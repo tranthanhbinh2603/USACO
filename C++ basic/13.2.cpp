@@ -13,6 +13,7 @@ using namespace std;
 
 const int maxN = 1e3 + 10;
 int A[maxN][maxN];
+long long pf[maxN][maxN];
 
 int main()
 {
@@ -22,9 +23,12 @@ int main()
 
 	int N; cin >> N;
 	for (int i = 0; i < N; i++)
-		for (int z = 0; z < N; z++)
+		for (int z = 0; z < N; z++){
 			cin >> A[i][z];
+			pf[i][z] = A[i][z] + pf[i - 1][z] + pf[i][z - 1] - pf[i - 1][z - 1];
 
+		}
+/*
 	int Q; cin >> Q;
 	while (Q--)
 	{
@@ -37,6 +41,14 @@ int main()
 				sum += A[i][z];
 
 		cout << sum << "\n";
-	}
+	}*/
 	//O(N^2) + O(Q * N ^ 2) = 10 ^ 5 * 10 ^ 6 = 10^11
+	int Q; cin >> Q;
+	while (Q--)
+	{
+		int a, b, c, d;
+		cin >> a >> b >> c >> d;
+
+		cout << pf[c][d] - pf[a - 1][d] - pf[c][b-1] + pf[a-1][b-1] << "\n";
+	}
 }
