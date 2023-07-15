@@ -1,0 +1,136 @@
+WEBVTT
+
+00:00.700 --> 00:02.710
+Everyone in the last lecture we saw.
+
+00:02.740 --> 00:07.660
+There are different data types that we can use to create buckets, and these buckets are of different
+
+00:07.660 --> 00:10.900
+sizes depending upon what type of data they are storing.
+
+00:11.470 --> 00:15.550
+In this video, I'm going to look at what is the actual size of each bucket.
+
+00:16.150 --> 00:23.570
+And for that, we are going to use inbuilt function in C++, which we call the size of the size of data
+
+00:23.590 --> 00:24.180
+needed.
+
+00:24.440 --> 00:28.330
+So I ask this function, tell me how big the bucket would be.
+
+00:28.330 --> 00:30.940
+So it will tell me, OK, it's going to take four bytes.
+
+00:31.510 --> 00:39.790
+Four bytes means 32 bits, basically on my system, this individual bucket will take 32 bit in the memory.
+
+00:40.540 --> 00:47.290
+And that means 32 bit, 32 zeros and ones can be stored in a zero bucket in this particular in the bucket,
+
+00:47.290 --> 00:47.520
+right?
+
+00:47.980 --> 00:52.150
+Let me show you in the demo how we can use this size of method.
+
+00:52.940 --> 00:58.420
+Either you create a Bucket X and then you give the name of the variable to the size of the function.
+
+00:58.840 --> 01:03.460
+It will tell me, OK, the X is going to occupy four bytes, or you can also give the data type.
+
+01:03.490 --> 01:07.860
+You can see how big the integer bucket would be if I created one.
+
+01:07.960 --> 01:09.280
+It would be, again, four bytes.
+
+01:10.090 --> 01:12.900
+So let me run this code and you can see the answer is four and four.
+
+01:13.840 --> 01:17.560
+Similarly, we can do the same thing for other data types as well.
+
+01:17.560 --> 01:18.280
+We can talk.
+
+01:18.640 --> 01:20.250
+How big is the guy bucket?
+
+01:20.290 --> 01:23.140
+So it is actually going to come to be one byte.
+
+01:24.300 --> 01:26.550
+The bull market, it is all going to be won, right?
+
+01:27.420 --> 01:28.410
+The float market.
+
+01:28.860 --> 01:33.270
+Maybe it would be around for four bite and a double, but maybe it would be.
+
+01:33.420 --> 01:33.960
+It bites.
+
+01:34.610 --> 01:35.160
+So.
+
+01:36.710 --> 01:41.370
+Let us see and try to underscore, right to build a God.
+
+01:41.520 --> 01:42.650
+And I'm going to run it.
+
+01:43.970 --> 01:48.840
+So you can see God is one who lives one loaded four and is it?
+
+01:49.760 --> 01:56.930
+Now we are going to understand how increasing the size of the bucket affect how big data we can stored
+
+01:56.930 --> 02:03.110
+in this particular bucket, or why one boat is sufficient enough to store the correct, but why one
+
+02:03.110 --> 02:07.460
+vote is required to store the right to one by means Edwards.
+
+02:09.430 --> 02:11.410
+OK, and this means 32 bits.
+
+02:11.950 --> 02:13.510
+And this means 60 for Edwards.
+
+02:14.500 --> 02:21.460
+That is why is it that your double can store a greater precision as compared to float suitability known
+
+02:21.460 --> 02:29.020
+as double floating point number and float is a single floating point or double has a higher precision
+
+02:29.020 --> 02:34.630
+than float because the bucket size of the ball is twice as big as compared to float.
+
+02:34.660 --> 02:35.860
+So this is a double bucket.
+
+02:37.080 --> 02:38.430
+And this is a fluid bucket.
+
+02:38.640 --> 02:38.930
+OK?
+
+02:39.420 --> 02:44.640
+The fluid bucket can store less because it can store more number of.
+
+02:46.020 --> 02:54.390
+So let us try to understand the binary number system, and someday we will try to estimate what bucket
+
+02:54.390 --> 02:57.240
+sizes recommended for each of these data types.
+
+02:57.600 --> 02:58.860
+That's all for this video.
+
+02:58.890 --> 02:59.390
+Thank you.

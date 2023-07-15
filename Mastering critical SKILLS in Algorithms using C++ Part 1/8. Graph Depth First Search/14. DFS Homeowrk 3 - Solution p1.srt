@@ -1,0 +1,411 @@
+1
+00:00:00,810 --> 00:00:01,440
+It's all home.
+
+2
+00:00:01,630 --> 00:00:02,310
+Number three.
+
+3
+00:00:03,030 --> 00:00:06,000
+The first problem about the restoration of the.
+
+4
+00:00:07,860 --> 00:00:12,330
+I hope when I told you that this is a graft problem, you manage easily to figure out what's happening
+
+5
+00:00:12,660 --> 00:00:13,980
+like one might tell himself.
+
+6
+00:00:14,250 --> 00:00:15,840
+What if every number is ignored?
+
+7
+00:00:16,020 --> 00:00:21,840
+So if the input is, for example, let's say here?
+
+8
+00:00:23,170 --> 00:00:26,830
+Yeah, that's generally the case one, two, three four five.
+
+9
+00:00:27,160 --> 00:00:33,970
+If I told you the bill, we had one and two and another beer maybe was like five and four and another
+
+10
+00:00:33,970 --> 00:00:39,400
+beer with two and the two under three and another beer.
+
+11
+00:00:39,400 --> 00:00:42,340
+As for, uh, four and three.
+
+12
+00:00:42,610 --> 00:00:43,690
+So I give you that one.
+
+13
+00:00:44,020 --> 00:00:47,290
+Now, if you started to think, what if every number isn't?
+
+14
+00:00:52,590 --> 00:00:56,880
+Now, every every adjustment can be an edge you saw one and two is an adjacent edge.
+
+15
+00:00:57,390 --> 00:01:05,610
+And then five and four is an adjustment edge two and the three is in a edge, four and three is an adjacent
+
+16
+00:01:05,610 --> 00:01:05,970
+edge.
+
+17
+00:01:06,540 --> 00:01:12,720
+Now when you look at it, you observe that this is actually creating a chin, right?
+
+18
+00:01:12,780 --> 00:01:13,740
+Nothing more than that.
+
+19
+00:01:14,580 --> 00:01:15,600
+And clearly.
+
+20
+00:01:16,620 --> 00:01:17,880
+We have two solutions.
+
+21
+00:01:18,180 --> 00:01:20,400
+One two, three four five is a solution.
+
+22
+00:01:20,700 --> 00:01:22,800
+Five four three two one is a solution.
+
+23
+00:01:23,040 --> 00:01:25,290
+This two solution satisfy the condition.
+
+24
+00:01:25,680 --> 00:01:32,670
+So this is how we converted the problem to graph by considering every number as a node, every relationship
+
+25
+00:01:32,670 --> 00:01:34,080
+between two numbers as an edge.
+
+26
+00:01:34,470 --> 00:01:39,900
+And this is actually a common way like there are many of the reduce the graphs can be eventually based
+
+27
+00:01:39,900 --> 00:01:45,150
+on the different numbers are nodes and the different and the relationship between the numbers are ages.
+
+28
+00:01:45,420 --> 00:01:47,280
+So keep that between you.
+
+29
+00:01:47,470 --> 00:01:54,570
+You remember the fraction case when we mentioned it over B and B or C again, it was no and B is no
+
+30
+00:01:54,570 --> 00:01:55,970
+and that it isn't possible, isn't it?
+
+31
+00:01:56,490 --> 00:01:59,100
+So keep that in mind when you have a bunch of values.
+
+32
+00:01:59,310 --> 00:02:02,220
+They are the nodes and the relationships are between them.
+
+33
+00:02:02,250 --> 00:02:03,870
+These are the edges.
+
+34
+00:02:05,430 --> 00:02:09,630
+So all what we need is to build the graph and find the chin begin.
+
+35
+00:02:10,290 --> 00:02:12,120
+Now what is the champion begin?
+
+36
+00:02:12,360 --> 00:02:14,730
+There is a trivial observation here to know about that.
+
+37
+00:02:14,730 --> 00:02:19,590
+So let's say the graph is one, two, three and four and five.
+
+38
+00:02:20,750 --> 00:02:25,400
+We know that we can either start from the word, get all of this once or the five and get all of this
+
+39
+00:02:25,400 --> 00:02:30,500
+once, we would like in an efficient way to know if this is the beginning of the chin or not.
+
+40
+00:02:30,980 --> 00:02:33,590
+There is a pretty simple observer here.
+
+41
+00:02:33,830 --> 00:02:37,970
+Every node has two neighbors like two has one and three three.
+
+42
+00:02:38,000 --> 00:02:41,750
+A strong four foot has three and five, except one and five.
+
+43
+00:02:42,050 --> 00:02:43,850
+If one of them has only one neighbor.
+
+44
+00:02:44,600 --> 00:02:50,360
+So this means iterate on the values, and the one who has only a single neighbor is there.
+
+45
+00:02:51,170 --> 00:02:55,610
+Graph is a champion can be achieved begin, which would be only the one or five here.
+
+46
+00:02:56,320 --> 00:03:02,750
+Uh, finally, like many problems based on numbers, you should expect that the values would be pretty
+
+47
+00:03:02,750 --> 00:03:03,050
+huge.
+
+48
+00:03:03,080 --> 00:03:09,950
+So instead of using the normal adjacency graph, we would use that, uh, Will has to use a hash table
+
+49
+00:03:09,950 --> 00:03:10,220
+here.
+
+50
+00:03:10,670 --> 00:03:14,270
+So we already made this could be for the one that is based on the festival.
+
+51
+00:03:14,570 --> 00:03:15,560
+So here is the hash table.
+
+52
+00:03:15,560 --> 00:03:17,270
+Here is the creation of eight.
+
+53
+00:03:17,630 --> 00:03:23,870
+This is a device that if this would have this time and order the set and um.
+
+54
+00:03:24,140 --> 00:03:30,260
+And here we are iterating whether it was in the normal way, I would like to tell you something recursion
+
+55
+00:03:30,260 --> 00:03:31,700
+that is based on trees and.
+
+56
+00:03:32,630 --> 00:03:38,630
+So the first that is based on trees and the chains can get rid of the wasted how.
+
+57
+00:03:39,640 --> 00:03:45,160
+With the burden to track weeks to blend in the detective cycle problem, like, let's say we are at
+
+58
+00:03:45,160 --> 00:03:47,770
+one two three four.
+
+59
+00:03:48,340 --> 00:03:52,030
+Why do we need visited to not visit the news that we visited before?
+
+60
+00:03:52,540 --> 00:03:55,570
+So too will make a cycle only by visiting the parent?
+
+61
+00:03:55,900 --> 00:04:02,200
+So if you have a value that say which, which is my bit and you just you are to go to three, but don't
+
+62
+00:04:02,200 --> 00:04:04,930
+go to what you are three, go to four, but don't go to two.
+
+63
+00:04:05,110 --> 00:04:06,690
+So this is how we can get rid of the victim.
+
+64
+00:04:06,700 --> 00:04:10,780
+But anyway, I'm leaving it here because it's more generic treatment here.
+
+65
+00:04:11,650 --> 00:04:17,170
+Now we created the hash table graph iterate on the beers bit by bit.
+
+66
+00:04:17,170 --> 00:04:17,580
+I hope you.
+
+67
+00:04:17,930 --> 00:04:18,930
+You are familiar with that.
+
+68
+00:04:18,940 --> 00:04:24,910
+I'm trying to avoid too, using modern syntax as much as I could, because I know many people do not
+
+69
+00:04:24,910 --> 00:04:28,150
+study modern C++ like they simply don't care.
+
+70
+00:04:29,290 --> 00:04:30,790
+Many people stop before C++.
+
+71
+00:04:30,790 --> 00:04:38,530
+Even some people know about some features about C++, and this is the reason why I don't use a lot here
+
+72
+00:04:38,590 --> 00:04:40,360
+a modern C++.
+
+73
+00:04:40,360 --> 00:04:42,820
+But anyway, let me give you a very first idea here.
+
+74
+00:04:43,180 --> 00:04:49,890
+And when we say, Oh, two x equals one C++ compiler, we know that this is integer, so we remove.
+
+75
+00:04:49,900 --> 00:04:57,310
+Although it would be automatic and replaced by integer when we say all to be equal, make underscore
+
+76
+00:04:57,550 --> 00:05:03,870
+it of two and the three, it would remove water and make it like beer of int.
+
+77
+00:05:04,360 --> 00:05:09,220
+And then so the word or two here is just an automatic way, so always know that this is going to be
+
+78
+00:05:09,220 --> 00:05:17,680
+replaced with something now the adjacency the graph is actually stable, so it would be bits of fruit.
+
+79
+00:05:18,970 --> 00:05:24,640
+So so the the the for now, this is a second thing in the modern C++ here.
+
+80
+00:05:25,030 --> 00:05:29,920
+When I do four or do something for something, it's going to iterate an element by element.
+
+81
+00:05:29,920 --> 00:05:37,870
+So if you have vector of integer, you can say for integer X in Vector V or you can say four or two
+
+82
+00:05:38,890 --> 00:05:40,300
+x in V.
+
+83
+00:05:40,720 --> 00:05:41,770
+These are the same here.
+
+84
+00:05:42,220 --> 00:05:47,050
+Now we are iterating on what vector of vector of integer.
+
+85
+00:05:47,320 --> 00:05:51,310
+So for all to hear this internally, it would be actually a vector of integer.
+
+86
+00:05:51,610 --> 00:05:54,880
+So this one is as simple as fourth vector.
+
+87
+00:05:56,260 --> 00:05:57,040
+Of eight.
+
+88
+00:05:58,450 --> 00:06:01,150
+Beer ad beers.
+
+89
+00:06:01,390 --> 00:06:06,550
+OK, so the the the word 02 will be replaced by victor of integrated beer.
+
+90
+00:06:06,880 --> 00:06:10,510
+So now beer is just a simple array of two valleys zero and one.
+
+91
+00:06:10,750 --> 00:06:11,480
+I hope you got it.
+
+92
+00:06:11,540 --> 00:06:15,130
+But is the search for this interesting style and C++?
+
+93
+00:06:16,600 --> 00:06:25,090
+Now we created the graph by adding all of their relevant roots, and we created an ordered set up.
+
+94
+00:06:25,690 --> 00:06:32,140
+I'm using the DFS based on the like the connected nodes, the numbers so that we can return to them
+
+95
+00:06:32,140 --> 00:06:32,710
+actually here.
+
+96
+00:06:33,250 --> 00:06:36,550
+So I'm going to iterate on the graph adjacency list one by one.
+
+97
+00:06:38,490 --> 00:06:39,240
+It is, yeah.
+
+98
+00:06:39,870 --> 00:06:48,690
+The graph here is the nude, the second, which is, uh, the neighbors equity equal one, which means
+
+99
+00:06:48,690 --> 00:06:50,190
+that this node has a single neighbor.
+
+100
+00:06:50,340 --> 00:06:53,970
+So this is enough so we can divest from here and break it here.
+
+101
+00:06:54,390 --> 00:06:58,080
+And that's a tier that the defense is a very normal defense.
+
+102
+00:06:58,380 --> 00:07:04,260
+But this is, you know, instead of marking would add here that would for us to.
+
+103
+00:07:04,350 --> 00:07:06,180
+I hope overall, the idea is clear enough.

@@ -1,0 +1,354 @@
+0
+1
+00:00:01,230 --> 00:00:02,250
+Let's solve homework
+1
+
+2
+00:00:02,280 --> 00:00:11,160
+number three, the first problem is about swapping three numbers that we will read, there are two
+2
+
+3
+00:00:11,160 --> 00:00:11,950
+ways to do that.
+3
+
+4
+00:00:12,390 --> 00:00:15,420
+One might think, OK, what if we just swap the number one
+4
+
+5
+00:00:15,420 --> 00:00:22,440
+with number two, then now number one and number two content is swapped.
+5
+
+6
+00:00:22,440 --> 00:00:29,010
+Taking number two content and number three content to swap it is done then this should be fair enough.
+6
+
+7
+00:00:29,010 --> 00:00:36,420
+For example, if we are here, if we swapped the content of A and B, you will observe that the a would have
+7
+
+8
+00:00:36,420 --> 00:00:39,690
+value 20 and B would have value 115.
+8
+
+9
+00:00:40,020 --> 00:00:48,810
+If you swapped now the B with 301, the B will have 301 and the c will have the coming from b (115)
+9
+
+10
+00:00:48,810 --> 00:00:51,080
+So, you can use to swaps
+10
+
+11
+00:00:51,090 --> 00:00:52,470
+to solve the problem.
+11
+
+12
+00:00:52,920 --> 00:00:58,820
+But if you tried to make use of the problem itself, you can do something much more smarter.
+12
+
+13
+00:00:59,370 --> 00:01:05,240
+And it's, as I said, similar to the swapping of the two values which is circulating the numbers.
+13
+
+14
+00:01:05,250 --> 00:01:08,300
+If you observed, it seems num1 is going to number three.
+14
+
+15
+00:01:08,340 --> 00:01:10,790
+Number two to number one, number three to number two.
+15
+
+16
+00:01:10,950 --> 00:01:12,830
+So it seems like they are moving in a circle.
+16
+
+17
+00:01:13,230 --> 00:01:19,230
+So I am introducing here a temp value moving number one to two, then making the circle two in one, three
+17
+
+18
+00:01:19,230 --> 00:01:19,770
+in two.
+18
+
+19
+00:01:19,980 --> 00:01:22,590
+Now we are ready to get the temp and put it in number three.
+19
+
+20
+00:01:22,770 --> 00:01:26,790
+So this is what happened by circulating the number together here.
+20
+
+21
+00:01:29,580 --> 00:01:36,510
+In the second homework, the print me, which I guess was a bit hard for some of you guys, the
+21
+
+22
+00:01:36,510 --> 00:01:44,210
+idea is as following, the idea is to convert B to something that creates an equation of zero and one.
+22
+
+23
+00:01:44,340 --> 00:01:48,610
+Let's see how. I'm going to create this equation here.
+23
+
+24
+00:01:48,930 --> 00:01:55,430
+Eventually, the equation has the value of equation number one, which is a times a, the value of the equation
+24
+
+25
+00:01:55,440 --> 00:01:58,390
+If the answer is negative one, which is two times a plus one.
+25
+
+26
+00:01:58,770 --> 00:01:59,580
+So far, so good.
+26
+
+27
+00:02:00,210 --> 00:02:05,880
+I'm trying to have a value here that would be either one or zero and this one would be either one and
+27
+
+28
+00:02:05,880 --> 00:02:06,150
+zero.
+28
+
+29
+00:02:06,480 --> 00:02:09,600
+If is_one is one, then is_negative_one
+29
+
+30
+00:02:09,600 --> 00:02:10,380
+should be zero.
+30
+
+31
+00:02:10,830 --> 00:02:15,210
+If is_one is zero, then is_negative_one should be one.
+31
+
+32
+00:02:16,170 --> 00:02:21,720
+So, as you see, with any input, either this one would be printed or this one would be printed.
+32
+
+33
+00:02:21,960 --> 00:02:28,940
+So this is the moral of the algorithm, you can think of this problem in a simpler way,
+33
+
+34
+00:02:28,950 --> 00:02:35,070
+If I told you that B is either one or zero, if this was the case, then you just multiply here B and
+34
+
+35
+00:02:35,070 --> 00:02:41,130
+one minus B, B would be one and one minus B would be zero, if B is zero, one minus B would be one.
+35
+
+36
+00:02:41,610 --> 00:02:46,090
+But I made it a little harder and told you that B is one or minus one.
+36
+
+37
+00:02:46,650 --> 00:02:53,970
+So the first thing I'm doing here is I'm checking if B is one or not, which is simple here for us.
+37
+
+38
+00:02:54,300 --> 00:02:56,640
+I'm adding B plus one and dividing by two.
+38
+
+39
+00:02:56,650 --> 00:02:58,430
+So I found this very simple equation.
+39
+
+40
+00:02:58,470 --> 00:02:59,290
+Let's trace it.
+40
+
+41
+00:02:59,730 --> 00:03:03,750
+If B is one, one plus one is two, two over two is one, that's perfect.
+41
+
+42
+00:03:04,410 --> 00:03:08,860
+On the other side, let's say B is minus one, minus one plus one is zero, zero over two is zero.
+42
+
+43
+00:03:09,210 --> 00:03:11,700
+So is_one so far is very straightforward.
+43
+
+44
+00:03:13,340 --> 00:03:19,130
+In the other case I would like to get the minus one, so to do that, I just subtracted one from is_minus
+44
+
+45
+00:03:19,130 --> 00:03:19,340
+one.
+45
+
+46
+00:03:19,760 --> 00:03:23,090
+Now, if is_one is one, is_negative_one would be zero.
+46
+
+47
+00:03:23,390 --> 00:03:25,870
+If is_one is zero, then is_negative_one would be one.
+47
+
+48
+00:03:26,210 --> 00:03:31,650
+And this way the equation is ready for us to print the two, as I mentioned in the homework,
+48
+
+49
+00:03:32,210 --> 00:03:36,530
+This problem is solved much easier and trivially using the if condition.
+49
+
+50
+00:03:36,830 --> 00:03:44,860
+But I'm just showing you if we have fewer tools, how things are a bit more complicated. In the homework
+50
+
+51
+00:03:44,870 --> 00:03:48,740
+number three, we would like to sum the numbers from one to n.
+51
+
+52
+00:03:49,400 --> 00:03:54,620
+And if you like mathematics, you should find this problem very interesting for you.
+52
+
+53
+00:03:55,550 --> 00:03:57,220
+The idea is as follows.
+53
+
+54
+00:03:57,440 --> 00:04:01,580
+Let's say we have numbers from one to eight.
+54
+
+55
+00:04:02,150 --> 00:04:05,680
+What is the value of one and eight, which are the first and the last number? 9
+55
+
+56
+00:04:06,170 --> 00:04:08,900
+What is the value of the second and second to last?
+56
+
+57
+00:04:08,900 --> 00:04:09,850
+two and seven is also nine.
+57
+
+58
+00:04:09,860 --> 00:04:13,400
+So this is nine and this one is nine too and three
+58
+
+59
+00:04:13,400 --> 00:04:15,470
+and six is also nine.
+59
+
+60
+00:04:16,280 --> 00:04:19,540
+Three and six is also nine, four and the five is also nine.
+60
+
+61
+00:04:19,940 --> 00:04:24,770
+And you should find an easy logic why they are always nine, they are always n plus one.
+61
+
+62
+00:04:25,400 --> 00:04:33,140
+It seems we can divide this sequence into (n / 2) pairs and every pair has a value of n plus one
+62
+
+63
+00:04:33,380 --> 00:04:35,540
+In our case, we have eight values.
+63
+
+64
+00:04:35,690 --> 00:04:38,180
+We divided them to four pairs each
+64
+
+65
+00:04:38,180 --> 00:04:40,010
+pair has a value of n plus one.
+65
+
+66
+00:04:40,460 --> 00:04:46,110
+So if we used this simple equation, anyplace, n * (n+1) / 2, we should get the answer.
+66
+
+67
+00:04:46,400 --> 00:04:48,680
+Now, the equation so far is good for even.
+67
+
+68
+00:04:49,730 --> 00:04:50,990
+But what about the odd?
+68
+
+69
+00:04:50,990 --> 00:04:52,110
+It also good for the odd.
+69
+
+70
+00:04:52,160 --> 00:04:58,010
+But I would like to think about it by yourself to verify this one is working well.
+70
+
+71
+00:04:58,370 --> 00:05:01,150
+Feel free to read this link if you would like. That's all.

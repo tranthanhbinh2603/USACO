@@ -1,0 +1,374 @@
+0
+1
+00:00:00,870 --> 00:00:07,740
+In this video, we will discuss a very special kind of recursive function, but first of all, let's
+1
+
+2
+00:00:07,740 --> 00:00:10,080
+introduce something about it.
+2
+
+3
+00:00:10,530 --> 00:00:14,810
+Sometimes we can decompose a problem to a set of sub-problems.
+3
+
+4
+00:00:14,970 --> 00:00:22,110
+For example, let's say you would like to print all prime numbers that are palindromes and less than
+4
+
+5
+00:00:22,380 --> 00:00:23,070
+one million.
+5
+
+6
+00:00:23,520 --> 00:00:28,740
+So we have here two sub-problems, is a number prime? is a number palindrome?
+6
+
+7
+00:00:28,770 --> 00:00:30,380
+These are our two sub-problems.
+7
+
+8
+00:00:30,660 --> 00:00:37,080
+If we solved these two sub-problems, then we iterate from one to million and count these number
+8
+
+9
+00:00:37,190 --> 00:00:41,280
+that satisfy condition number one and condition number two. There's
+9
+
+10
+00:00:41,280 --> 00:00:42,530
+an interesting question here,
+10
+
+11
+00:00:43,050 --> 00:00:49,990
+What if the sub-problem is of the same type as same as the problem itself?
+11
+
+12
+00:00:50,610 --> 00:00:52,130
+This is called recursion.
+12
+
+13
+00:00:53,490 --> 00:00:56,340
+Let's revise what is factorial.
+13
+
+14
+00:00:56,640 --> 00:01:01,740
+Factorial 6 is a multiplication of the numbers from 1 to 6 , factorial
+14
+
+15
+00:01:01,740 --> 00:01:06,360
+5 is a multiplication of numbers from 1 to 5 and so on.
+15
+
+16
+00:01:07,000 --> 00:01:12,360
+I would like you to stop the video for a minute and think, what is the relationship between Factorial
+16
+
+17
+00:01:12,360 --> 00:01:13,900
+6 and Factorial 5?
+17
+
+18
+00:01:14,040 --> 00:01:18,240
+There is some mathematical relationship between them, in another way,
+18
+
+19
+00:01:18,540 --> 00:01:20,820
+Can you factorial 6 if you know
+19
+
+20
+00:01:20,820 --> 00:01:21,760
+factorial 5?
+20
+
+21
+00:01:22,020 --> 00:01:22,830
+Think about that.
+21
+
+22
+00:01:25,260 --> 00:01:30,150
+Here is how we code the factorial code, we just iterate and multiply numbers from 1 to n.
+22
+
+23
+00:01:31,210 --> 00:01:35,350
+When we try to think about the factorial of numbers from 1 to 5,
+23
+
+24
+00:01:36,290 --> 00:01:43,610
+here, and the relationship with the factorial to 4, surprisingly, we noticed that factorial 5 is
+24
+
+25
+00:01:43,610 --> 00:01:48,260
+factorial 4 * 5, now factorial 5 is our problem.
+25
+
+26
+00:01:48,710 --> 00:01:54,320
+Factorial 4 is a sub-problem, but it is of the same type like our problem.
+26
+
+27
+00:01:54,530 --> 00:01:59,480
+That is, we multiply the number from 1 to the target number. in a similar way,
+27
+
+28
+00:01:59,840 --> 00:02:07,580
+Factorial 6, and factorial 5, factorial 6 is factorial 5 * 6, and factorial 5 is 5
+28
+
+29
+00:02:07,580 --> 00:02:14,240
+times factorial 4, and so on. this is a very interesting case when the problem and the sub-problems
+29
+
+30
+00:02:14,390 --> 00:02:15,980
+are of the same type. here,
+30
+
+31
+00:02:16,190 --> 00:02:18,020
+The problem is of type factorial.
+31
+
+32
+00:02:18,140 --> 00:02:23,960
+We need factorial 6, which is 6 * factorial 5, which is a smaller sub-problem.
+32
+
+33
+00:02:25,900 --> 00:02:32,440
+So let's say we would like to solve the factorial 6 problem, which is our problem, which we can definitely
+33
+
+34
+00:02:32,440 --> 00:02:38,950
+solve as just multiplication from 1 to 6. another way to think of it, is as following, factorial 5
+34
+
+35
+00:02:39,130 --> 00:02:40,770
+is a simpler sub-problem,
+35
+
+36
+00:02:41,860 --> 00:02:45,830
+If we multiplied it with 6, we get factorial 6.
+36
+
+37
+00:02:46,180 --> 00:02:53,740
+So can we go forever in smaller sub-problems, for example, 6 needs factorial 5, factorial 5 needs 4, 4 needs 3,
+37
+
+38
+00:02:53,890 --> 00:02:55,230
+3 2, 2 1.
+38
+
+39
+00:02:55,600 --> 00:02:57,640
+There is at some point we have to stop.
+39
+
+40
+00:02:57,940 --> 00:03:03,140
+And this is, for example, in our case, when we come to factorial 1, which is defined as factorial 1 
+40
+
+41
+00:03:03,160 --> 00:03:05,940
+with 1, and factorial 0 with 1.
+41
+
+42
+00:03:06,250 --> 00:03:08,230
+This is something that we call the best case,
+42
+
+43
+00:03:08,500 --> 00:03:11,070
+This is where there are no more  sub-problems.
+43
+
+44
+00:03:11,350 --> 00:03:15,310
+So what we know so far is, there are a problem and sub-problems.
+44
+
+45
+00:03:15,580 --> 00:03:20,150
+Sometimes, the sub-problem is of the same type as the problem itself.
+45
+
+46
+00:03:20,530 --> 00:03:27,940
+So one way to solve the problem is by solving the sub-problem, and the sub-problem will need another sub-sub-problem
+46
+
+47
+00:03:27,940 --> 00:03:28,900
+of the same type.
+47
+
+48
+00:03:29,170 --> 00:03:33,570
+And the sub-sub-problem would need a sub-sub-sub-problem of the same type.
+48
+
+49
+00:03:33,760 --> 00:03:35,130
+But we cannot go forever,
+49
+
+50
+00:03:35,290 --> 00:03:36,760
+We have to stop at some point,
+50
+
+51
+00:03:36,880 --> 00:03:39,610
+And this is what we call a base-case.
+51
+
+52
+00:03:40,900 --> 00:03:48,180
+So let's do some funny code to implement the factorial 6, using the logic that we have just
+52
+
+53
+00:03:48,190 --> 00:03:48,730
+sketched.
+53
+
+54
+00:03:49,120 --> 00:03:51,490
+So we are going here to print "cout<<factorial6() "
+54
+
+55
+00:03:51,490 --> 00:03:58,390
+as a function, but we know that factorial6 is just 6 * factorial5 as a function.
+55
+
+56
+00:03:58,780 --> 00:03:59,860
+So factorial 5,
+56
+
+57
+00:04:00,160 --> 00:04:01,600
+Forget how is it implemented,
+57
+
+58
+00:04:01,870 --> 00:04:08,220
+Think like factorial5 is some function that is going to return the answer of factorial5 correctly. Once
+58
+
+59
+00:04:08,230 --> 00:04:11,210
+factorial5 is returned, you multiply with 6 and we get the results.
+59
+
+60
+00:04:11,530 --> 00:04:13,720
+Now let's think about factorial5. Factorial
+60
+
+61
+00:04:14,050 --> 00:04:17,590
+5 is actually factorial4 *  5.
+61
+
+62
+00:04:18,490 --> 00:04:19,470
+This is very good.
+62
+
+63
+00:04:19,780 --> 00:04:26,200
+Now, regardless of how factorial4 is implemented, we know it is eventually 5 *
+63
+
+64
+00:04:26,200 --> 00:04:27,790
+factorial4. Factorial 4
+64
+
+65
+00:04:27,790 --> 00:04:30,340
+also is 4 * factorial3,
+65
+
+66
+00:04:30,490 --> 00:04:34,570
+3 * 2, factorial2 is 2 * 1 and 1 is returning 1.
+66
+
+67
+00:04:35,020 --> 00:04:41,350
+If you try to think about the overall here, 6, calling 5, calling 4, calling 3, calling 2,
+67
+
+68
+00:04:41,350 --> 00:04:42,220
+calling 1.
+68
+
+69
+00:04:42,670 --> 00:04:48,310
+This is actually the result will end up, for example, for factorial6, as 6 * 5 * 
+69
+
+70
+00:04:48,370 --> 00:04:50,410
+4 * 3 * 2 * 1. 
+70
+
+71
+00:04:50,830 --> 00:04:54,490
+And factorial4 is 4 * 3 * 2 * 1.
+71
+
+72
+00:04:54,730 --> 00:04:59,050
+I would like you to try to do some tracing for this code and think about it.
+72
+
+73
+00:04:59,410 --> 00:05:05,470
+Moreover, I would like you to think, is there an elegant way to write only a single function that
+73
+
+74
+00:05:05,470 --> 00:05:08,170
+save us from doing all of this repetitive task?
+74
+
+75
+00:05:08,590 --> 00:05:09,430
+That's it for today.

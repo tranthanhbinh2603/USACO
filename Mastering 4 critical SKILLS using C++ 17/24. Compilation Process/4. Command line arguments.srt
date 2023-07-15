@@ -1,0 +1,549 @@
+0
+1
+00:00:01,830 --> 00:00:07,800
+In this session, we will learn how to path arguments to your whole program. So far,
+1
+
+2
+00:00:07,860 --> 00:00:13,410
+we were reading all with the input from the user and process everything within it.
+2
+
+3
+00:00:14,040 --> 00:00:20,970
+In practice, applications typically are initialized with some of the initial arguments that we run the
+3
+
+4
+00:00:20,970 --> 00:00:26,220
+program itself with them. So we don't pass them as reading from a keyboard,
+4
+
+5
+00:00:26,500 --> 00:00:33,160
+but actually, we passed them as major parameters to the input of the program itself.
+5
+
+6
+00:00:33,750 --> 00:00:40,980
+You can think of that like I would like to, for example, run my online book reader program, but I
+6
+
+7
+00:00:40,980 --> 00:00:45,340
+would like to give it an initial path to the database itself.
+7
+
+8
+00:00:45,720 --> 00:00:50,720
+You can think of it like we can run the program, and then we ask the user to enter the database path and
+8
+
+9
+00:00:50,880 --> 00:00:51,200
+read it.
+9
+
+10
+00:00:51,670 --> 00:00:52,440
+That's OK,
+10
+
+11
+00:00:52,740 --> 00:00:54,900
+but in reality, this is more convenient.
+11
+
+12
+00:00:54,900 --> 00:01:00,500
+We can run the program itself and provided it with the input at the same time,
+12
+
+13
+00:01:00,810 --> 00:01:07,020
+or let's say you have a factorial_exe program, you run it with 5, so it gives you 120, and so on.
+13
+
+14
+00:01:07,800 --> 00:01:14,910
+So you think of all of the needs, like maybe path of the database, path of the configuration file, number of
+14
+
+15
+00:01:14,910 --> 00:01:16,730
+parallel workers, and so on.
+15
+
+16
+00:01:17,340 --> 00:01:18,270
+So how to do that?
+16
+
+17
+00:01:19,680 --> 00:01:23,250
+We will start for the first time to see a change to the main function.
+17
+
+18
+00:01:23,640 --> 00:01:25,920
+You notice here we added two parameters.
+18
+
+19
+00:01:26,220 --> 00:01:28,820
+The first parameter is of type integer.
+19
+
+20
+00:01:29,220 --> 00:01:32,460
+The second is of type character pointer array.
+20
+
+21
+00:01:32,790 --> 00:01:37,920
+This is actually an array of character pointers.
+21
+
+22
+00:01:39,540 --> 00:01:48,030
+The argc is the number of arguments that you pass to the program and the argv is a list of character pointers
+22
+
+23
+00:01:48,030 --> 00:01:50,220
+for this character pointers.
+23
+
+24
+00:01:50,670 --> 00:01:54,030
+If you write this program and do nothing, just run it as it is,
+24
+
+25
+00:01:54,040 --> 00:01:55,440
+you will notice the following:
+25
+
+26
+00:01:55,710 --> 00:01:59,490
+The argc would be one, although we pass nothing to the program,
+26
+
+27
+00:01:59,820 --> 00:02:06,910
+and then it's going to list  the value of the program itself, which could be typically
+27
+
+28
+00:02:06,930 --> 00:02:09,430
+some relative path or complete path, it depends.
+28
+
+29
+00:02:10,080 --> 00:02:17,160
+So even without passing anything into the program, there is at least one argument here, which is the
+29
+
+30
+00:02:17,170 --> 00:02:18,170
+program itself.
+30
+
+31
+00:02:18,540 --> 00:02:23,700
+So now we would like to see what's going to happen if we tried to pass more programs.
+31
+
+32
+00:02:24,060 --> 00:02:32,600
+Let's say we went to the command line here, and our program is called ztemp (I'm here on this level).
+32
+
+33
+00:02:32,810 --> 00:02:35,390
+So I'm calling it with debug slash ztemp.
+33
+
+34
+00:02:35,670 --> 00:02:37,340
+This is where my exe exists,
+34
+
+35
+00:02:37,800 --> 00:02:46,710
+this is on ubuntu, and then I pass the word Mostafa then 10, 20, Ali. The program said here, remember that
+35
+
+36
+00:02:46,710 --> 00:02:50,770
+I am iterating on the number of arguments and printing one by one.
+36
+
+37
+00:02:50,820 --> 00:02:55,590
+This is argv of I is the ith element of the array which would be of type character
+37
+
+38
+00:02:55,590 --> 00:02:56,070
+pointer.
+38
+
+39
+00:02:57,590 --> 00:02:59,080
+It listing the following:
+39
+
+40
+00:02:59,090 --> 00:03:02,610
+It lists the program name itself, then Mostafa, 10, 20, Ali.
+40
+
+41
+00:03:02,840 --> 00:03:08,730
+So I pass the four arguments, but the fifth one will be coming from the program itself.
+41
+
+42
+00:03:11,670 --> 00:03:18,700
+OK, let's do one more thing. Let's say that my program is expecting two values.
+42
+
+43
+00:03:18,720 --> 00:03:23,580
+The first one would be a path to something, and the second one would be an integer.
+43
+
+44
+00:03:24,000 --> 00:03:25,100
+So I'm doing the following:
+44
+
+45
+00:03:25,290 --> 00:03:28,290
+I'm first of all, checking if the user really passes
+45
+
+46
+00:03:28,290 --> 00:03:31,770
+two arguments or not. To pass two arguments,
+46
+
+47
+00:03:31,770 --> 00:03:34,390
+we know there will be an extra one for the program itself.
+47
+
+48
+00:03:34,680 --> 00:03:40,400
+So I'm saying if the argc is less than three, print an error message to the user.
+48
+
+49
+00:03:40,860 --> 00:03:46,530
+Otherwise, I am taking the argv (which will be a character pointer) and put it here in a string,
+49
+
+50
+00:03:47,190 --> 00:03:53,850
+and also I am taking the second argument and calling my personal function (function to_int) which will
+50
+
+51
+00:03:53,850 --> 00:03:57,780
+take a string and passes it, so the character pointer will be converted to string,
+51
+
+52
+00:03:58,110 --> 00:04:03,450
+then I'm doing  i_string on the string and then reading it and returning an integer, and then I'm printing
+52
+
+53
+00:04:03,450 --> 00:04:04,050
+both of them.
+53
+
+54
+00:04:04,620 --> 00:04:05,110
+That's it.
+54
+
+55
+00:04:05,370 --> 00:04:12,240
+So this is the initial logic of my program, expecting a path, expecting an integer, and using them
+55
+
+56
+00:04:13,500 --> 00:04:15,840
+and to_int is our function to convert a string to int.
+56
+
+57
+00:04:17,560 --> 00:04:25,660
+More interestingly, there is a library named stdlib, and noticed the dot_h, stdlib_dot_h, this library is from the C library.
+57
+
+58
+00:04:26,620 --> 00:04:33,700
+This library has a function named a_to_i which can convert for you, to is to convert, I is
+58
+
+59
+00:04:33,700 --> 00:04:34,300
+an integer.
+59
+
+60
+00:04:34,630 --> 00:04:40,150
+It can convert for you a character pointer of characters to an integer.
+60
+
+61
+00:04:40,300 --> 00:04:44,590
+So we can actually replace our to_int function.
+61
+
+62
+00:04:44,590 --> 00:04:50,710
+We can actually use the atoi function and just passes to it the character pointer, and it will
+62
+
+63
+00:04:50,710 --> 00:04:56,490
+convert it to an integer. This just a more short code if you would like, instead of writing a to_int function.
+63
+
+64
+00:04:57,750 --> 00:05:05,820
+Now, let's see the usage of this program, I here ran the program and give it the path of
+64
+
+65
+00:05:05,820 --> 00:05:07,720
+some file only, so it's one parameter.
+65
+
+66
+00:05:07,790 --> 00:05:11,250
+So it complains and says, hey, error please pass a string and an integer.
+66
+
+67
+00:05:11,730 --> 00:05:15,150
+Now, I changed my code and passed the path to the file,
+67
+
+68
+00:05:15,390 --> 00:05:19,050
+and 20, it will give me the path and 20.
+68
+
+69
+00:05:19,980 --> 00:05:22,340
+Now, here is a trick. Always in paths,
+69
+
+70
+00:05:22,950 --> 00:05:25,070
+be careful from spaces.
+70
+
+71
+00:05:25,470 --> 00:05:30,250
+So here I am giving another path, which has Mostafa, space, saad, bla bla bla, and 20
+71
+
+72
+00:05:30,720 --> 00:05:32,090
+but this is cause a problem.
+72
+
+73
+00:05:32,310 --> 00:05:38,720
+What will happen is the first string would be read as a path, and the second would be taking...
+73
+
+74
+00:05:39,000 --> 00:05:44,940
+So the program here will understand that this is an argument of one and this is an argument of two and this
+74
+
+75
+00:05:44,940 --> 00:05:45,720
+argument of three.
+75
+
+76
+00:05:45,990 --> 00:05:49,490
+So this is now wrong. To pass a path,
+76
+
+77
+00:05:49,500 --> 00:05:51,630
+or even a complete string,
+77
+
+78
+00:05:51,630 --> 00:05:57,630
+You have to pass a double-quote for it from beginning to end. This way, the command line will know that
+78
+
+79
+00:05:57,630 --> 00:05:59,630
+this is one complete string.
+79
+
+80
+00:05:59,880 --> 00:06:04,320
+So this way, it will figure out the spaces. That's all.
+80
+
+81
+00:06:04,320 --> 00:06:05,990
+Let's make a small demo.
+81
+
+82
+00:06:06,360 --> 00:06:09,090
+So here is the eclipse program.
+82
+
+83
+00:06:09,090 --> 00:06:12,540
+We learned already how to pass the arguments from the command line.
+83
+
+84
+00:06:12,750 --> 00:06:18,150
+I would like to show you also how to run them from the eclipse itself.
+84
+
+85
+00:06:19,200 --> 00:06:19,470
+If you
+85
+
+86
+00:06:19,470 --> 00:06:19,770
+right
+86
+
+87
+00:06:19,770 --> 00:06:24,090
+click here, and go to the run as (we usually click this guy or this button
+87
+
+88
+00:06:24,300 --> 00:06:27,600
+but there is also something here called run configuration)
+88
+
+89
+00:06:27,600 --> 00:06:33,300
+You click it when you go to the run configuration, you will find a lot of C++ configuration that you can
+89
+
+90
+00:06:34,140 --> 00:06:36,710
+increment one or remove one and so on.
+90
+
+91
+00:06:37,140 --> 00:06:41,640
+So this is the configuration of my program.
+91
+
+92
+00:06:42,180 --> 00:06:43,800
+This first time for us to come here.
+92
+
+93
+00:06:44,220 --> 00:06:46,290
+You will notice here we have the program name.
+93
+
+94
+00:06:46,620 --> 00:06:49,680
+You can browse it here and you can find it from a project.
+94
+
+95
+00:06:49,980 --> 00:06:52,320
+You will notice we have the build configuration here,
+95
+
+96
+00:06:52,320 --> 00:06:53,960
+I'm using debug as an active one.
+96
+
+97
+00:06:54,300 --> 00:06:56,400
+Now, this step is what we care about it,
+97
+
+98
+00:06:56,400 --> 00:07:01,740
+It has the argument. As you see here, I put hello world and I put three
+98
+
+99
+00:07:01,740 --> 00:07:08,050
+other integers. The environment is another important tab that we use it in real life.
+99
+
+100
+00:07:08,050 --> 00:07:13,290
+If we would like to add something to the environment. Now, as you see here, the argument is well configured
+100
+
+101
+00:07:13,290 --> 00:07:13,860
+for us here.
+101
+
+102
+00:07:14,010 --> 00:07:14,760
+So let's run.
+102
+
+103
+00:07:15,390 --> 00:07:17,160
+If we ran it, we see it
+103
+
+104
+00:07:17,160 --> 00:07:21,810
+gives hello world and 20. The other extra things don't matter here in our program.
+104
+
+105
+00:07:22,800 --> 00:07:26,310
+So this is how to handle in eclipse. In code blocks,
+105
+
+106
+00:07:27,270 --> 00:07:35,040
+here is the same program, you go to Project, set program arguments, and then you select which profile you
+106
+
+107
+00:07:35,040 --> 00:07:35,810
+would like to use.
+107
+
+108
+00:07:36,000 --> 00:07:39,810
+So here in the debug I have hello world 20, 30, 40,
+108
+
+109
+00:07:40,200 --> 00:07:46,260
+then again, you can just run the program here, and then you will have both of them here.
+109
+
+110
+00:07:47,190 --> 00:07:47,790
+That's it.

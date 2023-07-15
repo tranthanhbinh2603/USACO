@@ -1,0 +1,643 @@
+1
+00:00:00,180 --> 00:00:05,880
+Homework, no food in the defense, it's a bit hard compared to others.
+
+2
+00:00:06,570 --> 00:00:15,000
+So the first one is is is a by Patricia de Bipartite is a very well known, is a very well known, uh,
+
+3
+00:00:15,000 --> 00:00:16,160
+probability in graphs.
+
+4
+00:00:16,170 --> 00:00:17,130
+It's very important.
+
+5
+00:00:17,850 --> 00:00:19,060
+The problem is actually no thought.
+
+6
+00:00:19,080 --> 00:00:24,450
+Just it might be a little bit in thinking twice, but eventually pretty simple and pretty direct.
+
+7
+00:00:25,020 --> 00:00:29,560
+So the bar graph is as following we have vertices.
+
+8
+00:00:29,560 --> 00:00:30,720
+So let's see here the examples.
+
+9
+00:00:31,080 --> 00:00:38,070
+We have a graph like this graph and we can like virtually split the graph to two groups the group number
+
+10
+00:00:38,070 --> 00:00:40,290
+one and group number two.
+
+11
+00:00:40,620 --> 00:00:49,620
+And here is the probability there are no edges between the nodes in the same group, and edges are only
+
+12
+00:00:49,950 --> 00:00:51,360
+between both of them here.
+
+13
+00:00:52,230 --> 00:00:55,470
+So you see the graph here like this is a very similar one.
+
+14
+00:00:55,770 --> 00:01:00,960
+If we divided this graph to this group here and this group here, we need to verify two things.
+
+15
+00:01:01,930 --> 00:01:04,550
+Within the group, there are no edges, as you see.
+
+16
+00:01:04,570 --> 00:01:10,600
+There is no such edgy energy here or an edge here between the groups we have edges.
+
+17
+00:01:11,530 --> 00:01:15,450
+OK, so here in this one, um.
+
+18
+00:01:16,870 --> 00:01:18,220
+So you see the color.
+
+19
+00:01:19,180 --> 00:01:26,200
+Like, let's say this node and this node and this node and this node, the are the same color, black
+
+20
+00:01:26,200 --> 00:01:26,560
+color.
+
+21
+00:01:26,890 --> 00:01:28,670
+And the second one are red color.
+
+22
+00:01:28,690 --> 00:01:36,790
+So now let's see in the black group, do we see any any edges between nodes like these two are connected,
+
+23
+00:01:37,000 --> 00:01:38,320
+not connected, not connected.
+
+24
+00:01:38,980 --> 00:01:44,530
+Now in the red, the group in the same way these two are connected, not connected, but connected between
+
+25
+00:01:44,530 --> 00:01:46,780
+the two groups themselves, the red and black.
+
+26
+00:01:46,780 --> 00:01:51,250
+We see the grouping here, so we see that this red is connected to this flag.
+
+27
+00:01:51,250 --> 00:01:54,400
+This red was this black say to this black and so on.
+
+28
+00:01:54,700 --> 00:01:56,770
+It's actually people call it the two color.
+
+29
+00:01:56,770 --> 00:02:02,350
+And the problem, which means you would like to color the graph such that some graph are black, some
+
+30
+00:02:02,590 --> 00:02:04,480
+are white and you would like.
+
+31
+00:02:04,480 --> 00:02:10,420
+There are no edges within the black group and there are no edges within the right red group.
+
+32
+00:02:10,780 --> 00:02:13,890
+And there are edges between the black and red or the black and white.
+
+33
+00:02:13,900 --> 00:02:18,910
+Whatever color gear so that this is following the graph is undirected.
+
+34
+00:02:19,360 --> 00:02:24,700
+You will return it through if it is a bipartite graph, which means there is actually a way to split
+
+35
+00:02:24,700 --> 00:02:31,240
+it into two groups the G1 and G2, such that connections are only between G1 and G2.
+
+36
+00:02:32,200 --> 00:02:36,610
+Feel free as a personal practice to even bring to their Group one and Group two nodes, which would
+
+37
+00:02:36,610 --> 00:02:38,380
+be which should be an easy task.
+
+38
+00:02:39,980 --> 00:02:41,780
+So this is mainly what is it by what that graph.
+
+39
+00:02:41,810 --> 00:02:42,860
+Here are some examples.
+
+40
+00:02:43,100 --> 00:02:44,480
+So this is the first example.
+
+41
+00:02:44,540 --> 00:02:52,000
+The answer is false because there is no way to partition the nodes to two independents, such as Split.
+
+42
+00:02:52,580 --> 00:02:53,720
+What about this graph?
+
+43
+00:02:54,290 --> 00:03:01,850
+So here is one way if you took zero and two as the group number one and one of three as the second group,
+
+44
+00:03:01,850 --> 00:03:06,200
+as you see zero two, there are no edges between themselves, one of three.
+
+45
+00:03:06,200 --> 00:03:12,110
+There are no edges between themselves, but there are edges between the first group and the second group.
+
+46
+00:03:14,530 --> 00:03:21,490
+The second the problem, um, we have a graph, the graph looks like a tree.
+
+47
+00:03:21,550 --> 00:03:25,330
+Remember the tree that is a one bath between every two nodes in a three, right?
+
+48
+00:03:26,140 --> 00:03:28,150
+There can be no cycles in the city.
+
+49
+00:03:28,660 --> 00:03:30,570
+But the tree definition is actually undirected.
+
+50
+00:03:30,580 --> 00:03:33,370
+The definition notes actually a like like a tree.
+
+51
+00:03:33,610 --> 00:03:35,650
+But the edges actually have of their texture.
+
+52
+00:03:35,650 --> 00:03:36,040
+So.
+
+53
+00:03:37,470 --> 00:03:43,710
+So there will be like in the minus one edges only in this graph, and there are no direct cycles here.
+
+54
+00:03:44,880 --> 00:03:50,790
+So now so they're given input is actually for air at three lake structure that is directed.
+
+55
+00:03:50,940 --> 00:03:55,530
+So connections here are directed digits and they will be exactly in the minus one.
+
+56
+00:03:56,910 --> 00:03:57,960
+And here is the question.
+
+57
+00:03:59,850 --> 00:04:02,700
+Some of the notes here is not number zero, let's say this note.
+
+58
+00:04:03,510 --> 00:04:09,910
+We would like to be sure that there is there, Beth, from every note to nude numbers you.
+
+59
+00:04:09,940 --> 00:04:15,780
+There is a bath from every nude to nude numbers you, but we know that the original graph is direct.
+
+60
+00:04:15,850 --> 00:04:16,860
+So this isn't the case.
+
+61
+00:04:17,610 --> 00:04:24,480
+This is this following we would a change the direction of some of the ages such that there is a the
+
+62
+00:04:24,480 --> 00:04:27,510
+age from every nude to every other nude.
+
+63
+00:04:27,780 --> 00:04:33,090
+OK, so here is that in this graph, for example, here you see the black ones.
+
+64
+00:04:33,090 --> 00:04:38,580
+Here are that, uh, the the original edges, the original directed edges.
+
+65
+00:04:39,300 --> 00:04:43,530
+Now when you look at here, is there a bathroom two to 2.0?
+
+66
+00:04:43,980 --> 00:04:47,580
+You see that nozzle can go to three, but it cannot go further here.
+
+67
+00:04:48,120 --> 00:04:53,010
+So if we change in the direction of this edge and the direction of this edge to be the opposite direction,
+
+68
+00:04:53,490 --> 00:05:01,830
+now no two can can reach zero and three and two once food can reach net zero already, but five cannot
+
+69
+00:05:01,830 --> 00:05:05,400
+because the edges here, so we will change in the direction of this.
+
+70
+00:05:05,520 --> 00:05:08,520
+EDIT2 So now we change at the edges.
+
+71
+00:05:09,600 --> 00:05:16,410
+The tusk is as follows You would like to change the minimum number of edges such that every node can
+
+72
+00:05:16,410 --> 00:05:18,600
+now reach the node number zero.
+
+73
+00:05:21,460 --> 00:05:22,540
+It is another example.
+
+74
+00:05:24,050 --> 00:05:25,780
+Number two cannot reach A. No.
+
+75
+00:05:25,780 --> 00:05:29,260
+Zero, if we change at this age, no two can reach zero.
+
+76
+00:05:29,710 --> 00:05:32,640
+Number three, was this a change you can reach No.
+
+77
+00:05:32,650 --> 00:05:32,980
+Zero.
+
+78
+00:05:33,280 --> 00:05:34,000
+Look no further.
+
+79
+00:05:34,010 --> 00:05:35,470
+Anatsui change also this world.
+
+80
+00:05:35,470 --> 00:05:36,400
+So now it is.
+
+81
+00:05:38,890 --> 00:05:41,380
+We needed to not only to make the change.
+
+82
+00:05:42,980 --> 00:05:43,970
+Problem number three.
+
+83
+00:05:44,350 --> 00:05:49,520
+And this is the previous two of those problems, by the way, are OK, they are manageable.
+
+84
+00:05:49,910 --> 00:05:54,830
+This one is a bit hard and it involves two combined algorithms together.
+
+85
+00:05:55,100 --> 00:05:58,370
+You will not be able to solve this problem by just using the office.
+
+86
+00:05:59,150 --> 00:06:04,460
+There is actually one more trick you can find a hint in the early in the solution of this problem.
+
+87
+00:06:05,720 --> 00:06:06,740
+So here is a task.
+
+88
+00:06:07,720 --> 00:06:12,610
+We have agreed to the metrics, and every cell has a value.
+
+89
+00:06:13,030 --> 00:06:17,560
+We are here at zero zero and would like to go to five and five.
+
+90
+00:06:18,340 --> 00:06:23,200
+Now the bullet as following were any birth we go, we compute the value.
+
+91
+00:06:23,980 --> 00:06:31,270
+The value represent that what we call the birth effort, the birth effort is defined as following.
+
+92
+00:06:31,630 --> 00:06:36,160
+It is the maximum absolute difference between any two consecutive values.
+
+93
+00:06:36,520 --> 00:06:43,330
+So let's see here this is know that both these two values, what is the absolute difference to these
+
+94
+00:06:43,330 --> 00:06:43,810
+two values?
+
+95
+00:06:43,810 --> 00:06:46,480
+What's the difference to this two values?
+
+96
+00:06:46,480 --> 00:06:48,790
+What is the difference two and here two?
+
+97
+00:06:49,180 --> 00:06:51,580
+So what is the maximum difference in all of these values?
+
+98
+00:06:51,590 --> 00:06:52,510
+The maximum is two.
+
+99
+00:06:52,750 --> 00:06:57,010
+So we see that the effort of this birth is to let's take another example.
+
+100
+00:06:57,310 --> 00:07:02,040
+Let's say we would like to go here, here, here, here, OK?
+
+101
+00:07:02,980 --> 00:07:06,580
+Remember would like to go from the top left to the bottom right now.
+
+102
+00:07:06,590 --> 00:07:07,750
+What is the difference here?
+
+103
+00:07:07,780 --> 00:07:08,350
+Just one.
+
+104
+00:07:09,040 --> 00:07:10,170
+What does the difference here?
+
+105
+00:07:10,180 --> 00:07:11,650
+Six The difference here.
+
+106
+00:07:11,650 --> 00:07:13,020
+Six The difference here.
+
+107
+00:07:13,030 --> 00:07:13,450
+Three.
+
+108
+00:07:13,720 --> 00:07:15,550
+What is the maximum value in the bar?
+
+109
+00:07:15,580 --> 00:07:16,000
+Six.
+
+110
+00:07:16,180 --> 00:07:16,570
+So six.
+
+111
+00:07:16,570 --> 00:07:18,760
+They represented their effort of the Beth.
+
+112
+00:07:19,540 --> 00:07:27,760
+Our task is we would like to go from the top left to the bottom right with the minimum effort.
+
+113
+00:07:28,510 --> 00:07:34,870
+So your task is to decide what is the minimum effort to go from the top left to the bottom right.
+
+114
+00:07:35,230 --> 00:07:42,610
+So you should find the path that find the minimum effort the best that it's it's it's so absolute difference
+
+115
+00:07:42,850 --> 00:07:45,100
+is minimum, but is read the problem twice.
+
+116
+00:07:45,100 --> 00:07:49,720
+If you are confused about that, it is rather case if you would like.
+
+117
+00:07:49,720 --> 00:07:54,580
+If we go through this path, who would notice here every two values has a difference of only one.
+
+118
+00:07:54,760 --> 00:07:57,880
+So the maximum is one, and this is the best thing you can do here.
+
+119
+00:07:59,420 --> 00:08:05,410
+A third example here, if you go this way, this way, this way, you would notice that the maximum
+
+120
+00:08:05,450 --> 00:08:09,110
+difference is zero, which is the best thing you can do.
+
+121
+00:08:09,290 --> 00:08:11,450
+So this is merely the the task.
+
+122
+00:08:12,710 --> 00:08:16,340
+The first problem there is no alone judge for this problem.
+
+123
+00:08:16,340 --> 00:08:18,440
+I'm not aware of a good problem.
+
+124
+00:08:19,190 --> 00:08:20,420
+The task is as following.
+
+125
+00:08:21,350 --> 00:08:23,990
+And actually, the implementation isn't the key in this problem.
+
+126
+00:08:26,190 --> 00:08:28,200
+You have undirected graph.
+
+127
+00:08:29,460 --> 00:08:34,260
+We'd like to return it true if it consists contains a cycle.
+
+128
+00:08:34,900 --> 00:08:38,310
+Remember, we did something that involves cycles before, right the matrix of problem.
+
+129
+00:08:38,940 --> 00:08:44,400
+Remember, we already did that, but review this problem because it's the key for this problem here.
+
+130
+00:08:45,180 --> 00:08:48,570
+Now, you can assume for simplicity that the graph does.
+
+131
+00:08:48,570 --> 00:08:49,590
+It has any silver loops.
+
+132
+00:08:49,590 --> 00:08:49,890
+Does it?
+
+133
+00:08:49,890 --> 00:08:50,910
+Has anybody ages?
+
+134
+00:08:51,980 --> 00:08:53,600
+You would like to do the following.
+
+135
+00:08:55,160 --> 00:09:04,100
+Uh, you would like to implement the dysfunction bullion wood to check if the graph has a cycle or not.
+
+136
+00:09:04,520 --> 00:09:09,740
+Now here's the key in this problem I would like to provide an O V algorithm.
+
+137
+00:09:10,950 --> 00:09:14,280
+I would like you to informally prove the correctness of your algorithm.
+
+138
+00:09:15,260 --> 00:09:19,520
+So this is actually the key here, I don't just want you to write an algorithm to detect the second.
+
+139
+00:09:19,820 --> 00:09:25,790
+I need you to make sure it is all the algorithm and I need you to verify that it is all the algorithm.
+
+140
+00:09:26,600 --> 00:09:34,550
+Now, after you're done with that, I would like you to analyze a directed graph like you will not implement
+
+141
+00:09:34,550 --> 00:09:35,180
+something here.
+
+142
+00:09:35,450 --> 00:09:40,850
+You would just analyze, adapt the graph and tell me why your implementation here is in the U.S. will
+
+143
+00:09:40,850 --> 00:09:42,350
+fail on this directed problem.
+
+144
+00:09:42,650 --> 00:09:50,210
+The written graph You can develop a trivial graph of three nodes early that can show you why your graph
+
+145
+00:09:51,230 --> 00:09:52,310
+on their case will fit.
+
+146
+00:09:52,310 --> 00:09:59,410
+So only used to use three nodes and implement that, like a simple example that showed the failure of
+
+147
+00:09:59,420 --> 00:09:59,570
+it.
+
+148
+00:10:00,080 --> 00:10:06,080
+You don't need to good that, uh, will address the directed graph seconds later.
+
+149
+00:10:08,390 --> 00:10:16,360
+Uh, yeah, for the for the distinction, I'm providing you with a simple file that involves some artistic
+
+150
+00:10:16,370 --> 00:10:16,690
+pieces.
+
+151
+00:10:16,850 --> 00:10:20,870
+So the file structure would be following the first number two would be a number of cases.
+
+152
+00:10:20,870 --> 00:10:25,250
+Two means there will be two graphs, then the first number is the number of nodes and the number of
+
+153
+00:10:25,250 --> 00:10:26,540
+edges, then three edges.
+
+154
+00:10:26,780 --> 00:10:28,070
+They would be zero based indices.
+
+155
+00:10:28,070 --> 00:10:30,320
+So the graph is like as we used so far.
+
+156
+00:10:30,840 --> 00:10:33,320
+If the graph has a cycle, you will print.
+
+157
+00:10:33,560 --> 00:10:34,010
+No.
+
+158
+00:10:34,250 --> 00:10:37,370
+If it doesn't has a graph, it doesn't have a cycle you would print.
+
+159
+00:10:37,640 --> 00:10:38,030
+Yes.
+
+160
+00:10:38,150 --> 00:10:39,980
+So this is a fight.
+
+161
+00:10:40,580 --> 00:10:41,030
+That's all.

@@ -1,0 +1,619 @@
+0
+1
+00:00:01,200 --> 00:00:06,480
+In this video, we will learn about something named forward declaration C++, which help us to solve a
+1
+
+2
+00:00:06,480 --> 00:00:07,550
+specific problem.
+2
+
+3
+00:00:09,330 --> 00:00:16,080
+Let's say that we have a company that has departments. Each department has a set of employees and
+3
+
+4
+00:00:16,080 --> 00:00:24,420
+the employee can be shared between different departments so also employee has
+4
+
+5
+00:00:25,590 --> 00:00:26,580
+set of departments.
+5
+
+6
+00:00:27,060 --> 00:00:28,020
+Now, here's the issue.
+6
+
+7
+00:00:28,620 --> 00:00:33,640
+The employee needs department and department employees and so on.
+7
+
+8
+00:00:33,780 --> 00:00:38,720
+In other words, let's say we would like to separate that into two different header files.
+8
+
+9
+00:00:39,150 --> 00:00:40,650
+So you define the employee dot h,
+9
+
+10
+00:00:40,770 --> 00:00:48,270
+and start to say, hey, I need to see the department dot h, and I am to be a vector of
+10
+
+11
+00:00:48,270 --> 00:00:49,370
+departments, for example.
+11
+
+12
+00:00:50,400 --> 00:00:57,610
+Now with the other side, the department also says, I need employee dot h, and I have a vector of employees.
+12
+
+13
+00:00:58,080 --> 00:00:59,130
+Now, here's what happened.
+13
+
+14
+00:01:00,800 --> 00:01:09,890
+Here the employee dot h needs department. we go to department dot h, it says, no, no,
+14
+
+15
+00:01:09,890 --> 00:01:10,510
+no, I need employee dot h.
+15
+
+16
+00:01:11,370 --> 00:01:12,850
+We go back to the employee dot h.
+16
+
+17
+00:01:12,910 --> 00:01:16,970
+No, I need department-dot-h. You see here, this is a circular relationship.
+17
+
+18
+00:01:16,980 --> 00:01:25,560
+Remember, we said how in C++ sees the hash includes, it just go and copy-paste this content, but before it caused that if it sees another
+18
+
+19
+00:01:25,560 --> 00:01:28,710
+hash include, it is going to get the content first.
+19
+
+20
+00:01:29,100 --> 00:01:33,050
+So I need your content and you need my content, but I need your content.
+20
+
+21
+00:01:33,360 --> 00:01:34,860
+This is a circular relationship.
+21
+
+22
+00:01:35,040 --> 00:01:41,130
+So this is going to make a problem in your implementation, so you cannot define such a circular relationship,
+22
+
+23
+00:01:41,850 --> 00:01:42,330
+then
+23
+
+24
+00:01:42,330 --> 00:01:43,230
+here is a solution.
+24
+
+25
+00:01:43,230 --> 00:01:47,010
+The solution is what we call a forward declaration.
+25
+
+26
+00:01:48,150 --> 00:01:55,440
+The forward declaration means we are just highlighting what is a potential declaration before the definition
+26
+
+27
+00:01:55,440 --> 00:01:55,950
+itself.
+27
+
+28
+00:01:56,280 --> 00:02:00,230
+When it comes to the struct, we can have two levels of declaration.
+28
+
+29
+00:02:00,480 --> 00:02:04,770
+You can only say here like there is something named strcut department.
+29
+
+30
+00:02:04,980 --> 00:02:10,320
+So we are declaring that. Guys, there will be some struct that is department. The second level of
+30
+
+31
+00:02:10,320 --> 00:02:10,860
+declaration
+31
+
+32
+00:02:10,860 --> 00:02:15,180
+when you define the struct with the function inside it, you declare them, but you do not define
+32
+
+33
+00:02:15,180 --> 00:02:15,800
+the functions.
+33
+
+34
+00:02:16,080 --> 00:02:18,480
+So here we are just one higher level.
+34
+
+35
+00:02:18,960 --> 00:02:26,850
+Now, the moral of that is (remember in the previous class, the employee struct
+35
+
+36
+00:02:27,150 --> 00:02:29,010
+has to hash include department dot h,
+36
+
+37
+00:02:29,340 --> 00:02:37,200
+but now we have the struct department, we have it, then we don't need to hash include department,
+37
+
+38
+00:02:37,200 --> 00:02:43,080
+because at the moment I know sometime in the future, there will be a department struct which
+38
+
+39
+00:02:43,080 --> 00:02:45,390
+would have more implementation and more details.
+39
+
+40
+00:02:45,870 --> 00:02:49,770
+This way I broke the cycle. At least the employee
+40
+
+41
+00:02:50,010 --> 00:02:55,240
+doesn't need to have to hash include another file and the file needs to hash include me so we get rid of this cycle.
+41
+
+42
+00:02:55,590 --> 00:02:56,790
+There is one problem here.
+42
+
+43
+00:02:58,280 --> 00:03:03,200
+If you tried to compile your code, C++ will tell you invalid use of incomplete type.
+43
+
+44
+00:03:03,260 --> 00:03:04,190
+What does this mean?
+44
+
+45
+00:03:04,820 --> 00:03:10,040
+Is this struct department is a complete one?
+45
+
+46
+00:03:10,040 --> 00:03:11,240
+No, what is complete?
+46
+
+47
+00:03:11,600 --> 00:03:12,040
+Complete
+47
+
+48
+00:03:12,050 --> 00:03:15,110
+it means that it's declaration or even an implementation
+48
+
+49
+00:03:15,110 --> 00:03:18,320
+depends is really complete.
+49
+
+50
+00:03:18,660 --> 00:03:21,780
+However, at this moment it isn't complete at all.
+50
+
+51
+00:03:22,100 --> 00:03:26,900
+We even don't know the declaration of it, the full declaration of it.
+51
+
+52
+00:03:26,900 --> 00:03:28,690
+We just declared its name.
+52
+
+53
+00:03:29,150 --> 00:03:32,930
+So the C++ cannot have it this way.
+53
+
+54
+00:03:33,320 --> 00:03:35,100
+There are two solutions for this problem.
+54
+
+55
+00:03:35,510 --> 00:03:42,410
+The first one, which is a wrong solution, let's put the employee and department together
+55
+
+56
+00:03:42,410 --> 00:03:45,380
+in the same class (their declarations together).
+56
+
+57
+00:03:45,830 --> 00:03:46,920
+So here's is how it goes.
+57
+
+58
+00:03:47,650 --> 00:03:51,080
+Notice here the employee needs department and the department needs employees.
+58
+
+59
+00:03:51,090 --> 00:03:56,870
+So even in a single file, there is a cycle, but with a declaration for a declaration, we solve.
+59
+
+60
+00:03:56,870 --> 00:03:58,950
+the problem as following: In line 12
+60
+
+61
+00:03:58,950 --> 00:04:03,650
+we say there is something that would be named struct department, and you will know about that
+61
+
+62
+00:04:03,650 --> 00:04:04,250
+very soon.
+62
+
+63
+00:04:05,030 --> 00:04:10,400
+Now, the struct employee has a vector of departments, so it has no problem at the moment.
+63
+
+64
+00:04:10,940 --> 00:04:12,950
+After some time, we say, but you know what?
+64
+
+65
+00:04:12,950 --> 00:04:18,950
+the struct department is actually is this way, which is a vector of employee and employee is now defined. This
+65
+
+66
+00:04:18,950 --> 00:04:19,370
+way,
+66
+
+67
+00:04:19,760 --> 00:04:23,650
+the forward declaration at line 12 solved our problem,
+67
+
+68
+00:04:24,260 --> 00:04:25,790
+but this is a bad idea.
+68
+
+69
+00:04:25,820 --> 00:04:26,330
+Why?
+69
+
+70
+00:04:26,690 --> 00:04:32,690
+The idea of full separation is very important in industry because it helps us to be very flexible
+70
+
+71
+00:04:32,690 --> 00:04:34,310
+when it comes future code changes.
+71
+
+72
+00:04:34,680 --> 00:04:37,170
+When we study the OOP, we will understand that very well.
+72
+
+73
+00:04:37,790 --> 00:04:41,230
+Now, the way to print that is as following:
+73
+
+74
+00:04:41,660 --> 00:04:43,250
+We do that using pointers.
+74
+
+75
+00:04:44,670 --> 00:04:51,930
+I would like you to follow my code structure here very careful to avoid problems. The idea of
+75
+
+76
+00:04:51,930 --> 00:04:56,510
+the pointers is that you don't need to know about the exact details at the moment.
+76
+
+77
+00:04:56,820 --> 00:05:00,330
+You just need some pointer for it, which is just some address in the memory.
+77
+
+78
+00:05:00,330 --> 00:05:02,780
+We don't care more about that at the moment.
+78
+
+79
+00:05:03,150 --> 00:05:04,350
+So it goes as following:
+79
+
+80
+00:05:04,860 --> 00:05:10,800
+You are going to declare one of the two classes that have a circular dependency in the very normal
+80
+
+81
+00:05:10,800 --> 00:05:13,140
+way, just as very normal.
+81
+
+82
+00:05:13,140 --> 00:05:16,550
+You just declare it and you hash include its dependency.
+82
+
+83
+00:05:16,980 --> 00:05:22,230
+But the one that you are doing a forward declaration for it, you are using a pointer with it.
+83
+
+84
+00:05:22,440 --> 00:05:24,890
+OK, so here is the structure.
+84
+
+85
+00:05:25,230 --> 00:05:30,390
+The first class, let's say the department dot-h and department dot-cpp, you are going to declare
+85
+
+86
+00:05:30,390 --> 00:05:32,880
+and define it in the very normal way.
+86
+
+87
+00:05:32,910 --> 00:05:38,310
+This is implemented in the typical way. I decided that the department will go and see the employee and
+87
+
+88
+00:05:38,310 --> 00:05:41,240
+the employee dot-h will not depend on me directly,
+88
+
+89
+00:05:41,970 --> 00:05:44,940
+then in this case, I am very normal.
+89
+
+90
+00:05:45,240 --> 00:05:47,970
+I have here the employee class and have here the definition.
+90
+
+91
+00:05:47,970 --> 00:05:49,120
+Everything is good so far.
+91
+
+92
+00:05:49,950 --> 00:05:51,140
+Now here is the tricky part.
+92
+
+93
+00:05:52,470 --> 00:05:57,930
+The first thing is the employee dot-h is going to just has a forward declaration
+93
+
+94
+00:05:57,930 --> 00:05:59,020
+of struct department.
+94
+
+95
+00:05:59,520 --> 00:06:01,470
+Notice that in line 12 here,
+95
+
+96
+00:06:01,470 --> 00:06:04,620
+I'm telling you that you do not include the department dot-h here.
+96
+
+97
+00:06:04,980 --> 00:06:06,830
+If you did that, remember, we will have a cycle.
+97
+
+98
+00:06:07,080 --> 00:06:11,850
+So instead of the normal hash include, we replaced it with line 13, the forward declaration.
+98
+
+99
+00:06:12,390 --> 00:06:14,100
+...
+99
+
+100
+00:06:14,460 --> 00:06:15,030
+Oh, sorry.
+100
+
+101
+00:06:15,900 --> 00:06:21,180
+The critical information here is that in line 17, we don't have a vector of department, we
+101
+
+102
+00:06:21,180 --> 00:06:23,130
+have a vector of department pointer.
+102
+
+103
+00:06:23,490 --> 00:06:30,210
+This is a clue for that. The C++ is OK with referring to a pointer and we don't care about the
+103
+
+104
+00:06:30,210 --> 00:06:31,830
+complete declaration at the moment.
+104
+
+105
+00:06:32,040 --> 00:06:38,580
+Just pointer will be enough and then in your header file, your CPP file, you are just implementing your code
+105
+
+106
+00:06:38,580 --> 00:06:43,860
+in the normal way, and you are doing the hash include for the department dot-h here.
+106
+
+107
+00:06:44,280 --> 00:06:48,960
+There must be somewhere in both of these files that we need department dot-h because I need to see the
+107
+
+108
+00:06:48,960 --> 00:06:50,250
+remainder of the declaration.
+108
+
+109
+00:06:50,250 --> 00:06:51,890
+I need to do what I'm doing.
+109
+
+110
+00:06:52,740 --> 00:06:56,190
+So notice here, I have a vector of department pointer.
+110
+
+111
+00:06:56,400 --> 00:06:57,600
+I'm here in my function,
+111
+
+112
+00:06:57,600 --> 00:07:02,630
+I'm calling department to print department.
+112
+
+113
+00:07:02,940 --> 00:07:08,010
+If we don't see the hash include department dot-h, we never see the declaration, and we never know
+113
+
+114
+00:07:08,010 --> 00:07:09,540
+what is the function that is available.
+114
+
+115
+00:07:09,690 --> 00:07:10,470
+So we need it.
+115
+
+116
+00:07:10,920 --> 00:07:16,860
+So the moral of that is in this file you forward declaration line number 13.
+116
+
+117
+00:07:17,280 --> 00:07:18,120
+This is one step.
+117
+
+118
+00:07:18,450 --> 00:07:24,570
+Step number two, the class that you depend on it in line 17 should be a pointer. Step number three
+118
+
+119
+00:07:24,960 --> 00:07:26,010
+in line 4 here,
+119
+
+120
+00:07:26,010 --> 00:07:28,070
+You hash include the file and then you code normally.
+120
+
+121
+00:07:28,350 --> 00:07:33,600
+So these three lines are the trick to solve the problem that we said about it today.
+121
+
+122
+00:07:33,930 --> 00:07:39,090
+Line 13, line 17, and line 4, using these extra three lines,
+122
+
+123
+00:07:39,270 --> 00:07:43,080
+you solved the circle dependency that we saw.
+123
+
+124
+00:07:43,080 --> 00:07:44,400
+That's it.

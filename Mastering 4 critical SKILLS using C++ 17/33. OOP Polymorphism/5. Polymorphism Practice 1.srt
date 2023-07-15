@@ -1,0 +1,619 @@
+0
+1
+00:00:00,900 --> 00:00:03,930
+Let's see more examples to demonstrate the power of polymorphism.
+1
+
+2
+00:00:05,820 --> 00:00:10,410
+Remember this system, we want to give it to think about its implementation
+2
+
+3
+00:00:10,440 --> 00:00:17,790
+details. I think the most critical part was that the image editor needed to have shapes.
+3
+
+4
+00:00:18,060 --> 00:00:22,680
+So if you tried to implement it in the normal way, you have to have a vector of rectangles, vector of
+4
+
+5
+00:00:22,680 --> 00:00:23,700
+circles, and so on.
+5
+
+6
+00:00:24,330 --> 00:00:30,380
+But the way that the polymorphism is going to help you is just you need a vector of shapes.
+6
+
+7
+00:00:30,690 --> 00:00:31,920
+What are the current shapes?
+7
+
+8
+00:00:31,930 --> 00:00:35,720
+We don't care. What are the future class that would be added like, say, a polygon?
+8
+
+9
+00:00:35,910 --> 00:00:36,540
+We don't care.
+9
+
+10
+00:00:37,710 --> 00:00:42,720
+This how polymorphism is mainly going to help us when it comes to these shapes.
+10
+
+11
+00:00:43,380 --> 00:00:46,980
+Now, there is a bit minor concern that I would like to think about it.
+11
+
+12
+00:00:47,460 --> 00:00:51,420
+This editor will probably need some function like add shape.
+12
+
+13
+00:00:51,720 --> 00:00:56,510
+So we are providing it with add_shape shape-pointer for maybe a rectangle or for circle.
+13
+
+14
+00:00:57,010 --> 00:01:00,510
+Now, remember, whoever created the pointer has to delete it.
+14
+
+15
+00:01:00,870 --> 00:01:04,660
+So someone is calling add_shape with shape pointer.
+15
+
+16
+00:01:05,130 --> 00:01:10,140
+Now, the one who called with the shape pointer has to delete at some point to delete this object.
+16
+
+17
+00:01:10,710 --> 00:01:19,590
+If the image editor took a shallow copy of the current
+17
+
+18
+00:01:19,590 --> 00:01:20,820
+pointer, the pointer
+18
+
+19
+00:01:20,820 --> 00:01:23,370
+after little time is going to be invalid.
+19
+
+20
+00:01:23,490 --> 00:01:25,860
+So it now vector of shapes that are invalid.
+20
+
+21
+00:01:26,940 --> 00:01:29,980
+OK, then let's make a copy of the shape pointer.
+21
+
+22
+00:01:30,360 --> 00:01:31,610
+Now, we are facing a problem.
+22
+
+23
+00:01:31,920 --> 00:01:35,490
+You cannot make a copy of the shape pointer while you don't know about it.
+23
+
+24
+00:01:36,180 --> 00:01:39,600
+OK, let's cast it to a rectangle or circle to make a copy of it,
+24
+
+25
+00:01:40,200 --> 00:01:44,690
+but if you make a cast of rectangle and circle, you now know a lot about these sub-details.
+25
+
+26
+00:01:44,950 --> 00:01:47,570
+So now the code is again not generic one more time.
+26
+
+27
+00:01:47,790 --> 00:01:49,010
+So this isn't helpful.
+27
+
+28
+00:01:49,440 --> 00:01:57,060
+So the question here is how to make a copy of a shape pointer to a complete object from its type, which
+28
+
+29
+00:01:57,060 --> 00:01:58,150
+could be rectangle or circle.
+29
+
+30
+00:01:58,380 --> 00:01:59,030
+We don't know.
+30
+
+31
+00:01:59,430 --> 00:02:01,730
+Meanwhile, all what you have is shape pointer.
+31
+
+32
+00:02:01,740 --> 00:02:03,230
+You cannot just make new shape.
+32
+
+33
+00:02:03,240 --> 00:02:07,530
+You need to make like new rectangle, a new circle, but you cannot make that in the image editor.
+33
+
+34
+00:02:08,250 --> 00:02:11,720
+This is mainly a critical implementation details.
+34
+
+35
+00:02:11,760 --> 00:02:12,060
+...
+35
+
+36
+00:02:12,240 --> 00:02:17,380
+I would like to stop the video for a minute and try to think about the problem if hopefully, you understand
+36
+
+37
+00:02:17,380 --> 00:02:17,610
+it.
+37
+
+38
+00:02:19,350 --> 00:02:24,850
+So this is the point class, just a standard x and y with some setters and getters and to_string
+38
+
+39
+00:02:24,850 --> 00:02:31,410
+function that converts it to a string. Moving to the shape class, it should have some virtual function
+39
+
+40
+00:02:31,410 --> 00:02:34,420
+compute area and another function that's named draw.
+40
+
+41
+00:02:34,440 --> 00:02:38,920
+So we are expecting someone to implement them. As you see the virtual function,
+41
+
+42
+00:02:39,190 --> 00:02:41,120
+we don't know how to compute area at the moment.
+42
+
+43
+00:02:41,130 --> 00:02:43,020
+So this is not the best logic.
+43
+
+44
+00:02:44,140 --> 00:02:49,900
+The draw function is as following: it saying like drawing a shape of area, blah, blah, blah.
+44
+
+45
+00:02:50,580 --> 00:02:54,170
+So this is like a default implementation for drawing.
+45
+
+46
+00:02:54,180 --> 00:03:01,740
+OK, maybe the child class is going to draw to write the generic message
+46
+
+47
+00:03:01,740 --> 00:03:07,260
+first and then drawing it. This is something that is very, very, very interesting in this
+47
+
+48
+00:03:07,260 --> 00:03:12,470
+code. The compute area function isn't this one.
+48
+
+49
+00:03:12,930 --> 00:03:19,020
+In practice, there will be a rectangle that has some compute area function. Wait a second,
+49
+
+50
+00:03:19,320 --> 00:03:26,410
+The parent class is now calling the child class, and he doesn't know which is the child class.
+50
+
+51
+00:03:26,730 --> 00:03:29,280
+This is something we call inverse of control.
+51
+
+52
+00:03:29,760 --> 00:03:31,800
+What's happening? In normal cases,
+52
+
+53
+00:03:31,960 --> 00:03:34,950
+you have a child class that inherited from a parent class.
+53
+
+54
+00:03:35,430 --> 00:03:36,010
+...
+54
+
+55
+00:03:36,010 --> 00:03:36,380
+By
+55
+
+56
+00:03:36,410 --> 00:03:36,810
+logic,
+56
+
+57
+00:03:36,990 --> 00:03:40,670
+the child class knows about the parent class and about its functionalities,
+57
+
+58
+00:03:41,040 --> 00:03:43,740
+but the parent class knows nothing about the child 
+58
+
+59
+00:03:43,740 --> 00:03:44,840
+class, right?
+59
+
+60
+00:03:45,030 --> 00:03:46,260
+So this is how the logic like
+60
+
+61
+00:03:46,260 --> 00:03:52,500
+the shape doesn't know whose is a rectangle, whose is a circle, but surprisingly here using polymorphism, the shape class
+61
+
+62
+00:03:52,770 --> 00:03:59,010
+is going to the compute area function which exists on one of the children that the shape class doesn't know
+62
+
+63
+00:03:59,010 --> 00:04:03,200
+about it. Now, the parent class is calling the child class.
+63
+
+64
+00:04:03,480 --> 00:04:05,520
+This is an inverse of the normal scenario.
+64
+
+65
+00:04:05,850 --> 00:04:11,760
+In a normal scenario, a child class is calling something on the parent class, but with polymorphism,
+65
+
+66
+00:04:11,790 --> 00:04:13,650
+we can also inverse that.
+66
+
+67
+00:04:13,680 --> 00:04:21,630
+OK, so there are many frameworks in the high level like in frontend and backend is using this inverse
+67
+
+68
+00:04:21,630 --> 00:04:22,170
+of control trick.
+68
+
+69
+00:04:22,470 --> 00:04:27,490
+When you are going to use these frameworks, you will get better sense of understanding polymorphism.
+69
+
+70
+00:04:28,590 --> 00:04:32,960
+Now, there is a weird function here, something I'm calling a clone. Clone like make a copy.
+70
+
+71
+00:04:33,300 --> 00:04:36,480
+So the function clone is returning shape pointer.
+71
+
+72
+00:04:36,490 --> 00:04:38,270
+What is the point behind this function?
+72
+
+73
+00:04:38,550 --> 00:04:41,130
+It is the issue that I just mentioned from a few minutes.
+73
+
+74
+00:04:42,210 --> 00:04:46,980
+We are going to ask the rectangle to make a copy of this clone function.
+74
+
+75
+00:04:47,010 --> 00:04:48,360
+OK, so it override it.
+75
+
+76
+00:04:48,630 --> 00:04:55,170
+So now that rectangle is going to, here, the rectangle is going to override this function and write new
+76
+
+77
+00:04:55,170 --> 00:04:59,760
+rectangle-asterisk-this, and do some computation for its compute area.
+77
+
+78
+00:05:00,090 --> 00:05:05,830
+Here, It's going to call the parent class to make some base messaging and then drawing its own
+78
+
+79
+00:05:05,830 --> 00:05:06,240
+self.
+79
+
+80
+00:05:06,930 --> 00:05:12,300
+But back to the clone idea, why this class here is returning an object for myself, which is calling
+80
+
+81
+00:05:12,300 --> 00:05:14,400
+the copy constructor.
+81
+
+82
+00:05:14,400 --> 00:05:16,600
+So think of this like a virtual copy constructor.
+82
+
+83
+00:05:17,370 --> 00:05:22,320
+The trick here is in practice when we have a shape pointer, we can call a clone.
+83
+
+84
+00:05:22,590 --> 00:05:25,550
+So it's returning an object from something that we don't know
+84
+
+85
+00:05:25,560 --> 00:05:26,960
+Its exactly type.
+85
+
+86
+00:05:26,970 --> 00:05:32,190
+So this is solving our problem in the image editor. This is a circle,
+86
+
+87
+00:05:33,000 --> 00:05:39,570
+very similar logic. It is returning here in a new circle. Now going to the shape class,
+87
+
+88
+00:05:39,960 --> 00:05:41,220
+here is the issue one more time.
+88
+
+89
+00:05:41,520 --> 00:05:47,910
+The image editor has a vector of shape pointer, and it has a function that says add shape, give me some shpae
+89
+
+90
+00:05:48,060 --> 00:05:49,560
+pointer or some shape references.
+90
+
+91
+00:05:50,060 --> 00:05:54,590
+In the normal case, you can say, OK, shapes dot push back, reference of shape, and that's it.
+91
+
+92
+00:05:54,840 --> 00:05:56,070
+So we are pushing a pointer,
+92
+
+93
+00:05:56,310 --> 00:05:59,070
+but the one that gives us this object will be destroyed,
+93
+
+94
+00:05:59,760 --> 00:06:05,250
+so we need to make an object from a shape which could be a rectangle or a circle.
+94
+
+95
+00:06:05,250 --> 00:06:05,460
+The shape
+95
+
+96
+00:06:05,460 --> 00:06:08,370
+dot clone is our way to go around all of that.
+96
+
+97
+00:06:08,370 --> 00:06:10,830
+Shape dot clone is going to return a shape pointer.
+97
+
+98
+00:06:10,860 --> 00:06:16,950
+We don't know which shape, but in real-time or run-time, it will be maybe a rectangle, maybe a circle.
+98
+
+99
+00:06:17,190 --> 00:06:23,310
+This how the clone is going to help us solve this annoying problem. There is here a draw function for
+99
+
+100
+00:06:23,310 --> 00:06:31,310
+the whole image editor so it iterates all the objects that we have and just draws them, and now we can go
+100
+
+101
+00:06:31,320 --> 00:06:36,900
+over in the destructor over all our shapes and just destroy them. Once you are done with destroying
+101
+
+102
+00:06:36,900 --> 00:06:37,140
+them,
+102
+
+103
+00:06:37,400 --> 00:06:39,280
+clear the whole vector.
+103
+
+104
+00:06:39,570 --> 00:06:42,480
+So this is how we solve
+104
+
+105
+00:06:42,480 --> 00:06:44,910
+our problem for the image editor.
+105
+
+106
+00:06:45,180 --> 00:06:51,090
+In practice, you can have your function to initialize the editor like, say, creating some rectangle,
+106
+
+107
+00:06:51,100 --> 00:06:51,540
+circle,
+107
+
+108
+00:06:51,840 --> 00:06:53,850
+then you are adding them one by one.
+108
+
+109
+00:06:55,500 --> 00:07:05,250
+That is it, so these are more examples for you to get more context of where polymorphism may appear like they
+109
+
+110
+00:07:05,250 --> 00:07:13,260
+are eventually just inheritance cases, as you see, although we say that composition is
+110
+
+111
+00:07:13,260 --> 00:07:19,310
+preferred over inheritance, but the way that we use it in inheritance is mainly related to polymorphism.
+111
+
+112
+00:07:19,740 --> 00:07:25,890
+So a site can have a user or a customer or an admin. Parking could have a vehicle that could be a car, trunk,
+112
+
+113
+00:07:25,890 --> 00:07:27,870
+truck or motor, and each one of them with needed
+113
+
+114
+00:07:27,880 --> 00:07:34,620
+its own spots. In parking, there could be permits for students or faculty. In payment, cards can be
+114
+
+115
+00:07:34,620 --> 00:07:36,120
+credit, debit or prepaid.
+115
+
+116
+00:07:36,480 --> 00:07:39,510
+Customers sometimes are individuals, sometimes they are corporate.
+116
+
+117
+00:07:40,200 --> 00:07:42,390
+let's say you are modeling Expedia.com website.
+117
+
+118
+00:07:42,660 --> 00:07:48,180
+You could have a reservation, which could be for a flight, car or hotel, or itinerary. In a game,
+118
+
+119
+00:07:48,180 --> 00:07:50,670
+You have a monster. A monster could be fire-monster,
+119
+
+120
+00:07:50,670 --> 00:07:52,350
+water-monster, stone-monster.
+120
+
+121
+00:07:52,590 --> 00:07:53,760
+You have a game of player.
+121
+
+122
+00:07:53,760 --> 00:07:57,650
+Someone is an escaper, and another is a catcher or a soccer player and baseball player.
+122
+
+123
+00:07:57,900 --> 00:08:03,810
+So as you see, there is some base logic where polymorphism can help us to generalize a lot of code.
+123
+
+124
+00:08:04,380 --> 00:08:04,850
+That's it.

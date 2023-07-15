@@ -1,0 +1,512 @@
+1
+00:00:00,680 --> 00:00:05,510
+Hi Everyone, in this lecture we would be discussing the implementation for the problem unique number
+
+2
+00:00:05,510 --> 00:00:05,810
+three.
+
+3
+00:00:06,320 --> 00:00:11,270
+So let us begin, so first of all we have this input array  that we want to...
+
+4
+00:00:12,200 --> 00:00:16,880
+From which we want to find out the number which is repeating only once. Ok. it is of the form
+
+5
+00:00:16,880 --> 00:00:22,190
+3N+1 where every number is occurring thrice and only one number is unique.
+
+6
+00:00:22,190 --> 00:00:26,300
+So we need to find out this unique number. ok. that is four.
+
+7
+00:00:26,570 --> 00:00:28,170
+So let's see how we can do it.
+
+8
+00:00:28,190 --> 00:00:35,600
+So what we discussed is we discussed that we will add numbers.
+
+9
+00:00:36,560 --> 00:00:43,370
+ok. but what we will do? we will do addition along the column ok. so for one, it is like zero zero
+
+10
+00:00:43,370 --> 00:00:51,080
+one sorry..zero zero one. For three , it is like zero one one. what we discussed.
+
+11
+00:00:51,080 --> 00:00:55,520
+We will add all the bits along this column, this column and this column.
+
+12
+00:00:55,850 --> 00:00:59,670
+And finally, we'll get some sum. Ok. let say this is S1, 
+
+13
+00:00:59,690 --> 00:01:01,230
+this is S2 and this S3.
+
+14
+00:01:01,760 --> 00:01:05,600
+And then we will take a modules with three to get where
+
+15
+00:01:06,410 --> 00:01:12,230
+so this Mode three will remove the bits which belong to the numbers which are repeating thrice.
+
+16
+00:01:12,770 --> 00:01:18,730
+And if you get a number like zero one zero, then this is what the number is. OK.
+
+17
+00:01:18,730 --> 00:01:22,250
+Or if you get zero one zero zero and this number is nothing but four.
+
+18
+00:01:23,210 --> 00:01:25,430
+So something like this we are going to do.
+
+19
+00:01:25,790 --> 00:01:27,840
+So let's see what are the things we will need.
+
+20
+00:01:27,890 --> 00:01:30,440
+So we are passing the array here. Ok.
+
+21
+00:01:31,040 --> 00:01:39,290
+And now what we will do? we will maintain the count array. ok. so I will say OK, vector of int, this count is...
+
+22
+00:01:39,740 --> 00:01:48,380
+or maybe the sum array you can make. In the sum array, we can say we have 32 bits and everything is initialized
+
+23
+00:01:48,380 --> 00:01:48,970
+with zero.
+
+24
+00:01:50,090 --> 00:01:56,630
+So this is the fill contractor, so we are making the array of size 32 because integer in this
+
+25
+00:01:56,630 --> 00:02:00,410
+case takes 32 bits and everything is set to zero. OK?
+
+26
+00:02:00,890 --> 00:02:03,620
+What I can do, I can do for int i equal to zero.
+
+27
+00:02:04,970 --> 00:02:12,830
+I less than what? I less than 32. I plus plus and I can check what if I given the number let's
+
+28
+00:02:12,830 --> 00:02:18,430
+say the number is seven, so it will have lots of zeros followed by one one one.
+
+29
+00:02:18,950 --> 00:02:25,040
+I'll find out what is a bit at each position and it will add to the counter.
+
+30
+00:02:25,040 --> 00:02:28,460
+It will get added to the counter.
+
+31
+00:02:28,460 --> 00:02:30,650
+So maybe I can say. Ok.
+
+32
+00:02:33,010 --> 00:02:37,310
+And maybe I can move this logic into a separate helper method as well.
+
+33
+00:02:37,340 --> 00:02:38,890
+ok. so
+
+34
+00:02:40,810 --> 00:02:42,010
+Let me... let me do it.
+
+35
+00:02:44,120 --> 00:02:52,130
+So I can say ok. let us iterate over all the numbers that are there inside my array so I can say
+
+36
+00:02:52,130 --> 00:02:58,840
+I can also use a for each loop. so for int a number X that is there inside my array.
+
+37
+00:02:59,310 --> 00:03:03,500
+I can let us set the sum array.
+
+38
+00:03:03,780 --> 00:03:04,100
+OK.
+
+39
+00:03:05,800 --> 00:03:06,030
+OK.
+
+40
+00:03:06,160 --> 00:03:10,450
+Let us update the sum array or maybe I can make a method update sum.
+
+41
+00:03:11,410 --> 00:03:17,230
+So in the sum array, I'm going to pass in this sum array and I'm going to pass in this number x.
+
+42
+00:03:17,800 --> 00:03:18,250
+OK.
+
+43
+00:03:18,820 --> 00:03:20,710
+So let us write this method.
+
+44
+00:03:21,280 --> 00:03:23,050
+Let us make a helper function.
+
+45
+00:03:23,770 --> 00:03:26,860
+So maybe void update sum
+
+46
+00:03:27,040 --> 00:03:28,450
+So we are getting this sum array.
+
+47
+00:03:29,080 --> 00:03:36,160
+This error must be passed by reference so I can say vector int and array. Ok. this is a vector object
+
+48
+00:03:36,580 --> 00:03:37,900
+and I'm getting a number.
+
+49
+00:03:39,070 --> 00:03:40,300
+Let's see how we can do it.
+
+50
+00:03:40,480 --> 00:03:49,530
+So first of all, I need to extract all bits of X so that I can do easily. For int i equal to zero.
+
+51
+00:03:49,540 --> 00:03:51,220
+I less than 32.
+
+52
+00:03:52,030 --> 00:03:55,960
+I  plus plus and I can say ok. tell me, what is the last bit?
+
+53
+00:03:56,230 --> 00:04:04,540
+The last bit that we are extracting is or maybe let's talk about the ith bit. ok, the ith is nothing
+
+54
+00:04:04,540 --> 00:04:04,870
+but
+
+55
+00:04:07,490 --> 00:04:08,480
+It is going to be x
+
+56
+00:04:11,510 --> 00:04:15,820
+And we can do the and with what? one left shift i.
+
+57
+00:04:16,910 --> 00:04:19,200
+We are finding out what is the ith bit.
+
+58
+00:04:19,850 --> 00:04:21,470
+And I can check
+
+59
+00:04:22,530 --> 00:04:31,710
+If I ith bit what? if ith bit is set then I can say. ok. sum array of i++.
+
+60
+00:04:32,730 --> 00:04:37,890
+So effectively you are saying. ok. let's talk about the zero th bit.
+
+61
+00:04:39,390 --> 00:04:45,870
+If this is one the sum array becomes one. if this is one it becomes one. if this is one, then this
+
+62
+00:04:45,870 --> 00:04:48,200
+number sum array becomes one. next time..
+
+63
+00:04:48,210 --> 00:04:55,680
+Let's say you have a number four. Four is represented by lots of zeros followed by one zero zero. So extract 
+
+64
+00:04:55,680 --> 00:04:57,960
+this bit. it is zero. sum does not update.
+
+65
+00:04:59,030 --> 00:05:03,080
+extract this. sum does not update. extract this, at this point
+
+66
+00:05:03,290 --> 00:05:10,820
+the position is two. In the sum array at the second index we increment this as two. ok. So we are storing
+
+67
+00:05:10,820 --> 00:05:14,750
+the bits in this or zeroth column, first column, second column and so on.
+
+68
+00:05:15,810 --> 00:05:16,770
+This is what we are doing.
+
+69
+00:05:17,490 --> 00:05:23,850
+So this is going to update the sum array for all the numbers and we have called this update sum method
+
+70
+00:05:23,850 --> 00:05:25,200
+for all the numbers in the array.
+
+71
+00:05:25,230 --> 00:05:29,460
+So finally, this is going to give us the array of sums. ok.
+
+72
+00:05:30,000 --> 00:05:35,820
+And once we have this sum ready we can divide... we can take modulo with
+
+73
+00:05:36,150 --> 00:05:42,690
+Everyone. I can say for int i equal to zero, I less than32
+
+74
+00:05:43,660 --> 00:05:52,780
+I plus plus. at max, we can have 32 bits in the sum array. so I can say sum array of i equals
+
+75
+00:05:53,020 --> 00:05:54,430
+sum array of i.
+
+76
+00:05:56,020 --> 00:05:57,460
+And take a mode with three.
+
+77
+00:05:58,030 --> 00:05:58,540
+That's it.
+
+78
+00:05:59,110 --> 00:06:00,520
+So this is going to give us.
+
+79
+00:06:02,110 --> 00:06:08,920
+an array of bits. an array of bits. Because each position will be of the form zero or one because
+
+80
+00:06:08,920 --> 00:06:14,380
+we discussed in the sum array every sum would be 3N or 3N+1.
+
+81
+00:06:14,920 --> 00:06:20,800
+If you take a mode three either you will get bit zero or you will get one.
+
+82
+00:06:20,950 --> 00:06:26,320
+So finally, what we need is from array of bits we need to convert it into a number.
+
+83
+00:06:26,320 --> 00:06:33,420
+ok. so maybe let's make a helper method that converts an array of bits in to a integer. ok.
+
+84
+00:06:35,050 --> 00:06:45,730
+So maybe I can say return sum function. let's a number from bits and I give the sum array and
+
+85
+00:06:45,730 --> 00:06:51,850
+here I can make a method int number from bits I'm getting array of bits.
+
+86
+00:06:54,190 --> 00:06:56,890
+So how we can convert this? it's pretty easy.
+
+87
+00:06:56,890 --> 00:06:59,380
+So I can say the number is zero.
+
+88
+00:06:59,860 --> 00:07:07,870
+And I will iterate over all the 32 positions and I will multiply the corresponding number with powers
+
+89
+00:07:07,870 --> 00:07:08,350
+of two.
+
+90
+00:07:08,890 --> 00:07:11,770
+I can say number plus equals what?
+
+91
+00:07:12,640 --> 00:07:18,790
+So array of i multiplied with power of two so that is nothing but one left shift.
+
+92
+00:07:19,750 --> 00:07:21,610
+And finally, we can return num.
+
+93
+00:07:22,060 --> 00:07:24,250
+So let me tell you if you're confused here.
+
+94
+00:07:24,790 --> 00:07:29,470
+So we said. Ok. we have one zero one one and so on.
+
+95
+00:07:30,040 --> 00:07:31,690
+So this is 2 raise to the power 0.
+
+96
+00:07:31,690 --> 00:07:32,620
+this is 2 power 1.
+
+97
+00:07:32,620 --> 00:07:34,930
+This is two square. this 2 cube and so on.
+
+98
+00:07:35,470 --> 00:07:42,310
+What I say.. I say, ok. let's multiply one with two raise to the power zero. So one left shift i what ?
+
+99
+00:07:42,310 --> 00:07:44,020
+two raise to the power i.
+
+100
+00:07:44,050 --> 00:07:44,370
+OK?
+
+101
+00:07:45,960 --> 00:07:48,510
+plus zero multiplied by two power one.
+
+102
+00:07:48,750 --> 00:07:49,080
+OK.
+
+103
+00:07:49,600 --> 00:07:53,550
+Plus one multiplied with four plus one multiplied with eight.
+
+104
+00:07:53,550 --> 00:07:53,820
+OK.
+
+105
+00:07:54,210 --> 00:07:57,630
+This number is nothing but one plus zero plus four plus eight.
+
+106
+00:07:58,200 --> 00:07:59,270
+This number is 13.
+
+107
+00:07:59,280 --> 00:07:59,520
+OK?
+
+108
+00:07:59,910 --> 00:08:05,340
+So effectively, if you want to read the binary it is one one zero one and this number is 13.
+
+109
+00:08:05,850 --> 00:08:08,820
+But in the sum array, we're storing it in the left right order.
+
+110
+00:08:09,570 --> 00:08:15,220
+And that's why we are making the power from two raise to power zero.
+
+111
+00:08:15,240 --> 00:08:16,500
+That is one left shift i.
+
+112
+00:08:17,640 --> 00:08:20,120
+till the thirty first index.
+
+113
+00:08:20,130 --> 00:08:20,430
+OK?
+
+114
+00:08:21,870 --> 00:08:24,020
+So this should return the number. OK.
+
+115
+00:08:24,420 --> 00:08:26,880
+So finally, If i call unique number three.
+
+116
+00:08:27,570 --> 00:08:34,830
+This should return integer. so I can say return integer and i can say cout unique number three.
+
+117
+00:08:35,760 --> 00:08:36,120
+OK.
+
+118
+00:08:37,020 --> 00:08:39,480
+This should be what? this should be sum array.
+
+119
+00:08:41,669 --> 00:08:42,240
+All right.
+
+120
+00:08:42,600 --> 00:08:43,409
+The code is built.
+
+121
+00:08:44,460 --> 00:08:47,790
+And now what we can do? we can try to run it.
+
+122
+00:08:47,970 --> 00:08:50,250
+So ./unique_3
+
+123
+00:08:51,430 --> 00:08:58,360
+And we are getting four as the output that means our code is working perfectly fine. ok?
+
+124
+00:08:58,900 --> 00:09:01,600
+So I hope you really understood the logic.
+
+125
+00:09:01,630 --> 00:09:08,590
+And this is exactly what we discussed in the theory video and you can dry run it yourself and I
+
+126
+00:09:08,590 --> 00:09:11,200
+hope you understood the logic as well.
+
+127
+00:09:11,620 --> 00:09:13,120
+That's all for this video.
+
+128
+00:09:13,120 --> 00:09:13,600
+Thank you.
+

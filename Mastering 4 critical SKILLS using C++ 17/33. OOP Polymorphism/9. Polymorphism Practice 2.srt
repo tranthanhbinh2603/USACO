@@ -1,0 +1,659 @@
+0
+1
+00:00:00,870 --> 00:00:07,320
+One more practice with polymorphism. In this practice, we would like to highlight the idea of the
+1
+
+2
+00:00:07,500 --> 00:00:09,960
+device driver, something in the operating systems.
+2
+
+3
+00:00:10,300 --> 00:00:18,480
+Let's say that you put some camera, and you started to plug it in your system, which you could be ubuntu
+3
+
+4
+00:00:18,480 --> 00:00:19,330
+operating system,
+4
+
+5
+00:00:19,350 --> 00:00:21,550
+It could be Windows 10 operating system, and so on.
+5
+
+6
+00:00:22,080 --> 00:00:33,180
+So now the camera guys, when they provide you with a camera, they also provide
+6
+
+7
+00:00:33,180 --> 00:00:35,730
+some implementation for what we call a driver.
+7
+
+8
+00:00:36,450 --> 00:00:42,790
+The operating system knows nothing about the specific functionalities of your camera.
+8
+
+9
+00:00:43,260 --> 00:00:49,110
+So a driver is something that we typically install to let the operating system be able to communicate
+9
+
+10
+00:00:49,110 --> 00:00:55,410
+with the device. With every hardware that you plug in, the operating system has
+10
+
+11
+00:00:55,410 --> 00:00:59,010
+to figure out a way (the driver) to communicate with the device.
+11
+
+12
+00:01:00,690 --> 00:01:05,900
+For every complicated device, these guys has to provide different implementation, like they provide
+12
+
+13
+00:01:05,910 --> 00:01:11,240
+implementation for Windows 10, provide an implementation for Ubuntu, for fedora, and so on.
+13
+
+14
+00:01:11,640 --> 00:01:14,640
+So the driver is something between the operating system and device.
+14
+
+15
+00:01:15,270 --> 00:01:21,360
+There are also the applications like let's say I would like now to run some program on my machine that
+15
+
+16
+00:01:21,360 --> 00:01:24,630
+would start to get frames and images from this camera.
+16
+
+17
+00:01:25,080 --> 00:01:30,090
+Now, the application itself shouldn't depend on the driver like shouldn't depend
+17
+
+18
+00:01:30,090 --> 00:01:37,140
+I am on an operating system of Windows, and i am on operating system of Ubuntu, and do a lot of stuff that's very dependent
+18
+
+19
+00:01:37,140 --> 00:01:38,620
+on the driver.
+19
+
+20
+00:01:39,150 --> 00:01:46,020
+So if you noticed here, an interesting thing is the behavior eventually of the camera itself is very
+20
+
+21
+00:01:46,020 --> 00:01:49,590
+common like a function is going to start, to stop, give you a frame, and so on.
+21
+
+22
+00:01:50,190 --> 00:01:56,900
+But the implementation of it from this perspective is different from Ubuntu than Windows and so on.
+22
+
+23
+00:01:57,240 --> 00:02:02,640
+So it seems like we have one interface of generic functionalities here, and then we are going to have
+23
+
+24
+00:02:02,640 --> 00:02:04,440
+different implementation for the drivers.
+24
+
+25
+00:02:05,070 --> 00:02:10,290
+And also thinking about the application itself. The application shouldn't be depending on the ubuntu
+25
+
+26
+00:02:10,290 --> 00:02:12,150
+or depending on the windows,
+26
+
+27
+00:02:12,390 --> 00:02:14,760
+It should depend on some generic interface,
+27
+
+28
+00:02:15,180 --> 00:02:19,210
+and then in runtime, someone needs to give me an implementation of that.
+28
+
+29
+00:02:19,530 --> 00:02:21,140
+This is typically the operating system.
+29
+
+30
+00:02:21,390 --> 00:02:22,890
+So the process goes as following:
+30
+
+31
+00:02:24,240 --> 00:02:30,960
+The application here is want to run. This application knows that it has to use some functionalities
+31
+
+32
+00:02:30,960 --> 00:02:32,010
+of camera device,
+32
+
+33
+00:02:32,370 --> 00:02:34,250
+but what is the current implementation,
+33
+
+34
+00:02:34,290 --> 00:02:36,900
+Is it third party, even, by the way, on Ubuntu,
+34
+
+35
+00:02:36,900 --> 00:02:39,210
+there can be several drivers.
+35
+
+36
+00:02:39,210 --> 00:02:42,380
+Some of them are fast, some of them are slow, some of them are buggy.
+36
+
+37
+00:02:42,810 --> 00:02:47,060
+So this application doesn't want to depend on the specific implementation,
+37
+
+38
+00:02:47,070 --> 00:02:49,170
+It just depends on the interface.
+38
+
+39
+00:02:49,530 --> 00:02:52,070
+The operating system has some installed driver.
+39
+
+40
+00:02:52,380 --> 00:03:00,150
+So when you requested the device, the operating system gets an object of this type of driver and
+40
+
+41
+00:03:00,150 --> 00:03:01,440
+return it back to you.
+41
+
+42
+00:03:01,950 --> 00:03:09,270
+So now you are using the interface, which is using polymorphism is implementing this device driver.
+42
+
+43
+00:03:09,480 --> 00:03:13,040
+I hope the overall idea just makes sense for you,
+43
+
+44
+00:03:13,050 --> 00:03:14,970
+but anyway, let's see code for that.
+44
+
+45
+00:03:15,660 --> 00:03:19,440
+So I'm defining here, first of all, a very generic class.
+45
+
+46
+00:03:19,440 --> 00:03:20,940
+I am calling it IDevice
+46
+
+47
+00:03:21,210 --> 00:03:26,160
+like, remember, there can be a lot of devices, we are now trying to implement the whole cycle of the
+47
+
+48
+00:03:26,160 --> 00:03:27,300
+operating system itself.
+48
+
+49
+00:03:27,780 --> 00:03:31,890
+So we don't just have camera devices, we have even general devices.
+49
+
+50
+00:03:32,160 --> 00:03:37,110
+So the class IDevice is just for whatever generic device. It should have
+50
+
+51
+00:03:37,120 --> 00:03:38,010
+virtual destructor here,
+51
+
+52
+00:03:38,170 --> 00:03:39,120
+I forget about that.
+52
+
+53
+00:03:40,590 --> 00:03:45,840
+The ICamera device is now is an IDevice, and this is its interface.
+53
+
+54
+00:03:46,110 --> 00:03:48,030
+So remember, this is an interface,
+54
+
+55
+00:03:48,030 --> 00:03:49,770
+All of the functions are here
+55
+
+56
+00:03:49,770 --> 00:03:50,390
+equal zero,
+56
+
+57
+00:03:50,400 --> 00:03:51,990
+It means that this isn't implemented.
+57
+
+58
+00:03:52,320 --> 00:03:56,670
+Remember the guys of the camera itself,
+58
+
+59
+00:03:57,270 --> 00:04:00,210
+they thought about a good interface to provide to the public,
+59
+
+60
+00:04:00,510 --> 00:04:06,390
+they don't get crazy in the later time and rename this start function to say a run, for example,
+60
+
+61
+00:04:06,870 --> 00:04:09,930
+if you named it start now, keep it start, otherwise,
+61
+
+62
+00:04:09,930 --> 00:04:14,880
+all the applications that depend on your interface as a camera provider interface are going to fail
+62
+
+63
+00:04:14,880 --> 00:04:15,410
+in the future.
+63
+
+64
+00:04:16,020 --> 00:04:18,570
+We then start to provide implementations.
+64
+
+65
+00:04:18,870 --> 00:04:25,080
+So let's say that they provided a default ubuntu driver open-source implementation for this camera
+65
+
+66
+00:04:25,080 --> 00:04:25,440
+device.
+66
+
+67
+00:04:25,770 --> 00:04:31,200
+Someone found that this implementation on Ubuntu is very small and decided to provide another implementation
+67
+
+68
+00:04:31,200 --> 00:04:32,130
+that is very fast.
+68
+
+69
+00:04:32,520 --> 00:04:34,970
+The guys in windows 10 also wrote a definition for it.
+69
+
+70
+00:04:35,220 --> 00:04:40,410
+All of them eventually have to do this camera device implementation, but they are just different implementation
+70
+
+71
+00:04:40,410 --> 00:04:44,570
+for different operating systems or even different implementations on the same operating system.
+71
+
+72
+00:04:45,900 --> 00:04:52,080
+Now going more, let's say that Ubuntu system or the operating system would like to model the application
+72
+
+73
+00:04:52,080 --> 00:04:52,680
+in the system.
+73
+
+74
+00:04:53,010 --> 00:04:58,890
+So also there should be some generic functions in an application, like, for example, we can run it
+74
+
+75
+00:04:58,890 --> 00:04:59,880
+or we can shut down it,
+75
+
+76
+00:05:00,520 --> 00:05:09,010
+So this is a generic interface for what is an app. Now, let's say that we have two camera applications.
+76
+
+77
+00:05:09,280 --> 00:05:10,690
+One of them is named cheese,
+77
+
+78
+00:05:10,700 --> 00:05:11,560
+this is on Ubuntu,
+78
+
+79
+00:05:11,740 --> 00:05:14,100
+and the second one is named kamoso.
+79
+
+80
+00:05:14,470 --> 00:05:17,690
+So every one of them is now inheriting from the public application.
+80
+
+81
+00:05:18,010 --> 00:05:19,020
+So notice here now,
+81
+
+82
+00:05:19,070 --> 00:05:22,720
+this one is a genetic app to be used by the operating system.
+82
+
+83
+00:05:23,230 --> 00:05:24,430
+The more important thing here is,
+83
+
+84
+00:05:25,030 --> 00:05:30,320
+this application is has a constructor that takes a camera device object.
+84
+
+85
+00:05:30,640 --> 00:05:37,390
+So now someone is going to create an object for application cheese and provide it with the camera device
+85
+
+86
+00:05:37,390 --> 00:05:37,800
+object.
+86
+
+87
+00:05:37,810 --> 00:05:38,770
+Who created this one?
+87
+
+88
+00:05:38,770 --> 00:05:39,310
+I don't know,
+88
+
+89
+00:05:39,340 --> 00:05:40,030
+and I don't care.
+89
+
+90
+00:05:40,270 --> 00:05:45,850
+All I care about is to give me some object that I can use and make some calls using it.
+90
+
+91
+00:05:46,270 --> 00:05:51,200
+So now this is what's an application. Moving to the Ubuntu operating system itself.
+91
+
+92
+00:05:51,220 --> 00:05:57,220
+Let's say Ubuntu is going to have a vector of devices and also a vector of applications,
+92
+
+93
+00:05:57,640 --> 00:06:03,700
+and if you would like to shut down your Ubuntu system, you iterate on all application and just give them
+93
+
+94
+00:06:03,700 --> 00:06:05,260
+a call to shut down.
+94
+
+95
+00:06:05,620 --> 00:06:11,740
+If you are done with the system here, you shut down the system, remove the applications, remove the
+95
+
+96
+00:06:11,740 --> 00:06:12,310
+devices.
+96
+
+97
+00:06:12,820 --> 00:06:18,430
+Now, let's say that someone double-clicks the cheese application.
+97
+
+98
+00:06:18,850 --> 00:06:22,750
+So we called the operating system with the get_camera application for the cheese.
+98
+
+99
+00:06:23,510 --> 00:06:30,450
+The first thing is that the ubuntu system is going to have a specific driver installed on the system.
+99
+
+100
+00:06:30,490 --> 00:06:34,440
+So let's say that it knows for now that the driver is ubuntu driver open source.
+100
+
+101
+00:06:35,020 --> 00:06:36,580
+Now, it's going to check the application name.
+101
+
+102
+00:06:36,610 --> 00:06:42,700
+Is it cheese or komoso, for example? If it is cheese or komoso, iterate object based on that and pass
+102
+
+103
+00:06:42,700 --> 00:06:45,870
+for it the driver object that we have here.
+103
+
+104
+00:06:46,210 --> 00:06:49,250
+So the camera app cheese or camera app kamoso
+104
+
+105
+00:06:49,280 --> 00:06:52,210
+know nothing about the specific driver implementation,
+105
+
+106
+00:06:52,210 --> 00:06:53,200
+we just give it for it.
+106
+
+107
+00:06:53,440 --> 00:06:56,620
+This is how we reduce the coupling in the code itself.
+107
+
+108
+00:06:57,220 --> 00:07:02,870
+Then you add the device to the devices and application to applications. This is definitely like very silly code,
+108
+
+109
+00:07:02,890 --> 00:07:06,160
+I'm just highlighting the the generics of the
+109
+
+110
+00:07:08,520 --> 00:07:11,500
+of the poloymorphism here. Going back one step,
+110
+
+111
+00:07:11,880 --> 00:07:17,850
+Yes, this is a virtual function, good, OK. So in the main, you have your operating system, someone
+111
+
+112
+00:07:18,120 --> 00:07:19,140
+double click the cheese,
+112
+
+113
+00:07:19,140 --> 00:07:23,670
+so your OS gets the application and just tells it to run in a very generic way.
+113
+
+114
+00:07:23,910 --> 00:07:25,950
+So you get your camera running.
+114
+
+115
+00:07:26,550 --> 00:07:28,160
+I hope you get the example.
+115
+
+116
+00:07:28,260 --> 00:07:33,600
+The last thing to highlight here is the coupling issue. The coupling means dependency.
+116
+
+117
+00:07:33,990 --> 00:07:40,650
+If I'm defining the camera app cheese as dependent on the ubuntu driver windows 10, this is the
+117
+
+118
+00:07:40,950 --> 00:07:46,530
+direct dependencies. In the market, we always tell people to depend on interfaces.
+118
+
+119
+00:07:46,890 --> 00:07:52,790
+So now here I am having a camera app cheese that has a I, I for interface by the way, Icamera device.
+119
+
+120
+00:07:52,800 --> 00:07:54,150
+It depends on this interface.
+120
+
+121
+00:07:54,330 --> 00:07:56,820
+It knows nothing about ubuntu, knows nothing about Windows 10,
+121
+
+122
+00:07:56,820 --> 00:07:59,810
+it knows nothing about all of these guys, OK.
+122
+
+123
+00:08:00,150 --> 00:08:01,240
+It know nothing about them.
+123
+
+124
+00:08:01,440 --> 00:08:03,930
+So this one is more generic,
+124
+
+125
+00:08:04,170 --> 00:08:06,300
+we can change this implementation,
+125
+
+126
+00:08:06,300 --> 00:08:07,980
+we can add more implementation,
+126
+
+127
+00:08:09,150 --> 00:08:15,620
+So this one is very flexible, but this one is very tied to a specific driver.
+127
+
+128
+00:08:15,840 --> 00:08:21,990
+So always when you have two classes, think about the dependencies between them and ask yourself, do you depend
+128
+
+129
+00:08:21,990 --> 00:08:27,180
+the interfaces or abstract classes or you depend on a specific code implementation?
+129
+
+130
+00:08:27,450 --> 00:08:33,330
+The more you depend on code implementation, the more troubles you will face when you would like to change
+130
+
+131
+00:08:33,330 --> 00:08:34,510
+your code in the future.
+131
+
+132
+00:08:35,400 --> 00:08:35,910
+That's it.

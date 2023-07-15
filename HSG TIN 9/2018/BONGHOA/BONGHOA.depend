@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1672909081 source:c:\users\binh\documents\project\usaco\hsg tin 9\2018\bonghoa\main.cpp
+	<iostream>
+	<cstdio>
+	<iomanip>
+

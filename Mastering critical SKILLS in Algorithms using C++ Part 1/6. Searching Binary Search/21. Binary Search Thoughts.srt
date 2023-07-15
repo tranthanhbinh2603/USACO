@@ -1,0 +1,331 @@
+1
+00:00:01,100 --> 00:00:06,020
+Before ending this section, I thought specifically for this section, there were a lot of thoughts
+
+2
+00:00:06,470 --> 00:00:12,020
+and they were summarizing I see a lot of courses describing brain research in a very naive way just
+
+3
+00:00:12,020 --> 00:00:16,700
+to the the normal case, but brain research is way bigger than that, as you see.
+
+4
+00:00:17,090 --> 00:00:18,290
+So here is what we learned.
+
+5
+00:00:18,710 --> 00:00:19,370
+We learned.
+
+6
+00:00:19,520 --> 00:00:25,820
+Like any other course, that there is this normal brain research scenario that ascending or descending
+
+7
+00:00:25,820 --> 00:00:32,180
+order, the assertiveness here is very important reason for the logic of their brain research.
+
+8
+00:00:32,930 --> 00:00:38,330
+Then we started to generalize that two functions specifically what we call monotonic function, these
+
+9
+00:00:38,330 --> 00:00:45,080
+functions that are increasing or increasing and fixated, or decreasing or decreasing this way.
+
+10
+00:00:46,280 --> 00:00:51,500
+We also realized that the groove of the intensity of a function is usually a one minute time.
+
+11
+00:00:52,040 --> 00:00:59,840
+It's usually either the Model X, the model of X, so this is increasing or the more X X this is decreasing.
+
+12
+00:01:00,290 --> 00:01:05,120
+If you verify that congratulation of X is binary searchable.
+
+13
+00:01:05,240 --> 00:01:05,510
+Right.
+
+14
+00:01:05,520 --> 00:01:06,060
+The standard.
+
+15
+00:01:06,060 --> 00:01:09,230
+The good and the right of X and drive the possible function from it.
+
+16
+00:01:09,980 --> 00:01:12,560
+We learned the domain can be integer and real.
+
+17
+00:01:12,830 --> 00:01:14,900
+There is no big difference between both of them.
+
+18
+00:01:15,230 --> 00:01:16,620
+It's just minor changes.
+
+19
+00:01:16,940 --> 00:01:19,740
+We learned about the overflow concert.
+
+20
+00:01:20,630 --> 00:01:27,110
+We learned how to find the first and the last occurrence of a of the first and last occurrence of the
+
+21
+00:01:27,110 --> 00:01:27,500
+target.
+
+22
+00:01:27,900 --> 00:01:30,830
+And we learned how to do that on arrays and on functions.
+
+23
+00:01:31,250 --> 00:01:35,810
+Overall, you should note that binary sisterhood is very systematic.
+
+24
+00:01:36,230 --> 00:01:40,220
+You just do this kind of steps and write the template of the code.
+
+25
+00:01:41,210 --> 00:01:47,540
+The function f itself, usually in many cases it could be a one, sometimes oh, in a few cases.
+
+26
+00:01:48,140 --> 00:01:51,620
+And look, and so don't stuck like you are trying to find an all one solution.
+
+27
+00:01:52,250 --> 00:01:55,730
+You start with the brute force version and improve according to that.
+
+28
+00:01:56,180 --> 00:02:06,800
+If the function F is o m, then your overall complexity is o m log some factor usually A. So this is
+
+29
+00:02:06,830 --> 00:02:07,400
+overall.
+
+30
+00:02:08,860 --> 00:02:14,440
+During solving, we were trying to gain like some kind of bitterness, and this is something that you
+
+31
+00:02:14,440 --> 00:02:21,340
+should know the people who are very strong in competitive programming during algorithmic solving in
+
+32
+00:02:21,340 --> 00:02:27,760
+general as they solved many, many problems, they try to figure out the better in solving and whenever
+
+33
+00:02:27,760 --> 00:02:33,370
+they meet a problem due to their league, the depth of the experience, they managed to match what they
+
+34
+00:02:33,370 --> 00:02:35,710
+learned with some of the batteries.
+
+35
+00:02:35,950 --> 00:02:38,770
+So would like to give you here some of the clear patterns that we see.
+
+36
+00:02:39,370 --> 00:02:44,770
+So one better, which is the easy case, sometimes easy or medium, which is merely by searching when
+
+37
+00:02:44,770 --> 00:02:49,960
+the array, which you mean the start is equal zero and the end is equal the lengths of the remaining
+
+38
+00:02:49,960 --> 00:02:52,810
+one annual binary search to over the indices.
+
+39
+00:02:54,480 --> 00:02:59,910
+Now, in the second case, and we made that allowed in the binary search over functions, we binary
+
+40
+00:02:59,910 --> 00:03:02,010
+search on the given request itself.
+
+41
+00:03:02,520 --> 00:03:06,540
+So I ask you for a request you directly buy in the research on the request.
+
+42
+00:03:06,720 --> 00:03:12,840
+We see that in many things, for example, I ask you to find their divisor that do blah blah blah.
+
+43
+00:03:13,170 --> 00:03:16,680
+We binary search it on the device or in the body function.
+
+44
+00:03:16,680 --> 00:03:18,270
+I asked you for the Bay Area.
+
+45
+00:03:18,450 --> 00:03:21,360
+We binary search you in the Bay Area in that.
+
+46
+00:03:22,560 --> 00:03:23,400
+What does that do?
+
+47
+00:03:23,640 --> 00:03:27,990
+So that the license problem we ask, could you for the minimum time we binary?
+
+48
+00:03:27,990 --> 00:03:31,680
+Sorry, we bind the research on the minimum time for the heaters.
+
+49
+00:03:31,890 --> 00:03:35,940
+I asked you for the radius of the function we buying that associate on the hit radius.
+
+50
+00:03:36,360 --> 00:03:40,380
+We asked you for the minimum number of days to build the buckets.
+
+51
+00:03:40,530 --> 00:03:43,110
+We buy an associate in the days you see what's happening.
+
+52
+00:03:43,620 --> 00:03:47,940
+The problem is asking for a request you binary search on the request.
+
+53
+00:03:48,270 --> 00:03:49,860
+Make sure that f is one tick.
+
+54
+00:03:50,160 --> 00:03:50,760
+That's it.
+
+55
+00:03:51,060 --> 00:03:54,540
+The whole trick is how to write the function, not the wine the associates of.
+
+56
+00:03:56,130 --> 00:04:00,950
+And the moral of all of this once is ability to guide the binary situation.
+
+57
+00:04:01,770 --> 00:04:04,380
+Now this is a medium case, the how did the case?
+
+58
+00:04:04,380 --> 00:04:05,910
+We met two problems before them.
+
+59
+00:04:07,040 --> 00:04:12,560
+And in the third case, I give you a target, but you cannot bonus circulate.
+
+60
+00:04:13,670 --> 00:04:19,430
+So in the case of missing a problem and in the case the smallest, the problem you cannot directly buy
+
+61
+00:04:19,520 --> 00:04:20,720
+in the research on the target.
+
+62
+00:04:20,930 --> 00:04:22,100
+You cannot do that.
+
+63
+00:04:22,700 --> 00:04:29,870
+So what we did is we try to find relevant and the close function so that we can find the answer from
+
+64
+00:04:29,870 --> 00:04:39,590
+them that this one is specifically we switched it from finding equality to finding inequality because
+
+65
+00:04:39,590 --> 00:04:41,530
+what happens is, was equality.
+
+66
+00:04:41,540 --> 00:04:44,600
+This issue is this is like false reports of also true false or also false.
+
+67
+00:04:45,110 --> 00:04:46,040
+Was inequality.
+
+68
+00:04:46,040 --> 00:04:47,260
+It is like, what's false?
+
+69
+00:04:47,260 --> 00:04:48,570
+Forceful, the truth or truth?
+
+70
+00:04:48,890 --> 00:04:49,460
+What's what's?
+
+71
+00:04:49,460 --> 00:04:51,490
+What's in there in that?
+
+72
+00:04:51,560 --> 00:04:56,370
+In this second problem, also, we learned about the value index to track.
+
+73
+00:04:56,780 --> 00:05:00,260
+The problem is asking you to find the index, you buy an assertion of value.
+
+74
+00:05:00,830 --> 00:05:02,480
+So why this is hard?
+
+75
+00:05:02,810 --> 00:05:06,370
+Because in many cases you read the problem.
+
+76
+00:05:06,380 --> 00:05:09,290
+You don't get the sense that this is a binary social problem.
+
+77
+00:05:09,560 --> 00:05:13,700
+You just try to think about different approach, but it is binary, searchable.
+
+78
+00:05:14,060 --> 00:05:19,790
+But you need to put some thinking effort, some creativity to find this relevant function that we will
+
+79
+00:05:19,790 --> 00:05:23,000
+can use it to guide the binary search itself.
+
+80
+00:05:23,510 --> 00:05:27,560
+I think this is a hard case, and there are a few problems who are on the heart of the case.
+
+81
+00:05:27,740 --> 00:05:33,920
+Most of the problems are actually here, but in a way it's good to know about the heart of the case,
+
+82
+00:05:33,920 --> 00:05:34,130
+too.
+
+83
+00:05:34,850 --> 00:05:35,240
+That's all.

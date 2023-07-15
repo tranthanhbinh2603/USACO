@@ -1,0 +1,309 @@
+0
+1
+00:00:00,930 --> 00:00:07,140
+Let's solve the next problem about the maximum profit, I added the examples here in the slides.
+1
+
+2
+00:00:08,240 --> 00:00:09,800
+So how can we solve this problem?
+2
+
+3
+00:00:10,550 --> 00:00:12,560
+Definitely, the brute force is very clear.
+3
+
+4
+00:00:13,670 --> 00:00:16,280
+All what you need is a couple of nested loops.
+4
+
+5
+00:00:17,240 --> 00:00:24,560
+One for the workers, another for the job, if my difficulty is higher than the job, difficulty
+5
+
+6
+00:00:24,560 --> 00:00:28,490
+greater than or equal, then I can just keep maximizing among all of the profits.
+6
+
+7
+00:00:28,490 --> 00:00:30,760
+This is very clear and this is O(NQ)
+7
+
+8
+00:00:30,770 --> 00:00:35,360
+where N is the jobs, and Q is the workers or the opposite.
+8
+
+9
+00:00:35,540 --> 00:00:42,680
+Now I would like to process this thing in a way that's a more efficient approach.
+9
+
+10
+00:00:43,310 --> 00:00:45,080
+There is a very nice observation here.
+10
+
+11
+00:00:45,650 --> 00:00:48,470
+Let's say that worker A has a difficulty of 10,
+11
+
+12
+00:00:48,740 --> 00:00:50,390
+worker B is 15.
+12
+
+13
+00:00:51,470 --> 00:00:57,470
+Now, observe that worker B can do all the tasks that worker A can do.
+13
+
+14
+00:00:58,550 --> 00:01:05,450
+Now let's say that worker A checked himself again in jobs X, Y, Z and found that his profit is 70.
+14
+
+15
+00:01:06,360 --> 00:01:09,330
+Worker B doesn't have to check again X, Y, Z.
+15
+
+16
+00:01:09,660 --> 00:01:14,310
+He can just start after that using the profit of 70 so far.
+16
+
+17
+00:01:14,940 --> 00:01:16,710
+This is a very nice observation.
+17
+
+18
+00:01:17,190 --> 00:01:19,120
+Now, how can we make use of that?
+18
+
+19
+00:01:19,950 --> 00:01:23,060
+The moral of that is there are duplicate operations.
+19
+
+20
+00:01:23,070 --> 00:01:30,210
+If you tried to start B to check again X, Y, Z jobs, you are duplicating the operations. And in algorithms,
+20
+
+21
+00:01:30,630 --> 00:01:37,590
+One way to improve your implementation is to think, this
+21
+
+22
+00:01:37,590 --> 00:01:44,250
+what we call the root cause analysis, we would like to know what is consuming the time.
+22
+
+23
+00:01:44,760 --> 00:01:50,760
+So in this one, the consumptions come mainly from duplicate operations, and you usually need some smart
+23
+
+24
+00:01:50,760 --> 00:01:53,490
+ideas to skip the duplicate computations.
+24
+
+25
+00:01:53,850 --> 00:01:55,380
+So here is how we can do that.
+25
+
+26
+00:01:56,040 --> 00:02:01,380
+First of all, start by sorting the jobs and the workers, but based on the difficulty.
+26
+
+27
+00:02:01,860 --> 00:02:05,040
+So here are the difficulties, and here are the profits of them.
+27
+
+28
+00:02:05,460 --> 00:02:07,950
+And let's say you have two workers 10 and 15.
+28
+
+29
+00:02:09,830 --> 00:02:17,840
+Now, worker A will scan the jobs starting from here from five and keep going as long as he can do
+29
+
+30
+00:02:17,840 --> 00:02:21,450
+the job, which clearly he's of a difficulty two,
+30
+
+31
+00:02:21,470 --> 00:02:24,560
+he can only do the first two tasks, which have seven and two.
+31
+
+32
+00:02:24,710 --> 00:02:28,400
+So the profit for the first worker is just seven.
+32
+
+33
+00:02:29,420 --> 00:02:37,370
+Now, worker B with difficulty 15 can do the first four jobs but do not start from five again.
+33
+
+34
+00:02:37,550 --> 00:02:44,990
+We can directly start from after 10 using the profit of seven so far, and just comparing the profit of
+34
+
+35
+00:02:44,990 --> 00:02:47,840
+seven with six and three to take the profit seven again.
+35
+
+36
+00:02:48,650 --> 00:02:53,720
+This is an example of smart processing that avoids duplicate variables.
+36
+
+37
+00:02:54,350 --> 00:02:56,090
+Now what is the time complexity of that?
+37
+
+38
+00:02:56,210 --> 00:03:00,110
+Just you will need to sort the two arrays, so (Nlogn) and (Qlogn).
+38
+
+39
+00:03:01,170 --> 00:03:04,530
+And the profit calculation, which is the last part, is (N + Q) doesn't matter.
+39
+
+40
+00:03:04,830 --> 00:03:08,730
+The space complexity is O(N) for the jobs vector, as we will see.
+40
+
+41
+00:03:09,510 --> 00:03:11,430
+OK, let's see the implementation here.
+41
+
+42
+00:03:13,990 --> 00:03:20,470
+The implementation goes as following, we create a pair of jobs for the difficulty and for the profit, and we'll
+42
+
+43
+00:03:20,590 --> 00:03:26,980
+just sort the workers and the jobs. The jobs here, which is our new array, is based on the
+43
+
+44
+00:03:26,980 --> 00:03:27,760
+difficulty.
+44
+
+45
+00:03:29,010 --> 00:03:30,390
+They are sorted
+45
+
+46
+00:03:32,750 --> 00:03:33,830
+from small to large.
+46
+
+47
+00:03:34,670 --> 00:03:37,280
+Now this is the maximum profit so far.
+47
+
+48
+00:03:37,670 --> 00:03:39,560
+This is the total profit that we will add for it.
+48
+
+49
+00:03:39,950 --> 00:03:40,910
+You go for the
+49
+
+50
+00:03:41,930 --> 00:03:42,920
+workers, one by one.
+50
+
+51
+00:03:43,430 --> 00:03:50,390
+You take the first worker and iterate over the jobs, the limit as long as my difficulty
+51
+
+52
+00:03:50,390 --> 00:03:52,520
+is greater than or equal the current difficulty.
+52
+
+53
+00:03:53,000 --> 00:03:56,630
+Through all of that, I'm maximizing my profit and adding it here.
+53
+
+54
+00:03:57,320 --> 00:04:03,500
+The critical observation is when the second worker comes to the scene, he will keep working, starting
+54
+
+55
+00:04:03,500 --> 00:04:10,640
+from the job, which has index job zero here only after the for loops and incremented here, which
+55
+
+56
+00:04:10,640 --> 00:04:15,500
+means the second worker will continue directly from after
+56
+
+57
+00:04:16,280 --> 00:04:20,870
+the last job from the first one. So the first one covered three jobs and stopped.
+57
+
+58
+00:04:21,230 --> 00:04:25,820
+I will cover maybe the next two jobs, then the next one will cover the next four jobs.
+58
+
+59
+00:04:26,090 --> 00:04:29,450
+Everyone is making use of the history that we have.
+59
+
+60
+00:04:29,990 --> 00:04:39,200
+So one key to avoid duplicate values is to utilize the history, utilize the history computation.
+60
+
+61
+00:04:39,200 --> 00:04:41,570
+Don't repeat the history computations again.
+61
+
+62
+00:04:42,350 --> 00:04:42,800
+That's all.

@@ -1,0 +1,139 @@
+0
+1
+00:00:01,110 --> 00:00:06,420
+In this problem, we would like to convert 2 strings, which might be a bit problematic, maybe so
+1
+
+2
+00:00:06,420 --> 00:00:14,130
+anyway, for me, first of all, I needed to initialize a variable size to be the smallest of the two
+2
+
+3
+00:00:14,130 --> 00:00:15,380
+strings, the a and the b.
+3
+
+4
+00:00:15,900 --> 00:00:22,950
+So I started with taking the size of a and if size is less than b, I take it from b. Now,
+4
+
+5
+00:00:22,950 --> 00:00:25,680
+size is like the minimum between the a.size and b.size.
+5
+
+6
+00:00:26,550 --> 00:00:29,320
+And there are two cases for me that I can differentiate.
+6
+
+7
+00:00:30,030 --> 00:00:32,580
+I'm using "smaller" as a variable.
+7
+
+8
+00:00:32,850 --> 00:00:34,160
+Maybe "smaller" isn't a good name.
+8
+
+9
+00:00:35,160 --> 00:00:36,890
+Maybe good name. "smaller" here
+9
+
+10
+00:00:36,900 --> 00:00:43,080
+if zero, it means it is really a[i] smaller. One, it means it's bigger.
+10
+
+11
+00:00:43,230 --> 00:00:45,180
+If -1 , it means we are unsure.
+11
+
+12
+00:00:45,780 --> 00:00:48,730
+I keep going over the string and compare letter by letter.
+12
+
+13
+00:00:49,170 --> 00:00:51,590
+If they are not equal then we can compare.
+13
+
+14
+00:00:52,050 --> 00:00:55,980
+If the first one is less then it,  we need to put smaller equals zero.
+14
+
+15
+00:00:56,230 --> 00:00:58,050
+Otherwise, we got smaller equal one.
+15
+
+16
+00:00:58,350 --> 00:01:02,310
+Maybe we can do this in a similar way and say if less than, put zero, otherwise,
+16
+
+17
+00:01:02,310 --> 00:01:08,810
+put one. And this condition will help us to break once we have to break so that we don't keep going forever.
+17
+
+18
+00:01:09,990 --> 00:01:15,960
+After that, there are one of three cases, either smaller is zero, which is done. smaller is one, which is done.
+18
+
+19
+00:01:16,200 --> 00:01:22,500
+or smaller is still minus one, which means there is a complete match for the two strings together.
+19
+
+20
+00:01:22,980 --> 00:01:26,360
+So the one that will be actually smaller is the one who is smaller in the length.
+20
+
+21
+00:01:27,180 --> 00:01:32,310
+That's why I here after that I start to compare if the length of the first is a smaller then put it with
+21
+
+22
+00:01:32,310 --> 00:01:32,640
+zero.
+22
+
+23
+00:01:32,880 --> 00:01:36,390
+So it means the first one otherwise got the first one.
+23
+
+24
+00:01:37,640 --> 00:01:43,070
+Finally, we print if smaller == zero, then the first one is  smaller, otherwise,
+24
+
+25
+00:01:43,070 --> 00:01:49,070
+the second one. The big picture of the solution is to compare letter by letter until you are done or
+25
+
+26
+00:01:49,070 --> 00:01:49,970
+you find the difference.
+26
+
+27
+00:01:50,270 --> 00:01:57,050
+And after that handled the case of two strings with one of them completely equal prefix from the second
+27
+
+28
+00:01:57,050 --> 00:01:57,500
+string.

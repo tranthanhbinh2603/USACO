@@ -1,0 +1,79 @@
+1
+00:00:00,990 --> 00:00:10,530
+One of the new data structures in the standard library is the array of reckless you see here with the
+
+2
+00:00:10,530 --> 00:00:16,140
+final array and you give it a type and you give it also affects at length value.
+
+3
+00:00:16,170 --> 00:00:19,400
+Remember the temperatures tied for the parameters here.
+
+4
+00:00:19,860 --> 00:00:21,450
+You give it also a number.
+
+5
+00:00:21,690 --> 00:00:26,480
+So internally, this is just wrapping internally, affix its size array.
+
+6
+00:00:26,970 --> 00:00:33,510
+So the point here is the target of this array to be a replacement to the belt and fix it array from
+
+7
+00:00:33,510 --> 00:00:36,300
+the sea and it doesn't use any extra memory.
+
+8
+00:00:36,600 --> 00:00:40,800
+So you are okay here, initializing it with a list of three, four, five, one, two.
+
+9
+00:00:41,280 --> 00:00:47,910
+And then if you call a redesign is going to give you five, you can now normally change the value array
+
+10
+00:00:48,240 --> 00:00:53,610
+or that at or specific array position which is handling the exception.
+
+11
+00:00:53,610 --> 00:00:59,310
+If you try to access out of the world, you can also sort it normally you can assign it to somebody.
+
+12
+00:00:59,320 --> 00:01:02,780
+So if you are assigned it this way, the last elements will be zeros.
+
+13
+00:01:03,120 --> 00:01:08,900
+If you try to initialize it was numbers that are the more five, it will give you a comparison error.
+
+14
+00:01:09,660 --> 00:01:19,770
+If you want to get the internal array which is created, it just you can get the pointer here and plus
+
+15
+00:01:19,890 --> 00:01:20,580
+seventeen.
+
+16
+00:01:20,730 --> 00:01:26,850
+If you would like to omit these two things together, then you can just remove them and is going to
+
+17
+00:01:26,850 --> 00:01:32,070
+recognize all these are double numbers and also just like double and two, which make our life easier.
+
+18
+00:01:32,400 --> 00:01:37,200
+The purpose of the array is to be a replacement to the fix the system error rate.
+
+19
+00:01:37,200 --> 00:01:41,370
+So please stick to it if you would like to use a normal rate.
+
+20
+00:01:42,240 --> 00:01:42,420
+The.

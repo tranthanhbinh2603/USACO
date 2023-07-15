@@ -1,0 +1,459 @@
+0
+1
+00:00:02,520 --> 00:00:09,150
+Today we will discuss about the "prefix" and "postfix" operators, which is a ++ operator. there are two types
+1
+
+2
+00:00:09,150 --> 00:00:13,850
+of this operator, the prefix one, which "pre" means before.
+2
+
+3
+00:00:13,860 --> 00:00:16,920
+So it's like ++X, where X is a variable.
+3
+
+4
+00:00:17,370 --> 00:00:19,170
+The postfix "post" means after.
+4
+
+5
+00:00:19,170 --> 00:00:21,420
+It is X++ variable.
+5
+
+6
+00:00:21,660 --> 00:00:24,060
+So let's differentiate between them.
+6
+
+7
+00:00:24,270 --> 00:00:27,390
+Here is the ++A, for example case,
+7
+
+8
+00:00:29,070 --> 00:00:30,620
+Let's say that A is 10.
+8
+
+9
+00:00:30,780 --> 00:00:34,570
+If we say it B equals ++A, it means as following,
+9
+
+10
+00:00:35,160 --> 00:00:39,770
+so A++ is like, that means a = a + 1.
+10
+
+11
+00:00:40,230 --> 00:00:42,930
+But in this abbreviation what does it mean exactly?
+11
+
+12
+00:00:43,410 --> 00:00:49,820
+++A, means increment A; so now A is going to be 11 in memory.
+12
+
+13
+00:00:50,340 --> 00:00:54,180
+After that, the assignment step is going to happen normally.
+13
+
+14
+00:00:54,400 --> 00:00:56,870
+So it's now B = 11.
+14
+
+15
+00:00:57,210 --> 00:01:00,900
+So when we print both of them it would be A is 11 and B is 11.
+15
+
+16
+00:01:01,290 --> 00:01:06,460
+So A++ is as same as "a = a + 1".
+16
+
+17
+00:01:07,080 --> 00:01:11,730
+This is all what happened here and then the normal assignment operation happened.
+17
+
+18
+00:01:11,970 --> 00:01:13,030
+So this is very normal.
+18
+
+19
+00:01:13,530 --> 00:01:20,100
+Now, the second case where we have the A++ the postfix, this is a bit tricky. when
+19
+
+20
+00:01:20,100 --> 00:01:22,410
+we say A++, this is what happened,
+20
+
+21
+00:01:22,410 --> 00:01:30,540
+First, the compiler is going to assign B to A without affecting A, so A is now 10 and will still 10
+21
+
+22
+00:01:31,230 --> 00:01:33,860
+then assign it to the left side.
+22
+
+23
+00:01:33,870 --> 00:01:34,970
+It's going to be now
+23
+
+24
+00:01:35,250 --> 00:01:41,610
+B with 10. after that it is going to increment A with 1.
+24
+
+25
+00:01:41,620 --> 00:01:44,800
+So it would be 11. if we printed both of them,
+25
+
+26
+00:01:44,820 --> 00:01:46,230
+It will be 11 and 10.
+26
+
+27
+00:01:47,580 --> 00:01:53,850
+Now again, thinking about A and thinking about B, A in both cases become 11.
+27
+
+28
+00:01:54,060 --> 00:01:59,240
+So A++ or ++ِ is as same as "a = a + 1".
+28
+
+29
+00:01:59,730 --> 00:02:07,020
+But the difference here in what is being printed or assigned, here, in the ++A
+29
+
+30
+00:02:07,020 --> 00:02:11,120
+case we actually increment A first then assign it.
+30
+
+31
+00:02:11,490 --> 00:02:15,690
+But here we actually assign it first, then we increment it.
+31
+
+32
+00:02:15,810 --> 00:02:22,410
+That's why B has the old value of A, so we can summarize the prefix increment as an incremental step,
+32
+
+33
+00:02:22,770 --> 00:02:28,170
+then assign or print, but the postfix is assign then increment.
+33
+
+34
+00:02:28,440 --> 00:02:30,820
+This is mainly the difference between both of them.
+34
+
+35
+00:02:32,760 --> 00:02:34,410
+Let's see more here in printing.
+35
+
+36
+00:02:34,680 --> 00:02:41,120
+If I say "a = 10", then "cout<<a++" is going to print A first,
+36
+
+37
+00:02:41,130 --> 00:02:44,060
+So it's going to print 10, then increment A,
+37
+
+38
+00:02:44,060 --> 00:02:44,940
+It will be 11.
+38
+
+39
+00:02:45,510 --> 00:02:48,970
+Even if you put in parentheses here, it's going again to print 10.
+39
+
+40
+00:02:49,420 --> 00:02:53,580
+OK, so this is in summary the difference between both of them.
+40
+
+41
+00:02:53,610 --> 00:02:59,720
+The "++" increments first, but A++ here just does assigning first then increment.
+41
+
+42
+00:02:59,970 --> 00:03:03,720
+Eventually, A will be incremented but it is all about the other side,
+42
+
+43
+00:03:03,720 --> 00:03:06,210
+Will it get the old the value or the new value.
+43
+
+44
+00:03:07,000 --> 00:03:14,310
+OK, now one might write a fancy code like the following "cout<< a++ + ++a".
+44
+
+45
+00:03:14,550 --> 00:03:17,870
+This is undefined, and this is undesirable.
+45
+
+46
+00:03:18,120 --> 00:03:19,590
+We will discuss later more
+46
+
+47
+00:03:19,980 --> 00:03:20,820
+why is that.
+47
+
+48
+00:03:22,180 --> 00:03:25,980
+Now let's do one more tracing and let's say that A is 5 and B is 10.
+48
+
+49
+00:03:26,460 --> 00:03:31,070
+What is the output of A + 5 + B, this is clearly 20.
+49
+
+50
+00:03:31,590 --> 00:03:37,500
+But what about this "++a + 5 + b++".
+50
+
+51
+00:03:37,770 --> 00:03:38,870
+Think about it for a minute.
+51
+
+52
+00:03:40,600 --> 00:03:46,960
+If you thought about it, this is going again to be 20, but the question is any extra increment in the A ?
+52
+
+53
+00:03:46,960 --> 00:03:52,290
+any extra increment in the B? here, the "++a" is going to be incremented first.
+53
+
+54
+00:03:52,570 --> 00:03:54,950
+So we are going to get one from here.
+54
+
+55
+00:03:54,970 --> 00:03:57,820
+So actually, it would be 6 not 5. Here,
+55
+
+56
+00:03:57,940 --> 00:03:59,380
+The B would be actually used
+56
+
+57
+00:03:59,380 --> 00:04:00,790
+as it is first.
+57
+
+58
+00:04:00,820 --> 00:04:03,280
+So it will be 10, and later to be incremented.
+58
+
+59
+00:04:03,610 --> 00:04:05,830
+So this expression would end up with 21.
+59
+
+60
+00:04:06,250 --> 00:04:10,810
+The value of A after it is 6 and the value of B after it is 11.
+60
+
+61
+00:04:12,250 --> 00:04:17,800
+Now going to the "a++ + ++a" case.
+61
+
+62
+00:04:18,040 --> 00:04:20,410
+We are going to know about that a bit later.
+62
+
+63
+00:04:20,650 --> 00:04:28,180
+But what I want you to know here, if we are doing X + Y there is no guarantee if X will
+63
+
+64
+00:04:28,180 --> 00:04:31,000
+be evaluated first or Y will be evaluated first.
+64
+
+65
+00:04:31,270 --> 00:04:34,420
+So let's say that we are going to evaluate the left then the right.
+65
+
+66
+00:04:34,720 --> 00:04:41,980
+So A++, let's say A is 10, A++, we are going to take the 10 for the plus and then A will
+66
+
+67
+00:04:41,980 --> 00:04:43,890
+be 11.
+67
+
+68
+00:04:44,200 --> 00:04:48,060
+So we take from here 10 now and here A is 11.
+68
+
+69
+00:04:48,310 --> 00:04:51,650
+So we increment it so it now will be 12.
+69
+
+70
+00:04:51,910 --> 00:04:56,720
+So the overall of the expression becomes 10 plus 12, which is 22.
+70
+
+71
+00:04:57,070 --> 00:05:01,450
+Now let's say the reverse happened that this one was evaluated first.
+71
+
+72
+00:05:01,900 --> 00:05:03,580
+So A is now 10.
+72
+
+73
+00:05:03,970 --> 00:05:07,930
+If we incremented it, it will be 11.
+73
+
+74
+00:05:08,260 --> 00:05:11,440
+Then we go here and use it.
+74
+
+75
+00:05:11,770 --> 00:05:15,840
+So it will be also 11.
+75
+
+76
+00:05:15,970 --> 00:05:21,520
+So end up to 22, the results seems the same.
+76
+
+77
+00:05:21,730 --> 00:05:27,670
+But the point is, you don't know which one to evaluate it first and what degree
+77
+
+78
+00:05:28,330 --> 00:05:29,230
+it will affect each other.
+78
+
+79
+00:05:31,520 --> 00:05:37,550
+Some important tips, do not overuse this operator, it's important, it's almost in every code, but we don't
+79
+
+80
+00:05:37,550 --> 00:05:38,290
+overuse it.
+80
+
+81
+00:05:38,720 --> 00:05:45,730
+We don't use it in complicated expressions, because we don't know the order of evaluation.
+81
+
+82
+00:05:45,740 --> 00:05:46,860
+The best examples for it,
+82
+
+83
+00:05:46,860 --> 00:05:48,020
+It could be something like that,
+83
+
+84
+00:05:48,020 --> 00:05:53,700
+You have a normal ++X, which means "x = x + 1", or you want to use the postfix
+84
+
+85
+00:05:53,720 --> 00:05:55,950
+one, use it and you just take a copy out of it.
+85
+
+86
+00:05:57,350 --> 00:06:00,580
+There is another case, the "--" operator.
+86
+
+87
+00:06:00,590 --> 00:06:05,400
+This is called decrement, prefix decrement and postfix decrement.
+87
+
+88
+00:06:06,020 --> 00:06:07,210
+Sorry, this is postfix decrement.
+88
+
+89
+00:06:08,030 --> 00:06:19,250
+In this case, it just goes the other side, sorry these values aren't updated.
+89
+
+90
+00:06:19,250 --> 00:06:21,190
+it should be like 10 and 10, and 10 and 9.
+90
+
+91
+00:06:23,000 --> 00:06:23,480
+Yeah.
+91
+
+92
+00:06:23,750 --> 00:06:24,260
+That's it.

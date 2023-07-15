@@ -1,0 +1,371 @@
+WEBVTT
+
+00:02.110 --> 00:06.850
+Hi everyone, in this lecture we're going to solve a problem. the name of the problem is divisible
+
+00:06.850 --> 00:12.940
+subset and we are given a multi set of N integer, so multi set is nothing but a set which
+
+00:12.940 --> 00:14.980
+can contain repeating elements as well.
+
+00:15.070 --> 00:15.400
+OK.
+
+00:17.070 --> 00:24.240
+And we need to find a non empty subset of it such that sum of the subject element is divisible by
+
+00:24.240 --> 00:28.320
+N. so this N is nothing but the size of the subset.
+
+00:28.350 --> 00:35.190
+So given set we need to find a subset who's sum of element is divisible by the size of the set.
+
+00:35.220 --> 00:35.550
+OK.
+
+00:35.820 --> 00:39.540
+So N is size of the actual set.
+
+00:41.400 --> 00:44.670
+OK, so we are not given a different number but it is same as
+
+00:45.870 --> 00:47.880
+the size of the original set.
+
+00:48.510 --> 00:52.020
+And if such a subset does not exist we will print minus one.
+
+00:52.110 --> 00:56.940
+But if it exists, what we are going to do? we are going to output two lines.
+
+00:57.390 --> 01:01.550
+One is the size of the subset on the first line. OK?
+
+01:02.100 --> 01:07.260
+We need to tell what is the size of that particular subset and second is we need to output the list
+
+01:07.260 --> 01:08.220
+of indices
+
+01:09.450 --> 01:11.490
+That form the required subset. OK?
+
+01:11.910 --> 01:14.310
+And you can see N is very large.
+
+01:14.350 --> 01:17.930
+So actually this question is from the platform codechef.
+
+01:17.940 --> 01:21.150
+I will just show it to you. so you can do this is from codechef.
+
+01:21.280 --> 01:26.690
+The problem is divSubs and again we have already gone through the problem statement.
+
+01:26.700 --> 01:28.830
+But if you look at the constraints here.
+
+01:30.160 --> 01:30.700
+So.
+
+01:33.700 --> 01:39.520
+We are given each element of the multiset is a positive integer not exceeding 10 power nine. ok which is
+
+01:39.520 --> 01:40.060
+fine.
+
+01:40.840 --> 01:44.950
+And now we are given three different values for constraint.
+
+01:44.950 --> 01:51.430
+so if you solve this problem four N up to 15. OK. you get 37 points.
+
+01:51.850 --> 01:57.040
+If you solve it up to N equal one thousand, you get thirty seven plus twenty four points.
+
+01:57.460 --> 02:01.810
+And if you also solve for a larger of the value of N that ten power five, you get thirty
+
+02:01.810 --> 02:02.810
+nine more points. ok.
+
+02:03.460 --> 02:08.570
+That means we there must be multiple approaches to solve this particular question.
+
+02:08.590 --> 02:11.800
+OK. now let me also give you an example.
+
+02:12.340 --> 02:18.700
+So if you look at the input. so input, the first line of the input contains an integer T denoting the
+
+02:18.700 --> 02:24.290
+number of test cases. OK. then followed by the N and followed by N integer.
+
+02:24.310 --> 02:27.100
+Alright. so we have one test case.
+
+02:28.340 --> 02:34.220
+Which contains three integers and the integers are four six ten. So these are the values in the set.
+
+02:34.970 --> 02:47.150
+And now we need to output ok, anyone set. Output any one set such that sum of the integers in that particular
+
+02:47.150 --> 02:51.330
+subset is divisible by three.
+
+02:51.350 --> 02:58.010
+So in this case, they're saying. OK. I will just pick the second element that is six and six modulus
+
+02:58.010 --> 03:00.980
+three that is equal to zero which is fine.
+
+03:01.460 --> 03:06.220
+So that's why you can see the output as what ? the output is
+
+03:07.220 --> 03:12.560
+the size of the set is one and the element index is two.
+
+03:13.890 --> 03:15.390
+This is what what is the size?
+
+03:15.870 --> 03:19.560
+So we can pick as a subset, the sum is 6 and it's divisible by three.
+
+03:20.100 --> 03:20.370
+OK.
+
+03:20.850 --> 03:25.800
+The only thing is it should be non empty and that means at least the size should be at least one.
+
+03:26.700 --> 03:27.780
+Now we need to see
+
+03:28.840 --> 03:30.160
+what what can we do?
+
+03:30.220 --> 03:35.620
+OK, so if so. what is a brute force way of generating all possible subsets?
+
+03:36.160 --> 03:42.400
+So, you know if you're given array of size N which contains some elements A, B, C, D and so on.
+
+03:43.240 --> 03:49.270
+So for each element, you have two choices. either including the set or you do not include it. OK?
+
+03:49.900 --> 03:56.960
+So if the arrays of the size N then you can generate two raise to the power N subsets. OK?
+
+03:57.980 --> 04:04.330
+And if N is large, this is going to be a very huge number and it's obviously going to give you the
+
+04:04.330 --> 04:04.870
+time limit exceeded error.
+
+04:05.170 --> 04:08.950
+So for N, the value of N up to 15.
+
+04:08.950 --> 04:14.920
+You can easily do the work of two raise to the power 15 and you can definitely use the brute force
+
+04:14.920 --> 04:15.310
+approach.
+
+04:15.370 --> 04:16.510
+This will work fine here.
+
+04:17.730 --> 04:23.610
+So generate all the subset and print anyone subset that follows this particular property.
+
+04:24.540 --> 04:27.840
+But for N that is equal to one thousand. OK?
+
+04:27.960 --> 04:29.460
+That is equal to one thousand.
+
+04:30.300 --> 04:32.490
+We might not be able to do the same.
+
+04:32.550 --> 04:32.910
+OK.
+
+04:33.300 --> 04:33.870
+We cannot.
+
+04:33.870 --> 04:36.270
+We cannot do two raise to the power one thousand.
+
+04:36.480 --> 04:41.670
+This is going to be a huge number and it's going to give you TLE. OK.
+
+04:42.150 --> 04:47.760
+So this exponential complexity will work only till 20 or 30 at MAX.
+
+04:48.840 --> 04:54.940
+Because two raise to the power 20, this is of the order 10 power six. two raise to power 30
+
+04:55.260 --> 04:57.500
+It is of the order ten power nine.
+
+04:57.960 --> 04:59.370
+Even this is not going to work.
+
+04:59.520 --> 05:03.870
+OK, so for larger values greater than 20, it's going to be become.
+
+05:04.590 --> 05:05.750
+It's going to become very slow.
+
+05:07.730 --> 05:13.640
+So now what do we do for an equal to 1000 ? So one thing we need to recall is
+
+05:16.390 --> 05:22.000
+there are generally two terms. one is called is subarray. OK and one is called a subset.
+
+05:23.110 --> 05:27.180
+And all subarrays are also subsets of.
+
+05:28.030 --> 05:33.360
+OK, so subarrays are also subset, so I need to find only one subject.
+
+05:33.370 --> 05:38.170
+So if I find, if I can ensure
+
+05:40.560 --> 05:45.630
+If there is one subarray then we have also found out the subset.
+
+05:45.720 --> 05:47.970
+OK, then we have also found out the subset.
+
+05:49.230 --> 05:54.360
+so ensuring a subarray will ensure a subset also exists.
+
+05:55.050 --> 05:56.910
+So now let's see if we can.
+
+05:57.330 --> 06:01.650
+how many subsidies we can have for the array of size N. so subarray
+
+06:01.680 --> 06:03.410
+a continuous part and subarray...
+
+06:03.780 --> 06:06.040
+A subset might not be contiguous as well.
+
+06:06.060 --> 06:10.500
+OK, so let's see if we have a array like this.
+
+06:12.890 --> 06:20.020
+Then a subarray is a continuous part of the array. let's say starting from this index and this index.
+
+06:20.780 --> 06:22.310
+let's say this part of the subarray
+
+06:23.540 --> 06:24.110
+we have
+
+06:24.740 --> 06:33.230
+and somehow, if we are able to prove that OK. there would be this subarray which will have this which
+
+06:33.230 --> 06:38.660
+will follow this property that some of elements from a A[i] till A[j].
+
+06:39.990 --> 06:41.670
+sorry A[i+1] till A[j]
+
+06:43.440 --> 06:52.290
+The mode of this would be divisible by N. then we do not need to look for subsets
+
+06:53.220 --> 06:56.520
+Additionally. OK. if we can find a subarray then subset is
+
+06:57.080 --> 06:58.440
+subarray is also a subset.
+
+06:59.490 --> 07:01.610
+So how many subsets you can have?
+
+07:01.620 --> 07:08.070
+So if N is of the order ten power three then you can pick the starting and ending point of a subset
+
+07:08.070 --> 07:09.130
+in nC2 ways.
+
+07:09.950 --> 07:13.270
+So roughly, we can have N^2 subsets.
+
+07:13.740 --> 07:14.040
+OK.
+
+07:14.670 --> 07:15.540
+That means for
+
+07:16.050 --> 07:20.700
+N that is ten power three, we can have roughly 10 power six subsets.
+
+07:21.330 --> 07:28.200
+We can find the sum. OK. by generating accumulative sum array and we can find the sum ok. we know the sum
+
+07:28.200 --> 07:30.810
+till this particular point, we need the sum till this particular point.
+
+07:31.290 --> 07:33.720
+And we can find the sum in just constant time.
+
+07:33.780 --> 07:34.050
+OK.
+
+07:34.470 --> 07:37.050
+That means in order of N^2 complexity.
+
+07:38.240 --> 07:40.100
+We can check
+
+07:43.530 --> 07:44.610
+for all subarrays. OK.
+
+07:44.850 --> 07:48.120
+But the question is what if, if we don't find subarray. OK?
+
+07:48.600 --> 07:53.120
+But now what I'm going to do is, I'm just going to jump jump to this particular part.
+
+07:53.880 --> 07:56.880
+An I'm going to prove, we are going to prove.
+
+07:58.310 --> 08:01.220
+For this problem the subarray
+
+08:02.650 --> 08:11.750
+that follows this property that follows this property that is mentioned in the question that sum of
+
+08:11.770 --> 08:16.470
+elements should be divisible by the size of the original array.
+
+08:17.270 --> 08:23.800
+OK. will always exist, will always exist.
+
+08:23.950 --> 08:30.430
+So it's a little tricky to think of this but we will try to prove it using the pigeonhole principle.
+
+08:31.710 --> 08:35.160
+So now we'll solve for N, that is ten power five.
+
+08:35.610 --> 08:37.380
+And that will also cover the case.
+
+08:37.710 --> 08:40.680
+We will not need to find all the subarray.
+
+08:40.680 --> 08:47.850
+We will just prove that this subarray will always exist and in the output we only need to print one subset
+
+08:47.850 --> 08:51.300
+and the subarray is also a subset.
+
+08:52.050 --> 09:00.840
+So let's let's go into what we need to do for ten power five in the next video and that will give
+
+09:00.840 --> 09:04.350
+us an idea how we can use the pigeonhole principle.
+

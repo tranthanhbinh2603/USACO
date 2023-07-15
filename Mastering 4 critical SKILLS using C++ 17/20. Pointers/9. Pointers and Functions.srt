@@ -1,0 +1,724 @@
+0
+1
+00:00:00,960 --> 00:00:03,660
+Let's discuss the use of functions with pointers.
+1
+
+2
+00:00:04,920 --> 00:00:07,440
+Let's refresh here a reference.
+2
+
+3
+00:00:07,650 --> 00:00:15,330
+If you have a function do-math that has a reference X, X here must be a number no guarantee that it will
+3
+
+4
+00:00:15,330 --> 00:00:17,940
+like be no null. By guarantee,
+4
+
+5
+00:00:18,120 --> 00:00:23,040
+I mean you don't expect that the function would be called and really X is pointing to something
+5
+
+6
+00:00:23,040 --> 00:00:24,390
+wrong in the memory. This would not happen.
+6
+
+7
+00:00:26,130 --> 00:00:30,480
+Now, let's define some X1 equals 4 and call the function do-math with X1.
+7
+
+8
+00:00:30,750 --> 00:00:35,070
+The function is adding plus 1, then multiplying by 2, then multiplying another 2.
+8
+
+9
+00:00:35,280 --> 00:00:38,660
+So 4 plus 1 is 5, 10, 20.
+9
+
+10
+00:00:38,700 --> 00:00:39,250
+That's it.
+10
+
+11
+00:00:39,900 --> 00:00:42,030
+Now we overloading another function.
+11
+
+12
+00:00:43,080 --> 00:00:47,100
+Overloading, sorry. We are overloading another function, integer-pointer-X.
+12
+
+13
+00:00:47,580 --> 00:00:52,320
+So now we have one function that accepts the reference, another function that accepts the pointer.
+13
+
+14
+00:00:52,920 --> 00:00:58,050
+The first thing when you have a function that takes a pointer is you have to make sure that this value
+14
+
+15
+00:00:58,200 --> 00:00:59,210
+is a null pointer.
+15
+
+16
+00:00:59,520 --> 00:01:02,100
+Otherwise, the program might crash.
+16
+
+17
+00:01:02,160 --> 00:01:04,200
+So there is a check here, if this is a pointer or not.
+17
+
+18
+00:01:04,680 --> 00:01:09,450
+After that, we are going to do the same logic. I'm first putting asterisk X plus 1.
+18
+
+19
+00:01:09,660 --> 00:01:10,860
+So I'm incrementing it.
+19
+
+20
+00:01:11,250 --> 00:01:19,120
+Then I'm saying asterisk X times 2, then I'm saying asterisk X times equal 2. Notice that the asterisk here
+20
+
+21
+00:01:19,170 --> 00:01:20,640
+are a lot and they are confusing.
+21
+
+22
+00:01:20,970 --> 00:01:22,560
+This asterisk is a pointer asterisk.
+22
+
+23
+00:01:22,920 --> 00:01:28,090
+This asterisk is a pointer asterisk. This asterisk is a multiplication asterisk like 2 times 3.
+23
+
+24
+00:01:28,410 --> 00:01:33,240
+OK, so don't get confused by asterisk X, and asterisk equals 2.
+24
+
+25
+00:01:33,510 --> 00:01:35,310
+They are two different asterisks types.
+25
+
+26
+00:01:35,850 --> 00:01:39,630
+Once you are done with that, you can also print them. In a similar way,
+26
+
+27
+00:01:39,630 --> 00:01:45,770
+If I have a function that takes a vector pointer, and I am defining here a vector, I can just send
+27
+
+28
+00:01:45,770 --> 00:01:47,640
+the reference of it. Here for X1,
+28
+
+29
+00:01:47,640 --> 00:01:50,280
+I also use the reference of it. With the reference of it,
+29
+
+30
+00:01:50,430 --> 00:01:55,590
+you can read it as follows: this integer-integer pointer X equals reference of X1.
+30
+
+31
+00:01:55,590 --> 00:01:58,140
+This is how you can think of passing a parameter. Here
+31
+
+32
+00:01:58,140 --> 00:02:05,730
+we say what? We say integer-reference-X equals x1. Here we say integer-reference asterisk X equals reference
+32
+
+33
+00:02:05,730 --> 00:02:06,210
+X1.
+33
+
+34
+00:02:06,360 --> 00:02:10,490
+Here we say vector of integer-pointer-ptr equals reference V.
+34
+
+35
+00:02:10,710 --> 00:02:15,090
+So this is actually the normal assignment, it just now in terms of functions.
+35
+
+36
+00:02:16,620 --> 00:02:22,500
+On the other side, we can also return a pointer. Let's say that we are defining a function that takes
+36
+
+37
+00:02:22,530 --> 00:02:29,070
+two pointers that are pointing to integer values, and we are going to return one of them that is a
+37
+
+38
+00:02:29,070 --> 00:02:29,790
+maximum value.
+38
+
+39
+00:02:30,330 --> 00:02:34,130
+Again, you have to be very careful with parameters and make sure they null.
+39
+
+40
+00:02:34,350 --> 00:02:35,640
+So I'm using here
+40
+
+41
+00:02:35,640 --> 00:02:36,350
+a simple logic.
+41
+
+42
+00:02:36,690 --> 00:02:40,380
+I'm saying if p1 is a null pointer, just return p2.
+42
+
+43
+00:02:40,380 --> 00:02:41,550
+P2 could be a pointer, could be a null,
+43
+
+44
+00:02:41,550 --> 00:02:42,060
+we don't care.
+44
+
+45
+00:02:42,510 --> 00:02:48,870
+And if p2 is a null pointer, just return p1. Otherwise, compare the value with p1 is pointing
+45
+
+46
+00:02:48,870 --> 00:02:52,960
+and the value with p2 is pointing and returns the maximum one.
+46
+
+47
+00:02:53,760 --> 00:02:59,370
+Now, we are sending a parameter as a pointer and returning again one of them here
+47
+
+48
+00:02:59,370 --> 00:03:02,610
+back from the function. We are defining here
+48
+
+49
+00:03:02,610 --> 00:03:09,630
+X1 with 1 and Y with 5, and then we are calling maximum using reference and reference
+49
+
+50
+00:03:09,630 --> 00:03:12,390
+to be able to call a function that is expecting a pointer.
+50
+
+51
+00:03:13,020 --> 00:03:19,140
+Now there is a function here called integer-pointer some, and this function is ...
+51
+
+52
+00:03:19,140 --> 00:03:24,300
+..., is creating a temporary variable, local variable, and returning its reference.
+52
+
+53
+00:03:24,580 --> 00:03:25,380
+Never do that.
+53
+
+54
+00:03:25,620 --> 00:03:31,830
+Remember, all of the local variables of a function or a scope will be destroyed after
+54
+
+55
+00:03:31,830 --> 00:03:32,350
+the function.
+55
+
+56
+00:03:32,670 --> 00:03:36,940
+So this function is trying to return the address of this temporary memory,
+56
+
+57
+00:03:37,080 --> 00:03:41,170
+and when this return is returned to the caller, the temp will be destroyed.
+57
+
+58
+00:03:41,430 --> 00:03:45,270
+So now we have a pointer pointing to something that doesn't exist.
+58
+
+59
+00:03:45,510 --> 00:03:50,190
+So be very careful when you have a function that returns a pointer. Never return a pointer
+59
+
+60
+00:03:50,190 --> 00:03:53,040
+looking at something that is local. Now,
+60
+
+61
+00:03:53,040 --> 00:03:58,110
+thinking about this function here Max, Max is taking two pointers and returning one of them.
+61
+
+62
+00:03:58,350 --> 00:03:59,460
+This is very safe.
+62
+
+63
+00:03:59,790 --> 00:04:02,290
+But here you are returning reference to a local variable.
+63
+
+64
+00:04:02,490 --> 00:04:03,340
+This will crash.
+64
+
+65
+00:04:03,450 --> 00:04:04,250
+Be very careful.
+65
+
+66
+00:04:07,470 --> 00:04:11,160
+Another case here,...
+66
+
+67
+00:04:11,640 --> 00:04:14,220
+If we have a pointer and would like to pass it to a reference.
+67
+
+68
+00:04:14,250 --> 00:04:15,690
+Now, here
+68
+
+69
+00:04:15,690 --> 00:04:19,980
+this is a function that takes a reference X. If I have X, I can call it hello X.
+69
+
+70
+00:04:20,250 --> 00:04:20,900
+This is normal.
+70
+
+71
+00:04:22,110 --> 00:04:26,940
+If I have here Y2, which is just a reference, I can also pass it.
+71
+
+72
+00:04:27,330 --> 00:04:34,140
+But what if I have pointer p equals reference X and I would like to pass it to reference X.
+72
+
+73
+00:04:34,140 --> 00:04:37,940
+I cannot just say p, p is an address, and it is expecting a normal variable.
+73
+
+74
+00:04:38,220 --> 00:04:41,650
+here is a very simple way, you get asterisk p, now
+74
+
+75
+00:04:41,670 --> 00:04:43,650
+asterisk p is just like an X here.
+75
+
+76
+00:04:43,680 --> 00:04:49,440
+So remove asterisk p and put X. Now, it's taking the reference of X. This like a two steps two to get back to
+76
+
+77
+00:04:49,440 --> 00:04:50,380
+the address itself.
+77
+
+78
+00:04:50,670 --> 00:04:53,610
+So this is how you pass a pointer to a reference X.
+78
+
+79
+00:04:53,760 --> 00:04:55,260
+So now we learned how to pass
+79
+
+80
+00:04:57,930 --> 00:05:01,950
+a pointer to a reference and also we learned the reverse.
+80
+
+81
+00:05:02,700 --> 00:05:06,180
+Here is one more thing about the differences between references and pointers.
+81
+
+82
+00:05:06,660 --> 00:05:12,540
+Let's define three functions, the first takes X reference, the second takes const-integer reference, and the third takes
+82
+
+83
+00:05:12,540 --> 00:05:13,320
+integer pointer,
+83
+
+84
+00:05:13,890 --> 00:05:16,290
+and let's define some X and pointer to it.
+84
+
+85
+00:05:17,230 --> 00:05:23,860
+Fun1 can takes X definitely because it's a normal integer, so it's pass by reference, that's OK, but it
+85
+
+86
+00:05:23,860 --> 00:05:27,730
+cannot take a pointer because the pointer is an address and this is expecting a variable.
+86
+
+87
+00:05:28,360 --> 00:05:33,010
+What if I have a pointer that I would like to send it? Send it using an asterisk pointer. So I can say
+87
+
+88
+00:05:33,010 --> 00:05:37,470
+asterisk pointer, which is the last step,  just would go to the value
+88
+
+89
+00:05:37,480 --> 00:05:38,870
+then we take the reference of the value.
+89
+
+90
+00:05:39,610 --> 00:05:40,860
+Can I send an integer?
+90
+
+91
+00:05:40,900 --> 00:05:41,230
+No,
+91
+
+92
+00:05:41,440 --> 00:05:43,840
+I'm expecting a reference in the memory,
+92
+
+93
+00:05:44,020 --> 00:05:45,220
+but this is just an integer.
+93
+
+94
+00:05:45,220 --> 00:05:46,210
+It doesn't have a memory.
+94
+
+95
+00:05:46,360 --> 00:05:49,900
+OK, so it doesn't work. On the other side,
+95
+
+96
+00:05:49,930 --> 00:05:51,190
+what if the function is const?
+96
+
+97
+00:05:51,730 --> 00:05:53,950
+It is same logic, except one thing.
+97
+
+98
+00:05:54,250 --> 00:06:00,220
+C++ allows you to send some constant value that doesn't have a clear address for us, it's a temporary variable
+98
+
+99
+00:06:00,460 --> 00:06:02,830
+here to the function here in a normal way.
+99
+
+100
+00:06:04,220 --> 00:06:08,120
+So for the fun2 of 10, ten here creates a temporary variable to be passed.
+100
+
+101
+00:06:08,810 --> 00:06:14,040
+This can only work in two cases only. The first case if the function doesn't take any reference.
+101
+
+102
+00:06:14,360 --> 00:06:19,070
+The second case if the function taking reference,
+102
+
+103
+00:06:19,070 --> 00:06:23,780
+but it is const. There is something else now for the move semantic reference-reference,
+103
+
+104
+00:06:23,780 --> 00:06:25,790
+but this is another concern for now.
+104
+
+105
+00:06:26,360 --> 00:06:32,540
+So now here the only difference that is a bit more flexible. The third case, if the function
+105
+
+106
+00:06:32,540 --> 00:06:39,520
+is taking pointer. I cannot send for it just X. X is a variable and it is expecting an address. I can send
+106
+
+107
+00:06:39,530 --> 00:06:43,160
+for it directly the reference of X because the reference of X is an address.
+107
+
+108
+00:06:43,610 --> 00:06:46,160
+I can send for it pointer because this is a pointer and
+108
+
+109
+00:06:46,160 --> 00:06:46,760
+this is pointer.
+109
+
+110
+00:06:46,970 --> 00:06:48,320
+I cannot send for it
+110
+
+111
+00:06:48,320 --> 00:06:48,940
+just 10.
+111
+
+112
+00:06:49,460 --> 00:06:53,210
+As you see, the most flexible one is const integer-reference X.
+112
+
+113
+00:06:53,450 --> 00:06:57,700
+But remember, this implies that the X will not be changed.
+113
+
+114
+00:06:59,390 --> 00:07:04,340
+Reference is to some extent safer than the pointer, but there is still no guarantee.
+114
+
+115
+00:07:04,430 --> 00:07:10,430
+There is a very wrong statement coming between software engineers that references cannot have a null
+115
+
+116
+00:07:10,430 --> 00:07:10,770
+value.
+116
+
+117
+00:07:10,970 --> 00:07:12,250
+This is completely wrong.
+117
+
+118
+00:07:12,560 --> 00:07:19,670
+We can do some workarounds to make reference points to a null value. You might try to think to get
+118
+
+119
+00:07:19,670 --> 00:07:19,910
+it.
+119
+
+120
+00:07:20,450 --> 00:07:30,920
+So all what we guarantee is as following: if we are here calling with X, there
+120
+
+121
+00:07:30,920 --> 00:07:35,120
+is a very high chance that things are really safe.
+121
+
+122
+00:07:35,780 --> 00:07:40,700
+But still troubles can simply happen
+122
+
+123
+00:07:40,700 --> 00:07:46,190
+and we can find out where to assign a null value. A few tips: In practice
+123
+
+124
+00:07:46,190 --> 00:07:50,580
+in many modern C++ software codes, pointers aren't frequent.
+124
+
+125
+00:07:50,780 --> 00:07:54,760
+In general, we prefer references much more than pointers.
+125
+
+126
+00:07:55,070 --> 00:07:57,740
+Remember, that STL inside it,
+126
+
+127
+00:07:57,890 --> 00:08:00,430
+It has a dynamic memory allocation, as we will know later.
+127
+
+128
+00:08:00,620 --> 00:08:03,790
+So STL is actually from the side,
+128
+
+129
+00:08:03,810 --> 00:08:10,520
+It must use pointers to make things more dynamic. Avoid pointers as possible
+129
+
+130
+00:08:10,670 --> 00:08:13,640
+and go ahead more with with reference.
+130
+
+131
+00:08:13,790 --> 00:08:17,920
+If you are using pointers, you have to double-check the null pointer. later,
+131
+
+132
+00:08:17,930 --> 00:08:24,130
+we will study OOP polymorphism where pointers are playing a great role in allowing us to build reusable
+132
+
+133
+00:08:24,290 --> 00:08:25,280
+and generic code.
+133
+
+134
+00:08:26,120 --> 00:08:30,530
+If you have a small data type like an integer, don't even try to put a reference to save memory.
+134
+
+135
+00:08:30,530 --> 00:08:31,520
+It is a big deal.
+135
+
+136
+00:08:31,520 --> 00:08:35,940
+Like if your function like hello integer X, you don't need to think, oh, let's make it const integer reference
+136
+
+137
+00:08:35,960 --> 00:08:36,310
+X.
+137
+
+138
+00:08:36,500 --> 00:08:41,420
+This is very small and it will have a very minor headache, but we don't need it.
+138
+
+139
+00:08:41,780 --> 00:08:44,120
+You can start thinking about the references.
+139
+
+140
+00:08:44,270 --> 00:08:47,150
+If you have something like say a vector of person struct.
+140
+
+141
+00:08:47,480 --> 00:08:50,330
+Now this can be heavy in memory, you have to be careful.
+141
+
+142
+00:08:50,330 --> 00:08:51,530
+Do you really want to copy it?
+142
+
+143
+00:08:51,710 --> 00:08:53,990
+Or better to use a reference to save time
+143
+
+144
+00:08:53,990 --> 00:08:54,470
+and memory.
+144
+
+145
+00:08:55,280 --> 00:08:55,880
+That's it.

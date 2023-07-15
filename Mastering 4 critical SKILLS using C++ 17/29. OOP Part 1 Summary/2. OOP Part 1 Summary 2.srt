@@ -1,0 +1,529 @@
+0
+1
+00:00:00,660 --> 00:00:07,970
+Let's continue our summary. The class features, remember, using const functions are very important.
+1
+
+2
+00:00:08,190 --> 00:00:11,610
+Try to maximize the number of the const function that you have.
+2
+
+3
+00:00:11,880 --> 00:00:14,160
+Remember, the principle of least privilege.
+3
+
+4
+00:00:14,430 --> 00:00:18,990
+If someone doesn't need some permission, then just don't give it to him.
+4
+
+5
+00:00:19,140 --> 00:00:25,320
+If a function wasn't expected to change a variable, just make it const and forbid others to make a
+5
+
+6
+00:00:25,320 --> 00:00:25,890
+change for it.
+6
+
+7
+00:00:26,970 --> 00:00:32,610
+Remember that the const member variables must be initialized in the initializer-list, but it's better to
+7
+
+8
+00:00:32,610 --> 00:00:39,240
+avoid them due to some performance issues. In function parameters, use const and reference as much
+8
+
+9
+00:00:39,240 --> 00:00:41,320
+as possible and convenient.
+9
+
+10
+00:00:41,520 --> 00:00:43,010
+This saves time in memory.
+10
+
+11
+00:00:43,230 --> 00:00:49,440
+It also shares an intention that you are telling someone there is no change for this parameter.
+11
+
+12
+00:00:49,500 --> 00:00:54,780
+So if you pass for me a parameter to my function, don't worry, I'm not going to change it.
+12
+
+13
+00:00:55,350 --> 00:01:00,210
+Remember that static variables are declared once, they are in memory till the program ends.
+13
+
+14
+00:01:00,400 --> 00:01:08,550
+They are also shared access among whoever access it. The static functions shared among
+14
+
+15
+00:01:08,550 --> 00:01:09,450
+all objects,
+15
+
+16
+00:01:09,450 --> 00:01:16,080
+but they cannot access data members because they aren't normal functions. The
+16
+
+17
+00:01:16,080 --> 00:01:17,910
+only access, the static variables.
+17
+
+18
+00:01:18,090 --> 00:01:20,740
+So static functions access, static variables.
+18
+
+19
+00:01:21,570 --> 00:01:26,550
+Remember the friend, we have a friend class, a friend member function, and a friend global function.
+19
+
+20
+00:01:26,790 --> 00:01:29,250
+The class here can access everything. Here
+20
+
+21
+00:01:29,250 --> 00:01:34,710
+only this function can access the private section, and the global function can access only the private
+21
+
+22
+00:01:34,950 --> 00:01:35,450
+section.
+22
+
+23
+00:01:35,760 --> 00:01:41,970
+The usage of the friend should be limited and should be reasonable because it might corrupt your
+23
+
+24
+00:01:41,970 --> 00:01:45,390
+OOP concepts and OOP implementation.
+24
+
+25
+00:01:46,320 --> 00:01:47,780
+Let's highlight some general tips.
+25
+
+26
+00:01:48,030 --> 00:01:55,590
+Remember, the temporary objects, an object doesn't have a name, and one of the main rules that you cannot
+26
+
+27
+00:01:55,590 --> 00:01:57,530
+bound to an a non-const reference.
+27
+
+28
+00:01:57,990 --> 00:02:00,570
+A good class is responsible for one concern.
+28
+
+29
+00:02:00,630 --> 00:02:05,610
+This is a single responsibility principle.
+29
+
+30
+00:02:06,660 --> 00:02:08,610
+There should be one reason to change it.
+30
+
+31
+00:02:08,820 --> 00:02:13,250
+For example, let's say you have an email service that supports the retrial feature.
+31
+
+32
+00:02:13,440 --> 00:02:16,050
+There is some logging, there are some caching features.
+32
+
+33
+00:02:16,410 --> 00:02:21,090
+Every one of these is a reason for a change, and every one of them would need a lot of code.
+33
+
+34
+00:02:21,330 --> 00:02:23,340
+There are four reasons now to change this code.
+34
+
+35
+00:02:23,580 --> 00:02:30,780
+This isn't good. You have to find a way to separate these different features into different classes. Avoid
+35
+
+36
+00:02:30,780 --> 00:02:31,590
+duplication,
+36
+
+37
+00:02:31,770 --> 00:02:36,450
+otherwise, if there is a bug in some code, you will have to fix it in several locations.
+37
+
+38
+00:02:36,660 --> 00:02:38,820
+Move to common functions or use templates
+38
+
+39
+00:02:38,820 --> 00:02:44,730
+like the standard library. Use context to decide relevant features in a class, so that you know
+39
+
+40
+00:02:44,730 --> 00:02:46,950
+what you can put and what you shouldn't. Use
+40
+
+41
+00:02:46,950 --> 00:02:50,220
+available functionalities, don't duplicate your work. STL provide for you,
+41
+
+42
+00:02:50,220 --> 00:02:53,970
+for example, the Date class, provides for you sorting function, and so on.
+42
+
+43
+00:02:54,480 --> 00:02:58,650
+If there is some available open-source code, go ahead, experiment with it.
+43
+
+44
+00:02:58,650 --> 00:03:00,690
+If you found it good, you might use it,
+44
+
+45
+00:03:00,810 --> 00:03:01,680
+but be careful.
+45
+
+46
+00:03:01,680 --> 00:03:03,270
+For example, do you need to have it?
+46
+
+47
+00:03:03,270 --> 00:03:03,930
+and so on.
+47
+
+48
+00:03:05,250 --> 00:03:11,550
+If a feature has a getter and setter use them. This is better. Remember the time class 2 representations,
+48
+
+49
+00:03:11,560 --> 00:03:13,530
+if we changed one of them, we change a lot
+49
+
+50
+00:03:13,530 --> 00:03:16,440
+in the code. Also take care of correctness.
+50
+
+51
+00:03:16,650 --> 00:03:22,050
+When you have a function or a constructor that takes a parameter, make sure that you verify the parameters
+51
+
+52
+00:03:22,260 --> 00:03:24,450
+and don't duplicate the code for verification.
+52
+
+53
+00:03:24,460 --> 00:03:28,960
+You might have a single function and all of whoever needs to verify, just is calling it.
+53
+
+54
+00:03:29,610 --> 00:03:34,410
+Remember the delegation like delegation in the constructor, if there is an object or function should
+54
+
+55
+00:03:34,410 --> 00:03:34,990
+do a task,
+55
+
+56
+00:03:34,990 --> 00:03:36,600
+you just give it to this task.
+56
+
+57
+00:03:37,260 --> 00:03:38,610
+Testing is very important.
+57
+
+58
+00:03:38,610 --> 00:03:41,900
+When you start to test your work, you will discover a lot of hidden errors.
+58
+
+59
+00:03:42,150 --> 00:03:47,520
+So provide at least a black box testing for your work so that you are sure that it is working fairly
+59
+
+60
+00:03:47,520 --> 00:03:47,750
+well.
+60
+
+61
+00:03:48,330 --> 00:03:50,880
+It is important to provide a clear and maintainable code.
+61
+
+62
+00:03:51,090 --> 00:03:52,200
+Don't just write a code.
+62
+
+63
+00:03:52,440 --> 00:03:58,650
+Think twice if the person who is reading your code would find it easy or not. Avoid local variable names
+63
+
+64
+00:03:58,650 --> 00:04:00,090
+with the same name as data members
+64
+
+65
+00:04:00,270 --> 00:04:06,390
+like if you have a price variable in data members and a price variable in your function, this clash will make problems for
+65
+
+66
+00:04:06,390 --> 00:04:06,600
+you.
+66
+
+67
+00:04:07,230 --> 00:04:13,290
+We also highlighted the Singleton design pattern, which mainly is a private constructor plus a static
+67
+
+68
+00:04:13,290 --> 00:04:15,060
+function to get the static instance.
+68
+
+69
+00:04:15,300 --> 00:04:20,900
+We highlight also the iterator design pattern, which has hast_next, get_next, reset iterator. Later,
+69
+
+70
+00:04:20,910 --> 00:04:26,560
+you should restudy them again with further details and notes, but it's good to be exposed to them that
+70
+
+71
+00:04:26,580 --> 00:04:26,900
+early.
+71
+
+72
+00:04:28,960 --> 00:04:35,740
+When coding, do printing in all constructors and destructors. Why? this would give you a hint about who
+72
+
+73
+00:04:35,740 --> 00:04:38,530
+is being called and who is being destructive.
+73
+
+74
+00:04:39,130 --> 00:04:44,900
+It is very good for heavy classes to prevent the copy constructor and assignment operator.
+74
+
+75
+00:04:45,310 --> 00:04:51,670
+The purpose of that is for you to notice if there is something being copied and you didn't expect that,
+75
+
+76
+00:04:52,060 --> 00:04:53,630
+but support them later if needed.
+76
+
+77
+00:04:53,830 --> 00:04:57,390
+This is at least how I start coding my own objects.
+77
+
+78
+00:04:57,400 --> 00:05:07,390
+I initially make sure the copy constructor isn't allowed so that I prevent any unintentional
+78
+
+79
+00:05:07,570 --> 00:05:10,290
+code that is making a copy from some object
+79
+
+80
+00:05:10,300 --> 00:05:15,910
+and I don't notice that. One is the logic is that you can move the copy constructor to the private section,
+80
+
+81
+00:05:16,120 --> 00:05:18,370
+but C++11 give us a good way to do that.
+81
+
+82
+00:05:18,610 --> 00:05:20,110
+Let's say you have a class named user.
+82
+
+83
+00:05:20,260 --> 00:05:23,380
+You can say user const user reference equal delete.
+83
+
+84
+00:05:23,560 --> 00:05:28,240
+It means to delete the copy constructor. To the assignment operator,
+84
+
+85
+00:05:28,470 --> 00:05:31,680
+remember, this is an equal assignment operator like Y equal X object.
+85
+
+86
+00:05:31,870 --> 00:05:35,920
+You just write this line, void
+86
+
+87
+00:05:36,910 --> 00:05:40,330
+Yeah, void operator equals const user reference equal delete.
+87
+
+88
+00:05:40,600 --> 00:05:43,260
+I know that you don't know operator overloading so far.
+88
+
+89
+00:05:43,420 --> 00:05:49,210
+So this is weird syntax, but for now, it just going to forbid this kind of assignment. Again,
+89
+
+90
+00:05:49,210 --> 00:05:54,010
+assignments like copy constructors may be a problem if you don't notice that about pointers.
+90
+
+91
+00:05:55,320 --> 00:06:03,540
+Yeah, that's all so I hope this midway in OOP, you realized how hard to build a proper design and
+91
+
+92
+00:06:03,540 --> 00:06:08,850
+that following the best practice takes time. I also would like to warn you about something.
+92
+
+93
+00:06:09,600 --> 00:06:12,510
+I was a software engineer for like six years.
+93
+
+94
+00:06:12,810 --> 00:06:15,750
+The local market has a lot of weak software engineers.
+94
+
+95
+00:06:15,930 --> 00:06:19,790
+These engineers didn't put time into mastering basics.
+95
+
+96
+00:06:20,130 --> 00:06:25,590
+So don't be one of them because after three or four years in the market, you will find yourself facing
+96
+
+97
+00:06:25,590 --> 00:06:26,280
+difficulties.
+97
+
+98
+00:06:26,470 --> 00:06:32,700
+It's very important to be very good in OOP, in basic programming skills, in algorithms, in data
+98
+
+99
+00:06:32,700 --> 00:06:33,300
+structures.
+99
+
+100
+00:06:33,480 --> 00:06:38,420
+Don't be the guy who just jumps directly to android or front development or backend development.
+100
+
+101
+00:06:38,730 --> 00:06:40,330
+This is a fatal mistake.
+101
+
+102
+00:06:40,800 --> 00:06:46,620
+Also, remember that any skill takes time, it needs a lot of practice and practice and practice. Practice is
+102
+
+103
+00:06:46,620 --> 00:06:48,500
+the only way to make it perfect.
+103
+
+104
+00:06:49,050 --> 00:06:54,690
+I did my best in this project to provide a lot of practice so that you have the chance to improve your
+104
+
+105
+00:06:54,690 --> 00:06:56,320
+skills as much as possible.
+105
+
+106
+00:06:56,910 --> 00:06:57,450
+That's it.

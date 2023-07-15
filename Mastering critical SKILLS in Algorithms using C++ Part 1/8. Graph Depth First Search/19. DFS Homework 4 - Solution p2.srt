@@ -1,0 +1,359 @@
+1
+00:00:00,990 --> 00:00:06,480
+Let's solve the second problem, which looks scary, but actually, again, an easy problem as you think.
+
+2
+00:00:07,950 --> 00:00:12,490
+The first thing that you should remember, which is three, the three permits are very important.
+
+3
+00:00:12,510 --> 00:00:19,860
+Remember in a tree like this one here, there is only one bath from any note to any note, only one
+
+4
+00:00:19,860 --> 00:00:20,190
+bath.
+
+5
+00:00:21,360 --> 00:00:25,350
+So we know that the three is directed in a way, but it's in a way it's undirected.
+
+6
+00:00:25,650 --> 00:00:29,160
+There is only one bathroom here, so let's say this is nothing but zero, for example.
+
+7
+00:00:30,060 --> 00:00:32,370
+Then there's actually just one bathroom nude, no.
+
+8
+00:00:32,370 --> 00:00:36,000
+Zero to any food, and there is only one bathroom, any new Tunisia.
+
+9
+00:00:36,450 --> 00:00:41,490
+So, for example, this node will have to go this way, and this way, this node will have to go this
+
+10
+00:00:41,490 --> 00:00:41,830
+way.
+
+11
+00:00:41,850 --> 00:00:43,260
+This one would have to go this way.
+
+12
+00:00:43,350 --> 00:00:44,520
+This would have to go this way.
+
+13
+00:00:44,850 --> 00:00:49,830
+You see, in a very, in a very collaborative way, we would have to go to node number zero.
+
+14
+00:00:50,490 --> 00:00:54,090
+So now if the original edge is this way, we have to flip it this way.
+
+15
+00:00:54,480 --> 00:00:57,120
+If the original edge here is this way, we have to flip it.
+
+16
+00:00:57,300 --> 00:01:04,200
+So as you see with like symbol DFS, we can figure out what, what the direction that must be in the
+
+17
+00:01:04,200 --> 00:01:04,620
+problem.
+
+18
+00:01:05,190 --> 00:01:07,020
+So this is the key idea and the problem.
+
+19
+00:01:08,380 --> 00:01:13,480
+That the nodes in a way must take a specific bath to go to No.
+
+20
+00:01:13,480 --> 00:01:13,840
+Zero.
+
+21
+00:01:13,960 --> 00:01:20,500
+So all what you need to check is if this is the actual direction or not the remaining thing here, which
+
+22
+00:01:20,500 --> 00:01:23,770
+is a nice trick, how to implement that in an efficient way.
+
+23
+00:01:23,780 --> 00:01:24,870
+So it is an idea here.
+
+24
+00:01:24,880 --> 00:01:26,530
+Let's say we have.
+
+25
+00:01:27,950 --> 00:01:34,460
+This graph, again, it seems we have to do a lot, we have to take every note of them and get it to
+
+26
+00:01:34,460 --> 00:01:39,350
+defense and get the best through the road and then figure out which roads are flipped.
+
+27
+00:01:39,590 --> 00:01:41,990
+The idea looks are clear, but the implementation isn't.
+
+28
+00:01:42,380 --> 00:01:45,500
+So the first thing is what I call reverse the thinking.
+
+29
+00:01:46,700 --> 00:01:50,600
+And instead of thinking about the defense from every new tool, no.
+
+30
+00:01:50,600 --> 00:01:54,230
+Zero, which is the enemy in this one, their physicals.
+
+31
+00:01:55,800 --> 00:01:56,080
+OK.
+
+32
+00:01:56,670 --> 00:01:57,960
+In the mind of some difficult.
+
+33
+00:01:58,200 --> 00:02:01,590
+What if we just made the single device from zero to them?
+
+34
+00:02:02,010 --> 00:02:08,040
+So now we flip the problem, assume the original text, say I want to orient to the edges such that
+
+35
+00:02:08,050 --> 00:02:09,420
+zero can go to any one of them.
+
+36
+00:02:10,080 --> 00:02:15,210
+The good thing here that we just need to make a deal faster from zero a single day fiscal.
+
+37
+00:02:15,660 --> 00:02:18,210
+So here is a track implemented to be this way.
+
+38
+00:02:18,690 --> 00:02:21,120
+We would make a device from zero to all of the.
+
+39
+00:02:22,110 --> 00:02:28,410
+We will notice the direction of the edge, and if it isn't implemented, we will use it.
+
+40
+00:02:28,440 --> 00:02:30,900
+But just consider that we are in the reverse of the problem.
+
+41
+00:02:31,290 --> 00:02:33,810
+So in fact, if the edge exists, we count it.
+
+42
+00:02:34,020 --> 00:02:34,860
+Not the opposite.
+
+43
+00:02:35,250 --> 00:02:35,760
+That's all.
+
+44
+00:02:37,500 --> 00:02:40,320
+Uh, here is a practical example.
+
+45
+00:02:40,470 --> 00:02:44,220
+Let's say we have a lake, the chin.
+
+46
+00:02:44,520 --> 00:02:46,260
+The graph is zero one two three four.
+
+47
+00:02:46,890 --> 00:02:50,130
+Then the defense from zero will end up with this way.
+
+48
+00:02:50,730 --> 00:02:54,340
+If you try to reverse that the graph, it would be like four three two one zero.
+
+49
+00:02:54,840 --> 00:02:57,990
+Which means we need actually to flip zero and one two.
+
+50
+00:02:59,390 --> 00:03:01,540
+Um.
+
+51
+00:03:05,340 --> 00:03:05,910
+No, no, no.
+
+52
+00:03:06,720 --> 00:03:08,790
+Let me repeat, this is the original graph.
+
+53
+00:03:09,360 --> 00:03:10,320
+This is zero one.
+
+54
+00:03:11,970 --> 00:03:14,760
+And one, zero, one and one two.
+
+55
+00:03:16,200 --> 00:03:17,400
+And the three to.
+
+56
+00:03:18,940 --> 00:03:20,200
+And the four three.
+
+57
+00:03:21,380 --> 00:03:29,390
+This is the original graph, if you did a defensive from zero, it will be like zero one two three.
+
+58
+00:03:30,340 --> 00:03:38,620
+For now, the compare between the ages, but consider the opposite here, in fact, we wanted the graph
+
+59
+00:03:38,620 --> 00:03:45,700
+to be to be the following to be like four good two to three to go to two go to one but to zero.
+
+60
+00:03:45,710 --> 00:03:46,840
+This is what we are dealing with.
+
+61
+00:03:46,840 --> 00:03:48,610
+But this is actually the what exists.
+
+62
+00:03:48,940 --> 00:03:55,210
+So we iterate on the graph and we count to the edges that exist because we flip do that, we flip to
+
+63
+00:03:55,210 --> 00:03:56,020
+the edges.
+
+64
+00:03:56,440 --> 00:03:57,100
+So let's see them.
+
+65
+00:03:57,100 --> 00:03:59,650
+But the mutation here is going to be pretty straightforward.
+
+66
+00:04:00,100 --> 00:04:07,210
+I have an edge, which is include the two and Boolean if the original input in the graph is built or
+
+67
+00:04:07,210 --> 00:04:09,610
+not, add undirected edge here.
+
+68
+00:04:11,880 --> 00:04:19,500
+I'm going to make a undirected graph, but one edge is a given edge and the other edge is what I'm going
+
+69
+00:04:19,500 --> 00:04:19,890
+to build.
+
+70
+00:04:20,190 --> 00:04:25,770
+For example, if they say that zero, one and two is the edges, I will create them.
+
+71
+00:04:26,040 --> 00:04:28,110
+This will have the true value here.
+
+72
+00:04:28,440 --> 00:04:32,850
+And this back one will have faults are here and this one will have folds here so that I want the defense
+
+73
+00:04:32,850 --> 00:04:34,830
+to proceed as if it is undirected.
+
+74
+00:04:34,830 --> 00:04:40,650
+Graph Remember, the defense on the undirected graph is actually under the graph, so we need it to
+
+75
+00:04:40,650 --> 00:04:41,460
+be undirected here.
+
+76
+00:04:41,850 --> 00:04:43,530
+So I'm creating a graph with the original.
+
+77
+00:04:43,530 --> 00:04:47,400
+It just was very true and the opposite edges with value falls.
+
+78
+00:04:48,000 --> 00:04:49,770
+This is a very normal defense.
+
+79
+00:04:49,780 --> 00:04:50,380
+But what?
+
+80
+00:04:50,380 --> 00:04:56,490
+I am doing something here, this is the total number of edges that I will reorient and I see here if
+
+81
+00:04:56,490 --> 00:05:01,470
+the edge is built in, then counted as an edge to be flipped.
+
+82
+00:05:01,920 --> 00:05:03,740
+If the edges edges built, then we will flip it.
+
+83
+00:05:03,750 --> 00:05:08,040
+OK, this looks like weird, but remember we are doing the defense on the opposite direction.
+
+84
+00:05:09,770 --> 00:05:14,840
+Now, the last thing is we could hear the graph we do at the office, from the numbers, you go into
+
+85
+00:05:14,840 --> 00:05:17,090
+the reoriented edges and return it.
+
+86
+00:05:17,390 --> 00:05:19,410
+Now the algorithm is very trivial.
+
+87
+00:05:19,550 --> 00:05:20,810
+It is just Ebola's V.
+
+88
+00:05:21,170 --> 00:05:26,690
+So while it looks like scary and they begin on the idea level, it looks too scary in the implementation
+
+89
+00:05:26,690 --> 00:05:29,750
+level with a simple trick of flipping the wool graph.
+
+90
+00:05:29,960 --> 00:05:32,870
+We can note that we can proceed in an easy way.

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1673925386 source:e:\document\project\usaco\mastering 4 critical skills using c++ 17\17. stl\learning\13 sort & set & multiset\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<set>
+	<unordered_set>
+

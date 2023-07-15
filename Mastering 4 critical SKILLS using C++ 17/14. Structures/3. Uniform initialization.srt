@@ -1,0 +1,944 @@
+0
+1
+00:00:01,260 --> 00:00:08,090
+Today, we will learn some more details about the different types of the initializations in C++, and
+1
+
+2
+00:00:08,100 --> 00:00:11,970
+specifically knowing about the C++11, the uniform initialization.
+2
+
+3
+00:00:13,170 --> 00:00:20,250
+Let me first introduce the basic idea that, the initialization in C++ is just a nightmare.
+3
+
+4
+00:00:20,700 --> 00:00:29,490
+There are too many types of initializations in C++ and you have to use different types of initialization
+4
+
+5
+00:00:29,760 --> 00:00:31,100
+for different cases.
+5
+
+6
+00:00:31,320 --> 00:00:37,270
+So there is no one unique and global initialization way to use it everywhere, before C++11.
+6
+
+7
+00:00:38,130 --> 00:00:46,200
+An interesting fact is there is like at least 19 ways to initialize, to try to initialize an integer in
+7
+
+8
+00:00:46,200 --> 00:00:49,230
+C++, like four or so of them are just compiler error.
+8
+
+9
+00:00:49,470 --> 00:00:55,530
+You can imagine there are too many ways to initialize an integer in C++. In general,
+9
+
+10
+00:00:55,740 --> 00:01:03,480
+understanding when an object is uninitialized, isn't trivial in C++, and this typically lead to many
+10
+
+11
+00:01:03,480 --> 00:01:04,170
+problems.
+11
+
+12
+00:01:04,500 --> 00:01:09,990
+C++ introduces the "uniform initialization", which made our life a bit simpler.
+12
+
+13
+00:01:10,260 --> 00:01:14,580
+So I would like you to stop the video for five minutes.
+13
+
+14
+00:01:14,760 --> 00:01:16,200
+Read slowly
+14
+
+15
+00:01:16,380 --> 00:01:21,330
+these definitions, we're going to highlight some of them, but it will be useful to read the terms and
+15
+
+16
+00:01:21,720 --> 00:01:23,340
+like give a thinking about them.
+16
+
+17
+00:01:24,870 --> 00:01:31,350
+Here is a huge number of ways to try to initialize an integer now in C++, which is a lot.
+17
+
+18
+00:01:31,620 --> 00:01:32,760
+But anyway.
+18
+
+19
+00:01:32,790 --> 00:01:33,120
+Yeah.
+19
+
+20
+00:01:34,170 --> 00:01:39,960
+So the uniform initialization is to use these braces this way.
+20
+
+21
+00:01:41,770 --> 00:01:45,590
+What is good about uniform initialization or the motivation behind it?
+21
+
+22
+00:01:45,910 --> 00:01:54,610
+It can be used in all the different contexts, before C++11, you cannot have the same technique
+22
+
+23
+00:01:54,610 --> 00:01:55,810
+to initialize everything.
+23
+
+24
+00:01:56,080 --> 00:02:00,290
+You have to do different techniques for different types, the word uniform
+24
+
+25
+00:02:00,310 --> 00:02:04,480
+here is an indicator that it is the same for every context.
+25
+
+26
+00:02:04,490 --> 00:02:08,220
+You can use it in different context and it is going to work well. 
+26
+
+27
+00:02:08,290 --> 00:02:08,750
+before
+27
+
+28
+00:02:08,770 --> 00:02:09,460
+that
+28
+
+29
+00:02:09,490 --> 00:02:10,540
+This wasn't a solution.
+29
+
+30
+00:02:10,750 --> 00:02:13,120
+You can use them in a bunch of different locations,
+30
+
+31
+00:02:13,140 --> 00:02:14,870
+It's going to work well most of the time.
+31
+
+32
+00:02:15,370 --> 00:02:16,980
+So this makes our life simpler.
+32
+
+33
+00:02:17,140 --> 00:02:19,140
+As I said before C++11,
+33
+
+34
+00:02:19,660 --> 00:02:24,010
+There are different styles of initialization that you have used in the different cases.
+34
+
+35
+00:02:24,250 --> 00:02:27,670
+But now you have only one way that you can apply it everywhere.
+35
+
+36
+00:02:27,820 --> 00:02:30,380
+So it's going to make your life like simpler, more consistent.
+36
+
+37
+00:02:30,910 --> 00:02:37,870
+Sometimes it is even a more safer choice, for example, for some very minor cases, and we'll know
+37
+
+38
+00:02:37,870 --> 00:02:38,670
+about that later,
+38
+
+39
+00:02:38,920 --> 00:02:42,000
+It is going to handle and do better initialization for you.
+39
+
+40
+00:02:42,340 --> 00:02:47,680
+It also based on the settings of the compiler can give you warnings or even compiler errors if say, you
+40
+
+41
+00:02:47,680 --> 00:02:50,790
+try to do a narrowing from a data type to another data type.
+41
+
+42
+00:02:51,760 --> 00:02:58,870
+Sometimes it is the only way to solve a specific problem, like let's say you are in a template and
+42
+
+43
+00:02:58,870 --> 00:03:00,040
+you would like to
+43
+
+44
+00:03:02,150 --> 00:03:05,460
+initialize,
+44
+
+45
+00:03:05,470 --> 00:03:11,110
+It is going to be a very big problem to be a global one, when it comes to templates we will learn about that.
+45
+
+46
+00:03:12,880 --> 00:03:15,790
+It's still there are some debates about the uniform initialization.
+46
+
+47
+00:03:15,790 --> 00:03:18,250
+Should we use it in every possible situation?
+47
+
+48
+00:03:18,490 --> 00:03:19,720
+Should we be more careful?
+48
+
+49
+00:03:20,260 --> 00:03:21,970
+What are the potential problems of it?
+49
+
+50
+00:03:22,210 --> 00:03:27,220
+But overall, the uniform initialization like made our life much simpler anyway.
+50
+
+51
+00:03:29,200 --> 00:03:32,840
+Let's learn more about the different types of initialization.
+51
+
+52
+00:03:32,950 --> 00:03:34,510
+It's good time to know about that.
+52
+
+53
+00:03:35,800 --> 00:03:40,300
+We can see these different styles through the course and it's a good time now to know about them.
+53
+
+54
+00:03:40,300 --> 00:03:42,520
+And I would like you to learn something,
+54
+
+55
+00:03:43,520 --> 00:03:49,690
+one philosophy for me in this course isn't just to show you the good way of doing things,
+55
+
+56
+00:03:49,690 --> 00:03:56,860
+I actually intended to show you different ways to do things, including what might not be proper or
+56
+
+57
+00:03:56,860 --> 00:03:58,630
+what might be not trendy now.
+57
+
+58
+00:03:58,990 --> 00:04:04,780
+And the reason behind that, in C++, we can shoot ourselves in the foot.
+58
+
+59
+00:04:05,050 --> 00:04:08,200
+You need to learn how to protect yourself.
+59
+
+60
+00:04:08,290 --> 00:04:11,440
+What is a safer code, what is right and what is wrong.
+60
+
+61
+00:04:11,650 --> 00:04:16,450
+You shouldn't just be learned the optimal or the modern way to do things.
+61
+
+62
+00:04:16,690 --> 00:04:21,610
+That's why during the course I try to familiarize yourself with the different ways and eventually during
+62
+
+63
+00:04:21,610 --> 00:04:26,680
+the course you get enough tips about what is really modern and what really you should do. anyway,
+63
+
+64
+00:04:27,250 --> 00:04:33,790
+Going back to the primitives here, when we use the equal "=", we are doing what we call a "copy initialization".
+64
+
+65
+00:04:33,790 --> 00:04:34,720
+What does this mean?
+65
+
+66
+00:04:34,990 --> 00:04:41,440
+It means that this array, characters array is going to be created first, then typically copied to here.
+66
+
+67
+00:04:41,770 --> 00:04:43,900
+That's why we call "copy initialization".
+67
+
+68
+00:04:44,080 --> 00:04:53,410
+There is always this equal "=" here, but if there is no equal, then this is what we call "direct initialization",
+68
+
+69
+00:04:53,440 --> 00:04:58,350
+which means that this guy is going to be constructed directly inside the array.
+69
+
+70
+00:04:58,960 --> 00:05:01,210
+So with equal, you have a copy initialization,
+70
+
+71
+00:05:01,420 --> 00:05:03,670
+Without it, you have a direct initialization.
+71
+
+72
+00:05:03,940 --> 00:05:11,620
+As you can expect, the direct initialization is more efficient than the copy initialization, which isn't a big
+72
+
+73
+00:05:11,620 --> 00:05:13,150
+deal if you are using primitives.
+73
+
+74
+00:05:13,300 --> 00:05:16,180
+But it might be a problem if you are using heavy objects.
+74
+
+75
+00:05:16,660 --> 00:05:22,930
+Now, going more here, we know that integer x0 here will be uninitialized, right?
+75
+
+76
+00:05:23,200 --> 00:05:25,780
+Why ? we call it the default initialization,
+76
+
+77
+00:05:25,780 --> 00:05:29,050
+When you don't initialize something, it is a default initialization.
+77
+
+78
+00:05:29,260 --> 00:05:34,750
+And this is the worst thing to do, because it makes the primitives garbage, unless you have
+78
+
+79
+00:05:34,750 --> 00:05:38,110
+a good reason, you should always try to initialize your variables.
+79
+
+80
+00:05:38,350 --> 00:05:43,240
+So again, if you try to use the equal, you are going to make it a copy initialization.
+80
+
+81
+00:05:43,450 --> 00:05:48,760
+But if you try to use the parenthesis or the braces "{}", it is going to be direct initialization.
+81
+
+82
+00:05:49,510 --> 00:05:55,330
+OK, so the default initialization you aren't initializing, the copy direct initialization, you are initializing
+82
+
+83
+00:05:55,330 --> 00:05:55,990
+with something.
+83
+
+84
+00:05:56,590 --> 00:05:58,420
+And here's one more interesting type,
+84
+
+85
+00:05:58,750 --> 00:06:01,510
+What if I did just braces empty like that?
+85
+
+86
+00:06:02,050 --> 00:06:08,480
+This is called "value initialization", which is going to be for the primitives, just putting them with 0
+86
+
+87
+00:06:08,500 --> 00:06:11,860
+what we call "zero initialization", now I know this is now confusing.
+87
+
+88
+00:06:11,860 --> 00:06:15,700
+You are hearing now a lot of initialization things which might be very confusing.
+88
+
+89
+00:06:17,020 --> 00:06:23,890
+So the copy, there is a value and you are using equal. the direct, there is a value but you don't use
+89
+
+90
+00:06:23,890 --> 00:06:26,320
+an equal. if you don't initialize it,
+90
+
+91
+00:06:26,320 --> 00:06:32,200
+it's a default initialization. if you try to use parenthesis or braces, but without a value, it's
+91
+
+92
+00:06:32,200 --> 00:06:33,670
+called a value initialization.
+92
+
+93
+00:06:34,180 --> 00:06:37,060
+Now, here is one of the old problems with C++,
+93
+
+94
+00:06:37,660 --> 00:06:40,180
+If you tried here to use the parenthesis, which was working
+94
+
+95
+00:06:40,360 --> 00:06:48,580
+well here and here, now, this isn't a variable, this is how we define a function, which is why before
+95
+
+96
+00:06:48,580 --> 00:06:53,470
+C++ 11, there was no consistent way to initialize everything that you need.
+96
+
+97
+00:06:53,680 --> 00:06:58,270
+Now, this is a function which is a problem like you suddenly get a compilation error and you don't
+97
+
+98
+00:06:58,270 --> 00:07:04,270
+understand, because you shouldn't try to do value initialization using parenthesis, but you can also do it only
+98
+
+99
+00:07:04,480 --> 00:07:05,410
+using braces.
+99
+
+100
+00:07:06,730 --> 00:07:13,060
+Here is one more thing about the uniform initialization, when we say uniform, we refer to using
+100
+
+101
+00:07:13,060 --> 00:07:13,510
+parentheses.
+101
+
+102
+00:07:13,510 --> 00:07:15,370
+So this is uniform, this is uniform,
+102
+
+103
+00:07:15,370 --> 00:07:21,990
+this is a uniform. Here is a "double z" and this is an "int z", if you try to define an integer from a double,
+103
+
+104
+00:07:22,210 --> 00:07:28,210
+this is a narrowing, which means that you are potentially going to lose information, the window in
+104
+
+105
+00:07:28,210 --> 00:07:28,840
+your compiler
+105
+
+106
+00:07:28,840 --> 00:07:30,930
+And its settings compilation,
+106
+
+107
+00:07:31,120 --> 00:07:36,190
+This might be a warning or be like the official language, going to be a compilation error for you.
+107
+
+108
+00:07:36,820 --> 00:07:38,800
+So this is one good about the initialization.
+108
+
+109
+00:07:39,130 --> 00:07:43,980
+If you try to do that with the copy initialization here with the equal, you will not get this copy.
+109
+
+110
+00:07:43,990 --> 00:07:52,810
+If you didn't use the braces of the uniform initialization.
+110
+
+111
+00:07:53,830 --> 00:08:00,160
+Let's see more about the objects case, this is a struct with an integer "id" and a string "name".
+111
+
+112
+00:08:00,880 --> 00:08:03,540
+Notice that there's no initialization here.
+112
+
+113
+00:08:04,000 --> 00:08:07,480
+So the "id" and the "name" will be default initialization.
+113
+
+114
+00:08:07,900 --> 00:08:11,050
+The default initialization for primitives is garbage.
+114
+
+115
+00:08:11,530 --> 00:08:17,980
+The default initialization for an object is you call its constructor and the string is a struct or a
+115
+
+116
+00:08:17,980 --> 00:08:18,430
+class.
+116
+
+117
+00:08:18,700 --> 00:08:24,250
+So it's going to call its default constructor, which would put the value
+117
+
+118
+00:08:24,250 --> 00:08:24,850
+of "".
+118
+
+119
+00:08:25,870 --> 00:08:28,810
+Now, let's see some slides, here,
+119
+
+120
+00:08:28,840 --> 00:08:33,910
+are we initializing? no, then this is a default initialization, which will call implicitly the
+120
+
+121
+00:08:34,120 --> 00:08:35,770
+default constructor that is here.
+121
+
+122
+00:08:37,240 --> 00:08:40,120
+OK, what about "e2" of parenthesis?
+122
+
+123
+00:08:40,300 --> 00:08:42,060
+Again, we fall in the same problem,
+123
+
+124
+00:08:42,070 --> 00:08:43,180
+This is a function,
+124
+
+125
+00:08:43,180 --> 00:08:44,440
+This isn't an object.
+125
+
+126
+00:08:45,280 --> 00:08:47,060
+What about "e3" with this way?
+126
+
+127
+00:08:47,350 --> 00:08:53,110
+This is a value initialization, but as there is no value, it's just zero initialization.
+127
+
+128
+00:08:54,860 --> 00:09:01,010
+OK, now what if I made Employee as a temporary, temporary means that there is no name and
+128
+
+129
+00:09:01,010 --> 00:09:03,680
+I use the parenthesis or braces, now it's going to work
+129
+
+130
+00:09:03,710 --> 00:09:05,150
+well, why?
+130
+
+131
+00:09:05,780 --> 00:09:10,010
+This is a bit tricky, but now line 19 is very different from line 15.
+131
+
+132
+00:09:10,010 --> 00:09:13,830
+Line 19 isn't like a function signature.
+132
+
+133
+00:09:14,120 --> 00:09:19,170
+This guy here was a function signature because this looks like a return type, but here it doesn't.
+133
+
+134
+00:09:19,340 --> 00:09:23,440
+So you see the parentheses worked in one scenario, but it didn't work in another.
+134
+
+135
+00:09:23,810 --> 00:09:27,410
+But the braces worked here and worked here, which is very well.
+135
+
+136
+00:09:29,270 --> 00:09:31,220
+I would like to show you another interesting thing,
+136
+
+137
+00:09:31,430 --> 00:09:37,280
+If you try to do something like employee e4 with parentheses way, the 10 is going to initialize
+137
+
+138
+00:09:37,280 --> 00:09:39,980
+to the ID and the "Mostafa" is going to initialize the name.
+138
+
+139
+00:09:40,130 --> 00:09:43,270
+But this happens only for what we call here Aggregate Class, for example.
+139
+
+140
+00:09:43,550 --> 00:09:47,690
+I don't want to go into details of Aggregate Classes, there are a lot of terms that you still don't know about them,
+140
+
+141
+00:09:47,960 --> 00:09:52,580
+but for simplicity for now, this class doesn't have a constructor here, so there is no constructor
+141
+
+142
+00:09:52,580 --> 00:09:54,920
+at all, which make it qualified to aggregate.
+142
+
+143
+00:09:54,920 --> 00:09:57,520
+If it is that simple, it is going to be an aggregate.
+143
+
+144
+00:09:58,340 --> 00:10:02,840
+So this, even parentheses style is going to do this initialization.
+144
+
+145
+00:10:04,520 --> 00:10:06,860
+You know here a lot of words about the initialization.
+145
+
+146
+00:10:06,860 --> 00:10:11,510
+I would like to make some simple informal rules just to help you to remember, if you forgot to
+146
+
+147
+00:10:11,510 --> 00:10:14,150
+initialize, this is default initialization.
+147
+
+148
+00:10:14,480 --> 00:10:19,190
+If it is primitives, the value will be garbage, which is a big concern.
+148
+
+149
+00:10:19,550 --> 00:10:24,410
+If it's a struct object, like the employee class, it is going to call the default constructor, which is
+149
+
+150
+00:10:24,410 --> 00:10:25,040
+doing nothing.
+150
+
+151
+00:10:26,000 --> 00:10:31,350
+If it is initialized with something like this guy or this guy, then if you use the equal "=", it is a
+151
+
+152
+00:10:31,600 --> 00:10:32,450
+copy initialization.
+152
+
+153
+00:10:32,660 --> 00:10:38,300
+If you didn't use the equal, it is a direct initialization, which is more efficient. If you try to initialize
+153
+
+154
+00:10:38,300 --> 00:10:40,600
+but without some value like this style,
+154
+
+155
+00:10:40,940 --> 00:10:43,370
+If it is a primitive, it will be zero initialization,
+155
+
+156
+00:10:43,400 --> 00:10:44,300
+The zero value would be
+156
+
+157
+00:10:44,300 --> 00:10:49,350
+put. If it is an object, it is going to be the default constructor.
+157
+
+158
+00:10:50,600 --> 00:10:52,610
+So this is overall what happened here.
+158
+
+159
+00:10:52,880 --> 00:10:54,470
+The primitives here are garbage.
+159
+
+160
+00:10:54,590 --> 00:10:56,060
+The primitives here are zeros.
+160
+
+161
+00:10:56,210 --> 00:11:03,050
+The primitives here will take the corresponding value. The objects are going to be the default constructor.
+161
+
+162
+00:11:03,290 --> 00:11:04,150
+This is future reading
+162
+
+163
+00:11:04,160 --> 00:11:04,580
+if you like to read.
+163
+
+164
+00:11:05,840 --> 00:11:13,250
+Some tips, if you can stick to the uniform initialization, which is using the parentheses, please stick to that, it looks
+164
+
+165
+00:11:13,250 --> 00:11:21,080
+like a good option. If you would like to use the normal style here with the primitives, this is still
+165
+
+166
+00:11:21,080 --> 00:11:21,600
+an OK.
+166
+
+167
+00:11:21,710 --> 00:11:26,620
+Some people might hate it and say, hey, use like uniform initialization everywhere.
+167
+
+168
+00:11:26,870 --> 00:11:33,470
+Some of them will be OK with primitives' styles, otherwise and specifically for your user-defined types
+168
+
+169
+00:11:33,620 --> 00:11:35,470
+please stick to uniform initialization.
+169
+
+170
+00:11:35,840 --> 00:11:42,590
+There is a debate around that, but still good idea. Further tips, if you are using any scalar object
+170
+
+171
+00:11:42,590 --> 00:11:44,510
+and you didn't initialize it,
+171
+
+172
+00:11:44,690 --> 00:11:50,030
+My advice for safety, assume it is uninitialized, what happens, some coders 
+172
+
+173
+00:11:50,030 --> 00:11:51,550
+will think: oh, in this scenario
+173
+
+174
+00:11:51,560 --> 00:11:56,540
+I'm sure that behind the scene it would be initialized, errors happens and a lot of troubles
+174
+
+175
+00:11:56,540 --> 00:11:59,120
+happens. A similar advice,
+175
+
+176
+00:11:59,480 --> 00:12:02,720
+If you have some struct, please use a default
+176
+
+177
+00:12:02,720 --> 00:12:04,760
+member initializer, give it some value.
+177
+
+178
+00:12:04,970 --> 00:12:11,630
+This is very important so that if you forgot to initialize in some constructor, the default initialization
+178
+
+179
+00:12:11,780 --> 00:12:12,620
+would give a value.
+179
+
+180
+00:12:12,920 --> 00:12:16,740
+Later, we will see how, there is a lecture called "defaulted
+180
+
+181
+00:12:16,740 --> 00:12:17,690
+functions" lecture.
+181
+
+182
+00:12:17,900 --> 00:12:22,010
+We'll see how the braces is giving us several choices
+182
+
+183
+00:12:22,010 --> 00:12:28,160
+than the default initialization, and also later in templates will see how the braces come to rescue us
+183
+
+184
+00:12:28,160 --> 00:12:29,150
+in some situation.
+184
+
+185
+00:12:29,510 --> 00:12:36,080
+Overall, using the uniform initialization is a good style, stick to it, especially with primitives.
+185
+
+186
+00:12:36,500 --> 00:12:39,110
+I am mixing in the course.
+186
+
+187
+00:12:39,230 --> 00:12:42,440
+Sometimes it is a bad habit, sometimes it is for educational purposes.
+187
+
+188
+00:12:42,710 --> 00:12:49,160
+But after, the course stick to the uniform initialization if you can, at least with the user-defined types
+188
+
+189
+00:12:49,160 --> 00:12:50,840
+That's it.

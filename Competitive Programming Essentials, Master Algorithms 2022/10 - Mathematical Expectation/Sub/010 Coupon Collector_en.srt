@@ -1,0 +1,368 @@
+1
+00:00:01,090 --> 00:00:06,250
+Hi Everyone, In this lecture we're going to talk about a general type of problem, which is known as coupon
+
+2
+00:00:06,250 --> 00:00:07,090
+collector problem.
+
+3
+00:00:07,660 --> 00:00:14,530
+Let us understand this problem statement and this can be applied in question of this particular type. ok.
+
+4
+00:00:14,920 --> 00:00:16,059
+Let's see this question.
+
+5
+00:00:16,420 --> 00:00:19,600
+A certain brand distributes a coupon in a packet of chips.
+
+6
+00:00:20,560 --> 00:00:26,140
+The coupon is chosen randomly from a set of N distinct coupons, so you have N type of coupons. let say
+
+7
+00:00:26,140 --> 00:00:34,720
+a coupon of type one, coupon of type two, up to a coupon of type N. and any packet of chips can contain
+
+8
+00:00:34,960 --> 00:00:35,980
+coupon with the value x.
+
+9
+00:00:36,750 --> 00:00:38,260
+OK. I don't know what is this value x?
+
+10
+00:00:39,580 --> 00:00:45,840
+What is the expected number of packets that you will buy so that you get all the N distinct coupon?
+
+11
+00:00:46,060 --> 00:00:49,290
+So you want to collect all N distinct coupon?
+
+12
+00:00:49,300 --> 00:00:52,200
+And what is the number of packets you have to buy?
+
+13
+00:00:52,690 --> 00:00:53,960
+That is what you need to find out.
+
+14
+00:00:54,040 --> 00:00:54,340
+OK.
+
+15
+00:00:55,180 --> 00:01:03,640
+So another way to frame this question could be how many throws are needed so that you see all the N faces
+
+16
+00:01:03,640 --> 00:01:04,810
+of  a N sided die.
+
+17
+00:01:04,840 --> 00:01:05,140
+OK?
+
+18
+00:01:05,920 --> 00:01:08,500
+How many throws are needed?
+
+19
+00:01:10,740 --> 00:01:11,220
+To get
+
+20
+00:01:12,330 --> 00:01:14,610
+all N faces
+
+21
+00:01:16,430 --> 00:01:24,950
+Of a N sided die. For example If the die has six sides. in how many throws you will see, all the faces from
+
+22
+00:01:24,950 --> 00:01:29,030
+one to six. that is another way of framing this particular problem.
+
+23
+00:01:29,660 --> 00:01:32,090
+Let us discuss how we can solve this problem.
+
+24
+00:01:33,600 --> 00:01:39,450
+What we will do? we will say okay. let us say that E(xi) denotes
+
+25
+00:01:42,500 --> 00:01:50,630
+the number of pockets you will buy, denotes the number of bags you will buy
+
+26
+00:01:51,940 --> 00:01:52,480
+To get.
+
+27
+00:01:53,900 --> 00:01:58,390
+to grab the ith new, the ith new coupon.
+
+28
+00:01:58,770 --> 00:02:02,300
+ok, I'm not saying the ith coupon I am saying ith new coupon.
+
+29
+00:02:02,840 --> 00:02:08,419
+That means you have already collected I-1 type of coupon and now you're collecting the ith type
+
+30
+00:02:08,419 --> 00:02:08,960
+of coupon.
+
+31
+00:02:09,770 --> 00:02:11,870
+And what is the value that we want to compute?
+
+32
+00:02:12,530 --> 00:02:14,150
+We want to compute E(x).
+
+33
+00:02:14,720 --> 00:02:23,450
+That means we want to get all types of coupons which can be written as E(x1+x2+x3+...xn)
+
+34
+00:02:23,450 --> 00:02:24,680
+.
+
+35
+00:02:24,920 --> 00:02:30,230
+This is what we want to compute and we have seen that using the rule of linearity of expectation.
+
+36
+00:02:30,770 --> 00:02:39,410
+This can be written as E(x1) plus E(x2) plus E(x3) and so on E(xn). all of these
+
+37
+00:02:39,410 --> 00:02:41,930
+terms can be added independently.
+
+38
+00:02:43,400 --> 00:02:46,040
+Now we also saw that
+
+39
+00:02:48,010 --> 00:02:54,850
+getting a new coupon or getting an old coupon, so whenever this event is can be treated as a Bernoulli's trial,
+
+40
+00:02:54,850 --> 00:02:59,590
+ok so what is the probability of getting a new coupon ?so why it is a 
+
+41
+00:03:00,040 --> 00:03:04,930
+Bernoulli's trial, because if you buy a packet of chips, either you will get a new coupon.
+
+42
+00:03:05,530 --> 00:03:06,580
+That is a success.
+
+43
+00:03:07,620 --> 00:03:07,860
+OK.
+
+44
+00:03:08,280 --> 00:03:10,570
+Or you will get a coupon that you already have.
+
+45
+00:03:10,590 --> 00:03:13,590
+That means you will get the old coupon that is a state of failure.
+
+46
+00:03:14,190 --> 00:03:17,820
+What is the probability of getting the ith new coupon?
+
+47
+00:03:18,240 --> 00:03:20,550
+Probability of getting
+
+48
+00:03:21,700 --> 00:03:29,740
+the ith new open. let us try to find out this probability. so this would be how many new coupon are
+
+49
+00:03:29,740 --> 00:03:30,220
+available.
+
+50
+00:03:30,490 --> 00:03:31,720
+ok. that is available
+
+51
+00:03:31,930 --> 00:03:38,380
+new coupon after you have collected I-1 type of coupon upon total coupons. ok.
+
+52
+00:03:39,010 --> 00:03:41,680
+upon total coupon. as simple as that.
+
+53
+00:03:42,980 --> 00:03:49,070
+The probability of getting the ith new coupon is going to be nothing but let's say this probability
+
+54
+00:03:49,070 --> 00:03:50,900
+is equal to N minus
+
+55
+00:03:54,610 --> 00:03:57,800
+how many coupon would be available?
+
+56
+00:03:58,010 --> 00:04:01,750
+Suppose you have already collected
+
+57
+00:04:03,050 --> 00:04:09,740
+I-1 type of coupon OK. and total coupon is N. how many new type of coupon would be available
+
+58
+00:04:10,370 --> 00:04:12,860
+that would be nothing but N-i-1 
+
+59
+00:04:14,370 --> 00:04:16,140
+.
+
+60
+00:04:17,459 --> 00:04:17,790
+OK.
+
+61
+00:04:18,329 --> 00:04:27,530
+Upon total coupons that is N. so that means this probability P is nothing but n-i+1 upon N.
+
+62
+00:04:28,230 --> 00:04:29,810
+And then what is E(xi)?
+
+63
+00:04:30,870 --> 00:04:31,440
+Because
+
+64
+00:04:32,240 --> 00:04:35,030
+this is a case of a Bernoulli's trial.
+
+65
+00:04:35,540 --> 00:04:38,090
+OK, so we can say this probability is nothing but one by P.
+
+66
+00:04:39,360 --> 00:04:47,400
+The number of pack that you will need to buy to get the ith new coupon is nothing but N upon
+
+67
+00:04:47,410 --> 00:04:48,090
+N-I +1.
+
+68
+00:04:48,540 --> 00:04:48,860
+OK.
+
+69
+00:04:49,290 --> 00:04:51,090
+And what is the value that you want to compute?
+
+70
+00:04:51,120 --> 00:04:55,800
+You want to compute E(x) that is equal to E(x1).
+
+71
+00:04:55,800 --> 00:05:03,000
+So If you put the value of I is one what you get? you get N upon N-1+1.
+
+72
+00:05:03,600 --> 00:05:10,380
+So you can clearly see that in order to get the first unique coupon, you only need to buy one pack.
+
+73
+00:05:10,950 --> 00:05:14,370
+ok at buying one back will give you the first new coupon.
+
+74
+00:05:14,730 --> 00:05:16,890
+OK, what about E(x2)?
+
+75
+00:05:16,920 --> 00:05:20,310
+So you will add this term to put the value of I as two.
+
+76
+00:05:20,310 --> 00:05:27,540
+It becomes N upon N minus two plus one, which is N-1. E(x3) that is N upon N-2
+
+77
+00:05:27,540 --> 00:05:29,550
+upon so on....
+
+78
+00:05:30,870 --> 00:05:36,480
+To get the Nth new coupon what it would be? you will say N divided by N-I,
+
+79
+00:05:37,570 --> 00:05:44,290
+which is N+1, so effectively you can clearly see if you have collected N-1
+
+80
+00:05:44,290 --> 00:05:50,530
+of coupons, then to get the Nth unique coupon the expected number of packs that you need to buy
+
+81
+00:05:50,530 --> 00:05:51,160
+is equal to N.
+
+82
+00:05:51,160 --> 00:05:54,580
+so that is what this series is.
+
+83
+00:05:55,120 --> 00:06:00,730
+So if you try to simplify this to what you will get is, you will get OK.
+
+84
+00:06:00,820 --> 00:06:10,810
+N upon N. so if you take the term N outside, it becomes... it becomes starting from this thing.
+
+85
+00:06:10,990 --> 00:06:13,150
+So I'm just going to write the terms.
+
+86
+00:06:13,150 --> 00:06:20,950
+In this order, it becomes one plus one by two plus one by three plus up to up to up to this term.
+
+87
+00:06:20,950 --> 00:06:22,240
+This term becomes one by N.
+
+88
+00:06:23,550 --> 00:06:29,230
+So this is the final result and this is... this would be your answer ok. For any given value of N
+
+89
+00:06:29,350 --> 00:06:31,360
+You can easily compute this.
+
+90
+00:06:31,810 --> 00:06:35,620
+series using a for loop and you can finally output your answer.
+
+91
+00:06:36,130 --> 00:06:38,080
+So I hope you have understood this problem.
+
+92
+00:06:38,120 --> 00:06:39,880
+And that's all for this video.
+

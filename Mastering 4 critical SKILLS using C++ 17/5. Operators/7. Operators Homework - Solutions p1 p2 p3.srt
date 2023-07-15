@@ -1,0 +1,539 @@
+0
+1
+00:00:00,960 --> 00:00:05,000
+Let's solve this problem, which is all about tracing mainly. for the first
+1
+
+2
+00:00:05,010 --> 00:00:16,740
+problem here, we have mainly variables A and B, with two zeroes, and then we are printing
+2
+
+3
+00:00:16,740 --> 00:00:22,320
+A++,  ++ after the A means that the A original value will be used
+3
+
+4
+00:00:22,320 --> 00:00:24,030
+first then it will be incremented.
+4
+
+5
+00:00:24,240 --> 00:00:25,620
+So A is zero.
+5
+
+6
+00:00:25,890 --> 00:00:32,140
+So zero would be printed here and then B++ would be done after the 'cout'  statement.
+6
+
+7
+00:00:32,550 --> 00:00:36,360
+So after here at nine eight, the value of A now is one.
+7
+
+8
+00:00:37,110 --> 00:00:45,020
+Then we have ++A, ++A will increment A first before using it and A is one,
+8
+
+9
+00:00:45,030 --> 00:00:47,650
+So now A is two, then we print it,
+9
+
+10
+00:00:47,790 --> 00:00:50,760
+That's why we have two, we were one plus one two.
+10
+
+11
+00:00:51,650 --> 00:00:59,810
+Now, A + 2 * B + 1, B is 1, 2 * 1 is 2 + 1 is 3 and
+11
+
+12
+00:00:59,810 --> 00:01:02,680
+then 3 + A which is 2, is 5.
+12
+
+13
+00:01:02,870 --> 00:01:11,450
+So now A is 5 and then B = ++A * 2, A is 5, ++A will increment it
+13
+
+14
+00:01:11,450 --> 00:01:11,910
+first.
+14
+
+15
+00:01:12,010 --> 00:01:16,780
+So A will be 6 and then 6 * 2 will be 12.
+15
+
+16
+00:01:16,790 --> 00:01:23,770
+If we printed here A and B, we will notice then they are 6 and 12, for A and B. assigning B to A
+16
+
+17
+00:01:23,810 --> 00:01:24,110
+then
+17
+
+18
+00:01:24,110 --> 00:01:26,300
+Now the two values are 6 and 6.
+18
+
+19
+00:01:28,650 --> 00:01:35,550
+A = new value for A, 12 +A / 3 will compute all of this expression, then assign it here
+19
+
+20
+00:01:35,550 --> 00:01:42,210
+to the value of A, A is 6, 6 / 3 is  2, 2 / 2 is 1, and then 12 + 1
+20
+
+21
+00:01:42,210 --> 00:01:44,100
+is a 13.
+21
+
+22
+00:01:44,100 --> 00:01:46,290
+13 - 4 is 9
+22
+
+23
+00:01:46,300 --> 00:01:47,970
+So printing here 9.
+23
+
+24
+00:01:48,600 --> 00:01:56,490
+And observe here, in math this three lines must  be done together the A / by 3 by 2.
+24
+
+25
+00:01:56,640 --> 00:02:02,170
+In math the division will have higher priority and also the multiplication would have the higher priority.
+25
+
+26
+00:02:02,430 --> 00:02:07,420
+So in math you should do first this expression then this expression then you do all of it.
+26
+
+27
+00:02:07,860 --> 00:02:08,550
+So anyway,
+27
+
+28
+00:02:08,760 --> 00:02:10,560
+Now the B is 6 and A is 9.
+28
+
+29
+00:02:10,680 --> 00:02:13,700
+Now we are assigning A again to B, which is 6.
+29
+
+30
+00:02:13,710 --> 00:02:14,760
+So A is now 6
+30
+
+31
+00:02:15,570 --> 00:02:18,450
+And here we say 12 + 6.
+31
+
+32
+00:02:18,480 --> 00:02:20,580
+The parenthesis will give higher priority.
+32
+
+33
+00:02:20,580 --> 00:02:27,120
+So it will be applied first, 12 + 6 is 8, sorry, 12 + 6 is 18.
+33
+
+34
+00:02:27,480 --> 00:02:29,790
+/ 3 is 9 or 18
+34
+
+35
+00:02:29,790 --> 00:02:32,220
+/ 3 is 6,  / 2 is 3
+35
+
+36
+00:02:32,880 --> 00:02:34,380
+So this whole expression
+36
+
+37
+00:02:34,380 --> 00:02:36,180
+Here is 3.
+37
+
+38
+00:02:37,150 --> 00:02:38,740
+3 - 2 is 1
+38
+
+39
+00:02:39,150 --> 00:02:45,870
+Then 1*2 is 2, printing here 2 again, in terms of priority, the parenthesis will have
+39
+
+40
+00:02:45,880 --> 00:02:46,560
+higher priority.
+40
+
+41
+00:02:46,570 --> 00:02:47,770
+So this is very deep
+41
+
+42
+00:02:47,770 --> 00:02:52,990
+One will be done first, then the remaining of the division will be done here second,
+42
+
+43
+00:02:53,290 --> 00:02:55,620
+Then we will subtract by 2.
+43
+
+44
+00:02:55,960 --> 00:02:57,720
+Then finally we multiply by 2.
+44
+
+45
+00:02:57,910 --> 00:03:01,030
+It's important to know how to trace things like that.
+45
+
+46
+00:03:01,750 --> 00:03:04,450
+Let's move to the second homework again.
+46
+
+47
+00:03:04,450 --> 00:03:05,380
+Another tracing.
+47
+
+48
+00:03:06,190 --> 00:03:12,370
+This tracing is mainly the Fibonacci tracing, we already took such a program and we referred to Fibonacci before.
+48
+
+49
+00:03:12,820 --> 00:03:18,820
+If the first term of Fibonacci is A, and the second term of Fibonacci is B, then C here is = A + b is just
+49
+
+50
+00:03:18,820 --> 00:03:20,460
+assigning the term intermediate.
+50
+
+51
+00:03:20,860 --> 00:03:25,990
+And the moral of this assignment is just to observe that we have to print to the last value here.
+51
+
+52
+00:03:26,440 --> 00:03:30,550
+Remember that the comma operator is evaluated from left to right.
+52
+
+53
+00:03:30,580 --> 00:03:31,510
+This one is evaluated
+53
+
+54
+00:03:31,510 --> 00:03:31,990
+This one,
+54
+
+55
+00:03:31,990 --> 00:03:32,410
+This one,
+55
+
+56
+00:03:32,410 --> 00:03:32,830
+This one,
+56
+
+57
+00:03:32,830 --> 00:03:33,250
+This one,
+57
+
+58
+00:03:33,250 --> 00:03:33,610
+This one,
+58
+
+59
+00:03:33,610 --> 00:03:33,940
+This one.
+59
+
+60
+00:03:33,940 --> 00:03:37,270
+And so on till we are done with this guy and we print it.
+60
+
+61
+00:03:37,480 --> 00:03:39,250
+So in the comma we print the last one.
+61
+
+62
+00:03:39,580 --> 00:03:43,990
+The comma operator is one of the least used in industry in this type.
+62
+
+63
+00:03:43,990 --> 00:03:45,910
+And it is good to know about it.
+63
+
+64
+00:03:47,890 --> 00:03:55,930
+And the third homework, we have another tracing, so let's see here what we have, it's merely an exercise
+64
+
+65
+00:03:55,930 --> 00:03:58,400
+over the compound assignments.
+65
+
+66
+00:03:58,690 --> 00:04:02,650
+We start with A as 210
+66
+
+67
+00:04:02,980 --> 00:04:07,770
+If we divide A by 2, then the 200 would be 100 the 10 would be 5.
+67
+
+68
+00:04:07,780 --> 00:04:09,900
+So overall would be one 105
+68
+
+69
+00:04:10,450 --> 00:04:14,950
+105 actually is the multiplication of three values, 3 and 5 and 7.
+69
+
+70
+00:04:15,850 --> 00:04:18,130
+If you divide it by 3, you will get 35.
+70
+
+71
+00:04:18,130 --> 00:04:20,320
+Then by 5 you get 7.
+71
+
+72
+00:04:20,320 --> 00:04:22,090
+Then by 7 you get 1.
+72
+
+73
+00:04:22,570 --> 00:04:25,570
+And all of these operations involve the "/=".
+73
+
+74
+00:04:25,720 --> 00:04:28,730
+So A is updated with every step.
+74
+
+75
+00:04:29,320 --> 00:04:30,990
+This is an independent expression.
+75
+
+76
+00:04:32,080 --> 00:04:38,020
+Too we have here these parameters have priority would be applied first, these parameters have priority would be applied
+76
+
+77
+00:04:38,020 --> 00:04:44,320
+first, these parameters would be applied first, 2 +3 is 5, 5 - (-3) is 8.
+77
+
+78
+00:04:44,350 --> 00:04:49,660
+So we have actually 5 * 8, then divided by 5 and divided by 8 , so actually overall
+78
+
+79
+00:04:49,900 --> 00:04:50,380
+is 1.
+79
+
+80
+00:04:51,340 --> 00:04:56,980
+We start here with A = 10, then A++ + 10.
+80
+
+81
+00:04:57,460 --> 00:04:58,930
+it starts by addition.
+81
+
+82
+00:04:58,930 --> 00:05:02,520
+A is 10 and 10 is 20, and this (++) would be done later.
+82
+
+83
+00:05:02,540 --> 00:05:05,170
+So this would have to print 20. and then
+83
+
+84
+00:05:05,170 --> 00:05:11,140
+now A is 11 and here we have again A + 10,
+84
+
+85
+00:05:11,440 --> 00:05:13,930
+So you can think like oh A is 11,
+85
+
+86
+00:05:13,930 --> 00:05:19,620
+11 and 10 is 21. and this will be applied first, then we have 22, so we have here overall
+86
+
+87
+00:05:19,850 --> 00:05:28,180
+22. and A is now 12. and then the same concept here as we incremented A twice
+87
+
+88
+00:05:28,180 --> 00:05:31,600
+and decremented twice then we are sure that A is now just 10.
+88
+
+89
+00:05:32,110 --> 00:05:33,750
+So A is 10 and B is 20.
+89
+
+90
+00:05:34,090 --> 00:05:42,870
+Let's add them A + B, A is 10, B is 20 then 30. and the ++B is incremented first,
+90
+
+91
+00:05:42,900 --> 00:05:47,440
+then the B will have to be 1 early, so the output would have to be 31.
+91
+
+92
+00:05:48,460 --> 00:05:52,270
+And we are printing the A here, which is 11 from this expression.
+92
+
+93
+00:05:52,600 --> 00:05:57,220
+And finally this ugly statement, ++A += 10.
+93
+
+94
+00:05:57,550 --> 00:06:04,960
+I wrote it in this fancy way to confuse you. you are incrementing the A first and then you are adding
+94
+
+95
+00:06:04,960 --> 00:06:10,630
+the value to it. in industry we shouldn't try to code in a way that confuse people.
+95
+
+96
+00:06:10,930 --> 00:06:11,740
+This is fair enough,
+96
+
+97
+00:06:11,740 --> 00:06:12,910
+People will perceive it.
+97
+
+98
+00:06:13,690 --> 00:06:18,040
+Such an expression might be a bit longer for guys, so you might divide it to several variables.
+98
+
+99
+00:06:19,240 --> 00:06:24,160
+This are OK, OK expressions because there is only a single variable is changed here.
+99
+
+100
+00:06:24,520 --> 00:06:31,600
+However, for clarity, you might consider making this say ++A in a separate line first or taking
+100
+
+101
+00:06:31,600 --> 00:06:32,590
+a copy from that one.
+101
+
+102
+00:06:33,190 --> 00:06:37,090
+You do not code in this way, and you don't code in this way. over all
+102
+
+103
+00:06:37,090 --> 00:06:40,540
+You have to think in industry about your colleagues who are reading
+103
+
+104
+00:06:40,540 --> 00:06:44,770
+code. even you after like six months, you might come back to read the code.
+104
+
+105
+00:06:44,800 --> 00:06:45,940
+the code has to be clear.
+105
+
+106
+00:06:46,240 --> 00:06:48,700
+So make sure to write something that is really clear.
+106
+
+107
+00:06:49,180 --> 00:06:53,680
+If you are writing a line of code that isn't clear enough, it's a good idea to come and write some
+107
+
+108
+00:06:53,680 --> 00:06:57,310
+comment here for the guys to give them some help, that's all.

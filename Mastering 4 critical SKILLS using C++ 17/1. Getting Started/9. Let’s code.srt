@@ -1,0 +1,324 @@
+0
+1
+00:00:01,050 --> 00:00:09,390
+In this session, we will code our first program. Let's open a calculator. Enter: 3 + 5
+1
+
+2
+00:00:09,570 --> 00:00:16,140
+to get 8. To program that, we need to state the exact set of instructions. The program needs to read number
+2
+
+3
+00:00:16,150 --> 00:00:19,250
+one, read the operation, read number two.
+3
+
+4
+00:00:19,470 --> 00:00:20,910
+Then we ask to get the result.
+4
+
+5
+00:00:21,090 --> 00:00:28,830
+But how to tell the computer these instructions through a programming language? We use the programming
+5
+
+6
+00:00:28,830 --> 00:00:32,010
+language to write a set of instructions to the computer.
+6
+
+7
+00:00:32,550 --> 00:00:35,170
+Strictly, we follow something called "syntax rules".
+7
+
+8
+00:00:35,760 --> 00:00:38,520
+Think of the "syntax rules" like grammar rules in English.
+8
+
+9
+00:00:38,820 --> 00:00:40,980
+You don't just write anything to make a statement.
+9
+
+10
+00:00:41,370 --> 00:00:46,020
+A compiler is a tool to validate following the syntax rules.
+10
+
+11
+00:00:46,230 --> 00:00:50,700
+If you didn't respect the rules, the compiler generates compiler errors.
+11
+
+12
+00:00:50,970 --> 00:00:54,930
+Otherwise, you get an executable to run your code.
+12
+
+13
+00:00:57,240 --> 00:00:59,680
+Your coding cycle is typically three steps. Write
+13
+
+14
+00:00:59,720 --> 00:01:01,860
+some code, compile it and run.
+14
+
+15
+00:01:03,940 --> 00:01:11,500
+This is the "Hello World" program. Stop the video for a minute and read it slowly. Step by step, we should be
+15
+
+16
+00:01:11,500 --> 00:01:16,300
+able to understand this whole program. Just for now, here, "My first Program.
+16
+
+17
+00:01:16,300 --> 00:01:16,820
+Hello".
+17
+
+18
+00:01:16,960 --> 00:01:22,810
+We know this is scary at the moment, but don't worry. If you try to combine and run the program,
+18
+
+19
+00:01:23,140 --> 00:01:25,590
+we will get this screen, typically black.
+19
+
+20
+00:01:25,600 --> 00:01:26,140
+It is called
+20
+
+21
+00:01:26,320 --> 00:01:31,810
+"Console Screen",  just contains text. So a "Console Screen" is something that contains text. Nothing fancy
+21
+
+22
+00:01:31,810 --> 00:01:33,610
+like web or mobile screens.
+22
+
+23
+00:01:34,120 --> 00:01:34,900
+Notice here.
+23
+
+24
+00:01:34,900 --> 00:01:37,360
+The printed statement by "My First Program, Hello".
+24
+
+25
+00:01:38,290 --> 00:01:41,490
+So now let's go to the code. In line eight,
+25
+
+26
+00:01:41,770 --> 00:01:46,660
+we see something called "cout", 'c' is for console,
+26
+
+27
+00:01:46,840 --> 00:01:48,030
+'out' is for output.
+27
+
+28
+00:01:48,250 --> 00:01:49,510
+This is a command to print.
+28
+
+29
+00:01:49,690 --> 00:01:52,360
+Notice here the statement "My First Program.
+29
+
+30
+00:01:52,360 --> 00:01:52,690
+Hellllllo."
+30
+
+31
+00:01:53,500 --> 00:01:54,700
+Very important to notice here
+31
+
+32
+00:01:54,700 --> 00:01:55,120
+the double quotes "  ".
+32
+
+33
+00:01:55,360 --> 00:01:56,850
+There is a double quote here in the beginning and
+33
+
+34
+00:01:57,070 --> 00:01:58,150
+double quote in the end.
+34
+
+35
+00:01:58,150 --> 00:02:00,520
+Any statement needs, any string statement,
+35
+
+36
+00:02:00,520 --> 00:02:01,180
+any message,
+36
+
+37
+00:02:01,180 --> 00:02:02,500
+needs these two double quotes.
+37
+
+38
+00:02:02,860 --> 00:02:04,630
+You can also find here a semicolon ';'.
+38
+
+39
+00:02:04,930 --> 00:02:09,700
+The semicolon is just a signal to the end of an instruction.
+39
+
+40
+00:02:11,500 --> 00:02:14,940
+You can find also, one here in line two and one here in another 
+40
+
+41
+00:02:14,950 --> 00:02:15,210
+line.
+41
+
+42
+00:02:18,140 --> 00:02:23,120
+Anything else in the program for the moment, just write it as it is. I'm going to highlight some of
+42
+
+43
+00:02:23,120 --> 00:02:25,960
+it just to make you more familiar with it.
+43
+
+44
+00:02:25,970 --> 00:02:30,110
+But for now, what we care about is what will be between line 8 and 10 here
+44
+
+45
+00:02:30,110 --> 00:02:33,290
+,this space. In line number one,
+45
+
+46
+00:02:33,290 --> 00:02:41,000
+You see "iostream", (io) is an abbreviation for (Input and Output), and this is called like a 
+46
+
+47
+00:02:41,000 --> 00:02:41,330
+header stream.
+47
+
+48
+00:02:42,080 --> 00:02:47,420
+Going deeper, the "#include" is something that contains things that are ready for us to use.
+48
+
+49
+00:02:47,690 --> 00:02:51,580
+Let's say that you would like to compute √25, which is just 5.
+49
+
+50
+00:02:51,770 --> 00:02:53,720
+Should you write a code by yourself to do that?
+50
+
+51
+00:02:54,430 --> 00:02:55,250
+The answer is: No.
+51
+
+52
+00:02:55,460 --> 00:03:03,080
+We, as language authors, we can provide you with a ready-to-use-code. Something like,
+52
+
+53
+00:03:03,110 --> 00:03:08,450
+let's say: "Hey, here is a square root. Just use it to get 5. In something called "#include  cmath" ".
+53
+
+54
+00:03:08,780 --> 00:03:12,710
+The "#include iostream" includes functionalities to read and write from the desk.
+54
+
+55
+00:03:12,710 --> 00:03:18,020
+According to your operating system. There is something weird here called "using namespace std;".
+55
+
+56
+00:03:18,200 --> 00:03:23,900
+This something that contains like all the things that you need inside (C++). You don't need to worry about it
+56
+
+57
+00:03:23,900 --> 00:03:24,830
+at the moment.
+57
+
+58
+00:03:25,610 --> 00:03:26,360
+There is something here
+58
+
+59
+00:03:26,430 --> 00:03:32,630
+called "main". "main" is a function and if you notice it is lowercase.
+59
+
+60
+00:03:32,780 --> 00:03:38,270
+When you try to run your program, the first thing that the operating system is going to call is
+60
+
+61
+00:03:38,270 --> 00:03:39,250
+something called the "main".
+61
+
+62
+00:03:39,680 --> 00:03:45,470
+You notice here also there are these two brackets"()". These are always attached with functions. Another interesting
+62
+
+63
+00:03:45,470 --> 00:03:50,100
+and more important here, something called braces "{}", square braces, this brace and this brace.
+63
+
+64
+00:03:50,300 --> 00:03:53,210
+We write the body of our code inside them.
+64
+
+65
+00:03:54,740 --> 00:03:55,610
+That is it for today. :)

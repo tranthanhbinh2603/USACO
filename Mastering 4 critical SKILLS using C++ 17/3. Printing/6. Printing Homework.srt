@@ -1,0 +1,84 @@
+0
+1
+00:00:00,750 --> 00:00:07,500
+In this video, we will have our first real homework about printing. One of the main promises in this course 
+1
+
+2
+00:00:07,500 --> 00:00:15,450
+is that you gain a lot of skills. And the way that you will gain these skills is mainly through
+2
+
+3
+00:00:15,450 --> 00:00:16,980
+solving and practicing a lot,
+3
+
+4
+00:00:17,130 --> 00:00:22,230
+comparing your solution with the provided solution. Homework will be ranging from easy to 
+4
+
+5
+00:00:22,230 --> 00:00:22,540
+hard.
+5
+
+6
+00:00:22,710 --> 00:00:28,140
+So take it easy when it comes to hard problems and don't get disappointed. In the first program,
+6
+
+7
+00:00:28,140 --> 00:00:32,130
+you are giving this simple program. You are requested to trace it.
+7
+
+8
+00:00:32,280 --> 00:00:37,890
+So, line by line, go over it and decide what would be printed in the runtime.
+8
+
+9
+00:00:38,760 --> 00:00:46,020
+In your second program, you write something to print this triangle using Asterix '*' and spaces.
+9
+
+10
+00:00:46,470 --> 00:00:49,590
+This is another triangle in homework 3. And homework 4,
+10
+
+11
+00:00:49,590 --> 00:00:50,810
+it is more like a diamond.
+11
+
+12
+00:00:50,850 --> 00:00:52,800
+So these are your four homework.
+12
+
+13
+00:00:53,310 --> 00:01:00,480
+Finally, you are to identify all the possible errors that you can find in this code, 
+13
+
+14
+00:01:00,480 --> 00:01:01,050
+fix all of them.
+14
+
+15
+00:01:01,050 --> 00:01:05,130
+You will find the code inside the unit.
+15
+
+16
+00:01:05,280 --> 00:01:07,620
+So download it and start to fix one by one.
+16
+
+17
+00:01:08,460 --> 00:01:09,030
+That is it. :)

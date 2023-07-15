@@ -1,0 +1,1131 @@
+1
+00:00:01,110 --> 00:00:08,610
+So far, we were using things that we already know and plus the integer or the value, the value difference,
+
+2
+00:00:08,790 --> 00:00:11,510
+the daily value reference, they are value.
+
+3
+00:00:11,670 --> 00:00:17,400
+All of them are actually what you used to use, what you can figure out by yourself if it will combine
+
+4
+00:00:17,400 --> 00:00:17,910
+or not.
+
+5
+00:00:18,300 --> 00:00:25,500
+Now, we are coming closer to the reason behind explaining all of these concepts about value and our
+
+6
+00:00:25,500 --> 00:00:28,430
+value that we do not see a real consequence for them.
+
+7
+00:00:28,440 --> 00:00:36,240
+So far, the R value difference is a new type of reference that has been introduced in the modern C++.
+
+8
+00:00:37,170 --> 00:00:43,830
+When we define something like Integer A equals 10 and then we take integer reference variable for this
+
+9
+00:00:43,830 --> 00:00:44,340
+variable.
+
+10
+00:00:44,550 --> 00:00:47,040
+We call this one and only value difference.
+
+11
+00:00:47,400 --> 00:00:52,260
+And one of our rules is the only value difference binds only to an entire value.
+
+12
+00:00:52,430 --> 00:00:53,390
+The word binds here.
+
+13
+00:00:53,400 --> 00:00:57,040
+I always like to think of it like connect or assign something.
+
+14
+00:00:57,360 --> 00:01:02,880
+So this one has to be an L value to be assigned here because this guy you need an address.
+
+15
+00:01:03,750 --> 00:01:11,550
+I can define an expression like integrity equal two times one D in value, two times plus one is A B
+
+16
+00:01:11,550 --> 00:01:12,090
+or value.
+
+17
+00:01:12,750 --> 00:01:15,980
+Now what is happening behind the scene in these three lines?
+
+18
+00:01:16,680 --> 00:01:20,910
+First of all, some temporary location in the memory is going to be created.
+
+19
+00:01:21,360 --> 00:01:28,050
+The value of two times E plus one will be computed and put in the temporary location.
+
+20
+00:01:28,590 --> 00:01:35,790
+And what is more important here, this value is going to be copied to the address of T.
+
+21
+00:01:36,650 --> 00:01:42,240
+After that, this temporary location will be lost and after some time it will be destroyed from the
+
+22
+00:01:42,240 --> 00:01:42,660
+memory.
+
+23
+00:01:44,130 --> 00:01:50,820
+Now, the stimulus was introduced and you reference what we call our value reference, which is simply
+
+24
+00:01:50,820 --> 00:01:55,500
+a reference also like this guy reference, but now to a temporary object.
+
+25
+00:01:55,950 --> 00:02:01,400
+We use this double ampersand annotation, which we call the R value reference operator.
+
+26
+00:02:01,920 --> 00:02:07,050
+Now, using the R value reference operator, we use something like integer reference reference, some
+
+27
+00:02:07,050 --> 00:02:09,500
+name equal two times the Iblis one.
+
+28
+00:02:09,990 --> 00:02:11,830
+This is now our value reference.
+
+29
+00:02:12,090 --> 00:02:13,050
+What does this mean?
+
+30
+00:02:13,500 --> 00:02:21,690
+It means that as following create in the memory some temporary location, compute your value to Iblis
+
+31
+00:02:21,690 --> 00:02:23,640
+one and put it in the term.
+
+32
+00:02:23,650 --> 00:02:25,120
+So far, so same.
+
+33
+00:02:25,830 --> 00:02:35,070
+Now, instead of cabbing the term value to our one, we are going to put the address of this Temba location
+
+34
+00:02:35,190 --> 00:02:38,880
+in our one without an extra Kobie.
+
+35
+00:02:39,270 --> 00:02:43,110
+And this mean we avoided one step.
+
+36
+00:02:43,410 --> 00:02:48,120
+Imagine that what was in the right side was a very heavy object.
+
+37
+00:02:48,450 --> 00:02:52,740
+In the normal case, we should copy the whole object from the right to the left.
+
+38
+00:02:53,130 --> 00:02:59,850
+But now, instead of all of this be all, what we are doing is pointing to the address location of this
+
+39
+00:02:59,850 --> 00:03:00,180
+guy.
+
+40
+00:03:00,570 --> 00:03:02,160
+So what is the intuition behind that?
+
+41
+00:03:02,790 --> 00:03:09,120
+If this temporary value is going to be destroyed soon, why just letting it be destroyed?
+
+42
+00:03:09,130 --> 00:03:14,520
+Why not taking directly its address and make use of it instead of doing the Koby's tab?
+
+43
+00:03:15,510 --> 00:03:18,950
+So this is the old model of the R value difference.
+
+44
+00:03:19,230 --> 00:03:22,700
+It is there to avoid us unnecessary copies.
+
+45
+00:03:23,070 --> 00:03:25,820
+Our value reference are all about the performance.
+
+46
+00:03:25,860 --> 00:03:27,780
+You can write your code in this way.
+
+47
+00:03:27,990 --> 00:03:31,110
+It just a bit slower comparing to this way.
+
+48
+00:03:31,830 --> 00:03:38,510
+So again, the model of that, this is a temporary exhibition and all this time we copy it to the left
+
+49
+00:03:38,520 --> 00:03:38,850
+side.
+
+50
+00:03:39,270 --> 00:03:40,740
+Now we don't copy it.
+
+51
+00:03:40,950 --> 00:03:46,460
+We just use its address and put it here in our one and we don't remove it in the memory this way.
+
+52
+00:03:46,710 --> 00:03:53,850
+We are extending the lifetime of this expression and using it here to be more bounded to the Erwan.
+
+53
+00:03:55,330 --> 00:04:02,370
+The neural here is the R value difference binds only to our values, while the value references bind
+
+54
+00:04:02,370 --> 00:04:03,320
+only to the value.
+
+55
+00:04:03,660 --> 00:04:07,020
+In other words, he doesn't value the right side.
+
+56
+00:04:07,020 --> 00:04:08,570
+Here must be an L value.
+
+57
+00:04:08,880 --> 00:04:13,250
+And here on the right side, the right side must be and we are value.
+
+58
+00:04:13,260 --> 00:04:15,270
+It cannot be left to value.
+
+59
+00:04:15,660 --> 00:04:22,130
+Remember, the whole goal of that guy is to look to this, to take this address instead of the cabbing.
+
+60
+00:04:22,260 --> 00:04:24,780
+So this guy already has an address and it is there with us.
+
+61
+00:04:25,050 --> 00:04:28,400
+But this way, its address and its content might be destroyed soon.
+
+62
+00:04:28,560 --> 00:04:30,740
+So let's just keep it with us for now.
+
+63
+00:04:31,020 --> 00:04:33,490
+This is a story about the R value difference.
+
+64
+00:04:34,080 --> 00:04:35,580
+Let's see the effect of that.
+
+65
+00:04:36,120 --> 00:04:39,570
+Let's say that we have two functions here.
+
+66
+00:04:39,870 --> 00:04:42,270
+If one and if two and we are overloading them.
+
+67
+00:04:44,750 --> 00:04:54,330
+And we have year X and reference Y and integrate X is a L value, and the value of that guy is a value
+
+68
+00:04:54,330 --> 00:04:54,970
+reference.
+
+69
+00:04:54,980 --> 00:04:57,430
+And the guy and this is a constant value.
+
+70
+00:04:57,710 --> 00:05:03,500
+But remember, X and Y and Z themselves are just L values because we have names.
+
+71
+00:05:03,540 --> 00:05:06,490
+OK, we'll come back to this point later.
+
+72
+00:05:06,500 --> 00:05:12,710
+Now, if we try to call, if one with X, if one with X X a year is an L value.
+
+73
+00:05:12,920 --> 00:05:16,300
+So it's going to match F of integer references.
+
+74
+00:05:16,880 --> 00:05:20,280
+If you try to call Y again, it will match into a reference.
+
+75
+00:05:20,300 --> 00:05:24,890
+Say, if you try to code with that again, it's going to match your reference.
+
+76
+00:05:25,100 --> 00:05:26,270
+So far, so straightforward.
+
+77
+00:05:26,540 --> 00:05:33,080
+If you try to call with ten, which is a p r value, it's also going to match with the reference A we
+
+78
+00:05:33,080 --> 00:05:36,140
+should which you should be able to recognize this by yourself.
+
+79
+00:05:38,520 --> 00:05:48,290
+It is good or it is we are value, it matches the Kooris division, otherwise it matches the reference.
+
+80
+00:05:48,910 --> 00:05:51,720
+This is these are the rules of C++.
+
+81
+00:05:52,090 --> 00:05:52,970
+It is a new thing.
+
+82
+00:05:53,530 --> 00:06:01,480
+Now, the difference between if one and if two, if it is supporting an extra function that the right
+
+83
+00:06:01,480 --> 00:06:02,290
+value difference.
+
+84
+00:06:02,440 --> 00:06:04,720
+So it has left the value difference.
+
+85
+00:06:04,900 --> 00:06:12,130
+It has consistently value difference and it has also a b r value difference.
+
+86
+00:06:12,700 --> 00:06:18,880
+Now, if you try to call if it was X, which is an L value, it will go, it will call left with the
+
+87
+00:06:18,880 --> 00:06:20,020
+L value difference.
+
+88
+00:06:20,380 --> 00:06:27,850
+If you try to call with Y, the Y is going to call the Y is reference.
+
+89
+00:06:28,240 --> 00:06:29,170
+Y is reference.
+
+90
+00:06:29,770 --> 00:06:32,860
+Sorry, this one should be the the, the second is the difference.
+
+91
+00:06:34,820 --> 00:06:39,170
+I guess so if you try to call with the Z, Z is.
+
+92
+00:06:42,230 --> 00:06:49,920
+Z is as sorry, it should call also the inter-group, why should the reference differentiated Caraco
+
+93
+00:06:49,940 --> 00:06:50,720
+the cornerstone?
+
+94
+00:06:50,720 --> 00:06:51,890
+Because it's incredibly valuable.
+
+95
+00:06:52,250 --> 00:06:55,640
+Z here is a cornerstone value, so it can be different.
+
+96
+00:06:55,850 --> 00:06:56,830
+So far, so good.
+
+97
+00:06:57,050 --> 00:07:00,610
+This three lines are the same as this three lines.
+
+98
+00:07:00,770 --> 00:07:01,860
+It is a different melody.
+
+99
+00:07:01,880 --> 00:07:03,980
+Line 19, a line twenty four.
+
+100
+00:07:04,700 --> 00:07:05,630
+If you try to call.
+
+101
+00:07:05,630 --> 00:07:08,300
+If it was ten then is a better value.
+
+102
+00:07:08,600 --> 00:07:14,250
+The function that will be called is a function here in line in this one with a B are very different.
+
+103
+00:07:14,570 --> 00:07:19,850
+So it is one more matching or binding rule in C++.
+
+104
+00:07:20,060 --> 00:07:26,570
+If you are calling a function with a R value, the one that will be match it first, if it exists,
+
+105
+00:07:26,720 --> 00:07:30,680
+will be the the R value reference function.
+
+106
+00:07:31,310 --> 00:07:37,320
+The question here, why is this new Y to give more priority to our value reference, because our value
+
+107
+00:07:37,320 --> 00:07:39,700
+reference can avoid us an extra copies.
+
+108
+00:07:40,010 --> 00:07:46,280
+So if you provided us with an overloaded version, the take or value reference are we are calling you
+
+109
+00:07:46,280 --> 00:07:52,250
+first because you probably have better handling for the temporary values instead of losing them, you
+
+110
+00:07:52,250 --> 00:07:54,950
+are taking the reference behind the scene.
+
+111
+00:07:55,430 --> 00:07:57,230
+So this is a model of this slide.
+
+112
+00:07:57,920 --> 00:08:02,360
+If you are calling a function with or value reference, it will match the first to the function that
+
+113
+00:08:02,360 --> 00:08:02,920
+has our value.
+
+114
+00:08:03,630 --> 00:08:05,750
+OK, what if there is no other value reference?
+
+115
+00:08:05,960 --> 00:08:09,920
+It will match one of what exists or compile it of this is impossible.
+
+116
+00:08:12,800 --> 00:08:21,400
+Now, let's go to a very tricky concern we have here in reference reference R-1, Equal 10.
+
+117
+00:08:21,410 --> 00:08:24,020
+So far, so good you can bring to our one.
+
+118
+00:08:24,410 --> 00:08:25,900
+You can bring to its address.
+
+119
+00:08:25,920 --> 00:08:27,310
+You can bring it to size.
+
+120
+00:08:28,160 --> 00:08:31,910
+Now, I would like you to notice the following.
+
+121
+00:08:34,010 --> 00:08:41,420
+What is the relationship between our one and integral reference reference R one, this would take us
+
+122
+00:08:41,420 --> 00:08:47,870
+to what we mentioned very early in the lectures when we say every expression has a type and belongs
+
+123
+00:08:47,870 --> 00:08:48,810
+to a value category.
+
+124
+00:08:49,100 --> 00:08:51,440
+These are two independent capabilities.
+
+125
+00:08:51,650 --> 00:08:55,340
+We have what we call a variable type and a value category.
+
+126
+00:08:56,310 --> 00:09:05,970
+They're the variable type of R one is value reference, but the value category of our one is L value.
+
+127
+00:09:06,350 --> 00:09:12,470
+Remember the rule, everything that has a name is er is an L value.
+
+128
+00:09:12,680 --> 00:09:16,550
+This is its value category regardless of its type.
+
+129
+00:09:17,060 --> 00:09:21,980
+That way many people don't get that is the because the all the time assume the variable type would be
+
+130
+00:09:21,980 --> 00:09:23,220
+like the value category.
+
+131
+00:09:23,390 --> 00:09:27,570
+So when you are seeing here integral reference reference are when you're saying oh this is our value
+
+132
+00:09:27,570 --> 00:09:28,010
+reference.
+
+133
+00:09:28,160 --> 00:09:29,750
+So our, what is our value difference.
+
+134
+00:09:29,930 --> 00:09:30,710
+This is wrong.
+
+135
+00:09:31,040 --> 00:09:41,810
+The type of our value R one is a variable type of r r value difference, but its category is the L value
+
+136
+00:09:42,710 --> 00:09:44,930
+value category is B's.
+
+137
+00:09:44,930 --> 00:09:49,820
+The unavailability of the expression which is here we have an expression that has a name.
+
+138
+00:09:49,970 --> 00:09:51,790
+So R one is an L value.
+
+139
+00:09:52,220 --> 00:09:57,380
+When when you see here, when I say integer string be equal reference of our one.
+
+140
+00:09:57,710 --> 00:10:05,540
+If our one is in value, this expression should then compile, it will compile because r one is er l
+
+141
+00:10:05,570 --> 00:10:08,710
+value, it's a value category is l value.
+
+142
+00:10:08,900 --> 00:10:13,430
+This is extremely important to keep in mind in a very similar way.
+
+143
+00:10:13,970 --> 00:10:22,400
+If you define here integer X equals one and you say integer difference Y equals X, the time of this
+
+144
+00:10:22,400 --> 00:10:32,210
+expression is L value difference, the variable type, but the value category of X is L value.
+
+145
+00:10:32,660 --> 00:10:38,600
+And before this is you never have a problem with that because in a way both of them are value.
+
+146
+00:10:38,700 --> 00:10:43,580
+So you didn't you didn't you didn't need to keep in mind that the are two independent probabilities.
+
+147
+00:10:43,910 --> 00:10:50,060
+But starting from this slide with knowing about the R value difference, you have to keep in mind that
+
+148
+00:10:50,390 --> 00:10:53,640
+the variable type is different from the value category.
+
+149
+00:10:54,710 --> 00:10:56,360
+Let's see some consequences of that.
+
+150
+00:10:56,900 --> 00:10:59,240
+Let's say that we have here for functions.
+
+151
+00:10:59,390 --> 00:11:08,450
+If one F2, F3, F4 and we are providing the possible for cases busingye value busingye reference using
+
+152
+00:11:09,080 --> 00:11:11,870
+the value reference or the R value difference.
+
+153
+00:11:12,710 --> 00:11:21,140
+Now we are defining variables here, X, Y and Z and W if you thought about that here, the X and Y
+
+154
+00:11:21,140 --> 00:11:26,480
+and Z and W, all of them are value categories of left value.
+
+155
+00:11:27,590 --> 00:11:33,890
+But the types are different, the type of this statement is integral here, the type of this guy is
+
+156
+00:11:33,890 --> 00:11:39,090
+like the interior, the type of this guy is the value reference, the type of this guy is our value
+
+157
+00:11:39,090 --> 00:11:39,530
+reference.
+
+158
+00:11:40,070 --> 00:11:45,270
+So let's think of that value and value category and value.
+
+159
+00:11:45,380 --> 00:11:49,130
+Why is the added value add value to make it easier for you?
+
+160
+00:11:49,790 --> 00:11:53,960
+What's really tricky here, zied is l-a value as very category.
+
+161
+00:11:54,170 --> 00:11:57,050
+Dabu is value as a value category.
+
+162
+00:11:58,250 --> 00:12:02,470
+Now let's call if one was X, Y, Z, W, 10.
+
+163
+00:12:02,840 --> 00:12:04,780
+There they are straightforward.
+
+164
+00:12:04,790 --> 00:12:06,350
+All of them will be called in.
+
+165
+00:12:06,860 --> 00:12:07,940
+Some of them would be Matchett.
+
+166
+00:12:07,940 --> 00:12:14,120
+As we learned before, if you try to call F2 with X and Z and W, it's going to work well.
+
+167
+00:12:14,360 --> 00:12:19,670
+But if you try to kill effort with Y or if you do it, then it will complain, as we already learned
+
+168
+00:12:19,670 --> 00:12:21,350
+before and in a very similar way.
+
+169
+00:12:21,350 --> 00:12:26,240
+If we already discussed that before, it is the it is what I care about it.
+
+170
+00:12:27,930 --> 00:12:35,640
+If you try to call was X and Y, it will not bind and this is also we know about that because X is an
+
+171
+00:12:35,640 --> 00:12:36,240
+L value.
+
+172
+00:12:36,420 --> 00:12:37,520
+And why is it relevant?
+
+173
+00:12:38,220 --> 00:12:40,680
+It also is an L value, so it will not bind.
+
+174
+00:12:40,920 --> 00:12:43,070
+But the error message here is interesting.
+
+175
+00:12:43,350 --> 00:12:47,800
+Their message is we cannot bind our value difference to the value.
+
+176
+00:12:47,850 --> 00:12:51,160
+Weight is indeed a difference in value difference.
+
+177
+00:12:51,180 --> 00:12:52,880
+No, it is only value only.
+
+178
+00:12:52,890 --> 00:13:00,510
+As we said, the more clearer case, if you try to bind, if it was debu, it would say cannot bind
+
+179
+00:13:00,510 --> 00:13:02,690
+our value reference to any value.
+
+180
+00:13:02,970 --> 00:13:08,640
+If you do not understand that variable type, not equal value category, you will never be able to understand
+
+181
+00:13:08,640 --> 00:13:13,470
+the error message of line twenty seven because it would be for you what this is all value reference
+
+182
+00:13:13,680 --> 00:13:15,560
+and why cannot you buy in.
+
+183
+00:13:15,570 --> 00:13:18,060
+Why are you claiming that W is an L value.
+
+184
+00:13:18,510 --> 00:13:22,110
+Because every variable name is an L value.
+
+185
+00:13:22,290 --> 00:13:30,040
+Every variable name is an L value because it has an identity and it is identifiable in the memory variable
+
+186
+00:13:30,040 --> 00:13:31,630
+type, the equal value category.
+
+187
+00:13:32,040 --> 00:13:33,600
+Let's test your understanding.
+
+188
+00:13:33,870 --> 00:13:39,900
+I would like to read this quote and to think and discuss the output of this could give yourself five
+
+189
+00:13:39,900 --> 00:13:42,660
+minutes thinking deeper to make sure that you got it.
+
+190
+00:13:46,640 --> 00:13:51,670
+If we try to go call, if we do with X, the value of X has an L value.
+
+191
+00:13:51,830 --> 00:13:54,800
+So if we do, X is going to normally call.
+
+192
+00:13:54,800 --> 00:14:01,390
+If we do straightforward, if we try to call, if it was ten, then is a B R value.
+
+193
+00:14:01,580 --> 00:14:10,940
+So it's going to match the R value difference straight forward if you try to call if one with X X is
+
+194
+00:14:10,940 --> 00:14:12,150
+of value.
+
+195
+00:14:12,320 --> 00:14:20,870
+So if one will match here, line it if one straight forward and if one is calling, if we do with E
+
+196
+00:14:21,200 --> 00:14:22,430
+is hella value.
+
+197
+00:14:22,640 --> 00:14:25,610
+So it's going to match F to straight forward.
+
+198
+00:14:26,120 --> 00:14:32,630
+Now the trick, if you try to call if one with ten ten is A, B, R value, B are value.
+
+199
+00:14:32,650 --> 00:14:36,370
+So if one will match yea if one with reference straight forward.
+
+200
+00:14:37,010 --> 00:14:42,050
+Now if two, if one is calling, if two which one would call.
+
+201
+00:14:42,470 --> 00:14:49,730
+If you say it will call F2 with reference then you didn't get the message that the value type isn't
+
+202
+00:14:49,730 --> 00:14:50,060
+equal.
+
+203
+00:14:50,060 --> 00:14:56,030
+The value category E is has a variable type of reference.
+
+204
+00:14:56,030 --> 00:14:56,290
+Right.
+
+205
+00:14:56,330 --> 00:15:06,140
+Value R value reference but it is L value if it all a here is going to call F to hear this one, the
+
+206
+00:15:06,140 --> 00:15:06,860
+normal one.
+
+207
+00:15:07,190 --> 00:15:07,730
+Why.
+
+208
+00:15:08,000 --> 00:15:12,520
+Because A is of any value and this is alarming.
+
+209
+00:15:14,210 --> 00:15:21,890
+If we have some good handwriting in the memory for F one here as an, as a, as a, as a way to avoid
+
+210
+00:15:21,890 --> 00:15:22,430
+copying.
+
+211
+00:15:22,850 --> 00:15:28,730
+But now calling if we do here is calling with the L value vision with the R value version.
+
+212
+00:15:29,480 --> 00:15:33,340
+Now we lost the advantage of the R value differences here.
+
+213
+00:15:33,920 --> 00:15:40,670
+So this is a big problem because if one can avoid extra copies, but if it will fail in extra copies,
+
+214
+00:15:40,940 --> 00:15:47,510
+that's why later we learn about the S to the move and perfect forwarding to solve this problem as an
+
+215
+00:15:47,510 --> 00:15:47,980
+extra.
+
+216
+00:15:48,200 --> 00:15:55,840
+I define the here and r r value reference of X twenty and I just got here.
+
+217
+00:15:55,860 --> 00:16:03,650
+F2 with X are in a very similar way, x R will call F2 because Exer is an L value.
+
+218
+00:16:03,650 --> 00:16:04,640
+It's a value category.
+
+219
+00:16:06,570 --> 00:16:12,180
+The last observation here that I would like you to keep in mind is as following, let's say that we
+
+220
+00:16:12,180 --> 00:16:13,910
+have defined these four values.
+
+221
+00:16:13,920 --> 00:16:15,920
+We have a variable global 20.
+
+222
+00:16:16,200 --> 00:16:18,970
+We have a function name to be our value, which is us return 10.
+
+223
+00:16:18,990 --> 00:16:20,240
+So it's actually a better value.
+
+224
+00:16:20,700 --> 00:16:22,770
+We have to function the returning reference.
+
+225
+00:16:22,890 --> 00:16:24,600
+So the Aurélie value functions.
+
+226
+00:16:25,590 --> 00:16:27,890
+The first one is returning the global variable.
+
+227
+00:16:28,080 --> 00:16:31,050
+So returning to a global variable is OK.
+
+228
+00:16:31,530 --> 00:16:36,560
+But the second one is returning is returning reference to a local variable.
+
+229
+00:16:36,810 --> 00:16:40,480
+This variable will be destroyed after the function Terminix.
+
+230
+00:16:40,680 --> 00:16:42,960
+So this is a very wrong style of coding.
+
+231
+00:16:43,110 --> 00:16:45,200
+The timber here will be destroyed.
+
+232
+00:16:46,080 --> 00:16:52,110
+There is another function named X evalu the function has a temporary variable to equal, then you cannot
+
+233
+00:16:52,110 --> 00:16:59,040
+return it by itself because this is now like integer reference reference are equal to this is binding
+
+234
+00:16:59,490 --> 00:17:02,390
+reference value to it will fit.
+
+235
+00:17:02,550 --> 00:17:04,980
+You cannot also in a similar way bind it ruthlessly.
+
+236
+00:17:05,160 --> 00:17:10,410
+The only thing that you can return here within this scope is to return or return from a competition
+
+237
+00:17:10,410 --> 00:17:11,190
+perspective.
+
+238
+00:17:11,430 --> 00:17:12,430
+This would work.
+
+239
+00:17:12,670 --> 00:17:17,190
+However, this also is as long as the value to function.
+
+240
+00:17:17,340 --> 00:17:22,500
+Why there are value differences are just the differences, like an L value.
+
+241
+00:17:22,740 --> 00:17:26,870
+If you try to return the reference of the index value ten here.
+
+242
+00:17:27,300 --> 00:17:32,520
+This guy is returning address of something that will be destroyed after the function return.
+
+243
+00:17:32,910 --> 00:17:34,530
+So this is very problematic.
+
+244
+00:17:34,860 --> 00:17:42,720
+So don't assume that given that the R value reference is pointing to the address of a memory function
+
+245
+00:17:42,720 --> 00:17:44,090
+here is going to keep it.
+
+246
+00:17:44,100 --> 00:17:45,720
+It doesn't have a control over that.
+
+247
+00:17:45,870 --> 00:17:49,240
+If we return it, this then will be destroyed in the memory.
+
+248
+00:17:49,440 --> 00:17:54,720
+So now the reference is pointing to something wrong and this will cause a runtime error.
+
+249
+00:17:54,810 --> 00:17:57,420
+So be very careful reference, a reference.
+
+250
+00:17:57,600 --> 00:17:58,620
+It can be destroyed.
+
+251
+00:17:58,650 --> 00:18:00,000
+You don't have a control over that.
+
+252
+00:18:01,770 --> 00:18:06,770
+There's one more interesting thing that I would like to say about Lione line 16.
+
+253
+00:18:06,780 --> 00:18:10,910
+Sorry for that, which is returning 10.
+
+254
+00:18:11,790 --> 00:18:16,310
+What is the value type of this returning statement?
+
+255
+00:18:16,800 --> 00:18:18,990
+It is of type integer reference reference.
+
+256
+00:18:19,000 --> 00:18:20,580
+So it is an R value difference.
+
+257
+00:18:21,090 --> 00:18:24,450
+But what is the value category of this line?
+
+258
+00:18:24,750 --> 00:18:27,720
+It is returning ten, which is a temporary value.
+
+259
+00:18:28,170 --> 00:18:29,460
+Now, this is interesting.
+
+260
+00:18:29,880 --> 00:18:32,740
+The value category here is our value, which is definitely has no name.
+
+261
+00:18:33,180 --> 00:18:39,290
+So now we have here and our value reference that is linked to an L value.
+
+262
+00:18:39,510 --> 00:18:46,060
+So the model of that is our value reference can be an early value and can be an R value.
+
+263
+00:18:46,080 --> 00:18:48,750
+I mean, the assigning here, looking to line twenty three.
+
+264
+00:18:49,020 --> 00:18:50,130
+This is an extra three.
+
+265
+00:18:52,890 --> 00:18:53,220
+Yeah.
+
+266
+00:18:53,370 --> 00:18:54,930
+Looking to line three here.
+
+267
+00:18:55,140 --> 00:19:00,590
+The this guy here has an M right.
+
+268
+00:19:00,780 --> 00:19:05,070
+So AC3 here is an M, so AC3 is an L value by itself.
+
+269
+00:19:05,430 --> 00:19:07,810
+But this guy here it has no name.
+
+270
+00:19:07,830 --> 00:19:09,340
+So it is an R evaluator.
+
+271
+00:19:09,480 --> 00:19:14,610
+So the model of that are value reference can be both L value and R value.
+
+272
+00:19:14,700 --> 00:19:22,380
+I mean as a as a type, I think I'm done with explaining for now with the value, our value.
+
+273
+00:19:22,500 --> 00:19:24,750
+We should move to explaining the semantics.
+
+274
+00:19:25,710 --> 00:19:30,780
+I went extra miles comparing to many others when it comes to explaining the value.
+
+275
+00:19:31,050 --> 00:19:33,960
+I hope I made it easy as much as I could.
+
+276
+00:19:34,200 --> 00:19:40,620
+I tried to be informal, but meanwhile maintaining correctness of the concepts as much as I could.
+
+277
+00:19:41,010 --> 00:19:43,500
+You are highly advised to do some readings.
+
+278
+00:19:43,710 --> 00:19:44,610
+This value category.
+
+279
+00:19:44,910 --> 00:19:45,810
+It is very nice.
+
+280
+00:19:46,020 --> 00:19:50,900
+I think the very that the first four links here are very helpful to give it.
+
+281
+00:19:51,120 --> 00:19:57,690
+They will involve some talk about what is X value, which is just corresponding to this function, but
+
+282
+00:19:57,690 --> 00:19:59,940
+you will not understand easily at the moment.
+
+283
+00:20:01,060 --> 00:20:01,630
+That's it.

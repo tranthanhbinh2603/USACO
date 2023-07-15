@@ -1,0 +1,106 @@
+WEBVTT
+
+00:01.470 --> 00:06.840
+OK, here is a quick thinking problem for you, so you have to draw a flowchart for a bank security
+
+00:06.840 --> 00:07.120
+guard.
+
+00:07.140 --> 00:12.420
+OK, so the bank security guard is going to wait for the customers outside the bank.
+
+00:12.720 --> 00:17.670
+And if they're coming before 6:00 p.m., it will add the customers to the queue.
+
+00:18.000 --> 00:20.460
+Otherwise, it will keep on waiting.
+
+00:20.610 --> 00:23.750
+And if time reaches six p.m., he is going to close the bank.
+
+00:23.780 --> 00:28.980
+OK, so this was this video and think how you are going to build this flow chart?
+
+00:28.980 --> 00:29.200
+OK?
+
+00:29.970 --> 00:32.220
+Now let's talk about the solution.
+
+00:32.950 --> 00:34.530
+The solution would look something like this.
+
+00:34.950 --> 00:35.820
+The bank is open.
+
+00:36.900 --> 00:42.510
+And the security guard is going to take every dime, is it 6pm or not, if it's six p.m.?
+
+00:42.870 --> 00:46.510
+If the answer is yes, he is going to close the bank if it is not.
+
+00:46.530 --> 00:49.710
+He's going to check whether there is a customer waiting outside the bank.
+
+00:49.860 --> 00:53.430
+If yes, is going to add the customer to the queue.
+
+00:53.830 --> 00:57.900
+OK, so this is how it goes, like at the customer to the queue.
+
+00:58.590 --> 01:02.100
+And that's that's the work of the security guard.
+
+01:02.100 --> 01:05.120
+OK, if you are not worried, what will happen to the customer?
+
+01:05.130 --> 01:08.370
+That is a part of a separate flow given to enters the bank.
+
+01:09.060 --> 01:14.310
+So then, after doing both the steps where the customer is waiting or not, he will.
+
+01:14.430 --> 01:17.920
+He will continuously check when to close the bank.
+
+01:18.790 --> 01:20.340
+So he's always looking at his watch.
+
+01:20.670 --> 01:23.340
+What is their time if there is a customer added to the queue?
+
+01:23.340 --> 01:24.120
+Look at the time.
+
+01:24.120 --> 01:29.110
+If it is, if no customer is waiting again, look at what is their time will give.
+
+01:29.130 --> 01:32.250
+So he's doing these two steps repeatedly.
+
+01:32.680 --> 01:37.050
+OK, so this part is inside a loop continuously.
+
+01:37.050 --> 01:37.800
+Look at the time.
+
+01:38.340 --> 01:42.750
+And if there is a customer in time added to the queue, if there is not a customer, look at the time,
+
+01:42.750 --> 01:43.010
+OK?
+
+01:43.860 --> 01:48.180
+So in both the cases, after adding to the customer, he looked at time on other ways as well.
+
+01:48.930 --> 01:52.830
+And as soon as time reaches six p.m., he is going to close the bank.
+
+01:53.190 --> 01:53.760
+That's all.
+
+01:53.770 --> 01:57.210
+That's a pretty simple flowchart of a security guard of a bank.
+
+01:57.690 --> 01:59.280
+I hope you understood this one as well.

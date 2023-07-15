@@ -1,0 +1,549 @@
+0
+1
+00:00:01,380 --> 00:00:08,400
+Before discussing the logical operator in the next video, it might worth to discuss first something in computer
+1
+
+2
+00:00:08,400 --> 00:00:10,990
+science named as Truth Table.
+2
+
+3
+00:00:11,250 --> 00:00:15,630
+This is something that you typically learn first in something like a discrete course.
+3
+
+4
+00:00:16,620 --> 00:00:23,010
+And it's very intuitive, the first thing is something called the And operator '^'.
+4
+
+5
+00:00:23,160 --> 00:00:29,790
+OK, let's say that I am 30 years old and my salary is 7000 and my weight is 120
+5
+
+6
+00:00:29,790 --> 00:00:30,290
+kg.
+6
+
+7
+00:00:30,810 --> 00:00:37,740
+If I told you that is Mostafa greater than 25 and his salary is less than 8000, you say
+7
+
+8
+00:00:37,740 --> 00:00:38,390
+this is true.
+8
+
+9
+00:00:39,000 --> 00:00:40,860
+If I told you is his
+9
+
+10
+00:00:42,270 --> 00:00:49,890
+Age is greater than 27 and salary greater than 9000, you know that this is false, because Mostafa's salary
+10
+
+11
+00:00:49,890 --> 00:00:51,080
+is just 7000.
+11
+
+12
+00:00:51,330 --> 00:00:58,530
+So this is false information, but about 35 years and salary is less than 8500.
+12
+
+13
+00:00:59,040 --> 00:01:01,630
+This is, again, false because this information is wrong.
+13
+
+14
+00:01:02,160 --> 00:01:07,330
+And what about if Mostafa is greater than 35 and salary is greater than 9000?
+14
+
+15
+00:01:07,620 --> 00:01:09,870
+This is false because the two conditions are false.
+15
+
+16
+00:01:10,380 --> 00:01:17,640
+So now here in the logic of the word "AND" that we even use in our daily usage, we know that it will
+16
+
+17
+00:01:17,640 --> 00:01:21,270
+not be really true unless both of them are true.
+17
+
+18
+00:01:21,490 --> 00:01:23,520
+OK, in discrete we write it this way.
+18
+
+19
+00:01:24,390 --> 00:01:31,400
+So we are now discussing programming or discussing basic logic. in the case of using the word
+19
+
+20
+00:01:31,410 --> 00:01:33,780
+'And', we need both conditions to be true.
+20
+
+21
+00:01:34,650 --> 00:01:36,090
+What about the "OR" case?
+21
+
+22
+00:01:36,280 --> 00:01:42,390
+If I say is Mostafa greater than 25 or salary less than 8000, this is true because the
+22
+
+23
+00:01:42,390 --> 00:01:49,180
+two conditions are true. is Mostafa greater than 27 years or salary greater than 9000.
+23
+
+24
+00:01:49,500 --> 00:01:53,430
+This is true because I satisfied this condition.
+24
+
+25
+00:01:54,320 --> 00:01:57,950
+And same here, I will be true because I satisfy this condition.
+25
+
+26
+00:01:58,370 --> 00:02:02,420
+What about is Mostafa greater than 35 or salary greater than 9000?
+26
+
+27
+00:02:02,840 --> 00:02:05,190
+This is false, because the two conditions are false.
+27
+
+28
+00:02:05,480 --> 00:02:08,300
+So this is, again, from our daily semantic.
+28
+
+29
+00:02:08,790 --> 00:02:13,640
+So, when we use the word "or", we actually need at least one that is true.
+29
+
+30
+00:02:14,030 --> 00:02:21,500
+In other words, the answer would be false if both of them would be false.
+30
+
+31
+00:02:21,800 --> 00:02:29,350
+So this is how we differentiate between the "AND" and between the "OR". this table is what we call the logical table.
+31
+
+32
+00:02:29,570 --> 00:02:33,860
+It's kind of a summary to what we were saying. in the "AND" case,
+32
+
+33
+00:02:33,860 --> 00:02:40,790
+if this condition is true, like greater than 25 years old and this condition
+33
+
+34
+00:02:40,790 --> 00:02:45,110
+is true, then overall is true. if there is one missing condition,
+34
+
+35
+00:02:45,110 --> 00:02:47,390
+In the end it ends up with false.
+35
+
+36
+00:02:48,170 --> 00:02:50,210
+The "OR" case's is different.
+36
+
+37
+00:02:50,570 --> 00:02:54,290
+If anyone is true, then it can be true.
+37
+
+38
+00:02:54,680 --> 00:02:56,810
+Otherwise, if both of them are false,
+38
+
+39
+00:02:56,820 --> 00:02:57,890
+It can be false.
+39
+
+40
+00:02:58,550 --> 00:03:00,380
+The reverse of true is false.
+40
+
+41
+00:03:00,380 --> 00:03:01,730
+The not of false is true.
+41
+
+42
+00:03:01,730 --> 00:03:04,760
+This is the the the not operator that we know.
+42
+
+43
+00:03:05,210 --> 00:03:13,550
+So now this is the AND table and the OR table for the two cases that we were just learning in the previous
+43
+
+44
+00:03:13,550 --> 00:03:14,000
+slides.
+44
+
+45
+00:03:14,240 --> 00:03:20,060
+Please make sure that you understand very carefully that, and you know what I mainly saied.
+45
+
+46
+00:03:20,090 --> 00:03:25,270
+there is one case here to be true only. there is one case here to be false only.
+46
+
+47
+00:03:25,280 --> 00:03:26,590
+So make sure that you understand it.
+47
+
+48
+00:03:27,110 --> 00:03:31,760
+Now, let's expand it for three variables, OK, in a very similar way.
+48
+
+49
+00:03:32,000 --> 00:03:34,790
+In the AND case, there will be only one case
+49
+
+50
+00:03:34,790 --> 00:03:37,240
+that's true, when all of them are true.
+50
+
+51
+00:03:37,830 --> 00:03:39,050
+OK, one here for true.
+51
+
+52
+00:03:39,380 --> 00:03:41,870
+Otherwise we have all of them false.
+52
+
+53
+00:03:42,170 --> 00:03:48,260
+In the OR case, there is only one case that is zero or false when all of them are false, otherwise
+53
+
+54
+00:03:48,260 --> 00:03:49,150
+all of them are true.
+54
+
+55
+00:03:49,430 --> 00:03:55,640
+So this is clearly the difference between the AND and OR. so the AND and OR Truth Tables are corresponding
+55
+
+56
+00:03:55,820 --> 00:04:02,690
+to our human logic when it comes also to the AND and the OR. if you are applying to the college and I'm
+56
+
+57
+00:04:02,690 --> 00:04:11,510
+putting for you conditions about your family income, your current age, your current weight
+57
+
+58
+00:04:11,510 --> 00:04:16,040
+or something like that. I'm putting some conditions for you and telling you, are
+58
+
+59
+00:04:16,040 --> 00:04:19,520
+you satisfying all of them or are you satisfying one of them.
+59
+
+60
+00:04:19,700 --> 00:04:21,560
+This is like our normal logic.
+60
+
+61
+00:04:24,340 --> 00:04:31,450
+And here is some example about what we're saying, but more than three variables, so is Mustafa
+61
+
+62
+00:04:31,450 --> 00:04:36,580
+greater than 25 and salary less than 8000 and weight is less than 150 kg.
+62
+
+63
+00:04:36,850 --> 00:04:40,390
+To make it simpler for yourself, start with simplifying to true and false.
+63
+
+64
+00:04:40,660 --> 00:04:42,220
+Is Mostafa greater than 25,
+64
+
+65
+00:04:42,220 --> 00:04:42,610
+True.
+65
+
+66
+00:04:42,790 --> 00:04:45,220
+And salary less than 8000, true.
+66
+
+67
+00:04:45,220 --> 00:04:48,100
+And weight less than 150KG),                                                                                                                                                   true.
+67
+
+68
+00:04:48,250 --> 00:04:52,050
+We have ANDs, we know in AND we need all of them to be true.
+68
+
+69
+00:04:52,060 --> 00:04:53,020
+So all of them true ?
+69
+
+70
+00:04:53,050 --> 00:04:53,990
+Yes, then true.
+70
+
+71
+00:04:54,400 --> 00:04:56,890
+Now here's another condition we simplified it to
+71
+
+72
+00:04:56,890 --> 00:04:58,000
+True, true, true.
+72
+
+73
+00:04:58,210 --> 00:05:02,550
+then also true. in here we have a simplified to true, true, false.
+73
+
+74
+00:05:02,800 --> 00:05:06,820
+This is going to be false because we need all of them to be true. here,
+74
+
+75
+00:05:06,820 --> 00:05:09,250
+false or true or false.
+75
+
+76
+00:05:09,550 --> 00:05:12,190
+This is now the OR we need one of them to be true,
+76
+
+77
+00:05:12,190 --> 00:05:12,820
+to be true.
+77
+
+78
+00:05:12,940 --> 00:05:13,830
+So this is true.
+78
+
+79
+00:05:13,870 --> 00:05:16,120
+So the answer is true. false OR false OR
+79
+
+80
+00:05:16,240 --> 00:05:16,660
+False,
+80
+
+81
+00:05:16,660 --> 00:05:17,910
+All of them are false.
+81
+
+82
+00:05:17,920 --> 00:05:20,440
+And in our case, then it would be false.
+82
+
+83
+00:05:21,670 --> 00:05:27,040
+So what if we have a mix of AND and OR, how do we as humans do it?
+83
+
+84
+00:05:27,280 --> 00:05:34,540
+But let's say I said Mostafa greater than 35 or salary greater than 6000 or weight is greater than...this the previous
+84
+
+85
+00:05:34,540 --> 00:05:35,980
+case, false or true or false,
+85
+
+86
+00:05:35,990 --> 00:05:36,580
+This is true.
+86
+
+87
+00:05:37,000 --> 00:05:40,510
+But now what about that false AND true OR false?
+87
+
+88
+00:05:40,870 --> 00:05:45,370
+We as humans mainly we try to group first the ANDs together.
+88
+
+89
+00:05:45,610 --> 00:05:52,480
+So it ends up like you are thinking is Mostafa greater than 35 years and salary greater than 6000? or his
+89
+
+90
+00:05:52,480 --> 00:05:54,180
+weight is greater than 200 kg.
+90
+
+91
+00:05:54,490 --> 00:05:56,650
+We then think about this condition first.
+91
+
+92
+00:05:57,190 --> 00:06:00,760
+So we take this false AND true, and solve it first.
+92
+
+93
+00:06:00,910 --> 00:06:02,560
+False AND true is false.
+93
+
+94
+00:06:02,980 --> 00:06:05,480
+OK, false AND true is false.
+94
+
+95
+00:06:05,680 --> 00:06:08,410
+Now we remove false AND true, and replace it with false.
+95
+
+96
+00:06:08,680 --> 00:06:11,110
+So false OR false is false.
+96
+
+97
+00:06:11,500 --> 00:06:17,440
+Another case, let's say, for this expression, we simplified it to true AND true AND true
+97
+
+98
+00:06:17,440 --> 00:06:18,310
+OR false.
+98
+
+99
+00:06:18,820 --> 00:06:21,650
+Then we solve the ANDs group first.
+99
+
+100
+00:06:22,390 --> 00:06:25,780
+So this is like a priority. true AND true AND true,
+100
+
+101
+00:06:25,780 --> 00:06:27,760
+we solve it to true. true OR false,
+101
+
+102
+00:06:27,790 --> 00:06:28,830
+we solve it to true.
+102
+
+103
+00:06:29,110 --> 00:06:32,380
+So this is how we simplify a big expression.
+103
+
+104
+00:06:32,680 --> 00:06:39,370
+So in summary, if all conditions are ANDed, then it would be true,
+104
+
+105
+00:06:39,370 --> 00:06:46,870
+If all of them are true. if all conditions are ORed, it would be true if any one of them true; false
+105
+
+106
+00:06:46,870 --> 00:06:48,360
+if all of them are false.
+106
+
+107
+00:06:48,760 --> 00:06:55,600
+If you have a mix, of ORs and ANDs, find each subgroup of ANDs, evaluate it first, then do
+107
+
+108
+00:06:55,600 --> 00:06:58,660
+the normal ORing for the remaining.
+108
+
+109
+00:06:58,960 --> 00:07:02,530
+Please make sure that you are comfortable with today's session before the next lesson.
+109
+
+110
+00:07:03,670 --> 00:07:03,760
+That's it.

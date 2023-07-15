@@ -1,0 +1,474 @@
+0
+1
+00:00:01,080 --> 00:00:08,820
+One of the important things in modern C++ is the std initializer list. Today, we would like to see
+1
+
+2
+00:00:08,820 --> 00:00:14,850
+it more with classes, you probably saw before in the STL syntax like you're creating
+2
+
+3
+00:00:15,010 --> 00:00:19,870
+an object with the uniform initialization style, which is throwing in a bunch of numbers.
+3
+
+4
+00:00:20,280 --> 00:00:24,250
+So this probably might match what we call an initializer list.
+4
+
+5
+00:00:24,270 --> 00:00:25,260
+We have here a class named adder
+5
+
+6
+00:00:25,270 --> 00:00:31,480
+with a simple variable and an empty constructor and another constructor that takes an initializer
+6
+
+7
+00:00:31,480 --> 00:00:31,830
+list.
+7
+
+8
+00:00:32,130 --> 00:00:37,620
+You can think of the initializer list here, as just a vector of numbers or a set of numbers typically.
+8
+
+9
+00:00:38,250 --> 00:00:45,790
+Now, this constructor is receiving this initialization style is receiving it in an initializer list.
+9
+
+10
+00:00:45,810 --> 00:00:50,760
+We have here another function that we are calling with this list, and then we are iterating on
+10
+
+11
+00:00:50,760 --> 00:00:54,900
+this list and just summing all of its values together and doing some logic here.
+11
+
+12
+00:00:56,760 --> 00:01:01,860
+So this is one way to initialize your object and this would fit now with your uniform initialization style
+12
+
+13
+00:01:01,860 --> 00:01:07,710
+when you use this kind of braces. You can also call the like, let's say add 3, 4,
+13
+
+14
+00:01:07,710 --> 00:01:10,740
+which is calling normal function or calling with
+14
+
+15
+00:01:11,790 --> 00:01:14,080
+initialization list on the fly in this way.
+15
+
+16
+00:01:14,430 --> 00:01:18,300
+This list is typically of type constant, and behind the scene
+16
+
+17
+00:01:18,510 --> 00:01:24,360
+it is implemented in a specific way, and it is very lightweight and very memory efficient,
+17
+
+18
+00:01:24,630 --> 00:01:28,840
+and you will find a lot of things in STL with the support to the initializer list.
+18
+
+19
+00:01:30,450 --> 00:01:36,570
+Now, I would like to take you one step bigger to realize that there are different situations where
+19
+
+20
+00:01:36,570 --> 00:01:39,360
+you are passing this guy, but there are actually meaning different things.
+20
+
+21
+00:01:39,900 --> 00:01:45,840
+In the first case here, we have a struct A which is very basic, has just primitive variables,
+21
+
+22
+00:01:45,840 --> 00:01:47,370
+It doesn't have a constructor.
+22
+
+23
+00:01:47,610 --> 00:01:52,950
+Remember, we mentioned before that there is a case where the struct or a class is called an aggregate.
+23
+
+24
+00:01:53,550 --> 00:01:59,460
+So if you have a class that satisfies the aggregate conditions and we are defining A
+24
+
+25
+00:01:59,460 --> 00:02:05,130
+of 1 and 3, then automatically 1 would be set to the X, and 3 will be set to the y.
+25
+
+26
+00:02:05,130 --> 00:02:05,350
+...
+26
+
+27
+00:02:05,370 --> 00:02:07,150
+So this is an aggregate initialization.
+27
+
+28
+00:02:08,790 --> 00:02:14,970
+The other case is you have a constructor here that take two variables and assigning them internal 
+28
+
+29
+00:02:14,970 --> 00:02:18,130
+with the member initializer list.
+29
+
+30
+00:02:18,630 --> 00:02:22,140
+This is called a member initialization list or member list initialization,
+30
+
+31
+00:02:22,650 --> 00:02:29,730
+and then when you define here B of 2 and 9, then the 2 will be also assigned to the X and the 9
+31
+
+32
+00:02:29,730 --> 00:02:30,690
+will be assigned to the y.
+32
+
+33
+00:02:30,990 --> 00:02:33,750
+So, again, this isn't directly the std initializer list.
+33
+
+34
+00:02:34,830 --> 00:02:40,260
+In the third case here, we have a Class C1 and class c1 is supporting constructor with two
+34
+
+35
+00:02:40,260 --> 00:02:44,100
+variables and also supporting constructor with the initializer list.
+35
+
+36
+00:02:44,700 --> 00:02:50,270
+Now, if you tried to clone the 3 and 7, would it be matched with the X and Y?
+36
+
+37
+00:02:50,520 --> 00:02:51,500
+The answer is no.
+37
+
+38
+00:02:51,900 --> 00:02:57,240
+The initializer list constructor will always have a higher priority.
+38
+
+39
+00:02:57,420 --> 00:03:02,980
+So if it is something like C1 of 3 and 7, 3 and 7 will be sent as an initializer list
+39
+
+40
+00:03:02,980 --> 00:03:08,980
+here to be assigned here, so you can access the initializer list within begin,
+40
+
+41
+00:03:09,270 --> 00:03:12,960
+so the first element is begin and the second element is begin plus one.
+41
+
+42
+00:03:13,470 --> 00:03:19,590
+So the moral of that is if it happened that we have all of these guys, then the priority is first for
+42
+
+43
+00:03:19,590 --> 00:03:25,970
+the initializer list, second for the regular constructor, and third for the aggregate and notice here, 
+43
+
+44
+00:03:26,160 --> 00:03:31,560
+and this is a bit a bad thing, that the syntax here and the syntax here are very close,
+44
+
+45
+00:03:31,560 --> 00:03:34,170
+just this is braces and this is parenthesis.
+45
+
+46
+00:03:34,410 --> 00:03:39,840
+You have still to be very careful so that you don't call the wrong constructor.
+46
+
+47
+00:03:41,460 --> 00:03:48,450
+If it happened that you have a template, say a bunch of numbers, you cannot send directly initializer
+47
+
+48
+00:03:48,450 --> 00:03:52,050
+list this way, it might be hard to deduce its type.
+48
+
+49
+00:03:52,560 --> 00:03:57,600
+You can send it in an explicit way like say, initializer list of integer or you are sending something
+49
+
+50
+00:03:57,600 --> 00:03:58,740
+else like vector of integer,
+50
+
+51
+00:03:58,740 --> 00:04:02,580
+but this why this one is more lightweight in terms of memory.
+51
+
+52
+00:04:04,500 --> 00:04:06,300
+Let's see the initializer list with the STL.
+52
+
+53
+00:04:08,730 --> 00:04:16,410
+If you defined an initializer list like 5 and 10 here or use the parenthesis and use 5 and 10, one
+53
+
+54
+00:04:16,410 --> 00:04:21,150
+of the bad things, they are different, as we just have seen from a few slides.
+54
+
+55
+00:04:21,660 --> 00:04:27,600
+If you tried here to call with these braces, this will call a constructor that will just take two values
+55
+
+56
+00:04:27,600 --> 00:04:28,680
+and put them in a vector.
+56
+
+57
+00:04:28,680 --> 00:04:31,440
+So if you tried to print the vector, it would be five and ten,
+57
+
+58
+00:04:32,070 --> 00:04:38,280
+but if you tried to call these two numbers with parenthesis, this is calling another constructor, which
+58
+
+59
+00:04:38,550 --> 00:04:45,000
+will just create five copies of value 10 and put them in a vector.
+59
+
+60
+00:04:46,710 --> 00:04:53,980
+So the problem here is that this guy now matched two different things.
+60
+
+61
+00:04:54,150 --> 00:04:56,940
+It matches two different things.
+61
+
+62
+00:04:57,120 --> 00:05:03,270
+This is the type of constructor, but this is completely another type of constructor.
+62
+
+63
+00:05:03,570 --> 00:05:06,660
+So be very careful about that.
+63
+
+64
+00:05:12,110 --> 00:05:25,040
+What else here, the multi-map, if you have a multi-map, in C++, we used to insert it this
+64
+
+65
+00:05:25,040 --> 00:05:25,370
+way,
+65
+
+66
+00:05:25,370 --> 00:05:31,670
+we used to insert a pair of an integer with 1 and 40, another pair of integer and an integer, and so on.
+66
+
+67
+00:05:31,670 --> 00:05:31,940
+...
+67
+
+68
+00:05:32,420 --> 00:05:38,100
+With the initializer list in the C++, you can write as simple as 1, 40 and 1, 50.
+68
+
+69
+00:05:38,360 --> 00:05:42,110
+So now it just constructs them for you in a very beautiful way.
+69
+
+70
+00:05:43,250 --> 00:05:50,540
+Let's print all the multi-map elements that have the key of one, which would
+70
+
+71
+00:05:50,540 --> 00:05:51,770
+be a 40 and 50.
+71
+
+72
+00:05:52,070 --> 00:05:53,390
+So you can do that as following:
+72
+
+73
+00:05:53,570 --> 00:05:58,720
+You can call the function name equals range with value 1 which you will return for you a range
+73
+
+74
+00:05:58,740 --> 00:05:59,760
+with first and begin.
+74
+
+75
+00:05:59,810 --> 00:06:07,970
+This is a pair of first and second, which now can iterate on the range that
+75
+
+76
+00:06:07,970 --> 00:06:10,100
+is starting with the value of 1.
+76
+
+77
+00:06:10,550 --> 00:06:14,540
+So now you can iterate normally and print the value of the iterator.
+77
+
+78
+00:06:14,750 --> 00:06:19,640
+So the iterator_begin is the first one with 1, 40 and the last one will be 1, 50,
+78
+
+79
+00:06:19,640 --> 00:06:22,170
+and you are iterating in between here.
+79
+
+80
+00:06:23,540 --> 00:06:29,450
+The last thing to notice also with the initializer-list problems is when it comes to the
+80
+
+81
+00:06:29,660 --> 00:06:29,890
+auto.
+81
+
+82
+00:06:30,350 --> 00:06:37,460
+If you used auto X1 and you used the equal, which is doing copy initialization with one and two here is
+82
+
+83
+00:06:37,460 --> 00:06:39,410
+going to be like an initializer list.
+83
+
+84
+00:06:40,390 --> 00:06:47,050
+If you tried to do an auto with something that makes data types, it will fail for a compilation error.
+84
+
+85
+00:06:47,050 --> 00:06:49,210
+It cannot deduce that this is integer.
+85
+
+86
+00:06:50,500 --> 00:06:59,110
+Jump to line 12, x4 with a single element with equal would be an initializer list
+86
+
+87
+00:06:59,110 --> 00:07:06,220
+Here the tricky one, x5 without the equal direct initialization is an integer.
+87
+
+88
+00:07:06,520 --> 00:07:10,720
+So line 12 and 13 are very problematic.
+88
+
+89
+00:07:11,020 --> 00:07:13,900
+Line 12 is creating it as an initializer list
+89
+
+90
+00:07:14,140 --> 00:07:18,840
+if you used the equal. Line 13 without equal is going to create an integer.
+90
+
+91
+00:07:19,180 --> 00:07:21,400
+That's why line 11 is given a compilation error.
+91
+
+92
+00:07:21,670 --> 00:07:25,410
+Assume it's a single element, not just a list of elements.
+92
+
+93
+00:07:25,570 --> 00:07:30,090
+So this is one place where using the initializer list will create a problem.
+93
+
+94
+00:07:30,220 --> 00:07:33,360
+Still, C++ is very problematic when it comes to initialization.
+94
+
+95
+00:07:34,180 --> 00:07:34,740
+That's it.

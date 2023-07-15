@@ -1,0 +1,634 @@
+0
+1
+00:00:01,080 --> 00:00:06,910
+Let's do more practice on the multidimensional arrays. The greedy robot,
+1
+
+2
+00:00:07,770 --> 00:00:15,650
+we have a robot and this robot will be starting at position [0][0] in a matrix of NxM.
+2
+
+3
+00:00:15,690 --> 00:00:18,640
+Tho whole values of the matrix will be distinct.
+3
+
+4
+00:00:19,260 --> 00:00:27,150
+You are to do the following: the robot takes the value in the current cell and then starts to move
+4
+
+5
+00:00:27,150 --> 00:00:33,990
+but to where? it can only move one step to either right, bottom or the diagonal.
+5
+
+6
+00:00:34,770 --> 00:00:35,970
+OK, which one to select
+6
+
+7
+00:00:35,970 --> 00:00:39,350
+among them, is going to select the one that has the maximum value.
+7
+
+8
+00:00:39,360 --> 00:00:42,210
+And remember, they are distinct values, they are different values.
+8
+
+9
+00:00:42,630 --> 00:00:47,070
+And then you are telling me the total values that the robot is going to collect.
+9
+
+10
+00:00:47,700 --> 00:00:55,440
+OK, so for example, start at [0][0], then move maybe to the right, then bottom, then left and so
+10
+
+11
+00:00:55,440 --> 00:00:55,680
+on.
+11
+
+12
+00:00:55,710 --> 00:00:56,070
+OK,
+12
+
+13
+00:00:59,850 --> 00:01:01,690
+try to give a coding for it.
+13
+
+14
+00:01:01,690 --> 00:01:04,350
+It might be a short code, but give a trail.
+14
+
+15
+00:01:05,760 --> 00:01:09,720
+Here we are reading the whole matrix and we starting at position
+15
+
+16
+00:01:09,720 --> 00:01:13,830
+'i' with zero and j with zero and total sum with zero.
+16
+
+17
+00:01:14,340 --> 00:01:21,960
+We will start while looping and as long as the current 'i' and the current 'j' are within the matrix we keep
+17
+
+18
+00:01:21,960 --> 00:01:22,240
+going.
+18
+
+19
+00:01:22,800 --> 00:01:25,520
+We start with sticking the current value in the sum.
+19
+
+20
+00:01:25,530 --> 00:01:26,670
+So we add it to the sum.
+20
+
+21
+00:01:27,210 --> 00:01:28,820
+Then we need to make a decision.
+21
+
+22
+00:01:28,980 --> 00:01:34,260
+Are we going to move to the right or to the down or to the diagonal and we need the maximum
+22
+
+23
+00:01:34,260 --> 00:01:40,510
+one of them noticed that it is necessary that you have a right where you have a down or you have a diagonal.
+23
+
+24
+00:01:40,530 --> 00:01:43,620
+It might be that you in the end of the matrix somewhere.
+24
+
+25
+00:01:43,980 --> 00:01:46,910
+So we need to verify if we can make the step or not.
+25
+
+26
+00:01:47,160 --> 00:01:50,910
+So we first start with the right to have a valid right.
+26
+
+27
+00:01:51,180 --> 00:01:55,420
+Then the current j + 1 should be still less than the column.
+27
+
+28
+00:01:55,620 --> 00:01:57,890
+This means that you aren't at the last column.
+28
+
+29
+00:01:58,050 --> 00:02:06,000
+So if we are at the last column, we can take the next value for us from this position and we can
+29
+
+30
+00:02:06,000 --> 00:02:08,940
+consider it our, the first place to move.
+30
+
+31
+00:02:09,300 --> 00:02:11,870
+So right now, we already took the next value.
+31
+
+32
+00:02:11,880 --> 00:02:14,610
+We are taking it in a temporary value with a best_i and best_j.
+32
+
+33
+00:02:14,640 --> 00:02:16,260
+in temporary value.
+33
+
+34
+00:02:16,680 --> 00:02:20,970
+So for now I'm asking and saying if we are in the next value.
+34
+
+35
+00:02:22,930 --> 00:02:28,230
+If we can move to the right, take the value and say that we took these 'i' and 'j', so far we didn't move,
+35
+
+36
+00:02:28,230 --> 00:02:29,840
+we just trying to figure out.
+36
+
+37
+00:02:30,400 --> 00:02:34,270
+Now, let's check out the down, can we move to the down?
+37
+
+38
+00:02:34,480 --> 00:02:38,430
+This is what happened in line 26 if we can move to the down.
+38
+
+39
+00:02:38,710 --> 00:02:39,730
+We have two cases.
+39
+
+40
+00:02:39,970 --> 00:02:44,550
+Either we already have a next value from, has a next value from the last step or not.
+40
+
+41
+00:02:44,830 --> 00:02:53,440
+So I'm asking, I'm telling if best_i == -1, it means that this condition isn't achieved.
+41
+
+42
+00:02:53,650 --> 00:02:55,560
+So we just assign the current value.
+42
+
+43
+00:02:55,570 --> 00:02:58,910
+So we say, OK, let's move to the down and just keep it. OK,
+43
+
+44
+00:02:59,260 --> 00:03:01,540
+What if we already have some best_value?
+44
+
+45
+00:03:01,870 --> 00:03:05,950
+Then we're comparing our next value with the down value.
+45
+
+46
+00:03:06,250 --> 00:03:08,800
+If the next value is better, we just take it.
+46
+
+47
+00:03:09,070 --> 00:03:13,330
+So here at this moment we are actually checking, actually checking three things.
+47
+
+48
+00:03:13,630 --> 00:03:14,710
+Can we move or not?
+48
+
+49
+00:03:15,020 --> 00:03:17,550
+If we can move, do we have a value or not?
+49
+
+50
+00:03:17,560 --> 00:03:22,030
+If we don't have a value take it, if we have a value, compare and make sure we take it.
+50
+
+51
+00:03:22,570 --> 00:03:25,980
+Finally, in a very similar logic, we would like to check the diagonal.
+51
+
+52
+00:03:26,320 --> 00:03:30,370
+So first we need to make sure that 'i' + 1 and 'j' + 1 still in the grid.
+52
+
+53
+00:03:30,790 --> 00:03:37,810
+If it is still in the grid, there are two cases, either of these two values we can take.
+53
+
+54
+00:03:37,810 --> 00:03:40,660
+We already took something from them or not.
+54
+
+55
+00:03:40,780 --> 00:03:43,290
+So if 'best_i' is minus one, we just take it.
+55
+
+56
+00:03:43,480 --> 00:03:45,740
+Otherwise, we compare our value with this value.
+56
+
+57
+00:03:46,180 --> 00:03:53,810
+What happens after this step is we know our next 'best_i' and our next best_j.
+57
+
+58
+00:03:54,040 --> 00:03:59,200
+So we update our 'i' and update our 'j' with the next value to move to there.
+58
+
+59
+00:03:59,200 --> 00:04:06,280
+Once we move to there, the robot is going to take these 'i' and 'j' values, please take 3x4
+59
+
+60
+00:04:06,280 --> 00:04:13,780
+matrix and start to put some different values in it and start from 'i' and 'j' with zero and zero and start
+60
+
+61
+00:04:13,780 --> 00:04:14,590
+to do tracing,
+61
+
+62
+00:04:15,190 --> 00:04:20,440
+tracing for the matrix. In this one, we are going to make a shorter code, but it is a bit
+62
+
+63
+00:04:20,440 --> 00:04:21,460
+more complex.
+63
+
+64
+00:04:21,490 --> 00:04:25,540
+OK, so make sure you are comfortable with the previous one first.
+64
+
+65
+00:04:25,840 --> 00:04:28,620
+This is kind of to some extent might be a bit harder for you.
+65
+
+66
+00:04:29,920 --> 00:04:34,300
+There is something in programming.
+66
+
+67
+00:04:34,540 --> 00:04:36,610
+We call it a direction array,
+67
+
+68
+00:04:36,850 --> 00:04:38,140
+this isn't about syntax,
+68
+
+69
+00:04:38,140 --> 00:04:39,580
+it is just semantic idea.
+69
+
+70
+00:04:40,000 --> 00:04:42,150
+The idea is following: in the last
+70
+
+71
+00:04:42,180 --> 00:04:44,260
+code we tried three positions,
+71
+
+72
+00:04:44,470 --> 00:04:47,950
+we tried the left and we tried the bottom,
+72
+
+73
+00:04:48,070 --> 00:04:49,330
+and we tried the diagonal.
+73
+
+74
+00:04:49,600 --> 00:04:57,460
+OK, thinking about the shift that happened from 'i' and 'j', this actually we either added (1, 0) here
+74
+
+75
+00:04:57,820 --> 00:05:00,700
+or (0, 1) to get that one or added (1, 1).
+75
+
+76
+00:05:01,360 --> 00:05:03,660
+But the code was very, very complicated.
+76
+
+77
+00:05:03,910 --> 00:05:10,570
+So what..., the idea of the direction array is as following, you are to come and build two simple arrays
+77
+
+78
+00:05:10,570 --> 00:05:15,180
+like the 'di' and 'dj', and start to put these shiftings that happen here.
+78
+
+79
+00:05:15,460 --> 00:05:22,600
+So (1, 0) corresponds here for the first shift, (0, 1) correspond to the second shift, and (1, 1)
+79
+
+80
+00:05:22,600 --> 00:05:23,830
+to the third shift.
+80
+
+81
+00:05:24,280 --> 00:05:31,150
+Once you did that, your code here don't need to, doesn't need to give attention to the idea of right
+81
+
+82
+00:05:31,150 --> 00:05:31,570
+and left.
+82
+
+83
+00:05:31,570 --> 00:05:34,330
+We already coded the right and left here in the direction.
+83
+
+84
+00:05:34,930 --> 00:05:41,830
+Once we are here, we iterate on the three directions, get the new direction, which is 'i' +
+84
+
+85
+00:05:41,830 --> 00:05:43,450
+'di' and 'j' +.'dj'
+85
+
+86
+00:05:43,700 --> 00:05:48,960
+OK, so specifically let's say that 'i' and 'j' at (0, 0) and you are taking the direction of zero.
+86
+
+87
+00:05:49,180 --> 00:05:55,020
+So we say 'i + di[0]' which is 1, and 'j + dj[0]', which is zero.
+87
+
+88
+00:05:55,240 --> 00:05:57,600
+So the 'i + 1' and 'j + 0'.
+88
+
+89
+00:05:57,700 --> 00:06:03,010
+Now we have the next position which is lef here, but we don't care.
+89
+
+90
+00:06:03,340 --> 00:06:09,190
+And then we are saying if this is valid position or not, if it is valid we say: do we have a previous
+90
+
+91
+00:06:09,490 --> 00:06:15,320
+good value or not? if we don't have just take this one, if we have to make sure it's good.
+91
+
+92
+00:06:15,550 --> 00:06:18,040
+So it's the same logic actually that we did before.
+92
+
+93
+00:06:18,310 --> 00:06:25,180
+But this time we get rid of the, a lot of if-conditions that we were putting and just maintaining it in
+93
+
+94
+00:06:25,180 --> 00:06:26,380
+this nice direction array.
+94
+
+95
+00:06:26,380 --> 00:06:33,850
+Direction array make the code much more elegant to iterate on the neighbors, flattening an array.
+95
+
+96
+00:06:34,780 --> 00:06:37,570
+Remember we discussed before the flatting array.
+96
+
+97
+00:06:37,570 --> 00:06:39,970
+We say that this array can be flat in this way.
+97
+
+98
+00:06:40,120 --> 00:06:46,180
+And I asked you to figure out an equation to move from 2D position, to 1D position.
+98
+
+99
+00:06:46,330 --> 00:06:47,680
+So here is the idea.
+99
+
+100
+00:06:47,920 --> 00:06:54,130
+Let's say that you would like to know or like position (1, 2) in a 3x4 matrix.
+100
+
+101
+00:06:54,250 --> 00:06:55,450
+Where is it converted?
+101
+
+102
+00:06:55,700 --> 00:06:59,440
+The idea is that the equation is i * number of columns.
+102
+
+103
+00:06:59,450 --> 00:07:02,200
++ j. Take a moment to try to think about it.
+103
+
+104
+00:07:02,410 --> 00:07:06,640
+Here is what happens, if you are in row one.
+104
+
+105
+00:07:06,940 --> 00:07:13,030
+It means that there is a complete column that we are done with it, which has 'cols' as number of the
+105
+
+106
+00:07:13,030 --> 00:07:13,540
+columns.
+106
+
+107
+00:07:13,810 --> 00:07:16,450
+So we will multiply i * number of columns.
+107
+
+108
+00:07:16,450 --> 00:07:22,030
+We actually take the whole columns that we have so far and then we.
+108
+
+109
+00:07:22,090 --> 00:07:28,900
+Just add the current j, so if we are at (1, 2), we take the first row for values and add
+109
+
+110
+00:07:28,900 --> 00:07:29,980
+the current two values.
+110
+
+111
+00:07:30,250 --> 00:07:36,080
+Another example if you are here, then we know that we can multiply 2 * 4 to get these eight
+111
+
+112
+00:07:36,100 --> 00:07:43,510
+values and then just add this current position to here, this how we can easily convert from 'i' and 'j'
+112
+
+113
+00:07:43,840 --> 00:07:48,780
+to some position. The one that is more tricky is the reverse,
+113
+
+114
+00:07:48,970 --> 00:07:56,920
+if you have 1D and you would like to convert it to a position i and j, OK, the way to do it is mainly that
+114
+
+115
+00:07:56,920 --> 00:08:03,770
+the position i is going to be the index is divided by the column, and the index j mod column.
+115
+
+116
+00:08:03,790 --> 00:08:10,750
+So division and mod with column get the answer, for example, if we are at an index of 6, 6 
+116
+
+117
+00:08:10,780 --> 00:08:15,370
+divided by 4 in integer division is 1, and 6 mod 4 is 2.
+117
+
+118
+00:08:15,760 --> 00:08:19,840
+But the question? is why such a formula? let's remember the math.
+118
+
+119
+00:08:20,230 --> 00:08:27,670
+We know that from this equation that the position index is actually 'i * columns + j' when you
+119
+
+120
+00:08:27,670 --> 00:08:30,910
+start to divide by columns, here is what happen i *
+120
+
+121
+00:08:30,910 --> 00:08:35,920
+columns divided by columns is just 'i', 'j' divided by columns.
+121
+
+122
+00:08:35,940 --> 00:08:37,740
+We know that 'j' is less than columns.
+122
+
+123
+00:08:37,750 --> 00:08:43,270
+So this is actually is going to be 0; so end up with 'i', on the other side if we take the modulus.
+123
+
+124
+00:08:43,810 --> 00:08:49,240
+When you take the modulus on this equation, 'i' modulus columns is going to be 0, 'j' 
+124
+
+125
+00:08:49,420 --> 00:08:53,200
+'j' modulus column is going to be 'j', because again 'j' is less than columns.
+125
+
+126
+00:08:53,380 --> 00:08:58,690
+This how we can get the i and j position.
+126
+
+127
+00:08:59,650 --> 00:09:00,190
+That's it.

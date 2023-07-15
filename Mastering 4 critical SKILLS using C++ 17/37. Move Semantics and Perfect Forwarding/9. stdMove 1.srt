@@ -1,0 +1,247 @@
+1
+00:00:01,290 --> 00:00:06,630
+We will study the esteemable function, which is a very important function, and you will notice some
+
+2
+00:00:06,630 --> 00:00:08,950
+dependencies on next sections on it.
+
+3
+00:00:11,130 --> 00:00:19,400
+Recall we we we provided this could before and we tried to trace if one of 10 within is Ebby our value.
+
+4
+00:00:19,770 --> 00:00:24,240
+We notice normally that the barrier would be for another value difference.
+
+5
+00:00:24,600 --> 00:00:30,560
+So that then is matching if one of E and then we are trying to call off five to eight.
+
+6
+00:00:30,870 --> 00:00:34,490
+But remember that as we have a name here, then this is an L value.
+
+7
+00:00:34,830 --> 00:00:39,150
+So if it is going to match the effort with the L value difference.
+
+8
+00:00:39,570 --> 00:00:41,220
+But this isn't what we intended.
+
+9
+00:00:41,430 --> 00:00:48,540
+We wish, Dave, if we do a really cool the effort with another value different, I would like you to
+
+10
+00:00:48,540 --> 00:00:52,910
+try to guess a very simple solution actually that can work to this problem.
+
+11
+00:00:52,920 --> 00:00:56,450
+How can we force this function to call this function?
+
+12
+00:00:56,460 --> 00:00:58,080
+Give yourself like a minute thinking.
+
+13
+00:01:00,000 --> 00:01:05,790
+Here is a hint, if you couldn't do it by yourself, try to think about some casting that can end up
+
+14
+00:01:05,790 --> 00:01:08,150
+with this eight to be really calling this one.
+
+15
+00:01:10,730 --> 00:01:17,990
+As we know in C++, we can do a lot with the with with with many, several custom techniques, so we
+
+16
+00:01:17,990 --> 00:01:22,480
+simply can't ask a can cost to the value reference to our video reference.
+
+17
+00:01:22,760 --> 00:01:29,210
+If you tried to do something like static integer references, reference X. you actually got accustomed
+
+18
+00:01:29,420 --> 00:01:37,100
+variable to our value difference because eventually X and we are here like X here or be here are just
+
+19
+00:01:37,100 --> 00:01:38,890
+R R just L values.
+
+20
+00:01:39,170 --> 00:01:41,920
+So if you costing them they are, they had the address here.
+
+21
+00:01:41,930 --> 00:01:42,860
+They are addressed here.
+
+22
+00:01:43,190 --> 00:01:49,790
+We just to market them in the memory that these guys now are our value differences, which is an indicator
+
+23
+00:01:49,790 --> 00:01:57,900
+that you might be trying to move them or try to steal the resources or so we will know later about that.
+
+24
+00:01:58,310 --> 00:02:08,030
+So the the more of that here, because I think the variable is goes users to switch it from an L value
+
+25
+00:02:08,030 --> 00:02:09,130
+to our value difference.
+
+26
+00:02:09,620 --> 00:02:12,320
+But remember, this doesn't change anything in the memory.
+
+27
+00:02:12,330 --> 00:02:15,060
+For example, they would have the same address in the memory.
+
+28
+00:02:15,070 --> 00:02:16,640
+Nothing, nothing changes.
+
+29
+00:02:17,130 --> 00:02:23,330
+Remember crusting just here like it might affect the value, but otherwise we are still referring to
+
+30
+00:02:23,330 --> 00:02:24,440
+the same thing in the memory.
+
+31
+00:02:25,220 --> 00:02:32,240
+So going back to our code, if we did something like F2 of static, just integer reference a reference
+
+32
+00:02:32,240 --> 00:02:39,340
+to a then this guy is now casted again as an R value because that the customer return for us or value
+
+33
+00:02:39,350 --> 00:02:39,840
+difference.
+
+34
+00:02:40,040 --> 00:02:42,710
+So now the return here is an R value different.
+
+35
+00:02:42,950 --> 00:02:45,560
+So again, this is going to match if it do different.
+
+36
+00:02:46,580 --> 00:02:55,280
+Now it's your turn and Kersting here are from X and if one picks are, what is the code, which which
+
+37
+00:02:55,280 --> 00:02:56,270
+function would be called.
+
+38
+00:02:58,250 --> 00:03:03,980
+It would be if one if you remember X is a name and the name is the name of the value.
+
+39
+00:03:04,250 --> 00:03:07,040
+We know that this is counterintuitive, but keep that in mind.
+
+40
+00:03:08,390 --> 00:03:14,000
+Literally, our function, instead of just making it on the here, it's a bit ugly.
+
+41
+00:03:14,270 --> 00:03:14,780
+That's right.
+
+42
+00:03:14,990 --> 00:03:21,380
+Our our move function, which you take reference X custo and return for us reference, reference.
+
+43
+00:03:21,800 --> 00:03:28,790
+Notice that this function is returning a reference, but however, it is a reference to to a barometer.
+
+44
+00:03:28,940 --> 00:03:34,820
+So this is very easy because we said like when you when you are returning from a function, a reference
+
+45
+00:03:34,820 --> 00:03:36,940
+to a local variable, it would be a problem.
+
+46
+00:03:37,130 --> 00:03:38,250
+But this isn't a local bar.
+
+47
+00:03:38,510 --> 00:03:40,680
+This is actually the argument that we send.
+
+48
+00:03:41,060 --> 00:03:45,370
+So now here we are using the what are you doing here?
+
+49
+00:03:45,380 --> 00:03:47,600
+The same function that we are using the same logic.
+
+50
+00:03:47,600 --> 00:03:52,520
+But just we are calling the function now there there's an interesting thing here that will come back
+
+51
+00:03:52,520 --> 00:03:56,070
+later to discuss more about it this year.
+
+52
+00:03:56,420 --> 00:03:57,920
+So originally an L value.
+
+53
+00:03:58,610 --> 00:04:04,730
+When you cast it and you return reference reference, you are actually moving like marking it that it
+
+54
+00:04:04,730 --> 00:04:07,030
+can be moved internally.
+
+55
+00:04:07,040 --> 00:04:11,620
+You can still it's a memory, but it certainly has an identity, has an address.
+
+56
+00:04:11,930 --> 00:04:13,790
+This is what we call an X value.
+
+57
+00:04:14,210 --> 00:04:19,400
+And Xibalba is something that has an identity which here like we know the address of this eight, but
+
+58
+00:04:19,400 --> 00:04:22,970
+also no market in the memory was movable by this is that, of course.
+
+59
+00:04:23,180 --> 00:04:26,800
+So this is called the X value and would come back to that one again with.
+
+60
+00:04:27,740 --> 00:04:34,430
+Finally, instead of writing our own move, this is what is is the function listed function is a generic
+
+61
+00:04:34,460 --> 00:04:40,960
+implementation that internally doing a static costing from the eight to integrate reference reference
+
+62
+00:04:40,970 --> 00:04:44,620
+or from some object to object reference reference that set.

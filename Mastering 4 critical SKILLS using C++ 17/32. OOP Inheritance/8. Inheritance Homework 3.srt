@@ -1,0 +1,219 @@
+1
+00:00:01,110 --> 00:00:03,600
+The third homework set in the inheritance.
+
+2
+00:00:05,250 --> 00:00:11,480
+Remember, we said that C++ doesn't allow you to initialize inherited member variables in the initial
+
+3
+00:00:11,540 --> 00:00:12,040
+results?
+
+4
+00:00:12,330 --> 00:00:13,250
+Why you think so?
+
+5
+00:00:13,620 --> 00:00:19,500
+Think in some cases that the language designers considered for that in C++.
+
+6
+00:00:19,500 --> 00:00:21,570
+Also, friendship isn't inherited.
+
+7
+00:00:21,780 --> 00:00:22,770
+Why do you think so?
+
+8
+00:00:23,880 --> 00:00:27,800
+Comparing the set of objects of a class with its drive to classes?
+
+9
+00:00:28,260 --> 00:00:29,660
+Which one is bigger?
+
+10
+00:00:29,670 --> 00:00:30,230
+Like how many?
+
+11
+00:00:30,240 --> 00:00:31,150
+One of them is bigger.
+
+12
+00:00:31,410 --> 00:00:36,390
+So think, for example, in a working class and Honda, their child, the class which you base, which
+
+13
+00:00:36,390 --> 00:00:38,310
+class would have more instances created.
+
+14
+00:00:39,420 --> 00:00:42,930
+We know that we do not access private variables in.
+
+15
+00:00:42,930 --> 00:00:44,910
+But are they still inherited?
+
+16
+00:00:46,590 --> 00:00:54,840
+Finally, from a different perspective, think about providing protected variables or providing getters
+
+17
+00:00:54,840 --> 00:00:55,520
+and setters.
+
+18
+00:00:56,520 --> 00:00:58,230
+Which one would be a better approach?
+
+19
+00:00:58,530 --> 00:01:03,870
+So think like a subclass corruptibility class using the protected data.
+
+20
+00:01:04,380 --> 00:01:05,370
+Also the coupling.
+
+21
+00:01:05,640 --> 00:01:08,280
+If we allow the protected data, then they are visible.
+
+22
+00:01:08,460 --> 00:01:09,090
+To what degree?
+
+23
+00:01:09,090 --> 00:01:13,050
+There are more cabling and dependencies between the child and the the class.
+
+24
+00:01:14,670 --> 00:01:19,270
+OK, the package delivery service is as following.
+
+25
+00:01:19,530 --> 00:01:21,020
+You would like to design a set of classes.
+
+26
+00:01:21,030 --> 00:01:24,940
+You don't have to write a mean function for a package delivery service as follows.
+
+27
+00:01:25,290 --> 00:01:31,140
+We have something we call a standard package which has sender address, receiver address, and it has
+
+28
+00:01:31,140 --> 00:01:33,540
+written KG's and some price per kilogram.
+
+29
+00:01:33,930 --> 00:01:37,870
+So the total cost, the total cost is eight times the price per kilogram.
+
+30
+00:01:38,550 --> 00:01:43,530
+The address is just name city and the name, name and city.
+
+31
+00:01:45,210 --> 00:01:50,430
+Yeah, the string and the address of the street and some number, whatever.
+
+32
+00:01:50,430 --> 00:01:56,700
+Something similar to the package is a standard package with an added fixed fee for the total cost.
+
+33
+00:01:57,340 --> 00:02:03,200
+A heavy package is a standard package for heavy weights attached attached with extra weight.
+
+34
+00:02:03,420 --> 00:02:08,970
+So for example, if the weight is greater than 100 kilograms, then there is an extra piece of weight
+
+35
+00:02:08,970 --> 00:02:12,080
+minus 100 times that, the extra weight in kilograms.
+
+36
+00:02:12,120 --> 00:02:19,760
+OK, so what we have now here, this extra weight and we use it to add extra fees for the average.
+
+37
+00:02:20,490 --> 00:02:23,490
+There are also customers who create several shipments.
+
+38
+00:02:23,850 --> 00:02:27,480
+Each shipment has a set of packages of different types.
+
+39
+00:02:28,080 --> 00:02:32,100
+The total shipment price is the sum of the price of every package.
+
+40
+00:02:32,520 --> 00:02:35,830
+Each shipment has some information of card used for the payment.
+
+41
+00:02:36,300 --> 00:02:40,580
+This could be a debit card or credit card and the user might have many of them.
+
+42
+00:02:40,980 --> 00:02:45,080
+So try to design a set of glasses that express this kind of relationships.
+
+43
+00:02:47,500 --> 00:02:50,580
+Read this program and tell us what is the output of it.
+
+44
+00:02:51,540 --> 00:02:58,470
+And here, read this good and figure out some problems and why this problem happened, how could Syntex
+
+45
+00:02:58,770 --> 00:03:00,650
+using a Syntex to solve the problem?
+
+46
+00:03:03,170 --> 00:03:06,740
+I would like you to read this program very carefully investigated.
+
+47
+00:03:07,040 --> 00:03:08,840
+There's something interesting here in the mean.
+
+48
+00:03:08,840 --> 00:03:09,660
+Figure it out.
+
+49
+00:03:10,040 --> 00:03:17,240
+Also, what is expected out of this program, thinking about the data members X and Y and Z, think
+
+50
+00:03:17,240 --> 00:03:18,960
+about the visibility of each object.
+
+51
+00:03:18,980 --> 00:03:20,220
+Here we have more than object.
+
+52
+00:03:20,390 --> 00:03:22,150
+So think about the visibility of the member.
+
+53
+00:03:22,520 --> 00:03:26,180
+What's visible and what isn't in a similar way, the function here.
+
+54
+00:03:26,180 --> 00:03:28,130
+What which variable are visible or not?
+
+55
+00:03:29,730 --> 00:03:30,210
+That's it.

@@ -1,0 +1,419 @@
+1
+00:00:01,290 --> 00:00:08,370
+In this video, you will learn about one of the rappers in C++ is named Optioning the word Rapper Mean,
+
+2
+00:00:08,400 --> 00:00:09,930
+it's something inside it.
+
+3
+00:00:09,940 --> 00:00:13,470
+We learned about this Keywood in the object oriented programming.
+
+4
+00:00:14,400 --> 00:00:20,460
+So sometimes we would like to express that something doesn't exist.
+
+5
+00:00:21,330 --> 00:00:24,500
+Typically in programming, we try to do that in some workarounds.
+
+6
+00:00:24,930 --> 00:00:30,560
+For example, let's say we are dividing two numbers and B, we all know that we cannot divide by zero.
+
+7
+00:00:31,080 --> 00:00:38,220
+So if you are writing a function that has just a double header, you would like to check if, if, if,
+
+8
+00:00:38,230 --> 00:00:44,280
+if B is in zero, but whether are you going to return here, it would not work with you like you would
+
+9
+00:00:44,280 --> 00:00:48,280
+like to, to communicate to the caller that there is something wrong.
+
+10
+00:00:48,660 --> 00:00:50,960
+One way is just to throw an exception here.
+
+11
+00:00:51,090 --> 00:00:52,830
+But this isn't the best thing to do.
+
+12
+00:00:52,840 --> 00:00:54,350
+Maybe we can just make it simpler.
+
+13
+00:00:54,360 --> 00:00:57,800
+We would like to express that we are going to proceed this query.
+
+14
+00:00:58,530 --> 00:01:05,460
+So another way is just, OK, let's define a pool with beer and double and then if it either return
+
+15
+00:01:05,490 --> 00:01:07,980
+true, if we can do it otherwise return false.
+
+16
+00:01:08,520 --> 00:01:09,840
+So look to the function here.
+
+17
+00:01:10,320 --> 00:01:12,510
+We are done with it, but the function is ugly.
+
+18
+00:01:12,510 --> 00:01:14,580
+We have to define it in this bad way.
+
+19
+00:01:16,410 --> 00:01:21,660
+In general, in general, since you might have two best arguments that you would like to communicate
+
+20
+00:01:21,870 --> 00:01:27,120
+with the caller that this argument doesn't exist or return or something and would like to say it doesn't
+
+21
+00:01:27,120 --> 00:01:31,140
+exist, we can send a pointer and give it the full value of pointer.
+
+22
+00:01:31,440 --> 00:01:37,560
+Then this guy check and there is agreement that if a best for you not pointer, it doesn't exist or
+
+23
+00:01:37,560 --> 00:01:41,910
+if a best for minus one it doesn't exist or return it to you minus one, it doesn't exist.
+
+24
+00:01:42,210 --> 00:01:47,340
+Such agreements that we do between ourself as programmers and write some documentation about it.
+
+25
+00:01:47,490 --> 00:01:49,290
+But all of that is very bad ways.
+
+26
+00:01:49,590 --> 00:01:53,820
+C++ 17 introduced the word optional.
+
+27
+00:01:55,250 --> 00:02:00,630
+An optional variable is variable that simply may exist, and this is a great thing.
+
+28
+00:02:00,650 --> 00:02:02,890
+It might be yes or not.
+
+29
+00:02:03,230 --> 00:02:04,950
+So it is how you how you define it.
+
+30
+00:02:05,180 --> 00:02:10,100
+You say optional and give it a parameter integer x one of five.
+
+31
+00:02:10,460 --> 00:02:14,970
+This means we have already a variable X one that has a value five sets it.
+
+32
+00:02:15,710 --> 00:02:20,070
+Or you can even do optional extra to five.
+
+33
+00:02:20,100 --> 00:02:27,770
+This is going to reduce the parameter type of file automatically to just interfere with another other.
+
+34
+00:02:27,980 --> 00:02:32,870
+You can call the function, make optional and give it five and it's going to return to the variable
+
+35
+00:02:32,870 --> 00:02:33,350
+for you.
+
+36
+00:02:35,180 --> 00:02:38,180
+So these are three ways here to define it.
+
+37
+00:02:38,960 --> 00:02:44,060
+Now, what if you would like to say there is no value at the moment, you can define optional and give
+
+38
+00:02:44,060 --> 00:02:46,670
+it the value of it similar to the pointer.
+
+39
+00:02:46,680 --> 00:02:49,980
+It's not opt or you can even just write it MBT here.
+
+40
+00:02:50,420 --> 00:02:55,440
+So now we see how can we define it or as exists or it doesn't exist.
+
+41
+00:02:56,030 --> 00:02:59,450
+Now if I have a variable x how to know if the value exists.
+
+42
+00:02:59,460 --> 00:03:00,560
+There are several ways.
+
+43
+00:03:01,070 --> 00:03:06,270
+One of them is just to use a function that has value, which is going to check if there is value or
+
+44
+00:03:06,290 --> 00:03:07,850
+what if it has a value.
+
+45
+00:03:07,880 --> 00:03:12,020
+You can write those value to to explain why this is one way.
+
+46
+00:03:12,620 --> 00:03:19,820
+Another way is to use as three x three as is the dereference operator is going also to bring to the
+
+47
+00:03:19,820 --> 00:03:20,120
+value.
+
+48
+00:03:20,600 --> 00:03:25,280
+So do you know if there is a value Younus has value to use it.
+
+49
+00:03:25,280 --> 00:03:31,520
+You use that value or use it as another way to know if it has a value or not is to use the just not
+
+50
+00:03:31,840 --> 00:03:38,870
+for not X before is going to call an overloaded operator that just convert the variable to true or false
+
+51
+00:03:38,870 --> 00:03:39,780
+if it exists or not.
+
+52
+00:03:39,980 --> 00:03:43,280
+So it's just more, more nicer way to bring to the value exists.
+
+53
+00:03:44,630 --> 00:03:54,530
+Now what what if you try to use X5, which is empty directly without checking if it has a value or not?
+
+54
+00:03:55,040 --> 00:04:01,850
+If you try to call the value directly, it's going to throw a bad option and access exception if you
+
+55
+00:04:01,850 --> 00:04:03,520
+try to use it with a strike.
+
+56
+00:04:03,890 --> 00:04:05,540
+This is undefined behavior.
+
+57
+00:04:05,540 --> 00:04:07,090
+So your program may be crash.
+
+58
+00:04:07,100 --> 00:04:07,790
+Maybe not.
+
+59
+00:04:08,980 --> 00:04:18,430
+Now, there is one one one nicer way in an IPPEI for what you can call the value or the value or will
+
+60
+00:04:18,430 --> 00:04:21,790
+do as following, if there is a value, it will return it.
+
+61
+00:04:22,030 --> 00:04:26,770
+If there is no value, it will take this parameter, this argument, as a default value.
+
+62
+00:04:27,100 --> 00:04:30,890
+So here this this one will already display minus one.
+
+63
+00:04:31,990 --> 00:04:36,910
+Finally, if you would like to reset the variable, like you would like to remove its content, you
+
+64
+00:04:36,910 --> 00:04:43,930
+can call the value function that reset, or you can just like a lot and you can put another value in
+
+65
+00:04:43,930 --> 00:04:44,840
+a very normal way.
+
+66
+00:04:45,340 --> 00:04:50,360
+So overall, we have different ways to express if something exists or not.
+
+67
+00:04:50,590 --> 00:04:54,670
+We have different ways to express it with the variable exist.
+
+68
+00:04:55,480 --> 00:04:56,940
+Check if it exists or not.
+
+69
+00:04:57,250 --> 00:05:04,810
+And we have different ways to get the value itself and we have exceptions or undefined behavior if we
+
+70
+00:05:04,810 --> 00:05:06,770
+wrongly use the variable.
+
+71
+00:05:07,000 --> 00:05:13,390
+So the moral of that select word choice to define select what a choice to check, select one choice
+
+72
+00:05:13,390 --> 00:05:17,450
+to get the variable, but be careful from wrongly using it.
+
+73
+00:05:18,310 --> 00:05:22,900
+Now let's rewrite the divide function to make use of the optional.
+
+74
+00:05:23,230 --> 00:05:29,740
+We're going to define a function by two, which is optional, double now as a parameter.
+
+75
+00:05:29,740 --> 00:05:33,950
+When you see that, it means this function may or may not return a variable.
+
+76
+00:05:34,210 --> 00:05:37,000
+So I'm hearing saying this B is in zero.
+
+77
+00:05:38,410 --> 00:05:40,160
+This should be zero zero point.
+
+78
+00:05:40,370 --> 00:05:41,350
+It just to be zero.
+
+79
+00:05:41,650 --> 00:05:48,180
+If being equal zero, then we are normally returning eval, otherwise we are returning empty.
+
+80
+00:05:48,340 --> 00:05:53,040
+So either we are optional level, equal value or optional double equal empty.
+
+81
+00:05:53,110 --> 00:05:54,490
+This how we define it.
+
+82
+00:05:54,850 --> 00:06:03,550
+Now we are calling the function if there is a return we just displayed here er in our case six or zero,
+
+83
+00:06:03,550 --> 00:06:04,570
+there would be no value.
+
+84
+00:06:04,580 --> 00:06:06,280
+So we are displaying it.
+
+85
+00:06:07,860 --> 00:06:13,530
+Let's see one more example, this function in the box and it takes a character pointer or a Conestoga
+
+86
+00:06:13,830 --> 00:06:16,770
+pointer and return for us into.
+
+87
+00:06:17,340 --> 00:06:21,240
+The point is the function would take some string or some character pointer.
+
+88
+00:06:21,570 --> 00:06:26,030
+And if it can be converted to integer, we will get an integer.
+
+89
+00:06:26,340 --> 00:06:30,290
+But if it cannot be converted to an integer, we are going to return to nothing.
+
+90
+00:06:30,390 --> 00:06:31,540
+This is our logic.
+
+91
+00:06:32,010 --> 00:06:35,360
+So this is a function in the string header file named Estás.
+
+92
+00:06:35,370 --> 00:06:43,950
+I take a character pointer and they take a string and convert it back to an integer.
+
+93
+00:06:44,130 --> 00:06:49,800
+Remember when when we learned the basic arguments I used the function it I from the cedar, please don't
+
+94
+00:06:49,800 --> 00:06:50,100
+use it.
+
+95
+00:06:50,100 --> 00:06:50,730
+Use a string.
+
+96
+00:06:51,120 --> 00:06:53,050
+This is much better for you now.
+
+97
+00:06:53,070 --> 00:06:59,240
+This function will throw an exception if it couldn't convert a string to an integer.
+
+98
+00:06:59,460 --> 00:07:01,120
+So we're going to make use of it also.
+
+99
+00:07:01,310 --> 00:07:07,320
+So if we can convert a return to the if we can convert the return to the value, if it happened that
+
+100
+00:07:07,320 --> 00:07:11,550
+we have an exception, maybe you can look something and then you just return it.
+
+101
+00:07:11,880 --> 00:07:16,560
+So one application for that is investing the arguments you hear expecta.
+
+102
+00:07:16,560 --> 00:07:17,930
+The program has two numbers.
+
+103
+00:07:18,360 --> 00:07:24,450
+So you are passing the first one and passing the second one and saying if we manage to pass the two
+
+104
+00:07:24,450 --> 00:07:27,900
+values, then just bring together some.
+
+105
+00:07:29,040 --> 00:07:32,660
+That's it for now, but he's practicing before the next lesson.

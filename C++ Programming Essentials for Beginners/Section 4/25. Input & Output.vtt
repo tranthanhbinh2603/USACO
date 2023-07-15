@@ -1,0 +1,424 @@
+WEBVTT
+
+00:02.600 --> 00:06.470
+Everyone, so you have seen how to build and run a very simple C++ program.
+
+00:06.820 --> 00:12.320
+So we are going to increase the level by one step and we are going to solve a very simple problem.
+
+00:12.920 --> 00:16.580
+And the problem is we want to find note the average marks.
+
+00:17.270 --> 00:23.780
+So we are given the marks of a student in three different subjects physics, chemistry and maths, and
+
+00:23.780 --> 00:25.820
+we want to find out their average.
+
+00:26.390 --> 00:32.420
+The what we will will learn to take input output through this example and will learn a little bit about
+
+00:32.450 --> 00:33.230
+the great apes.
+
+00:33.440 --> 00:35.930
+Though we will dive deep into data types as well.
+
+00:36.950 --> 00:42.890
+What we are doing, we are going to say, OK, we will take input the marks in the physics and chemistry
+
+00:43.190 --> 00:47.810
+and will produce a final output how much marks the audience could.
+
+00:48.970 --> 00:49.810
+What we are going to do.
+
+00:50.530 --> 00:58.150
+Let us go back and do the sublime text, and we are going to create a new file.
+
+01:00.030 --> 01:03.330
+And maybe we can say average marks.
+
+01:04.460 --> 01:07.160
+Is the fight on what we are doing?
+
+01:07.400 --> 01:12.890
+We are going to first include the head of the fight as usual, followed by the namespace.
+
+01:14.800 --> 01:21.100
+And this extreme is responsible for containing the could not be used for doing input and output.
+
+01:21.220 --> 01:27.970
+Right now, what we have only seen how to do output the output is done using a sealed object, but the
+
+01:27.970 --> 01:30.270
+input is done using a C in object.
+
+01:30.310 --> 01:34.330
+So C in is responsible for taking something as an input.
+
+01:34.900 --> 01:35.200
+OK.
+
+01:35.650 --> 01:39.880
+So firstly, we will we can hardcore look, we can say in physics.
+
+01:40.510 --> 01:46.810
+The student got led to 18 months in physics and what we are doing, we are creating a bucket which is
+
+01:46.810 --> 01:49.930
+going to store the marks of physics in a program.
+
+01:49.930 --> 01:51.670
+You will need to store data.
+
+01:52.660 --> 01:56.980
+So you have created a bucket which will store interior type of data.
+
+01:56.990 --> 02:02.710
+And we are saying, look, the value is equal to the values equal to 80.
+
+02:04.070 --> 02:06.500
+And similarly, we can create boomer buckets.
+
+02:06.960 --> 02:12.680
+It's there is a bucket of chemistry there in the seven and months, which has led to 65.
+
+02:13.440 --> 02:19.130
+And what I want to do, I want to do with the average, OK, they're doing, the average might result
+
+02:19.140 --> 02:23.960
+in a number if it is not an integer which is having some value after the decimal as well.
+
+02:23.960 --> 02:26.210
+Maybe what the point three three.
+
+02:27.410 --> 02:31.400
+These kind of numbers are known as floating point numbers.
+
+02:32.360 --> 02:38.300
+What we need to do instead of creating a bucket of type in digit, we can create a bucket of the type
+
+02:38.690 --> 02:39.290
+average.
+
+02:40.070 --> 02:40.350
+OK.
+
+02:40.900 --> 02:43.880
+And 65 and we'll be 32.
+
+02:45.050 --> 02:52.280
+All these drone beaters, and I want to put the average inside another book, so I can say Lord Average,
+
+02:52.820 --> 02:56.060
+that is nothing but the sum of three numbers.
+
+02:57.300 --> 02:58.500
+Divided by three.
+
+03:00.690 --> 03:04.980
+And now, if I print the value of a bridge, let's see what happens.
+
+03:05.670 --> 03:08.190
+Maybe you can see the bridge marks.
+
+03:09.670 --> 03:10.070
+Odd.
+
+03:11.050 --> 03:13.000
+And here you print the average.
+
+03:13.300 --> 03:21.130
+So anything that is printed in the mail quote, this is printed as it is and this thing is used without
+
+03:21.130 --> 03:21.700
+double code.
+
+03:21.730 --> 03:27.460
+That means we are printing what is contained in the average bucket, so that will show as an output
+
+03:27.460 --> 03:28.120
+on the screen.
+
+03:29.250 --> 03:35.640
+If I that's OK, let's return on the exit of the program in this program, what we are defining, we
+
+03:35.640 --> 03:36.960
+are defining our data.
+
+03:38.130 --> 03:39.960
+We are processing the data.
+
+03:42.890 --> 03:44.450
+And we are printing the output.
+
+03:46.400 --> 03:50.230
+OK, so these are the three steps we are doing we are doing in this program.
+
+03:50.990 --> 03:55.080
+Now let us go back here and let us try to run this code.
+
+03:55.640 --> 04:05.020
+Maybe what I wanted to do, I want to invoke the compiler and the name of my file is average marks.
+
+04:05.660 --> 04:11.990
+I can say average marks start MBP, so I'm using the W2 or to complete the names.
+
+04:12.950 --> 04:14.300
+I know if I do a list.
+
+04:15.200 --> 04:20.010
+Since we have not specified the name of the output file, it would be created in error.
+
+04:20.020 --> 04:24.230
+Doubt if I now say I want to run this code, so I will say dogs like.
+
+04:27.290 --> 04:29.330
+Torchlight is not out.
+
+04:30.330 --> 04:33.570
+And now it says the average marks is 74.
+
+04:34.830 --> 04:39.680
+We are not getting anything that is after the decimal know why that happened, OK?
+
+04:40.770 --> 04:45.720
+It might be possible the average marks were seventy four point three two, but we are not getting this
+
+04:45.720 --> 04:45.930
+one.
+
+04:46.920 --> 04:47.520
+Let's see why.
+
+04:48.600 --> 04:53.880
+So what happens in programming languages like C++ and Java whenever you divide?
+
+04:55.120 --> 05:02.170
+And integer, but then indeed it, for example, if you divide the number five with two, you are not
+
+05:02.170 --> 05:03.370
+going to get 2.5.
+
+05:03.580 --> 05:05.500
+You're only going to get that in digit by.
+
+05:06.960 --> 05:10.560
+Indeed, it is one endangered, it always leads and endangered.
+
+05:11.560 --> 05:12.580
+That is the problem here.
+
+05:13.090 --> 05:13.360
+OK.
+
+05:13.780 --> 05:18.220
+What I want to do is I want to make one of these no flawed.
+
+05:18.670 --> 05:20.680
+And then the output would be two one five.
+
+05:20.740 --> 05:24.760
+So if I make this as 2.0, then the output would be 2.5.
+
+05:25.670 --> 05:25.940
+OK.
+
+05:26.260 --> 05:30.710
+Similarly, in our case, there are two things we can do we can make this as three 3.0 zero.
+
+05:31.780 --> 05:37.620
+So this is this process of changing the day to day from one to another.
+
+05:38.620 --> 05:43.360
+This is known as typecasting, so here it is, happening automatically in the numerator.
+
+05:43.360 --> 05:46.510
+We have an integer in the denominator, we have a float.
+
+05:46.900 --> 05:48.610
+The resulting value would be a float.
+
+05:49.030 --> 05:55.330
+OK, so when you have an operation between an integer and a float, resulting value would be a float.
+
+05:56.730 --> 06:03.480
+Now, if I print out what these average marks order, followed by a new line, let's see if our output
+
+06:03.480 --> 06:09.000
+changes are not OK or if I say I want to build my code again.
+
+06:09.690 --> 06:11.310
+And I want to run my code again.
+
+06:19.900 --> 06:26.230
+OK, so in this case, it is still there, and the reason being it's precisely seven people, OK, so
+
+06:26.290 --> 06:30.190
+if you do this, you will see that this number is divisible by three.
+
+06:30.400 --> 06:30.940
+Exactly.
+
+06:30.940 --> 06:32.560
+We're getting it as they were in default.
+
+06:32.590 --> 06:34.540
+But let me make it as 76 in physics.
+
+06:35.610 --> 06:37.160
+Then let's see what happened in this case.
+
+06:38.450 --> 06:40.370
+And we have to build the gold again.
+
+06:42.610 --> 06:46.630
+Now you see the average marks up seventy three point six, six, seven.
+
+06:47.750 --> 06:57.590
+So you can see that this is because of now we are dividing it with 3.0, not not because of um.
+
+06:58.640 --> 07:05.360
+So is it because of the final result is a flawed as we are dividing it with three point zero?
+
+07:05.940 --> 07:11.960
+Well, I hope that this kid who will alternate will the tails of typecasting in the course, but this
+
+07:11.960 --> 07:14.450
+is just an example to demonstrate what you can do.
+
+07:15.050 --> 07:21.500
+One thing is left that instead of having hardcoded data, I want to take data as a user input.
+
+07:22.830 --> 07:24.540
+I want to take the data and use it in.
+
+07:25.650 --> 07:32.070
+What I will I will only define the buckets and I will ask the user to put data inside these buckets.
+
+07:32.580 --> 07:36.840
+OK, so I can see physics, chemistry and maths.
+
+07:37.230 --> 07:45.210
+I just defined there are three buckets of one for physics, one for chemistry and one for months.
+
+07:46.580 --> 07:48.920
+And we are going to use a special object.
+
+07:50.540 --> 07:51.930
+That is known as the in.
+
+07:52.770 --> 07:53.680
+And again.
+
+07:54.760 --> 08:01.660
+It is responsible for taking input, so we will give the in, followed by the arrows in the value of
+
+08:01.660 --> 08:08.260
+politics, in the value of chemistry and developments.
+
+08:11.270 --> 08:11.930
+And storied.
+
+08:14.430 --> 08:22.020
+Now what I'm doing, I'm asking the user to give me the data of the first number that would go into
+
+08:22.020 --> 08:25.750
+the FedEx bucket letter to indicate the next number is only two.
+
+08:26.160 --> 08:31.680
+And 34, if I give input three numbers, they would be stored in these buckets.
+
+08:31.860 --> 08:35.100
+In this particular order, only physics, chemistry and months.
+
+08:35.640 --> 08:40.410
+And then again, I'm doing the processing and I'm going to print the average.
+
+08:41.180 --> 08:43.230
+Let us try to run this code.
+
+08:45.050 --> 08:48.380
+And maybe I can say average marks minus.
+
+08:48.650 --> 08:51.160
+I want do the name of the violence.
+
+08:51.680 --> 08:54.770
+And maybe average it out.
+
+08:56.710 --> 09:01.540
+If I now run the file towards light every start out.
+
+09:03.350 --> 09:09.560
+What you will see, you will see you're not getting any output right because it is waiting for certain
+
+09:09.560 --> 09:16.100
+input to be given to me if I give the input as a default, the window to enter physics, it gives me
+
+09:16.100 --> 09:17.630
+the average mark, said 54.
+
+09:18.290 --> 09:24.740
+If you want to run this code again, maybe with a different example, maybe 30, 30, 39, 40.
+
+09:25.640 --> 09:29.720
+Now you get the average marks as thirty three point three three three.
+
+09:30.900 --> 09:35.940
+So you can see we are able to send user input if you want to make your.
+
+09:37.730 --> 09:38.870
+This thing more readable.
+
+09:39.560 --> 09:45.770
+You can also print a message for the user, you can joke you can enter the marks.
+
+09:47.250 --> 09:50.910
+For physics, chemistry and maths.
+
+09:54.740 --> 09:57.140
+So let us build this court again.
+
+09:58.940 --> 10:01.760
+And we can see less evidence or doubt.
+
+10:01.790 --> 10:08.090
+Now you're are getting a message on the terminal that this program is asking for marks in physics.
+
+10:08.810 --> 10:09.980
+Maybe I can give nine.
+
+10:10.640 --> 10:15.070
+Either you can give the input in a single line like we did earlier on.
+
+10:15.140 --> 10:19.130
+You can hit a new line and enter and then you can give the input.
+
+10:20.270 --> 10:23.630
+Now you can see the average marks at fifty nine point eighty.
+
+10:24.880 --> 10:32.830
+I hope you understood how to write a simple program, how to take input and how to take how to do output
+
+10:32.830 --> 10:35.110
+and how to do very simple processing.
+
+10:35.790 --> 10:38.860
+It's a lot of things yet to come, but this is just the start.
+
+10:39.410 --> 10:43.030
+And but the idea was after this do lectures.
+
+10:43.030 --> 10:46.810
+You get comfortable with building and executing your code.
+
+10:46.940 --> 10:51.610
+OK, if you have understood that well, then you are ready to go to the next step.
+
+10:52.330 --> 10:53.590
+That's all for this video.
+
+10:54.160 --> 10:54.940
+See you in the next.

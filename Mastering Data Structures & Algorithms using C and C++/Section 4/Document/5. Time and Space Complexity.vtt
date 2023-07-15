@@ -1,0 +1,1041 @@
+WEBVTT
+
+0
+00:00.390 --> 00:04.110
+Let us talk about Time and Space Complexity.
+
+1
+00:04.120 --> 00:08.760
+This is a very important topic, and sometimes it is difficult for the students to understand though it
+
+2
+00:08.760 --> 00:11.370
+is not that difficult, it's not complex.
+
+3
+00:11.370 --> 00:15.840
+Though the word complexity is used, it is very simple.
+
+4
+00:15.840 --> 00:17.090
+Let me explain you,
+
+5
+00:17.190 --> 00:19.150
+What does it mean by Time Complexity?
+
+6
+00:19.170 --> 00:22.530
+Then, afterwards I'll tell you about Space Complexity also.
+
+7
+00:22.530 --> 00:26.750
+So, first let us start with Time Complexity. See, in daily life,
+
+8
+00:26.760 --> 00:32.640
+when we do any work, any task, we want to know how much time it takes for that, performing that particular
+
+9
+00:32.640 --> 00:37.410
+task. Let us suppose, it is a one hour task, or a one day task.
+
+10
+00:37.460 --> 00:41.540
+So that amount of time required, depending on the work that we have to do.
+
+11
+00:42.260 --> 00:47.990
+So, usually in daily life, we measure the time based on the work that we have to do.
+
+12
+00:48.560 --> 00:54.010
+So, now we're using machines to do our work, that is computers to do our work.
+
+13
+00:54.080 --> 00:57.950
+So, we want to know how much time the machine takes for doing the same task.
+
+14
+00:58.280 --> 01:05.090
+Like, if a person is making a bread in 15 minutes, 20 minutes then, if you're using machine for making
+
+15
+01:05.090 --> 01:07.240
+that bread, How much time the machine takes?
+
+16
+01:07.240 --> 01:11.980
+We are interested in that. What if ,machine is taking 45 hours, then it's better to do it manually.
+
+17
+01:12.710 --> 01:15.870
+So, how much time a machine takes is very important for us.
+
+18
+01:15.920 --> 01:18.020
+So, we use computers for problem solving,
+
+19
+01:18.050 --> 01:22.710
+What type of problem solving? The work that we used to do using pen and paper.
+
+20
+01:22.760 --> 01:23.520
+That same work,
+
+21
+01:23.540 --> 01:25.230
+We want our computers to do that.
+
+22
+01:25.520 --> 01:30.800
+So, computers are used for performing computation task. So, computation also needs time.
+
+23
+01:31.370 --> 01:35.270
+So, you want to measure, how much time a machine will take.
+
+24
+01:35.270 --> 01:40.640
+So, actually that depends on the process, or the procedure for completing that task.
+
+25
+01:40.970 --> 01:46.160
+So, the Time Complexity basically depends on the procedure that you are adopting. So, for giving you the
+
+26
+01:46.160 --> 01:49.970
+idea, I have taken various examples. Using these examples,
+
+27
+01:49.970 --> 01:55.040
+I'll explain you, what procedure may take what amount of time.
+
+28
+01:55.220 --> 02:01.150
+So, let us start with array. See, this is an array of some size, and some elements are there.
+
+29
+02:01.160 --> 02:02.710
+So how many elements are there?
+
+30
+02:02.720 --> 02:05.540
+See, this is the example already I have taken,
+
+31
+02:05.540 --> 02:11.810
+and you can count, there are total 10 elements but will it be always 10 elements? or depends on the
+
+32
+02:11.810 --> 02:12.300
+problem?
+
+33
+02:12.650 --> 02:13.760
+So, depending on the problem.
+
+34
+02:13.820 --> 02:15.110
+So, how many elements may be there in
+
+35
+02:15.110 --> 02:20.720
+the list of elements in an array? We say n elements. We don't know how many elements will be there, maybe
+
+36
+02:20.720 --> 02:24.200
+10, or 10 000, or 10 000 000,
+
+37
+02:24.260 --> 02:25.170
+We don't know.
+
+38
+02:25.190 --> 02:32.920
+So we say n. n means, some number of elements, that number of elements may start from 1, up-to infinity.
+
+39
+02:32.990 --> 02:37.430
+So, we don't define infinity, so, up-to maximum number, or whatever that number you can imagine, you take
+
+40
+02:37.430 --> 02:44.150
+that one. So, n means not just 5 or 10 does, this is the first important thing, mostly students get confused
+
+41
+02:44.150 --> 02:44.460
+here.
+
+42
+02:44.960 --> 02:47.230
+So, n means some number of elements.
+
+43
+02:47.270 --> 02:51.600
+So, let us say there are n elements in this list.
+
+44
+02:51.760 --> 02:54.300
+Now, What do you want to do with these elements?
+
+45
+02:54.300 --> 02:56.120
+I want to add all of them.
+
+46
+02:56.340 --> 03:01.560
+So, you have to go through all of them, one by one you have to take the element and go on adding it.
+
+47
+03:02.290 --> 03:05.220
+So, how much time it takes depends on the number of elements.
+
+48
+03:05.220 --> 03:10.940
+So, what is the time taken? n, we say n. Then next thing, what do you want to do?
+
+49
+03:11.030 --> 03:15.680
+I want to search for a particular number, whether element 12 is there or not, search for it.
+
+50
+03:15.800 --> 03:16.580
+Yes it is there.
+
+51
+03:17.120 --> 03:18.970
+I want to search for element 21,
+
+52
+03:18.980 --> 03:21.080
+Is it there or not? Check for all.
+
+53
+03:21.080 --> 03:22.730
+No, 21 is not there.
+
+54
+03:22.970 --> 03:25.510
+So, utmost how much time is it taking?
+
+55
+03:25.610 --> 03:28.750
+It depends on the number of elements that you have to compare.
+
+56
+03:28.820 --> 03:31.130
+So, how many elements are there? n elements are there.
+
+57
+03:31.190 --> 03:32.430
+So, what is the time taken?
+
+58
+03:32.840 --> 03:40.440
+n. So the time is n. So, it means in a list, if you have some n elements and you are going through all
+
+59
+03:40.440 --> 03:43.610
+of them just once then the time is n.
+
+60
+03:44.370 --> 03:53.670
+So this n, we represent it as a degree. So, we can say Order(n). We usually use the term
+
+61
+03:53.790 --> 03:56.060
+order; degree or order are same thing,
+
+62
+03:56.130 --> 04:04.740
+So, we use the term Order(n). There are other terms like, bigo, omega, theta, that I will explain
+
+63
+04:04.740 --> 04:09.990
+you at the end of the course, because till then, you will be having the good understanding of time complexities
+
+64
+04:09.990 --> 04:16.320
+then I can explain you what is bigo, omega, and theta. So, through out the course I'll be using term
+
+65
+04:16.770 --> 04:18.360
+Order( ).
+
+66
+04:18.510 --> 04:22.470
+So, when we know what are asymptotic notations, like bigo, omega,theta, then you will understand
+
+67
+04:22.500 --> 04:28.520
+how to use them. So, let's say Order( ), then next thing.
+
+68
+04:28.520 --> 04:33.350
+Next very important thing, if you want to access all the elements, then what is the code that you have
+
+69
+04:33.350 --> 04:36.820
+to write? for(i=0;i<n;i++)
+
+70
+04:36.860 --> 04:43.820
+for(i=0;i<n;i++), then whatever you want to do here, means you want to add all of them, or
+
+71
+04:43.880 --> 04:50.780
+search something, or count number of elements, or finding maximum element, whatever you want to do, that logic
+
+72
+04:50.780 --> 04:51.570
+comes here.
+
+73
+04:51.590 --> 04:53.870
+So, that procedure comes here.
+
+74
+04:53.870 --> 05:00.690
+So, whatever the procedure may be then, this for loop is taking us through all those elements n. So, how
+
+75
+05:00.700 --> 05:01.850
+many elements? n elements.
+
+76
+05:01.850 --> 05:09.940
+So, what is the time? Order(n). Now listen, the very important thing. For finding the time complexity either
+
+77
+05:09.940 --> 05:16.240
+you can measure the time based on the work that you are doing, means according to your procedure, if you're clear
+
+78
+05:16.240 --> 05:22.930
+with your procedure, you can know the time, or else from the code, program code also you can find the
+
+79
+05:22.930 --> 05:29.950
+time complexity. If there is a for loop, going through 0 to last element, then it's n, it's taking Order(n)
+
+80
+05:29.950 --> 05:38.110
+time, whatever it is there inside will repeat for n times. So, we analyse based on the procedure also,
+
+81
+05:38.440 --> 05:45.100
+based on the code also. And the most confusing thing is, when the code is given we get confused
+
+82
+05:45.220 --> 05:48.480
+how to analyze this one. So, actually what the code is doing,
+
+83
+05:48.520 --> 05:54.730
+You do that work, and based on the work you analyse it, it's very simple. It's very simple. If you don't
+
+84
+05:54.730 --> 06:01.320
+want to understand what the code is doing, then it's a difficult task. So, if a for loop is used means there is
+
+85
+06:01.320 --> 06:06.300
+a chance that time is Order(n). Now, let us move to the next situation.
+
+86
+06:06.400 --> 06:10.920
+See, in this list, see suppose, being on the 1st element,
+
+87
+06:10.920 --> 06:18.240
+I am comparing or processing all other elements once. Then, being on the second element,
+
+88
+06:18.240 --> 06:20.870
+Again I am processing all other elements,
+
+89
+06:20.880 --> 06:24.360
+maybe I'm comparing for sorting purposes, whatever the purpose may be,
+
+90
+06:24.480 --> 06:30.350
+this 5, I am comparing or processing with the rest of the elements, like that for each element,
+
+91
+06:30.420 --> 06:33.280
+I'll be checking with all the rest of the elements.
+
+92
+06:33.450 --> 06:38.300
+So, for 1 value, it will check for all, means n elements.
+
+93
+06:38.490 --> 06:39.750
+Then, for next value also,
+
+94
+06:39.750 --> 06:47.240
+If it is checking for all, processing for all, then n. n elements. So, n elements are being processed, but
+
+95
+06:47.690 --> 06:52.910
+How many times? For each element n elements are processed. So, this will be n^2.
+
+96
+06:52.910 --> 06:56.750
+This is n*n, that is n^2. So, we can say Order(n^2).
+
+97
+06:59.490 --> 07:02.300
+So, this is another case. Now, in this same case,
+
+98
+07:02.340 --> 07:08.550
+I'll show you one more thing, for processing like this how the code should look like? The code should
+
+99
+07:08.550 --> 07:10.060
+have a nested for loop.
+
+100
+07:10.150 --> 07:17.100
+Again, I should have for loop that is, for(j=0;j<n;j++), and inside this
+
+101
+07:17.180 --> 07:20.950
+I'll be writing that processing, whatever the work I want to do.
+
+102
+07:21.000 --> 07:22.050
+These will be the statements.
+
+103
+07:22.410 --> 07:29.190
+So, when you have two nested for loops, it's n^2, simple. You don't have to check line by line every
+
+104
+07:29.190 --> 07:34.830
+statement and all, just from the code you got the rough idea, you can say it's n^2. But sometimes,
+
+105
+07:34.870 --> 07:37.340
+for analyzing the code we check every line.
+
+106
+07:37.620 --> 07:39.920
+So, the idea is, we should not miss any line,
+
+107
+07:39.930 --> 07:40.590
+We should check
+
+108
+07:40.590 --> 07:41.970
+check it thoroughly.
+
+109
+07:41.970 --> 07:48.810
+That's why we write the time complexity, but overall, the time complexity is written in terms of the degree
+
+110
+07:48.810 --> 07:53.490
+of a polynomial. So, it is Order(n^2). Nested for loop means n^2.
+
+111
+07:53.730 --> 07:55.670
+So, let us follow it like a formula.
+
+112
+07:56.890 --> 08:00.100
+Third situation, for the same array.
+
+113
+08:00.250 --> 08:04.720
+Suppose, being on first element, I'm processing the rest of the elements.
+
+114
+08:06.660 --> 08:12.990
+So, n-1 elements I'm processing, then being on the second element, I'm processing the rest of
+
+115
+08:12.990 --> 08:15.300
+the elements, I'm not processing upon this one, right?
+
+116
+08:15.810 --> 08:22.500
+So n-2. Then, being on third element, I'm processing rest of them.
+
+117
+08:22.500 --> 08:23.920
+It depends what you are doing.
+
+118
+08:23.940 --> 08:24.230
+Right?
+
+119
+08:24.480 --> 08:29.880
+So, imagine something you are doing. So, you're processing rest of the elements. So, this is n-3.
+
+120
+08:30.180 --> 08:30.690
+Like that,
+
+121
+08:30.990 --> 08:37.610
+It will be going on reducing, then finally it will be 4 elements, 3 elements, 2 elements, then 1.
+
+122
+08:37.680 --> 08:38.700
+What is this?
+
+123
+08:38.900 --> 08:43.640
+(n*(n-1))/2, sum of first natural numbers,
+
+124
+08:43.650 --> 08:45.330
+So, it is not n, it is n-1.
+
+125
+08:45.960 --> 08:50.030
+So this will be (n^2 - n)/2.
+
+126
+08:50.040 --> 08:52.210
+So, what is the degree of this polynomial?
+
+127
+08:52.260 --> 08:53.220
+This is n^2.
+
+128
+08:53.580 --> 08:59.830
+So, it is Order(n^2). So, that's what. The time complexity that we are writing,
+
+129
+08:59.940 --> 09:02.140
+We are writing the degree of a polynomial.
+
+130
+09:02.160 --> 09:10.100
+See, this time I have done detailed analysis and I got a polynomial, and for that I got a function, this is
+
+131
+09:10.110 --> 09:15.180
+like a function, and the degree of the function is n^2, so time is n^2.
+
+132
+09:15.180 --> 09:21.230
+If same thing, I write it in the form of a for loop, then this j will not be starting from 0, but
+
+133
+09:21.240 --> 09:26.660
+j will be starting from i+1. See, now again two nested for loops.
+
+134
+09:26.760 --> 09:29.030
+So utmost, this will take n^2 time.
+
+135
+09:29.390 --> 09:34.150
+Yes. Then next, I'll show you one more situation.
+
+136
+09:34.160 --> 09:35.250
+Fourth one.
+
+137
+09:35.260 --> 09:36.180
+Let us look at this.
+
+138
+09:36.220 --> 09:38.540
+I'll remove this one. Now in this array,
+
+139
+09:38.540 --> 09:42.360
+Suppose, first of all we are processing the middle element, suppose 4 is the middle element, right? There
+
+140
+09:42.370 --> 09:43.780
+are 10 elements.
+
+141
+09:43.780 --> 09:46.120
+So 5th element is the middle element.
+
+142
+09:46.330 --> 09:49.690
+Then next, either on the left side or on the right side
+
+143
+09:49.760 --> 09:54.190
+again we go in the middle, suppose this is the middle element on this side. Then again, middle
+
+144
+09:54.190 --> 09:55.060
+element on this side.
+
+145
+09:55.360 --> 09:58.630
+So, in this way we are not processing the entire list.
+
+146
+09:58.630 --> 10:00.690
+We are processing half of the list,
+
+147
+10:00.700 --> 10:01.900
+Then again it's half,
+
+148
+10:02.050 --> 10:03.100
+Then again it's half,
+
+149
+10:03.100 --> 10:06.420
+So, that process is always dividing the list by two.
+
+150
+10:06.430 --> 10:13.870
+So, when something is successively divided until it reaches one, that is represented as log,
+
+151
+10:15.160 --> 10:17.140
+And we are divided by 2, 1/2.
+
+152
+10:17.230 --> 10:26.350
+So, log of n elements, "log n". So, the time complexity is log n, if we are not processing all elements.
+
+153
+10:26.350 --> 10:32.140
+Then, if I write for that one, then the code will look like this, for(i=n;i>1;i=i/2)
+
+154
+10:35.000 --> 10:40.440
+for(i=n;i>1;i=i/2)
+
+155
+10:44.720 --> 10:46.990
+Now, just by looking at for loop,
+
+156
+10:47.000 --> 10:48.140
+Don't tell
+
+157
+10:48.140 --> 10:51.970
+blindly Order(n), because just now, previously we saw Order(n)
+
+158
+10:52.150 --> 10:52.700
+Read it,
+
+159
+10:52.700 --> 10:55.280
+How the for loop is behaving.
+
+160
+10:55.280 --> 10:58.990
+That's why, we check it thoroughly. When we are reading the code,
+
+161
+10:59.060 --> 10:59.950
+We totally check it
+
+162
+10:59.950 --> 11:03.350
+line by line. So that, we should not go wrong.
+
+163
+11:04.250 --> 11:07.120
+But overall we need answer, log n.
+
+164
+11:07.160 --> 11:16.530
+If the value of counter i is getting divided by 2 every time, then it is log n, divided by 2, log n
+
+165
+11:16.530 --> 11:18.890
+base 2. And how long is it happening?
+
+166
+11:18.890 --> 11:20.390
+Until it reaches 1.
+
+167
+11:20.510 --> 11:24.990
+The same thing can even be written by using while loop, See, i=n;
+
+168
+11:25.430 --> 11:34.430
+And, while(i>1) and some processing; i=i/2;
+
+169
+11:34.450 --> 11:36.670
+Same thing. Instead of for loop,
+
+170
+11:36.680 --> 11:44.760
+You can use while loop also. Usually, when this is not on increment, one by one every time, for loop is
+
+171
+11:44.760 --> 11:46.970
+not on increment by one every time,
+
+172
+11:46.980 --> 11:53.460
+We prefer using while loop. But in C, C++, Java programming, when for loops are there, people use for loop for
+
+173
+11:53.460 --> 11:57.580
+this purpose also. For loop is used for counters which are on increment by 1.
+
+174
+11:57.900 --> 12:02.820
+So anyway, when this is written, you have to read it thoroughly and find out how much time it is taking.
+
+175
+12:02.820 --> 12:09.960
+So, we have seen 4 different behaviors of procedures that are performed on array, and also I have shown
+
+176
+12:09.960 --> 12:16.360
+you the code, and also shown you, from the code how we can analyze from the work.
+
+177
+12:16.440 --> 12:20.660
+So, if you are analyzing from the work, the process, that's more better.
+
+178
+12:21.420 --> 12:23.270
+Now, let us proceed ahead.
+
+179
+12:23.310 --> 12:27.690
+See, this is the linked list. We'll be studying about this linked list data structure later on, this will be
+
+180
+12:27.690 --> 12:32.670
+same as array; like, this is list, and this also a list.
+
+181
+12:32.790 --> 12:33.990
+So, what all we studied there,
+
+182
+12:33.990 --> 12:36.090
+same things apply here.
+
+183
+12:36.090 --> 12:42.470
+Then, next is matrix. Matrix is having how many elements? The dimensions are 4x4.
+
+184
+12:42.860 --> 12:50.510
+So, total how many elements? If dimensions is nxn, then total, n^2 elements. So, when you're
+
+185
+12:50.510 --> 12:55.730
+processing upon a matrix, then it will require n^2 amount of time,
+
+186
+12:55.730 --> 13:02.450
+If you're processing all the elements. If you say, No I'm just processing a row, then a row is having n
+
+187
+13:02.450 --> 13:05.570
+elements, Order(n), no I'm processing just a column,
+
+188
+13:05.570 --> 13:13.270
+So, again it's n, Order(n). If you're processing all elements, then it is n^2. Now, I'll show the
+
+189
+13:13.270 --> 13:14.400
+code for that.
+
+190
+13:14.590 --> 13:23.350
+I'll remove this. So, for processing a matrix of elements, we need 2 nested for loops,for(i=0;i<n;i++), and inside
+
+191
+13:23.350 --> 13:31.150
+this, for(j=0;j<n;j++), whatever you want to do with those elements you
+
+192
+13:31.150 --> 13:32.510
+can do that.
+
+193
+13:32.530 --> 13:38.980
+So, this is n^2. Now, for 1 element, if you're processing more upon that element, and that requires,
+
+194
+13:38.980 --> 13:45.540
+suppose, a loop or, suppose you are calling a function which is having a loop, then the time will be more,
+
+195
+13:45.550 --> 13:50.670
+for, for, for, 3 for loops inside, then it will be n^3, right?
+
+196
+13:51.010 --> 13:53.480
+If you are processing only one unit of time;
+
+197
+13:53.490 --> 14:00.010
+Just one statement or two statements are there, simple statements, no loops, then it is n^2 only. Then, coming
+
+198
+14:00.040 --> 14:01.050
+to this structure.
+
+199
+14:02.040 --> 14:07.110
+This looks like array of linked lists, like total how many elements are there?
+
+200
+14:07.140 --> 14:12.380
+So, here let us say n elements are there, these elements. So, you can see that, these are of different sizes,
+
+201
+14:12.510 --> 14:14.200
+and here, array of size n.
+
+202
+14:15.050 --> 14:17.430
+So total how much processing is required?
+
+203
+14:17.790 --> 14:23.700
+We have to process all these n elements, as well as using this array, so we can say m+n processing
+
+204
+14:23.700 --> 14:24.470
+is required.
+
+205
+14:25.610 --> 14:29.550
+If you say, no I don't want to consider this, I want to consider only the number of elements. Okay,
+
+206
+14:29.570 --> 14:33.600
+consider only n number of elements, Order(n).
+
+207
+14:34.340 --> 14:36.560
+What does it mean by considering, not considering?
+
+208
+14:36.710 --> 14:43.960
+I'll give you an idea. Just listen as an example. Suppose, you are giving a party to your friends, some
+
+209
+14:43.960 --> 14:48.370
+4,5 friends you have called them on a hotel for a party. Then, what is the cost?
+
+210
+14:48.410 --> 14:50.500
+The cost of the food that you're taking there.
+
+211
+14:50.810 --> 14:58.280
+Then, the bill at the hotel, + travelling amount, and if any extra things that you are spending on,
+
+212
+14:58.970 --> 15:00.190
+tips you are giving.
+
+213
+15:00.260 --> 15:04.590
+Do you consider that amount also and include it as the cost for the party?
+
+214
+15:04.610 --> 15:10.650
+It depends on you. Now, the same way, whether you want to analyze or not, it depends on you.
+
+215
+15:10.650 --> 15:14.690
+So, you should be in a situation to understand, whether you need it or not.
+
+216
+15:14.920 --> 15:15.200
+Right?
+
+217
+15:15.200 --> 15:19.940
+Mostly, what students believe that, they are doing it because it is given as a task, as a challenge.
+
+218
+15:20.810 --> 15:23.420
+So, somebody else's job they are doing.
+
+219
+15:23.420 --> 15:26.930
+So, they get worried that, I should consider or not; Why I should leave it?
+
+220
+15:27.260 --> 15:29.020
+So, that is your choice.
+
+221
+15:29.030 --> 15:31.750
+You be in that situation and solve it.
+
+222
+15:31.850 --> 15:32.510
+So, that's all.
+
+223
+15:32.900 --> 15:37.490
+If you say, I don't want to consider this, means you are processing it, but you don't want to consider
+
+224
+15:37.490 --> 15:42.030
+the time taken for that one. So, only Order(n), that's it.
+
+225
+15:42.040 --> 15:43.970
+So, this structure is over.
+
+226
+15:44.170 --> 15:45.270
+Now, last one.
+
+227
+15:45.400 --> 15:47.830
+This one. This is a binary tree.
+
+228
+15:47.830 --> 15:52.660
+So, if you have a binary tree structure, total elements are 7, 7 elements
+
+229
+15:52.660 --> 15:53.330
+are there.
+
+230
+15:53.470 --> 15:55.240
+Then, how much processing is done?
+
+231
+15:55.240 --> 16:00.220
+Suppose, you are processing, searching or something, and you are processing upon the elements, only along
+
+232
+16:00.220 --> 16:04.210
+the path, like this one, then this one, or this one, or this one, then this one, or this one.
+
+233
+16:04.210 --> 16:07.560
+Suppose, you're processing just along a path, then what is the height?
+
+234
+16:07.560 --> 16:08.380
+It depends on the height.
+
+235
+16:08.380 --> 16:10.070
+So, how many elements you are processing?
+
+236
+16:10.120 --> 16:13.990
+See, there are some elements, divided by 2, then divided by 2,
+
+237
+16:14.020 --> 16:19.960
+until it reaches 1 element. So total seven elements are there. As from the bottom, if you see the number
+
+238
+16:19.960 --> 16:22.330
+of elements are divided by 2, and divided by 2.
+
+239
+16:22.330 --> 16:25.700
+So, it looks like log n. Yes, log n base 2.
+
+240
+16:25.960 --> 16:27.790
+So, we'll be studying about this one.
+
+241
+16:27.850 --> 16:33.880
+So, if you're spending time upon a tree, along the height of a tree, then it is log n.
+
+242
+16:34.210 --> 16:38.590
+Next situation, if you say, no I want to process all the elements, then how many elements are there?
+
+243
+16:38.600 --> 16:39.010
+n element.
+
+244
+16:39.010 --> 16:46.480
+So, it is Order(n), then whatever the program code that you write for processing this one, that
+
+245
+16:46.500 --> 16:48.200
+code also will be Order(n)
+
+246
+16:48.280 --> 16:51.310
+Order(n) only, if you analyze that one.
+
+247
+16:51.310 --> 16:55.670
+So, this is the general idea I have given you about time complexity. So, the time complexity is solely
+
+248
+16:55.670 --> 17:01.570
+and solely dependent on the work that you are doing. Now, a little bit on space complexity.
+
+249
+17:01.720 --> 17:06.900
+We want to know how much space is consumed in main memory during the execution of a program.
+
+250
+17:07.600 --> 17:16.630
+So, array, n elements are there, so it's Order(n). This is, n elements are there, Order(n). Space is n,
+
+251
+17:16.930 --> 17:24.800
+means, n integers, or n floats, or n doubles, whatever it is; n elements we say. We are not concerned
+
+252
+17:24.800 --> 17:30.380
+about the number of bytes, right? We are not concerned about that. We are not calculating
+
+253
+17:30.380 --> 17:38.300
+that, we want to know, the space is dependent on what? n. If the value of n is more, the space will
+
+254
+17:38.310 --> 17:46.960
+be more, that's what the idea is. Then, here also it's n, but along with the elements you need space for links also.
+
+255
+17:47.090 --> 17:55.330
+So, let's say 2n, again the degree is what? Order(n). Then, coming to this, this space is
+
+256
+17:55.450 --> 18:04.930
+n^2, and this space is m+n, and the space here is, n nodes are there, so it's Order(n).
+
+257
+18:06.770 --> 18:10.560
+So, the next video I'll take few program codes and show you.
+
+258
+18:10.590 --> 18:16.020
+So, without looking at the processing, just from the program code, how to find out the time complexity,
+
+259
+18:16.020 --> 18:19.330
+I will show you. So, that's all in this video.

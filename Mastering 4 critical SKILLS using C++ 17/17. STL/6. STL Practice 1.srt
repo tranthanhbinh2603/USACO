@@ -1,0 +1,254 @@
+0
+1
+00:00:00,960 --> 00:00:06,540
+Let's do some practice on STL, with every practice, I would like you to try to allow us to stop
+1
+
+2
+00:00:06,540 --> 00:00:09,060
+the video and think by yourself for some time,
+2
+
+3
+00:00:09,090 --> 00:00:10,740
+this is a very good exercise for you.
+3
+
+4
+00:00:11,070 --> 00:00:15,320
+When you think and compare with others, you are learning a lot more than just reading the solutions.
+4
+
+5
+00:00:15,900 --> 00:00:20,960
+So in our first problem, we would like to sum the key K numbers of a stream,
+5
+
+6
+00:00:21,420 --> 00:00:26,920
+so I would like you to think of it like you have a stream of numbers,
+6
+
+7
+00:00:27,300 --> 00:00:28,290
+let's look here,
+7
+
+8
+00:00:28,740 --> 00:00:31,320
+we have some reading for Infinity,
+8
+
+9
+00:00:31,320 --> 00:00:36,030
+we are just reading (while),  (cin, number),  (cin, number), we are calling this struct, we are calling this struct with something 
+9
+
+10
+00:00:36,030 --> 00:00:37,950
+called next and we are giving its number here.
+10
+
+11
+00:00:39,180 --> 00:00:43,530
+The target of the stream is to keep printing only the sum of the k numbers.
+11
+
+12
+00:00:43,800 --> 00:00:47,430
+Let's see, the stream numbers that we read here: it is one, two, three, four, five, six, seven,
+12
+
+13
+00:00:47,430 --> 00:00:53,250
+eight, nine. with the first number the last four number are just one, with the second number two, we
+13
+
+14
+00:00:53,250 --> 00:00:54,130
+have only two numbers.
+14
+
+15
+00:00:54,130 --> 00:00:55,530
+So we just sum them, three
+15
+
+16
+00:00:55,530 --> 00:00:59,490
+we just sum them, four we just sum them, with the fifth number,
+16
+
+17
+00:00:59,580 --> 00:01:03,390
+now we need to get the last four numbers in the stream, which are two, three, four, five,
+17
+
+18
+00:01:03,930 --> 00:01:08,300
+after that, the next four numbers are three, four, five, six and so on.
+18
+
+19
+00:01:08,580 --> 00:01:10,530
+So this processor function.
+19
+
+20
+00:01:10,530 --> 00:01:11,970
+has here a function
+20
+
+21
+00:01:11,970 --> 00:01:17,970
+named "next" with every number it receives, it computes and returns the sum only of the last K numbers,
+21
+
+22
+00:01:18,300 --> 00:01:21,330
+and we are initializing here for example with four,
+22
+
+23
+00:01:21,570 --> 00:01:24,830
+so it has a four in the constructor here and then
+23
+
+24
+00:01:24,870 --> 00:01:27,300
+just returning the sum of the last key numbers.
+24
+
+25
+00:01:27,630 --> 00:01:33,450
+Note that although you should implement this one, but you shouldn't store more than K numbers.
+25
+
+26
+00:01:33,690 --> 00:01:38,730
+so how to implement that? what kind of data structure would make our life easier when trying to do
+26
+
+27
+00:01:39,360 --> 00:01:39,960
+this task?
+27
+
+28
+00:01:40,140 --> 00:01:41,880
+So, think about it.
+28
+
+29
+00:01:43,790 --> 00:01:48,300
+The way I'm implementing that is as simple as using a queue, the idea is as follows.
+29
+
+30
+00:01:48,590 --> 00:01:51,050
+We will keep in the queue only the last K elements.
+30
+
+31
+00:01:51,260 --> 00:01:56,000
+Whenever we have more than a key element, we just remove the first element that we have right now in
+31
+
+32
+00:01:56,000 --> 00:01:57,530
+the queue.
+32
+
+33
+00:01:57,770 --> 00:02:05,780
+So it goes as following, with every new number we add it to our queue and add it to our sum, initially
+33
+
+34
+00:02:05,780 --> 00:02:07,480
+the queue is empty and the sum is 0
+34
+
+35
+00:02:08,000 --> 00:02:09,170
+Now we have a check,
+35
+
+36
+00:02:09,440 --> 00:02:11,930
+if the queue has more than K, let's say four,
+36
+
+37
+00:02:11,960 --> 00:02:16,060
+if it has more than four elements, we know that we are now like five elements,
+37
+
+38
+00:02:16,070 --> 00:02:16,610
+exactly,
+38
+
+39
+00:02:16,880 --> 00:02:19,310
+so we started to remove the first number that we have,
+39
+
+40
+00:02:19,700 --> 00:02:23,150
+then we remove it from the sum and then we remove it from the vector,
+40
+
+41
+00:02:23,510 --> 00:02:26,180
+for example, if we have now the numbers, one, two, three, four,
+41
+
+42
+00:02:26,450 --> 00:02:27,390
+we expected the queue 
+42
+
+43
+00:02:27,420 --> 00:02:28,610
+to be have the four numbers
+43
+
+44
+00:02:28,610 --> 00:02:31,640
+and expect the sum to be 10
+44
+
+45
+00:02:32,180 --> 00:02:36,600
+If you have a new number five, we add it first to the queue and we add it to the sum,
+45
+
+46
+00:02:36,620 --> 00:02:38,030
+now, the sum is fifteen,
+46
+
+47
+00:02:38,240 --> 00:02:39,500
+but now we have five numbers,
+47
+
+48
+00:02:39,800 --> 00:02:45,890
+then we go and remove from the sum the first element which is one, and remove it also
+48
+
+49
+00:02:45,890 --> 00:02:49,450
+from the queue so the queue now have two, three, four, five, and so on.
+49
+
+50
+00:02:49,640 --> 00:02:53,120
+So the idea is that the .front in the queue would help us to do the task here.
+50
+
+51
+00:02:53,780 --> 00:02:54,350
+That's it.

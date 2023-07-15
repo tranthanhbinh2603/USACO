@@ -1,0 +1,355 @@
+1
+00:00:01,380 --> 00:00:12,660
+The term with some minor improvements, so specifically, let's say you have you would like to create
+
+2
+00:00:12,870 --> 00:00:18,540
+or you would like to initialize some, he would like to return initialize some variable in the capture
+
+3
+00:00:18,540 --> 00:00:19,300
+clause itself.
+
+4
+00:00:20,070 --> 00:00:22,530
+So let's say that you have here.
+
+5
+00:00:23,400 --> 00:00:23,970
+Here.
+
+6
+00:00:25,550 --> 00:00:33,740
+Let's say you are defining some out of history over some file here, you would like to create some.
+
+7
+00:00:34,880 --> 00:00:41,060
+Lambda expression, you cannot simply because of us here, definitely because you cannot copy the theory.
+
+8
+00:00:41,090 --> 00:00:44,720
+Otherwise, it would be two extremes working with the same file in the same way.
+
+9
+00:00:46,760 --> 00:00:47,870
+So this is prevented.
+
+10
+00:00:48,380 --> 00:00:54,140
+OK, so I can pass it by reference, this is no OK, if you best it by reference, you can use it.
+
+11
+00:00:54,710 --> 00:00:55,570
+This is totally OK.
+
+12
+00:00:55,880 --> 00:00:56,960
+There is one issue here.
+
+13
+00:00:59,230 --> 00:01:06,620
+The the issue here is when you buy this object to the function, there are now two things that are working
+
+14
+00:01:06,620 --> 00:01:09,140
+on the object, one inside the function.
+
+15
+00:01:09,260 --> 00:01:13,880
+And maybe something after this might cause like some trouble in reading, writing, maybe because some
+
+16
+00:01:13,880 --> 00:01:14,610
+issue about that.
+
+17
+00:01:15,080 --> 00:01:20,010
+So what if you would like to basser object to the function and you just get rid of it?
+
+18
+00:01:20,390 --> 00:01:22,010
+There are two things that we can do here.
+
+19
+00:01:22,280 --> 00:01:24,140
+The first from the expression.
+
+20
+00:01:25,660 --> 00:01:29,230
+We can create a variable here and assign it to a value.
+
+21
+00:01:30,480 --> 00:01:33,550
+So this is the first thing about the Jerusalem exhibition.
+
+22
+00:01:33,810 --> 00:01:38,910
+The second thing coming from the semantic move you are moving this object to inside this function,
+
+23
+00:01:39,300 --> 00:01:46,080
+once you are done with that, this function is taking you or if this object and you cannot use it any
+
+24
+00:01:46,080 --> 00:01:46,910
+more after it.
+
+25
+00:01:47,160 --> 00:01:53,270
+So this is over all of the exhibition, your ability to pass a variable and just adjust the move here.
+
+26
+00:01:53,490 --> 00:01:57,360
+I'm just showing you the actual uses for that.
+
+27
+00:01:57,360 --> 00:01:59,940
+Otherwise, you might say a defining somebody here.
+
+28
+00:01:59,940 --> 00:02:01,600
+I can say here X equals 10.
+
+29
+00:02:02,010 --> 00:02:03,930
+This is a creation initialization for a variable.
+
+30
+00:02:03,930 --> 00:02:09,300
+But but but the real scenarios for using the lambda expression, you have some object and you really
+
+31
+00:02:09,300 --> 00:02:11,450
+want to base it and you want to get rid of it.
+
+32
+00:02:11,480 --> 00:02:14,720
+You don't you don't use any more after the function.
+
+33
+00:02:15,480 --> 00:02:17,310
+I would like to show you another example.
+
+34
+00:02:17,880 --> 00:02:22,890
+It is from the unique pointers or from smart pointers, but you are going to study that in the next
+
+35
+00:02:22,890 --> 00:02:23,340
+chapter.
+
+36
+00:02:23,550 --> 00:02:25,410
+Please come back to this is like the vector.
+
+37
+00:02:26,820 --> 00:02:33,410
+So now here, as you see, this is another function code named I'm I have here some local variable to
+
+38
+00:02:33,500 --> 00:02:36,660
+convert m creating a variable, initializing it X with.
+
+39
+00:02:37,110 --> 00:02:38,520
+This is from the generalized lambda.
+
+40
+00:02:38,700 --> 00:02:41,730
+I'm creating another one with Y just for no.
+
+41
+00:02:42,120 --> 00:02:47,750
+I'm also having here a unique pointer and later we know also you cannot pass by value a pointer.
+
+42
+00:02:47,760 --> 00:02:49,350
+So the best way to here.
+
+43
+00:02:49,430 --> 00:02:54,270
+Here you are going to base it with a move so the move is going to move it from here.
+
+44
+00:02:54,450 --> 00:02:58,380
+And again, you cannot use the DB here.
+
+45
+00:02:58,980 --> 00:03:03,690
+By the way, when you see the syntax like like it seems like there is an error here.
+
+46
+00:03:04,020 --> 00:03:05,160
+It is just a collapse.
+
+47
+00:03:05,460 --> 00:03:10,410
+Doesn't figure out some of the modern C++ syntax, that's all.
+
+48
+00:03:11,190 --> 00:03:17,850
+So this is all about the one part of the Jerusalem, the expression, your ability to create and initialize
+
+49
+00:03:17,850 --> 00:03:23,880
+variables, but a series of the stronger cases when you would like to move some object from your local
+
+50
+00:03:23,880 --> 00:03:26,440
+school to that exhibition function.
+
+51
+00:03:26,470 --> 00:03:32,220
+So that's what I would like to highlight a couple of other relevant issues.
+
+52
+00:03:32,440 --> 00:03:39,960
+The first one is this a blunder very, very, very similar to nested if conditions instead do conditions.
+
+53
+00:03:40,140 --> 00:03:43,560
+There is no new syntax, just units to things inside each other.
+
+54
+00:03:43,920 --> 00:03:50,940
+So here's a function that is anonymous and it is its breece, and this is a calling for it.
+
+55
+00:03:50,940 --> 00:03:57,360
+Inside it, I'm defining another function, another exhibition, and using it in a similar way instead
+
+56
+00:03:57,360 --> 00:03:59,730
+of defining it inside the function.
+
+57
+00:03:59,730 --> 00:04:03,600
+This way I can even define and use it on the fly this way.
+
+58
+00:04:03,780 --> 00:04:10,020
+So it looks like from the exhibition inside the exhibition, this is in a new C++ syntax, just utilizing
+
+59
+00:04:10,020 --> 00:04:11,460
+what what exists.
+
+60
+00:04:13,490 --> 00:04:20,400
+In line 19 here, I am quoting the function with the so there are two mistakes that could have here,
+
+61
+00:04:20,420 --> 00:04:24,400
+some some guys in general might forget to call the function.
+
+62
+00:04:24,410 --> 00:04:25,370
+I said that before.
+
+63
+00:04:25,620 --> 00:04:27,080
+So it just nothing worked.
+
+64
+00:04:27,090 --> 00:04:28,120
+The function is in code.
+
+65
+00:04:28,520 --> 00:04:32,890
+The other thing is you forgot to bust the V, which is a function is expecting here.
+
+66
+00:04:33,440 --> 00:04:37,610
+So if you didn't forget that, unfortunately, you would get an error.
+
+67
+00:04:37,790 --> 00:04:39,650
+The error would be something maybe like that.
+
+68
+00:04:40,430 --> 00:04:46,580
+Generally speaking, with modern syntax, the error message sometimes are very hard to understand.
+
+69
+00:04:47,390 --> 00:04:52,800
+The last thing that I would like to talk about is what is happening behind the scene, like how the
+
+70
+00:04:52,800 --> 00:04:55,610
+lambda function are handled by the compiler.
+
+71
+00:04:56,090 --> 00:04:57,380
+What happens is as follows.
+
+72
+00:04:57,550 --> 00:04:59,630
+We need to find out the function like that.
+
+73
+00:05:00,170 --> 00:05:03,320
+The compiler generate two things for you.
+
+74
+00:05:03,680 --> 00:05:06,740
+If you if you call it the first thing.
+
+75
+00:05:06,740 --> 00:05:12,590
+And this important part is going to define a struct with a function, operator code is going to give
+
+76
+00:05:12,590 --> 00:05:17,860
+it a very specific, unique name and it's going to give it like a function call.
+
+77
+00:05:18,050 --> 00:05:20,510
+And here is the parameter that you use with this parameter.
+
+78
+00:05:21,620 --> 00:05:29,040
+Now, notice here, the default one will generate something we are passing here by value, by the value.
+
+79
+00:05:29,270 --> 00:05:34,160
+So it's going to want to hear the word, because if you use the word immutable here, it's going to
+
+80
+00:05:34,160 --> 00:05:35,270
+remove the word chorused.
+
+81
+00:05:35,720 --> 00:05:41,790
+If you have more parameter in the capture clause, it will be more of class members variables here.
+
+82
+00:05:42,110 --> 00:05:45,830
+So the moral of that is the behind the scene.
+
+83
+00:05:45,830 --> 00:05:52,280
+The compiler will need to see the long expression it just struck with the operator and with whatever
+
+84
+00:05:52,280 --> 00:06:00,050
+necessary function members and definition keywords and whatever class members that you need to do that.
+
+85
+00:06:00,440 --> 00:06:05,420
+If you want to call this function, it's also going to create an object for you from this class and
+
+86
+00:06:05,420 --> 00:06:06,500
+just couldn't get for you.
+
+87
+00:06:08,080 --> 00:06:11,010
+So the more of that that said, this is what happened behind the scene.
+
+88
+00:06:11,500 --> 00:06:15,530
+The exhibition is just a struggle with the ability to function.
+
+89
+00:06:16,750 --> 00:06:17,290
+That's it.

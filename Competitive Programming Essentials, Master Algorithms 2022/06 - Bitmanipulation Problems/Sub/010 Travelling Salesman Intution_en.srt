@@ -1,0 +1,244 @@
+1
+00:00:02,090 --> 00:00:02,700
+Hi Everyone.
+
+2
+00:00:03,140 --> 00:00:06,410
+So now we have discussed the recursive solution.
+
+3
+00:00:06,830 --> 00:00:12,920
+Now I'm just want to talk about why you can use dynamic programming in this particular problem.
+
+4
+00:00:13,410 --> 00:00:16,219
+I suppose you have N number of nodes.
+
+5
+00:00:16,610 --> 00:00:16,910
+OK.
+
+6
+00:00:17,810 --> 00:00:19,160
+You have N number of nodes.
+
+7
+00:00:19,700 --> 00:00:24,350
+And let's say you have something like ABC.
+
+8
+00:00:24,350 --> 00:00:30,440
+Let say this is the current path that you have explored. and you also need to add N-3 nodes in this
+
+9
+00:00:30,440 --> 00:00:31,040
+current path.
+
+10
+00:00:31,040 --> 00:00:31,310
+OK?
+
+11
+00:00:31,910 --> 00:00:40,480
+Or maybe the current path might look like ACB and you may still have N-3 nodes which are left
+
+12
+00:00:40,490 --> 00:00:40,800
+Ok?
+
+13
+00:00:40,820 --> 00:00:46,070
+So if we talk about n nodes then 3 nodes I have depicted here N-3 are in this going...
+
+14
+00:00:46,370 --> 00:00:47,770
+are going to be in this particular path.
+
+15
+00:00:47,790 --> 00:00:50,780
+what does this sub tour represent?
+
+16
+00:00:50,900 --> 00:00:52,400
+I call it as sub tour.
+
+17
+00:00:52,940 --> 00:00:53,270
+OK.
+
+18
+00:00:53,660 --> 00:00:56,060
+This subtour represents the
+
+19
+00:00:57,310 --> 00:00:57,970
+the minimum.
+
+20
+00:00:58,690 --> 00:01:01,360
+OK, so there could be multiple possible subtours.
+
+21
+00:01:01,630 --> 00:01:05,770
+Maybe if we have some not like DEF. the sub tour may start from
+
+22
+00:01:08,680 --> 00:01:15,940
+D, the subtour may start from E, it may start from F. let's say we have computed the optimal
+
+23
+00:01:16,000 --> 00:01:16,720
+sub tour once.
+
+24
+00:01:17,410 --> 00:01:24,640
+OK, let's say we have already computed once and the same sub tour can be part of this solution as well,
+
+25
+00:01:24,650 --> 00:01:24,990
+why?
+
+26
+00:01:25,510 --> 00:01:30,010
+In this solution, what we are expecting? we're expecting that we will
+
+27
+00:01:30,880 --> 00:01:33,100
+We have already used the nodes AB and C.
+
+28
+00:01:33,130 --> 00:01:36,400
+We have already used the nodes AB and C and then from
+
+29
+00:01:38,830 --> 00:01:46,540
+this tour, we will start from some node. Let's say we will start from some node and we will traverse the remaining
+
+30
+00:01:46,540 --> 00:01:47,560
+n-3 nodes
+
+31
+00:01:48,010 --> 00:01:49,240
+And we will come back to A.
+
+32
+00:01:49,660 --> 00:01:49,990
+OK.
+
+33
+00:01:50,590 --> 00:01:55,360
+The same sub tour can be.... can be the optimal solution here as well.
+
+34
+00:01:55,630 --> 00:01:58,630
+We'll start from some node which is same as this one.
+
+35
+00:01:59,020 --> 00:02:02,200
+We will end up at some node, which is same as this one and we will end up at A.
+
+36
+00:02:02,590 --> 00:02:02,920
+OK.
+
+37
+00:02:03,220 --> 00:02:11,260
+So what I'm trying to say that if you know that you have already visited ABC or ACB, so what are the
+
+38
+00:02:11,260 --> 00:02:12,550
+set of states you have visited?
+
+39
+00:02:12,550 --> 00:02:15,610
+OK for this and for this.
+
+40
+00:02:16,000 --> 00:02:22,660
+OK, we are going to... we're going to make a call on multiples of sub problems. Ok. for let's say ABC tour,
+
+41
+00:02:22,660 --> 00:02:28,270
+you make multiple calls and then for ACB too, you make multiple calls.
+
+42
+00:02:28,840 --> 00:02:35,380
+What I'm trying to say is if you've already figured out what is the optimal answer for this path you
+
+43
+00:02:35,380 --> 00:02:38,500
+can reduce that answer for this part as well.
+
+44
+00:02:38,560 --> 00:02:38,890
+OK.
+
+45
+00:02:39,160 --> 00:02:44,740
+Because the set of set is you have visited is same and in this set you will have the same as it is.
+
+46
+00:02:44,740 --> 00:02:46,760
+like this one?
+
+47
+00:02:46,780 --> 00:02:47,120
+OK?
+
+48
+00:02:47,170 --> 00:02:51,550
+Because if DEF are left and they want... they need to be covered in a specific order
+
+49
+00:02:51,820 --> 00:02:54,280
+the same order can be used here as well.
+
+50
+00:02:54,310 --> 00:02:54,610
+OK.
+
+51
+00:02:55,000 --> 00:02:59,110
+That is the whole idea of using dynamic programming in this problem.
+
+52
+00:02:59,890 --> 00:03:06,430
+So what we need to do is we will see that we will dp will have two states.
+
+53
+00:03:07,330 --> 00:03:13,570
+One state will depend upon what is a set of cities that we have visited ok. we have visited ABC.
+
+54
+00:03:13,630 --> 00:03:18,340
+So that is a set of cities and there is a clever way of doing this.
+
+55
+00:03:18,610 --> 00:03:25,810
+We will see it can be done using bit masking and we will also talk about what is the last city we
+
+56
+00:03:25,810 --> 00:03:25,960
+are at.
+
+57
+00:03:26,200 --> 00:03:28,540
+OK, last city we are at?
+
+58
+00:03:29,730 --> 00:03:31,500
+the current city we are at. Ok.
+
+59
+00:03:32,280 --> 00:03:38,220
+We will do... so this will become more clear as we go through the implementation video in the next part
+
+60
+00:03:38,220 --> 00:03:40,380
+first we will discuss the recursive solution
+
+61
+00:03:40,380 --> 00:03:41,550
+And then we will code it out.
+

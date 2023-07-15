@@ -1,0 +1,231 @@
+1
+00:00:00,560 --> 00:00:03,390
+And the next problem would like to recursively, Brent.
+
+2
+00:00:04,700 --> 00:00:06,200
+Brent assembly chin.
+
+3
+00:00:06,410 --> 00:00:07,010
+That's it.
+
+4
+00:00:07,370 --> 00:00:11,330
+So here is the right is British symbol.
+
+5
+00:00:12,650 --> 00:00:15,470
+After you reading the read the graph and the query.
+
+6
+00:00:15,490 --> 00:00:17,420
+So this is mainly the British chin function.
+
+7
+00:00:18,080 --> 00:00:23,180
+I'm just doing this exercise because later we will start to do more recursive, more recursive work
+
+8
+00:00:23,180 --> 00:00:23,990
+on the graphs.
+
+9
+00:00:24,350 --> 00:00:25,260
+So you have here.
+
+10
+00:00:26,950 --> 00:00:33,400
+Let's say we have not five go to zero, which you go to, for which you go to one, let's say what's
+
+11
+00:00:33,400 --> 00:00:34,090
+missing here.
+
+12
+00:00:35,350 --> 00:00:37,700
+Zero, one, two and three are missing.
+
+13
+00:00:37,720 --> 00:00:41,290
+Let's say this is three and we have two here.
+
+14
+00:00:41,860 --> 00:00:49,150
+And I'm asking you to bring to the chin from the from now we know we have one of two cases, every every
+
+15
+00:00:49,150 --> 00:00:49,330
+note.
+
+16
+00:00:49,570 --> 00:00:54,760
+This note have only a single with a single neighbor, and this one in the last note in the chain doesn't
+
+17
+00:00:54,760 --> 00:00:55,330
+have any neighbors.
+
+18
+00:00:55,780 --> 00:01:02,950
+So first of all, I ask here, does the just this has more neighbors or Iraq, which is usually one
+
+19
+00:01:02,950 --> 00:01:03,400
+or zero.
+
+20
+00:01:03,880 --> 00:01:07,670
+So if it has a neighbor, I get the neighbor which is at from you.
+
+21
+00:01:08,020 --> 00:01:09,030
+And then the curtain.
+
+22
+00:01:09,170 --> 00:01:10,450
+So this is a symbol of change.
+
+23
+00:01:10,450 --> 00:01:14,290
+So three has here, I think, a neighbor of value zero.
+
+24
+00:01:14,590 --> 00:01:21,280
+So I say grief of three and zero two zero recurso and three and zero and then zero check do have a neighbor
+
+25
+00:01:21,280 --> 00:01:22,300
+easier when a neighbor?
+
+26
+00:01:22,600 --> 00:01:23,000
+OK.
+
+27
+00:01:23,020 --> 00:01:24,910
+Graph of zero and one is four.
+
+28
+00:01:25,180 --> 00:01:28,180
+So Wilkerson four, then recurs on one.
+
+29
+00:01:28,570 --> 00:01:34,780
+Then we stop because no more alos, as you see overall, is pretty, uh, pretty simple and pretty straightforward.
+
+30
+00:01:35,440 --> 00:01:40,540
+The second home homework here is about printing every birth of two steps.
+
+31
+00:01:40,570 --> 00:01:41,690
+Also, this isn't hard.
+
+32
+00:01:42,720 --> 00:01:46,600
+Um, the idea is following we can make this in a very simple way.
+
+33
+00:01:49,290 --> 00:01:51,270
+We have we have nodes.
+
+34
+00:01:51,450 --> 00:01:51,840
+Right?
+
+35
+00:01:52,110 --> 00:01:52,830
+So I can.
+
+36
+00:01:53,250 --> 00:01:57,450
+This is an addition to this, so I can iterate on my nodes.
+
+37
+00:01:58,080 --> 00:02:00,000
+So let's say we have here node number three.
+
+38
+00:02:00,270 --> 00:02:03,780
+So I know for node number three now I get graph of OK.
+
+39
+00:02:04,110 --> 00:02:07,920
+So let's say graph of AI has um.
+
+40
+00:02:09,190 --> 00:02:12,140
+Not seven, not two, not five.
+
+41
+00:02:13,030 --> 00:02:15,490
+Now, this is my adjusting to this.
+
+42
+00:02:15,580 --> 00:02:19,660
+So so far, I have a single aged like three to seven, for example.
+
+43
+00:02:21,490 --> 00:02:29,540
+Now we go and see a graph of severe, let's say here down here, a group of seven has an edge to route
+
+44
+00:02:29,570 --> 00:02:31,810
+zero and had edgy to not fall.
+
+45
+00:02:33,470 --> 00:02:35,600
+So now we are here seven zero.
+
+46
+00:02:36,950 --> 00:02:38,000
+And then sevenfold.
+
+47
+00:02:39,080 --> 00:02:45,050
+So the moral of that is we simply need to reduce the three groups are enough to bring every edges,
+
+48
+00:02:45,320 --> 00:02:49,250
+the first to get this list, to hear the second look at this list here.
+
+49
+00:02:49,400 --> 00:02:52,550
+So this is now give me the fittest and the fittest edge.
+
+50
+00:02:52,880 --> 00:02:54,230
+Then using this one, we get.
+
+51
+00:02:54,230 --> 00:02:57,290
+It's also that it is two ages.
+
+52
+00:02:57,530 --> 00:03:03,020
+So this all three loops to bring to all of the edges of list of leads, say two, which is also three
+
+53
+00:03:03,020 --> 00:03:03,140
+new.
+
+54
+00:03:03,140 --> 00:03:06,380
+So when they say one five seven.
+
+55
+00:03:08,300 --> 00:03:11,090
+So this is merely has a five and seven.
+
+56
+00:03:11,150 --> 00:03:12,670
+This is merely like three values.
+
+57
+00:03:12,680 --> 00:03:18,590
+So I needed like this kind of three loops to bring three values which represent two edges.
+
+58
+00:03:18,740 --> 00:03:21,200
+I hope the idea is OK overall.

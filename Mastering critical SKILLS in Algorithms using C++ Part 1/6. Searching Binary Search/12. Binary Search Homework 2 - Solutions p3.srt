@@ -1,0 +1,575 @@
+1
+00:00:01,530 --> 00:00:08,940
+Let's solve the third, the problem, the heaters, so in this problem would like to set up the heaters,
+
+2
+00:00:09,780 --> 00:00:13,980
+specifically the ridges of the heaters, so like we did so far.
+
+3
+00:00:14,580 --> 00:00:15,420
+What is the goal?
+
+4
+00:00:15,630 --> 00:00:18,480
+The good is the ridges, specifically the minimum ridges.
+
+5
+00:00:18,900 --> 00:00:24,830
+So the first thing you tell yourself is a radius itself, like it's a function is monotonic or not.
+
+6
+00:00:24,900 --> 00:00:26,040
+So let's think about it.
+
+7
+00:00:26,550 --> 00:00:30,870
+So let's assume that we're going to try this.
+
+8
+00:00:30,960 --> 00:00:35,310
+Let's say we try to Eq. one, and let's say it covered seven houses.
+
+9
+00:00:36,090 --> 00:00:38,070
+Now, when you try it, it is equal to.
+
+10
+00:00:39,810 --> 00:00:40,630
+What happens?
+
+11
+00:00:40,650 --> 00:00:41,680
+Is it predictable?
+
+12
+00:00:41,700 --> 00:00:43,290
+Yes, it must be at least given.
+
+13
+00:00:43,530 --> 00:00:51,180
+So maybe another seven registry, maybe 10 house now radius for maybe the 12 houses.
+
+14
+00:00:51,690 --> 00:00:56,340
+This is monotonic increasing function, so it seems that the more we increase the reduce.
+
+15
+00:00:56,610 --> 00:01:02,200
+The function that tells us how many houses are covered is also increasing.
+
+16
+00:01:02,580 --> 00:01:03,000
+So it does.
+
+17
+00:01:03,030 --> 00:01:04,050
+No one is done.
+
+18
+00:01:04,350 --> 00:01:07,590
+We are sure that this is a binary search about this piece.
+
+19
+00:01:08,220 --> 00:01:09,550
+Now let's proceed with that.
+
+20
+00:01:09,630 --> 00:01:15,540
+The first thing is deciding the minimum and the maximum of a certain end so we can have Regis equals
+
+21
+00:01:15,540 --> 00:01:15,870
+zero.
+
+22
+00:01:16,870 --> 00:01:22,410
+And the maximum is I use one item, one item, nine, which is 10, one nine zero.
+
+23
+00:01:22,810 --> 00:01:26,860
+Why this big number, the let good values are such a huge.
+
+24
+00:01:26,860 --> 00:01:30,130
+I went up 8:40, so I used the maximum value here.
+
+25
+00:01:30,520 --> 00:01:35,260
+Another way may be to just compute the maximum from these two arrays, but anyway, this is just one
+
+26
+00:01:35,260 --> 00:01:35,560
+way.
+
+27
+00:01:37,750 --> 00:01:41,590
+Why I'm showing it to you this way, especially for guys in competitive programming.
+
+28
+00:01:42,460 --> 00:01:45,190
+Sometimes you do need to care to think a lot about the end.
+
+29
+00:01:45,190 --> 00:01:46,960
+In a way it's going to be look value.
+
+30
+00:01:47,350 --> 00:01:54,010
+So just big enough value, small enough value are all what you need and the region as usually you do
+
+31
+00:01:54,010 --> 00:01:54,270
+them.
+
+32
+00:01:54,550 --> 00:01:59,590
+The minute we saw the first couple of examples of finding the minimum, so it would mix the condition
+
+33
+00:01:59,590 --> 00:02:00,910
+of less than an equal together.
+
+34
+00:02:01,270 --> 00:02:01,780
+Why?
+
+35
+00:02:02,020 --> 00:02:07,900
+Because we would like to find the fittest, reduce the smallest radius that is good enough.
+
+36
+00:02:08,200 --> 00:02:11,350
+So if, for example, R1 is good, R2 is good.
+
+37
+00:02:11,710 --> 00:02:12,820
+R3 is good.
+
+38
+00:02:13,120 --> 00:02:14,800
+We need this minimum one.
+
+39
+00:02:15,190 --> 00:02:19,540
+So whenever we have a solution, we keep pushing to the left side.
+
+40
+00:02:20,170 --> 00:02:22,330
+So so far, the recursion is very standard.
+
+41
+00:02:22,660 --> 00:02:25,960
+The only remaining thing is given a specific reduce.
+
+42
+00:02:26,590 --> 00:02:28,660
+We would like to know if this is enough or not.
+
+43
+00:02:28,900 --> 00:02:34,630
+So the possible function here is mixing the competition and the comparison in the same time now to make
+
+44
+00:02:34,630 --> 00:02:36,390
+that possible function efficient as possible.
+
+45
+00:02:36,400 --> 00:02:39,490
+I sorted here the the houses and the heaters.
+
+46
+00:02:39,760 --> 00:02:44,050
+So let me tell you the logic behind this function, which you should be able to develop by itself.
+
+47
+00:02:44,860 --> 00:02:45,300
+Let's see.
+
+48
+00:02:45,490 --> 00:02:53,080
+Let's say we have houses at the following location maybe one, maybe five, maybe 10, maybe 20.
+
+49
+00:02:53,530 --> 00:02:56,530
+And let's say we have heaters at the following location.
+
+50
+00:02:56,540 --> 00:03:02,350
+Maybe three, maybe, uh, maybe seven, maybe 30.
+
+51
+00:03:02,890 --> 00:03:04,060
+These are our heaters.
+
+52
+00:03:04,690 --> 00:03:08,590
+And now we have our let's say the R is to the radius is two.
+
+53
+00:03:09,070 --> 00:03:11,710
+So if we have three, they just do.
+
+54
+00:03:11,710 --> 00:03:13,900
+It means from three minus two.
+
+55
+00:03:15,630 --> 00:03:21,480
+Two or three blocks, two is our coverage window, so we do have this following, we trade on the heaters
+
+56
+00:03:21,480 --> 00:03:26,730
+one by one, we take the current heater and get the minus and B+.
+
+57
+00:03:26,910 --> 00:03:33,510
+So this is the lift, the coverage and the right coverage of the current heaters and then G is initialized
+
+58
+00:03:33,510 --> 00:03:35,400
+to iterate on their houses.
+
+59
+00:03:35,760 --> 00:03:42,630
+I keep iterating on the houses as long as the current house is, but is covered by the current heater.
+
+60
+00:03:42,840 --> 00:03:44,370
+Just move for the next one.
+
+61
+00:03:44,730 --> 00:03:46,860
+So let's say that it just is too.
+
+62
+00:03:47,250 --> 00:03:49,170
+So now we started with one here.
+
+63
+00:03:50,070 --> 00:03:51,870
+Three minus two is one.
+
+64
+00:03:51,870 --> 00:03:52,950
+Three plus two is five.
+
+65
+00:03:53,250 --> 00:03:55,810
+So is is one in the range of four and five years.
+
+66
+00:03:55,830 --> 00:03:56,560
+Move to the next.
+
+67
+00:03:56,570 --> 00:03:59,190
+The house is five within the one on five.
+
+68
+00:03:59,190 --> 00:04:03,300
+Yes, so move to the next house is then in the order and five no.
+
+69
+00:04:03,570 --> 00:04:09,900
+Now we move to the second heater here and computes its range, which would be seven minus two is five
+
+70
+00:04:10,110 --> 00:04:16,080
+seven plus two is seven plus two is nine, now is five.
+
+71
+00:04:16,080 --> 00:04:18,210
+And then within the current heater also.
+
+72
+00:04:18,210 --> 00:04:18,520
+No.
+
+73
+00:04:18,630 --> 00:04:25,680
+So we stop here now we move to the next heater and then get the minus two and +2, which would be twenty
+
+74
+00:04:25,680 --> 00:04:27,360
+eight and thirty two.
+
+75
+00:04:27,690 --> 00:04:28,740
+Now is a ten.
+
+76
+00:04:28,770 --> 00:04:31,440
+Is that is it then in the range and also not in the range?
+
+77
+00:04:31,950 --> 00:04:37,410
+So as you see, we end with this function that the G is still stuck at, then we couldn't cover it.
+
+78
+00:04:37,800 --> 00:04:39,360
+So we say, no, we couldn't.
+
+79
+00:04:40,170 --> 00:04:47,700
+Again, the model of this function is we iterate by the heater for every heater we get its range and
+
+80
+00:04:47,700 --> 00:04:50,370
+the cover as possible as we can from the houses.
+
+81
+00:04:51,000 --> 00:04:54,630
+And that's why we need even to sort of the houses and the heaters, both of them.
+
+82
+00:04:55,140 --> 00:05:01,170
+Because this ordering here, this logic here depends on the ordering, like it depends on that.
+
+83
+00:05:01,470 --> 00:05:08,610
+They are like maybe here two seven, uh, 12, maybe one, five, uh, 10.
+
+84
+00:05:08,940 --> 00:05:12,030
+So this is a this is a heater, does it cover?
+
+85
+00:05:12,030 --> 00:05:14,880
+Nor does it cover, nor does it cover?
+
+86
+00:05:15,150 --> 00:05:15,420
+No.
+
+87
+00:05:15,420 --> 00:05:18,990
+And so we can write this could to be more efficient, but still, in a way, it is possible.
+
+88
+00:05:20,550 --> 00:05:22,620
+What is the term complexity of this function?
+
+89
+00:05:24,210 --> 00:05:30,990
+It is just, oh, heater is a B+ house, is because this look at it on the heater and this little bit
+
+90
+00:05:30,990 --> 00:05:36,510
+of it on their house is this g is initialized only here, so it just cover only once.
+
+91
+00:05:37,910 --> 00:05:41,930
+So overall, this is in like and in the square or it's just queer, it is just that the house is built
+
+92
+00:05:41,930 --> 00:05:44,900
+as the heater size this functions here is in look.
+
+93
+00:05:44,900 --> 00:05:49,340
+In this way, Lou is look end times dysfunction.
+
+94
+00:05:49,340 --> 00:05:51,680
+So this again, overall, here is in again.
+
+95
+00:05:52,070 --> 00:05:57,740
+So the whole complexity of this function is in look at now we are done with the good and we are happy
+
+96
+00:05:57,740 --> 00:05:58,670
+and everything is good.
+
+97
+00:05:59,300 --> 00:06:04,460
+But I would like to tell you another angle for the reasons, and this is important.
+
+98
+00:06:04,460 --> 00:06:09,440
+So you see, now that even binary surgery can be handled from different angles, the previous angle
+
+99
+00:06:09,740 --> 00:06:13,910
+is based on the direct, systematic operation I did in the previous two problems.
+
+100
+00:06:14,270 --> 00:06:16,650
+You ask yourself, what is the good radius?
+
+101
+00:06:16,910 --> 00:06:18,350
+Let's obtain the assertion the radius.
+
+102
+00:06:18,350 --> 00:06:19,850
+Can we write an authentic function?
+
+103
+00:06:19,880 --> 00:06:20,340
+Yes.
+
+104
+00:06:20,360 --> 00:06:21,620
+Could it be that simple?
+
+105
+00:06:22,430 --> 00:06:24,470
+This one is based on observations.
+
+106
+00:06:24,800 --> 00:06:29,300
+So the idea is following Let's say this is some house here.
+
+107
+00:06:30,740 --> 00:06:32,930
+Which Heater will cover this house?
+
+108
+00:06:34,570 --> 00:06:37,540
+Logically, then it two heaters.
+
+109
+00:06:39,240 --> 00:06:45,060
+So if there are a lot of heaters here and a lot of heaters here, was this specific regions, at least
+
+110
+00:06:45,090 --> 00:06:47,070
+if any of this cover?
+
+111
+00:06:47,100 --> 00:06:48,540
+Also, there's too much to cover.
+
+112
+00:06:49,200 --> 00:06:57,900
+So the model of that every house is only covered by its senior staff, and it's the nearest right nearest
+
+113
+00:06:57,900 --> 00:06:59,430
+to lift a needed striped heater.
+
+114
+00:07:00,210 --> 00:07:03,690
+So the logic would be as following for every house.
+
+115
+00:07:04,170 --> 00:07:05,040
+Get its.
+
+116
+00:07:06,300 --> 00:07:12,360
+Duke loses to heaters and then let it be covered by the minimum one, like, let's say we have your
+
+117
+00:07:12,360 --> 00:07:20,670
+house in position 10, and we have a heater at position two and we have heater ed position 12.
+
+118
+00:07:21,240 --> 00:07:25,050
+So logically we can connect it to the to the smallest one.
+
+119
+00:07:25,470 --> 00:07:29,010
+So we need the heater a must of at least three to four this house.
+
+120
+00:07:29,610 --> 00:07:34,800
+So it is on every house, compute his minimum or his suitable heater.
+
+121
+00:07:35,100 --> 00:07:37,440
+Reduce and maximize among all of them.
+
+122
+00:07:39,010 --> 00:07:44,320
+Again, the idea coming from the observation that a house would be covered either by the left or the
+
+123
+00:07:44,320 --> 00:07:48,940
+right one, the nearest left or nearest right, which one is specifically the closest one.
+
+124
+00:07:49,300 --> 00:07:57,160
+So now we know that house one near the of, let's say, three houses to need a heater of links one house,
+
+125
+00:07:57,160 --> 00:07:58,990
+three mm of land, seven.
+
+126
+00:07:58,990 --> 00:08:00,850
+So the maximum among all of them is seven.
+
+127
+00:08:01,060 --> 00:08:07,750
+This is the answer, and this now takes us to a very different and easier implementation.
+
+128
+00:08:08,050 --> 00:08:15,190
+Now we only care about sorting the heaters only and for every house we can lower bound in the heaters
+
+129
+00:08:15,730 --> 00:08:23,050
+to find something that is, uh, we would like to find the nearest the heater for it.
+
+130
+00:08:23,530 --> 00:08:24,220
+There are two.
+
+131
+00:08:24,220 --> 00:08:25,480
+There are three cases here.
+
+132
+00:08:25,750 --> 00:08:27,760
+It is a house case number one.
+
+133
+00:08:27,760 --> 00:08:31,720
+We has a heater in the lift and heater in the right, so we need to take the minimum up.
+
+134
+00:08:32,050 --> 00:08:34,480
+Among them is number one.
+
+135
+00:08:34,480 --> 00:08:37,330
+We have a heater only before it, so just take it.
+
+136
+00:08:37,690 --> 00:08:40,540
+Case number two, we have heater only after it shows just take it.
+
+137
+00:08:40,810 --> 00:08:44,830
+So I'm handling here the two special cases and then that general case.
+
+138
+00:08:45,160 --> 00:08:51,490
+I hope you get the idea as you see one perspective in the normal brain research unit array.
+
+139
+00:08:51,790 --> 00:08:57,940
+Another perspective ended up with the generalized version of binary search and the key message here
+
+140
+00:08:58,270 --> 00:09:04,540
+don't lock yourself in a specific solution or even don't look yourself in the same implementation.
+
+141
+00:09:04,780 --> 00:09:06,520
+We can think of from different angles.
+
+142
+00:09:06,670 --> 00:09:11,110
+We can implement the the same approach in different ways, and I would like you to try to give this
+
+143
+00:09:11,110 --> 00:09:12,160
+a scale from the course.
+
+144
+00:09:13,240 --> 00:09:13,690
+That's all.

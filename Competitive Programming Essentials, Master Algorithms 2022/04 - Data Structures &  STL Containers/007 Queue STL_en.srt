@@ -1,0 +1,84 @@
+1
+00:00:01,620 --> 00:00:07,410
+Hi Everyone in this lecture, I'm going to tell you about the queue STL, the queue standard template library,
+
+2
+00:00:07,890 --> 00:00:13,600
+so that is present, the queue class is present in the file hash include queue.
+
+3
+00:00:13,620 --> 00:00:16,680
+So you have to include this and once you include this.
+
+4
+00:00:16,830 --> 00:00:20,160
+You can easily make a queue of any datatype.
+
+5
+00:00:20,280 --> 00:00:26,190
+Let's say queue of integers, and we will just try to insert some numbers in the queue so 
+
+6
+00:00:26,190 --> 00:00:27,360
+queue dot push lets say one.
+
+7
+00:00:28,590 --> 00:00:29,210
+And.
+
+8
+00:00:31,100 --> 00:00:32,000
+Maybe two.
+
+9
+00:00:33,650 --> 00:00:37,880
+Then three, then four, then five and then six.
+
+10
+00:00:38,330 --> 00:00:44,480
+So what we will do will try to print the entire element of the queue and we will remove everything from
+
+11
+00:00:44,480 --> 00:00:49,490
+the front so while the queue is not empty, so we will do cout queue dot front.
+
+12
+00:00:50,240 --> 00:00:54,550
+So the STL also provides this method and we can do queue dot pop
+
+13
+00:00:54,630 --> 00:00:56,960
+But OK, that's it.
+
+14
+00:00:57,620 --> 00:01:02,030
+And this is how we can use the inbuilt C++ standard template library, queue.
+
+15
+00:01:02,630 --> 00:01:05,690
+And now we can actually try to run over code as well.
+
+16
+00:01:06,290 --> 00:01:07,040
+So.
+
+17
+00:01:10,790 --> 00:01:11,630
+Let me show you.
+
+18
+00:01:19,670 --> 00:01:25,060
+We are getting the output in the same order that means it is a fifo kind of a queue.
+
+19
+00:01:25,220 --> 00:01:25,630
+All right.
+
+20
+00:01:25,940 --> 00:01:27,870
+So that's all for this lecture.
+
+21
+00:01:27,890 --> 00:01:28,400
+Thank you.
+

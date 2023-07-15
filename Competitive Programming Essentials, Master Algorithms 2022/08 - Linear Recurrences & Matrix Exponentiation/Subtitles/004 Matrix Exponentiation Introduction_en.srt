@@ -1,0 +1,924 @@
+1
+00:00:01,060 --> 00:00:09,580
+Always so welcome to the real four metrics explanation, the the explanation will come handy in various
+
+2
+00:00:09,580 --> 00:00:15,460
+dynamic programming problems and all those are all those problems in which you will be solving some
+
+3
+00:00:15,460 --> 00:00:16,770
+linear recurring solution.
+
+4
+00:00:17,500 --> 00:00:17,720
+Eight.
+
+5
+00:00:18,350 --> 00:00:22,840
+So for example, I'll give you the very basic example, and then we'll move on to various different
+
+6
+00:00:22,840 --> 00:00:23,890
+examples, of course.
+
+7
+00:00:24,700 --> 00:00:25,060
+So.
+
+8
+00:00:26,070 --> 00:00:32,600
+Right now, this small catfish here, and I'll help you prevent this cat face right away and will coordinate
+
+9
+00:00:32,600 --> 00:00:33,540
+things exponentially.
+
+10
+00:00:33,570 --> 00:00:34,020
+I will.
+
+11
+00:00:35,070 --> 00:00:40,530
+Not pass to the mattresses, but will work on during mattresses, in methods, in different methods.
+
+12
+00:00:41,670 --> 00:00:44,220
+Eight or windows are a nuisance.
+
+13
+00:00:44,820 --> 00:00:46,770
+They might be, but will avoid them.
+
+14
+00:00:47,110 --> 00:00:48,450
+They will avoid nuisance.
+
+15
+00:00:50,170 --> 00:00:54,250
+Now, let's understand how this matrix explanation work with an example.
+
+16
+00:00:54,500 --> 00:00:55,960
+So let's take an example first.
+
+17
+00:00:57,720 --> 00:00:58,770
+Let's say I want to find out.
+
+18
+00:00:58,950 --> 00:01:00,060
+And it's Fibonacci number.
+
+19
+00:01:01,810 --> 00:01:06,640
+And it's Fibonacci numbers, so it's a very famous series, guys, Fibonacci numbers cities because
+
+20
+00:01:06,640 --> 00:01:12,760
+it is being used in various places and there are some well-known facts about Fibonacci numbers, you
+
+21
+00:01:12,760 --> 00:01:14,260
+can easily search those facts.
+
+22
+00:01:14,800 --> 00:01:17,060
+So if I want to find out the end, it's Fibonacci numbers.
+
+23
+00:01:17,060 --> 00:01:19,060
+So let me write first few terms of this series.
+
+24
+00:01:19,450 --> 00:01:20,720
+It is one one.
+
+25
+00:01:21,010 --> 00:01:21,910
+The first time is one.
+
+26
+00:01:21,910 --> 00:01:22,780
+The second time is one.
+
+27
+00:01:23,020 --> 00:01:24,630
+Now, the third time is equal.
+
+28
+00:01:24,970 --> 00:01:33,130
+The third term follows this pattern that f and is equal to f off and minus one plus and minus two.
+
+29
+00:01:33,550 --> 00:01:40,990
+That means three will be equal to a fourth two three three minus one plus three minus two is f of one.
+
+30
+00:01:41,710 --> 00:01:44,440
+So the next term is equal to the sum of previous two terms.
+
+31
+00:01:44,560 --> 00:01:44,840
+Eight.
+
+32
+00:01:44,850 --> 00:01:45,690
+So it is two.
+
+33
+00:01:46,180 --> 00:01:50,410
+Two plus one is three five eight 13.
+
+34
+00:01:51,880 --> 00:01:52,660
+Twenty one.
+
+35
+00:01:53,790 --> 00:01:56,160
+Party have a missed No.
+
+36
+00:01:56,730 --> 00:02:00,540
+13 percent to end its 34 and then 34 in next year's.
+
+37
+00:02:01,670 --> 00:02:05,540
+Thirty four in twenty one is five and five, fifty five and so on.
+
+38
+00:02:05,720 --> 00:02:07,070
+So it's an infinite series.
+
+39
+00:02:07,070 --> 00:02:12,380
+It is never ending cities and after a certain time it goes like exponential rate.
+
+40
+00:02:12,620 --> 00:02:15,440
+You can easily see this particular cities.
+
+41
+00:02:16,670 --> 00:02:22,250
+So if I want to find out the end for when I can them, but and its end is less than equals to turn to
+
+42
+00:02:22,250 --> 00:02:24,890
+the power six, it becomes very easy for me.
+
+43
+00:02:24,890 --> 00:02:26,720
+I can directly use dynamic programming.
+
+44
+00:02:28,780 --> 00:02:30,490
+Dynamic programming.
+
+45
+00:02:32,450 --> 00:02:39,740
+Right, and a very simple cold case began easily undo this, not a big deal, if still you have a problem
+
+46
+00:02:39,950 --> 00:02:45,260
+using dynamic programming for finding just a Fibonacci number just to watch US action on dynamic programming.
+
+47
+00:02:46,280 --> 00:02:50,600
+And in the first example will be of it when I give numbers in one day.
+
+48
+00:02:51,430 --> 00:02:53,360
+DP eight Not a big deal.
+
+49
+00:02:53,630 --> 00:02:57,170
+So running programming is not a big deal for African economics, but easy stuff.
+
+50
+00:03:00,050 --> 00:03:06,620
+What happens in the name of Ghadami is that you take an area of land, think about six eight, and what
+
+51
+00:03:06,620 --> 00:03:12,590
+you do is you calculate that are done by using the first two dams and you calculate the Fortnum by using
+
+52
+00:03:12,590 --> 00:03:14,630
+their second and third dome in you.
+
+53
+00:03:15,590 --> 00:03:22,550
+That means you take an area and you simply fill the first two times that d b minus one and b b who is
+
+54
+00:03:22,550 --> 00:03:23,210
+also one.
+
+55
+00:03:23,210 --> 00:03:29,030
+And then they re you add a loop from three to in and say the DPA is equal to that.
+
+56
+00:03:29,070 --> 00:03:34,010
+Maybe a is equal to DP I minus one plus API minus two.
+
+57
+00:03:35,850 --> 00:03:36,240
+So.
+
+58
+00:03:38,050 --> 00:03:40,990
+This is a normal loop from.
+
+59
+00:03:44,000 --> 00:03:44,900
+You're doing great.
+
+60
+00:03:45,050 --> 00:03:49,220
+And after the loop ends, we have the end, no finish, so we have to be in after this end.
+
+61
+00:03:50,150 --> 00:03:56,270
+But guys, this is not the perfect solution that I want because it is for less than equal to 10 Dubai
+
+62
+00:03:56,270 --> 00:04:02,210
+with six and eight to four lots of my a of my friends got this problem is going to be a problem that
+
+63
+00:04:03,230 --> 00:04:05,790
+like a follow up problem they say now.
+
+64
+00:04:05,840 --> 00:04:08,450
+And this lesson in Gloucester turned the 18.
+
+65
+00:04:09,550 --> 00:04:11,980
+Now, how do you get to create this particular?
+
+66
+00:04:13,130 --> 00:04:20,450
+Even economically if and it's so huge, you cannot apply this law from three to 10 because again, we
+
+67
+00:04:20,450 --> 00:04:23,590
+cannot have attended the voting and it will take a huge time.
+
+68
+00:04:24,540 --> 00:04:24,830
+Eight.
+
+69
+00:04:26,080 --> 00:04:28,150
+How do you solve this, how do you figure this out?
+
+70
+00:04:28,420 --> 00:04:29,020
+What is the.
+
+71
+00:04:29,350 --> 00:04:31,640
+And also there is that number will be huge.
+
+72
+00:04:31,660 --> 00:04:34,010
+Of course, is this number will also be huge.
+
+73
+00:04:34,030 --> 00:04:35,910
+They're distributing queue of 10 to diversify.
+
+74
+00:04:35,920 --> 00:04:36,850
+It will also be huge.
+
+75
+00:04:37,360 --> 00:04:43,810
+Generally, whenever you face this problem, they will say that they might just like big what is actually
+
+76
+00:04:43,830 --> 00:04:50,470
+a comp. It's actually a drawback of languages of the computer system we have now.
+
+77
+00:04:50,740 --> 00:04:53,850
+It may be not up to 100 or 200 years right now.
+
+78
+00:04:53,860 --> 00:04:56,560
+This is a topic it's a bit more to.
+
+79
+00:04:58,030 --> 00:05:00,040
+They could it in in that limit.
+
+80
+00:05:01,430 --> 00:05:01,670
+You.
+
+81
+00:05:02,310 --> 00:05:02,650
+OK?
+
+82
+00:05:03,030 --> 00:05:08,910
+So how do you solve this problem in an instant, is it being so that's the main problem that we are
+
+83
+00:05:08,910 --> 00:05:11,280
+going to discuss in this election, right?
+
+84
+00:05:11,820 --> 00:05:13,890
+Here goes What I'll do is I'll take three.
+
+85
+00:05:15,070 --> 00:05:19,540
+Mattresses and just show you an example and everything will become all clear.
+
+86
+00:05:20,260 --> 00:05:21,610
+So let's take three mattresses.
+
+87
+00:05:22,330 --> 00:05:26,140
+The first mattress that I'm taking is a normal matrix, and let's call it.
+
+88
+00:05:27,550 --> 00:05:34,270
+Matrix F and kept live in this effort, Matrix is too gross value matrix, and in this I will be storing
+
+89
+00:05:34,270 --> 00:05:38,200
+Effen, which is the end for but and f of and minus one.
+
+90
+00:05:40,150 --> 00:05:40,450
+Well.
+
+91
+00:05:41,470 --> 00:05:48,340
+Now what happens is I have a Imitrex, let's call it biometrics, and I'll feel the value of it.
+
+92
+00:05:48,770 --> 00:05:55,520
+Oop, I want you to feel the values of the stigma have on you to find out the emergence of this dream
+
+93
+00:05:55,520 --> 00:06:02,620
+matrix, as if a multiplicity matrix to this effort matrix that is deep into effen this matrix give
+
+94
+00:06:02,620 --> 00:06:03,700
+me effen plus one.
+
+95
+00:06:05,340 --> 00:06:12,930
+It is this into this equals this f of endless fun to wherever, and I literally said, bend this one
+
+96
+00:06:13,260 --> 00:06:14,460
+and this one minus one is in.
+
+97
+00:06:17,220 --> 00:06:19,950
+What should be my be matrix of video games?
+
+98
+00:06:22,230 --> 00:06:27,990
+But easy that this f of endless one metrics is actually nothing but.
+
+99
+00:06:29,860 --> 00:06:35,550
+How is it ever and responded in it it is written as f and plus f minus one in the sum of previous two
+
+100
+00:06:35,560 --> 00:06:36,520
+terms in Fibonacci.
+
+101
+00:06:36,850 --> 00:06:41,670
+It is, and this is I if I dig two ones over here.
+
+102
+00:06:41,680 --> 00:06:45,580
+So this one multiplies with this happen and this one multiplies with this happen.
+
+103
+00:06:46,270 --> 00:06:51,070
+This rule multiplies with this column and gets me off of endless but eight.
+
+104
+00:06:51,430 --> 00:06:56,500
+Secondly, in the second, what we have to do is, guys, I won't happen to be here so I can take it
+
+105
+00:06:56,500 --> 00:06:57,010
+one zero.
+
+106
+00:06:57,730 --> 00:07:00,760
+If I multiply this rule with this column, it gives me a fine.
+
+107
+00:07:02,220 --> 00:07:02,520
+Well.
+
+108
+00:07:03,700 --> 00:07:08,740
+So Venezuela is not a big deal that if I multiplied the metrics with the F and it gives me, I think
+
+109
+00:07:08,740 --> 00:07:10,810
+this one eight now.
+
+110
+00:07:13,010 --> 00:07:18,200
+Now, let's see this if this if anything goes to evolve.
+
+111
+00:07:18,980 --> 00:07:21,840
+Rachel, let's get into it for you.
+
+112
+00:07:22,160 --> 00:07:26,720
+This will give me a of three similarly esteemed to of.
+
+113
+00:07:27,810 --> 00:07:29,280
+They will give me f off.
+
+114
+00:07:30,810 --> 00:07:33,720
+Similarly, they do it for food, will give me half of.
+
+115
+00:07:35,330 --> 00:07:36,380
+You and and so on.
+
+116
+00:07:36,650 --> 00:07:38,180
+It will go on forever.
+
+117
+00:07:39,410 --> 00:07:47,400
+So if I replace effort in this equation by the industry, then I can.
+
+118
+00:07:47,570 --> 00:07:50,210
+It is this way into being the F3.
+
+119
+00:07:52,910 --> 00:07:54,260
+Is Eagles do it four, five?
+
+120
+00:07:54,290 --> 00:07:56,220
+So let's say I'm just trying to find a fight.
+
+121
+00:07:56,240 --> 00:08:05,450
+So now let's replace FTD by using this equation here, where I get this thing to eat into e into a f
+
+122
+00:08:05,450 --> 00:08:07,970
+of a two is.
+
+123
+00:08:10,460 --> 00:08:13,320
+One more record is equal to three or four, five, eight.
+
+124
+00:08:13,610 --> 00:08:19,820
+So basically, guys, if I want to find out some f of RN and I know what it f of two, what do you have
+
+125
+00:08:19,820 --> 00:08:25,100
+to evolve to is nothing but of the F2 Dome and the F1 team, which is one one.
+
+126
+00:08:26,020 --> 00:08:28,780
+The base case is basically rate based cases.
+
+127
+00:08:31,330 --> 00:08:32,289
+So, yeah.
+
+128
+00:08:34,370 --> 00:08:40,429
+OK, so what happens is if I want to find out, be of end of this actually becomes the the power and
+
+129
+00:08:40,429 --> 00:08:42,230
+minus two yes or no.
+
+130
+00:08:45,900 --> 00:08:47,430
+Due to the power and minus two.
+
+131
+00:08:48,360 --> 00:08:54,660
+IndyRef2 is going to happen to win always, these all are mattresses which are being multiplied, multiply
+
+132
+00:08:55,050 --> 00:09:02,550
+follows that property, whatever it is associated or community in, which is to be in the sea, is equal
+
+133
+00:09:02,550 --> 00:09:04,350
+to A into B and C.
+
+134
+00:09:05,250 --> 00:09:11,490
+Hey, I'm just a blanket, probably over here, and simply I grouped all these, I'm just simply multiplying
+
+135
+00:09:11,490 --> 00:09:13,790
+all I'm just finding to the power in minus two.
+
+136
+00:09:13,800 --> 00:09:16,050
+What is do over here is the matrix.
+
+137
+00:09:16,290 --> 00:09:17,190
+One one one zero.
+
+138
+00:09:17,790 --> 00:09:18,540
+This is Matrix.
+
+139
+00:09:19,780 --> 00:09:20,920
+Hey, you know what?
+
+140
+00:09:21,250 --> 00:09:26,680
+What is the solution that I've come up to that if I want to find out if people, Nikki and I simply
+
+141
+00:09:26,680 --> 00:09:33,490
+have to find out the power in my next one multiplied by f of two that will give me effen, which is
+
+142
+00:09:33,500 --> 00:09:34,030
+even.
+
+143
+00:09:35,550 --> 00:09:42,270
+And if in minus one, and I'll just written the topmost value that will be called within the how do
+
+144
+00:09:42,270 --> 00:09:45,480
+I do this guy is how do I find due to the power and menace to?
+
+145
+00:09:47,040 --> 00:09:54,570
+Again, we can use binary exponentially here instead of multiplying to one by one here again directly.
+
+146
+00:09:55,230 --> 00:10:01,320
+Node by devouring minus two by using binary explanation because and minus two is an integer.
+
+147
+00:10:03,480 --> 00:10:09,270
+I can simply say by this time, empty of what what we'll do is we'll take a resultant.
+
+148
+00:10:10,840 --> 00:10:18,390
+Certain metrics that will be of one identity metric say other metrics will be 92 metrics and.
+
+149
+00:10:20,010 --> 00:10:23,370
+In each separate it needs to do is simple.
+
+150
+00:10:24,290 --> 00:10:30,320
+Just as binary exponentially, can we do that result in will be equal to resulting into if the last
+
+151
+00:10:30,320 --> 00:10:31,250
+British state and so on.
+
+152
+00:10:31,430 --> 00:10:36,480
+And so basically just consider it the city as another integer, right?
+
+153
+00:10:36,560 --> 00:10:40,430
+So we know as integers multiply, so so do matrix multiply.
+
+154
+00:10:40,640 --> 00:10:43,850
+As integers add up, so do mattresses add up.
+
+155
+00:10:45,400 --> 00:10:46,480
+Ed, I'm just.
+
+156
+00:10:46,960 --> 00:10:51,840
+Instead of doing a by explanation of unity, then I'm doing in binary exponential matters.
+
+157
+00:10:52,150 --> 00:10:54,210
+It is called matrix exponential.
+
+158
+00:10:54,890 --> 00:10:56,740
+It's instead of in multiplications.
+
+159
+00:10:56,740 --> 00:11:02,990
+And in these editions, we'll be having methods between multiply mattresses and advocacy.
+
+160
+00:11:03,460 --> 00:11:12,760
+So those methods will not take 2D error as a as an argument because I'll be telling you a best way to
+
+161
+00:11:12,820 --> 00:11:16,390
+code this out and you won't be like having this face.
+
+162
+00:11:17,740 --> 00:11:18,400
+Whatever this.
+
+163
+00:11:19,810 --> 00:11:20,860
+It is eight.
+
+164
+00:11:22,540 --> 00:11:24,940
+I hope you I hope you got this that.
+
+165
+00:11:27,050 --> 00:11:34,160
+Instead of in business, we'll just use mattresses, multiply them, add them whatever we do, and simply.
+
+166
+00:11:35,790 --> 00:11:36,930
+Use it right.
+
+167
+00:11:38,370 --> 00:11:39,810
+So I think that's it.
+
+168
+00:11:40,770 --> 00:11:47,210
+And so, first of all, I want you to call it odious and like nightmare third-rate functions, if you
+
+169
+00:11:47,220 --> 00:11:48,810
+ever understood this part, just.
+
+170
+00:11:49,660 --> 00:11:56,430
+Do they do it yourself first and then move on to the next for you, during which I'll call it out there
+
+171
+00:11:56,440 --> 00:11:58,530
+are there are various examples.
+
+172
+00:11:58,540 --> 00:11:59,740
+Let me give you another example.
+
+173
+00:12:00,340 --> 00:12:03,940
+This was a very easy to kill installation and let me give you a tougher one.
+
+174
+00:12:04,530 --> 00:12:06,550
+If anything was to happen.
+
+175
+00:12:07,960 --> 00:12:09,310
+These are records of relation.
+
+176
+00:12:10,900 --> 00:12:15,670
+Any recurrence, so instead of getting left, let's have smaller.
+
+177
+00:12:17,370 --> 00:12:18,630
+F off and.
+
+178
+00:12:19,840 --> 00:12:28,900
+Is he close to Earth at 15 minus one plus B of f off and minus two plus c f off and minus three?
+
+179
+00:12:30,140 --> 00:12:31,570
+How do you all this?
+
+180
+00:12:35,090 --> 00:12:41,090
+So always, whenever you face, whenever you will just face a reconciliation, a regardless of religion
+
+181
+00:12:41,090 --> 00:12:46,520
+and you going to use medical expert intuition, my first advice for you will be to.
+
+182
+00:12:47,460 --> 00:12:48,060
+Make this.
+
+183
+00:12:49,020 --> 00:12:55,970
+Vector, I make this vector that is Effen and this vector, which is even less when you take Effen Vector,
+
+184
+00:12:55,980 --> 00:12:56,580
+like what?
+
+185
+00:12:56,580 --> 00:13:03,180
+What thinks I have to make the nest next, what word things and then make the de vector accordingly?
+
+186
+00:13:03,630 --> 00:13:07,140
+If I multiply to do this, I'll get this eight or.
+
+187
+00:13:08,270 --> 00:13:13,840
+So let's solve this just positively, if you don't want to solve this puzzle, we don't think about
+
+188
+00:13:13,840 --> 00:13:20,950
+it and then, uh, you dive into this hit ABC are some constraints right that are being given to us?
+
+189
+00:13:21,900 --> 00:13:23,730
+So as I said, first of all.
+
+190
+00:13:25,640 --> 00:13:28,700
+We will have this f matrix and we will take.
+
+191
+00:13:30,700 --> 00:13:33,790
+Many we keep on changing world, we need eight.
+
+192
+00:13:33,820 --> 00:13:36,520
+So here we have endless fun metrics.
+
+193
+00:13:36,820 --> 00:13:38,350
+Let's have fun here.
+
+194
+00:13:38,930 --> 00:13:41,650
+F1 minus one here, F1 minus two here.
+
+195
+00:13:42,920 --> 00:13:46,010
+And, yeah, reality, I have a friend one.
+
+196
+00:13:47,060 --> 00:13:47,780
+Offend.
+
+197
+00:13:50,530 --> 00:13:55,860
+I finally an F and minus one because I'm replacing and when and endless fun.
+
+198
+00:13:56,170 --> 00:13:58,870
+And it's I have the year eight or.
+
+199
+00:13:59,950 --> 00:14:01,270
+Instead of let's take one.
+
+200
+00:14:02,700 --> 00:14:04,380
+Welcome, come to know, why am I doing this?
+
+201
+00:14:06,540 --> 00:14:07,200
+So, yeah.
+
+202
+00:14:08,450 --> 00:14:16,250
+Now, let's make this symmetric case to make a friend +1, what I want is I want one find one that is
+
+203
+00:14:16,760 --> 00:14:18,590
+funny to have, but in not one.
+
+204
+00:14:19,460 --> 00:14:19,810
+I bet.
+
+205
+00:14:19,880 --> 00:14:21,140
+Not one I have.
+
+206
+00:14:21,440 --> 00:14:23,900
+I won't be into heaven.
+
+207
+00:14:24,350 --> 00:14:24,920
+Be into.
+
+208
+00:14:26,130 --> 00:14:29,500
+F minus one, the endorphin minus two, 20.
+
+209
+00:14:30,520 --> 00:14:32,070
+Which is equal to evolve and listen.
+
+210
+00:14:32,570 --> 00:14:36,250
+Hey, not I want Evan in the second place.
+
+211
+00:14:36,760 --> 00:14:38,350
+So what is I in the second place?
+
+212
+00:14:38,350 --> 00:14:40,420
+It will be simple one zero zero zero.
+
+213
+00:14:41,530 --> 00:14:43,680
+It was Veneman replied the second row with this.
+
+214
+00:14:43,860 --> 00:14:51,360
+I will defend and it is zero one zero zero, then it is zero zero one zero eight.
+
+215
+00:14:51,690 --> 00:14:52,050
+So.
+
+216
+00:14:53,080 --> 00:14:58,750
+Yes, I did happen, I defend in my innocence, but here goes whatever it is, I don't want to be carried
+
+217
+00:14:58,750 --> 00:14:59,260
+forward.
+
+218
+00:15:00,210 --> 00:15:06,060
+I do not want a foreign minister to come at this location late, so the last straw needs to be changed.
+
+219
+00:15:07,210 --> 00:15:09,910
+What will I have in the classroom?
+
+220
+00:15:10,510 --> 00:15:12,790
+I want mind later it will be zero zero zero one.
+
+221
+00:15:14,350 --> 00:15:19,660
+So this is my teammate, this family played this dramatic stuff in Matrix 11 plus again and again and
+
+222
+00:15:19,660 --> 00:15:23,590
+multiplied by again again, f in my f in bliss two and then again and so on.
+
+223
+00:15:24,280 --> 00:15:29,530
+If I wanted to find out for friend is fine, go to the power end and simply multiplied by by if you
+
+224
+00:15:29,530 --> 00:15:30,640
+don't hate.
+
+225
+00:15:31,410 --> 00:15:33,570
+And you can easily solve this thing.
+
+226
+00:15:34,410 --> 00:15:36,630
+Well, guys, I hope you are able to.
+
+227
+00:15:37,510 --> 00:15:40,450
+Go back with this and in the next video, we will.
+
+228
+00:15:40,720 --> 00:15:45,280
+So this is another example of a bigger installation, you can have various examples.
+
+229
+00:15:45,850 --> 00:15:46,120
+Eight.
+
+230
+00:15:46,540 --> 00:15:52,150
+And now we will see an efficient way of cutting this in the next year.
+
+231
+00:15:52,600 --> 00:15:53,770
+Well, thank you, guys.
+

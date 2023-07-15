@@ -1,0 +1,227 @@
+1
+00:00:00,910 --> 00:00:08,980
+The first homework in the office, the first one, I would like you to modify the lecture to bring to
+
+2
+00:00:08,980 --> 00:00:12,780
+the best from the starting A. zero to every other note.
+
+3
+00:00:13,460 --> 00:00:16,150
+So here is an example.
+
+4
+00:00:16,270 --> 00:00:22,660
+This is this is a graph as we see we have five nodes, so this is the usual reading style.
+
+5
+00:00:22,660 --> 00:00:25,630
+You read number of cases, nodes, edges and so on.
+
+6
+00:00:25,630 --> 00:00:32,620
+So we have your very direct one zero one two three and then two to three and then four to three.
+
+7
+00:00:34,120 --> 00:00:40,210
+OK, so if we started from I think I was going here from zero, right, yes, from zero, if we started
+
+8
+00:00:40,210 --> 00:00:45,310
+from zero, you can see here I'm listing the best from zero to one zero two zero three zero four.
+
+9
+00:00:45,640 --> 00:00:51,310
+So zero one is just one zero two, just two zero three zero one two three zero four.
+
+10
+00:00:51,320 --> 00:00:52,180
+There is nothing here.
+
+11
+00:00:53,440 --> 00:00:54,580
+And here is the bigger graph.
+
+12
+00:00:54,970 --> 00:01:00,910
+So we have my notes, so you'll print from one to eight when every note you would bring to the bath.
+
+13
+00:01:01,030 --> 00:01:03,490
+So how can you get you get the bath you need?
+
+14
+00:01:03,880 --> 00:01:08,740
+You will need some beer and tray and you would need to fill it somehow, and you need to print it somehow.
+
+15
+00:01:09,100 --> 00:01:11,440
+So this is the first task and it's an easy task.
+
+16
+00:01:11,740 --> 00:01:13,840
+Don't get scared from it.
+
+17
+00:01:15,780 --> 00:01:22,980
+In the second, the problem, we will solve their Grass Valley tree problem firmly in this problem,
+
+18
+00:01:22,980 --> 00:01:25,710
+it says you will be given a tree.
+
+19
+00:01:26,110 --> 00:01:30,840
+OK, so you'll be given a graph and would like to validate if it is true or not.
+
+20
+00:01:31,560 --> 00:01:38,580
+So the labels would be from zero to one and you would be given it just as usual in Lakewood is just
+
+21
+00:01:38,580 --> 00:01:40,830
+two values represented.
+
+22
+00:01:40,830 --> 00:01:47,610
+There represent the ages and it is actually an undirected tree and and values zero based.
+
+23
+00:01:48,000 --> 00:01:51,090
+You are literally true only if this is a valid tree.
+
+24
+00:01:51,360 --> 00:01:51,720
+OK?
+
+25
+00:01:52,310 --> 00:01:57,180
+If there are no silver loops or remitted edges, and I would like you to use fence, we definitely can
+
+26
+00:01:57,180 --> 00:02:03,990
+implement that with the defense believes a stick to using us as much as you can during their the homework
+
+27
+00:02:03,990 --> 00:02:04,680
+of this section.
+
+28
+00:02:06,270 --> 00:02:07,090
+So here is a graph.
+
+29
+00:02:07,110 --> 00:02:08,550
+Clearly, this is a tree.
+
+30
+00:02:08,970 --> 00:02:10,490
+Remember the tree?
+
+31
+00:02:10,500 --> 00:02:13,470
+There is only single base between every two nodes in the tree.
+
+32
+00:02:13,470 --> 00:02:14,580
+There are no cycles.
+
+33
+00:02:28,620 --> 00:02:35,970
+OK, so for that, in the second example, here we have, as you see, this isn't a graph, isn't a
+
+34
+00:02:35,970 --> 00:02:38,190
+tree because we have a cycle here.
+
+35
+00:02:41,640 --> 00:02:49,220
+And the third problem we would like to do the following we have, uh, let's see an example here, whether
+
+36
+00:02:49,650 --> 00:02:56,640
+you have a to the matrix and in these two metrics, you have the person and you have food and would
+
+37
+00:02:56,640 --> 00:02:59,970
+like to know that how many steps it will take to reach it.
+
+38
+00:03:00,250 --> 00:03:03,120
+So let's see there again the definition of the problem.
+
+39
+00:03:03,870 --> 00:03:09,330
+So you would like to to find the shortest birth to any any food cell.
+
+40
+00:03:09,600 --> 00:03:11,400
+OK, so how is The Matrix represented?
+
+41
+00:03:11,880 --> 00:03:15,300
+You will have only one star which represent your current location.
+
+42
+00:03:15,870 --> 00:03:18,180
+The hash is the cell food.
+
+43
+00:03:18,180 --> 00:03:20,640
+You would like to find any one of these multiple ones.
+
+44
+00:03:21,270 --> 00:03:24,750
+The zero means that this is a free space so you can move inside this.
+
+45
+00:03:24,750 --> 00:03:27,360
+Is this an x represent an obstacle.
+
+46
+00:03:27,810 --> 00:03:33,060
+You can move in the four normal directions, and you would like to alternate the shortest path to any
+
+47
+00:03:33,060 --> 00:03:33,960
+of the food cell.
+
+48
+00:03:34,260 --> 00:03:36,270
+So the the closest one to you?
+
+49
+00:03:36,600 --> 00:03:38,910
+Otherwise, you return minus one.
+
+50
+00:03:39,480 --> 00:03:40,680
+So this is the first example.
+
+51
+00:03:40,710 --> 00:03:41,670
+It is the second one.
+
+52
+00:03:41,940 --> 00:03:45,240
+The person here, as is, he cannot go to this one.
+
+53
+00:03:46,420 --> 00:03:51,340
+And the third example, the person can go here and here, so this is the shortest one here, so there
+
+54
+00:03:51,340 --> 00:03:58,220
+are two food cells, but we only need the shortest one, so please, yeah.
+
+55
+00:03:58,270 --> 00:04:00,280
+Read the full example and verify it.
+
+56
+00:04:02,000 --> 00:04:05,180
+And here here are more examples, please read and verify.
+
+57
+00:04:07,020 --> 00:04:07,590
+Yeah, that's sort.

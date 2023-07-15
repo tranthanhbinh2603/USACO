@@ -1,0 +1,368 @@
+1
+00:00:01,960 --> 00:00:02,620
+Hi, everyone.
+
+2
+00:00:02,710 --> 00:00:05,470
+So let us increase the complexity of the question a little bit.
+
+3
+00:00:05,939 --> 00:00:12,550
+And instead of saying two consecutive three consecutive votes, we are going to write for the general
+
+4
+00:00:12,550 --> 00:00:12,940
+case.
+
+5
+00:00:13,390 --> 00:00:19,510
+What is the expected number of coin flips that are needed to get and consecutive it took?
+
+6
+00:00:20,590 --> 00:00:27,040
+So the answer will obviously depend upon the value of and so we need to analyze this and find out answer,
+
+7
+00:00:27,040 --> 00:00:27,310
+OK.
+
+8
+00:00:27,640 --> 00:00:30,730
+So let's see how we can solve this problem.
+
+9
+00:00:31,030 --> 00:00:32,680
+So what?
+
+10
+00:00:32,680 --> 00:00:38,860
+Let's assume that the transit is equal to X and we draw the line and suppose we get a failure in the
+
+11
+00:00:38,860 --> 00:00:39,480
+first row.
+
+12
+00:00:39,520 --> 00:00:48,620
+OK, so the probability of getting a tail is one by two, and we would required X more troops to get
+
+13
+00:00:48,640 --> 00:00:49,840
+in consecutive if I took it.
+
+14
+00:00:50,200 --> 00:00:55,570
+So it would be half multiplied with X plus one because we have already wasted one through.
+
+15
+00:00:55,960 --> 00:00:56,980
+So this is one case.
+
+16
+00:00:57,550 --> 00:01:02,140
+Another case could be that in the first rule, we get ahead.
+
+17
+00:01:02,770 --> 00:01:04,690
+OK, the probability stuff.
+
+18
+00:01:05,200 --> 00:01:06,940
+But in the next rule, we don't get ahead.
+
+19
+00:01:07,060 --> 00:01:08,470
+So suppose we get a deal.
+
+20
+00:01:08,530 --> 00:01:12,880
+So that means we have wasted two throws and we would regret x more throws.
+
+21
+00:01:12,910 --> 00:01:13,180
+OK.
+
+22
+00:01:13,570 --> 00:01:17,820
+So in total, we would be needing X Plus two throws to begin to get.
+
+23
+00:01:18,340 --> 00:01:22,840
+It is one by two in the one by two in the X plus two.
+
+24
+00:01:23,590 --> 00:01:27,050
+Similarly, we may have we get ahead, we get ahead.
+
+25
+00:01:27,550 --> 00:01:28,840
+And now we get a failure.
+
+26
+00:01:29,170 --> 00:01:29,890
+We get a deal.
+
+27
+00:01:30,430 --> 00:01:38,890
+The probability is one by eight into x Exmoor throws, so it becomes explicitly so I can see one upon
+
+28
+00:01:39,070 --> 00:01:42,760
+one, divided by two by whether it is explicitly OK.
+
+29
+00:01:43,000 --> 00:01:46,750
+Similarly, to keep on going in the worst case, what is going to happen?
+
+30
+00:01:47,680 --> 00:01:52,930
+We are going to say that suppose we get n minus one heads, OK?
+
+31
+00:01:54,680 --> 00:02:01,910
+And the net experiment gave us a tale, OK, in this case, what is going to happen again?
+
+32
+00:02:02,090 --> 00:02:04,360
+It would be one divided by two days to devouring.
+
+33
+00:02:04,760 --> 00:02:09,770
+That means we have wasted and number two and number of troops and we have to do the experiment again,
+
+34
+00:02:09,770 --> 00:02:12,940
+which would expect X number of tries.
+
+35
+00:02:12,950 --> 00:02:22,730
+So it would be X Plus and we're going to plus one by two, raise the dividend into X plus and a rate.
+
+36
+00:02:23,300 --> 00:02:26,430
+Then there would be a case in which we get a success.
+
+37
+00:02:26,450 --> 00:02:32,270
+Suppose in all the interests, we get heads, what is the probability of this happening?
+
+38
+00:02:32,390 --> 00:02:38,180
+It would be one way to raise the and into how many trials we needed.
+
+39
+00:02:38,180 --> 00:02:40,270
+We actually needed a number of trials.
+
+40
+00:02:40,280 --> 00:02:41,450
+OK, so that would be.
+
+41
+00:02:41,840 --> 00:02:47,660
+And so it would be plus one way to raise the dividend in two and OK.
+
+42
+00:02:48,230 --> 00:02:55,970
+So this is the case where we get all the needs in a number of trials because this is where we just get
+
+43
+00:02:56,240 --> 00:02:57,040
+a success.
+
+44
+00:02:57,080 --> 00:03:03,210
+But otherwise, even if there is one failure, then this would be the series that we would be getting.
+
+45
+00:03:03,230 --> 00:03:05,360
+OK, now let us try to simplify this.
+
+46
+00:03:05,360 --> 00:03:13,940
+How we can solve this equation so we can say X equals what if I take X common out of all the dumps?
+
+47
+00:03:13,940 --> 00:03:23,320
+It would be like X in the one by two plus one by four plus one by eight up to up to one by two rated
+
+48
+00:03:23,320 --> 00:03:23,320
+to.
+
+49
+00:03:23,900 --> 00:03:24,230
+OK.
+
+50
+00:03:25,490 --> 00:03:25,770
+Less.
+
+51
+00:03:26,090 --> 00:03:28,220
+What are these terms?
+
+52
+00:03:28,430 --> 00:03:33,260
+One by two into this one by four, into this one by eight into this.
+
+53
+00:03:33,470 --> 00:03:44,990
+So it would be less one battle, less two by or less three by eight less four by 16 and so on.
+
+54
+00:03:45,440 --> 00:03:48,320
+Less divided by and in duration.
+
+55
+00:03:48,410 --> 00:03:50,420
+Well, then less this term.
+
+56
+00:03:50,750 --> 00:03:54,560
+This term will carry a gun as it is and divided by the rest of the power.
+
+57
+00:03:55,280 --> 00:04:00,640
+And now you may ask, how do we solve this equation, OK?
+
+58
+00:04:00,680 --> 00:04:06,230
+So if you now look carefully this equation that we are looking at?
+
+59
+00:04:09,460 --> 00:04:11,770
+This equation is a dramatic progression.
+
+60
+00:04:12,070 --> 00:04:12,920
+It's a job.
+
+61
+00:04:13,000 --> 00:04:16,329
+So you know how to find the sum of in terms of GP.
+
+62
+00:04:16,690 --> 00:04:17,440
+It can be done.
+
+63
+00:04:18,100 --> 00:04:19,060
+What about this?
+
+64
+00:04:20,260 --> 00:04:25,210
+So in the denominator, this is deep in the numerator.
+
+65
+00:04:25,300 --> 00:04:29,740
+This is AP and this kind of a series is called as AGP.
+
+66
+00:04:29,860 --> 00:04:30,160
+OK.
+
+67
+00:04:31,030 --> 00:04:38,560
+So what you need to you need to find out the sum of in terms of the ultimate big geometric progression
+
+68
+00:04:39,280 --> 00:04:41,890
+that is again doable, that can be done.
+
+69
+00:04:42,310 --> 00:04:44,230
+And this term is a singledom.
+
+70
+00:04:44,410 --> 00:04:46,840
+And as you can handle separately, OK?
+
+71
+00:04:47,110 --> 00:04:50,210
+So I'm not going to solve this deep before you.
+
+72
+00:04:50,230 --> 00:04:51,730
+I'm just going to write down the result.
+
+73
+00:04:52,120 --> 00:04:55,930
+So if you solve this equation, if you simplify, then what?
+
+74
+00:04:55,930 --> 00:05:02,560
+You're going to get it having to get the value of X storage to the IT and plus one minus two.
+
+75
+00:05:04,000 --> 00:05:04,780
+This is doable.
+
+76
+00:05:04,840 --> 00:05:05,110
+OK.
+
+77
+00:05:05,170 --> 00:05:07,510
+This is the final result that you would be getting.
+
+78
+00:05:08,110 --> 00:05:11,020
+And you can verify if you put any equal or two.
+
+79
+00:05:11,410 --> 00:05:16,870
+Then in the previous example, for two consecutive heads, we got an answer as it becomes two plus one
+
+80
+00:05:16,870 --> 00:05:17,620
+minus two.
+
+81
+00:05:18,100 --> 00:05:19,240
+That is eight minus two.
+
+82
+00:05:19,390 --> 00:05:20,490
+That is six.
+
+83
+00:05:21,030 --> 00:05:26,560
+Yes, we derived this on that six in the previous example as well.
+
+84
+00:05:27,070 --> 00:05:30,250
+And that's so this this is the correct result.
+
+85
+00:05:30,460 --> 00:05:32,250
+We have not sold AGP 40.
+
+86
+00:05:32,290 --> 00:05:33,760
+We have no ideology before you.
+
+87
+00:05:34,300 --> 00:05:40,750
+So if you go back to your school level, maths are class 12 months, I think, then you should be able
+
+88
+00:05:40,750 --> 00:05:43,750
+to definitely able to derive this result.
+
+89
+00:05:44,080 --> 00:05:48,230
+Otherwise, you can just skip and go to the next problems as well.
+
+90
+00:05:48,250 --> 00:05:48,520
+OK.
+
+91
+00:05:48,910 --> 00:05:50,590
+So that's all for this we do.
+
+92
+00:05:50,770 --> 00:05:51,760
+And thanks a lot.
+

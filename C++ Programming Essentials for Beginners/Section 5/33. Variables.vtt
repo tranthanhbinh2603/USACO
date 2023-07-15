@@ -1,0 +1,205 @@
+WEBVTT
+
+00:01.120 --> 00:03.670
+I in this lecture, we will talk about variables.
+
+00:04.060 --> 00:10.240
+Let's see what variables are so variables as you know, they are the buckets that can hold data.
+
+00:10.510 --> 00:17.740
+And now this data can have different types, so the buckets will also have different right to.
+
+00:17.740 --> 00:19.900
+Some buckets may require a larger space.
+
+00:20.050 --> 00:21.970
+Some buckets made it quite a lesser space.
+
+00:22.540 --> 00:24.160
+So us because I love this concept.
+
+00:24.520 --> 00:28.240
+But before that, let's talk a little bit more about the variables, OK?
+
+00:28.860 --> 00:32.520
+So when you're creating a variable, you give a name to that particular ribbon.
+
+00:32.530 --> 00:36.760
+So a name is just a label or a memory location.
+
+00:36.970 --> 00:42.730
+So, for example, you create a bucket called monks and you say, OK, so this creates a bucket.
+
+00:43.570 --> 00:47.920
+And when you're creating this bucket, you also need to define what kind of data this bucket can hold.
+
+00:48.130 --> 00:52.240
+So we will define or get this bucket can hold in indeed the type of data.
+
+00:53.230 --> 00:58.690
+So this is how you create a video, but then you also have some value that you can put inside that bucket.
+
+00:58.690 --> 01:01.570
+Maybe you want to store wind inside this bucket.
+
+01:01.630 --> 01:05.140
+So you will see OK, marks equals 220.
+
+01:05.500 --> 01:09.820
+Creating the bucket is one thing holding balloons and the bucket is another thing.
+
+01:10.090 --> 01:10.360
+OK.
+
+01:11.350 --> 01:13.600
+And third, third content storage.
+
+01:13.730 --> 01:15.360
+Where are these variables stored?
+
+01:16.000 --> 01:21.700
+They are stored in the part of memory that we call it azra that's stored in the random access memory,
+
+01:22.450 --> 01:24.850
+which is again a hardware unit on your system.
+
+01:25.810 --> 01:31.190
+The first thing is declaration announcing a variable at the beginning of the program.
+
+01:31.210 --> 01:37.480
+So here we're announcing that within this program, we would be using a bucket whose name is MOCS.
+
+01:37.630 --> 01:43.960
+So this thing is known as declarations, and we have declared a variable and we have told the compiler,
+
+01:43.960 --> 01:47.290
+you reserve some memory for a bucket called marks.
+
+01:48.340 --> 01:55.360
+And when you're creating variables, you also need to define certain rules or certain rules that define
+
+01:55.360 --> 01:58.770
+you have to name the variables according to those rules.
+
+01:58.780 --> 01:59.890
+OK, so those rules?
+
+02:00.910 --> 02:02.290
+We will see what those rules are.
+
+02:03.040 --> 02:07.060
+And last but not the listing assignment.
+
+02:07.570 --> 02:14.140
+So giving variable a value to this statement that we have written here, we are putting some value inside
+
+02:14.140 --> 02:15.040
+the variables bucket.
+
+02:15.100 --> 02:16.690
+So this is known as assignment.
+
+02:17.780 --> 02:20.870
+OK, this equal was known as assignment operator.
+
+02:21.470 --> 02:27.350
+So this is how you put something into the bucket or you assign some value to that particular bucket.
+
+02:28.430 --> 02:32.720
+Now let us discuss the various rules that you can follow.
+
+02:33.410 --> 02:37.250
+You will have to follow while naming the variables before naming a variable.
+
+02:37.250 --> 02:43.010
+We can use an uppercase or a lowercase letter, or we can use digits from one to nine.
+
+02:43.640 --> 02:50.540
+But the first character must be an underscore or a letter, or you cannot have a variable which starts
+
+02:50.540 --> 02:51.380
+from a number.
+
+02:51.410 --> 02:58.640
+For example, this one, this is a invalid variable name because it starts from a number on C++ is a
+
+02:58.640 --> 03:00.250
+strongly typed language.
+
+03:00.290 --> 03:01.160
+What does it mean?
+
+03:01.730 --> 03:05.060
+It basically means with every language or with every variable.
+
+03:05.060 --> 03:12.680
+You need to define the type of that particular look so it cannot figure out automatically.
+
+03:15.030 --> 03:21.360
+You have to define what kind of market it is to every variable needs to be declared before using it.
+
+03:22.200 --> 03:27.950
+So you create a variable simple interest, student age, flawed student percentile and so on.
+
+03:27.950 --> 03:34.290
+And so every variable is declared and every variable is declared using a data type.
+
+03:35.340 --> 03:38.430
+And very soon we'll discuss about the rapes as well, right?
+
+03:39.330 --> 03:43.020
+So that's all what you need to know about variables.
+
+03:43.650 --> 03:49.540
+And yes, there is one more thing that initialization when you just declare the variables and you don't
+
+03:49.540 --> 03:51.510
+store it anyway inside that particular area.
+
+03:51.630 --> 03:56.130
+So you simply say, I'm declaring a variable B at this point.
+
+03:56.160 --> 03:58.980
+This B is going to store garbage.
+
+03:59.250 --> 04:00.210
+So what is garbage?
+
+04:01.050 --> 04:04.830
+By default, the memory is going to have some random collection of bits.
+
+04:05.490 --> 04:08.430
+And this can can be can, can be any random number.
+
+04:08.490 --> 04:10.860
+So we call this any random number as garbage.
+
+04:11.790 --> 04:18.120
+So by default, the variables, if they're not initialized, if they're not assigned any value, they
+
+04:18.120 --> 04:19.140
+will contain garbage.
+
+04:19.860 --> 04:24.990
+We can also assign a specific value from the moment when the variable is created.
+
+04:25.000 --> 04:31.830
+So this is known as initialization of the variable, for example, this at this point, we are declaring
+
+04:31.830 --> 04:35.040
+the variable and at the same time, we are assigning it some value.
+
+04:35.700 --> 04:41.640
+So doing this declaration plus assignment at the same time, it is also known as initialization of the
+
+04:41.640 --> 04:47.290
+variable because we are defining what this variable is going to hold initially.
+
+04:47.690 --> 04:50.940
+This is known as initialization of the variable.
+
+04:51.870 --> 04:57.240
+So I hope you have understood these concepts related to the variables, and in the next lecture, we'll
+
+04:57.240 --> 04:58.680
+talk about the rapes.

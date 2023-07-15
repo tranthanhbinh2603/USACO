@@ -1,0 +1,294 @@
+0
+1
+00:00:00,970 --> 00:00:06,820
+Let's solve the third problem. We would like to make a count sort on a string, but mainly on the first
+1
+
+2
+00:00:06,820 --> 00:00:07,210
+letter.
+2
+
+3
+00:00:07,600 --> 00:00:09,280
+The implementation isn't tough at all.
+3
+
+4
+00:00:09,400 --> 00:00:13,810
+It just needs some skills from you to be more generic.
+4
+
+5
+00:00:14,410 --> 00:00:14,740
+So
+5
+
+6
+00:00:15,780 --> 00:00:19,560
+we know the count sort is all about the frequency, so the frequency of the values.
+6
+
+7
+00:00:20,010 --> 00:00:24,990
+Now previously, value seven repeated three times, we say seven three.
+7
+
+8
+00:00:25,830 --> 00:00:26,370
+That's it.
+8
+
+9
+00:00:26,850 --> 00:00:30,270
+Now character 'X' is repeated in seven different words.
+9
+
+10
+00:00:30,660 --> 00:00:33,000
+We just cannot say 'X' is seven.
+10
+
+11
+00:00:33,210 --> 00:00:33,930
+We need them.
+11
+
+12
+00:00:34,290 --> 00:00:35,850
+So this will take us from, instead of
+12
+
+13
+00:00:35,850 --> 00:00:37,080
+the vector of integer,
+13
+
+14
+00:00:37,440 --> 00:00:42,640
+to vector of vector of string, in terms of the previous one.
+14
+
+15
+00:00:42,660 --> 00:00:48,450
+If we have seven strings, we will have here a vector of seven strings. And a very similar to the count sort,
+15
+
+16
+00:00:48,460 --> 00:00:52,380
+instead of having like a maximum of maybe 500 as a value,
+16
+
+17
+00:00:52,590 --> 00:00:58,950
+we know there are maximum 26 letters, so now we go and iterate on the strings one by one,
+17
+
+18
+00:00:59,520 --> 00:01:01,290
+and take the first letter of the string.
+18
+
+19
+00:01:01,290 --> 00:01:04,380
+Let's say we have a string like "bcd".
+19
+
+20
+00:01:04,740 --> 00:01:07,410
+So 'b' - 'a' is just one.
+20
+
+21
+00:01:09,100 --> 00:01:15,280
+So now we say that letters to strings of one, please push back for me this "bcd". Once you are done
+21
+
+22
+00:01:15,280 --> 00:01:22,600
+with that, we have a count sort representation, but on strings. If you observed here, the strings
+22
+
+23
+00:01:22,600 --> 00:01:28,810
+are added here in order. Now, we would like to print them. In a very similar way, we iterate on our maximum
+23
+
+24
+00:01:28,810 --> 00:01:29,170
+range.
+24
+
+25
+00:01:29,590 --> 00:01:36,160
+And instead of iterating with a frequency, we iterate on the string list itself, and start to get one
+25
+
+26
+00:01:36,160 --> 00:01:40,420
+by one. As we are pushing back in order and getting in order,
+26
+
+27
+00:01:40,570 --> 00:01:46,780
+this is actually a stable algorithm. In the second one, I'm just making it a little bit harder for you
+27
+
+28
+00:01:47,650 --> 00:01:50,470
+by focusing on two letters instead of one.
+28
+
+29
+00:01:50,950 --> 00:01:57,100
+So the first thing here, implementation-wise, instead of having only 26 letters, how many now,
+29
+
+30
+00:01:57,610 --> 00:02:00,820
+in general? We have twenty-six choices for the first one,
+30
+
+31
+00:02:00,850 --> 00:02:01,330
+twenty-six
+31
+
+32
+00:02:01,330 --> 00:02:02,590
+choices for the second one.
+32
+
+33
+00:02:02,830 --> 00:02:06,070
+This is actually like 26*26 choices, right?
+33
+
+34
+00:02:06,670 --> 00:02:14,440
+If I told you, if this is harder for you, you can always think in normal numbers, something like
+34
+
+35
+00:02:15,030 --> 00:02:20,320
+a number of two digits is ranging from zero up to 99, which are 100 elements.
+35
+
+36
+00:02:20,590 --> 00:02:25,990
+What are these hundred elements? 10*10, ten for the first digit, and ten for the second digit.
+36
+
+37
+00:02:26,350 --> 00:02:28,810
+So in a similar way, we have up to two letters.
+37
+
+38
+00:02:28,870 --> 00:02:36,730
+The first one is twenty-six, the second one is twenty-six, we have overall 26*26 letters. So now, we have this
+38
+
+39
+00:02:36,730 --> 00:02:38,320
+range as number of elements.
+39
+
+40
+00:02:39,320 --> 00:02:45,740
+And we have here the printing, nothing new. Now, the question is, if I have two letters, how to
+40
+
+41
+00:02:45,740 --> 00:02:51,870
+convert them to a number from zero to 26*26 -1?
+41
+
+42
+00:02:51,890 --> 00:02:53,810
+How can I convert them to this range?
+42
+
+43
+00:02:54,260 --> 00:03:00,200
+This is where my function here comes, I take the first character,
+43
+
+44
+00:03:00,200 --> 00:03:03,140
+convert it to digit, second character convert it to digit.
+44
+
+45
+00:03:03,380 --> 00:03:06,380
+Then, with this equation, we convert it here.
+45
+
+46
+00:03:07,280 --> 00:03:08,960
+There is two ways to understand that one.
+46
+
+47
+00:03:09,320 --> 00:03:15,590
+First, how do you convert a 2D array to flat index?
+47
+
+48
+00:03:15,650 --> 00:03:21,290
+Remember, if I told you we have an array that's 3*5, I tell you to flatten it to an array of
+48
+
+49
+00:03:21,680 --> 00:03:24,070
+15 elements.
+49
+
+50
+00:03:24,800 --> 00:03:32,000
+Remember the equation, you say i, which is the row, times the number of columns, plus the j. This is the equation
+50
+
+51
+00:03:32,000 --> 00:03:32,750
+that you converted.
+51
+
+52
+00:03:32,780 --> 00:03:33,950
+This is exactly the same.
+52
+
+53
+00:03:34,640 --> 00:03:38,120
+Another logic is just you think in the two digits that we were mentioning.
+53
+
+54
+00:03:38,600 --> 00:03:44,630
+If I have something like sixty-seven, and I only have the six and the seven, how can you convert it?
+54
+
+55
+00:03:44,630 --> 00:03:46,700
+You say 6 * 10 + 7.
+55
+
+56
+00:03:47,000 --> 00:03:48,110
+This is how you convert it.
+56
+
+57
+00:03:48,440 --> 00:03:53,660
+So the moral of that we were just trying to build a function that converts for us from a string
+57
+
+58
+00:03:54,050 --> 00:03:57,110
+to an integer, so that we can use it here in the array.
+58
+
+59
+00:03:57,350 --> 00:03:58,760
+I hope you learned a nice trick.

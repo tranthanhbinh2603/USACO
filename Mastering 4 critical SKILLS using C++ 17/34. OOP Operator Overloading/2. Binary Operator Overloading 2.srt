@@ -1,0 +1,199 @@
+1
+00:00:00,960 --> 00:00:06,720
+And this video I'd like to highlight on more possibilities for the operator plus one, we are using
+
+2
+00:00:06,720 --> 00:00:08,620
+it as a nonmember function.
+
+3
+00:00:08,850 --> 00:00:10,170
+So now we have this operator.
+
+4
+00:00:10,170 --> 00:00:15,080
+Plus here, if you look to the first three function, they are all named operator Bloss.
+
+5
+00:00:15,390 --> 00:00:21,610
+But like any operator, like any function overloading you can have, you have to have different parameters.
+
+6
+00:00:21,930 --> 00:00:24,900
+So here we have the previous to my bare objects.
+
+7
+00:00:25,290 --> 00:00:31,070
+Now we have here Meyerbeer objects an integer and we have an integer and Meyerbeer function.
+
+8
+00:00:31,410 --> 00:00:38,230
+So it seems as if we're trying to provide some integer to interact with the operator overloading itself.
+
+9
+00:00:38,550 --> 00:00:43,360
+So the logic here, if we want to add an X, we are adding it to the first and to the second.
+
+10
+00:00:43,920 --> 00:00:45,570
+Now we have X and the number.
+
+11
+00:00:45,600 --> 00:00:50,790
+You can write it in the same way, but be smart and do not just duplicate your code.
+
+12
+00:00:51,000 --> 00:00:56,850
+You can just switch the you want to see one plus X to be the same call as here.
+
+13
+00:00:57,300 --> 00:01:03,150
+As you see, you can also have the same like operator multiplication or subtraction and so on.
+
+14
+00:01:03,840 --> 00:01:10,070
+So now this again the same for function, but we know just in a more visible way.
+
+15
+00:01:10,440 --> 00:01:14,120
+So let's see the main function to get a sense of what is happening here.
+
+16
+00:01:14,610 --> 00:01:18,170
+I have defined the beer one beer to like, be sorry.
+
+17
+00:01:18,180 --> 00:01:19,410
+Here is a normal beer.
+
+18
+00:01:21,080 --> 00:01:27,360
+Oh, by the way, the operator minus here is taking my beer class and taking normal beer, beer, beer
+
+19
+00:01:27,360 --> 00:01:28,070
+variable from.
+
+20
+00:01:30,190 --> 00:01:35,350
+So now here we say that Z one is defined as X plus five.
+
+21
+00:01:35,390 --> 00:01:42,450
+Now wait, it isn't like X Y and both of them are De beers, they are X which is the object and five
+
+22
+00:01:42,450 --> 00:01:43,410
+which is an integer.
+
+23
+00:01:43,740 --> 00:01:49,770
+When you see here you find here the object and you find here the, the, the X.
+
+24
+00:01:50,100 --> 00:01:56,910
+So what's happening is that this function X plus five is calling this guy to, to use it.
+
+25
+00:01:57,570 --> 00:02:01,680
+Now on the on the other side here, looking to.
+
+26
+00:02:03,840 --> 00:02:09,860
+Who looking to three times X, OK, three times X.
+
+27
+00:02:10,770 --> 00:02:12,270
+Let's go back one step to here.
+
+28
+00:02:12,300 --> 00:02:20,340
+If I try to do five plus X within these cases, you notice that it needs an integer plus my beer.
+
+29
+00:02:20,580 --> 00:02:23,080
+But there is nothing here like integer and my beer.
+
+30
+00:02:23,100 --> 00:02:24,630
+So this will be a competition.
+
+31
+00:02:25,530 --> 00:02:31,230
+Now the other side we have here something to say three times X, so it needs an operator overloading
+
+32
+00:02:31,230 --> 00:02:34,320
+the ticket and integer in the beginning and an object of three.
+
+33
+00:02:34,500 --> 00:02:36,780
+So we see here here is operator multiplication.
+
+34
+00:02:37,050 --> 00:02:39,720
+It is X as an integer and here is the object.
+
+35
+00:02:40,110 --> 00:02:45,750
+If I try to say six times the three, this would make a comparison error because it can search for an
+
+36
+00:02:45,750 --> 00:02:49,830
+X object times and then times integer but doesn't exist.
+
+37
+00:02:50,550 --> 00:02:58,650
+We say here also X minus be so this need a minus operator that has an X in the left side and has B in
+
+38
+00:02:58,650 --> 00:02:59,300
+the right side.
+
+39
+00:02:59,460 --> 00:03:04,380
+So we have here we have minus and the left side is integer and the right side is.
+
+40
+00:03:07,580 --> 00:03:17,490
+It's actually a bit like like this is a what could difference why we cannot make it.
+
+41
+00:03:17,520 --> 00:03:23,580
+Let's say I would like to support something like three times X using the member function.
+
+42
+00:03:23,650 --> 00:03:29,460
+We cannot do that Y because the member function needs on the left side an object.
+
+43
+00:03:29,710 --> 00:03:35,040
+What I say X plus five X here is an object calling function, that operator Bloss.
+
+44
+00:03:35,470 --> 00:03:40,890
+But if I say three times X, what is code and times A here with no, we cannot say it's the same.
+
+45
+00:03:40,900 --> 00:03:41,940
+That extends three.
+
+46
+00:03:41,980 --> 00:03:45,030
+This is different to different operator version.
+
+47
+00:03:45,310 --> 00:03:48,460
+So the compiler would not be able to find some object representing three.
+
+48
+00:03:48,460 --> 00:03:50,290
+We will know in the future how this might happen.
+
+49
+00:03:50,650 --> 00:03:57,160
+But for now, what's more important here is if you would like to submit to something that is more flexible
+
+50
+00:03:57,340 --> 00:04:02,800
+in terms of the appearance of the operators, then they num number function is the way to go.

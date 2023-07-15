@@ -1,0 +1,134 @@
+0
+1
+00:00:01,460 --> 00:00:07,280
+In this program, we will.. In this homework will solve the Tic-Tac-Toe some people, consider it a project,
+1
+
+2
+00:00:07,920 --> 00:00:10,400
+but this is again a simple assignment,
+2
+
+3
+00:00:10,400 --> 00:00:12,710
+so don't like don't be cheated by that.
+3
+
+4
+00:00:13,070 --> 00:00:17,240
+And it will be challenging for you because I would like you to develop it in a smart way.
+4
+
+5
+00:00:17,930 --> 00:00:22,220
+We would like to develop a tic tac toe, but it will not be three times three,
+5
+
+6
+00:00:22,520 --> 00:00:24,590
+it will be N times N, for simplicity here,
+6
+
+7
+00:00:24,650 --> 00:00:27,620
+let's say N maximum is nine, but you can do it in any number,
+7
+
+8
+00:00:28,160 --> 00:00:36,050
+you will are run a game of two users who will keep playing till one of them win or tie eventually, print
+8
+
+9
+00:00:36,080 --> 00:00:38,600
+to the grid after each round.
+9
+
+10
+00:00:39,120 --> 00:00:40,790
+We started with three, for example,
+10
+
+11
+00:00:40,970 --> 00:00:43,790
+the user write one and one, so we put an X for him,
+11
+
+12
+00:00:44,030 --> 00:00:50,090
+now it is o turn three and one we print for him here the O here, two and the two we print for him
+12
+
+13
+00:00:50,090 --> 00:00:52,460
+the X at the two and two.
+13
+
+14
+00:00:53,150 --> 00:00:54,470
+Now two and one
+14
+
+15
+00:00:54,470 --> 00:01:01,250
+we print it here, we put it at two and one for the O, the user now entered two and two which is already
+15
+
+16
+00:01:01,250 --> 00:01:01,580
+there.
+16
+
+17
+00:01:01,580 --> 00:01:03,020
+So we say invalid
+17
+
+18
+00:01:03,020 --> 00:01:05,330
+try again, five and five, again, invalid.
+18
+
+19
+00:01:05,570 --> 00:01:08,660
+Three and three is good position and X just won the game.
+19
+
+20
+00:01:09,470 --> 00:01:15,530
+You can write this code to be a very ugly one, writing a lot of for loops to verify the rows and verifying
+20
+
+21
+00:01:15,530 --> 00:01:17,270
+the columns and defining the diagonals,
+21
+
+22
+00:01:17,570 --> 00:01:23,210
+I would like you to try to use the direction array track to implement this code in a very nice and smart
+22
+
+23
+00:01:23,210 --> 00:01:23,480
+way.
+23
+
+24
+00:01:23,870 --> 00:01:26,720
+If you found this hard, maybe start with the ugly way,
+24
+
+25
+00:01:26,930 --> 00:01:31,070
+just write a bunch of loops to verify all of the rows, all of the columns out of the diagonals for
+25
+
+26
+00:01:31,070 --> 00:01:31,880
+the winning cases.
+26
+
+27
+00:01:32,270 --> 00:01:37,640
+And after that, maybe try to make it better or check out my solution. That's all.

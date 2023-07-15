@@ -1,0 +1,404 @@
+0
+1
+00:00:01,230 --> 00:00:06,660
+In the previous videos, we learned about the while-loops and how they make us make more iterations.
+1
+
+2
+00:00:07,110 --> 00:00:09,750
+the for loops is the same concept
+2
+
+3
+00:00:09,750 --> 00:00:12,060
+Exactly, just using a different syntax.
+3
+
+4
+00:00:12,240 --> 00:00:17,370
+So we are mainly learning how to make the same task using a more convenient syntax.
+4
+
+5
+00:00:17,670 --> 00:00:19,020
+The for-loop goes as following,
+5
+
+6
+00:00:19,320 --> 00:00:21,060
+But remember, first, the while loop,
+6
+
+7
+00:00:21,300 --> 00:00:23,420
+We had something to do, the initialization,
+7
+
+8
+00:00:23,670 --> 00:00:29,480
+We have a condition, we have a body code, and then we have an incrementing step. in the for-loop,
+8
+
+9
+00:00:29,490 --> 00:00:32,490
+We are going to rearrange them using the word "for" here.
+9
+
+10
+00:00:32,790 --> 00:00:35,760
+You open parenthesis, close it.
+10
+
+11
+00:00:36,000 --> 00:00:37,170
+there are two semicolons here.
+11
+
+12
+00:00:37,170 --> 00:00:42,180
+The initialization line goes here, the condition line goes here, the step line goes
+12
+
+13
+00:00:42,180 --> 00:00:42,420
+here,
+13
+
+14
+00:00:42,720 --> 00:00:48,300
+Then the code. as you see, it is more of an elegant way to organize the code.
+14
+
+15
+00:00:48,510 --> 00:00:54,270
+So, instead of having initialization, condition, and step, separated in this way on three lines,
+15
+
+16
+00:00:54,420 --> 00:00:57,600
+we now make all of them on the same line of code.
+16
+
+17
+00:00:57,750 --> 00:00:59,450
+Then here we put your whole body code.
+17
+
+18
+00:00:59,470 --> 00:01:06,870
+That's why typically guys are using for loops because it has a better organization for the code.
+18
+
+19
+00:01:07,170 --> 00:01:12,810
+It's important to notice that the step here is in the last column, but it has a specific order in being
+19
+
+20
+00:01:12,810 --> 00:01:15,260
+applied. let's see, a while-loop here.
+20
+
+21
+00:01:15,570 --> 00:01:19,630
+This is how we write a while loop to sum the numbers from 1 to 5.
+21
+
+22
+00:01:20,160 --> 00:01:24,150
+This is the corresponding one to write the code in the for-loop.
+22
+
+23
+00:01:24,450 --> 00:01:28,830
+So, here we have line 5 for initialization, integer x = 1.
+23
+
+24
+00:01:29,040 --> 00:01:31,260
+We here initialize integer x = 1.
+24
+
+25
+00:01:31,620 --> 00:01:34,200
+We have the condition here in line number 8.
+25
+
+26
+00:01:34,440 --> 00:01:35,400
+We have the condition here
+26
+
+27
+00:01:35,400 --> 00:01:40,860
+number 7, we have the increment here ++ X, we have it here, and then we have the body.
+27
+
+28
+00:01:41,100 --> 00:01:44,550
+If you look to it, it is more shorter and more convenient.
+28
+
+29
+00:01:44,880 --> 00:01:48,070
+So we put the initialization, condition, step in the line code.
+29
+
+30
+00:01:48,300 --> 00:01:52,810
+It is important to notice that the tracing is the same as while-loop.
+30
+
+31
+00:01:52,860 --> 00:01:54,660
+It could be a bit tricky when you look at it.
+31
+
+32
+00:01:54,930 --> 00:01:57,540
+So here is how the the code goes.
+32
+
+33
+00:01:57,930 --> 00:02:04,610
+The for loop finds here the initialization, then goes to the condition, then directly goes to the body.
+33
+
+34
+00:02:04,650 --> 00:02:05,430
+This is the trick.
+34
+
+35
+00:02:05,910 --> 00:02:09,300
+It isn't like you go to initialization, body, step.
+35
+
+36
+00:02:09,360 --> 00:02:11,220
+No, it's the same logic as the while-loop.
+36
+
+37
+00:02:11,490 --> 00:02:13,380
+So it is initialization,
+37
+
+38
+00:02:13,710 --> 00:02:22,830
+then condition, then body, then step, and then go to condition, body, step, condition, body, step,
+38
+
+39
+00:02:22,830 --> 00:02:24,150
+condition, body, step.
+39
+
+40
+00:02:24,390 --> 00:02:25,920
+The same flow as the while-loop
+40
+
+41
+00:02:25,920 --> 00:02:26,520
+Exactly.
+41
+
+42
+00:02:26,760 --> 00:02:30,090
+So don't make it like any condition, step.
+42
+
+43
+00:02:30,120 --> 00:02:30,310
+No,
+43
+
+44
+00:02:30,350 --> 00:02:32,550
+it is condition, body, step.
+44
+
+45
+00:02:32,550 --> 00:02:34,170
+Notice this style.
+45
+
+46
+00:02:37,350 --> 00:02:39,150
+What if we would like to do nested loops
+46
+
+47
+00:02:39,450 --> 00:02:42,480
+Using for loops? it is the same exact logic.
+47
+
+48
+00:02:42,480 --> 00:02:46,020
+Let's say that we are reading T test cases, for every 
+48
+
+49
+00:02:46,020 --> 00:02:52,050
+test case, we are printing the sum from 1 to N. So now we need one for-loop to iterate
+49
+
+50
+00:02:52,050 --> 00:02:56,470
+over 1 to N for the test cases, and another for-loop for the submission.
+50
+
+51
+00:02:56,730 --> 00:02:57,930
+This is how you can do it.
+51
+
+52
+00:02:58,440 --> 00:03:04,790
+You are here reading the number of test cases, then you are iterating from t = 0, till t < T.
+52
+
+53
+00:03:04,840 --> 00:03:10,620
+So the logic goes this way for the number of test cases. inside
+53
+
+54
+00:03:10,620 --> 00:03:11,430
+the test case,
+54
+
+55
+00:03:11,430 --> 00:03:17,200
+You are reading a number, then you are making a for loop to iterate from number one to number N
+55
+
+56
+00:03:17,220 --> 00:03:19,320
+doing this body logic, and doing this
+56
+
+57
+00:03:20,860 --> 00:03:27,130
+step. this way, you transfer from while-loops to the for-loops. please make sure that you are comfortable
+57
+
+58
+00:03:27,130 --> 00:03:28,440
+with that before proceeding more.
+58
+
+59
+00:03:30,640 --> 00:03:36,460
+We can have some body, empty parts in the for-loops, for example.
+59
+
+60
+00:03:36,730 --> 00:03:44,410
+If you removed the initialization part, and you remove the increment part, it's actually
+60
+
+61
+00:03:44,410 --> 00:03:46,870
+now become exactly the while-loop.
+61
+
+62
+00:03:47,110 --> 00:03:52,830
+So the for is just "while" here without initialization and without any step.
+62
+
+63
+00:03:52,840 --> 00:03:53,950
+So it's just very empty.
+63
+
+64
+00:03:54,730 --> 00:03:59,980
+Another funny case, if you removed all the three items, this is now the same as while
+64
+
+65
+00:03:59,980 --> 00:04:00,330
+true.
+65
+
+66
+00:04:00,790 --> 00:04:06,720
+So as you see, we can easily switch the for loops to make it more look like a while-loop.
+66
+
+67
+00:04:08,350 --> 00:04:11,590
+There are some common mistakes when it comes to the for-loops.
+67
+
+68
+00:04:11,950 --> 00:04:16,030
+The first, if you are doing something like "for (Int i = 0; i < 10)".
+68
+
+69
+00:04:16,030 --> 00:04:20,540
+This loop is iterating 10 times with index from 0 to 9.
+69
+
+70
+00:04:21,430 --> 00:04:27,400
+The second common mistake, and it's a killer one, if you put a semicolon here by mistake, then the
+70
+
+71
+00:04:27,400 --> 00:04:29,560
+body of the for-loop is just this semicolon.
+71
+
+72
+00:04:30,250 --> 00:04:34,660
+And then you are assuming that this line is going to be printed ten times, but it's just
+72
+
+73
+00:04:34,660 --> 00:04:35,530
+printed one time.
+73
+
+74
+00:04:35,540 --> 00:04:36,060
+What's wrong?
+74
+
+75
+00:04:36,610 --> 00:04:39,710
+The wrong Is this semicolon. The third
+75
+
+76
+00:04:39,710 --> 00:04:46,750
+common mistake is we have here our ++i step, for some reason the guy did i++ inside it.
+76
+
+77
+00:04:47,110 --> 00:04:50,290
+One very common mistake
+77
+
+78
+00:04:50,290 --> 00:04:51,160
+you forget about that
+78
+
+79
+00:04:51,160 --> 00:04:52,840
+You have it here or something like that.
+79
+
+80
+00:04:53,230 --> 00:04:57,850
+So make sure that you don't play with your step or do it in a careful way.
+80
+
+81
+00:04:58,840 --> 00:04:59,410
+That's it.

@@ -1,0 +1,219 @@
+0
+1
+00:00:01,200 --> 00:00:07,440
+Let's solve the second homework set in the first problem we need to print the diamond one and to
+1
+
+2
+00:00:07,440 --> 00:00:12,900
+be able to solve this problem, you need to focus on the relationship between the number of spaces and
+2
+
+3
+00:00:12,900 --> 00:00:15,310
+the number of stars per line.
+3
+
+4
+00:00:15,630 --> 00:00:18,890
+So let's first of all, start with recording some data.
+4
+
+5
+00:00:19,260 --> 00:00:25,080
+If you try to think about, say, N=4 in rule number one, we have three spaces then one
+5
+
+6
+00:00:25,080 --> 00:00:36,070
+star, then two spaces, three stars, then one space, five stars, then zero spaces, seven stars.
+6
+
+7
+00:00:36,420 --> 00:00:39,990
+So this is the overall statistics that we can find per row.
+7
+
+8
+00:00:40,860 --> 00:00:48,660
+Now, I would like to think about what kind of relationship
+8
+
+9
+00:00:48,660 --> 00:00:48,990
+we have so far? What kind of formula that we have?
+9
+
+10
+00:00:49,380 --> 00:00:53,250
+It seems the spaces are typically (N -  rows).
+10
+
+11
+00:00:53,470 --> 00:00:59,520
+For example, if you are in row one, observe here both of them always seem to be 4, one plus
+11
+
+12
+00:00:59,520 --> 00:01:00,390
+three is four.
+12
+
+13
+00:01:00,390 --> 00:01:03,870
+2+2=4, 3+1=4, and  0+4=4.
+13
+
+14
+00:01:04,020 --> 00:01:07,610
+So N - the current row is enough to get this one.
+14
+
+15
+00:01:07,800 --> 00:01:09,290
+And this is a straightforward one.
+15
+
+16
+00:01:09,840 --> 00:01:14,270
+The second one, if you are good in math, it should be easy also to get. Observe
+16
+
+17
+00:01:14,280 --> 00:01:17,630
+the equation is two times row - one, that's all.
+17
+
+18
+00:01:17,820 --> 00:01:24,270
+For example, if the row is three, 3 * 2 = 6, 6 - 1 = 5,Here 4 * 2 = 8
+18
+
+19
+00:01:24,270 --> 00:01:26,220
+8 - 1 = 7
+19
+
+20
+00:01:26,670 --> 00:01:32,820
+So based on these two equations, we can easily for every row, print according to that number of spaces
+20
+
+21
+00:01:33,060 --> 00:01:39,660
+and then according to that number of stars, so here we start our for loop and then according to that,
+21
+
+22
+00:01:39,930 --> 00:01:46,460
+we iterate once (N -  row) to print the spaces and then (2 * row - 1) to print the stars.
+22
+
+23
+00:01:47,220 --> 00:01:49,590
+Now to do the opposite triangle.
+23
+
+24
+00:01:49,710 --> 00:01:55,110
+All that we need is just mainly to switch, iterating from 1 to N to N to 1.
+24
+
+25
+00:01:55,620 --> 00:01:56,040
+That's all.
+25
+
+26
+00:01:56,040 --> 00:01:56,670
+Nothing else.
+26
+
+27
+00:01:58,480 --> 00:02:04,030
+For the second problem, we would like to print the special multiples here, so let's see how can
+27
+
+28
+00:02:04,030 --> 00:02:04,600
+we do that?
+28
+
+29
+00:02:05,260 --> 00:02:09,490
+It's very straightforward to do it.
+29
+
+30
+00:02:12,040 --> 00:02:16,930
+Let's see here in the first program here we are iterating.
+30
+
+31
+00:02:19,480 --> 00:02:20,870
+I think there are two solutions.
+31
+
+32
+00:02:20,890 --> 00:02:26,350
+... , let's start with that one.
+32
+
+33
+00:02:30,700 --> 00:02:38,410
+... , here we would like to figure out all the numbers that are divisible by
+33
+
+34
+00:02:38,410 --> 00:02:43,870
+8 or divisible by both 4 and the 3 to solve this problem, we are just iterating here from
+34
+
+35
+00:02:43,870 --> 00:02:44,200
+8.
+35
+
+36
+00:02:44,440 --> 00:02:46,750
+And then all of what we need is to do the condition.
+36
+
+37
+00:02:47,170 --> 00:02:48,520
+Is it divisible by 8?
+37
+
+38
+00:02:48,700 --> 00:02:49,270
+Yes.
+38
+
+39
+00:02:49,810 --> 00:02:52,810
+Or is it divisible by both 3 and 4?
+39
+
+40
+00:02:53,050 --> 00:02:53,620
+Yes.
+40
+
+41
+00:02:53,620 --> 00:02:54,370
+Then we are done.
+41
+
+42
+00:02:54,380 --> 00:02:56,320
+So if these two conditions are achieved.
+42
+
+43
+00:02:56,590 --> 00:02:58,020
+We are done with that.
+43
+
+44
+00:02:58,360 --> 00:03:00,510
+This is mainly all what we need in this simple problem.

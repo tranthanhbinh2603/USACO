@@ -1,0 +1,319 @@
+1
+00:00:00,900 --> 00:00:04,770
+One of the interesting things are the subscript operator.
+
+2
+00:00:05,190 --> 00:00:11,300
+So remember, we're using a string we used to exit with something like a race type.
+
+3
+00:00:11,550 --> 00:00:16,290
+So what would like to do that you simply override the operator on your code.
+
+4
+00:00:16,590 --> 00:00:20,440
+So you would like now to to override this operator overloading.
+
+5
+00:00:20,700 --> 00:00:22,320
+So what do you expect as a parameter?
+
+6
+00:00:22,470 --> 00:00:23,760
+You expect a position.
+
+7
+00:00:24,030 --> 00:00:29,790
+So if you would like now to provide some operator overloading for all my berglas such that if I said
+
+8
+00:00:30,090 --> 00:00:34,100
+X of zero it gives you a first number and X of one, it gives a second number.
+
+9
+00:00:34,230 --> 00:00:35,360
+It is how you define it.
+
+10
+00:00:35,640 --> 00:00:41,790
+So first, this is operator overloading for the subscript you say here, operator of operator overloading
+
+11
+00:00:41,790 --> 00:00:45,930
+the subscript and then you expect the parameter to be some position.
+
+12
+00:00:46,080 --> 00:00:48,090
+So you see, hear the integral position.
+
+13
+00:00:48,420 --> 00:00:51,580
+And as my work is to integrate, you are returning interior.
+
+14
+00:00:51,600 --> 00:00:55,320
+So this is dependent more on the function, on the object.
+
+15
+00:00:55,560 --> 00:00:56,730
+And then I have some logic.
+
+16
+00:00:56,730 --> 00:01:01,020
+I said if position equals zero, return of the first value or otherwise return the second value.
+
+17
+00:01:01,410 --> 00:01:04,240
+So now we can bring to the two values in a very normal way.
+
+18
+00:01:04,530 --> 00:01:05,400
+Very good so far.
+
+19
+00:01:05,850 --> 00:01:09,910
+Now, let's say that I would like to say X of zero equals seven.
+
+20
+00:01:10,260 --> 00:01:15,420
+So now if we have an array, we can print it, but we can say the value for the component here is going
+
+21
+00:01:15,420 --> 00:01:16,590
+to complain about that.
+
+22
+00:01:16,760 --> 00:01:17,280
+Why?
+
+23
+00:01:17,730 --> 00:01:19,650
+What is X zero zero?
+
+24
+00:01:19,680 --> 00:01:20,670
+Just like some value.
+
+25
+00:01:20,820 --> 00:01:24,480
+Imagine if you did integer X and then you say five equals X.
+
+26
+00:01:24,810 --> 00:01:29,730
+You know, the compiler will definitely complain because five isn't some memory in there isn't some
+
+27
+00:01:29,730 --> 00:01:33,970
+pointer address isn't some areas that you can just add something in it.
+
+28
+00:01:34,320 --> 00:01:36,800
+So actually zero here is just some integer value.
+
+29
+00:01:36,930 --> 00:01:38,620
+You cannot say five equals seven.
+
+30
+00:01:38,670 --> 00:01:41,260
+This would complete in a more formal terms.
+
+31
+00:01:41,280 --> 00:01:42,550
+This is good nifty value.
+
+32
+00:01:42,810 --> 00:01:48,870
+So if the value in a very informal way is some is some like points to address, there are some areas
+
+33
+00:01:48,870 --> 00:01:49,880
+that you can use it, but.
+
+34
+00:01:50,150 --> 00:01:50,420
+Right.
+
+35
+00:01:50,490 --> 00:01:56,550
+But it doesn't let the value and write value in like C++ 20 is is much more complicated.
+
+36
+00:01:56,560 --> 00:01:57,540
+That's a simplification.
+
+37
+00:01:57,840 --> 00:02:00,770
+But for now, this is just the left of does it have some address.
+
+38
+00:02:01,110 --> 00:02:04,660
+So if it if it isn't addressed, I could just put the value.
+
+39
+00:02:05,100 --> 00:02:10,650
+So now the question is, how can I provide something that allows me to put a value?
+
+40
+00:02:10,980 --> 00:02:16,280
+If I would like to put a value, I need some address referring to the first or the second event.
+
+41
+00:02:16,740 --> 00:02:20,070
+And this is where the second version of it comes to the C.
+
+42
+00:02:20,460 --> 00:02:21,710
+It's the same logic.
+
+43
+00:02:21,720 --> 00:02:22,380
+Exactly.
+
+44
+00:02:22,650 --> 00:02:24,700
+But you use here into your reference.
+
+45
+00:02:25,050 --> 00:02:31,530
+Now, if this function is returning, a value is returning value that has a reference to the first or
+
+46
+00:02:31,530 --> 00:02:35,280
+second is a specific reference in the in the class values.
+
+47
+00:02:35,700 --> 00:02:44,370
+So now if I say X zero X1, I can do that, but I can also write X zero, equal 10, x1 equal 20, because
+
+48
+00:02:44,610 --> 00:02:50,510
+this time it's in just like five or seven is actually a variable that we are looking to the memory for.
+
+49
+00:02:52,080 --> 00:02:59,690
+So this integral difference is it's what we call the value and the value and we can put some value inside
+
+50
+00:02:59,770 --> 00:02:59,870
+it.
+
+51
+00:03:00,360 --> 00:03:01,820
+Now there is an interesting thing here.
+
+52
+00:03:02,100 --> 00:03:05,280
+If you look to these two functions, they are very similar.
+
+53
+00:03:05,310 --> 00:03:08,390
+Remember, operator is just there is just a functioning.
+
+54
+00:03:08,670 --> 00:03:12,880
+So they are the same function name that we know that genotype doesn't matter.
+
+55
+00:03:12,900 --> 00:03:15,870
+So integrate into reference, they are different, but it doesn't matter.
+
+56
+00:03:16,490 --> 00:03:23,670
+How is it possible that we shouldn't have to function with the same name in a class there could differentiate
+
+57
+00:03:23,670 --> 00:03:26,280
+it is a contest if two function are the same.
+
+58
+00:03:26,280 --> 00:03:26,910
+Exactly.
+
+59
+00:03:27,030 --> 00:03:28,300
+But one of them was conscious.
+
+60
+00:03:28,500 --> 00:03:29,600
+This also is okay.
+
+61
+00:03:29,910 --> 00:03:36,870
+What will happen is if you have a if you if you, if you if the objects is going to call this going
+
+62
+00:03:36,990 --> 00:03:43,860
+to function, something that doesn't change the internal values and codes are going to be to call this
+
+63
+00:03:43,860 --> 00:03:51,480
+one and C++, the the, the, the ones that involve just the printing it is going to call this one,
+
+64
+00:03:51,480 --> 00:03:54,840
+which is the case, the one that involves changing.
+
+65
+00:03:54,840 --> 00:03:56,060
+It's going to be this one.
+
+66
+00:03:56,310 --> 00:04:00,280
+So this is relevant to the list, the privilege of principle specifically.
+
+67
+00:04:00,420 --> 00:04:05,490
+Are you printing then we call this function for you because you cannot you don't need to change your
+
+68
+00:04:05,490 --> 00:04:06,060
+variables.
+
+69
+00:04:06,390 --> 00:04:09,290
+Are you assigning this function for you?
+
+70
+00:04:09,540 --> 00:04:15,780
+So, OK, what if I just supervise the dysfunction here, this one in forty six and provided the kids
+
+71
+00:04:15,780 --> 00:04:20,220
+going to work well, but now even imprinting you are giving him an X's.
+
+72
+00:04:20,220 --> 00:04:22,610
+So this is improver from an obi perspective.
+
+73
+00:04:22,770 --> 00:04:28,590
+So although this function can work by itself, it is better to always provide the two Gourgeon one Kristofor
+
+74
+00:04:28,590 --> 00:04:30,420
+printing and one with our decongest.
+
+75
+00:04:31,050 --> 00:04:32,480
+OK, and interesting question here.
+
+76
+00:04:32,730 --> 00:04:36,360
+Can I define the subscript overeater outside the class?
+
+77
+00:04:36,370 --> 00:04:37,280
+The answer is no.
+
+78
+00:04:37,560 --> 00:04:45,240
+There are some operators in C++ that can only be defined inside the class and there are some operators
+
+79
+00:04:45,240 --> 00:04:48,620
+that cannot be overloaded either inside or outside the class.
+
+80
+00:04:49,020 --> 00:04:49,530
+That's it.

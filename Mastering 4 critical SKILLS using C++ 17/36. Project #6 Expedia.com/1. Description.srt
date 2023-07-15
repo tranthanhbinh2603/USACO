@@ -1,0 +1,543 @@
+1
+00:00:01,200 --> 00:00:06,630
+In this project, we will implement a simple version from Expedia, that website, so as you know,
+
+2
+00:00:06,890 --> 00:00:13,560
+the website is something that allow you to reserva flights, to reserve hotels, to reserve workers,
+
+3
+00:00:13,560 --> 00:00:18,620
+vacation packages that include a mix of all of that cruises and so on.
+
+4
+00:00:19,140 --> 00:00:27,000
+So you create an itinerary, itinerary and activity to come, which could be very complicated, for
+
+5
+00:00:27,000 --> 00:00:30,900
+example, which you can have several itineraries.
+
+6
+00:00:31,170 --> 00:00:37,550
+And each itinerary can consist of, say, two flights or four flights to OTES two cars and so on.
+
+7
+00:00:37,860 --> 00:00:43,140
+You can define very big, very big reservation or very big package.
+
+8
+00:00:43,830 --> 00:00:48,450
+OK, for now, for our first minimal viable product, something very simple.
+
+9
+00:00:48,760 --> 00:00:50,040
+Consider only two things.
+
+10
+00:00:50,040 --> 00:00:50,520
+Flights.
+
+11
+00:00:50,550 --> 00:00:52,680
+One way or transit and audience.
+
+12
+00:00:52,980 --> 00:00:56,940
+But remember that in reality we can have all of this bunch of choices.
+
+13
+00:00:57,240 --> 00:01:04,940
+So make a design that be very extensible and itinerary item can be the following.
+
+14
+00:01:04,950 --> 00:01:06,490
+Let's say its flight or hotel.
+
+15
+00:01:06,780 --> 00:01:08,190
+It would have its own cost.
+
+16
+00:01:08,490 --> 00:01:13,590
+And also it has some information, let's say that if you have a flight, it could have a request from
+
+17
+00:01:14,170 --> 00:01:16,680
+the selected flight and so on in an audit.
+
+18
+00:01:16,680 --> 00:01:19,730
+It can be the cost to be the total nice time, the price per night.
+
+19
+00:01:20,040 --> 00:01:25,110
+I would like to think about that in terms of logic, what might be the different logical items for a
+
+20
+00:01:25,110 --> 00:01:27,750
+flight for and for a OTRANTO on?
+
+21
+00:01:28,500 --> 00:01:33,570
+The total cost of it is the sum of every internal cost to have flight with one thousand dollars.
+
+22
+00:01:33,600 --> 00:01:37,110
+Another flight was five hundred dollars and hotel booking with one thousand dollars.
+
+23
+00:01:37,350 --> 00:01:43,620
+Then the total is two thousand five hundred dollars for simplicity in this project, do not use the
+
+24
+00:01:43,620 --> 00:01:48,420
+project is big enough and also use the mydata when convenient.
+
+25
+00:01:48,780 --> 00:01:54,090
+There are two types of of of users here, the admin and customer, but focus only on the customer part
+
+26
+00:01:54,450 --> 00:01:55,090
+in the bin.
+
+27
+00:01:56,910 --> 00:02:00,840
+Here is the here is the interface of the user.
+
+28
+00:02:02,130 --> 00:02:06,780
+The user would see something that allow him to log in or sign up.
+
+29
+00:02:08,970 --> 00:02:15,210
+When you say login was one, you exit the user, you start to say hello, the name and then user view.
+
+30
+00:02:15,570 --> 00:02:21,500
+Then you are allowed to view your profile, make an itinerary or list all your current ones or logout.
+
+31
+00:02:21,870 --> 00:02:23,910
+Let's let's make an itinerary.
+
+32
+00:02:24,270 --> 00:02:27,540
+It allows you here to add a flight or at a hotel or you are done.
+
+33
+00:02:28,230 --> 00:02:33,420
+So we can keep adding things like add a fly, then fly the no fly then and until then and until then
+
+34
+00:02:33,420 --> 00:02:36,900
+I am done this how you are making itinerary of several items.
+
+35
+00:02:37,200 --> 00:02:40,500
+So we are not telling him we would like to add an item here.
+
+36
+00:02:40,500 --> 00:02:41,340
+It's telling me
+
+37
+00:02:45,450 --> 00:02:47,070
+enter number and range one to four.
+
+38
+00:02:47,220 --> 00:02:49,830
+We say until then it started to say,
+
+39
+00:02:54,180 --> 00:02:55,050
+I got confused.
+
+40
+00:02:55,050 --> 00:02:58,530
+Sorry, we are here, we are here adding a flight number one.
+
+41
+00:02:58,950 --> 00:03:01,470
+It says from then which date.
+
+42
+00:03:01,470 --> 00:03:06,840
+To which date and then says how many others, how many children, how many infants you are providing
+
+43
+00:03:06,840 --> 00:03:07,710
+all of them together.
+
+44
+00:03:08,130 --> 00:03:13,740
+And after when I give all of this information, it lists it for me for flights to on Turkish Airlines
+
+45
+00:03:13,740 --> 00:03:15,810
+and to on on Air Canada lines.
+
+46
+00:03:16,080 --> 00:03:20,580
+So these are the information on your select one of one one out of four of these three trips.
+
+47
+00:03:20,910 --> 00:03:22,980
+So I selected this third line.
+
+48
+00:03:23,280 --> 00:03:26,700
+This data is Adami Data and creating in the project to make it easier for me.
+
+49
+00:03:26,910 --> 00:03:31,530
+So I selected the third the choice here, which is two hundred dollar trip.
+
+50
+00:03:32,640 --> 00:03:36,390
+Going back to the Choices menu, I said I would like to add an item.
+
+51
+00:03:36,780 --> 00:03:38,820
+So adding an order it say from date
+
+52
+00:03:44,090 --> 00:03:51,480
+this should be to date, not from date, and then saying the country and the city and adults and children.
+
+53
+00:03:51,480 --> 00:03:53,730
+So this is the input of my hotel reservation.
+
+54
+00:03:54,250 --> 00:03:58,950
+They are listed for me, all of these six choices for Ottens.
+
+55
+00:03:59,190 --> 00:04:04,980
+Also, this is the mydata and here, let's say interior view, six available units, the price per night
+
+56
+00:04:04,980 --> 00:04:11,550
+and the from to this, I made the choice of choice number four, which is this Marriott Hotel.
+
+57
+00:04:12,150 --> 00:04:13,440
+One, two, three, four.
+
+58
+00:04:13,440 --> 00:04:13,710
+Yes.
+
+59
+00:04:13,710 --> 00:04:17,310
+This Marriott Hotel, which costs 320 bed a single night.
+
+60
+00:04:19,640 --> 00:04:23,920
+Again, going back to the menu, I said, I'm done so so far, I added one flight and one autumn.
+
+61
+00:04:24,260 --> 00:04:30,040
+What I'm going to say which option today is a debit card or credit card I selected here, my debit card.
+
+62
+00:04:30,290 --> 00:04:36,490
+Then let's say here the money withdrawn successfully, reservation confirmed and itinerary resurvey.
+
+63
+00:04:36,860 --> 00:04:42,290
+This means that we are actually managed to reserve the flight and the hotel and we also managed to to
+
+64
+00:04:42,290 --> 00:04:45,020
+be the money for you from your bank accounts.
+
+65
+00:04:45,480 --> 00:04:53,360
+If I back to the top menu and say here list of my itinerary is going to list, the first one is the
+
+66
+00:04:53,530 --> 00:04:54,760
+preservation of the airline.
+
+67
+00:04:54,980 --> 00:04:57,020
+It is a reservation for the hotel.
+
+68
+00:04:57,170 --> 00:04:59,420
+It is the total cost of my reservation.
+
+69
+00:05:00,620 --> 00:05:05,750
+Now, there is a function requirements here about the FBI.
+
+70
+00:05:05,840 --> 00:05:08,330
+We discussed this before and we had some homework.
+
+71
+00:05:08,600 --> 00:05:13,110
+So it's now we're going to use it here, which is that Expedia as a website.
+
+72
+00:05:13,110 --> 00:05:15,540
+He knew nothing about the flights and the course, the details.
+
+73
+00:05:15,570 --> 00:05:17,000
+He doesn't have a database of that.
+
+74
+00:05:17,420 --> 00:05:18,680
+What happens in reality?
+
+75
+00:05:18,890 --> 00:05:27,560
+Expedia is going to contact the FBI is of the flights and all the hotels to get the information.
+
+76
+00:05:27,920 --> 00:05:33,020
+So we as developers, we typically visit their sites, check and check out their eyes and see what's
+
+77
+00:05:33,020 --> 00:05:34,490
+available to call it remotely.
+
+78
+00:05:35,360 --> 00:05:39,100
+Expedia, also Web site, would like to allow one payment strategy.
+
+79
+00:05:39,110 --> 00:05:41,730
+There are many, many payments in the eyes.
+
+80
+00:05:42,140 --> 00:05:46,130
+But but typically you have only a single one that's activated in your system.
+
+81
+00:05:46,610 --> 00:05:52,580
+So we are contacting separately eyes for the flights, but only a single eye for the payments.
+
+82
+00:05:53,090 --> 00:05:53,840
+At the moment.
+
+83
+00:05:53,840 --> 00:06:00,230
+Our system will have to support the systems, but just one of them will be active in usage.
+
+84
+00:06:02,940 --> 00:06:07,000
+Assume for simplicity that we have local ice to cool.
+
+85
+00:06:09,450 --> 00:06:11,940
+Yeah, just just you don't have to make really remote.
+
+86
+00:06:12,240 --> 00:06:13,560
+This is outside of the scope.
+
+87
+00:06:13,580 --> 00:06:14,700
+Just consider them locally.
+
+88
+00:06:14,700 --> 00:06:16,110
+Buy something that you are going to call.
+
+89
+00:06:17,080 --> 00:06:24,620
+When we investigated the FBI for the Air Canada FBI, we find some here, some customer info class.
+
+90
+00:06:24,930 --> 00:06:30,840
+We found the flight information like from and to the price and then the you go to get flights to get
+
+91
+00:06:30,840 --> 00:06:35,040
+vector of Air Canada flights you provide here it is in the function.
+
+92
+00:06:35,280 --> 00:06:37,200
+As you see, I'm sitting here some dummy data.
+
+93
+00:06:37,800 --> 00:06:39,540
+There is a function that they serve with the flight.
+
+94
+00:06:39,540 --> 00:06:42,230
+It takes the flight and the customer information retrieval.
+
+95
+00:06:42,540 --> 00:06:47,550
+So I'm assuming that this is going to just return true for now and also you can cancel it.
+
+96
+00:06:47,760 --> 00:06:55,320
+So, again, just consistent with the rule for the Turkish flight just now, they have also their own
+
+97
+00:06:55,320 --> 00:06:57,570
+API, which was their own naming.
+
+98
+00:06:58,320 --> 00:07:02,370
+For example, you can hear the function here are static discovered function.
+
+99
+00:07:02,670 --> 00:07:03,630
+You create an object.
+
+100
+00:07:03,630 --> 00:07:08,640
+And you said this kind of information, this is the available function.
+
+101
+00:07:08,640 --> 00:07:14,430
+It's just returning the flight here for the hotels in the Hilton room.
+
+102
+00:07:15,900 --> 00:07:18,630
+It has a struct for little room with the details of the room.
+
+103
+00:07:18,990 --> 00:07:21,270
+That function is static for searching the room.
+
+104
+00:07:21,270 --> 00:07:25,680
+It takes this information that the static data and return to them for the Marriott.
+
+105
+00:07:25,680 --> 00:07:29,310
+One would also had that it was static function function.
+
+106
+00:07:29,310 --> 00:07:34,290
+That takes some parameters, but they aren't necessarily in the same order embedding Marriott rooms
+
+107
+00:07:34,290 --> 00:07:35,790
+and returning it for us.
+
+108
+00:07:36,000 --> 00:07:42,660
+As you see multiple flights in the eyes, multiple authors eyes, they share similar things, but they
+
+109
+00:07:42,660 --> 00:07:44,940
+are using their own definitions.
+
+110
+00:07:46,370 --> 00:07:53,120
+For the payments, when you look to the people, we found that they have bibel credit card information
+
+111
+00:07:53,120 --> 00:07:59,390
+here and they have here like sit in and make payment, you pay money, you get that money and so on.
+
+112
+00:08:01,030 --> 00:08:09,600
+For the these guys here, they are using JSON information, so not the following.
+
+113
+00:08:09,700 --> 00:08:12,130
+They have this user info card info.
+
+114
+00:08:12,130 --> 00:08:12,910
+So far so good.
+
+115
+00:08:13,210 --> 00:08:18,280
+They have sort of these guys have a normal withdraw function that takes the money for you and return
+
+116
+00:08:18,280 --> 00:08:18,430
+it.
+
+117
+00:08:18,880 --> 00:08:23,290
+But the guys from the square, Ippei, which will have to support, also are taking just one query.
+
+118
+00:08:23,680 --> 00:08:26,610
+So they just don't they just think, where is something like that?
+
+119
+00:08:26,920 --> 00:08:29,470
+So this guy is taking the information here in his trucks.
+
+120
+00:08:29,650 --> 00:08:33,340
+But this guy would like a stringer that represented your son and you have to pass that adjustment to
+
+121
+00:08:33,340 --> 00:08:36,880
+get back the there's just an object information.
+
+122
+00:08:39,340 --> 00:08:45,100
+So thinking it needed business logic, let's say I created an itinerary of two flights and two cars.
+
+123
+00:08:45,520 --> 00:08:52,150
+I ask it to be and then we manage to confirm it the first flight and the first item, but then we fail
+
+124
+00:08:52,150 --> 00:08:53,940
+to reserve with the next flight.
+
+125
+00:08:54,280 --> 00:09:00,340
+In reality, what happens to us following one scenario is that Expedia is going to cancel your first
+
+126
+00:09:00,340 --> 00:09:06,280
+flight, cancel your first cancel its abatement, and then we cancel the flight and the hotel and cancel
+
+127
+00:09:06,280 --> 00:09:07,170
+the payment until you.
+
+128
+00:09:07,510 --> 00:09:13,600
+So the moral of that, if it's having a problem in the middle of the of an itinerary, we should cancel
+
+129
+00:09:13,600 --> 00:09:15,000
+all of what happened so far.
+
+130
+00:09:15,700 --> 00:09:19,930
+I would like you to think of what you're missing in the logic, in the eyes and whatever.
+
+131
+00:09:20,430 --> 00:09:24,280
+And this project is a huge space of polymorphism and zany choices.
+
+132
+00:09:24,490 --> 00:09:25,390
+So think twice.
+
+133
+00:09:25,410 --> 00:09:29,050
+My optimize school is like one thousand five hundred with some dummy data.
+
+134
+00:09:29,950 --> 00:09:31,480
+You will definitely go beyond that.
+
+135
+00:09:31,510 --> 00:09:32,500
+This is totally OK.
+
+136
+00:09:33,280 --> 00:09:33,820
+That's it.

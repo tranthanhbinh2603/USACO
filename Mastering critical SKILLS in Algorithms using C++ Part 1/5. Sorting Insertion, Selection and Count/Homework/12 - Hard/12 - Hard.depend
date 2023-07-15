@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1672756525 source:c:\users\binh\documents\project\usaco\mastering critical skills in algorithms using c++ part 1\5. sorting insertion, selection and count\homework\12 - hard\main.cpp
+	<iostream>
+	<vector>
+

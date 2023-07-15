@@ -1,0 +1,148 @@
+1
+00:00:00,930 --> 00:00:06,420
+Hi Everyone, so let us try to solve a problem using the rule of linearity of expectation.
+
+2
+00:00:06,840 --> 00:00:08,160
+So let us go through this question.
+
+3
+00:00:08,160 --> 00:00:10,650
+So it is a fair coin is true N times.
+
+4
+00:00:11,100 --> 00:00:14,010
+What is the expected number of heads that you can get to get?
+
+5
+00:00:14,460 --> 00:00:17,970
+So let us consider this experiment of flipping a coin N times.
+
+6
+00:00:18,390 --> 00:00:22,590
+And let us denote the outcomes of the experiment using this array.
+
+7
+00:00:23,070 --> 00:00:28,950
+So the first experiment outcome is let say E1, the second experiment is E2,E3 and up
+
+8
+00:00:28,950 --> 00:00:29,460
+to up to En.
+
+9
+00:00:30,780 --> 00:00:33,060
+So we want to calculate E(z).
+
+10
+00:00:33,420 --> 00:00:36,750
+That is nothing but E(e1)+E(e2)+E(e3)+
+
+11
+00:00:37,110 --> 00:00:43,020
+up to up to En. where E(i) what is E(i)?
+
+12
+00:00:43,410 --> 00:00:51,840
+So E(i) denote... it will take the value one if the ith experiment got the value head OK.
+
+13
+00:00:52,380 --> 00:00:54,300
+In the ith experiment, if you got a head.
+
+14
+00:00:54,480 --> 00:00:57,960
+This would be one or it would be zero if you got a failure.
+
+15
+00:00:58,050 --> 00:01:01,500
+OK, let's see if you got a tail.
+
+16
+00:01:01,920 --> 00:01:03,260
+So now what...
+
+17
+00:01:03,270 --> 00:01:13,230
+What we can say is that this can be written as E(e1)+E(e2)+E(e3)
+
+18
+00:01:14,630 --> 00:01:21,220
+And up to up to E(n). now we want to find out what is the value of E(ei)?
+
+19
+00:01:21,280 --> 00:01:24,800
+OK, what is the expected value of the ith experiment?
+
+20
+00:01:24,800 --> 00:01:32,060
+So we know that this can be written as Sigma xi nto pi, where Xi is the value that you got so Xi
+
+21
+00:01:32,060 --> 00:01:32,480
+is one.
+
+22
+00:01:32,840 --> 00:01:34,450
+What is the probability of getting a head?
+
+23
+00:01:34,460 --> 00:01:35,150
+That is half.
+
+24
+00:01:35,570 --> 00:01:38,570
+What is the probability of getting a tail? that is also half.
+
+25
+00:01:39,080 --> 00:01:41,840
+OK, so this comes out to be 0.5.
+
+26
+00:01:42,230 --> 00:01:46,160
+So what we can do is we can put each of these values as 0.5.
+
+27
+00:01:46,430 --> 00:01:50,780
+OK, so you are basically doing the summation of 0.5 how many times? N times.
+
+28
+00:01:51,300 --> 00:01:53,450
+This becomes N  into 0.5.
+
+29
+00:01:54,050 --> 00:01:59,740
+And this is equal to N/2 and you can see that this is the probability.
+
+30
+00:02:00,200 --> 00:02:02,150
+This is the probability of getting...
+
+31
+00:02:04,370 --> 00:02:06,140
+This is the expected number of heads.
+
+32
+00:02:06,320 --> 00:02:10,259
+If you throw.... throw of... throw of fair coin N times.
+
+33
+00:02:10,280 --> 00:02:12,830
+So basically it is half of them would be heads.
+
+34
+00:02:13,340 --> 00:02:16,640
+And that is also seems true
+
+35
+00:02:16,640 --> 00:02:21,740
+Logically, because of half the number of times you are, you can expect heads OK.
+
+36
+00:02:22,310 --> 00:02:24,870
+And I hope you understood this problem as well.
+
+37
+00:02:25,220 --> 00:02:26,720
+And that's all for this video.
+

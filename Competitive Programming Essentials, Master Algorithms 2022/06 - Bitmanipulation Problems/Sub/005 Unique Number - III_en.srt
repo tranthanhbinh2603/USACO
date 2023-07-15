@@ -1,0 +1,384 @@
+1
+00:00:01,410 --> 00:00:06,230
+Hi everyone. In this lecture we're going to solve this problem, unique number 3N+1.
+
+2
+00:00:06,240 --> 00:00:12,660
+okay, so this bit different from the problems that we have seen where the repeating numbers were
+
+3
+00:00:12,900 --> 00:00:19,740
+coming two times but in this problem, the number that is repeating is coming tries except one number,
+
+4
+00:00:19,830 --> 00:00:21,390
+which is coming only once.
+
+5
+00:00:21,390 --> 00:00:21,660
+OK?
+
+6
+00:00:22,140 --> 00:00:24,270
+So let us look at an example.
+
+7
+00:00:25,550 --> 00:00:34,700
+Now, this example is let's say we have the numbers five, two, five and let's say three five
+
+8
+00:00:37,380 --> 00:00:41,360
+Two and two. so you can see the number five
+
+9
+00:00:42,280 --> 00:00:43,720
+is coming three times.
+
+10
+00:00:43,840 --> 00:00:50,170
+Ok and the number two is also coming three times, the one unique number is nothing but 3.
+
+11
+00:00:52,030 --> 00:00:58,600
+The problem is... although we can do it using the frequency table but we need to think in terms of
+
+12
+00:00:58,610 --> 00:00:59,200
+bits, OK?
+
+13
+00:00:59,920 --> 00:01:01,180
+So the idea here is.
+
+14
+00:01:02,410 --> 00:01:05,500
+We somehow can we do XOR. the answer is No.
+
+15
+00:01:05,540 --> 00:01:08,950
+Ok, if you do sort of let's to five or five sort of five.
+
+16
+00:01:11,050 --> 00:01:15,280
+It will still give you the result 5 ok. so what... what you need is you need a way
+
+17
+00:01:17,270 --> 00:01:19,520
+so that you can
+
+18
+00:01:20,910 --> 00:01:21,840
+Cancel out
+
+19
+00:01:24,380 --> 00:01:31,190
+bits of repeating numbers. ok., a bit of a repeating numbers, OK?
+
+20
+00:01:31,830 --> 00:01:37,970
+Basically instead of a number when it is coming three times the bits should get cancelled for that
+
+21
+00:01:37,970 --> 00:01:38,730
+particular number.
+
+22
+00:01:38,760 --> 00:01:44,060
+OK, so how we can do it so let's come up with an approach.
+
+23
+00:01:44,600 --> 00:01:46,280
+OK, so what we will do?
+
+24
+00:01:46,520 --> 00:01:51,270
+We will now look at some of bits on each bit position.
+
+25
+00:01:51,270 --> 00:01:52,500
+ok. why this is important.
+
+26
+00:01:52,520 --> 00:01:53,870
+You will come to know very soon.
+
+27
+00:01:54,500 --> 00:01:59,660
+Let me just first write down all the numbers in in a single line.
+
+28
+00:02:00,260 --> 00:02:00,530
+OK?
+
+29
+00:02:00,950 --> 00:02:04,640
+In a single column. let say the number is what? the number is
+
+30
+00:02:04,640 --> 00:02:07,190
+Five. okay.
+
+31
+00:02:08,360 --> 00:02:11,930
+And I'm going to make three bit position ok. one
+
+32
+00:02:13,290 --> 00:02:13,680
+two two and three.
+
+33
+00:02:14,740 --> 00:02:21,840
+right now, I just assuming the numbers are small but otherwise we will have 32 bit positions.
+
+34
+00:02:21,850 --> 00:02:26,470
+OK, if it is a integer then five is nothing but one zero one.
+
+35
+00:02:27,010 --> 00:02:27,910
+What about two?
+
+36
+00:02:28,420 --> 00:02:32,650
+two is nothing but zero one zero.
+
+37
+00:02:33,070 --> 00:02:34,780
+What about five?
+
+38
+00:02:35,290 --> 00:02:36,190
+again One zero one.
+
+39
+00:02:36,490 --> 00:02:39,790
+What about three ? zero one one.
+
+40
+00:02:40,210 --> 00:02:41,260
+What about five?
+
+41
+00:02:42,510 --> 00:02:47,280
+One zero one. what about two? zero one zero.
+
+42
+00:02:47,310 --> 00:02:49,200
+What about two zero one?
+
+43
+00:02:49,550 --> 00:02:53,190
+You get what I'm saying is we'll find out.
+
+44
+00:02:54,520 --> 00:03:01,840
+The some will find out the sum along each column along each column.
+
+45
+00:03:02,860 --> 00:03:04,620
+Let's see what is this?
+
+46
+00:03:05,800 --> 00:03:09,340
+The sum for this is one, two, three and four.
+
+47
+00:03:09,370 --> 00:03:14,210
+OK, what about this sum for this one, two, three and four?
+
+48
+00:03:14,230 --> 00:03:14,650
+OK.
+
+49
+00:03:15,250 --> 00:03:16,540
+What about this one?
+
+50
+00:03:17,960 --> 00:03:21,010
+The what I'm saying is that some.
+
+51
+00:03:22,460 --> 00:03:26,750
+At each position, OK, some at each position.
+
+52
+00:03:28,110 --> 00:03:33,420
+Will be on the phone, Ryan, or it will be of the endless fun, OK?
+
+53
+00:03:34,200 --> 00:03:37,650
+So it will be three in four for the column.
+
+54
+00:03:38,090 --> 00:03:41,940
+We're the unique no does not have us.
+
+55
+00:03:42,370 --> 00:03:43,620
+OK, so it will be three.
+
+56
+00:03:43,620 --> 00:03:44,580
+And if?
+
+57
+00:03:45,630 --> 00:03:46,650
+Unique, no.
+
+58
+00:03:48,340 --> 00:03:49,180
+Does not.
+
+59
+00:03:50,120 --> 00:03:52,190
+I was say, OK, does not have a certain.
+
+60
+00:03:52,910 --> 00:03:57,150
+And you can verify for this calamitous.
+
+61
+00:03:57,170 --> 00:03:59,180
+It is three days of the farm train.
+
+62
+00:03:59,510 --> 00:04:01,940
+And here you can see the unique number that is three.
+
+63
+00:04:02,450 --> 00:04:07,820
+It does not have a set built in this column, so you see to see one and see zero.
+
+64
+00:04:07,870 --> 00:04:08,170
+OK.
+
+65
+00:04:09,900 --> 00:04:14,510
+And it will be on the phone to the endless one, we're unique, no, has I said.
+
+66
+00:04:15,030 --> 00:04:21,240
+OK, unique number has a Edward because every other number is coming three times, OK, it this tree
+
+67
+00:04:21,240 --> 00:04:22,500
+and will always be there.
+
+68
+00:04:23,040 --> 00:04:30,630
+And this one bit would be added because of the unique number, and it has led to celebrate here and
+
+69
+00:04:30,630 --> 00:04:30,870
+it.
+
+70
+00:04:31,260 --> 00:04:36,750
+And you can see the summit of the farm tree and plus one look at the summit of the palm tree and plus
+
+71
+00:04:36,750 --> 00:04:37,050
+one.
+
+72
+00:04:37,680 --> 00:04:44,370
+What are you going to do, what each of these positions you can do or more with three you get whether
+
+73
+00:04:44,370 --> 00:04:46,410
+the original as zero or one.
+
+74
+00:04:46,620 --> 00:04:49,770
+So if you do a morbidity, you will get three more three.
+
+75
+00:04:49,770 --> 00:04:52,590
+That is what, zero or more?
+
+76
+00:04:52,590 --> 00:04:54,240
+Three that is one or more.
+
+77
+00:04:54,240 --> 00:04:55,010
+Three, that is one.
+
+78
+00:04:55,020 --> 00:05:01,920
+OK, so now you are getting three words, OK, and now you get the binary representation of the unique
+
+79
+00:05:01,920 --> 00:05:02,260
+number.
+
+80
+00:05:02,280 --> 00:05:09,510
+So if you convert this into decimal zero multiplied with two squared plus one multiplied by two rows
+
+81
+00:05:09,510 --> 00:05:13,080
+to divide one plus one multiplied with to register to the bar zero.
+
+82
+00:05:13,650 --> 00:05:15,360
+This number is what this number is.
+
+83
+00:05:15,360 --> 00:05:17,850
+Nothing but the number three itself.
+
+84
+00:05:17,850 --> 00:05:18,150
+OK?
+
+85
+00:05:18,690 --> 00:05:24,480
+And this is how you can actually find the unique numbers OK.
+
+86
+00:05:24,840 --> 00:05:31,050
+And you can extend this approach for maybe numbers of the Form five and +1 or seven plus one or four
+
+87
+00:05:31,080 --> 00:05:32,130
+and plus one, whatever.
+
+88
+00:05:32,720 --> 00:05:34,230
+And this approach can.
+
+89
+00:05:34,230 --> 00:05:39,540
+This resolution can be extended for those kind of numbers as we looking.
+
+90
+00:05:40,980 --> 00:05:44,290
+So I hope you really understood the solution.
+
+91
+00:05:44,330 --> 00:05:51,390
+OK, so Warren, Glusman, you you can simply do this odd think for five and +1 because it is all you
+
+92
+00:05:51,390 --> 00:05:53,630
+can use this kind of approach as well.
+
+93
+00:05:53,650 --> 00:06:01,680
+OK, so I have no showing you the most common approaches for solving these unique number type of problems.
+
+94
+00:06:02,130 --> 00:06:05,940
+And in the next lecture, healthy the code for this particular approach.
+
+95
+00:06:06,540 --> 00:06:07,870
+That's all for this video.
+
+96
+00:06:07,890 --> 00:06:08,370
+Thank you.
+

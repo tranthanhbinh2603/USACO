@@ -1,0 +1,274 @@
+0
+1
+00:00:01,590 --> 00:00:09,090
+So this is our first project in the course, as I promised, there will be many projects in the course
+1
+
+2
+00:00:09,450 --> 00:00:16,560
+I think on average they are like 2 mini projects and 2 medium to large scale projects and 2 large
+2
+
+3
+00:00:16,560 --> 00:00:17,080
+projects.
+3
+
+4
+00:00:17,460 --> 00:00:21,600
+So this is our first smallest system, a hospital system.
+4
+
+5
+00:00:23,610 --> 00:00:30,300
+In this system, Assume that there are 20 different specializations like children,
+5
+
+6
+00:00:30,310 --> 00:00:31,680
+surgery, and things like that.
+6
+
+7
+00:00:32,250 --> 00:00:35,670
+For each specialization, there are only five available spots.
+7
+
+8
+00:00:35,670 --> 00:00:42,900
+So you can think of patients like they are making a queue of maximum five spots, per a specialization
+8
+
+9
+00:00:43,170 --> 00:00:45,010
+in the system, we can add a patient;
+9
+
+10
+00:00:45,420 --> 00:00:48,000
+So we need some specialization.
+10
+
+11
+00:00:48,000 --> 00:00:50,580
+From one to 20, we get a status.
+11
+
+12
+00:00:50,580 --> 00:00:52,290
+Is it regular or urgent?
+12
+
+13
+00:00:52,590 --> 00:00:54,540
+If five patients exist, 
+13
+
+14
+00:00:54,570 --> 00:00:57,510
+we apologize and we cannot accept this patient.
+14
+
+15
+00:00:57,900 --> 00:01:02,610
+If the user is regular, we add him at the end of the queue like what happens in a hospital.
+15
+
+16
+00:01:02,940 --> 00:01:10,260
+But if he is urgent, we add him to the beginning of the queue, the very top beginning so we can print
+16
+
+17
+00:01:10,260 --> 00:01:14,730
+patients for the specializations that have waiting patients.
+17
+
+18
+00:01:15,120 --> 00:01:18,040
+We..., some doctor might come and pick a patient.
+18
+
+19
+00:01:18,060 --> 00:01:23,730
+Then we check what is the specialization of the doctor if no patients at the moment we inform the doctor.
+19
+
+20
+00:01:23,850 --> 00:01:29,010
+Otherwise, we ask the patient to go to the doctor and then remove this patient from the
+20
+
+21
+00:01:29,010 --> 00:01:29,250
+queue.
+21
+
+22
+00:01:29,250 --> 00:01:33,510
+We typicaly give him the top one in the queue now.
+22
+
+23
+00:01:34,080 --> 00:01:36,510
+So let's see some some simulation for that.
+23
+
+24
+00:01:36,900 --> 00:01:39,270
+Here is what we call a user interface.
+24
+
+25
+00:01:39,480 --> 00:01:41,790
+an interface is something that the user is seeing.
+25
+
+26
+00:01:41,790 --> 00:01:45,990
+When you hold your mobile, you are watching a user interface.
+26
+
+27
+00:01:45,990 --> 00:01:49,230
+When you're accessing a website, you are seeing an interface.
+27
+
+28
+00:01:49,440 --> 00:01:52,580
+So this is what we call a console interface, just text.
+28
+
+29
+00:01:53,010 --> 00:01:56,220
+So the user here has a menu of four choices.
+29
+
+30
+00:01:56,730 --> 00:02:01,130
+So he chose number 1, which is adding a new patient for each patient,
+30
+
+31
+00:02:01,150 --> 00:02:05,970
+we add the specialization, the name, the status for the 'i'.
+31
+
+32
+00:02:06,240 --> 00:02:08,490
+So this is like 15 mostafa 0.
+32
+
+33
+00:02:10,500 --> 00:02:13,590
+This is 0 for regular, 1 for urgent.
+33
+
+34
+00:02:13,920 --> 00:02:18,870
+15 is a specialization number and so on. We added another user.
+34
+
+35
+00:02:18,870 --> 00:02:26,070
+And we added a third user. Notice, the first two were regular, but that one is urgent.
+35
+
+36
+00:02:26,460 --> 00:02:29,730
+Now we are asked for 2, which is printing all the patients.
+36
+
+37
+00:02:29,880 --> 00:02:33,960
+So we printed the following: Belal, Mostafa, Asmaa, but notice Belal here,
+37
+
+38
+00:02:33,960 --> 00:02:35,940
+this guy came here in the top.
+38
+
+39
+00:02:37,410 --> 00:02:45,690
+We again added another child, another person who is again urgent when we printed "Ziad" came at the top.
+39
+
+40
+00:02:45,960 --> 00:02:51,180
+Remember that we if someone is urgent, we definitely add him in the top of everyone else.
+40
+
+41
+00:02:53,200 --> 00:03:01,030
+Let's continue, we are adding one more person at specialization 15, and then we added one more person, but we now
+41
+
+42
+00:03:01,030 --> 00:03:03,550
+have 5 persons in the specialization 15.
+42
+
+43
+00:03:03,820 --> 00:03:07,660
+So it says: "sorry, we can't add more patients for this specialization".
+43
+
+44
+00:03:08,290 --> 00:03:15,550
+Now, if we try to print, we have these five, three urgent and three, two urgent and three regular
+44
+
+45
+00:03:16,210 --> 00:03:20,940
+Let's enter 3, which is getting a patient so we ask which specialization?
+45
+
+46
+00:03:20,950 --> 00:03:25,480
+We say 10, but there are no patients at the moment.
+46
+
+47
+00:03:26,260 --> 00:03:28,340
+OK, what about Specialization 15?
+47
+
+48
+00:03:28,540 --> 00:03:31,870
+We asked "Ziad", which is the top person to go with the doctor.
+48
+
+49
+00:03:32,050 --> 00:03:34,150
+If we print it again, we get the list.
+49
+
+50
+00:03:34,150 --> 00:03:38,980
+Without "Ziad", let's add one more person.
+50
+
+51
+00:03:38,990 --> 00:03:44,680
+But now for the specialization 7, and then let's print if we printed we see here, this is specialization 
+51
+
+52
+00:03:44,680 --> 00:03:48,310
+7 and "Soha", and this special 15 and the people here.
+52
+
+53
+00:03:50,110 --> 00:03:56,590
+Let's add another person to specialization 15, let's get a patient from 7, so 7 goes
+53
+
+54
+00:03:56,830 --> 00:04:01,030
+If we printed again, it go back to just specialization 15.
+54
+
+55
+00:04:02,200 --> 00:04:02,770
+That's it.

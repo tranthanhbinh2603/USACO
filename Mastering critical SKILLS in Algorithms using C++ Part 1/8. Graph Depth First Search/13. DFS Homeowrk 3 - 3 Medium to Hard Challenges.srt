@@ -1,0 +1,455 @@
+1
+00:00:00,940 --> 00:00:08,290
+Homeworker number three, in the defense, this three homeworkers are merely based on their graph reduction
+
+2
+00:00:08,290 --> 00:00:09,700
+that we just learned.
+
+3
+00:00:10,240 --> 00:00:16,690
+So I would like you to note that many of these problems might be solvable in different ways.
+
+4
+00:00:17,170 --> 00:00:23,510
+Now I would like you here to practice that, um, how to reduce a problem to the graph.
+
+5
+00:00:23,830 --> 00:00:29,980
+So you should only focus on solving the problem based on a graph observing that this is actually a very
+
+6
+00:00:29,980 --> 00:00:34,420
+big hint for you, that I told you that this problem can be reduced to a graph.
+
+7
+00:00:34,930 --> 00:00:39,580
+In fact, if the graph is the only way to solve the problem and you don't get this head, it probably
+
+8
+00:00:39,580 --> 00:00:43,750
+would be pretty hard for me for you to reduce it to the graph.
+
+9
+00:00:44,020 --> 00:00:48,460
+So anyway, you are just here practicing the scheme of reducing something to graph.
+
+10
+00:00:49,030 --> 00:00:50,500
+So let's see the first.
+
+11
+00:00:50,500 --> 00:00:56,470
+The problem is this following we had some graphs, so we have some array of unique elements, let's
+
+12
+00:00:56,470 --> 00:01:01,960
+say one two, three four, and then we forgot this array.
+
+13
+00:01:02,290 --> 00:01:06,460
+But we remember one thing, we remember the adjacent two beers, for example.
+
+14
+00:01:06,460 --> 00:01:09,310
+I can tell you that I remember that one and two were a decent.
+
+15
+00:01:10,030 --> 00:01:12,490
+I remember that four and three were adjacent.
+
+16
+00:01:13,270 --> 00:01:14,680
+I don't remember the exact order.
+
+17
+00:01:14,680 --> 00:01:16,960
+Like, I don't mean that food was before three.
+
+18
+00:01:17,440 --> 00:01:19,210
+I know that four and three were adjacent.
+
+19
+00:01:19,690 --> 00:01:22,180
+So how many adjacent to beer are in a reference in?
+
+20
+00:01:22,540 --> 00:01:25,800
+There are in the minus one adjacent two beers.
+
+21
+00:01:26,380 --> 00:01:33,550
+So the problem will give you in the minus one adjacent two beers and you have to recover their original
+
+22
+00:01:33,550 --> 00:01:33,910
+array.
+
+23
+00:01:34,210 --> 00:01:39,010
+The input would be completely correct, but observe the following There can be multiple solutions.
+
+24
+00:01:39,280 --> 00:01:40,390
+Any of them is okay.
+
+25
+00:01:40,990 --> 00:01:46,360
+Also, observe the values of the array itself are in a huge range.
+
+26
+00:01:46,930 --> 00:01:48,250
+Remember, they are unique.
+
+27
+00:01:48,430 --> 00:01:50,980
+Don't miss, uh, critical conditions.
+
+28
+00:01:51,580 --> 00:01:53,500
+So let's see, uh, an example here.
+
+29
+00:01:55,290 --> 00:01:59,730
+What we remember that two and one, three, four, three and two were adjacent to values.
+
+30
+00:02:00,090 --> 00:02:02,670
+So no one solution is one two three four.
+
+31
+00:02:02,940 --> 00:02:05,670
+So you see here, one two is a decent yes.
+
+32
+00:02:06,000 --> 00:02:07,200
+Three four extensions.
+
+33
+00:02:07,200 --> 00:02:07,590
+Yes.
+
+34
+00:02:07,860 --> 00:02:09,840
+Three two is a decent yes.
+
+35
+00:02:10,020 --> 00:02:12,510
+So this is a valid and this isn't the only valid one.
+
+36
+00:02:13,080 --> 00:02:15,060
+It is another case, I tell you.
+
+37
+00:02:15,330 --> 00:02:18,120
+Four minus two and one for minus three.
+
+38
+00:02:18,120 --> 00:02:19,560
+One is this is a does it?
+
+39
+00:02:19,800 --> 00:02:21,540
+Does it match four minus two?
+
+40
+00:02:21,570 --> 00:02:23,530
+Yes, they are here one in four.
+
+41
+00:02:23,550 --> 00:02:25,580
+Yes, they are here minus three and one.
+
+42
+00:02:25,590 --> 00:02:26,370
+Yes, they are here.
+
+43
+00:02:26,520 --> 00:02:28,280
+So this is adjacent beers.
+
+44
+00:02:32,110 --> 00:02:34,330
+Uh, yeah, probably number two.
+
+45
+00:02:35,500 --> 00:02:36,850
+We have a stringers.
+
+46
+00:02:38,740 --> 00:02:42,340
+And you will be given an array of beers.
+
+47
+00:02:42,970 --> 00:02:44,890
+So it's a victory, it is just two numbers.
+
+48
+00:02:45,350 --> 00:02:47,500
+They are zero based indices.
+
+49
+00:02:48,250 --> 00:02:53,530
+So beers of indices in within that within that length of the stick.
+
+50
+00:02:54,100 --> 00:02:55,210
+Now what is the point?
+
+51
+00:02:55,630 --> 00:03:04,390
+You can swap the beer, the characters in this in any bit of indices, any number of times you can make
+
+52
+00:03:04,390 --> 00:03:06,130
+such a swings in number of times.
+
+53
+00:03:06,310 --> 00:03:11,960
+So you can take beer number, for example, number two, and you find the answers to insipid.
+
+54
+00:03:12,160 --> 00:03:13,240
+You can swab.
+
+55
+00:03:14,280 --> 00:03:18,000
+As of two and as of seven.
+
+56
+00:03:19,530 --> 00:03:23,190
+You can do this works at any number of times in any order, in anything.
+
+57
+00:03:23,550 --> 00:03:28,950
+Now what is a good assume that we have all of the whistleblowers things that we can generate from this
+
+58
+00:03:28,950 --> 00:03:29,520
+operation?
+
+59
+00:03:30,060 --> 00:03:32,820
+We would like to find the leaks who graphically smallest one.
+
+60
+00:03:33,150 --> 00:03:35,260
+Don't be confused by all the leaks graphically.
+
+61
+00:03:35,260 --> 00:03:39,210
+It just mean, according to the English dictionary, it is the smallest one.
+
+62
+00:03:39,390 --> 00:03:41,010
+So it mean among all of them.
+
+63
+00:03:41,010 --> 00:03:42,480
+So to them and bring the first one.
+
+64
+00:03:43,380 --> 00:03:46,530
+So this is mainly what you should do in this problem.
+
+65
+00:03:46,560 --> 00:03:47,760
+Let's see an example here.
+
+66
+00:03:48,450 --> 00:03:50,810
+We have this strange guest this cab.
+
+67
+00:03:51,150 --> 00:03:52,650
+And these are our beers.
+
+68
+00:03:53,370 --> 00:03:58,830
+Now, if you try to swab, it's zero and it's a free coming from the free spirit.
+
+69
+00:03:59,400 --> 00:04:05,040
+So the new string would be said as we swab the zero and the three.
+
+70
+00:04:06,100 --> 00:04:11,730
+If you then swab the one and two from the second beer, then you could be back.
+
+71
+00:04:12,160 --> 00:04:17,770
+Now obesity is the smallest possible strength you can generate by applying the well, that's worse in
+
+72
+00:04:17,770 --> 00:04:19,450
+any order and in a bar of types.
+
+73
+00:04:20,140 --> 00:04:21,490
+Let's see another example here.
+
+74
+00:04:24,170 --> 00:04:27,200
+We have a bunch of of of elements.
+
+75
+00:04:27,690 --> 00:04:33,290
+Uh, uh, let's see this one because we will apply the same swab twice.
+
+76
+00:04:33,560 --> 00:04:36,530
+So we have here the string that is C, B and the.
+
+77
+00:04:36,770 --> 00:04:38,540
+So we have indices zero, one or two.
+
+78
+00:04:39,110 --> 00:04:41,870
+Now we can take the first to be of zero and one a.
+
+79
+00:04:42,350 --> 00:04:46,010
+So here is a first two beers so bright you could be C and E.
+
+80
+00:04:46,700 --> 00:04:50,990
+Now you can take the second beer and a blight, which will take the second two letters which are here
+
+81
+00:04:51,230 --> 00:04:51,850
+and Oblates.
+
+82
+00:04:51,870 --> 00:04:55,670
+It will give us B E and the C, then a back again.
+
+83
+00:04:55,670 --> 00:04:59,450
+The first two two indices, which are B, so serve them.
+
+84
+00:04:59,450 --> 00:05:01,010
+It's no e b and C.
+
+85
+00:05:01,400 --> 00:05:06,800
+Now ABC is a small list of possible string among all of the things that you can generate.
+
+86
+00:05:07,040 --> 00:05:08,090
+I hope you good the idea.
+
+87
+00:05:11,680 --> 00:05:15,490
+In the third, the problem we would be given unsorted array.
+
+88
+00:05:16,550 --> 00:05:17,090
+Now.
+
+89
+00:05:18,410 --> 00:05:19,310
+This array.
+
+90
+00:05:20,490 --> 00:05:21,840
+Have different sequences.
+
+91
+00:05:22,560 --> 00:05:29,020
+I would like to find the length of the length of the longest consecutive sequence of elements.
+
+92
+00:05:29,100 --> 00:05:30,210
+What does it mean?
+
+93
+00:05:30,270 --> 00:05:31,800
+Look to this sequence here.
+
+94
+00:05:33,640 --> 00:05:37,720
+Remember, the sequence can be any subsidy you don't have to be like consecutive here.
+
+95
+00:05:38,440 --> 00:05:42,340
+So if we notice this subsidy for and one and three and two.
+
+96
+00:05:43,660 --> 00:05:48,970
+If you try to search this number, you will be one, two, three four, which is what we call a consecutive
+
+97
+00:05:48,970 --> 00:05:51,370
+sequence of consecutive sequels.
+
+98
+00:05:51,550 --> 00:05:55,810
+So one two three four is the length of their longest consecutive sequence.
+
+99
+00:05:56,470 --> 00:05:57,620
+So let me say that again.
+
+100
+00:05:57,970 --> 00:06:05,910
+You would be given an array by some numbers inside it, such that when you sorted them, they are considered
+
+101
+00:06:05,920 --> 00:06:06,550
+of sequence.
+
+102
+00:06:06,940 --> 00:06:11,800
+Now, among all of such impossible sequences would like to find the length of the longest one here.
+
+103
+00:06:12,490 --> 00:06:16,420
+In this example, here, the array is a single sequence.
+
+104
+00:06:16,420 --> 00:06:19,750
+If you sorted out of the array, it would be from zero to nine.
+
+105
+00:06:20,140 --> 00:06:30,490
+And so maybe another example in case let's say I give you numbers like 10 to 11, three and 12.
+
+106
+00:06:31,060 --> 00:06:32,980
+So if you take these 10, was this 11?
+
+107
+00:06:32,980 --> 00:06:38,040
+Was this 12 and sorted, then they would be 10, 11 12, which are sequence consecutive numbers.
+
+108
+00:06:39,440 --> 00:06:44,060
+Uh, two and three are also another consecutive number, but just the rent is too, so actually we have
+
+109
+00:06:44,060 --> 00:06:45,650
+also two and three.
+
+110
+00:06:46,190 --> 00:06:48,530
+So the array has different sequences.
+
+111
+00:06:50,120 --> 00:06:54,500
+Some sequences could be consecutive and some are, and we would like to find the lens of the longest
+
+112
+00:06:54,500 --> 00:06:55,910
+one among all of them.
+
+113
+00:06:56,180 --> 00:06:59,420
+Notice that the array is big and the values are huge.
+
+114
+00:07:00,230 --> 00:07:00,740
+That's all.

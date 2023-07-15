@@ -1,0 +1,455 @@
+1
+00:00:01,680 --> 00:00:03,840
+It's solved the homework for this problem.
+
+2
+00:00:05,080 --> 00:00:06,120
+Um.
+
+3
+00:00:08,240 --> 00:00:09,410
+So the shot, the bridge.
+
+4
+00:00:10,180 --> 00:00:16,520
+Um, so let's let's imagine the following something that gives us an intuition.
+
+5
+00:00:17,030 --> 00:00:20,900
+Imagine we up here we are in a very big grid like that.
+
+6
+00:00:22,580 --> 00:00:28,700
+And there is some block here 10 times, 10 for the first degree and another.
+
+7
+00:00:29,640 --> 00:00:30,750
+Ten by ten.
+
+8
+00:00:31,410 --> 00:00:40,260
+Look here now when you think about it, we need to build this amount of cells to this, to this island
+
+9
+00:00:40,260 --> 00:00:42,540
+here intuitively.
+
+10
+00:00:43,460 --> 00:00:47,930
+You didn't need the shooters to pass off this note, for example, to any anything here.
+
+11
+00:00:48,350 --> 00:00:52,790
+You actually need to know what is the boundary of one island.
+
+12
+00:00:54,950 --> 00:00:57,740
+And the boundary of the second island.
+
+13
+00:00:58,890 --> 00:01:04,350
+Like, imagine there are any boundaries here and the boundaries here in the sense that it misses you
+
+14
+00:01:04,350 --> 00:01:07,530
+would like for every bit of boundaries to know what is the shortest birth.
+
+15
+00:01:07,560 --> 00:01:13,560
+For example, you take this boundary and try to see the shortest best to all of this boundary and so
+
+16
+00:01:13,560 --> 00:01:13,830
+on.
+
+17
+00:01:14,460 --> 00:01:20,940
+So in many times, anyone you would like to know what is the shortest boundary between every cell here
+
+18
+00:01:20,940 --> 00:01:21,330
+and here?
+
+19
+00:01:22,110 --> 00:01:23,190
+Let me summarize that.
+
+20
+00:01:23,790 --> 00:01:27,870
+First of all, the first intuition that you should get is a bone-dry idea.
+
+21
+00:01:28,560 --> 00:01:32,360
+It is all about we have two separate islands and we have their boundaries.
+
+22
+00:01:32,370 --> 00:01:36,210
+Remember, we implemented something before they get the boundary off of an island.
+
+23
+00:01:38,190 --> 00:01:43,380
+So it's all about the boundary of the first island and the the boundary of the second island.
+
+24
+00:01:44,190 --> 00:01:49,440
+So as a very brute force where you can try for every boundary here and every boundary here just could
+
+25
+00:01:49,440 --> 00:01:52,020
+be the shortest to both and minimize among all of them.
+
+26
+00:01:52,740 --> 00:01:53,790
+This looks like slow.
+
+27
+00:01:53,820 --> 00:01:55,590
+We can actually optimize it a little bit.
+
+28
+00:01:57,210 --> 00:02:03,360
+Remember the source idea, you can set all of the nodes here.
+
+29
+00:02:04,960 --> 00:02:13,240
+As one in the queue and then try to find the shortest the best to a specific note, this is a multi
+
+30
+00:02:13,240 --> 00:02:14,050
+source to one.
+
+31
+00:02:14,620 --> 00:02:15,940
+You can even do the opposite.
+
+32
+00:02:16,240 --> 00:02:21,580
+You can take one boundary from here and do it first to get all of the toys here.
+
+33
+00:02:22,030 --> 00:02:24,370
+So so far, we said one to one relationship.
+
+34
+00:02:24,730 --> 00:02:31,030
+We say to start with Maltesers and find the set or start with the source and go to the multi destination.
+
+35
+00:02:33,230 --> 00:02:35,030
+OK, can we do something better?
+
+36
+00:02:36,250 --> 00:02:43,390
+We can't do what we call multi source multi destination business, and this is a new variant in this
+
+37
+00:02:43,390 --> 00:02:44,080
+business.
+
+38
+00:02:44,410 --> 00:02:49,270
+We start to the queue was all over the destination with all of the sources that we need.
+
+39
+00:02:50,110 --> 00:02:52,790
+And then there'd be a first while working.
+
+40
+00:02:53,200 --> 00:02:56,440
+Once it found the annual of the destinations, it stops.
+
+41
+00:02:57,750 --> 00:03:00,000
+Which is very trivial to change for what we do.
+
+42
+00:03:00,600 --> 00:03:07,890
+So let me let me say that again, we have bounded inwards from here, create them and then find them,
+
+43
+00:03:07,890 --> 00:03:08,850
+add them to the queue.
+
+44
+00:03:09,570 --> 00:03:11,640
+And we have boundary nodes from here.
+
+45
+00:03:11,730 --> 00:03:16,050
+Find them the first wide working on all of this multi sources.
+
+46
+00:03:16,440 --> 00:03:20,820
+Once if I went to any node from the boundary of this one, it is them.
+
+47
+00:03:21,570 --> 00:03:25,170
+I hope you over all got the idea, and it isn't that confusing for you.
+
+48
+00:03:25,830 --> 00:03:31,380
+The purpose of this problem is introducing the Multi Source Multi Distillation variant.
+
+49
+00:03:33,020 --> 00:03:38,240
+The good news is following we yeah, let me, first of all, tell you a very nice simplification.
+
+50
+00:03:38,720 --> 00:03:41,470
+The logic say that we need to get the boundaries.
+
+51
+00:03:41,480 --> 00:03:44,780
+Do we really need to put an effort to find the exact boundaries?
+
+52
+00:03:45,050 --> 00:03:45,860
+I would say no.
+
+53
+00:03:46,160 --> 00:03:52,250
+Let's say that you found the the first island and you just add all of it to the queue.
+
+54
+00:03:53,030 --> 00:03:56,750
+So you added this one, this one, this one, this one, this one, this one, this one, this one,
+
+55
+00:03:56,750 --> 00:03:57,290
+this OK.
+
+56
+00:03:57,530 --> 00:04:01,790
+And you also added this one in the middle, which is embroidery boundary, but observed that this one
+
+57
+00:04:01,790 --> 00:04:07,640
+anyway is going to is going to like, fail to move in a way because it will find that the neighbors
+
+58
+00:04:07,640 --> 00:04:09,770
+are all market so it doesn't go to anywhere.
+
+59
+00:04:10,910 --> 00:04:16,580
+So this is a simplification for the could just end all of the needs of the first, the island in the
+
+60
+00:04:16,580 --> 00:04:20,180
+group in the queue and just play in any set of the second line.
+
+61
+00:04:20,240 --> 00:04:20,780
+That's it.
+
+62
+00:04:21,560 --> 00:04:23,450
+So here is how we can implement that.
+
+63
+00:04:24,200 --> 00:04:31,850
+We will do this first to find island number one, and we will cover all of it with the value two and
+
+64
+00:04:31,850 --> 00:04:33,800
+then add all of the values in the queue.
+
+65
+00:04:34,530 --> 00:04:41,480
+Now the DFS has all of their starting nodes and the grid has either the value zero or the value to.
+
+66
+00:04:43,400 --> 00:04:43,620
+Sorry.
+
+67
+00:04:44,880 --> 00:04:52,880
+The very one is now, too, and we still have an old one so that the grid now has values too, which
+
+68
+00:04:52,880 --> 00:04:57,920
+is from island one and one, which was from Ireland to sort of, if this is confusing for you.
+
+69
+00:04:59,860 --> 00:05:04,030
+Now we will run a single be fast, but four this multi sources.
+
+70
+00:05:06,470 --> 00:05:10,430
+We will we can use the rhetorics update as a vis a vis the grid by itself.
+
+71
+00:05:10,970 --> 00:05:15,170
+So now the cells, as I said, either two, four, eight and one or one four island two.
+
+72
+00:05:15,560 --> 00:05:19,250
+What about the zero zero are the empty sensor that we would like to flip?
+
+73
+00:05:20,070 --> 00:05:24,240
+Every time you meet a new cell that is zero, we will flip it to value zero.
+
+74
+00:05:25,020 --> 00:05:26,640
+So now we have three values.
+
+75
+00:05:26,640 --> 00:05:29,610
+We have zero one two and three four values.
+
+76
+00:05:29,970 --> 00:05:32,730
+Zero is a cell that is a still not flipped.
+
+77
+00:05:33,120 --> 00:05:38,550
+Three is a cell that is flipped the value one four of the grid, the two from Island two and the value
+
+78
+00:05:38,550 --> 00:05:39,540
+two from Island one.
+
+79
+00:05:40,770 --> 00:05:47,010
+Now if while you are working and you found the zero, then this is already fled to.
+
+80
+00:05:47,010 --> 00:05:53,660
+So we don't do anything if we find the value to you also stop because you ignore it because in a way
+
+81
+00:05:53,660 --> 00:05:54,810
+it's just part of you.
+
+82
+00:05:55,500 --> 00:06:01,260
+If you fell into any of the ones, then you know that you found their target destination.
+
+83
+00:06:01,260 --> 00:06:07,290
+The first note that find a one represents the smallest number of steps that we need.
+
+84
+00:06:08,170 --> 00:06:09,470
+I hope you got the message.
+
+85
+00:06:09,490 --> 00:06:13,390
+The purpose of this problem is introducing the multi source multi destination.
+
+86
+00:06:13,870 --> 00:06:19,510
+And I would like to confirm that the time complexity for all of the three variants we learned is the
+
+87
+00:06:19,510 --> 00:06:23,260
+same all of them or even as we now.
+
+88
+00:06:23,260 --> 00:06:25,660
+Let's see the implementation of that in case you are confused.
+
+89
+00:06:27,950 --> 00:06:29,510
+This is a normal is Ireland.
+
+90
+00:06:29,570 --> 00:06:31,190
+This is perfectly normal.
+
+91
+00:06:31,490 --> 00:06:34,910
+This is a defense, very standard defense on a matrix.
+
+92
+00:06:34,910 --> 00:06:39,890
+It taken all the color, which is here by default one and new color, which is by default at all.
+
+93
+00:06:40,130 --> 00:06:42,910
+And just do the new coloring and iterating friends.
+
+94
+00:06:42,920 --> 00:06:44,690
+So nothing, nothing new here.
+
+95
+00:06:47,180 --> 00:06:54,170
+We start by searching the grid for an island that has a single one, so I iterate on the wood matrix
+
+96
+00:06:54,170 --> 00:06:55,240
+and find a single one.
+
+97
+00:06:55,250 --> 00:07:01,010
+Once I find it, I'm going to do first two from it and break of three.
+
+98
+00:07:01,310 --> 00:07:05,150
+There is an extra condition here also that say as long as the queue is empty.
+
+99
+00:07:05,480 --> 00:07:07,700
+What does this queue here observe?
+
+100
+00:07:08,540 --> 00:07:11,440
+The queue is sent to the queue is global here.
+
+101
+00:07:11,450 --> 00:07:15,230
+I bush any any note that I find in the queue, all of them.
+
+102
+00:07:15,710 --> 00:07:19,730
+Theoretically, we should bush only there boundaries, but it doesn't matter so we can push all of them
+
+103
+00:07:19,730 --> 00:07:20,150
+anyway.
+
+104
+00:07:20,660 --> 00:07:22,820
+So this is how we initialize the multi source queue.
+
+105
+00:07:24,820 --> 00:07:30,160
+After that, we do very normal business, this is very normal iterating with the neighbors as normal.
+
+106
+00:07:30,820 --> 00:07:35,800
+If you found that the sale has value three, it means it was zero and they flipped it to three.
+
+107
+00:07:35,830 --> 00:07:38,850
+So this is like a vista if the value is too.
+
+108
+00:07:38,910 --> 00:07:40,700
+This is coming from the first islands.
+
+109
+00:07:40,730 --> 00:07:41,980
+Also visited ignited.
+
+110
+00:07:42,700 --> 00:07:48,550
+The first one that find the equally cool one is we managed to make a bridge, so we return to their
+
+111
+00:07:48,550 --> 00:07:49,000
+level.
+
+112
+00:07:49,270 --> 00:07:52,660
+Otherwise we wish the neighbor and avoided the sale with the value.
+
+113
+00:07:52,870 --> 00:07:53,260
+Three.
+
+114
+00:07:53,500 --> 00:07:55,780
+I hope the problem wasn't that hard for you.

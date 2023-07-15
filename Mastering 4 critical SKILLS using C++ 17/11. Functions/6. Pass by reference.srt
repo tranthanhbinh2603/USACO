@@ -1,0 +1,449 @@
+0
+1
+00:00:01,080 --> 00:00:07,080
+In C++, when we pass an argument to a function, it could be passed by value or by reference.
+1
+
+2
+00:00:07,080 --> 00:00:11,910
+Let's know the details about that, but I would like to make a clear distinction between what we call a parameter and
+2
+
+3
+00:00:11,910 --> 00:00:17,610
+what we call an argument, because sometimes many programmers just like use them in the same way.
+3
+
+4
+00:00:17,790 --> 00:00:19,760
+And I even during the course, sometimes I do that.
+4
+
+5
+00:00:19,770 --> 00:00:20,900
+But this isn't an accurate.
+5
+
+6
+00:00:21,180 --> 00:00:23,250
+So I would like to make it very clear distinction here.
+6
+
+7
+00:00:23,760 --> 00:00:28,090
+The parameter is declared only in the declaration.
+7
+
+8
+00:00:28,110 --> 00:00:34,370
+So here in the function, we declare it with variable "a" and "b", "a" and "b" are called the parameters of the function "print".
+8
+
+9
+00:00:34,980 --> 00:00:37,400
+So the parameter is about the declaration itself.
+9
+
+10
+00:00:37,860 --> 00:00:43,240
+Now when we are calling the function, what we are calling with are the arguments.
+10
+
+11
+00:00:43,530 --> 00:00:50,550
+So if we define here x = 2, and call it with x and 5, x is an argument corresponding to "a", 5 is an argument
+11
+
+12
+00:00:50,550 --> 00:00:54,550
+corresponding to "b", "3*2+1" is an argument corresponding to "a".
+12
+
+13
+00:00:54,930 --> 00:01:00,960
+So parameters are about the declaration here, arguments about the passing, the passing here.
+13
+
+14
+00:01:01,680 --> 00:01:03,320
+Now let's go back to our topic.
+14
+
+15
+00:01:03,570 --> 00:01:07,610
+We are passing values through what we learned so far by value.
+15
+
+16
+00:01:07,920 --> 00:01:10,840
+There is also another way to pass them by reference.
+16
+
+17
+00:01:11,460 --> 00:01:16,000
+Let's see the details of that. We have here a function "change" which has an integer "a",
+17
+
+18
+00:01:16,050 --> 00:01:17,090
+This is normal.
+18
+
+19
+00:01:17,370 --> 00:01:23,790
+We have here something we call it integer reference b "int &b", and the reference always is related to a memory address.
+19
+
+20
+00:01:24,870 --> 00:01:31,770
+This is called the ampersand "&" operator, we read it integer reference b and we would like to see the
+20
+
+21
+00:01:31,770 --> 00:01:33,870
+effect of this reference. Here,
+21
+
+22
+00:01:33,870 --> 00:01:41,220
+we have a function "change" that takes two arguments "a" and "b", so this "a" is going to
+22
+
+23
+00:01:41,220 --> 00:01:44,090
+be assigned to this "a" by value.
+23
+
+24
+00:01:44,550 --> 00:01:51,090
+This means the compiler in the runtime is going to take a copy, memory copy of this variable to assign
+24
+
+25
+00:01:51,090 --> 00:01:51,360
+it here.
+25
+
+26
+00:01:51,600 --> 00:01:58,920
+So when you pass here 1 to this int "a" is going to be here "a", now if you incremented this a++,
+26
+
+27
+00:01:59,130 --> 00:01:59,490
+It is
+27
+
+28
+00:01:59,490 --> 00:02:00,600
+local change.
+28
+
+29
+00:02:00,870 --> 00:02:07,500
+So when you come back here and print a, it is going to be 1, because this "a" is very different from this
+29
+
+30
+00:02:07,500 --> 00:02:09,030
+"a". memory wise,
+30
+
+31
+00:02:09,180 --> 00:02:14,820
+We have two boxes, one from them for this local function here in the main, and another from them for
+31
+
+32
+00:02:14,820 --> 00:02:15,510
+this one here.
+32
+
+33
+00:02:15,660 --> 00:02:16,680
+So we have two copies.
+33
+
+34
+00:02:16,870 --> 00:02:20,670
+So if we started to change this one, this doesn't affect this one.
+34
+
+35
+00:02:21,840 --> 00:02:29,220
+On the other side, passing by reference means that this variable is going to share the same memory
+35
+
+36
+00:02:29,220 --> 00:02:30,570
+location as this one.
+36
+
+37
+00:02:31,170 --> 00:02:36,530
+So now both the function "change" and the function "main" are looking to the same memory location.
+37
+
+38
+00:02:36,870 --> 00:02:42,780
+So we are passing here the value "b1", with its address to this "b" and then when you increment b++
+38
+
+39
+00:02:42,780 --> 00:02:47,180
+and you come back here, you will notice that this "b" now is 2.
+39
+
+40
+00:02:47,640 --> 00:02:52,590
+So the core difference between passing by value and passing by reference; passing by value creates a
+40
+
+41
+00:02:52,590 --> 00:02:53,280
+new memory
+41
+
+42
+00:02:53,280 --> 00:02:57,270
+copy, but passing by reference is the same memory location.
+42
+
+43
+00:02:58,320 --> 00:03:04,320
+And as you might be able to guess, this might play a big factor from one side to simplify the code,
+43
+
+44
+00:03:04,560 --> 00:03:08,420
+the other side to minimize the number of memory copies that we are doing.
+44
+
+45
+00:03:08,730 --> 00:03:12,030
+For example, the more copies you are doing, the more memory you take.
+45
+
+46
+00:03:12,510 --> 00:03:17,730
+It might be like basic when you are using primitives like Integer, but as we will know in the end of
+46
+
+47
+00:03:17,760 --> 00:03:20,250
+the session, it might be sensitive in other scenarios.
+47
+
+48
+00:03:20,490 --> 00:03:22,290
+Here is another case for a demonstration,
+48
+
+49
+00:03:22,620 --> 00:03:27,830
+We have here a string name and we have a function that's going to read for us "a", "b" and "name".
+49
+
+50
+00:03:28,290 --> 00:03:34,950
+So the "a" corresponds to x, but by copy. "b" is going to be by reference for "y". "name" is going to be by reference
+50
+
+51
+00:03:34,950 --> 00:03:40,260
+for "str". Now when this function reads the "x" and "y" and "str",
+51
+
+52
+00:03:40,890 --> 00:03:46,650
+We will notice that the value of "a" will not be changed, it will remain as 1, but the value of "b" and
+52
+
+53
+00:03:46,650 --> 00:03:50,130
+the value of "name" will be changed because they are passed by reference.
+53
+
+54
+00:03:50,760 --> 00:03:54,000
+So this is mainly what is passing by value and passing by reference.
+54
+
+55
+00:03:55,630 --> 00:04:00,600
+The interesting thing about passing arrays, they are always passed by reference, so if you have here,
+55
+
+56
+00:04:00,610 --> 00:04:06,100
+some array of 6 elements and you called function to sum array and you give it here length of 3
+56
+
+57
+00:04:06,100 --> 00:04:10,540
+elements, and then we iterate on the first three elements to iterate over the array and sum them
+57
+
+58
+00:04:10,540 --> 00:04:11,470
+and returning the sum.
+58
+
+59
+00:04:11,740 --> 00:04:13,750
+This array here is the same as here.
+59
+
+60
+00:04:13,930 --> 00:04:18,040
+So you can read it and you can write it and you can change it and it's going to affect the main.
+60
+
+61
+00:04:18,460 --> 00:04:21,370
+So the array is passed by reference.
+61
+
+62
+00:04:21,620 --> 00:04:28,720
+So as you see, we didn't have to put the "&" here because it's already passed by reference. As an another
+62
+
+63
+00:04:28,720 --> 00:04:29,530
+observation,
+63
+
+64
+00:04:29,560 --> 00:04:32,000
+We didn't need to put the actual size of the array here.
+64
+
+65
+00:04:32,020 --> 00:04:34,900
+We can just drop it for 1D arrays.
+65
+
+66
+00:04:36,910 --> 00:04:40,820
+One more thing, let's develop a function to compute if a string is lower or not.
+66
+
+67
+00:04:40,930 --> 00:04:46,680
+So we have a function bool return type, it is tacking string and iterating on the string and just checking
+67
+
+68
+00:04:46,930 --> 00:04:53,350
+if the character is between 'a' or 'z' or not, if yes, it's returning true for all of them, if any of them is
+68
+
+69
+00:04:53,350 --> 00:04:54,490
+a violation, it's returning false.
+69
+
+70
+00:04:54,820 --> 00:04:57,960
+Now, is this passing by value or passing by reference?
+70
+
+71
+00:04:58,270 --> 00:05:00,580
+This is passing by value.
+71
+
+72
+00:05:00,890 --> 00:05:04,350
+OK, the passing by reference, by default is only for the arrays.
+72
+
+73
+00:05:04,360 --> 00:05:08,500
+Anything else by default would be by value.
+73
+
+74
+00:05:08,980 --> 00:05:10,030
+So now this is good.
+74
+
+75
+00:05:10,360 --> 00:05:17,350
+But remember, if this str, let's say is a big file of one million characters, in the runtime the
+75
+
+76
+00:05:17,350 --> 00:05:22,130
+compiler has to make another copy of one million characters to the function as "str" here.
+76
+
+77
+00:05:22,270 --> 00:05:24,550
+So this is a big waste of memory.
+77
+
+78
+00:05:24,760 --> 00:05:27,910
+The best way in this case is to pass it by reference.
+78
+
+79
+00:05:28,300 --> 00:05:33,740
+But remember, also, when you pass something by reference, it means they are sharing the same memory.
+79
+
+80
+00:05:34,000 --> 00:05:37,090
+So this function might corrupt your "str".
+80
+
+81
+00:05:37,450 --> 00:05:38,710
+So this is a risk of that.
+81
+
+82
+00:05:38,980 --> 00:05:46,930
+There's one way to solve this problem, using "const"; if you use "const string &str", then
+82
+
+83
+00:05:46,930 --> 00:05:50,880
+from one side you made sure that "str" is by reference,
+83
+
+84
+00:05:50,890 --> 00:05:53,590
+So no more memory copy and also it is const,
+84
+
+85
+00:05:53,630 --> 00:05:55,390
+So this guy doesn't need to change it.
+85
+
+86
+00:05:55,390 --> 00:05:56,230
+does 
+86
+
+87
+00:05:56,230 --> 00:06:00,030
+a guy who is coding is_lower function have to change the content?
+87
+
+88
+00:06:00,250 --> 00:06:00,550
+No.
+88
+
+89
+00:06:00,850 --> 00:06:04,960
+So the proper signature for this function is "const string &str".
+89
+
+90
+00:06:06,280 --> 00:06:06,850
+That's it.

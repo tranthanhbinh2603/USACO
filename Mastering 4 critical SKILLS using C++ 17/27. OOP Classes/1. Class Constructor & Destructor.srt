@@ -1,0 +1,589 @@
+0
+1
+00:00:01,080 --> 00:00:07,800
+In this section, we will start to discuss a lot of syntex details in C++ relevant to classes that allow
+1
+
+2
+00:00:07,800 --> 00:00:11,400
+us to build more of OOP projects.
+2
+
+3
+00:00:11,580 --> 00:00:17,430
+It isn't about the core OOP's concepts but think of it like more of the utilities.
+3
+
+4
+00:00:17,760 --> 00:00:19,520
+The first thing is a constructor.
+4
+
+5
+00:00:19,740 --> 00:00:22,800
+We already saw the constructor when we studied the struct.
+5
+
+6
+00:00:23,040 --> 00:00:30,720
+We know that the constructor can give us an automatic way to assign initial values for your object.
+6
+
+7
+00:00:30,730 --> 00:00:39,120
+We saw before the default constructor where there are no arguments and also we saw the parameterize
+7
+
+8
+00:00:39,300 --> 00:00:43,230
+constructor where you can have multiple constructors.
+8
+
+9
+00:00:43,470 --> 00:00:45,800
+The constructor is eventually a member function,
+9
+
+10
+00:00:46,050 --> 00:00:51,720
+but it's kind of a special member function, for example, it must have the same name as the class and
+10
+
+11
+00:00:51,720 --> 00:01:01,380
+also, it doesn't have a return to type here. In C++ 11, the recommended way to initialize C++
+11
+
+12
+00:01:01,380 --> 00:01:03,120
+is the initializer list.
+12
+
+13
+00:01:03,420 --> 00:01:07,980
+This is how you initialize using the initializer list. You see here
+13
+
+14
+00:01:08,010 --> 00:01:12,460
+after defining the function of the constructor you put colon,
+14
+
+15
+00:01:12,870 --> 00:01:17,430
+then you start to put width, width, height, height, or whatever.
+15
+
+16
+00:01:17,430 --> 00:01:18,750
+These are recent parameter.
+16
+
+17
+00:01:19,020 --> 00:01:25,560
+As you see one advantage here, you don't care if the parameters of the constructor name are the same
+17
+
+18
+00:01:25,560 --> 00:01:26,640
+as a member function,
+18
+
+19
+00:01:26,760 --> 00:01:32,850
+but going back one step here, you have to make the difference, like, say, here width underscore and
+19
+
+20
+00:01:32,850 --> 00:01:34,390
+width to be able to assign it.
+20
+
+21
+00:01:34,560 --> 00:01:38,690
+So this is one intuitive way about the member initializer list.
+21
+
+22
+00:01:38,700 --> 00:01:40,350
+So you define it this way.
+22
+
+23
+00:01:40,830 --> 00:01:47,820
+If you also have here like one parameter also, then you can say define that guy and then define
+23
+
+24
+00:01:47,820 --> 00:01:49,020
+that guy with initial values zero.
+24
+
+25
+00:01:49,020 --> 00:01:53,640
+Remember, when you have different functions with the same name, but different parameters,
+25
+
+26
+00:01:53,880 --> 00:01:56,450
+we call it function overloading.
+26
+
+27
+00:01:56,910 --> 00:01:59,400
+There is also an interesting thing,
+27
+
+28
+00:01:59,400 --> 00:02:00,810
+we call it delegating.
+28
+
+29
+00:02:01,020 --> 00:02:05,850
+So if you have a constructor that is empty, you can set the width and height with zero,
+29
+
+30
+00:02:06,270 --> 00:02:11,780
+but a better way to minimize the code is just to do something like rectangle zero and zero.
+30
+
+31
+00:02:12,060 --> 00:02:15,560
+This one is going to call the constructor here.
+31
+
+32
+00:02:15,780 --> 00:02:19,490
+So this is like a function calling a function.
+32
+
+33
+00:02:19,500 --> 00:02:23,570
+So the empty constructor is calling another constructor.
+33
+
+34
+00:02:23,760 --> 00:02:27,720
+So the whole initializer list is about having a colon here.
+34
+
+35
+00:02:28,770 --> 00:02:29,130
+...
+35
+
+36
+00:02:29,680 --> 00:02:36,360
+The way that the initializer list works is actually very interesting because it works before the
+36
+
+37
+00:02:36,360 --> 00:02:39,680
+actual processing in the constructor itself.
+37
+
+38
+00:02:40,110 --> 00:02:45,060
+That's why there are some things that cannot be initialized in another way,
+38
+
+39
+00:02:45,070 --> 00:02:51,120
+for example, if you have here a const variable or a reference variable, you cannot get inside here
+39
+
+40
+00:02:51,210 --> 00:02:52,410
+and just initialize it.
+40
+
+41
+00:02:52,410 --> 00:02:53,610
+It doesn't go this way.
+41
+
+42
+00:02:53,970 --> 00:03:00,960
+You have to initialize it in the initializer list, and there are actually a lot of other
+42
+
+43
+00:03:00,960 --> 00:03:01,590
+reasons.
+43
+
+44
+00:03:01,770 --> 00:03:09,270
+So the recommended way from now follow is to initialize using the member initializer list
+44
+
+45
+00:03:09,270 --> 00:03:12,720
+unless there is some reason to don't do that.
+45
+
+46
+00:03:13,290 --> 00:03:17,430
+When a constructor calls another constructor, we call it delegating constructor.
+46
+
+47
+00:03:17,760 --> 00:03:22,530
+When you are in a company, you would hear something like the power of delegation,
+47
+
+48
+00:03:22,530 --> 00:03:24,870
+your team lead is delegating tasks for you,
+48
+
+49
+00:03:24,870 --> 00:03:27,540
+so delegation is an important concept in practical life.
+49
+
+50
+00:03:29,170 --> 00:03:35,770
+The default constructor, as you know, is a constructor that doesn't have any parameters or there are
+50
+
+51
+00:03:35,770 --> 00:03:41,230
+parameters, but they have initial values, notice that these two functions now are the same
+51
+
+52
+00:03:41,440 --> 00:03:46,310
+because they are actually both of them allow empty constructor,
+52
+
+53
+00:03:46,330 --> 00:03:48,040
+so this will actually will not compile.
+53
+
+54
+00:03:48,230 --> 00:03:49,980
+OK, you have only to make one of them.
+54
+
+55
+00:03:52,110 --> 00:03:57,630
+OK, so what if we don't provide a default constructor to the rectangle?
+55
+
+56
+00:03:57,690 --> 00:04:04,080
+What happens actually that the compiler will generate a constructor for you, and it's going to take these
+56
+
+57
+00:04:04,080 --> 00:04:07,100
+parameters and going to assign some initialized values for them.
+57
+
+58
+00:04:07,470 --> 00:04:12,500
+In our case, they will be assigned the default values of 10 and 20, but otherwise, they will be assigned
+58
+
+59
+00:04:12,570 --> 00:04:14,400
+some default values like zero and zero,
+59
+
+60
+00:04:14,400 --> 00:04:17,990
+for example, here. Don't use the default initialization,
+60
+
+61
+00:04:18,300 --> 00:04:23,580
+It's much better to define your own constructor and initialize your own variables.
+61
+
+62
+00:04:26,400 --> 00:04:32,190
+Yeah, read this code, this code will not compile,
+62
+
+63
+00:04:32,370 --> 00:04:32,880
+Why?
+63
+
+64
+00:04:34,750 --> 00:04:43,090
+There is a restriction in the constructor if you provided a constructor that takes parameters,
+64
+
+65
+00:04:43,420 --> 00:04:47,530
+you cannot call the default constructor, so you have to provide it.
+65
+
+66
+00:04:47,740 --> 00:04:52,540
+This is one of the tricky compile errors, that you still to see and get puzzled about what is a problem.
+66
+
+67
+00:04:52,930 --> 00:04:58,710
+If you provided the constructor with arguments, it's OK as long as you are using this constructor,
+67
+
+68
+00:04:58,930 --> 00:05:05,170
+but if you tried to use the default constructor, it is going to do a compilation error. As a tip, always provide
+68
+
+69
+00:05:05,170 --> 00:05:07,530
+a default constructor, it will make your life easier.
+69
+
+70
+00:05:08,600 --> 00:05:15,810
+A destructor is a bit the opposite definition of the constructor, when your object is going out of the
+70
+
+71
+00:05:15,810 --> 00:05:18,980
+scope, it's going to be destructed automatically.
+71
+
+72
+00:05:19,260 --> 00:05:22,590
+So sometimes we need to provide a destructor function.
+72
+
+73
+00:05:22,800 --> 00:05:25,390
+It could be only one destructor function.
+73
+
+74
+00:05:25,410 --> 00:05:33,150
+You first use this symbol on your keyboard and put the class name and start to
+74
+
+75
+00:05:33,150 --> 00:05:34,650
+do ...
+75
+
+76
+00:05:35,160 --> 00:05:40,560
+some destructor's logic here. If you are defining it outside the class, like defining it,
+76
+
+77
+00:05:40,740 --> 00:05:46,230
+use the scope resolution operator then the destructor's name similar to any function name.
+77
+
+78
+00:05:46,380 --> 00:05:53,790
+So this all of it is a function name for the destructor. If you have an object written with a pointer
+78
+
+79
+00:05:53,790 --> 00:05:58,530
+and then you deleted it directly, then this guy is going to call the destructor.
+79
+
+80
+00:05:58,650 --> 00:06:05,640
+If it just went out of the scope of some if's conditions or so, it is going to call the destructor.
+80
+
+81
+00:06:05,790 --> 00:06:12,330
+If the whole program ended then anything that not be destructed will also call the destructor.
+81
+
+82
+00:06:12,450 --> 00:06:14,780
+So constructor builds, destructor finishes.
+82
+
+83
+00:06:15,270 --> 00:06:19,470
+But why do we need the destructor? mainly to deallocate memory
+83
+
+84
+00:06:19,770 --> 00:06:27,150
+If you have pointer data created inside your class, if you didn't remove
+84
+
+85
+00:06:27,150 --> 00:06:31,660
+them in the destructor, this will create something we call a memory leak.
+85
+
+86
+00:06:32,190 --> 00:06:38,440
+A memory leak happens when the program has data that no one deleted. As a rule,
+86
+
+87
+00:06:38,460 --> 00:06:43,620
+Keep it in mind, whoever created some pointer in the memory, must be deleted.
+87
+
+88
+00:06:43,800 --> 00:06:46,680
+For example, if inside the class you created a memory,
+88
+
+89
+00:06:46,830 --> 00:06:49,980
+then you have to delete the memory inside the class from the destructor.
+89
+
+90
+00:06:50,310 --> 00:06:55,410
+If you created an object with a pointer in the main, for example, you have to remove it in the main.
+90
+
+91
+00:06:55,560 --> 00:06:58,340
+If you didn't do that, there would be a memory leak.
+91
+
+92
+00:06:58,590 --> 00:07:02,660
+OK, so a destructor must have logic to destroy the data by itself.
+92
+
+93
+00:07:02,660 --> 00:07:04,220
+Let's see an example here.
+93
+
+94
+00:07:04,590 --> 00:07:05,940
+This is our own class,
+94
+
+95
+00:07:05,940 --> 00:07:07,050
+It's called my vector,
+95
+
+96
+00:07:07,290 --> 00:07:11,070
+It has internally a pointer array and an initial length of 100,
+96
+
+97
+00:07:11,490 --> 00:07:17,310
+and this is one constructor that has length and some default value. In the creation,
+97
+
+98
+00:07:17,460 --> 00:07:23,310
+we assign the length, and also we create a new array, and we start to assign for it the default value.
+98
+
+99
+00:07:23,640 --> 00:07:27,990
+We here create the vector and then after the main, the vector will be destroyed.
+99
+
+100
+00:07:28,320 --> 00:07:33,270
+Here in the destructor, I say delete array arr, that is it.
+100
+
+101
+00:07:33,510 --> 00:07:36,030
+This way the memory is released.
+101
+
+102
+00:07:36,210 --> 00:07:41,220
+Notice if you forgot to put the brackets of the array, this would be a memory leak.
+102
+
+103
+00:07:41,460 --> 00:07:47,520
+So there are two cases for the memory leak. The first that you forget to make a destructor, or make an empty destructor,
+103
+
+104
+00:07:47,670 --> 00:07:49,440
+or make a delete without delete the array.
+104
+
+105
+00:07:49,650 --> 00:07:52,020
+You have to be careful with pointers in C++.
+105
+
+106
+00:07:53,490 --> 00:07:59,040
+Finally, there is something called this pointer, when you create an object from outside, there
+106
+
+107
+00:07:59,070 --> 00:08:00,000
+is actually a pointer
+107
+
+108
+00:08:00,000 --> 00:08:00,690
+looking at it.
+108
+
+109
+00:08:00,900 --> 00:08:06,090
+We inside the class, have the chance to access this implicit pointer for us.
+109
+
+110
+00:08:06,810 --> 00:08:08,670
+It's named this.
+110
+
+111
+00:08:08,700 --> 00:08:10,470
+OK, so it's a pointer.
+111
+
+112
+00:08:10,500 --> 00:08:11,970
+That's why we use arrow here.
+112
+
+113
+00:08:12,090 --> 00:08:15,000
+You can use it any time, you can say this arrow length,
+113
+
+114
+00:08:15,000 --> 00:08:16,290
+so this is the length here.
+114
+
+115
+00:08:16,530 --> 00:08:19,080
+We don't need it unless there are some reasons.
+115
+
+116
+00:08:19,470 --> 00:08:22,480
+As you see, most of the time we can refer to variables directly,
+116
+
+117
+00:08:22,740 --> 00:08:28,320
+but later, you will see some use cases for this THIS pointer.
+117
+
+118
+00:08:28,980 --> 00:08:29,490
+That's it.

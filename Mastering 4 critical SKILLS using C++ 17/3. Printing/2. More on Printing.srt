@@ -1,0 +1,549 @@
+0
+1
+00:00:01,080 --> 00:00:04,440
+In this video, we will discuss more printing notes.
+1
+
+2
+00:00:06,810 --> 00:00:13,470
+Let's start right with tracing this code. The code says, 'cout', then prints something,
+2
+
+3
+00:00:13,470 --> 00:00:17,480
+"I am Mostafa" and then it says 'return 0;'.
+3
+
+4
+00:00:17,790 --> 00:00:19,710
+What does a 'return' statement mean?
+4
+
+5
+00:00:20,180 --> 00:00:24,520
+A return statement is a message to the compiler that we are done.
+5
+
+6
+00:00:25,050 --> 00:00:27,800
+So what does happen after the 'return' statement?
+6
+
+7
+00:00:28,060 --> 00:00:29,710
+It is completely ignored.
+7
+
+8
+00:00:29,940 --> 00:00:37,790
+So remember, if you put something after 'return', it is going to be ignored. '0' is a message to the running case
+8
+
+9
+00:00:37,800 --> 00:00:40,470
+that everything was normal.
+9
+
+10
+00:00:40,620 --> 00:00:45,560
+In the future, you should know that we can return different things to mean different errors.
+10
+
+11
+00:00:45,720 --> 00:00:49,590
+So some messages come from what we're returning from here.
+11
+
+12
+00:00:51,090 --> 00:00:55,890
+The second thing here, '//' this is something called a  (comment)
+12
+
+13
+00:00:56,160 --> 00:00:59,550
+A comment is something that ignored by a compiler.
+13
+
+14
+00:01:00,030 --> 00:01:04,730
+For example, here we see "I am Mostafa", then it's a new line then 'endl'.
+14
+
+15
+00:01:04,740 --> 00:01:06,120
+So it goes to the next line.
+15
+
+16
+00:01:06,300 --> 00:01:12,020
+And then "I was born in Giza\n", has a '//', that is a comment, so the compiler is ignoring it.
+16
+
+17
+00:01:12,300 --> 00:01:13,770
+So why do you write comments?
+17
+
+18
+00:01:14,250 --> 00:01:17,040
+We write comments to have some messages.
+18
+
+19
+00:01:17,220 --> 00:01:21,360
+For example, you might write a note for your friend about what this good means.
+19
+
+20
+00:01:22,990 --> 00:01:28,090
+There's another type of commenting which allows you to ignore a bigger scope.
+20
+
+21
+00:01:28,110 --> 00:01:30,750
+Let's say you would like to ignore all of these lines of code.
+21
+
+22
+00:01:31,020 --> 00:01:37,980
+Then you put here '/*', no spaces among them and end up with '*/' no space
+22
+
+23
+00:01:37,980 --> 00:01:38,610
+between them.
+23
+
+24
+00:01:39,000 --> 00:01:44,060
+Then the compiler is going to ignore all the text between of them.
+24
+
+25
+00:01:44,400 --> 00:01:48,980
+Notice how Eclipse changes the color of this part to mean that it is a commented-code.
+25
+
+26
+00:01:51,240 --> 00:01:57,150
+So far we just were learning about printing messages, but also we can print numbers.
+26
+
+27
+00:01:57,300 --> 00:02:02,430
+So say here, we say 'cout<< 1;' just print the number 1, 12, 123
+27
+
+28
+00:02:02,610 --> 00:02:03,780
+123 is a number.
+28
+
+29
+00:02:04,300 --> 00:02:08,930
+OK, now here, when you print "123" as a message, this isn't a number.
+29
+
+30
+00:02:09,270 --> 00:02:14,520
+So in C++, as we will know later and every programming language, there is something, what we call
+30
+
+31
+00:02:14,520 --> 00:02:18,510
+(Data Type). The data type of 123 is something called integer.
+31
+
+32
+00:02:18,600 --> 00:02:19,290
+It's a number.
+32
+
+33
+00:02:19,470 --> 00:02:22,620
+Let's call it a number for now, and here "123"
+33
+
+34
+00:02:22,620 --> 00:02:23,730
+Between double quotes,
+34
+
+35
+00:02:23,910 --> 00:02:24,930
+It is a string.
+35
+
+36
+00:02:25,230 --> 00:02:26,220
+It is a string.
+36
+
+37
+00:02:26,590 --> 00:02:28,800
+OK, so while you see here
+37
+
+38
+00:02:28,800 --> 00:02:30,270
+123 and 123
+38
+
+39
+00:02:30,480 --> 00:02:34,110
+This actually was coming from a number, but this was coming from a message.
+39
+
+40
+00:02:35,730 --> 00:02:38,700
+You can also have something like "15.7"
+40
+
+41
+00:02:38,850 --> 00:02:40,350
+So fractions are supported.
+41
+
+42
+00:02:40,620 --> 00:02:43,490
+You can also have something like a negative number, "-12"
+42
+
+43
+00:02:44,160 --> 00:02:45,780
+This is a number, this is number.
+43
+
+44
+00:02:46,050 --> 00:02:46,590
+Look here.
+44
+
+45
+00:02:46,950 --> 00:02:52,890
+These two lines are printing almost the same number here.
+45
+
+46
+00:02:53,070 --> 00:02:58,470
+But however, this is coming from one single number, but this is coming from two different numbers.
+46
+
+47
+00:02:58,920 --> 00:03:04,830
+And finally, you can see here, printing a message followed by a number is just be like that.
+47
+
+48
+00:03:05,130 --> 00:03:10,800
+So what to know here is that we can also print numbers, we can print messages and so on.
+48
+
+49
+00:03:12,000 --> 00:03:15,630
+In addition to that, we can also make some math on numbers.
+49
+
+50
+00:03:15,840 --> 00:03:23,070
+For example, if you printed (1+2+3+4), it is going to print for you "10", if you
+50
+
+51
+00:03:23,070 --> 00:03:31,020
+put this equation, simple equation between double quotes "", it is going to be printed as a message. so you can
+51
+
+52
+00:03:31,020 --> 00:03:32,010
+make things more advanced like
+52
+
+53
+00:03:32,010 --> 00:03:37,950
+put "1+2+3+4" equals (1+2+3+4), for the compiler
+53
+
+54
+00:03:38,220 --> 00:03:39,900
+this is between double quotes,
+54
+
+55
+00:03:40,020 --> 00:03:41,730
+So it's going to be printed as it is.
+55
+
+56
+00:03:42,120 --> 00:03:43,890
+And then this looks like math.
+56
+
+57
+00:03:43,890 --> 00:03:51,610
+So It's going to sum it and print "10", so you can do more math and more math and so on.
+57
+
+58
+00:03:51,630 --> 00:03:54,420
+"2*3*4 = ", is just 24.
+58
+
+59
+00:03:54,630 --> 00:03:58,650
+You can divide 12 by 2, is going to give you 6.
+59
+
+60
+00:03:59,130 --> 00:04:01,530
+You can divide 12 over 2 over 3.
+60
+
+61
+00:04:01,530 --> 00:04:02,790
+Do it from left to right.
+61
+
+62
+00:04:03,000 --> 00:04:04,530
+So 12 over 2 is 6.
+62
+
+63
+00:04:04,710 --> 00:04:06,390
+6 over 3 is 2.
+63
+
+64
+00:04:07,290 --> 00:04:08,100
+Now here's 6/2,
+64
+
+65
+00:04:08,100 --> 00:04:13,110
+is 3, 7 over 2 is also 3!
+65
+
+66
+00:04:13,530 --> 00:04:14,720
+This is very weird!
+66
+
+67
+00:04:15,090 --> 00:04:21,420
+So one of the things that you should know about the programming language is when it comes to division,
+67
+
+68
+00:04:21,720 --> 00:04:28,260
+are we dividing what we call "integers" or dividing what we are calling "double" or "float"?
+68
+
+69
+00:04:28,530 --> 00:04:31,920
+What is a "double" or a "float", it is something that represents the fractions.
+69
+
+70
+00:04:32,520 --> 00:04:39,660
+When you are doing a division between two things that are integers, an integer is something that doesn't
+70
+
+71
+00:04:39,660 --> 00:04:41,550
+have this ".0" and ".0"
+71
+
+72
+00:04:41,700 --> 00:04:42,600
+It doesn't have it.
+72
+
+73
+00:04:43,170 --> 00:04:46,410
+If you did that, it's going to ignore the fraction part.
+73
+
+74
+00:04:46,830 --> 00:04:53,820
+So if the operation is coming from fractions, the output is going to involve fraction.
+74
+
+75
+00:04:54,090 --> 00:04:58,710
+if the input doesn't involve fraction style, the output would ignore the fraction part.
+75
+
+76
+00:04:58,710 --> 00:04:59,910
+So actually,
+76
+
+77
+00:05:00,090 --> 00:05:07,070
+7 divided by 2 is 3.5, but as these two numbers aren't in a fraction style,
+77
+
+78
+00:05:07,590 --> 00:05:13,320
+It's just printing 3 and dropping the fraction style. We will learn more about that when we come
+78
+
+79
+00:05:13,320 --> 00:05:15,330
+to the data types.
+79
+
+80
+00:05:16,650 --> 00:05:22,610
+The last interesting thing here is we might multiply these 10s in each other to get this number.
+80
+
+81
+00:05:23,220 --> 00:05:27,120
+But when we added one more 10, it gives us a very weird number.
+81
+
+82
+00:05:27,510 --> 00:05:28,950
+This is called overflow.
+82
+
+83
+00:05:29,250 --> 00:05:33,870
+Every, every...., There is a limit to your numbers in C++.
+83
+
+84
+00:05:33,870 --> 00:05:35,490
+You cannot have very big numbers.
+84
+
+85
+00:05:35,640 --> 00:05:38,350
+And in every language like that, there are some limitations.
+85
+
+86
+00:05:38,910 --> 00:05:39,970
+We will know more about that later. 
+86
+
+87
+00:05:40,020 --> 00:05:42,600
+"Code Tracing"
+87
+
+88
+00:05:42,600 --> 00:05:43,380
+Let's trace this code.
+88
+
+89
+00:05:43,380 --> 00:05:49,530
+a tracing means you go over the code line by line and act like a compiler.
+89
+
+90
+00:05:49,770 --> 00:05:50,790
+So when we say here
+90
+
+91
+00:05:50,790 --> 00:05:52,890
+'cout <<'
+91
+
+92
+00:05:52,920 --> 00:05:59,340
+It means that there is a message "If your dream only includes you, it's too small \n\n",
+92
+
+93
+00:05:59,730 --> 00:06:01,130
+\n\n".
+93
+
+94
+00:06:01,320 --> 00:06:06,170
+So it's going to print this message with one line empty and then another line.
+94
+
+95
+00:06:06,450 --> 00:06:09,870
+So the message is going to be printed, go a line and then go another line.
+95
+
+96
+00:06:10,500 --> 00:06:16,900
+Then, we sum some equations that ends up with zero then would print the string that is "70/10",
+96
+
+97
+00:06:17,070 --> 00:06:17,950
+This is.
+97
+
+98
+00:06:18,240 --> 00:06:19,350
+just a message.
+98
+
+99
+00:06:19,770 --> 00:06:24,330
+Then we divide (80/10) which is eight, divided by 2 is 4.
+99
+
+100
+00:06:25,050 --> 00:06:29,640
+Then every one of them has "\n" and this 'endl' then so everyone is in a separate line.
+100
+
+101
+00:06:30,330 --> 00:06:36,950
+We started a new message starting with '\n', so we go one line below, then "opportunities don't happen".
+101
+
+102
+00:06:37,230 --> 00:06:38,160
+"You create them".
+102
+
+103
+00:06:38,460 --> 00:06:41,340
+So you have a new message here and then another 'endl'.
+103
+
+104
+00:06:41,340 --> 00:06:45,770
+After that we have a comment,
+104
+
+105
+00:06:45,780 --> 00:06:50,390
+It would be ignored and then another big comment would be ignored, then we return zero.
+105
+
+106
+00:06:50,400 --> 00:06:52,050
+So the program is going to be ended now.
+106
+
+107
+00:06:52,050 --> 00:06:56,640
+After that, there is a message that is going to be ignored by the compiler.
+107
+
+108
+00:06:57,030 --> 00:06:59,250
+Code tracing is an important skill.
+108
+
+109
+00:06:59,460 --> 00:07:05,330
+You should get used to that. To read the code and decide what the compiler will output before running it.
+109
+
+110
+00:07:06,770 --> 00:07:06,860
+That's it for today!

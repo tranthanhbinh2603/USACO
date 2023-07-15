@@ -1,0 +1,375 @@
+1
+00:00:01,320 --> 00:00:03,810
+Let's continue our talk about unique pointers.
+
+2
+00:00:05,990 --> 00:00:12,490
+We would like to see how to make a point to energy, for example, when you can use a unique pointer
+
+3
+00:00:12,500 --> 00:00:15,190
+and here in the template we give it integer array.
+
+4
+00:00:15,500 --> 00:00:21,470
+Then we say B1 Iqua, new interval or you end of end with the parameters.
+
+5
+00:00:21,860 --> 00:00:25,190
+Or we can use a unique function and this is how we should use it.
+
+6
+00:00:25,640 --> 00:00:26,840
+Now, there is a question here.
+
+7
+00:00:29,260 --> 00:00:33,470
+Are these the same like are you want me to be three or three reasons?
+
+8
+00:00:33,470 --> 00:00:40,210
+It does not exactly be one here is creating a memory and it didn't initialize it.
+
+9
+00:00:40,220 --> 00:00:45,920
+So in fact, Fuster one, both B2 and B3 are initializing the whole array with some value.
+
+10
+00:00:45,920 --> 00:00:54,710
+Typically zero here in practice, by the way, is the L would be enough like you need to use unique
+
+11
+00:00:54,710 --> 00:00:55,970
+pointer over integrate.
+
+12
+00:00:55,970 --> 00:00:57,410
+In my opinion, you need to do that.
+
+13
+00:00:57,710 --> 00:01:03,340
+But just in some cases and some like memory management cases or also because the vector is a bit slow,
+
+14
+00:01:03,530 --> 00:01:06,540
+people don't use the vector, they use the report.
+
+15
+00:01:06,560 --> 00:01:11,120
+But but typically you do need to make a unique pointer overlay, if you would like now to iterate to
+
+16
+00:01:11,120 --> 00:01:16,820
+initialize this array to a value you can just say for integrase visit and then just about the value.
+
+17
+00:01:18,230 --> 00:01:21,260
+I would like you to be careful from defining it this way.
+
+18
+00:01:21,470 --> 00:01:28,160
+If you decided to define it like you return it to a new integer five, but you are having you just end
+
+19
+00:01:28,490 --> 00:01:34,100
+this integral pointer, but this integrated array, so this would have undefined behavior, probably
+
+20
+00:01:34,110 --> 00:01:36,230
+would cause a memory leak.
+
+21
+00:01:36,410 --> 00:01:40,640
+So this is integer, this is just integer, but this entire array is integral.
+
+22
+00:01:41,930 --> 00:01:44,270
+I would like to go back to this initialization track.
+
+23
+00:01:44,990 --> 00:01:49,910
+Let's say that you really have a big array and you have to use a new pointer over this array and you
+
+24
+00:01:49,910 --> 00:01:53,990
+would like to avoid the default initialization because the Beslow.
+
+25
+00:01:54,320 --> 00:01:56,510
+So you now define to be one in this way.
+
+26
+00:01:56,780 --> 00:01:59,390
+New end is just creating the memory and use it.
+
+27
+00:02:00,440 --> 00:02:05,000
+Now, let's say that you would like to initializes very fast this something I didn't talk about it before
+
+28
+00:02:05,210 --> 00:02:12,320
+the meme said memes, it is a function in coming from the C language that is very fast initialization
+
+29
+00:02:12,420 --> 00:02:14,160
+intellectualise, character by character internee.
+
+30
+00:02:14,210 --> 00:02:21,120
+Look here at line line thirty eight, if you have a character is to r you can say meme's it is to R
+
+31
+00:02:21,560 --> 00:02:30,230
+later t size of this is going to initially initialize every assign every letter here to character in
+
+32
+00:02:30,230 --> 00:02:30,920
+a very fast way.
+
+33
+00:02:32,900 --> 00:02:38,450
+We can do the same thing with integrity types only for two values, zero at one.
+
+34
+00:02:38,660 --> 00:02:40,850
+And please notice the syntax you use.
+
+35
+00:02:40,970 --> 00:02:45,560
+First of all, we got here the rule pointer so that because we would like to initialize it, I say it,
+
+36
+00:02:45,560 --> 00:02:50,930
+meme's it, give it the pointer, give it the value which could be zero or sorry, this is minus one,
+
+37
+00:02:51,230 --> 00:02:52,310
+zero is minus one.
+
+38
+00:02:52,580 --> 00:02:59,150
+And now I'm saying in times of integer, I'm thinking here the the the number of memory items that it's
+
+39
+00:02:59,150 --> 00:02:59,960
+going to assign.
+
+40
+00:03:00,200 --> 00:03:03,250
+So I'm standing here, get the size of interent multiplied within.
+
+41
+00:03:03,290 --> 00:03:09,000
+When we do that, it's going to assign initialize aside the overlay to minus value, minus one value.
+
+42
+00:03:09,770 --> 00:03:15,620
+So the moral of that is it's in some in some cases, if someone would like to the very first initialization
+
+43
+00:03:15,620 --> 00:03:18,860
+for specific cases, he can get the pointer and just use Mxit.
+
+44
+00:03:19,220 --> 00:03:22,730
+If you get confused from the set and its usage, just skip it for now.
+
+45
+00:03:22,730 --> 00:03:25,160
+I know that you will not be able y to know why.
+
+46
+00:03:25,520 --> 00:03:26,350
+Just zero minutes.
+
+47
+00:03:26,360 --> 00:03:28,500
+What are the valid values at the moment?
+
+48
+00:03:30,170 --> 00:03:34,940
+Also using a unique pointer, which is the L is a bit problematic.
+
+49
+00:03:34,940 --> 00:03:35,780
+So be careful.
+
+50
+00:03:36,170 --> 00:03:38,300
+Let's say that we have a vector of unique pointers.
+
+51
+00:03:38,960 --> 00:03:43,360
+We can push back on the fly, something like make unique of seven.
+
+52
+00:03:43,700 --> 00:03:45,680
+Now the move semantic is going to handle that.
+
+53
+00:03:46,160 --> 00:03:48,080
+But if you have a pointer B what?
+
+54
+00:03:48,110 --> 00:03:53,820
+You can just push it here because it's going to take a Kobie using constructor, which isn't a zero.
+
+55
+00:03:53,840 --> 00:03:57,500
+You have to use a B one by yourself with the move function.
+
+56
+00:03:58,460 --> 00:03:59,840
+Let's use another example here.
+
+57
+00:04:00,110 --> 00:04:08,090
+There is something in C++ that is named Ambanis back, which is doing something in place, construction.
+
+58
+00:04:08,100 --> 00:04:10,300
+Even without the move, it's very efficient.
+
+59
+00:04:10,340 --> 00:04:11,750
+Something good, new placement.
+
+60
+00:04:13,040 --> 00:04:19,040
+You can also you can also use Imbursement back with moving or with the normal way.
+
+61
+00:04:19,830 --> 00:04:22,850
+The more of that just seamless back is more efficient than the wish back.
+
+62
+00:04:23,570 --> 00:04:31,460
+There is something interesting in C++ 17, when you push back some pointer, you can take a reference
+
+63
+00:04:31,460 --> 00:04:32,530
+over it in the same time.
+
+64
+00:04:32,540 --> 00:04:33,170
+This is just that.
+
+65
+00:04:33,260 --> 00:04:34,280
+Use one line of code.
+
+66
+00:04:34,590 --> 00:04:35,810
+Don't do that in C++.
+
+67
+00:04:35,810 --> 00:04:36,950
+Fourteen, it will not work.
+
+68
+00:04:37,670 --> 00:04:40,640
+It gives you would like to iterate on a vector of unique pointers.
+
+69
+00:04:40,790 --> 00:04:42,170
+You have to use the difference.
+
+70
+00:04:42,170 --> 00:04:46,430
+You cannot move it, remove it because it's going to make a copy and which isn't allowed.
+
+71
+00:04:46,670 --> 00:04:49,370
+So iterating on a vector, you have to use the reference.
+
+72
+00:04:51,670 --> 00:04:55,570
+There is a memory leak here, so be careful from from that.
+
+73
+00:04:58,320 --> 00:05:04,290
+Now, you shouldn't use that, but I'm just telling you about it, the release function in the winter
+
+74
+00:05:04,440 --> 00:05:09,050
+is releasing the pointer for you and giving you the responsibility to remove it.
+
+75
+00:05:09,360 --> 00:05:12,480
+So if you could release is going to give you the internal pointer.
+
+76
+00:05:12,630 --> 00:05:14,320
+Now, be one is null pointer.
+
+77
+00:05:14,730 --> 00:05:16,800
+So now you have to remove the bee by yourself.
+
+78
+00:05:17,190 --> 00:05:18,630
+You should then use the release function.
+
+79
+00:05:18,640 --> 00:05:23,530
+I'm just warning you, in case you just by mistake use it or you have very, very specific scenario.
+
+80
+00:05:23,820 --> 00:05:26,190
+This is the only case when you have to delete the pointer.
+
+81
+00:05:26,200 --> 00:05:33,330
+Borshoff also be careful from the situation we have here, Integral Pointer Bee and we give it to to
+
+82
+00:05:33,330 --> 00:05:34,310
+two unique pointers.
+
+83
+00:05:34,440 --> 00:05:35,330
+You can do that.
+
+84
+00:05:35,520 --> 00:05:38,520
+But notice this is a is going to be a dangling pointer.
+
+85
+00:05:38,820 --> 00:05:41,330
+The first pointer would remove Bee is OK.
+
+86
+00:05:41,490 --> 00:05:43,320
+The second one would cause a runtime error.
+
+87
+00:05:43,530 --> 00:05:47,700
+So as you see, we can do a lot of problems still with smart pointers.
+
+88
+00:05:48,700 --> 00:05:53,890
+Just look at the scene, and I already say that before the behind the scene, the smart operators are
+
+89
+00:05:53,890 --> 00:05:58,840
+just grabbing for the internal data in this way once you go to that school.
+
+90
+00:05:58,870 --> 00:06:01,410
+This one is going to destructed object.
+
+91
+00:06:01,660 --> 00:06:09,190
+This mechanism is known as R Eye, and the model of it is just grabbing the resource by this way to
+
+92
+00:06:09,190 --> 00:06:13,960
+reduce the hassle of destroying it, even feel free to think about.
+
+93
+00:06:13,960 --> 00:06:17,100
+Let's implement my own unique pointer class and do this stuff by yourself.
+
+94
+00:06:17,740 --> 00:06:18,250
+That's it.

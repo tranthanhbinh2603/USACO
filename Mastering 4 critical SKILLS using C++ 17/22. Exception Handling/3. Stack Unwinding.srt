@@ -1,0 +1,530 @@
+0
+1
+00:00:01,410 --> 00:00:08,970
+Stack unwinding is a process that happens behind the scene when there is an exception that has been
+1
+
+2
+00:00:08,970 --> 00:00:15,330
+thrown in your code. I guess so far, you can already guess what's happening behind the scene.
+2
+
+3
+00:00:15,630 --> 00:00:22,170
+If we have some function1 calling function2 and function2 having to throw an exception, then
+3
+
+4
+00:00:22,170 --> 00:00:29,670
+the logic is: does it have any try-catch around this line of code that throws the exception?
+4
+
+5
+00:00:30,060 --> 00:00:35,220
+If the answer is no, then the current function would be terminated, and it would be removed from the
+5
+
+6
+00:00:35,220 --> 00:00:40,710
+stack and all of its local variables, as we learned in the stack and heap video before.
+6
+
+7
+00:00:41,640 --> 00:00:49,950
+Now on the other side, if it happened that the function has a try-catch with a matching type, if
+7
+
+8
+00:00:49,950 --> 00:00:52,690
+it doesn't have a matching type, then it doesn't have an effect.
+8
+
+9
+00:00:52,860 --> 00:00:57,890
+So again, it will terminate removed from the stack, and all of its local variables would be destroyed.
+9
+
+10
+00:00:58,620 --> 00:01:06,150
+But if it has a matching type, like let's say we have thrown a remote runtime exception and we caught a runtime
+10
+
+11
+00:01:06,150 --> 00:01:13,050
+exception, then we go to the catch block to handle it, which may have to throw again. If it happened
+11
+
+12
+00:01:13,050 --> 00:01:21,030
+to throw again, then the same logic starts to apply, and so on. After function1, the function2
+12
+
+13
+00:01:21,030 --> 00:01:27,180
+may receive a throw exception from function1 to start to do the same
+13
+
+14
+00:01:27,180 --> 00:01:27,630
+logic.
+14
+
+15
+00:01:28,200 --> 00:01:34,230
+If it happened that the main itself received the exception and there is no try-catch for it, then the whole
+15
+
+16
+00:01:34,380 --> 00:01:35,440
+program will crash.
+16
+
+17
+00:01:36,150 --> 00:01:41,670
+Let's do a little simulation to make sure that we understand that. Here is some class employee
+17
+
+18
+00:01:41,940 --> 00:01:45,200
+with just an id and destructure that destroy
+18
+
+19
+00:01:45,240 --> 00:01:53,520
+an employee. Take a minute, stop this video and try to simulate all of the function calls from here.
+19
+
+20
+00:01:55,010 --> 00:02:01,350
+Let's do a tracing. The function main is calling function f1. F1 will print start f1.
+20
+
+21
+00:02:01,350 --> 00:02:08,360
+So we print here f1, and then it's calling f2 which is surrounded with a try-catch of type integer.
+21
+
+22
+00:02:09,090 --> 00:02:16,980
+Now F2 will start to print F2, F2 is again calling F3 but has a try-catch of type runtime error.
+22
+
+23
+00:02:16,980 --> 00:02:17,270
+...
+23
+
+24
+00:02:18,060 --> 00:02:22,730
+Now, F3 is writing f3...
+24
+
+25
+00:02:22,770 --> 00:02:25,260
+First, creating an object
+25
+
+26
+00:02:26,150 --> 00:02:29,040
+p and assigning id 3.
+26
+
+27
+00:02:29,630 --> 00:02:33,950
+Now, where is this object created? the employee object is created on the stack.
+27
+
+28
+00:02:34,220 --> 00:02:38,480
+So if it happened when this function is destroyed, this variable should be destroyed.
+28
+
+29
+00:02:39,560 --> 00:02:45,020
+Calling f4 will print start f4. We are defining a new object here, but we are defining it on
+29
+
+30
+00:02:45,020 --> 00:02:45,590
+the heap.
+30
+
+31
+00:02:45,590 --> 00:02:48,030
+It is dynamic memory that should be released.
+31
+
+32
+00:02:48,740 --> 00:02:52,570
+Now, it happened here that we are throwing one, so we are throwing an integer.
+32
+
+33
+00:02:53,030 --> 00:02:58,640
+So the stack unwinding process starts and says, do we have a try-catch here?
+33
+
+34
+00:02:58,640 --> 00:02:58,880
+...
+34
+
+35
+00:02:58,880 --> 00:02:59,660
+The answer is no.
+35
+
+36
+00:03:00,050 --> 00:03:06,500
+So the function will directly terminate and throw back the exception to this line of code here.
+36
+
+37
+00:03:06,950 --> 00:03:12,620
+Now, one clear problem here is there is a memory leak here because this object is dynamic and need
+37
+
+38
+00:03:12,620 --> 00:03:18,190
+to be free and clean, but this line will never be executed.
+38
+
+39
+00:03:18,440 --> 00:03:20,510
+So this is the first memory that we have.
+39
+
+40
+00:03:21,050 --> 00:03:27,620
+So the first lesson here to learn is you need to be careful with dynamic pointers like that because
+40
+
+41
+00:03:27,620 --> 00:03:34,170
+if there is anything that has been thrown here, your code will have a memory leak.
+41
+
+42
+00:03:34,430 --> 00:03:40,820
+You might think like I'm not going to code in this ugly way, but you can have some calling to
+42
+
+43
+00:03:40,820 --> 00:03:46,820
+some functions in some library and you don't notice that this function is going to throw an exception.
+43
+
+44
+00:03:47,240 --> 00:03:49,750
+So you end up that you really have a memory leak.
+44
+
+45
+00:03:50,060 --> 00:03:54,500
+So anyway, this line will not be executed, end f4 will not be executed.
+45
+
+46
+00:03:54,980 --> 00:03:57,020
+Now, the exception come here to the line f4.
+46
+
+47
+00:03:57,020 --> 00:04:01,010
+Does it have a try-catch? the answer is no.
+47
+
+48
+00:04:01,280 --> 00:04:03,050
+So again, this function will terminate,
+48
+
+49
+00:04:03,530 --> 00:04:05,390
+but there is a difference here.
+49
+
+50
+00:04:05,780 --> 00:04:13,160
+This object now is in the local stack, as we are terminating F4, we are destroying all of the local variables
+50
+
+51
+00:04:13,400 --> 00:04:15,010
+in the stack unwinding process.
+51
+
+52
+00:04:15,230 --> 00:04:17,810
+So that's why we see here a destroy employee 3.
+52
+
+53
+00:04:19,130 --> 00:04:26,780
+Now, f4 is jumping back to here at line 31. F3, it happened to have a try-catch,
+53
+
+54
+00:04:27,260 --> 00:04:33,620
+so the exception with a check first, if it's matching or not. We have here a runtime
+54
+
+55
+00:04:34,040 --> 00:04:37,750
+error exception, but we actually throw an integer exception
+55
+
+56
+00:04:38,030 --> 00:04:41,840
+so this guy doesn't have an effect, doesn't have a matching.
+56
+
+57
+00:04:41,840 --> 00:04:44,720
+This message would not be printed, and this message would not be printed.
+57
+
+58
+00:04:46,100 --> 00:04:50,770
+Now, the exception is going to free local variables, jump again to line 42.
+58
+
+59
+00:04:51,160 --> 00:04:55,840
+In line 42, we have a try-catch of a matching type.
+59
+
+60
+00:04:56,090 --> 00:05:01,130
+Now, the exception stops here and jumps to this line of code, writing error code 1,
+60
+
+61
+00:05:01,550 --> 00:05:05,520
+and then there is no more throwing of the exception here.
+61
+
+62
+00:05:05,840 --> 00:05:11,240
+So the end f1 would be written, and we go back to f1.  If it happened that even this guy doesn't have
+62
+
+63
+00:05:11,240 --> 00:05:16,400
+a matching try-catch and this guy doesn't have a matching 
+try-catch, the program crashes. 
+63
+
+64
+00:05:19,830 --> 00:05:27,900
+This is all about the stack unwinding process, which would have some specific handling behind the scene
+64
+
+65
+00:05:27,910 --> 00:05:30,430
+for the local variables and the destroying of them.
+65
+
+66
+00:05:31,410 --> 00:05:32,690
+This is another code here.
+66
+
+67
+00:05:32,970 --> 00:05:41,010
+We are creating an object, and it happened that we are throwing an exception in the constructor,
+67
+
+68
+00:05:41,430 --> 00:05:47,610
+and one of the interesting things about constructors is that the constructor is a function that doesn't
+68
+
+69
+00:05:47,610 --> 00:05:48,620
+have a return type.
+69
+
+70
+00:05:49,020 --> 00:05:54,540
+So you cannot say that the constructor field. Throwing an exception is one of the best ways to say that
+70
+
+71
+00:05:54,540 --> 00:05:58,090
+the constructor failed to initialize my variables in a way runnable.
+71
+
+72
+00:05:58,440 --> 00:06:00,090
+But again, we are failing here
+72
+
+73
+00:06:00,090 --> 00:06:05,370
+in a memory leak. This destructure will never be called even if you are creating a normal object
+73
+
+74
+00:06:05,370 --> 00:06:06,380
+in the stack like that.
+74
+
+75
+00:06:06,810 --> 00:06:07,350
+Why?
+75
+
+76
+00:06:07,710 --> 00:06:09,930
+Because the object didn't complete.
+76
+
+77
+00:06:10,080 --> 00:06:12,990
+There is no complete object that has been created here.
+77
+
+78
+00:06:13,290 --> 00:06:18,090
+So this is one lesson that you have to be very careful. On the other side,
+78
+
+79
+00:06:18,280 --> 00:06:21,780
+you should never try to throw an exception inside a destructure.
+79
+
+80
+00:06:22,080 --> 00:06:23,310
+This is very problematic.
+80
+
+81
+00:06:23,580 --> 00:06:28,920
+Imagine that there is an exception that the stack unwinding is handling,
+81
+
+82
+00:06:29,130 --> 00:06:32,900
+and suddenly in the middle of that, your destructure also throws an exception.
+82
+
+83
+00:06:32,940 --> 00:06:37,880
+This would be very problematic and might end up with some undefined behavior.
+83
+
+84
+00:06:40,260 --> 00:06:46,500
+The last track that I would like you to be aware of is a very wrong assumption between guys and the
+84
+
+85
+00:06:46,500 --> 00:06:48,360
+difference between throw e and throw.
+85
+
+86
+00:06:49,020 --> 00:06:56,490
+We know that when we catch an error, we can throw it again.
+86
+
+87
+00:06:56,550 --> 00:07:03,090
+OK, so here, f3 is throwing runtime error, and now I have a try-catch here of runtime error,
+87
+
+88
+00:07:03,420 --> 00:07:08,850
+and then in the try-catch, I am printing the error address, and throwing e again.
+88
+
+89
+00:07:09,540 --> 00:07:17,520
+Now, the guys think that this is as a reference e and this is as a reference e and this as a reference e,
+89
+
+90
+00:07:17,940 --> 00:07:24,360
+they think that all of these e's would be one. This will not be true. The E only would be once in
+90
+
+91
+00:07:24,360 --> 00:07:27,030
+terms of whatever receiving.
+91
+
+92
+00:07:27,330 --> 00:07:34,050
+When you try here through E, E is creating a new copy. You will notice every time we have a different
+92
+
+93
+00:07:34,050 --> 00:07:41,130
+address and this means we are creating copies of it, although 99 percent, this will not be actually the
+93
+
+94
+00:07:41,130 --> 00:07:45,340
+intentions. You actually don't need to make a copy. If this is a very heavy object,
+94
+
+95
+00:07:45,390 --> 00:07:48,160
+this might slow the performance of the system.
+95
+
+96
+00:07:48,730 --> 00:07:52,410
+Now, another way is just to try throw without through E.
+96
+
+97
+00:07:52,770 --> 00:07:58,810
+When you do that, the compiler does some magic behind the scene and keep throwing the same error exactly.
+97
+
+98
+00:07:58,830 --> 00:07:59,630
+...
+98
+
+99
+00:07:59,910 --> 00:08:05,250
+So you notice that throw E everywhere is actually having the same address.
+99
+
+100
+00:08:05,580 --> 00:08:07,650
+This is very important,
+100
+
+101
+00:08:08,100 --> 00:08:17,130
+and even later when we will learn the OOP, you will know about the inheritance hierarchy.
+101
+
+102
+00:08:17,250 --> 00:08:22,300
+You will know that this is very, very, very useful because it gives the child and parent information
+102
+
+103
+00:08:22,560 --> 00:08:22,670
+throwing
+103
+
+104
+00:08:22,680 --> 00:08:23,280
+exactly.
+104
+
+105
+00:08:23,700 --> 00:08:29,910
+So the moral of that stick to throw only unless there is an important reason.
+105
+
+106
+00:08:29,910 --> 00:08:34,910
+I would like really to make a copy of the error itself. That's all.

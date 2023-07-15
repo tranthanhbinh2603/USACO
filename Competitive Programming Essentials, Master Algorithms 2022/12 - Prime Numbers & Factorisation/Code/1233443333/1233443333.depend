@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1675851667 source:e:\document\project\usaco\competitive programming essentials, master algorithms 2022\12 - prime numbers & factorisation\code\1233443333\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<math.h>
+	<map>
+

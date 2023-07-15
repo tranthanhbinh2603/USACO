@@ -1,0 +1,404 @@
+0
+1
+00:00:01,260 --> 00:00:07,380
+It is useful to refresh the inheritance when it comes with the exception, exception is one of the very
+1
+
+2
+00:00:07,380 --> 00:00:12,530
+nice locations when inheritance comes in practice.
+2
+
+3
+00:00:12,750 --> 00:00:15,990
+So the STL has an exception hierarchy.
+3
+
+4
+00:00:16,380 --> 00:00:19,190
+Remember, the exceptions is a way to handle errors.
+4
+
+5
+00:00:19,200 --> 00:00:26,490
+If there is something wrong in the classes, then we can throw an exception that just point out there
+5
+
+6
+00:00:26,490 --> 00:00:28,540
+is something wrong in the system.
+6
+
+7
+00:00:29,100 --> 00:00:33,640
+There are typically two ways for people to handle problems and code,
+7
+
+8
+00:00:33,810 --> 00:00:35,370
+One way is to throw exceptions.
+8
+
+9
+00:00:35,370 --> 00:00:36,450
+Another way is to return an error code.
+9
+
+10
+00:00:36,460 --> 00:00:38,730
+they are both in industry.
+10
+
+11
+00:00:38,730 --> 00:00:41,000
+It's important to know about the differences between them.
+11
+
+12
+00:00:41,730 --> 00:00:46,530
+So I would like you to read carefully this hierarchy.
+12
+
+13
+00:00:46,530 --> 00:00:49,500
+It is a hierarchy of three levels, in the top level:
+13
+
+14
+00:00:49,500 --> 00:00:50,460
+We have an exception.
+14
+
+15
+00:00:50,640 --> 00:00:52,920
+And the second level: we have some
+15
+
+16
+00:00:53,340 --> 00:00:59,220
+bad_alloc this is if you are allocating a lot of memory, logic error, runtime error, and bad_casting if
+16
+
+17
+00:00:59,220 --> 00:01:00,440
+you are casting something wrong.
+17
+
+18
+00:01:00,930 --> 00:01:07,080
+So the logic errors like out of range error, for example, like you are good out of range from an array,
+18
+
+19
+00:01:07,080 --> 00:01:10,110
+for example, overflow error if for example
+19
+
+20
+00:01:10,110 --> 00:01:13,020
+Some numbers is exceeding some of the limits and so on.
+20
+
+21
+00:01:13,290 --> 00:01:17,490
+So stop the video and familiarize yourself with the hierarchy elements.
+21
+
+22
+00:01:18,690 --> 00:01:20,820
+Now let's refresh the following cases.
+22
+
+23
+00:01:21,660 --> 00:01:25,300
+Here is a function that is dividing over X if X is zero.
+23
+
+24
+00:01:25,440 --> 00:01:27,200
+This would be like division by zero.
+24
+
+25
+00:01:27,210 --> 00:01:28,440
+The program is going to crash.
+25
+
+26
+00:01:28,440 --> 00:01:33,420
+Whatever you are trying to do, even exception, nothing will stop it from crashing. Array X
+26
+
+27
+00:01:33,460 --> 00:01:34,170
+this is a vector
+27
+
+28
+00:01:34,470 --> 00:01:36,960
+And we are accessing it using the at position.
+28
+
+29
+00:01:36,960 --> 00:01:43,440
+It has only 5 elements if you try to access with more, it will throw an out of range error, which
+29
+
+30
+00:01:43,440 --> 00:01:44,610
+is actually a logical error.
+30
+
+31
+00:01:45,690 --> 00:01:46,800
+Mysqrt function.
+31
+
+32
+00:01:46,800 --> 00:01:51,210
+I'm saying here, if the number is less than zero, then just throw a domain error.
+32
+
+33
+00:01:51,330 --> 00:01:53,160
+Otherwise compute the sqrt function.
+33
+
+34
+00:01:53,670 --> 00:01:56,820
+My exponential function is taking X and computing it.
+34
+
+35
+00:01:57,420 --> 00:01:59,580
+The C++ will return a HUGE_VAL.
+35
+
+36
+00:02:00,630 --> 00:02:04,540
+this keyword, if the exponential value was too large.
+36
+
+37
+00:02:04,830 --> 00:02:11,610
+So if this happened, I would throw out_of_range error saying that we cannot hold this value in double
+37
+
+38
+00:02:11,610 --> 00:02:12,100
+for example.
+38
+
+39
+00:02:12,990 --> 00:02:15,570
+Now, let's here create a test function.
+39
+
+40
+00:02:15,690 --> 00:02:24,180
+It takes a double X, then the logic is line mysqrt(X), then myexp(X),then array_access(X).
+40
+
+41
+00:02:24,720 --> 00:02:27,840
+So here is how C++ handle exceptions.
+41
+
+42
+00:02:28,050 --> 00:02:32,100
+It will only execute lines 35, 36, 37.
+42
+
+43
+00:02:32,430 --> 00:02:34,980
+If everything is OK, it just go outside them.
+43
+
+44
+00:02:35,520 --> 00:02:42,300
+If there is a problem, it jumps to the first catch and say is the exception of the type of the domain
+44
+
+45
+00:02:42,300 --> 00:02:42,620
+error.
+45
+
+46
+00:02:42,960 --> 00:02:45,570
+If yes it enter here and then just 
+46
+
+47
+00:02:45,570 --> 00:02:48,900
+go to completely outside, if no it move to the second one.
+47
+
+48
+00:02:49,110 --> 00:02:54,840
+Think of it like the if-else, it double-checks the if condition this then this condition, then this condition.
+48
+
+49
+00:02:55,890 --> 00:03:00,330
+And if you caught it anywhere, you can print the e.what() to get the message.
+49
+
+50
+00:03:00,550 --> 00:03:04,440
+Now the core message in this video is as following.
+50
+
+51
+00:03:04,950 --> 00:03:10,950
+Let's put the hierarchy of classes here always like this is a child class, then parent 
+51
+
+52
+00:03:10,950 --> 00:03:11,390
+class.
+52
+
+53
+00:03:11,790 --> 00:03:14,770
+What happens if you put here parent class after it
+53
+
+54
+00:03:14,790 --> 00:03:15,390
+It's child class.
+54
+
+55
+00:03:15,390 --> 00:03:19,570
+The parent class will definitely would be accessible,but the child
+55
+
+56
+00:03:19,590 --> 00:03:26,070
+class will never be accessible, So the right order in try-catch should be some a child class,
+56
+
+57
+00:03:26,070 --> 00:03:27,060
+then parent class.
+57
+
+58
+00:03:27,330 --> 00:03:32,100
+If you put a parent class of someone, then one of the children, the child will never be called.
+58
+
+59
+00:03:32,340 --> 00:03:35,130
+So this is the only thing that you have to be careful about.
+59
+
+60
+00:03:35,640 --> 00:03:40,670
+And as we said, the division by zero will never be caught.
+60
+
+61
+00:03:40,890 --> 00:03:44,100
+It's our responsibility to verify such arithmetic level.
+61
+
+62
+00:03:46,080 --> 00:03:48,660
+The three dots here is catching whatever thing.
+62
+
+63
+00:03:48,700 --> 00:03:50,580
+OK, so this is a very special syntax.
+63
+
+64
+00:03:50,820 --> 00:03:55,620
+If no specific error here, it just would be caught from here.
+64
+
+65
+00:03:55,650 --> 00:04:00,360
+OK, be careful from that because it might like swallow errors in your system.
+65
+
+66
+00:04:00,360 --> 00:04:01,260
+You might catch it.
+66
+
+67
+00:04:01,260 --> 00:04:04,650
+Then you look something, then you through it again.
+67
+
+68
+00:04:05,280 --> 00:04:10,650
+In practice, what happened is we typically build our own exception hierarchy.
+68
+
+69
+00:04:10,950 --> 00:04:12,720
+We build our own exception hierarchy.
+69
+
+70
+00:04:12,840 --> 00:04:16,320
+So we start to define classes of specific reasons.
+70
+
+71
+00:04:16,680 --> 00:04:22,980
+If you are building banking application, you might have some error, like, say, not paid exception,
+71
+
+72
+00:04:23,100 --> 00:04:23,880
+things like that.
+72
+
+73
+00:04:25,290 --> 00:04:30,890
+So here is a test, we testing test(10), test(-4), a big number, the test(10) will fail in the array access,
+73
+
+74
+00:04:30,900 --> 00:04:33,360
+so it is giving this logical array vector access issue.
+74
+
+75
+00:04:33,630 --> 00:04:35,660
+The -4 would fail in the square root.
+75
+
+76
+00:04:35,670 --> 00:04:36,770
+So it's a domain error.
+76
+
+77
+00:04:37,140 --> 00:04:43,990
+So you shouldn't. The domain means like expected for a square root number to be from zero to something positive if you enter minus,
+77
+
+78
+00:04:44,010 --> 00:04:44,700
+then this is a wrong domain.
+78
+
+79
+00:04:44,740 --> 00:04:52,410
+If you picked this very big value, this is a logical error or like a specifically out of range
+79
+
+80
+00:04:52,410 --> 00:04:55,410
+for the exponential, test for zero will crash the whole program.
+80
+
+81
+00:04:56,520 --> 00:04:57,020
+That's it.

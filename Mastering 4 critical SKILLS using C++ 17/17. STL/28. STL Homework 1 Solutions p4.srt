@@ -1,0 +1,139 @@
+0
+1
+00:00:02,130 --> 00:00:08,640
+In this homework, we would like to, as you see, to make some kind of queries like when you give a
+1
+
+2
+00:00:08,640 --> 00:00:12,300
+query like 'm',  it gives the current name, 'mo' gives the current names.
+2
+
+3
+00:00:12,690 --> 00:00:15,630
+Do you notice this like auto complete service in Google?
+3
+
+4
+00:00:15,900 --> 00:00:17,010
+This is something like that.
+4
+
+5
+00:00:18,000 --> 00:00:20,340
+There is a constraint here to use the input order
+5
+
+6
+00:00:20,340 --> 00:00:25,990
+as I explained, if we ask it for 'm', then we have these three words with the 'm' and we should respect
+6
+
+7
+00:00:25,990 --> 00:00:28,470
+the input order as it is now.
+7
+
+8
+00:00:28,470 --> 00:00:29,850
+How can we implement that?
+8
+
+9
+00:00:30,120 --> 00:00:33,390
+What kind of data structure that would be pretty good and flexible for us?
+9
+
+10
+00:00:34,320 --> 00:00:41,370
+Um, the data structure that I selected to solve for this problem is the map data structure.
+10
+
+11
+00:00:42,860 --> 00:00:47,570
+The map data structure can map for me from something to something, so what is the point?
+11
+
+12
+00:00:48,050 --> 00:00:55,940
+The point is as following: for every given string, I will generate all of the prefixes of it and create
+12
+
+13
+00:00:55,940 --> 00:00:59,660
+a map ranging from the current prefix to the string.
+13
+
+14
+00:01:00,020 --> 00:01:02,450
+For example, let's say I have the string 'Mustafa'.
+14
+
+15
+00:01:03,530 --> 00:01:11,990
+How many prefixes are here? using this loop here, I can generate all of the prefixes, which are 'm', 'mo',
+15
+
+16
+00:01:12,410 --> 00:01:24,220
+'mos', 'most', 'mosta', 'mostaf', 'mostafa'
+16
+
+17
+00:01:25,460 --> 00:01:28,640
+So all of these prefixes are part of the word Mustafa.
+17
+
+18
+00:01:29,390 --> 00:01:38,690
+Now in the map, I will map from the prefix to a vector of all of the strings that have this prefix.
+18
+
+19
+00:01:39,170 --> 00:01:47,630
+So now, for example, um, let's say in the 'mo' map, we will map and will have here mostafa.
+19
+
+20
+00:01:50,890 --> 00:01:58,170
+The next string, for example, was 'morad'. Now 'morad' also has a 'mo', so it's a prefix will push back itself
+20
+
+21
+00:01:58,190 --> 00:02:00,610
+here, 'Morad' and so on.
+21
+
+22
+00:02:01,120 --> 00:02:12,070
+In this way, the map is ready after this competition, such that every prefix is
+22
+
+23
+00:02:12,070 --> 00:02:20,740
+pointing to a list of all of the strings that have this prefix as a prefix.
+23
+
+24
+00:02:21,430 --> 00:02:25,840
+Now what's more interesting is: given that I was just pushing back the elements,
+24
+
+25
+00:02:26,870 --> 00:02:31,420
+then these elements would be in exactly the same order as the given input.
+25
+
+26
+00:02:31,580 --> 00:02:36,950
+So I also this way maintained the current input. I know that this kind of usage for these data structures
+26
+
+27
+00:02:36,950 --> 00:02:38,180
+might not be easy for you.
+27
+
+28
+00:02:38,420 --> 00:02:41,480
+But over time, you will get used to it.

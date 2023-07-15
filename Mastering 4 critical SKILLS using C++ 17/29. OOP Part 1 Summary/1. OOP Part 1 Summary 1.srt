@@ -1,0 +1,424 @@
+0
+1
+00:00:00,930 --> 00:00:07,440
+We are like halfway in the OOP, so it's a good time to make some summary to enforce what we already
+1
+
+2
+00:00:07,440 --> 00:00:08,310
+learned so far.
+2
+
+3
+00:00:08,880 --> 00:00:12,930
+So we discussed that OOP is a paradigm,
+3
+
+4
+00:00:12,930 --> 00:00:14,730
+it isn't the only paradigm that we have,
+4
+
+5
+00:00:15,120 --> 00:00:21,440
+and in OOP, we are very centralized around the objects and the relationships. So far,
+5
+
+6
+00:00:21,630 --> 00:00:26,940
+we studied the following concepts: class object, encapsulation, data hiding, and abstraction,
+6
+
+7
+00:00:27,390 --> 00:00:34,340
+and also, we saw a lot of C++ syntax about class, and what it takes to apply it in a proper way.
+7
+
+8
+00:00:36,160 --> 00:00:40,990
+The remaining concepts are mainly something called inheritance and polymorphism, these are the other
+8
+
+9
+00:00:40,990 --> 00:00:45,070
+two concepts in the OOP diagram. There is also something called
+9
+
+10
+00:00:45,070 --> 00:00:47,580
+operator overloading. It isn't OOP,
+10
+
+11
+00:00:47,590 --> 00:00:51,730
+it's more about making OOP looks like a more beautiful code.
+11
+
+12
+00:00:52,520 --> 00:00:59,140
+There are also, as we said in the, remember, the initial triangle, there is also OOP principles
+12
+
+13
+00:00:59,140 --> 00:01:06,160
+and OOP design patterns. OOP principles are very critical. In the homework, I already embedded
+13
+
+14
+00:01:06,160 --> 00:01:10,480
+many of them like the single responsibility principle, open-closed principle,
+14
+
+15
+00:01:10,660 --> 00:01:12,220
+don't repeat yourself principle,
+15
+
+16
+00:01:12,430 --> 00:01:13,640
+you aren't gonna need.
+16
+
+17
+00:01:13,660 --> 00:01:15,670
+So this already was embedded in the homework.
+17
+
+18
+00:01:16,150 --> 00:01:23,590
+Also, we discussed the design patterns and how they are more repetitive tasks. In the homework,
+18
+
+19
+00:01:23,610 --> 00:01:28,540
+I also stressed 2 design patterns, the singleton design pattern and the wrapper design pattern.
+19
+
+20
+00:01:29,200 --> 00:01:34,410
+When I say that these guys were in the homework, they definitely weren't explained to you.
+20
+
+21
+00:01:34,660 --> 00:01:40,060
+So the point was to let you find them and identify them to some extent by yourself.
+21
+
+22
+00:01:40,330 --> 00:01:45,910
+When you come to study more about the principles and design patterns, it should be much easier
+22
+
+23
+00:01:45,910 --> 00:01:46,370
+process.
+23
+
+24
+00:01:46,660 --> 00:01:53,410
+I think the OOP courses that just teach programming and the design are wrong like it's very
+24
+
+25
+00:01:53,410 --> 00:01:59,830
+useful in the early stage to expose students to the principles and patterns and a lot of design issues,
+25
+
+26
+00:02:00,010 --> 00:02:04,360
+so that they keep consider it during the project's implementation.
+26
+
+27
+00:02:05,290 --> 00:02:10,510
+We also discussed the differences between OOA and OOP and OOD and the difference when it comes to a small
+27
+
+28
+00:02:10,510 --> 00:02:14,200
+project and a big project, and what could be applied and what code it?
+28
+
+29
+00:02:15,310 --> 00:02:22,000
+The encapsulation, as you remember, is more about let's get together the variables and
+29
+
+30
+00:02:22,000 --> 00:02:23,140
+the functions together.
+30
+
+31
+00:02:23,530 --> 00:02:27,300
+One interesting thing about data hiding that it reduces the complexity.
+31
+
+32
+00:02:27,490 --> 00:02:34,150
+So as an external user for a class like a search engine in Google, you don't know about most of
+32
+
+33
+00:02:34,250 --> 00:02:35,650
+the hidden implementation.
+33
+
+34
+00:02:35,650 --> 00:02:36,970
+You don't know about it.
+34
+
+35
+00:02:36,970 --> 00:02:38,980
+You just care about what is provided for you,
+35
+
+36
+00:02:39,190 --> 00:02:45,820
+and here data-hiding comes for us to tell us there is public and there is private and the user only
+36
+
+37
+00:02:45,820 --> 00:02:50,260
+see the public part, and all the private part is hidden for me.
+37
+
+38
+00:02:50,770 --> 00:02:51,640
+We discussed that
+38
+
+39
+00:02:51,640 --> 00:02:53,740
+how this reduces the complexity also
+39
+
+40
+00:02:54,010 --> 00:03:02,290
+and as an advice design tip, it is good to reveal as little as possible your data members and functionality.
+40
+
+41
+00:03:02,530 --> 00:03:08,110
+So your public interface with the others can see should be much less, very focused, very simplified
+41
+
+42
+00:03:08,320 --> 00:03:10,330
+exactly like the search engine in Google,
+42
+
+43
+00:03:10,330 --> 00:03:14,380
+we are just searching for something and getting back the results.
+43
+
+44
+00:03:16,210 --> 00:03:19,480
+That abstraction is a very fundamental concept in OOP.
+44
+
+45
+00:03:19,690 --> 00:03:22,930
+We see how the getters and setters play a role in that,
+45
+
+46
+00:03:23,170 --> 00:03:28,080
+and we also learned about providing getters and setters in everything.
+46
+
+47
+00:03:28,330 --> 00:03:32,290
+So you have to think twice, make sure your class is doing its own job,
+47
+
+48
+00:03:32,320 --> 00:03:40,360
+you don't force others to try to do a lot of getters to do something
+48
+
+49
+00:03:40,360 --> 00:03:42,760
+that you are missing as a critical functionality.
+49
+
+50
+00:03:44,780 --> 00:03:50,500
+So it's also a good design tip to depend on them inside the class.
+50
+
+51
+00:03:51,760 --> 00:03:58,030
+Sometimes the developers would be afraid from that because calling a function is a bit slower than just
+51
+
+52
+00:03:58,030 --> 00:03:59,180
+using a variable directly.
+52
+
+53
+00:03:59,390 --> 00:04:05,110
+However, the good thing is there are a lot of hidden compiler optimizations that improve the time
+53
+
+54
+00:04:05,110 --> 00:04:05,330
+alot.
+54
+
+55
+00:04:05,590 --> 00:04:12,100
+Remember, depending on the variable on the getters and setters internally in the class would save your
+55
+
+56
+00:04:12,100 --> 00:04:14,890
+time if you decided to change the layout of the class.
+56
+
+57
+00:04:15,340 --> 00:04:18,160
+We talked about separating the implementation,
+57
+
+58
+00:04:18,160 --> 00:04:23,320
+we talked about two perspectives, separating the WHAT from HOW and also separating the WHAT in header
+58
+
+59
+00:04:23,320 --> 00:04:29,410
+file and the HOW in an implementation file so that in the future you can fix the bugs or introduce
+59
+
+60
+00:04:29,410 --> 00:04:31,110
+new implementations in a smooth way.
+60
+
+61
+00:04:31,570 --> 00:04:37,660
+Abstraction is all about hiding and also showing considering some context, we highlighted the three
+61
+
+62
+00:04:37,690 --> 00:04:38,230
+items.
+62
+
+63
+00:04:40,610 --> 00:04:46,910
+Then we move to the C++ class features to stress the different concepts that we have. A constructor
+63
+
+64
+00:04:46,910 --> 00:04:55,070
+is something that helps us to create the objects, focus on the initializer list, avoid the default
+64
+
+65
+00:04:55,070 --> 00:04:55,860
+initialization.
+65
+
+66
+00:04:56,090 --> 00:05:02,740
+Remember that constructors are code-based on the class data members, not the order of the initializer
+66
+
+67
+00:05:02,840 --> 00:05:04,310
+list. We have a homework about that.
+67
+
+68
+00:05:04,780 --> 00:05:11,600
+The destructor mainly is executed, when an object goes out of the scope like out of the
+68
+
+69
+00:05:11,600 --> 00:05:13,130
+function or deleted, and so on.
+69
+
+70
+00:05:13,640 --> 00:05:17,520
+The critical usage of the destructor is when we have a memory to deallocate.
+70
+
+71
+00:05:17,780 --> 00:05:21,410
+So whenever we have pointers, we should provide destructors.
+71
+
+72
+00:05:21,770 --> 00:05:25,970
+Destructors are called in the reverse order of constructors,
+72
+
+73
+00:05:26,870 --> 00:05:33,200
+but remember, static objects are there till the end of the program.
+73
+
+74
+00:05:33,470 --> 00:05:38,820
+So don't mix the destruction order of the normal objects with static objects.
+74
+
+75
+00:05:39,500 --> 00:05:46,010
+In addition, we know about the copy constructor, and it's very critical mainly when you have internal
+75
+
+76
+00:05:46,010 --> 00:05:46,490
+pointers.
+76
+
+77
+00:05:46,670 --> 00:05:49,130
+The copy constructor helps you to make a deep copy
+77
+
+78
+00:05:49,250 --> 00:05:50,120
+not a shallow copy.
+78
+
+79
+00:05:50,540 --> 00:05:52,490
+Be very careful with memory leaks.
+79
+
+80
+00:05:52,790 --> 00:05:57,200
+When you create a pointer, delete it. If you created a pointer inside the class,
+80
+
+81
+00:05:57,380 --> 00:05:58,850
+this class is supposed to delete it.
+81
+
+82
+00:05:59,120 --> 00:06:03,170
+If a pointer was created outside the class, who created it should remove it.
+82
+
+83
+00:06:03,350 --> 00:06:07,460
+If you removed a pointer, it is very useful to put all of the null pointer for it.
+83
+
+84
+00:06:07,790 --> 00:06:13,150
+Be careful from deleting a pointer twice, which is causing a runtime error.
+84
+
+85
+00:06:13,970 --> 00:06:14,500
+That it.

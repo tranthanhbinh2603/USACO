@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1672396992 source:e:\document\project\usaco\mastering 4 critical skills using c++ 17\21. headers and includes\learning\02 separating interface from implementation\main.cpp
+	<iostream>
+	"header.h"
+
+1672396851 e:\document\project\usaco\mastering 4 critical skills using c++ 17\21. headers and includes\learning\02 separating interface from implementation\header.h
+
+1672396962 source:e:\document\project\usaco\mastering 4 critical skills using c++ 17\21. headers and includes\learning\02 separating interface from implementation\sum.cpp
+	<iostream>
+	"header.h"
+

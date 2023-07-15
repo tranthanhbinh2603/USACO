@@ -1,0 +1,949 @@
+0
+1
+00:00:03,560 --> 00:00:07,940
+I have rerouted the task of this link to be a bit more standard.
+1
+
+2
+00:00:08,300 --> 00:00:11,960
+So this description is a bit different from here, but they are actually the same.
+2
+
+3
+00:00:12,470 --> 00:00:19,130
+So the task in its simple format is as following: we are giving an array. For every number in the
+3
+
+4
+00:00:19,130 --> 00:00:19,610
+array,
+4
+
+5
+00:00:19,790 --> 00:00:27,200
+find the index of the first number after it of a higher value, -1, if no such number.
+5
+
+6
+00:00:27,620 --> 00:00:32,600
+For example, here 10,5 ,7, 15, 11. For 10, 
+6
+
+7
+00:00:32,810 --> 00:00:35,630
+What is the first element greater than it?
+7
+
+8
+00:00:35,930 --> 00:00:36,500
+15.
+8
+
+9
+00:00:36,740 --> 00:00:38,870
+In index 3.  For five,
+9
+
+10
+00:00:39,080 --> 00:00:45,620
+what is the first element greater than it? 7; index two. seven? 15. For 15?
+10
+
+11
+00:00:45,620 --> 00:00:48,670
+There's nothing greater than it after it. for 11?
+11
+
+12
+00:00:48,680 --> 00:00:51,050
+There's nothing greater than it after it.
+12
+
+13
+00:00:51,530 --> 00:00:58,370
+So for every integer, you find the first number after it and just use its index, if nothing, use -1.
+13
+
+14
+00:00:58,370 --> 00:00:58,580
+-1.
+14
+
+15
+00:00:58,970 --> 00:01:00,350
+And here is another example.
+15
+
+16
+00:01:00,740 --> 00:01:01,580
+Please verify.
+16
+
+17
+00:01:03,470 --> 00:01:05,340
+Let's solve the problem again.
+17
+
+18
+00:01:05,360 --> 00:01:09,020
+If you have any question, ask them. If you have any assumptions, state them.
+18
+
+19
+00:01:09,290 --> 00:01:11,230
+Think of the test cases are good enough.
+19
+
+20
+00:01:11,240 --> 00:01:12,860
+Are there any special cases?
+20
+
+21
+00:01:13,160 --> 00:01:13,820
+And so on.
+21
+
+22
+00:01:16,230 --> 00:01:18,180
+Let's start thinking about the solution.
+22
+
+23
+00:01:18,270 --> 00:01:21,540
+Start with the brute-force, the brute-force is very clear here.
+23
+
+24
+00:01:21,840 --> 00:01:25,320
+Two nested loops are more than enough. For every index,
+24
+
+25
+00:01:25,410 --> 00:01:31,320
+you just iterate and find the first one after it. That simple. 'n^2' are very direct to brute force.
+25
+
+26
+00:01:31,980 --> 00:01:34,590
+Now the problem is this is very slow.
+26
+
+27
+00:01:35,010 --> 00:01:37,710
+So we start to think about the faster approach.
+27
+
+28
+00:01:38,580 --> 00:01:39,420
+Is it easy?
+28
+
+29
+00:01:40,410 --> 00:01:45,210
+The answer is no, actually.
+29
+
+30
+00:01:45,510 --> 00:01:48,960
+Like, if you try to improve the brute force, it will mislead you.
+30
+
+31
+00:01:49,350 --> 00:01:56,070
+So sometimes improving the brute force is a very nice idea and sometimes is a time consuming task.
+31
+
+32
+00:01:56,400 --> 00:01:57,750
+So be careful about that.
+32
+
+33
+00:02:02,820 --> 00:02:06,510
+There is a chance that you get stuck in the interview in this problem.
+33
+
+34
+00:02:06,720 --> 00:02:12,810
+So if you are really stuck, ask the interviewer for a hint. There is one of two hints that the interviewer
+34
+
+35
+00:02:12,810 --> 00:02:18,450
+might provide you. Another one is try to think from an opposite perspective.
+35
+
+36
+00:02:19,920 --> 00:02:23,070
+And what is the forward perspective that we are trying?
+36
+
+37
+00:02:23,340 --> 00:02:24,630
+We take an element.
+37
+
+38
+00:02:24,870 --> 00:02:27,210
+We iterate and find its next one.
+38
+
+39
+00:02:27,810 --> 00:02:31,350
+What do you think would be the opposite of such a perspective?
+39
+
+40
+00:02:33,190 --> 00:02:37,720
+The opposite would be to take a number and go backwards.
+40
+
+41
+00:02:38,560 --> 00:02:44,050
+So now we take a number to search about his next greater element, which is a single element.
+41
+
+42
+00:02:44,680 --> 00:02:48,580
+The opposite would be you take a number and go backward, go backward to do what?
+42
+
+43
+00:02:49,270 --> 00:02:53,470
+To assign it to the different numbers that I am there next 
+43
+
+44
+00:02:53,470 --> 00:02:56,440
+perspective; that I'm next greater elements.
+44
+
+45
+00:02:57,070 --> 00:03:02,740
+Anyway, the second hint that the interviewer might provide is use a stack data structure.
+45
+
+46
+00:03:02,860 --> 00:03:07,180
+This problem is solvable in O(n) with a stack data structure.
+46
+
+47
+00:03:07,480 --> 00:03:10,360
+So one of these two hints you might be provided.
+47
+
+48
+00:03:11,300 --> 00:03:14,470
+Anyway, the solution is as following: it's more of reverse thinking.
+48
+
+49
+00:03:15,070 --> 00:03:23,710
+For every index, you will find the previous indices that array of index is there next greater value.
+49
+
+50
+00:03:24,310 --> 00:03:30,700
+So this is, as you see, this is the opposite direction of the brute force, and sometimes it is
+50
+
+51
+00:03:31,480 --> 00:03:32,560
+what I call reverse
+51
+
+52
+00:03:32,560 --> 00:03:34,240
+thinking is the way to go.
+52
+
+53
+00:03:34,630 --> 00:03:41,680
+An example of that here, the value 15 is the greater element for whom, for the value 10 and for the
+53
+
+54
+00:03:41,680 --> 00:03:44,770
+value 7, not for the value 5.
+54
+
+55
+00:03:45,010 --> 00:03:52,030
+OK, so the question is how can we develop a stack based on this approach, this opposite perspective?
+55
+
+56
+00:03:52,600 --> 00:03:54,280
+This is reverse thinking's style.
+56
+
+57
+00:03:55,630 --> 00:04:04,630
+So here is the idea, we will maintain in the stack the indices that don't have any greater elements so
+57
+
+58
+00:04:04,630 --> 00:04:04,960
+far.
+58
+
+59
+00:04:05,380 --> 00:04:06,490
+Let's take an example.
+59
+
+60
+00:04:06,970 --> 00:04:14,110
+If you have something like 15, 10, 13, 10 has a next greater element of 13, but which indices do
+60
+
+61
+00:04:14,110 --> 00:04:15,750
+not have a next greater element?
+61
+
+62
+00:04:16,240 --> 00:04:19,330
+15 and 13 at positions 1 and 3.
+62
+
+63
+00:04:19,600 --> 00:04:27,910
+OK, now if we added 12, 12 also don't have now next greater element. If we added 20, 20 would
+63
+
+64
+00:04:27,910 --> 00:04:32,470
+be the next the greater element for all of them except itself.
+64
+
+65
+00:04:33,310 --> 00:04:40,630
+So as you see this here, we are maintaining the indices of the next greater elements without
+65
+
+66
+00:04:40,630 --> 00:04:41,680
+the next greater elements.
+66
+
+67
+00:04:42,010 --> 00:04:49,300
+What I would like you to think about is if I have this case 1, 3, 4 as elements without next 
+67
+
+68
+00:04:49,300 --> 00:04:49,960
+greater element.
+68
+
+69
+00:04:50,290 --> 00:04:51,520
+And now, you got 20.
+69
+
+70
+00:04:51,850 --> 00:04:53,020
+What can you do with this
+70
+
+71
+00:04:53,020 --> 00:04:53,440
+20?
+71
+
+72
+00:04:56,030 --> 00:05:02,570
+Simply, we can take the 20 and go over the stack element by element, for the 4 and for the
+72
+
+73
+00:05:02,570 --> 00:05:06,350
+3 and for the 1, one by one and keep it checking.
+73
+
+74
+00:05:07,040 --> 00:05:10,250
+If I am greater than you, then I am your next greater element.
+74
+
+75
+00:05:10,280 --> 00:05:11,300
+Get out of the stack.
+75
+
+76
+00:05:11,660 --> 00:05:12,890
+I am greater than you, 
+76
+
+77
+00:05:13,340 --> 00:05:16,020
+then I am your next greater element. Get out of the stack.
+77
+
+78
+00:05:16,070 --> 00:05:16,940
+Keep doing that.
+78
+
+79
+00:05:18,140 --> 00:05:21,050
+What if we met an element that I am not greater than it?
+79
+
+80
+00:05:21,860 --> 00:05:26,060
+Then it means he is greater than me, so I can stop at this moment.
+80
+
+81
+00:05:26,480 --> 00:05:27,620
+Let's see an example here.
+81
+
+82
+00:05:27,950 --> 00:05:34,160
+Let's say I took 13 and I signed it for 10 as the next the greater element.
+82
+
+83
+00:05:34,610 --> 00:05:35,750
+Then I found 15.
+83
+
+84
+00:05:36,230 --> 00:05:38,660
+When I find 15, 15 is greater than me.
+84
+
+85
+00:05:39,080 --> 00:05:43,280
+I cannot keep going in the stack because the stack has elements greater than 15.
+85
+
+86
+00:05:44,420 --> 00:05:45,680
+Greater than 15.
+86
+
+87
+00:05:45,830 --> 00:05:47,390
+So I have to stop at this moment.
+87
+
+88
+00:05:48,020 --> 00:05:55,040
+Let's repeat that again before the i-th step, the stack will have all of the positions that aren't 
+88
+
+89
+00:05:55,040 --> 00:06:01,430
+assigned their next  greater element. If you try to take a big example and analyze it, you will notice
+89
+
+90
+00:06:01,430 --> 00:06:05,030
+that the stack must be sorted in a decreasing order.
+90
+
+91
+00:06:06,080 --> 00:06:14,930
+So if you at the moment, for example, and found, for example, 14 as a new element, you take
+91
+
+92
+00:06:14,930 --> 00:06:16,360
+12, assign it to 14.
+92
+
+93
+00:06:16,380 --> 00:06:18,050
+You take 13 assign to 14.
+93
+
+94
+00:06:18,290 --> 00:06:19,100
+You take 15,
+94
+
+95
+00:06:19,100 --> 00:06:22,340
+you stop, you stop and never go before 15.
+95
+
+96
+00:06:22,370 --> 00:06:22,910
+Why?
+96
+
+97
+00:06:23,300 --> 00:06:29,230
+Because if 15 isn't next greater for anything before it, I will definitely as a 14 will not 
+97
+
+98
+00:06:29,360 --> 00:06:31,550
+be a greater element for them.
+98
+
+99
+00:06:32,150 --> 00:06:34,620
+I hope the overall idea is clear.
+99
+
+100
+00:06:34,820 --> 00:06:38,750
+It might be a little bit challenging to write a code for it, but give a trial.
+100
+
+101
+00:06:40,690 --> 00:06:42,700
+The good, surprisingly, is very small.
+101
+
+102
+00:06:43,770 --> 00:06:48,490
+Uh, this is O(n) time and O(1) memory because I will update the vector itself.
+102
+
+103
+00:06:48,820 --> 00:06:51,190
+But if you have to like...,
+103
+
+104
+00:06:59,690 --> 00:07:03,790
+This is O(n) the memory, sorry, because we are creating a stack anyway, so forget about that.
+104
+
+105
+00:07:06,050 --> 00:07:07,100
+Let's start with it.
+105
+
+106
+00:07:07,740 --> 00:07:12,080
+I will go through a vector, through the elements one by one.
+106
+
+107
+00:07:12,560 --> 00:07:15,140
+And then you see here line 38.
+107
+
+108
+00:07:15,140 --> 00:07:18,040
+I will always push myself because I am a new element.
+108
+
+109
+00:07:18,050 --> 00:07:19,950
+I still don't have a next greater, right?
+109
+
+110
+00:07:20,290 --> 00:07:22,590
+I'm like, 15 just arrived.
+110
+
+111
+00:07:22,610 --> 00:07:23,780
+It would get inside here.
+111
+
+112
+00:07:25,610 --> 00:07:26,900
+Now what's happening here?
+112
+
+113
+00:07:27,050 --> 00:07:30,710
+We mentioned that the stack would have the elements that I am greater than them.
+113
+
+114
+00:07:31,040 --> 00:07:35,210
+We keep iterating over the stack as long as the stack has elements
+114
+
+115
+00:07:35,690 --> 00:07:40,490
+and my value is greater than the top of the stack. If this happened,
+115
+
+116
+00:07:41,000 --> 00:07:44,720
+we will assign..,  the stack is a stack of indices,
+116
+
+117
+00:07:45,020 --> 00:07:50,420
+we will assign the vectors of the given index 'i'.
+117
+
+118
+00:07:51,050 --> 00:07:56,270
+So we are putting that this index, next greater element, is 'i' and then we remove it.
+118
+
+119
+00:07:56,720 --> 00:08:00,950
+Once I find that element that I am not greater than it, I have to stop that.
+119
+
+120
+00:08:01,370 --> 00:08:05,650
+So what happened is as follows: we first push
+120
+
+121
+00:08:05,660 --> 00:08:12,340
+3, then 15 come finds 3 in the stack, so assign it as a 15.
+121
+
+122
+00:08:12,690 --> 00:08:13,640
+Now the stack has only
+122
+
+123
+00:08:13,640 --> 00:08:18,140
+one. 10 comes, and then 10 checks with the top of the stack.
+123
+
+124
+00:08:18,140 --> 00:08:20,080
+15, no way then stop.
+124
+
+125
+00:08:20,810 --> 00:08:22,640
+13 comes, 13
+125
+
+126
+00:08:22,640 --> 00:08:24,650
+finds itself a greater than 10.
+126
+
+127
+00:08:24,950 --> 00:08:28,430
+So 10 gets out of the stack and its marked. Now,
+127
+
+128
+00:08:28,430 --> 00:08:31,460
+when 13 compared with 15, 15 is greater.
+128
+
+129
+00:08:31,550 --> 00:08:34,100
+We stop. Now the next is 12.
+129
+
+130
+00:08:34,700 --> 00:08:42,460
+12 is less than 13, which its index number 4. 0, 1, 2, 3, sorry index number 3. 12
+130
+
+131
+00:08:42,480 --> 00:08:44,990
+is compared with index number 3, which is 13.
+131
+
+132
+00:08:45,350 --> 00:08:46,160
+I am smaller.
+132
+
+133
+00:08:46,430 --> 00:08:46,970
+We stop.
+133
+
+134
+00:08:47,510 --> 00:08:52,910
+Next is 20, 20 compared with index of 4, which is 12, yes, I'm greater.
+134
+
+135
+00:08:52,940 --> 00:08:54,560
+Mark myself as greater.
+135
+
+136
+00:08:55,040 --> 00:08:58,930
+Next is 3, which is value 13.
+136
+
+137
+00:08:58,940 --> 00:09:01,880
+I am greater mark myself as a next greater element.
+137
+
+138
+00:09:02,360 --> 00:09:04,670
+Then Index 1, which is 15.
+138
+
+139
+00:09:04,970 --> 00:09:06,620
+Yes, I'm greater than 15.
+139
+
+140
+00:09:06,920 --> 00:09:09,200
+Mark myself as next greater element.
+140
+
+141
+00:09:09,530 --> 00:09:10,540
+Nothing else, stop.
+141
+
+142
+00:09:11,060 --> 00:09:14,900
+So always as you see, the new element would be pushed in way to the stack.
+142
+
+143
+00:09:15,530 --> 00:09:22,880
+But I am going through the stack, find every element I am greater than him and marking myself as
+143
+
+144
+00:09:22,880 --> 00:09:24,790
+his next greater element.
+144
+
+145
+00:09:26,420 --> 00:09:31,190
+The vector here initially would be vector of values, but I'm updating it by reference, so it's going
+145
+
+146
+00:09:31,190 --> 00:09:35,360
+to be eventually vector of indices marking the next greater element.
+146
+
+147
+00:09:35,630 --> 00:09:38,150
+In another case, you would just create a copy of the vector.
+147
+
+148
+00:09:39,000 --> 00:09:45,440
+And now there is one point here. After we are done with that, some of the indices would never have,
+148
+
+149
+00:09:46,100 --> 00:09:50,300
+would never have a greater element, next greater element.
+149
+
+150
+00:09:50,540 --> 00:09:54,920
+So we iterate on the remaining of the stack and mark all of them with -1.
+150
+
+151
+00:09:55,280 --> 00:10:01,010
+If it happened that you create a vector for the answer and initialized all of it to -1, then
+151
+
+152
+00:10:01,010 --> 00:10:07,430
+you don't need this loop because it would be already assigned -1. Please take an example
+152
+
+153
+00:10:07,430 --> 00:10:10,640
+and make sure you understand how this internal loop works.
+153
+
+154
+00:10:11,940 --> 00:10:14,110
+Overall, this is a very nice problem.
+154
+
+155
+00:10:14,120 --> 00:10:16,330
+It's also challenging. Why?
+155
+
+156
+00:10:16,400 --> 00:10:18,390
+Because it has an ad-hoc problem.
+156
+
+157
+00:10:18,410 --> 00:10:27,770
+This is one reason. The second reason because the problem is involving this opposite thinking
+157
+
+158
+00:10:27,770 --> 00:10:29,960
+point, which is also another challenge.
+158
+
+159
+00:10:30,320 --> 00:10:33,920
+The third is the writing style of the stack isn't that common.
+159
+
+160
+00:10:34,160 --> 00:10:36,260
+So overall, it isn't an easy task.
+160
+
+161
+00:10:37,710 --> 00:10:44,730
+This problem is very, very, very important, and the reason is it comes as a sub problem in many
+161
+
+162
+00:10:44,730 --> 00:10:45,720
+other problems.
+162
+
+163
+00:10:46,110 --> 00:10:49,950
+So in other problems you will find yourself copy-paste
+163
+
+164
+00:10:50,160 --> 00:10:51,390
+this code and using it.
+164
+
+165
+00:10:51,600 --> 00:10:54,030
+That's why this problem is really important.
+165
+
+166
+00:10:54,960 --> 00:10:56,160
+There is a variant here
+166
+
+167
+00:10:56,470 --> 00:10:59,400
+for this problem, it's a premium problem.
+167
+
+168
+00:10:59,400 --> 00:11:00,930
+I'm copying the text here for you.
+168
+
+169
+00:11:01,170 --> 00:11:01,860
+Think about it.
+169
+
+170
+00:11:01,860 --> 00:11:04,980
+You will notice it's very relevant to the problem we mentioned.
+170
+
+171
+00:11:05,910 --> 00:11:08,950
+I would like to show another variant. This next
+171
+
+172
+00:11:08,950 --> 00:11:10,800
+greater element will go circular.
+172
+
+173
+00:11:11,190 --> 00:11:16,590
+This means the element can go circular in the array to find its next the greater element.
+173
+
+174
+00:11:17,190 --> 00:11:24,330
+So previously, if there is 100, 70, 30, we will have all of them -1 because no one of them has
+174
+
+175
+00:11:24,330 --> 00:11:25,500
+next greater element.
+175
+
+176
+00:11:26,460 --> 00:11:32,550
+But if we can go circular in the array, the 70 can go circular and find 100 as the next greater element
+176
+
+177
+00:11:32,820 --> 00:11:34,320
+and the same for the 30.
+177
+
+178
+00:11:34,890 --> 00:11:36,990
+So this is the difference now in the output.
+178
+
+179
+00:11:37,110 --> 00:11:38,280
+How can we solve that?
+179
+
+180
+00:11:41,110 --> 00:11:48,970
+Here is a hint for all of the problems that involve circular arrays, please remember to double the array.
+180
+
+181
+00:11:49,000 --> 00:11:50,350
+This is your first approach.
+181
+
+182
+00:11:50,620 --> 00:11:58,900
+So if you doubled the 100, 70, 30 twice here, now with our normal code, the 100 would have
+182
+
+183
+00:11:58,900 --> 00:12:03,340
+the next as 100, sorry the 70 would have 100 next.
+183
+
+184
+00:12:03,550 --> 00:12:05,410
+And 30 would have 100 as a next.
+184
+
+185
+00:12:05,920 --> 00:12:07,210
+This is very popular trick.
+185
+
+186
+00:12:07,690 --> 00:12:11,610
+Do I need to really duplicate the array itself in terms of the memory?
+186
+
+187
+00:12:11,620 --> 00:12:13,360
+No, we can do that virtually.
+187
+
+188
+00:12:13,720 --> 00:12:15,760
+So actually, we would not use an extra memory.
+188
+
+189
+00:12:15,760 --> 00:12:23,110
+We will use the same array, but we will process it as array of 2n length, not just O(n) length. Try to code the
+189
+
+190
+00:12:23,110 --> 00:12:27,070
+idea and compare your solution with the discussion. That's all. 

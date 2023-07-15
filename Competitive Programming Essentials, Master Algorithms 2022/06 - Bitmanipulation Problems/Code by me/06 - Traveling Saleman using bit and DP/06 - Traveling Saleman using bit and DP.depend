@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1674205401 source:c:\users\binh\documents\project\usaco\competitive programming essentials, master algorithms 2022\06 - bitmanipulation problems\code by me\06 - traveling saleman using bit and dp\main.cpp
+	<iostream>
+	<vector>
+

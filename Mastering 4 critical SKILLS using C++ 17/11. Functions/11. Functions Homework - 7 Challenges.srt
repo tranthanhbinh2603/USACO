@@ -1,0 +1,304 @@
+0
+1
+00:00:00,990 --> 00:00:07,530
+The homework for the functions, the first function is a function that computes max of six values, actually
+1
+
+2
+00:00:07,530 --> 00:00:08,450
+up to six values.
+2
+
+3
+00:00:08,640 --> 00:00:13,320
+I would like you to create the following function, "max", that takes three variables, four variables,
+3
+
+4
+00:00:13,320 --> 00:00:14,890
+five variables, six variables,
+4
+
+5
+00:00:14,910 --> 00:00:17,080
+OK, so just implement them.
+5
+
+6
+00:00:17,310 --> 00:00:18,330
+There's a question here,
+6
+
+7
+00:00:18,510 --> 00:00:24,600
+How can the function that takes one, two, three, four variables utilize the function that takes the
+7
+
+8
+00:00:24,600 --> 00:00:26,130
+three variables and so on?
+8
+
+9
+00:00:26,160 --> 00:00:28,590
+Think about the utilization between these functions.
+9
+
+10
+00:00:29,770 --> 00:00:30,720
+Reverse a string,
+10
+
+11
+00:00:30,900 --> 00:00:34,410
+You are to write a function that takes a string and just reverses it.
+11
+
+12
+00:00:34,530 --> 00:00:38,600
+As you see, I'm putting here "const" reference "&", so you cannot change "str",
+12
+
+13
+00:00:38,620 --> 00:00:39,870
+you have to return a new one.
+13
+
+14
+00:00:41,130 --> 00:00:48,480
+Calculator, is a simple program that gives the user an option to add 2 numbers, subtract, multiply, divide.
+14
+
+15
+00:00:48,540 --> 00:00:51,870
+This is simple program, but we would like to make it more functions.
+15
+
+16
+00:00:52,200 --> 00:00:57,360
+First of all, define a function that read two double numbers and make it by reference.
+16
+
+17
+00:00:57,780 --> 00:01:01,590
+Define four functions, one for every operation out of these four operations.
+17
+
+18
+00:01:01,800 --> 00:01:06,960
+Make sure that you don't divide by 0 in the division, then display for the user the choices,
+18
+
+19
+00:01:07,170 --> 00:01:12,660
+read it and then based on the choice, execute the program and so on.
+19
+
+20
+00:01:12,660 --> 00:01:15,060
+Keep going, once that program ended,
+20
+
+21
+00:01:16,230 --> 00:01:19,650
+print for the user how many operations that he already did.
+21
+
+22
+00:01:20,250 --> 00:01:26,460
+So the user keeps going in this menu until he ends the program. Is Palindrome Array,
+22
+
+23
+00:01:26,670 --> 00:01:32,730
+You are to read an integer "n", then n integers, call a function with the array to check if this palindrome 
+23
+
+24
+00:01:32,730 --> 00:01:35,010
+or not, We already did this before.
+24
+
+25
+00:01:35,040 --> 00:01:38,610
+We just would like to move it to an array. Set-powers,
+25
+
+26
+00:01:38,910 --> 00:01:41,270
+The function "set-powers" is as following,
+26
+
+27
+00:01:41,430 --> 00:01:50,570
+This is the function, like we call it the declaration of it,
+27
+
+28
+00:01:50,850 --> 00:01:57,480
+OK, so it takes an array, it takes length which is by default 5, and it takes M which is 2, OK?
+28
+
+29
+00:01:57,780 --> 00:02:01,470
+the function will fill this array of length with the following,
+29
+
+30
+00:02:01,920 --> 00:02:07,470
+The ith position will have the value of (m^i) which is "m * m * m..." i times.
+30
+
+31
+00:02:07,650 --> 00:02:16,200
+For example, if I give you length = 6, and M = 2 is going to put the values to be 1, 2, 4, 8, 16,
+31
+
+32
+00:02:16,380 --> 00:02:17,110
+32.
+32
+
+33
+00:02:17,130 --> 00:02:22,230
+OK, so notice here 8 is just 2 * 4, 16 is 2 * 8 and so on.
+33
+
+34
+00:02:22,620 --> 00:02:24,510
+The same for the value here, 4 and 3,
+34
+
+35
+00:02:24,510 --> 00:02:29,310
+It's 1,3, 3 * 3 is 9, 9 * 3 is 27.
+35
+
+36
+00:02:29,580 --> 00:02:37,530
+So the ith value has m multiplied i times. after return of call, print the array to make sure that it's working
+36
+
+37
+00:02:37,530 --> 00:02:39,780
+well, try it with different default values.
+37
+
+38
+00:02:41,600 --> 00:02:42,830
+Implement the two functions,
+38
+
+39
+00:02:43,010 --> 00:02:47,220
+The first is, "is_prime", takes a number and returns true if the number is prime.
+39
+
+40
+00:02:47,690 --> 00:02:53,590
+The second function is "nth-prime", it takes an n and returns the nth prime for us.
+40
+
+41
+00:02:53,810 --> 00:02:58,730
+So if we give you 6, return 13, let this function call this function.
+41
+
+42
+00:03:00,110 --> 00:03:03,390
+Replacing sub-string, it might not be easy.
+42
+
+43
+00:03:03,680 --> 00:03:11,300
+So we are to define a function "replace_str", it takes "input" and "pattern" and "to", and returns a string, the
+43
+
+44
+00:03:11,780 --> 00:03:15,680
+input is lower cases and "pattern" will be always greater than zero,
+44
+
+45
+00:03:15,680 --> 00:03:17,280
+But "to" can be zero and more.
+45
+
+46
+00:03:18,290 --> 00:03:19,220
+Here is the replacement,
+46
+
+47
+00:03:19,220 --> 00:03:25,370
+What I mean with it, if the input is like "aa" blah blah blah, and you would like to replace every "aa" with
+47
+
+48
+00:03:25,370 --> 00:03:25,820
+"X",
+48
+
+49
+00:03:26,210 --> 00:03:30,740
+So you see here this "aa" will be "X" and this "aa" will be "X" here.
+49
+
+50
+00:03:31,190 --> 00:03:37,670
+OK, if I asked you for this input with "aa" and 4 "a"s; this "aa" will be expanded to 4 "a"s and this
+50
+
+51
+00:03:38,010 --> 00:03:39,830
+"aa" would be expanded with 4 "a"s.
+51
+
+52
+00:03:40,280 --> 00:03:48,680
+If I asked you to replace "aa" with empty string, then you see we are removing
+52
+
+53
+00:03:48,680 --> 00:03:48,950
+it.
+53
+
+54
+00:03:49,910 --> 00:03:56,570
+I would like you also while coding this one to make another function called "starts_with", it takes an input
+54
+
+55
+00:03:56,570 --> 00:03:58,940
+and pattern and takes integer position,
+55
+
+56
+00:03:59,390 --> 00:04:06,140
+It returns true only if the pattern exists in input starting from this position.
+56
+
+57
+00:04:06,470 --> 00:04:12,360
+For example, if we have this function, aa bla bla bla and we say does this pattern exist
+57
+
+58
+00:04:12,360 --> 00:04:15,560
+starting from position zero? here is true,
+58
+
+59
+00:04:15,920 --> 00:04:21,410
+But from here, at position one is false, this function would be helpful for you in developing
+59
+
+60
+00:04:21,410 --> 00:04:22,780
+the pattern function.
+60
+
+61
+00:04:23,300 --> 00:04:23,690
+That's it.

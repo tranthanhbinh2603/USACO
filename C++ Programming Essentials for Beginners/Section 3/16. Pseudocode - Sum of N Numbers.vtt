@@ -1,0 +1,166 @@
+WEBVTT
+
+00:01.630 --> 00:06.830
+Everyone in this lecture, we are going to solve the problem, find the sum of any inputs, OK?
+
+00:06.910 --> 00:14.350
+So first of all, we are given and how many numbers we have followed by an indigenous whose sum we want
+
+00:14.350 --> 00:14.790
+to find.
+
+00:14.800 --> 00:16.570
+So these two are part of input.
+
+00:17.140 --> 00:21.250
+And this sum is the output that we want to get.
+
+00:21.700 --> 00:24.040
+Now we want to write a solution for this problem.
+
+00:24.370 --> 00:26.080
+So let's see how we can do it.
+
+00:26.440 --> 00:33.160
+So obviously, we will need to implement a loop to solve this problem because we want to take inputs
+
+00:33.160 --> 00:35.700
+repeatedly and update our OK.
+
+00:36.580 --> 00:43.240
+So first step would be to read the value of in in the next step will start reading the numbers.
+
+00:43.360 --> 00:47.140
+But in order to read the numbers, we need to maintain view of things.
+
+00:47.470 --> 00:47.770
+OK.
+
+00:48.340 --> 00:55.900
+When we are reading the numbers, we need to maintain what number we are reading or guess in the beginning.
+
+00:56.020 --> 01:01.540
+We are going to read the first number, so we'll keep a bucket and we will say, OK, I will do one
+
+01:02.050 --> 01:07.390
+and we are going to start reading from the first number and we will go to the Ford number.
+
+01:07.390 --> 01:07.660
+OK?
+
+01:08.530 --> 01:09.640
+So this I call the one.
+
+01:09.640 --> 01:15.790
+It's just a count of how many numbers and we are going to see how many numbers we have read or how many
+
+01:15.790 --> 01:16.270
+numbers.
+
+01:16.690 --> 01:19.840
+What is the correct number that we are reading will get it.
+
+01:20.500 --> 01:23.710
+And we also need to store what is the number, OK?
+
+01:24.400 --> 01:25.330
+What is the number?
+
+01:25.330 --> 01:30.460
+So we'll create another bucket called value, but we can do it inside the loop as well.
+
+01:31.330 --> 01:37.240
+So another thing that we need to maintain, OK, we need to maintain what is the sum that that is there
+
+01:37.240 --> 01:39.040
+to announce a sum is zero in the beginning.
+
+01:39.640 --> 01:42.760
+After you read this number, you update this particular sum so you can to.
+
+01:42.760 --> 01:51.220
+While I is less than equal doing, you are going to read numbers below the point the value of I is less
+
+01:51.220 --> 01:52.290
+than equal doing OK.
+
+01:53.110 --> 01:54.120
+How do you read a number?
+
+01:54.130 --> 01:58.270
+You can read a number and store it in a booklet called Value.
+
+01:58.330 --> 02:04.210
+So you have created another bucket in which you are storing the current number to the valuers, and
+
+02:05.200 --> 02:06.910
+the next step would be to update the sum.
+
+02:06.910 --> 02:09.970
+OK, so you have to update the sum so you can to some equals.
+
+02:10.920 --> 02:18.010
+Tumblers value, we also need to define the sum in the beginning as the rule that we have already defined
+
+02:18.010 --> 02:18.210
+it.
+
+02:19.320 --> 02:23.220
+And now we have updated the sums of some becomes 10.
+
+02:23.730 --> 02:24.030
+OK.
+
+02:24.690 --> 02:31.170
+And next time, what we want to do, we again want to enter this loop and we want to repeat this process.
+
+02:31.860 --> 02:35.510
+When you're going inside the loop again, you can increment the value.
+
+02:35.520 --> 02:40.590
+If I, as I +1 and you can see the value of ACE2.
+
+02:40.890 --> 02:46.110
+And next time it is going to reach the number, it will read the next number from the keyboard input.
+
+02:46.650 --> 02:51.990
+It will read when the next time it will add 20 to the sum, some will become 30.
+
+02:52.440 --> 02:54.540
+The value was 10, not the value is 20.
+
+02:55.470 --> 02:57.060
+Next time I becomes three.
+
+02:58.490 --> 03:04.790
+It will read 40, Anderson will become 70 next time I becomes four.
+
+03:05.920 --> 03:06.220
+OK.
+
+03:06.790 --> 03:14.500
+And it reads the value 30, Anderson becomes gendered, and also that value of life becomes what becomes
+
+03:14.500 --> 03:23.140
+fake as soon as value five becomes five, this condition becomes false and hence we are going to come
+
+03:23.140 --> 03:25.270
+out of the fall out of the value.
+
+03:25.310 --> 03:28.000
+OK, so we will end up it.
+
+03:28.460 --> 03:31.660
+And at this point, we can print the final value of some.
+
+03:32.840 --> 03:37.190
+And begin to exit, this is how we will get those some of an input.
+
+03:37.520 --> 03:38.840
+And this is what we have done.
+
+03:38.840 --> 03:43.280
+We have implemented a vile look to read and numbers and find this.
+
+03:44.090 --> 03:47.420
+So I hope you understood this explanation and that's all for this with you.

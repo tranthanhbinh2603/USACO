@@ -1,0 +1,535 @@
+1
+00:00:01,110 --> 00:00:02,100
+Homework number two.
+
+2
+00:00:04,640 --> 00:00:08,350
+And the first problem which is jumping, getting a game.
+
+3
+00:00:08,630 --> 00:00:15,590
+So we have an array of non negative integers and these are a specific starting index in this array.
+
+4
+00:00:16,310 --> 00:00:18,920
+And there are some values with values zero.
+
+5
+00:00:19,840 --> 00:00:24,250
+And I would like to jump from the index to that any index that has a value zero.
+
+6
+00:00:25,000 --> 00:00:26,440
+OK, so how can we jump?
+
+7
+00:00:26,860 --> 00:00:36,400
+We can move to if we are at Index I, we can move to Ibrox or if I or I too early, minus RFI RFI.
+
+8
+00:00:36,640 --> 00:00:47,100
+So from any position you can only go to I Blosser if I or I minus reapply it now.
+
+9
+00:00:47,530 --> 00:00:48,850
+You would like to know.
+
+10
+00:00:49,780 --> 00:00:50,260
+If.
+
+11
+00:00:51,300 --> 00:00:56,250
+This is both civil war, not can you end up at any of these indices or not?
+
+12
+00:00:56,970 --> 00:00:58,380
+So let's see an example here.
+
+13
+00:00:59,220 --> 00:01:02,940
+In the first example you say, the starting index is index number five.
+
+14
+00:01:02,970 --> 00:01:05,070
+So zero one two three four five.
+
+15
+00:01:05,370 --> 00:01:06,360
+We start to hear.
+
+16
+00:01:08,980 --> 00:01:09,840
+At this index.
+
+17
+00:01:10,790 --> 00:01:11,300
+Now.
+
+18
+00:01:12,290 --> 00:01:15,390
+We would like to see where are the values of values here?
+
+19
+00:01:15,410 --> 00:01:19,430
+We have only one values zero here, which is here.
+
+20
+00:01:20,850 --> 00:01:21,600
+I'm sorry.
+
+21
+00:01:22,020 --> 00:01:23,040
+This one should be.
+
+22
+00:01:24,210 --> 00:01:27,690
+Here is zero one two three four five.
+
+23
+00:01:27,720 --> 00:01:31,160
+This is the starting index, and this is the current.
+
+24
+00:01:31,500 --> 00:01:34,100
+This is a good index, so we search for the zeros.
+
+25
+00:01:34,110 --> 00:01:36,030
+Any of the zeros is a target for us.
+
+26
+00:01:36,270 --> 00:01:37,080
+So this is zero.
+
+27
+00:01:37,320 --> 00:01:39,870
+So the question is, can we start from five?
+
+28
+00:01:39,900 --> 00:01:46,470
+And in the three indices, the operation is to increment yourself with the value or subtract the value.
+
+29
+00:01:46,830 --> 00:01:47,940
+So we start at five.
+
+30
+00:01:48,030 --> 00:01:49,350
+The value of five is one.
+
+31
+00:01:49,650 --> 00:01:53,010
+So we either go five plus one or five minus one.
+
+32
+00:01:53,850 --> 00:02:00,180
+If we go to five minus one, which is at Index Food Index, what has a value three?
+
+33
+00:02:00,600 --> 00:02:03,240
+So you have two choices either you go.
+
+34
+00:02:04,380 --> 00:02:11,070
+Four minus three or four plus three for Flossie is out of the array for minus three is four, minus
+
+35
+00:02:11,070 --> 00:02:12,540
+three is just one.
+
+36
+00:02:13,230 --> 00:02:19,620
+Now we add in this one here at index one here, the index one has a value two, so it means we can either
+
+37
+00:02:19,620 --> 00:02:21,590
+go one plus two or one minus two.
+
+38
+00:02:21,880 --> 00:02:25,260
+Woman two is that out of that, a one plus two three, which is a go.
+
+39
+00:02:25,710 --> 00:02:29,370
+So as you see, we can go from index five to index of three with this sequence.
+
+40
+00:02:29,610 --> 00:02:30,630
+And here is another way.
+
+41
+00:02:31,110 --> 00:02:39,630
+So you are you will return it to if you can follow this operation, whatever how and find your destination
+
+42
+00:02:39,870 --> 00:02:44,550
+or what we need to do is to go from the starting index to the ending index.
+
+43
+00:02:44,940 --> 00:02:46,020
+So what is the graph?
+
+44
+00:02:46,440 --> 00:02:47,940
+This is a question that you have to answer.
+
+45
+00:02:48,150 --> 00:02:50,340
+More examples are here for you to think about them.
+
+46
+00:02:53,140 --> 00:02:59,890
+In the second, the problem, we will have a number, so we will have a sorry, we will have an array.
+
+47
+00:03:00,840 --> 00:03:08,070
+The array has distinct numbers and you have a starting values thought and you have an ending value goes.
+
+48
+00:03:09,120 --> 00:03:10,260
+And here is what you should do.
+
+49
+00:03:11,920 --> 00:03:18,850
+You would like to start from X and keep changing it with operations to end the op the good.
+
+50
+00:03:19,630 --> 00:03:20,920
+OK, what are this operation?
+
+51
+00:03:20,920 --> 00:03:22,090
+How can we change the number?
+
+52
+00:03:22,720 --> 00:03:25,360
+You cannot change it by the following.
+
+53
+00:03:26,170 --> 00:03:30,040
+First of all, for any X in this range.
+
+54
+00:03:33,030 --> 00:03:40,950
+You can try any index in the array and then you have three operation, either adding numbers of AI or
+
+55
+00:03:40,950 --> 00:03:44,970
+subtracting numbers of AI or soaring numbers of AI.
+
+56
+00:03:45,180 --> 00:03:52,980
+If you don't know what is X or like, what is X or B, just write it and think of it as a like plus
+
+57
+00:03:52,980 --> 00:03:56,400
+minus asterisk division or prediction.
+
+58
+00:03:56,430 --> 00:03:58,530
+Just an operation at the time, and it's Betway celebratory.
+
+59
+00:03:59,640 --> 00:04:01,890
+So let me explain the Tuskegee.
+
+60
+00:04:03,920 --> 00:04:05,360
+You have a starting number.
+
+61
+00:04:06,470 --> 00:04:07,880
+And you have an ending, no.
+
+62
+00:04:08,090 --> 00:04:09,200
+So here is a start.
+
+63
+00:04:09,740 --> 00:04:13,610
+And here is the goal, and we cannot change the start to another number.
+
+64
+00:04:13,610 --> 00:04:16,010
+Let's say the renames has five values.
+
+65
+00:04:16,280 --> 00:04:18,920
+Then you can change it to five different values.
+
+66
+00:04:21,980 --> 00:04:27,500
+And for everybody who can agree to change it to other five bags, but the only condition is the new
+
+67
+00:04:27,590 --> 00:04:31,220
+oxygenated must be between zero and 1000.
+
+68
+00:04:31,790 --> 00:04:36,590
+OK, so it is a case we have the starting six and would like to end at four.
+
+69
+00:04:36,890 --> 00:04:38,180
+The values are one or three.
+
+70
+00:04:38,390 --> 00:04:43,730
+So we either add one two six or subtracted or explore it.
+
+71
+00:04:43,740 --> 00:04:45,290
+So these are the three operation here.
+
+72
+00:04:45,920 --> 00:04:53,120
+Now, if we can go six seven four, using first exhorting was one, then second exploding with three.
+
+73
+00:04:53,870 --> 00:04:55,580
+Here is another case you start from.
+
+74
+00:04:55,580 --> 00:04:56,810
+Two would like to go to 12.
+
+75
+00:04:57,500 --> 00:04:58,880
+Now we can.
+
+76
+00:04:59,890 --> 00:05:10,780
+Add to the 212, this move us to 14, then we can subtract two from the 14 to this end up with, uh,
+
+77
+00:05:11,200 --> 00:05:11,710
+12.
+
+78
+00:05:13,060 --> 00:05:16,090
+Which is a good I hope you good idea.
+
+79
+00:05:16,300 --> 00:05:21,550
+So again, it looks like we have a bunch of numbers, have bunch of operations would like to model that
+
+80
+00:05:21,550 --> 00:05:22,090
+as a graph.
+
+81
+00:05:23,140 --> 00:05:24,070
+How can we do that?
+
+82
+00:05:25,580 --> 00:05:26,990
+More examples for you to trace.
+
+83
+00:05:29,420 --> 00:05:37,250
+And then the problem you have a string, the string represent a look, if you go to the gym, you probably
+
+84
+00:05:37,250 --> 00:05:38,240
+see, so she looks a lot.
+
+85
+00:05:38,240 --> 00:05:44,210
+Each look is like a fool for circular wheels, if you will.
+
+86
+00:05:44,210 --> 00:05:46,130
+From them is just digits from zero tonight.
+
+87
+00:05:46,490 --> 00:05:47,540
+And then it has a best one.
+
+88
+00:05:47,750 --> 00:05:50,710
+Maybe, for example, the best one is two one seven zero.
+
+89
+00:05:50,720 --> 00:05:52,280
+So this is the best one of your look.
+
+90
+00:05:52,670 --> 00:05:56,660
+If you roll the the values so that they are two one seven zero is going to open.
+
+91
+00:05:57,260 --> 00:06:03,770
+So the problem is as following we start from this drink zero zero zero zero and we would like to go
+
+92
+00:06:03,770 --> 00:06:08,870
+to this target maybe two one seven zero with the minimum number of steps.
+
+93
+00:06:09,260 --> 00:06:14,360
+So each step would involve just you can take a value and push it forward or backward.
+
+94
+00:06:14,990 --> 00:06:21,620
+So for example, if I have a zero zero zero zero and I would like two two one seven zero if I push this
+
+95
+00:06:21,620 --> 00:06:27,620
+zero two steps and this zero one a step and the seven seven steps, then we have in total 10 steps to
+
+96
+00:06:27,620 --> 00:06:28,520
+reach to this state.
+
+97
+00:06:29,150 --> 00:06:32,600
+But this is so straight forward it is the catch in this problem.
+
+98
+00:06:33,260 --> 00:06:35,390
+There are some dead ends.
+
+99
+00:06:35,810 --> 00:06:41,990
+Some states, maybe, for example, two one one zero, for example, it's a dead end.
+
+100
+00:06:42,290 --> 00:06:49,380
+If if it happened that you'd look at best with this number, it will get logged and you cannot open
+
+101
+00:06:49,400 --> 00:06:49,910
+it anymore.
+
+102
+00:06:50,090 --> 00:06:54,100
+So you have to avoid thing by any of these dead ends.
+
+103
+00:06:54,710 --> 00:07:02,440
+So the problem again, you start to from this four zeros, you would like to go to the target here such
+
+104
+00:07:02,450 --> 00:07:07,580
+that you don't best buy this dead ends and you have to do that with the minimum number of steps.
+
+105
+00:07:08,060 --> 00:07:15,230
+So here is the target zero two zero two and you cannot iterate on any of these values.
+
+106
+00:07:15,770 --> 00:07:17,930
+So one sequence would be take zero zero.
+
+107
+00:07:18,080 --> 00:07:19,910
+Change it at one here.
+
+108
+00:07:19,910 --> 00:07:20,480
+One step.
+
+109
+00:07:20,780 --> 00:07:21,710
+Another one here.
+
+110
+00:07:21,710 --> 00:07:22,360
+Another step.
+
+111
+00:07:22,640 --> 00:07:24,200
+Then this one here or the step.
+
+112
+00:07:24,470 --> 00:07:25,520
+Then this one here.
+
+113
+00:07:25,520 --> 00:07:30,230
+So another step and then removing this one from here in the system.
+
+114
+00:07:30,620 --> 00:07:33,500
+So as you see, we ended up with one very big choice.
+
+115
+00:07:34,220 --> 00:07:36,650
+But this sequence, for example, is invalid.
+
+116
+00:07:36,980 --> 00:07:37,610
+Why?
+
+117
+00:07:37,970 --> 00:07:44,690
+Because we iterated on the value zero one zero two in the middle and zero one zero two is here as it
+
+118
+00:07:44,690 --> 00:07:47,540
+did, and you cannot iterate over it.
+
+119
+00:07:49,030 --> 00:07:50,470
+So this is mainly what you need.
+
+120
+00:07:51,050 --> 00:07:52,430
+Uh, this is Mindy.
+
+121
+00:07:52,450 --> 00:07:53,380
+What you need to do?
+
+122
+00:07:53,980 --> 00:07:55,240
+Observe the following.
+
+123
+00:07:59,240 --> 00:08:07,010
+In the problem paid, it's say that you can move forward and backward as you want, you can move forward
+
+124
+00:08:07,010 --> 00:08:09,260
+and backward, as you, as you would like.
+
+125
+00:08:09,260 --> 00:08:13,730
+Say the truth here that the wheels can rotate freely and wrap around.
+
+126
+00:08:14,060 --> 00:08:19,340
+This means that nine can be go to zero and zero can go to nine.
+
+127
+00:08:19,760 --> 00:08:27,410
+OK, so here you see, the last example here is just is zero zero zero nine.
+
+128
+00:08:27,410 --> 00:08:33,200
+So if I have zero zero zero zero and then fled this one one step backward, it will be zero zero zero
+
+129
+00:08:33,470 --> 00:08:36,200
+nine in a single in a single step.
+
+130
+00:08:36,890 --> 00:08:38,270
+So this is mainly the problem.
+
+131
+00:08:38,270 --> 00:08:39,440
+More examples for you.
+
+132
+00:08:40,070 --> 00:08:46,040
+Please consider this examples because because this puts because it could has some of the special cases.
+
+133
+00:08:46,040 --> 00:08:48,110
+I don't want you to keep getting wrong answers.
+
+134
+00:08:48,320 --> 00:08:53,000
+So consider this once while cutting your approach that sort.

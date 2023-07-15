@@ -1,0 +1,344 @@
+0
+1
+00:00:01,470 --> 00:00:07,680
+In this section, we will start to know about polymorphism, which is one of the strongest features in OOP.
+1
+
+2
+00:00:08,100 --> 00:00:14,760
+Let's trace this code. We have here a class person which has a constructor and a destructor,
+2
+
+3
+00:00:15,120 --> 00:00:20,460
+and a class student which is extending from a person with a print function and destructor.
+3
+
+4
+00:00:21,300 --> 00:00:24,330
+Now, let's define a person object and a student object.
+4
+
+5
+00:00:24,750 --> 00:00:30,240
+If we did person dot print, everything goes well, and it goes to the print and just prints student.
+5
+
+6
+00:00:30,840 --> 00:00:36,120
+Sorry as a person. If we printed as a student, it also goes to the student and prints student.
+6
+
+7
+00:00:36,420 --> 00:00:37,290
+so far, so good.
+7
+
+8
+00:00:37,890 --> 00:00:39,120
+Let's create some pointers.
+8
+
+9
+00:00:39,540 --> 00:00:45,330
+The first pointer here is pointing to the reference of the person and its type person pointer.
+9
+
+10
+00:00:45,810 --> 00:00:50,070
+The second pointer here is of type student and its reference to student.
+10
+
+11
+00:00:50,100 --> 00:00:52,500
+OK, so drop these two lines for now.
+11
+
+12
+00:00:52,770 --> 00:00:54,060
+Let's make these two printing.
+12
+
+13
+00:00:54,240 --> 00:00:55,690
+Everything is still OK.
+13
+
+14
+00:00:56,190 --> 00:00:57,060
+Here is a problem.
+14
+
+15
+00:00:57,390 --> 00:00:58,620
+At line 25,
+15
+
+16
+00:00:58,950 --> 00:01:05,610
+we take a reference to the student, but we put it in the person pointer, or we created a new student and
+16
+
+17
+00:01:05,610 --> 00:01:06,830
+put it in the person pointer.
+17
+
+18
+00:01:07,080 --> 00:01:08,830
+We saw something like that in the homework.
+18
+
+19
+00:01:09,150 --> 00:01:17,820
+So what is happening here is we are using a pointer of type parent to point to an instance of the type child.
+19
+
+20
+00:01:18,240 --> 00:01:18,990
+Semantically,
+20
+
+21
+00:01:18,990 --> 00:01:21,480
+this is valid because a student is a person.
+21
+
+22
+00:01:22,210 --> 00:01:25,260
+So we can easily in c++ logic,
+22
+
+23
+00:01:25,260 --> 00:01:29,680
+we create a pointer of type parent looking to the child.
+23
+
+24
+00:01:30,000 --> 00:01:31,920
+This is OK, but where is the problem.
+24
+
+25
+00:01:32,400 --> 00:01:37,980
+If we started to call the pointer print, it goes and prints person, it doesn't print student.
+25
+
+26
+00:01:38,310 --> 00:01:45,330
+This is very counterintuitive because here in line 24 when we have a pointer of the type student,
+26
+
+27
+00:01:45,810 --> 00:01:49,890
+in reference student, the printing function is calling printing a student,
+27
+
+28
+00:01:50,250 --> 00:01:57,380
+but if we took it in a person pointer, and we call print, it is going to print in the person, not on the student.
+28
+
+29
+00:01:57,960 --> 00:01:59,150
+So what does this mean?
+29
+
+30
+00:01:59,460 --> 00:02:04,660
+It means that the member function is called based on the pointer type.
+30
+
+31
+00:02:05,220 --> 00:02:09,090
+So if you use a pointer of type student, it will call a student.
+31
+
+32
+00:02:09,090 --> 00:02:13,380
+If you use the pointer type of person, it will type person. 
+32
+
+33
+00:02:13,630 --> 00:02:17,460
+Let's say you now would like to delete your pointer number three here.
+33
+
+34
+00:02:17,970 --> 00:02:20,200
+Remember that the destructor is just a function.
+34
+
+35
+00:02:20,610 --> 00:02:24,390
+So if you are treating here this function, which one would be called the function
+35
+
+36
+00:02:24,390 --> 00:02:26,370
+that would be called if this person called?
+36
+
+37
+00:02:26,910 --> 00:02:28,770
+But this one is created in memory.
+37
+
+38
+00:02:29,190 --> 00:02:32,800
+There is undefined behavior here and potentially a memory leak that you would face.
+38
+
+39
+00:02:33,240 --> 00:02:40,350
+So the rule here is now so far, the member function is called based on the pointer type.
+39
+
+40
+00:02:40,590 --> 00:02:43,800
+So you have to be careful about what is a pointer target,
+40
+
+41
+00:02:44,600 --> 00:02:47,400
+and here is where the virtual function comes.
+41
+
+42
+00:02:47,640 --> 00:02:51,570
+The virtual keyword is what makes for us the polymorphism.
+42
+
+43
+00:02:52,020 --> 00:03:01,350
+So the rule so far is, as we know, if we have an object that isn't reference, isn't a pointer, we call
+43
+
+44
+00:03:01,350 --> 00:03:06,910
+it, then the right thing would be called like we see here in the student person,
+44
+
+45
+00:03:06,930 --> 00:03:08,510
+they are non reference, no pointers,
+45
+
+46
+00:03:08,610 --> 00:03:10,290
+so they would be normal printing.
+46
+
+47
+00:03:10,710 --> 00:03:14,460
+And also we know the second rule that the member function is called based on the pointer type.
+47
+
+48
+00:03:15,030 --> 00:03:17,400
+If we used the keyword virtual,
+48
+
+49
+00:03:18,390 --> 00:03:25,530
+when we will mark a function with virtual, we are actually calling based on the right object, the drived
+49
+
+50
+00:03:25,530 --> 00:03:27,400
+one, not the base one.
+50
+
+51
+00:03:27,690 --> 00:03:32,670
+So here we are creating a student pointer, putting it in a person pointer.
+51
+
+52
+00:03:33,150 --> 00:03:37,860
+If we called the print function, it will call the student, not the person.
+52
+
+53
+00:03:38,310 --> 00:03:45,750
+So, again, the virtual keyword, if we put it, we will call based on the actual object, not the
+53
+
+54
+00:03:45,750 --> 00:03:46,800
+used pointer type,
+54
+
+55
+00:03:47,160 --> 00:03:52,750
+but if we removed the virtual keyword and make a call, it will call based on the pointer type.
+55
+
+56
+00:03:53,070 --> 00:03:56,080
+So one case will call the person class itself.
+56
+
+57
+00:03:56,370 --> 00:04:01,130
+Another case will call based on the created object itself.
+57
+
+58
+00:04:01,380 --> 00:04:04,080
+If we use the virtual, we get this property.
+58
+
+59
+00:04:05,580 --> 00:04:11,490
+If this function is virtual and we overridded here, it would be virtual also, even if we did not write
+59
+
+60
+00:04:11,490 --> 00:04:12,190
+the word virtual.
+60
+
+61
+00:04:12,360 --> 00:04:18,000
+So someone is extending from a student, then print would be also a virtual function.
+61
+
+62
+00:04:18,150 --> 00:04:21,580
+The word virtual means exist in appearance, but not in reality.
+62
+
+63
+00:04:21,840 --> 00:04:25,770
+That's why when we put a virtual here, this will not be the function that would be called.
+63
+
+64
+00:04:25,950 --> 00:04:28,230
+It is actually the function here that would be called.
+64
+
+65
+00:04:28,840 --> 00:04:29,760
+OK, what if
+65
+
+66
+00:04:29,760 --> 00:04:33,140
+no, I would like in an explicit way to make a call to this function,
+66
+
+67
+00:04:33,240 --> 00:04:38,100
+then you can use this operator to just make the explicit call.
+67
+
+68
+00:04:38,550 --> 00:04:42,130
+This property is very fundamental in virtual function.
+68
+
+69
+00:04:42,540 --> 00:04:43,440
+That's it for today.

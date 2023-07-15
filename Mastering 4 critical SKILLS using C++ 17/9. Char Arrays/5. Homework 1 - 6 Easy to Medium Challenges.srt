@@ -1,0 +1,184 @@
+0
+1
+00:00:01,020 --> 00:00:07,680
+Homework set number one for the character arrays, in the first problem we would like to check if two
+1
+
+2
+00:00:07,680 --> 00:00:09,720
+strings are prefix or not. 
+2
+
+3
+00:00:10,750 --> 00:00:16,280
+Remember, when something is prefix, it should be coming here as an early character of it,
+3
+
+4
+00:00:16,660 --> 00:00:24,750
+so for example, ABCDE is prefix of an ABCDE, on the other side EFG isn't prefix of ABCDE.
+4
+
+5
+00:00:25,620 --> 00:00:27,510
+In the second one, the opposite,
+5
+
+6
+00:00:27,520 --> 00:00:30,150
+we would like it to be suffix, to check if it is suffix or not,
+6
+
+7
+00:00:30,420 --> 00:00:32,340
+so ACD does it end here?
+7
+
+8
+00:00:32,340 --> 00:00:32,630
+No.
+8
+
+9
+00:00:33,000 --> 00:00:37,590
+Does ABCDEF end here?
+9
+
+10
+00:00:37,590 --> 00:00:37,890
+No.
+10
+
+11
+00:00:38,380 --> 00:00:40,410
+Does this string end with EFG?
+11
+
+12
+00:00:41,010 --> 00:00:41,300
+Yes.
+12
+
+13
+00:00:41,400 --> 00:00:42,630
+So this is a suffix for it.
+13
+
+14
+00:00:42,780 --> 00:00:45,720
+So suffix means ending with this string.
+14
+
+15
+00:00:46,970 --> 00:00:52,970
+the "Is substring" means it's somewhere in the middle and this means that it could be prefix or suffix 
+15
+
+16
+00:00:52,970 --> 00:00:55,700
+or something in the middle, which make it more yeses here.
+16
+
+17
+00:00:56,600 --> 00:01:03,530
+Now looking to that ABCD is a prefix, ABCDEF  is another prefix, EFG is a suffix,
+17
+
+18
+00:01:03,530 --> 00:01:11,210
+so good to, DEFG is something also suffix BCD is here, a substring and so on.
+18
+
+19
+00:01:12,110 --> 00:01:17,210
+The last one is a subsequence and subsequence is like a bigger scope than all of them.
+19
+
+20
+00:01:17,220 --> 00:01:19,910
+So all of them now are subsequence,
+20
+
+21
+00:01:20,150 --> 00:01:24,290
+which you mean the letters should exist in the same order as here, for example.
+21
+
+22
+00:01:25,130 --> 00:01:29,420
+A, C, E, G.
+22
+
+23
+00:01:29,430 --> 00:01:36,210
+All of them are in order, here for example the GD aren't suffix because they doesn't follow order, G
+23
+
+24
+00:01:36,230 --> 00:01:37,910
+is in ending and B is in the beginning.
+24
+
+25
+00:01:37,940 --> 00:01:38,870
+...in the middle,
+25
+
+26
+00:01:39,110 --> 00:01:40,520
+so it doesn't work this way,
+26
+
+27
+00:01:43,130 --> 00:01:49,870
+converting a number you would read a string of six letters maximum convert it to integer, then print
+27
+
+28
+00:01:50,300 --> 00:01:54,650
+two things, the number and the number multiplied by three.
+28
+
+29
+00:01:55,080 --> 00:02:00,410
+For example, if the input of a string hundred you need to print hundred and three hundred.
+29
+
+30
+00:02:01,040 --> 00:02:06,770
+If the string is zero, two hundred, you need to print 200 and 600, so mainly convert string to integer 
+30
+
+31
+00:02:06,770 --> 00:02:09,880
+and then print it, you have to do the conversion by yourself.
+31
+
+32
+00:02:11,790 --> 00:02:18,150
+Grouping, you will read N string, then divided to consecutive groups of the same letter and
+32
+
+33
+00:02:18,150 --> 00:02:23,550
+then each group, for example, here you'll notice the first three characters are same one one, one,
+33
+
+34
+00:02:23,850 --> 00:02:27,900
+then three, two, two, two, two "A"s, three "B"s, here
+34
+
+35
+00:02:27,900 --> 00:02:29,730
+all of them are of the same group,
+35
+
+36
+00:02:29,940 --> 00:02:32,550
+so: read, divided, print them
+36
+
+37
+00:02:32,550 --> 00:02:34,200
+separated. That's all.

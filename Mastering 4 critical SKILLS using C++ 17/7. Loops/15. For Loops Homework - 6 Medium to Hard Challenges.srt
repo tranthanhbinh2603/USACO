@@ -1,0 +1,219 @@
+0
+1
+00:00:01,800 --> 00:00:10,980
+Let's do more homework on looping also because it's a very critical topic. the first homework is you
+1
+
+2
+00:00:10,980 --> 00:00:13,620
+are to print an X as following.
+2
+
+3
+00:00:13,620 --> 00:00:18,320
+So you are reading an N, which would be always odd, and you are to print something like that,
+3
+
+4
+00:00:18,330 --> 00:00:28,530
+And then another thing like that. find a special pair, you are
+4
+
+5
+00:00:28,530 --> 00:00:34,830
+to count how many numbers X and Y such that X in the following range and Y, also in the given
+5
+
+6
+00:00:34,890 --> 00:00:35,220
+range.
+6
+
+7
+00:00:35,460 --> 00:00:41,280
+And you are to make sure that X < Y and X + Y is divisible by 7.
+7
+
+8
+00:00:43,380 --> 00:00:49,680
+More harder, you are to count all quadruples, the word quadruples refers to something that is 4.
+8
+
+9
+00:00:49,980 --> 00:00:53,220
+So you would like to count all 4 numbers with the following conditions,
+9
+
+10
+00:00:53,470 --> 00:00:55,350
+All of them are < 200,
+10
+
+11
+00:00:55,620 --> 00:00:58,370
+And a + b == c + d.
+11
+
+12
+00:00:58,800 --> 00:01:00,000
+You can easily code
+12
+
+13
+00:01:00,000 --> 00:01:07,450
+It with 4 loops, but try to code it using 3 loops and in the future, you will learn something in data
+13
+
+14
+00:01:07,560 --> 00:01:08,160
+structures,
+14
+
+15
+00:01:08,160 --> 00:01:09,060
+called hash tables.
+15
+
+16
+00:01:09,180 --> 00:01:12,900
+You can do it with two loops only in the far future.
+16
+
+17
+00:01:13,780 --> 00:01:20,200
+Is Prime, you are to read an integer N, which is < 500 and Print YES; if it's a prime
+17
+
+18
+00:01:20,200 --> 00:01:21,270
+number, otherwise no.
+18
+
+19
+00:01:21,640 --> 00:01:29,260
+So remember, a prime number is a number that is greater than 1 and can't be formed by multiplying
+19
+
+20
+00:01:29,260 --> 00:01:30,240
+2 smaller numbers.
+20
+
+21
+00:01:30,490 --> 00:01:35,360
+For example, it cannot be divisible with something that is smaller than it, except 1.
+21
+
+22
+00:01:35,770 --> 00:01:39,880
+So the first few numbers are 2, 3, 5, 7, 11, and so on
+22
+
+23
+00:01:40,300 --> 00:01:43,390
+So if I give you 13, this is yes, a prime number.
+23
+
+24
+00:01:43,580 --> 00:01:44,600
+If I give you 12,
+24
+
+25
+00:01:44,740 --> 00:01:51,580
+This isn't a prime number because 12 is divisible by 2 and divisible by 6, which are like less
+25
+
+26
+00:01:51,580 --> 00:01:52,150
+than it.
+26
+
+27
+00:01:53,690 --> 00:01:55,820
+Print primes is a similar one,
+27
+
+28
+00:01:55,850 --> 00:02:00,680
+You're just going now to print the primes, so if I give you 18 year to print all the prime numbers
+28
+
+29
+00:02:00,680 --> 00:02:09,260
+that are < 18, when you are printing,  make sure please that there is no comma printed after the last
+29
+
+30
+00:02:09,260 --> 00:02:11,510
+number, you are to print them comma separated,
+30
+
+31
+00:02:11,510 --> 00:02:13,010
+No comma after the last number.
+31
+
+32
+00:02:14,610 --> 00:02:21,890
+Digits sum in range, you are going to read 3 numbers N, A, and B, you are to print the summation
+32
+
+33
+00:02:21,900 --> 00:02:24,460
+of the numbers between 1 and N,
+33
+
+34
+00:02:24,480 --> 00:02:28,080
+Whose sum of digits is between A and B. Let's give an example,
+34
+
+35
+00:02:28,500 --> 00:02:35,040
+Let's say that you read 20 and the sum of digits that we are targeting should be between 2 and
+35
+
+36
+00:02:35,040 --> 00:02:35,430
+5.
+36
+
+37
+00:02:37,130 --> 00:02:47,030
+So now here, the numbers whose sum of digits are between 2 and 5 and this from 1 to
+37
+
+38
+00:02:47,030 --> 00:02:50,320
+20 would be 2, 3, 4, 5, 11 and so on.
+38
+
+39
+00:02:50,570 --> 00:02:53,570
+For example, let's say that you took number like 13.
+39
+
+40
+00:02:53,840 --> 00:02:58,950
+The sum of digits is just 4, which is between 2 and 5. 
+40
+
+41
+00:02:59,090 --> 00:03:03,090
+20, the sum of digits is just 2, which is between 2 and 5, and so on.
+41
+
+42
+00:03:03,380 --> 00:03:10,280
+So you are actually iterating from 1 to N verifying that the sum of digits is just between the A and
+42
+
+43
+00:03:10,280 --> 00:03:10,550
+B.
+43
+
+44
+00:03:12,060 --> 00:03:12,600
+That's it.

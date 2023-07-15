@@ -1,0 +1,154 @@
+0
+1
+00:00:00,960 --> 00:00:08,670
+Another interesting data structure in the STL is priority queue, priority queue is a queue that involves
+1
+
+2
+00:00:08,670 --> 00:00:09,480
+some priority,
+2
+
+3
+00:00:09,690 --> 00:00:14,520
+Remember, in the hospital, we have the case that we can add in the front or add in the back,
+3
+
+4
+00:00:14,550 --> 00:00:20,790
+we did this workaround to maintain some priority, but C++ has something very interesting named the
+4
+
+5
+00:00:20,790 --> 00:00:21,260
+priority
+5
+
+6
+00:00:21,270 --> 00:00:27,180
+queue, the priority queue is something that always will order the numbers from the big to the small,
+6
+
+7
+00:00:27,480 --> 00:00:33,930
+You define it as following is also exists in the hash include of queue, you define priority queue of type integer
+7
+
+8
+00:00:33,990 --> 00:00:34,340
+priority
+8
+
+9
+00:00:34,410 --> 00:00:37,740
+queue. You start to push 3 and then push 5,
+9
+
+10
+00:00:38,040 --> 00:00:43,640
+when you push a second number, it is going to put it in the right order, which is the biggest first,
+10
+
+11
+00:00:43,800 --> 00:00:45,570
+so now it would be 5 3.
+11
+
+12
+00:00:46,020 --> 00:00:48,960
+If you push the 1, then it would be 5 3 1,
+12
+
+13
+00:00:48,960 --> 00:00:51,150
+notice they are sorted from big to small,
+13
+
+14
+00:00:51,390 --> 00:00:53,680
+if you push seven, it is going to be in the top,
+14
+
+15
+00:00:53,850 --> 00:00:58,680
+so now 7 3 1, if you push 0 is going to be in the lower.
+15
+
+16
+00:00:59,040 --> 00:01:03,090
+OK, what if I would like numbers to be sorted from small to large?
+16
+
+17
+00:01:03,090 --> 00:01:06,430
+One workaround for now you can use negative value,
+17
+
+18
+00:01:06,450 --> 00:01:08,970
+there are other ways, but this is like one easy way for you.
+18
+
+19
+00:01:09,810 --> 00:01:11,520
+Let's print a priority queue,
+19
+
+20
+00:01:11,880 --> 00:01:16,470
+if we print the priority queue, we can just use a function very similar to the stack,
+20
+
+21
+00:01:16,800 --> 00:01:22,220
+where you say while not empty top, get a top and remove it,
+21
+
+22
+00:01:22,250 --> 00:01:30,210
+notice it was like front in the queue, but it is now here top in priority queue, a good programmer make
+22
+
+23
+00:01:30,290 --> 00:01:32,910
+choices that make sense, in a priority queue,
+23
+
+24
+00:01:32,910 --> 00:01:35,120
+we need something that is the best among them,
+24
+
+25
+00:01:35,130 --> 00:01:37,110
+that's why we call it top function.
+25
+
+26
+00:01:37,260 --> 00:01:38,670
+This how we print it.
+26
+
+27
+00:01:39,090 --> 00:01:42,930
+Also notice this priority queue has here a reference,
+27
+
+28
+00:01:43,050 --> 00:01:46,980
+so this priority queue and this priority queue are the same in memory.
+28
+
+29
+00:01:46,980 --> 00:01:51,360
+If you try to check the size of the priority queue here, it will be zero.
+29
+
+30
+00:01:51,540 --> 00:01:57,840
+So use a priority queue whenever you would like to enter items and they remain sorted according to some
+30
+
+31
+00:01:58,080 --> 00:01:59,850
+criteria. That it.

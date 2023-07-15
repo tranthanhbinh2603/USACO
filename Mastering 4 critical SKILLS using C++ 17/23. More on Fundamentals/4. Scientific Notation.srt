@@ -1,0 +1,629 @@
+0
+1
+00:00:01,020 --> 00:00:06,580
+Let's talk about some of the details for the double numbers or the floating point numbers in general.
+1
+
+2
+00:00:07,020 --> 00:00:10,110
+The first thing we would like to talk about is the scientific notation.
+2
+
+3
+00:00:11,430 --> 00:00:15,600
+The scientific notation is just a shorthand for writing very lengthy numbers.
+3
+
+4
+00:00:16,020 --> 00:00:22,110
+For example, let's introduce that. If we have something like 1.2 times 10 to the power 4
+4
+
+5
+00:00:22,470 --> 00:00:27,270
+we know that this is like 10.000; 10 to the power 4  is just 4 zeros.
+5
+
+6
+00:00:27,420 --> 00:00:30,290
+And then we multiply it with one point two, we get this big number.
+6
+
+7
+00:00:31,410 --> 00:00:36,300
+The 1.2 we call it a significant and 4, we call it the exponent of the 10 here.
+7
+
+8
+00:00:36,840 --> 00:00:40,330
+What about 5* 10^-3?
+8
+
+9
+00:00:40,710 --> 00:00:45,390
+This is as same as 5 divided by 1000, which is just 0.005.
+9
+
+10
+00:00:46,200 --> 00:00:49,140
+What about this number times 10^24?
+10
+
+11
+00:00:49,440 --> 00:00:51,210
+It is very huge number.
+11
+
+12
+00:00:51,720 --> 00:00:54,720
+Thinking about the left style and right stylem,
+12
+
+13
+00:00:54,720 --> 00:01:01,540
+we notice that this left style is easily readable, compared to this one, and also is easily to be compared to the
+13
+
+14
+00:01:01,560 --> 00:01:02,310
+other numbers.
+14
+
+15
+00:01:02,910 --> 00:01:04,380
+OK, here is one more thing.
+15
+
+16
+00:01:04,620 --> 00:01:11,190
+If we have this number that times 10^4, it is the same as if this number become
+16
+
+17
+00:01:11,190 --> 00:01:11,520
+5
+17
+
+18
+00:01:11,520 --> 00:01:17,250
+but we divide here by 10, or become 6 and we divide it by another 10, or 7 and we divide by another
+18
+
+19
+00:01:17,250 --> 00:01:19,770
+10, or 8 and we divide it by another 10.
+19
+
+20
+00:01:21,360 --> 00:01:23,940
+So here is the notation.
+20
+
+21
+00:01:24,270 --> 00:01:31,550
+The notation of 1.2e4 means that this is 1.2 times the 10^4
+21
+
+22
+00:01:31,560 --> 00:01:37,550
+OK, which can be represented as 1.2e004
+22
+
+23
+00:01:37,770 --> 00:01:43,800
+So 'e' here which is referring to the exponential or exponent, it means 1.2e,
+23
+
+24
+00:01:43,860 --> 00:01:48,750
+when you see 'e', you're replace it with 10to the power and put this number is, 004, is like
+24
+
+25
+00:01:48,870 --> 00:01:49,230
+4.
+25
+
+26
+00:01:49,260 --> 00:01:54,240
+That's OK. For this number here, 5*10^-3,
+26
+
+27
+00:01:54,240 --> 00:01:56,850
+We can write it like 5e-3.
+27
+
+28
+00:01:57,180 --> 00:02:02,160
+So it means 5 times 10 to the power -3. For this number here,
+28
+
+29
+00:02:02,160 --> 00:02:07,170
+It's written as 1.2387e8.
+29
+
+30
+00:02:07,500 --> 00:02:08,760
+For this very big number,
+30
+
+31
+00:02:08,760 --> 00:02:12,050
+we can write it like5.97 blah blah blah e24.
+31
+
+32
+00:02:12,450 --> 00:02:16,170
+So the scientific notation is writing this number in this style.
+32
+
+33
+00:02:16,440 --> 00:02:19,710
+You have the significant and you have some power to 10.
+33
+
+34
+00:02:20,010 --> 00:02:21,240
+Then you write it this way.
+34
+
+35
+00:02:21,240 --> 00:02:23,130
+It would be easy to read and easy to compare.
+35
+
+36
+00:02:25,000 --> 00:02:26,370
+How to build this scientific notation?
+36
+
+37
+00:02:27,160 --> 00:02:28,840
+This is an important thing.
+37
+
+38
+00:02:29,170 --> 00:02:34,750
+Generally speaking, you have to restructure it to be one non-zero digit then 'e'.
+38
+
+39
+00:02:35,200 --> 00:02:40,270
+So there is always the scientific notation, that is only a single digit here, non-zero one,
+39
+
+40
+00:02:40,550 --> 00:02:41,870
+then you have something here.
+40
+
+41
+00:02:42,340 --> 00:02:44,320
+This is the details of how to compute that.
+41
+
+42
+00:02:44,350 --> 00:02:45,300
+Feel free to read it.
+42
+
+43
+00:02:45,310 --> 00:02:46,950
+It's very logical to think about it.
+43
+
+44
+00:02:46,960 --> 00:02:52,000
+You would like to give the first digit here so you keep moving the sign like you say,
+44
+
+45
+00:02:52,000 --> 00:02:54,390
+7 would like the 7 to be here in the beginning.
+45
+
+46
+00:02:54,640 --> 00:02:57,910
+So you need to keep dividing here to get it here and so on.
+46
+
+47
+00:03:01,820 --> 00:03:05,990
+So in terms of scientific notation, you see that this number can be written here. I'm just providing
+47
+
+48
+00:03:05,990 --> 00:03:11,210
+more examples. If we would like this 7 to jump here to the beginning, then we divide it 3
+48
+
+49
+00:03:11,210 --> 00:03:11,570
+times.
+49
+
+50
+00:03:11,570 --> 00:03:17,270
+That's OK. If we have 600 here, and then we would like one digit on here to be 6. ,
+50
+
+51
+00:03:17,280 --> 00:03:19,580
+so we need to multiply with these 2 zeros.
+51
+
+52
+00:03:19,820 --> 00:03:23,060
+So you see, if I'm moving left, I'm dividing.
+52
+
+53
+00:03:23,060 --> 00:03:26,510
+If I'm moving right, I'm multiplying.
+53
+
+54
+00:03:27,230 --> 00:03:29,840
+And notice also here something like 6.7,
+54
+
+55
+00:03:29,840 --> 00:03:34,810
+We can write it like 6.70000e+00 .
+55
+
+56
+00:03:34,820 --> 00:03:35,600
+What does this mean?
+56
+
+57
+00:03:36,110 --> 00:03:39,080
+It means as following: we have here
+57
+
+58
+00:03:42,170 --> 00:03:43,720
+the 0.7000,
+58
+
+59
+00:03:43,730 --> 00:03:45,130
+This is as same as 0.7.
+59
+
+60
+00:03:45,140 --> 00:03:46,850
+So don't get confused about that.
+60
+
+61
+00:03:47,300 --> 00:03:51,500
+And 'e00' just means 10 to the power zero, which is just 1.
+61
+
+62
+00:03:51,800 --> 00:03:55,940
+So make sure that when you read such a number, you don't get confused.
+62
+
+63
+00:03:55,950 --> 00:04:01,730
+This is what we call it, trailing zeros.
+63
+
+64
+00:04:01,730 --> 00:04:03,260
+Here are two values.
+64
+
+65
+00:04:03,290 --> 00:04:06,470
+OK, here is your turn. Try to think about this one.
+65
+
+66
+00:04:06,500 --> 00:04:10,760
+Give yourself like one minute how to make it with one digit only here in the beginning.
+66
+
+67
+00:04:13,590 --> 00:04:15,050
+Something like 3.4,
+67
+
+68
+00:04:20,150 --> 00:04:21,290
+probably this is wrong.
+68
+
+69
+00:04:21,870 --> 00:04:24,710
+So for the 123, it would be one point.
+69
+
+70
+00:04:24,720 --> 00:04:27,990
+So we need to multiply with 2 to make this shift.
+70
+
+71
+00:04:28,560 --> 00:04:36,630
+This number, if we put here a point, then there are 5 digits that you need to multiply
+71
+
+72
+00:04:36,660 --> 00:04:37,170
+with them.
+72
+
+73
+00:04:37,510 --> 00:04:43,560
+If you have something like that 0.8, then you need to divide by e-10 to get this
+73
+
+74
+00:04:43,560 --> 00:04:44,340
+number and so on.
+74
+
+75
+00:04:45,390 --> 00:04:48,060
+There's something here relevant, but I don't want to get in details.
+75
+
+76
+00:04:48,060 --> 00:04:51,440
+It's just confusing what we call the significant digits.
+76
+
+77
+00:04:51,660 --> 00:04:55,590
+So thinking about this number before the 'e', we have up to 6 significant digits.
+77
+
+78
+00:04:56,370 --> 00:04:58,260
+But it isn't that straightforward.
+78
+
+79
+00:04:58,260 --> 00:05:03,540
+Like for example, here in this case, it's just a 3  significant digits
+79
+
+80
+00:05:03,540 --> 00:05:11,760
+although we have 6 before the 'e'. Feel free to go to this link to read about the significant
+80
+
+81
+00:05:11,760 --> 00:05:17,070
+digits, but I just wanted to give you a sense of when people refer to significant digits, they refer
+81
+
+82
+00:05:17,070 --> 00:05:20,870
+to some digits here before the 'e'.
+82
+
+83
+00:05:21,090 --> 00:05:24,390
+It is more tricky when you have some trailing zeros.
+83
+
+84
+00:05:24,600 --> 00:05:27,780
+But for example, here in this case, we have like 9 digits.
+84
+
+85
+00:05:28,200 --> 00:05:34,590
+If you have something that involving the 8 here, like all of these zeros would be ignored, then
+85
+
+86
+00:05:34,590 --> 00:05:35,600
+we have only 8 here
+86
+
+87
+00:05:35,610 --> 00:05:36,760
+so it would be one significant digit.
+87
+
+88
+00:05:37,110 --> 00:05:37,860
+It isn't a big deal.
+88
+
+89
+00:05:37,860 --> 00:05:43,170
+I don't need you to understand it at the moment, but just in case, then feel free to go here.
+89
+
+90
+00:05:43,770 --> 00:05:47,140
+But when we say significant digits, we are referring to something before the 'e'.
+90
+
+91
+00:05:47,190 --> 00:05:49,080
+This is what I care about it at the moment.
+91
+
+92
+00:05:51,180 --> 00:05:56,190
+In terms of code: if you try to print this number, it would be pretty normally, but if you try to
+92
+
+93
+00:05:56,190 --> 00:05:59,190
+print this big number, it would be printed in this notation.
+93
+
+94
+00:05:59,440 --> 00:06:05,610
+That's why it's important to understand the scientific notation. In C++, you can even force printing
+94
+
+95
+00:06:05,610 --> 00:06:06,800
+of scientific information as following.
+95
+
+96
+00:06:07,030 --> 00:06:15,830
+This is what we call, a setf  function so we can say setf(ios::scientific).
+96
+
+97
+00:06:16,140 --> 00:06:18,640
+setf(ios::scientific)
+97
+
+98
+00:06:18,930 --> 00:06:23,820
+Another way is to say that I would cout scientific this way and now if you try to print these two
+98
+
+99
+00:06:23,820 --> 00:06:28,650
+numbers, both of them would be printed in the scientific notation or these two numbers would be printed
+99
+
+100
+00:06:28,650 --> 00:06:29,780
+in the scientific notation.
+100
+
+101
+00:06:30,530 --> 00:06:32,820
+There is also in C++, what we call precision.
+101
+
+102
+00:06:33,150 --> 00:06:39,430
+The precision is forcing how many digits you will need after the point.
+102
+
+103
+00:06:39,690 --> 00:06:44,880
+So if you say here precision ten, if you try to count here, one, two, three, four, five,
+103
+
+104
+00:06:44,880 --> 00:06:49,440
+six, seven, eight, I guess this would be this would be 10 or so.
+104
+
+105
+00:06:51,060 --> 00:06:56,490
+So now mixing the precision with the scientific notation, this isn't very useful, actually.
+105
+
+106
+00:06:56,760 --> 00:06:59,990
+What's more useful is just use it with the with the normal representation.
+106
+
+107
+00:07:00,270 --> 00:07:02,320
+So let's here go back and set setf.
+107
+
+108
+00:07:02,340 --> 00:07:06,990
+ios::fixed, ios:: floatfield. It might look weird for you.
+108
+
+109
+00:07:06,990 --> 00:07:07,950
+Just use it as it is.
+109
+
+110
+00:07:08,190 --> 00:07:14,400
+You are now getting it back as a normal printing; the standard not the scientific notation.
+110
+
+111
+00:07:16,480 --> 00:07:21,580
+Remember, the precision was set here to 10, so if you try to print to this number here, it is going
+111
+
+112
+00:07:21,580 --> 00:07:28,230
+to print 10 digits after the dot and here it is going to print also 10 numbers after the dot.
+112
+
+113
+00:07:28,840 --> 00:07:33,940
+Notice that in C++, if you try to print 100.0, it would just print 100.
+113
+
+114
+00:07:34,480 --> 00:07:39,480
+But if you say here 'showpoint', it will force typically point putting the point here.
+114
+
+115
+00:07:39,730 --> 00:07:48,760
+So why line 27? It is just forcing the point here and printing. What we're using here is something
+115
+
+116
+00:07:48,760 --> 00:07:49,150
+called
+116
+
+117
+00:07:49,540 --> 00:07:56,020
+ios three manipulators which will have a separate video for them. The moral of them is you are
+117
+
+118
+00:07:56,020 --> 00:07:57,760
+affecting the stream
+118
+
+119
+00:07:57,780 --> 00:08:03,130
+output here to behave in a way different than the default style.
+119
+
+120
+00:08:03,430 --> 00:08:08,140
+So the default style is to print this number without scientific notation.
+120
+
+121
+00:08:08,440 --> 00:08:13,960
+When you tell him, hey, I want you to put this flag, it is going to printed in a scientific notation.
+121
+
+122
+00:08:14,230 --> 00:08:19,300
+If you said here, hey, I want you to this precision, it is going to print all of these numbers. If you
+122
+
+123
+00:08:19,300 --> 00:08:24,200
+say, hey, when I want you always to show point, it is going to always print the show point and so on.
+123
+
+124
+00:08:24,220 --> 00:08:27,770
+So this is called istream manipulators.
+124
+
+125
+00:08:27,890 --> 00:08:29,320
+We will talk more about them later.
+125
+
+126
+00:08:30,520 --> 00:08:30,990
+That's it.

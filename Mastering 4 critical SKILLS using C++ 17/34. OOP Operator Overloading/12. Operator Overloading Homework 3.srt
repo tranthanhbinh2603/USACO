@@ -1,0 +1,187 @@
+1
+00:00:00,900 --> 00:00:08,550
+The third set for for operator overloading, the first is to read this program and the guess the output
+
+2
+00:00:08,550 --> 00:00:09,030
+of it.
+
+3
+00:00:10,980 --> 00:00:17,520
+There is something tricky here about the about this operator in terms of precedence.
+
+4
+00:00:17,730 --> 00:00:19,160
+So double check for this.
+
+5
+00:00:19,170 --> 00:00:21,900
+What was the precedence in C++ of this operator?
+
+6
+00:00:22,890 --> 00:00:28,920
+The second program is as following the first software engineer who wanted to operator overloading the
+
+7
+00:00:28,930 --> 00:00:29,880
+reading and writing.
+
+8
+00:00:30,210 --> 00:00:34,000
+He did it as far as he did as a member function inside his class.
+
+9
+00:00:34,500 --> 00:00:39,840
+So the first idea with the first question is how to use this ability of reading to really read and write.
+
+10
+00:00:39,840 --> 00:00:47,310
+So add two lines here to read and write your X Y and write them and give it up for the guy who did this
+
+11
+00:00:47,520 --> 00:00:48,290
+kind of design.
+
+12
+00:00:50,360 --> 00:00:54,630
+Fractured glass, fractured glasses, like three over a three or four and so on.
+
+13
+00:00:54,860 --> 00:00:55,880
+So this is a fraction.
+
+14
+00:00:55,880 --> 00:00:57,680
+We have a no hitter and numerator.
+
+15
+00:00:58,160 --> 00:01:02,810
+You are to implement a fraction that support this functionality, read it and understand it.
+
+16
+00:01:03,260 --> 00:01:08,890
+To simplify a fraction, you should do something with the greater the greater common deviser.
+
+17
+00:01:09,320 --> 00:01:11,870
+There is a built in function, underscore, underscore GCT.
+
+18
+00:01:12,170 --> 00:01:17,450
+If you try to use it and it doesn't work for a reason or another combination error, then you can use
+
+19
+00:01:17,450 --> 00:01:18,470
+this implementation.
+
+20
+00:01:18,470 --> 00:01:20,560
+If you want to skip the simplification, that's OK.
+
+21
+00:01:21,050 --> 00:01:27,020
+If you have two numbers and would like to simplify them as they did between A and B, and then divide
+
+22
+00:01:27,020 --> 00:01:28,520
+ABC and BBC.
+
+23
+00:01:30,420 --> 00:01:35,610
+Everyone, this is a close race that we would like to implement, it has internally appointer and size,
+
+24
+00:01:35,610 --> 00:01:42,120
+wherever you are, to add a bunch of methods here to support the following it allow creating the array.
+
+25
+00:01:42,360 --> 00:01:45,030
+You can access it with subscript operator to sit and get.
+
+26
+00:01:45,270 --> 00:01:46,300
+You can read and write.
+
+27
+00:01:46,590 --> 00:01:52,200
+You can do the plus plus prefix and postfix to increment every cell in the array with one you can compare
+
+28
+00:01:52,200 --> 00:01:55,180
+with equally Cuarón, but you can assign a rate to another.
+
+29
+00:01:55,500 --> 00:01:58,430
+So this is some sembler function to the class here.
+
+30
+00:01:58,650 --> 00:02:00,660
+So we are defining an array of six numbers.
+
+31
+00:02:00,680 --> 00:02:06,440
+So initially six is we are sending them from zero to six, we are incrementing and so on.
+
+32
+00:02:06,690 --> 00:02:11,610
+I would like you to read this mean and double check with the output in a similar way.
+
+33
+00:02:11,820 --> 00:02:15,900
+I would like you to extend the current array to add to the array.
+
+34
+00:02:16,140 --> 00:02:22,620
+So the extra thing here, Belarusan column, you are to try to to me to make use of the available things
+
+35
+00:02:22,620 --> 00:02:27,360
+in their function as much as you could with one extra functionality.
+
+36
+00:02:27,360 --> 00:02:31,740
+I would like you to allow us to exit using the function collaboratively with the I n g.
+
+37
+00:02:33,030 --> 00:02:34,760
+So it is again and again for the class.
+
+38
+00:02:34,770 --> 00:02:38,740
+Read it, double check it and make sure you can implement it.
+
+39
+00:02:39,630 --> 00:02:47,790
+Finally going back to the above the the company payroll homework that we had before.
+
+40
+00:02:47,800 --> 00:02:53,100
+Inboden, what is the one that has problems like being comparable, printable and cleanable were to
+
+41
+00:02:53,100 --> 00:02:54,210
+make two changes here.
+
+42
+00:02:54,660 --> 00:02:59,520
+The first one is we are going to submit to the insertion the extraction operator.
+
+43
+00:02:59,850 --> 00:03:06,190
+So I can now say instead of some able to print, I can say also see with this, that is then some people
+
+44
+00:03:06,210 --> 00:03:07,470
+or whatever five times.
+
+45
+00:03:07,890 --> 00:03:13,470
+The second thing is a comparable biocompatible has a function to make Kabeer, but more to provide me
+
+46
+00:03:13,470 --> 00:03:16,010
+with a greater list then to compare function.
+
+47
+00:03:16,170 --> 00:03:18,680
+So I also provide that the TYT.

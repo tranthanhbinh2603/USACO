@@ -1,0 +1,319 @@
+0
+1
+00:00:01,710 --> 00:00:06,210
+In this section, we will learn something about the class diagram.
+1
+
+2
+00:00:06,900 --> 00:00:12,060
+This isn't a coding section, but it is an important section. Let's motivate it.
+2
+
+3
+00:00:12,450 --> 00:00:19,350
+If you would like to represent some task, how would you communicate it to someone in the team or to some
+3
+
+4
+00:00:19,350 --> 00:00:20,280
+manager or so?
+4
+
+5
+00:00:20,820 --> 00:00:26,460
+There are some different ways for that. The first way is to write a text that represent it, something that
+5
+
+6
+00:00:26,460 --> 00:00:28,440
+we call like function requirements.
+6
+
+7
+00:00:28,440 --> 00:00:32,310
+What exactly the system is going to do for an online shopping system.
+7
+
+8
+00:00:33,090 --> 00:00:35,640
+Another way is just to code it.
+8
+
+9
+00:00:35,640 --> 00:00:40,620
+If you provide a code to another developer, he reads it and understands what is a purpose.
+9
+
+10
+00:00:41,330 --> 00:00:45,990
+There is a third way to draw a diagram that represents some information.
+10
+
+11
+00:00:46,230 --> 00:00:50,660
+Looking at this diagram seems we have things that look like boxes,
+11
+
+12
+00:00:51,300 --> 00:00:53,220
+there are arrows between boxes,
+12
+
+13
+00:00:53,220 --> 00:00:55,020
+there are numbers on the edges,
+13
+
+14
+00:00:55,230 --> 00:01:01,740
+there are names here like customer user status, shopping cart, account, looks like classes names,
+14
+
+15
+00:01:02,070 --> 00:01:04,410
+and this is what is called
+15
+
+16
+00:01:04,410 --> 00:01:05,370
+a class diagram.
+16
+
+17
+00:01:05,880 --> 00:01:09,800
+A class diagram eventually represents relationships.
+17
+
+18
+00:01:10,140 --> 00:01:14,970
+So we use something named UML for a unified modeling language.
+18
+
+19
+00:01:15,420 --> 00:01:18,000
+It is a standardized modeling language.
+19
+
+20
+00:01:18,030 --> 00:01:18,870
+So it's language,
+20
+
+21
+00:01:18,990 --> 00:01:20,650
+So we communicate with each other with it.
+21
+
+22
+00:01:20,820 --> 00:01:27,720
+It is also standardized like we have some agreement between each other on what kind of notations to
+22
+
+23
+00:01:27,720 --> 00:01:29,100
+use to express what we need.
+23
+
+24
+00:01:29,460 --> 00:01:30,750
+It has many purposes.
+24
+
+25
+00:01:30,960 --> 00:01:34,470
+One of the most important to them is the visualization purposes.
+25
+
+26
+00:01:34,920 --> 00:01:39,900
+Imagine that you have a big system, and it is actually three subsystems.
+26
+
+27
+00:01:40,200 --> 00:01:44,780
+Each subsystem has like 10 components, and each component has 100 classes.
+27
+
+28
+00:01:45,330 --> 00:01:51,960
+Now, with such a very big project, we can communicate it definitely in a document, but we
+28
+
+29
+00:01:51,960 --> 00:01:55,860
+can also use diagrams to visualize it from some perspectives.
+29
+
+30
+00:01:56,360 --> 00:02:02,100
+There are many UML diagram types, and we are going to focus on the class diagram, which is one of the
+30
+
+31
+00:02:02,100 --> 00:02:03,540
+most important among them.
+31
+
+32
+00:02:04,770 --> 00:02:10,410
+So remember that we can represent, say, a book as follows:
+32
+
+33
+00:02:10,740 --> 00:02:13,530
+We have a private section, we have a public section,
+33
+
+34
+00:02:13,740 --> 00:02:19,080
+we have variables here, methods, here also variables, and some function.
+34
+
+35
+00:02:19,650 --> 00:02:24,810
+A class diagram for a single class is as simple as you have a bounding box.
+35
+
+36
+00:02:24,990 --> 00:02:27,330
+It could have only a single name, like just a book,
+36
+
+37
+00:02:27,600 --> 00:02:29,340
+or you can go in more details.
+37
+
+38
+00:02:29,910 --> 00:02:32,400
+The above section is four variables,
+38
+
+39
+00:02:32,700 --> 00:02:35,970
+the blow section is four methods and functions.
+39
+
+40
+00:02:36,480 --> 00:02:38,570
+If it is minus, it means a private.
+40
+
+41
+00:02:38,610 --> 00:02:41,640
+If it is plus, it means public.
+41
+
+42
+00:02:42,190 --> 00:02:44,400
+OK, so let's see here
+42
+
+43
+00:02:44,400 --> 00:02:48,630
+the naming. I'm seeing here total quantity, colon, integer. Here,
+43
+
+44
+00:02:48,630 --> 00:02:50,600
+we saying integer total quantity.
+44
+
+45
+00:02:50,880 --> 00:02:54,180
+So as you see, there is some rephrasing.
+45
+
+46
+00:02:54,570 --> 00:02:56,820
+We say here ID, colon, an integer.
+46
+
+47
+00:02:56,820 --> 00:02:58,230
+We see here integer ID.
+47
+
+48
+00:02:58,260 --> 00:03:01,770
+OK, we see also here some plus num integer.
+48
+
+49
+00:03:01,950 --> 00:03:05,280
+This is a public variable, and also we see it equals zero.
+49
+
+50
+00:03:05,460 --> 00:03:07,300
+So this is an equal zero variable,
+50
+
+51
+00:03:07,320 --> 00:03:10,770
+this is an initialization. In a similar way, a method,
+51
+
+52
+00:03:10,770 --> 00:03:16,500
+its function starts first, then parameters are defined in the same style as here, and then some
+52
+
+53
+00:03:16,500 --> 00:03:18,120
+return type after the colon.
+53
+
+54
+00:03:18,510 --> 00:03:24,130
+So to string colon string is a function that is public and returns a string.
+54
+
+55
+00:03:24,660 --> 00:03:31,670
+So the interesting word here is a class in C++ has a private section for variables and methods and a public section for
+55
+
+56
+00:03:31,730 --> 00:03:33,120
+variables and methods,
+56
+
+57
+00:03:33,360 --> 00:03:39,390
+but here we have a section for variables and another section for full functionality.
+57
+
+58
+00:03:39,600 --> 00:03:44,600
+This is mainly how is a diagram for a single class.
+58
+
+59
+00:03:45,240 --> 00:03:47,670
+There are actually many other types of diagrams.
+59
+
+60
+00:03:47,670 --> 00:03:53,370
+So we just here in the class diagram, which is of a structural type, there are also other behavioral
+60
+
+61
+00:03:54,090 --> 00:03:54,810
+diagrams.
+61
+
+62
+00:03:56,680 --> 00:04:03,370
+For tools, there are many tools that I have tried during my career, I tried nowadays this online web
+62
+
+63
+00:04:03,400 --> 00:04:06,600
+tool for the course, and I found it very nice and very easy to use.
+63
+
+64
+00:04:08,410 --> 00:04:09,280
+That's it for today.

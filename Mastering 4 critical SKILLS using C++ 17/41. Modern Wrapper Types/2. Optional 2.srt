@@ -1,0 +1,403 @@
+1
+00:00:01,020 --> 00:00:07,770
+And this video will see more applications of the option of just applications with classes.
+
+2
+00:00:08,010 --> 00:00:12,770
+Imagine that you have some class that has an object from another class.
+
+3
+00:00:13,080 --> 00:00:14,790
+So they're very nice about optional.
+
+4
+00:00:14,790 --> 00:00:18,750
+Now, that express, if this object exists or not exist.
+
+5
+00:00:18,960 --> 00:00:22,110
+So you just define it here like a very normal way.
+
+6
+00:00:22,800 --> 00:00:28,440
+But I would like to show you really a very strong application for this idea with classes, what we call
+
+7
+00:00:28,470 --> 00:00:31,120
+the delayed initialization problem.
+
+8
+00:00:31,500 --> 00:00:38,130
+Let's say that you have a class here and this middle class has two parameters in its constructor and
+
+9
+00:00:38,130 --> 00:00:41,880
+there is no default deconstructive here for some reason.
+
+10
+00:00:41,880 --> 00:00:44,070
+And let's say we cannot change it and add it here.
+
+11
+00:00:44,550 --> 00:00:48,240
+In the normal case, if you would like to have an object of this class.
+
+12
+00:00:48,600 --> 00:00:56,140
+The problem is this class is going in this way of defining it is going to call the default constructor.
+
+13
+00:00:56,730 --> 00:01:02,150
+One way to avoid that is to initialize it here in the member rest of the class.
+
+14
+00:01:02,460 --> 00:01:07,530
+But sometimes you have to delay the initialization because you think there is some logic to define.
+
+15
+00:01:08,310 --> 00:01:12,930
+So now the problem is I cannot initialize it in the member list.
+
+16
+00:01:13,350 --> 00:01:16,940
+And if I put it here, it's going to call the default constructor.
+
+17
+00:01:17,910 --> 00:01:20,810
+But the problem is there is no different to constructor.
+
+18
+00:01:20,820 --> 00:01:22,700
+So this is going to combine error.
+
+19
+00:01:23,700 --> 00:01:29,460
+The typical workaround for us as software engineers is to to use a pointer over this object.
+
+20
+00:01:29,760 --> 00:01:36,800
+Now, when you use a pointer, it just initialized to null pointer and then we later created here.
+
+21
+00:01:37,080 --> 00:01:38,220
+But this is very ugly.
+
+22
+00:01:38,220 --> 00:01:43,080
+Like you had to use a pointer to solve this problem or any other workaround.
+
+23
+00:01:43,680 --> 00:01:51,090
+But thinking about optional, now we have a perfect new initialization status for our object, which
+
+24
+00:01:51,090 --> 00:01:52,470
+is defined as an optional.
+
+25
+00:01:52,480 --> 00:01:54,120
+So by default, it has nothing.
+
+26
+00:01:54,510 --> 00:01:58,710
+And then we can eat it later in the hour constructor and create it later.
+
+27
+00:01:58,950 --> 00:02:07,150
+And you can use the function in place that would just call the constructor of your of your object.
+
+28
+00:02:09,150 --> 00:02:13,950
+So the moral of that is the optional class.
+
+29
+00:02:14,180 --> 00:02:20,140
+The option of the year allowed us to delay the initialization of it, which allowed us to escape the
+
+30
+00:02:20,670 --> 00:02:23,070
+constructor problem there.
+
+31
+00:02:23,070 --> 00:02:29,740
+Implicit function is remember to take over the template so you can best for it.
+
+32
+00:02:29,810 --> 00:02:35,880
+The the the the the the parameters that you would like to tuba's here.
+
+33
+00:02:38,270 --> 00:02:44,150
+So this guy is expecting a three barometer's, so you can bet here three arguments, this guy would
+
+34
+00:02:44,150 --> 00:02:47,780
+take them in predictably and then forwarding them to the constructor.
+
+35
+00:02:50,890 --> 00:02:56,650
+With Arab with Israel, it's just a very direct application, you can create an optional vector of integer
+
+36
+00:02:56,650 --> 00:03:00,430
+and then initialize it with something or you can make a copy.
+
+37
+00:03:00,460 --> 00:03:01,180
+There's normal.
+
+38
+00:03:02,080 --> 00:03:08,210
+Now, if you would like to access, you can either use Astrobee or you can use the arrow because Internet,
+
+39
+00:03:08,210 --> 00:03:13,450
+you can handle it as a pointer or what it is other ways to get the value, but you have to make sure
+
+40
+00:03:13,450 --> 00:03:14,330
+it exists first.
+
+41
+00:03:14,620 --> 00:03:19,990
+You can also to pointer here, you can call value or let's say I would like to bring to the site of
+
+42
+00:03:19,990 --> 00:03:20,490
+the victim.
+
+43
+00:03:20,770 --> 00:03:30,000
+So I'm saying we did value or and good size, so we did value is going to return the value the size
+
+44
+00:03:30,010 --> 00:03:33,880
+is going to bring to the current site, which is zero because we would not object.
+
+45
+00:03:34,240 --> 00:03:40,090
+But we are saying here, because we're giving here a default argument, we are saying if it doesn't
+
+46
+00:03:40,090 --> 00:03:43,170
+exist, use that in fact.
+
+47
+00:03:44,100 --> 00:03:51,520
+Now, this is an important thing here that this copy would be still for like this copy is different,
+
+48
+00:03:51,540 --> 00:03:57,100
+but more importantly, to know from this slide that you can use the traditional operators normally to
+
+49
+00:03:57,100 --> 00:04:01,570
+compare the different items if if they supported the original.
+
+50
+00:04:01,900 --> 00:04:04,510
+So you can compare Vila's and copy and so on.
+
+51
+00:04:06,930 --> 00:04:13,740
+The final example here, the final, if you know the findings from the steel, it's going to take a
+
+52
+00:04:13,740 --> 00:04:19,110
+start at the end and take some predicate and if it exists, the return iterator for it.
+
+53
+00:04:19,110 --> 00:04:23,700
+Otherwise it return at the end of the of the container.
+
+54
+00:04:24,300 --> 00:04:28,460
+Now, let's make a let's let's make another function for that.
+
+55
+00:04:28,770 --> 00:04:31,990
+Our new function will return an optional iterator.
+
+56
+00:04:32,100 --> 00:04:36,240
+So if the territory doesn't exist and return, then it would be more nicer to use.
+
+57
+00:04:37,620 --> 00:04:38,510
+So let's define it.
+
+58
+00:04:38,730 --> 00:04:43,410
+We're going to make a symbol function, the take by reference, a vector and some predicate function
+
+59
+00:04:43,410 --> 00:04:44,380
+as a cluster with you.
+
+60
+00:04:44,730 --> 00:04:47,330
+And we certainly defined it for our predicate.
+
+61
+00:04:47,820 --> 00:04:51,040
+If we reached the end, we return an empty option.
+
+62
+00:04:51,060 --> 00:04:52,410
+It otherwise would return to data.
+
+63
+00:04:53,070 --> 00:04:59,400
+Now, in terms of usage, it could be as nicer as you have vector a year than find if this guy you print
+
+64
+00:04:59,400 --> 00:04:59,640
+it.
+
+65
+00:04:59,850 --> 00:05:02,450
+Please take a moment to make sure you understand that.
+
+66
+00:05:03,570 --> 00:05:05,680
+And this is why that would make the code more generic.
+
+67
+00:05:05,700 --> 00:05:07,130
+This is nothing about the optional.
+
+68
+00:05:07,140 --> 00:05:12,110
+It's just that making the code more generic so that you get used to writing genetic code.
+
+69
+00:05:12,480 --> 00:05:20,820
+The first thing is I replaced the range with the vector with a range here class template, which you
+
+70
+00:05:20,820 --> 00:05:24,360
+can now receive anything that has a religious thought in it.
+
+71
+00:05:24,660 --> 00:05:26,040
+And it also has a predicate.
+
+72
+00:05:27,400 --> 00:05:34,820
+And notice that we are using our value references here, so we are expecting some we are more like more
+
+73
+00:05:34,820 --> 00:05:35,630
+flexible here.
+
+74
+00:05:39,500 --> 00:05:42,620
+Remember, this is the Arvelo reference to Stumbler.
+
+75
+00:05:42,650 --> 00:05:50,090
+So if it's value to build value for value GERBERRY Now, the second thing is I'm using here instead
+
+76
+00:05:50,090 --> 00:05:53,730
+of Renji to begin and end using the beginning and end the function.
+
+77
+00:05:54,290 --> 00:05:56,960
+And remember this this function.
+
+78
+00:05:57,830 --> 00:06:00,840
+Not has an extra advantage on using oranges.
+
+79
+00:06:00,900 --> 00:06:03,080
+We can now we can beshear an area.
+
+80
+00:06:03,380 --> 00:06:09,560
+So the beginning of the array and end of array will return it to start and end corresponding to victory,
+
+81
+00:06:09,560 --> 00:06:10,170
+certain victory.
+
+82
+00:06:10,700 --> 00:06:12,650
+So the big function is more generic.
+
+83
+00:06:12,770 --> 00:06:17,850
+I can use the orange end, but being of range would be more generic.
+
+84
+00:06:18,380 --> 00:06:23,900
+Now normally we are going to find f the beginning end the predicate with an R.
+
+85
+00:06:25,040 --> 00:06:27,780
+Now I would like to make things more generic.
+
+86
+00:06:27,780 --> 00:06:30,530
+So now I don't know what kind of iterator that guy.
+
+87
+00:06:31,010 --> 00:06:37,370
+Remember the type we can get in the competition time, the exact time of this iterator.
+
+88
+00:06:37,700 --> 00:06:43,850
+So I'm using the type of R to let's say we best picture of entier to return here, vector of integrate
+
+89
+00:06:43,870 --> 00:06:49,490
+iterator and I'm using also the using iterator to make it easier and more nicer to my code.
+
+90
+00:06:49,490 --> 00:06:51,540
+So I'm saying using iterator blah blah blah.
+
+91
+00:06:51,770 --> 00:06:58,730
+So now this iterator will be if I pass the vector of integral to be a vector of integrity and I'm then
+
+92
+00:06:58,760 --> 00:07:01,430
+now comparing the R equal equality.
+
+93
+00:07:01,580 --> 00:07:05,810
+If we reached the end I'm returning optional of iterator that is empty.
+
+94
+00:07:06,030 --> 00:07:08,130
+Otherwise I'm returning optional for the.
+
+95
+00:07:08,990 --> 00:07:11,660
+And here we are using a return to make it more dynamic.
+
+96
+00:07:12,680 --> 00:07:18,050
+I know that this might like, like a lot of features together in a single function, but I would like
+
+97
+00:07:18,050 --> 00:07:19,010
+you to get used to that.
+
+98
+00:07:19,020 --> 00:07:21,920
+So please take a moment to understand it.
+
+99
+00:07:22,850 --> 00:07:33,740
+Here in the school we used to also to try to find, if so, this function return an optional that has
+
+100
+00:07:33,740 --> 00:07:38,570
+a value, then it would be initialized here and you get inside to just erase it if you would like.
+
+101
+00:07:39,740 --> 00:07:40,340
+That's it.

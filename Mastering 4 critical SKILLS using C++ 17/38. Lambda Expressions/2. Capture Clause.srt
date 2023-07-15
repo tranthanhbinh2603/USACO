@@ -1,0 +1,391 @@
+1
+00:00:01,460 --> 00:00:09,120
+Let's continue our talk about the anonymous function, what we call a capture close, you see this practice
+
+2
+00:00:09,140 --> 00:00:15,450
+that we used to write in the syntax of the expression, this is good, the capture glass.
+
+3
+00:00:15,780 --> 00:00:18,420
+And inside it, we can do a lot of things.
+
+4
+00:00:18,420 --> 00:00:23,280
+We can be specific or all variables by value or by reference.
+
+5
+00:00:23,460 --> 00:00:26,960
+We can best this of class by reference and so on.
+
+6
+00:00:27,270 --> 00:00:30,150
+So the purpose of this guy is bashing something.
+
+7
+00:00:30,900 --> 00:00:32,940
+So let's see, how can we do that?
+
+8
+00:00:33,720 --> 00:00:37,170
+And who would like to buy something with a value here?
+
+9
+00:00:37,470 --> 00:00:41,620
+We have a victor and we have here two values, two variables.
+
+10
+00:00:42,030 --> 00:00:48,570
+Now I'm defining here an anonymous function, the anonymous function.
+
+11
+00:00:48,750 --> 00:00:51,210
+Let's let's see from the branches here.
+
+12
+00:00:51,480 --> 00:00:53,070
+It's taking the branches here.
+
+13
+00:00:53,400 --> 00:00:59,430
+And it would like to iterate over the vector elements that we are providing or whatever container.
+
+14
+00:00:59,700 --> 00:01:03,600
+And then it's doing something like it's saying item plus equal factor.
+
+15
+00:01:03,660 --> 00:01:07,010
+But what is factor factor is a local variable here.
+
+16
+00:01:07,350 --> 00:01:13,680
+So it could happen that you would like to define your function somewhere here at 12 and you would like
+
+17
+00:01:13,680 --> 00:01:17,140
+to pass some of the local variables around the function.
+
+18
+00:01:17,370 --> 00:01:21,690
+So if you would like to pass the variable factor, you can reset it to here in the parameters.
+
+19
+00:01:21,690 --> 00:01:24,260
+You just put it here, then you can use it internally.
+
+20
+00:01:24,660 --> 00:01:28,170
+But now this is best by Kanishka, by value.
+
+21
+00:01:28,500 --> 00:01:29,630
+This means two things.
+
+22
+00:01:30,030 --> 00:01:34,230
+First, it means that the value itself is is constant.
+
+23
+00:01:34,410 --> 00:01:37,560
+So factor internally can just be used.
+
+24
+00:01:37,770 --> 00:01:39,400
+It cannot be incremented this way.
+
+25
+00:01:39,420 --> 00:01:45,150
+You think of it like you have a function that have a keyword inside the class.
+
+26
+00:01:45,270 --> 00:01:48,210
+You can adjust the element to the factory.
+
+27
+00:01:48,210 --> 00:01:51,030
+It is going to give you a comparison here, which is the only variable.
+
+28
+00:01:52,630 --> 00:01:59,760
+So when you buy something this way, you are basing it by course, by value, so you can use it internally,
+
+29
+00:01:59,890 --> 00:02:01,720
+but you cannot play with it.
+
+30
+00:02:02,380 --> 00:02:06,700
+Now, remember who we after we define a function, we need to apply it.
+
+31
+00:02:06,910 --> 00:02:13,630
+So here I am applying it on the vector to get an increment of two for every element in the vector.
+
+32
+00:02:13,630 --> 00:02:15,610
+So they are going to be three, four, five, six.
+
+33
+00:02:16,300 --> 00:02:18,370
+What I would like a little more flexibility.
+
+34
+00:02:18,370 --> 00:02:22,700
+I would like to best buy value, but I can I can change it internally.
+
+35
+00:02:22,990 --> 00:02:28,720
+So now you can work toward the key, the key word here, multiple mutable.
+
+36
+00:02:29,080 --> 00:02:33,550
+And then now you can change the world, the vector inside the function.
+
+37
+00:02:33,880 --> 00:02:38,580
+However, if you try to bring to the factor here, the value would be the same as here.
+
+38
+00:02:38,590 --> 00:02:40,550
+It would be the the same local variable.
+
+39
+00:02:40,930 --> 00:02:46,140
+So think of this like you are sending it a value, passing by values.
+
+40
+00:02:46,160 --> 00:02:49,450
+They can play with it, they can change it, but it doesn't affect us.
+
+41
+00:02:49,930 --> 00:02:53,550
+So the model of the capture clause is to bear some variable.
+
+42
+00:02:53,560 --> 00:02:58,840
+And here we learned how to best buy value and either like a to value or just to value.
+
+43
+00:03:00,070 --> 00:03:06,340
+If you would like to best by reference, you can pass the ampersand operator here.
+
+44
+00:03:08,060 --> 00:03:12,610
+Let's say you have a victory and you would like to summit and you have the same as a local variable
+
+45
+00:03:12,630 --> 00:03:16,910
+here, so you would like to iterate over the vector and some it's a value here.
+
+46
+00:03:18,050 --> 00:03:22,360
+So this is local variable that we need it to be updated of the code.
+
+47
+00:03:22,610 --> 00:03:27,480
+So we know we started to give it here, the parameter here, and then we can apply the function code.
+
+48
+00:03:28,820 --> 00:03:33,980
+What if I would like to define a function that has a taking something by value on something by reference
+
+49
+00:03:34,250 --> 00:03:39,800
+for what you would like to think, by referencing the value here, but the end here and for the best
+
+50
+00:03:39,950 --> 00:03:41,980
+value, just don't put it this way.
+
+51
+00:03:41,980 --> 00:03:48,560
+You are defining a function that takes the, uh, the the very the variables with different modes.
+
+52
+00:03:49,760 --> 00:03:56,150
+If you started to think about this example, you will start to see why, why I don't know or a of exhibition
+
+53
+00:03:56,150 --> 00:04:01,910
+are very, very powerful in a different in a different scenario, you would have to define a complete
+
+54
+00:04:01,910 --> 00:04:07,850
+function that the vector and you either want this parameter by reference or return it from the function
+
+55
+00:04:07,850 --> 00:04:08,370
+and so on.
+
+56
+00:04:08,660 --> 00:04:10,720
+Now this function is doing all of that here.
+
+57
+00:04:10,730 --> 00:04:15,560
+And the more we go in the exhibition, you will notice is making our life easier.
+
+58
+00:04:16,130 --> 00:04:22,720
+And and we didn't like we didn't add in the global space, the global scale, one more function with
+
+59
+00:04:22,720 --> 00:04:25,460
+the same name that might create conflicts with others.
+
+60
+00:04:26,780 --> 00:04:33,410
+What if I would like to base all the variables by value over reference the equal means bas all the variables
+
+61
+00:04:33,650 --> 00:04:41,800
+by value to value the end here means obsess over the variable by difference.
+
+62
+00:04:41,960 --> 00:04:48,560
+So this function now can see the factor and can see even the vector and this function can see the sum
+
+63
+00:04:48,560 --> 00:04:50,120
+and can see the factor.
+
+64
+00:04:50,420 --> 00:04:53,510
+But you see them, all of them by by reference.
+
+65
+00:04:54,050 --> 00:04:58,930
+Generally speaking, this is a bit risky, but you should know just about its availability as a feature.
+
+66
+00:04:59,060 --> 00:05:05,180
+But but having a complete visibility to your school might not be the best way, especially with the
+
+67
+00:05:05,180 --> 00:05:06,250
+end year.
+
+68
+00:05:07,310 --> 00:05:14,210
+OK, this is the very still same here, betting everything by value.
+
+69
+00:05:14,210 --> 00:05:16,490
+And B, I'm here messing about.
+
+70
+00:05:16,640 --> 00:05:17,930
+So this was the value.
+
+71
+00:05:17,940 --> 00:05:19,250
+I'm here basing by value only.
+
+72
+00:05:19,430 --> 00:05:22,690
+I'm here passing by reference for all the variables.
+
+73
+00:05:22,940 --> 00:05:30,980
+So every like this function and dysfunction doesn't affect the doesn't affect our outputs.
+
+74
+00:05:30,980 --> 00:05:34,720
+So far, one and B here would be still one in five.
+
+75
+00:05:37,080 --> 00:05:41,720
+Once you come back here incremented them again, that would be really two and six because this one is
+
+76
+00:05:41,720 --> 00:05:42,890
+the one by difference.
+
+77
+00:05:46,330 --> 00:05:52,590
+What if I would like to assess all the variables by, say, value, except something by reference here
+
+78
+00:05:52,630 --> 00:05:55,690
+you can start to specify like saying equal.
+
+79
+00:05:55,690 --> 00:05:59,440
+It means I'm basing all the variables by going to that.
+
+80
+00:06:00,270 --> 00:06:05,760
+And here you are saying, but you know what, I'm bursting the see as the difference, so if you try
+
+81
+00:06:05,760 --> 00:06:10,290
+to change the sea, it would be change it in a similar way.
+
+82
+00:06:10,290 --> 00:06:15,380
+I can say embarrassing everything by reference except to be messing it by value.
+
+83
+00:06:15,720 --> 00:06:24,090
+So if you try to incrementally be here, then the beast will remain by will remain five as old value.
+
+84
+00:06:24,540 --> 00:06:28,140
+So we have more flexibility in what Thabazimbi value and busway reference.
+
+85
+00:06:28,500 --> 00:06:30,110
+One more interesting scenario.
+
+86
+00:06:30,120 --> 00:06:38,820
+If I say the class and I have my, I would like to define a function and lambda expression that can
+
+87
+00:06:38,820 --> 00:06:42,900
+access the member variables of of the this and it can change it.
+
+88
+00:06:43,110 --> 00:06:48,600
+So, you know, you can come here and say, hey, best thing also that this so in this function F and
+
+89
+00:06:48,990 --> 00:06:53,910
+the ABI reference I'm basing this, would this basically be by about value?
+
+90
+00:06:55,470 --> 00:07:00,800
+It seems in some compilers you can see the asterisk this and in this case it would be best that this
+
+91
+00:07:00,810 --> 00:07:02,130
+very valuable reference book.
+
+92
+00:07:02,310 --> 00:07:06,090
+But it didn't work with me with the GC compare.
+
+93
+00:07:08,850 --> 00:07:14,010
+Another case is about the static variables we know if we would like to bust the local variables, we
+
+94
+00:07:14,010 --> 00:07:15,190
+have to put them here.
+
+95
+00:07:15,630 --> 00:07:21,330
+The only variable that you can see from outside around your scope, and it's still accessible and you
+
+96
+00:07:21,330 --> 00:07:23,270
+don't need to mess it is the static variable.
+
+97
+00:07:23,280 --> 00:07:27,500
+So basically variable is defined and visible from inside the function.
+
+98
+00:07:28,260 --> 00:07:28,830
+That's it.

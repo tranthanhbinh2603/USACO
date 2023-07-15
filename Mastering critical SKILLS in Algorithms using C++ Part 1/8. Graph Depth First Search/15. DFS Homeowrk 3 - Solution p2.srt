@@ -1,0 +1,291 @@
+1
+00:00:01,160 --> 00:00:04,490
+Let's solve the second problem, which might be a bit harder for you.
+
+2
+00:00:04,550 --> 00:00:09,770
+Um, but the problem would be pretty easy if you, Richard.
+
+3
+00:00:10,190 --> 00:00:18,140
+The very fundamental observation in the observation is is following let's say we have some beers, for
+
+4
+00:00:18,150 --> 00:00:21,530
+instance, following zero three three six, six, nine, nine and two.
+
+5
+00:00:23,340 --> 00:00:29,590
+Now, the observation is, is following, let's say I swab maybe nine and 12.
+
+6
+00:00:29,610 --> 00:00:36,240
+So the two characters here swept, then I swab the they're six and nine, then three and six, then
+
+7
+00:00:36,240 --> 00:00:37,080
+zero three.
+
+8
+00:00:37,110 --> 00:00:43,980
+What happened is we moved that character that was originally a 12 to the character at Index Zero.
+
+9
+00:00:45,480 --> 00:00:51,010
+So if you thought about it, if we have a bunch of related beards in this way who are connected with
+
+10
+00:00:51,060 --> 00:00:58,740
+each other, we can actually make the swab such that we move the character anywhere in the characters.
+
+11
+00:00:59,100 --> 00:01:02,040
+So then this is you two, three, six, nine and 12.
+
+12
+00:01:02,070 --> 00:01:08,550
+Here we can arrange their corresponding characters in any way that we need.
+
+13
+00:01:08,880 --> 00:01:09,320
+Why?
+
+14
+00:01:09,330 --> 00:01:14,700
+Because we can do the swings in any order, any number of times.
+
+15
+00:01:15,300 --> 00:01:21,540
+So if I would like to get that character, no later six at 12, I can just make what is one here and
+
+16
+00:01:21,540 --> 00:01:23,760
+then want to swap here for I would like to get there.
+
+17
+00:01:24,390 --> 00:01:28,020
+Maybe the three at nine here I can swab and swab.
+
+18
+00:01:28,020 --> 00:01:29,760
+I got it here and so on.
+
+19
+00:01:30,240 --> 00:01:32,280
+So this is the observation here.
+
+20
+00:01:32,550 --> 00:01:41,460
+We can make any number of flips and move the character anywhere within the connected values here.
+
+21
+00:01:42,000 --> 00:01:47,460
+So if we can do that now, all what we need is there could be a lot of beers and arranged in a very
+
+22
+00:01:47,460 --> 00:01:48,240
+complex way.
+
+23
+00:01:48,570 --> 00:01:52,320
+But if you thought about it, this arrangement is actually can be a graph.
+
+24
+00:01:52,740 --> 00:01:53,820
+So here is the idea.
+
+25
+00:01:54,300 --> 00:02:00,510
+Again, we would use the values as the indices this time would use the indices as our nodes.
+
+26
+00:02:00,780 --> 00:02:06,000
+So when you say we have, for example, 12 letters in the string would have to advance.
+
+27
+00:02:06,300 --> 00:02:09,360
+So here zero and the three would be a would be an edge.
+
+28
+00:02:10,640 --> 00:02:16,580
+Three and six would be an age six and nine would be an age that in what would be another age?
+
+29
+00:02:17,560 --> 00:02:22,690
+Now, let's say there is also in with like five and seven, then five and seven on edge.
+
+30
+00:02:24,130 --> 00:02:32,290
+OK, let's say that three is also can be swabbed with a four, then three can also be swabbed with four.
+
+31
+00:02:32,740 --> 00:02:36,040
+Let's say that also nine can be swabbed with five.
+
+32
+00:02:36,430 --> 00:02:38,510
+The nine can be also swabbed with five.
+
+33
+00:02:39,310 --> 00:02:43,300
+If I have a letter at five, I can move it anywhere between this indices.
+
+34
+00:02:44,110 --> 00:02:50,320
+So the idea is the following we would build the graph undirected based on these relationships, then
+
+35
+00:02:50,320 --> 00:02:52,900
+find the connected component of each one of them.
+
+36
+00:02:53,650 --> 00:02:57,080
+Now the letters of this connected component can be arranged in any way.
+
+37
+00:02:57,550 --> 00:03:02,080
+So logically, we would just sort them like, get the corresponding string and sorted.
+
+38
+00:03:02,230 --> 00:03:04,640
+This is how we need it in the original string.
+
+39
+00:03:05,480 --> 00:03:06,490
+Nuts are huge.
+
+40
+00:03:06,520 --> 00:03:07,270
+So be careful.
+
+41
+00:03:07,270 --> 00:03:11,890
+You have to make sure they cover all still linear in terms of number of adjacent vertices.
+
+42
+00:03:12,310 --> 00:03:13,900
+So let's see here the implementation.
+
+43
+00:03:15,180 --> 00:03:21,270
+The adding direct graph is a standard, the defense is a standard, not nothing, can you hear?
+
+44
+00:03:21,690 --> 00:03:27,930
+So this defense is just it built for us, the connected connected component, the nodes, as we did
+
+45
+00:03:27,930 --> 00:03:28,380
+before.
+
+46
+00:03:29,540 --> 00:03:35,930
+Now, let's see here we have the graph in inroads in a normal way, we iterate on the bears, I didn't
+
+47
+00:03:35,930 --> 00:03:36,180
+use the.
+
+48
+00:03:36,410 --> 00:03:42,350
+Here we add the other two graph from the 0.1 and one the first of the value of the second the value.
+
+49
+00:03:42,770 --> 00:03:46,460
+This is the normal Boolean array to before the connected components.
+
+50
+00:03:47,210 --> 00:03:50,060
+We start here iterating when the nodes one by one.
+
+51
+00:03:50,660 --> 00:03:53,870
+Every we see is this index visited before.
+
+52
+00:03:53,900 --> 00:03:57,020
+If not, then this index is a new connected component.
+
+53
+00:03:57,500 --> 00:04:00,200
+We bear with the nodes and the office.
+
+54
+00:04:00,980 --> 00:04:08,560
+Now, once we return it from the nodes here, this one, let's say in the is zero, three, five and
+
+55
+00:04:08,570 --> 00:04:09,050
+12.
+
+56
+00:04:10,400 --> 00:04:12,620
+This for once can be arranged in any way.
+
+57
+00:04:12,980 --> 00:04:18,740
+So we iterate on the original string and get the letters corresponding to the Index zero index of three
+
+58
+00:04:18,740 --> 00:04:19,130
+five.
+
+59
+00:04:19,130 --> 00:04:19,700
+And it will.
+
+60
+00:04:20,600 --> 00:04:24,080
+Now we would like to make this thing as lexicon as possible.
+
+61
+00:04:24,350 --> 00:04:25,310
+So here's what we'll do.
+
+62
+00:04:26,210 --> 00:04:28,010
+We will sort of there.
+
+63
+00:04:29,600 --> 00:04:35,930
+Indices then sort their letters, and we will put these letters in this indices.
+
+64
+00:04:36,260 --> 00:04:41,330
+For example, let's see then this is where five, one and seven.
+
+65
+00:04:42,200 --> 00:04:45,080
+Order them, they will be one, five and seven.
+
+66
+00:04:45,980 --> 00:04:51,860
+Let's say the letters of one, five and seven, whereas following like maybe this was later said, maybe
+
+67
+00:04:51,860 --> 00:04:58,910
+this was letter A. Maybe this smoother, uh, let's say this is B and this is a so sort of the string.
+
+68
+00:04:58,910 --> 00:05:03,230
+Also, it will be A and B and the Z now in index one.
+
+69
+00:05:03,530 --> 00:05:08,720
+What a an index of five would be in index seven, but Z.
+
+70
+00:05:09,630 --> 00:05:16,620
+So this way, in the corresponding budgets for this connected component, we put the indices to the
+
+71
+00:05:16,620 --> 00:05:22,080
+best of them and observe that every connected component is separated from the others.
+
+72
+00:05:22,410 --> 00:05:23,760
+I hope you enjoy this problem.
+
+73
+00:05:23,760 --> 00:05:27,570
+It's pretty, pretty fundamental and pretty pretty A. Problem.

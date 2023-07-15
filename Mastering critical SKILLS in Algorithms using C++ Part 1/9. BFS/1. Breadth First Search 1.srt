@@ -1,0 +1,583 @@
+1
+00:00:01,450 --> 00:00:07,330
+In this section, we will move to another type of traversal algorithms, which is the breadth first
+
+2
+00:00:07,630 --> 00:00:14,980
+search similar to the dips, a first search, the first search is at reversing algorithm.
+
+3
+00:00:15,490 --> 00:00:18,370
+It works for directed graphs, for undirected graphs.
+
+4
+00:00:19,030 --> 00:00:25,630
+But let's remember the defense was exploring the nodes as deep as possible, and that's why we got a
+
+5
+00:00:25,630 --> 00:00:26,680
+depth of research.
+
+6
+00:00:27,550 --> 00:00:29,440
+This news here doesn't represent the nodes.
+
+7
+00:00:29,630 --> 00:00:31,900
+It represents the exploration order.
+
+8
+00:00:32,410 --> 00:00:38,950
+If we are starting at this node, which may be in fact, the number 17 or whatever, we keep going deeper
+
+9
+00:00:38,950 --> 00:00:39,430
+and deeper.
+
+10
+00:00:39,430 --> 00:00:42,070
+So this is where the algorithm keep going.
+
+11
+00:00:42,280 --> 00:00:43,860
+It say, Hey, do you have children?
+
+12
+00:00:44,230 --> 00:00:45,130
+Yes, two.
+
+13
+00:00:45,130 --> 00:00:46,900
+Oh, recursive two.
+
+14
+00:00:46,900 --> 00:00:47,470
+Do you have a child?
+
+15
+00:00:47,470 --> 00:00:47,710
+Yes.
+
+16
+00:00:47,710 --> 00:00:49,120
+Three Because they're three.
+
+17
+00:00:49,120 --> 00:00:49,680
+Do you have a child?
+
+18
+00:00:49,690 --> 00:00:51,850
+Yes, requested and so on.
+
+19
+00:00:52,320 --> 00:00:58,090
+Who in four say, I don't have any children that recursion go back to three, which jump into the next
+
+20
+00:00:58,090 --> 00:01:00,430
+chart, which you then go back and so on.
+
+21
+00:01:00,760 --> 00:01:09,210
+So this is the order of the defense, the defense keep going as deep as possible and then return, then
+
+22
+00:01:09,340 --> 00:01:10,210
+go deeper.
+
+23
+00:01:10,450 --> 00:01:11,190
+Return.
+
+24
+00:01:11,660 --> 00:01:12,540
+Go deeper.
+
+25
+00:01:12,950 --> 00:01:13,410
+Return.
+
+26
+00:01:13,450 --> 00:01:15,100
+Gordemer return.
+
+27
+00:01:15,100 --> 00:01:16,830
+Gordemer return.
+
+28
+00:01:16,840 --> 00:01:17,500
+We are done.
+
+29
+00:01:17,920 --> 00:01:20,050
+This is a depth first search and we solve it a lot.
+
+30
+00:01:20,290 --> 00:01:23,200
+I expect that you understand very clearly what I'm saying here.
+
+31
+00:01:24,040 --> 00:01:26,830
+Now, what about the B s the B?
+
+32
+00:01:26,830 --> 00:01:29,440
+If this is a breath, the first search algorithm?
+
+33
+00:01:29,500 --> 00:01:32,080
+Remember, we explained the difference between the two words.
+
+34
+00:01:32,590 --> 00:01:36,700
+So b a face explodes at the graph level by level.
+
+35
+00:01:37,330 --> 00:01:40,720
+Specifically, we discover the nodes in the following order.
+
+36
+00:01:41,290 --> 00:01:42,190
+So we are here.
+
+37
+00:01:42,970 --> 00:01:46,330
+What is the next level two and the three weeks of these two first?
+
+38
+00:01:46,780 --> 00:01:51,420
+Then what is the next level four, five and six weeks ago this first, then seven eight nine 10.
+
+39
+00:01:51,700 --> 00:01:55,090
+So this one next and then this one next.
+
+40
+00:01:55,540 --> 00:01:59,740
+So the defense, the B a first go level by level.
+
+41
+00:02:00,220 --> 00:02:05,620
+So now we have two approaches that are inspired from how we as human think.
+
+42
+00:02:05,620 --> 00:02:08,770
+Remember when to give you the top story?
+
+43
+00:02:08,890 --> 00:02:16,150
+Like, we have topic like mathematics, we have topic like maybe biology, maybe we have physics.
+
+44
+00:02:16,630 --> 00:02:20,110
+And then there are hundred books a year.
+
+45
+00:02:20,110 --> 00:02:21,940
+Hundred books are here, 200 books are here.
+
+46
+00:02:22,270 --> 00:02:27,580
+In the depths of her research, she will take the mass to finish it first, then take biology topic
+
+47
+00:02:27,580 --> 00:02:28,780
+first and finish it first.
+
+48
+00:02:28,960 --> 00:02:31,000
+Then the physics, go back and finish it first.
+
+49
+00:02:31,480 --> 00:02:36,580
+In the first state, you will finish one book for math, then one book for biology, then one book from
+
+50
+00:02:36,580 --> 00:02:40,720
+physics, then another book from math, another book from biology and another book from physics.
+
+51
+00:02:41,080 --> 00:02:41,650
+And so.
+
+52
+00:02:42,010 --> 00:02:50,050
+I hope the life phenomena and the corresponding one in the algorithms are clear for you, so it is clearly
+
+53
+00:02:50,050 --> 00:02:51,060
+the difference between them.
+
+54
+00:02:51,070 --> 00:02:59,200
+This one is a DFS and this one is a farce that the depth of research explored deep well why the physics
+
+55
+00:02:59,200 --> 00:03:01,810
+of lower level by bite of it.
+
+56
+00:03:02,050 --> 00:03:07,090
+Remember, this nodes doesn't represent the node values that they represent the exploration order.
+
+57
+00:03:07,420 --> 00:03:10,840
+OK, so this is mainly what is the first doing.
+
+58
+00:03:11,380 --> 00:03:15,520
+So what is the level of a node like when they say you were level by level?
+
+59
+00:03:16,330 --> 00:03:21,910
+We can clearly see here because I structured, I drew the graph to look like a level by living graph.
+
+60
+00:03:21,920 --> 00:03:26,950
+In practice, maybe node number one would be here, rule number two here, rule number three here,
+
+61
+00:03:27,130 --> 00:03:28,090
+node number six here.
+
+62
+00:03:28,360 --> 00:03:32,490
+When you draw the graph this way, it doesn't see where are the levels now?
+
+63
+00:03:32,740 --> 00:03:37,630
+I drew the graph to look like the levels from the perspective of node number one.
+
+64
+00:03:38,140 --> 00:03:41,290
+So the level here represented the shortest to Abarth.
+
+65
+00:03:41,770 --> 00:03:46,380
+So we know really what is a Beth, which represents like when I say, one two five 10.
+
+66
+00:03:46,390 --> 00:03:51,130
+This is above the shortest represent about ability in the graph itself.
+
+67
+00:03:51,730 --> 00:03:57,100
+So there are usually two facts for the shortest the values sometimes which is here.
+
+68
+00:03:57,310 --> 00:03:59,350
+It represented the total number of edges.
+
+69
+00:03:59,620 --> 00:04:05,080
+For example, when you think about node number nine, there is only one Beth actually from one to nine,
+
+70
+00:04:05,080 --> 00:04:07,360
+which is one two five nine.
+
+71
+00:04:07,450 --> 00:04:08,920
+We needed three edges.
+
+72
+00:04:09,400 --> 00:04:10,270
+We see the shortest.
+
+73
+00:04:10,270 --> 00:04:14,770
+The Beth from one to nine is three in a similar way.
+
+74
+00:04:14,770 --> 00:04:20,440
+The church, the best from one to seven, is one two three again, three edges.
+
+75
+00:04:20,830 --> 00:04:24,580
+So this is the definition of the shortest path, and later we would learn about the orchestra.
+
+76
+00:04:25,570 --> 00:04:31,530
+In the second part of this course, we will learn about the other definitions of the shortest Sabbath.
+
+77
+00:04:32,230 --> 00:04:32,500
+So.
+
+78
+00:04:32,680 --> 00:04:37,990
+So now I hope the the word level and the word the shortest Beth are clear for you.
+
+79
+00:04:38,410 --> 00:04:45,370
+It represents the number of edges from a starting node to an ending or from a source to a destination.
+
+80
+00:04:45,850 --> 00:04:47,380
+This is what are the levels.
+
+81
+00:04:47,650 --> 00:04:50,920
+So let's see some visualization on a general graph now.
+
+82
+00:04:50,920 --> 00:04:52,660
+No, I don't get I don't drew the graph to.
+
+83
+00:04:52,660 --> 00:04:53,680
+Looks like a good for you.
+
+84
+00:04:54,190 --> 00:04:55,210
+So here is a graph.
+
+85
+00:04:55,480 --> 00:04:58,750
+Let's say you would like to start and do it first from node number two.
+
+86
+00:05:00,000 --> 00:05:02,730
+So here is no, no, no, no to.
+
+87
+00:05:03,710 --> 00:05:06,030
+Now, Newt number two level is just zero.
+
+88
+00:05:06,050 --> 00:05:08,120
+The distance from zero to two is just you.
+
+89
+00:05:08,390 --> 00:05:14,880
+Which nodes do you think are at level number one, which means that the shortest bus is just one inch?
+
+90
+00:05:15,020 --> 00:05:15,890
+Can you spot them?
+
+91
+00:05:19,130 --> 00:05:27,960
+These nodes are node number one and seven and the food and the five specifically, they are the neighbors,
+
+92
+00:05:27,960 --> 00:05:28,770
+the food number two.
+
+93
+00:05:28,790 --> 00:05:32,270
+So they are good neighbors who neighbors represent nodes at level number one.
+
+94
+00:05:32,960 --> 00:05:33,290
+OK.
+
+95
+00:05:33,680 --> 00:05:36,890
+So as you see the this, the best now is just one step.
+
+96
+00:05:37,790 --> 00:05:38,180
+OK.
+
+97
+00:05:38,210 --> 00:05:41,900
+What about what about the rules that live in No.
+
+98
+00:05:41,900 --> 00:05:43,280
+Two, can you spot them?
+
+99
+00:05:45,920 --> 00:05:49,190
+There was no number two is three and six and zero.
+
+100
+00:05:49,400 --> 00:05:52,910
+So when you look to two, it takes two to two to three.
+
+101
+00:05:54,110 --> 00:05:56,510
+It takes two ages to reach six.
+
+102
+00:05:56,540 --> 00:05:58,370
+It takes two edges to reach zero.
+
+103
+00:05:59,780 --> 00:06:08,820
+Observe the following, uh, like, for example, nude number six, we can reach it using here one bathroom
+
+104
+00:06:08,820 --> 00:06:10,890
+from two to four to five to six.
+
+105
+00:06:10,910 --> 00:06:14,810
+This takes three steps, but we cannot stretch from two to five to six.
+
+106
+00:06:15,500 --> 00:06:18,290
+And remember, we seek the shortest to bath.
+
+107
+00:06:18,620 --> 00:06:21,590
+So the answer is about the one that is closer to me.
+
+108
+00:06:22,040 --> 00:06:24,770
+So the the closest way is this way.
+
+109
+00:06:25,400 --> 00:06:26,090
+Now your turn?
+
+110
+00:06:26,960 --> 00:06:29,000
+What about their level three?
+
+111
+00:06:31,570 --> 00:06:35,380
+Clearly, River three comes from node number seven here, which is as you.
+
+112
+00:06:36,510 --> 00:06:37,530
+Let's take another example.
+
+113
+00:06:38,010 --> 00:06:43,020
+This is thought to be a first from the number seven now, which, you know, at level one, just the
+
+114
+00:06:43,020 --> 00:06:47,190
+number zero, which, you know, at level two, just no food.
+
+115
+00:06:48,130 --> 00:06:49,720
+Which, you know, at level three.
+
+116
+00:06:50,640 --> 00:06:52,590
+Just include two and seven and five.
+
+117
+00:06:52,920 --> 00:06:58,740
+I would like you to observe the relationship between the news that we visited so far and the news that
+
+118
+00:06:58,740 --> 00:07:02,220
+are new for us, for example, who target news, no food.
+
+119
+00:07:02,580 --> 00:07:03,860
+You will not see this.
+
+120
+00:07:04,080 --> 00:07:05,400
+This is harvested bullet.
+
+121
+00:07:06,770 --> 00:07:08,240
+This is the unvisited booked.
+
+122
+00:07:08,780 --> 00:07:14,090
+So now some of the unvisited board will join our our our, our joint, our vested group.
+
+123
+00:07:14,450 --> 00:07:20,840
+So you see here Newt, number five Ken and number six from here and also can add new number three from
+
+124
+00:07:20,840 --> 00:07:21,050
+here.
+
+125
+00:07:21,500 --> 00:07:23,270
+Number two can add Newt number one here.
+
+126
+00:07:23,450 --> 00:07:24,860
+So we see that in.
+
+127
+00:07:26,650 --> 00:07:28,670
+Uh, let me go one step.
+
+128
+00:07:29,210 --> 00:07:31,580
+Uh.
+
+129
+00:07:33,000 --> 00:07:35,610
+Uh, one, two, three four.
+
+130
+00:07:36,240 --> 00:07:38,100
+I should add three, was you with us here?
+
+131
+00:07:38,250 --> 00:07:41,310
+So three should be added in this in this graph, OK?
+
+132
+00:07:41,610 --> 00:07:43,080
+There are no nodes at level five.
+
+133
+00:07:43,620 --> 00:07:43,890
+OK.
+
+134
+00:07:44,040 --> 00:07:45,510
+Three is already part of level four.
+
+135
+00:07:47,190 --> 00:07:51,420
+OK, I think one more example, yeah, here.
+
+136
+00:07:51,750 --> 00:07:52,720
+So let's see here one more.
+
+137
+00:07:52,930 --> 00:07:58,870
+I'm just trying to make you familiar with the idea of the of the Liberals now he had no one.
+
+138
+00:07:58,890 --> 00:08:02,340
+Where are the nudes at level number one?
+
+139
+00:08:03,330 --> 00:08:08,820
+Clearly, the neighbors, which are three and five and six, now live in number two.
+
+140
+00:08:09,360 --> 00:08:13,290
+So you see now nude number seven will join through number six.
+
+141
+00:08:13,860 --> 00:08:16,620
+Nude number two can join through number five.
+
+142
+00:08:16,950 --> 00:08:20,010
+So we see now they are added now at level number three.
+
+143
+00:08:20,010 --> 00:08:22,530
+Nude number four can come either from here or from here.
+
+144
+00:08:23,070 --> 00:08:26,190
+I hope you spot the relationship, not number zero two, the nude number seven.
+
+145
+00:08:27,180 --> 00:08:29,610
+I hope you get the idea of the levels in the next session.
+
+146
+00:08:29,610 --> 00:08:32,280
+We will show how to do that in a very systematic way.

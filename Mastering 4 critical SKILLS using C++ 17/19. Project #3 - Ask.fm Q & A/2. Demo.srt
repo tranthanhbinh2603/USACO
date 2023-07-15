@@ -1,0 +1,319 @@
+0
+1
+00:00:00,870 --> 00:00:07,380
+In this video, I would like to give a very short demo of a specific feature in the ASKme project, specifically
+1
+
+2
+00:00:07,560 --> 00:00:10,220
+opening parallel sessions.
+2
+
+3
+00:00:10,530 --> 00:00:12,090
+Let me tell you what I mean by that.
+3
+
+4
+00:00:12,300 --> 00:00:17,250
+Let's say here I am going to run my personal code, is asking me to log in.
+4
+
+5
+00:00:17,250 --> 00:00:24,810
+I'm going to log in with Mostafa and password one one one, now it's giving me a list of choices.
+5
+
+6
+00:00:24,810 --> 00:00:27,960
+If I give one, it's going to list to my choice by my questions.
+6
+
+7
+00:00:28,290 --> 00:00:29,100
+Questions to me.
+7
+
+8
+00:00:29,310 --> 00:00:31,920
+Remember, this is look like a thread question.
+8
+
+9
+00:00:31,920 --> 00:00:33,390
+These all are questions and rate.
+9
+
+10
+00:00:34,320 --> 00:00:36,060
+This question, for example, is an answer.
+10
+
+11
+00:00:36,180 --> 00:00:37,050
+This is another question.
+11
+
+12
+00:00:37,060 --> 00:00:40,950
+And so now we can run the same project several times.
+12
+
+13
+00:00:40,950 --> 00:00:50,430
+For example, I can here run again and say I'm going to run with say Noha 222 it's going again
+13
+
+14
+00:00:50,430 --> 00:00:51,090
+giving me a list.
+14
+
+15
+00:00:51,090 --> 00:00:55,440
+Let me print the question that came from Noha itself like two here.
+15
+
+16
+00:00:56,550 --> 00:01:03,640
+OK, so Noha is asking a lot of questions like yeah, a lot of them depends probably on the
+16
+
+17
+00:01:03,750 --> 00:01:12,030
+first guy here, in Eclipse, you can switch between the two views easily and code blocks are going
+17
+
+18
+00:01:12,030 --> 00:01:15,000
+to generate like one black screen for every one of them.
+18
+
+19
+00:01:15,420 --> 00:01:19,980
+Now, by being parallel, I mean something like a real situation.
+19
+
+20
+00:01:20,130 --> 00:01:27,060
+If you are on a website like ask me and you are asking a question, the other guy can see the question
+20
+
+21
+00:01:27,150 --> 00:01:27,780
+in Facebook.
+21
+
+22
+00:01:27,780 --> 00:01:32,940
+If someone commenting the other guy is seeing the comment, this means there is somewhere the programs
+22
+
+23
+00:01:32,940 --> 00:01:39,900
+are like handling this kind of information together in a way or another specifically here, you will
+23
+
+24
+00:01:39,900 --> 00:01:40,740
+depend on files.
+24
+
+25
+00:01:40,740 --> 00:01:41,610
+You need some files.
+25
+
+26
+00:01:41,790 --> 00:01:46,590
+You need to keep these files very updated with the new things such that the other code can all the
+26
+
+27
+00:01:46,590 --> 00:01:51,840
+time refresh and load the updated status, note.
+27
+
+28
+00:01:51,870 --> 00:01:57,180
+If this is hard for you, just skip it in the beginning and just go ahead and implement like
+28
+
+29
+00:01:57,180 --> 00:01:59,520
+a one system per one user this is totally OK.
+29
+
+30
+00:01:59,730 --> 00:02:01,350
+I would like to show you here something.
+30
+
+31
+00:02:01,590 --> 00:02:03,150
+This is a user Mostafa so Mostafa
+31
+
+32
+00:02:03,150 --> 00:02:05,060
+would like to, let's say, answer a question.
+32
+
+33
+00:02:05,070 --> 00:02:06,870
+So here we get the three.
+33
+
+34
+00:02:07,260 --> 00:02:14,160
+Now, let's answer this question, which has ID three zero two.
+34
+
+35
+00:02:15,060 --> 00:02:17,100
+OK, so the question is, why so late?
+35
+
+36
+00:02:17,160 --> 00:02:26,790
+OK, let's say very sorry for that now if we try to print to the questions again of my side, we should
+36
+
+37
+00:02:26,790 --> 00:02:27,390
+find it here updated.
+37
+
+38
+00:02:27,810 --> 00:02:28,800
+This is the easy part.
+38
+
+39
+00:02:29,040 --> 00:02:31,950
+But I would like to make sure that the other guy here.
+39
+
+40
+00:02:33,520 --> 00:02:39,190
+Noha can see the update, so Noha at the moment has no answer for this question if now she clicked
+40
+
+41
+00:02:39,200 --> 00:02:42,460
+two again is going to find the answer here.
+41
+
+42
+00:02:42,480 --> 00:02:47,770
+notice that both of them are working on files and both of them are being updated in the same
+42
+
+43
+00:02:47,770 --> 00:02:47,990
+time.
+43
+
+44
+00:02:48,280 --> 00:02:49,420
+So let's go back here.
+44
+
+45
+00:02:49,450 --> 00:02:51,340
+Let's say that I would like to delete a question.
+45
+
+46
+00:02:51,340 --> 00:02:57,700
+So let's delete question number four and I'm going to delete one or one, which is the third question
+46
+
+47
+00:02:57,700 --> 00:02:58,750
+with a lot of questions.
+47
+
+48
+00:02:58,960 --> 00:03:02,770
+So I'm going to give the ID here of one or one here.
+48
+
+49
+00:03:03,190 --> 00:03:04,470
+Now, let's separate the questions.
+49
+
+50
+00:03:04,480 --> 00:03:05,920
+I have. notes here
+50
+
+51
+00:03:05,920 --> 00:03:06,820
+Most of them are done.
+51
+
+52
+00:03:07,000 --> 00:03:07,990
+This is the easy part.
+52
+
+53
+00:03:08,200 --> 00:03:16,150
+Now, let's go to the other user here and let's print their questions from me to notice that all of them
+53
+
+54
+00:03:16,150 --> 00:03:16,670
+are removed.
+54
+
+55
+00:03:16,690 --> 00:03:17,080
+Why?
+55
+
+56
+00:03:17,230 --> 00:03:21,220
+Because all of them were the thread questions, for word two Mostafa.
+56
+
+57
+00:03:21,520 --> 00:03:26,890
+So the moral of that is we have two sessions that now communicate to the Single-file, reading it
+57
+
+58
+00:03:26,890 --> 00:03:28,620
+and writing it together.
+58
+
+59
+00:03:28,780 --> 00:03:32,710
+It could be one file two files three files, it is up to you, please
+59
+
+60
+00:03:32,930 --> 00:03:36,130
+When you are trying to solve a big problem, try to make it simpler for yourself.
+60
+
+61
+00:03:36,130 --> 00:03:42,070
+First, if the project is big, try to think in a very simple set up and very simple features and start with
+61
+
+62
+00:03:42,070 --> 00:03:42,250
+them.
+62
+
+63
+00:03:42,260 --> 00:03:43,900
+Don't make it very hard for you.
+63
+
+64
+00:03:44,950 --> 00:03:45,490
+That's it.

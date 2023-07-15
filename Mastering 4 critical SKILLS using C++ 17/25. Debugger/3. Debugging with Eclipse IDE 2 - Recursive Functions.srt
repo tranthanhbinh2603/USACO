@@ -1,0 +1,234 @@
+0
+1
+00:00:01,770 --> 00:00:08,580
+In this session, I would like to show you how debugging with a debugger can help you to understand
+1
+
+2
+00:00:08,640 --> 00:00:12,340
+the recursive function, give you a better chance of understanding them.
+2
+
+3
+00:00:12,690 --> 00:00:18,840
+So let's put here a breakpoint in this..., maybe starting from here and this factorial function and let's
+3
+
+4
+00:00:18,840 --> 00:00:24,900
+run the debugger. So the debugger would go and jump for the factorial in here.
+4
+
+5
+00:00:25,620 --> 00:00:32,580
+Now, I have called here with a factorial five, so looking to the stack, we have a function at the main
+5
+
+6
+00:00:32,580 --> 00:00:37,940
+calling the factorial here and the value of N is 5.
+6
+
+7
+00:00:37,950 --> 00:00:39,510
+The return is still garbage.
+7
+
+8
+00:00:39,840 --> 00:00:40,860
+Now let's trace it.
+8
+
+9
+00:00:41,580 --> 00:00:49,620
+We take one step here and it is going to call the factorial function with N with value 4. Now,
+9
+
+10
+00:00:49,650 --> 00:00:51,690
+What's going to happen is..., try to guess it.
+10
+
+11
+00:00:52,200 --> 00:00:54,710
+The stack here is going to get another function.
+11
+
+12
+00:00:54,930 --> 00:01:00,120
+So let's resume. Now,
+12
+
+13
+00:01:00,180 --> 00:01:03,390
+we are in the factorial function with N equal 4,
+13
+
+14
+00:01:03,870 --> 00:01:06,000
+and here we have two positions.
+14
+
+15
+00:01:06,180 --> 00:01:13,530
+We have a factorial at line 10, which is calling now factorial, which is at line 7,
+15
+
+16
+00:01:13,770 --> 00:01:16,800
+and you notice the stack here N is 5, here
+16
+
+17
+00:01:16,800 --> 00:01:20,340
+the N is 4. Let's proceed
+17
+
+18
+00:01:20,370 --> 00:01:22,790
+little more steps. Again, another call.
+18
+
+19
+00:01:22,950 --> 00:01:24,570
+Let's go to it. Now,
+19
+
+20
+00:01:24,570 --> 00:01:26,820
+we have a third factorial function.
+20
+
+21
+00:01:26,940 --> 00:01:29,340
+You can think of every one of them as a separate function.
+21
+
+22
+00:01:29,560 --> 00:01:32,610
+So now looking here to the value of three,
+22
+
+23
+00:01:33,180 --> 00:01:34,110
+we can go again,
+23
+
+24
+00:01:34,110 --> 00:01:36,350
+value of two, again value of one.
+24
+
+25
+00:01:36,630 --> 00:01:42,480
+Now, so far we have one, two, three, four, five functions. All of them on the stack here about
+25
+
+26
+00:01:42,480 --> 00:01:43,140
+the factorial.
+26
+
+27
+00:01:43,530 --> 00:01:49,470
+Now, when you get to this line, you will notice that the function with factorial N equal one is about
+27
+
+28
+00:01:49,470 --> 00:01:50,020
+to return.
+28
+
+29
+00:01:50,400 --> 00:01:55,410
+So this function will be getting out of the stack of calls, and the local variable will be
+29
+
+30
+00:01:55,410 --> 00:01:56,040
+destroyed.
+30
+
+31
+00:01:57,230 --> 00:01:59,940
+Now, let's get back here. Now,
+31
+
+32
+00:01:59,960 --> 00:02:05,360
+we returned to the function where the factorial N with value 2, and we are done with this line of
+32
+
+33
+00:02:05,360 --> 00:02:07,260
+code, and the ret here is value one.
+33
+
+34
+00:02:07,610 --> 00:02:09,170
+Now, we multiply one with two.
+34
+
+35
+00:02:10,760 --> 00:02:14,500
+Now, ret is 2. We return ret. We are returning ret, which one?
+35
+
+36
+00:02:14,690 --> 00:02:16,030
+The one who called us.
+36
+
+37
+00:02:16,250 --> 00:02:24,230
+So we return back here to the function when the factorial has N equal three. We multiplied it with
+37
+
+38
+00:02:25,430 --> 00:02:28,820
+with N equal two, 3 times 2 which is six,
+38
+
+39
+00:02:29,240 --> 00:02:31,010
+and now we returned back.
+39
+
+40
+00:02:31,040 --> 00:02:38,690
+So you see here one more stack has like one more item is extracted from the stack. We have now
+40
+
+41
+00:02:38,960 --> 00:02:42,380
+the ret with value 6, and N with value 4. 6 times
+41
+
+42
+00:02:42,380 --> 00:02:43,660
+4 is 24.
+42
+
+43
+00:02:44,000 --> 00:02:52,390
+Now, we returned back to the caller which is N with 5. Now, ret is 24 and N is 5.
+43
+
+44
+00:02:52,520 --> 00:02:57,740
+We multiply both of them together, it will be 120, and this is the last factorial function.
+44
+
+45
+00:02:57,740 --> 00:03:02,710
+Once we are done with it, we return back to the main function here and it's gone here.
+45
+
+46
+00:03:03,200 --> 00:03:09,170
+This way, you see the factorial function can be traced with the debugger in an easy way.
+46
+
+47
+00:03:09,620 --> 00:03:10,220
+That's it.

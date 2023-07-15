@@ -1,0 +1,289 @@
+0
+1
+00:00:00,990 --> 00:00:05,790
+Let's see how to solve the problems, the first one is about the increasing array, this one should be
+1
+
+2
+00:00:05,790 --> 00:00:06,570
+straightforward.
+2
+
+3
+00:00:06,960 --> 00:00:16,050
+We will read the array content here and then we would like just to check if every element is, like, if any
+3
+
+4
+00:00:16,050 --> 00:00:21,040
+element is less than the previous element, then we know that it isn't increasing anymore.
+4
+
+5
+00:00:21,060 --> 00:00:23,640
+We started with an increasing equal one, like, a boolean.
+5
+
+6
+00:00:23,640 --> 00:00:24,000
+True.
+6
+
+7
+00:00:24,420 --> 00:00:29,100
+And then we keep iterating to check if any of these items would be violating that.
+7
+
+8
+00:00:29,310 --> 00:00:34,380
+Once we find that one item is less than the previous one, we know it isn't increasing anymore and we
+8
+
+9
+00:00:34,380 --> 00:00:37,380
+break the loop and after that we just do printing.
+9
+
+10
+00:00:39,150 --> 00:00:41,520
+In the second problem, we would like to replace the MinMax.
+10
+
+11
+00:00:41,830 --> 00:00:46,590
+So this is mainly find the min, find the max and do the replacements. To do that,
+11
+
+12
+00:00:47,520 --> 00:00:51,540
+We see here, we are going to read all of the array.
+12
+
+13
+00:00:53,280 --> 00:00:55,230
+We are going to read the array.
+13
+
+14
+00:00:55,500 --> 00:01:00,720
+And while reading, we will maintain two things, we will maintain the minimum value, and we would like
+14
+
+15
+00:01:00,720 --> 00:01:02,100
+to maintain the maximum value.
+15
+
+16
+00:01:05,260 --> 00:01:11,560
+Whenever you are trying to do a min and max, minimization or maximization, you need to be careful about
+16
+
+17
+00:01:11,560 --> 00:01:12,740
+your initial value.
+17
+
+18
+00:01:13,060 --> 00:01:18,430
+So here it say that assume that the minimum value is zero and the maximum is two thousand.
+18
+
+19
+00:01:18,850 --> 00:01:25,330
+For that purpose, we can initialize the maximum with minus one, which is less than the possible minimum value
+19
+
+20
+00:01:25,510 --> 00:01:26,250
+or any value
+20
+
+21
+00:01:26,440 --> 00:01:32,290
+less than zero would be OK. On the other side, we can initialize the minimum with any value greater than
+21
+
+22
+00:01:32,290 --> 00:01:33,070
+two thousand.
+22
+
+23
+00:01:34,270 --> 00:01:41,530
+If there are no given limits, C++ provide other limits, like, you can use the minimum possible
+23
+
+24
+00:01:41,530 --> 00:01:45,850
+value in C++ and maximum possible value in C++ for that case.
+24
+
+25
+00:01:46,090 --> 00:01:50,930
+But the moral of that be very careful about your initial values for variables.
+25
+
+26
+00:01:51,550 --> 00:01:54,940
+For that, we keep minimizing over the minimum during reading.
+26
+
+27
+00:01:54,940 --> 00:01:58,390
+We keep maximizing over the variables while reading.
+27
+
+28
+00:01:58,810 --> 00:02:01,940
+And after that, we just need to make the swap operation or replacement operation.
+28
+
+29
+00:02:02,230 --> 00:02:05,740
+So if the current value is equal to the minimum, we will change it to the maximum.
+29
+
+30
+00:02:05,980 --> 00:02:08,410
+If it's equal to the maximum, we change it to the minimum.
+30
+
+31
+00:02:08,410 --> 00:02:09,130
+And that's all.
+31
+
+32
+00:02:12,440 --> 00:02:18,940
+Observe here, this code will not print a space after the last number, using this if condition,
+32
+
+33
+00:02:18,940 --> 00:02:22,000
+It will not print the space after the last number.
+33
+
+34
+00:02:24,320 --> 00:02:30,230
+In the third homework, we would like to find the unique numbers among a list, but this list is an
+34
+
+35
+00:02:30,230 --> 00:02:30,710
+orderd
+35
+
+36
+00:02:30,710 --> 00:02:31,190
+list.
+36
+
+37
+00:02:34,940 --> 00:02:39,170
+When you are attacking a problem in this course or in software engineering,
+37
+
+38
+00:02:39,420 --> 00:02:46,160
+There are what we call constraints, constraints or given extra information help us typically to find
+38
+
+39
+00:02:46,160 --> 00:02:47,100
+the better solutions.
+39
+
+40
+00:02:47,420 --> 00:02:52,180
+So when you think about this problem, given that they are sorted numbers or ordered numbers,
+40
+
+41
+00:02:52,460 --> 00:02:54,980
+This is, like, a useful information for you.
+41
+
+42
+00:02:54,980 --> 00:02:58,050
+You should think of how can I make a solution based on that?
+42
+
+43
+00:02:58,550 --> 00:02:59,710
+The idea is very simple.
+43
+
+44
+00:02:59,720 --> 00:03:03,620
+Let's say we would like to find unique numbers and we would like to make use of the fact that they are
+44
+
+45
+00:03:03,620 --> 00:03:04,460
+sorted numbers.
+45
+
+46
+00:03:05,030 --> 00:03:07,900
+We can keep going on the numbers and observe here,
+46
+
+47
+00:03:07,940 --> 00:03:14,870
+This is one, if this one is the same as the previous one, then definitely it is repeated.
+47
+
+48
+00:03:14,870 --> 00:03:16,490
+So we need to cancel it.
+48
+
+49
+00:03:17,390 --> 00:03:20,890
+If two is not equal to the one, then it means it is the first one of its type.
+49
+
+50
+00:03:21,200 --> 00:03:26,600
+So we print this two. When we go to this two, we find it equal to the previous, we ignore it and
+50
+
+51
+00:03:26,600 --> 00:03:27,860
+this one is equal to the previous.
+51
+
+52
+00:03:27,870 --> 00:03:28,420
+We ignore it.
+52
+
+53
+00:03:28,700 --> 00:03:30,350
+This one is different than the previous.
+53
+
+54
+00:03:30,510 --> 00:03:31,900
+So it is the first of its kind.
+54
+
+55
+00:03:32,240 --> 00:03:37,370
+This is only valid because the array is already sorted.
+55
+
+56
+00:03:39,830 --> 00:03:45,680
+So here to solve this problem, we just need to keep going during the array and just make sure that if
+56
+
+57
+00:03:45,680 --> 00:03:50,840
+the item doesn't equal the previous item all what we need is to print it, otherwise, we just ignore it.
+57
+
+58
+00:03:51,140 --> 00:03:54,950
+This is mainly making use of the fact that the array is sorted.

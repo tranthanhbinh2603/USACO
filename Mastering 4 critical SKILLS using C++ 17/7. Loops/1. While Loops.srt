@@ -1,0 +1,694 @@
+0
+1
+00:00:01,380 --> 00:00:08,280
+In this video, we will start to move to one more unit of advanced blocks in C++. In the previous unit,
+1
+
+2
+00:00:08,280 --> 00:00:11,480
+we learned about the selections; the if-statement and if-else.
+2
+
+3
+00:00:11,490 --> 00:00:17,640
+And we found how it helps us to do more complex logic. here, in the looping
+3
+
+4
+00:00:18,240 --> 00:00:22,900
+We are more about to learn about how to make more sequential processing in our code.
+4
+
+5
+00:00:23,310 --> 00:00:31,350
+So the word "loop" means circular, and in our context, it's a command to give the computer to keep doing a specific
+5
+
+6
+00:00:31,350 --> 00:00:34,050
+task or operation more and more until we stop it.
+6
+
+7
+00:00:34,470 --> 00:00:35,730
+So let's go more details.
+7
+
+8
+00:00:36,010 --> 00:00:38,580
+Let's say we are processing this statement.
+8
+
+9
+00:00:38,850 --> 00:00:43,980
+If 3 is less than 5, you print: "3 < 5, ONE time".
+9
+
+10
+00:00:44,610 --> 00:00:48,150
+Now, what if I want to do this operation forever?
+10
+
+11
+00:00:48,160 --> 00:00:50,760
+I want the program to just keep printing it here.
+11
+
+12
+00:00:50,760 --> 00:00:53,810
+C++ comes with something called While-loop.
+12
+
+13
+00:00:54,120 --> 00:00:59,250
+So as you see here, we changed the word statement if to the word "while".
+13
+
+14
+00:00:59,550 --> 00:01:02,610
+So now let's go with the logic here to understand what is happening.
+14
+
+15
+00:01:03,000 --> 00:01:04,530
+The compiler finds something,
+15
+
+16
+00:01:04,530 --> 00:01:10,020
+So while condition very similar to the if, if it is true, it gets inside it.
+16
+
+17
+00:01:10,020 --> 00:01:12,140
+If it isn't true, it doesn't get inside it.
+17
+
+18
+00:01:12,480 --> 00:01:15,080
+But the question is where it goes next.
+18
+
+19
+00:01:15,420 --> 00:01:22,500
+In the if case, if the condition is false, it just jumps outside the whole if condition to proceed after
+19
+
+20
+00:01:22,500 --> 00:01:28,780
+it. in the while-loop, it comes back and keeps returning here again and again.
+20
+
+21
+00:01:28,980 --> 00:01:33,360
+So here is the logic, you say the compiler while 2 < 6,
+21
+
+22
+00:01:33,360 --> 00:01:35,420
+Is this true?
+22
+
+23
+00:01:35,640 --> 00:01:36,610
+Yes, this is true.
+23
+
+24
+00:01:36,630 --> 00:01:41,670
+So while true, it gets here, after that, it jumps again to line 6.
+24
+
+25
+00:01:41,970 --> 00:01:42,750
+While true,
+25
+
+26
+00:01:43,290 --> 00:01:43,740
+Yes,
+26
+
+27
+00:01:43,740 --> 00:01:49,240
+Get inside, execute the body, finish at line 9, jump again in and line 6.
+27
+
+28
+00:01:49,500 --> 00:01:56,940
+So what happens here is that in while-loop we start to see jumping back logic, jumping back, jumping back.
+28
+
+29
+00:01:57,300 --> 00:02:03,360
+We used in C++ so far to move one line after a line, one line after a line.
+29
+
+30
+00:02:03,540 --> 00:02:07,970
+This is the first time we see the program is just going back in logic.
+30
+
+31
+00:02:08,220 --> 00:02:15,090
+So while-loop is very similar to the if condition, but once the body is finished it jumps back again
+31
+
+32
+00:02:15,090 --> 00:02:15,690
+to the while-loop.
+32
+
+33
+00:02:15,760 --> 00:02:19,080
+If you look here to the program, it says this forever.
+33
+
+34
+00:02:19,080 --> 00:02:24,840
+If you look to the C++ here, you will find this red button means the program is just still running,
+34
+
+35
+00:02:25,030 --> 00:02:28,800
+and the only way to stop it is just stopping it with double clicking it.
+35
+
+36
+00:02:29,490 --> 00:02:33,680
+Now, let's start to use this idea to make more complex logic.
+36
+
+37
+00:02:34,020 --> 00:02:40,020
+Let's say you would like to print the first five numbers, how I can use the whilee loop to make this
+37
+
+38
+00:02:40,020 --> 00:02:40,460
+idea.
+38
+
+39
+00:02:40,800 --> 00:02:41,130
+here is,
+39
+
+40
+00:02:41,400 --> 00:02:42,870
+Here is how I'm going to do it.
+40
+
+41
+00:02:42,990 --> 00:02:45,260
+I'm going to use the C++ syntax feature.
+41
+
+42
+00:02:45,660 --> 00:02:48,480
+So I will start with some X number, which is 1.
+42
+
+43
+00:02:48,960 --> 00:02:53,920
+And then I would like to keep going increasing 'till 5 and I stop once it is 5.
+43
+
+44
+00:02:54,150 --> 00:02:55,380
+So here's what I'm going to do.
+44
+
+45
+00:02:55,770 --> 00:03:03,380
+while x is less than or equal 5, print X, increment X, we call it the incremental step.
+45
+
+46
+00:03:03,660 --> 00:03:04,500
+Let's trace it.
+46
+
+47
+00:03:04,950 --> 00:03:08,250
+We are at line 7 while X is less than 5,
+47
+
+48
+00:03:08,250 --> 00:03:08,940
+Is this true?
+48
+
+49
+00:03:08,970 --> 00:03:10,740
+Yes, this is true.
+49
+
+50
+00:03:10,740 --> 00:03:11,280
+1 is less than 5.
+50
+
+51
+00:03:11,280 --> 00:03:13,260
+Execute this line.
+51
+
+52
+00:03:13,350 --> 00:03:15,240
+So printing, execute this line,
+52
+
+53
+00:03:15,240 --> 00:03:16,380
+So it's incrementing.
+53
+
+54
+00:03:16,680 --> 00:03:19,980
+Now finish, go back to line 7.
+54
+
+55
+00:03:20,880 --> 00:03:22,730
+Is X less than or equal 5?
+55
+
+56
+00:03:22,740 --> 00:03:23,020
+Yes,
+56
+
+57
+00:03:23,040 --> 00:03:23,910
+Because X is 2.
+57
+
+58
+00:03:23,910 --> 00:03:31,970
+2 is less than 5, go, print, increment,  now X is 3, jump to line 7, is 3 less than 5 or equal?
+58
+
+59
+00:03:31,980 --> 00:03:32,520
+Yes,
+59
+
+60
+00:03:32,820 --> 00:03:39,420
+Print, increment, now X is 4, end,  jump back to line 7.
+60
+
+61
+00:03:39,420 --> 00:03:40,620
+Is 4 less than or equal 5?
+61
+
+62
+00:03:40,650 --> 00:03:41,190
+Yes,
+62
+
+63
+00:03:41,400 --> 00:03:45,220
+Print, increment, now X is 5, finish.
+63
+
+64
+00:03:45,270 --> 00:03:48,180
+Go back to line 7 is 5 is less than or equal to 5?
+64
+
+65
+00:03:48,180 --> 00:03:51,270
+Yes print it, increment, now X is 6.
+65
+
+66
+00:03:51,600 --> 00:03:57,990
+Now, finish, jump, is X is less than or equal 5? is 6 less than or equal 5?
+66
+
+67
+00:03:57,990 --> 00:03:59,040
+No,
+67
+
+68
+00:03:59,040 --> 00:04:04,800
+Now, the condition fails, now like the if-condition it just breaks it here and goes to line 12.
+68
+
+69
+00:04:05,400 --> 00:04:12,940
+So the three important tracks here is what we call the "initialization step" in line 5, the condition
+69
+
+70
+00:04:12,980 --> 00:04:17,040
+step in line 7, the incrementation step in line 10.
+70
+
+71
+00:04:17,280 --> 00:04:23,310
+And here between these two braces of while-loop, we have whatever body very similar to the if condition.
+71
+
+72
+00:04:23,550 --> 00:04:28,110
+please make sure that you are comfortable with this three steps.
+72
+
+73
+00:04:32,460 --> 00:04:43,950
+In a very similar way, we can do some changes for the code and changes for the logic.
+73
+
+74
+00:04:43,980 --> 00:04:49,270
+here in this program, we would like to sum, not to print, the sum from 1 to 5.
+74
+
+75
+00:04:49,290 --> 00:04:56,250
+OK, so the first thing as we said, we need some initialization and incremental for the the loop.
+75
+
+76
+00:04:56,280 --> 00:05:01,890
+So you can think of it as two different parts, the three lines that are for the while-loop to keep going
+76
+
+77
+00:05:02,100 --> 00:05:03,350
+and your extra logic.
+77
+
+78
+00:05:03,630 --> 00:05:11,730
+So here in line 5, line 8, and  line 11, the three components of a while-loop, and line 6
+78
+
+79
+00:05:11,730 --> 00:05:12,580
+and line 10
+79
+
+80
+00:05:12,600 --> 00:05:13,880
+This is our logic.
+80
+
+81
+00:05:14,250 --> 00:05:18,370
+So line 5, and 8, and 11 here,
+81
+
+82
+00:05:18,840 --> 00:05:20,690
+This one is just maintaining the while-loop.
+82
+
+83
+00:05:20,910 --> 00:05:22,380
+We can say it again here,
+83
+
+84
+00:05:22,560 --> 00:05:23,720
+Look at the condition.
+84
+
+85
+00:05:23,730 --> 00:05:26,220
+I didn't write X less than or equal five.
+85
+
+86
+00:05:26,220 --> 00:05:28,050
+I wrote X is less than 6.
+86
+
+87
+00:05:28,350 --> 00:05:30,390
+This is, practically speaking, the same condition.
+87
+
+88
+00:05:30,390 --> 00:05:36,360
+I'm just writing it in a different way, for the logic we need to sum from one to 5.
+88
+
+89
+00:05:36,360 --> 00:05:38,820
+So we need to maintain some variable for the sum.
+89
+
+90
+00:05:39,210 --> 00:05:43,470
+And then we keep here with every variable X from 1 to 5.
+90
+
+91
+00:05:43,470 --> 00:05:50,090
+We just say sum += 1, sum += 2,  sum += 3, 4, 5.
+91
+
+92
+00:05:50,280 --> 00:05:52,780
+So we end up here with sum 15.
+92
+
+93
+00:05:53,040 --> 00:05:58,590
+So again, this code has two parts, one part for the three lines, for the while loop.
+93
+
+94
+00:05:59,010 --> 00:06:01,290
+And the another part is for our logic.
+94
+
+95
+00:06:02,760 --> 00:06:03,870
+Let's do the reverse.
+95
+
+96
+00:06:03,870 --> 00:06:08,940
+Let's sum from 5 to 1.
+96
+
+97
+00:06:08,940 --> 00:06:13,500
+It's going to give the same answer but would like to do it in the reverse. in a very similar way,
+97
+
+98
+00:06:13,770 --> 00:06:16,710
+If I would like to proceed from up to low.
+98
+
+99
+00:06:17,010 --> 00:06:20,430
+You can think of it as I would like to start with 5.
+99
+
+100
+00:06:20,790 --> 00:06:23,670
+I would like to make sure that the number is still not zero.
+100
+
+101
+00:06:23,910 --> 00:06:26,400
+I would like to decrease the X with one step.
+101
+
+102
+00:06:26,760 --> 00:06:33,110
+So here X starts with 5, then 4, 3, 2, 1, 0.
+102
+
+103
+00:06:33,120 --> 00:06:37,320
+The condition is still valid, then it's minus one; so the condition is broken.
+103
+
+104
+00:06:37,920 --> 00:06:41,970
+And for our body logic, we have initially "sum" with 0.
+104
+
+105
+00:06:42,030 --> 00:06:44,670
+Then we are adding sum += X.
+105
+
+106
+00:06:47,340 --> 00:06:54,080
+One interesting property in the while-loops, is what we call breaking.
+106
+
+107
+00:06:54,420 --> 00:07:01,740
+So, check out here what I'm writing, I'm saying while true now saying that "while (true)" means that this
+107
+
+108
+00:07:01,740 --> 00:07:03,390
+code actually can go forever.
+108
+
+109
+00:07:03,630 --> 00:07:07,260
+So forget about what is in line 8 to line 15.
+109
+
+110
+00:07:07,590 --> 00:07:10,260
+While true here just means keep going forever,
+110
+
+111
+00:07:10,260 --> 00:07:13,370
+Keep going forever. now I'm making more logic,
+111
+
+112
+00:07:13,500 --> 00:07:14,750
+So here is my program,
+112
+
+113
+00:07:14,760 --> 00:07:17,550
+I would like to say this is a program to do division.
+113
+
+114
+00:07:17,850 --> 00:07:23,940
+And I'm saying here our logic is if the second number is zero, we are going to print: "Bye" and end
+114
+
+115
+00:07:23,940 --> 00:07:24,510
+the program.
+115
+
+116
+00:07:24,550 --> 00:07:28,290
+OK, so there is nothing specific to stop
+116
+
+117
+00:07:28,290 --> 00:07:33,470
+The while-loop here, I would like to keep going forever, as long as the second number isn't zero.
+117
+
+118
+00:07:33,750 --> 00:07:36,630
+So we will "while (true)" forever, then we read two numbers,
+118
+
+119
+00:07:36,930 --> 00:07:43,770
+If the second number is zero, we say Y is zero and here we say break.
+119
+
+120
+00:07:43,800 --> 00:07:45,030
+What does "break" mean?
+120
+
+121
+00:07:45,480 --> 00:07:49,510
+"break" means end this while loop right now and go after it.
+121
+
+122
+00:07:49,830 --> 00:07:54,130
+So once we say break here we jump to line 17.
+122
+
+123
+00:07:54,600 --> 00:07:56,670
+So again, what does a break do?
+123
+
+124
+00:07:57,030 --> 00:08:01,830
+The break jumps completely outside our current while-loop.
+124
+
+125
+00:08:02,190 --> 00:08:04,830
+OK, so this is what the break does for us.
+125
+
+126
+00:08:05,100 --> 00:08:06,660
+So here are two interesting things.
+126
+
+127
+00:08:06,960 --> 00:08:14,130
+The "while (true)" is an infinite loop, and the break is going out of the statement. Infinite means to
+127
+
+128
+00:08:14,130 --> 00:08:15,180
+just going forever.
+128
+
+129
+00:08:16,910 --> 00:08:23,630
+The other case is something called "continue", so the "continue" tells the compiler to jump to
+129
+
+130
+00:08:23,630 --> 00:08:25,600
+the start of the loop.
+130
+
+131
+00:08:25,880 --> 00:08:33,260
+So let's say if here in our logic we say if the number turned out to be zero, the Y, then tell
+131
+
+132
+00:08:33,260 --> 00:08:37,070
+him that this is zero and start again from scratch to ask for input.
+132
+
+133
+00:08:37,760 --> 00:08:41,570
+So when we see the continue, it jumps to line 7.
+133
+
+134
+00:08:41,960 --> 00:08:44,720
+So now what is the difference between "continue" and "break"?
+134
+
+135
+00:08:45,050 --> 00:08:51,640
+Continue, it is just continuing the looping so it jumps to line 7, verifies one more time and gets inside.
+135
+
+136
+00:08:52,040 --> 00:08:54,600
+break in the while, and go outside it.
+136
+
+137
+00:08:54,920 --> 00:08:59,380
+So one of them goes to the start of the while, one of them goes after the while.
+137
+
+138
+00:09:00,530 --> 00:09:01,120
+That's it.
+138
+
+139
+00:09:01,430 --> 00:09:05,240
+Please make sure that you are comfortable with today's content before the next session.

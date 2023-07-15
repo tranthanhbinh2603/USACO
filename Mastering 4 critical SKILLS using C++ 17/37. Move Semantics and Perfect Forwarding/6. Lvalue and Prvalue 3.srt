@@ -1,0 +1,591 @@
+1
+00:00:01,140 --> 00:00:03,810
+Let's continue more details about the difference between them.
+
+2
+00:00:05,220 --> 00:00:11,940
+Remember, we went to an operator overloading, introduced to the class, my beer and what I care here
+
+3
+00:00:11,940 --> 00:00:18,780
+more about two things, the prefix operator plus plus and the most fixed operator plus, plus.
+
+4
+00:00:19,140 --> 00:00:25,710
+Remember the prefix operator plus plus would returning by reference.
+
+5
+00:00:26,100 --> 00:00:30,070
+However, that was the fixed operator was returning by value.
+
+6
+00:00:30,450 --> 00:00:33,980
+This means the return, as we said, from this function by reference.
+
+7
+00:00:34,110 --> 00:00:39,380
+So this return is an early value, but the return from here is a right value.
+
+8
+00:00:39,540 --> 00:00:42,540
+And remember the operator plus plus here.
+
+9
+00:00:42,840 --> 00:00:44,460
+Why is it returning by value.
+
+10
+00:00:44,700 --> 00:00:51,780
+Because it first take a Cobbe from the current class, then we are incrementally or internally incrementing
+
+11
+00:00:51,780 --> 00:00:54,870
+the object, then returning Akabi this return.
+
+12
+00:00:54,880 --> 00:00:56,700
+It is in the diskless.
+
+13
+00:00:56,700 --> 00:00:57,770
+It's a different copy.
+
+14
+00:00:57,960 --> 00:00:59,760
+However, here we do not have a cubie.
+
+15
+00:00:59,940 --> 00:01:05,490
+We are returning actually the object itself again to be used in further operations.
+
+16
+00:01:06,120 --> 00:01:09,440
+So overall, this is a return by reference is Anila value.
+
+17
+00:01:09,690 --> 00:01:11,220
+This is a return by value.
+
+18
+00:01:11,340 --> 00:01:12,440
+This is a we are value.
+
+19
+00:01:14,490 --> 00:01:20,140
+Let's define here variable EHP and then some C equals two times E-Plus five.
+
+20
+00:01:20,220 --> 00:01:23,060
+This is a normal expression, a temporary value.
+
+21
+00:01:23,070 --> 00:01:25,530
+So it is a b r value expression.
+
+22
+00:01:26,570 --> 00:01:35,300
+If I did something like sea equal air plus plus the ER plus plus here is a B R value expression.
+
+23
+00:01:37,930 --> 00:01:44,950
+However, if I did something like Last Plus Equal, then this is an L value expression, so this is
+
+24
+00:01:44,950 --> 00:01:51,880
+a mistake plus plus E is an L value expression y very similar to the logic of the class that we just
+
+25
+00:01:51,880 --> 00:01:52,360
+mentioned.
+
+26
+00:01:52,660 --> 00:01:53,890
+The E-Plus was here.
+
+27
+00:01:53,910 --> 00:01:54,700
+The boost effects.
+
+28
+00:01:54,910 --> 00:01:57,360
+This is returning by value.
+
+29
+00:01:57,490 --> 00:02:05,770
+So it should be R expression, but E is returning by reference so that if we changed the E here it will
+
+30
+00:02:05,770 --> 00:02:06,360
+be changed.
+
+31
+00:02:06,530 --> 00:02:08,860
+It is an L value expression.
+
+32
+00:02:10,200 --> 00:02:16,000
+Now, the value here equals then we usually do, right sentosa this way, because it is used to incremented
+
+33
+00:02:16,000 --> 00:02:21,970
+than assigning to 10, if you try to do something like abler plus equals 10.
+
+34
+00:02:22,320 --> 00:02:24,470
+This would be a combination error.
+
+35
+00:02:24,600 --> 00:02:25,200
+Why?
+
+36
+00:02:25,560 --> 00:02:32,400
+Because on the left side of of the equal sign, an expression that is B are value, so it will not come
+
+37
+00:02:32,400 --> 00:02:32,650
+by.
+
+38
+00:02:33,000 --> 00:02:38,130
+So the moral of that is A plus plus is a PR value.
+
+39
+00:02:38,280 --> 00:02:41,610
+However, plus plus A is a lift.
+
+40
+00:02:41,610 --> 00:02:42,980
+The value expression.
+
+41
+00:02:43,410 --> 00:02:46,860
+Let's see the difference when it comes to objects, not the primitives.
+
+42
+00:02:47,310 --> 00:02:54,450
+I'm defining my beer as V of one and two and then I'm saying here blood must be equal.
+
+43
+00:02:54,450 --> 00:02:56,250
+My beer of three and ten.
+
+44
+00:02:58,650 --> 00:03:02,280
+Now, this is a.
+
+45
+00:03:03,390 --> 00:03:10,530
+A return to Bio-Reference, so it is an 11 and I can see plus must be the Brent, so it's going to print
+
+46
+00:03:10,980 --> 00:03:12,800
+for and the and 11.
+
+47
+00:03:14,130 --> 00:03:16,640
+So not that he had this plus plus is useless.
+
+48
+00:03:17,070 --> 00:03:20,490
+So the actual actual value from here would be the three and the 10.
+
+49
+00:03:20,790 --> 00:03:25,570
+The plus plus B from here will be useful and then it would be incremented to quarantine.
+
+50
+00:03:25,980 --> 00:03:27,960
+So far so good, so straight forward.
+
+51
+00:03:28,230 --> 00:03:31,010
+This plus plus B is very similar to this plus plus eight.
+
+52
+00:03:31,860 --> 00:03:32,640
+It is a trick.
+
+53
+00:03:33,240 --> 00:03:38,340
+If you did something like plus B plus plus equals my bit of two hundred and three hundred.
+
+54
+00:03:39,980 --> 00:03:42,120
+First of all, it's going to combine.
+
+55
+00:03:42,440 --> 00:03:46,110
+But notice here, the corresponding one didn't come by in C++.
+
+56
+00:03:46,310 --> 00:03:52,610
+The the the the rule about the birth defects operator is for comparison error only for primitives,
+
+57
+00:03:52,880 --> 00:03:56,060
+but it's going to work for the objects.
+
+58
+00:03:57,350 --> 00:04:02,660
+As as you know, the plus plus, plus plus here is returning at.
+
+59
+00:04:03,900 --> 00:04:13,420
+Could be returning a copy of B. So actually the the the copy is going to be assigned to the 200 and
+
+60
+00:04:13,420 --> 00:04:14,060
+300.
+
+61
+00:04:14,350 --> 00:04:17,580
+This means it is useless and has no effect.
+
+62
+00:04:18,280 --> 00:04:23,710
+If you tried here to print that, we were going to close it again and then print the value would be
+
+63
+00:04:23,710 --> 00:04:28,000
+five and 12, not two hundred and three hundred and one again.
+
+64
+00:04:28,000 --> 00:04:31,070
+Why B plus plus is returning by value.
+
+65
+00:04:31,300 --> 00:04:36,730
+So what is return is something temporary in the memory is going to be assigned to 200 or 300 and just
+
+66
+00:04:36,730 --> 00:04:37,500
+gone in the memory.
+
+67
+00:04:37,510 --> 00:04:38,840
+So it has no effect.
+
+68
+00:04:39,190 --> 00:04:42,520
+So here is a bit confusing for for two reasons.
+
+69
+00:04:42,520 --> 00:04:47,920
+As I said, the first is it doesn't compile because the rules in C++ for the primitive is different
+
+70
+00:04:47,920 --> 00:04:48,730
+from the objects.
+
+71
+00:04:49,030 --> 00:04:52,720
+And the second one that this statement has no effect at all.
+
+72
+00:04:55,400 --> 00:05:02,260
+The only effect that you see here is that the original three and the ten, the original three, four
+
+73
+00:05:02,260 --> 00:05:04,420
+and 11 are going to be incremented.
+
+74
+00:05:04,510 --> 00:05:06,850
+But this assignment itself has no value.
+
+75
+00:05:08,260 --> 00:05:13,900
+The hint that I would like you mainly to get from this slide and the reason behind it, some expressions
+
+76
+00:05:13,900 --> 00:05:17,560
+on primitives might be different from operator overloading.
+
+77
+00:05:17,690 --> 00:05:23,230
+If you are if you overloaded operators, what might not combine in the primitives might combine it or
+
+78
+00:05:23,230 --> 00:05:24,670
+behave in a different way.
+
+79
+00:05:25,810 --> 00:05:27,180
+Let me give you an example.
+
+80
+00:05:27,460 --> 00:05:33,670
+If we wrote something like eight times for equal G, let's say that A4 and G are primitives.
+
+81
+00:05:34,000 --> 00:05:39,060
+This will not compile because eight times before is A is a, b r value.
+
+82
+00:05:39,070 --> 00:05:41,110
+It has no identifiable at this.
+
+83
+00:05:41,110 --> 00:05:41,800
+It will not work.
+
+84
+00:05:42,160 --> 00:05:50,290
+However, imagine that A is a is a class for example, that overloads the multiplication such that the
+
+85
+00:05:50,290 --> 00:05:53,750
+return of this statement is an object written by reference.
+
+86
+00:05:53,810 --> 00:06:00,970
+Now this statement is going to come by, so it could be an L value under the operator.
+
+87
+00:06:01,480 --> 00:06:06,430
+So the model of that, as I said, is just to differentiate between the behavior of primitives comparing
+
+88
+00:06:06,430 --> 00:06:09,190
+to the objects when it comes to operator.
+
+89
+00:06:10,270 --> 00:06:13,800
+The second thing that I would like to highlight here is about the arrays and the pointers.
+
+90
+00:06:14,350 --> 00:06:18,160
+Array names are not modifiable values.
+
+91
+00:06:18,370 --> 00:06:19,230
+They are a name.
+
+92
+00:06:19,240 --> 00:06:20,520
+That's why they are a value.
+
+93
+00:06:20,680 --> 00:06:23,160
+And as you know, they are they are not modified.
+
+94
+00:06:23,170 --> 00:06:29,410
+But you can adjust if you try to say array equal reference X. It will combine error because you cannot
+
+95
+00:06:29,410 --> 00:06:30,810
+modify the array.
+
+96
+00:06:30,820 --> 00:06:33,670
+Array is is is recidivate in the memory in a specific way.
+
+97
+00:06:33,670 --> 00:06:34,690
+And you cannot just remove it.
+
+98
+00:06:35,530 --> 00:06:39,670
+You can create a pointer B and assign it to the IRS.
+
+99
+00:06:39,680 --> 00:06:41,410
+Now, pointing to the value of your.
+
+100
+00:06:43,010 --> 00:06:50,080
+You cannot say B plus one equals three, because B plus one itself is an expression of A, B or value.
+
+101
+00:06:50,600 --> 00:06:57,650
+However, we can say as three B plus one equals 10, the extra is that the reference operator, the
+
+102
+00:06:57,650 --> 00:07:03,470
+TEQSA, the addressee it and go to the content, bring its address and be ready to assign something
+
+103
+00:07:03,470 --> 00:07:03,800
+of it.
+
+104
+00:07:04,220 --> 00:07:06,260
+Here are new cable rules.
+
+105
+00:07:06,590 --> 00:07:14,350
+The first rule is the extra recovery to hear the different single convert the B-R value to an end value.
+
+106
+00:07:14,870 --> 00:07:18,080
+So Nieblas one is and B are value.
+
+107
+00:07:18,290 --> 00:07:20,630
+The S3 could convert it to an L value.
+
+108
+00:07:20,840 --> 00:07:25,800
+That's why this line combines on the other side the difference.
+
+109
+00:07:25,820 --> 00:07:29,720
+Operator convert an L value to be our value.
+
+110
+00:07:29,720 --> 00:07:32,000
+So they are working in an opposite way.
+
+111
+00:07:33,200 --> 00:07:41,750
+If you define here and integrate equal ten and assigning the pointer to the difference of a itself is
+
+112
+00:07:41,750 --> 00:07:44,890
+an L value when you apply the difference over it.
+
+113
+00:07:45,050 --> 00:07:48,350
+The result of this expression is a b r value.
+
+114
+00:07:49,370 --> 00:07:55,810
+Here, if you try to say be equal, a reference of eight plus one, this will not work because E-Plus
+
+115
+00:07:55,880 --> 00:08:02,320
+one itself is a better value and the difference is expecting an L value to convert it to be a plus one.
+
+116
+00:08:02,540 --> 00:08:06,440
+So it's going not it will not work in a similar way.
+
+117
+00:08:06,620 --> 00:08:13,330
+If you try to say you reference equal 40, it would not work because reference to A is a B R value.
+
+118
+00:08:13,490 --> 00:08:16,040
+So keep in mind this couple of rules to help you.
+
+119
+00:08:18,020 --> 00:08:25,400
+If you try to say integer point or B two equal ten, this is would combine error because the pointer
+
+120
+00:08:25,400 --> 00:08:28,900
+here is expecting an address to be used, not a primitive this way.
+
+121
+00:08:29,660 --> 00:08:35,780
+The only exception for this rule, the only literal exception is a C string literal.
+
+122
+00:08:35,940 --> 00:08:37,910
+The old style of character applies here.
+
+123
+00:08:38,360 --> 00:08:44,810
+If you say character pointer equal, Mustafa is going to come by because this is string, although it
+
+124
+00:08:44,810 --> 00:08:47,360
+is literal, it is actually Internet NRA.
+
+125
+00:08:47,540 --> 00:08:49,700
+So it's very similar to the line here.
+
+126
+00:08:51,110 --> 00:08:57,530
+If you try to define a string reference erev to equal Mustaffa, this will not come by for the same
+
+127
+00:08:57,530 --> 00:08:59,090
+reason that we know about them.
+
+128
+00:08:59,240 --> 00:09:05,450
+Referred to here is an uncanny valley reference, but Mustaffa itself is a better value, so you will
+
+129
+00:09:05,450 --> 00:09:07,160
+not be able to assign them.
+
+130
+00:09:07,280 --> 00:09:10,070
+Remember, a string is a is an object.
+
+131
+00:09:12,480 --> 00:09:19,450
+Here we can definitely assign something like l value and we are value tokenized value difference.
+
+132
+00:09:19,560 --> 00:09:20,730
+This is a bit a special case.
+
+133
+00:09:22,860 --> 00:09:28,060
+That's all about the value versus the our values in the very simple case.
+
+134
+00:09:28,080 --> 00:09:34,050
+Remember that the LRR value, the dollar value, something that has an idea, something that has identifiable
+
+135
+00:09:34,050 --> 00:09:37,260
+address or in a very simple way, it's something that has a name.
+
+136
+00:09:37,800 --> 00:09:43,470
+The buyer value on the other side is something that is temporary and it has no identity.
+
+137
+00:09:43,950 --> 00:09:50,070
+Going back to the scene here, we have this or value that was in the past, as simple as what is on
+
+138
+00:09:50,070 --> 00:09:50,720
+the right side.
+
+139
+00:09:51,150 --> 00:09:56,520
+But now we we saw a lot of details that we could be our value.
+
+140
+00:09:56,520 --> 00:10:02,490
+Most of it is actually just our value because the value here it is the beer and the glass.
+
+141
+00:10:02,640 --> 00:10:10,290
+For these two things, we also reduced the value, which is mainly has a name X value is something that
+
+142
+00:10:10,290 --> 00:10:12,420
+is most much more constrained.
+
+143
+00:10:12,600 --> 00:10:18,060
+It also has an identity and have another feature that will talk about it later, which is the movability.
+
+144
+00:10:18,390 --> 00:10:19,290
+We can move it.
+
+145
+00:10:19,450 --> 00:10:21,320
+X value is for an exit buyer.
+
+146
+00:10:21,330 --> 00:10:25,470
+It's a very narrow type and it's here in the intersection of these two things.
+
+147
+00:10:25,920 --> 00:10:32,700
+Most visual value and our value are now like a high level concepts, but the actual primary values are
+
+148
+00:10:32,700 --> 00:10:36,240
+these three categories that it.

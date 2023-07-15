@@ -1,0 +1,194 @@
+0
+1
+00:00:01,140 --> 00:00:07,320
+In the third problem here, we would like to try all of the integers A, B, C, D, E, and we would like to find
+1
+
+2
+00:00:07,320 --> 00:00:08,160
+how many
+2
+
+3
+00:00:08,160 --> 00:00:12,870
+Ones satisfy the following condition, all of them, ABCD, are between one to 200.
+3
+
+4
+00:00:13,320 --> 00:00:17,850
+And then we have this nice condition, A + B equal C + D.
+4
+
+5
+00:00:18,210 --> 00:00:21,200
+It's very clear that we don't need to try every number in the world.
+5
+
+6
+00:00:21,210 --> 00:00:23,610
+We just need to try ABCD in
+6
+
+7
+00:00:23,610 --> 00:00:25,490
+these ranges from one to 200.
+7
+
+8
+00:00:25,500 --> 00:00:31,510
+So this is a good indicator for a for loop, then with every for loop we can just double-check the condition.
+8
+
+9
+00:00:31,860 --> 00:00:38,220
+So here are four loops, satisfying the target, and then we count every condition that satisfy the
+9
+
+10
+00:00:38,220 --> 00:00:38,990
+target from us.
+10
+
+11
+00:00:39,270 --> 00:00:40,160
+So far so good.
+11
+
+12
+00:00:40,530 --> 00:00:47,040
+But we learned that probably we can get rid of one of the four loops because this is very slow, to do
+12
+
+13
+00:00:47,040 --> 00:00:47,340
+that.
+13
+
+14
+00:00:47,490 --> 00:00:53,760
+We just get rid of this loop and we estimate from the equation that D = A + B - C, the
+14
+
+15
+00:00:53,760 --> 00:00:56,480
+remaining thing for us is some of the D would be invalid.
+15
+
+16
+00:00:56,730 --> 00:01:00,850
+So let's verify here that D is within the range.
+16
+
+17
+00:01:01,260 --> 00:01:05,270
+This is how to do it with actually three loops. In the future,
+17
+
+18
+00:01:05,490 --> 00:01:10,410
+You can learn using something called metal middle and dictionaries or maps.
+18
+
+19
+00:01:10,440 --> 00:01:14,120
+You can learn how to do it with just two loops in a very efficient way.
+19
+
+20
+00:01:14,370 --> 00:01:15,770
+But this is out of a scope for now.
+20
+
+21
+00:01:17,370 --> 00:01:22,470
+In the fourth problem, we would like to print if a number is a prime number or not and a prime number
+21
+
+22
+00:01:22,470 --> 00:01:28,490
+is a number that is greater than one and cannot be divided by any number less than it.
+22
+
+23
+00:01:28,730 --> 00:01:34,230
+For example, if you are thinking about numbers like 13, 13 is a prime number because starting from
+23
+
+24
+00:01:34,230 --> 00:01:38,530
+two to 12, there is no number that 13 is divisible by it.
+24
+
+25
+00:01:38,880 --> 00:01:43,140
+So what you have to do is to take a number and decide if it's a prime number or not.
+25
+
+26
+00:01:44,890 --> 00:01:50,830
+The code is very straightforward, all what you have to do is just, first of all, handle the number
+26
+
+27
+00:01:50,860 --> 00:01:52,630
+in a 
+27
+
+28
+00:01:55,270 --> 00:02:00,760
+handle the number, handle the one as a special case.
+28
+
+29
+00:02:00,880 --> 00:02:05,000
+I would like here to go one more step and make it less than or equal one.
+29
+
+30
+00:02:05,320 --> 00:02:08,560
+This way you are handling it even for the negative number.
+30
+
+31
+00:02:08,560 --> 00:02:12,180
+If someone entered a negative number, any negative number isn't an odd number.
+31
+
+32
+00:02:12,370 --> 00:02:16,030
+So let's make it even more, more, more wider in the scope.
+32
+
+33
+00:02:20,880 --> 00:02:22,110
+OK, let's keep going.
+33
+
+34
+00:02:23,590 --> 00:02:28,950
+In the second case, we like now to iterate starting from n to the number, but lesst than it, not less
+34
+
+35
+00:02:28,950 --> 00:02:29,540
+than or equal.
+35
+
+36
+00:02:29,790 --> 00:02:33,390
+We will keep going for all the numbers that is less than the number.
+36
+
+37
+00:02:33,550 --> 00:02:37,920
+And check, if we found it is divisible by any number, then this isn't a prime number.
+37
+
+38
+00:02:38,580 --> 00:02:41,820
+Otherwise, the is_OK will be true through the whole iteration.
+38
+
+39
+00:02:41,820 --> 00:02:43,700
+Then we just print it. That's all.

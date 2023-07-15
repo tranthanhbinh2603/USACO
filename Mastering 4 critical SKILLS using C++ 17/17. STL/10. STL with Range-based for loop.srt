@@ -1,0 +1,264 @@
+0
+1
+00:00:01,140 --> 00:00:07,410
+One of the interesting features in C++11 is the range-based for loop.
+1
+
+2
+00:00:07,650 --> 00:00:12,330
+This isn't an STL topic, It is more of an iterating style
+2
+
+3
+00:00:12,330 --> 00:00:21,120
+but you see its power really when it comes to STL. Before the looping style, I would like first
+3
+
+4
+00:00:21,150 --> 00:00:25,870
+to introduce also something in C++11 that makes our life much easier.
+4
+
+5
+00:00:26,280 --> 00:00:32,890
+So when you define an integer X equals 10, You are defining the data type of X by yourself.
+5
+
+6
+00:00:33,540 --> 00:00:39,200
+Now, In C++ also the auto keyword can deduce for us the data type.
+6
+
+7
+00:00:39,450 --> 00:00:44,030
+So let's say I wrote x2 equal 10 so we can see that 10 here must be an integer.
+7
+
+8
+00:00:44,040 --> 00:00:49,320
+So auto would be resolved automatically to an integer, 10.0  would be resolved automatically
+8
+
+9
+00:00:49,320 --> 00:00:49,820
+to double.
+9
+
+10
+00:00:50,160 --> 00:00:53,670
+If you have double quotes this way, It will be automatically resolved to a string.
+10
+
+11
+00:00:54,210 --> 00:00:55,860
+This is the best way.
+11
+
+12
+00:00:56,580 --> 00:01:02,370
+This is like we are dealing as in the STL, as you will see, with complex data types.
+12
+
+13
+00:01:02,580 --> 00:01:04,020
+You can just put it here auto
+13
+
+14
+00:01:04,050 --> 00:01:05,880
+so it's going to make your life much easier.
+14
+
+15
+00:01:06,120 --> 00:01:08,070
+Also, there will be no wrong conversion,
+15
+
+16
+00:01:08,100 --> 00:01:13,770
+for example, if you wrote here integer X equal 10.0, there is a conversion from double to an integer.
+16
+
+17
+00:01:13,770 --> 00:01:15,040
+So there is no conversion here.
+17
+
+18
+00:01:15,060 --> 00:01:16,530
+It makes your code also clean.
+18
+
+19
+00:01:17,010 --> 00:01:22,290
+There are more details specifically in C++ 14 and 17
+19
+
+20
+00:01:22,290 --> 00:01:25,200
+but I would like to keep it as simple as that right now.
+20
+
+21
+00:01:25,740 --> 00:01:30,440
+So now going to the iterating style, I would like first to show you that this iterating
+21
+
+22
+00:01:30,440 --> 00:01:33,070
+style is by itself available even for the arrays.
+22
+
+23
+00:01:33,630 --> 00:01:39,980
+So, let's say we define an array of three items, 1, 2, 3, so we can do the syntax as follows:
+23
+
+24
+00:01:40,350 --> 00:01:43,560
+We can say for, int-val or auto-
+24
+
+25
+00:01:43,590 --> 00:01:50,310
+val, colon, the something that we would like to iterate and just close it.
+25
+
+26
+00:01:50,640 --> 00:01:55,710
+So now, notes this is a for loop that has two components only with a colon in middle.
+26
+
+27
+00:01:56,010 --> 00:02:01,980
+So, on the right side, you write the data type. On the left side, you write the type of the element.
+27
+
+28
+00:02:01,980 --> 00:02:03,350
+You can write here int val.
+28
+
+29
+00:02:03,600 --> 00:02:07,530
+You can write whatever data type that you would like to access.
+29
+
+30
+00:02:07,800 --> 00:02:09,780
+And then you cout val, which is val.
+30
+
+31
+00:02:10,020 --> 00:02:16,560
+So automatically what happened here is the C++ is going to start with the first element, move to the second
+31
+
+32
+00:02:16,560 --> 00:02:18,750
+element, to the third element and so on.
+32
+
+33
+00:02:19,440 --> 00:02:21,040
+Let's try it on STL.
+33
+
+34
+00:02:21,120 --> 00:02:24,150
+So here is a definition of the dequeue of five elements.
+34
+
+35
+00:02:24,190 --> 00:02:25,980
+We saw different iterating styles
+35
+
+36
+00:02:26,250 --> 00:02:27,060
+but look to that,
+36
+
+37
+00:02:27,090 --> 00:02:32,100
+this is one of the best ones. I can say for, say const, auto, reference
+37
+
+38
+00:02:32,100 --> 00:02:33,600
+val, colon,
+38
+
+39
+00:02:33,600 --> 00:02:37,730
+queue, then this is going to iterate on the queue one by one element.
+39
+
+40
+00:02:37,980 --> 00:02:42,570
+You can even have a C++ initializer list here, and then you start to iterate on it.
+40
+
+41
+00:02:43,290 --> 00:02:48,720
+Remember a string is just something that we can iterate it letter by letter, so we can again iterate here to print
+41
+
+42
+00:02:48,720 --> 00:02:50,920
+its letters, a letter by letter.
+42
+
+43
+00:02:51,780 --> 00:02:54,480
+So, what do we write here on the left side exactly?
+43
+
+44
+00:02:54,750 --> 00:02:57,570
+It is up to you, but it should be something of the data type of.
+44
+
+45
+00:02:57,570 --> 00:03:02,750
+queue. Typically one of the best ways is to use auto because just automatically resolving this type.
+45
+
+46
+00:03:03,060 --> 00:03:08,890
+Otherwise, if you would like here, it should be character-val and here it should be an integer-val.
+46
+
+47
+00:03:09,030 --> 00:03:16,050
+If you would like it to be by copy, so you should just use auto-val. If you would
+47
+
+48
+00:03:16,050 --> 00:03:20,250
+like it to be by reference and this is more efficient, you should write with reference,
+48
+
+49
+00:03:20,550 --> 00:03:22,590
+but be careful if you updated here
+49
+
+50
+00:03:22,590 --> 00:03:27,840
+this val, the array would not be updated, but if you updated here this file, the queue would be updated.
+50
+
+51
+00:03:28,320 --> 00:03:32,930
+If you used const, it just means that no one is expected to change this val.
+51
+
+52
+00:03:33,390 --> 00:03:39,540
+So, this is the most preferred way to iterate on a queue as long as you don't need to change the value
+52
+
+53
+00:03:39,540 --> 00:03:49,060
+itself. In the next times, you will see more complex usage for range-based for loop that's it.

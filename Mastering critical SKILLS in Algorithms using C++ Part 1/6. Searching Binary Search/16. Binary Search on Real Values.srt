@@ -1,0 +1,547 @@
+1
+00:00:01,330 --> 00:00:07,960
+Another important generalization to know about it is that binary search can actually work on real values.
+
+2
+00:00:08,350 --> 00:00:09,970
+Let's start with a simple problem.
+
+3
+00:00:10,270 --> 00:00:13,570
+We have an issue of excessive which has this equation.
+
+4
+00:00:14,080 --> 00:00:16,240
+I would like to find the root for this equation.
+
+5
+00:00:16,390 --> 00:00:20,680
+This mean I would like to find an X where f of X is zero.
+
+6
+00:00:21,390 --> 00:00:26,380
+Now I'm telling you an information that X is guaranteed to be in the range two.
+
+7
+00:00:26,380 --> 00:00:26,710
+Three.
+
+8
+00:00:27,640 --> 00:00:30,340
+The answer to this function is going to be a real no.
+
+9
+00:00:30,370 --> 00:00:32,230
+Maybe something like 1.5 or so.
+
+10
+00:00:32,800 --> 00:00:35,200
+So now I would like to find X.
+
+11
+00:00:36,380 --> 00:00:41,330
+Can we begin research that to begin the research on it, first of all, you need to prove that F of
+
+12
+00:00:41,330 --> 00:00:44,030
+X is monotonic function.
+
+13
+00:00:45,030 --> 00:00:50,490
+And then you need to modify the binary search, good to start to work on real values.
+
+14
+00:00:50,910 --> 00:00:55,560
+I would like you to take the challenge and try to change the code by yourself to solve this problem.
+
+15
+00:00:57,750 --> 00:00:58,110
+OK.
+
+16
+00:00:58,170 --> 00:01:01,200
+Let's think about how to do it.
+
+17
+00:01:01,710 --> 00:01:06,510
+Practically speaking, there is no magic this thought and in the variables would be double.
+
+18
+00:01:06,960 --> 00:01:11,640
+We need a possible function to guide the search and we need to prove it is correct and one panic.
+
+19
+00:01:12,490 --> 00:01:14,100
+Uh, and that's it.
+
+20
+00:01:14,220 --> 00:01:18,630
+The only the only new concern is actually about how to stop the coup, which isn't that hard.
+
+21
+00:01:20,270 --> 00:01:21,860
+Let's start with the FAA function.
+
+22
+00:01:22,550 --> 00:01:26,570
+They function when you think about it, you have food to the power to the board.
+
+23
+00:01:26,570 --> 00:01:30,740
+Seven and X were given for us and the range zero to three.
+
+24
+00:01:31,100 --> 00:01:33,080
+So this term almost must be a positive value.
+
+25
+00:01:33,350 --> 00:01:35,330
+And this one is also another was the value.
+
+26
+00:01:35,660 --> 00:01:37,040
+And this is a negative value.
+
+27
+00:01:37,340 --> 00:01:39,830
+This means that this equation must be increasing.
+
+28
+00:01:39,830 --> 00:01:41,810
+Mathematically must be increasing.
+
+29
+00:01:42,140 --> 00:01:46,940
+If you are in doubt from that, you can simply write the function and just try a bunch of conservative
+
+30
+00:01:46,940 --> 00:01:47,360
+values.
+
+31
+00:01:47,930 --> 00:01:52,820
+So when you try to see here the Albert, you just notice it is an increasing output.
+
+32
+00:01:53,150 --> 00:01:59,360
+So now we are sure that this function is increasing, which means we can use it to guide our search,
+
+33
+00:01:59,900 --> 00:02:01,400
+for example it.
+
+34
+00:02:02,030 --> 00:02:02,460
+Yeah.
+
+35
+00:02:05,120 --> 00:02:08,450
+Yeah, anyway, let's let's keep going here.
+
+36
+00:02:12,920 --> 00:02:14,280
+It is the way their search function.
+
+37
+00:02:14,720 --> 00:02:18,470
+First of all, I have is thought, is you and equal?
+
+38
+00:02:18,470 --> 00:02:20,790
+Three, because the already told me the limit.
+
+39
+00:02:20,810 --> 00:02:25,030
+If the problem didn't tell you, you have to figure it out, you're starting it for a while.
+
+40
+00:02:25,070 --> 00:02:26,630
+Assume that it's just a zero.
+
+41
+00:02:27,110 --> 00:02:31,460
+So in the minus is third in the minus third greater than zero.
+
+42
+00:02:31,730 --> 00:02:36,230
+This is as simple as sending that ended the opposite side.
+
+43
+00:02:36,230 --> 00:02:39,030
+So to be is, is this then?
+
+44
+00:02:39,250 --> 00:02:41,720
+Uh, yeah.
+
+45
+00:02:42,050 --> 00:02:48,170
+As long as as long as start is this, then it is set, isn't it?
+
+46
+00:02:48,230 --> 00:02:52,400
+So this is exactly, um, the normal condition.
+
+47
+00:02:54,640 --> 00:02:56,350
+The middle is, as we used to do.
+
+48
+00:02:56,830 --> 00:02:59,740
+Now let's think about our guidance for the function.
+
+49
+00:03:00,310 --> 00:03:03,910
+We say if if of middle Lisbon zero.
+
+50
+00:03:04,120 --> 00:03:08,680
+So let's say we tried X, for example, by half, for example.
+
+51
+00:03:09,400 --> 00:03:16,110
+Now let's say that x of half give us something like f of x, give us something like minus 20.
+
+52
+00:03:16,600 --> 00:03:19,000
+Now this is more than zero, but we just need zero.
+
+53
+00:03:19,390 --> 00:03:23,920
+So it means we need to drop the first part of the search observer here.
+
+54
+00:03:24,490 --> 00:03:29,590
+We will not try to start equal mid +1 because we are working on real values.
+
+55
+00:03:29,920 --> 00:03:31,490
+So we'll just say start equal mode.
+
+56
+00:03:32,050 --> 00:03:36,160
+There is no plus one or minus one in more in 3D values and a very similar way.
+
+57
+00:03:36,170 --> 00:03:40,420
+Let's say the next time X was like 2.5.
+
+58
+00:03:41,750 --> 00:03:48,230
+If EXA-, for example, turned out to be 170, this is way beyond the zero that we need.
+
+59
+00:03:48,590 --> 00:03:53,120
+So this mean we need to drop the second part of the search so we right and equal zero.
+
+60
+00:03:53,510 --> 00:03:57,770
+As you see, this is how we use the function to guide the search.
+
+61
+00:03:58,190 --> 00:04:01,520
+But when it comes to assigning we just right start and end.
+
+62
+00:04:02,460 --> 00:04:08,670
+Now, let's go back to this condition, it's all about comparison of the double values.
+
+63
+00:04:09,000 --> 00:04:15,990
+We know that in this problem that start and end are at the zero and zero and an issue that is greater
+
+64
+00:04:15,990 --> 00:04:16,470
+than zero.
+
+65
+00:04:16,680 --> 00:04:20,750
+But Wood Lake wants to start and end are very, very close.
+
+66
+00:04:20,760 --> 00:04:27,630
+I cannot say, or I'll start, uh, just to just to greater than I could to just see that.
+
+67
+00:04:29,400 --> 00:04:34,830
+Because in real values, as you learned in the programming, the real values cannot be compared this
+
+68
+00:04:34,830 --> 00:04:35,160
+way.
+
+69
+00:04:35,370 --> 00:04:38,430
+So we need to compare this to an episode in which is a very small value.
+
+70
+00:04:38,460 --> 00:04:42,690
+This refers to the C++ course or Google that about how to convert double numbers.
+
+71
+00:04:43,350 --> 00:04:45,390
+So and this is just one way.
+
+72
+00:04:45,720 --> 00:04:52,200
+So the moral of that is, we say, as long as there is some error difference between them greater than
+
+73
+00:04:52,200 --> 00:04:54,630
+Epsilon, then that's we still keep going.
+
+74
+00:04:55,080 --> 00:05:02,040
+If once it become Lisbon Epsilon, but what does Epsilon Epsilon is a very, very, very small value.
+
+75
+00:05:02,190 --> 00:05:06,720
+So let's say the difference at some point becomes something like zero point zero zero to three, which
+
+76
+00:05:06,720 --> 00:05:07,950
+is a smaller than this value.
+
+77
+00:05:08,100 --> 00:05:09,270
+Now we know we can stop.
+
+78
+00:05:10,080 --> 00:05:12,960
+So this is a model of one domain estate.
+
+79
+00:05:13,320 --> 00:05:13,830
+So why?
+
+80
+00:05:13,830 --> 00:05:14,790
+Why it's minus nine?
+
+81
+00:05:14,790 --> 00:05:17,010
+Why not one e to minus 15?
+
+82
+00:05:17,020 --> 00:05:17,520
+What not?
+
+83
+00:05:17,520 --> 00:05:18,600
+Why items in a seven?
+
+84
+00:05:18,870 --> 00:05:19,590
+It's up to you.
+
+85
+00:05:20,460 --> 00:05:23,430
+And I would say some clarification about that right now.
+
+86
+00:05:23,640 --> 00:05:27,330
+Observer here there is no middle +1 middle minus one anymore.
+
+87
+00:05:28,490 --> 00:05:32,510
+Look, I would like to say some notes about competitive programming here.
+
+88
+00:05:32,720 --> 00:05:39,290
+First of all, sometimes you will find the problem, saying the answer should be within absolute error
+
+89
+00:05:39,290 --> 00:05:41,120
+of 10 to the bar minus nine.
+
+90
+00:05:41,450 --> 00:05:42,740
+What does this statement mean?
+
+91
+00:05:43,040 --> 00:05:47,390
+It meets if he were to take the flute absolute off your real answer?
+
+92
+00:05:47,630 --> 00:05:48,590
+And their answer?
+
+93
+00:05:48,590 --> 00:05:51,410
+I make sure it is equal to the bar minus light.
+
+94
+00:05:52,370 --> 00:05:58,820
+And here in the bonus research, you would like to put the smaller value so that you guarantee you are
+
+95
+00:05:58,820 --> 00:06:00,050
+very close to the answer.
+
+96
+00:06:00,260 --> 00:06:06,260
+If you use something like 10 to the minus minus five, for example, your error difference would be
+
+97
+00:06:06,260 --> 00:06:08,360
+greater than 10 to the minus nine.
+
+98
+00:06:08,390 --> 00:06:10,130
+I hope that this isn't hard for you to get.
+
+99
+00:06:11,540 --> 00:06:16,310
+I would like to tell you about some things that people do in competitions, and also it's good for others
+
+100
+00:06:16,310 --> 00:06:16,910
+to know about them.
+
+101
+00:06:17,330 --> 00:06:21,980
+First of all, many people than just a competitor start an industry that they use the flute obsidian
+
+102
+00:06:21,980 --> 00:06:26,470
+to avoid any kind of maybe possible overflows or infinite loops.
+
+103
+00:06:26,750 --> 00:06:33,170
+So they, because those are maybe like any anything, could have it in the double values they they use
+
+104
+00:06:33,170 --> 00:06:37,250
+the flute absolute to make sure that this one is always boasted value.
+
+105
+00:06:38,540 --> 00:06:42,680
+The second thing which is very important in programming competitions and many problems is still the
+
+106
+00:06:42,680 --> 00:06:45,140
+competition based on the absolute value is wrong.
+
+107
+00:06:45,410 --> 00:06:46,490
+So there is a trick here.
+
+108
+00:06:46,760 --> 00:06:53,690
+People replace the way loop of the absolute value by iterating maybe like 100 or 200 steps.
+
+109
+00:06:54,170 --> 00:06:59,780
+This guarantees that after 100 or 200 steps of dividing by two of the social space, that the error
+
+110
+00:06:59,780 --> 00:07:02,840
+difference between your answer and that answer is very small.
+
+111
+00:07:03,050 --> 00:07:10,280
+For example, your answer could be 1.5 five three one seven one eight two three, and their answer could
+
+112
+00:07:10,280 --> 00:07:16,460
+be 1.5 to three one seven one eight zero one.
+
+113
+00:07:16,880 --> 00:07:20,120
+So the only difference comes here in the last two digits, maybe.
+
+114
+00:07:20,390 --> 00:07:25,340
+So the model of that is instead of making it depending on the comparisons, which might be a bit tricky.
+
+115
+00:07:25,460 --> 00:07:28,310
+You depend on the iteration.
+
+116
+00:07:28,730 --> 00:07:33,470
+You'll find a lot of people just using the plus in the other two because the overflow problems are in
+
+117
+00:07:33,470 --> 00:07:37,700
+the big when it comes to the real values in most of the programming competitions.
+
+118
+00:07:38,150 --> 00:07:42,640
+But if something fancy that I almost never did did it before.
+
+119
+00:07:43,100 --> 00:07:48,620
+In some problems, if the left and right are greater than one, people use the square root of the multiplication
+
+120
+00:07:48,800 --> 00:07:52,820
+and they claim that this do for the conversions during my computer program create.
+
+121
+00:07:52,820 --> 00:07:55,700
+I never needed that, but in a way I just wanted you to know about it.
+
+122
+00:07:56,870 --> 00:07:59,240
+I'm showing you this good, but don't get it wrong.
+
+123
+00:07:59,240 --> 00:08:00,230
+I don't mean that this is good.
+
+124
+00:08:00,230 --> 00:08:00,650
+It's better.
+
+125
+00:08:00,650 --> 00:08:00,860
+Good.
+
+126
+00:08:00,860 --> 00:08:05,330
+I'm just showing you what I was just meaning I started this good year with Epsilon because I wanted
+
+127
+00:08:05,330 --> 00:08:09,170
+to multiply the start times and otherwise it would keep being zero answer.
+
+128
+00:08:09,890 --> 00:08:15,010
+And sometimes people return to their average of the start and end.
+
+129
+00:08:15,020 --> 00:08:17,210
+Not just the start, but but they never needed that.
+
+130
+00:08:17,990 --> 00:08:21,500
+Uh, and here is what I meant by the fruit absolute in the equation.
+
+131
+00:08:21,950 --> 00:08:25,780
+But if you are in programming competition, I suggest for you more to do it this way.
+
+132
+00:08:25,790 --> 00:08:30,230
+Iterate 100 iterations or 200 iterations and tell you reach the reason.
+
+133
+00:08:30,440 --> 00:08:34,460
+So if that is something you should borrow from this slide, it would be under this line.
+
+134
+00:08:34,460 --> 00:08:35,060
+17.
+
+135
+00:08:35,970 --> 00:08:39,690
+Because many problems would be wrong answers or maybe time limit exceed.
+
+136
+00:08:39,900 --> 00:08:42,690
+But this equation will just solve the problem for you.
+
+137
+00:08:43,260 --> 00:08:43,740
+That's it.

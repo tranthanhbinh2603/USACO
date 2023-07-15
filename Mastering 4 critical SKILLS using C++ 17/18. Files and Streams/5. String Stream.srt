@@ -1,0 +1,159 @@
+0
+1
+00:00:00,990 --> 00:00:07,590
+Another interesting kind of stream is a string stream, the string dream act in a very temporary way.
+1
+
+2
+00:00:07,590 --> 00:00:11,150
+you hash include this sstream and you can use the iStringstream.
+2
+
+3
+00:00:11,640 --> 00:00:13,080
+So what does this mean exactly?
+3
+
+4
+00:00:13,440 --> 00:00:17,790
+We are instead of reading from the console or reading from a file.
+4
+
+5
+00:00:17,790 --> 00:00:19,720
+We are reading from a string that we have.
+5
+
+6
+00:00:20,160 --> 00:00:26,910
+So let's say you have string str, which is "Mustafa 23 years", and you would like to parse it,
+6
+
+7
+00:00:26,950 --> 00:00:31,060
+to extract the word Mostafa and the age here, for example.
+7
+
+8
+00:00:31,410 --> 00:00:35,850
+So one way is to take the string and try to cut it and find twenty-three and so on.
+8
+
+9
+00:00:36,000 --> 00:00:37,120
+This is a lot of logic.
+9
+
+10
+00:00:37,620 --> 00:00:43,020
+What if we are dealing with this input as if it's coming from the console or from a file.
+10
+
+11
+00:00:43,410 --> 00:00:44,540
+So here is how we do that.
+11
+
+12
+00:00:44,820 --> 00:00:47,910
+We define istringstream, let's name it iss.
+12
+
+13
+00:00:48,300 --> 00:00:55,020
+And then you provided with this is str now you start to act with ISS as if you are reading from,
+13
+
+14
+00:00:55,020 --> 00:00:55,830
+say, a console.
+14
+
+15
+00:00:56,100 --> 00:00:59,220
+You say here, ISS name age.
+15
+
+16
+00:00:59,430 --> 00:01:01,260
+If you try to see what age it would be.
+16
+
+17
+00:01:01,260 --> 00:01:01,880
+Twenty three.
+17
+
+18
+00:01:02,270 --> 00:01:08,010
+So, again you have a string, you are dealing with it as a stream, like a console stream or a
+18
+
+19
+00:01:08,010 --> 00:01:08,730
+file stream.
+19
+
+20
+00:01:08,970 --> 00:01:15,450
+And then you are reading from it very normally as you see it was like very trivial to get the twenty
+20
+
+21
+00:01:15,450 --> 00:01:22,320
+three using this way, otherwise you have to split the string and try to identify the number in a similar
+21
+
+22
+00:01:22,320 --> 00:01:22,620
+way.
+22
+
+23
+00:01:22,620 --> 00:01:26,780
+The ostringstream allows you to deal with the string as an output destination.
+23
+
+24
+00:01:27,240 --> 00:01:34,250
+So let's say I would like to create a string and I would like to print Mostafa Space 50 years old.
+24
+
+25
+00:01:34,620 --> 00:01:44,160
+So the way to do that is to define ostringstream "oss" and then write Mostafa space, 50, space years old.
+25
+
+26
+00:01:44,460 --> 00:01:49,100
+If you did oss.str, it will give you Mostafa, 50 years old.
+26
+
+27
+00:01:49,620 --> 00:01:50,730
+This is very nice way.
+27
+
+28
+00:01:50,730 --> 00:01:57,450
+If you would like to construct a string in a complex way that involves a lot of things that you can
+28
+
+29
+00:01:57,450 --> 00:01:58,820
+also define astringstream.
+29
+
+30
+00:01:58,830 --> 00:02:00,450
+Can you read and write in the same way?
+30
+
+31
+00:02:00,450 --> 00:02:04,650
+But I usually use i string stream and o string stream in a separate way.
+31
+
+32
+00:02:04,800 --> 00:02:10,310
+So these two string streams provide very conventional functionalities that it.

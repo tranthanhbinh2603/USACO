@@ -1,0 +1,211 @@
+1
+00:00:01,200 --> 00:00:07,350
+We studied some data structures for containers that are known as container adapters, and it's time
+
+2
+00:00:07,350 --> 00:00:09,750
+to make them more formal about them.
+
+3
+00:00:10,450 --> 00:00:13,800
+Remember, we once had an interesting homework.
+
+4
+00:00:13,800 --> 00:00:18,870
+I asked you to reimplement a stack, but only because you did a structure.
+
+5
+00:00:19,980 --> 00:00:26,790
+The point here is many that the structures can be implemented actually by utilizing others as an example
+
+6
+00:00:26,790 --> 00:00:33,030
+of that, one can implement a set data structure using just the vector, the structure, how to do that
+
+7
+00:00:33,360 --> 00:00:35,890
+with every call for the insertion function.
+
+8
+00:00:36,090 --> 00:00:42,870
+You just sort of the whole vector, this where you are maintaining the vector as a sorted, sorted data
+
+9
+00:00:42,870 --> 00:00:43,340
+structure.
+
+10
+00:00:43,710 --> 00:00:45,000
+But this is very slow.
+
+11
+00:00:45,030 --> 00:00:47,630
+This isn't wise to do it in a very similar way.
+
+12
+00:00:47,880 --> 00:00:51,130
+You can implement a barrier to Q using just set.
+
+13
+00:00:51,150 --> 00:00:52,990
+And this is by the way, it would be very efficient.
+
+14
+00:00:53,250 --> 00:00:58,620
+However, there is another, more suitable little structure that is named as Hib, which is internally
+
+15
+00:00:58,620 --> 00:00:59,330
+just an array.
+
+16
+00:00:59,550 --> 00:01:03,960
+So actually Vertica eventually is implemented based on a vector internally.
+
+17
+00:01:04,890 --> 00:01:10,080
+So the point here is we can implement the same data structures in terms of others.
+
+18
+00:01:10,560 --> 00:01:13,050
+And this stick us to the idea of the adaptor.
+
+19
+00:01:15,210 --> 00:01:22,860
+We use the word adapter and the wardrobing before in the Obbie, you are merely providing an interface
+
+20
+00:01:23,100 --> 00:01:27,250
+of something that is using something behind the scene, something like the composition.
+
+21
+00:01:27,630 --> 00:01:33,960
+So you're actually probably are limiting some functionality from the internal data structures and you
+
+22
+00:01:33,960 --> 00:01:38,160
+are providing some new functionality in C++.
+
+23
+00:01:39,420 --> 00:01:46,020
+Still, there are some data structures that are directly ahead of some other structure and you even
+
+24
+00:01:46,020 --> 00:01:51,300
+have the chance to tell it, to tell him what kind of the underlying data structure that we can use.
+
+25
+00:01:51,990 --> 00:01:53,030
+Think about the stack.
+
+26
+00:01:54,210 --> 00:01:58,620
+We can definitely define a stack based on a vector and use the push back and Bulbeck methods.
+
+27
+00:01:59,040 --> 00:02:05,450
+But Bethwaite, what is the point if we do that, are specific logic for us that that the structure,
+
+28
+00:02:05,730 --> 00:02:11,370
+then we can just read the structure of the stack, say based on the dequeue or within the vector and
+
+29
+00:02:11,370 --> 00:02:14,140
+provide the suitable methods.
+
+30
+00:02:14,880 --> 00:02:16,440
+I hope this isn't confusing for you.
+
+31
+00:02:16,950 --> 00:02:18,160
+So here is some good.
+
+32
+00:02:18,390 --> 00:02:19,880
+This is a model of what I'm saying.
+
+33
+00:02:20,520 --> 00:02:24,240
+We used to use the stack of integrase one internally.
+
+34
+00:02:24,270 --> 00:02:28,340
+The stack is by default will depend on a dequeue to be implemented.
+
+35
+00:02:28,710 --> 00:02:33,630
+You can't actually specify other types of internal data structures.
+
+36
+00:02:33,810 --> 00:02:38,570
+You can specify a state based on a vector state based on a Q stack based on a list.
+
+37
+00:02:39,030 --> 00:02:45,600
+I'm not sure if there is a practical reason that you can decide that O list is more efficient for my
+
+38
+00:02:45,600 --> 00:02:46,440
+usage or not.
+
+39
+00:02:46,740 --> 00:02:52,980
+I would like probably the default one is very good, but it's nice to know that this actually interface
+
+40
+00:02:53,250 --> 00:02:58,530
+and internally there is something else that is used to implement the request in a similar way.
+
+41
+00:02:58,800 --> 00:03:05,390
+The queue is internally at Q and you can use a Q over vector or a Q over list.
+
+42
+00:03:05,970 --> 00:03:07,290
+Now he did an interesting thing.
+
+43
+00:03:07,840 --> 00:03:13,980
+If you tried to use a Q over a stack or Q overset, this will compile, but once you start to use it,
+
+44
+00:03:13,980 --> 00:03:16,400
+it will tell you, hey, I don't find the pushback method.
+
+45
+00:03:16,410 --> 00:03:22,710
+Remember this oral templates seps are going to generate code and in both cases is going to search in
+
+46
+00:03:22,710 --> 00:03:26,640
+the given data structure over a Bush back method.
+
+47
+00:03:26,880 --> 00:03:32,670
+So if you can provide your own data structure with a Bush back method, you can even replace the Internet
+
+48
+00:03:32,670 --> 00:03:33,920
+of these guys with other ones.
+
+49
+00:03:34,470 --> 00:03:36,120
+There is nothing more than that.
+
+50
+00:03:36,330 --> 00:03:38,310
+There is no practical implications.
+
+51
+00:03:38,310 --> 00:03:39,140
+Most of the time.
+
+52
+00:03:39,300 --> 00:03:46,080
+I just wanted you to know that something like Stack and Q and Rearticulate are internally using other
+
+53
+00:03:46,080 --> 00:03:50,640
+data structures and you can even specify some of the details of this data structures that's said.

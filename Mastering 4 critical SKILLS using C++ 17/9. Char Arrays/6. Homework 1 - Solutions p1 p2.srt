@@ -1,0 +1,204 @@
+0
+1
+00:00:00,870 --> 00:00:05,140
+Let's see how to implement the codes for the homework.
+1
+
+2
+00:00:05,200 --> 00:00:07,450
+Number one here, the Is Prefix  method.
+2
+
+3
+00:00:07,470 --> 00:00:10,820
+Our first function, the idea is pretty simple.
+3
+
+4
+00:00:12,390 --> 00:00:19,020
+I would like, first of all, to get rid of an annoying test case when the "small_str" is bigger
+4
+
+5
+00:00:19,020 --> 00:00:19,950
+than the "big_str".
+5
+
+6
+00:00:20,430 --> 00:00:26,760
+And you should develop such test case by yourself to make sure that it is valid like most of my test 
+6
+
+7
+00:00:26,770 --> 00:00:27,970
+cases provided in the file.
+7
+
+8
+00:00:28,350 --> 00:00:30,270
+The big_str was really the big.
+8
+
+9
+00:00:30,270 --> 00:00:31,610
+But what if the small is big?
+9
+
+10
+00:00:31,920 --> 00:00:34,720
+You should make sure that your code doesn't fail. To get rid of,
+10
+
+11
+00:00:34,740 --> 00:00:35,760
+this test case here,
+11
+
+12
+00:00:35,760 --> 00:00:37,410
+We are just handling it first.
+12
+
+13
+00:00:37,860 --> 00:00:43,650
+Now, from now on, we are assuming that the small_str or the prefix is really the smaller one.
+13
+
+14
+00:00:44,310 --> 00:00:50,970
+To make the check, all what we need is to iterate from the beginning on the small one and keep comparing
+14
+
+15
+00:00:50,970 --> 00:00:51,740
+with the big one.
+15
+
+16
+00:00:52,170 --> 00:00:56,910
+If it happens that at any point of time it doesn't match, then we just say "NO", it doesn't match
+16
+
+17
+00:00:56,910 --> 00:00:57,650
+and return here.
+17
+
+18
+00:00:57,990 --> 00:01:05,320
+Otherwise. if we reach this line of code, it makes that all of the current matches are correct.
+18
+
+19
+00:01:05,680 --> 00:01:12,090
+So also so now we print the "YES".  Another hidden test case that you will not be able to test easily;
+19
+
+20
+00:01:12,270 --> 00:01:14,530
+What if the two strings are empty strings?
+20
+
+21
+00:01:14,850 --> 00:01:15,930
+The answer should be yes.
+21
+
+22
+00:01:15,930 --> 00:01:21,600
+And all of the four problems, the prefix, suffix, and so on. So also make sure that your code seems
+22
+
+23
+00:01:21,600 --> 00:01:22,950
+working while for these test cases.
+23
+
+24
+00:01:22,950 --> 00:01:28,170
+For example, you can assign both of them for empty strings and make sure that they are working
+24
+
+25
+00:01:28,170 --> 00:01:28,390
+well.
+25
+
+26
+00:01:28,860 --> 00:01:30,350
+So this is for the first problem.
+26
+
+27
+00:01:30,990 --> 00:01:34,530
+The second problem would like to test the suffix, which is the opposite of it.
+27
+
+28
+00:01:35,220 --> 00:01:36,210
+So this is the suffix,
+28
+
+29
+00:01:36,210 --> 00:01:37,770
+We need very similar logic.
+29
+
+30
+00:01:38,100 --> 00:01:42,810
+Handling the big test case first and then we need to compare from the end.
+30
+
+31
+00:01:43,170 --> 00:01:47,150
+It might end up from you couldn't get in an ugly way.
+31
+
+32
+00:01:47,340 --> 00:01:53,630
+So I tried here to make as much as I could something that is well reading; well readable.
+32
+
+33
+00:01:53,940 --> 00:02:00,070
+Remember that your colleagues will need to read your code and understand it in the company.
+33
+
+34
+00:02:00,420 --> 00:02:03,660
+So try to make sure that your code is readable, is really easy to read.
+34
+
+35
+00:02:03,960 --> 00:02:07,380
+So what I did here is I created two integers:
+35
+
+36
+00:02:07,590 --> 00:02:12,870
+big_end and small_end, pointing to the last element in the array of both of them.
+36
+
+37
+00:02:13,290 --> 00:02:19,500
+And then by iterating with the length of the small size, I'm comparing the end of the guy with
+37
+
+38
+00:02:19,500 --> 00:02:24,180
+the end of the guy and this variable is decreasing and this variable is decreasing in the same time.
+38
+
+39
+00:02:24,420 --> 00:02:26,270
+So very peaceful way.
+39
+
+40
+00:02:26,820 --> 00:02:27,170
+Yeah.
+40
+
+41
+00:02:27,600 --> 00:02:29,340
+So this is a nice way to do it.

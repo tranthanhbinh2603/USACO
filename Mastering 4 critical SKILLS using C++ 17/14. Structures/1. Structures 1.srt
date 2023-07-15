@@ -1,0 +1,464 @@
+0
+1
+00:00:02,120 --> 00:00:11,570
+Similar to the functions, structures come to help us to organize our data, but in a bit different
+1
+
+2
+00:00:11,570 --> 00:00:19,280
+way. remember that we already had this very basic employee system, and each employee has a name, age, salary and
+2
+
+3
+00:00:19,280 --> 00:00:19,740
+gender.
+3
+
+4
+00:00:20,120 --> 00:00:21,880
+So we define 4 arrays for them.
+4
+
+5
+00:00:22,430 --> 00:00:24,540
+In practice, this is hard to maintain,
+5
+
+6
+00:00:24,560 --> 00:00:27,870
+Why? assume we now got a new feature for a person,
+6
+
+7
+00:00:28,220 --> 00:00:29,960
+You have to add a new array for that,
+7
+
+8
+00:00:29,960 --> 00:00:30,300
+Right.
+8
+
+9
+00:00:30,620 --> 00:00:36,170
+So this isn't a way to like to keep incrementing things.
+9
+
+10
+00:00:36,650 --> 00:00:42,200
+C++ comes with a convenient way to solve this problem.
+10
+
+11
+00:00:42,240 --> 00:00:45,110
+Like what if we have more and more and more features?
+11
+
+12
+00:00:45,260 --> 00:00:47,950
+Are we going to keep adding more and more and more arrays?
+12
+
+13
+00:00:48,770 --> 00:00:55,400
+So the way that C++ is doing that is introducing something called struct, and something relevant
+13
+
+14
+00:00:55,400 --> 00:01:01,410
+to it is called class. struct is a data type, it is something similar to data type.
+14
+
+15
+00:01:02,240 --> 00:01:08,510
+Remember, we have things like integer and doubles and float and so on.
+15
+
+16
+00:01:08,540 --> 00:01:10,280
+We call them primitive data types.
+16
+
+17
+00:01:10,460 --> 00:01:12,830
+These are data types supported by the system.
+17
+
+18
+00:01:12,830 --> 00:01:14,740
+Struct is like our new data type.
+18
+
+19
+00:01:14,960 --> 00:01:16,440
+So we here define it as following,
+19
+
+20
+00:01:16,460 --> 00:01:23,840
+We say struct employee, you open this brace, close it.
+20
+
+21
+00:01:24,380 --> 00:01:26,200
+Remember there must be a semicolon here.
+21
+
+22
+00:01:26,480 --> 00:01:33,650
+Then we started to put string name, integer age, double salary, character gender. Now we are defining here
+22
+
+23
+00:01:33,650 --> 00:01:35,150
+something called employee arrays.
+23
+
+24
+00:01:35,390 --> 00:01:37,730
+But the data type is employee. so,
+24
+
+25
+00:01:38,030 --> 00:01:42,790
+"employee" now is our new data type, but it is a user-defined data type.
+25
+
+26
+00:01:42,980 --> 00:01:48,490
+So there are primitive data types like Integer and there is our defined data types.
+26
+
+27
+00:01:48,860 --> 00:01:54,080
+Now notice here, there is only this struct that has our data.
+27
+
+28
+00:01:54,110 --> 00:01:58,830
+so you can think of struct as a way to collect your member data, okay.
+28
+
+29
+00:01:59,180 --> 00:02:02,330
+We are calling them member data or just variable anyway.
+29
+
+30
+00:02:02,930 --> 00:02:06,910
+Now let's say that there is a new feature that you would like to add to the system.
+30
+
+31
+00:02:07,250 --> 00:02:12,540
+The only thing that you need to come to do is just to come to this struct and add the new feature here.
+31
+
+32
+00:02:12,830 --> 00:02:18,740
+So this way, we allowed the program to grow up with minimal changes,
+32
+
+33
+00:02:18,930 --> 00:02:23,390
+OK. so this is the critical usage of a struct.
+33
+
+34
+00:02:23,630 --> 00:02:31,620
+It helps us to gather together the relevant variables in something and we define it as a data type.
+34
+
+35
+00:02:32,990 --> 00:02:38,360
+So let's see, how can we create elements, we can say element first, then =
+35
+
+36
+00:02:38,370 --> 00:02:41,590
+you open braces and you give it in the order of the struct.
+36
+
+37
+00:02:41,600 --> 00:02:44,150
+You can also remove this equal as a C++ style.
+37
+
+38
+00:02:44,630 --> 00:02:50,690
+Once you did that, you have a new variable named first, which is of type class employee and it
+38
+
+39
+00:02:50,690 --> 00:02:53,420
+has the name, age, salary, and blah blah blah.
+39
+
+40
+00:02:53,720 --> 00:02:57,170
+If I would like to add it to array, we add it in a very normal way.
+40
+
+41
+00:02:57,200 --> 00:03:00,230
+Just you add it here with equal first and that's it.
+41
+
+42
+00:03:00,740 --> 00:03:09,080
+OK, what if I would like to print or access things, you can say here "court<<first.name", the dot "." operator
+42
+
+43
+00:03:09,200 --> 00:03:11,030
+is something that's a bit new for us.
+43
+
+44
+00:03:11,240 --> 00:03:15,200
+We start to use it, to access the elements of a struct.
+44
+
+45
+00:03:15,350 --> 00:03:20,210
+So we say here first.name, it is just how we get the object.
+45
+
+46
+00:03:20,750 --> 00:03:26,180
+What else, if we have something like employee array of added (employee_arr[added]), what is that?
+46
+
+47
+00:03:26,600 --> 00:03:29,350
+This is array element of type employee.
+47
+
+48
+00:03:29,750 --> 00:03:37,730
+So again, you can say .name = "hani", .age = 55. So you can initialize it with this way, or you can
+48
+
+49
+00:03:37,730 --> 00:03:41,410
+later read it or print it or you can access this way.
+49
+
+50
+00:03:41,990 --> 00:03:43,520
+There is an interesting thing,
+50
+
+51
+00:03:43,520 --> 00:03:49,880
+In eclipse, if you click the dot, it's going to give you this list.
+51
+
+52
+00:03:49,910 --> 00:03:56,870
+If it didn't give you, just press "ctrl+space", it is going to give you this list of the available variables
+52
+
+53
+00:03:56,870 --> 00:03:58,280
+for this object.
+53
+
+54
+00:03:58,280 --> 00:04:00,380
+Please familiarize yourself with the syntax.
+54
+
+55
+00:04:01,950 --> 00:04:07,440
+If you would like to read an employee, we can have a function here, say, (read_emplyee) and then
+55
+
+56
+00:04:07,440 --> 00:04:09,150
+it says the following, cin>>
+56
+
+57
+00:04:10,280 --> 00:04:13,350
+employee_arr[added].name
+57
+
+58
+00:04:13,610 --> 00:04:21,020
+So, again, you see this syntex, I would like you all the time to deal with that, as we have data type of type
+58
+
+59
+00:04:21,230 --> 00:04:22,160
+that we define.
+59
+
+60
+00:04:22,400 --> 00:04:26,580
+Then (.name) is getting something internal in this struct that we are going to use.
+60
+
+61
+00:04:26,840 --> 00:04:32,960
+So, again, as simple as (.name) read it, (.age), (.gender), and so on. In a similar way, we can just iterate
+61
+
+62
+00:04:32,960 --> 00:04:37,040
+on the array and just print it.
+62
+
+63
+00:04:37,370 --> 00:04:41,420
+So if you would like to print it, you can say "for(int i = 0;
+63
+
+64
+00:04:41,630 --> 00:04:45,890
+i < added; ++i)" so here employee e = employee_arr[i]
+64
+
+65
+00:04:45,900 --> 00:04:53,060
+employee_arr[i], we are accessing the array and getting the object and then printing it.
+65
+
+66
+00:04:53,500 --> 00:05:00,060
+It's important to notice that when you do this syntax, there are now two copies of the employees object.
+66
+
+67
+00:05:00,260 --> 00:05:05,430
+One is the employee e and one inside the array[i].
+67
+
+68
+00:05:05,480 --> 00:05:09,240
+Later We will know how to make it one, one only looking to one position in the memory,
+68
+
+69
+00:05:09,500 --> 00:05:14,020
+It's very same to the reference.
+69
+
+70
+00:05:14,240 --> 00:05:18,460
+If you put reference here, it's looking now at the same position in the memory.
+70
+
+71
+00:05:18,830 --> 00:05:20,050
+More on that later.
+71
+
+72
+00:05:21,530 --> 00:05:24,840
+OK, let's read it in a different way,
+72
+
+73
+00:05:24,890 --> 00:05:27,920
+Yeah, here is the reference way anyway.
+73
+
+74
+00:05:28,280 --> 00:05:36,770
+So I'm here defining a method, (read_employee) that is taking an instance of employee, but with reference.
+74
+
+75
+00:05:37,070 --> 00:05:41,520
+So remember, when we take something with reference, it's looking to the memory.
+75
+
+76
+00:05:41,780 --> 00:05:43,700
+So now we are reading a.name,
+76
+
+77
+00:05:43,880 --> 00:05:46,720
+a.age, a.salary, a.gender,
+77
+
+78
+00:05:47,000 --> 00:05:51,260
+This is updated as in the memory based on the caller.
+78
+
+79
+00:05:51,500 --> 00:05:52,970
+So now, looking to the memory here.
+79
+
+80
+00:05:52,990 --> 00:05:57,890
+We are doing what? employees of array of added (employee_arr[added]++)) ++ will be applied later,
+80
+
+81
+00:05:58,100 --> 00:06:04,340
+So now we are adding an employee position here and then we are giving it to this function, which
+81
+
+82
+00:06:04,340 --> 00:06:05,650
+is going to read the elements.
+82
+
+83
+00:06:05,660 --> 00:06:09,210
+If you didn't put this reference, it is going to be by copy,
+83
+
+84
+00:06:09,230 --> 00:06:13,820
+So this one will read something, but the array will not be updated. in a similar way,
+84
+
+85
+00:06:13,970 --> 00:06:17,150
+If you would like to print, you print with reference e "&e",
+85
+
+86
+00:06:17,630 --> 00:06:19,670
+so you are referring to the reference.
+86
+
+87
+00:06:19,820 --> 00:06:23,570
+But the question here, why putting reference in printing?
+87
+
+88
+00:06:23,570 --> 00:06:28,280
+We don't care if this object is actually changed, the reason behind that,
+88
+
+89
+00:06:28,460 --> 00:06:34,700
+It saves time and memory; because when you put reference, you don't copy the object and you should
+89
+
+90
+00:06:34,700 --> 00:06:35,480
+always favor that. 
+90
+
+91
+00:06:35,990 --> 00:06:40,970
+So we have here a print employees function "print_employees()", iterating on every employee, calling employee function
+91
+
+92
+00:06:40,970 --> 00:06:42,140
+to be printed.
+92
+
+93
+00:06:43,190 --> 00:06:43,940
+That's it for now.

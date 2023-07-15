@@ -1,0 +1,351 @@
+1
+00:00:01,080 --> 00:00:03,180
+Let's continue more on unique pointers.
+
+2
+00:00:05,270 --> 00:00:10,740
+We would like to see some cases where we are trying to pass a unique pointer to a function the first
+
+3
+00:00:10,740 --> 00:00:16,110
+way, as you know, we have several ways to get something very valuable, a reference by the semantic
+
+4
+00:00:16,110 --> 00:00:16,610
+and so on.
+
+5
+00:00:16,980 --> 00:00:19,970
+So the first one here is passing by a unique point.
+
+6
+00:00:19,980 --> 00:00:23,240
+If we'd like to best buy value so you can hear to hear some reference.
+
+7
+00:00:23,580 --> 00:00:26,670
+Now, there's an issue here, how to Bashira unique pointer.
+
+8
+00:00:26,820 --> 00:00:33,410
+And we said that there should be only one pointer who is handling the Internet data.
+
+9
+00:00:33,600 --> 00:00:40,230
+Then this again would need a would need a move semantic notice here and all of the function and trying
+
+10
+00:00:40,230 --> 00:00:42,540
+to verify that the B is a null pointer.
+
+11
+00:00:42,840 --> 00:00:44,310
+So be careful from that.
+
+12
+00:00:45,830 --> 00:00:52,700
+In the second case, we have here, the difference of B now, this is very this is very normal, like
+
+13
+00:00:53,240 --> 00:00:56,140
+it's OK to pass the unique pointer here by reference.
+
+14
+00:00:56,420 --> 00:01:01,190
+Notice that one might say, oh, but this now means that there are two pointers who are looking to the
+
+15
+00:01:01,190 --> 00:01:01,910
+Internet data.
+
+16
+00:01:02,210 --> 00:01:03,310
+No, this isn't true.
+
+17
+00:01:03,740 --> 00:01:08,240
+The Internet data is looking by the same object we have in here, an alias for it.
+
+18
+00:01:08,480 --> 00:01:10,610
+So B here is the same as a caller.
+
+19
+00:01:10,610 --> 00:01:11,840
+We are looking to the same thing.
+
+20
+00:01:12,590 --> 00:01:16,490
+What are the consequences of providing a function with a reference?
+
+21
+00:01:16,850 --> 00:01:19,500
+It means that someone might destroy our data.
+
+22
+00:01:19,820 --> 00:01:26,030
+So when you are using such a function, do you really mean it to be very careful if you intend to do
+
+23
+00:01:26,030 --> 00:01:31,120
+that later, because you are passing also by reference, but you are using this time.
+
+24
+00:01:31,670 --> 00:01:38,300
+So as we are using colourist here, we we cannot we can definitely again, still believe with the pointer
+
+25
+00:01:38,300 --> 00:01:41,600
+value here, but we cannot assign it to a different value.
+
+26
+00:01:41,810 --> 00:01:43,010
+We cannot reset it.
+
+27
+00:01:43,340 --> 00:01:49,010
+So they could hear about this case that no one can store or play with the actual pointer itself of the
+
+28
+00:01:49,010 --> 00:01:54,380
+object, but they can play with the internals, like changing its value in a similar way.
+
+29
+00:01:54,380 --> 00:02:01,100
+We can use the best thing, like our value reference, like the semantic and as we know, this would
+
+30
+00:02:01,100 --> 00:02:06,160
+allow you to best buy a temporary value or to use movimiento everybody like here.
+
+31
+00:02:06,680 --> 00:02:08,340
+So let's see A uses you for that.
+
+32
+00:02:08,600 --> 00:02:15,400
+These are the three functions we discussed I had define the B1 normal way.
+
+33
+00:02:15,800 --> 00:02:18,890
+I also hear took a difference of B2 over B1.
+
+34
+00:02:19,160 --> 00:02:22,400
+This is okay this is just LSP one B two are the same thing.
+
+35
+00:02:22,970 --> 00:02:28,460
+Now if I tried to call Brint one of B2 with this function is going to give compiler error.
+
+36
+00:02:28,460 --> 00:02:31,540
+Why would this now involve a copy constructor.
+
+37
+00:02:31,550 --> 00:02:36,900
+You are trying to copy this to, to the B is going to combine because we are just allowing the copy
+
+38
+00:02:36,950 --> 00:02:37,470
+constructor.
+
+39
+00:02:37,670 --> 00:02:42,080
+The way here is to move the B2 from here to this guy.
+
+40
+00:02:42,470 --> 00:02:46,880
+But be careful once the this function is done B to here is garbage.
+
+41
+00:02:48,230 --> 00:02:51,290
+OK, let's reset it now because we did hear a remove here.
+
+42
+00:02:51,440 --> 00:02:54,020
+I can now kolby to to this guy.
+
+43
+00:02:54,050 --> 00:02:55,400
+This is working very well.
+
+44
+00:02:55,550 --> 00:02:56,000
+Why.
+
+45
+00:02:56,240 --> 00:02:59,150
+Because B here is by reference, so no problem at all.
+
+46
+00:03:00,770 --> 00:03:03,740
+But notice that I cannot call Brint.
+
+47
+00:03:03,740 --> 00:03:04,940
+It was a move.
+
+48
+00:03:05,040 --> 00:03:06,860
+There is no need to do that.
+
+49
+00:03:06,860 --> 00:03:13,340
+But in case y because the function here Brinda two is using reference but is incorrect.
+
+50
+00:03:13,340 --> 00:03:19,100
+And as I said, if there is a temporary variable like the one coming, remove this one need to be reference.
+
+51
+00:03:19,100 --> 00:03:19,940
+I need to be honest.
+
+52
+00:03:20,240 --> 00:03:23,360
+That's why the case of Brinda three is going to work very well for you.
+
+53
+00:03:25,250 --> 00:03:30,020
+Returning from a function is a bit special case like thinking here about the good pointer.
+
+54
+00:03:30,260 --> 00:03:32,840
+You are returning it from the function to taking it here.
+
+55
+00:03:33,110 --> 00:03:39,860
+It means, practically speaking, two things are looking to the two things are looking to the to the
+
+56
+00:03:39,860 --> 00:03:40,430
+data now.
+
+57
+00:03:40,640 --> 00:03:43,970
+But but in C++, we know that this one is going to really be destructed.
+
+58
+00:03:44,150 --> 00:03:48,410
+So with some moving here sematic, we can just get me out of here and put it here.
+
+59
+00:03:48,620 --> 00:03:50,690
+So it's OK to return any pointer.
+
+60
+00:03:52,310 --> 00:04:02,060
+The right way to use unique pointers isn't to create them in the in the way like it in as we did C++
+
+61
+00:04:02,330 --> 00:04:04,730
+encourage you and we will refer to that more later.
+
+62
+00:04:04,940 --> 00:04:10,730
+Do you something we called Make Unique, Make Unique is a helper function that helps you to create a
+
+63
+00:04:10,730 --> 00:04:11,990
+unique object.
+
+64
+00:04:12,380 --> 00:04:13,700
+So how to how to do that?
+
+65
+00:04:13,880 --> 00:04:19,820
+You define this part, you use equal or maybe précis, and then you call the mechanic and then you are
+
+66
+00:04:19,820 --> 00:04:24,680
+using here the same template as the object here and here embraces.
+
+67
+00:04:24,680 --> 00:04:26,660
+You are going to you are going broke is here.
+
+68
+00:04:26,660 --> 00:04:30,230
+You are going to use that the parameters to initialize something.
+
+69
+00:04:30,620 --> 00:04:35,690
+For example, if it is an integer, you say now here like a constructor aside and give it to any.
+
+70
+00:04:37,530 --> 00:04:42,520
+In a if you would like to make a shorter sentence, you can use the altar now because this function
+
+71
+00:04:42,520 --> 00:04:43,520
+knew about the data type.
+
+72
+00:04:43,530 --> 00:04:46,590
+So can you just use it to be three make unique of 20?
+
+73
+00:04:46,830 --> 00:04:49,840
+This is actually how we do it all the time in the in the market.
+
+74
+00:04:50,280 --> 00:04:52,350
+Now, I would like to to to stress the meaning.
+
+75
+00:04:52,350 --> 00:04:54,960
+I would like to show you how to do it with a class.
+
+76
+00:04:55,290 --> 00:04:58,650
+Let's say we have a class embley that have two parameters.
+
+77
+00:04:59,920 --> 00:05:04,380
+Now I would like to call the Mikuni if I would like to do it in the normal way, I'm going to create
+
+78
+00:05:04,380 --> 00:05:10,220
+a unique pointer over amply and then here create an object of ability and the values for it.
+
+79
+00:05:10,990 --> 00:05:15,750
+I would like to make unique that I'm going to make unique, use the same template and then open the
+
+80
+00:05:15,750 --> 00:05:17,950
+braces and start to give it the parameters.
+
+81
+00:05:18,210 --> 00:05:25,020
+So think of the parameters here of the make unique function as the same parameters as your object.
+
+82
+00:05:25,650 --> 00:05:28,710
+Now again, notice number here is a pointer.
+
+83
+00:05:29,130 --> 00:05:34,160
+If you would like to access it, then you have to deal it with the pointer.
+
+84
+00:05:34,170 --> 00:05:39,690
+So for example, you say here brain is going to print, but if you would like to access the functionality
+
+85
+00:05:39,840 --> 00:05:43,200
+of a unique pointer itself, then you have to use the douget.
+
+86
+00:05:43,500 --> 00:05:50,990
+So the arrow is handling what you are pointing to it, but the DOT is handling the object of your pointer.
+
+87
+00:05:51,120 --> 00:05:52,740
+It's up from now on.
+
+88
+00:05:52,740 --> 00:05:57,630
+I would like you to get use of the make unique function that it.

@@ -1,0 +1,729 @@
+0
+1
+00:00:01,110 --> 00:00:07,080
+One of the critical topics to know about the floating point numbers is the rounding errors.
+1
+
+2
+00:00:07,590 --> 00:00:11,360
+Recall we once highlighted about the double comparisons.
+2
+
+3
+00:00:11,790 --> 00:00:17,430
+If you have here a number, like a= 3/7 and you incremented 1 here and then you subtracted
+3
+
+4
+00:00:17,430 --> 00:00:22,120
+it. If you tried to compare these 2 numbers, surprisingly, sometimes it would not be the same one.
+4
+
+5
+00:00:22,500 --> 00:00:24,110
+Here we have 5 and 4.
+5
+
+6
+00:00:25,950 --> 00:00:34,880
+And if you try to print them, surprisingly, you might find that this 4.99999 is printed as 5.
+6
+
+7
+00:00:35,160 --> 00:00:37,090
+But if you try to compare, they are not equal.
+7
+
+8
+00:00:37,470 --> 00:00:44,640
+So the reason behind that, as we highlighted before, is C++ is using an approximation for this floating
+8
+
+9
+00:00:44,640 --> 00:00:45,960
+point or read values.
+9
+
+10
+00:00:46,350 --> 00:00:49,650
+And the lesson was you should not compare directly.
+10
+
+11
+00:00:49,660 --> 00:00:51,450
+So today we will learn a little more about that.
+11
+
+12
+00:00:51,690 --> 00:00:54,070
+And we learn one way to make a comparison.
+12
+
+13
+00:00:54,840 --> 00:01:00,300
+But before that, I would like you to take the chance, read this program and tell us what is the output
+13
+
+14
+00:01:00,300 --> 00:01:01,070
+of this program.
+14
+
+15
+00:01:03,090 --> 00:01:08,720
+OK, so probably you guessed some of them correctly, this one is going to print 2 stars. We have
+15
+
+16
+00:01:08,730 --> 00:01:14,370
+we have 0,5, so it's going to increment twice. we're going also to print 5# because
+16
+
+17
+00:01:14,370 --> 00:01:16,680
+0.2 is going to be incremented like 5 times.
+17
+
+18
+00:01:17,110 --> 00:01:21,410
+Surprisingly, the third one is going to work for infinity.
+18
+
+19
+00:01:21,420 --> 00:01:25,140
+If you tried this on your computer, this would not be printed 10 times.
+19
+
+20
+00:01:25,320 --> 00:01:27,830
+It would be printed as infinity numbers.
+20
+
+21
+00:01:28,110 --> 00:01:31,010
+So what's wrong with such a very simple equation?
+21
+
+22
+00:01:31,530 --> 00:01:33,130
+The 'r' not equal just one.
+22
+
+23
+00:01:33,160 --> 00:01:34,190
+What's wrong with that?
+23
+
+24
+00:01:35,130 --> 00:01:36,800
+The wrong is here in the 0.1.
+24
+
+25
+00:01:37,500 --> 00:01:42,540
+So let's introduce two things about C++ and the math itself. In math,
+25
+
+26
+00:01:42,780 --> 00:01:46,450
+if you say 5 divided by 2, this is just about 2.5.
+26
+
+27
+00:01:46,470 --> 00:01:47,450
+Nothing wrong about that.
+27
+
+28
+00:01:47,940 --> 00:01:50,940
+If you divide 1 by 10, it's 0.1, so far so good.
+28
+
+29
+00:01:51,450 --> 00:01:56,610
+But if you try to represent 1/3, in math, you would notice it is 0.33333333
+29
+
+30
+00:01:56,610 --> 00:01:57,440
+3 forever.
+30
+
+31
+00:01:58,170 --> 00:02:05,160
+We can write this in a shorter notation and say 0.(3), which means that 3 is repeating
+31
+
+32
+00:02:05,160 --> 00:02:08,460
+forever, but about 3/7?
+32
+
+33
+00:02:09,150 --> 00:02:12,170
+If you tried in the calculator, it would be also repeating forever.
+33
+
+34
+00:02:12,420 --> 00:02:16,490
+So we find that this pattern 428571 is repeating forever.
+34
+
+35
+00:02:16,510 --> 00:02:19,710
+We are going to put it in parentheses () to indicate repeating forever.
+35
+
+36
+00:02:20,580 --> 00:02:25,980
+If you thought about it, if in math these two numbers are going forever, then we cannot represent
+36
+
+37
+00:02:25,980 --> 00:02:28,080
+them in limited storage.
+37
+
+38
+00:02:28,560 --> 00:02:31,820
+That's why C++ eventually have to approximate this number.
+38
+
+39
+00:02:32,250 --> 00:02:35,380
+It cannot just use it as it. It can not just represent it going forever.
+39
+
+40
+00:02:36,810 --> 00:02:43,590
+So this is one reason why C++ eventually or any programming language would have problems will come representing
+40
+
+41
+00:02:43,590 --> 00:02:44,370
+floating numbers.
+41
+
+42
+00:02:44,820 --> 00:02:46,190
+But it is what's more tricky.
+42
+
+43
+00:02:46,680 --> 00:02:48,240
+Let's think about 0.1.
+43
+
+44
+00:02:48,680 --> 00:02:52,140
+It looks like very, very straightforward in decimals.
+44
+
+45
+00:02:52,710 --> 00:02:59,240
+But remember, everything in the lower level in C++ is just zeros and ones. When we try to represent
+45
+
+46
+00:02:59,260 --> 00:03:01,440
+zero one in binary representation,
+46
+
+47
+00:03:01,560 --> 00:03:06,150
+and I know that you don't know how to make that, then you find it represented as following.
+47
+
+48
+00:03:06,510 --> 00:03:11,050
+It is actually 0.0, then 0011 is repeating forever.
+48
+
+49
+00:03:11,640 --> 00:03:17,160
+This means that although the number 0.1 is very straightforward in math and in decimal
+49
+
+50
+00:03:17,160 --> 00:03:20,300
+systems, but in binary it's also going forever.
+50
+
+51
+00:03:20,730 --> 00:03:26,610
+So 0.1 would have to be approximated also
+51
+
+52
+00:03:26,610 --> 00:03:28,160
+so it would not be accurate.
+52
+
+53
+00:03:28,470 --> 00:03:35,580
+That's why in the slide here you are incrementing with 0.1 which is internally approximated.
+53
+
+54
+00:03:36,330 --> 00:03:42,150
+So this one, when it comes to 'r' and one, this one will not be actually one.
+54
+
+55
+00:03:42,150 --> 00:03:44,360
+It would be something like 0.9999999.
+55
+
+56
+00:03:44,370 --> 00:03:45,920
+So the comparison will not work.
+56
+
+57
+00:03:47,770 --> 00:03:55,650
+OK, let's have some fun with the IOI manipulators, if you include 'iomanip' to see the precision. 
+57
+
+58
+00:03:55,720 --> 00:03:56,900
+Let's print the five and six.
+58
+
+59
+00:03:57,490 --> 00:04:03,490
+Fair enough that the .0 is removed. If you try to print 0.1 or  1/3.
+59
+
+60
+00:04:03,850 --> 00:04:06,460
+let's set precision with 20, we want 20 digits.
+60
+
+61
+00:04:06,820 --> 00:04:13,060
+When you see the 0.1 printed, you will notice there are some numbers in the end here.
+61
+
+62
+00:04:13,570 --> 00:04:15,280
+So some numbers are here.
+62
+
+63
+00:04:15,850 --> 00:04:22,900
+If you say the 1/3, it will have some numbers that are not just 0.33333
+63
+
+64
+00:04:22,900 --> 00:04:23,170
+...
+64
+
+65
+00:04:23,470 --> 00:04:30,760
+So these two cases are cases where C++ is going to approximate your numbers and they cannot represented
+65
+
+66
+00:04:30,760 --> 00:04:33,250
+in completely appropriate way.
+66
+
+67
+00:04:36,800 --> 00:04:43,910
+As a side note, the precision can help us to do some rounding to the numbers. Let's use here's some
+67
+
+68
+00:04:43,910 --> 00:04:48,940
+number like c=3.14, and then try to print a precision like, say, if you printed
+68
+
+69
+00:04:49,040 --> 00:04:53,230
+9, it should print 9 numbers, but it didn't print 9 numbers.
+69
+
+70
+00:04:53,240 --> 00:04:53,720
+Why?
+70
+
+71
+00:04:53,960 --> 00:04:56,360
+You have to use the 'fixed' also with C++.
+71
+
+72
+00:04:56,630 --> 00:05:00,490
+So every time you are using the precision, please also use 'fixed'.
+72
+
+73
+00:05:00,650 --> 00:05:05,000
+Now if you try to use the fixed here and printing the 9, it is going to print this number with nine
+73
+
+74
+00:05:05,000 --> 00:05:05,420
+digits.
+74
+
+75
+00:05:05,790 --> 00:05:06,400
+So far so good.
+75
+
+76
+00:05:06,410 --> 00:05:10,970
+I would like you here to highlight the rounding of a number approximating a number.
+76
+
+77
+00:05:11,270 --> 00:05:17,890
+If you say it for this number up to 7, then it will be a couple of 00. For 6, it's 0here.
+77
+
+78
+00:05:18,470 --> 00:05:19,520
+Five is OK.
+78
+
+79
+00:05:19,880 --> 00:05:23,530
+If you say that I want to print it to 4, C++ is going to make an approximation.
+79
+
+80
+00:05:23,810 --> 00:05:26,960
+So this 8 is going to be approximated and give us 1 here.
+80
+
+81
+00:05:26,990 --> 00:05:30,050
+So now 66. If you tried to approximate to 3,
+81
+
+82
+00:05:30,320 --> 00:05:35,600
+This 6 is going to be removed and this 6 is going to be 7. Approximate more of the setprecision (2),
+82
+
+83
+00:05:35,600 --> 00:05:37,670
+it will be 7 go to 1 here
+83
+
+84
+00:05:37,670 --> 00:05:38,570
+so it will be 2.
+84
+
+85
+00:05:38,930 --> 00:05:44,030
+So, you know, in math, if you like to approximate, you see
+85
+
+86
+00:05:44,030 --> 00:05:48,830
+if the digit is greater than 5, then you increment to the one before it.
+86
+
+87
+00:05:48,860 --> 00:05:49,990
+OK, this is just math.
+87
+
+88
+00:05:50,660 --> 00:05:52,280
+But be careful.
+88
+
+89
+00:05:53,540 --> 00:05:58,970
+Let's say here you are approximating this number to 3, so the 8 will make the 4 to be 5
+89
+
+90
+00:05:59,450 --> 00:06:02,560
+and the 5. Should the 5 make the 6 to be 7 or not?
+90
+
+91
+00:06:03,050 --> 00:06:08,780
+This is something that repeat. Here in our case, the 5 doesn't increment the number only if
+91
+
+92
+00:06:08,780 --> 00:06:15,320
+the number are 6, 7, 8, or 9 and you are set precision, it's  going to increment to the number before
+92
+
+93
+00:06:15,320 --> 00:06:16,900
+them, otherwise it would not affect it.
+93
+
+94
+00:06:17,480 --> 00:06:22,220
+So the moral of that, you can actually have some control over the rounding of the printed numbers.
+94
+
+95
+00:06:23,360 --> 00:06:27,500
+Comparison:  as we know now, direct comparison is wrong.
+95
+
+96
+00:06:27,950 --> 00:06:34,220
+If you would like to compare number, here is one way. You can think of the difference between two numbers.
+96
+
+97
+00:06:34,520 --> 00:06:40,970
+What happens if we have two numbers that we think they are equal, but there might be very minor
+97
+
+98
+00:06:40,970 --> 00:06:42,140
+differences in the value?
+98
+
+99
+00:06:42,530 --> 00:06:47,690
+If we so substracted the two numbers together, the difference would be something like maybe 10^-9 
+99
+
+100
+00:06:48,200 --> 00:06:53,790
+, 10^-8,  or 10^-10, something very small.
+100
+
+101
+00:06:54,170 --> 00:06:59,120
+So if you would like to check for comparison, we might start with comparing if they are very, very
+101
+
+102
+00:06:59,120 --> 00:06:59,780
+close or not.
+102
+
+103
+00:06:59,780 --> 00:07:02,270
+If they are very close, we consider them equal.
+103
+
+104
+00:07:02,450 --> 00:07:05,420
+Otherwise, we just can compare normally.
+104
+
+105
+00:07:05,420 --> 00:07:06,480
+less than or greater than.
+105
+
+106
+00:07:06,950 --> 00:07:08,180
+So here is how to code that.
+106
+
+107
+00:07:08,660 --> 00:07:14,000
+I'm defining a function that takes two numbers a and B and some EPS.
+107
+
+108
+00:07:14,360 --> 00:07:19,630
+This EPS represents the error gap between the two numbers, the potential one.
+108
+
+109
+00:07:20,030 --> 00:07:26,420
+And here I'm saying float absolute "fabs" between a and b, remember "fabs" is getting the absolute which is
+109
+
+110
+00:07:26,420 --> 00:07:30,400
+a positive sign, but in a float representations.
+110
+
+111
+00:07:30,410 --> 00:07:36,650
+So if we subtracted the two numbers and they are really very, very close, like one
+111
+
+112
+00:07:36,650 --> 00:07:39,650
+and one point something very, very small.
+112
+
+113
+00:07:39,980 --> 00:07:42,800
+We know the difference should be less than this EPS value.
+113
+
+114
+00:07:43,160 --> 00:07:48,560
+If it's less than EPS value, we return 0 to indicate they are equal, otherwise they are not
+114
+
+115
+00:07:48,560 --> 00:07:48,950
+equal.
+115
+
+116
+00:07:48,950 --> 00:07:53,870
+We can now compare normally less than and greater than. If a<b, we return -1.
+116
+
+117
+00:07:54,080 --> 00:07:55,300
+Otherwise, we return 1.
+117
+
+118
+00:07:55,640 --> 00:08:00,620
+So this function is returning either 0, 1, or -1. 0 for equal,  one
+118
+
+119
+00:08:00,620 --> 00:08:02,830
+if the first is bigger, and -1 if smaller.
+119
+
+120
+00:08:03,350 --> 00:08:10,010
+Now we are defining here our a and b like 3/7 and this one I'm making here 0.1
+120
+
+121
+00:08:10,010 --> 00:08:13,340
+to make it more problematic as an internal representation.
+121
+
+122
+00:08:13,850 --> 00:08:16,340
+If I compared a ==b, it would be 0.
+122
+
+123
+00:08:16,790 --> 00:08:21,560
+But now if I say double comparison to a and b, is it ==0? , is it equal?
+123
+
+124
+00:08:21,560 --> 00:08:22,400
+It would say yes.
+124
+
+125
+00:08:22,400 --> 00:08:22,760
+One.
+125
+
+126
+00:08:24,250 --> 00:08:29,860
+Now, let's see why this might be also very careful, very, very dangerous function. If you try to
+126
+
+127
+00:08:29,860 --> 00:08:36,130
+compare1/3 with 0.33333, and you say it is ==0?
+127
+
+128
+00:08:36,730 --> 00:08:37,420
+It will be answered
+128
+
+129
+00:08:37,420 --> 00:08:37,790
+Yes.
+129
+
+130
+00:08:38,590 --> 00:08:46,390
+Now, if you tried to use less precision here, like you say, this just number here, ==0?
+130
+
+131
+00:08:46,390 --> 00:08:48,070
+The answer is false.
+131
+
+132
+00:08:48,070 --> 00:08:48,570
+Why?
+132
+
+133
+00:08:49,000 --> 00:08:55,050
+Because the difference of these two numbers is greater than 1e-10. You notice here
+133
+
+134
+00:08:55,060 --> 00:09:01,480
+if you try to think of the difference, it would be greater than 10e-10
+134
+
+135
+00:09:01,480 --> 00:09:02,410
+...
+135
+
+136
+00:09:03,040 --> 00:09:08,680
+So now this EPS value is now a problem, like what is the right very small difference.
+136
+
+137
+00:09:08,710 --> 00:09:10,560
+This is really a very challenging question.
+137
+
+138
+00:09:11,080 --> 00:09:12,000
+Let's play with that.
+138
+
+139
+00:09:12,250 --> 00:09:17,640
+I'm going to use the same number, but using ten to the power -9, 
+139
+
+140
+00:09:17,640 --> 00:09:18,580
+...
+140
+
+141
+00:09:18,580 --> 00:09:19,740
+That is going to work out.
+141
+
+142
+00:09:20,140 --> 00:09:26,380
+So although the idea of comparing two numbers using the difference is a good idea and I hope you got
+142
+
+143
+00:09:26,380 --> 00:09:33,010
+it, the risk is what should be the value of the EPS value. Typically something that e-10 also
+143
+
+144
+00:09:33,010 --> 00:09:34,160
+is going to work well
+144
+
+145
+00:09:34,180 --> 00:09:39,680
+in most of the cases. The moral of that even this problem, even this way is still problematic.
+145
+
+146
+00:09:40,090 --> 00:09:40,620
+That's it.

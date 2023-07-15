@@ -1,0 +1,1029 @@
+0
+1
+00:00:01,580 --> 00:00:07,250
+In the last question, I asked you to try to understand this popular count sort algorithm. I see many
+1
+
+2
+00:00:07,250 --> 00:00:09,830
+courses when they try to explain to the students
+2
+
+3
+00:00:10,250 --> 00:00:15,170
+the count sort algorithm, they start with this version, and I believe this is bad and wrong, and I
+3
+
+4
+00:00:15,170 --> 00:00:17,840
+know they do just to follow some textbooks.
+4
+
+5
+00:00:18,230 --> 00:00:19,910
+But this is a bad idea, in my opinion.
+5
+
+6
+00:00:20,330 --> 00:00:26,760
+The version that I explained in the lecture is a way simpler version of the count sort.
+6
+
+7
+00:00:28,130 --> 00:00:28,940
+Shorter code,
+7
+
+8
+00:00:28,940 --> 00:00:30,110
+easier to understand.
+8
+
+9
+00:00:30,530 --> 00:00:37,010
+Now, the problem with the previous code in the lecture is the algorithm wasn't a stable algorithm.
+9
+
+10
+00:00:37,640 --> 00:00:43,670
+So the motivation behind this version is how to make the count sort a stable algorithm.
+10
+
+11
+00:00:44,720 --> 00:00:52,640
+Um, so here is the point, we can see that the first two blocks are exactly the same as the previous
+11
+
+12
+00:00:52,640 --> 00:00:53,000
+block.
+12
+
+13
+00:00:53,510 --> 00:00:58,820
+We see another block that is computing the accumulative sum of the numbers, and we see that
+13
+
+14
+00:00:58,820 --> 00:01:03,590
+there is some new way to build the vector output, and there is a vector output here.
+14
+
+15
+00:01:04,280 --> 00:01:08,720
+Now let's try to compare this algorithm and try to understand the differences.
+15
+
+16
+00:01:09,230 --> 00:01:12,710
+First of all, here are the new problems with this algorithm.
+16
+
+17
+00:01:13,190 --> 00:01:20,210
+First of all, it involves more memory writes, when you have here adding count[ i ] over count[ i - 1 ],
+17
+
+18
+00:01:20,210 --> 00:01:24,170
+you are doing more memory access to the count array.
+18
+
+19
+00:01:24,380 --> 00:01:25,250
+Is it a problem?
+19
+
+20
+00:01:25,640 --> 00:01:27,380
+99% of the cases,
+20
+
+21
+00:01:27,390 --> 00:01:33,500
+no, unless you are working on some hardware where memory accessing is expensive.
+21
+
+22
+00:01:33,710 --> 00:01:36,290
+So these two operations are going to make it slower.
+22
+
+23
+00:01:37,100 --> 00:01:40,780
+The second thing which is very optional is the locality of reference.
+23
+
+24
+00:01:40,790 --> 00:01:46,400
+If you studied computer architecture, you will know there is something we call locality of reference.
+24
+
+25
+00:01:46,400 --> 00:01:49,520
+Let me give you a very informal idea about that.
+25
+
+26
+00:01:49,970 --> 00:01:50,750
+We have
+26
+
+27
+00:01:51,380 --> 00:01:52,670
+RAM, right?
+27
+
+28
+00:01:53,210 --> 00:01:54,140
+This is our RAM.
+28
+
+29
+00:01:57,700 --> 00:01:59,470
+And there is something called cache .
+29
+
+30
+00:02:01,710 --> 00:02:06,570
+The purpose of the cache is being way faster to get elements.
+30
+
+31
+00:02:06,990 --> 00:02:11,070
+So let's say you have an array, let's call it count, for example.
+31
+
+32
+00:02:12,360 --> 00:02:14,160
+The array count is very huge.
+32
+
+33
+00:02:14,730 --> 00:02:17,040
+We can definitely put it here in the RAM somewhere.
+33
+
+34
+00:02:18,180 --> 00:02:24,450
+Now, accessing the array might be a bit slow thing, so maybe the processor will do something else.
+34
+
+35
+00:02:24,900 --> 00:02:32,640
+Let's say you are accessing the cache array here in this range from maybe 400 to range 450,
+35
+
+36
+00:02:33,330 --> 00:02:34,860
+and you are accessing this right now.
+36
+
+37
+00:02:34,890 --> 00:02:39,210
+The cache will do the following, you are accessing this one, so it will only take
+37
+
+38
+00:02:39,450 --> 00:02:41,970
+this small range and put it here.
+38
+
+39
+00:02:42,330 --> 00:02:45,660
+The 400 to 450.
+39
+
+40
+00:02:46,740 --> 00:02:51,840
+And after that, every time you request an index here, oh, it is in our range, we return it.
+40
+
+41
+00:02:52,200 --> 00:02:56,190
+Let's say you started to access 451.
+41
+
+42
+00:02:56,190 --> 00:02:57,420
+It doesn't exist in the cache.
+42
+
+43
+00:02:57,750 --> 00:03:04,520
+What happened is as following, this one will be removed and we will get another one here from
+43
+
+44
+00:03:04,530 --> 00:03:06,900
+451 to maybe 500.
+44
+
+45
+00:03:07,260 --> 00:03:12,300
+So the cache is our way to make faster processing, but the cache is way smaller than the RAM.
+45
+
+46
+00:03:13,620 --> 00:03:15,540
+Now if you have a 2D array,
+46
+
+47
+00:03:17,250 --> 00:03:23,670
+and you access it row by row, we say that this is very efficient in terms of locality of reference,
+47
+
+48
+00:03:23,670 --> 00:03:30,510
+which means that informally very, very informal way, the values that you are requesting, most of them,
+48
+
+49
+00:03:30,510 --> 00:03:35,940
+will be existing in the cache and the in and out of the cache is very limited.
+49
+
+50
+00:03:36,630 --> 00:03:40,860
+What happens if you have a 2D array and you tried to access it column the by column?
+50
+
+51
+00:03:41,370 --> 00:03:49,830
+If you made 2D like, let's say you are tried to loop the matrix j, then loop i, which
+51
+
+52
+00:03:49,830 --> 00:03:54,750
+is column by column, and you tried to do that for 10000 times.
+52
+
+53
+00:03:55,140 --> 00:04:00,270
+This isn't the same time as looping 10000 times and accessing row by row.
+53
+
+54
+00:04:00,690 --> 00:04:04,050
+You learned such stuff in computer architecture course.
+54
+
+55
+00:04:04,890 --> 00:04:05,510
+Why?
+55
+
+56
+00:04:06,100 --> 00:04:11,040
+When you try to access column by column, remember that the 2D array in the memory is just 1D array,
+56
+
+57
+00:04:11,040 --> 00:04:11,310
+right?
+57
+
+58
+00:04:11,640 --> 00:04:17,730
+If you have an array that is 100 * 100, it is in the memory just one single row of 10000 values.
+58
+
+59
+00:04:18,150 --> 00:04:21,390
+So you tried to access the first value here in the array.
+59
+
+60
+00:04:22,140 --> 00:04:22,530
+Good.
+60
+
+61
+00:04:22,830 --> 00:04:29,550
+So we copied for you the first maybe 50 values. Now in the second time, sorry
+61
+
+62
+00:04:29,550 --> 00:04:31,770
+you access this one here, but it doesn't exist.
+62
+
+63
+00:04:32,100 --> 00:04:33,150
+We remove this one,
+63
+
+64
+00:04:33,420 --> 00:04:35,760
+then bring this one for you from in the cache.
+64
+
+65
+00:04:36,300 --> 00:04:36,810
+Then you access
+65
+
+66
+00:04:36,810 --> 00:04:38,820
+this one, oh, it also doesn't exist in the cache.
+66
+
+67
+00:04:38,840 --> 00:04:40,710
+Remove this one and bring this one.
+67
+
+68
+00:04:40,710 --> 00:04:45,930
+Do you see what's happening? With almost every single element, we keep in and out of the cache.
+68
+
+69
+00:04:46,380 --> 00:04:54,660
+But in the row order access, it's actually, uh, much faster because every, say, 50 elements will
+69
+
+70
+00:04:54,660 --> 00:04:55,450
+be already in the cache.
+70
+
+71
+00:04:55,470 --> 00:04:56,220
+I hope you got it.
+71
+
+72
+00:04:56,460 --> 00:04:57,550
+This is very optional.
+72
+
+73
+00:04:57,570 --> 00:05:01,680
+This is something from the computer architecture, something nice that I wanted you to know
+73
+
+74
+00:05:01,680 --> 00:05:02,130
+about it.
+74
+
+75
+00:05:02,730 --> 00:05:04,110
+OK, back to this algorithm.
+75
+
+76
+00:05:04,110 --> 00:05:09,930
+Why it has a bad locality of reference? Because we have a big array and as you will see, we keep jumping
+76
+
+77
+00:05:09,930 --> 00:05:11,880
+in the array in very different areas.
+77
+
+78
+00:05:12,060 --> 00:05:17,250
+So I add something here in the output, then I go add something here, then I add something here, then
+78
+
+79
+00:05:17,250 --> 00:05:18,240
+I add something here.
+79
+
+80
+00:05:18,540 --> 00:05:19,590
+This jumping
+80
+
+81
+00:05:20,830 --> 00:05:24,310
+in the memory will cause a lot of in and out of the cache.
+81
+
+82
+00:05:24,460 --> 00:05:27,550
+That's why it's a bad locality of reference.
+82
+
+83
+00:05:28,030 --> 00:05:33,310
+The third thing it's actually involving more memory because we created the output one.
+83
+
+84
+00:05:33,730 --> 00:05:38,680
+So the previous implementation was in-place, actually not in-place, because it has
+84
+
+85
+00:05:38,680 --> 00:05:44,980
+extra memory, but the input array is the same as the output array, here as we wanted to make it a stable array,
+85
+
+86
+00:05:44,980 --> 00:05:46,360
+we have to create an extra output.
+86
+
+87
+00:05:46,720 --> 00:05:50,890
+So the moral of that, this algorithm, all of it, is just to make it a stable array.
+87
+
+88
+00:05:51,700 --> 00:05:57,100
+And some people try to implement this version, and they don't make the array work backward.
+88
+
+89
+00:05:57,430 --> 00:06:04,240
+And this is wrong because they did a lot of code and they suddenly lost the reason why we do all
+89
+
+90
+00:06:04,240 --> 00:06:05,590
+of this stuff in count sort.
+90
+
+91
+00:06:06,070 --> 00:06:10,780
+Now let's try to simulate the array on an example to make your life easier.
+91
+
+92
+00:06:12,210 --> 00:06:14,160
+Assume that this is the given array.
+92
+
+93
+00:06:14,550 --> 00:06:19,320
+Here is the frequency, three is one time, five is two, seven is one, and nine is three times.
+93
+
+94
+00:06:19,980 --> 00:06:23,610
+Now the second step in the array is doing accumulation here.
+94
+
+95
+00:06:23,820 --> 00:06:27,240
+We are iterating and accumulating element by element. When you do that,
+95
+
+96
+00:06:27,540 --> 00:06:33,450
+you will notice that the count of zero is zero zero zero, then three is one, four is one too,
+96
+
+97
+00:06:33,450 --> 00:06:34,560
+five blah blah blah.
+97
+
+98
+00:06:35,100 --> 00:06:39,450
+So practically speaking, is the accumulation sum of nine is seven?
+98
+
+99
+00:06:39,450 --> 00:06:42,960
+Yes, because overall we have one, two, three, four, five, six, seven elements.
+99
+
+100
+00:06:43,650 --> 00:06:48,060
+Now we don't care about these empty elements in the middle, we only care about the three, five, seven,
+100
+
+101
+00:06:48,060 --> 00:06:48,390
+and nine.
+101
+
+102
+00:06:48,600 --> 00:06:52,530
+So this is what we care now, and here is the core of the algorithm.
+102
+
+103
+00:06:53,940 --> 00:06:55,080
+Why do we do that?
+103
+
+104
+00:06:55,170 --> 00:06:56,190
+Here is the intuition.
+104
+
+105
+00:06:56,640 --> 00:07:03,060
+What does it mean that the value, uh,
+105
+
+106
+00:07:04,350 --> 00:07:13,350
+nine here has, I needed to mention here value nine, value nine has a frequency
+106
+
+107
+00:07:13,350 --> 00:07:16,170
+three and has a cumulative sum seven?
+107
+
+108
+00:07:16,830 --> 00:07:19,380
+It means, in array of seven elements,
+108
+
+109
+00:07:19,800 --> 00:07:27,500
+value nine, which has an accumulation of seven, must be here in positions four and five and six,
+109
+
+110
+00:07:27,510 --> 00:07:34,860
+must be, because nine has an accumulation of seven, so it should be in index six and its frequency is
+110
+
+111
+00:07:34,860 --> 00:07:36,600
+three, so it must be here.
+111
+
+112
+00:07:37,660 --> 00:07:40,930
+In a similar way, let's say the frequency of five is three.
+112
+
+113
+00:07:41,710 --> 00:07:43,630
+It means from
+113
+
+114
+00:07:45,110 --> 00:07:46,250
+from position two,
+114
+
+115
+00:07:48,590 --> 00:07:50,210
+we must have two fives here.
+115
+
+116
+00:07:50,870 --> 00:07:56,510
+So the moral of that is there is a relationship between the accumulation and the index.
+116
+
+117
+00:07:57,200 --> 00:08:02,810
+And we wanted to build the output array properly, so we can use the accumulation to build the index.
+117
+
+118
+00:08:02,990 --> 00:08:04,640
+That's why we did the accumulation step.
+118
+
+119
+00:08:04,940 --> 00:08:09,410
+So actually, the last two for loops that are building the output are just using this fact.
+119
+
+120
+00:08:10,120 --> 00:08:11,510
+Anyway, here is some tracing for you.
+120
+
+121
+00:08:11,810 --> 00:08:14,420
+Let's say that this is just indexing from zero to six.
+121
+
+122
+00:08:14,660 --> 00:08:16,910
+This is the original input and this is the expected
+122
+
+123
+00:08:16,910 --> 00:08:19,760
+output. Now, when you trace the output, it goes as following.
+123
+
+124
+00:08:20,000 --> 00:08:23,630
+In the first step, it says, OK, the value is seven.
+124
+
+125
+00:08:24,260 --> 00:08:26,150
+What is the frequency of seven? Four.
+125
+
+126
+00:08:26,660 --> 00:08:30,800
+So four means we need to put a seven in which position?
+126
+
+127
+00:08:32,450 --> 00:08:38,060
+We'll put the seven in index three, which is the accumulation minus one, accumulation minus one.
+127
+
+128
+00:08:38,990 --> 00:08:42,080
+Now the next value in the array is nine.
+128
+
+129
+00:08:42,350 --> 00:08:43,970
+What is the accumulation of nine?
+129
+
+130
+00:08:44,180 --> 00:08:45,710
+The accumulation of nine is seven.
+130
+
+131
+00:08:46,040 --> 00:08:48,770
+This means index six will have a value.
+131
+
+132
+00:08:49,700 --> 00:08:53,280
+Then the value five.
+132
+
+133
+00:08:53,300 --> 00:08:55,040
+What is the accumulation of five? Three.
+133
+
+134
+00:08:55,310 --> 00:08:57,290
+It means index two must have a value.
+134
+
+135
+00:08:57,950 --> 00:09:02,480
+Now there is a trick. After every one of these steps, we decrease its accumulation.
+135
+
+136
+00:09:02,750 --> 00:09:05,270
+So initially, we have three with one,
+136
+
+137
+00:09:05,630 --> 00:09:08,960
+five with, um...
+137
+
+138
+00:09:09,710 --> 00:09:10,520
+Wait a second.
+138
+
+139
+00:09:11,180 --> 00:09:12,410
+What was the array?
+139
+
+140
+00:09:12,950 --> 00:09:13,850
+Three with one,
+140
+
+141
+00:09:13,850 --> 00:09:19,850
+five with two, seven with one, and nine with three and their accumulation is as following.
+141
+
+142
+00:09:19,850 --> 00:09:22,490
+Three is one, five is three,
+142
+
+143
+00:09:22,820 --> 00:09:23,840
+seven is four,
+143
+
+144
+00:09:24,880 --> 00:09:27,250
+uh, three is one,
+144
+
+145
+00:09:27,910 --> 00:09:34,060
+seven is four, and nine is seven. Now so far, we addressed seven, nine, and five.
+145
+
+146
+00:09:34,300 --> 00:09:36,730
+So their frequency will be decreased.
+146
+
+147
+00:09:36,740 --> 00:09:37,300
+Six,
+147
+
+148
+00:09:37,750 --> 00:09:39,130
+and this one will be three,
+148
+
+149
+00:09:39,400 --> 00:09:40,930
+and this one will be two.
+149
+
+150
+00:09:40,990 --> 00:09:41,530
+Why?
+150
+
+151
+00:09:41,680 --> 00:09:44,320
+Because we already put a value in the array.
+151
+
+152
+00:09:44,680 --> 00:09:47,050
+So now let's trace it here.
+152
+
+153
+00:09:48,780 --> 00:09:52,320
+Zero, one, two three, four, five six.
+153
+
+154
+00:09:52,710 --> 00:10:01,230
+So so far, we put in index three, let's make it here zero, one, two, three, four, five, six, in index
+154
+
+155
+00:10:01,250 --> 00:10:01,680
+three,
+155
+
+156
+00:10:01,800 --> 00:10:05,190
+we put the value seven, and in index six,
+156
+
+157
+00:10:05,190 --> 00:10:09,780
+we put the value nine, and in index of two, we put the value five.
+157
+
+158
+00:10:10,140 --> 00:10:10,590
+Now,
+158
+
+159
+00:10:11,680 --> 00:10:16,970
+next is value nine again, value nine now has a frequency of six.
+159
+
+160
+00:10:16,990 --> 00:10:21,430
+It means we go to the five, do you see? We are putting indirectly the previous one.
+160
+
+161
+00:10:21,670 --> 00:10:26,590
+So we put another nine, and now the frequency is five because we already put an element.
+161
+
+162
+00:10:26,590 --> 00:10:30,400
+So the accumulative is decreased.
+162
+
+163
+00:10:31,480 --> 00:10:32,880
+And again, what is the next three?
+163
+
+164
+00:10:32,890 --> 00:10:35,740
+What is the frequency of three? It's one.
+164
+
+165
+00:10:35,770 --> 00:10:38,530
+So one minus one is zero, we put three here.
+165
+
+166
+00:10:39,040 --> 00:10:46,720
+After that, we have the value of five, which has a frequency of two minus one is one, so we put five
+166
+
+167
+00:10:46,720 --> 00:10:47,080
+here.
+167
+
+168
+00:10:47,320 --> 00:10:51,580
+After that, we have the value nine, which has a frequency of five.
+168
+
+169
+00:10:51,880 --> 00:10:55,720
+We decreased five, we put it here in four, and so on.
+169
+
+170
+00:10:56,560 --> 00:10:57,520
+I hope you got the
+170
+
+171
+00:10:57,520 --> 00:10:58,980
+tracing. It might be a bit annoying.
+171
+
+172
+00:10:58,990 --> 00:11:03,160
+I would like you to notice that we put nine, nine, nine
+172
+
+173
+00:11:03,160 --> 00:11:08,650
+in this order for the nine, we put the five and five backward in this order
+173
+
+174
+00:11:08,650 --> 00:11:10,480
+for the five.
+174
+
+175
+00:11:11,650 --> 00:11:18,310
+I hope you now realize why the algorithm was in inverse order here.
+175
+
+176
+00:11:18,850 --> 00:11:25,930
+The reason that we put in inverse order is because the last nine we know from the accumulative sum, its
+176
+
+177
+00:11:25,930 --> 00:11:33,520
+index, this nine here at index six, you know that this is the last nine that we have.
+177
+
+178
+00:11:33,820 --> 00:11:34,910
+So you put it first.
+178
+
+179
+00:11:34,930 --> 00:11:37,570
+That's why we are processing from the back to the forward.
+179
+
+180
+00:11:37,960 --> 00:11:40,920
+If you couldn't get this algorithm, for now, don't stop too much by it.
+180
+
+181
+00:11:40,930 --> 00:11:48,040
+I just wanted you to know that one lesson to keep in mind, we can implement the same algorithm in different
+181
+
+182
+00:11:48,040 --> 00:11:48,550
+ways.
+182
+
+183
+00:11:49,060 --> 00:11:51,580
+Then the properties like, Is it stable?
+183
+
+184
+00:11:51,820 --> 00:11:53,260
+Is it adaptive?
+184
+
+185
+00:11:53,530 --> 00:11:54,760
+Is it in-place?
+185
+
+186
+00:11:55,600 --> 00:11:57,970
+These are mainly based on the implementation.
+186
+
+187
+00:11:58,510 --> 00:12:08,470
+Something like the selection sort is going anyway to has its own specific properties like it's stable,
+187
+
+188
+00:12:08,470 --> 00:12:13,150
+for example, the stability in the count sort depends on the implementation.
+188
+
+189
+00:12:13,150 --> 00:12:19,090
+So most specifically, stability is something that can change from an algorithm to another,
+189
+
+190
+00:12:19,090 --> 00:12:20,560
+from an implementation to another.
+190
+
+191
+00:12:21,490 --> 00:12:22,910
+Let me say that in a different way.
+191
+
+192
+00:12:23,530 --> 00:12:29,830
+The properties that we mentioned with the algorithm are based on two things the algorithm nature itself
+192
+
+193
+00:12:30,070 --> 00:12:32,170
+and sometimes also the implementation.
+193
+
+194
+00:12:32,440 --> 00:12:38,330
+So you see here the properties of the count sort changed from not stable to stable based on the implementation.
+194
+
+195
+00:12:38,590 --> 00:12:40,570
+So it isn't something I shouldn't tell you,
+195
+
+196
+00:12:40,750 --> 00:12:43,420
+hey, the count sort is a stable algorithm, correct or not?
+196
+
+197
+00:12:43,600 --> 00:12:44,710
+This is a wrong question.
+197
+
+198
+00:12:45,040 --> 00:12:50,100
+We can implement it in a way that makes it stable and we can implement it in a way that makes it unstable.
+198
+
+199
+00:12:50,800 --> 00:12:51,640
+Which one is a good
+199
+
+200
+00:12:51,640 --> 00:12:51,970
+One?
+200
+
+201
+00:12:52,210 --> 00:12:57,880
+It depends on the architecture.
+201
+
+202
+00:12:58,090 --> 00:12:59,170
+It depends on the needs.
+202
+
+203
+00:12:59,380 --> 00:13:01,690
+Do we need it stable? Use a stable one.
+203
+
+204
+00:13:01,840 --> 00:13:03,220
+You do not care about stability.
+204
+
+205
+00:13:03,700 --> 00:13:05,140
+Just use the more efficient version.
+205
+
+206
+00:13:05,440 --> 00:13:05,920
+That's all.

@@ -1,0 +1,225 @@
+0
+1
+00:00:01,470 --> 00:00:06,780
+The course has a bit specific teaching style, so I thought it worth sharing with you. 
+1
+
+2
+00:00:07,680 --> 00:00:13,770
+There are definitely a lot and a lot of complaints about other courses here or in universities.
+2
+
+3
+00:00:13,800 --> 00:00:17,150
+So from my experience, I learned a lot about how to teach things.
+3
+
+4
+00:00:17,730 --> 00:00:23,550
+The first thing is to know I usually differentiate between the major concepts and minor concepts.
+4
+
+5
+00:00:23,880 --> 00:00:29,670
+Normally, courses are explained like unit by unit, explaining the complete concepts of a specific unit
+5
+
+6
+00:00:29,670 --> 00:00:34,710
+with all of its details, which typically involve a lot of major and minor concepts.
+6
+
+7
+00:00:35,070 --> 00:00:39,290
+And these minor concepts typically just cause a lot of puzzling for the students.
+7
+
+8
+00:00:39,750 --> 00:00:47,190
+In my case, you would find me explaining some major concepts in a unit and delaying some of the concepts
+8
+
+9
+00:00:47,190 --> 00:00:48,130
+to another round.
+9
+
+10
+00:00:48,450 --> 00:00:52,260
+For example, you will notice that there is a unit named "More on Fundamentals".
+10
+
+11
+00:00:52,260 --> 00:00:54,950
+It's like number twenty-four or so in the content.
+11
+
+12
+00:00:55,470 --> 00:01:01,710
+So even in something like after twenty-four units, I'm going back to explain some
+12
+
+13
+00:01:01,710 --> 00:01:04,410
+of the very basic and the very fundamentals of the course.
+13
+
+14
+00:01:05,010 --> 00:01:08,930
+The reason behind that is they aren't mandatory at all.
+14
+
+15
+00:01:08,940 --> 00:01:12,410
+You can skip them for a lot of time and focus on the major concepts.
+15
+
+16
+00:01:12,750 --> 00:01:14,370
+So be careful from that. I delay concepts.
+16
+
+17
+00:01:14,520 --> 00:01:16,200
+I intended to do that.
+17
+
+18
+00:01:16,980 --> 00:01:20,550
+You also find me usually going directly to the point with practice.
+18
+
+19
+00:01:21,570 --> 00:01:23,550
+So this is more of a bottom-up style.
+19
+
+20
+00:01:23,550 --> 00:01:28,170
+Like, I go directly to the point that I would like to explain, typically highlighting some syntax and
+20
+
+21
+00:01:28,170 --> 00:01:32,640
+then in between, highlighting the needed theory.
+21
+
+22
+00:01:33,390 --> 00:01:36,610
+So it's more of very practical and this fits more with programming.
+22
+
+23
+00:01:37,950 --> 00:01:42,540
+The other very critical point when it comes to showing the code, there are two styles.
+23
+
+24
+00:01:43,110 --> 00:01:48,780
+The very common one is, live-coding style, where someone is starting to write the code line by line
+24
+
+25
+00:01:48,780 --> 00:01:49,520
+in front of you.
+25
+
+26
+00:01:50,100 --> 00:01:53,490
+This is very good from the engaging point of view,
+26
+
+27
+00:01:53,850 --> 00:01:56,070
+but there are a few drawbacks.
+27
+
+28
+00:01:56,070 --> 00:01:59,980
+For example, the content is usually longer than necessary.
+28
+
+29
+00:02:00,330 --> 00:02:02,360
+Also, sometimes there are mistakes.
+29
+
+30
+00:02:02,360 --> 00:02:07,680
+So, one has to make editings, which might be not suitable for everyone. On the other side,
+30
+
+31
+00:02:07,680 --> 00:02:10,410
+The way that I go with it is ready-code snippets.
+31
+
+32
+00:02:10,420 --> 00:02:17,430
+You would find me always pasting a picture here with the whole content directly, and I'm just explaining 
+32
+
+33
+00:02:17,430 --> 00:02:17,630
+it.
+33
+
+34
+00:02:18,210 --> 00:02:23,100
+The advantage of that is really fast and the content is clear. The lecture
+34
+
+35
+00:02:23,100 --> 00:02:27,410
+that is five minutes in code snippets might be like 12 in the live-coding style.
+35
+
+36
+00:02:28,590 --> 00:02:30,420
+There is a single disadvantage with that.
+36
+
+37
+00:02:30,990 --> 00:02:34,760
+To some extent, it might be less engaging than the other style.
+37
+
+38
+00:02:35,010 --> 00:02:37,890
+You cannot gain the advantage of everything. You will not find
+38
+
+39
+00:02:38,130 --> 00:02:40,980
+the lecture is short and still is live-coding style.
+39
+
+40
+00:02:41,010 --> 00:02:42,900
+This is very rare and very hard to achieve.
+40
+
+41
+00:02:43,350 --> 00:02:49,410
+So this is my way. This is how I see myself saving my time and other guys' time.
+41
+
+42
+00:02:51,360 --> 00:02:58,050
+Also, most of the time I have this strategy like I explain something. I try to administrate
+42
+
+43
+00:02:58,050 --> 00:03:01,230
+something through some easy to medium, sometimes hard to practice.
+43
+
+44
+00:03:01,560 --> 00:03:04,290
+And this is typically followed by a homework.
+44
+
+45
+00:03:04,650 --> 00:03:10,740
+So this should be like a common style during the whole content.
+That is it. :) 

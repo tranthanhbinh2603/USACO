@@ -1,0 +1,284 @@
+1
+00:00:01,609 --> 00:00:07,250
+Hi Everyone, so now we will solve a very interesting problem using the concept that we have learned so far.
+
+2
+00:00:07,980 --> 00:00:09,980
+So what I'm going to do? I'm going to explain you question.
+
+3
+00:00:10,580 --> 00:00:17,480
+The question is very simple. it says we given to 32 bit numbers n and m and we're also given two bit positions i and j.
+
+4
+00:00:17,630 --> 00:00:24,290
+so we need to write a method to set all the bits between i and j in m equal to n.
+
+5
+00:00:24,770 --> 00:00:27,350
+So let me... let me give you one example also.
+
+6
+00:00:30,320 --> 00:00:36,950
+So if you look at this, this is what n is given this is what m given. what I want is I want
+
+7
+00:00:36,950 --> 00:00:40,730
+to put m inside n from index j to i.
+
+8
+00:00:44,350 --> 00:00:51,970
+OK, so starting starting from index j till the index i, I want to put all the bit of in which
+
+9
+00:00:51,970 --> 00:00:52,990
+should be same as m.
+
+10
+00:00:53,030 --> 00:00:55,060
+OK, this is what we need to do.
+
+11
+00:00:55,520 --> 00:00:57,740
+So let me try to show it to you.
+
+12
+00:00:57,760 --> 00:01:00,820
+So we have n one followed by let say 10 Zeroes.
+
+13
+00:01:04,620 --> 00:01:04,920
+OK.
+
+14
+00:01:05,340 --> 00:01:14,070
+And indexes 2 and 6, so basically it is like this zero one two three four five six.
+
+15
+00:01:14,520 --> 00:01:17,100
+I want to replace these bits
+
+16
+00:01:18,690 --> 00:01:24,190
+with bits from m so the Bits from m are one zero one zero one.
+
+17
+00:01:24,550 --> 00:01:30,550
+OK so basically these bits may also have one or they may also have something else as well.
+
+18
+00:01:30,910 --> 00:01:31,510
+I don't know.
+
+19
+00:01:31,850 --> 00:01:35,620
+What i want is if I want to replace these bits with this.
+
+20
+00:01:35,620 --> 00:01:42,970
+So first I need to clear these bits. Ok. so first I need to clear the bits from Index J to i.
+
+21
+00:01:43,450 --> 00:01:48,820
+And for that we have already implemented one function in one of the lectures so we can first call
+
+22
+00:01:48,820 --> 00:01:50,350
+that function clear bit j to i.
+
+23
+00:01:50,830 --> 00:01:54,630
+And once we have done. what we can do? we can do OR with of m.
+
+24
+00:01:54,640 --> 00:01:57,250
+But m should also have
+
+25
+00:01:58,610 --> 00:02:05,040
+these number of zeros here that means m should be left shifted by a factor of I.
+
+26
+00:02:05,600 --> 00:02:11,240
+So what we need to do? we need to left shift m by a factor of i.
+
+27
+00:02:11,930 --> 00:02:13,520
+And we need to clear the bits .
+
+28
+00:02:13,520 --> 00:02:21,440
+once we're done that we can do the operation of n in which these bits are already set to
+
+29
+00:02:21,440 --> 00:02:25,520
+zero with m which has been shifted to the right index
+
+30
+00:02:25,940 --> 00:02:28,050
+And then we will get the right result.
+
+31
+00:02:28,090 --> 00:02:29,290
+OK, so that's it.
+
+32
+00:02:29,300 --> 00:02:30,380
+That's what we need to do.
+
+33
+00:02:31,400 --> 00:02:35,480
+So if I give you this example now you can see output is like this.
+
+34
+00:02:36,070 --> 00:02:38,050
+So I will first copy this function clear bits
+
+35
+00:02:38,210 --> 00:02:39,880
+in the range j to i.
+
+36
+00:02:40,330 --> 00:02:41,330
+I I'll pasted it here.
+
+37
+00:02:41,810 --> 00:02:44,240
+And let me just comment out the problem statement.
+
+38
+00:02:46,190 --> 00:02:50,840
+And now what we need to do? we need to create this method void replace bits.
+
+39
+00:02:51,410 --> 00:02:54,770
+I have n, I have I, I have J.
+
+40
+00:02:54,770 --> 00:02:56,990
+I have M. So what we need to do.
+
+41
+00:02:56,990 --> 00:03:03,860
+First, we need to call the clear bit in range method I give n, I and j and then we need to create
+
+42
+00:03:03,860 --> 00:03:07,420
+a mask. ok so  mosque is nothing but m left shift
+
+43
+00:03:07,430 --> 00:03:07,700
+I.
+
+44
+00:03:09,790 --> 00:03:16,690
+And finally we need to return or we need to say n equals to n or mask.
+
+45
+00:03:16,990 --> 00:03:17,590
+That's it.
+
+46
+00:03:19,090 --> 00:03:20,050
+And we are done.
+
+47
+00:03:20,320 --> 00:03:27,190
+Ok. so let us look at one example lets say n is 15. i is one, j is 3.
+
+48
+00:03:29,900 --> 00:03:34,550
+j Is three and m is two.
+
+49
+00:03:35,480 --> 00:03:45,290
+So if I say okay replace bits n, i, j and m and if i do cout n now I should see some output.
+
+50
+00:03:45,380 --> 00:03:46,850
+Let us try to build this code.
+
+51
+00:03:50,240 --> 00:03:51,710
+And let us try to run it.
+
+52
+00:03:52,280 --> 00:03:53,540
+So this is...
+
+53
+00:03:55,560 --> 00:04:02,240
+so I'm getting an answer five. so let's see what we have done. so we have n, which is 15 so it is one
+
+54
+00:04:02,240 --> 00:04:03,050
+one one one.
+
+55
+00:04:03,530 --> 00:04:04,550
+We have i and j.
+
+56
+00:04:04,580 --> 00:04:06,770
+So this is zero one two three.
+
+57
+00:04:07,250 --> 00:04:12,020
+I said OK, replace these bits with bits of two.
+
+58
+00:04:12,200 --> 00:04:14,480
+So what is two ?
+
+59
+00:04:16,040 --> 00:04:16,670
+two is One zero.
+
+60
+00:04:16,700 --> 00:04:17,060
+OK.
+
+61
+00:04:17,720 --> 00:04:20,209
+Two is zero one zero.
+
+62
+00:04:21,300 --> 00:04:27,180
+And this is what we are going to get. now if you see these bits replaced
+
+63
+00:04:28,310 --> 00:04:28,650
+.
+
+64
+00:04:31,220 --> 00:04:31,750
+What we did ?
+
+65
+00:04:32,270 --> 00:04:34,360
+We first cleared these bit.
+
+66
+00:04:34,360 --> 00:04:36,490
+We made this number as a 0001.
+
+67
+00:04:36,970 --> 00:04:43,150
+Then we left shifted two by a factor. two by doing a left shift of i becomes like this.
+
+68
+00:04:43,540 --> 00:04:49,120
+And then we do a OR operation so it becomes 0101 which is equal to five.
+
+69
+00:04:49,630 --> 00:04:54,710
+That means our code is working as expected and we are done.
+
+70
+00:04:55,520 --> 00:04:56,790
+That's it for this lecture.
+
+71
+00:04:56,800 --> 00:04:57,160
+Thank you.
+

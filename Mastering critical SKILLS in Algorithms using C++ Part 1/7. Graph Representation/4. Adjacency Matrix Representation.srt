@@ -1,0 +1,779 @@
+1
+00:00:01,100 --> 00:00:06,620
+In this section, we would like to start to learn more about how to represent the epigraph as the section
+
+2
+00:00:06,770 --> 00:00:08,660
+is graph representation.
+
+3
+00:00:08,990 --> 00:00:10,730
+We would like to represent a graph.
+
+4
+00:00:12,950 --> 00:00:15,650
+For a while, it might seems like a very difficult task.
+
+5
+00:00:15,680 --> 00:00:19,800
+How can we take such a graph and express it in computers in something?
+
+6
+00:00:19,820 --> 00:00:26,750
+However, it isn't by the end of the this citizens and their homework, so you will be very flexible
+
+7
+00:00:26,750 --> 00:00:27,920
+when it comes to graphs.
+
+8
+00:00:29,090 --> 00:00:35,090
+I would like you to take two minutes and ask yourself a simple question How can I express a graph with
+
+9
+00:00:35,090 --> 00:00:38,720
+five nodes like that in a matrix that is five times five?
+
+10
+00:00:38,750 --> 00:00:40,520
+Like, you have a five times five metrics?
+
+11
+00:00:40,970 --> 00:00:46,300
+I would like to encode this kind of information inside this five times five metrics.
+
+12
+00:00:46,310 --> 00:00:47,330
+How can you do that?
+
+13
+00:00:48,080 --> 00:00:49,160
+This is a directed graph.
+
+14
+00:00:49,160 --> 00:00:52,130
+As you see, the most thinking should be more than enough.
+
+15
+00:00:55,020 --> 00:01:07,260
+The idea is very simple we can create a matrix such that, uh, if the matrix of Ingwe represent how
+
+16
+00:01:07,260 --> 00:01:12,630
+many edges we have from node ideology as there are no multiple edges here.
+
+17
+00:01:12,870 --> 00:01:17,070
+So this means every two nodes will have either zero edges or one edges.
+
+18
+00:01:17,550 --> 00:01:23,460
+So let's see here node number one and number four, there is an edge between them, so node number one
+
+19
+00:01:24,000 --> 00:01:25,530
+and node number four here.
+
+20
+00:01:26,660 --> 00:01:28,340
+Should have I won here?
+
+21
+00:01:29,000 --> 00:01:29,670
+What else?
+
+22
+00:01:29,690 --> 00:01:35,900
+Two and the three, so array of two and the three should have won here one and two.
+
+23
+00:01:36,320 --> 00:01:38,030
+One and two should have won here.
+
+24
+00:01:38,660 --> 00:01:43,100
+A ray of zero and two should have won, so zero and two should have won here.
+
+25
+00:01:43,490 --> 00:01:46,310
+So as you see, this is very simple and very intuitive, right?
+
+26
+00:01:46,520 --> 00:01:52,910
+Like, you just put the metrics of high energy or the gratify energy with how many, just how many edges.
+
+27
+00:01:53,270 --> 00:02:00,470
+So this way we can even like if I told you that, maybe let's say, from two to three, like, for example,
+
+28
+00:02:00,470 --> 00:02:03,440
+if I said that we have another edge this way and another edge this way.
+
+29
+00:02:03,800 --> 00:02:08,360
+So now from two to three, we should have here three three edges.
+
+30
+00:02:09,230 --> 00:02:12,230
+So in this way, we build a very nice mattress.
+
+31
+00:02:12,530 --> 00:02:18,310
+So the wood adjacency that you just referred to two things who are adjacent, like when we have EMV,
+
+32
+00:02:18,560 --> 00:02:20,060
+this is a different relationship.
+
+33
+00:02:20,780 --> 00:02:25,640
+The what the metrics mean, just we use a 2D array to express their relationships.
+
+34
+00:02:26,060 --> 00:02:28,970
+This is one way and this is very intuitive.
+
+35
+00:02:31,260 --> 00:02:32,640
+So let's keep going.
+
+36
+00:02:35,430 --> 00:02:42,840
+If the graph is undirected, then one is connected with zero and also zero is connected with one.
+
+37
+00:02:43,350 --> 00:02:50,010
+So 200 that all what we need to make sure that matrix of energy is as simple as metrics of journey.
+
+38
+00:02:50,370 --> 00:02:56,670
+For example, if there are seven edges between one and five, the metrics of one five a matrix of five
+
+39
+00:02:56,670 --> 00:02:58,620
+on one should have a value of seven.
+
+40
+00:02:58,980 --> 00:03:02,490
+This usually would create a kind of symmetry in the matrix.
+
+41
+00:03:03,720 --> 00:03:06,060
+As you see, again, there are no multiple edges here.
+
+42
+00:03:06,330 --> 00:03:09,780
+So this is a completely binary matrix.
+
+43
+00:03:10,020 --> 00:03:17,550
+If I told you that between one and two, there are four undirected edges.
+
+44
+00:03:17,850 --> 00:03:20,550
+So one and two, one and two we should have here.
+
+45
+00:03:21,060 --> 00:03:21,360
+Four.
+
+46
+00:03:22,140 --> 00:03:27,150
+So again, so as I see the The Matrix, a 2D matrix is very flexible.
+
+47
+00:03:27,450 --> 00:03:31,560
+Either you would like to represent a directed graph or undirected graph.
+
+48
+00:03:32,980 --> 00:03:41,110
+Now, let's try to implement that, you would you will usually make a typedef and call it graph so we
+
+49
+00:03:41,110 --> 00:03:45,820
+can use a vector vector of integer to represent the graph so that it be flexible in the creation.
+
+50
+00:03:46,510 --> 00:03:53,130
+I would like you to create two function, one ad directed edge and one is add undirected edge, which
+
+51
+00:03:53,180 --> 00:03:53,470
+you take.
+
+52
+00:03:53,470 --> 00:03:58,990
+The from A to Z are zero based indices like the whole course most of the time, and the graph itself
+
+53
+00:03:59,800 --> 00:04:02,430
+that the graph is would be initialized and proper for you.
+
+54
+00:04:02,440 --> 00:04:08,050
+For example, if the number of modes is five, graph will be a 2D vector, that's five times five.
+
+55
+00:04:08,470 --> 00:04:10,420
+How can we implement these two methods?
+
+56
+00:04:10,420 --> 00:04:12,190
+But it's take five minutes to implement them.
+
+57
+00:04:17,360 --> 00:04:19,190
+Then presentation is very straightforward.
+
+58
+00:04:21,230 --> 00:04:26,210
+If you have in the directed function, if you have an image from from to you just go to grab from and
+
+59
+00:04:26,210 --> 00:04:27,740
+to and right plus equals one.
+
+60
+00:04:27,950 --> 00:04:34,940
+So the second one will will increase the count of the adjacency in the ad undirected graph.
+
+61
+00:04:34,970 --> 00:04:37,650
+You can go two from and two and read Blitz equals one.
+
+62
+00:04:37,730 --> 00:04:40,100
+And from the to and from AndroidPolice equal one.
+
+63
+00:04:40,610 --> 00:04:44,000
+So this way we are adding in the two sides in the same time.
+
+64
+00:04:44,330 --> 00:04:47,480
+So as you see overall, very, very, very straightforward.
+
+65
+00:04:48,090 --> 00:04:49,340
+Now let's use them.
+
+66
+00:04:49,700 --> 00:04:54,320
+It is how you will write a code that will like take an emblem from the user.
+
+67
+00:04:54,740 --> 00:04:56,620
+You start by reading the number of nodes.
+
+68
+00:04:57,110 --> 00:05:00,990
+And number of edges, as we would like to create a matrix of nodes.
+
+69
+00:05:01,000 --> 00:05:06,480
+The times inwards we create here a graph which is victor victor of nodes, and every entry is vector
+
+70
+00:05:06,480 --> 00:05:07,880
+of integer of nodes.
+
+71
+00:05:08,240 --> 00:05:13,220
+I assume that you are good enough in each state to understand this line of code, and then we iterate
+
+72
+00:05:13,220 --> 00:05:17,870
+on the number of edges every time we read the form and two.
+
+73
+00:05:18,110 --> 00:05:22,610
+This is a directed graph, so I'm quoting here the ad directed graph function, which you take the graph
+
+74
+00:05:22,850 --> 00:05:27,200
+graph from a tool and then we are going to print adjacency metrics to verify it.
+
+75
+00:05:27,560 --> 00:05:31,040
+So here is the inputs five nodes, eight edges.
+
+76
+00:05:31,190 --> 00:05:32,540
+Then we have eight lines.
+
+77
+00:05:32,870 --> 00:05:35,360
+Every line is two numbers that are zero based.
+
+78
+00:05:35,810 --> 00:05:41,450
+If we try to help with this one, it will say from zero to one, there are two edges because you can
+
+79
+00:05:41,450 --> 00:05:44,090
+see here we have a zero one here and we have zero one here.
+
+80
+00:05:45,250 --> 00:05:50,520
+From one to two, we have one edge from four to three, we have three edges four two three four two
+
+81
+00:05:50,520 --> 00:05:51,840
+three four two three.
+
+82
+00:05:52,810 --> 00:05:57,310
+How can we write the Brent adjacency matrix to Brent this could here?
+
+83
+00:05:58,260 --> 00:05:58,920
+Can you try?
+
+84
+00:06:03,240 --> 00:06:08,250
+The idea is very simple, but we have nodes, so we iterate on the first look like a tourist that loops
+
+85
+00:06:08,250 --> 00:06:09,690
+each one of them go afterwards.
+
+86
+00:06:10,050 --> 00:06:15,000
+I'm getting the first one from and the second one to have graphs from and to greater than zero.
+
+87
+00:06:15,000 --> 00:06:20,370
+It means there are idiocy and from from it to say Brent from and Brent two and Brent a graph of from
+
+88
+00:06:20,370 --> 00:06:21,810
+into that simple.
+
+89
+00:06:24,110 --> 00:06:24,590
+OK.
+
+90
+00:06:25,250 --> 00:06:26,720
+What about the wicked graph?
+
+91
+00:06:27,770 --> 00:06:32,420
+If the graph no has weights with the current metrics would be enough.
+
+92
+00:06:32,840 --> 00:06:35,120
+How can we change it or how can we handle that?
+
+93
+00:06:36,840 --> 00:06:37,950
+The idea is very simple.
+
+94
+00:06:39,090 --> 00:06:43,050
+Let the adjacency of Iron G equal costs, but it didn't.
+
+95
+00:06:43,140 --> 00:06:46,830
+For now, there are no multireligious OK, like this is just one inch here.
+
+96
+00:06:47,250 --> 00:06:48,230
+So here I would.
+
+97
+00:06:48,360 --> 00:06:52,170
+As you see, we have aged from zero to one here.
+
+98
+00:06:52,170 --> 00:06:53,370
+One and two was 15.
+
+99
+00:06:53,550 --> 00:06:56,040
+So you go one and two and what 15?
+
+100
+00:06:56,340 --> 00:06:58,350
+We have from two to four with 13.
+
+101
+00:06:58,530 --> 00:07:02,370
+You go from two to four here and 13 and so on.
+
+102
+00:07:03,330 --> 00:07:04,710
+Can you adjust the previous cuts?
+
+103
+00:07:06,710 --> 00:07:07,840
+Here is that just good?
+
+104
+00:07:09,490 --> 00:07:16,470
+We take Froman, too, and we take the cost to now hear from Graph from until we write the costs and
+
+105
+00:07:16,720 --> 00:07:20,610
+directed one graph from an to equal graph tool from equal the cost.
+
+106
+00:07:21,040 --> 00:07:22,860
+The reading is the same, almost.
+
+107
+00:07:22,870 --> 00:07:25,180
+You just read the cost, the here.
+
+108
+00:07:25,180 --> 00:07:25,860
+Read it here.
+
+109
+00:07:25,870 --> 00:07:26,530
+Best to you.
+
+110
+00:07:27,450 --> 00:07:27,960
+That's all.
+
+111
+00:07:28,230 --> 00:07:32,280
+So as you see, changing the good is very straightforward.
+
+112
+00:07:33,910 --> 00:07:35,140
+And here is the outfit.
+
+113
+00:07:36,400 --> 00:07:40,900
+Now, you might wonder, what should we do if we have multiple ages?
+
+114
+00:07:41,590 --> 00:07:48,370
+If the previous one, we assume two things, we assume that an all ages and also we assume that no age
+
+115
+00:07:48,370 --> 00:07:50,050
+would have a value equal zeal.
+
+116
+00:07:50,380 --> 00:07:52,660
+I assumed all of which equal greater than zero.
+
+117
+00:07:53,080 --> 00:07:59,580
+However, what of the which between the two two is actually zero or even negative value in the previous
+
+118
+00:07:59,590 --> 00:08:02,710
+good will depend on the cheek of matt and equivocal zero two.
+
+119
+00:08:02,950 --> 00:08:03,800
+There is an agent.
+
+120
+00:08:04,690 --> 00:08:11,230
+But what if it can be used one in a way, the handling of the multiple ages with which in reality depends
+
+121
+00:08:11,230 --> 00:08:12,280
+on the problem itself?
+
+122
+00:08:12,340 --> 00:08:14,710
+Let me give you some examples in a suit.
+
+123
+00:08:14,710 --> 00:08:15,760
+This to bethe problem.
+
+124
+00:08:16,600 --> 00:08:18,250
+How can we handle the multiple ages?
+
+125
+00:08:18,790 --> 00:08:23,980
+If you are, if you have interest only in the shortest about, and I told you that not one good to note
+
+126
+00:08:24,070 --> 00:08:28,120
+event was ghostwritten and good to note seven was close to 20.
+
+127
+00:08:28,450 --> 00:08:29,860
+Which one do you care about them?
+
+128
+00:08:30,220 --> 00:08:35,260
+Only the 10 because you would like to get the shots, the birth right, so we can suggest that the minimum
+
+129
+00:08:35,740 --> 00:08:37,330
+among all of the different ages.
+
+130
+00:08:37,630 --> 00:08:38,320
+And that's it.
+
+131
+00:08:39,220 --> 00:08:41,650
+So this is how we can handle multiple ages.
+
+132
+00:08:41,680 --> 00:08:42,850
+What about missing values?
+
+133
+00:08:43,150 --> 00:08:47,620
+One way, maybe just create another Boolean metrics that say, if there is an issue from here to here
+
+134
+00:08:47,620 --> 00:08:48,040
+or not.
+
+135
+00:08:48,550 --> 00:08:51,940
+So now we have the metrics for the Boolean and in other metrics for the values.
+
+136
+00:08:52,690 --> 00:08:58,180
+Maybe a third way you would initialize their tricks to have a very large value like an infinity, maybe
+
+137
+00:08:58,180 --> 00:09:02,410
+one each with nine, for example, and then you can convert against Guinness 08:40 and see if that is
+
+138
+00:09:02,410 --> 00:09:03,190
+a value or not.
+
+139
+00:09:03,220 --> 00:09:10,150
+So two that, you know, missing the key message here there is no standard and what a specific way it
+
+140
+00:09:10,150 --> 00:09:16,300
+is all about the problem, and you utilise your problem solving skills to come up with the proper representation.
+
+141
+00:09:16,550 --> 00:09:22,870
+So, so don't be stuck in a specific way through the course you should find in a way.
+
+142
+00:09:22,900 --> 00:09:30,760
+Examples of that handle such such cases before ending it is very important to understand the space and
+
+143
+00:09:30,760 --> 00:09:31,590
+time complexity.
+
+144
+00:09:31,600 --> 00:09:33,310
+So there are a bunch of questions for you.
+
+145
+00:09:33,760 --> 00:09:35,080
+What is the space complexity?
+
+146
+00:09:35,290 --> 00:09:36,610
+What is the time complexity?
+
+147
+00:09:36,940 --> 00:09:38,230
+But for the following scenarios.
+
+148
+00:09:38,530 --> 00:09:42,220
+So I would like to know if there is an issue between you and you and V. What's the name complexity of
+
+149
+00:09:42,220 --> 00:09:42,520
+that?
+
+150
+00:09:43,270 --> 00:09:48,670
+If you'd like to get your neighbors, what is the complexity that we would like to bring to the wood
+
+151
+00:09:48,670 --> 00:09:49,030
+graph?
+
+152
+00:09:49,030 --> 00:09:50,200
+Let's them complex of that.
+
+153
+00:09:50,860 --> 00:09:54,460
+And is this representation good for the Spurs audience metrics?
+
+154
+00:09:55,360 --> 00:09:58,030
+And what does it mean if the two metrics are there?
+
+155
+00:09:58,040 --> 00:10:01,760
+They are going to has some one zero values, but is it?
+
+156
+00:10:01,760 --> 00:10:05,020
+Stop the video for like a five minutes and answer out of this question.
+
+157
+00:10:05,320 --> 00:10:10,150
+Try to make it a of engagement and trying to make the calls involving a lot of engagement.
+
+158
+00:10:10,180 --> 00:10:11,680
+I'm asking you a lot of questions.
+
+159
+00:10:11,680 --> 00:10:15,400
+I'm encouraging you to curate algorithm scores, if you would.
+
+160
+00:10:15,730 --> 00:10:18,610
+So try to help me to make it an easy experience for you.
+
+161
+00:10:19,780 --> 00:10:20,180
+Here are the.
+
+162
+00:10:21,130 --> 00:10:24,580
+First of all, we created a 2D matrix of times of each.
+
+163
+00:10:24,580 --> 00:10:28,420
+So be square in the standard books that they were rated this way all.
+
+164
+00:10:29,650 --> 00:10:36,670
+Oh, the squid, OK, when I write it this way, I'm just writing it for short because sometimes I use
+
+165
+00:10:36,670 --> 00:10:39,790
+V and mean the number of notes, and sometimes I use it to mean the set of the.
+
+166
+00:10:40,330 --> 00:10:41,410
+So just flexibility.
+
+167
+00:10:41,710 --> 00:10:47,620
+But don't get confused if you'd like to know if there's an edge between you and V, you can do that
+
+168
+00:10:47,620 --> 00:10:49,960
+in all one by accessing the metrics directly.
+
+169
+00:10:50,800 --> 00:10:53,860
+If you'd like to get your neighbors, you have to iterate on your route.
+
+170
+00:10:53,860 --> 00:10:55,840
+Like, let's say this is true.
+
+171
+00:10:56,840 --> 00:11:02,750
+Number three, and there is someone here, and maybe there is some five here, so you need to iterate
+
+172
+00:11:02,750 --> 00:11:06,080
+on the wood rule to know that this is my neighbor and this is my neighbor.
+
+173
+00:11:06,470 --> 00:11:09,770
+So we need all of you to iterate on the road to get my neighbors.
+
+174
+00:11:10,430 --> 00:11:11,590
+To traverse that graph.
+
+175
+00:11:11,600 --> 00:11:13,670
+You need to trade on all of the rules and all of the columns.
+
+176
+00:11:13,670 --> 00:11:17,960
+So this is v squared now thinking about sports and dance?
+
+177
+00:11:18,530 --> 00:11:21,830
+If you thought about it, this one is very good.
+
+178
+00:11:21,830 --> 00:11:27,070
+If the graph is very, very complete, like if we have every kind of connection, this is very perfect.
+
+179
+00:11:27,070 --> 00:11:30,260
+The graph, because we have here, we can represent all of them.
+
+180
+00:11:30,260 --> 00:11:30,980
+We can put them.
+
+181
+00:11:31,280 --> 00:11:33,200
+So it's actually very good for denser graph.
+
+182
+00:11:33,830 --> 00:11:35,090
+Now think about the graph.
+
+183
+00:11:35,090 --> 00:11:37,310
+If I told you have a tree, you remember the tree.
+
+184
+00:11:37,670 --> 00:11:44,930
+The tree has, uh, any nodes and in the minus one edges, imagine that we have 1000 nodes, so we have
+
+185
+00:11:44,930 --> 00:11:46,910
+around nine nine nine inches.
+
+186
+00:11:47,330 --> 00:11:53,090
+You created one million entries, total the around 1000 of them or 2000 of them.
+
+187
+00:11:53,990 --> 00:11:54,800
+This is too much.
+
+188
+00:11:55,160 --> 00:11:58,130
+So this representation is good for dense a graph.
+
+189
+00:11:58,130 --> 00:11:58,990
+Not for the specific.
+
+190
+00:11:59,990 --> 00:12:05,510
+The last thing is, what does it mean to have a value in the diagonal?
+
+191
+00:12:06,230 --> 00:12:08,510
+Like, let's say we have here are three times the three metrics.
+
+192
+00:12:11,060 --> 00:12:13,850
+And I found zero zero seven zero.
+
+193
+00:12:14,820 --> 00:12:21,000
+So here in the diagonal, it means that metrics of two and two is seven.
+
+194
+00:12:21,330 --> 00:12:26,310
+There are seven loops that are around the Pixel two.
+
+195
+00:12:28,640 --> 00:12:29,150
+That's of.

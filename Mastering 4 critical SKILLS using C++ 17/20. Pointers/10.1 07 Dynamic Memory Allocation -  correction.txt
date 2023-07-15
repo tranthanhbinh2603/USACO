@@ -1,0 +1,5 @@
+When you terminate the program, all memory will be released in most of the operating systems.
+
+So 2 things that force the memory leak to be ended:
+- App close
+- Machine restart

@@ -1,0 +1,640 @@
+1
+00:00:00,680 --> 00:00:01,550
+Welcome back, guys.
+
+2
+00:00:01,670 --> 00:00:06,740
+So forever, very cool problem for you, and first of all, I want you to go through this.
+
+3
+00:00:07,580 --> 00:00:08,270
+And there are.
+
+4
+00:00:09,260 --> 00:00:12,650
+And types of people in the world, those who understand binary and those who don't.
+
+5
+00:00:13,400 --> 00:00:16,010
+So is this 10 or.
+
+6
+00:00:17,130 --> 00:00:18,730
+You can convert this to binary rate.
+
+7
+00:00:19,820 --> 00:00:20,070
+Well.
+
+8
+00:00:21,250 --> 00:00:22,270
+Now, let's move on to the.
+
+9
+00:00:24,640 --> 00:00:31,360
+Problem, so the problem is very nice, and it will give you a deeper dive into what is actually.
+
+10
+00:00:32,520 --> 00:00:36,500
+Binary explanation, it's a divide and conquer approach.
+
+11
+00:00:36,550 --> 00:00:39,900
+Right, but we are actually using manipulation to code.
+
+12
+00:00:41,670 --> 00:00:43,350
+Despite eight to.
+
+13
+00:00:44,700 --> 00:00:50,640
+The problem is very simple, you are going this in C++, I do not think of any other language because
+
+14
+00:00:50,640 --> 00:00:52,530
+it will become very easy, so.
+
+15
+00:00:54,460 --> 00:00:56,590
+What do you have is you have been given tremendous.
+
+16
+00:00:58,060 --> 00:01:05,239
+Eben, see, the fun fact is that all these three are less than equals referring to the power 15.
+
+17
+00:01:05,920 --> 00:01:06,170
+Eight.
+
+18
+00:01:06,610 --> 00:01:09,910
+And what do you want to do is you want to find out.
+
+19
+00:01:10,240 --> 00:01:11,830
+E into B.
+
+20
+00:01:13,150 --> 00:01:14,440
+My seat.
+
+21
+00:01:16,650 --> 00:01:19,710
+So you want to find out this interview, Marty, how do you do it?
+
+22
+00:01:21,010 --> 00:01:26,230
+So just imagine yourself sitting in an interview and solving this problem just because the video.
+
+23
+00:01:27,100 --> 00:01:33,550
+And try to do this, though, of course, guys, brute force won't work, so you can't just see out
+
+24
+00:01:34,060 --> 00:01:36,070
+into b more to see.
+
+25
+00:01:37,230 --> 00:01:38,100
+Vote by.
+
+26
+00:01:39,340 --> 00:01:40,750
+By brute force won't work.
+
+27
+00:01:44,690 --> 00:01:45,350
+Because.
+
+28
+00:01:48,890 --> 00:01:53,870
+Place, because is often the 15 inch wheels of train to the bar, 15 range.
+
+29
+00:01:54,470 --> 00:01:59,480
+If you multiply them even like even in like inside or if you're just multiplying them.
+
+30
+00:02:00,080 --> 00:02:02,810
+This this is actually exceeding my long, long into range.
+
+31
+00:02:02,840 --> 00:02:05,660
+Even Unsane long, long interchanges also being exceeded.
+
+32
+00:02:06,020 --> 00:02:12,560
+If you multiply these two values because the range of the new number will go around 10 to devour poverty
+
+33
+00:02:12,560 --> 00:02:17,420
+rate, which cannot be stored in any format, it can be stored in string eight.
+
+34
+00:02:17,420 --> 00:02:22,340
+But that will become again a heavier task recorded in it as strings.
+
+35
+00:02:22,580 --> 00:02:25,130
+And you have to do that pen and paper job again.
+
+36
+00:02:26,150 --> 00:02:28,730
+So I'm not asking for a string solution, but a good one.
+
+37
+00:02:29,970 --> 00:02:31,830
+So how do you do it, guys?
+
+38
+00:02:34,440 --> 00:02:35,180
+But this won't work.
+
+39
+00:02:35,460 --> 00:02:42,240
+We are very clear with this because this is going above the limit of my long longing and it will give
+
+40
+00:02:42,240 --> 00:02:44,230
+me a garbage value for garbage value.
+
+41
+00:02:44,280 --> 00:02:47,000
+Marty will be another garbage that you will.
+
+42
+00:02:47,490 --> 00:02:48,480
+So this is not working.
+
+43
+00:02:48,480 --> 00:02:54,270
+The second is some of you might be thinking the second approach and that is e might see.
+
+44
+00:02:55,310 --> 00:03:03,560
+Into we might see Nazi hate, so that's how we distribute my inside when we are trying to find is again,
+
+45
+00:03:03,570 --> 00:03:05,060
+there is the same reason.
+
+46
+00:03:05,090 --> 00:03:05,780
+So let's see.
+
+47
+00:03:06,320 --> 00:03:06,830
+Let's see.
+
+48
+00:03:07,070 --> 00:03:12,950
+That is equal to be is equal to 10 to 12 15 and see is equal to 10 to 12 15 minus one.
+
+49
+00:03:13,500 --> 00:03:15,230
+It is nine 14 times at eight.
+
+50
+00:03:16,310 --> 00:03:16,730
+Whatever.
+
+51
+00:03:17,710 --> 00:03:19,930
+So if you take a Motsi.
+
+52
+00:03:20,830 --> 00:03:23,680
+OK, so I think I have just reversed the situation.
+
+53
+00:03:26,610 --> 00:03:29,610
+So let's say, as he was too busy with strapped into the power.
+
+54
+00:03:31,400 --> 00:03:32,720
+15 minus one.
+
+55
+00:03:34,010 --> 00:03:40,800
+Right and seized and about 15, if you take MRC, then it will be only because C is greater than the
+
+56
+00:03:41,040 --> 00:03:42,650
+similarly guys B Morsi will be.
+
+57
+00:03:42,680 --> 00:03:44,990
+B only because it is greater than.
+
+58
+00:03:46,520 --> 00:03:52,340
+Because she's going to then be an Rachel, what does this problem statement conversion do, what does
+
+59
+00:03:52,340 --> 00:03:53,180
+it actually become?
+
+60
+00:03:53,360 --> 00:03:54,660
+Becomes a normal statement.
+
+61
+00:03:54,680 --> 00:03:55,880
+It is going to be Marty.
+
+62
+00:03:56,930 --> 00:03:59,930
+Well, NBA legend and inches awkward isn't going to work.
+
+63
+00:04:00,540 --> 00:04:04,520
+What I mean to say is this more is unnecessary in this case.
+
+64
+00:04:05,920 --> 00:04:11,320
+Again, more than we are offering 15 and above 15, all of them out of this range.
+
+65
+00:04:12,190 --> 00:04:14,260
+They can't, cannot be multiplied by brute force.
+
+66
+00:04:15,070 --> 00:04:16,110
+I just want you to.
+
+67
+00:04:18,500 --> 00:04:20,930
+If you're not like if you want.
+
+68
+00:04:21,130 --> 00:04:30,080
+And so this is normal unit that you are watching this video on the topic of binary multiplication,
+
+69
+00:04:30,090 --> 00:04:32,420
+so instead of exponential be a multiplication.
+
+70
+00:04:33,060 --> 00:04:35,060
+This is nothing different.
+
+71
+00:04:35,660 --> 00:04:35,960
+So.
+
+72
+00:04:36,840 --> 00:04:42,480
+It like it's a golf utility, but it's like relatable from this to this, you can easily relate.
+
+73
+00:04:42,960 --> 00:04:45,540
+It is in binary explanation what happens?
+
+74
+00:04:50,190 --> 00:04:53,880
+Let's read a binary multiplication.
+
+75
+00:04:58,790 --> 00:05:06,520
+Binary explanation, what does it do, is it calculate it to be and this will get great aim to be more
+
+76
+00:05:06,560 --> 00:05:09,680
+than will be taken later, do not worry about that March eight.
+
+77
+00:05:10,340 --> 00:05:12,350
+The counting is in by next one injection.
+
+78
+00:05:12,350 --> 00:05:14,690
+It is actually a multiplied buildings.
+
+79
+00:05:16,650 --> 00:05:24,440
+Your name's brought in by animal application, it is a plus a plus e plus a few times in both.
+
+80
+00:05:24,450 --> 00:05:26,340
+What we'll do is we'll simply divide.
+
+81
+00:05:27,400 --> 00:05:28,300
+Or break?
+
+82
+00:05:29,300 --> 00:05:30,380
+Being too binary.
+
+83
+00:05:33,290 --> 00:05:34,340
+Eight and.
+
+84
+00:05:35,420 --> 00:05:37,400
+The rest of the part will remain same late.
+
+85
+00:05:37,700 --> 00:05:44,420
+So here in like minded expert intuition, I was actually multiplying anyway, resulting in binding multiplication.
+
+86
+00:05:44,420 --> 00:05:47,860
+I will simply add it to the resulting theorem.
+
+87
+00:05:47,930 --> 00:05:53,480
+So you saying, is it going to be a square part in finding multiplication tables is equal to twenty
+
+88
+00:05:54,170 --> 00:05:54,440
+eight?
+
+89
+00:05:54,830 --> 00:05:58,550
+What does I mean that if I want to find out in two?
+
+90
+00:06:00,050 --> 00:06:01,970
+That is let's take an example to Windows 10.
+
+91
+00:06:02,820 --> 00:06:06,230
+So how can this better than this can in this window for?
+
+92
+00:06:07,330 --> 00:06:09,620
+But if doing to eight plus blustering to do.
+
+93
+00:06:10,730 --> 00:06:16,580
+And because they were divided and into Bindi's, not a big deal, guys divided the next term into binary.
+
+94
+00:06:17,000 --> 00:06:24,470
+And finally, do they do these multiplications and continuously take note eight who are very easy are
+
+95
+00:06:24,500 --> 00:06:25,550
+very easy to disguise.
+
+96
+00:06:25,850 --> 00:06:26,740
+So let's call it out.
+
+97
+00:06:26,750 --> 00:06:28,940
+I don't think much explanation is needed here.
+
+98
+00:06:29,820 --> 00:06:30,060
+A.
+
+99
+00:06:31,250 --> 00:06:31,910
+Oh, yeah.
+
+100
+00:06:34,310 --> 00:06:39,020
+If I want to yeah, this is let me say how I saved it.
+
+101
+00:06:39,190 --> 00:06:39,920
+Yeah, I've saved it.
+
+102
+00:06:41,240 --> 00:06:42,500
+So let's multiply.
+
+103
+00:06:44,930 --> 00:06:46,390
+My deep lie.
+
+104
+00:06:46,940 --> 00:06:48,680
+Let's multiply it into B.
+
+105
+00:06:49,660 --> 00:06:53,710
+With some with some sort of sea instead of this smart and.
+
+106
+00:06:55,520 --> 00:06:59,210
+At stake, this is retained as he goes to one guy, it's not a big deal.
+
+107
+00:06:59,710 --> 00:07:04,680
+So again, until I have B, then what I need to do is simple.
+
+108
+00:07:04,910 --> 00:07:05,420
+If.
+
+109
+00:07:06,750 --> 00:07:08,540
+I don't I don't know why today it is it.
+
+110
+00:07:09,150 --> 00:07:13,990
+If B and one, then resulting in close to deserted place.
+
+111
+00:07:14,850 --> 00:07:18,150
+Not my reply this time is it goes to India.
+
+112
+00:07:18,150 --> 00:07:18,360
+We.
+
+113
+00:07:19,690 --> 00:07:26,440
+Or instead, we can record everything is a political story, and we let you go through to a formalistic,
+
+114
+00:07:26,440 --> 00:07:33,490
+a very basic example is day to the Barberton, and let's say the mod is a very big integer one nine
+
+115
+00:07:33,490 --> 00:07:33,970
+platoon.
+
+116
+00:07:37,650 --> 00:07:39,000
+That's OK, it multiply.
+
+117
+00:07:44,200 --> 00:07:44,560
+OK.
+
+118
+00:07:45,110 --> 00:07:50,140
+But these children will not be one, it will be zero, because right now emerging things are multiplying
+
+119
+00:07:50,180 --> 00:07:51,850
+late initially to zero.
+
+120
+00:07:52,600 --> 00:07:55,750
+Yes, sir, I've got 20 and let's see about 20.
+
+121
+00:07:56,590 --> 00:08:02,950
+I know the march or not, because you're doing your 20s party again, branding you 20 will be 400.
+
+122
+00:08:03,430 --> 00:08:05,410
+I hope you understand this part.
+
+123
+00:08:05,850 --> 00:08:08,670
+Now let's do the modelling part again.
+
+124
+00:08:08,680 --> 00:08:14,290
+The same thing they're doing is to go through and place it whenever it exceeds my MA limit.
+
+125
+00:08:14,590 --> 00:08:20,230
+Let's dig more similarly, as you go straight into it air and whenever it suits me more limited, let's
+
+126
+00:08:20,230 --> 00:08:20,830
+take it.
+
+127
+00:08:21,670 --> 00:08:23,630
+Oh, let's dig marred by the.
+
+128
+00:08:24,690 --> 00:08:28,800
+Well, why am I doing this, why wounded exceed my long, long range?
+
+129
+00:08:28,800 --> 00:08:36,780
+Because very, very ultra long lines that I'm just adding it to resulting great so retreating is becoming
+
+130
+00:08:37,500 --> 00:08:45,090
+resulting, plus a look at both resultant and E alleged intent to devote 15.
+
+131
+00:08:45,090 --> 00:08:46,660
+Because I am continuously taking more.
+
+132
+00:08:46,690 --> 00:08:50,430
+If if you want to exceed their level 15, I'm going industry taking more rate.
+
+133
+00:08:50,880 --> 00:08:55,170
+If I add both of them, then what will be the range around 10 to the above 16?
+
+134
+00:08:55,650 --> 00:09:01,080
+In the worst case, if I had to integers of tangible 15 days in the worst case, they can go end the
+
+135
+00:09:01,110 --> 00:09:01,680
+worst 16.
+
+136
+00:09:02,090 --> 00:09:07,860
+But the standard 16 is easily storable in my data, in my long longing.
+
+137
+00:09:10,430 --> 00:09:15,860
+Easily storey buildings, because we are just adding two integers and again, part the second operation,
+
+138
+00:09:15,860 --> 00:09:16,970
+it's very easy.
+
+139
+00:09:17,240 --> 00:09:18,450
+We're not multiplying anything.
+
+140
+00:09:18,450 --> 00:09:19,570
+And so this is doing to.
+
+141
+00:09:19,850 --> 00:09:23,780
+Of course we're multiplying, but we can also write it as a plus equals to it.
+
+142
+00:09:24,850 --> 00:09:28,850
+And again, what I'm doing is I'm saying is going to be a blessing.
+
+143
+00:09:29,300 --> 00:09:31,730
+Again, I'm adding to Indonesia's of instead of.
+
+144
+00:09:32,420 --> 00:09:36,110
+So their total range will be less than 10 to the power 16.
+
+145
+00:09:36,410 --> 00:09:39,830
+And then when ultimately they will again become less than 10 to 15.
+
+146
+00:09:39,830 --> 00:09:40,020
+Why?
+
+147
+00:09:40,040 --> 00:09:45,740
+Because these less than 10 to the power 15 while taking more bases, they will again move back.
+
+148
+00:09:46,370 --> 00:09:53,000
+This is just to give you a brief idea about how does exponentially what is what is binary conversion
+
+149
+00:09:53,000 --> 00:09:53,570
+of a number?
+
+150
+00:09:54,080 --> 00:09:55,820
+How is this VI loop actually going?
+
+151
+00:09:55,820 --> 00:10:01,720
+So it's not about multiplication or only about exponents using this can be used in various places,
+
+152
+00:10:01,730 --> 00:10:02,030
+guys.
+
+153
+00:10:02,570 --> 00:10:08,090
+In the next topic, you will see what is metrics expert intuition in Dallas will be using the same thing.
+
+154
+00:10:09,020 --> 00:10:11,390
+I just wanted to give you a very.
+
+155
+00:10:14,290 --> 00:10:22,030
+Diverse obligation of binding and with it, so it's it isn't like binding members are a very big thing
+
+156
+00:10:22,030 --> 00:10:30,210
+and they're kind of if to the humanity, because everything that we see is working in binary, they
+
+157
+00:10:30,460 --> 00:10:33,120
+may been like under 200 years.
+
+158
+00:10:33,130 --> 00:10:36,100
+Everything works in condoms, which are not perfect binaries.
+
+159
+00:10:36,520 --> 00:10:40,750
+But yes, right now this is possible because of binary, right?
+
+160
+00:10:41,470 --> 00:10:44,740
+And yeah, so see in the next word, gays, thank you.
+

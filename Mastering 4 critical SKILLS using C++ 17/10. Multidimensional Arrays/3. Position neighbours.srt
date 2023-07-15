@@ -1,0 +1,325 @@
+0
+1
+00:00:01,170 --> 00:00:04,290
+This is a recently added video on the positions neighbours.
+1
+
+2
+00:00:05,010 --> 00:00:10,590
+I already explained it during the section, but I thought maybe making it more clear here will make
+2
+
+3
+00:00:10,590 --> 00:00:11,370
+things easier.
+3
+
+4
+00:00:13,020 --> 00:00:18,300
+The word matrix or the word grid refers mainly to something that is of 2D structure, like same number
+4
+
+5
+00:00:18,300 --> 00:00:19,830
+of rows and same number of columns.
+5
+
+6
+00:00:23,250 --> 00:00:31,260
+And we will learn today about some neighbors trick that make coding very easier. To give you some context, in many
+6
+
+7
+00:00:31,260 --> 00:00:33,720
+problems we might need to check our neighbors.
+7
+
+8
+00:00:33,870 --> 00:00:36,420
+Let's say you are at this position here in the middle.
+8
+
+9
+00:00:36,810 --> 00:00:42,160
+Then you might sometimes need to consider your 4 neighbors: up and right and down and left.
+9
+
+10
+00:00:42,540 --> 00:00:43,650
+So these four positions.
+10
+
+11
+00:00:44,070 --> 00:00:49,020
+Sometimes you need to consider more than that, as these 8 
+conditions, these eight neighbors and sometimes
+11
+
+12
+00:00:49,020 --> 00:00:50,160
+16 and so on,
+12
+
+13
+00:00:50,160 --> 00:00:50,760
+it depends.
+13
+
+14
+00:00:51,600 --> 00:00:57,450
+And what might make the code very ugly is that you have to keep addressing all of them one by one.
+14
+
+15
+00:00:57,960 --> 00:01:03,510
+But there is what we call "direction array", which make our life much easier when it comes to addressing
+15
+
+16
+00:01:03,510 --> 00:01:04,020
+the neighbors.
+16
+
+17
+00:01:05,520 --> 00:01:08,640
+I would like to think about the following, think in position
+17
+
+18
+00:01:08,640 --> 00:01:15,540
+0 and 0, what is the relation between the four or the eight neighbors it has? and try to create 2 like 1D 
+18
+
+19
+00:01:15,540 --> 00:01:22,180
+arrays, in each one list the differences such that from any (i,j) we can get the neighbor
+19
+
+20
+00:01:22,890 --> 00:01:28,400
+So if I'm zero and zero, how to get this neighbor or this neighbor or this neighbor, or this neighbor,
+20
+
+21
+00:01:28,620 --> 00:01:32,750
+what kind of a change happening to the current row and the current column?
+21
+
+22
+00:01:33,120 --> 00:01:34,410
+Try to think for five minutes.
+22
+
+23
+00:01:36,240 --> 00:01:37,290
+Let's see the differences.
+23
+
+24
+00:01:37,530 --> 00:01:44,540
+If you are in (r,c) here in the middle to go up, you need to be at (r-1 ,c), to go down
+24
+
+25
+00:01:44,550 --> 00:01:48,750
+You need (r+1, c), if you would like to go to the diagonal
+25
+
+26
+00:01:48,750 --> 00:01:50,520
+You should be (r+1, c+1)
+26
+
+27
+00:01:51,150 --> 00:01:57,810
+So this means that if I am at (r, c) and would like to go to the down, it means that the number of rows
+27
+
+28
+00:01:57,810 --> 00:01:59,250
+will be incremented with one
+28
+
+29
+00:01:59,430 --> 00:02:02,220
+but the column doesn't change, in a similar way
+29
+
+30
+00:02:02,400 --> 00:02:06,510
+if you would like to move to the left, it means you would like to
+30
+
+31
+00:02:08,340 --> 00:02:09,580
+You would like to
+31
+
+32
+00:02:10,020 --> 00:02:12,170
+What is a change of (r,c) to the left?
+32
+
+33
+00:02:12,210 --> 00:02:13,590
+This is the left
+33
+
+34
+00:02:13,800 --> 00:02:15,230
+It should be.. sorry
+34
+
+35
+00:02:15,330 --> 00:02:20,010
+This should be (r, c-1)  
+35
+
+36
+00:02:20,070 --> 00:02:21,240
+sorry for the mistake
+36
+
+37
+00:02:21,630 --> 00:02:23,610
+So down we definitely have (r+1,c)
+37
+
+38
+00:02:23,620 --> 00:02:24,930
+I made a copy-paste mistake here :(
+38
+
+39
+00:02:25,230 --> 00:02:30,870
+If you would like to move to the left, the row doesn't change, but the column is minimized with one.
+39
+
+40
+00:02:31,620 --> 00:02:37,600
+We can have two arrays to encode for us this +1/-1/0 changes and we call that direction
+40
+
+41
+00:02:37,780 --> 00:02:39,630
+array mainly in programming competitions.
+41
+
+42
+00:02:40,440 --> 00:02:43,500
+So here is how to get the four neighbors you maintain
+42
+
+43
+00:02:43,500 --> 00:02:46,980
+mainly what is the difference that you need to move to the down?
+43
+
+44
+00:02:46,980 --> 00:02:50,250
+You need one change for the row, but not change for the column.
+44
+
+45
+00:02:50,700 --> 00:02:52,170
+What about moving to the right?
+45
+
+46
+00:02:52,470 --> 00:02:57,390
+We need no change for the row, but one change for the column. Moving up
+46
+
+47
+00:02:57,720 --> 00:03:03,060
+you need to decrease the row, but leave the column.
+47
+
+48
+00:03:03,330 --> 00:03:04,350
+What about the left?
+48
+
+49
+00:03:04,560 --> 00:03:10,860
+You need to do not change the row, but minimize the left.
+49
+
+50
+00:03:11,340 --> 00:03:15,030
+Let's say you are at position here in the middle at (4,7)
+50
+
+51
+00:03:15,270 --> 00:03:18,720
+If you are treated at four the steps and take the current row and column
+51
+
+52
+00:03:18,960 --> 00:03:19,950
+oh, this is another
+52
+
+53
+00:03:19,950 --> 00:03:29,580
+bug, this should be j, if you are at (i, j) and started to add the current row and current
+53
+
+54
+00:03:29,580 --> 00:03:35,840
+column, you will notice that you are getting the neighbors, for example, if you are here at r
+54
+
+55
+00:03:35,840 --> 00:03:45,090
+and seven and would like to go up then up would be 4+1 is 5 and j plus zero which is
+55
+
+56
+00:03:46,410 --> 00:03:48,170
+which will be seven.
+56
+
+57
+00:03:48,780 --> 00:03:51,690
+It's wrong here because I acceded with wrong one I didn't verified.
+57
+
+58
+00:03:51,990 --> 00:03:58,590
+So this way the four will be five, but the j would be seven, in a similar way let's say, we would like
+58
+
+59
+00:03:58,590 --> 00:03:59,490
+to move to the left
+59
+
+60
+00:03:59,730 --> 00:04:01,290
+the four will be added to zero.
+60
+
+61
+00:04:01,290 --> 00:04:05,160
+It would be 4 the g would be added to -1.
+61
+
+62
+00:04:05,160 --> 00:04:08,130
+It would be six, it would be four and six, and so on.
+62
+
+63
+00:04:09,620 --> 00:04:15,080
+I would like you to give you a trial to think about the array when it comes to 8 elements, it's like now how
+63
+
+64
+00:04:15,080 --> 00:04:22,280
+to get this 8 elements? design something that is di and dj to encode all of this row and column changes.
+64
+
+65
+00:04:23,300 --> 00:04:23,810
+That's all.

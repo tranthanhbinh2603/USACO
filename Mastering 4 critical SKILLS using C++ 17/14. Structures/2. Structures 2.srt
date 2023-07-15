@@ -1,0 +1,784 @@
+0
+1
+00:00:01,290 --> 00:00:08,580
+Let's learn more about structures, the first very interesting thing that you can know is that there
+1
+
+2
+00:00:08,580 --> 00:00:13,110
+is an ability to put a function inside the struct itself.
+2
+
+3
+00:00:13,470 --> 00:00:19,380
+So in the previous video, we know that we can add the member variables so that we can access them and
+3
+
+4
+00:00:19,380 --> 00:00:22,020
+we group them together for convenient usage.
+4
+
+5
+00:00:22,440 --> 00:00:25,190
+Now we are also adding function inside the struct.
+5
+
+6
+00:00:25,530 --> 00:00:26,870
+What is the purpose of that?
+6
+
+7
+00:00:27,240 --> 00:00:31,380
+You have some functions that are very relevant to this struct, right?
+7
+
+8
+00:00:31,560 --> 00:00:35,160
+So, for example, you might want to read employee or print employee,
+8
+
+9
+00:00:35,700 --> 00:00:37,060
+OK.
+9
+
+10
+00:00:37,200 --> 00:00:43,230
+So there is a need here if this function can be inside the struct itself so that we are grouping together
+10
+
+11
+00:00:43,440 --> 00:00:45,940
+the variables and the functions.
+11
+
+12
+00:00:46,200 --> 00:00:48,630
+Think of that as a way to make your life easier.
+12
+
+13
+00:00:48,900 --> 00:00:52,650
+All of your code that is very relevant is just in one place.
+13
+
+14
+00:00:53,130 --> 00:00:59,940
+Now there's an interesting property when the function is inside the struct, you see here
+14
+
+15
+00:00:59,940 --> 00:01:04,190
+the function "read_employee" is reading directly name, age, salary and gender.
+15
+
+16
+00:01:04,560 --> 00:01:10,770
+So the C++ compiler knows that you are trying to read the name of this object and the gender of this
+16
+
+17
+00:01:10,770 --> 00:01:12,240
+object and so on.
+17
+
+18
+00:01:12,300 --> 00:01:14,630
+OK, it's important.
+18
+
+19
+00:01:14,850 --> 00:01:19,590
+I hope that you manage to figure out so far that there is a difference between the struct
+19
+
+20
+00:01:19,590 --> 00:01:24,910
+employee, as like say how things would be go compared to the objects.
+20
+
+21
+00:01:24,930 --> 00:01:29,730
+OK, so we call that struct employee and we call that object employee.
+21
+
+22
+00:01:29,810 --> 00:01:31,700
+OK, so there is here a difference in the name.
+22
+
+23
+00:01:32,010 --> 00:01:34,190
+What is a struct and what is object?
+23
+
+24
+00:01:34,650 --> 00:01:39,210
+We call this is a struct, which is the way we define what is an employee.
+24
+
+25
+00:01:39,690 --> 00:01:44,670
+But when we create an employee here and keep adding it, every one of them we named it object.
+25
+
+26
+00:01:44,910 --> 00:01:48,480
+So this is called struct employee and this is called object employee.
+26
+
+27
+00:01:48,480 --> 00:01:51,190
+And this is how things would be defined.
+27
+
+28
+00:01:51,450 --> 00:01:53,440
+This is an actual example of it.
+28
+
+29
+00:01:53,850 --> 00:02:03,390
+So anyway the interesting here that "read", "print", "get", "set" and such things are accessing directly the
+29
+
+30
+00:02:03,510 --> 00:02:08,250
+variables inside the employee; so you don't need the dot operator when you are inside the function.
+30
+
+31
+00:02:08,580 --> 00:02:15,020
+Now let's see, how can we use it, now instead of like we pass it as a parameter,
+31
+
+32
+00:02:15,330 --> 00:02:22,320
+We get now the object that we have, remember, "employees_array" at some position is an object of kind employee.
+32
+
+33
+00:02:22,320 --> 00:02:24,320
+we say ".read_employee",
+33
+
+34
+00:02:24,600 --> 00:02:27,330
+So now we see another usage for the dot.
+34
+
+35
+00:02:27,630 --> 00:02:34,500
+One time the dot was accessing a variable and another time the dot was accessing the function itself.
+35
+
+36
+00:02:34,740 --> 00:02:40,830
+So this is how we again, in a printing, we just get the object and say dot "." and it's going to print.
+36
+
+37
+00:02:41,130 --> 00:02:43,380
+We don't care now about the reference and such things.
+37
+
+38
+00:02:44,980 --> 00:02:53,440
+So let's do some comparison between some objects, here is a "compare_name" I would like this
+38
+
+39
+00:02:53,440 --> 00:02:59,860
+function to take two objects of type employee and tell me if the first is smaller than the second or not
+39
+
+40
+00:02:59,860 --> 00:03:00,570
+based on the name.
+40
+
+41
+00:03:00,760 --> 00:03:04,420
+So we can do that as simple as a.name < b.name.
+41
+
+42
+00:03:05,140 --> 00:03:07,000
+OK, what about comparing salary?
+42
+
+43
+00:03:07,000 --> 00:03:08,140
+Compare for me salary,
+43
+
+44
+00:03:08,300 --> 00:03:12,440
+Such that you return true if the first has a bigger salary than the second.
+44
+
+45
+00:03:12,790 --> 00:03:20,590
+So we say "compare_salary", a.salary > b.salary. OK, let's make it more complex, compare for me name and
+45
+
+46
+00:03:20,590 --> 00:03:21,130
+salary.
+46
+
+47
+00:03:21,490 --> 00:03:31,540
+compare first by name after that compare by salary smaller and smaller.
+47
+
+48
+00:03:31,600 --> 00:03:36,850
+OK, so notice what I'm doing here, the order is very important.
+48
+
+49
+00:03:37,030 --> 00:03:37,960
+I'm saying here,
+49
+
+50
+00:03:38,500 --> 00:03:40,230
+OK, you want to compare first all name,
+50
+
+51
+00:03:40,250 --> 00:03:42,330
+Let's check out if the name are equal or not.
+51
+
+52
+00:03:42,640 --> 00:03:48,490
+If a.name != b.name then we know we can compare all names only so we are going to
+52
+
+53
+00:03:48,490 --> 00:03:50,340
+return a.name <b.name.
+53
+
+54
+00:03:50,950 --> 00:03:53,830
+Otherwise we are sure that they are equal.
+54
+
+55
+00:03:53,860 --> 00:04:00,670
+So we go to the next feature to compare with it, a.salary < b.salary, then this function as
+55
+
+56
+00:04:00,670 --> 00:04:02,180
+an overall returns
+56
+
+57
+00:04:02,200 --> 00:04:09,010
+true, if the first employee has a smaller name or a smaller salary, it's very important to understand
+57
+
+58
+00:04:09,010 --> 00:04:10,270
+the logic of this function.
+58
+
+59
+00:04:11,500 --> 00:04:13,150
+OK, let's go deeper.
+59
+
+60
+00:04:13,780 --> 00:04:21,690
+Let's say that you have array of 5 numbers and you would like to sort it or order it.
+60
+
+61
+00:04:21,700 --> 00:04:26,070
+What does it mean to sort it or order it? it means to make it from the smallest to the largest.
+61
+
+62
+00:04:26,320 --> 00:04:29,050
+So we have here five numbers not sorted.
+62
+
+63
+00:04:29,260 --> 00:04:38,920
+If we sorted them, they became 1, 2, 3, 4, 5. in STL, 
+63
+
+64
+00:04:39,250 --> 00:04:43,900
+we will study something called the "sort" function, it exists in #include<algorithm>
+64
+
+65
+00:04:44,230 --> 00:04:52,050
+If you did the following sort(array, array + 5) is going to sort this array.
+65
+
+66
+00:04:52,090 --> 00:04:53,980
+OK, the syntax here is weird.
+66
+
+67
+00:04:54,250 --> 00:05:00,850
+I know, you are sending the first parameter array, but in the second parameter you are sending array
+67
+
+68
+00:05:01,000 --> 00:05:01,710
++ 5.
+68
+
+69
+00:05:01,900 --> 00:05:06,450
+This means that go five places in the array maximum.
+69
+
+70
+00:05:06,460 --> 00:05:07,750
+OK, so five places.
+70
+
+71
+00:05:07,750 --> 00:05:10,930
+If we are here at zero then the five places is at here.
+71
+
+72
+00:05:11,170 --> 00:05:18,370
+Please familiarize yourself with this syntax, you say array and array +  some integer to indicate another
+72
+
+73
+00:05:18,370 --> 00:05:21,940
+position in the array, you don't just fill in the 5, it must be array + 5.
+73
+
+74
+00:05:23,350 --> 00:05:28,600
+Now if you familiarize yourself with that, I would like to tell you that we can also, if we have an
+74
+
+75
+00:05:28,600 --> 00:05:34,420
+array of employees that we read here, we can also sort them, so sort "employees_array", "employees array" 
+75
+
+76
+00:05:34,420 --> 00:05:35,200
++ added.
+76
+
+77
+00:05:35,200 --> 00:05:40,180
+Let's say we added three employees so it's employee_array, employee_array + 3.
+77
+
+78
+00:05:40,570 --> 00:05:50,140
+There's a question here, ordering the objects of the array based on what? like here,
+78
+
+79
+00:05:50,140 --> 00:05:54,550
+if we said sort, we know that numbers can be ordered from small to largest.
+79
+
+80
+00:05:54,970 --> 00:05:56,420
+But here, what about that one?
+80
+
+81
+00:05:56,920 --> 00:06:00,760
+So here is you see the comma "," and we give a function name.
+81
+
+82
+00:06:01,060 --> 00:06:09,340
+Remember that this function takes two objects and tells to us true if the first is more than the
+82
+
+83
+00:06:09,340 --> 00:06:09,770
+second.
+83
+
+84
+00:06:10,120 --> 00:06:17,020
+So this function "sort" here is going to order them based on which one is the smaller but smaller in which
+84
+
+85
+00:06:17,020 --> 00:06:17,520
+order?
+85
+
+86
+00:06:17,710 --> 00:06:18,900
+This depends on the function name.
+86
+
+87
+00:06:19,180 --> 00:06:24,900
+So this is a bit new also because you now see a function is sent as a parameter of the function.
+87
+
+88
+00:06:25,060 --> 00:06:30,580
+So the sort function here is actually taking a function, but it is expecting a function that takes
+88
+
+89
+00:06:30,610 --> 00:06:36,880
+two objects, return true if the first is smaller than the second.
+89
+
+90
+00:06:37,330 --> 00:06:42,070
+OK, what if I would like to order them by salary, use a salary function what if I would like to ordered them
+90
+
+91
+00:06:42,070 --> 00:06:48,010
+by the name then salary you can use this function, please familiarize yourself with the syntax.
+91
+
+92
+00:06:49,710 --> 00:06:54,980
+There is also another very interesting thing, we can create structures of structures of structures.
+92
+
+93
+00:06:54,990 --> 00:06:55,760
+What does it mean?
+93
+
+94
+00:06:56,160 --> 00:07:00,240
+Let's say that "employee" would have a full name, in a simpler way,
+94
+
+95
+00:07:00,240 --> 00:07:05,360
+You can put here, OK, string first name, string second name, string  last_name and so on.
+95
+
+96
+00:07:05,670 --> 00:07:07,950
+So the features of the "employee" are very in growing.
+96
+
+97
+00:07:08,400 --> 00:07:14,130
+But you can think from modularity perspective, creating smaller logic.
+97
+
+98
+00:07:14,310 --> 00:07:19,350
+You can define struct "full_name" and you put inside it the first, the middle, the last features,
+98
+
+99
+00:07:19,590 --> 00:07:22,470
+and you can define a read function inside it to read them.
+99
+
+100
+00:07:23,070 --> 00:07:26,010
+Now this is now a ready to use data type.
+100
+
+101
+00:07:26,370 --> 00:07:30,560
+I can inside the "employee" say we have a "full_name" of employee name.
+101
+
+102
+00:07:30,810 --> 00:07:36,180
+This means we have a new variable named Employee name and it is of data-type full_name.
+102
+
+103
+00:07:36,930 --> 00:07:41,730
+But notice that employee is a struct, full_name is a struct, so we have a struct of a struct, we can have
+103
+
+104
+00:07:41,730 --> 00:07:43,530
+more of struct of struct of struct.
+104
+
+105
+00:07:44,100 --> 00:07:45,390
+I want to mean by that,
+105
+
+106
+00:07:45,600 --> 00:07:49,260
+If you to define a new data-type, you can use it,
+106
+
+107
+00:07:49,510 --> 00:07:54,840
+OK. so now let's say that we would like to read in the Employee, the first thing you can read the name
+107
+
+108
+00:07:54,840 --> 00:08:01,920
+here so you can go to this object. and say "employee.name.read" this object so that this function
+108
+
+109
+00:08:02,070 --> 00:08:03,360
+would be called first.
+109
+
+110
+00:08:03,660 --> 00:08:06,120
+Then you read your age and salary and so on.
+110
+
+111
+00:08:06,120 --> 00:08:12,870
+If you would like to print, you can print directly "emp_name.first", "emp_name.middle", "emp_name.last" , and the sallary.
+111
+
+112
+00:08:13,200 --> 00:08:18,500
+So this is a way to build a better, a better structure.
+112
+
+113
+00:08:18,720 --> 00:08:23,580
+Think of your program in a smaller way, smaller things, and you are building them up instead of one
+113
+
+114
+00:08:23,580 --> 00:08:24,540
+very big thing.
+114
+
+115
+00:08:25,830 --> 00:08:29,160
+The constructor is the last thing to explain today.
+115
+
+116
+00:08:29,430 --> 00:08:33,220
+The constructor is a way to initialize the object from the beginning.
+116
+
+117
+00:08:33,600 --> 00:08:34,770
+Let's say that you did.
+117
+
+118
+00:08:36,120 --> 00:08:42,070
+Here is how the syntax of the constructor, the constructor is a function without a return type.
+118
+
+119
+00:08:42,480 --> 00:08:47,640
+So we first put it with the same "full_name", like the same of the object name.
+119
+
+120
+00:08:48,100 --> 00:08:50,250
+OK, and then it's a function.
+120
+
+121
+00:08:50,250 --> 00:08:52,220
+So it has a braces here, parentheses here.
+121
+
+122
+00:08:52,650 --> 00:08:53,750
+If it is empty,
+122
+
+123
+00:08:53,760 --> 00:08:55,450
+We named it empty constructor.
+123
+
+124
+00:08:56,250 --> 00:08:58,830
+OK, and then we are initializing our variables.
+124
+
+125
+00:09:00,320 --> 00:09:02,480
+And building here, another constructor.
+125
+
+126
+00:09:02,660 --> 00:09:08,770
+OK, think of it like function overriding, and I'm setting this constructor has first name, and
+126
+
+127
+00:09:08,790 --> 00:09:09,340
+last name.
+127
+
+128
+00:09:09,690 --> 00:09:11,510
+OK, so this is like a function
+128
+
+129
+00:09:11,510 --> 00:09:16,530
+We initialize the array with it, construct with it, and we give it two parameters.
+129
+
+130
+00:09:16,640 --> 00:09:18,020
+I'm now seeing here first
+130
+
+131
+00:09:18,020 --> 00:09:23,210
+= _first, last = _last, a "middle" is an empty string.
+131
+
+132
+00:09:23,240 --> 00:09:25,970
+OK, this is a constructor that takes two parameters.
+132
+
+133
+00:09:25,970 --> 00:09:27,890
+But the second is default.
+133
+
+134
+00:09:28,640 --> 00:09:29,660
+Let's see the code below,
+134
+
+135
+00:09:29,880 --> 00:09:36,440
+I'm thinking, I'm defining here "full_name my_name" and then I did = full"_name
+135
+
+136
+00:09:36,440 --> 00:09:37,790
+then I opened braces like a function,
+136
+
+137
+00:09:37,790 --> 00:09:41,960
+and passed the name Ali, the "full_name" here is taking a parameter,
+137
+
+138
+00:09:42,140 --> 00:09:48,370
+So it will search for a constructor that has matching to one parameter, which is this guy.
+138
+
+139
+00:09:48,590 --> 00:09:50,840
+So it would send the first with Ali,
+139
+
+140
+00:09:51,050 --> 00:09:52,400
+Last  will be nothing.
+140
+
+141
+00:09:52,550 --> 00:09:55,740
+So first will be Ali, last will be empty and middle will be empty.
+141
+
+142
+00:09:55,760 --> 00:09:57,590
+So if you print it here, it would print: Ali
+142
+
+143
+00:09:59,390 --> 00:10:03,840
+In another case, I send it full name, his name "Mustafa" "Ibrahim",
+143
+
+144
+00:10:03,840 --> 00:10:07,860
+So Mustafa will be sent it to the first and Ibrahim will be sent to the last,
+144
+
+145
+00:10:08,090 --> 00:10:09,800
+You can print it here. again,
+145
+
+146
+00:10:10,070 --> 00:10:15,140
+Constructor is a function in the struct, but it is a very special function,
+146
+
+147
+00:10:15,320 --> 00:10:17,060
+It doesn't have a return to type,
+147
+
+148
+00:10:17,360 --> 00:10:20,340
+It is called only in the creation of the object.
+148
+
+149
+00:10:20,540 --> 00:10:23,630
+So here we are creating object and here we are creating object,
+149
+
+150
+00:10:23,780 --> 00:10:25,040
+So only in the creation.
+150
+
+151
+00:10:25,400 --> 00:10:34,730
+if you created a full name here, like my name, "full_name my_name",
+151
+
+152
+00:10:34,730 --> 00:10:39,380
+and you stopped at this moment, then you are actually building an object without no parameter.
+152
+
+153
+00:10:39,570 --> 00:10:40,760
+That's why its code here.
+153
+
+154
+00:10:41,450 --> 00:10:48,550
+If you provide something that takes a parameter, as an advice, please always provide the empty one.
+154
+
+155
+00:10:48,740 --> 00:10:52,490
+Otherwise you might face a syntax error, later in the
+155
+
+156
+00:10:52,500 --> 00:10:54,030
+OOP will know the details of that.
+156
+
+157
+00:10:54,860 --> 00:10:55,360
+That's it.

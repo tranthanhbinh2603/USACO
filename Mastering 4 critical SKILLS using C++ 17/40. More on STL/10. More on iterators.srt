@@ -1,0 +1,363 @@
+1
+00:00:01,380 --> 00:00:06,400
+In this video, I would like to give a more treatment form of treatment to the Étretat topic.
+
+2
+00:00:06,990 --> 00:00:09,420
+So far we've learned about the iterators.
+
+3
+00:00:09,420 --> 00:00:15,180
+We use them with almost most of the data structures we use to get them from inside the structure, like
+
+4
+00:00:15,180 --> 00:00:16,910
+using the scope resolution operator.
+
+5
+00:00:17,070 --> 00:00:20,950
+It would give you a bit later on the data structure itself.
+
+6
+00:00:21,630 --> 00:00:23,970
+We learned that they are more like appointer.
+
+7
+00:00:23,970 --> 00:00:25,890
+Zicam plus plus, minus minus.
+
+8
+00:00:26,070 --> 00:00:28,200
+Do some arithmetic in some cases and so on.
+
+9
+00:00:29,040 --> 00:00:33,710
+And we use the most probably the member functionality like big an end and the blockbuster separator
+
+10
+00:00:33,740 --> 00:00:35,790
+or the most we learned at the beginning.
+
+11
+00:00:35,790 --> 00:00:36,420
+At the beginning.
+
+12
+00:00:36,420 --> 00:00:39,390
+But the end is after the data structure.
+
+13
+00:00:39,780 --> 00:00:42,030
+The urban is at the end.
+
+14
+00:00:42,050 --> 00:00:44,290
+About the other end is before the beginning.
+
+15
+00:00:44,730 --> 00:00:45,960
+And then that was enough.
+
+16
+00:00:46,110 --> 00:00:47,640
+So far today.
+
+17
+00:00:47,640 --> 00:00:52,640
+I would like you to learn a little more about the big picture of the iterators.
+
+18
+00:00:53,010 --> 00:01:00,330
+First of all, there are four, five, five different Ofwat of iterators and they follow like an inheritance
+
+19
+00:01:00,330 --> 00:01:00,940
+hierarchy.
+
+20
+00:01:01,350 --> 00:01:08,220
+So in the very basic case, we have an input iterator and over the three to the input iterator do two
+
+21
+00:01:08,220 --> 00:01:08,600
+things.
+
+22
+00:01:08,610 --> 00:01:10,040
+It can only read variables.
+
+23
+00:01:10,050 --> 00:01:15,350
+So you can do like esoteric it to to to bring to something, but you cannot change it.
+
+24
+00:01:15,950 --> 00:01:23,070
+The arbitrator on the other side can only write so you can change the value and both of them move forward.
+
+25
+00:01:23,370 --> 00:01:26,310
+Moving forward means you can only move for the next step.
+
+26
+00:01:26,490 --> 00:01:32,930
+Think about reading from a stream or writing to a stream or what you are doing is yet you are moving
+
+27
+00:01:32,940 --> 00:01:34,050
+step by step to the next.
+
+28
+00:01:34,050 --> 00:01:38,520
+If you are reading from the console, you are just moving to the next thing.
+
+29
+00:01:38,520 --> 00:01:39,600
+You never go back.
+
+30
+00:01:39,630 --> 00:01:46,140
+So this is something that limitation thinking in contrast to, for example, at it at a at a vector,
+
+31
+00:01:46,530 --> 00:01:49,110
+you can go to the next step, you can go to the next step.
+
+32
+00:01:49,120 --> 00:01:49,860
+This is what we mean.
+
+33
+00:01:49,860 --> 00:01:51,810
+We move forward and move backward.
+
+34
+00:01:52,200 --> 00:01:57,320
+So the input iterator output iterator read only move forward right when we move forward.
+
+35
+00:01:57,690 --> 00:02:01,020
+That is what we call a forward iterator, which, you know, is like a beer.
+
+36
+00:02:01,020 --> 00:02:01,860
+And for both of them.
+
+37
+00:02:01,860 --> 00:02:04,190
+So it can read and can write and can move forward.
+
+38
+00:02:05,160 --> 00:02:12,480
+The next more flexible iterator is the wider and the wider regional can move one step forward and one
+
+39
+00:02:12,480 --> 00:02:13,160
+step backward.
+
+40
+00:02:13,830 --> 00:02:16,020
+This is like the iterator of the set, for example.
+
+41
+00:02:16,500 --> 00:02:21,150
+The most flexible one is the random axis iterator and the word random Xs.
+
+42
+00:02:21,150 --> 00:02:22,860
+It means you can access anywhere.
+
+43
+00:02:22,860 --> 00:02:24,150
+And this is like the array.
+
+44
+00:02:24,690 --> 00:02:27,900
+So you can read and you can write and you can access anywhere.
+
+45
+00:02:28,020 --> 00:02:30,320
+And this is typically internally entropy.
+
+46
+00:02:31,050 --> 00:02:31,880
+The.
+
+47
+00:02:33,150 --> 00:02:39,570
+So yeah, this is mainly the five different types of the iterators in C++.
+
+48
+00:02:41,140 --> 00:02:48,790
+You notice that this Tacuba realistic, you don't have any return, the input stream, the input stream
+
+49
+00:02:48,790 --> 00:02:52,360
+iterator is an example of an input iterator for the outer stream.
+
+50
+00:02:52,390 --> 00:02:54,400
+We have something like those three minutes later.
+
+51
+00:02:54,450 --> 00:03:00,310
+We also saw before the concert Turtur, we have something that can keep adding elements to the back
+
+52
+00:03:00,310 --> 00:03:05,410
+of some data structure, the bidirectional or the like, the list and sets and maps.
+
+53
+00:03:05,410 --> 00:03:07,840
+You can move one step forward, one step backward.
+
+54
+00:03:09,310 --> 00:03:12,700
+The random access ones are like the vector and the curandera.
+
+55
+00:03:12,730 --> 00:03:17,650
+They are internally just gistaro.
+
+56
+00:03:18,880 --> 00:03:23,500
+Sometimes the triggered from a data structure is of this example of a set and map.
+
+57
+00:03:23,500 --> 00:03:29,020
+For example, when you get a better iterator from them, it would be bidirectional.
+
+58
+00:03:29,290 --> 00:03:30,520
+But also to be honest.
+
+59
+00:03:30,880 --> 00:03:39,880
+And the logic here is you cannot and you shouldn't try to change the values of the system directly because
+
+60
+00:03:39,880 --> 00:03:44,950
+the internal data structure is built on something that could balance it.
+
+61
+00:03:45,130 --> 00:03:47,040
+The researcher three, you should study into the structure.
+
+62
+00:03:47,500 --> 00:03:51,970
+So the design to build on that, but you can only browse and move.
+
+63
+00:03:51,970 --> 00:03:59,230
+And then generally speaking, during the data structure course, you should get very strong intuition
+
+64
+00:03:59,380 --> 00:04:01,180
+why things were designed this way.
+
+65
+00:04:03,410 --> 00:04:09,020
+In terms of the possibilities, if you notice in something like the random access, like over a vector,
+
+66
+00:04:09,110 --> 00:04:17,390
+you can do everything you can, you can access with this way you can get equal, you can plus, plus
+
+67
+00:04:17,390 --> 00:04:21,020
+or minus equal, like you can say plus equals seven.
+
+68
+00:04:21,020 --> 00:04:22,850
+So they try to jump at seven steps.
+
+69
+00:04:23,030 --> 00:04:28,040
+You can do all kinds of relational operators, but the other ones you will start to notice they are
+
+70
+00:04:28,040 --> 00:04:28,840
+much more limited.
+
+71
+00:04:29,180 --> 00:04:34,640
+For example, in the bidirectional, you can move forward and backward, but only one step you can make
+
+72
+00:04:34,640 --> 00:04:41,360
+equal, equal and not equal, but you can do the other additional operators if you notice the input
+
+73
+00:04:41,360 --> 00:04:42,660
+or we can further forward.
+
+74
+00:04:42,680 --> 00:04:44,200
+You can only move forward.
+
+75
+00:04:44,240 --> 00:04:45,410
+You cannot go back.
+
+76
+00:04:45,410 --> 00:04:48,610
+One step if you are using an input is three stream.
+
+77
+00:04:48,800 --> 00:04:54,500
+You cannot go one backstabs logically and naturally keep moving forward in the iterator.
+
+78
+00:04:55,670 --> 00:04:59,330
+The last thing to be careful about is the iterator invalidation.
+
+79
+00:04:59,690 --> 00:05:07,120
+When you are reading an iterator and just just reading it and everything is perfect, but the problems
+
+80
+00:05:07,130 --> 00:05:12,110
+may start with it starting to change the content itself if it's allowed.
+
+81
+00:05:12,350 --> 00:05:20,990
+Sometimes the return it validated from a step is invalid and some programmers might not might just use
+
+82
+00:05:20,990 --> 00:05:26,150
+the return like the current iteration, as everything is good.
+
+83
+00:05:26,360 --> 00:05:28,070
+But the key is that it isn't.
+
+84
+00:05:28,430 --> 00:05:34,100
+For example, in the vector you notice that the vector after insertion or after erasure is working very
+
+85
+00:05:34,100 --> 00:05:34,460
+well.
+
+86
+00:05:34,820 --> 00:05:37,730
+But this might not be the case for other data structures.
+
+87
+00:05:38,150 --> 00:05:43,780
+I would say be very careful about iterators when it comes to deleting content, especially if you are
+
+88
+00:05:43,790 --> 00:05:47,150
+treating the data structure like your treating and rating in the same time.
+
+89
+00:05:47,570 --> 00:05:53,120
+If it had been that, please come back to such such a table, read the data structure and double check
+
+90
+00:05:53,120 --> 00:05:59,360
+what is going to happen to the Iterator after the change over overwritten.
+
+91
+00:06:00,860 --> 00:06:01,390
+That's all.

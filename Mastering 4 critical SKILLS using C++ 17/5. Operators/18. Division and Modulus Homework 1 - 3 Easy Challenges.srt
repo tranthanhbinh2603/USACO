@@ -1,0 +1,129 @@
+0
+1
+00:00:01,110 --> 00:00:07,560
+Homework number one for the division and modulus part, in the first program, you will read five
+1
+
+2
+00:00:07,560 --> 00:00:14,790
+numbers and print the following, their average, the sum of the first three numbers divided by the
+2
+
+3
+00:00:14,790 --> 00:00:16,410
+sum of the last two numbers.
+3
+
+4
+00:00:16,860 --> 00:00:20,760
+So here are the five numbers that we read as an input,
+4
+
+5
+00:00:21,630 --> 00:00:28,260
+And then their average is 3, because 1, 2, 3 is 6, 10, 15, 15 
+5
+
+6
+00:00:28,260 --> 00:00:29,370
+Over five is three.
+6
+
+7
+00:00:30,000 --> 00:00:34,850
+The sum of the first three numbers divided by the sum of last two numbers, that should be one, two,
+7
+
+8
+00:00:34,860 --> 00:00:37,270
+three, which is six divided by nine.
+8
+
+9
+00:00:37,920 --> 00:00:44,220
+And finally here in C the average of the first three numbers divided by the average of the last two
+9
+
+10
+00:00:44,220 --> 00:00:44,720
+numbers.
+10
+
+11
+00:00:44,730 --> 00:00:50,130
+So the average of the first three numbers are six over two, six over three, which is two.
+11
+
+12
+00:00:50,430 --> 00:00:53,040
+And the average of the last two number, which is nine number two.
+12
+
+13
+00:00:53,640 --> 00:00:54,770
+And that is the question here.
+13
+
+14
+00:00:54,780 --> 00:01:01,530
+Is there any math relationship between B and C? in the second the program would like to print the
+14
+
+15
+00:01:01,530 --> 00:01:04,380
+fractional part of two numbers when they are divided,
+15
+
+16
+00:01:04,830 --> 00:01:10,500
+For example, if you divide two hundred and one over twenty-five, the answer is eight point zero four.
+16
+
+17
+00:01:10,920 --> 00:01:13,600
+I would like you to try to print this zero point zero four.
+17
+
+18
+00:01:13,650 --> 00:01:15,840
+This is a fractional part that we would like to print.
+18
+
+19
+00:01:18,280 --> 00:01:23,020
+Our reminder, we know that N%M computes the remainder of the division, I would like you to
+19
+
+20
+00:01:23,020 --> 00:01:29,530
+write a program that reads 2 positive integers and print their remainders, but you shouldn't use the
+20
+
+21
+00:01:29,530 --> 00:01:31,570
+model operator, for example.
+21
+
+22
+00:01:31,840 --> 00:01:34,510
+Twenty seven and the twelve with models
+22
+
+23
+00:01:34,510 --> 00:01:35,490
+we know they are three.
+23
+
+24
+00:01:35,500 --> 00:01:39,220
+I would like you to get the three without using the model operator itself.
+24
+
+25
+00:01:39,460 --> 00:01:43,900
+So remember, what is a math equation that we need to get this three value
+25
+
+26
+00:01:45,260 --> 00:01:45,560
+That's all.

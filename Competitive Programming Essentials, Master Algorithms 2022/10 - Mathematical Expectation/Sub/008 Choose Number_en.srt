@@ -1,0 +1,84 @@
+1
+00:00:00,780 --> 00:00:02,490
+OK, let us discuss this problem choose
+
+2
+00:00:03,180 --> 00:00:07,650
+Numbers. it says, N students are ask to choose a number from one to 100.
+
+3
+00:00:07,950 --> 00:00:08,310
+OK.
+
+4
+00:00:08,880 --> 00:00:12,930
+What is the expected number of students that would choose a single digit number?
+
+5
+00:00:13,260 --> 00:00:15,030
+So let us talk about a single student.
+
+6
+00:00:15,210 --> 00:00:15,570
+OK?
+
+7
+00:00:15,900 --> 00:00:20,910
+What is the probability of single student choosing a one digit number?
+
+8
+00:00:20,910 --> 00:00:21,180
+OK?
+
+9
+00:00:21,720 --> 00:00:28,320
+So between 1 to 100, we have only nine numbers so that means this probability would be 9/100.
+
+10
+00:00:28,680 --> 00:00:31,500
+Now we are doing this experiment not for a single student.
+
+11
+00:00:31,500 --> 00:00:35,050
+We are doing this experiment for N number of students, OK?
+
+12
+00:00:35,520 --> 00:00:43,320
+So if the probability of getting success in a single experiment has P OK. then we have seen from
+
+13
+00:00:43,320 --> 00:00:47,130
+theorem 2 that for N experiment or for N student.
+
+14
+00:00:47,160 --> 00:00:48,860
+This is going to be N into P. OK.
+
+15
+00:00:48,870 --> 00:00:53,400
+So we can see this is going to be 9P upon 100.
+
+16
+00:00:53,970 --> 00:00:55,290
+And that's that's it.
+
+17
+00:00:55,290 --> 00:00:56,220
+That's the answer.
+
+18
+00:00:56,220 --> 00:01:02,670
+This is nothing but a simple application of Theorem two of Bernoulli's trial. that we have seen in the
+
+19
+00:01:03,420 --> 00:01:03,930
+concept video.
+
+20
+00:01:03,930 --> 00:01:04,530
+OK?
+
+21
+00:01:04,860 --> 00:01:05,700
+So that's all.
+

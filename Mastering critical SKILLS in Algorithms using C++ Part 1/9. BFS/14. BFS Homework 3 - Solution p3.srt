@@ -1,0 +1,391 @@
+1
+00:00:01,090 --> 00:00:04,010
+Let's solve the third problem about this tipping number.
+
+2
+00:00:05,140 --> 00:00:08,520
+This problem involved with the two tracks that we learned so far.
+
+3
+00:00:09,170 --> 00:00:15,820
+It involved an operation based problem and it involves a multi source to track and keep in mind that
+
+4
+00:00:16,270 --> 00:00:21,190
+one type of hard the problems are these problems that are composed of such problems.
+
+5
+00:00:21,490 --> 00:00:26,560
+Once you manage solving these problems and learning about them and gets killed in them, you can now
+
+6
+00:00:26,560 --> 00:00:28,330
+approach hardhearted problems.
+
+7
+00:00:28,840 --> 00:00:30,580
+So let's see, what do we have here?
+
+8
+00:00:31,300 --> 00:00:35,950
+We have a positive number and we know we can generate maximum to new numbers from it.
+
+9
+00:00:36,310 --> 00:00:40,930
+So if I have three, three four and I would like to add one more digit, the next digit would be either
+
+10
+00:00:40,930 --> 00:00:47,080
+five or three because Ford has either five after it or three of it before it.
+
+11
+00:00:47,680 --> 00:00:48,940
+Now what about three zero?
+
+12
+00:00:49,210 --> 00:00:50,770
+You can only have three zero one.
+
+13
+00:00:51,400 --> 00:00:52,510
+What about three nine?
+
+14
+00:00:52,540 --> 00:00:56,680
+You can only have 398, so you can have maximum two new children.
+
+15
+00:00:57,460 --> 00:01:05,380
+The idea here we can use the first word be a force to generate all the numbers, then add only the numbers
+
+16
+00:01:05,380 --> 00:01:05,920
+in the range.
+
+17
+00:01:06,190 --> 00:01:09,550
+This task now involved with two things generate.
+
+18
+00:01:11,700 --> 00:01:14,190
+Select Saddam mixing both of them.
+
+19
+00:01:14,310 --> 00:01:14,700
+OK.
+
+20
+00:01:15,510 --> 00:01:17,930
+There are different problems I can tell you generate for me.
+
+21
+00:01:17,940 --> 00:01:21,330
+All of them are random strings and only add the Brent room within.
+
+22
+00:01:21,330 --> 00:01:26,160
+A specific range of this problem followed the same pattern you would like to generate out of such numbers
+
+23
+00:01:26,520 --> 00:01:29,390
+so we can use defense or be first to generate them.
+
+24
+00:01:29,400 --> 00:01:31,680
+Then we selected that target problem.
+
+25
+00:01:32,280 --> 00:01:33,960
+OK, so here's what we need to do.
+
+26
+00:01:34,320 --> 00:01:38,940
+You kind of start from the valleys one to nine, which is the minimum number of valleys that we can
+
+27
+00:01:38,940 --> 00:01:41,790
+have on all of them are are still being number four.
+
+28
+00:01:41,940 --> 00:01:45,240
+Then iteratively, one can add 10 and 11.
+
+29
+00:01:45,540 --> 00:01:50,790
+Two can add 21 and 20 through three for up to nine, then nine at night.
+
+30
+00:01:51,240 --> 00:01:52,260
+Keep doing that.
+
+31
+00:01:52,530 --> 00:01:54,750
+Now what is the next 10 will add for you?
+
+32
+00:01:54,790 --> 00:01:59,670
+One one one one eight one one one zero and one one two and so on.
+
+33
+00:01:59,670 --> 00:02:00,960
+Keep adding, keep adding.
+
+34
+00:02:00,960 --> 00:02:03,270
+Keep adding one observation here.
+
+35
+00:02:03,270 --> 00:02:09,420
+If you thought about the generation process, first of all, all of the numbers that would be generated
+
+36
+00:02:09,420 --> 00:02:10,080
+are unique.
+
+37
+00:02:11,580 --> 00:02:14,430
+The second all of the numbers are sorted.
+
+38
+00:02:15,120 --> 00:02:19,740
+Does this mean the number, the next number is usually bigger than the previous one, and it has different
+
+39
+00:02:19,740 --> 00:02:21,080
+benefits than anyone before.
+
+40
+00:02:21,570 --> 00:02:26,940
+So the condition that would make it unique and order exists.
+
+41
+00:02:27,390 --> 00:02:33,570
+So how can we stop once you find the number that is bigger than the higher limit you can install?
+
+42
+00:02:34,790 --> 00:02:40,220
+So again, the key idea here split the generation from this election, keep generating in order it will
+
+43
+00:02:40,220 --> 00:02:41,420
+generate unique values.
+
+44
+00:02:41,600 --> 00:02:46,250
+It will generate order the values once you have a value that is bigger than the current one.
+
+45
+00:02:46,580 --> 00:02:47,270
+Then we are done.
+
+46
+00:02:48,050 --> 00:02:50,360
+In terms of the graph, every number is a.
+
+47
+00:02:51,050 --> 00:02:52,820
+And there are two edges maximum here.
+
+48
+00:02:53,190 --> 00:02:58,220
+In the first, we'll start with multiple starting nodes, which are one two nine values.
+
+49
+00:02:58,700 --> 00:03:04,430
+You cannot add to the Q the value zero because zero when you add zero one zero two is just generating
+
+50
+00:03:04,430 --> 00:03:05,840
+the the zero one and two.
+
+51
+00:03:05,840 --> 00:03:09,080
+It could be like a like a more buggy, maybe.
+
+52
+00:03:09,440 --> 00:03:14,720
+So anyway, what they did is I handed the the zero as a special keys, so let's see here.
+
+53
+00:03:17,530 --> 00:03:22,480
+Um, first of all, I'm using long, long because the.
+
+54
+00:03:24,170 --> 00:03:26,700
+The limits are high, so to avoid any overflows.
+
+55
+00:03:27,080 --> 00:03:27,980
+This is my cue.
+
+56
+00:03:28,550 --> 00:03:34,510
+And first of all, I am checking if the value zero in their range in range is a function of the return.
+
+57
+00:03:34,530 --> 00:03:36,110
+True, if the value is in the range.
+
+58
+00:03:36,440 --> 00:03:37,550
+It is implementation.
+
+59
+00:03:38,530 --> 00:03:43,120
+It just literally true if the number between low and high.
+
+60
+00:03:43,150 --> 00:03:44,020
+Very simple function.
+
+61
+00:03:45,550 --> 00:03:51,730
+So I'm wondering here, zero special case, I'm adding multi source from all of these nine values and
+
+62
+00:03:51,730 --> 00:03:54,040
+also abandoning them in their queue.
+
+63
+00:03:54,400 --> 00:03:57,220
+Remember my advice in my quitting style?
+
+64
+00:03:57,460 --> 00:04:03,040
+You have to check your initial starting conditions as a special case, as a special treatment.
+
+65
+00:04:03,400 --> 00:04:04,450
+This is more efficient.
+
+66
+00:04:06,030 --> 00:04:10,530
+Now, in terms of the queue here, observe the huge size, this is important.
+
+67
+00:04:10,890 --> 00:04:12,840
+Now the office is not looking normally.
+
+68
+00:04:13,020 --> 00:04:16,980
+You get the number you above it, then you can record the next two numbers.
+
+69
+00:04:17,410 --> 00:04:23,640
+If I was no like two or three five, for example, no more 10 will get the five.
+
+70
+00:04:24,150 --> 00:04:26,520
+So now all what I need to do is.
+
+71
+00:04:28,110 --> 00:04:33,510
+I would like to generate the next number, so we have two, three five, the next number would be two
+
+72
+00:04:33,510 --> 00:04:35,820
+three five six or two three five four.
+
+73
+00:04:36,210 --> 00:04:41,310
+So I am multiplying this number within and either adding the digits with minus one or plus one.
+
+74
+00:04:42,560 --> 00:04:44,410
+Uh.
+
+75
+00:04:45,780 --> 00:04:50,190
+Now, the first one here cannot be applied if the digit is is zero.
+
+76
+00:04:51,300 --> 00:04:53,220
+This one cannot be applied if digit is nine.
+
+77
+00:04:53,250 --> 00:04:57,990
+So we have these two conditions to make sure that we don't go invalid if the Bruces function return
+
+78
+00:04:57,990 --> 00:05:05,300
+it a false at any at any time than we need, we know we can.
+
+79
+00:05:05,340 --> 00:05:06,120
+We can stop.
+
+80
+00:05:06,540 --> 00:05:09,510
+So now the process function is following.
+
+81
+00:05:10,530 --> 00:05:17,970
+The Brussels function say if the number is greater than how we can, we can stop because numbers are
+
+82
+00:05:17,970 --> 00:05:19,680
+unique and united in order.
+
+83
+00:05:19,950 --> 00:05:23,430
+The first one that is bigger than lie is definitely outside of the school.
+
+84
+00:05:24,150 --> 00:05:27,870
+Then we add that Q a number to the Q.
+
+85
+00:05:28,860 --> 00:05:34,380
+And if the number itself in the range, we can add it to the queue, we can add it to the answers.
+
+86
+00:05:35,370 --> 00:05:35,940
+Be careful.
+
+87
+00:05:35,940 --> 00:05:39,840
+Sometimes people might try to to try to generate only within the range.
+
+88
+00:05:40,260 --> 00:05:44,940
+So if he's generating only in the range, you cannot get the numbers before the range to generate.
+
+89
+00:05:45,210 --> 00:05:52,290
+That's why I'm saying split the focus on the generation and only when you have a number that is, uh,
+
+90
+00:05:52,320 --> 00:05:54,750
+is in the range, added Observe.
+
+91
+00:05:55,110 --> 00:05:59,250
+Why didn't we need, uh, a victory here?
+
+92
+00:05:59,820 --> 00:06:03,960
+Because numbers are unique, we would never need to visit the number that we visited before.
+
+93
+00:06:04,200 --> 00:06:06,260
+This is what it looks like a tree.
+
+94
+00:06:06,270 --> 00:06:11,160
+So like a one is giving eleven and giving ten and so on.
+
+95
+00:06:11,370 --> 00:06:12,060
+This is a tree.
+
+96
+00:06:12,060 --> 00:06:14,820
+There is definitely no cycles in this graph.
+
+97
+00:06:14,820 --> 00:06:17,550
+You can you don't need an invested array here.
+
+98
+00:06:18,030 --> 00:06:18,290
+That's.

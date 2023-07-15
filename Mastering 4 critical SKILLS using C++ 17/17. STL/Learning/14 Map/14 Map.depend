@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1670080119 source:e:\document\project\usaco\mastering 4 critical skills using c++ 17\17. stl\learning\14 map\main.cpp
+	<iostream>
+	<map>
+	<vector>
+

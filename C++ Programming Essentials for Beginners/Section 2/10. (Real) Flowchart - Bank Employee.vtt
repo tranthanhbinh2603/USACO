@@ -1,0 +1,220 @@
+WEBVTT
+
+00:01.430 --> 00:05.090
+Everyone in this lecture will discuss the real world example of flowchart.
+
+00:05.210 --> 00:05.500
+OK.
+
+00:05.720 --> 00:12.650
+Just to make of it in this tiny little mode better the question as a bank is open till six pm and the
+
+00:12.650 --> 00:16.850
+banker needs to process requests from the customers, OK?
+
+00:17.530 --> 00:24.200
+The requests can be of one of the four types Guy's deposit, cash withdrawal, check deposit and making
+
+00:24.200 --> 00:24.980
+or demand draft.
+
+00:25.550 --> 00:28.160
+We want to draw the flowchart of a bank employee.
+
+00:29.060 --> 00:36.410
+Now, the bank employee can process one of these requests, but we also need to see that the customer
+
+00:36.410 --> 00:38.130
+can enter the bank if it is open.
+
+00:38.150 --> 00:40.880
+So let us see how the flowchart would look like.
+
+00:41.750 --> 00:47.630
+So if you want, you can spend two minutes to think and try to come up with a solution of your own.
+
+00:48.170 --> 00:52.520
+Otherwise, we had the solution and we will discuss this solution with you, OK?
+
+00:53.390 --> 00:57.250
+So the flowchart will start from the first step.
+
+00:57.260 --> 01:01.810
+The bank gets open in the morning and in front of bank.
+
+01:01.820 --> 01:06.200
+There is a queue and the if.
+
+01:06.440 --> 01:14.540
+If the queue is empty, OK, and time is greater than six p.m., then we will close the bank.
+
+01:14.780 --> 01:19.880
+Otherwise, what we will do, we will try to extract customers from the queue.
+
+01:19.880 --> 01:20.150
+OK?
+
+01:20.630 --> 01:29.600
+So if there are people which are standing in the queue, we will try to extract the customers OK from
+
+01:29.600 --> 01:29.990
+the queue.
+
+01:30.500 --> 01:32.330
+Now, if the bank is open.
+
+01:32.620 --> 01:40.970
+So suppose you come here and the bank is open and there can be two possibilities either the queue is
+
+01:40.970 --> 01:43.090
+empty on the queue is not empty.
+
+01:43.130 --> 01:45.510
+That means during the time that the bank is open.
+
+01:45.530 --> 01:48.680
+OK, so we are coming here when time is less than six.
+
+01:49.520 --> 01:56.090
+And now if the queue is empty, then we will again go and check whether there are certain people that
+
+01:56.090 --> 01:57.320
+have entered the queue or not.
+
+01:58.070 --> 02:02.840
+If it is not the case, then we will extract a customer from the queue.
+
+02:03.590 --> 02:08.270
+So in the later on, when you will learn some more concepts about programming, you will learn about
+
+02:08.270 --> 02:10.210
+data centers, OK?
+
+02:10.850 --> 02:14.240
+The researchers are nothing, but they are the containers that store data.
+
+02:14.240 --> 02:15.860
+So you is actually your data sector.
+
+02:15.860 --> 02:22.410
+So we are performing an operation that if the queue is empty or not, if there is a person here, if
+
+02:22.430 --> 02:28.850
+there is a person here that is a person, it these people, ABC, they are waiting in the queue to get
+
+02:28.850 --> 02:34.880
+their work done and the bank will remove the ghost mode, which is dead at the front of the queue.
+
+02:35.540 --> 02:39.100
+Our next step would be to read the request of this person.
+
+02:39.110 --> 02:42.290
+We will ask this person, What do you want to do?
+
+02:42.740 --> 02:45.710
+That is denoted using this box read request.
+
+02:46.670 --> 02:52.580
+Now, once you have read the request, you have to make a decision which content this person will give.
+
+02:52.640 --> 02:55.970
+So there are, let's say, four different counters.
+
+02:56.060 --> 03:00.830
+One as A1 is B, one is C, one is D, which processed these requests.
+
+03:00.830 --> 03:05.240
+OK, so first we will check is this request for a demand draft?
+
+03:05.360 --> 03:08.360
+If we did, yes, we send this customer to country.
+
+03:08.660 --> 03:11.900
+If it is not, we check if it is a request for direct deposit.
+
+03:12.170 --> 03:19.160
+If yes, we send this person to counter, we if not, we send this person to counter-sued and we check
+
+03:19.160 --> 03:21.070
+if it is for cash withdrawal.
+
+03:21.080 --> 03:25.700
+If yes, we send this to counter C, otherwise we take it for this guy's deposit.
+
+03:25.700 --> 03:26.990
+We send it to we.
+
+03:26.990 --> 03:31.870
+If it is something else, OK, so maybe we have a miscellaneous helpline Gonder.
+
+03:31.970 --> 03:34.310
+So we send this person to that country.
+
+03:34.310 --> 03:39.620
+OK, this is how the various requests of these persons would be processed.
+
+03:40.160 --> 03:45.490
+Now you may have separate flowchart for each of these actions.
+
+03:45.500 --> 03:48.860
+OK, so maybe there could be a flowchart starting from me.
+
+03:48.860 --> 03:53.200
+OK, this is how you process the demand graph.
+
+03:53.210 --> 04:03.920
+So humans OK, it is a flowchart read demand draft OK, and there may be some process to create a demand
+
+04:03.920 --> 04:04.220
+draft.
+
+04:04.220 --> 04:05.360
+OK, or something like that.
+
+04:05.360 --> 04:11.610
+Credit or debit demand, whatever you want to do, and then maybe end or hand it over to the customer,
+
+04:11.630 --> 04:12.560
+whatever it could be.
+
+04:12.560 --> 04:17.120
+So there can be separate flowchart for a busy, endless what you can do.
+
+04:17.480 --> 04:21.590
+So sometimes in a problem, the flowchart can get quite big.
+
+04:21.680 --> 04:29.930
+So in that case, you be the other part of the flowchart like we are doing in this case, starting from
+
+04:29.930 --> 04:31.340
+E, it'll be exit.
+
+04:31.670 --> 04:34.670
+OK, well, we exit all, be connected to some other point.
+
+04:36.430 --> 04:42.160
+So what we are doing is we're making these circles, so these circles are known as connectors.
+
+04:42.440 --> 04:47.110
+Look, they are known as the nucleus, so they're combining two different products.
+
+04:48.660 --> 04:52.210
+And there can be separate flowchart for ABC, and so.
+
+04:52.680 --> 05:01.870
+But now we have to understand that this would be a high level overview of our flowchart for a bank employee,
+
+05:01.870 --> 05:06.420
+it would look like, OK, it's a bank employee would wait for customers in the queue that you would
+
+05:06.420 --> 05:09.270
+be dead if the bank is open.
+
+05:09.330 --> 05:11.320
+And for that, that is certain time.
+
+05:12.190 --> 05:16.260
+And yes, that's how a flowchart would look like.
+
+05:16.830 --> 05:20.910
+I hope you understood this flowchart on that side for this video.

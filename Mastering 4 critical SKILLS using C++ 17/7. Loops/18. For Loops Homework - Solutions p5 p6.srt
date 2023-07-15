@@ -1,0 +1,174 @@
+0
+1
+00:00:00,930 --> 00:00:06,810
+In this one, we would like to print all the prime numbers that are less than or equal N, for example,
+1
+
+2
+00:00:06,810 --> 00:00:09,390
+for 18, you would like to print all of them.
+2
+
+3
+00:00:09,430 --> 00:00:17,580
+This is just a more extension for the one that we took using is_prime, so just one extra loops to handle
+3
+
+4
+00:00:17,580 --> 00:00:18,900
+it. Observed here,
+4
+
+5
+00:00:18,900 --> 00:00:24,780
+I would like you to separate them by comma, but don't put a comma after the last number. To implement
+5
+
+6
+00:00:24,780 --> 00:00:25,470
+that we need
+6
+
+7
+00:00:25,470 --> 00:00:32,820
+We now need this target number here and start to iterate over all of the numbers and for every given
+7
+
+8
+00:00:32,820 --> 00:00:38,430
+number, we would like to make sure that this number is prime by checking every number less than it.
+8
+
+9
+00:00:38,700 --> 00:00:43,620
+Once we are done with it, we are just going to, if it's OK, if it's a prime number, we will print the
+9
+
+10
+00:00:43,620 --> 00:00:49,050
+number here. To handle properly the comma.
+10
+
+11
+00:00:49,050 --> 00:00:49,950
+There are several ways.
+11
+
+12
+00:00:49,950 --> 00:00:51,120
+Let's make it simple for now.
+12
+
+13
+00:00:51,450 --> 00:00:52,270
+I'm handling here.
+13
+
+14
+00:00:52,290 --> 00:00:58,770
+If this is the first printed number or not, it isn't the first printed number, then we can like print
+14
+
+15
+00:00:58,770 --> 00:00:59,510
+always a comma.
+15
+
+16
+00:00:59,520 --> 00:01:01,470
+If it's a first number, we just print it.
+16
+
+17
+00:01:01,830 --> 00:01:05,250
+Otherwise, with every next number, we put a comma here.
+17
+
+18
+00:01:05,460 --> 00:01:10,770
+This guarantee that between every two numbers there is a comma, but there is no comma after the last
+18
+
+19
+00:01:10,770 --> 00:01:11,130
+number.
+19
+
+20
+00:01:13,080 --> 00:01:21,090
+In the last homework here, number six, we would like to compute the sum of the numbers between
+20
+
+21
+00:01:21,090 --> 00:01:25,670
+one and N whose sum of the digits is between A and B.
+21
+
+22
+00:01:25,860 --> 00:01:30,070
+If you understood the problem, then it should be fair enough to be implemented.
+22
+
+23
+00:01:30,270 --> 00:01:31,890
+We need to iterate over the numbers.
+23
+
+24
+00:01:32,040 --> 00:01:33,420
+We need to compute the digits sum.
+24
+
+25
+00:01:33,450 --> 00:01:36,110
+We need to make a check against the loop and so on.
+25
+
+26
+00:01:36,510 --> 00:01:40,800
+So let's read the N, A, B, iterate over all of the numbers from one to N.
+26
+
+27
+00:01:41,160 --> 00:01:45,090
+And then let's take a copy here from the i.
+27
+
+28
+00:01:45,900 --> 00:01:50,990
+You should know why and then for every number i, we will compute its digits sum.
+28
+
+29
+00:01:51,990 --> 00:01:57,630
+And if its digit sum is between the range that we will have, the A and B, all that we need to do is just adding
+29
+
+30
+00:01:57,630 --> 00:01:58,700
+it for us here.
+30
+
+31
+00:01:59,160 --> 00:02:04,620
+The reason that we took a copy from i, as this copy would end up as
+31
+
+32
+00:02:04,620 --> 00:02:09,540
+zero as we learned before and we would like to add it here if we didn't, if we corrupted the i
+32
+
+33
+00:02:09,540 --> 00:02:15,570
+we are corrupting two things, we are corrupting the for loop here and we are corrupting the result here.
+33
+
+34
+00:02:15,690 --> 00:02:17,190
+So we better take a copy here.
+34
+
+35
+00:02:17,490 --> 00:02:22,860
+So it was just more of an exercise over two loops and being able to understand the logic. That's all.

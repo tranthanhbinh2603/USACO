@@ -1,0 +1,235 @@
+WEBVTT
+
+00:01.020 --> 00:07.810
+And welcome to this course on C++ essentials, and I'm very excited to welcome you on congratulations
+
+00:07.810 --> 00:10.750
+on taking the first step into the world of programming.
+
+00:11.440 --> 00:12.550
+So my name is pretty.
+
+00:12.550 --> 00:14.890
+I've been a software engineer at Google.
+
+00:14.890 --> 00:18.730
+I have co-founded two tech startups, including coding minutes.
+
+00:19.270 --> 00:21.280
+I work with scalar academy as well.
+
+00:21.580 --> 00:25.300
+And I've been instructor on Udemy for about one year now.
+
+00:25.870 --> 00:31.910
+And if you want to learn more about me, so I created an interactive portfolio resumé website on that
+
+00:31.930 --> 00:38.200
+igniting dot com, which you can visit and look at my journey of learning coding.
+
+00:38.350 --> 00:40.420
+When did I start and what did I achieve?
+
+00:41.970 --> 00:48.000
+So before we dive into the specific details, I would like to share my perspective on learning to code
+
+00:48.000 --> 00:49.680
+on becoming a problem solver.
+
+00:50.430 --> 00:58.050
+What we do is I break down the step into three parts, like the first step of learning programming is
+
+00:58.050 --> 00:59.280
+learning to hold the knife.
+
+00:59.550 --> 01:00.350
+What does it mean?
+
+01:00.470 --> 01:06.600
+Get them translated with a real world analogy so that if you're a beginner, you understand the flaw
+
+01:06.630 --> 01:07.800
+in a better sense, right?
+
+01:08.430 --> 01:12.030
+The first step is always to learn to work with the programming language.
+
+01:12.060 --> 01:18.030
+So programming language is our tool and will try to get comfortable with the programming language in
+
+01:18.030 --> 01:18.660
+this course.
+
+01:19.480 --> 01:25.080
+Once you're comfortable, the next step is you learn to use the knife by cutting a fruit.
+
+01:25.560 --> 01:31.320
+It means you learn how to solve a problem and what solving problems you need something.
+
+01:31.350 --> 01:37.920
+Already the researchers, which are basically the containers that you need to store data on, you need
+
+01:37.920 --> 01:41.850
+to learn algorithms which are basically their techniques to solve the problem, OK?
+
+01:42.630 --> 01:46.530
+So then in the next step, you will learn about data centers an algorithm.
+
+01:46.980 --> 01:52.110
+And the third step is, once you have learned to work with the researchers algorithms, you have to
+
+01:52.110 --> 01:55.140
+apply them to newer kind of problems.
+
+01:55.140 --> 02:00.000
+OK, so this is what is also observed in many interviews.
+
+02:00.030 --> 02:05.040
+So you would be given a problem statement, which would be a newer, unseen problem, and it can be
+
+02:05.040 --> 02:06.720
+a problem inspired from real world.
+
+02:06.720 --> 02:13.290
+For example, you want to find the nearest hospital, or maybe you want to devise a route for the cab,
+
+02:13.770 --> 02:17.640
+which works in a sharing model, something like that.
+
+02:18.240 --> 02:23.130
+So the third step is about sharpening your knife and you have to cut your kind of route.
+
+02:23.190 --> 02:26.940
+So that is one step ahead of these three steps.
+
+02:27.300 --> 02:34.320
+I have created a problem solving track, and this is the first course of the track where you get comfortable
+
+02:34.320 --> 02:38.010
+with the programming language in the next course, which is on data centers.
+
+02:38.910 --> 02:43.770
+You learn how to work with different containers and their time complexities as well.
+
+02:44.220 --> 02:49.590
+And in the third step, you learn how to sharpen your skills, how do you sharpen your knife and applied
+
+02:49.590 --> 02:52.830
+algorithmic techniques to different type of problems, OK?
+
+02:53.340 --> 03:01.170
+And so that's why I have devised three courses so that you go from zero to hero in in your journey of
+
+03:01.170 --> 03:02.070
+solving problems.
+
+03:02.490 --> 03:08.490
+I will be there in all three courses to help you the must become the master of problem solving.
+
+03:09.060 --> 03:12.180
+And yeah, that is the problem solving track for you.
+
+03:12.930 --> 03:18.480
+So before we discuss about this course, let me also tell you a little bit more about my professional
+
+03:18.480 --> 03:19.050
+experience.
+
+03:19.480 --> 03:25.080
+I've created several top rated online courses on did great coding minutes to bring high quality courses
+
+03:25.080 --> 03:25.650
+on Udemy.
+
+03:26.220 --> 03:31.440
+And a lot of my students who have gone through this journey of problem solving with me.
+
+03:31.800 --> 03:37.500
+They're working in top product companies, including startups and companies like Google, Amazon, Microsoft
+
+03:37.500 --> 03:38.100
+as well, right?
+
+03:39.540 --> 03:41.450
+So what to expect after this course?
+
+03:41.490 --> 03:46.890
+So I'm just going to talk about this course, so you'll get comfortable with the programming language.
+
+03:46.890 --> 03:50.940
+It does not matter which programming language you start with, it can be C++.
+
+03:50.940 --> 03:52.500
+It can be deployed, can be Python.
+
+03:53.070 --> 04:00.840
+But for this course, I've picked C++ as the language, and it helps you to get into more details of
+
+04:01.440 --> 04:05.760
+how the programs work, what happens at the binary level and all that stuff.
+
+04:05.760 --> 04:12.210
+We do go in this course and you build solid programming foundations annually, radiological thinking
+
+04:12.210 --> 04:14.640
+skills which are required to take the next step.
+
+04:15.570 --> 04:20.850
+And you'll get familiar with concepts like loops, branching is string through cohesion, back dragging
+
+04:20.850 --> 04:24.150
+on with masking and loops will cover these.
+
+04:24.480 --> 04:26.890
+You can have a detailed look at the curriculum, right?
+
+04:27.240 --> 04:32.340
+The first part is the logic building curriculum, which is again optional if you're already familiar
+
+04:32.340 --> 04:33.210
+with logic building.
+
+04:33.750 --> 04:34.800
+So I discuss.
+
+04:35.940 --> 04:37.710
+Few things before you start writing good.
+
+04:38.070 --> 04:43.260
+I discuss floor jokes and go dark, tell you how to think like a programmer given a small problem.
+
+04:43.830 --> 04:46.910
+How do we break it down and how do we build logic for the same?
+
+04:47.550 --> 04:53.850
+The second part of the course is more C++ specific, and we try to learn with various language constructs,
+
+04:53.850 --> 05:02.310
+like how to write code that is using effects, ranging concepts, loops, operators, functions, pointers
+
+05:02.310 --> 05:09.810
+et is Gutierrez Strings recursion and basics of object oriented programming so that the complete curriculum
+
+05:09.810 --> 05:17.460
+of this course and um, and you know the good thing, there are no prerequisites to take this course.
+
+05:17.520 --> 05:22.560
+So if you are an absolute beginner and if you have not worked with programming anywhere in your life,
+
+05:23.040 --> 05:24.090
+you are at the right point.
+
+05:24.120 --> 05:27.150
+This is the right step to start learning programming, right?
+
+05:27.810 --> 05:34.260
+And so I hope you are ready to join me on this journey of learning coding and you will tighten your
+
+05:34.530 --> 05:36.450
+seat belt and I will see you in the course.
+
+05:36.810 --> 05:37.280
+Thank you.
+
+05:37.290 --> 05:37.710
+Bye bye.

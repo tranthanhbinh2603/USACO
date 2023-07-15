@@ -1,0 +1,219 @@
+0
+1
+00:00:01,080 --> 00:00:07,500
+In this video, you will start to know about the binary and unary operators. We already saw the arithmetic
+1
+
+2
+00:00:07,500 --> 00:00:11,220
+operators, like the ('+', '-', '*', '/' and '%').
+2
+
+3
+00:00:11,460 --> 00:00:18,000
+Arithmetic refers to properties on numbers, like when I add it. The word operator is just a symbol,
+3
+
+4
+00:00:18,000 --> 00:00:20,810
+So the symbols for the arithmetic are like the '+' and '-' and so on.
+4
+
+5
+00:00:21,510 --> 00:00:27,840
+Thinking about this expression (x+2*y-1), we call it in C++ expression. An expression can be
+5
+
+6
+00:00:27,840 --> 00:00:35,400
+even as simple as just as a number, the ('+', '*', '-') here are operators, (x, 2, y, 1) we call them
+6
+
+7
+00:00:35,400 --> 00:00:35,900
+operands.
+7
+
+8
+00:00:36,090 --> 00:00:42,990
+So an operator needs operands, the asterisk here has two operands, the (2 and y), the plus here has two operands, the
+8
+
+9
+00:00:42,990 --> 00:00:47,600
+(x) and the result of (2*y). This is a normal flow.
+9
+
+10
+00:00:48,420 --> 00:00:51,840
+when we think about the evaluation of this expression, in math,
+10
+
+11
+00:00:51,840 --> 00:00:52,620
+normal math,
+11
+
+12
+00:00:52,710 --> 00:00:58,080
+we know that the multiplication and division are applied first, so we multiply those two numbers first,
+12
+
+13
+00:00:58,290 --> 00:01:00,210
+then we start from left to right.
+13
+
+14
+00:01:00,420 --> 00:01:04,470
+Add (x) to the result of (2 * y), and then (2 - 1).
+14
+
+15
+00:01:05,070 --> 00:01:10,170
+The parenthesis is an extra thing in programming to enforce order.
+15
+
+16
+00:01:10,380 --> 00:01:15,360
+If you would like (x+y) to be added first, then we need to put two braces here.
+16
+
+17
+00:01:15,360 --> 00:01:18,570
+Otherwise though, I (y) be dividing over 3 first.
+17
+
+18
+00:01:20,220 --> 00:01:23,810
+There are two operands that are used here for this operator.
+18
+
+19
+00:01:23,820 --> 00:01:26,060
+So the (x+y) need X and Y,
+19
+
+20
+00:01:26,060 --> 00:01:28,560
+you need to two. the word binary always means 
+20
+
+21
+00:01:28,560 --> 00:01:28,860
+two.
+21
+
+22
+00:01:29,130 --> 00:01:33,000
+So we call it also binary operator because it needs two operands.
+22
+
+23
+00:01:34,260 --> 00:01:38,880
+Another interesting, the operators are the minus and the not. The minus
+23
+
+24
+00:01:38,880 --> 00:01:41,130
+helps us to switch a number from positive to negative.
+24
+
+25
+00:01:41,160 --> 00:01:44,330
+So (6) would be (-6), (-6) would be (6) here.
+25
+
+26
+00:01:44,340 --> 00:01:47,640
+So if we have (x=6), we say (y = -x),
+26
+
+27
+00:01:47,640 --> 00:01:49,520
+it switches the sign of the number.
+27
+
+28
+00:01:49,950 --> 00:01:51,720
+The other one is the NOT operator '!'.
+28
+
+29
+00:01:51,960 --> 00:01:57,420
+The NOT operator switches the true to false, and the false to true, the zero to one and one to zero.
+29
+
+30
+00:01:57,420 --> 00:02:01,080
+So if we have here (male=true), (!male) will make it false.
+30
+
+31
+00:02:01,230 --> 00:02:05,000
+If you have not zero (!0) it will be one and not one (!1) would be zero.
+31
+
+32
+00:02:05,400 --> 00:02:08,970
+The NOT operator is part of something called logical operators.
+32
+
+33
+00:02:08,970 --> 00:02:10,440
+We will know more about them later.
+33
+
+34
+00:02:10,850 --> 00:02:16,140
+Officially you can say it's (logical not or negation operator), but we pronounce it just NOT X.
+34
+
+35
+00:02:16,440 --> 00:02:20,490
+So one of them changes the sign and the other one changes of the Boolean status.
+35
+
+36
+00:02:20,730 --> 00:02:21,990
+How many operands here?
+36
+
+37
+00:02:22,350 --> 00:02:22,980
+Just one.
+37
+
+38
+00:02:23,220 --> 00:02:24,870
+So we call it a unary operator.
+38
+
+39
+00:02:24,990 --> 00:02:27,840
+Unary for one operand, binary for two operands.
+39
+
+40
+00:02:28,170 --> 00:02:31,260
+Interestingly here, the minus operator,
+40
+
+41
+00:02:31,500 --> 00:02:36,960
+we once used it with two operands, so it was binary operator and here was one operand only,
+41
+
+42
+00:02:36,960 --> 00:02:37,790
+So it is a unary operator.
+42
+
+43
+00:02:38,100 --> 00:02:40,050
+So it has two scenarios.
+43
+
+44
+00:02:40,710 --> 00:02:41,250
+That's it! :)

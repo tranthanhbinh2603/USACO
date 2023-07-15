@@ -1,0 +1,319 @@
+0
+1
+00:00:00,960 --> 00:00:06,270
+For the second set of homework in STL, the first one is the score of parentheses.
+1
+
+2
+00:00:06,580 --> 00:00:12,600
+Remember, parentheses are like that, if the expression is balanced, it means every open parentheses has
+2
+
+3
+00:00:12,600 --> 00:00:14,810
+a closing parentheses in the right way.
+3
+
+4
+00:00:14,820 --> 00:00:19,220
+Sometimes the expression is very nested like that or they are separate balanced expressions.
+4
+
+5
+00:00:19,230 --> 00:00:21,470
+For example, this one has this one and this one,
+5
+
+6
+00:00:21,480 --> 00:00:22,890
+they are two separate expressions,
+6
+
+7
+00:00:22,890 --> 00:00:23,780
+All of them are balanced.
+7
+
+8
+00:00:24,300 --> 00:00:26,760
+We will give a score for every expression as following:
+8
+
+9
+00:00:27,060 --> 00:00:28,980
+If it's just open and close, you give it one.
+9
+
+10
+00:00:29,370 --> 00:00:32,970
+If it is two separate expressions, it is just the summation of them.
+10
+
+11
+00:00:33,510 --> 00:00:38,600
+Otherwise, for an expression, it will be two times the score of the internal expression.
+11
+
+12
+00:00:39,030 --> 00:00:41,470
+Let's go with examples. Here for this guy,
+12
+
+13
+00:00:41,580 --> 00:00:44,460
+the expression is 1 from here. For this one,
+13
+
+14
+00:00:44,730 --> 00:00:45,960
+it is a nested expression,
+14
+
+15
+00:00:45,960 --> 00:00:49,770
+so it is two times the score inside it. The score of this internal is 1,
+15
+
+16
+00:00:49,770 --> 00:00:50,760
+2 times 1 is 2.
+16
+
+17
+00:00:51,300 --> 00:00:52,410
+This has two separate
+17
+
+18
+00:00:53,490 --> 00:00:59,140
+expressions, this is one, this is one, from this rule, 1 plus 1 is 2. This one has a nested expression.
+18
+
+19
+00:00:59,260 --> 00:01:04,750
+So it is 2 times the internal and the internal we know from here is 2, 2 times 2 is 4. This
+19
+
+20
+00:01:04,750 --> 00:01:06,450
+one has an internal expression,
+20
+
+21
+00:01:06,460 --> 00:01:07,590
+so let's go inside it.
+21
+
+22
+00:01:07,630 --> 00:01:10,600
+This guy is 1 and this guy from here is 2.
+22
+
+23
+00:01:10,900 --> 00:01:14,140
+So 1 plus 2 is 3, 2 times 3 is 6.
+23
+
+24
+00:01:14,560 --> 00:01:17,200
+This guy is the same expression here plus this guy,
+24
+
+25
+00:01:17,200 --> 00:01:18,660
+so 1 plus 6 is 7.
+25
+
+26
+00:01:19,870 --> 00:01:24,370
+By the way, this homework set isn't easy, so don't feel bad.
+26
+
+27
+00:01:25,790 --> 00:01:33,610
+Asteroid collisions, we have some asteroids that are moving, they have size. If the size is positive,
+27
+
+28
+00:01:33,620 --> 00:01:34,900
+it means moving to the right.
+28
+
+29
+00:01:34,910 --> 00:01:37,000
+If it is negative, it means moving to the left.
+29
+
+30
+00:01:38,240 --> 00:01:40,070
+They are all moving with the same speed.
+30
+
+31
+00:01:40,340 --> 00:01:46,190
+Now, there is a chance that some of these asteroids collide and do a collision.
+31
+
+32
+00:01:46,310 --> 00:01:48,590
+If they are all positive, they definitely would not collide.
+32
+
+33
+00:01:48,590 --> 00:01:51,260
+If they are all negative, they also would never collide.
+33
+
+34
+00:01:51,620 --> 00:01:56,180
+But now the problem is what if there are some positive and negative, there is a chance of meeting.
+34
+
+35
+00:01:56,600 --> 00:02:00,560
+If two asteroids meet, the smaller one will explode.
+35
+
+36
+00:02:00,560 --> 00:02:03,490
+If both are the same size, both of them would explode.
+36
+
+37
+00:02:03,710 --> 00:02:04,650
+So let's simulate here.
+37
+
+38
+00:02:04,880 --> 00:02:10,570
+You would be given this array and you are to find the final set of asteroids that will not explode.
+38
+
+39
+00:02:10,880 --> 00:02:15,440
+So here for example, you have -5 moving to the left, 10 moving to the right, then these
+39
+
+40
+00:02:15,440 --> 00:02:18,790
+two will meet when 10 meet -5, 10 is bigger,
+40
+
+41
+00:02:18,800 --> 00:02:19,730
+so -5,
+41
+
+42
+00:02:19,790 --> 00:02:20,790
+this one will explode.
+42
+
+43
+00:02:20,810 --> 00:02:27,180
+So this is the remaining one. In this case, both of them are of equal value, moving in opposite directions,
+43
+
+44
+00:02:27,200 --> 00:02:28,310
+they will meet and explode,
+44
+
+45
+00:02:28,370 --> 00:02:33,030
+so nothing will remain. In this case, 2 will meet 5,
+45
+
+46
+00:02:33,230 --> 00:02:34,550
+so 2 will be destroyed,
+46
+
+47
+00:02:34,820 --> 00:02:38,720
+then 10 meet 5, then 5 destroyed because 10 is bigger.
+47
+
+48
+00:02:39,320 --> 00:02:42,530
+In this case, these two negative values are moving to the left,
+48
+
+49
+00:02:42,740 --> 00:02:44,870
+and these two positive values moving to the right,
+49
+
+50
+00:02:45,020 --> 00:02:46,070
+they will never meet,
+50
+
+51
+00:02:46,890 --> 00:02:55,730
+and so on. Finally, given an array, you are to find for every number the next element after it that
+51
+
+52
+00:02:55,730 --> 00:02:56,650
+has a greater value.
+52
+
+53
+00:02:56,690 --> 00:03:02,240
+For example, here in this array 10, which a number after it of a bigger value, where is the first one?
+53
+
+54
+00:03:02,570 --> 00:03:03,010
+15.
+54
+
+55
+00:03:03,650 --> 00:03:06,260
+So for 10 we print 15. For 5,
+55
+
+56
+00:03:06,260 --> 00:03:08,030
+the next bigger one is 7. For 7,
+56
+
+57
+00:03:08,030 --> 00:03:08,690
+it is 15.
+57
+
+58
+00:03:09,080 --> 00:03:11,720
+15 has nothing greater than it. After it,
+58
+
+59
+00:03:11,720 --> 00:03:16,180
+11 has nothing greater than it. After it, so we just print -1.
+59
+
+60
+00:03:16,490 --> 00:03:19,230
+Here is another example to trace 8 numbers,
+60
+
+61
+00:03:19,290 --> 00:03:20,510
+then you have the eight numbers.
+61
+
+62
+00:03:20,930 --> 00:03:23,720
+We can solve easily this problem using 2 nested loops,
+62
+
+63
+00:03:23,930 --> 00:03:29,960
+but can we do it in one iteration style? we can, for example, by using a stack. Try to find that.
+63
+
+64
+00:03:30,950 --> 00:03:31,410
+That's it.

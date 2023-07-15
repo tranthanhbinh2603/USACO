@@ -1,0 +1,319 @@
+0
+1
+00:00:01,290 --> 00:00:08,760
+Let's play with more examples to administrate functions, we would like to help our team by creating
+1
+
+2
+00:00:08,760 --> 00:00:09,410
+a function.
+2
+
+3
+00:00:09,690 --> 00:00:12,750
+The function is called (absolute) the function, do as following:
+3
+
+4
+00:00:13,110 --> 00:00:19,500
+If the number is positive, it returns it as it is, if the number is negative it returns it with negative
+4
+
+5
+00:00:19,500 --> 00:00:19,830
+value.
+5
+
+6
+00:00:20,160 --> 00:00:26,010
+So the first thing is define a function name, it is very close to the variable name, for example, you don't
+6
+
+7
+00:00:26,010 --> 00:00:26,940
+start it with an integer,
+7
+
+8
+00:00:27,120 --> 00:00:29,240
+You don't use dashes "-", you don't use the spaces.
+8
+
+9
+00:00:29,430 --> 00:00:36,180
+So we define it as (our_abs). You need to define what is the input for the function and what is the
+9
+
+10
+00:00:36,180 --> 00:00:36,890
+output from it.
+10
+
+11
+00:00:37,080 --> 00:00:40,460
+So the parameter here integer n, represents the input to this function.
+11
+
+12
+00:00:40,680 --> 00:00:47,490
+So we are going to give it an integer N and the result is going to be another integer. here in the logic,
+12
+
+13
+00:00:47,490 --> 00:00:47,910
+at line 5,
+13
+
+14
+00:00:47,910 --> 00:00:53,970
+We say "if (n >= 0) return n;" otherwise here we are returning -n.
+14
+
+15
+00:00:54,720 --> 00:00:59,760
+So there are two return statements here and very similar to the return statements in the main.
+15
+
+16
+00:00:59,940 --> 00:01:02,540
+Once you are returned, you are done with the function,
+16
+
+17
+00:01:02,550 --> 00:01:03,330
+You don't complete any more.
+17
+
+18
+00:01:03,840 --> 00:01:09,720
+So for example, if we requested the answer for 5, it says 5 >= 0?
+18
+
+19
+00:01:09,720 --> 00:01:10,780
+Yes, return 5.
+19
+
+20
+00:01:11,190 --> 00:01:14,990
+But if we ask it for -5, is "-5 >= 0?",
+20
+
+21
+00:01:15,000 --> 00:01:21,060
+no, we jump to line 7, return -(-5), which is now again 5.
+21
+
+22
+00:01:21,360 --> 00:01:23,700
+So again, you see we have a function name,
+22
+
+23
+00:01:23,910 --> 00:01:26,430
+We have some parameter, we have some return,
+23
+
+24
+00:01:26,610 --> 00:01:28,920
+We have some logic and return statements.
+24
+
+25
+00:01:30,300 --> 00:01:35,750
+Let's say we have another case, let's solve a maximum function.
+25
+
+26
+00:01:35,940 --> 00:01:42,650
+You would like to create a function that takes two inputs, parameter a and parameter b and returns
+26
+
+27
+00:01:42,660 --> 00:01:46,010
+integer representing the maximum of two of them.
+27
+
+28
+00:01:46,320 --> 00:01:49,340
+So we go as following, the max between 2 and 5,
+28
+
+29
+00:01:49,590 --> 00:01:55,260
+So the value "a" will be assigned the value 2, the value "b" will be assigned the value 5.
+29
+
+30
+00:01:55,590 --> 00:02:00,560
+Now what is the maximum between 2 and 5? if 2 >= 5
+30
+
+31
+00:02:00,600 --> 00:02:02,680
+this is false.
+31
+
+32
+00:02:02,880 --> 00:02:07,310
+So we go here to the "return b", which is just 5. On the other side,
+32
+
+33
+00:02:07,370 --> 00:02:13,110
+If we sent 2 and -5, so is (2 >= -5)?,
+33
+
+34
+00:02:14,020 --> 00:02:22,700
+The answer is yes, so return 2. again, function name, two parameters here, or two inputs and they call it also
+34
+
+35
+00:02:22,720 --> 00:02:28,360
+argument, so here, inputs, parameters, arguments, and we are returning integer.
+35
+
+36
+00:02:29,850 --> 00:02:36,310
+Let's make something that's little more complex, you are to find the maximum of absolute of two numbers.
+36
+
+37
+00:02:36,360 --> 00:02:37,210
+What does this mean?
+37
+
+38
+00:02:37,410 --> 00:02:39,200
+Let's say I give you 2 and 5.
+38
+
+39
+00:02:39,510 --> 00:02:44,120
+So find the absolute first, then compute the maximum. 2 and -5 ?
+39
+
+40
+00:02:44,310 --> 00:02:47,680
+Find the absolute first, then do the maximum.
+40
+
+41
+00:02:47,970 --> 00:02:51,320
+So we have here our previous absolute function.
+41
+
+42
+00:02:51,660 --> 00:02:56,950
+So now our max2 is calling the 2 and 5 for our max2 here.
+42
+
+43
+00:02:57,240 --> 00:02:59,380
+So "a" is 2 and "b" is 5.
+43
+
+44
+00:02:59,790 --> 00:03:01,320
+Then I did something interesting,
+44
+
+45
+00:03:01,560 --> 00:03:03,240
+I here at "a",
+45
+
+46
+00:03:03,240 --> 00:03:06,930
+I called the function, we call it (calling the function).
+46
+
+47
+00:03:07,200 --> 00:03:09,440
+I called the function "our_abs" with "a",
+47
+
+48
+00:03:09,720 --> 00:03:10,650
+So "a" is 2.
+48
+
+49
+00:03:10,830 --> 00:03:12,810
+So I'm calling now another function,
+49
+
+50
+00:03:13,170 --> 00:03:18,870
+So the main function is calling our max2 function, and our max2 function is calling our absolute
+50
+
+51
+00:03:18,870 --> 00:03:19,340
+function.
+51
+
+52
+00:03:19,590 --> 00:03:20,510
+It goes as following,
+52
+
+53
+00:03:20,550 --> 00:03:22,560
+"our_abs" is called here with 2.
+53
+
+54
+00:03:22,950 --> 00:03:30,160
+We know that this function if took 2 it returns 2, so "a" is 2, and then "our_abs(5)" it goes 5 and
+54
+
+55
+00:03:30,190 --> 00:03:31,200
+returns as 5.
+55
+
+56
+00:03:31,500 --> 00:03:34,170
+and then we are comparing for maximum value.
+56
+
+57
+00:03:34,740 --> 00:03:35,460
+What about 2 and
+57
+
+58
+00:03:35,460 --> 00:03:36,420
+-5?
+58
+
+59
+00:03:37,050 --> 00:03:41,050
+"our_abs(2)" is returning 2, "our_abs(-5)"
+59
+
+60
+00:03:41,110 --> 00:03:41,940
+returning 5,
+60
+
+61
+00:03:42,180 --> 00:03:45,150
+Then we are computing the maximum of them.
+61
+
+62
+00:03:45,360 --> 00:03:46,770
+So we notice here, function "main()" is
+62
+
+63
+00:03:46,770 --> 00:03:55,790
+calling max function, which is calling another absolute function, so we can make such a lot of calls.
+63
+
+64
+00:03:55,800 --> 00:03:56,040
+That's it.

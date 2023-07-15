@@ -1,0 +1,538 @@
+WEBVTT
+
+00:00.330 --> 00:06.390
+Now, in this video, we will learn about Taylor, Chris, we will learn how to write a recursive function
+
+00:06.390 --> 00:07.600
+for Taylor series.
+
+00:07.980 --> 00:12.430
+First of all, will generate idea how we can prepare a recursive function for this one.
+
+00:12.960 --> 00:14.850
+Let us observe Taylor CCDs.
+
+00:14.850 --> 00:20.650
+Then we will devise a method for writing a recursive function for Taylor series.
+
+00:21.600 --> 00:27.120
+So let me read it out, see Airport X for any given value of X..
+
+00:27.450 --> 00:30.090
+It is nothing but submission of the storms.
+
+00:30.570 --> 00:34.420
+As many times as you take, we get more precise value.
+
+00:34.710 --> 00:41.170
+So here it is an item so you can continue the summation up to some down fuel dumps or whatever you want.
+
+00:41.640 --> 00:43.950
+Here are the example I have written up to power for.
+
+00:43.960 --> 00:45.690
+That is total five tons.
+
+00:46.020 --> 00:49.700
+That is about zero to power for now.
+
+00:49.710 --> 00:52.320
+How to write a recursive function for this one.
+
+00:52.350 --> 00:55.460
+So if you observe there are three operations, perform this one.
+
+00:55.860 --> 01:03.670
+One is submission of comms and another one is power of x x rays to power every time.
+
+01:04.140 --> 01:09.990
+Then in the denominator there is a factorial factor of one factor of two and three and four, so on.
+
+01:09.990 --> 01:13.020
+So there are three values that are involved here.
+
+01:13.500 --> 01:19.670
+In our previous videos, we have already written recursive function for some of the natural numbers.
+
+01:19.680 --> 01:21.630
+That is some of them natural numbers.
+
+01:22.020 --> 01:31.170
+One, two, three goes on to N and we have also written a function for finding factorial of NP that
+
+01:31.170 --> 01:37.440
+is number and that was one and go to include three into goes on to add.
+
+01:38.360 --> 01:45.660
+And we have written a function for finding power of X power and that is mPower and we have taken so
+
+01:45.660 --> 01:53.850
+this is X into X, into X and X goes on four and times.
+
+01:54.960 --> 01:59.520
+We have already seen this, we have already done recursive functions for this.
+
+01:59.520 --> 02:03.510
+We said that some of and some of the minus one plus.
+
+02:03.510 --> 02:12.030
+And so we have written it like this, some off and the minus one plus N and this factorial off and minus
+
+02:12.030 --> 02:13.110
+one then into N.
+
+02:13.110 --> 02:20.930
+So we have redundant like the factorial of and minus one in to end and this is without power of two
+
+02:20.970 --> 02:22.280
+and minus one times.
+
+02:22.290 --> 02:27.900
+So this was power up to and the minus one and in X.
+
+02:28.710 --> 02:32.980
+So we have written this recursive definitions already know fourteeners.
+
+02:33.030 --> 02:37.700
+It is actually we have to combine these three and write recursive function for that one.
+
+02:38.040 --> 02:40.860
+So let us observe a few things here.
+
+02:40.860 --> 02:47.910
+If you see the first value N so the four recursive call will start from and it will be go on reducing
+
+02:47.910 --> 02:51.530
+up to one and then it will start adding.
+
+02:51.690 --> 02:55.820
+So the addition of value is done at returning time.
+
+02:56.160 --> 02:59.510
+So actual addition starts from one onwards.
+
+02:59.910 --> 03:09.150
+So if I repeat the value of four for some four four, then this will call some of three and plus for
+
+03:09.450 --> 03:19.050
+this forward will be added at returning time, then sum of two plus the three, sum of one then plus
+
+03:19.050 --> 03:24.920
+to sum of zero then plus one the sum of zero zero.
+
+03:25.200 --> 03:31.500
+So while returning this is zero then this is one, one is other than this in this one, two is added
+
+03:31.740 --> 03:36.030
+and total is three and then here three is added and here four is added.
+
+03:36.270 --> 03:39.570
+So you can see that the addition is done at returning time.
+
+03:40.500 --> 03:45.370
+So similarly for finding factual, also, product is done actually at running time.
+
+03:45.390 --> 03:49.920
+So the starting point will be one and the last value will be multiplied will be.
+
+03:51.330 --> 03:56.110
+And similarly, in the power also no fourteeners series.
+
+03:56.130 --> 04:05.370
+What we want is we want three things submission and power as well as we need factorial.
+
+04:05.610 --> 04:10.440
+So this X is raising to some powers and also we are getting factorial.
+
+04:10.830 --> 04:18.510
+Now, a function for Taylor series must perform three operation, but the function can return.
+
+04:18.510 --> 04:26.940
+Only one result like this is some of three numbers plus four, like this is some off two numbers plus
+
+04:26.940 --> 04:27.370
+three.
+
+04:28.050 --> 04:32.970
+So here some of these items plus the storm we can do.
+
+04:33.300 --> 04:35.460
+But what about the power and factorial?
+
+04:35.730 --> 04:38.820
+So power and factorial cannot be returned by a function.
+
+04:38.820 --> 04:40.540
+Function can return only one value.
+
+04:40.920 --> 04:47.080
+So when you have to involve multiple values in the recursion, then you can use static variables.
+
+04:47.460 --> 04:54.610
+So let me show you how we can frame a recursive function for finding ebow x using static variables.
+
+04:54.780 --> 04:58.980
+First, I will try to devise the method, then I will write on a function for that.
+
+04:59.190 --> 05:06.170
+Let me take the example for apower x four four then total five times.
+
+05:06.180 --> 05:10.070
+It will be so highest degrees for now.
+
+05:10.170 --> 05:13.070
+Let us devise a recursive procedure for that.
+
+05:13.080 --> 05:17.560
+I'll take the example up to power for that is highest part for.
+
+05:17.850 --> 05:21.900
+So let me write the function as X and for.
+
+05:23.060 --> 05:27.950
+Let us start with this one, so I am first doing the tracing that I relied on to function based on that,
+
+05:28.610 --> 05:29.610
+not what we want.
+
+05:29.990 --> 05:33.550
+So when it is XCOM afford, it should call itself by three.
+
+05:33.740 --> 05:39.460
+So OK, it will call itself by three and then it should call itself by two.
+
+05:40.220 --> 05:41.450
+OK, then.
+
+05:43.310 --> 05:46.110
+One, then zero.
+
+05:46.970 --> 05:51.430
+No one at a zero interest rate on zero, so it will return Zettl.
+
+05:51.470 --> 05:57.950
+So the result of this is still not what we need for this system, actually, for this function.
+
+05:57.950 --> 05:58.820
+For this function.
+
+05:58.850 --> 05:59.460
+We are here.
+
+05:59.780 --> 06:02.960
+So what it should do X by one, it should do so.
+
+06:03.230 --> 06:09.950
+OK, I find it as one plus X by one one plus X by one.
+
+06:09.980 --> 06:12.260
+This is what I want, X by one.
+
+06:12.950 --> 06:21.260
+Now this result is written here, so the result of this function will be one plus X by one, not for
+
+06:21.260 --> 06:23.150
+this term, for this function.
+
+06:23.180 --> 06:28.500
+What I want is X squared by two factorial and this should be added.
+
+06:29.600 --> 06:36.170
+So I need this X and one so that X is multiplied with numerator so it becomes a square.
+
+06:36.170 --> 06:37.850
+Two is multiplied the denominator.
+
+06:38.090 --> 06:41.690
+So it becomes factorial then when I go back again here.
+
+06:41.930 --> 06:44.210
+So this result will be given to this function.
+
+06:44.220 --> 06:51.260
+So the result of this function is one and X squared by two factorial for this function call.
+
+06:51.470 --> 06:56.360
+It should be executed by three factorial and plus one.
+
+06:57.080 --> 07:02.190
+So in this function call, it should become an excuse for making it as X Cube.
+
+07:02.210 --> 07:10.620
+I need this X square so in that I can multiply it by X and obtain execute and then I need to factor
+
+07:10.800 --> 07:16.780
+so that I multiply it by three so it becomes three factorial not for handling these two values.
+
+07:16.790 --> 07:18.410
+That is numerator and denominator.
+
+07:18.650 --> 07:22.970
+I take to static variables first as X power.
+
+07:23.180 --> 07:28.640
+So this is power, b I will take and the next is the denominator that is factorial.
+
+07:28.640 --> 07:29.930
+So I take it as F.
+
+07:31.800 --> 07:40.170
+Not initially, I will write them as one one, so assume that this is over zero and this is zero factorial,
+
+07:40.170 --> 07:44.100
+so we have these initial values that is for the first time around us.
+
+07:44.810 --> 07:47.010
+Now, let me try this once again.
+
+07:47.370 --> 07:53.010
+So I'll remove this and I will utilize this, the static variables and this recursive calls.
+
+07:53.160 --> 07:55.230
+No, let us start again for this function.
+
+07:55.230 --> 07:59.970
+Call XCOM or for that is I want total five times.
+
+07:59.970 --> 08:01.780
+That is highest power is four.
+
+08:01.800 --> 08:06.570
+So for this it will call itself a trade and gold and one then zettl.
+
+08:06.840 --> 08:08.950
+So for zero it should return one.
+
+08:08.970 --> 08:11.220
+So that is the stone and that is one.
+
+08:11.220 --> 08:14.960
+It is ready now when it goes back here what it should do.
+
+08:15.810 --> 08:21.150
+I need that one plus X by one for this discon for this call.
+
+08:21.450 --> 08:27.700
+So let us multiply this P with X and the factorial with one.
+
+08:28.020 --> 08:35.040
+So this X and this one, this X and this one, this X is multiplied with B and this one is multiplied
+
+08:35.040 --> 08:35.580
+with F.
+
+08:35.850 --> 08:39.150
+So this literally does B by F.
+
+08:40.200 --> 08:40.890
+So this must be.
+
+08:42.350 --> 08:48.490
+So this one is the result obtained by this function plus B by F, so I was right on the steps once again,
+
+08:49.520 --> 08:50.270
+this is.
+
+08:51.360 --> 08:54.300
+B is A fine with the B into X.
+
+08:54.580 --> 09:03.480
+This I have to do and then F as a sign that F into one, this I have to do, then the result of this
+
+09:03.480 --> 09:11.750
+one F one plus this is B by S, so B is X, an F F one.
+
+09:12.000 --> 09:13.720
+So this is X by one.
+
+09:13.740 --> 09:15.190
+So this term affects by one.
+
+09:15.540 --> 09:18.240
+So these are the two steps every time I'll be performing.
+
+09:18.450 --> 09:20.740
+So I will not write them every time directly.
+
+09:20.760 --> 09:24.440
+I will be using this one by People X and these operations I will perform here.
+
+09:24.750 --> 09:25.680
+Now let us continue.
+
+09:25.890 --> 09:27.500
+It goes back with the result.
+
+09:27.630 --> 09:28.410
+What is the result?
+
+09:28.650 --> 09:34.550
+The result of this function is one plus what is B by F.P. is X and one.
+
+09:34.560 --> 09:36.160
+So this will X by one.
+
+09:37.020 --> 09:39.540
+Now in this call also it has to perform this.
+
+09:39.780 --> 09:47.740
+So this becomes in two X that is actually square and F becomes into two to the system.
+
+09:47.760 --> 09:53.290
+So in two, so this is two factorial and plus now in this result are divided.
+
+09:53.520 --> 09:59.820
+So what does that it be by F Soapies X squared and by to.
+
+10:02.240 --> 10:05.230
+Then the result of this function is written.
+
+10:06.780 --> 10:13.680
+The result of this function is written, so this becomes one plus by one plus X squared by two.
+
+10:14.010 --> 10:16.800
+Now for this function, call again.
+
+10:17.040 --> 10:22.170
+This space should be multiplied by X and F should be multiplied by three.
+
+10:22.170 --> 10:25.950
+So it becomes X cube and this becomes three factorial.
+
+10:26.190 --> 10:30.120
+So plus X Cube by three factorial.
+
+10:31.610 --> 10:33.090
+That is six now.
+
+10:33.110 --> 10:36.140
+This is the result of this function called this function called.
+
+10:36.170 --> 10:44.240
+So this returns and this becomes one plus X by one, plus X squared by two, plus execute by three factorial.
+
+10:44.570 --> 10:48.980
+Now, these are steps, as I said, I will not be writing them, but I'm performing every time, so
+
+10:48.980 --> 10:51.500
+I'll do X, so be again into X.
+
+10:51.500 --> 10:55.150
+This becomes B, Explorer four and this is in four.
+
+10:55.190 --> 10:56.810
+So this becomes four factorial.
+
+10:57.020 --> 10:58.670
+So Taqaddum is added.
+
+10:58.880 --> 11:01.910
+And this is export four by four factorial.
+
+11:02.120 --> 11:10.910
+So result of this function will be one plus X by one, X squared by two factorial, executed by three
+
+11:10.910 --> 11:14.850
+factorial plus export, four by four factorial.
+
+11:15.350 --> 11:20.990
+So that's how we are getting the result of our Taylor series four highest power forward.
+
+11:21.800 --> 11:24.530
+Now, let me write a function for this one.
+
+11:25.680 --> 11:34.350
+Which is utilizing variables that are static B and static F and X and ND by using the static variables,
+
+11:34.510 --> 11:36.000
+we will write A function.
+
+11:36.360 --> 11:38.130
+So let me write the function here.
+
+11:41.370 --> 11:48.420
+Return to this engager function name is E, and they can put parameters X and M.
+
+11:50.580 --> 11:52.900
+Now, here, I need two variables.
+
+11:52.980 --> 12:02.790
+So, first of all, I declare some variables that are static, static int B, that is one and F that
+
+12:02.790 --> 12:06.570
+is also one, then I need one more variable.
+
+12:06.570 --> 12:14.550
+The result of this function as ordered by B, by F, so I have to take one more variable to store the
+
+12:14.550 --> 12:15.740
+result of A function.
+
+12:16.050 --> 12:18.840
+So I will take one more normal variable.
+
+12:20.100 --> 12:28.710
+Ah, if and is equal to zero, then then end as a zero, it is returning one.
+
+12:30.020 --> 12:31.010
+All right, on one
+
+12:33.440 --> 12:34.250
+else.
+
+12:35.860 --> 12:39.310
+What are the steps first call itself, call it.
+
+12:39.550 --> 12:50.440
+So first us call so e X is as it is and and the minus one, the result of this function should be taken
+
+12:50.440 --> 12:51.410
+in some variables.
+
+12:51.410 --> 12:59.200
+So for that I have taken the variable are let it be in r then here in the basic step, I have shown
+
+12:59.200 --> 13:04.280
+you that these multiplied by X and F is multiplied by the value of N.
+
+13:04.630 --> 13:05.680
+So let us do this.
+
+13:06.340 --> 13:17.050
+B assign B into X and F. assign F into N so these two things will be happening at written time.
+
+13:17.080 --> 13:19.900
+So at this point in time the poverty will be growing.
+
+13:20.080 --> 13:26.800
+By the time we return back to the first call we will be having export for and F will be having four
+
+13:26.800 --> 13:27.540
+factorial.
+
+13:27.640 --> 13:30.220
+So those two are performed in threatening time.
+
+13:31.060 --> 13:37.510
+Now, what I have to do, I have to take the result of A function and plus B by half the result of A
+
+13:37.510 --> 13:44.890
+function plus B by the result of A function plus B by as a result of A function, B minus this.
+
+13:44.900 --> 13:46.360
+What I have to go on returning.
+
+13:47.110 --> 13:56.350
+So written result of a function are plus power by factorial.
+
+13:59.790 --> 14:01.440
+So this is a recursive function.
+
+14:02.480 --> 14:08.750
+For Taylor, that is cheaper access for the same dealers series, we look at one more approach, which
+
+14:08.750 --> 14:13.530
+is faster method and takes less number of multiplication for getting the result.
+
+14:13.820 --> 14:18.810
+So I will show you the approach and also I will write a recursive function for that one.

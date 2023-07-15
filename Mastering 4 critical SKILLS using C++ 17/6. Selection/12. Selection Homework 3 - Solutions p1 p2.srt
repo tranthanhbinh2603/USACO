@@ -1,0 +1,234 @@
+0
+1
+00:00:01,380 --> 00:00:06,310
+Let's solve the third homework, actually, the first one is easy.
+1
+
+2
+00:00:06,310 --> 00:00:12,420
+It was more like an introduction to the second one, for the first one, all what you need is to read the
+2
+
+3
+00:00:12,420 --> 00:00:17,850
+number X and then start to read the three intervals I kept.
+3
+
+4
+00:00:17,910 --> 00:00:19,050
+Just start and end here.
+4
+
+5
+00:00:19,380 --> 00:00:24,870
+And then I read the start and end and increment the count if X is between the start and end.
+5
+
+6
+00:00:25,080 --> 00:00:27,600
+That's all. you don't need more than that.So interval
+6
+
+7
+00:00:27,630 --> 00:00:34,710
+Second, the third and counter. in the second one, we need to do the interval intersection and this might
+7
+
+8
+00:00:34,710 --> 00:00:35,280
+be tricky.
+8
+
+9
+00:00:35,280 --> 00:00:37,670
+And this is why actually you have this assignment.
+9
+
+10
+00:00:38,070 --> 00:00:40,110
+So let's see here.
+10
+
+11
+00:00:41,670 --> 00:00:47,310
+You might try to list a lot of different cases, which would be hard and buggy, but you eventually
+11
+
+12
+00:00:47,310 --> 00:00:47,940
+can do it.
+12
+
+13
+00:00:49,260 --> 00:00:51,690
+But there is a consideration here.
+13
+
+14
+00:00:52,080 --> 00:00:55,340
+If you try to think a little more, you will notice the following.
+14
+
+15
+00:00:55,520 --> 00:00:57,900
+Where does the intersection start and end?
+15
+
+16
+00:00:58,290 --> 00:01:04,770
+The intersection starts at the maximum of the two starts and ends at the minimum of the
+16
+
+17
+00:01:04,770 --> 00:01:05,340
+two ends.
+17
+
+18
+00:01:05,610 --> 00:01:07,970
+If you tried that, it should be good enough.
+18
+
+19
+00:01:08,370 --> 00:01:11,400
+Now, there is one trick here that would save you a lot of your time.
+19
+
+20
+00:01:11,730 --> 00:01:18,510
+Try first to make sure that the intersect, if it doesn't, just get rid of this intersection very early
+20
+
+21
+00:01:18,510 --> 00:01:18,780
+How to know
+21
+
+22
+00:01:18,780 --> 00:01:24,750
+The two intervals don't intersect if one of them is ending before the start of the second,
+22
+
+23
+00:01:25,050 --> 00:01:25,980
+which need from us
+23
+
+24
+00:01:25,980 --> 00:01:29,570
+Two cases here to make sure that ...
+24
+
+25
+00:01:29,790 --> 00:01:37,590
+If I am ending before his start or he is ending before my start, then we definitely don't intersect otherwise
+25
+
+26
+00:01:37,710 --> 00:01:41,910
+with the simple observation, we can get that intersection in an easy way.
+26
+
+27
+00:01:44,160 --> 00:01:50,310
+One good lesson from this problem is many problems can be solved in many ways.
+27
+
+28
+00:01:50,670 --> 00:01:57,600
+Some of the ways might be easier to find, but very hard to code and some approaches might be hard to
+28
+
+29
+00:01:57,600 --> 00:01:59,610
+find very easy to code.
+29
+
+30
+00:01:59,610 --> 00:02:04,560
+Sometimes the approach is hard to find, hard to code, but is very efficient.
+30
+
+31
+00:02:05,040 --> 00:02:08,760
+The moral of that is there might be several ways to tackle a problem.
+31
+
+32
+00:02:09,060 --> 00:02:12,390
+Do not go with the first idea that comes to your mind.
+32
+
+33
+00:02:12,600 --> 00:02:13,770
+Try to think deeper.
+33
+
+34
+00:02:14,130 --> 00:02:17,130
+I also used to tell my students an important to track.
+34
+
+35
+00:02:17,130 --> 00:02:20,940
+I used to tell them think on papers not on PC.
+35
+
+36
+00:02:21,480 --> 00:02:29,250
+I mean by that when you have a problem, don't rush to the computer to code it because I believe the
+36
+
+37
+00:02:29,250 --> 00:02:32,640
+coding make like a kind of bounding to your mind.
+37
+
+38
+00:02:33,040 --> 00:02:35,670
+Your mind got trapped and it's boundaries.
+38
+
+39
+00:02:35,670 --> 00:02:41,340
+It cannot find good solutions. when you have a problem go far from the computer, pick a paper and pencil
+39
+
+40
+00:02:41,460 --> 00:02:44,310
+and start to sketch a solution, verify the solution.
+40
+
+41
+00:02:44,430 --> 00:02:47,340
+Ask yourself what if there is another efficient way.
+41
+
+42
+00:02:47,550 --> 00:02:50,640
+Let's try to see this problem from a different angle.
+42
+
+43
+00:02:51,030 --> 00:02:56,100
+This how people in the industry come up with different designs for their problems.
+43
+
+44
+00:02:56,100 --> 00:03:00,900
+The same problem can be solved with different ways, and every approach has some pros and cons.
+44
+
+45
+00:03:01,380 --> 00:03:04,560
+So do not be that guy who just rush to the computer to write an idea.
+45
+
+46
+00:03:04,860 --> 00:03:09,420
+Do not be the guy who just thinks the one way to solve the problem, try to figure out more than
+46
+
+47
+00:03:09,420 --> 00:03:15,360
+an approach, try to figure out the different like qualities in a solution, that's all.

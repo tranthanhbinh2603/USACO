@@ -1,0 +1,26 @@
+<p>These notes were added later after a discussion in Q/A. Nothing new, just usage code.</p><p>Map is just key and value. You prepare them to fill and print your mp. All you need is to replace the examples in the lecture with your types. Please consider the below sample</p><pre class="prettyprint linenums">#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+	map&lt;string, vector&lt;string&gt;&gt; mp1;
+
+	string key1 = "mostafa";
+	vector&lt;string&gt; value1 = {"name1", "name2"};
+	mp1[key1] = value1;
+
+	string key2 = "john";
+	vector&lt;string&gt; value2 = {"Hey", "How are u"};
+	mp1[key2] = value2;
+
+	for (const pair&lt;string, vector&lt;string&gt;&gt; &amp; pair : mp1)
+	{
+		const string &amp;key = pair.first;
+		const vector&lt;string&gt; &amp;value = pair.second;
+		cout&lt;&lt;key&lt;&lt;"\n";
+		// Use them
+	}
+	// u can remove const from all of them
+	return 0;
+}</pre><ul><li><p>During the practice of this section, you get several examples on usage</p></li><li><p>During the projects, you will learn how STL is very useful</p></li><li><p>At the end of OOP, you will learn how to make your own map</p></li><li><p>Also, you will learn a nicer way to fill map using {}</p></li></ul><p><br></p>

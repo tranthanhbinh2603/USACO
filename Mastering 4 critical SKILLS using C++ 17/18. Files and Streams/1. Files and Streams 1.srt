@@ -1,0 +1,354 @@
+0
+1
+00:00:00,880 --> 00:00:08,730
+So far, we were reading and a black screen, but if you would like to take one step more toward complicated
+1
+
+2
+00:00:08,730 --> 00:00:11,080
+things, we can read and write two files.
+2
+
+3
+00:00:11,460 --> 00:00:15,360
+So let's introduce the idea of the stream.
+3
+
+4
+00:00:15,730 --> 00:00:22,380
+So the console, as you know, is just this black screen and we used it and our IO stream was linked
+4
+
+5
+00:00:22,380 --> 00:00:23,360
+to the keyboard.
+5
+
+6
+00:00:23,370 --> 00:00:27,060
+So when you try to input something from the keyboard, we read it.
+6
+
+7
+00:00:27,060 --> 00:00:28,860
+If you wrote it, we see it on the screen.
+7
+
+8
+00:00:29,310 --> 00:00:31,980
+And as you know, definitely this isn't the most flexible way.
+8
+
+9
+00:00:31,980 --> 00:00:35,570
+Like in real life, we would like to have files or data disk and so on.
+9
+
+10
+00:00:36,060 --> 00:00:44,400
+So you can think of the stream as some path where input and some input and something is moving into the
+10
+
+11
+00:00:44,400 --> 00:00:44,940
+direction here.
+11
+
+12
+00:00:45,330 --> 00:00:51,370
+So we this is a keyboard and you enter something is going to be free to your program.
+12
+
+13
+00:00:51,390 --> 00:00:52,660
+This is the meaning of the stream.
+13
+
+14
+00:00:52,680 --> 00:00:56,540
+Think of it as a stream of something, a stream of water, or whatever.
+14
+
+15
+00:00:56,730 --> 00:01:00,480
+So it's here, a stream of characters going to the console.
+15
+
+16
+00:01:00,960 --> 00:01:05,080
+Now let's go to reading and writing in C++.
+16
+
+17
+00:01:05,430 --> 00:01:09,930
+I would like to show you first one thing that you shouldn't do in any professional project, but it
+17
+
+18
+00:01:09,930 --> 00:01:10,410
+is for fun.
+18
+
+19
+00:01:10,410 --> 00:01:12,180
+It can switch in a very easy way.
+19
+
+20
+00:01:12,360 --> 00:01:18,030
+You will see your reading from a console to reading to a file without adding more than a couple of
+20
+
+21
+00:01:18,030 --> 00:01:18,370
+lines.
+21
+
+22
+00:01:18,630 --> 00:01:23,670
+So this happened through something is called free, open, small C style.
+22
+
+23
+00:01:24,090 --> 00:01:32,460
+So if you put here this line "freopen" and use "stdin" application for standard input and used
+23
+
+24
+00:01:32,460 --> 00:01:40,680
+here the file path and use here, "rt", then every c.in would go and read from this file in a
+24
+
+25
+00:01:40,680 --> 00:01:41,250
+similar way.
+25
+
+26
+00:01:41,250 --> 00:01:47,940
+If you use this file name for the out with "wt". and "stdout", then every std output, would then
+26
+
+27
+00:01:48,290 --> 00:01:50,820
+then see how it was actually read the right to file.
+27
+
+28
+00:01:51,390 --> 00:01:57,530
+So this is the easiest way to switch any program to read and write from files with
+28
+
+29
+00:01:57,870 --> 00:01:59,150
+just a couple of lines.
+29
+
+30
+00:01:59,200 --> 00:02:01,190
+OK, yeah.
+30
+
+31
+00:02:01,200 --> 00:02:07,620
+So if you have here some file has some numbers you put this "freeopen" to read from it X and Y if you see
+31
+
+32
+00:02:07,620 --> 00:02:13,860
+cin X and Y is going to read from the file here 3 and 6 and then you can sell them to the console
+32
+
+33
+00:02:13,860 --> 00:02:15,600
+because this cout isn't oriented.
+33
+
+34
+00:02:16,260 --> 00:02:17,730
+How does freopen work.
+34
+
+35
+00:02:18,030 --> 00:02:19,940
+Let's put it now as out of the scope.
+35
+
+36
+00:02:20,220 --> 00:02:24,930
+So this is the easiest way, but this isn't how you can do it, how you should it in a real big project.
+36
+
+37
+00:02:25,200 --> 00:02:28,540
+This is just how can you switch on the program to read and write from files?
+37
+
+38
+00:02:29,610 --> 00:02:32,540
+OK, let's see this the right C++ way.
+38
+
+39
+00:02:32,880 --> 00:02:35,310
+This hash include fstream.
+39
+
+40
+00:02:35,310 --> 00:02:39,860
+It has two things Ifstream I for input and ofstream for output.
+40
+
+41
+00:02:40,230 --> 00:02:41,970
+So you need to define an object.
+41
+
+42
+00:02:42,120 --> 00:02:49,860
+ifstream fin this is very close to the struct and then you say here, read, underscore, file
+42
+
+43
+00:02:49,860 --> 00:02:50,490
+dot text.
+43
+
+44
+00:02:50,670 --> 00:02:57,660
+So this is how you define an object that you go to read.
+44
+
+45
+00:02:58,080 --> 00:02:59,940
+Skip this logic here and jump here.
+45
+
+46
+00:02:59,940 --> 00:03:08,010
+Now you see here we say fin greater than  X and greater than Y notice here the style is very similar
+46
+
+47
+00:03:08,010 --> 00:03:11,790
+to cin and in fact cin was defined this way.
+47
+
+48
+00:03:12,030 --> 00:03:18,450
+is an object like fin here but defined already for you and was ready to read and write fromcin
+48
+
+49
+00:03:18,450 --> 00:03:19,070
+the console.
+49
+
+50
+00:03:19,500 --> 00:03:24,990
+That's why if we wanted to read and write from a file, which is similar one but of type ifstream
+50
+
+51
+00:03:24,990 --> 00:03:29,880
+which is mean reading from a file this file name, once you're done with that, you start to read and
+51
+
+52
+00:03:29,880 --> 00:03:31,450
+write with it in a very normal way.
+52
+
+53
+00:03:31,950 --> 00:03:33,710
+Now there is two missing things here.
+53
+
+54
+00:03:33,810 --> 00:03:39,530
+The first is we would like to check if the file exists or not, or can we open it or not.
+54
+
+55
+00:03:39,540 --> 00:03:41,640
+Could be like, for example, permission issues.
+55
+
+56
+00:03:42,240 --> 00:03:44,220
+So we say here, fin.fail.
+56
+
+57
+00:03:44,310 --> 00:03:47,910
+If we couldn't read that, then we cannot open this file.
+57
+
+58
+00:03:48,000 --> 00:03:50,600
+Otherwise we can use it, notice here.
+58
+
+59
+00:03:50,660 --> 00:03:52,070
+We use this cout in the normal way.
+59
+
+60
+00:03:52,530 --> 00:03:55,800
+The second thing is you have to close it by the end.
+60
+
+61
+00:03:55,830 --> 00:03:57,930
+This is very, very, very important.
+61
+
+62
+00:03:58,290 --> 00:04:04,760
+So we have one line to create it and want to check about working, then use it, then close it.
+62
+
+63
+00:04:05,010 --> 00:04:06,870
+This is how you can read from a file.
+63
+
+64
+00:04:07,050 --> 00:04:14,190
+And remember, fin here object is very similar to the CIn that we were using to read in a similar
+64
+
+65
+00:04:14,190 --> 00:04:14,430
+way.
+65
+
+66
+00:04:14,430 --> 00:04:16,650
+We can use the printing one.
+66
+
+67
+00:04:16,980 --> 00:04:21,190
+So let's add here an ofstream Fout on this file.
+67
+
+68
+00:04:21,480 --> 00:04:24,510
+So again, this how we can write to a file.
+68
+
+69
+00:04:24,840 --> 00:04:30,990
+We can also check here if the file is ready or not and use it exactly as we use the cout.
+69
+
+70
+00:04:30,990 --> 00:04:35,180
+Once we are done, we again importantly to close the pipe.
+70
+
+71
+00:04:35,850 --> 00:04:36,420
+That's it.

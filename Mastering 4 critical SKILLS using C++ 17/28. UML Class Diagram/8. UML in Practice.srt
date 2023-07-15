@@ -1,0 +1,329 @@
+0
+1
+00:00:00,750 --> 00:00:06,990
+One of the critical concerns about UML is how to use it in practice? Sadly, typically courses academic
+1
+
+2
+00:00:06,990 --> 00:00:11,700
+or online, doesn't stress on the quality of UML.
+2
+
+3
+00:00:12,030 --> 00:00:18,120
+So in this video, I would like to highlight for you five different tips on UML so that you can
+3
+
+4
+00:00:18,120 --> 00:00:19,940
+generate a good UML.
+4
+
+5
+00:00:20,310 --> 00:00:22,200
+The first one is less is more.
+5
+
+6
+00:00:22,230 --> 00:00:28,860
+When we say by less is more, read this diagram. It seems someone wanted to communicate a lot of information,
+6
+
+7
+00:00:29,160 --> 00:00:33,780
+but when you give a diagram like that to someone to read it and understand it, you just get bothered
+7
+
+8
+00:00:33,930 --> 00:00:35,750
+and maybe get 10 percent of it.
+8
+
+9
+00:00:36,090 --> 00:00:39,360
+So although you provided a lot, actually people got less.
+9
+
+10
+00:00:39,360 --> 00:00:41,190
+You know, this is like explaining courses.
+10
+
+11
+00:00:41,340 --> 00:00:46,530
+If you explained to someone a lot in the beginning, they just get confused, and they get much less of
+11
+
+12
+00:00:46,770 --> 00:00:48,140
+what they learned.
+12
+
+13
+00:00:48,360 --> 00:00:52,260
+So don't provide such a diagram, but think in the priorities.
+13
+
+14
+00:00:52,440 --> 00:00:55,520
+Think about what is really the important information to communicate.
+14
+
+15
+00:00:55,920 --> 00:01:01,200
+So UML diagrams and class diagrams aren't about communicating every single piece of information.
+15
+
+16
+00:01:01,440 --> 00:01:05,460
+It's about communicating the big picture, the core items, the core features.
+16
+
+17
+00:01:05,490 --> 00:01:11,060
+OK, so feel free to drop something that makes your diagram complicated or ugly and so on.
+17
+
+18
+00:01:11,940 --> 00:01:13,680
+The second rule is crossings.
+18
+
+19
+00:01:13,920 --> 00:01:20,430
+When you start to cross arrows this way, either you are using a lot of relationships and classes,
+19
+
+20
+00:01:20,700 --> 00:01:27,330
+or you need to think in a better way to arrange diagrams. When diagrams are this way without crossing
+20
+
+21
+00:01:27,510 --> 00:01:30,400
+so that every line here almost is by itself,
+21
+
+22
+00:01:30,750 --> 00:01:32,550
+this is a much readable diagram.
+22
+
+23
+00:01:32,670 --> 00:01:37,800
+So, minimize the crossings as much as you could. A third rule is an orthogonality.
+23
+
+24
+00:01:37,890 --> 00:01:44,160
+Orthogonality makes your UML looks very good. Orthogonal means 90 degrees percent
+24
+
+25
+00:01:44,160 --> 00:01:45,950
+between a couple of arrows here.
+25
+
+26
+00:01:46,170 --> 00:01:48,620
+So you see this arrows have different angles.
+26
+
+27
+00:01:48,900 --> 00:01:50,040
+It looks ugly really,
+27
+
+28
+00:01:50,520 --> 00:01:56,370
+but on the other side, this one was 90 degrees arrow in the relationships. It looks like much more
+28
+
+29
+00:01:56,370 --> 00:01:56,760
+readable.
+29
+
+30
+00:01:56,970 --> 00:02:05,040
+I would like you to think about how others are receiving my work, OK. A fourth note is about inheritance.
+30
+
+31
+00:02:05,040 --> 00:02:09,720
+Remember, inheritance means like a circle is a shape, a rectangle is a shape,
+31
+
+32
+00:02:09,870 --> 00:02:15,540
+so the shape we call it a parent class. This class has here some parent class, but
+32
+
+33
+00:02:15,540 --> 00:02:16,440
+they loo down.
+33
+
+34
+00:02:16,860 --> 00:02:24,400
+The semantics of a parent or this shape class is that it is a higher logic than the circle and the rectangle.
+34
+
+35
+00:02:24,660 --> 00:02:28,660
+So a better way is to put this inheritance relationship to go up.
+35
+
+36
+00:02:28,980 --> 00:02:32,410
+So this is an arrow inheritance going up, arrow inheritance going up.
+36
+
+37
+00:02:33,690 --> 00:02:38,100
+Generally speaking, don't provide things that look ugly for the people.
+37
+
+38
+00:02:38,370 --> 00:02:40,040
+Consider alignments, for example.
+38
+
+39
+00:02:40,050 --> 00:02:42,830
+Make sure that it looks like a good UML diagram.
+39
+
+40
+00:02:43,590 --> 00:02:48,990
+The last thing to say about UML is about how software engineers receive it in the industry.
+40
+
+41
+00:02:49,290 --> 00:02:53,310
+Some companies never or rarely use UML.
+41
+
+42
+00:02:53,580 --> 00:02:54,810
+They just use whiteboard,
+42
+
+43
+00:02:54,810 --> 00:02:57,840
+and as a team, you brain storm, you draw on a board.
+43
+
+44
+00:02:57,990 --> 00:03:00,270
+Maybe you take some pictures of what you draw, and that is it.
+44
+
+45
+00:03:00,700 --> 00:03:05,760
+There is a problem typically they face when there is a newcomer, they don't have material to provide
+45
+
+46
+00:03:05,760 --> 00:03:06,150
+for him.
+46
+
+47
+00:03:06,150 --> 00:03:12,470
+So the workaround is someone to explain with him some high-level explantation and then they do some code
+47
+
+48
+00:03:12,670 --> 00:03:13,880
+deep dive together.
+48
+
+49
+00:03:14,040 --> 00:03:20,220
+This is one thing. Typically in many small projects, like something that takes three to six months from
+49
+
+50
+00:03:20,220 --> 00:03:24,360
+a team, there are no diagrams. We can just keep information inside our mind,
+50
+
+51
+00:03:24,360 --> 00:03:25,410
+and it isn't that big.
+51
+
+52
+00:03:26,160 --> 00:03:30,060
+In big projects, we typically start to create high-level diagrams.
+52
+
+53
+00:03:30,240 --> 00:03:34,320
+We focused on the class diagram, and we highlighted the rule less is more.
+53
+
+54
+00:03:34,620 --> 00:03:40,230
+There are many diagrams in UML, but the other three critical ones, if you would like to prioritize,
+54
+
+55
+00:03:40,440 --> 00:03:43,740
+are the sequence, state, and activity diagrams.
+55
+
+56
+00:03:43,770 --> 00:03:46,320
+These four are the most common in industry.
+56
+
+57
+00:03:46,830 --> 00:03:49,110
+There is something in software engineering named agile.
+57
+
+58
+00:03:49,380 --> 00:03:56,400
+Agile is an iterative process to implement your projects like this course,
+58
+
+59
+00:03:56,450 --> 00:03:57,900
+I explain it in an iterative way.
+59
+
+60
+00:03:58,410 --> 00:04:05,130
+The problem with Agile is that UML diagrams that we build early become wrong in the end and outdated,
+60
+
+61
+00:04:05,280 --> 00:04:07,800
+so they typically would have problems with that.
+61
+
+62
+00:04:08,520 --> 00:04:15,210
+If I would like to give you a tip, I would say learn UML, learned annotations, but think twice before
+62
+
+63
+00:04:15,210 --> 00:04:16,290
+creating a diagram,
+63
+
+64
+00:04:16,590 --> 00:04:21,420
+and if you decided to create a diagram, focus on the high level of the diagram. In the future,
+64
+
+65
+00:04:21,420 --> 00:04:23,150
+you might read this things.
+65
+
+66
+00:04:23,640 --> 00:04:24,180
+That's it.

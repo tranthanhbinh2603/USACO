@@ -1,0 +1,403 @@
+WEBVTT
+
+00:01.340 --> 00:07.040
+Everyone in this example, we will look at how do you handle multiple inputs inside a flow chart, OK?
+
+00:07.700 --> 00:09.860
+The question is taken would end.
+
+00:10.100 --> 00:16.130
+So we have to first read the value of an OK and followed by inward numbers.
+
+00:16.250 --> 00:22.520
+So for example, in this case, we had first given the value of and that is food, then we are followed
+
+00:22.520 --> 00:24.990
+by four more numbers that we have to read.
+
+00:25.550 --> 00:26.980
+And then we have to find that sum.
+
+00:27.380 --> 00:30.110
+So this some is nothing but one one zero.
+
+00:30.470 --> 00:30.770
+OK.
+
+00:31.480 --> 00:33.430
+The end could be anything, if any, stent.
+
+00:33.440 --> 00:35.330
+We have to read 10 words.
+
+00:35.330 --> 00:37.850
+If an is 50, we have to read 15 words, OK?
+
+00:38.630 --> 00:43.460
+Now you cannot create and number of buckets to read.
+
+00:44.620 --> 00:52.120
+Such numbers, okay, so what we have to do, we have to read and process the Sun as we go through the
+
+00:52.120 --> 00:54.430
+input, okay, so we have to read.
+
+00:56.600 --> 00:58.010
+And update some.
+
+01:00.360 --> 01:04.590
+Simultaneously, for example, if I give you a number 10.
+
+01:04.800 --> 01:08.340
+So in your mind, you create a bucket called sum, OK?
+
+01:09.010 --> 01:18.450
+And knew is initially zero, then you know the sum is nothing but 0+ and that is equal to and OK, next
+
+01:18.450 --> 01:20.370
+time I took it, read the number 20.
+
+01:20.910 --> 01:22.650
+So you add 22 years.
+
+01:23.130 --> 01:27.210
+So the sum now becomes thirty years during what is the current sum?
+
+01:28.020 --> 01:29.610
+Then I ask your grade.
+
+01:29.610 --> 01:31.310
+The next number that is 30.
+
+01:31.350 --> 01:32.580
+So you are 32.
+
+01:32.580 --> 01:34.170
+The sum, it becomes 60.
+
+01:35.040 --> 01:38.550
+Next time I ask you to read the next number, that is 50.
+
+01:39.590 --> 01:46.680
+So you added tourism and it becomes one, 110 or so, do you think will require a use of loop?
+
+01:48.590 --> 01:51.710
+And in this loop, we are also going to update this, OK?
+
+01:52.190 --> 01:54.140
+Let's see how many buckets we will need.
+
+01:54.350 --> 01:57.260
+So one bucket we will need to store.
+
+01:57.440 --> 01:59.510
+What is the value of in that is food.
+
+02:00.380 --> 02:07.820
+Another bucket we will need to count, which, no, we are doing OK, so the first number, the value
+
+02:07.820 --> 02:10.310
+of I is one when we go to the second number.
+
+02:10.370 --> 02:13.310
+The value of I is two when we go to the third number.
+
+02:13.340 --> 02:14.420
+The value of our history.
+
+02:14.540 --> 02:16.860
+When we go to the fourth number, the value of his food.
+
+02:17.660 --> 02:20.690
+So I denotes which number we are eating.
+
+02:20.810 --> 02:21.140
+OK.
+
+02:21.590 --> 02:22.460
+So another bucket.
+
+02:22.460 --> 02:25.090
+I denotes which bucket we're reading.
+
+02:25.690 --> 02:26.540
+Another bucket.
+
+02:26.750 --> 02:30.500
+We need to know the value of the current number.
+
+02:30.800 --> 02:31.820
+Suppose I is one.
+
+02:32.370 --> 02:34.490
+What is the first number that we are reading?
+
+02:34.670 --> 02:36.320
+The first number is nothing but 10.
+
+02:36.350 --> 02:37.310
+So this will go ahead.
+
+02:38.420 --> 02:38.780
+OK.
+
+02:39.050 --> 02:41.080
+Another bucket to ensure.
+
+02:41.420 --> 02:43.970
+What does the sum belong to?
+
+02:43.970 --> 02:46.070
+The sum till now is zero.
+
+02:46.730 --> 02:49.370
+Then we read, then we add 10 to the sum.
+
+02:50.330 --> 02:51.590
+Then we read 20.
+
+02:52.130 --> 02:53.360
+Then we add 22.
+
+02:53.360 --> 02:53.750
+The sum.
+
+02:53.780 --> 02:54.080
+OK.
+
+02:54.440 --> 02:59.300
+So I hope you're getting some idea of what all buckets we will need to create.
+
+02:59.900 --> 03:03.110
+And now let's see how we can create the flow chart.
+
+03:03.230 --> 03:03.530
+OK.
+
+03:04.160 --> 03:06.110
+So first of all, we will have start.
+
+03:07.250 --> 03:13.820
+As usual, then we will read the well, you often will say, OK, let's read.
+
+03:15.110 --> 03:15.860
+The number and.
+
+03:17.970 --> 03:19.800
+Then what what next?
+
+03:20.640 --> 03:23.300
+We need to know the count.
+
+03:23.350 --> 03:23.670
+OK.
+
+03:25.590 --> 03:31.290
+So we need to say, OK, we're going to read the first number, the value of this one and how many numbers
+
+03:31.300 --> 03:32.400
+we want to read.
+
+03:32.790 --> 03:39.450
+We want to read and numbers on what is this some now, some below zero.
+
+03:39.780 --> 03:40.060
+OK.
+
+03:40.790 --> 03:42.630
+To tell what point we are going to read.
+
+03:43.020 --> 03:43.530
+Let's see.
+
+03:44.370 --> 03:46.080
+So we are going to read a little.
+
+03:48.180 --> 03:53.700
+I is less than equal to and because we are going to read let us defend his vote, we are only going
+
+03:53.700 --> 03:55.890
+to try and look four times.
+
+03:56.730 --> 04:01.590
+So if I is less than equal to end, if the answer is yes, we will take it.
+
+04:02.260 --> 04:03.660
+Read the current value.
+
+04:04.080 --> 04:04.890
+How do we read it?
+
+04:05.420 --> 04:08.100
+We read the current value.
+
+04:09.270 --> 04:09.900
+We read it.
+
+04:11.830 --> 04:13.180
+And now what are you going to do?
+
+04:13.780 --> 04:14.890
+You can do two things.
+
+04:15.790 --> 04:18.860
+One thing is you will update the sum, OK?
+
+04:20.490 --> 04:27.930
+So you will update the Sun so you can see some equals, some less value.
+
+04:29.130 --> 04:32.190
+OK, next thing, you will increment the count.
+
+04:32.580 --> 04:36.660
+You will talk, I equals I +1.
+
+04:37.380 --> 04:39.060
+That is another thing that you will do.
+
+04:40.080 --> 04:44.400
+And then again, you will connect back here.
+
+04:47.300 --> 04:49.250
+You will again going to back it.
+
+04:50.560 --> 04:52.150
+And if the answer is no.
+
+04:53.640 --> 04:57.360
+Then you know that, OK, I have computed the sum I can print it.
+
+04:58.640 --> 05:02.030
+Do you will talk rent the value of some?
+
+05:03.730 --> 05:06.160
+And then you can simply say exit.
+
+05:08.930 --> 05:13.220
+Now, let us brighten this code for our given input.
+
+05:14.420 --> 05:16.640
+So the input we are given and is Ford, OK?
+
+05:17.270 --> 05:26.570
+And is Ford, and we are given some numbers, let's say 30, 50, 20 and later than that, these are
+
+05:26.570 --> 05:27.170
+the numbers.
+
+05:28.130 --> 05:30.110
+If what is I is one.
+
+05:31.730 --> 05:36.800
+Is one less than equal when one is less than equal, the 40th will read the value.
+
+05:37.160 --> 05:38.690
+What is the value that we will read?
+
+05:39.410 --> 05:45.560
+The next input that is available from the keyboard that will go into the value to the value is 30.
+
+05:47.040 --> 05:53.560
+The value is 30, and we update about something as simple as value, so sum becomes zero plus 30 to
+
+05:53.610 --> 05:55.490
+some becomes 30.
+
+05:56.820 --> 05:57.290
+All right.
+
+05:58.170 --> 06:03.210
+I becomes what I becomes to who is less than equal to for.
+
+06:04.560 --> 06:09.870
+We will redouble you to the next number from the keyboard and productively that will go into the value.
+
+06:10.900 --> 06:15.220
+The values 50, some becomes 30 plus $50, 80.
+
+06:18.450 --> 06:21.270
+OK, next time I began to three.
+
+06:23.430 --> 06:28.710
+Three is less than equal to four values, the next value that is this number.
+
+06:28.920 --> 06:30.310
+We are reading the third number, OK?
+
+06:31.230 --> 06:32.430
+We are reading the third number.
+
+06:34.010 --> 06:38.420
+And we lose 20, so some becomes 80 plus 20.
+
+06:39.020 --> 06:41.030
+That is Android.
+
+06:43.390 --> 06:49.900
+And finally, we read the next number that is equal to Ford or is less than equal to Ford.
+
+06:50.470 --> 06:52.990
+And we read the value that is 10.
+
+06:55.650 --> 06:58.410
+And we update us here, so some equals.
+
+06:59.410 --> 07:00.490
+Under less than.
+
+07:01.690 --> 07:04.600
+Which becomes one 110, and we update.
+
+07:05.170 --> 07:08.530
+The eye becomes five, so then I becomes five.
+
+07:08.560 --> 07:13.810
+We again come here, which is five, then equal to four Dhanteras.
+
+07:13.810 --> 07:14.100
+No.
+
+07:14.200 --> 07:15.160
+We print the sum.
+
+07:15.640 --> 07:17.290
+And what is the final value of some?
+
+07:17.590 --> 07:22.390
+It is 110, so we get the output at 110 and we exit.
+
+07:22.930 --> 07:27.490
+That's how we can handle the processing of multiple inputs.
+
+07:27.490 --> 07:27.650
+Okay?
+
+07:28.090 --> 07:33.520
+So in this example, we do not need to store all the numbers at once.
+
+07:33.820 --> 07:36.220
+We are only storing the current number, OK?
+
+07:36.640 --> 07:40.120
+But in some problems, we might require to store all the numbers.
+
+07:40.570 --> 07:46.900
+And later on, in the course, you will learn about data centers to one data center that can be used
+
+07:46.900 --> 07:47.740
+for storage.
+
+07:47.860 --> 07:49.030
+It's called as Eddy.
+
+07:49.300 --> 07:49.590
+OK.
+
+07:50.170 --> 07:54.730
+It's called Azadi that would be covered in the later topics, not in this topic.
+
+07:55.550 --> 08:01.420
+So I hope you have understood how to handle multiple inputs inside a flowchart, and that's all for
+
+08:01.420 --> 08:01.960
+this video.

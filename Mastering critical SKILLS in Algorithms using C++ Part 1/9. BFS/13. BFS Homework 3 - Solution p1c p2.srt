@@ -1,0 +1,307 @@
+1
+00:00:00,460 --> 00:00:01,990
+Let's see, how can we put him into that?
+
+2
+00:00:02,320 --> 00:00:08,230
+We start the year by MC and be a first of the rules to make the objects that we need in the query.
+
+3
+00:00:08,590 --> 00:00:11,170
+We this is a normal breakfast on a grid.
+
+4
+00:00:11,410 --> 00:00:15,130
+We will iterate on the metrics and any cell that has a value zero.
+
+5
+00:00:15,280 --> 00:00:16,870
+We know that this is a starting point.
+
+6
+00:00:17,140 --> 00:00:24,610
+So we use here kudos bush and market to market it as a visited and edit it as a starting point.
+
+7
+00:00:25,060 --> 00:00:27,220
+The second, the change, which is very important.
+
+8
+00:00:27,490 --> 00:00:29,980
+You should right size equal Q to size.
+
+9
+00:00:30,400 --> 00:00:34,900
+Maybe you can, even from that one, make it a habit like you always right size equal Q that size.
+
+10
+00:00:35,440 --> 00:00:37,750
+So if the Q has a single note, it's OK.
+
+11
+00:00:37,760 --> 00:00:43,200
+If the Q has more than not, it will be OK because if you forget this one, the good will not work.
+
+12
+00:00:43,210 --> 00:00:49,990
+But obviously everything else in this problem is exactly the general, uh, the general iteration on
+
+13
+00:00:49,990 --> 00:00:52,600
+the in the could not nothing, nothing more fancy here.
+
+14
+00:00:53,020 --> 00:00:57,250
+So the overall of this problem, we use the reverse the thinking.
+
+15
+00:00:58,570 --> 00:01:03,520
+So by reverse thinking, we we notice that the room need one gate.
+
+16
+00:01:03,670 --> 00:01:09,010
+But if we started from the gate, we got all of the rooms and all of the gates together can find together
+
+17
+00:01:09,010 --> 00:01:09,610
+the answer.
+
+18
+00:01:09,910 --> 00:01:14,350
+The second one is the multi source idea that we should hear.
+
+19
+00:01:15,460 --> 00:01:23,710
+Now, let's see the second, the problem, the second, the problem is about there, the Pacific Ocean
+
+20
+00:01:23,710 --> 00:01:24,400
+idea here.
+
+21
+00:01:24,700 --> 00:01:26,050
+So this is problem number two.
+
+22
+00:01:27,050 --> 00:01:32,900
+Now, this problem is going to be exactly very similar to the previous problem.
+
+23
+00:01:33,320 --> 00:01:35,300
+Actually, it has the same two components.
+
+24
+00:01:35,960 --> 00:01:36,680
+First of all.
+
+25
+00:01:38,230 --> 00:01:42,460
+From the cell perspective, it looks like more like one to one relationship.
+
+26
+00:01:42,730 --> 00:01:46,690
+Every cell is looking to one exit or a specific direction.
+
+27
+00:01:47,080 --> 00:01:52,150
+But if you thought it from the ocean perspective, the ocean would like to find here the ocean.
+
+28
+00:01:52,150 --> 00:01:57,880
+Like this one here, it would look to find all of the sensors that can reach you to me.
+
+29
+00:01:58,240 --> 00:02:04,780
+So if we revisit the problem, we think about the start from the ocean and the find all of the energy
+
+30
+00:02:04,780 --> 00:02:06,100
+that can reach to this ocean.
+
+31
+00:02:06,730 --> 00:02:09,460
+This would have it also splitting the problem to two problems.
+
+32
+00:02:09,910 --> 00:02:11,080
+We would like to split it.
+
+33
+00:02:11,260 --> 00:02:17,320
+One problem to find like from the best of caution, which are all of the nodes that can the rest of
+
+34
+00:02:17,320 --> 00:02:18,990
+ocean can reach it, Richard.
+
+35
+00:02:19,360 --> 00:02:23,260
+And also, we can do it from there other ocean perspective.
+
+36
+00:02:23,770 --> 00:02:26,140
+We find all of them is that it can reach it.
+
+37
+00:02:26,560 --> 00:02:28,120
+So the processing goes as following.
+
+38
+00:02:28,870 --> 00:02:30,310
+There are a lot of nodes here.
+
+39
+00:02:31,640 --> 00:02:34,430
+These are my starting points, I will use them.
+
+40
+00:02:34,610 --> 00:02:39,190
+And in a business, I find all of them is that I can reach in a very, very similar way.
+
+41
+00:02:39,200 --> 00:02:40,850
+These are all my starting points.
+
+42
+00:02:41,150 --> 00:02:43,820
+I will use them to find all of the notes that I can.
+
+43
+00:02:44,330 --> 00:02:46,400
+I can reach in this way.
+
+44
+00:02:46,400 --> 00:02:51,920
+If a note is reachable from massive and also reachable from Atlantic, that it must be part of the answer.
+
+45
+00:02:52,370 --> 00:02:54,320
+So again, this problem ended up like.
+
+46
+00:02:55,510 --> 00:02:58,840
+You thought, reversely, which is something very specific to the problem.
+
+47
+00:02:59,080 --> 00:03:05,230
+And more importantly, you have multiple starting points now one catch about the reversing ideas when
+
+48
+00:03:05,230 --> 00:03:09,760
+you reversed something which are the effect on the problem in the normal problem.
+
+49
+00:03:10,390 --> 00:03:16,430
+You are thinking that the sale will go to the neighbour because if I am five, it would be five or more
+
+50
+00:03:16,430 --> 00:03:16,840
+or less.
+
+51
+00:03:17,200 --> 00:03:18,790
+So it should be less than or equal me.
+
+52
+00:03:19,300 --> 00:03:20,800
+Now we are reversing.
+
+53
+00:03:21,040 --> 00:03:27,310
+So we would like the ocean to go to the hood so the ocean will go to the road if and only if the ocean
+
+54
+00:03:27,310 --> 00:03:29,860
+is greater than or equal to it.
+
+55
+00:03:30,250 --> 00:03:34,870
+So in the normal direction, less than or equal in their reverse direction, it would be greater than
+
+56
+00:03:35,170 --> 00:03:35,680
+or equal.
+
+57
+00:03:35,800 --> 00:03:38,800
+So just be careful about the flipping of the semantic.
+
+58
+00:03:39,250 --> 00:03:41,290
+Everything else is just a matter of cutting.
+
+59
+00:03:41,650 --> 00:03:42,820
+Let's see how to do that.
+
+60
+00:03:43,780 --> 00:03:50,680
+Two billion array Pacific and Atlantic with the grid the size, and then we would like to find the starting
+
+61
+00:03:50,680 --> 00:03:51,130
+cells.
+
+62
+00:03:51,520 --> 00:03:56,050
+So I'm iterating on the rule, getting the first through and through and getting the first two columns
+
+63
+00:03:56,050 --> 00:03:57,010
+and the last the column.
+
+64
+00:03:57,400 --> 00:03:57,970
+This now could.
+
+65
+00:03:57,970 --> 00:03:59,230
+It's my starting points.
+
+66
+00:03:59,650 --> 00:04:05,980
+I will do two separate business one offs on the Pacific Reachable and the best of starting here and
+
+67
+00:04:05,980 --> 00:04:08,050
+the second one on the Atlantic one.
+
+68
+00:04:08,650 --> 00:04:13,060
+Once we are done with this to be a first, I will read two iterations and there are three.
+
+69
+00:04:13,420 --> 00:04:18,910
+If the route is reachable from the massive and reachable from the Atlantic, then it's part of the answer.
+
+70
+00:04:20,170 --> 00:04:27,340
+For the BFC itself, it is very straightforward here, observe we add all of the cells to the graph.
+
+71
+00:04:27,640 --> 00:04:28,900
+So this is the first the change.
+
+72
+00:04:29,140 --> 00:04:32,860
+The second exchange change, this one should be queue that size.
+
+73
+00:04:33,100 --> 00:04:35,560
+So this way we are done with it.
+
+74
+00:04:35,620 --> 00:04:38,260
+Anything else is the same, but observers here.
+
+75
+00:04:40,240 --> 00:04:45,880
+The condition here must be ruled in a reverse way so that the this is this is more about the reversing
+
+76
+00:04:45,880 --> 00:04:52,900
+the idea, this two about the, uh, about the change itself in the.
+
+77
+00:04:54,570 --> 00:04:57,810
+In the multi source in the third, the problem.

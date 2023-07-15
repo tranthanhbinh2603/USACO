@@ -1,0 +1,739 @@
+0
+1
+00:00:01,840 --> 00:00:08,680
+We once discussed the bus pay reference and in functions, we highlighted it, but it's time to maybe
+1
+
+2
+00:00:08,680 --> 00:00:10,960
+to elaborate a little more about that.
+2
+
+3
+00:00:11,440 --> 00:00:18,340
+So recall in the memory, when we define something like integer age fifty-five, what happens is there
+3
+
+4
+00:00:18,340 --> 00:00:21,910
+is an entry in the memory, let's say, at location three to seven.
+4
+
+5
+00:00:21,910 --> 00:00:26,470
+One-four is going to reserve it for age was very fifty-five and data type integer.
+5
+
+6
+00:00:27,280 --> 00:00:31,910
+Typically when you see addresses you will see it in something we call hexadecimal representation.
+6
+
+7
+00:00:32,230 --> 00:00:36,190
+So this is hexadecimal representation just think of it like just another number.
+7
+
+8
+00:00:36,730 --> 00:00:40,750
+You can use this online calculator to convert normal numbers to hexadecimal numbers.
+8
+
+9
+00:00:40,780 --> 00:00:43,640
+They are eventually the same thing, but different views.
+9
+
+10
+00:00:44,140 --> 00:00:48,550
+Now, if we would like to get the address of the variable, we can use the reference.
+10
+
+11
+00:00:48,730 --> 00:00:51,490
+let's say we define the variable integer age.
+11
+
+12
+00:00:51,490 --> 00:00:56,740
+Fifty-five and then you can print age, which will get fifty-five from the memory.
+12
+
+13
+00:00:57,040 --> 00:01:02,950
+But if you did reference age, this is the ampersand operator, then it's going to get the actual location
+13
+
+14
+00:01:02,950 --> 00:01:07,030
+number, but just print it in the hexadecimal format.
+14
+
+15
+00:01:07,960 --> 00:01:10,960
+So this is just to the location in the memory now.
+15
+
+16
+00:01:11,050 --> 00:01:13,810
+So age is a value reference.
+16
+
+17
+00:01:13,810 --> 00:01:16,630
+Age is the address of the value in the memory.
+17
+
+18
+00:01:17,290 --> 00:01:22,300
+Now, this takes us to further utilization of the address of the operator as follows.
+18
+
+19
+00:01:22,870 --> 00:01:28,720
+Let's define here age and then we say here integer reference, equal age.
+19
+
+20
+00:01:28,990 --> 00:01:32,420
+This is just an alias of the variable.
+20
+
+21
+00:01:32,440 --> 00:01:33,250
+What does this mean?
+21
+
+22
+00:01:33,580 --> 00:01:36,910
+It means this isn't a new variable in the memory.
+22
+
+23
+00:01:36,910 --> 00:01:41,560
+It's actually the same variable is just looking at it and giving it a new name.
+23
+
+24
+00:01:41,950 --> 00:01:46,750
+So now when you put here in the declaration reference before a variable, they are looking to the same
+24
+
+25
+00:01:46,750 --> 00:01:47,920
+position in the memory.
+25
+
+26
+00:01:48,190 --> 00:01:53,470
+If you try to print to the value and the address of this variable is again going to show you fifty-five
+26
+
+27
+00:01:53,470 --> 00:01:59,770
+and exactly the same address, you can again define a new variable, say the reference to looking to
+27
+
+28
+00:01:59,770 --> 00:02:04,600
+age or looking to reference one when you try to print it again it will print the same value.
+28
+
+29
+00:02:05,230 --> 00:02:10,720
+If you try to change the value of any of these three items, the value of all of them is changed.
+29
+
+30
+00:02:10,840 --> 00:02:15,520
+why they are all now referring to the same position in the memory.
+30
+
+31
+00:02:15,760 --> 00:02:17,400
+That's why we call them the alias.
+31
+
+32
+00:02:17,410 --> 00:02:22,750
+they aren't new things they are actually defining just the address of the variable and they all are pointing
+32
+
+33
+00:02:22,750 --> 00:02:24,040
+to the same thing.
+33
+
+34
+00:02:25,000 --> 00:02:26,860
+Now, let's learn about some constraints.
+34
+
+35
+00:02:26,920 --> 00:02:33,610
+When it comes to the references, the first constraint is you cannot assign them.
+35
+
+36
+00:02:33,760 --> 00:02:34,720
+We define here ref.
+36
+
+37
+00:02:35,350 --> 00:02:38,860
+to age, you can't come back and make ref equal another.
+37
+
+38
+00:02:38,890 --> 00:02:40,000
+It doesn't go like that.
+38
+
+39
+00:02:40,150 --> 00:02:41,500
+So it just wants to declare
+39
+
+40
+00:02:41,500 --> 00:02:44,460
+exactly this way. it has to be a reference here.
+40
+
+41
+00:02:44,620 --> 00:02:46,260
+It has to be another variable here.
+41
+
+42
+00:02:46,870 --> 00:02:49,210
+You cannot make it look without initialization.
+42
+
+43
+00:02:49,300 --> 00:02:55,840
+You cannot initialize it to a constant because this doesn't have a well defined
+43
+
+44
+00:02:56,050 --> 00:02:57,460
+location in memory for us?
+44
+
+45
+00:02:57,650 --> 00:02:59,740
+OK, one more constraint.
+45
+
+46
+00:02:59,740 --> 00:03:02,370
+If you would like to take a reference, it must be the same as the time.
+46
+
+47
+00:03:02,620 --> 00:03:05,440
+So you cannot refer to to the double from an integer.
+47
+
+48
+00:03:05,560 --> 00:03:09,610
+And this is that has to be with consistency in the memory itself.
+48
+
+49
+00:03:09,880 --> 00:03:11,460
+So these are some of the constraints.
+49
+
+50
+00:03:11,650 --> 00:03:16,580
+So typically we have to define it in this exact way, otherwise, we typically get compilation.
+50
+
+51
+00:03:17,410 --> 00:03:21,000
+Now let's apply more with the references.
+51
+
+52
+00:03:21,310 --> 00:03:27,010
+The first thing about functions, let's say we have some function here that has variable X and returning
+52
+
+53
+00:03:27,010 --> 00:03:29,740
+it to us when Y what observation here.
+53
+
+54
+00:03:29,740 --> 00:03:36,070
+If we try to print to the address of X here and the address of Y here, we notice it is a different address.
+54
+
+55
+00:03:36,460 --> 00:03:41,600
+So X here isn't the same Y here we are returning just a copy of it.
+55
+
+56
+00:03:41,950 --> 00:03:44,650
+What happened after the user returns from this function.
+56
+
+57
+00:03:44,920 --> 00:03:51,490
+X is a local variable, so X is going to be destroyed because the scope of the variable is going to
+57
+
+58
+00:03:51,490 --> 00:03:52,280
+be done.
+58
+
+59
+00:03:52,510 --> 00:03:54,280
+So once the scope of a variable is done?
+59
+
+60
+00:03:54,430 --> 00:03:55,740
+It is gone from the memory.
+60
+
+61
+00:03:55,840 --> 00:03:58,110
+So here X and Y are two different things.
+61
+
+62
+00:03:58,390 --> 00:04:00,400
+So this is about the return by a value.
+62
+
+63
+00:04:00,400 --> 00:04:04,080
+You have to be careful to return by a value. the pass by reference.
+63
+
+64
+00:04:04,120 --> 00:04:07,870
+with the first time for us to know about the references.
+64
+
+65
+00:04:08,140 --> 00:04:15,120
+So we have here a function that takes read. it takes a name then two references X and str.  name is passed here
+65
+
+66
+00:04:15,130 --> 00:04:21,550
+By value, it means some could be in the memory having but X and str pass by references it means we are actually
+66
+
+67
+00:04:21,550 --> 00:04:23,980
+pointing to the same thing in memory.
+67
+
+68
+00:04:24,220 --> 00:04:28,450
+If you look at it you will notice exactly the same format as the by reference.
+68
+
+69
+00:04:28,630 --> 00:04:32,310
+For example, here we are sending X and here is integer
+69
+
+70
+00:04:32,350 --> 00:04:34,330
+reference X we are sending a message.
+70
+
+71
+00:04:34,330 --> 00:04:36,520
+Here is string references str.
+71
+
+72
+00:04:36,670 --> 00:04:40,330
+So this is like your writing is string references str equal message.
+72
+
+73
+00:04:40,330 --> 00:04:41,290
+It is the same logic.
+73
+
+74
+00:04:41,290 --> 00:04:41,890
+Exactly.
+74
+
+75
+00:04:42,040 --> 00:04:46,210
+That's why this is str and this message is there is an alias for this message.
+75
+
+76
+00:04:46,530 --> 00:04:48,850
+They look in the same location in the memory.
+76
+
+77
+00:04:49,480 --> 00:04:56,710
+Now your name, all of the three variables are changed, but only the X and Str will be reflected here
+77
+
+78
+00:04:56,740 --> 00:04:57,610
+with an update.
+78
+
+79
+00:04:58,000 --> 00:04:59,830
+they will be changed.
+79
+
+80
+00:05:00,040 --> 00:05:00,970
+But my name here is.
+80
+
+81
+00:05:01,540 --> 00:05:06,490
+Mostafa, go to a name, change it to some dummy name when you return it back again.
+81
+
+82
+00:05:06,650 --> 00:05:11,000
+Mostafa here will be just as it is, it will not be changing.
+82
+
+83
+00:05:12,970 --> 00:05:17,410
+So just x the message would be updated, this is for pass by reference.
+83
+
+84
+00:05:18,040 --> 00:05:20,430
+Now let's see the return by reference.
+84
+
+85
+00:05:20,950 --> 00:05:23,860
+Let's say we have here a struct that have variable name.
+85
+
+86
+00:05:24,100 --> 00:05:29,560
+It has a print function that can print the name and it has a get name function that isn't returned
+86
+
+87
+00:05:29,560 --> 00:05:32,060
+just a string it return string reference.
+87
+
+88
+00:05:32,410 --> 00:05:33,650
+So what is this return?
+88
+
+89
+00:05:34,030 --> 00:05:38,440
+This is a returning for a reference for the name variable.
+89
+
+90
+00:05:38,800 --> 00:05:39,990
+Now let's make use of it.
+90
+
+91
+00:05:40,240 --> 00:05:41,820
+We have here defined my name.
+91
+
+92
+00:05:42,040 --> 00:05:45,640
+We just ask for a print, which is Mustafa as the default value.
+92
+
+93
+00:05:46,090 --> 00:05:51,610
+Now I say here this is following string reference str equal my_name.get_name.
+93
+
+94
+00:05:52,030 --> 00:05:56,460
+The .get_name function is going here to return to the reference of the name variable.
+94
+
+95
+00:05:56,740 --> 00:06:03,670
+So it's going here to put a reference point about as I started to change this str, it will change
+95
+
+96
+00:06:03,670 --> 00:06:05,640
+the content of this struct.
+96
+
+97
+00:06:05,860 --> 00:06:13,570
+So if I start to Zyad and it prints for it is going to print Zyad one more very similar syntax to
+97
+
+98
+00:06:13,570 --> 00:06:13,840
+that.
+98
+
+99
+00:06:13,840 --> 00:06:20,730
+But a bit weird for you if I say my name dot get name equal belal, if you print it would be belal notice.
+99
+
+100
+00:06:20,770 --> 00:06:21,840
+This is a weird syntax.
+100
+
+101
+00:06:21,860 --> 00:06:26,110
+You this is the first time for you to see a function on the left side that has a value.
+101
+
+102
+00:06:26,350 --> 00:06:30,220
+You all the time see it on the right side, but now you are seeing it on the left side.
+102
+
+103
+00:06:30,470 --> 00:06:32,740
+The question here is, is this address or not.
+103
+
+104
+00:06:32,770 --> 00:06:35,700
+This is something related to something called the left value and the right value.
+104
+
+105
+00:06:36,460 --> 00:06:38,070
+So here the dot get name.
+105
+
+106
+00:06:38,080 --> 00:06:41,820
+What does it actually is going to get this reference to the name?
+106
+
+107
+00:06:42,100 --> 00:06:45,130
+So think of it like remove this get name function.
+107
+
+108
+00:06:45,250 --> 00:06:48,040
+We have here a reference to the name variable in the memory.
+108
+
+109
+00:06:48,250 --> 00:06:49,440
+You are now changing it.
+109
+
+110
+00:06:49,630 --> 00:06:56,080
+So this is a valid C++ syntax because although this is a function call is going to return by Reference
+110
+
+111
+00:06:56,710 --> 00:07:00,160
+now going back to the return by value, and return by difference.
+111
+
+112
+00:07:00,380 --> 00:07:01,600
+This is a normal function.
+112
+
+113
+00:07:01,990 --> 00:07:04,030
+It's returning here, reference to hello.
+113
+
+114
+00:07:04,390 --> 00:07:09,000
+But a few minutes ago we said that this temp variable is going to be destroyed.
+114
+
+115
+00:07:09,280 --> 00:07:12,040
+So returning a reference here is completely wrong.
+115
+
+116
+00:07:12,220 --> 00:07:17,720
+In Eclipse, you would see a compiler warn like a reference to local variable.
+116
+
+117
+00:07:17,740 --> 00:07:19,810
+You are trying to return a local variable.
+117
+
+118
+00:07:20,020 --> 00:07:22,930
+There's going to be destroyed very soon to be very careful.
+118
+
+119
+00:07:23,110 --> 00:07:28,480
+When I return it here, the reference, was in a struct because the struct will be alive with us.
+119
+
+120
+00:07:28,630 --> 00:07:31,720
+So be very careful about the difference between them.
+120
+
+121
+00:07:33,290 --> 00:07:39,260
+Another concern is using the reference with the iterators, when you are iterating here over a vector
+121
+
+122
+00:07:39,470 --> 00:07:42,860
+with reference Val, you are actually looking to the memory of it.
+122
+
+123
+00:07:42,860 --> 00:07:46,070
+If you try to change the value content, they will be changed.
+123
+
+124
+00:07:48,080 --> 00:07:54,080
+So if you try to print again is going to be printed, if you don't want to change it, you can put const
+124
+
+125
+00:07:54,080 --> 00:07:54,310
+here.
+125
+
+126
+00:07:54,440 --> 00:08:00,500
+So to be const and reference, now, this is good because the idea of the difference is it's looking
+126
+
+127
+00:08:00,500 --> 00:08:01,090
+in the memory.
+127
+
+128
+00:08:01,100 --> 00:08:03,920
+So there's no copy on the other side if you didn't.
+128
+
+129
+00:08:03,920 --> 00:08:04,910
+if you didn't
+129
+
+130
+00:08:04,910 --> 00:08:08,750
+put the reference is going to make a copy Step-By-Step for this vector.
+130
+
+131
+00:08:08,990 --> 00:08:12,920
+So over all the changes here will not have effect.
+131
+
+132
+00:08:13,100 --> 00:08:17,030
+But the worse is you are taking a lot of memory steps.
+132
+
+133
+00:08:17,240 --> 00:08:18,540
+So be very careful.
+133
+
+134
+00:08:18,560 --> 00:08:20,360
+What exactly do you want from that?
+134
+
+135
+00:08:21,110 --> 00:08:24,880
+The last thing to share here is a common mistake we highlighted before in the stl.
+135
+
+136
+00:08:25,190 --> 00:08:29,060
+Let's say we have a simple struct like an employee and we have a map from integer to employee.
+136
+
+137
+00:08:29,480 --> 00:08:33,170
+I define no one object of type employee, but then I put it in the memory.
+137
+
+138
+00:08:33,590 --> 00:08:35,870
+I can get it from the memory in two ways.
+138
+
+139
+00:08:35,870 --> 00:08:37,250
+I can get it by reference.
+139
+
+140
+00:08:37,250 --> 00:08:42,050
+So it's now e2 is looking to exactly the same pointer in the memory or I can get it by copy.
+140
+
+141
+00:08:42,380 --> 00:08:47,950
+What's important here to know e1  e2, e3 have different three addresses in the memory.
+141
+
+142
+00:08:48,380 --> 00:08:53,870
+So what happens is some mysterious during implementing the projects they define e1, they put it
+142
+
+143
+00:08:53,870 --> 00:08:59,320
+in the map, they start to play with e1 expecting the map to be changed, but they are different
+143
+
+144
+00:08:59,330 --> 00:08:59,930
+objects.
+144
+
+145
+00:09:00,050 --> 00:09:01,800
+So you have to be very careful about that.
+145
+
+146
+00:09:02,150 --> 00:09:07,130
+So if you have a reference for it, you can change it freely and it will change the map.
+146
+
+147
+00:09:07,130 --> 00:09:10,680
+Otherwise, they are different objects will be very careful from that.
+147
+
+148
+00:09:11,300 --> 00:09:11,810
+That's it.

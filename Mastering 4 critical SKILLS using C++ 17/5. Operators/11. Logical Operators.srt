@@ -1,0 +1,779 @@
+0
+1
+00:00:01,490 --> 00:00:07,190
+The logical operators are all about the truth table, but just we put in C++, that's it.
+1
+
+2
+00:00:07,460 --> 00:00:15,760
+So in C++, we use these two symbols "&&" for the AND and these two symbols "||" for the OR, call it like AND AND
+2
+
+3
+00:00:15,890 --> 00:00:23,140
+OR OR, and as we know that the AND is before the OR so the precedence of && is before the ||.
+3
+
+4
+00:00:23,600 --> 00:00:24,550
+So, same concepts,
+4
+
+5
+00:00:24,570 --> 00:00:29,520
+but just now in C++, and remember that the parentheses help us to force some order.
+5
+
+6
+00:00:29,750 --> 00:00:38,260
+So now here, in the same logic if age is 30 and salary is 7000 and then we say here result = (age
+6
+
+7
+00:00:38,450 --> 00:00:39,800
+> 25)
+7
+
+8
+00:00:40,130 --> 00:00:42,700
+&& (salary < 8000)
+8
+
+9
+00:00:43,010 --> 00:00:48,050
+So this condition is evaluated first to true, this condition is evaluated to true, true && true
+9
+
+10
+00:00:48,050 --> 00:00:51,290
+is just true. in a very similar way,
+10
+
+11
+00:00:51,310 --> 00:00:57,440
+this is another condition, this is another condition, This  is another condition that just evaluated.
+11
+
+12
+00:00:57,440 --> 00:01:00,450
+In the third evaluation we say (age > 35)
+12
+
+13
+00:01:00,770 --> 00:01:01,520
+this is false,
+13
+
+14
+00:01:02,330 --> 00:01:04,360
+(Salary < 8500)
+14
+
+15
+00:01:04,580 --> 00:01:05,330
+This is true.
+15
+
+16
+00:01:05,480 --> 00:01:06,980
+So false || true
+16
+
+17
+00:01:06,980 --> 00:01:08,210
+is true.
+17
+
+18
+00:01:09,460 --> 00:01:15,270
+In the same way, we can mix operators together, but now be careful from the parentheses and their order.
+18
+
+19
+00:01:15,580 --> 00:01:18,020
+So here, for example, we have one big parentheses,
+19
+
+20
+00:01:18,040 --> 00:01:19,060
+It doesn't affect us.
+20
+
+21
+00:01:19,300 --> 00:01:22,960
+And then we have three separate expressions, start to evaluate them,
+21
+
+22
+00:01:23,170 --> 00:01:24,940
+It would be like this one is true,
+22
+
+23
+00:01:25,180 --> 00:01:26,130
+This one is true,
+23
+
+24
+00:01:26,380 --> 00:01:27,310
+This one is true,
+24
+
+25
+00:01:27,310 --> 00:01:27,550
+True,
+25
+
+26
+00:01:27,550 --> 00:01:31,120
+&& true && true is just true. Here,
+26
+
+27
+00:01:31,120 --> 00:01:37,510
+in this one, you can find that the (weight > 200) is false.
+27
+
+28
+00:01:37,690 --> 00:01:41,280
+So it's like now say true, true, false.
+28
+
+29
+00:01:41,290 --> 00:01:42,370
+True and true and false,
+29
+
+30
+00:01:42,370 --> 00:01:43,840
+It would be false and so on.
+30
+
+31
+00:01:43,840 --> 00:01:46,990
+We can just normally solve them like we did the last time.
+31
+
+32
+00:01:50,080 --> 00:01:52,540
+as we said, the parentheses force order.
+32
+
+33
+00:01:52,840 --> 00:01:56,500
+So here, we have this expression that gives something.
+33
+
+34
+00:01:57,100 --> 00:02:03,970
+But in the second expression, we are giving more priority to
+34
+
+35
+00:02:07,100 --> 00:02:11,300
+To which parts? I feel there is a missing..
+35
+
+36
+00:02:11,660 --> 00:02:13,300
+Oh, no, nothing missing. Here,
+36
+
+37
+00:02:13,490 --> 00:02:16,300
+we have one parentheses here and one parentheses here,
+37
+
+38
+00:02:16,490 --> 00:02:22,040
+So, this sub-expression is going to be evaluated first, OK, before ANDing here.
+38
+
+39
+00:02:22,280 --> 00:02:24,090
+But this one is going to evaluate
+39
+
+40
+00:02:24,110 --> 00:02:26,450
+This one, this one and then this one.
+40
+
+41
+00:02:26,600 --> 00:02:28,730
+So these two will be evaluated first,
+41
+
+42
+00:02:28,940 --> 00:02:30,430
+Then we apply them with the OR.
+42
+
+43
+00:02:30,680 --> 00:02:34,550
+But in our case here, these two will be evaluated first and then ANDed.
+43
+
+44
+00:02:34,700 --> 00:02:37,910
+Why? because parentheses force more order.
+44
+
+45
+00:02:38,150 --> 00:02:40,870
+So in the default the case AND is applied first.
+45
+
+46
+00:02:40,880 --> 00:02:45,350
+But if there are parentheses, they force a specific order first.
+46
+
+47
+00:02:46,880 --> 00:02:48,320
+This is one big expression,
+47
+
+48
+00:02:48,890 --> 00:02:51,000
+We can simplify it as we did before,
+48
+
+49
+00:02:51,030 --> 00:02:52,190
+Nothing fancy.
+49
+
+50
+00:02:52,550 --> 00:02:56,230
+You start with the sum and group and start to resolve it.
+50
+
+51
+00:02:56,480 --> 00:03:01,460
+For example, you take this, first, take a minute to try to solve it by yourself, you should
+51
+
+52
+00:03:01,460 --> 00:03:09,800
+be able to do that. We first can take this (T && T), resolve it to T, so we remove it, now it's T.
+52
+
+53
+00:03:09,800 --> 00:03:16,330
+We can now take this parenthesis (false || T), simplify it to true.
+53
+
+54
+00:03:16,640 --> 00:03:17,720
+So it's now here.
+54
+
+55
+00:03:18,200 --> 00:03:18,800
+Here true.
+55
+
+56
+00:03:19,010 --> 00:03:21,170
+There are no more ANDs now.
+56
+
+57
+00:03:21,170 --> 00:03:23,390
+So we are done with parentheses simplifications.
+57
+
+58
+00:03:23,630 --> 00:03:28,780
+Now we just go in the normal case, take a group of ANDs so (T && T && T),
+58
+
+59
+00:03:28,970 --> 00:03:35,030
+This is just T, so it ends up with T || T, which is just T.
+59
+
+60
+00:03:35,300 --> 00:03:41,000
+There is one interesting concept in C++ called the "short-circuit" evaluation.
+60
+
+61
+00:03:41,360 --> 00:03:46,940
+The short circuit evolution is all about stopping, evaluating an expression when you could.
+61
+
+62
+00:03:47,160 --> 00:03:49,490
+This is for more efficiency.
+62
+
+63
+00:03:49,730 --> 00:03:58,160
+For example, let's say we are simplifying this expression and we are saying true or bla bla bla bla
+63
+
+64
+00:03:58,160 --> 00:03:58,850
+bla bla bla.
+64
+
+65
+00:03:59,450 --> 00:04:00,560
+Let me tell you something,
+65
+
+66
+00:04:00,560 --> 00:04:03,560
+Can you guess the answer here before computing this result?
+66
+
+67
+00:04:04,160 --> 00:04:06,770
+The answer is definitely yes, it is going to be true.
+67
+
+68
+00:04:07,130 --> 00:04:07,690
+Why?
+68
+
+69
+00:04:08,540 --> 00:04:15,110
+Because if the first item is true or something, then even if all of that ended up with false, it is
+69
+
+70
+00:04:15,110 --> 00:04:15,940
+true or false.
+70
+
+71
+00:04:16,130 --> 00:04:17,330
+So it's going to be true.
+71
+
+72
+00:04:17,330 --> 00:04:18,350
+Definitely true.
+72
+
+73
+00:04:18,680 --> 00:04:24,410
+In C++, once it figured out that we know the answer, it's going to skip what it can skip.
+73
+
+74
+00:04:24,980 --> 00:04:26,060
+here is another case,
+74
+
+75
+00:04:27,810 --> 00:04:34,410
+Let's say that we have here true && true && false && something, now
+75
+
+76
+00:04:34,410 --> 00:04:41,850
+thinking about that, if it's true and true and false, then this is now false, false && whatever
+76
+
+77
+00:04:42,060 --> 00:04:43,370
+is going to be false.
+77
+
+78
+00:04:43,560 --> 00:04:47,460
+So in C++, we will do short circuit and we will stop early.
+78
+
+79
+00:04:48,030 --> 00:04:52,410
+So in complex expression, what happens is C++,
+79
+
+80
+00:04:52,410 --> 00:05:00,060
+the compiler will discard as much as it could, okay? it might discard some part of an expression, but
+80
+
+81
+00:05:00,060 --> 00:05:02,340
+still continue in the overall logic.
+81
+
+82
+00:05:02,670 --> 00:05:05,580
+So the idea is discard what can be discarded.
+82
+
+83
+00:05:06,670 --> 00:05:09,900
+Let's give some example for that. Here in C++,
+83
+
+84
+00:05:10,750 --> 00:05:14,850
+Why short circuit could be tricky? because of the side effects
+84
+
+85
+00:05:14,890 --> 00:05:16,560
+also. here is an example.
+85
+
+86
+00:05:16,770 --> 00:05:22,770
+If you see this expression here, X < 100 but here X += 50.
+86
+
+87
+00:05:23,160 --> 00:05:29,190
+As this expression has a side effect, we need to be very careful, in a short circuit evolution
+87
+
+88
+00:05:29,430 --> 00:05:32,790
+This condition might not be applied and this would be the case here.
+88
+
+89
+00:05:33,060 --> 00:05:42,360
+X is 10 and we say X < 100, OK, which is true or something, now it is true or something
+89
+
+90
+00:05:42,540 --> 00:05:44,020
+C++ would stop.
+90
+
+91
+00:05:44,370 --> 00:05:48,860
+So this expression will not be evaluated.
+91
+
+92
+00:05:49,020 --> 00:05:52,310
+So the side effect would not happen. In the same way
+92
+
+93
+00:05:52,320 --> 00:05:59,280
+Here, we say X == 20 && something, once C++ figured out that this is false &&
+93
+
+94
+00:05:59,280 --> 00:06:06,360
+something it will not continue here, it will not do that. a third case here we say like X == 20
+94
+
+95
+00:06:06,600 --> 00:06:08,610
+&& 
+95
+
+96
+00:06:08,960 --> 00:06:17,130
+OK, so now when you think about it, this is now is false.
+96
+
+97
+00:06:19,190 --> 00:06:21,610
+let me think for a while.
+97
+
+98
+00:06:24,240 --> 00:06:30,450
+Yeah, OK, here in this case, this is a tricky case, so be careful from that X == 20,
+98
+
+99
+00:06:30,630 --> 00:06:34,350
+So this is false &&, so it's like true && something.
+99
+
+100
+00:06:34,530 --> 00:06:39,390
+Now, C++ would discard this part, the ++(x) > 50, not 10 here.
+100
+
+101
+00:06:39,660 --> 00:06:42,600
+OK, so now watch out.
+101
+
+102
+00:06:42,690 --> 00:06:46,560
+C++ will go and evaluate this sub-expression.
+102
+
+103
+00:06:47,110 --> 00:06:48,680
+So what C++ will discard only
+103
+
+104
+00:06:48,720 --> 00:06:50,220
+Here is this sub-expression.
+104
+
+105
+00:06:50,610 --> 00:06:51,080
+Why?
+105
+
+106
+00:06:51,240 --> 00:06:54,350
+Because using logic we can simply discard this one.
+106
+
+107
+00:06:54,630 --> 00:06:55,370
+So be careful,
+107
+
+108
+00:06:55,380 --> 00:06:59,190
+It isn't like it stops at some point and doesn't evaluate anything else,
+108
+
+109
+00:06:59,400 --> 00:07:02,290
+It simply discards what can be discarded.
+109
+
+110
+00:07:02,430 --> 00:07:04,200
+So this part here can be discarded
+110
+
+111
+00:07:04,200 --> 00:07:09,080
+First, ok. In all of these expressions, X is still 10.
+111
+
+112
+00:07:09,690 --> 00:07:11,810
+This is the first expression, that starts to change 10.
+112
+
+113
+00:07:12,090 --> 00:07:13,700
+Here we say x == 10.
+113
+
+114
+00:07:13,740 --> 00:07:14,370
+This is true.
+114
+
+115
+00:07:14,670 --> 00:07:14,970
+True
+115
+
+116
+00:07:14,970 --> 00:07:18,900
+&& something, we should still keep going in evaluating.
+116
+
+117
+00:07:19,140 --> 00:07:22,440
+So here it's say ++X > 50.
+117
+
+118
+00:07:22,690 --> 00:07:29,090
+This is true, this is true.
+118
+
+119
+00:07:29,100 --> 00:07:30,860
+No, this is a false expression.
+119
+
+120
+00:07:30,870 --> 00:07:35,390
+OK, OR x > 0, because this is false
+120
+
+121
+00:07:35,410 --> 00:07:36,960
+this is going to be evaluated.
+121
+
+122
+00:07:37,290 --> 00:07:38,730
+And after this guy.
+122
+
+123
+00:07:38,970 --> 00:07:39,360
+Yeah.
+123
+
+124
+00:07:39,570 --> 00:07:41,910
+This will be false.
+124
+
+125
+00:07:42,120 --> 00:07:43,320
+So this one will be evaluated.
+125
+
+126
+00:07:43,320 --> 00:07:46,790
+But the point here that this ++X now affects the variable.
+126
+
+127
+00:07:47,130 --> 00:07:49,680
+So the moral of that is this is discarded,
+127
+
+128
+00:07:49,680 --> 00:07:52,600
+Variable isn't changed. discarded, variable isn't changed
+128
+
+129
+00:07:52,860 --> 00:07:56,880
+This is discarded, but this still is evaluated and so on.
+129
+
+130
+00:07:57,930 --> 00:08:01,820
+Some coding mistakes do not put space between less than and equal.
+130
+
+131
+00:08:03,600 --> 00:08:05,550
+Some guys will might try just (&)
+131
+
+132
+00:08:05,580 --> 00:08:07,200
+This is another operator "bitwise".
+132
+
+133
+00:08:07,200 --> 00:08:08,210
+We'll discuss it later.
+133
+
+134
+00:08:08,400 --> 00:08:09,630
+It should be &&.
+134
+
+135
+00:08:09,810 --> 00:08:11,030
+It should be || not just |.
+135
+
+136
+00:08:11,040 --> 00:08:18,780
+One of the more tricky ones is writing = not == in the relational operators.
+136
+
+137
+00:08:18,810 --> 00:08:26,880
+So it should be ==. to not put space between the result and the result.
+137
+
+138
+00:08:27,900 --> 00:08:35,430
+Also here like "cout<< X < 5", C++ will complain, please put parentheses to make it easier for it to
+138
+
+139
+00:08:35,430 --> 00:08:35,940
+compile.
+139
+
+140
+00:08:36,180 --> 00:08:41,760
+Also imbalanced expressions like here, you open the parentheses and another parentheses, you close this one,
+140
+
+141
+00:08:41,760 --> 00:08:43,110
+but you forgot to close this one.
+141
+
+142
+00:08:43,230 --> 00:08:48,410
+So the C++ compiler is complaining, um, the precedence,
+142
+
+143
+00:08:48,420 --> 00:08:51,030
+It's a good moment to see the big picture one more time.
+143
+
+144
+00:08:51,390 --> 00:08:54,210
+Remember, the precedence is about the order.
+144
+
+145
+00:08:54,390 --> 00:08:55,750
+Associativity is about left to
+145
+
+146
+00:08:55,800 --> 00:08:56,490
+right. we now
+146
+
+147
+00:08:56,490 --> 00:08:57,520
+saw a lot of operators.
+147
+
+148
+00:08:57,540 --> 00:08:59,070
+So good to see all of them together.
+148
+
+149
+00:08:59,520 --> 00:09:03,600
+This is in order group by group for the priorities.
+149
+
+150
+00:09:03,630 --> 00:09:05,280
+We already know about that at the moment.
+150
+
+151
+00:09:05,280 --> 00:09:10,470
+For example, the assignment operator is the lowest in order.
+151
+
+152
+00:09:10,800 --> 00:09:13,860
+The unary operators are the highest. associativity,
+152
+
+153
+00:09:13,860 --> 00:09:18,870
+As you see, all of them are left-to-right in C++ except two groups here.
+153
+
+154
+00:09:18,870 --> 00:09:21,210
+The assignment operator is right-to-left.
+154
+
+155
+00:09:22,130 --> 00:09:30,090
+The prefix operator, OK, is also right-to-left
+155
+
+156
+00:09:32,100 --> 00:09:32,940
+Yeah, that's it.

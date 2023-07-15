@@ -1,0 +1,1119 @@
+0
+1
+00:00:03,170 --> 00:00:07,580
+We start our discussions in the algorithms course with something basic,
+1
+
+2
+00:00:08,000 --> 00:00:13,400
+uh, mainly to allow us to start to understand what is an algorithm really, and some concerns about it.
+2
+
+3
+00:00:13,730 --> 00:00:15,260
+So, why the topics are easy?
+3
+
+4
+00:00:15,590 --> 00:00:17,900
+The goal is mainly understanding about them.
+4
+
+5
+00:00:18,350 --> 00:00:20,210
+In computer science,
+5
+
+6
+00:00:21,500 --> 00:00:25,910
+there are two very popular topics the sorting topic and the searching topic.
+6
+
+7
+00:00:26,630 --> 00:00:32,180
+So we start with one of the very popular topics, which is the insertion sort.
+7
+
+8
+00:00:32,720 --> 00:00:34,520
+So, what is insertion?
+8
+
+9
+00:00:35,310 --> 00:00:36,200
+What is sorting?
+9
+
+10
+00:00:36,200 --> 00:00:39,770
+Probably, you know this problem already from the programming course.
+10
+
+11
+00:00:40,160 --> 00:00:45,950
+Simply, we have a group of numbers, and we would like to sort them from small to large, that's simple.
+11
+
+12
+00:00:46,960 --> 00:00:53,420
+Now we have here a group of items we can start to sort them, so zero is the smallest, two,
+12
+
+13
+00:00:53,440 --> 00:01:00,040
+three, and so on. And we can clearly see that any element is less than or equal to the next
+13
+
+14
+00:01:00,040 --> 00:01:00,430
+element.
+14
+
+15
+00:01:01,270 --> 00:01:05,230
+And there is a mathematical property that you usually don't notice, but it's also good to notice about
+15
+
+16
+00:01:05,230 --> 00:01:05,470
+them.
+16
+
+17
+00:01:05,890 --> 00:01:14,290
+If I told you that two is less than five, and five is less than ten, logically this means two is also
+17
+
+18
+00:01:14,290 --> 00:01:15,250
+less than ten.
+18
+
+19
+00:01:15,550 --> 00:01:17,230
+We call this feature transitivity.
+19
+
+20
+00:01:17,650 --> 00:01:21,010
+So also, the sorting involves this transitivity in the array itself.
+20
+
+21
+00:01:22,300 --> 00:01:27,700
+So if you compared every element with only the next one and it's smaller, and this one and
+21
+
+22
+00:01:27,700 --> 00:01:32,950
+it's smaller, and this one and it's smaller, then definitely this one is smaller than this one.
+22
+
+23
+00:01:33,790 --> 00:01:37,150
+And also, I think it's very intuitive, but why sorting is important?
+23
+
+24
+00:01:38,110 --> 00:01:43,480
+First of all, as you will notice during the course, there are many computational problems that actually
+24
+
+25
+00:01:43,480 --> 00:01:48,850
+start by sorting the data because it makes things much, much easier, especially the greedy technique.
+25
+
+26
+00:01:49,900 --> 00:01:54,940
+And you can also find that in a lot of real-life applications, for example, you might go to the LeetCode
+26
+
+27
+00:01:54,940 --> 00:01:55,480
+website.
+27
+
+28
+00:01:55,490 --> 00:02:01,360
+LeetCode website is a site that lists different problems, and then it wants to order its problems
+28
+
+29
+00:02:01,630 --> 00:02:03,760
+based on the acceptance ratio,
+29
+
+30
+00:02:04,420 --> 00:02:09,730
+or maybe you are in your Gmail and you would like to order the problems based on the size of the attachment
+30
+
+31
+00:02:09,730 --> 00:02:11,170
+file, and so on.
+31
+
+32
+00:02:11,650 --> 00:02:18,130
+So this is the sorting problem, and this is why it is important. Now,
+32
+
+33
+00:02:18,670 --> 00:02:23,890
+It is very educative to talk about some very popular terms that people use from time to time.
+33
+
+34
+00:02:24,490 --> 00:02:27,520
+The first thing is an increasing sequence.
+34
+
+35
+00:02:27,760 --> 00:02:34,630
+Sometimes we say strictly increasing sequence, and this means that every number is bigger than the
+35
+
+36
+00:02:34,630 --> 00:02:35,290
+previous one.
+36
+
+37
+00:02:35,440 --> 00:02:37,390
+So three is bigger than two, and so on.
+37
+
+38
+00:02:37,660 --> 00:02:43,000
+So in general, A[ i ] is less than A[ i + 1 ].
+38
+
+39
+00:02:45,230 --> 00:02:45,620
+OK.
+39
+
+40
+00:02:45,650 --> 00:02:48,830
+What if the sequence has duplicate values?
+40
+
+41
+00:02:49,490 --> 00:02:54,500
+The concept of strictly isn't applied anymore because now A[ i ] is less than or equal
+41
+
+42
+00:02:54,710 --> 00:02:58,280
+A[ i + 1 ]. We call this sequence non-decreasing.
+42
+
+43
+00:02:59,210 --> 00:03:04,370
+So the increasing means no duplicate values, the non-decreasing means there are duplicate values.
+43
+
+44
+00:03:04,370 --> 00:03:06,440
+Non-decreasing means it's actually increasing
+44
+
+45
+00:03:06,440 --> 00:03:13,610
+but there are duplicate values. Notice that some sources might still use the word increasing to refer to
+45
+
+46
+00:03:13,610 --> 00:03:17,300
+this sequence, and they use the words strictly to refer to this sequence.
+46
+
+47
+00:03:17,450 --> 00:03:23,630
+So sometimes you need to check out the definition itself. In a very similar way, the decreasing one,
+47
+
+48
+00:03:23,990 --> 00:03:27,320
+this is a decreasing sequence or a strictly decreasing sequence.
+48
+
+49
+00:03:27,920 --> 00:03:29,450
+This one has duplicate values,
+49
+
+50
+00:03:29,450 --> 00:03:31,760
+we call it non-increasing sequence.
+50
+
+51
+00:03:32,900 --> 00:03:35,450
+Remembered, we say non-negative number.
+51
+
+52
+00:03:35,990 --> 00:03:37,790
+OK, so the same concept.
+52
+
+53
+00:03:38,600 --> 00:03:40,490
+Uh, what about this sequence?
+53
+
+54
+00:03:40,880 --> 00:03:44,480
+It is neither increasing nor decreasing, so there's no order here in this sequence,
+54
+
+55
+00:03:44,480 --> 00:03:45,530
+we need to sort it first.
+55
+
+56
+00:03:46,990 --> 00:03:51,970
+There are also two other popular names the ascending order and descending order, ascending means we are
+56
+
+57
+00:03:51,970 --> 00:03:53,520
+ordering from small to large.
+57
+
+58
+00:03:53,790 --> 00:04:00,520
+Typically, this is as same as saying this is non-decreasing, and descending means to order them from large to small.
+58
+
+59
+00:04:00,730 --> 00:04:02,950
+This is as same as saying it is non-increasing.
+59
+
+60
+00:04:02,960 --> 00:04:03,550
+I like more
+60
+
+61
+00:04:03,550 --> 00:04:09,310
+the ascending and descending because they get us out away of the definition issues in these ones.
+61
+
+62
+00:04:09,340 --> 00:04:12,490
+But anyway, you should be aware of these concepts.
+62
+
+63
+00:04:14,290 --> 00:04:15,190
+Let's move further.
+63
+
+64
+00:04:16,060 --> 00:04:22,150
+The sorting algorithms, as you see sorting is very critical, and we learned in the complexity,
+64
+
+65
+00:04:22,270 --> 00:04:23,890
+how sensitive the operations.
+65
+
+66
+00:04:24,310 --> 00:04:25,270
+So we know the n,
+66
+
+67
+00:04:25,780 --> 00:04:32,200
+and during the complexity section, we learned about n, n^2, n^3, and so on.
+67
+
+68
+00:04:32,680 --> 00:04:37,300
+There is a new order that we start to introduce here, which we call n log n.
+68
+
+69
+00:04:38,470 --> 00:04:47,430
+Remember, what's the log function? The log function of (256) is just eight, the log of
+69
+
+70
+00:04:47,740 --> 00:04:50,080
+these four billion numbers is just thirty-two.
+70
+
+71
+00:04:50,470 --> 00:04:52,480
+Log is a very decreasing function.
+71
+
+72
+00:04:52,480 --> 00:04:54,250
+It decreases very, very fast.
+72
+
+73
+00:04:54,580 --> 00:04:58,180
+So as you see, we have a new thing here.
+73
+
+74
+00:04:58,360 --> 00:05:03,100
+So we used to say we have n and we have the n^2, but actually, in the middle, there is a new
+74
+
+75
+00:05:03,100 --> 00:05:04,780
+order called n log n.
+75
+
+76
+00:05:06,510 --> 00:05:15,570
+Um, now for the sorting itself, there are many, many, many sorting algorithms, sorting is historically
+76
+
+77
+00:05:15,570 --> 00:05:18,720
+one of the very old problems in computer science.
+77
+
+78
+00:05:19,350 --> 00:05:25,770
+So some algorithms are simple but inefficient like insertion, selection, and we will explain these two.
+78
+
+79
+00:05:26,100 --> 00:05:28,590
+There is also the bubble sort, it is a bit not intuitive.
+79
+
+80
+00:05:28,710 --> 00:05:33,990
+However, it's still common for people in explaining, these algorithms are n^2, and we will explain
+80
+
+81
+00:05:33,990 --> 00:05:34,950
+them in this section.
+81
+
+82
+00:05:36,020 --> 00:05:43,700
+There are also other efficient algorithms, such as the Merge sort and the Quicksort, I plan to explain
+82
+
+83
+00:05:43,700 --> 00:05:45,440
+these two things in the end of the course.
+83
+
+84
+00:05:45,770 --> 00:05:49,280
+The Heapsort is actually based on data structure heap.
+84
+
+85
+00:05:49,520 --> 00:05:54,710
+I explained that in the data structure course, so it's more or less a data structure topic.
+85
+
+86
+00:05:55,910 --> 00:06:01,880
+There are also some techniques that take a different path than these ones like what we call the Counting sort
+86
+
+87
+00:06:01,940 --> 00:06:03,290
+Bucket sort, and Radix sort.
+87
+
+88
+00:06:03,560 --> 00:06:07,100
+I will explain the counting sort, and the intuition comes from here.
+88
+
+89
+00:06:07,430 --> 00:06:11,780
+What if all the values, for example, are just zero to 100, not just a general problem?
+89
+
+90
+00:06:11,780 --> 00:06:12,950
+How can we make use of that?
+90
+
+91
+00:06:13,550 --> 00:06:15,860
+So these are the different sorting algorithms.
+91
+
+92
+00:06:16,460 --> 00:06:20,990
+And as you see, there is clearly a huge difference between n^2 and n log n.
+92
+
+93
+00:06:21,410 --> 00:06:28,670
+For example, if n is like one hundred thousand, the n^2 even over four will be such a huge number.
+93
+
+94
+00:06:29,390 --> 00:06:33,170
+But n log n is way smaller than that guy.
+94
+
+95
+00:06:33,350 --> 00:06:37,900
+So it's actually like one versus two thousand and five hundred.
+95
+
+96
+00:06:37,920 --> 00:06:38,750
+You see the difference!
+96
+
+97
+00:06:38,750 --> 00:06:40,490
+It's extremely huge difference.
+97
+
+98
+00:06:43,370 --> 00:06:51,200
+Before introducing the insertion sort, I would like to introduce you to the technique that insertion
+98
+
+99
+00:06:51,200 --> 00:06:52,610
+sort is based on it.
+99
+
+100
+00:06:52,940 --> 00:06:55,810
+It's called incremental thinking technique.
+100
+
+101
+00:06:55,820 --> 00:06:57,410
+Very nice and simple idea.
+101
+
+102
+00:06:57,800 --> 00:07:01,070
+The idea is as following, you would like to solve a specific problem.
+102
+
+103
+00:07:01,190 --> 00:07:02,540
+Let's say sorting problem.
+103
+
+104
+00:07:03,440 --> 00:07:06,170
+You ask yourself this simple question.
+104
+
+105
+00:07:09,620 --> 00:07:13,520
+Assume we know the answer for the first N-1 elements.
+105
+
+106
+00:07:14,550 --> 00:07:17,670
+Can we update the answer for the next element or not?
+106
+
+107
+00:07:18,180 --> 00:07:23,010
+If the answer to this question is yes,
+107
+
+108
+00:07:23,730 --> 00:07:26,730
+we can apply the incremental thinking.
+108
+
+109
+00:07:27,000 --> 00:07:33,030
+Specifically, we start with the first element as a base case and keep applying this update operation.
+109
+
+110
+00:07:33,450 --> 00:07:38,640
+Let's see that in the insertion sort context, we would like to sort an array.
+110
+
+111
+00:07:39,090 --> 00:07:40,710
+So the question is as following.
+111
+
+112
+00:07:42,070 --> 00:07:47,000
+What is the sorting answer for the first N-1 elements? So N here equals eight,
+112
+
+113
+00:07:47,770 --> 00:07:50,060
+and here is the first N-1 elements.
+113
+
+114
+00:07:50,080 --> 00:07:50,940
+Do you know the answer?
+114
+
+115
+00:07:51,130 --> 00:07:52,100
+This is a question for you.
+115
+
+116
+00:07:52,120 --> 00:07:53,110
+Do you know what is the answer?
+116
+
+117
+00:07:54,810 --> 00:07:57,120
+The answer is simple, yeah, let's get these values,
+117
+
+118
+00:07:57,360 --> 00:07:58,170
+let's sort them.
+118
+
+119
+00:07:59,660 --> 00:08:06,950
+Now, the real question here, can you update this answer to the next element, element number  n=8
+119
+
+120
+00:08:06,950 --> 00:08:08,150
+which is eighty-five?
+120
+
+121
+00:08:08,600 --> 00:08:15,050
+Like if I told you, given this sorted array, can you put eighty-five in the right place or not?
+121
+
+122
+00:08:16,540 --> 00:08:21,130
+Clearly, the eighty-five should go here between ten and ninety.
+122
+
+123
+00:08:21,670 --> 00:08:22,600
+How can we do that?
+123
+
+124
+00:08:22,780 --> 00:08:30,970
+We can start from the last element and keep going backward as long as we find
+124
+
+125
+00:08:30,970 --> 00:08:37,390
+the right location for the eighty-five, which will be like eighty-five less than ninety, yes, less than ten,
+125
+
+126
+00:08:37,390 --> 00:08:37,780
+no.
+126
+
+127
+00:08:37,930 --> 00:08:39,100
+So it must be here.
+127
+
+128
+00:08:39,850 --> 00:08:44,500
+I hope you got the idea of the incremental thinking, it's mainly based on these two questions.
+128
+
+129
+00:08:45,040 --> 00:08:48,010
+Do you know the answer of the first N-1? Assume you know the answer.
+129
+
+130
+00:08:48,250 --> 00:08:49,290
+Can you update it?
+130
+
+131
+00:08:50,300 --> 00:08:51,800
+Now, how can we solve it now?
+131
+
+132
+00:08:52,280 --> 00:08:57,110
+You simply do the following, you start with the first element in the array, which is nine, and now
+132
+
+133
+00:08:57,110 --> 00:09:03,320
+you keep applying the update operation, put two in the right location, now put ten in the right location, put
+133
+
+134
+00:09:03,330 --> 00:09:06,650
+zero in the right location, put five in the right location, and so on.
+134
+
+135
+00:09:07,430 --> 00:09:09,890
+If this is confusing, let's make tracing together.
+135
+
+136
+00:09:11,600 --> 00:09:13,310
+Assume we have to sort this array.
+136
+
+137
+00:09:13,580 --> 00:09:16,100
+Now we know that the first element is sorted anyway.
+137
+
+138
+00:09:16,550 --> 00:09:23,120
+We start with the second element, and ask ourselves, how can we put it in the right location?
+138
+
+139
+00:09:23,540 --> 00:09:25,790
+Simply, two has to come before the nine.
+139
+
+140
+00:09:26,090 --> 00:09:28,580
+Iterate from the backward, find a place to put two.
+140
+
+141
+00:09:29,840 --> 00:09:34,130
+Let's go further. Now two and nine are sorted.
+141
+
+142
+00:09:34,160 --> 00:09:38,870
+Remember the assumption of question number one, what is the sorted sub-array of the first two elements?
+142
+
+143
+00:09:38,880 --> 00:09:39,680
+Just two and nine.
+143
+
+144
+00:09:40,860 --> 00:09:44,970
+Now for the next element, can you update the array to put ten in its right place?
+144
+
+145
+00:09:45,060 --> 00:09:46,830
+Yes, it should be between two and the nine.
+145
+
+146
+00:09:47,790 --> 00:09:48,360
+That's simple.
+146
+
+147
+00:09:49,440 --> 00:09:50,370
+Let's move further.
+147
+
+148
+00:09:51,060 --> 00:09:55,370
+Sorry, ten here is in its right location, anyway it
+148
+
+149
+00:09:55,380 --> 00:09:56,220
+will not change.
+149
+
+150
+00:09:57,300 --> 00:10:01,560
+Let's move, the zero, observe this one now is sorted.
+150
+
+151
+00:10:01,920 --> 00:10:08,880
+So the array is like the following a sorted part, unsorted parts, and we take the first element here,
+151
+
+152
+00:10:09,360 --> 00:10:13,380
+and we put it in the right location. Where is the right location? Start from the back,
+152
+
+153
+00:10:13,560 --> 00:10:17,740
+compare zero and the ten, less than it, compare zero and nine, less
+153
+
+154
+00:10:17,790 --> 00:10:20,190
+than it, compare zero and two, less than it.
+154
+
+155
+00:10:20,400 --> 00:10:21,020
+Nothing else.
+155
+
+156
+00:10:21,020 --> 00:10:22,290
+So zero has to come here.
+156
+
+157
+00:10:24,230 --> 00:10:25,100
+Let's move further.
+157
+
+158
+00:10:26,480 --> 00:10:31,460
+The array is as following, these four are sorted, we would like to put five in its right location.
+158
+
+159
+00:10:31,640 --> 00:10:33,230
+Can we update a sorted array with
+159
+
+160
+00:10:33,230 --> 00:10:33,710
+five?
+160
+
+161
+00:10:34,220 --> 00:10:34,700
+Yes.
+161
+
+162
+00:10:35,540 --> 00:10:36,200
+Less than ten?
+162
+
+163
+00:10:36,240 --> 00:10:37,250
+Yes. Less than or equal
+163
+
+164
+00:10:37,370 --> 00:10:37,840
+nine?
+164
+
+165
+00:10:37,850 --> 00:10:38,060
+Yes.
+165
+
+166
+00:10:38,060 --> 00:10:39,350
+Less than or equal two? No.
+166
+
+167
+00:10:39,770 --> 00:10:41,510
+Then it should be here.
+167
+
+168
+00:10:42,920 --> 00:10:48,260
+As you see, it's all based on the assumption, we have a sorted sub-array.
+168
+
+169
+00:10:48,680 --> 00:10:51,110
+Can you update it with the new element or not?
+169
+
+170
+00:10:51,410 --> 00:10:54,100
+If yes, then we can increment our solution.
+170
+
+171
+00:10:54,110 --> 00:10:56,060
+That's why we call it incremental thinking.
+171
+
+172
+00:10:56,630 --> 00:10:57,470
+Let's keep going.
+172
+
+173
+00:10:59,430 --> 00:11:02,550
+Here is the sorted part, can you put three in its right location?
+173
+
+174
+00:11:02,730 --> 00:11:03,180
+Yes.
+174
+
+175
+00:11:03,630 --> 00:11:05,890
+Go ten, five, two.
+175
+
+176
+00:11:06,040 --> 00:11:07,530
+No, it should be here.
+176
+
+177
+00:11:08,940 --> 00:11:09,900
+Let's go further.
+177
+
+178
+00:11:10,290 --> 00:11:10,880
+Ninety.
+178
+
+179
+00:11:10,890 --> 00:11:11,920
+It will not change.
+179
+
+180
+00:11:11,970 --> 00:11:13,500
+It is in the right location already.
+180
+
+181
+00:11:13,800 --> 00:11:14,070
+Now,
+181
+
+182
+00:11:14,070 --> 00:11:14,700
+go back to the.
+182
+
+183
+00:11:15,510 --> 00:11:16,200
+eighty-five
+183
+
+184
+00:11:16,200 --> 00:11:18,090
+here, we are at this location.
+184
+
+185
+00:11:18,360 --> 00:11:18,750
+Go back
+185
+
+186
+00:11:18,750 --> 00:11:20,730
+one step, still, one step.
+186
+
+187
+00:11:20,730 --> 00:11:21,180
+No.
+187
+
+188
+00:11:21,300 --> 00:11:22,740
+Then it should be here.
+188
+
+189
+00:11:23,700 --> 00:11:26,900
+So this is all the incremental thinking. Again,
+189
+
+190
+00:11:26,910 --> 00:11:31,620
+How can you figure out that this is possible with incremental thinking?
+190
+
+191
+00:11:31,770 --> 00:11:33,960
+You ask yourself this very basic question.
+191
+
+192
+00:11:34,240 --> 00:11:37,290
+Assume you have the answer for the first N-1 numbers.
+192
+
+193
+00:11:37,740 --> 00:11:39,750
+Can you update it to the new value?
+193
+
+194
+00:11:39,990 --> 00:11:41,280
+If the answer is yes,
+194
+
+195
+00:11:41,640 --> 00:11:43,090
+start from the first element,
+195
+
+196
+00:11:43,110 --> 00:11:44,610
+keep putting in the right location,
+196
+
+197
+00:11:44,610 --> 00:11:48,240
+keep incrementing, keep incrementing, keep incrementing, and so on.
+197
+
+198
+00:11:49,350 --> 00:11:54,510
+The technique isn't very popular, but from time to time, you will meet a problem where incremental
+198
+
+199
+00:11:54,510 --> 00:11:57,450
+thinking will make your life very, very, very easy.
+199
+
+200
+00:11:58,050 --> 00:12:00,240
+Now we are done with tracing the algorithm.
+200
+
+201
+00:12:00,660 --> 00:12:05,670
+I would like you to take this course as a very engagement activity.
+201
+
+202
+00:12:06,420 --> 00:12:08,850
+Without that, the algorithms course will be tough for you.
+202
+
+203
+00:12:09,120 --> 00:12:09,610
+Don't wait
+203
+
+204
+00:12:09,630 --> 00:12:11,820
+from me to say everything.
+204
+
+205
+00:12:12,240 --> 00:12:13,650
+Now, I explained an idea.
+205
+
+206
+00:12:13,650 --> 00:12:16,740
+Stop the video and think about the correctness.
+206
+
+207
+00:12:17,070 --> 00:12:19,350
+Think about the time complexity.
+207
+
+208
+00:12:19,650 --> 00:12:21,210
+Think about the space complexity.
+208
+
+209
+00:12:21,330 --> 00:12:23,070
+Think how can you code it by yourself.
+209
+
+210
+00:12:23,790 --> 00:12:25,710
+Trace the code for different test cases.
+210
+
+211
+00:12:25,740 --> 00:12:27,150
+This is very important skill.
+211
+
+212
+00:12:27,360 --> 00:12:30,540
+One of the important skills in algorithms is testing.
+212
+
+213
+00:12:30,690 --> 00:12:35,750
+You should think about the potential test cases. And also do more little analysis.
+213
+
+214
+00:12:35,760 --> 00:12:36,870
+Here is a tip for that.
+214
+
+215
+00:12:37,260 --> 00:12:43,500
+Can you find an array input where the algorithm we explained can do the fewest number of iterations?
+215
+
+216
+00:12:44,010 --> 00:12:48,150
+Another test case for doing the largest number of test cases, and so on.
+216
+
+217
+00:12:48,360 --> 00:12:54,060
+So these are classical steps that I would like you to try to do as early as possible correctness,
+217
+
+218
+00:12:54,420 --> 00:12:59,160
+test cases, some analysis, time and space complexity.
+218
+
+219
+00:12:59,760 --> 00:13:04,440
+And keep in mind that one of the reasons the algorithms topic is challenging.
+219
+
+220
+00:13:04,560 --> 00:13:08,520
+You have to think, which is the hardest part, you have to code, which is a bit new for you.
+220
+
+221
+00:13:08,700 --> 00:13:10,140
+You have to find good test cases.
+221
+
+222
+00:13:10,290 --> 00:13:11,730
+You will debug too much.
+222
+
+223
+00:13:11,850 --> 00:13:13,830
+You need to prove things from time to time.
+223
+
+224
+00:13:15,450 --> 00:13:16,410
+That's all for now.

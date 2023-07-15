@@ -1,0 +1,829 @@
+0
+1
+00:00:01,410 --> 00:00:08,850
+This video will learn how to think in the data, in the solution of the second project, the library
+1
+
+2
+00:00:08,850 --> 00:00:15,600
+system. Starting with the big picture of the project, we have here a struct for maintaining the
+2
+
+3
+00:00:15,600 --> 00:00:21,840
+book and another struct for the user, a third one for library system, which we ran from here like
+3
+
+4
+00:00:21,840 --> 00:00:22,590
+we did before.
+4
+
+5
+00:00:23,220 --> 00:00:25,130
+We'll start to browse the code here.
+5
+
+6
+00:00:25,380 --> 00:00:29,630
+Remember, make your first function something that provide the user with all these choices.
+6
+
+7
+00:00:30,000 --> 00:00:35,230
+So we have here the run function which keeps looping, taking a choice from the user.
+7
+
+8
+00:00:35,280 --> 00:00:36,510
+We have a lot of choices.
+8
+
+9
+00:00:36,720 --> 00:00:40,950
+So based on the choice we start to call the corresponding function for it.
+9
+
+10
+00:00:41,700 --> 00:00:45,150
+Let's do some basic browsing for the book
+10
+
+11
+00:00:45,150 --> 00:00:46,500
+user,  the book struct.
+11
+
+12
+00:00:46,510 --> 00:00:52,020
+We have here a book ID book name and also we have the total quantity, which will be like a fixed number.
+12
+
+13
+00:00:52,020 --> 00:00:55,550
+let's say 10, and the current borrowed one from zero up to 10 maximum.
+13
+
+14
+00:00:55,830 --> 00:01:01,830
+And we have some functionality like let's read, return a book, checking if a book has a prefix
+14
+
+15
+00:01:01,830 --> 00:01:02,750
+or not and so on.
+15
+
+16
+00:01:03,060 --> 00:01:06,510
+So every time you need a specific functionality relevant to the book, you put it here.
+16
+
+17
+00:01:08,300 --> 00:01:13,950
+There are a couple of functionalities here that will help us to sort books, maybe by name or by
+17
+
+18
+00:01:13,950 --> 00:01:14,300
+ID.
+18
+
+19
+00:01:15,170 --> 00:01:20,600
+For the user struct, we have user ID, user name, and also we have like a list of the books that the
+19
+
+20
+00:01:20,600 --> 00:01:22,070
+user has borrowed.
+20
+
+21
+00:01:22,340 --> 00:01:26,380
+And given that this is array, we need some variable to tell us the current length of this.
+21
+
+22
+00:01:27,290 --> 00:01:32,990
+In a similar way, we can read it, we can borrow something, we can return something and we can
+22
+
+23
+00:01:32,990 --> 00:01:34,760
+check if this book is borrowed or not.
+23
+
+24
+00:01:34,760 --> 00:01:37,900
+The printing of that, will get into the details of that.
+24
+
+25
+00:01:38,810 --> 00:01:40,210
+So let's go with the choices.
+25
+
+26
+00:01:40,220 --> 00:01:41,850
+The first the choice here is add_book.
+26
+
+27
+00:01:41,960 --> 00:01:42,260
+I have.
+27
+
+28
+00:01:42,300 --> 00:01:42,790
+while loop.
+28
+
+29
+00:01:42,800 --> 00:01:47,180
+And then with an add book choice, I just have an add_book function.
+29
+
+30
+00:01:47,600 --> 00:01:49,150
+The add_book function is as follows.
+30
+
+31
+00:01:49,650 --> 00:01:53,690
+I have in the library system,
+31
+
+32
+00:01:53,960 --> 00:01:58,550
+I have an array of books and array of users.
+32
+
+33
+00:01:59,150 --> 00:02:02,930
+So here in the add_book function it's going to like...,
+33
+
+34
+00:02:04,320 --> 00:02:10,090
+Get an object from here and ask it to be read, which was just to go and read the elements of a book.
+34
+
+35
+00:02:10,500 --> 00:02:12,120
+So this syntax, I hope it isn't weird. 
+35
+
+36
+00:02:12,120 --> 00:02:16,590
+You get the array element which is now an object, and then you .read it.
+36
+
+37
+00:02:16,740 --> 00:02:22,360
+To read the object, you would like to ask for the ID, name, and quantity and that's all.
+37
+
+38
+00:02:22,380 --> 00:02:23,760
+And initially, the total borrowed
+38
+
+39
+00:02:23,760 --> 00:02:25,110
+it should be zero value.
+39
+
+40
+00:02:29,900 --> 00:02:34,040
+So this is our first choice, the second the choice is search books by prefix.
+40
+
+41
+00:02:34,590 --> 00:02:40,670
+Remember, we need to give a prefix and we need to find all of the books that has this prefix. To make
+41
+
+42
+00:02:40,670 --> 00:02:41,550
+our life easier,
+42
+
+43
+00:02:41,570 --> 00:02:45,080
+I developed the has_prefix function as a function inside the books.
+43
+
+44
+00:02:46,520 --> 00:02:51,950
+So let's iterate over all our books. For every book, we check if it starts with this prefix or not,
+44
+
+45
+00:02:52,160 --> 00:02:54,020
+if it starts with that, we just print it.
+45
+
+46
+00:02:54,620 --> 00:02:56,840
+The function has_prefix is a simple function.
+46
+
+47
+00:02:57,260 --> 00:02:59,660
+You have a prefix and you have a name.
+47
+
+48
+00:03:00,080 --> 00:03:03,560
+If the name is less than the prefix, then definitely doesn't match.
+48
+
+49
+00:03:03,920 --> 00:03:07,010
+Otherwise, we iterate till the length of the prefix.
+49
+
+50
+00:03:07,010 --> 00:03:11,780
+If at any point of time there is no match, then it cannot be to fix for it.
+50
+
+51
+00:03:12,260 --> 00:03:15,680
+If we are done with this loop, then definitely we matched the whole prefix.
+51
+
+52
+00:03:15,680 --> 00:03:19,280
+Otherwise, this run should be activated.
+52
+
+53
+00:03:19,880 --> 00:03:21,680
+So this is the has_prefix function.
+53
+
+54
+00:03:23,300 --> 00:03:29,750
+And this is how the search book by prefix, in general, is working; just iterate match and that's all. I hope
+54
+
+55
+00:03:29,750 --> 00:03:37,940
+you are getting more sense of how to, like, put functionalities together of something like I need
+55
+
+56
+00:03:38,390 --> 00:03:41,280
+search by prefix , which is part of the menu, the search
+56
+
+57
+00:03:41,280 --> 00:03:44,360
+needs to check by prefix, you might do a loop here to check by prefix.
+57
+
+58
+00:03:44,360 --> 00:03:51,070
+But it's much better to move it to the book data structure or the book structure.
+58
+
+59
+00:03:52,210 --> 00:04:00,300
+The third choice here, let's close this menu, the third choice here is borrowing a book.
+59
+
+60
+00:04:00,760 --> 00:04:04,450
+So to do that, we first of all need the book name.
+60
+
+61
+00:04:05,140 --> 00:04:12,280
+And then I have here developed a simple function that help me to find a book index by name.
+61
+
+62
+00:04:12,280 --> 00:04:17,930
+I give it a name and it returns for me a book index. From a high level from
+62
+
+63
+00:04:17,990 --> 00:04:21,310
+now, if the book index is negative one, then we didn't find such a book.
+63
+
+64
+00:04:21,850 --> 00:04:24,640
+Otherwise, we have the book and we have an ID for it.
+64
+
+65
+00:04:25,240 --> 00:04:30,100
+So we check how many books are like borrowed from that guy.
+65
+
+66
+00:04:30,580 --> 00:04:38,020
+If the number is zero and this shouldn't happen, then sorry, if the number of zero is, then we cannot
+66
+
+67
+00:04:38,020 --> 00:04:40,060
+borrow any books anymore at the moment.
+67
+
+68
+00:04:40,540 --> 00:04:47,260
+If we are done with this check and with this check, then the remaining is just to mark this
+68
+
+69
+00:04:47,260 --> 00:04:49,000
+book as is
+69
+
+70
+00:04:49,000 --> 00:04:49,750
+borrowed book.
+70
+
+71
+00:04:53,070 --> 00:04:53,400
+Yeah.
+71
+
+72
+00:04:56,320 --> 00:05:02,630
+Yeah, this is a point we are going to iterate over all of our users to check if this person borrowed
+72
+
+73
+00:05:02,630 --> 00:05:03,190
+the book or not.
+73
+
+74
+00:05:03,350 --> 00:05:07,630
+So the purpose of the function, remember originally that we would like to know who borrowed the book
+74
+
+75
+00:05:07,630 --> 00:05:08,010
+by name.
+75
+
+76
+00:05:08,350 --> 00:05:09,290
+So we give it a name.
+76
+
+77
+00:05:09,700 --> 00:05:10,690
+We'll get an index.
+77
+
+78
+00:05:10,840 --> 00:05:12,550
+We validate it is valid.
+78
+
+79
+00:05:12,550 --> 00:05:14,320
+We validate that there are actually copies.
+79
+
+80
+00:05:14,560 --> 00:05:22,000
+And after that we can iterate here. We have two functions to check, the is_borrowed is an easy
+80
+
+81
+00:05:22,000 --> 00:05:22,480
+function.
+81
+
+82
+00:05:22,750 --> 00:05:27,430
+You iterate over inside the book, inside the user, you iterate over the ...,
+82
+
+83
+00:05:27,520 --> 00:05:34,450
+OK, the user here, we already said that, the user here has a list of books already so we can iterate
+83
+
+84
+00:05:34,450 --> 00:05:35,350
+over the books.
+84
+
+85
+00:05:35,620 --> 00:05:40,000
+And if I'm matching any one of them, then I already borrowed this book.
+85
+
+86
+00:05:40,000 --> 00:05:41,290
+Otherwise, we return false.
+86
+
+87
+00:05:43,210 --> 00:05:48,390
+Let's suppose this guy's going back to the library system here.
+87
+
+88
+00:05:48,710 --> 00:05:55,120
+So this is the check of the is_borrowed. The remaining check is the functionality and the function is finding a book index
+88
+
+89
+00:05:55,130 --> 00:05:55,780
+by name.
+89
+
+90
+00:05:55,970 --> 00:05:59,450
+So we give it a name, we iterate over all of the current books.
+90
+
+91
+00:05:59,640 --> 00:06:02,240
+If the book name matches it, we return 'i'.
+91
+
+92
+00:06:03,200 --> 00:06:06,160
+The purpose of returning the index is to use it to do more job by it.
+92
+
+93
+00:06:06,890 --> 00:06:11,250
+If we couldn't find it, we just returned negative one as a signal that no book with such a name.
+93
+
+94
+00:06:11,390 --> 00:06:12,140
+This shouldn't happen.
+94
+
+95
+00:06:12,140 --> 00:06:16,650
+But in case, like if you are providing right name then it shouldn't happen. 
+95
+
+96
+00:06:18,610 --> 00:06:25,050
+The fourth function is printing & printing. This two functions as printing one by ID and one by name.
+96
+
+97
+00:06:26,350 --> 00:06:30,090
+So we mainly need to know we are here inside the library.
+97
+
+98
+00:06:30,340 --> 00:06:37,000
+We need mainly to make a sorting for all the current books, but we are going to provide this same function
+98
+
+99
+00:06:37,000 --> 00:06:41,640
+here to sort by ID, the sort of a name is very, very similar structure.
+99
+
+100
+00:06:41,860 --> 00:06:47,580
+So the moral of that is we have an array and we know that array plus a total current box is a current
+100
+
+101
+00:06:47,590 --> 00:06:47,950
+length.
+101
+
+102
+00:06:48,130 --> 00:06:54,010
+If we provided a comparative function, then we can sort all of the data and then the remaining is just
+102
+
+103
+00:06:54,090 --> 00:06:55,230
+to print the data.
+103
+
+104
+00:06:58,770 --> 00:07:02,620
+After that, we have a function to add the user, so let's see how to add him.
+104
+
+105
+00:07:03,000 --> 00:07:05,330
+We have a list of users already, array of users.
+105
+
+106
+00:07:05,580 --> 00:07:09,270
+You just add the user here and just then you start to read the user.
+106
+
+107
+00:07:09,270 --> 00:07:11,370
+Very similar structure,like the add_book.
+107
+
+108
+00:07:12,460 --> 00:07:19,000
+After that, we have a user that would like to borrow a book, so to do this functionality, we 
+108
+
+109
+00:07:19,000 --> 00:07:24,010
+have here a helper function that will read for us the user name and the book name so that we
+109
+
+110
+00:07:24,010 --> 00:07:25,570
+can borrow them together.
+110
+
+111
+00:07:25,600 --> 00:07:33,370
+So let's jump in this function first. This function has here a user name and book name, and I'm giving
+111
+
+112
+00:07:33,370 --> 00:07:38,550
+him by default a maximum of three trials. Within every trial,
+112
+
+113
+00:07:38,560 --> 00:07:43,440
+I ask him for a user name and book name and then remember the find user function.
+113
+
+114
+00:07:43,600 --> 00:07:49,120
+This function takes a name, you can get the logic; it takes a name and return its index to array.
+114
+
+115
+00:07:49,270 --> 00:07:52,930
+If there is no such user, we ask him to try again. In a similar way,
+115
+
+116
+00:07:52,930 --> 00:07:55,330
+we give a function of book name to return a book index for us.
+116
+
+117
+00:07:55,330 --> 00:07:57,220
+If no such a book, it
+117
+
+118
+00:07:57,220 --> 00:07:58,810
+gives an error message.
+118
+
+119
+00:07:59,350 --> 00:08:04,000
+If we reached these two cases, we return a true. Observe here,
+119
+
+120
+00:08:04,000 --> 00:08:07,060
+the user ID and book ID are sent by reference. 
+120
+
+121
+00:08:07,480 --> 00:08:10,360
+So the bool is an indicator if we succeed or not.
+121
+
+122
+00:08:10,660 --> 00:08:14,350
+And the two parameters here are by reference.
+122
+
+123
+00:08:16,480 --> 00:08:21,370
+Let's get back to here once we returned from this function, we have a user ID and we have a book ID
+123
+
+124
+00:08:21,400 --> 00:08:26,590
+All what we need to do is to try to borrow for this user, for this book
+124
+
+125
+00:08:27,040 --> 00:08:31,490
+this user ID. If we couldn't, we tell him that there are no more users.
+125
+
+126
+00:08:31,750 --> 00:08:37,270
+Otherwise, we go to the user himself and tell him, borrow the book. So going to the book,
+126
+
+127
+00:08:37,270 --> 00:08:42,930
+it just takes the book  ID and started to put it inside the class itself.
+127
+
+128
+00:08:45,620 --> 00:08:46,500
+Uh.
+128
+
+129
+00:08:54,330 --> 00:08:58,860
+Going back to this menu, I think all of them are following the same similar logic. If it would
+129
+
+130
+00:08:58,860 --> 00:09:06,960
+like to return a book, in a very similar way, you try first to read name and ID for you, then you ask the book
+130
+
+131
+00:09:06,960 --> 00:09:12,930
+to return a copy and you ask the user to return a copy. For example, here, this guy took a book
+131
+
+132
+00:09:13,170 --> 00:09:15,520
+and you would like to return a copy.
+132
+
+133
+00:09:15,540 --> 00:09:18,180
+So we have now an internal list of books.
+133
+
+134
+00:09:18,570 --> 00:09:20,090
+We are going to find this book.
+134
+
+135
+00:09:20,100 --> 00:09:25,250
+But the problem now is we would like to remove an element from the middle of the array.
+135
+
+136
+00:09:25,650 --> 00:09:27,720
+So there are many tricks for that.
+136
+
+137
+00:09:27,720 --> 00:09:33,120
+But one way here is just to make a right shift, like shifting all of the data after the position to
+137
+
+138
+00:09:33,120 --> 00:09:34,100
+the current position.
+138
+
+139
+00:09:34,110 --> 00:09:38,450
+For example, if you have like, say, one, two, three, four, I would like to remove three.
+139
+
+140
+00:09:38,760 --> 00:09:40,190
+So move the four to three.
+140
+
+141
+00:09:40,230 --> 00:09:44,360
+This how you remove the array and minimize the length here.
+141
+
+142
+00:09:44,820 --> 00:09:49,490
+If you couldn't remove it, then you give a message that we cannot like...,
+142
+
+143
+00:09:49,750 --> 00:09:52,530
+this user never borrowed the book.
+143
+
+144
+00:09:53,640 --> 00:09:57,000
+Probably, overall I expect you to be confused.
+144
+
+145
+00:09:57,120 --> 00:10:00,680
+The reason behind that is the project might not be an easy one for you.
+145
+
+146
+00:10:00,690 --> 00:10:09,780
+It depends. In terms of thinking, it takes time so that you you can develop a proper view.
+146
+
+147
+00:10:11,310 --> 00:10:18,530
+One way to think about it, let's say you would like to build such a system, start to figure
+147
+
+148
+00:10:18,540 --> 00:10:22,740
+out all the names that should be used as a class or as a struct.
+148
+
+149
+00:10:22,740 --> 00:10:24,960
+Here we can figure out that we need a book.
+149
+
+150
+00:10:25,200 --> 00:10:26,880
+We can figure out that we need the user.
+150
+
+151
+00:10:27,120 --> 00:10:31,230
+We need some front end to keep presenting the choices. We need here
+151
+
+152
+00:10:31,230 --> 00:10:33,180
+some while loops to have list of choices.
+152
+
+153
+00:10:33,450 --> 00:10:38,300
+We need one function for every choice of these guys and then we need to start fill implementation.
+153
+
+154
+00:10:38,580 --> 00:10:44,010
+So this is how you can access the big picture of the system. By thinking what are the main items,
+154
+
+155
+00:10:44,010 --> 00:10:48,900
+let's start to do at like scratch from something like
+155
+
+156
+00:10:48,900 --> 00:10:55,800
+basics for them. In the second step, start to implement every function and try in a very early
+156
+
+157
+00:10:55,800 --> 00:10:58,680
+way to recognize the utilities that you might need.
+157
+
+158
+00:10:58,950 --> 00:11:04,500
+For example, observe here this function read the user name and book name this a very generic function.
+158
+
+159
+00:11:04,500 --> 00:11:06,240
+It just read for us this couple of items.
+159
+
+160
+00:11:06,450 --> 00:11:08,220
+I think it is used twice in the code.
+160
+
+161
+00:11:08,460 --> 00:11:12,600
+So this is a nice utility that we developed during the code. The more 
+161
+
+162
+00:11:12,600 --> 00:11:19,080
+you can divide your code, the easier task for you and also easy to debug and easy to find the books.
+162
+
+163
+00:11:19,380 --> 00:11:24,210
+So this is the overall. Think about your choices, develop function for everyone, start to develop the
+163
+
+164
+00:11:24,210 --> 00:11:25,770
+code of them. Again,
+164
+
+165
+00:11:26,010 --> 00:11:33,840
+try to do this code by yourself and after that, try to understand, read very well, remove all of
+165
+
+166
+00:11:33,840 --> 00:11:36,990
+the code, write it from scratch by yourself. That's all.

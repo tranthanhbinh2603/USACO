@@ -1,0 +1,499 @@
+1
+00:00:01,020 --> 00:00:03,210
+Let's proceed and see how can we do it?
+
+2
+00:00:03,570 --> 00:00:07,740
+So here is a hint assume you are at position zero and zero.
+
+3
+00:00:08,700 --> 00:00:10,790
+And you would like to get your neighbors.
+
+4
+00:00:11,280 --> 00:00:13,980
+Can you create two one D arrays?
+
+5
+00:00:14,100 --> 00:00:19,440
+OK, one here and another one the array and record in each one of them.
+
+6
+00:00:19,440 --> 00:00:26,040
+The difference between the current position and the neighbor position like in terms plus one minus one,
+
+7
+00:00:26,040 --> 00:00:26,700
+for example.
+
+8
+00:00:28,200 --> 00:00:29,130
+How can that help you?
+
+9
+00:00:30,210 --> 00:00:35,610
+It is worth having if we are at position RC, if who would like to go up, we go to R minus one and
+
+10
+00:00:35,610 --> 00:00:38,210
+see if we would like to go diagonally.
+
+11
+00:00:38,210 --> 00:00:44,970
+Here we are at war and so on and so on, so we can see the differences from a position to a specific
+
+12
+00:00:44,970 --> 00:00:45,330
+neighborhood.
+
+13
+00:00:46,440 --> 00:00:53,610
+Now the question is what if we created an ad to erase and recorded these differences, which are here,
+
+14
+00:00:53,610 --> 00:00:59,430
+for example, for us mainly plus one minus one or zero, we call them the direction race, and they
+
+15
+00:00:59,430 --> 00:01:01,980
+help us to right the good in a smarter way.
+
+16
+00:01:03,240 --> 00:01:05,730
+So let's write the code to be more smarter than that.
+
+17
+00:01:06,330 --> 00:01:08,840
+We will have here two arrays.
+
+18
+00:01:09,150 --> 00:01:12,990
+One of them is the direction of rules, one of them in the direction of columns.
+
+19
+00:01:13,320 --> 00:01:14,520
+And it means the following.
+
+20
+00:01:14,730 --> 00:01:20,610
+So here we are, assuming we are a zero and zero if we would like to go up.
+
+21
+00:01:21,660 --> 00:01:26,580
+Zinke, clearly the rules would be minus one, and the current would be zero.
+
+22
+00:01:26,610 --> 00:01:27,720
+So this is the difference here.
+
+23
+00:01:28,230 --> 00:01:34,350
+If you would like to go here, for example, may be right, then the current would increase one and
+
+24
+00:01:34,350 --> 00:01:35,280
+this one would be zero.
+
+25
+00:01:35,580 --> 00:01:41,010
+So as you see, you can think of it as a delta from the current opposition to the naval position.
+
+26
+00:01:41,250 --> 00:01:46,350
+Or you can just write here zero and zero and list all of the relevant neighbors within the hour, your
+
+27
+00:01:46,350 --> 00:01:46,850
+list here.
+
+28
+00:01:46,860 --> 00:01:48,840
+So this is how we build this in an easy way.
+
+29
+00:01:49,740 --> 00:01:55,830
+Now the idea is following you iterate on all of your neighbors, the delta that you need and then the
+
+30
+00:01:55,830 --> 00:01:58,160
+rule of law is the current through the column of laws.
+
+31
+00:01:58,170 --> 00:01:59,940
+The change in the column is what you need.
+
+32
+00:02:00,810 --> 00:02:06,240
+Now what if I need to have, uh, eight eight neighbors?
+
+33
+00:02:06,600 --> 00:02:09,180
+You can write here your list of eight neighbors.
+
+34
+00:02:09,570 --> 00:02:11,550
+Then there will be just eight.
+
+35
+00:02:12,060 --> 00:02:13,290
+What about twenty four?
+
+36
+00:02:13,470 --> 00:02:15,420
+You can write the 24 on it right here.
+
+37
+00:02:15,810 --> 00:02:22,480
+So as you see, it ended up just a single loop iterating on the node and its input.
+
+38
+00:02:22,500 --> 00:02:23,190
+And that's it.
+
+39
+00:02:24,600 --> 00:02:27,240
+But I would like to tell you even a smarter and smarter track.
+
+40
+00:02:27,630 --> 00:02:27,840
+Hmm.
+
+41
+00:02:28,440 --> 00:02:33,300
+Let's say you would like to iterate on all of your eight neighbors here.
+
+42
+00:02:35,730 --> 00:02:44,040
+OK, if you created two four loops, one of them over the Earth from minus one to one and another for
+
+43
+00:02:44,040 --> 00:02:48,270
+Loop DC from minus one to one two from minus one to one.
+
+44
+00:02:48,750 --> 00:02:52,500
+The combination of this for this loop has three values minus one zero one.
+
+45
+00:02:52,530 --> 00:02:55,230
+This one has three values minus one zero one.
+
+46
+00:02:55,470 --> 00:02:58,620
+This represents the nine values that represent to this region.
+
+47
+00:02:59,160 --> 00:03:02,820
+So you can make only these two regions like remove this one here.
+
+48
+00:03:03,090 --> 00:03:04,950
+Use this for Loop, for loop and for loop.
+
+49
+00:03:05,160 --> 00:03:06,150
+And then just to call.
+
+50
+00:03:06,150 --> 00:03:12,450
+Then there's only one trickier you need to discard that went to the R and DC with zero values.
+
+51
+00:03:12,750 --> 00:03:16,440
+So this way you got these eight values without writing even the delta.
+
+52
+00:03:16,920 --> 00:03:23,340
+This is even more smarter and better if you would like to make it for the case of the twenty five and
+
+53
+00:03:23,340 --> 00:03:28,140
+instead of writing it any future direction, the changes would be very hard and very challenging.
+
+54
+00:03:28,530 --> 00:03:32,070
+You can make two four loops, one from them from minus two to two.
+
+55
+00:03:32,340 --> 00:03:34,320
+And another one from minus two to two.
+
+56
+00:03:34,590 --> 00:03:41,730
+Now this generic for you all of the possible directions, but this would cover five times the five values,
+
+57
+00:03:42,090 --> 00:03:43,160
+but you need only 24.
+
+58
+00:03:43,170 --> 00:03:46,950
+So again, discard that the are equal DC equity equals zero.
+
+59
+00:03:47,580 --> 00:03:53,640
+So this, in summary, are the three different ways to iterate on your neighbors on a grid.
+
+60
+00:03:54,060 --> 00:03:55,020
+The stupid way?
+
+61
+00:03:55,350 --> 00:03:56,070
+One by one.
+
+62
+00:03:56,400 --> 00:04:01,470
+The smart way for the virtual array, which is good specifically if you would like very specific ones
+
+63
+00:04:01,890 --> 00:04:05,700
+or their intensive iteration here.
+
+64
+00:04:08,350 --> 00:04:08,860
+That's all.
+
+65
+00:04:09,520 --> 00:04:12,340
+There are some minor improvements that you can do for this good.
+
+66
+00:04:12,340 --> 00:04:17,590
+One of them is you can move these kind of arrays outside of the function so that you don't create them
+
+67
+00:04:17,920 --> 00:04:19,030
+in every recursive call.
+
+68
+00:04:19,480 --> 00:04:22,570
+The second one, this recursive this very decision.
+
+69
+00:04:22,810 --> 00:04:24,250
+You can make it early here.
+
+70
+00:04:24,670 --> 00:04:30,280
+If you did that, you will not like, make an empty stack goal and then return here.
+
+71
+00:04:30,670 --> 00:04:35,410
+So you've verified before calling or were fight after calling the verification, after the coding,
+
+72
+00:04:35,410 --> 00:04:37,810
+the good advantage of the good advantage of it.
+
+73
+00:04:38,110 --> 00:04:41,860
+If the initial RNC something is wrong with them, we will catch it.
+
+74
+00:04:42,130 --> 00:04:45,490
+So I usually recommend for you validating here.
+
+75
+00:04:45,850 --> 00:04:46,240
+OK.
+
+76
+00:04:46,750 --> 00:04:50,140
+Um, yeah, that's all here.
+
+77
+00:04:50,710 --> 00:04:55,480
+Now, going back to the complexity, let end to be number of our time.
+
+78
+00:04:55,480 --> 00:04:56,850
+See that here.
+
+79
+00:04:56,860 --> 00:04:59,290
+It just in the maximum case, are for end.
+
+80
+00:04:59,860 --> 00:05:07,270
+So now the complexity of our algorithm was enablers e but E is anyway for N, so it's eventually open.
+
+81
+00:05:08,350 --> 00:05:14,500
+But but remember if something like R and C r 2000 this mean we have one million would to be careful
+
+82
+00:05:14,500 --> 00:05:14,710
+about.
+
+83
+00:05:14,710 --> 00:05:15,430
+Keep that in mind.
+
+84
+00:05:17,290 --> 00:05:21,460
+Very can trade up to the maximum of the number of so again, it is all in.
+
+85
+00:05:21,490 --> 00:05:25,840
+Always remember that that the region has an auxiliary space.
+
+86
+00:05:26,650 --> 00:05:34,450
+Um, one thing here also is good to say the internal stack of the occasion is limited size, so a huge
+
+87
+00:05:34,450 --> 00:05:38,530
+recursive calls will end up with a runtime error correction or could.
+
+88
+00:05:38,920 --> 00:05:44,470
+This is where the next the technique the DFS can solve this problem because it isn't iterative.
+
+89
+00:05:45,190 --> 00:05:46,870
+It's an iterative technique.
+
+90
+00:05:47,590 --> 00:05:50,260
+Finally, I would like to say a nice competitive programming tip.
+
+91
+00:05:50,560 --> 00:05:54,910
+Sometimes it a good idea to randomize the four directions in each school.
+
+92
+00:05:55,120 --> 00:05:59,800
+So this sometimes will be very good to avoid being trapped in a specific behavior.
+
+93
+00:06:00,160 --> 00:06:01,510
+Let me say this in a different way.
+
+94
+00:06:02,050 --> 00:06:06,460
+At the moment, let's say our array is up, right, down and left.
+
+95
+00:06:06,760 --> 00:06:10,860
+You're could we keep making a up as long as no of then?
+
+96
+00:06:10,870 --> 00:06:11,830
+Right, right, right?
+
+97
+00:06:11,950 --> 00:06:12,160
+No.
+
+98
+00:06:12,160 --> 00:06:14,200
+So they right that up above and so on.
+
+99
+00:06:14,680 --> 00:06:19,270
+This is good, but another strategy is inevitable, of course, of goal.
+
+100
+00:06:19,390 --> 00:06:22,060
+Randomized the internet for direction.
+
+101
+00:06:22,330 --> 00:06:27,940
+Then once you go up, right down, left in another recursive code, you go right or left it out with
+
+102
+00:06:28,180 --> 00:06:31,540
+another one down, left, right and so on.
+
+103
+00:06:32,500 --> 00:06:39,610
+So this means that if iterating in a very random way, which in general should have a better and more
+
+104
+00:06:39,610 --> 00:06:46,480
+stable performance, especially if the grid is a very degenerate grid that is designed such that you
+
+105
+00:06:46,870 --> 00:06:49,420
+in general will take a huge step.
+
+106
+00:06:49,870 --> 00:06:56,500
+So if it happened that you wrote a device and it seems like runtime error before right, rewriting the
+
+107
+00:06:56,500 --> 00:07:00,010
+good as a beef's just to try randomizing the food directions.
+
+108
+00:07:00,280 --> 00:07:04,900
+But the vectors of the rest of the poor direction must be looked at inside the function, so every one
+
+109
+00:07:04,900 --> 00:07:08,440
+of them has its own version of the randomized randomized the slide.
+
+110
+00:07:09,010 --> 00:07:10,310
+I hope you get the idea anyway.
+
+111
+00:07:11,740 --> 00:07:16,630
+Overall, as you see, theoretically, there is no difference to the DFS itself.
+
+112
+00:07:17,490 --> 00:07:24,300
+All what's happening is we were building the graph and defacing the graph in an implicit in an implicit
+
+113
+00:07:24,300 --> 00:07:29,960
+way, as you see, building the graph is very systematic, like you have a node and you have the four
+
+114
+00:07:29,970 --> 00:07:30,420
+neighbors.
+
+115
+00:07:30,690 --> 00:07:35,280
+So what is the point we just generated on the fly when we when we need it?
+
+116
+00:07:38,240 --> 00:07:42,650
+Observe that in some of the domains, real life domains, the generation.
+
+117
+00:07:44,970 --> 00:07:46,950
+The age of the generation is very slow.
+
+118
+00:07:47,340 --> 00:07:54,030
+In this case, you might think that building the graph in an explicit way is good, like imagine that
+
+119
+00:07:54,030 --> 00:08:01,140
+you have a state here, A. And there are maybe 20 neighbors, but you need, for example, for neighbors,
+
+120
+00:08:01,140 --> 00:08:03,960
+you need of EM Cube to build your edges.
+
+121
+00:08:04,590 --> 00:08:06,040
+So now you have a trade off.
+
+122
+00:08:06,870 --> 00:08:12,030
+Do you like to generate the edges in the cube and build the things on the fly over me better?
+
+123
+00:08:12,030 --> 00:08:16,830
+You just do the training the generation or fly it and use your edges.
+
+124
+00:08:17,250 --> 00:08:22,740
+It happened based on the problem and based on the trade off in the in the real life scenarios.
+
+125
+00:08:23,910 --> 00:08:24,450
+That's all.

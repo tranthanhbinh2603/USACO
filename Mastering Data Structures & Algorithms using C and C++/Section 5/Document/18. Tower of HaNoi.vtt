@@ -1,0 +1,1075 @@
+WEBVTT
+
+00:00.240 --> 00:04.950
+The problem is cover of honey, first of all, we learn what the problem is.
+
+00:06.320 --> 00:13.540
+So here there are three hours given these are the two hours, three hours given an hour.
+
+00:13.580 --> 00:18.280
+There are some number of disk kept one, two, three, four, five.
+
+00:18.530 --> 00:21.560
+So these are kept on a.
+
+00:22.730 --> 00:29.710
+Now, the problem is we have to transfer all this disk from our aid to cover feet.
+
+00:31.930 --> 00:34.240
+So we can just take out all this and keep them there?
+
+00:34.900 --> 00:40.800
+No, you have to take out one day at a time, move one desk at a time.
+
+00:41.550 --> 00:49.020
+OK, we will transfer all these this one by one and be so Fosterville come the most welcome here, Dianabol
+
+00:49.080 --> 00:51.470
+that I've ordered from here.
+
+00:52.440 --> 00:54.000
+No, you cannot transfer like this.
+
+00:54.300 --> 00:59.280
+You have to transfer such that no larger this should be kept over a smaller disk.
+
+00:59.490 --> 01:05.510
+So you cannot have a small risk here and the larger disk over it.
+
+01:05.730 --> 01:08.610
+This is not allowed to conditions.
+
+01:08.610 --> 01:11.860
+How did you have to move on to such a time security?
+
+01:11.970 --> 01:15.170
+The larger this should not be kept auris Monegasque.
+
+01:15.960 --> 01:23.910
+So by following these two conditions, you have to move all this and the disk from our aid to Tower
+
+01:24.150 --> 01:32.150
+C before moving all this disk from cover to cover C V may require one more start over so that our beas
+
+01:32.160 --> 01:34.530
+given azo auxiliary tower.
+
+01:34.800 --> 01:43.230
+So we have to move disk from our AI, from our C, from and to.
+
+01:43.560 --> 01:46.120
+And this is for utilization, for helping.
+
+01:46.140 --> 01:48.600
+So this is using the Stohr.
+
+01:48.810 --> 01:51.800
+We are using the one that is auxiliary cover.
+
+01:52.170 --> 01:57.720
+So from the source and to the destination and other one is using let us call it as using.
+
+01:57.720 --> 02:03.330
+So else you can call that our name says A.B.C. not the problem is not so easy.
+
+02:03.960 --> 02:06.960
+It is believed to be unsolvable problem.
+
+02:07.470 --> 02:09.300
+There is some story behind this problem.
+
+02:09.450 --> 02:14.670
+It is believed that somewhere in the world there is a temple and the other temple distrait over there
+
+02:14.880 --> 02:19.020
+and there is a tower with sixteen golden disk.
+
+02:19.470 --> 02:27.330
+And few priests are trying to move this disc from cover to cover C and they are doing it from centuries.
+
+02:27.750 --> 02:31.310
+And if they are successful, the world will.
+
+02:31.350 --> 02:33.350
+And that could be a doomsday.
+
+02:33.450 --> 02:35.430
+So there is a story behind this one.
+
+02:35.430 --> 02:39.660
+So it is believed that these two words and temple as in China and India.
+
+02:40.110 --> 02:43.110
+So this was believed as unsolvable problem.
+
+02:43.800 --> 02:46.560
+But this problem can be solved using recursion.
+
+02:46.890 --> 02:51.060
+Let us see how recursion helps in solving this problem.
+
+02:51.270 --> 02:58.560
+So we want, what should we do, move to such a dark that this can be transferred from A to C with the
+
+02:58.560 --> 03:05.190
+help of B, so will take some number of disk and we will try to devise a recursive function.
+
+03:06.000 --> 03:09.260
+Now we are ready to devise a recursive algorithm for this fund.
+
+03:09.750 --> 03:12.030
+I have taken three problems here.
+
+03:12.330 --> 03:19.530
+One problem with a single desk and second problem, but the two is let us solve these problems one by
+
+03:19.530 --> 03:19.750
+one.
+
+03:20.160 --> 03:22.240
+So the first problem there is the single desk.
+
+03:22.500 --> 03:25.710
+So simply move this this from A to C.
+
+03:26.100 --> 03:35.010
+So the problem is off on a problem where only one is given and we have three towards A, B, C, and
+
+03:35.010 --> 03:39.800
+there is only one desk, then what we are supposed to do, move desk.
+
+03:41.030 --> 03:41.630
+From.
+
+03:43.200 --> 03:51.120
+And to see that the source resignation from Pooh-pooh and with the help of our big donor, we are not
+
+03:51.270 --> 03:54.240
+using this B here because there is only one desk.
+
+03:54.250 --> 04:00.680
+We don't need to be what I am writing it that will help me write on other positions.
+
+04:04.820 --> 04:11.820
+No, there are two disc when there are two, this number of nine to discard one and three to watch.
+
+04:11.870 --> 04:17.000
+How did ABC then what I'm supposed to do, see the topmost disc?
+
+04:17.930 --> 04:21.370
+I cannot wait to see more of it to be so the stock moves.
+
+04:21.380 --> 04:22.760
+This can be to be.
+
+04:23.060 --> 04:24.350
+So there's a small disc.
+
+04:24.540 --> 04:25.130
+Come here.
+
+04:27.970 --> 04:34.660
+That is not the destination that is familiar to what intermediate auxiliary over, so that is not the
+
+04:34.660 --> 04:35.300
+destination.
+
+04:35.470 --> 04:40.780
+So moving there is temporary or moving there as recursively.
+
+04:41.170 --> 04:43.120
+So that first a step as.
+
+04:45.350 --> 04:52.430
+Out of her nine one disc from see, this was the source and the source, the destination, this was
+
+04:52.430 --> 04:53.590
+the middle oxalate.
+
+04:54.230 --> 04:58.640
+Now we have moved it from this source to this destination.
+
+04:59.150 --> 05:01.560
+We have moved from A to B so far.
+
+05:01.570 --> 05:03.110
+This is single topmost.
+
+05:03.110 --> 05:10.220
+This C became my intermediate of R R this auxiliary tower, actually a destination where we are not
+
+05:10.220 --> 05:10.880
+moving there.
+
+05:11.150 --> 05:12.230
+So we are moving here.
+
+05:12.230 --> 05:18.050
+So this becomes source and this destination and that becomes a using tower or auxiliary tower.
+
+05:18.050 --> 05:22.160
+So serious mean that first step.
+
+05:22.190 --> 05:23.810
+So no second step.
+
+05:24.020 --> 05:28.790
+Move this larger disk from here to see.
+
+05:30.730 --> 05:36.860
+One desk for me to see directly, so that is the same as this one, so move desk.
+
+05:37.980 --> 05:38.640
+From.
+
+05:40.330 --> 05:43.930
+A to see using B.
+
+05:45.740 --> 05:52.280
+So we have not used, but we have seen that we are using B so the other day our ability to do what we
+
+05:52.280 --> 05:53.110
+are mentioning it.
+
+05:53.600 --> 05:58.370
+So this is a move from a to see that same as the first step.
+
+05:59.090 --> 06:00.970
+We have already seen how to move on this.
+
+06:01.100 --> 06:02.510
+That same step is useful.
+
+06:02.520 --> 06:05.660
+You know what is remaining from cover B?
+
+06:05.660 --> 06:10.210
+We have to move more to cover C, and this becomes an auxiliary tower.
+
+06:10.370 --> 06:12.460
+So that step is recursive step.
+
+06:12.470 --> 06:16.580
+So let us call it a recursive step number of a nine one disk.
+
+06:16.970 --> 06:21.860
+And the source is B, destination of C, an auxiliary to what is A.
+
+06:22.910 --> 06:29.510
+So these are the three steps I got, so here I am saying move right, don't worry about this.
+
+06:29.720 --> 06:31.060
+This should be performed.
+
+06:31.070 --> 06:35.280
+As for the first step, and this also should be performed as that first step.
+
+06:35.570 --> 06:36.840
+So this is recursive.
+
+06:37.550 --> 06:39.670
+So this definition I have written recursively.
+
+06:40.830 --> 06:51.660
+Now, if there are three, discuss how to move them, let us see a of honey, this sort of intermediate,
+
+06:51.730 --> 06:53.490
+our destination, our.
+
+06:54.480 --> 07:01.200
+Now we have to discuss how to move through this, if I number them one, two, three from top.
+
+07:02.830 --> 07:05.080
+Then how to move them not far.
+
+07:05.110 --> 07:13.590
+Those are steps we will use or take here and define recursively observe this.
+
+07:13.960 --> 07:18.940
+I will say that move these to this to to be.
+
+07:22.950 --> 07:29.940
+Move these two days to our B to desk, we cannot move at a time, no, no, we are not moving to this
+
+07:30.000 --> 07:30.570
+at a time.
+
+07:31.020 --> 07:34.650
+Those two are moved by following this matter.
+
+07:34.650 --> 07:36.720
+We already know how to move to desk.
+
+07:36.990 --> 07:40.780
+We saw how to move to this from ER to see the final.
+
+07:40.800 --> 07:41.850
+This was kept here.
+
+07:41.850 --> 07:42.110
+Right.
+
+07:42.330 --> 07:48.540
+So er to see how to move, we saw now instead of er to see you have to move them from A to B.
+
+07:50.340 --> 07:50.630
+Right.
+
+07:50.710 --> 07:59.070
+So that is not in one step, that is in three steps, so moving to disk from cover to cover, B takes
+
+07:59.080 --> 08:02.500
+a three step, which will utilize it our C or be something.
+
+08:02.500 --> 08:03.680
+Some holiday will be moved.
+
+08:04.180 --> 08:05.470
+So how to move?
+
+08:05.470 --> 08:07.720
+If you want to see that, follow these steps.
+
+08:08.750 --> 08:12.340
+So to make this problem simple, we are seeing that move to.
+
+08:13.490 --> 08:17.320
+So moving to this is not just one step, it is recursive.
+
+08:17.750 --> 08:20.560
+So how to move towards other steps?
+
+08:21.050 --> 08:22.130
+Then they can to move on.
+
+08:22.130 --> 08:23.960
+This other step was given here.
+
+08:24.530 --> 08:26.700
+So let us right on that first step.
+
+08:26.930 --> 08:34.460
+First step is cover of honey three minus one to disk from there to where it to be.
+
+08:35.560 --> 08:40.120
+A to B and C is the intermediate term.
+
+08:40.660 --> 08:43.420
+OK, then to discard move did not.
+
+08:43.490 --> 08:48.400
+Third largest remaining move this disk to our C.
+
+08:50.480 --> 08:51.980
+So second step is.
+
+08:53.330 --> 08:55.250
+Move this.
+
+08:56.480 --> 08:57.050
+From.
+
+08:58.650 --> 09:00.300
+A to see.
+
+09:02.080 --> 09:03.760
+Using B.
+
+09:05.780 --> 09:06.780
+So move that one.
+
+09:06.810 --> 09:11.420
+No, we are not using or we are using it or not, there is a different thing using the intermediate
+
+09:11.420 --> 09:11.700
+term.
+
+09:13.210 --> 09:19.720
+Now, what does it mean you have to move to this from B to C to this, you cannot move at a time, but
+
+09:19.720 --> 09:24.540
+how to move those two this and multiple steps already shown here.
+
+09:24.760 --> 09:26.390
+So follow those steps now.
+
+09:26.430 --> 09:31.970
+So this is not A Salsa's B and destination A C, so A is an auxiliary tower.
+
+09:32.230 --> 09:36.470
+So this is all multiple steps, but we tried it as a single step here.
+
+09:36.730 --> 09:45.340
+So the third step is tomorrow for nine to disk from B to C using A.
+
+09:46.450 --> 09:47.060
+That's all.
+
+09:47.440 --> 09:53.050
+So these three steps, so we can see that when we have three desk, we can perform it like this.
+
+09:54.530 --> 10:04.190
+So now from the this formula, not from this 3D procedure, we can generate the idea for any number
+
+10:04.190 --> 10:04.790
+of disk.
+
+10:05.270 --> 10:11.930
+So suppose this is and then what it should be and minus one.
+
+10:12.890 --> 10:15.980
+Then what this should be and minus one.
+
+10:17.680 --> 10:25.060
+That's it, because this is Recursive Requestion will call itself again, so there are more steps below
+
+10:25.060 --> 10:32.500
+that call, so don't imagine it's a single step, but we are able to define it recursively so far,
+
+10:32.500 --> 10:33.940
+defining it recursively.
+
+10:33.940 --> 10:38.240
+I made a simple problem, the next little bigger problem than a little bigger problem.
+
+10:38.530 --> 10:45.420
+Now, this is suitable for all and number of tasks, not just to disk to suitable for any number of
+
+10:45.430 --> 10:45.690
+things.
+
+10:45.970 --> 10:46.800
+So I have done with it.
+
+10:46.810 --> 10:54.970
+But no, I will try doing this as a recursive function and I will take an example.
+
+10:55.180 --> 11:00.700
+And is this function and show you really these steps will solve the problem.
+
+11:01.180 --> 11:09.130
+Now here is a recursive function for solving problem Tower of Honey, based on our discussion of the
+
+11:09.130 --> 11:13.610
+final function that I got to find a little gaudium that I have redundant as a function.
+
+11:14.050 --> 11:17.110
+So let us really don't see this taking forward parameters.
+
+11:17.110 --> 11:25.950
+Number of our No A.B.C., our first three, our numbers, ABC are three, our numbers.
+
+11:26.080 --> 11:32.850
+Then if number of this are more than zero, more than zero, then perform these three steps.
+
+11:33.520 --> 11:34.840
+So first step is recursive.
+
+11:34.840 --> 11:37.890
+Call that one reduce disk.
+
+11:37.900 --> 11:38.920
+That is a minus one.
+
+11:39.160 --> 11:44.810
+And that was our changing C this was from the world and this is a two to work.
+
+11:45.070 --> 11:52.480
+So this is using no in the first step already we saw that we will move this, this from A to B. So from
+
+11:52.480 --> 11:59.650
+the what is A and B to what is two and C's using power then move our disk from A to C.
+
+11:59.650 --> 12:01.870
+So I ordered like this because of lack of space.
+
+12:02.110 --> 12:10.060
+The next one you have to move and minus one this which were kept in B from B to C, so sources from
+
+12:10.090 --> 12:14.530
+S.B and Destination to C and is auxiliary.
+
+12:16.000 --> 12:21.370
+So I replace this one and see how this function will solve our problem.
+
+12:21.730 --> 12:23.860
+And this is an example problem here.
+
+12:23.860 --> 12:32.920
+The number of disk are three and I want a I would be no c I'm not calling them as ABC actually does
+
+12:32.920 --> 12:33.910
+are variable names.
+
+12:34.270 --> 12:37.510
+So values in the month of October 2003.
+
+12:37.510 --> 12:39.130
+So one and two and three.
+
+12:40.000 --> 12:41.650
+So slight change here.
+
+12:42.040 --> 12:47.890
+Those are actually variable names, but in them the values, the name of the tower, I have to take
+
+12:47.890 --> 12:48.420
+advantage.
+
+12:48.820 --> 12:51.580
+Otherwise I should take them as characters.
+
+12:52.480 --> 12:56.830
+So instead of characters, logistic integers, whatever numbers are there, one, two, three to four
+
+12:56.840 --> 12:57.180
+numbers.
+
+12:58.570 --> 13:04.150
+Now, if this function is scarred by passing these parameters.
+
+13:04.150 --> 13:06.020
+Three, one, two, three.
+
+13:06.280 --> 13:13.620
+So this is N and this is A and B, this is C, so these four are past.
+
+13:14.590 --> 13:16.080
+So now let us raise this one.
+
+13:16.420 --> 13:23.140
+So here the first call I will write the first column number of three and the current numbers are one,
+
+13:23.350 --> 13:24.660
+two and three.
+
+13:25.420 --> 13:29.290
+So these four values are passed and is greater than zero.
+
+13:29.680 --> 13:35.200
+And if the three, then what to do, call itself by N minus one and the values that change.
+
+13:35.530 --> 13:37.720
+So let us write on the second.
+
+13:38.320 --> 13:39.220
+So this is.
+
+13:41.430 --> 13:44.280
+And minus one, the first two.
+
+13:45.360 --> 13:48.120
+First is a is one.
+
+13:49.160 --> 13:53.030
+Next year, see C is three.
+
+13:54.140 --> 14:00.500
+And last one is a be that our number is two, yes, deserve change.
+
+14:01.700 --> 14:07.130
+Now, this call has to be expanded, but before expanding, I will relied on other two steps.
+
+14:07.130 --> 14:09.080
+Also, it will be easy for writing.
+
+14:11.130 --> 14:22.500
+Brent, move from a to see, so eager to see, so this is step from one to three, so move on from a
+
+14:22.500 --> 14:25.350
+to see so a one and sees three.
+
+14:26.490 --> 14:27.440
+The third step.
+
+14:28.500 --> 14:29.280
+This is step.
+
+14:31.490 --> 14:37.940
+And the minus one, so three minus one, that is two and the B first, so that is two.
+
+14:39.460 --> 14:45.940
+Then again, next, that is a is one and last one to see that, see the three.
+
+14:47.690 --> 14:52.760
+So as we know, the working of recursion, this call is making two more calls, the first call has to
+
+14:52.760 --> 14:57.220
+be finished first, then it will bring this one, then it will call this one.
+
+14:57.230 --> 15:00.740
+So we know that what we have written all of them together at once.
+
+15:00.770 --> 15:02.030
+So that's easy to write.
+
+15:02.360 --> 15:04.250
+Now, let us continue this call.
+
+15:04.250 --> 15:10.880
+Will we perform so as support discon again, three steps because this is two and two is greater than
+
+15:10.880 --> 15:11.280
+zero.
+
+15:11.870 --> 15:14.090
+So for that, what are the steps?
+
+15:14.510 --> 15:16.480
+So first step ACB.
+
+15:16.880 --> 15:22.760
+So this is one A, C, b.
+
+15:25.100 --> 15:32.870
+Right now, let's bring Daisy, ac ac so one to two, one, two, to say it is not a.
+
+15:35.980 --> 15:41.710
+So last hour is not it is a two for one to be, it means to be.
+
+15:42.610 --> 15:43.540
+Then this is step.
+
+15:45.490 --> 15:49.180
+One, and this is B, a, c.
+
+15:50.800 --> 15:56.940
+B ac DC three, one, two, the call.
+
+16:01.160 --> 16:04.190
+Then I'll expand this one also, though, this is done afterwards.
+
+16:04.220 --> 16:05.300
+Let us expand this.
+
+16:05.690 --> 16:14.900
+So for this first call ACB so the two will become one, A, C, B.
+
+16:16.240 --> 16:18.750
+The next step is move it to sea.
+
+16:18.880 --> 16:22.030
+So what is a guy who sees what one saw?
+
+16:22.030 --> 16:23.020
+Two to one?
+
+16:25.010 --> 16:25.970
+Then third step.
+
+16:28.140 --> 16:40.770
+And minus one BSEE and minus one B, A, C, so one, two, three, B, A, C, minus one is B, C asked
+
+16:40.770 --> 16:41.810
+for the variable names.
+
+16:41.820 --> 16:43.360
+You see the variable name ABC.
+
+16:43.620 --> 16:49.180
+So this is a variable name and I values to now this variable named B and its value is one.
+
+16:49.980 --> 16:51.780
+So we think the values of the variable.
+
+16:51.810 --> 16:54.320
+So this is basically the variable name.
+
+16:54.330 --> 16:59.030
+So this is variable and this is a variable to see variable necessary to.
+
+17:00.060 --> 17:07.470
+One more level of steps I have to write, but this time the call will be for Zettl.
+
+17:09.040 --> 17:15.380
+Zero, not one to zero, it has no meaning because when it is greater than zero, it is performing.
+
+17:15.790 --> 17:17.960
+So the next step will not be performed.
+
+17:18.220 --> 17:20.470
+So this call will not execute at all.
+
+17:20.740 --> 17:25.140
+So checking that words and writing them is useless.
+
+17:25.390 --> 17:27.310
+So I will avoid writing the steps.
+
+17:27.550 --> 17:35.230
+So if I have to write the first steps, ACB, that is HCB, that is one three two billion is of no use
+
+17:35.230 --> 17:36.390
+if is going to terminate.
+
+17:36.640 --> 17:37.880
+So I will avoid this one.
+
+17:38.200 --> 17:44.620
+Then what is the next step to see is one sees three one three.
+
+17:45.370 --> 17:47.170
+The next step is again zero.
+
+17:47.380 --> 17:55.810
+But some values then for this, this is step zero with some parameters and this is move from three to
+
+17:55.810 --> 17:56.220
+two.
+
+17:56.350 --> 17:58.000
+So three to two.
+
+17:58.310 --> 17:59.590
+This is one, two, three.
+
+18:01.640 --> 18:10.740
+Is free and six to so critical and the system is again useless now for this left hand side is useless
+
+18:11.580 --> 18:15.600
+because the function will not execute the minimal step move to see.
+
+18:15.610 --> 18:16.560
+So three to one.
+
+18:18.210 --> 18:27.900
+Move to see that is two to one, so two to one, and this is a game of no use and here left hand side
+
+18:28.080 --> 18:31.200
+of no use, middle one to see.
+
+18:31.200 --> 18:33.300
+One, two, three, one, two, three.
+
+18:33.960 --> 18:35.700
+The right side zero.
+
+18:39.130 --> 18:42.650
+So actually, these steps will not be performed, this will not be performed.
+
+18:43.120 --> 18:46.450
+So I'll just mark them to show that these are not required.
+
+18:48.000 --> 18:55.410
+No, let us see how these calls are made and take those results, see, first, this is the call, first
+
+18:55.410 --> 19:04.410
+call, then second call, then third call, then fourth call, which will not execute seismogram das,
+
+19:06.030 --> 19:07.080
+which will not execute.
+
+19:07.090 --> 19:10.790
+So have strike enough that now the next step is one to three.
+
+19:10.950 --> 19:15.920
+So the first step is one command three does the first step.
+
+19:17.290 --> 19:19.210
+Then this is the fifth call.
+
+19:20.450 --> 19:21.310
+Then go back.
+
+19:21.340 --> 19:28.570
+This is their best performance, so the step is one comfort to someone who is the next step, then the
+
+19:28.590 --> 19:32.140
+second sixth call, then seventh call.
+
+19:32.500 --> 19:35.470
+That is step three to do so.
+
+19:35.470 --> 19:37.430
+The first three to two.
+
+19:38.830 --> 19:40.160
+The aide call.
+
+19:41.760 --> 19:47.010
+Then go back and this is step one, two, three, one, two, three.
+
+19:49.410 --> 19:51.600
+The next this is the ninth call.
+
+19:52.610 --> 19:57.360
+And just the Carl Levin call, then two to one.
+
+19:57.560 --> 19:59.480
+So this is two to one.
+
+20:01.120 --> 20:02.680
+Then this is the tool called.
+
+20:04.250 --> 20:06.440
+Then the student is brain dead.
+
+20:06.890 --> 20:07.800
+Oh, sorry.
+
+20:07.880 --> 20:12.610
+This was two to three, I thought, attached to the one ear to see two to three.
+
+20:13.460 --> 20:14.720
+So this is two to three.
+
+20:17.390 --> 20:24.770
+Then putting one foot in goal and then this one, two, three steps, one, two, three.
+
+20:26.700 --> 20:34.680
+Then the 15 column support, 15 calls are just making for a three disc, but let me show you the values
+
+20:34.680 --> 20:35.390
+once again.
+
+20:35.850 --> 20:40.750
+See, first call is this one, then this call and this call in this call, Thandiswa Sprint.
+
+20:41.160 --> 20:46.480
+So first Disvalue Sprint and then this call then or then this is the next one.
+
+20:47.340 --> 20:52.290
+Then goes back and this is the next value printer and this one is printed next.
+
+20:52.500 --> 20:54.660
+And then it comes on this side.
+
+20:54.660 --> 20:57.570
+So two to one and then two to three.
+
+20:57.860 --> 20:59.590
+Then finally, one, two, three.
+
+20:59.790 --> 21:01.520
+So the values are printed like this.
+
+21:02.460 --> 21:05.990
+So if you know the three driver, this is more like in order drivers.
+
+21:06.030 --> 21:08.100
+And so the printing is done in order.
+
+21:08.100 --> 21:08.580
+Tollerson.
+
+21:09.150 --> 21:11.730
+So these are the steps I got.
+
+21:11.880 --> 21:18.900
+If I follow these steps up on this problem, then that this will be transferred from A to our C with
+
+21:18.900 --> 21:23.850
+the help of Tower B, so I will take these steps and show you how it works.
+
+21:24.240 --> 21:28.650
+But before showing you that, let us analyze how much time this is ticking.
+
+21:30.480 --> 21:33.400
+See, there are three the number of this country.
+
+21:33.660 --> 21:37.440
+So how many calls it is making, this is making.
+
+21:41.560 --> 21:42.880
+15 Gong's.
+
+21:46.340 --> 21:49.550
+Then and is equal to how many calls it will make.
+
+21:49.970 --> 21:51.770
+So let us look at the subset of this one.
+
+21:51.810 --> 21:53.980
+So one, two, three, four, five, six, seven.
+
+21:54.290 --> 21:55.820
+So it is making seven counts.
+
+21:57.320 --> 22:04.670
+So actually, for three itself, if you see one, then two, then one, two, three, four calls, then
+
+22:04.670 --> 22:05.250
+eight calls.
+
+22:05.480 --> 22:11.650
+So this is nothing but one plus two plus two squared plus two Kupe.
+
+22:12.260 --> 22:13.950
+So these many calls it is making.
+
+22:14.420 --> 22:20.990
+So this is nothing but topographer minus one that is 16, minus 115 so far.
+
+22:20.990 --> 22:28.160
+And how many calls it will make algorithm here, one plus two plus two squared plus goes on to two power
+
+22:28.160 --> 22:28.560
+end.
+
+22:28.580 --> 22:31.110
+So this will be two percent plus one minus one.
+
+22:31.370 --> 22:33.430
+So this is order of power.
+
+22:33.440 --> 22:36.970
+And so this is exponential time taking problem.
+
+22:37.550 --> 22:43.850
+The function is calling itself two times by degrees to value often and the minus one.
+
+22:44.000 --> 22:46.410
+So two times it is calling to bottom.
+
+22:46.660 --> 22:49.130
+Well, this is time consuming function.
+
+22:49.580 --> 22:51.640
+It's exponential time taking function.
+
+22:51.650 --> 22:53.000
+It takes to power and time.
+
+22:54.350 --> 22:59.390
+Now I will take these steps and show you how the this can be moved.
+
+23:00.080 --> 23:06.860
+Now here are the steps that we got from the function and here is the problem with the three disk undercover
+
+23:06.860 --> 23:07.300
+numbers.
+
+23:07.310 --> 23:09.890
+You can see I have labeled them as one, two, three.
+
+23:10.310 --> 23:11.600
+You can call them as ABC.
+
+23:11.630 --> 23:14.660
+Also the value of A's one B's two one six three.
+
+23:14.690 --> 23:17.900
+So I have taken numbers and these steps are giving numbers.
+
+23:19.160 --> 23:25.420
+Now, let us follow these steps are from these steps over this disk and get the result.
+
+23:25.610 --> 23:26.340
+First step.
+
+23:26.360 --> 23:27.120
+What does it say?
+
+23:27.450 --> 23:29.690
+Movement is from government to 2003.
+
+23:29.930 --> 23:35.150
+So from Tower one, tower three, we have to move orders and we know very well that we have to move
+
+23:35.150 --> 23:35.950
+only one desk.
+
+23:36.800 --> 23:37.080
+Right.
+
+23:37.150 --> 23:39.770
+And need to ask how MiniDisc we have to move on this quantity.
+
+23:40.220 --> 23:43.190
+So one disk move it from the star to.
+
+23:44.810 --> 23:45.590
+Disturber.
+
+23:47.360 --> 23:47.860
+No.
+
+23:47.990 --> 23:55.060
+One, two, three, one, two, three, second step, more modest from government to do so from to two,
+
+23:55.100 --> 23:57.890
+which is that is not a second smaller disk.
+
+23:57.890 --> 24:01.220
+We have so moved that one to cover B.
+
+24:03.400 --> 24:12.940
+What that is from one to to the next step is three, two to so over to second our OK, move this from
+
+24:12.940 --> 24:15.970
+third over to the second tower, just as moved.
+
+24:16.980 --> 24:21.950
+The next step is move orders from Tower one, two, three, from Tower one, two, three.
+
+24:21.960 --> 24:26.990
+So this largest disk, you'll send it on tower three, OK?
+
+24:29.620 --> 24:30.950
+Largest defendant.
+
+24:31.000 --> 24:37.300
+What we know makes this more is from two to one, so from second toward the one.
+
+24:37.300 --> 24:39.540
+So the smaller it is, you bring it here.
+
+24:42.580 --> 24:46.960
+Then more or less from second to what would hurt our second or third tower.
+
+24:47.260 --> 24:51.880
+So this second night, this that this middle desk, you set it on Totowa.
+
+24:53.890 --> 25:01.680
+Then move this from one to three, so from first of talk to her so more this from first hour to target
+
+25:01.750 --> 25:02.080
+over.
+
+25:04.630 --> 25:11.860
+That song, I have followed these steps and under this God move from here until they see the definition
+
+25:11.860 --> 25:18.490
+was recursive, saying that move to disc from cover to cover be a reality, not moving to the skin one
+
+25:18.490 --> 25:20.830
+step, we are moving them recursively.
+
+25:21.130 --> 25:26.920
+So we have utilized one all the other towers and we have shifted the disc here and there.
+
+25:27.430 --> 25:30.090
+And finally we got all this controversy.
+
+25:30.400 --> 25:31.730
+So that was the objective.
+
+25:32.050 --> 25:38.440
+If you are not following the steps, if you are randomly trying to do, we may be wasting our time by
+
+25:38.440 --> 25:42.300
+performing unnecessary steps or repeating steps.
+
+25:42.310 --> 25:44.340
+That is a problem, not recursion.
+
+25:44.350 --> 25:48.490
+Gives us perfect minimum number of steps, a number of steps.
+
+25:48.490 --> 25:52.450
+If you follow that, you can move the disc from one to another time.
+
+25:53.290 --> 25:57.330
+Now, that's all about out of a problem, not for you to remember it.
+
+25:58.150 --> 25:59.520
+You have to work on this one.
+
+25:59.710 --> 26:03.490
+So practice this one once and then you can easily remember this one.
+
+26:03.670 --> 26:07.300
+And this idea will help you solve other problems.
+
+26:08.230 --> 26:11.800
+Disturber of an idea will help you think recursively.

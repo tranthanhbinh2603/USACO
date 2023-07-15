@@ -1,0 +1,1204 @@
+0
+1
+00:00:01,200 --> 00:00:03,750
+Let's see the second homework in the sorting
+1
+
+2
+00:00:04,020 --> 00:00:08,730
+lesson. Let me first share with you a few tips during the course.
+2
+
+3
+00:00:09,180 --> 00:00:13,920
+First of all, you always have to compute the time and memory complexity for any code that you write.
+3
+
+4
+00:00:14,280 --> 00:00:22,740
+Even if I didn't mention that. sometimes I might miss describing the time or memory complexity, sometimes
+4
+
+5
+00:00:22,740 --> 00:00:24,750
+because it's very clear similar to other things.
+5
+
+6
+00:00:25,080 --> 00:00:29,640
+Sometimes I just forget. If you couldn't figure it out by yourself, or you aren't sure, and I forgot to
+6
+
+7
+00:00:29,640 --> 00:00:30,060
+mention it.
+7
+
+8
+00:00:30,270 --> 00:00:33,810
+Just ask me, uh, to put the information.
+8
+
+9
+00:00:34,410 --> 00:00:37,030
+Any moment I just mentioned the word complexity,
+9
+
+10
+00:00:37,050 --> 00:00:38,790
+then I just mean the time complexity.
+10
+
+11
+00:00:38,790 --> 00:00:40,620
+And this is the same for people in the industry.
+11
+
+12
+00:00:41,610 --> 00:00:48,030
+There is a section for the online judge section where you can use online judges to judge
+12
+
+13
+00:00:48,030 --> 00:00:48,150
+your
+13
+
+14
+00:00:48,150 --> 00:00:54,900
+solutions. The online judge is a website or a tool that allow you to automatically evaluate your
+14
+
+15
+00:00:54,900 --> 00:00:59,670
+code over many test cases so that you can know if the code is correct or not.
+15
+
+16
+00:01:00,390 --> 00:01:02,840
+Some problems might not have an online judge.
+16
+
+17
+00:01:02,850 --> 00:01:04,750
+That's OK, just test locally with some
+17
+
+18
+00:01:04,750 --> 00:01:09,870
+personal test cases, generate a test case, run on my code, run on your code, compare between both
+18
+
+19
+00:01:09,870 --> 00:01:10,260
+of them.
+19
+
+20
+00:01:10,830 --> 00:01:12,270
+Sometimes on LeetCode,
+20
+
+21
+00:01:12,270 --> 00:01:13,860
+there is a premium problem.
+21
+
+22
+00:01:13,980 --> 00:01:17,000
+So it's a private problem, it's OK, just test locally, and so on.
+22
+
+23
+00:01:18,060 --> 00:01:22,040
+Uh, the goal of the homework is to think in an efficient way.
+23
+
+24
+00:01:22,050 --> 00:01:24,690
+So don't just solve with an easy idea.
+24
+
+25
+00:01:24,690 --> 00:01:27,720
+Try to find something that is a bit efficient.
+25
+
+26
+00:01:28,890 --> 00:01:33,660
+There are some common terminologies that you will see me using from time to time.
+26
+
+27
+00:01:33,990 --> 00:01:38,790
+One of them is brute force, which, as simple as, means just try everything.
+27
+
+28
+00:01:40,530 --> 00:01:47,250
+Let me give you an example, let's say we'd like to find all of the triplets
+28
+
+29
+00:01:47,760 --> 00:01:54,570
+i, j, and k where each one of them has a value from 1 to 100, and their summation is one hundred twenty
+29
+
+30
+00:01:54,570 --> 00:01:54,960
+five.
+30
+
+31
+00:01:55,860 --> 00:02:01,020
+If I asked you to find a solution for this problem, you might think, OK, what about making three nested
+31
+
+32
+00:02:01,020 --> 00:02:13,980
+loops, loop i over i from 1 to 100, loop j, loop k, and then you sum i+j+k, and compare with 125.
+32
+
+33
+00:02:15,060 --> 00:02:15,750
+This is good,
+33
+
+34
+00:02:17,020 --> 00:02:23,250
+but a bit slow, but the moral of that is it tries everything. With some basic thinking,
+34
+
+35
+00:02:23,260 --> 00:02:28,660
+you can notice that we don't need the third loop, and we can end up with only two loops to solve the problem.
+35
+
+36
+00:02:28,960 --> 00:02:32,020
+Now, this is still a brute force, but more efficient than that one.
+36
+
+37
+00:02:32,020 --> 00:02:34,120
+It doesn't try really everything, it tries
+37
+
+38
+00:02:34,150 --> 00:02:35,110
+most of the things.
+38
+
+39
+00:02:35,680 --> 00:02:39,580
+So anyway the word brute force means try everything.
+39
+
+40
+00:02:40,660 --> 00:02:47,440
+The second keyword is Ad-hoc, and Ad-hoc means there are no well-known algorithms for this problem.
+40
+
+41
+00:02:47,770 --> 00:02:53,500
+During the course, we will study many popular algorithms, but some of the problems that you will meet in
+41
+
+42
+00:02:53,500 --> 00:02:58,600
+the literature, in the online judges, doesn't have a specific solution for them.
+42
+
+43
+00:02:58,600 --> 00:03:00,700
+Doesn't have a specific well-known algorithm for them.
+43
+
+44
+00:03:01,000 --> 00:03:03,100
+We invent our own algorithm for them.
+44
+
+45
+00:03:03,310 --> 00:03:05,260
+We call them ad-hoc problems.
+45
+
+46
+00:03:05,690 --> 00:03:09,400
+Ad-hoc problems are typically harder than normal problems.
+46
+
+47
+00:03:09,430 --> 00:03:09,910
+Why?
+47
+
+48
+00:03:10,150 --> 00:03:13,090
+Because they don't have enough patterns like the other problems.
+48
+
+49
+00:03:13,870 --> 00:03:16,420
+The third word is the word greedy and greedily.
+49
+
+50
+00:03:17,110 --> 00:03:19,960
+Greedy is a well-known algorithmic topic.
+50
+
+51
+00:03:22,900 --> 00:03:29,200
+The good news is there are a lot of problems that can be solved with your basic logic and basic thinking,
+51
+
+52
+00:03:29,200 --> 00:03:33,520
+and actually what's behind the scene is kind of a greedy algorithm.
+52
+
+53
+00:03:34,300 --> 00:03:38,770
+So whenever I mentioned the word greedy, you can just replace it with the word
+53
+
+54
+00:03:38,770 --> 00:03:41,000
+logically. When I say greedily do something,
+54
+
+55
+00:03:41,020 --> 00:03:47,080
+It just means logically do something, which in a way or another, we mean just basic thinking and
+55
+
+56
+00:03:47,440 --> 00:03:48,600
+basic logic will do it.
+56
+
+57
+00:03:48,610 --> 00:03:50,320
+Just basic observations.
+57
+
+58
+00:03:50,740 --> 00:04:01,900
+Later, we will study the greedy topic to find some problems where there are more explicit fundamentals,
+58
+
+59
+00:04:01,900 --> 00:04:06,580
+theoretical fundamentals are needed to solve the problem or to prove its correctness.
+59
+
+60
+00:04:06,910 --> 00:04:09,490
+But there are a lot of problems that don't require that.
+60
+
+61
+00:04:09,940 --> 00:04:16,120
+You will notice that many greedy problems start with the sorting step, so the sorting step facilitates
+61
+
+62
+00:04:16,120 --> 00:04:18,100
+many of the greedy algorithms.
+62
+
+63
+00:04:19,990 --> 00:04:25,600
+Finally, in this section, I would like you to use always the built-in sort as much as you can when
+63
+
+64
+00:04:25,600 --> 00:04:26,350
+it's convenient.
+64
+
+65
+00:04:26,650 --> 00:04:32,740
+To compute your total time complexity, you can assume the sort is O(nlogn), and the memory complexity
+65
+
+66
+00:04:32,740 --> 00:04:37,450
+is O(1). You can find the sort function in the algorithm, and
+66
+
+67
+00:04:37,450 --> 00:04:40,540
+if you need the limits, you can find them in the climits.
+67
+
+68
+00:04:41,470 --> 00:04:44,290
+Now let's move to our problems.
+68
+
+69
+00:04:44,650 --> 00:04:46,510
+And here is a very important tip for you.
+69
+
+70
+00:04:47,140 --> 00:04:50,540
+Don't take this course in a very passive way.
+70
+
+71
+00:04:50,920 --> 00:04:52,240
+Algorithms need active
+71
+
+72
+00:04:52,240 --> 00:04:53,650
+guys, need engagements.
+72
+
+73
+00:04:53,890 --> 00:04:55,400
+When I tell you here is the problem,
+73
+
+74
+00:04:55,420 --> 00:04:56,050
+stop the video,
+74
+
+75
+00:04:56,060 --> 00:04:58,090
+go to this problem by yourself,
+75
+
+76
+00:04:58,240 --> 00:05:00,820
+read it once or twice or even three times.
+76
+
+77
+00:05:01,090 --> 00:05:02,590
+Read the test cases by yourself.
+77
+
+78
+00:05:02,830 --> 00:05:04,900
+Try to understand the problem by yourself.
+78
+
+79
+00:05:05,380 --> 00:05:11,200
+Put this effort by yourself. This is going to improve this kind of comprehension skills on your side.
+79
+
+80
+00:05:12,010 --> 00:05:17,800
+Especially, you will notice that you might be very good in English,
+80
+
+81
+00:05:17,950 --> 00:05:20,440
+Meanwhile, you read the problem and you do not understand it.
+81
+
+82
+00:05:20,860 --> 00:05:21,730
+It takes time.
+82
+
+83
+00:05:22,060 --> 00:05:24,190
+So try to take always these steps.
+83
+
+84
+00:05:24,220 --> 00:05:25,570
+Don't wait for me.
+84
+
+85
+00:05:25,600 --> 00:05:28,600
+Go ahead, read, understand, and then come back here to verify.
+85
+
+86
+00:05:29,500 --> 00:05:32,590
+Sometimes even I might not explain the problem in a complete way.
+86
+
+87
+00:05:33,220 --> 00:05:36,610
+So always go and be active and understand the problem by yourself.
+87
+
+88
+00:05:38,850 --> 00:05:41,760
+The first problem is the minimum absolute difference problem.
+88
+
+89
+00:05:41,790 --> 00:05:46,440
+The idea is as following, we have an array of distinct numbers.
+89
+
+90
+00:05:46,500 --> 00:05:47,190
+Be careful.
+90
+
+91
+00:05:47,880 --> 00:05:55,600
+We would like to find all of the pairs in an array such that
+91
+
+92
+00:05:56,520 --> 00:05:59,220
+they have the minimum absolute difference between any two elements.
+92
+
+93
+00:05:59,250 --> 00:06:00,010
+What does it mean?
+93
+
+94
+00:06:00,690 --> 00:06:05,610
+Let's say we have maybe four or five elements.
+94
+
+95
+00:06:05,970 --> 00:06:09,900
+Try every pair of them and get the minimum absolute difference between all of them.
+95
+
+96
+00:06:10,500 --> 00:06:12,920
+Now go back and find all of these elements
+96
+
+97
+00:06:12,920 --> 00:06:15,930
+that have the same minimum absolute difference.
+97
+
+98
+00:06:16,500 --> 00:06:18,930
+The minimum absolute difference is just |a - b|.
+98
+
+99
+00:06:20,130 --> 00:06:24,380
+For example, if the difference is minus three, then the min absolute difference of minus three is just
+99
+
+100
+00:06:24,390 --> 00:06:24,780
+three.
+100
+
+101
+00:06:25,530 --> 00:06:27,270
+This is the function name that you should develop.
+101
+
+102
+00:06:27,660 --> 00:06:30,630
+It takes a vector and returns vector of vector.
+102
+
+103
+00:06:30,630 --> 00:06:32,010
+What is this internal vector?
+103
+
+104
+00:06:32,040 --> 00:06:37,290
+It is just containing two elements of the pair, and we would like to find O(nlogn)
+104
+
+105
+00:06:37,350 --> 00:06:40,650
+element. Let's see the examples in case you are confused,
+105
+
+106
+00:06:40,800 --> 00:06:44,970
+I expect that. Here are four numbers in the input array.
+106
+
+107
+00:06:45,360 --> 00:06:46,710
+How many pairs we have?
+107
+
+108
+00:06:47,910 --> 00:06:53,370
+We have a pair from one to two and a pair from one to three,
+108
+
+109
+00:06:53,550 --> 00:06:55,140
+and a pair from one to four,
+109
+
+110
+00:06:55,620 --> 00:06:57,660
+and we have a pair from two to three,
+110
+
+111
+00:06:57,960 --> 00:06:59,820
+a pair from two to four, and a pair from three to four.
+111
+
+112
+00:06:59,850 --> 00:07:01,110
+So how many pairs in total?
+112
+
+113
+00:07:02,010 --> 00:07:07,320
+One, two, three, four, five, six, around six pairs, which are (4*3) / 2.
+113
+
+114
+00:07:09,710 --> 00:07:16,190
+Now, among all of these pairs, compute the absolute difference and get the minimum
+114
+
+115
+00:07:16,190 --> 00:07:16,700
+one of them.
+115
+
+116
+00:07:16,820 --> 00:07:20,290
+You will notice the minimum is one. After you're done with that,
+116
+
+117
+00:07:20,300 --> 00:07:26,690
+find the pairs that have this minimum, which are [1, 2], and [2, 3], and [3, 4] because
+117
+
+118
+00:07:26,690 --> 00:07:30,110
+these three pairs like |3 - 4| is one.
+118
+
+119
+00:07:31,140 --> 00:07:40,230
+So two steps, one is to find the minimum, and two is to find the pairs that have this minimum value.
+119
+
+120
+00:07:42,320 --> 00:07:43,460
+The second problem.
+120
+
+121
+00:07:44,780 --> 00:07:47,720
+We are given an array of values.
+121
+
+122
+00:07:48,320 --> 00:07:54,680
+We would like to build a triangle from them such that it has the largest perimeter of a triangle.
+122
+
+123
+00:07:54,860 --> 00:08:00,740
+So in this case here, this triangle has two, one, two here, the total sum is five.
+123
+
+124
+00:08:01,670 --> 00:08:05,120
+And this is the only valid triangle here. In this case
+124
+
+125
+00:08:05,120 --> 00:08:06,620
+here, we have more triangles.
+125
+
+126
+00:08:06,620 --> 00:08:09,920
+We have different ways to make triangles here.
+126
+
+127
+00:08:10,490 --> 00:08:11,690
+Now there is a point here.
+127
+
+128
+00:08:12,260 --> 00:08:15,220
+Some triangles, as we know, aren't valid. Please
+128
+
+129
+00:08:15,230 --> 00:08:16,180
+google the internet,
+129
+
+130
+00:08:16,190 --> 00:08:19,340
+What makes an array of edges or sides
+130
+
+131
+00:08:19,460 --> 00:08:21,230
+abc a valid triangle?
+131
+
+132
+00:08:21,710 --> 00:08:28,460
+So you should focus only on the valid triangles. If you cannot find any valid triangles, just return
+132
+
+133
+00:08:28,460 --> 00:08:28,790
+zero.
+133
+
+134
+00:08:29,240 --> 00:08:34,520
+Otherwise, among all of the different possible valid triangles, we need the one that has the largest
+134
+
+135
+00:08:34,520 --> 00:08:40,460
+perimeter. The array size will be always valid, so greater than or equal three. Again, develop
+135
+
+136
+00:08:40,850 --> 00:08:41,840
+(nlogn) approach.
+136
+
+137
+00:08:45,130 --> 00:08:51,910
+The third problem is as following, you are given 2n integers, you will group them in pairs.
+137
+
+138
+00:08:52,150 --> 00:08:54,970
+So here is the first pair, the second pair, and the third pair.
+138
+
+139
+00:08:55,540 --> 00:08:57,790
+There is an operation that we will apply, the operation
+139
+
+140
+00:08:57,790 --> 00:09:03,520
+is as following, you will get first the minimum of every pair, and then sum all of these minimums.
+140
+
+141
+00:09:04,060 --> 00:09:08,170
+So, yeah, we will see an example.
+141
+
+142
+00:09:09,370 --> 00:09:12,530
+Now we can make the grouping in many, many different ways.
+142
+
+143
+00:09:12,550 --> 00:09:15,670
+We would like to find a way that maximizes the answer.
+143
+
+144
+00:09:17,140 --> 00:09:21,610
+Now, I would like to tell you something, in the previous problem, we're finding the largest
+144
+
+145
+00:09:21,710 --> 00:09:22,810
+perimeter, in this one,
+145
+
+146
+00:09:22,810 --> 00:09:24,170
+you're finding the largest
+146
+
+147
+00:09:24,200 --> 00:09:30,670
+sum. These kinds of problems are called optimization problems, which mean we find the best solution
+147
+
+148
+00:09:30,940 --> 00:09:36,520
+among all of the feasible solutions, which typically here in competitive programming, usually
+148
+
+149
+00:09:36,520 --> 00:09:37,930
+the minimum or the maximum value.
+149
+
+150
+00:09:38,170 --> 00:09:43,000
+So these kinds of problems that we find the minimum and maximum things are actually optimization problems.
+150
+
+151
+00:09:43,660 --> 00:09:51,100
+The second thing here, when I tell you to read an array of 2n numbers,
+151
+
+152
+00:09:59,790 --> 00:10:02,910
+It means we have actually even numbers of items.
+152
+
+153
+00:10:03,600 --> 00:10:06,540
+So here we have 2n numbers.
+153
+
+154
+00:10:06,960 --> 00:10:12,060
+If I give you an array of eight numbers, it just means n itself is four.
+154
+
+155
+00:10:12,420 --> 00:10:15,110
+So the word 2n just means even number of values.
+155
+
+156
+00:10:15,780 --> 00:10:18,930
+Let's see an example if you are confused from the problem statement.
+156
+
+157
+00:10:20,580 --> 00:10:23,550
+Here we have four values, [1, 4, 3, 2].
+157
+
+158
+00:10:25,160 --> 00:10:31,940
+Now, there are different ways to make groups of them, so one way is to group (1, 4), group (2, 3)
+158
+
+159
+00:10:31,940 --> 00:10:32,630
+together.
+159
+
+160
+00:10:33,850 --> 00:10:38,680
+After that, you get the minimum of one and four, which is one, minimum of two and three, which is
+160
+
+161
+00:10:38,680 --> 00:10:41,260
+two. Now the sum of one and two is three.
+161
+
+162
+00:10:41,890 --> 00:10:44,680
+And this is another way to group, and this is the third way to group.
+162
+
+163
+00:10:45,070 --> 00:10:47,400
+Now we get the minimum of every pair and sum.
+163
+
+164
+00:10:47,410 --> 00:10:51,160
+We got three and three and four. Which one is the maximum? Four.
+164
+
+165
+00:10:51,730 --> 00:10:52,000
+.
+165
+
+166
+00:10:52,420 --> 00:11:00,460
+So the summary of the problem is to find a way to group pairs such that the minimum of every group,
+166
+
+167
+00:11:02,750 --> 00:11:08,690
+and the summation of these minimums is maximum, we usually use this arrow up to mean maximize, arrow
+167
+
+168
+00:11:08,690 --> 00:11:10,240
+down to mean minimize.
+168
+
+169
+00:11:10,280 --> 00:11:12,140
+So this is mainly the problem.
+169
+
+170
+00:11:16,880 --> 00:11:23,210
+Problem number five, something is called wiggleSort. You will take an array of numbers, find
+170
+
+171
+00:11:23,210 --> 00:11:28,910
+any way to make it a wiggle sort. What is a wiggle sort? The first number is less than or equal
+171
+
+172
+00:11:28,910 --> 00:11:33,580
+the second number, which is greater than the third, which is less than the fourth, and so on.
+172
+
+173
+00:11:33,590 --> 00:11:37,820
+So it's like a kind of up, down, up, down, up, down, up, down, up, down.
+173
+
+174
+00:11:39,500 --> 00:11:44,420
+Here is an example if I give you this array, there are many wiggle sort arrays here, so this is one of
+174
+
+175
+00:11:44,420 --> 00:11:44,720
+them.
+175
+
+176
+00:11:45,170 --> 00:11:48,500
+As you see, three is less than or equal five, which is greater than or equal
+176
+
+177
+00:11:48,500 --> 00:11:52,160
+one, less than or equal six, greater than or equal two, less than or equal four,
+177
+
+178
+00:11:52,190 --> 00:11:52,760
+and so on.
+178
+
+179
+00:11:54,320 --> 00:11:59,570
+So you will be given an array and find any of these wiggle sort arrays. It is guaranteed that there
+179
+
+180
+00:11:59,570 --> 00:12:00,250
+is a solution.
+180
+
+181
+00:12:00,260 --> 00:12:03,860
+If you are building your own test cases, don't build an invalid test case.
+181
+
+182
+00:12:06,240 --> 00:12:11,100
+The fifth problem has a very lengthy text, but let me give you some insights about it.
+182
+
+183
+00:12:11,430 --> 00:12:13,260
+Please, go ahead and read it very carefully.
+183
+
+184
+00:12:14,220 --> 00:12:18,120
+We are in a city, so I am in a city here, this is my city.
+184
+
+185
+00:12:20,720 --> 00:12:23,360
+And I have a gun.
+185
+
+186
+00:12:27,930 --> 00:12:31,620
+And there are some monsters who are coming to my city.
+186
+
+187
+00:12:31,980 --> 00:12:34,410
+So let's say we have one monster here,
+187
+
+188
+00:12:36,150 --> 00:12:38,820
+and one monster here, and one monster here.
+188
+
+189
+00:12:40,200 --> 00:12:46,530
+This monster is far maybe, let's say, five kilometers from the city.
+189
+
+190
+00:12:46,890 --> 00:12:52,020
+This one is far eight kilometers from the city, and this one is far sixteen kilometers from the city.
+190
+
+191
+00:12:53,010 --> 00:13:00,810
+kilometers per minute, now in each minute, I can kill only
+191
+
+192
+00:13:00,810 --> 00:13:01,530
+one of them.
+192
+
+193
+00:13:02,010 --> 00:13:06,750
+I would like to kill as much as I can from them before reaching the city.
+193
+
+194
+00:13:07,200 --> 00:13:09,840
+Now, each one of these monsters has a speed.
+194
+
+195
+00:13:10,320 --> 00:13:13,170
+So let's say that this monster has a speed of one.
+195
+
+196
+00:13:13,620 --> 00:13:16,980
+It means in every one minute, it just moves one kilo.
+196
+
+197
+00:13:17,700 --> 00:13:21,630
+So this one will reach me after five kilometers.
+197
+
+198
+00:13:22,380 --> 00:13:25,500
+Let's say that this one has a speed of four.
+198
+
+199
+00:13:26,040 --> 00:13:29,000
+It means after one minute, it is here, and another minute, it's here.
+199
+
+200
+00:13:29,010 --> 00:13:30,660
+So it takes two minutes only to reach me.
+200
+
+201
+00:13:31,440 --> 00:13:36,420
+Let's say that this one has a speed of, uh, four, for example.
+201
+
+202
+00:13:36,900 --> 00:13:43,080
+Then after four minutes, he can reach me. Once any of them reached the city, the city will
+202
+
+203
+00:13:43,080 --> 00:13:47,880
+be destroyed. So I would like to kill as much as I can from these monsters in this problem.
+203
+
+204
+00:13:48,120 --> 00:13:51,340
+So this is mainly the problem.
+204
+
+205
+00:13:51,930 --> 00:13:53,250
+So here are the distances,
+205
+
+206
+00:13:53,250 --> 00:13:57,240
+initial distances in km, and here are the initial speeds of them.
+206
+
+207
+00:13:57,750 --> 00:13:59,250
+I would like to kill as much as I can.
+207
+
+208
+00:13:59,550 --> 00:14:01,950
+So in the first minute, I can kill the first one.
+208
+
+209
+00:14:02,920 --> 00:14:06,970
+Now, in the second minute, the first one becomes closer at two.
+209
+
+210
+00:14:07,390 --> 00:14:08,800
+And the third one becomes closer at
+210
+
+211
+00:14:08,900 --> 00:14:09,340
+three.
+211
+
+212
+00:14:09,880 --> 00:14:13,720
+Now I can kill this one now here because they didn't reach the city yet.
+212
+
+213
+00:14:14,660 --> 00:14:21,950
+Now, after that, we have this one at two, so after every minute, you have to update the new distance
+213
+
+214
+00:14:21,950 --> 00:14:23,810
+of the monster, and so on.
+214
+
+215
+00:14:24,200 --> 00:14:30,260
+So for example, here in [3, 2, 4], you might, for example, try to kill the first one, in
+215
+
+216
+00:14:30,260 --> 00:14:32,930
+the first minute so you killed this one.
+216
+
+217
+00:14:33,900 --> 00:14:34,320
+Now,
+217
+
+218
+00:14:36,090 --> 00:14:41,490
+the speed of the second one here is three, and he is already at two.
+218
+
+219
+00:14:41,820 --> 00:14:47,640
+This means directly after one minute he is already in the city, so he is going to destroy the city.
+219
+
+220
+00:14:47,640 --> 00:14:50,880
+So I can kill only in maximum one of them.
+220
+
+221
+00:14:52,880 --> 00:15:01,160
+The next problem is as following, we are given an array is named nums and some integer k.
+221
+
+222
+00:15:01,460 --> 00:15:04,820
+And there is an operation that we will use to modify the array as following.
+222
+
+223
+00:15:05,360 --> 00:15:11,510
+Every time we apply the operation, we find some index i and multiply it with negative one.
+223
+
+224
+00:15:13,460 --> 00:15:19,580
+Now we need to apply this operation k times, and also the same index can be used multiple times.
+224
+
+225
+00:15:21,120 --> 00:15:27,170
+What is the goal? We would like to maximize the possible sum. So find your way to apply this operation
+225
+
+226
+00:15:27,180 --> 00:15:31,110
+k times such that the modified array has the maximum sum.
+226
+
+227
+00:15:31,770 --> 00:15:33,030
+So let's see an example here.
+227
+
+228
+00:15:34,910 --> 00:15:36,470
+We have only k = 1.
+228
+
+229
+00:15:37,220 --> 00:15:41,450
+Logically, you would like to take the minimum among all of them and just multiply it with negative one.
+229
+
+230
+00:15:41,450 --> 00:15:43,400
+So you get over all these ones here.
+230
+
+231
+00:15:43,670 --> 00:15:44,810
+So multiply all of them,
+231
+
+232
+00:15:44,810 --> 00:15:47,360
+you get just five as a summation.
+232
+
+233
+00:15:48,430 --> 00:15:49,930
+Um...
+233
+
+234
+00:15:51,010 --> 00:15:54,100
+Here you have to apply it three times.
+234
+
+235
+00:15:55,550 --> 00:15:59,030
+Now, if you choose the following indices one, two, and two.
+235
+
+236
+00:15:59,660 --> 00:16:05,720
+So if you choose index number one and you applied on it one times, so it's going to be
+236
+
+237
+00:16:06,110 --> 00:16:06,470
+one.
+237
+
+238
+00:16:07,970 --> 00:16:14,030
+And if you choose index two to apply it two times, zero anyway is going to be zero. If you choose this
+238
+
+239
+00:16:14,030 --> 00:16:16,510
+one to apply two times, it is going to remain two.
+239
+
+240
+00:16:16,700 --> 00:16:19,250
+So the summation is six, and so on.
+240
+
+241
+00:16:20,060 --> 00:16:20,570
+That's all.

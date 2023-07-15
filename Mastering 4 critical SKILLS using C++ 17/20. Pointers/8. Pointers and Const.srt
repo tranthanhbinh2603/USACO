@@ -1,0 +1,189 @@
+0
+1
+00:00:00,990 --> 00:00:04,440
+There are three cases when it comes to using constants with pointers.
+1
+
+2
+00:00:04,920 --> 00:00:10,470
+The first case is when we define a pointer to constant. Let's first define two values here val1 and
+2
+
+3
+00:00:10,520 --> 00:00:13,980
+val2, and they are just have values.
+3
+
+4
+00:00:14,580 --> 00:00:24,150
+Now, if you defined const in val3 equal 40. What we know is that if you decided that val3 be
+4
+
+5
+00:00:24,150 --> 00:00:26,160
+40, you cannot later change its value.
+5
+
+6
+00:00:26,850 --> 00:00:33,270
+Remember what we said before when I defined integer val, I need an integer pointer to look at it. If I
+6
+
+7
+00:00:33,270 --> 00:00:40,830
+defined double val, I need a double pointer to point out at it. If I defined const integer val, I need
+7
+
+8
+00:00:41,160 --> 00:00:46,500
+a const integer pointer to look at it because I want to guarantee that the value will not be changed
+8
+
+9
+00:00:46,500 --> 00:00:47,790
+even through a pointer.
+9
+
+10
+00:00:48,180 --> 00:00:53,940
+So now let's define a const integer pointer ptr looking to val1, which is just an integer
+10
+
+11
+00:00:53,940 --> 00:00:54,220
+value.
+11
+
+12
+00:00:55,020 --> 00:00:57,870
+Here is the thing, you can do something and you cannot do another.
+12
+
+13
+00:00:58,080 --> 00:01:03,720
+What you can do is changing the value of this pointer, changing the value of where it points to,
+13
+
+14
+00:01:04,320 --> 00:01:06,880
+even if this val was a normal value.
+14
+
+15
+00:01:07,050 --> 00:01:13,460
+So regardless of its value ( val1 or val3 which is an integer and const-int ), you cannot change
+15
+
+16
+00:01:13,470 --> 00:01:13,980
+its value.
+16
+
+17
+00:01:14,370 --> 00:01:19,730
+But you can change where the pointer itself is looking. So I can change from val1 to val2,
+17
+
+18
+00:01:19,740 --> 00:01:21,030
+val2 to val3 as I would like.
+18
+
+19
+00:01:21,300 --> 00:01:26,910
+But with every change..., I cannot change where the pointer
+19
+
+20
+00:01:26,910 --> 00:01:27,600
+is looking at.
+20
+
+21
+00:01:28,710 --> 00:01:35,130
+The second thing is interesting, you know, defining it as an integer pointer const. In the previous slide,
+21
+
+22
+00:01:35,130 --> 00:01:37,360
+we define it as const integer pointer.
+22
+
+23
+00:01:37,800 --> 00:01:38,820
+Now we are switching.
+23
+
+24
+00:01:38,820 --> 00:01:42,580
+It is an integer pointer const. This is a constant pointer.
+24
+
+25
+00:01:43,020 --> 00:01:49,760
+This means that once you are defining the pointer, you cannot change the pointer itself.
+25
+
+26
+00:01:50,100 --> 00:01:53,400
+So I cannot come back here and say p2 equals reference val2.
+26
+
+27
+00:01:53,460 --> 00:01:57,960
+I cannot change the pointer itself, but I can change its value.
+27
+
+28
+00:01:58,560 --> 00:02:05,870
+So the pointer to constant, you change the pointer but cannot change the value where it points to. In const to
+28
+
+29
+00:02:05,940 --> 00:02:08,550
+the pointer, you can change where it points to,
+29
+
+30
+00:02:08,670 --> 00:02:10,230
+but you cannot change
+30
+
+31
+00:02:12,270 --> 00:02:15,110
+the pointer address itself, the value of the pointer itself.
+31
+
+32
+00:02:16,160 --> 00:02:19,050
+In a third case, you are defining it to be constant
+32
+
+33
+00:02:19,050 --> 00:02:20,030
+pointer to constant.
+33
+
+34
+00:02:20,280 --> 00:02:23,000
+So here you see a very weird syntax, const,
+34
+
+35
+00:02:23,250 --> 00:02:26,890
+integer, pointer, const ptr equals some value.
+35
+
+36
+00:02:27,120 --> 00:02:29,400
+Now you cannot do what you changed.
+36
+
+37
+00:02:29,640 --> 00:02:32,220
+So we have three variants for that.
+37
+
+38
+00:02:32,400 --> 00:02:32,880
+That's it.

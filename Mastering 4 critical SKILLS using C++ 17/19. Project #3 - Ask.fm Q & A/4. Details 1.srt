@@ -1,0 +1,414 @@
+0
+1
+00:00:01,050 --> 00:00:03,100
+Let's get into more details.
+1
+
+2
+00:00:03,930 --> 00:00:12,360
+Let's focus on the user manager, the user manager here has a constructor which is has a last ID
+2
+
+3
+00:00:12,360 --> 00:00:13,650
+initialized to zero.
+3
+
+4
+00:00:14,100 --> 00:00:18,300
+As we learned, we have to provide every user just an ID.
+4
+
+5
+00:00:18,780 --> 00:00:23,810
+And we have here a map from the current user name to the actual user object.
+5
+
+6
+00:00:23,820 --> 00:00:29,390
+And I'm defining here a user object to use with every new user.
+6
+
+7
+00:00:30,180 --> 00:00:36,570
+The system starts with loading the database, which simply starts with clearing the data.
+7
+
+8
+00:00:37,380 --> 00:00:45,360
+The reason behind clearing the data is I will be calling now the method LoadDatabase several times so
+8
+
+9
+00:00:45,360 --> 00:00:54,330
+in every time I'm clearing all the data and I start to go to this read file lines function with the user
+9
+
+10
+00:00:54,330 --> 00:01:02,310
+text to read the file for me with every line in the file, I create a user object and then add a map from
+10
+
+11
+00:01:02,310 --> 00:01:04,320
+user name to the actual user.
+11
+
+12
+00:01:04,830 --> 00:01:11,400
+And also I keep maximizing between the current last ID and the user ID from the guy, which is just
+12
+
+13
+00:01:11,400 --> 00:01:12,290
+incrementing it.
+13
+
+14
+00:01:12,780 --> 00:01:15,420
+So that's how we simply load the data from the database.
+14
+
+15
+00:01:17,300 --> 00:01:24,830
+And as we learned, access is just giving a choice between login and sign up. in the Login function,
+15
+
+16
+00:01:24,830 --> 00:01:26,420
+we load the database again.
+16
+
+17
+00:01:26,420 --> 00:01:27,590
+Why I do that?
+17
+
+18
+00:01:27,980 --> 00:01:35,690
+Because I want to if there are multiple sessions, I would like the system to be like feeling with
+18
+
+19
+00:01:35,690 --> 00:01:36,260
+the changes.
+19
+
+20
+00:01:36,290 --> 00:01:40,730
+That's why if someone added a user, I will probably feel it here.
+20
+
+21
+00:01:42,270 --> 00:01:44,420
+In reality, things are handled in a different way.
+21
+
+22
+00:01:44,420 --> 00:01:50,900
+But this is a good trial for now in terms of a console program, the program keeps
+22
+
+23
+00:01:50,900 --> 00:01:57,320
+reading a username and password from the user and we double check if the user have this username or
+23
+
+24
+00:01:57,320 --> 00:01:57,670
+not.
+24
+
+25
+00:01:57,800 --> 00:02:03,160
+So to do that, I take the user name to the map and count the number of people with this username.
+25
+
+26
+00:02:03,680 --> 00:02:09,410
+If the answer is zero, I say that this is an invalid user name and then we continue to try again.
+26
+
+27
+00:02:10,190 --> 00:02:10,790
+if It isn't.
+27
+
+28
+00:02:10,790 --> 00:02:11,650
+we keep going.
+28
+
+29
+00:02:12,080 --> 00:02:18,350
+Now, let's get the user existing at the moment, which is, by the way, copy here and then the
+29
+
+30
+00:02:18,350 --> 00:02:23,630
+user_exist would be compared with the current password if it doesn't match.
+30
+
+31
+00:02:23,630 --> 00:02:28,940
+We again say that the user name or the password is wrong, otherwise, we continue.
+31
+
+32
+00:02:30,260 --> 00:02:36,350
+If these are is done with both cases, we take the current_user to match the user_exist.
+32
+
+33
+00:02:36,620 --> 00:02:43,490
+So every session, once the user logged in, will have the current_user as the object available.
+33
+
+34
+00:02:43,490 --> 00:02:48,740
+in the UsersManager. observe that, this map is focusing on all of the available users.
+34
+
+35
+00:02:49,130 --> 00:02:52,010
+But this object is available about the current_user.
+35
+
+36
+00:02:52,850 --> 00:03:00,410
+By the way, when you always access a website with a username or password that are invalid we don't tell
+36
+
+37
+00:03:00,410 --> 00:03:05,390
+user, most of the time it's a problem if the user name or the password for more security.
+37
+
+38
+00:03:05,540 --> 00:03:11,540
+We just say that either one of these two guys is invalid and someone might say that the username is
+38
+
+39
+00:03:11,540 --> 00:03:13,610
+invalid and here the password is invalid.
+39
+
+40
+00:03:13,910 --> 00:03:17,210
+But we like to make it back for some security reasons.
+40
+
+41
+00:03:18,490 --> 00:03:25,420
+In the case of sign-up, we have similar logic here, we started to read the username for Simplicity.
+41
+
+42
+00:03:25,450 --> 00:03:30,970
+I'm avoiding spaces, we read the user name and the user_name shouldn't be on the map.
+42
+
+43
+00:03:31,330 --> 00:03:36,310
+So every time the user is trying to give a user name that already exists, we tell him that this is
+43
+
+44
+00:03:36,310 --> 00:03:42,030
+already used to try some other username after that we read the password, name
+44
+
+45
+00:03:42,050 --> 00:03:42,960
+the email and so on.
+45
+
+46
+00:03:43,390 --> 00:03:47,500
+In practice, we do a lot of verification about this data, but let's keep things simple.
+46
+
+47
+00:03:48,910 --> 00:03:53,830
+Once you are done with that, we give a new ID for the current user by using 
+47
+
+48
+00:03:53,830 --> 00:03:54,250
+++last_ID.
+48
+
+49
+00:03:55,140 --> 00:04:03,990
+And then we add in the map, this new user here, and after that, we update the database to add this
+49
+
+50
+00:04:04,020 --> 00:04:06,910
+new user to the file again.
+50
+
+51
+00:04:06,960 --> 00:04:10,260
+This one is helping us to make our code more parallel.
+51
+
+52
+00:04:10,920 --> 00:04:14,720
+I would like to show you something here that this linking generates .
+52
+
+53
+00:04:14,750 --> 00:04:20,730
+a bug, let's say we have two users are signing up at the same time.
+53
+
+54
+00:04:21,070 --> 00:04:23,090
+Let's say that the number of users are ten.
+54
+
+55
+00:04:23,580 --> 00:04:26,370
+So why the first one signed?
+55
+
+56
+00:04:26,640 --> 00:04:27,570
+The second one signed.
+56
+
+57
+00:04:27,570 --> 00:04:28,040
+Exactly.
+57
+
+58
+00:04:28,050 --> 00:04:31,780
+And both of them accessed this line of code at exactly the same moment.
+58
+
+59
+00:04:32,040 --> 00:04:35,970
+So both of them will have last_ID
+59
+
+60
+00:04:35,970 --> 00:04:39,420
+10. this guy will be 11 and the other parallel session will be 11.
+60
+
+61
+00:04:39,900 --> 00:04:42,990
+And then both of them will update the database with the same ID.
+61
+
+62
+00:04:43,530 --> 00:04:45,720
+If you didn't get this, this is totally OK.
+62
+
+63
+00:04:45,750 --> 00:04:53,750
+I'm just teaching you what happens in parallel session when you study parallel programming and threading,
+63
+
+64
+00:04:53,760 --> 00:04:56,760
+you will be more familiar with this issue.
+64
+
+65
+00:04:58,170 --> 00:04:59,600
+This is a sign-up method.
+65
+
+66
+00:04:59,940 --> 00:05:02,960
+And what else is the update?
+66
+
+67
+00:05:02,970 --> 00:05:11,790
+database here is just we can convert every user object to a string which will follow the structure of the
+67
+
+68
+00:05:11,790 --> 00:05:12,270
+commas.
+68
+
+69
+00:05:12,540 --> 00:05:16,320
+You should have this user constructor and this ToString function.
+69
+
+70
+00:05:16,590 --> 00:05:19,470
+Both of them should be like very relevant.
+70
+
+71
+00:05:19,710 --> 00:05:23,070
+Like this reading is parsing based on this writing.
+71
+
+72
+00:05:23,070 --> 00:05:24,930
+So they are very relevant here.
+72
+
+73
+00:05:25,440 --> 00:05:31,200
+So here the code for updating the database, you just convert the user to an ID and then you go and push
+73
+
+74
+00:05:31,200 --> 00:05:33,430
+it to the file.
+74
+
+75
+00:05:33,450 --> 00:05:38,550
+I'm creating a vector of one string and then writing all of it to the file.
+75
+
+76
+00:05:42,330 --> 00:05:44,710
+There is also some read user ID here.
+76
+
+77
+00:05:45,390 --> 00:05:45,690
+Yeah.
+77
+
+78
+00:05:45,690 --> 00:05:50,460
+Overall, I think this is the important part that I needed to do.
+78
+
+79
+00:05:50,460 --> 00:05:53,550
+This is just the printing all of 
+79
+
+80
+00:05:56,240 --> 00:06:05,150
+The current IDs in the system, this function is reading a user ID, so in practice, we will never
+80
+
+81
+00:06:05,150 --> 00:06:11,090
+have such a function because users will not have a user ID. But just for simplicity, this guy is reading
+81
+
+82
+00:06:11,090 --> 00:06:14,770
+a user id and verify that it exists in the map.
+82
+
+83
+00:06:15,800 --> 00:06:18,470
+That's all about the users manager.

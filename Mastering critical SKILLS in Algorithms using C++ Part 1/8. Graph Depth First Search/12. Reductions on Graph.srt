@@ -1,0 +1,355 @@
+1
+00:00:01,880 --> 00:00:05,840
+I would like here to share with you something a bit advanced.
+
+2
+00:00:06,920 --> 00:00:10,000
+I would like you to know about it, which is the reductions to graphs.
+
+3
+00:00:10,010 --> 00:00:10,860
+What does it mean?
+
+4
+00:00:10,880 --> 00:00:12,560
+Would the reduction has a lot of meanings.
+
+5
+00:00:13,280 --> 00:00:18,380
+Sometimes when you read the problem, let's say I'm telling you you have a matrix and this matrix has
+
+6
+00:00:18,380 --> 00:00:23,750
+a cell here and there is a treasure in and out of the cell and would like, you know, if the if the
+
+7
+00:00:23,750 --> 00:00:27,740
+man can find the treasure or not, you can see that this is a matrix.
+
+8
+00:00:27,750 --> 00:00:28,670
+Every node is there.
+
+9
+00:00:28,670 --> 00:00:31,490
+Actually, every every word is actually a node.
+
+10
+00:00:31,490 --> 00:00:34,250
+You can know that because matrices are anyway graphs.
+
+11
+00:00:34,820 --> 00:00:42,800
+Sometimes you read the problem and there is zero connection with graph theory, and you don't even think
+
+12
+00:00:42,800 --> 00:00:45,260
+that this has a relationship with graffiti at all.
+
+13
+00:00:45,980 --> 00:00:50,360
+And with some smart observations, you can model it as a graph.
+
+14
+00:00:51,680 --> 00:00:57,860
+Why this category of problems is very hard because you don't see the graph, you don't have a graph
+
+15
+00:00:57,860 --> 00:00:58,430
+problem.
+
+16
+00:00:58,430 --> 00:00:59,720
+It is invisible at all.
+
+17
+00:01:00,440 --> 00:01:03,440
+So what happened is you don't consider graphs.
+
+18
+00:01:03,770 --> 00:01:07,310
+However, it is possible using graphs.
+
+19
+00:01:09,670 --> 00:01:11,440
+Let me give you a great example here.
+
+20
+00:01:11,920 --> 00:01:20,140
+Let's say I give you a bunch of fractions here, like maybe fraction number one, equal a over B symbols
+
+21
+00:01:20,560 --> 00:01:29,770
+and the values is that say, here are four B, let's say was value number three, for example, fraction
+
+22
+00:01:29,770 --> 00:01:30,130
+two.
+
+23
+00:01:30,310 --> 00:01:35,140
+It is symbols B oversea and let's see the value is half production.
+
+24
+00:01:35,140 --> 00:01:35,560
+Three.
+
+25
+00:01:36,700 --> 00:01:40,090
+Let's say symbol C over the and the value is four.
+
+26
+00:01:41,880 --> 00:01:42,360
+And I.
+
+27
+00:01:43,450 --> 00:01:45,640
+First of all, do you see any connection with graphs?
+
+28
+00:01:46,060 --> 00:01:47,100
+Can you spot anything?
+
+29
+00:01:49,350 --> 00:01:49,760
+OK.
+
+30
+00:01:50,010 --> 00:01:57,840
+Let me ask you the task, because that is what is the fraction value of E250 know mathematically, Eovaldi
+
+31
+00:01:57,840 --> 00:02:08,380
+can be committed from, um, from if one finds, if at all times everything we can do that by our mind,
+
+32
+00:02:08,380 --> 00:02:15,570
+this is the which will be eventually like a over b times, b over c times c over the.
+
+33
+00:02:18,060 --> 00:02:23,430
+It over the which is eventually three times before 12 would half is six value.
+
+34
+00:02:24,210 --> 00:02:27,420
+Let me ask you again, do you see any connections with graphs?
+
+35
+00:02:29,220 --> 00:02:35,130
+What what if I asked you for the value of be over, for example, or anything like that?
+
+36
+00:02:36,350 --> 00:02:38,060
+You have to make a lot of resolving, right?
+
+37
+00:02:38,270 --> 00:02:39,980
+Can you see a relationship of the graph?
+
+38
+00:02:42,200 --> 00:02:42,650
+OK.
+
+39
+00:02:42,680 --> 00:02:43,670
+It is a relationship.
+
+40
+00:02:45,600 --> 00:02:48,990
+If you thought that every symbol is A..
+
+41
+00:02:49,650 --> 00:02:51,900
+So we have here A. A.
+
+42
+00:02:53,030 --> 00:02:59,990
+It would be no see, no deal, and the production value represent an inch.
+
+43
+00:03:00,290 --> 00:03:07,250
+So we have an idea from A to B with the value of three and have an edge from B to E with the value of
+
+44
+00:03:07,250 --> 00:03:08,300
+one over three.
+
+45
+00:03:09,290 --> 00:03:11,960
+And we have an edge from B to C would have.
+
+46
+00:03:13,100 --> 00:03:16,700
+And we have an edge from sea to B was one Oberhof, which is two.
+
+47
+00:03:17,240 --> 00:03:29,450
+And we have an edge of from Setoodeh with um c 2D with wood and from D to C with one over four, which
+
+48
+00:03:29,450 --> 00:03:30,620
+is zero point two five.
+
+49
+00:03:31,750 --> 00:03:32,680
+Now, this is a graph.
+
+50
+00:03:33,430 --> 00:03:33,880
+OK?
+
+51
+00:03:33,940 --> 00:03:37,420
+What is the fraction value from A to Z?
+
+52
+00:03:38,050 --> 00:03:44,980
+It equals the multiplication of the ages from eight to D so far and now the multiplication of HD, which
+
+53
+00:03:44,980 --> 00:03:46,180
+is that here is an inch.
+
+54
+00:03:46,450 --> 00:03:47,320
+It is an edge.
+
+55
+00:03:47,500 --> 00:03:48,400
+There is an edge.
+
+56
+00:03:48,760 --> 00:03:51,580
+The answer is three times half times four.
+
+57
+00:03:52,210 --> 00:03:53,230
+What about that?
+
+58
+00:03:54,210 --> 00:04:00,340
+The answer from what is the value of C over eight, for example, is again, it is a best two.
+
+59
+00:04:00,670 --> 00:04:01,780
+And here is the best two.
+
+60
+00:04:01,930 --> 00:04:07,330
+So we can see that the answer of C over eight is just two over three.
+
+61
+00:04:09,280 --> 00:04:16,210
+Now you see, we can even with fractions in a very nice and easy way with just finding a better multiplying
+
+62
+00:04:16,210 --> 00:04:16,990
+its values.
+
+63
+00:04:18,670 --> 00:04:24,850
+So the key here is it's very hard to see that this problem is a graft problem.
+
+64
+00:04:24,970 --> 00:04:26,560
+Very, very hard, the problem.
+
+65
+00:04:26,740 --> 00:04:30,700
+But you see someone can spot that this is an edge and this is an engine, this is an edge.
+
+66
+00:04:31,780 --> 00:04:33,340
+Let me give you another problem.
+
+67
+00:04:37,280 --> 00:04:38,630
+This is a geometric problem.
+
+68
+00:04:39,410 --> 00:04:46,130
+Can you model it as a graph like assume that I'm asking you for the for the maybe, maybe this distance
+
+69
+00:04:46,130 --> 00:04:46,670
+or anything?
+
+70
+00:04:46,670 --> 00:04:47,900
+I will not go into details here.
+
+71
+00:04:50,780 --> 00:04:51,740
+What is the graph?
+
+72
+00:04:53,480 --> 00:04:59,840
+If you started to think about the intersection points here, like this point here, this one here,
+
+73
+00:04:59,960 --> 00:05:06,680
+this one here, this one here, maybe also this one here, this one here, you can think of this intersection,
+
+74
+00:05:06,680 --> 00:05:13,190
+but this may be as a graph and connections between them as it just that has some distance.
+
+75
+00:05:13,550 --> 00:05:17,930
+I know the folly of imagination and treatment of the problem isn't clear because I don't give details,
+
+76
+00:05:18,200 --> 00:05:19,340
+but I wanted to tell you.
+
+77
+00:05:19,520 --> 00:05:25,070
+You see how very far from graph theory, but you can spot some graph relationship.
+
+78
+00:05:25,760 --> 00:05:31,610
+It needs a lot of smartness and a lot of creativity so that you can figure out where are the graphs.
+
+79
+00:05:32,840 --> 00:05:34,440
+So there are no rules for that.
+
+80
+00:05:34,460 --> 00:05:37,610
+I cannot write for you some rules or even better for that.
+
+81
+00:05:37,790 --> 00:05:39,920
+This is one of the hardest types of problems.
+
+82
+00:05:40,250 --> 00:05:46,250
+And even practically speaking, there are a few problems that will have this this idea.
+
+83
+00:05:47,540 --> 00:05:50,120
+It happens a lot that we can like.
+
+84
+00:05:50,240 --> 00:05:50,720
+Maybe.
+
+85
+00:05:51,020 --> 00:05:56,270
+Generally speaking, we have some problem and we see that this problem can be represented as a graph
+
+86
+00:05:56,630 --> 00:06:01,700
+or maybe have a problem and see that this problem maybe can represent it as a geometry problems.
+
+87
+00:06:02,480 --> 00:06:08,600
+Uh, yeah, this kind of reduction is one of the hardest skills ever, and it takes a lot of time and
+
+88
+00:06:08,600 --> 00:06:10,430
+experience to develop them.
+
+89
+00:06:11,100 --> 00:06:11,450
+Solve.

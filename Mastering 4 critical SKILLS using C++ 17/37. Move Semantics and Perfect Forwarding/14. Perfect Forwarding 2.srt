@@ -1,0 +1,479 @@
+1
+00:00:01,050 --> 00:00:03,170
+Let's continue the perfect wording.
+
+2
+00:00:05,280 --> 00:00:10,860
+Let's go back to the forwarding problem, and this is as simple as now the solution using the forwarding
+
+3
+00:00:10,860 --> 00:00:17,670
+reference idea, instead of providing a constructor for every different case, we are going to use three
+
+4
+00:00:17,670 --> 00:00:23,220
+template parameters here, one for the full name, one for the nickname and one for the address, and
+
+5
+00:00:23,220 --> 00:00:25,570
+then one would like to initialize the full name.
+
+6
+00:00:25,590 --> 00:00:27,270
+We are going to use the forward with it.
+
+7
+00:00:27,540 --> 00:00:28,380
+Forward here.
+
+8
+00:00:28,530 --> 00:00:29,270
+Forward here.
+
+9
+00:00:29,520 --> 00:00:36,510
+This way, the constructor is able to receive the different types of up to eight cases because up to
+
+10
+00:00:36,510 --> 00:00:38,360
+eight cases are going to be generated for you.
+
+11
+00:00:38,850 --> 00:00:40,980
+The second with the forwarding function.
+
+12
+00:00:40,990 --> 00:00:46,190
+If you received here and our value reference, it will be assigned to this guy was a constructor if
+
+13
+00:00:46,200 --> 00:00:46,770
+it is available.
+
+14
+00:00:47,010 --> 00:00:51,590
+And if you received an elevated reference, this guy will be initialized with a copy constructor.
+
+15
+00:00:51,870 --> 00:00:55,960
+So with these two guys, we solved with the perfect routing problem.
+
+16
+00:00:56,490 --> 00:01:02,190
+One thing here to keep in mind, you have to use a different city, a different template parameter for
+
+17
+00:01:02,190 --> 00:01:03,170
+every case of them.
+
+18
+00:01:03,330 --> 00:01:12,600
+Why all of them are just a string because every one of them will be generated based on the usages that
+
+19
+00:01:12,600 --> 00:01:13,180
+you have here.
+
+20
+00:01:13,500 --> 00:01:15,000
+This one isn't a string.
+
+21
+00:01:15,230 --> 00:01:18,720
+This one would be generated maybe to string reference.
+
+22
+00:01:18,840 --> 00:01:24,660
+We could as the string reference, maybe string reference, reference, string reference, reference.
+
+23
+00:01:24,930 --> 00:01:28,730
+It depends on the compiler generation based on the usage cases.
+
+24
+00:01:29,190 --> 00:01:34,380
+And if you have a function that is returning a T, it will be also a separate template.
+
+25
+00:01:34,500 --> 00:01:37,730
+So be careful so that you don't get that comparison error.
+
+26
+00:01:40,800 --> 00:01:46,800
+By the way, you can use Otha instead of the template of just saving your time, something like auto
+
+27
+00:01:46,800 --> 00:01:49,020
+or to auto, but you might face this error.
+
+28
+00:01:49,320 --> 00:01:53,610
+I'm not sure if the feature is really applicable from now or not.
+
+29
+00:01:54,690 --> 00:01:56,970
+The declaration time, we will highlight it.
+
+30
+00:01:57,160 --> 00:02:03,120
+We highlighted once later, but it's just guessing the type of Wolny directly so it will know that full
+
+31
+00:02:03,120 --> 00:02:07,980
+name here is, for example, the string reference or so a declaration type of something in the in the
+
+32
+00:02:07,980 --> 00:02:10,740
+library that gas the pipe from here by itself.
+
+33
+00:02:10,770 --> 00:02:15,930
+Something that can make your code more generic if you are confused about this is like just skip it.
+
+34
+00:02:17,760 --> 00:02:25,640
+I would like also to say that in our example here, I believe that there the move was more than enough.
+
+35
+00:02:25,950 --> 00:02:35,460
+For example, let's say that you are going to receive all your parameters and just like without reference
+
+36
+00:02:35,460 --> 00:02:37,380
+at all, this isn't the best practice.
+
+37
+00:02:37,380 --> 00:02:42,630
+By the way, if you are receiving here like string for name, nickname and address and you just move
+
+38
+00:02:42,670 --> 00:02:43,870
+this parameter to here.
+
+39
+00:02:44,100 --> 00:02:45,240
+Now, there are two cases.
+
+40
+00:02:45,660 --> 00:02:48,180
+Either the caller is using an L value.
+
+41
+00:02:48,330 --> 00:02:53,790
+So it would make in a way, a copy constructor outside us and give it us to here we move it or is giving
+
+42
+00:02:53,790 --> 00:02:54,930
+us our value reference.
+
+43
+00:02:54,930 --> 00:03:04,920
+So we are just if it was an R value for us, then you will wonder if it's a real value, why this guy
+
+44
+00:03:04,920 --> 00:03:06,530
+would be good in moving.
+
+45
+00:03:06,750 --> 00:03:13,470
+We learned that in the next lesson about the competition, where there is the constructor will not call
+
+46
+00:03:13,470 --> 00:03:14,820
+an extra call here.
+
+47
+00:03:15,360 --> 00:03:20,520
+But this is something that's very compiler dependent and we will know about that in the next lecture.
+
+48
+00:03:23,090 --> 00:03:27,410
+Let's introduce you to another funny thing, let's say you would like to to create a perfect factory
+
+49
+00:03:27,410 --> 00:03:32,930
+function where the factory is coming from, design batteries, and let's say that we would like to create
+
+50
+00:03:32,930 --> 00:03:38,770
+a function that able to create any arbitrary object to to be able to satisfy such a crazy idea.
+
+51
+00:03:38,780 --> 00:03:39,590
+You need the following.
+
+52
+00:03:39,950 --> 00:03:43,130
+You need to function to be able to accept any number of arguments.
+
+53
+00:03:43,610 --> 00:03:46,000
+You need to be ready to accept a value or value.
+
+54
+00:03:46,400 --> 00:03:51,590
+You need to be able to forward a barometer to other guys as we wish for.
+
+55
+00:03:51,590 --> 00:03:57,230
+The last two things, you can use perfect forwarding with the forward function or the forwarding references
+
+56
+00:03:57,230 --> 00:04:00,800
+will follow the function and to supported a number of arguments.
+
+57
+00:04:00,820 --> 00:04:01,480
+Arbitrate.
+
+58
+00:04:01,580 --> 00:04:02,930
+You need the verdict, Hambly.
+
+59
+00:04:03,080 --> 00:04:04,880
+So let's see how all of them would get together.
+
+60
+00:04:05,720 --> 00:04:07,010
+The function would be as following.
+
+61
+00:04:07,970 --> 00:04:12,680
+Here we have the forwarding reference parameter that we have.
+
+62
+00:04:12,920 --> 00:04:19,310
+We have a return and we have equal parameters so that the return is deep and it is the parameters and
+
+63
+00:04:19,310 --> 00:04:20,330
+we are using here.
+
+64
+00:04:20,330 --> 00:04:28,130
+The very argument is that now the remaining is this is that which is a constructor of an object and
+
+65
+00:04:28,140 --> 00:04:30,140
+would like to pass the argument.
+
+66
+00:04:30,150 --> 00:04:32,270
+But remember, we need to forward it.
+
+67
+00:04:32,540 --> 00:04:37,940
+So you see here the syntax we forward do the args, which is going to do the casting, then we put the
+
+68
+00:04:37,940 --> 00:04:38,880
+three dots after it.
+
+69
+00:04:38,900 --> 00:04:40,700
+Actually, this is a Woodburn's of the example.
+
+70
+00:04:40,700 --> 00:04:46,280
+I wanted to show you how the verdict template was come would come in with the four words here.
+
+71
+00:04:46,850 --> 00:04:48,290
+Anyway, let's see about the mean.
+
+72
+00:04:49,190 --> 00:04:56,150
+Let's see first the stronger case I have here, a string guess I can call the Kiriat function with a
+
+73
+00:04:56,150 --> 00:05:04,760
+template string and bessus it is an L value so this guy will create a string of L value is another case
+
+74
+00:05:04,850 --> 00:05:06,650
+mussing a string of Mustafah.
+
+75
+00:05:06,820 --> 00:05:13,630
+So it's going to call the string class T would be a business and we will call Mustaffa as our value.
+
+76
+00:05:13,820 --> 00:05:14,590
+So far so good.
+
+77
+00:05:14,900 --> 00:05:24,620
+Let's say I could with something like create and I guess the two victor into and best two parameters.
+
+78
+00:05:24,620 --> 00:05:25,310
+Five and ten.
+
+79
+00:05:25,760 --> 00:05:26,420
+One thousand.
+
+80
+00:05:26,690 --> 00:05:29,540
+This would create a vector of five elements.
+
+81
+00:05:29,540 --> 00:05:33,560
+Each of them is custard with one thousand notice here with best two values.
+
+82
+00:05:33,920 --> 00:05:35,630
+Then the answer would be the two values.
+
+83
+00:05:35,840 --> 00:05:39,230
+So it's like creating here vector of integer with two values.
+
+84
+00:05:39,950 --> 00:05:44,570
+We can even in a similar way create a vector vector of integer ambassador content to you.
+
+85
+00:05:44,840 --> 00:05:47,630
+If you feel that this is very advanced, you can skip it.
+
+86
+00:05:47,630 --> 00:05:51,890
+I really wanted to show you this three arcs, but good to understand the example.
+
+87
+00:05:52,550 --> 00:05:54,200
+Let's also show you something interesting.
+
+88
+00:05:55,520 --> 00:05:59,510
+The emblazed function, the symbols function in the vector.
+
+89
+00:05:59,780 --> 00:06:04,880
+You can normally push back something like I have a vector of bit of interior string.
+
+90
+00:06:05,180 --> 00:06:06,560
+You can normally push back.
+
+91
+00:06:06,890 --> 00:06:10,400
+We say make pair of two Mustafah, you are just creating it.
+
+92
+00:06:10,820 --> 00:06:13,070
+The the emplace function is very interesting.
+
+93
+00:06:13,400 --> 00:06:20,930
+The function take for a position and iterator and you give it the parameters of the say here be whatever
+
+94
+00:06:20,930 --> 00:06:24,410
+here is just without, without the beer and so on.
+
+95
+00:06:24,410 --> 00:06:26,890
+You just send them here like in arguments.
+
+96
+00:06:27,830 --> 00:06:34,100
+If you have a if you have a class of constructor that take five elements, you just pass the five atmosphere
+
+97
+00:06:34,370 --> 00:06:35,000
+vertically.
+
+98
+00:06:35,390 --> 00:06:41,510
+Now the EMBLAZED is going to put it in this position, but if you try to open the C++ function for the
+
+99
+00:06:41,510 --> 00:06:45,410
+employees, you will notice it consists of the three things it consists of.
+
+100
+00:06:45,410 --> 00:06:51,910
+Predictably, it consists of the forwarding references and the forward function.
+
+101
+00:06:52,100 --> 00:06:56,240
+So this function is actually implemented using the three things together.
+
+102
+00:06:57,560 --> 00:07:02,090
+I hope at this moment you are confused about the difference between the move and forward.
+
+103
+00:07:02,090 --> 00:07:08,080
+But in case, remember that the move we don't call it with template arguments, OK?
+
+104
+00:07:08,360 --> 00:07:11,750
+And you can typically call it with an L value on our value.
+
+105
+00:07:11,930 --> 00:07:14,420
+But the result always is that our value differs.
+
+106
+00:07:14,810 --> 00:07:17,300
+When you use it to remove you have an intention.
+
+107
+00:07:17,300 --> 00:07:21,950
+You are saying that this guy is going to be X, Y or soon and it will be no longer used.
+
+108
+00:07:23,490 --> 00:07:29,070
+They send you forward on the other side can forward the value as an only value reference and the values
+
+109
+00:07:29,070 --> 00:07:31,300
+are value difference overall.
+
+110
+00:07:31,320 --> 00:07:40,530
+You have to be careful when you are using coding to move forward because the the guy here might like
+
+111
+00:07:40,920 --> 00:07:42,520
+after moving it would be expired.
+
+112
+00:07:42,540 --> 00:07:43,830
+So in the case.
+
+113
+00:07:43,980 --> 00:07:46,620
+So you need to be careful for not using it.
+
+114
+00:07:48,240 --> 00:07:54,330
+Some this here highlighting for sometimes you guys might use forward function instead of the function,
+
+115
+00:07:54,330 --> 00:07:55,980
+maybe by mistake or intentionally.
+
+116
+00:07:56,220 --> 00:07:59,090
+Do not use that because it will not give a compilation here.
+
+117
+00:07:59,100 --> 00:07:59,780
+So be careful.
+
+118
+00:08:01,530 --> 00:08:07,080
+And again, to optimize your code, you really need to identify the locations where the semantic overall
+
+119
+00:08:07,110 --> 00:08:10,930
+applies so that you don't lose the advantage of the or value difference.
+
+120
+00:08:11,580 --> 00:08:14,520
+These are a bunch of readings that it.

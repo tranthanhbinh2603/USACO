@@ -1,0 +1,584 @@
+0
+1
+00:00:01,170 --> 00:00:08,100
+In modern C++, we have a new specifier that is saying no_except. the specifier is an abbreviation, and
+1
+
+2
+00:00:08,100 --> 00:00:15,270
+it indicates me as a developer, I'm sure that this function doesn't throw an exception.
+2
+
+3
+00:00:15,690 --> 00:00:22,290
+So, what is the point of saying that? When you give such a specifier, the compiler is going to do better
+3
+
+4
+00:00:22,290 --> 00:00:24,740
+in different handling for your functions.
+4
+
+5
+00:00:24,990 --> 00:00:30,600
+Specifically, it will have some details about the unwinding that is going to skip behind the scene.
+5
+
+6
+00:00:31,980 --> 00:00:35,900
+So this ends up with good optimizations for the compiler itself,
+6
+
+7
+00:00:36,210 --> 00:00:41,760
+but where is the problem? the problem happens if you say that your function doesn't throw an exception,
+7
+
+8
+00:00:42,090 --> 00:00:48,680
+however, it actually through one. This is a nice code, you have just a function that computes the absolute,
+8
+
+9
+00:00:48,690 --> 00:00:50,860
+just doing some checks and returning the variable,
+9
+
+10
+00:00:51,150 --> 00:00:53,190
+there is nothing wrong here,
+10
+
+11
+00:00:53,610 --> 00:00:58,010
+and the computed variable here is X, it is just a primitive.
+11
+
+12
+00:00:58,140 --> 00:00:59,310
+So we are fair enough.
+12
+
+13
+00:00:59,670 --> 00:01:04,890
+But if this function, for example, is creating an object with a new, it might fail, for example,
+13
+
+14
+00:01:04,890 --> 00:01:07,240
+due to some memory allocation problems.
+14
+
+15
+00:01:07,650 --> 00:01:09,310
+So for now, this is a good function.
+15
+
+16
+00:01:09,510 --> 00:01:10,980
+This one also is a good function.
+16
+
+17
+00:01:10,980 --> 00:01:11,960
+So everyone is happy.
+17
+
+18
+00:01:12,360 --> 00:01:14,920
+But what if you was wrong?
+18
+
+19
+00:01:15,390 --> 00:01:18,780
+You say nothing here,
+19
+
+20
+00:01:18,780 --> 00:01:21,140
+so you didn't say that this function doesn't throw exceptions.
+20
+
+21
+00:01:21,270 --> 00:01:22,290
+This is a good function,
+21
+
+22
+00:01:22,770 --> 00:01:25,670
+but this function, we say no exception or no_exception of true.
+22
+
+23
+00:01:25,680 --> 00:01:26,340
+It is the same.
+23
+
+24
+00:01:26,740 --> 00:01:28,230
+Now, this is very wrong.
+24
+
+25
+00:01:28,560 --> 00:01:35,650
+The compiler will skip some important details behind the scene, but actually, your code throws
+25
+
+26
+00:01:35,670 --> 00:01:36,210
+an error.
+26
+
+27
+00:01:36,600 --> 00:01:40,950
+So what happened is undefined behavior, and typically your program may crashs for that.
+27
+
+28
+00:01:41,580 --> 00:01:45,760
+So this is the whole story.
+28
+
+29
+00:01:46,110 --> 00:01:47,670
+It is good to write no_except,
+29
+
+30
+00:01:47,940 --> 00:01:52,200
+but, if you have to throw an exception, your program would terminate probably.
+30
+
+31
+00:01:54,020 --> 00:01:59,450
+On the other side, the no_except can also be used as an operator as following: let's say you have
+31
+
+32
+00:01:59,450 --> 00:01:59,920
+a function 
+32
+
+33
+00:01:59,930 --> 00:02:05,990
+My_apps, you can say no_except (this is like an object here), and you are passing parameters to be this
+33
+
+34
+00:02:05,990 --> 00:02:06,530
+function,
+34
+
+35
+00:02:06,740 --> 00:02:13,400
+and passing some parameters for it. This function here, as an operator, will tell you that this function...
+35
+
+36
+00:02:13,400 --> 00:02:18,840
+has a no_except or not.
+36
+
+37
+00:02:19,280 --> 00:02:25,660
+So here, it would be false because this function doesn't have no_except. If you tried to call my_abs_div,
+37
+
+38
+00:02:25,730 --> 00:02:28,430
+so now my_abs_div is doing something very interesting,
+38
+
+39
+00:02:28,850 --> 00:02:32,460
+It saying here we can write nothing or can write true or false.
+39
+
+40
+00:02:32,810 --> 00:02:38,240
+So instead of writing here, true or false, if you are dependent on function like say my_abs,
+40
+
+41
+00:02:38,480 --> 00:02:41,720
+you can say no_except of my_abs of y.
+41
+
+42
+00:02:42,050 --> 00:02:48,050
+Now, this is very similar to that guy, so that this guy is going to compute that if this guy has a no_exception or not.
+42
+
+43
+00:02:48,050 --> 00:02:50,020
+It doesn't have an exception.
+43
+
+44
+00:02:50,180 --> 00:02:51,760
+So this guy will be false.
+44
+
+45
+00:02:52,160 --> 00:02:53,270
+So it would be now no
+45
+
+46
+00:02:53,330 --> 00:02:54,020
+except or false.
+46
+
+47
+00:02:54,200 --> 00:02:58,610
+So think of this as a function that's computing for you an expression computing for you if it's
+47
+
+48
+00:02:58,610 --> 00:02:59,420
+true or false.
+48
+
+49
+00:03:01,220 --> 00:03:05,420
+In a similar way, we can say here no_except over this function that has a template.
+49
+
+50
+00:03:06,020 --> 00:03:10,040
+Now, this function is is just making a copy of this object.
+50
+
+51
+00:03:10,220 --> 00:03:11,970
+So it's calling the copy constructor.
+51
+
+52
+00:03:12,560 --> 00:03:15,290
+You can, again, do it like following: no_except of
+52
+
+53
+00:03:16,090 --> 00:03:21,580
+and you are computing here a true or false. For T of source, you are calling
+53
+
+54
+00:03:21,580 --> 00:03:22,990
+the copy constructor of this guy.
+54
+
+55
+00:03:23,000 --> 00:03:26,990
+You are telling him what does the copy constructor of this guy return?
+55
+
+56
+00:03:27,280 --> 00:03:31,240
+So let's say the function returned true, then you are  no_except of true,
+56
+
+57
+00:03:31,450 --> 00:03:35,760
+but if this function call or operator call returned false, then you are false.
+57
+
+58
+00:03:36,280 --> 00:03:42,100
+The moral of that is you can sometimes depend on one of the functions or build a simple expression
+58
+
+59
+00:03:42,100 --> 00:03:42,820
+if it's possible.
+59
+
+60
+00:03:45,430 --> 00:03:51,730
+Now, your turn, I would like you to read this nice program, understand it, and guess what is the output of it?
+60
+
+61
+00:03:51,730 --> 00:03:52,110
+...
+61
+
+62
+00:03:54,930 --> 00:04:02,250
+You probably thought this is going to divide by zero, so it is going to generate an exception and then
+62
+
+63
+00:04:02,250 --> 00:04:03,510
+we are catching everything.
+63
+
+64
+00:04:03,510 --> 00:04:06,330
+So we're going to catch the exception here,
+64
+
+65
+00:04:06,780 --> 00:04:07,890
+but this will not happen.
+65
+
+66
+00:04:08,340 --> 00:04:12,760
+Catching by by zero can be caught. The low level
+66
+
+67
+00:04:12,810 --> 00:04:20,970
+events like arithmetic events overflows, and division by zero are considered to be handled by low
+67
+
+68
+00:04:20,970 --> 00:04:23,660
+level mechanisms rather than exceptions.
+68
+
+69
+00:04:23,940 --> 00:04:28,440
+So there is no one who is generating behind the scene an exception for the division for you.
+69
+
+70
+00:04:28,800 --> 00:04:34,530
+This is going to be directly computed by, say, your hardware and returned eventually for you.
+70
+
+71
+00:04:34,800 --> 00:04:37,710
+If it is impossible, your program actually crashes.
+71
+
+72
+00:04:38,100 --> 00:04:46,050
+The right way to handle division by zero is by checking if the Y is zero or not, not by depeding on
+72
+
+73
+00:04:46,100 --> 00:04:48,960
+try-catch, and this is an important thing to understand.
+73
+
+74
+00:04:49,410 --> 00:04:54,900
+There is a difference between exceptions that we prepare and throw as an object and between the
+74
+
+75
+00:04:54,900 --> 00:04:58,260
+low-level mechanism that happened here behind the scene.
+75
+
+76
+00:04:59,860 --> 00:05:08,700
+The final thing a little of topic is a keyword no_throw. It is a constant. Let's say we
+76
+
+77
+00:05:08,710 --> 00:05:14,830
+are creating an object using some new, or primitives, or whatever.
+77
+
+78
+00:05:15,670 --> 00:05:22,300
+One thing to know is if the size of what you are allocating is bigger than your physical memory,
+78
+
+79
+00:05:22,660 --> 00:05:25,190
+then the computer definitely will fail to create it.
+79
+
+80
+00:05:25,570 --> 00:05:28,210
+So actually, there is an exception here that would be thrown.
+80
+
+81
+00:05:28,210 --> 00:05:29,110
+It's called
+81
+
+82
+00:05:29,110 --> 00:05:29,440
+bad_alloc.
+82
+
+83
+00:05:30,040 --> 00:05:32,070
+So we failed to allocate memory for you.
+83
+
+84
+00:05:32,830 --> 00:05:38,560
+So normally, if you would like to allocate an array, you can do try-catch and catch here bad_aloc
+84
+
+85
+00:05:38,560 --> 00:05:41,440
+and try to create. Every time that you create,
+85
+
+86
+00:05:41,440 --> 00:05:43,420
+this is good, otherwise no problem.
+86
+
+87
+00:05:44,440 --> 00:05:47,110
+Now, there is another way to do that
+87
+
+88
+00:05:47,110 --> 00:05:52,810
+if you would like to avoid the try-catch. You come here and put the word no_throw. This function now
+88
+
+89
+00:05:52,810 --> 00:05:53,640
+is as following:
+89
+
+90
+00:05:54,130 --> 00:06:00,790
+If it fails to create a pointer or new memory here, it is going to return a null.
+90
+
+91
+00:06:00,820 --> 00:06:07,540
+So you can check first it is null or not. If it's null, don't use it. Otherwise, you just use
+91
+
+92
+00:06:07,540 --> 00:06:07,760
+it.
+92
+
+93
+00:06:08,170 --> 00:06:14,170
+So the moral of that is there is a way to use it to create a memory using try-cash, and thre is another
+93
+
+94
+00:06:14,170 --> 00:06:16,720
+way to avoid the try-catch.
+94
+
+95
+00:06:17,080 --> 00:06:18,760
+So those are the two different ways.
+95
+
+96
+00:06:21,010 --> 00:06:27,550
+Finally, it's good to know that all destructures are implicit with the word no_except so there
+96
+
+97
+00:06:27,550 --> 00:06:32,800
+is an assumption that you will not throw an exception during the destruction.
+97
+
+98
+00:06:33,160 --> 00:06:37,480
+So you don't need to put the word no_except besides destructures,
+98
+
+99
+00:06:37,750 --> 00:06:41,550
+and you shouldn't try to throw an exception during a destructure,
+99
+
+100
+00:06:42,040 --> 00:06:48,340
+and as we said before, it's good and OK to have a throw inside a constructor.
+100
+
+101
+00:06:49,770 --> 00:06:56,320
+Remember, as we said during today session, don't wrongly use the no_except keyword specifier.
+101
+
+102
+00:06:56,340 --> 00:06:56,450
+...
+102
+
+103
+00:06:56,640 --> 00:07:01,870
+If you used it, you have to be very sure that there will be no exception from your function.
+103
+
+104
+00:07:02,220 --> 00:07:08,220
+What is really more important are the exceptions that might happen in an implicit way and you don't
+104
+
+105
+00:07:08,220 --> 00:07:08,850
+notice them,
+105
+
+106
+00:07:09,090 --> 00:07:14,070
+for example, you are catching a function that actually throwing an exception, or you are calling a constructor
+106
+
+107
+00:07:14,070 --> 00:07:19,080
+that actually can catch an exception, or you are calling a function that actually catches an exception.
+107
+
+108
+00:07:19,230 --> 00:07:20,370
+So this is really tricky.
+108
+
+109
+00:07:20,370 --> 00:07:26,250
+You have to put an effort to make sure that there are no exceptions that might be thrown somewhere.
+109
+
+110
+00:07:27,810 --> 00:07:30,090
+The word throw can be used as specifier
+110
+
+111
+00:07:30,090 --> 00:07:32,870
+exactly in place of no_except keyword,
+111
+
+112
+00:07:33,270 --> 00:07:36,780
+but this is now would be deprecated, so don't use it.
+112
+
+113
+00:07:38,280 --> 00:07:42,360
+Also, the Microsoft compiler, I notice they have some different changes from the standard,
+113
+
+114
+00:07:42,360 --> 00:07:44,890
+but it will not affect you a lot. In the future,
+114
+
+115
+00:07:44,910 --> 00:07:46,130
+there is something called 
+115
+
+116
+00:07:46,180 --> 00:07:50,130
+move_if_noexcept, you will later study what we call a move semantic.
+116
+
+117
+00:07:50,140 --> 00:07:56,190
+So it might be a good time then to come back to this function and see what does it mean. That's all.

@@ -1,0 +1,131 @@
+1
+00:00:00,780 --> 00:00:05,070
+Let's make some comparison between the three three rappers that we learned.
+
+2
+00:00:06,600 --> 00:00:13,260
+As you know, the institutional Ismailiya, when you have something may exist or may not, but the verdict
+
+3
+00:00:13,290 --> 00:00:19,830
+is when you have several data types, but only one of them is available at any time, anything on any
+
+4
+00:00:20,160 --> 00:00:23,330
+trial for that can hold anything of them.
+
+5
+00:00:23,670 --> 00:00:25,080
+But you are advised to use it.
+
+6
+00:00:25,080 --> 00:00:27,600
+Unless there is, there is no way to avoid it.
+
+7
+00:00:28,640 --> 00:00:35,160
+From the memory perspective, both variant and optional don't require any extra, no allocations.
+
+8
+00:00:35,180 --> 00:00:41,630
+Behind the scene, remember, for variant, the memories the legends member, but for any there is extra
+
+9
+00:00:41,630 --> 00:00:44,020
+memory allocations that happen from time to time.
+
+10
+00:00:44,540 --> 00:00:49,490
+If the data types are very primitives, then this will not allocate memory types.
+
+11
+00:00:49,670 --> 00:00:53,680
+But for larger objects, this will typically allocate memory types for you.
+
+12
+00:00:53,810 --> 00:00:59,810
+So you have to be careful with any as it is like it can consume your memory if it has been to use it
+
+13
+00:00:59,810 --> 00:01:00,950
+a lot with different objects.
+
+14
+00:01:02,550 --> 00:01:08,060
+From miniaturisation, prospective by default, variant is initialized with the first time.
+
+15
+00:01:08,700 --> 00:01:15,480
+And remember, we talk about the model state and it can help us to avoid initializing the first variable
+
+16
+00:01:15,960 --> 00:01:21,120
+optional on the other side is usually initialized to an empty optional.
+
+17
+00:01:22,180 --> 00:01:28,190
+Remember that both variant and optional can work with objects, even if it doesn't have the Kobe and
+
+18
+00:01:28,190 --> 00:01:36,880
+new functionalities, however, is the DNA cannot the object must be copyable and must be movable.
+
+19
+00:01:38,140 --> 00:01:44,260
+In terms of the FBI, let's say you're dealing with an FBI when you see guys are using, say, for example,
+
+20
+00:01:44,260 --> 00:01:49,920
+variant, they are giving you a signal that this FBI allow to return to different options.
+
+21
+00:01:50,290 --> 00:01:53,230
+But what of the FBI that you are using?
+
+22
+00:01:53,230 --> 00:01:55,770
+Is returning any this is now very risky.
+
+23
+00:01:55,960 --> 00:02:00,730
+You will probably have to have to go and read the code or the documentation by yourself to know what
+
+24
+00:02:00,730 --> 00:02:06,130
+are these guys exactly returning so any can be a bit scary in the eyes.
+
+25
+00:02:06,130 --> 00:02:10,870
+And you have to think and have to read the commission to make sure that you understand what these guys
+
+26
+00:02:10,870 --> 00:02:11,530
+are going to do
+
+27
+00:02:14,170 --> 00:02:14,680
+before.
+
+28
+00:02:14,770 --> 00:02:22,030
+And C++ any is a replacement for what we call avoid point or explain that in the modern pointer topics.
+
+29
+00:02:22,360 --> 00:02:23,470
+But you do need to learn it.
+
+30
+00:02:23,680 --> 00:02:28,540
+And also, as I said, the variant is like a replacement to The Onion, which you do need to replace
+
+31
+00:02:28,540 --> 00:02:28,670
+it.
+
+32
+00:02:28,900 --> 00:02:35,610
+The point behind this model is more flexibility, simpler good and several choices in implementation.
+
+33
+00:02:36,340 --> 00:02:36,880
+That's it.

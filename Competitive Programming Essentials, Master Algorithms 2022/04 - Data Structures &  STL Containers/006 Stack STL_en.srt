@@ -1,0 +1,200 @@
+1
+00:00:01,700 --> 00:00:08,570
+Hi Everyone,   today I'm going to tell you about the C++ standard template library for the stack that
+
+2
+00:00:08,570 --> 00:00:10,460
+is available for use for everyone.
+
+3
+00:00:10,850 --> 00:00:14,870
+And you can use STL while solving online coding challenges.
+
+4
+00:00:15,290 --> 00:00:15,530
+OK.
+
+5
+00:00:15,860 --> 00:00:18,500
+You can also use it during your interview rounds.
+
+6
+00:00:19,130 --> 00:00:27,380
+And what this library offers is it offers you implementation of most common data structures that we're
+
+7
+00:00:27,380 --> 00:00:28,430
+learning in this course.
+
+8
+00:00:29,090 --> 00:00:34,400
+Learning data structures is important because you understand the core concepts of data structures, and when we are
+
+9
+00:00:34,610 --> 00:00:35,930
+going through the implementation.
+
+10
+00:00:36,560 --> 00:00:42,500
+Once you understand the core concept for every problem, you don't need to repeat the same date structure
+
+11
+00:00:42,500 --> 00:00:42,820
+,,
+
+12
+00:00:42,830 --> 00:00:46,610
+You don't need to write the code for that data structure again and again
+
+13
+00:00:46,610 --> 00:00:49,400
+OK, so we want to reuse our code.
+
+14
+00:00:49,820 --> 00:00:56,360
+And for most of the data structure, the code are available and hence the library for the stack is hash
+
+15
+00:00:56,360 --> 00:00:57,090
+include stack.
+
+16
+00:00:57,110 --> 00:00:58,570
+So this is not written by me.
+
+17
+00:00:58,580 --> 00:01:04,790
+It's written by the people who built the C++ standard template library framework and that provides the
+
+18
+00:01:04,790 --> 00:01:06,530
+direct implementation of stack.
+
+19
+00:01:06,920 --> 00:01:08,780
+Let's see how we can use this stack.
+
+20
+00:01:09,200 --> 00:01:16,010
+So firstly, you define the class that is stack, then maybe you type the data type, maybe a stack
+
+21
+00:01:16,010 --> 00:01:16,610
+of strings.
+
+22
+00:01:17,620 --> 00:01:27,820
+And maybe let me call it as books ,Books, dot push, I can say C++ and sorry, then I can
+
+23
+00:01:27,820 --> 00:01:28,420
+say.
+
+24
+00:01:31,210 --> 00:01:37,930
+Some more books I can push, maybe a Java, or maybe a python, or maybe an operating system book.
+
+25
+00:01:39,860 --> 00:01:46,250
+Now here you can see it is very similar to what we have done, and we actually try to replicate the
+
+26
+00:01:46,250 --> 00:01:50,070
+same functionality that is provided by the STL stack.
+
+27
+00:01:50,090 --> 00:01:54,860
+So what I can do is I can while this stack is not empty, which supports the empty method.
+
+28
+00:01:55,250 --> 00:01:57,290
+It supports what is there at the top.
+
+29
+00:01:57,800 --> 00:01:59,630
+It supports the pop method.
+
+30
+00:01:59,870 --> 00:02:01,850
+And it also supports the push method.
+
+31
+00:02:01,850 --> 00:02:03,470
+OK, so let's build the code.
+
+32
+00:02:04,220 --> 00:02:06,290
+OK, it says undefined.
+
+33
+00:02:07,210 --> 00:02:08,050
+Identifier.
+
+34
+00:02:15,530 --> 00:02:16,570
+wait..
+
+35
+00:02:16,900 --> 00:02:17,920
+This should be books.
+
+36
+00:02:19,630 --> 00:02:21,490
+The name of the stack is actually books.
+
+37
+00:02:21,790 --> 00:02:23,470
+So I was using this.
+
+38
+00:02:24,100 --> 00:02:30,730
+Now you can see the code is getting built very fine and it is using the inbuilt stack that is provided to
+
+39
+00:02:30,730 --> 00:02:30,940
+us.
+
+40
+00:02:31,450 --> 00:02:33,750
+So yes, it has an empty method.
+
+41
+00:02:33,760 --> 00:02:36,280
+Top method, pop method, push method?
+
+42
+00:02:36,670 --> 00:02:43,230
+You can also read about more details in the C++ reference are C++ dot com.
+
+43
+00:02:44,230 --> 00:02:46,210
+And let us run this code and see.
+
+44
+00:02:46,460 --> 00:02:51,260
+So dot slash stack STL
+
+45
+00:02:51,310 --> 00:02:53,610
+We are getting os, python, java and C++.
+
+46
+00:02:53,620 --> 00:02:56,860
+That means the stack is working as expected.
+
+47
+00:03:01,970 --> 00:03:02,430
+Yes.
+
+48
+00:03:02,450 --> 00:03:03,980
+Working perfectly fine.
+
+49
+00:03:04,640 --> 00:03:06,320
+So that's all for this lecture.
+
+50
+00:03:06,410 --> 00:03:06,920
+Thank you.
+

@@ -1,0 +1,399 @@
+0
+1
+00:00:01,080 --> 00:00:07,590
+In this video, we will introduce inheritance, one of the fundamental concepts in the OOP, so
+1
+
+2
+00:00:08,580 --> 00:00:13,530
+when you think about what is coming and what is unique between the two things, like let's say you are
+2
+
+3
+00:00:13,530 --> 00:00:20,460
+modeling a system for a teacher and then there are many classes such as student and teacher, what
+3
+
+4
+00:00:20,460 --> 00:00:21,090
+is common ?
+4
+
+5
+00:00:21,300 --> 00:00:22,820
+What is in common between them?
+5
+
+6
+00:00:22,830 --> 00:00:27,960
+Give yourself a minute to think of some common data members and functionalities between them and some
+6
+
+7
+00:00:27,960 --> 00:00:30,070
+unique member and functionalities between them.
+7
+
+8
+00:00:30,760 --> 00:00:34,640
+What is the observation that we have? Let's try to give the thinking for a minute
+8
+
+9
+00:00:35,820 --> 00:00:38,160
+If you thought about it, ...
+9
+
+10
+00:00:38,250 --> 00:00:45,060
+Here is a basic class for a student that has name, email address, national ID and then some starting
+10
+
+11
+00:00:45,060 --> 00:00:52,680
+year, total GPA, courses and also have some relevant functionality like is a valid email , add course grade and print grades.
+11
+
+12
+00:00:53,160 --> 00:00:56,060
+thinking about the feature you start define as a human.
+12
+
+13
+00:00:56,220 --> 00:01:01,440
+He has also a name, email address, and national ID, but has something that's more relevant to him.
+13
+
+14
+00:01:01,440 --> 00:01:05,580
+Like when did he started working, what is the current salary and so on.
+14
+
+15
+00:01:06,060 --> 00:01:10,740
+It has the functionality also to read the email but also has a function to add to the list of courses
+15
+
+16
+00:01:10,740 --> 00:01:12,000
+that is going to teach.
+16
+
+17
+00:01:12,510 --> 00:01:20,040
+So clearly the issue here is that there are some common functionalities that we are duplicating and common member
+17
+
+18
+00:01:20,040 --> 00:01:24,640
+data that we are duplicating and definitely there are unique things that we don't care about them.
+18
+
+19
+00:01:24,930 --> 00:01:27,390
+So this is actually what's the problem of inheritance?
+19
+
+20
+00:01:27,870 --> 00:01:30,360
+The inheritance is a relationship
+20
+
+21
+00:01:30,540 --> 00:01:31,860
+We discussed this before.
+21
+
+22
+00:01:31,980 --> 00:01:34,820
+Student is a person, teacher is a person, Dean is a person.
+22
+
+23
+00:01:35,010 --> 00:01:40,140
+This means there must be common variables and function between them and some unique variables and function between them.
+23
+
+24
+00:01:40,770 --> 00:01:41,640
+in a similar way,
+24
+
+25
+00:01:41,850 --> 00:01:42,870
+Circle is a shape,
+25
+
+26
+00:01:43,060 --> 00:01:44,190
+Rectangle is a shape,
+26
+
+27
+00:01:44,340 --> 00:01:45,400
+and triangle is a shape,
+27
+
+28
+00:01:45,510 --> 00:01:50,980
+So there should be some common functionalities and the common data types, there could be functionalities
+28
+
+29
+00:01:51,000 --> 00:01:53,910
+with different behaviors like we need to draw from all of them,
+29
+
+30
+00:01:54,090 --> 00:01:59,310
+But the draw on the rectangle is different from the triangle, the computing area in the rectangle
+30
+
+31
+00:01:59,310 --> 00:02:01,350
+is different than the computing area in the triangle.
+31
+
+32
+00:02:02,730 --> 00:02:06,510
+You can also think in a hierarchy like a hierarchy of relationships.
+32
+
+33
+00:02:06,690 --> 00:02:11,970
+So the person could be student or employee, the employee could be faculty or staff, the graduate could be
+33
+
+34
+00:02:11,970 --> 00:02:15,080
+masters or doctoral or not degree and so on.
+34
+
+35
+00:02:15,840 --> 00:02:18,330
+So back to the student and the teacher,
+35
+
+36
+00:02:18,330 --> 00:02:23,100
+We know that the issue is duplication in code, but the question, how can we handle that?
+36
+
+37
+00:02:23,520 --> 00:02:28,110
+This need some some some syntax mechanism and here the inheritance comes.
+37
+
+38
+00:02:28,530 --> 00:02:36,210
+But let's first refresh something, the code reusability is our ability to reuse an existing code instead of
+38
+
+39
+00:02:36,470 --> 00:02:37,590
+writing it from scratch.
+39
+
+40
+00:02:37,890 --> 00:02:42,570
+If you have a good already existed, then probably it's written, tested, and bug fixed.
+40
+
+41
+00:02:42,840 --> 00:02:49,440
+There's no sense in duplicating a lot of work about that this isn't easy - by the way - in practice.
+41
+
+42
+00:02:49,590 --> 00:02:59,070
+But at least you should use .... C++ or OOP allows 2 reusable approaches that inheritance and composition.
+42
+
+43
+00:02:59,490 --> 00:03:05,760
+We already saw the composition several times, like the class car has a class engine and victor of 4
+43
+
+44
+00:03:05,760 --> 00:03:06,720
+wheels and so on.
+44
+
+45
+00:03:07,860 --> 00:03:11,550
+Another type of reusability is inheritance.
+45
+
+46
+00:03:11,730 --> 00:03:17,460
+If we can reuse the common features between the manager and the student, then we are saving our time.
+46
+
+47
+00:03:18,150 --> 00:03:20,640
+So here is how the inheritance happened.
+47
+
+48
+00:03:21,000 --> 00:03:26,340
+Let's define a class that represents the common logic between the persons.
+48
+
+49
+00:03:26,490 --> 00:03:29,490
+Like we say, the student is a person, teacher is a person.
+49
+
+50
+00:03:29,610 --> 00:03:31,110
+So let's define a class person.
+50
+
+51
+00:03:31,110 --> 00:03:32,040
+What is common here?
+51
+
+52
+00:03:32,280 --> 00:03:37,200
+It could have a name, it could have email, could have function that is validating the email and so on.
+52
+
+53
+00:03:37,920 --> 00:03:45,090
+Now, if you did the following syntax, is class student : public person, then you are inheriting
+53
+
+54
+00:03:45,450 --> 00:03:46,170
+this person.
+54
+
+55
+00:03:46,170 --> 00:03:47,490
+What does it mean to inherit it?
+55
+
+56
+00:03:47,700 --> 00:03:53,970
+It means that you see it's a public data members and it is  a public functions.
+56
+
+57
+00:03:54,270 --> 00:03:59,340
+So now, although I have a GPA, I can also see the variable name and email.
+57
+
+58
+00:03:59,640 --> 00:04:05,190
+And although I have the print grades and set GPA Functions, I can also see is this valid email format.
+58
+
+59
+00:04:05,430 --> 00:04:15,630
+So inheritance is this fundamental syntax that allow a class to add for it the variables and functions
+59
+
+60
+00:04:15,870 --> 00:04:17,970
+the public in another class. definitely 
+60
+
+61
+00:04:18,120 --> 00:04:18,750
+if they are private,
+61
+
+62
+00:04:18,750 --> 00:04:19,890
+We will see nothing of that.
+62
+
+63
+00:04:20,520 --> 00:04:23,310
+That's why I'm putting here in public. In a similar way
+63
+
+64
+00:04:24,300 --> 00:04:25,350
+Let's see the mean of that.
+64
+
+65
+00:04:25,350 --> 00:04:29,340
+So I'm defining here a student.
+65
+
+66
+00:04:29,610 --> 00:04:35,400
+And then the student can set GPA, which is a function here, can also validate an email, which is a function
+66
+
+67
+00:04:35,400 --> 00:04:38,790
+at the parent class and can print grades, which is a function here.
+67
+
+68
+00:04:39,240 --> 00:04:44,040
+But notice, if you are a person, person isn't necessarily a student so the person can validate the
+68
+
+69
+00:04:44,040 --> 00:04:44,460
+email.
+69
+
+70
+00:04:44,640 --> 00:04:46,740
+But he knew nothing about the print grades.
+70
+
+71
+00:04:47,040 --> 00:04:52,260
+So this is the functionalities that you get from the inheritance in C++.
+71
+
+72
+00:04:52,650 --> 00:04:54,160
+This is code public inheritance.
+72
+
+73
+00:04:54,190 --> 00:04:58,260
+There is other two types we will know later. Some terminology: 
+73
+
+74
+00:04:58,530 --> 00:04:59,830
+This class we call it
+74
+
+75
+00:05:00,220 --> 00:05:06,460
+The parent class or the base class or the super class or general class, it depends on different
+75
+
+76
+00:05:06,460 --> 00:05:08,470
+language, call a different things like C++ call it 
+76
+
+77
+00:05:08,470 --> 00:05:09,430
+more base, Java call it Super
+77
+
+78
+00:05:09,850 --> 00:05:17,350
+But the class student we call it child or derived or subclass or a specific class.
+78
+
+79
+00:05:17,620 --> 00:05:22,240
+Again, derived the name in C++ , subclass is the name in Java and so on.
+79
+
+80
+00:05:22,900 --> 00:05:23,470
+That's it.

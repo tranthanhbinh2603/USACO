@@ -1,0 +1,304 @@
+0
+1
+00:00:01,230 --> 00:00:02,900
+Let's do some practice on the character arrays.
+1
+
+2
+00:00:02,950 --> 00:00:06,800
+The first one is a concatenation task.
+2
+
+3
+00:00:06,810 --> 00:00:11,780
+You are going to read two different strings and concatenate them, but in a bit a special way.
+3
+
+4
+00:00:12,210 --> 00:00:13,500
+Here is an example,
+4
+
+5
+00:00:13,720 --> 00:00:20,550
+Let's say you are reading something like "AM CICBC", you take the first letter from this one, then
+5
+
+6
+00:00:20,550 --> 00:00:25,140
+the first letter from this one, and then the second letter from this one, then the second letter from
+6
+
+7
+00:00:25,140 --> 00:00:26,390
+this one and so on.
+7
+
+8
+00:00:26,550 --> 00:00:31,830
+If one of them is done, then you just add the remaining of the string.
+8
+
+9
+00:00:32,670 --> 00:00:39,450
+Don't create new strings, don't change the input content, maybe just like a printing or so.
+9
+
+10
+00:00:39,450 --> 00:00:40,200
+Here is how to do that,
+10
+
+11
+00:00:40,530 --> 00:00:48,930
+We first need to figure out the length of the two strings, which one is like the max size that we have.
+11
+
+12
+00:00:49,590 --> 00:00:55,650
+now here we keep the maximum size between the first string and the second string, notice
+12
+
+13
+00:00:55,650 --> 00:00:57,840
+here we use the .size function.
+13
+
+14
+00:00:58,350 --> 00:01:00,900
+Now iterate over whole max length.
+14
+
+15
+00:01:01,470 --> 00:01:05,570
+We know in the best case there would be some letter from the first and some letter in the second.
+15
+
+16
+00:01:06,000 --> 00:01:12,240
+If there is more letters here from the first, print it, of there is more letters here from the second, just to print it.
+16
+
+17
+00:01:12,240 --> 00:01:14,700
+This way, you can concatenate them step by step.
+17
+
+18
+00:01:14,700 --> 00:01:18,630
+And this way you can handle easily the difference in sizes.
+18
+
+19
+00:01:20,310 --> 00:01:25,800
+Another problem is the frequency of a string, you are to read the string that will have different letters
+19
+
+20
+00:01:25,800 --> 00:01:32,360
+of upper and lower, ignore that, the fact that they are upper letters and compute the frequency of lower letters.
+20
+
+21
+00:01:32,580 --> 00:01:38,970
+So, for example, reading this string, then we are ignoring the three capital letters here,
+21
+
+22
+00:01:39,180 --> 00:01:41,870
+and computing the frequency of the remaining of the letters.
+22
+
+23
+00:01:42,060 --> 00:01:46,900
+So 'a' appeared three times, 'b' once and 'z' two times, stop the video and try to create it by yourself
+23
+
+24
+00:01:49,890 --> 00:01:55,980
+remember the frequency array, so we can make our life easier by creating a frequency array big enough
+24
+
+25
+00:01:55,980 --> 00:02:02,280
+to cover the small and capital letters, initialize all of them to zeros, iterate over the string and
+25
+
+26
+00:02:02,280 --> 00:02:10,260
+just compute the frequency, come to the character [i] and just increment to the frequency of it.
+26
+
+27
+00:02:10,650 --> 00:02:17,550
+By the end of that, we have the frequency actually of the whole string, even lower and
+27
+
+28
+00:02:17,550 --> 00:02:21,670
+upper cases. after that we want to print only the lower cases.
+28
+
+29
+00:02:21,780 --> 00:02:28,170
+So one easy trick is just to iterate from the letter 'a' to the letter 'z' if there is some frequency here
+29
+
+30
+00:02:28,350 --> 00:02:36,930
+just print character i and print the frequency [i], notice here I casted the integer i
+30
+
+31
+00:02:37,200 --> 00:02:39,210
+to character to be printed like a character.
+31
+
+32
+00:02:39,660 --> 00:02:43,200
+This program can be done in several ways, but I think this is one of the easy ways to do that.
+32
+
+33
+00:02:45,150 --> 00:02:51,570
+A special mapper, or like people doing encoding and decoding, you are to read the string and you are to
+33
+
+34
+00:02:51,570 --> 00:02:57,720
+do the following conversions, if this is an upper letter, don't change it, if it is a lower letter you are
+34
+
+35
+00:02:57,720 --> 00:02:59,510
+to use the following map,
+35
+
+36
+00:02:59,910 --> 00:03:04,670
+These are the lower letters and this is a conversion map.
+36
+
+37
+00:03:04,950 --> 00:03:12,240
+So we are converting letter 'a' to letter 'Y', letter 'b' to letter 'Z', letter 'z' to letter 'L' capital, and so
+37
+
+38
+00:03:12,240 --> 00:03:12,490
+on.
+38
+
+39
+00:03:12,750 --> 00:03:14,160
+So this is your conversion,
+39
+
+40
+00:03:14,160 --> 00:03:19,070
+whenever you find a small letter, you convert based on the corresponding one. in a similar way,
+40
+
+41
+00:03:19,110 --> 00:03:24,040
+if you found some digits from 0 to 9, you are to use this conversion to convert it.
+41
+
+42
+00:03:24,270 --> 00:03:29,580
+So if this is the input, we are going for letter-by-letter to do conversions except the capital letters
+42
+
+43
+00:03:29,580 --> 00:03:30,030
+'M' and 'N'.
+43
+
+44
+00:03:30,060 --> 00:03:32,900
+here, they are the same here. again,
+44
+
+45
+00:03:32,910 --> 00:03:33,690
+Think about that.
+45
+
+46
+00:03:35,560 --> 00:03:37,870
+OK, here is one very nice way to do that.
+46
+
+47
+00:03:38,770 --> 00:03:45,340
+First of all, I started with putting all the lower letters and in another string, the corresponding
+47
+
+48
+00:03:45,340 --> 00:03:52,860
+one, and then the digits and their corresponding one, I created - let's call it a map here -, I'm
+48
+
+49
+00:03:52,870 --> 00:03:59,050
+creating a map and I'm iterating on the (from) and from every letter in the (from) I'm saying
+49
+
+50
+00:03:59,050 --> 00:04:00,660
+What should we map to it?
+50
+
+51
+00:04:00,940 --> 00:04:09,430
+For example, I'm saying here, letter map of 'a' -small 'a'- to 'Y' capital, letter map of '9' to the closing
+51
+
+52
+00:04:09,430 --> 00:04:10,030
+parenthesis ')'.
+52
+
+53
+00:04:10,330 --> 00:04:15,790
+So by the end of that, letter map can help me easily to convert from a letter to another.
+53
+
+54
+00:04:16,330 --> 00:04:18,760
+After that we would iterate on the whole input string,
+54
+
+55
+00:04:18,910 --> 00:04:23,930
+If it's a capital letter just ignore it, otherwise change it from the map.
+55
+
+56
+00:04:24,400 --> 00:04:29,440
+I expect you that you try to iterate in this string and find the corresponding one
+56
+
+57
+00:04:29,440 --> 00:04:29,840
+and do it,
+57
+
+58
+00:04:30,130 --> 00:04:30,760
+This is good.
+58
+
+59
+00:04:30,940 --> 00:04:35,080
+But as you see here, this trick is just saving us a lot of computations.
+59
+
+60
+00:04:35,470 --> 00:04:39,280
+It takes time to learn how to come up with smart and nice ideas.
+60
+
+61
+00:04:40,700 --> 00:04:41,230
+That's it.

@@ -1,0 +1,314 @@
+0
+1
+00:00:01,800 --> 00:00:09,930
+In the next problem, we have a grid like a 2D matrix; like the one that we see here. Three times three
+1
+
+2
+00:00:09,990 --> 00:00:12,540
+grid and we have a robot.
+2
+
+3
+00:00:12,780 --> 00:00:14,070
+It starts at position.
+3
+
+4
+00:00:14,340 --> 00:00:21,060
+It can only go in three directions either to the right or to the left or to the diagonal.
+4
+
+5
+00:00:22,140 --> 00:00:27,260
+I wasn't clear to emphasize that it must be only this diagonal, so we have only three choices.
+5
+
+6
+00:00:27,300 --> 00:00:29,100
+We cannot go this backward diagonal.
+6
+
+7
+00:00:29,940 --> 00:00:31,770
+OK, we can just go to this one.
+7
+
+8
+00:00:32,220 --> 00:00:37,410
+And now the robot have a very deterministic operation, and we can't even implement that in an iterative
+8
+
+9
+00:00:37,410 --> 00:00:37,680
+way.
+9
+
+10
+00:00:38,190 --> 00:00:39,750
+The robot starts here.
+10
+
+11
+00:00:39,750 --> 00:00:45,930
+It consider the three destinations if they are available, and then see which one has the maximum value. 
+11
+
+12
+00:00:45,930 --> 00:00:50,640
+And remember, the values are distinct, which mean they are different.
+12
+
+13
+00:00:51,330 --> 00:00:53,760
+Then there must be only one of them is maximum.
+13
+
+14
+00:00:54,800 --> 00:01:00,380
+According to that, it will move to this cell based on the maximum value, for example, the robot 
+14
+
+15
+00:01:00,390 --> 00:01:06,810
+would start here at one, then it checks 7, 10, 2. 10 is the maximum, so go to the diagonal at 10.
+15
+
+16
+00:01:07,170 --> 00:01:09,810
+Then it checks 11, 9 and 5.
+16
+
+17
+00:01:10,460 --> 00:01:11,580
+11 is a diagonal.
+17
+
+18
+00:01:11,580 --> 00:01:12,300
+It goes here.
+18
+
+19
+00:01:12,630 --> 00:01:14,580
+Then it only have one choice here at the 9.
+19
+
+20
+00:01:15,060 --> 00:01:19,110
+So there is only one specific path we can do, and we can implement that trivially
+20
+
+21
+00:01:19,980 --> 00:01:23,370
+using a loop like we can start looping from here and keep moving.
+21
+
+22
+00:01:23,610 --> 00:01:30,870
+Maybe you should try to implement that in a loop first before trying to..., try to implement it
+22
+
+23
+00:01:30,870 --> 00:01:31,710
+in a recursive way.
+23
+
+24
+00:01:32,130 --> 00:01:36,750
+So this problem, more or less is just a way to administrate this.
+24
+
+25
+00:01:38,520 --> 00:01:44,280
+This is kind of switching from like iterative code to a recursive code.
+25
+
+26
+00:01:44,760 --> 00:01:47,250
+So here is how we can implement that in an easy way.
+26
+
+27
+00:01:49,290 --> 00:01:56,380
+First of all, we will use the direction arrays that we learned in the course and the
+27
+
+28
+00:01:56,400 --> 00:02:03,840
+direction array we have here three directions only so I'm representing them here the our three positive
+28
+
+29
+00:02:03,840 --> 00:02:04,470
+directions.
+29
+
+30
+00:02:05,070 --> 00:02:08,550
+Now this should be a common part of the iterative code.
+30
+
+31
+00:02:08,850 --> 00:02:15,180
+I'm going here to iterate on the three directions and store in the maximum index which one has the
+31
+
+32
+00:02:15,180 --> 00:02:15,870
+maximum value.
+32
+
+33
+00:02:16,200 --> 00:02:21,450
+So I'm computing the next row and column and making sure they are valid.
+33
+
+34
+00:02:21,750 --> 00:02:24,720
+And then I'm comparing with the maximum value so far.
+34
+
+35
+00:02:25,020 --> 00:02:30,270
+If they are less than the current maximum value, I will just
+35
+
+36
+00:02:31,960 --> 00:02:38,050
+I will just use here the current maximum value.
+36
+
+37
+00:02:39,070 --> 00:02:45,310
+Um, I think it is more proper to initialize this max value to something, maybe even in some scenarios 
+37
+
+38
+00:02:45,310 --> 00:02:46,860
+there is a bug here, but I didn't.
+38
+
+39
+00:02:48,760 --> 00:02:51,670
+So anyway, this one should be initialized to a proper value.
+39
+
+40
+00:02:52,500 --> 00:02:59,380
+Now, once we are done with deciding which one of the 3 direction is the minimum, we can
+40
+
+41
+00:02:59,380 --> 00:03:02,800
+know the exact position that we will move to it.
+41
+
+42
+00:03:03,370 --> 00:03:10,750
+The remaining step is instead of making a loop that keeps going, we just call the function path_sum 
+42
+
+43
+00:03:10,750 --> 00:03:11,080
+here.
+43
+
+44
+00:03:11,320 --> 00:03:14,290
+So the function path_sum; it takes our current grid.
+44
+
+45
+00:03:14,620 --> 00:03:19,900
+It takes the total number of frozen columns and also it takes that uh.
+45
+
+46
+00:03:21,160 --> 00:03:27,100
+Uh, it takes the initial row and column.
+46
+
+47
+00:03:28,860 --> 00:03:37,140
+Now here in the code, this first three parameters are the
+47
+
+48
+00:03:37,140 --> 00:03:37,420
+same.
+48
+
+49
+00:03:37,650 --> 00:03:40,230
+And I just here now pass it the new location.
+49
+
+50
+00:03:40,470 --> 00:03:43,230
+So initially remember the values
+50
+
+51
+00:03:45,790 --> 00:03:49,840
+we were here at the one then, here at 10, and 11, and 9.
+51
+
+52
+00:03:50,170 --> 00:03:53,470
+So initially we start with zero and zero.
+52
+
+53
+00:03:55,690 --> 00:03:59,320
+And then it will find that the maximum is coming from one and one.
+53
+
+54
+00:03:59,500 --> 00:04:05,200
+So the function will be called with position one and one at the 10.  The one and one will find that the next
+54
+
+55
+00:04:05,200 --> 00:04:08,530
+one here, which is at one and two, is the next maximum.
+55
+
+56
+00:04:08,680 --> 00:04:11,110
+So it will call the rows and column with one and two.
+56
+
+57
+00:04:11,470 --> 00:04:14,500
+This one doesn't have any choices except two and two.
+57
+
+58
+00:04:14,950 --> 00:04:17,230
+Now this here takes us to our base case.
+58
+
+59
+00:04:17,530 --> 00:04:23,230
+The base case is when the number of rows and number of columns is at the end.
+59
+
+60
+00:04:23,530 --> 00:04:25,600
+So this is where I'm going to end it.
+60
+
+61
+00:04:26,080 --> 00:04:32,290
+So in summary, we instead of writing it in an iterative way with a loop, we just did something that
+61
+
+62
+00:04:32,290 --> 00:04:36,310
+keeps recursively call at the next starting position.
+62
+
+63
+00:04:36,730 --> 00:04:37,900
+That's all for this problem.

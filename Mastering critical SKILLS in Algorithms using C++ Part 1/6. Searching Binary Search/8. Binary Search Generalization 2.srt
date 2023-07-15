@@ -1,0 +1,571 @@
+1
+00:00:01,370 --> 00:00:07,400
+We need now to understand how to prove that a function can be used with a binary search.
+
+2
+00:00:08,290 --> 00:00:14,150
+Um, try to take five minutes for your time based on what we mentioned and try to think about it.
+
+3
+00:00:14,690 --> 00:00:16,560
+The moral of it is as following.
+
+4
+00:00:17,060 --> 00:00:23,120
+We need to be to make sure that the the the baboons, the function can guide the brain research.
+
+5
+00:00:23,330 --> 00:00:29,270
+Remember when we do a brain research on the array that is sorted, so the middle value in a comparison
+
+6
+00:00:29,270 --> 00:00:32,390
+with the target value can tell us should we go to the left or the right?
+
+7
+00:00:32,940 --> 00:00:39,890
+If you're like intuitive and in an informal sense, you can see that your function can correctly guide
+
+8
+00:00:39,890 --> 00:00:41,360
+you to move to the left or the right.
+
+9
+00:00:41,600 --> 00:00:44,450
+Then this is definitely can be used in a binary search.
+
+10
+00:00:45,440 --> 00:00:46,790
+Let's be more specific.
+
+11
+00:00:49,310 --> 00:00:55,940
+There are two cases, either the evaluation of the possible function is as following forgiving values
+
+12
+00:00:55,940 --> 00:00:58,850
+through true, true, true, true and starting from as false.
+
+13
+00:00:58,880 --> 00:01:00,740
+There is always false after it.
+
+14
+00:01:01,340 --> 00:01:02,480
+This is case number one.
+
+15
+00:01:03,080 --> 00:01:09,650
+The second case is we have faults of all sorts of also faults, and once we have true, we have always
+
+16
+00:01:09,650 --> 00:01:09,950
+true.
+
+17
+00:01:10,490 --> 00:01:13,490
+So this is the only two possible cases.
+
+18
+00:01:14,180 --> 00:01:18,050
+Specifically, these are our virtual array.
+
+19
+00:01:18,800 --> 00:01:24,650
+These are our virtual array and we are trying to use their answers to guide us.
+
+20
+00:01:24,980 --> 00:01:28,280
+For example, you might be here searching for their lost true.
+
+21
+00:01:28,880 --> 00:01:33,140
+So if you're a search here, come to a false value and we need the last true, then we definitely need
+
+22
+00:01:33,150 --> 00:01:34,760
+to decide.
+
+23
+00:01:36,450 --> 00:01:39,120
+OK, we jumped in the research to this true.
+
+24
+00:01:39,420 --> 00:01:41,760
+That's good, we have an answer, but we need the truth.
+
+25
+00:01:41,880 --> 00:01:47,520
+So we start to search in this array to find the lost, the true and so in a very similar way.
+
+26
+00:01:47,790 --> 00:01:55,080
+If the search is bunch of forces and then bunch of truths, there would never be another false are here
+
+27
+00:01:55,470 --> 00:01:59,580
+because, you know, as you see, it is an assorted array.
+
+28
+00:01:59,730 --> 00:02:05,400
+So when we have a true, true, true, true, then false, false, false, this is a decreasing array.
+
+29
+00:02:06,330 --> 00:02:09,090
+If we have false reports of also, then true, true, true, true.
+
+30
+00:02:09,270 --> 00:02:10,520
+This is an increasing array.
+
+31
+00:02:10,740 --> 00:02:11,580
+So as you see?
+
+32
+00:02:12,540 --> 00:02:16,980
+The social space is sorted, it is just this time zeros and ones in a set of values.
+
+33
+00:02:17,130 --> 00:02:19,820
+That's why it is a virtual array, not array.
+
+34
+00:02:20,460 --> 00:02:22,260
+You could be searching for whatever you need.
+
+35
+00:02:22,260 --> 00:02:23,860
+Maybe you need to search for the first.
+
+36
+00:02:23,860 --> 00:02:24,180
+True.
+
+37
+00:02:24,420 --> 00:02:26,160
+Maybe you need to search for the last efforts.
+
+38
+00:02:26,340 --> 00:02:27,030
+It's up to you.
+
+39
+00:02:27,030 --> 00:02:29,490
+It's in a way an array of just to value zeros and ones.
+
+40
+00:02:30,540 --> 00:02:32,940
+Again, go back to your general intuition.
+
+41
+00:02:33,300 --> 00:02:35,820
+Can we guide the search or not?
+
+42
+00:02:35,820 --> 00:02:37,680
+If yes, this is a binary search?
+
+43
+00:02:38,700 --> 00:02:43,920
+Now the interesting thing is you just need one or two minutes thinking to decide if this is true or
+
+44
+00:02:43,920 --> 00:02:44,220
+not.
+
+45
+00:02:44,260 --> 00:02:51,540
+Like, think about the indices we have function, if so, if of zero, if one, if we have to ask yourself
+
+46
+00:02:51,540 --> 00:02:52,320
+what is happening?
+
+47
+00:02:52,590 --> 00:02:53,700
+Is it always increasing?
+
+48
+00:02:54,660 --> 00:02:58,110
+And he is always decreasing, like if this is the case, then yes.
+
+49
+00:02:59,280 --> 00:03:00,660
+OK, let's up like that.
+
+50
+00:03:01,140 --> 00:03:02,810
+Let's go back to the orange squeeze.
+
+51
+00:03:02,820 --> 00:03:10,410
+I explain that already in there in that in the bush will function the first moment that you decide the
+
+52
+00:03:10,410 --> 00:03:12,750
+current coins cannot.
+
+53
+00:03:14,640 --> 00:03:19,400
+Cover the coins that we know way too to cover it anymore.
+
+54
+00:03:19,410 --> 00:03:27,570
+For example, if possible, function of eight coins and three rules is true now possible function of
+
+55
+00:03:27,570 --> 00:03:30,030
+eight coins and four rules is false.
+
+56
+00:03:30,480 --> 00:03:35,880
+Definitely possible of eight and five is false and possible of eight and six is false.
+
+57
+00:03:36,240 --> 00:03:40,020
+Boosters would if any number that is beyond the four is false.
+
+58
+00:03:40,290 --> 00:03:42,960
+So this is a serious piece of true, true, true.
+
+59
+00:03:43,260 --> 00:03:46,910
+Once we start with the fools, it's false vaults, false reports of all supports.
+
+60
+00:03:47,340 --> 00:03:53,610
+So this is how we know the social space can be used to guide their binary.
+
+61
+00:03:53,920 --> 00:03:54,090
+Not.
+
+62
+00:03:54,450 --> 00:03:59,610
+Now, going back to the word, the monotonic function, the monotonic function is a function that is
+
+63
+00:04:00,330 --> 00:04:02,610
+increasing, just increasing or decreasing.
+
+64
+00:04:02,610 --> 00:04:06,240
+Maybe just increasing, maybe strictly increasing, strictly decreasing.
+
+65
+00:04:06,420 --> 00:04:08,160
+But it is just one of these things.
+
+66
+00:04:08,370 --> 00:04:10,440
+So this function just keep increasing.
+
+67
+00:04:10,440 --> 00:04:11,070
+It is increasing.
+
+68
+00:04:11,460 --> 00:04:15,360
+So it's important actually increasing function or decreasing function.
+
+69
+00:04:15,570 --> 00:04:17,100
+This one decrease decrease decrease.
+
+70
+00:04:17,490 --> 00:04:19,680
+This one is increasing and decreasing.
+
+71
+00:04:20,040 --> 00:04:22,260
+So this isn't when putting this function here.
+
+72
+00:04:22,260 --> 00:04:26,430
+If it's like that, then like that this is actually a function of forces.
+
+73
+00:04:26,760 --> 00:04:31,800
+Then once it's somewhat untidy, if the function is like that, then like that.
+
+74
+00:04:32,130 --> 00:04:34,800
+So this is Monacan increasing, then decreasing.
+
+75
+00:04:35,340 --> 00:04:37,860
+So the good about the monotonic functions.
+
+76
+00:04:38,820 --> 00:04:44,880
+They are logically can guide the binary search now in brackets with the NIC to think actually that much,
+
+77
+00:04:44,880 --> 00:04:48,930
+you will see that in the homework, that things are and are much less formal than that.
+
+78
+00:04:49,320 --> 00:04:50,430
+A few examples here.
+
+79
+00:04:50,850 --> 00:04:56,430
+Assorted array of duplicate values, it actually a monotonic function, specifically that decreasing.
+
+80
+00:04:57,540 --> 00:05:03,900
+Their little that it could function that we developed is increasing monitoring function.
+
+81
+00:05:04,680 --> 00:05:07,360
+Uh, I mean, they're restricting.
+
+82
+00:05:07,770 --> 00:05:13,720
+OK, now there is a something that's very useful to remember.
+
+83
+00:05:13,740 --> 00:05:16,080
+Let's say you have an array of non-negative values.
+
+84
+00:05:17,460 --> 00:05:23,250
+Can you bring the research on that definitely didn't sorted now I committed this disarray.
+
+85
+00:05:23,940 --> 00:05:28,230
+What's happening there is monotonic, so.
+
+86
+00:05:29,320 --> 00:05:34,210
+The accumulated array is a internet function, you can their social media and some problems.
+
+87
+00:05:34,240 --> 00:05:39,820
+The key is to figure out that you are actually searching based on the accumulation of the rate, which
+
+88
+00:05:39,820 --> 00:05:40,420
+is I'm an attorney.
+
+89
+00:05:40,420 --> 00:05:48,310
+So this is something that to keep in mind in somebody, you need to merely develop this possible function.
+
+90
+00:05:50,200 --> 00:05:54,790
+This is your virtual array, and you should think if this is doable or not.
+
+91
+00:05:55,740 --> 00:06:01,830
+The miners record is usually two section one section that has their start and the end and the middle
+
+92
+00:06:01,830 --> 00:06:03,210
+and the call for the possible function.
+
+93
+00:06:03,270 --> 00:06:04,620
+This is classical and repeated.
+
+94
+00:06:04,920 --> 00:06:09,660
+The second book is developing the possible function, sometimes the possible function, or this is just
+
+95
+00:06:09,660 --> 00:06:13,590
+one function and sometimes the possible function is doing some counting or so.
+
+96
+00:06:13,980 --> 00:06:16,230
+The multiple functions sometimes is actually complex.
+
+97
+00:06:16,260 --> 00:06:20,380
+This is actually the code of the trick to figure out would that visible function?
+
+98
+00:06:20,610 --> 00:06:26,040
+To figure out what it is, it's correct and to know how to use it in the overall homework of this section.
+
+99
+00:06:26,190 --> 00:06:31,680
+We will learn about a lot about different cases for that possible function.
+
+100
+00:06:32,310 --> 00:06:39,810
+Now, as I said during this course, I would be explaining in a and informal way and I would be more
+
+101
+00:06:39,810 --> 00:06:46,110
+concrete than theoretical because it simply make the course, which is actually hard by itself and easier
+
+102
+00:06:46,110 --> 00:06:47,040
+learning experience.
+
+103
+00:06:47,460 --> 00:06:50,610
+I would like to show you, what does it mean to speak in a formal way?
+
+104
+00:06:50,940 --> 00:06:55,710
+So here is how can we explain the binary search in a formal way?
+
+105
+00:06:55,950 --> 00:07:03,680
+We can say the following Consider a predicate be defined on some order set as brain research is possible
+
+106
+00:07:03,690 --> 00:07:08,460
+if and only if and then I can use this statement or I can use this statement.
+
+107
+00:07:09,060 --> 00:07:13,500
+I would like you to take a minute and try to interpret what is the relationship between that and brain
+
+108
+00:07:13,510 --> 00:07:15,180
+research in an informal way.
+
+109
+00:07:16,310 --> 00:07:18,650
+So that is what what this statement is saying.
+
+110
+00:07:18,680 --> 00:07:23,340
+First of all, Bridget could be just a Boolean function that returns true or false.
+
+111
+00:07:23,360 --> 00:07:23,870
+That's it.
+
+112
+00:07:24,560 --> 00:07:26,060
+Now what does this one say?
+
+113
+00:07:26,060 --> 00:07:31,310
+Here it say for all X as it's here, by the way, is just your sister's space.
+
+114
+00:07:31,640 --> 00:07:33,800
+For example, in the range of creates a problem.
+
+115
+00:07:34,040 --> 00:07:40,190
+The social space that has this start and end is it's now built.
+
+116
+00:07:40,200 --> 00:07:43,100
+X implies if bill fixes through.
+
+117
+00:07:44,040 --> 00:07:48,750
+It implies that the boy is truthful all way greater than X, how to interpret that mathematically is
+
+118
+00:07:48,750 --> 00:07:52,140
+following it sees once you found a true.
+
+119
+00:07:53,160 --> 00:08:00,420
+Everyone after this exposition, which are position is also true, which can be said in a different
+
+120
+00:08:00,420 --> 00:08:00,780
+way.
+
+121
+00:08:01,950 --> 00:08:08,070
+If the fix is false, every number before it is false, as you see.
+
+122
+00:08:09,600 --> 00:08:14,700
+This could be a bit confusing unless you have a good mathematical background and can barely understand
+
+123
+00:08:14,700 --> 00:08:16,710
+that this equal to this in the courts.
+
+124
+00:08:16,920 --> 00:08:23,820
+I just told you you need a bunch of zeros followed by ones or a bunch of ones, followed by zeros.
+
+125
+00:08:23,940 --> 00:08:26,520
+This is an informal description for that.
+
+126
+00:08:26,820 --> 00:08:28,110
+If you would like to make it formal.
+
+127
+00:08:28,320 --> 00:08:29,490
+It would be good this way.
+
+128
+00:08:29,820 --> 00:08:35,340
+It is still good and useful to explain in a formal ways because it make the interpretation easier.
+
+129
+00:08:35,820 --> 00:08:38,190
+Specifically, it make it more controlled.
+
+130
+00:08:38,250 --> 00:08:43,440
+Well, when we write an informal description, there might be a lot of questions to clarify the informal
+
+131
+00:08:43,440 --> 00:08:43,980
+description.
+
+132
+00:08:44,190 --> 00:08:48,420
+But the mathematics is much more, uh, much more limited.
+
+133
+00:08:48,630 --> 00:08:52,860
+This simple, by the way, is just the donut symbol taken in C++.
+
+134
+00:08:52,860 --> 00:08:54,480
+It would be the not operator.
+
+135
+00:08:55,290 --> 00:09:00,720
+Now, as I see, it might be tough for the people based on your background if you like mathematics.
+
+136
+00:09:00,990 --> 00:09:01,950
+This is OK for you.
+
+137
+00:09:02,250 --> 00:09:06,570
+If you studied the discrete mathematics, you should be very familiar with the symbols.
+
+138
+00:09:06,570 --> 00:09:10,350
+At least I don't mean that all of the algorithms are written in this way.
+
+139
+00:09:10,350 --> 00:09:12,150
+They are written in different formal ways.
+
+140
+00:09:12,390 --> 00:09:17,970
+But this is what we mean by a formal description and informal description if you would like to expose
+
+141
+00:09:17,970 --> 00:09:19,920
+yourself to a lot of formal descriptions.
+
+142
+00:09:20,160 --> 00:09:26,130
+You could read from the introduction to algorithms book or the one that named as the salaries.
+
+143
+00:09:27,080 --> 00:09:27,590
+That's all.

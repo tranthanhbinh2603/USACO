@@ -1,0 +1,995 @@
+1
+00:00:01,340 --> 00:00:05,660
+Let's continue and see how can we implement the idea of the breadth versus.
+
+2
+00:00:07,450 --> 00:00:11,380
+We will implement two versions in the first version, which is a very standard one.
+
+3
+00:00:11,830 --> 00:00:16,890
+The function is as follows it takes an adjacent Celeste and inserting a note, so be a face.
+
+4
+00:00:16,900 --> 00:00:20,740
+Always need a starting point and a victor would be returned.
+
+5
+00:00:20,950 --> 00:00:25,990
+This victory represents the shortest line of I.
+
+6
+00:00:25,990 --> 00:00:30,110
+Which you will return is the number of ideas from the start to die.
+
+7
+00:00:30,700 --> 00:00:34,420
+In other words, it is the shortest to from the starting point.
+
+8
+00:00:34,630 --> 00:00:37,600
+To this point, I said I didn't serve.
+
+9
+00:00:38,020 --> 00:00:39,400
+The start must be with zero.
+
+10
+00:00:40,410 --> 00:00:45,720
+Now, initially, we'll initialize all of this array was a big, a big value, for example, one million
+
+11
+00:00:45,720 --> 00:00:46,560
+or so, it depends.
+
+12
+00:00:47,310 --> 00:00:54,090
+So this then can be now indicator for the twisted itself, like if the value is, oh, we know that
+
+13
+00:00:54,210 --> 00:01:01,020
+this node is invested so far, if it has a value, then it is already sold with that value, the processing
+
+14
+00:01:01,020 --> 00:01:02,430
+of BFS goes as following.
+
+15
+00:01:02,460 --> 00:01:07,020
+Whenever we have a new node, we market as vested in the referee by putting its current length.
+
+16
+00:01:07,530 --> 00:01:09,900
+And we add to information to the queue.
+
+17
+00:01:10,260 --> 00:01:12,960
+We add the current node and it's the level.
+
+18
+00:01:13,630 --> 00:01:16,470
+The level of A. is one of the Birand level.
+
+19
+00:01:16,710 --> 00:01:18,210
+So let's see the implementation here.
+
+20
+00:01:19,490 --> 00:01:27,520
+We started by creating the lens array of nodes and all value that you will have two values on item.
+
+21
+00:01:28,170 --> 00:01:34,790
+Initially, we say we started from the start with level zero and we mark here that the length of the
+
+22
+00:01:34,790 --> 00:01:36,320
+thought is zero.
+
+23
+00:01:37,240 --> 00:01:43,690
+Now, the queue will keep working as long as we have more and more nodes in the first system.
+
+24
+00:01:43,810 --> 00:01:47,140
+We get the next note from the queue and we remove it.
+
+25
+00:01:47,440 --> 00:01:51,240
+We added only a single element here, so we get the single element here.
+
+26
+00:01:51,250 --> 00:01:52,990
+So let's say the starter was just one.
+
+27
+00:01:53,590 --> 00:01:55,630
+So we market that length of one is zero.
+
+28
+00:01:56,500 --> 00:02:01,630
+Now from the View here, it seems that one will have three neighbors three, five and six.
+
+29
+00:02:02,380 --> 00:02:06,040
+So the current node would be three delivered would be zero.
+
+30
+00:02:07,030 --> 00:02:12,340
+We start iterating by over the neighbors, so neighbors here would be the three and five and six.
+
+31
+00:02:13,030 --> 00:02:15,730
+And each time will check if it is visited before or not.
+
+32
+00:02:16,150 --> 00:02:20,080
+So if the rest of the neighborhood equal, it means we never visited it.
+
+33
+00:02:21,040 --> 00:02:26,050
+Otherwise, if it's visited already, we just ignore it because we already found the churches to both
+
+34
+00:02:26,050 --> 00:02:26,630
+what it would do.
+
+35
+00:02:26,640 --> 00:02:27,490
+You visited it.
+
+36
+00:02:28,890 --> 00:02:35,490
+If it is a first time to visit the node, first of all, we push it to the queue, so the queue in the
+
+37
+00:02:35,490 --> 00:02:37,560
+next time will have three value three.
+
+38
+00:02:37,950 --> 00:02:41,070
+And the level will be level plus one, which is here zero.
+
+39
+00:02:41,070 --> 00:02:41,610
+So it's one.
+
+40
+00:02:42,360 --> 00:02:48,350
+So now after this is Deb, the queue now has three and one, and the next iteration it would be five.
+
+41
+00:02:48,360 --> 00:02:51,420
+It will add five on one, then add six and one.
+
+42
+00:02:52,710 --> 00:02:53,190
+Now.
+
+43
+00:02:54,720 --> 00:03:00,090
+This, too, is done, and we go back here is that you and Betty know that you now have three values.
+
+44
+00:03:00,330 --> 00:03:04,650
+It has that next to three values that are exactly one step far from me.
+
+45
+00:03:05,100 --> 00:03:06,360
+So one is removed.
+
+46
+00:03:06,540 --> 00:03:12,420
+But it added for us three and five and six so that you will keep going and it will take the value three.
+
+47
+00:03:13,020 --> 00:03:14,940
+The value three is at level one.
+
+48
+00:03:15,330 --> 00:03:20,010
+Who are the neighbors of three, five, one and five and four and seven?
+
+49
+00:03:21,020 --> 00:03:24,120
+Observe that one has length of zero.
+
+50
+00:03:24,720 --> 00:03:26,610
+Five has length of one.
+
+51
+00:03:27,150 --> 00:03:29,820
+So these two will be ignored in this condition.
+
+52
+00:03:30,360 --> 00:03:33,000
+But the value four and very seven will not be ignored.
+
+53
+00:03:33,330 --> 00:03:38,730
+So when it comes to the value seven, for example, it would push seven and level two, which you mean
+
+54
+00:03:38,730 --> 00:03:45,540
+we took two steps to discover seven and add here levels of seven is two in a similar way.
+
+55
+00:03:45,540 --> 00:03:47,400
+It would add length, so food is two.
+
+56
+00:03:47,550 --> 00:03:49,290
+We already did this dressing before.
+
+57
+00:03:50,190 --> 00:03:54,910
+So now the Q has a value five and six and seven and four and so on.
+
+58
+00:03:54,930 --> 00:04:00,150
+I hope the the implementation just reflects what we already explained.
+
+59
+00:04:00,150 --> 00:04:08,010
+Before you keep going in the queue, become a big government, get its value to level, then iterate
+
+60
+00:04:08,010 --> 00:04:08,640
+on the numbers.
+
+61
+00:04:08,940 --> 00:04:12,540
+If we visited this neighborhood before then, we already know the shortest path for it.
+
+62
+00:04:12,930 --> 00:04:14,130
+Otherwise, we are done.
+
+63
+00:04:14,400 --> 00:04:20,430
+For example, five can be explored from one to five in a single step or from one to three to five in
+
+64
+00:04:20,430 --> 00:04:21,030
+two steps.
+
+65
+00:04:21,360 --> 00:04:23,490
+So five would be similar to early from one.
+
+66
+00:04:23,640 --> 00:04:26,160
+So we don't care about three five as a connection.
+
+67
+00:04:26,670 --> 00:04:28,230
+I hope the idea here is clear.
+
+68
+00:04:29,730 --> 00:04:36,330
+Now I would like to show you a smarter implementation that is also easy to get sense of correctness
+
+69
+00:04:36,330 --> 00:04:36,720
+of it.
+
+70
+00:04:37,500 --> 00:04:38,370
+Here is the idea.
+
+71
+00:04:38,970 --> 00:04:43,860
+Assuming general put on this graph, assume in general, the third level has five news.
+
+72
+00:04:44,430 --> 00:04:46,790
+The third delivered has five news alerts.
+
+73
+00:04:46,860 --> 00:04:49,890
+A pretended IQ has now exactly the five nodes.
+
+74
+00:04:51,050 --> 00:04:55,910
+What happens if we've processed the Q five times only?
+
+75
+00:04:57,070 --> 00:05:01,060
+Five times early, if we book the five notes only from the queue.
+
+76
+00:05:01,390 --> 00:05:06,280
+First of all, all of the nodes in level three will be gone from the queue.
+
+77
+00:05:07,030 --> 00:05:11,290
+Second, all of the nodes in the next level will be added.
+
+78
+00:05:11,860 --> 00:05:13,090
+So observed with the following.
+
+79
+00:05:13,390 --> 00:05:17,110
+Let me give you an example here the queue initially has value one.
+
+80
+00:05:17,560 --> 00:05:24,100
+If we process only one time after a single step, the one would be gone from the queue and that you
+
+81
+00:05:24,100 --> 00:05:28,690
+have three, five and six, which are their second delivery in the queue.
+
+82
+00:05:29,380 --> 00:05:30,790
+Now how many nodes in the queue?
+
+83
+00:05:31,030 --> 00:05:31,780
+Three nodes.
+
+84
+00:05:32,230 --> 00:05:39,180
+If you bruces the queue three times, then three go out of it and at seven and four five two eight six
+
+85
+00:05:39,190 --> 00:05:39,820
+eight zero.
+
+86
+00:05:40,630 --> 00:05:42,190
+After that, what?
+
+87
+00:05:42,190 --> 00:05:43,450
+What, what has been done?
+
+88
+00:05:43,750 --> 00:05:48,970
+Three, five and six, which are level one, are one, seven, four and zero are in the queue.
+
+89
+00:05:49,600 --> 00:05:51,010
+Let me say that in a different way.
+
+90
+00:05:51,580 --> 00:05:58,630
+If you bruces the queue such that in each single step, you process the size of the queue all of it
+
+91
+00:05:58,630 --> 00:06:05,410
+at once, you remove all of the current river node and add all of the nodes of the next level.
+
+92
+00:06:07,000 --> 00:06:13,570
+So what does this mean, we can determine the level from the processing order going back to the previous
+
+93
+00:06:13,570 --> 00:06:14,110
+version?
+
+94
+00:06:14,380 --> 00:06:19,060
+We needed to give it the level here as a tribute and edit here as the villainous one.
+
+95
+00:06:19,630 --> 00:06:25,060
+What I'm telling you is we can't actually know this information if we processed in a smarter way.
+
+96
+00:06:25,540 --> 00:06:26,710
+What is the advantage?
+
+97
+00:06:26,950 --> 00:06:28,900
+We have a bit similar code.
+
+98
+00:06:28,900 --> 00:06:31,180
+We don't need this integral from here.
+
+99
+00:06:31,630 --> 00:06:33,160
+So let's see the new implementation.
+
+100
+00:06:33,730 --> 00:06:35,530
+The new implementation goes as following.
+
+101
+00:06:36,760 --> 00:06:40,930
+It will keep going again as long as the queue isn't empty.
+
+102
+00:06:41,230 --> 00:06:43,030
+Now there is new to things here.
+
+103
+00:06:43,600 --> 00:06:48,220
+I initialize variable named the level, which is zero and there is a block here.
+
+104
+00:06:48,490 --> 00:06:52,200
+After the level, the level would be initialized to B+ Plus.
+
+105
+00:06:52,210 --> 00:06:58,060
+So the committee 2+ plus Sullivan will go here zero, one, two, three and four.
+
+106
+00:07:00,020 --> 00:07:05,330
+The second thing is the size, which is initialized with one is always replaced with the current queue
+
+107
+00:07:05,330 --> 00:07:05,720
+size.
+
+108
+00:07:05,960 --> 00:07:07,220
+So let's see what's happening here.
+
+109
+00:07:07,400 --> 00:07:08,900
+This internal body is the same.
+
+110
+00:07:08,960 --> 00:07:10,100
+We didn't change it.
+
+111
+00:07:11,840 --> 00:07:16,970
+The only thing is the cuno has only the node value, and we bush only then would value.
+
+112
+00:07:17,420 --> 00:07:20,930
+So here's what happened in the first step that you would have size of one.
+
+113
+00:07:22,130 --> 00:07:25,250
+Then this way you will only be processed one all the time.
+
+114
+00:07:25,700 --> 00:07:31,980
+So after one one year, one step, only the three, five and six would be added in the next step.
+
+115
+00:07:32,000 --> 00:07:33,590
+The size would be three.
+
+116
+00:07:34,220 --> 00:07:39,890
+So this way, look will be processed the three times which will process three and five and six, and
+
+117
+00:07:39,890 --> 00:07:41,930
+there are more nodes will be added in the queue.
+
+118
+00:07:42,290 --> 00:07:48,890
+But what matters is after three steps, the three, five and six would be booted out of the out of side
+
+119
+00:07:48,890 --> 00:07:52,460
+of the queue and the seven and four and zero will be added to the queue.
+
+120
+00:07:52,910 --> 00:07:54,620
+So the new size is again three.
+
+121
+00:07:55,600 --> 00:08:00,550
+Then we processed three times seven, four and zero will be processed and got out of the queue.
+
+122
+00:08:00,970 --> 00:08:02,200
+Only two will be added.
+
+123
+00:08:02,620 --> 00:08:08,100
+So in the next step, the queue would have only the next one next valley here, which is to as size
+
+124
+00:08:08,110 --> 00:08:08,890
+one and so on.
+
+125
+00:08:09,460 --> 00:08:15,960
+So the idea is it's following we can literally process that you literally level by level.
+
+126
+00:08:16,660 --> 00:08:19,780
+And this while loop here is what allowing us to do that.
+
+127
+00:08:20,710 --> 00:08:28,930
+So which version to you is most of the time when you need the actual level, then this is the way to
+
+128
+00:08:28,930 --> 00:08:33,520
+go because it is way easier than other ones like it doesn't need here a beer or fits.
+
+129
+00:08:33,530 --> 00:08:35,680
+And second, all of that you just maintain the level here.
+
+130
+00:08:36,770 --> 00:08:42,590
+Uh, if if you don't need the level, then you can just use this version, and even in this case, you
+
+131
+00:08:42,590 --> 00:08:45,380
+will not even also need this interior for the river.
+
+132
+00:08:45,380 --> 00:08:48,650
+You don't need the rivet also here, for example, in some Boolean function.
+
+133
+00:08:49,010 --> 00:08:51,950
+If we would like to know if this is reachable or not.
+
+134
+00:08:52,670 --> 00:08:54,200
+So this is mainly the change here.
+
+135
+00:08:55,590 --> 00:09:00,540
+The length also as an array, you keep using it if you need that and if you just need to know it's visited
+
+136
+00:09:00,540 --> 00:09:02,840
+or not, then you can just use a normal visit.
+
+137
+00:09:03,390 --> 00:09:08,070
+So it depends most of the time you will notice you are using this version.
+
+138
+00:09:09,450 --> 00:09:14,040
+Now, let me highlight some properties about the algorithm, and I hope that you got the tracing of
+
+139
+00:09:14,040 --> 00:09:14,280
+it.
+
+140
+00:09:14,970 --> 00:09:19,430
+Some people like to say that we have three status here white, gray and black, which are the colors
+
+141
+00:09:19,440 --> 00:09:20,760
+when you think about the graph.
+
+142
+00:09:21,180 --> 00:09:23,700
+We actually have three different statuses for the them.
+
+143
+00:09:24,630 --> 00:09:27,330
+The first is the status that the node is never visited.
+
+144
+00:09:28,200 --> 00:09:32,760
+The second status is the node is marketed here and visited, but not breakfast yet.
+
+145
+00:09:33,420 --> 00:09:38,820
+The third state, when we buy it here, the node is visited and processed, so we can say we actually
+
+146
+00:09:38,820 --> 00:09:43,410
+have three statuses for the for the nodes, implementation wise, as you see.
+
+147
+00:09:43,620 --> 00:09:44,490
+It doesn't matter.
+
+148
+00:09:46,080 --> 00:09:49,440
+We don't care more than it is visited or not, and that you will get the next one.
+
+149
+00:09:49,440 --> 00:09:52,790
+So we don't have to keep labeling it with the three different cases.
+
+150
+00:09:54,340 --> 00:10:00,400
+The second thing is clearly that you would always have to have have unique values.
+
+151
+00:10:00,490 --> 00:10:01,030
+Why?
+
+152
+00:10:01,390 --> 00:10:04,810
+Because we only push the value if it is never visited before.
+
+153
+00:10:04,990 --> 00:10:07,090
+So every note is only bush the one time.
+
+154
+00:10:08,670 --> 00:10:15,570
+The third thing, which is an interesting observation now when you think about Vision one here, the
+
+155
+00:10:15,570 --> 00:10:16,260
+Vision one.
+
+156
+00:10:17,780 --> 00:10:21,530
+Keeps adding and moving in a conservative way.
+
+157
+00:10:22,250 --> 00:10:26,330
+This means at any point of time that you will have.
+
+158
+00:10:27,690 --> 00:10:31,260
+Mix up to two levels, for example, that you could have at the moment.
+
+159
+00:10:31,470 --> 00:10:37,410
+Five six and the Valley seven six and Valley seven and seven four, maybe seven four zero and two,
+
+160
+00:10:37,710 --> 00:10:43,860
+maybe only seven and foot that you would always have either information from one level or two levels.
+
+161
+00:10:44,220 --> 00:10:44,940
+Does this matter?
+
+162
+00:10:45,000 --> 00:10:45,330
+No.
+
+163
+00:10:45,810 --> 00:10:49,560
+But again, it's just about ability here in this one.
+
+164
+00:10:49,590 --> 00:10:55,740
+The interesting thing is, by definition, after the processing of the wood level, we will have only
+
+165
+00:10:55,740 --> 00:10:57,180
+the nodes of the second level.
+
+166
+00:10:58,560 --> 00:11:02,190
+There is one one minor difference between the two things.
+
+167
+00:11:02,400 --> 00:11:06,570
+This one is a bit easier to think and prove compared to this one.
+
+168
+00:11:06,960 --> 00:11:11,670
+This one is a bit more complicated because the queue in every iteration has this mix of the two levels.
+
+169
+00:11:12,000 --> 00:11:16,980
+You are updating yourself all the time and you don't know exactly which one you belong to.
+
+170
+00:11:17,520 --> 00:11:21,870
+In this one, when you try to think about the correctness, it would be way easier because you just
+
+171
+00:11:21,900 --> 00:11:24,340
+are adding he had no delivered by it.
+
+172
+00:11:25,950 --> 00:11:31,290
+OK, so remember, this is what we could there be a first three, right?
+
+173
+00:11:31,890 --> 00:11:36,630
+So actually, the beef is three, which represent the only the only use.
+
+174
+00:11:36,630 --> 00:11:42,180
+The edges here represents actually the shortest the bath, where the shortest path here represents the
+
+175
+00:11:42,180 --> 00:11:45,720
+number of edges from the starting point to the target point.
+
+176
+00:11:46,020 --> 00:11:50,710
+So when you think about the search from one to five, it would be one two five four one two zero two
+
+177
+00:11:50,850 --> 00:11:54,140
+one six zero from three to zero eight.
+
+178
+00:11:54,140 --> 00:11:58,020
+It would be also three to eight here, three four, two eight and so on.
+
+179
+00:11:58,680 --> 00:12:00,610
+You don't even want the shortest.
+
+180
+00:12:00,610 --> 00:12:03,990
+The bus from three to eight must be also three four two eight.
+
+181
+00:12:04,410 --> 00:12:05,880
+But anyway, we don't care about that.
+
+182
+00:12:06,980 --> 00:12:13,010
+What we care, the major focus is the best from one to any one of them actually represent their ages
+
+183
+00:12:13,010 --> 00:12:13,250
+here.
+
+184
+00:12:13,760 --> 00:12:17,900
+Please feel free to check out the the formal proof in the sailors book.
+
+185
+00:12:18,590 --> 00:12:21,530
+But however, it's very easy to get an informal sense of it.
+
+186
+00:12:22,950 --> 00:12:26,550
+The complexity we only add in the queue, the unvisited nodes.
+
+187
+00:12:26,790 --> 00:12:32,640
+This means we will have only all nodes to be explored in the queue now forever renewed.
+
+188
+00:12:32,880 --> 00:12:35,610
+We iterate on all of its neighbors.
+
+189
+00:12:36,180 --> 00:12:38,340
+Thinking about it individually would be hard.
+
+190
+00:12:38,700 --> 00:12:44,580
+But when you think about it as a global view, aggregating that every node is treating its children.
+
+191
+00:12:44,970 --> 00:12:48,450
+So the overall we actually iterated on all of the edges.
+
+192
+00:12:48,840 --> 00:12:51,420
+So the addition of of the neighbors here.
+
+193
+00:12:52,450 --> 00:12:56,890
+From a global view, I just represented the this is exactly as we did before in the defense.
+
+194
+00:12:58,460 --> 00:13:04,120
+So the total complexity is, again, Ebola's V and that you will have maximum of any nodes or vineyards,
+
+195
+00:13:04,130 --> 00:13:05,960
+so we have all the memory complex.
+
+196
+00:13:06,260 --> 00:13:09,770
+This is exactly the same memory and time complexity of the device.
+
+197
+00:13:11,190 --> 00:13:17,010
+Now for the correctness, the sailors book is actually implementing Division One Division One Brew.
+
+198
+00:13:17,280 --> 00:13:21,050
+It is still intuitive, but not the direct uh.
+
+199
+00:13:21,660 --> 00:13:24,450
+It is very beneficial for you to try to read the proof.
+
+200
+00:13:24,690 --> 00:13:29,340
+But I would like you to like, give it the following in mind when you read format proofs expected to
+
+201
+00:13:29,340 --> 00:13:34,440
+iterate a lot and it isn't helpful to try to explain formal proofs in lectures with full details.
+
+202
+00:13:34,860 --> 00:13:40,200
+The best thing is if you would like go ahead and keep reading and reading it, read maybe five or six
+
+203
+00:13:40,200 --> 00:13:41,220
+times or more.
+
+204
+00:13:41,550 --> 00:13:44,550
+It depends on your mathematical background until you get it.
+
+205
+00:13:44,970 --> 00:13:50,700
+I would like to give you some keys because you might be new to the the silliest books I would like.
+
+206
+00:13:50,720 --> 00:13:51,810
+Just give you some symbols.
+
+207
+00:13:52,110 --> 00:13:53,370
+G represented a graph.
+
+208
+00:13:53,490 --> 00:13:55,620
+So G that V is like the graph of vertices.
+
+209
+00:13:55,950 --> 00:14:03,900
+Think here is an object and g that V is an attribute when we say g that v minus s this minus mean subtraction
+
+210
+00:14:03,900 --> 00:14:04,050
+mean.
+
+211
+00:14:04,050 --> 00:14:10,680
+Except so it means, like all of the vertices except to the searching vertex you is a vertex itself.
+
+212
+00:14:10,680 --> 00:14:12,660
+U the smolka ripper is Vertex.
+
+213
+00:14:12,870 --> 00:14:14,760
+You will not see it in the Sudoku, for example.
+
+214
+00:14:14,940 --> 00:14:15,790
+Use that colour.
+
+215
+00:14:15,810 --> 00:14:17,470
+Remember, we mentioned they have three colours.
+
+216
+00:14:17,730 --> 00:14:21,690
+You did colour you the D you did by the dot here like an object.
+
+217
+00:14:21,690 --> 00:14:25,320
+So this is obviously the colour, obviously the distance object, goodbye and so on.
+
+218
+00:14:26,100 --> 00:14:32,790
+So the first here is like a thread on every node that isn't the starting point and initialize it in
+
+219
+00:14:32,790 --> 00:14:33,240
+this way.
+
+220
+00:14:35,910 --> 00:14:42,360
+The boy here represented the parents there by a representative parent, for example, the parent of
+
+221
+00:14:42,360 --> 00:14:43,440
+four would be three.
+
+222
+00:14:43,440 --> 00:14:49,590
+The parent of six is one, the parent of zero six and in the homework we will see you would be asked
+
+223
+00:14:49,590 --> 00:14:52,440
+to bring to their dad to bring to the actual birth.
+
+224
+00:14:52,590 --> 00:14:55,740
+So you will need to add the parent the delta here.
+
+225
+00:14:55,860 --> 00:14:57,860
+This Delta symbol represented the shortest about.
+
+226
+00:14:57,870 --> 00:15:02,550
+So when we say this to is and we it mean the minimum number of ages from SC to V.
+
+227
+00:15:02,910 --> 00:15:07,380
+So using this symbol should be enough so that you get you don't get confused about the symbols.
+
+228
+00:15:07,560 --> 00:15:10,620
+Feel free to read it for the correctness.
+
+229
+00:15:10,620 --> 00:15:18,480
+Version two is probably way easier than proving the first the first version because the Q in every stage
+
+230
+00:15:18,480 --> 00:15:21,030
+has only the vertices of the current level.
+
+231
+00:15:21,300 --> 00:15:27,030
+So one would generate for us three five and six, three, five and six hundred seven four zero seven
+
+232
+00:15:27,030 --> 00:15:33,030
+four zero three two two would generate it, and it will go in exactly for live, as we did here.
+
+233
+00:15:33,300 --> 00:15:37,950
+So when you think about it informally, this one got the first level.
+
+234
+00:15:38,280 --> 00:15:40,320
+Definitely there is no shorter birth then.
+
+235
+00:15:40,320 --> 00:15:43,320
+One two step two three one two step two five one step to fix.
+
+236
+00:15:43,980 --> 00:15:47,940
+Now, in a very similar way, the three is adding the next one here.
+
+237
+00:15:47,950 --> 00:15:51,360
+When you drew the graph in a vertical way, this way you can see it.
+
+238
+00:15:51,360 --> 00:15:54,240
+Clearly, three is going to add its neighbors.
+
+239
+00:15:54,690 --> 00:15:58,410
+If the neighbor is visited already, then this mean we definitely know a shorter birth.
+
+240
+00:15:59,640 --> 00:16:06,660
+If if we never met it before, then it's definitely the shortest path for it because if it was found
+
+241
+00:16:06,660 --> 00:16:08,550
+in, it really was, it should be visited.
+
+242
+00:16:08,910 --> 00:16:14,640
+If it is in and we are iterating and processing in a level by level this way, then I must be the shortest
+
+243
+00:16:14,640 --> 00:16:15,120
+path here.
+
+244
+00:16:15,510 --> 00:16:16,980
+This is very informal definition.
+
+245
+00:16:17,550 --> 00:16:24,300
+If you don't get the intuition in a very strong way, believes feel free to, uh, to read the to read
+
+246
+00:16:24,300 --> 00:16:28,150
+the book and read a lot with the proof itself.
+
+247
+00:16:29,580 --> 00:16:30,390
+Feel free to do that.
+
+248
+00:16:30,390 --> 00:16:33,690
+Also, after solving the practice, I'm trying to make the course more practical.
+
+249
+00:16:33,690 --> 00:16:38,790
+But still theory is part of the mixture, but the practice will make things much more intuitive.

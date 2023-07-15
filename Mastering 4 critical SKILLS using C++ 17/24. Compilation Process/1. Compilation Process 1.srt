@@ -1,0 +1,354 @@
+0
+1
+00:00:01,230 --> 00:00:06,870
+Through the course twice, we have talked about the compilation process. We knew about what is
+1
+
+2
+00:00:06,870 --> 00:00:09,590
+the compilation part,
+2
+
+3
+00:00:09,910 --> 00:00:12,210
+we learned a few things about the linker part,
+3
+
+4
+00:00:12,630 --> 00:00:18,660
+and in this section, we would like to go in little more details about the compiler and the linker.
+4
+
+5
+00:00:19,710 --> 00:00:23,430
+A full understanding of this issue, especially about the compiler things,
+5
+
+6
+00:00:23,430 --> 00:00:27,480
+would require three different computer science courses.
+6
+
+7
+00:00:27,810 --> 00:00:33,450
+The compiler course, the assembly programming language, and the computer architecture.
+7
+
+8
+00:00:33,720 --> 00:00:38,460
+With these courses, you can have a very deep understanding of what is happening and about the
+8
+
+9
+00:00:38,460 --> 00:00:39,030
+details.
+9
+
+10
+00:00:41,530 --> 00:00:48,550
+There were many programming languages that have been there, and it was like an evolution for the languages,
+10
+
+11
+00:00:48,940 --> 00:00:55,570
+so we have here our hardware typically implemented using just a bunch of the zeros and ones.
+11
+
+12
+00:00:56,170 --> 00:00:57,790
+The first the programming language
+12
+
+13
+00:00:57,790 --> 00:01:03,790
+and the only one that the hardware understands in our context typically is the machine code language,
+13
+
+14
+00:01:04,060 --> 00:01:06,130
+which is just zeros and ones.
+14
+
+15
+00:01:06,430 --> 00:01:09,220
+You can imagine how hard to write zeros and ones.
+15
+
+16
+00:01:09,580 --> 00:01:16,140
+So through zeros and ones, we can tell the computer every kind of instructions we would like to give.
+16
+
+17
+00:01:16,150 --> 00:01:20,200
+Remember, every programming language eventually is a set of instructions.
+17
+
+18
+00:01:21,860 --> 00:01:27,680
+When we go to a higher level, we get what we call an assembly language, and the assembly language is
+18
+
+19
+00:01:27,680 --> 00:01:33,470
+kind of one-to-one mapping between this language and the machine code language.
+19
+
+20
+00:01:33,860 --> 00:01:40,880
+The assembly is still like a low-level code, but it's much, much easier to write compared to the machine
+20
+
+21
+00:01:40,880 --> 00:01:41,230
+code.
+21
+
+22
+00:01:41,840 --> 00:01:49,970
+And now in the development of languages, we go one higher-level like Java and C++ and Python, and these
+22
+
+23
+00:01:49,970 --> 00:01:51,320
+are very high level languages.
+23
+
+24
+00:01:51,320 --> 00:01:54,170
+We can write programming languages in a very easy way.
+24
+
+25
+00:01:54,550 --> 00:01:59,530
+Some of them are compiled like C++ and Java, and some of them are interpreted like Python.
+25
+
+26
+00:01:59,590 --> 00:02:03,170
+Later, you can know what is interpretation in a python course so.
+26
+
+27
+00:02:03,170 --> 00:02:03,470
+...
+27
+
+28
+00:02:04,190 --> 00:02:11,840
+So if you tried to go to this website and you wrote such a very simple code, which is a high
+28
+
+29
+00:02:11,840 --> 00:02:18,290
+level code and you wrote a square function this way, the website will give you a translation for this
+29
+
+30
+00:02:18,290 --> 00:02:23,420
+code to the assembly code. If you tried to read here, you would notice something called square int.
+30
+
+31
+00:02:23,420 --> 00:02:25,420
+So you can guess that this is a square function.
+31
+
+32
+00:02:25,640 --> 00:02:30,880
+So as you see, we are going to do mapping that this code is going to be converted here.
+32
+
+33
+00:02:30,910 --> 00:02:36,140
+So we have here also the main function, and then you start to find the commands or instructions like push,
+33
+
+34
+00:02:36,140 --> 00:02:40,470
+move, move, pop, ret for return, and so on.
+34
+
+35
+00:02:40,880 --> 00:02:46,660
+So the main function here, you see in line 14, we have a call for a function named Square that takes
+35
+
+36
+00:02:46,670 --> 00:02:49,700
+an integer and this square is going to take an integer,
+36
+
+37
+00:02:49,700 --> 00:02:53,000
+and eventually would be computed and return here with the ret.
+37
+
+38
+00:02:53,570 --> 00:02:58,850
+So the assembly is a bunch of instructions in this way that have very specific meanings.
+38
+
+39
+00:03:02,070 --> 00:03:09,510
+So overall, we write this kind of high-level code like C++ code or Fortran code, this higher
+39
+
+40
+00:03:09,510 --> 00:03:18,420
+level and then this high-level code is going to be converted to assembly language.
+40
+
+41
+00:03:20,070 --> 00:03:29,530
+This is mainly happening through a compilation step. After this code is converted here to assembly,
+41
+
+42
+00:03:29,790 --> 00:03:39,510
+we are going to convert it to another level, to a very low-level code, which is the binary
+42
+
+43
+00:03:39,510 --> 00:03:42,040
+code. From the high level to the assembly,
+43
+
+44
+00:03:42,060 --> 00:03:46,060
+we do that through the compiler. From the assembly to a machine language,
+44
+
+45
+00:03:46,080 --> 00:03:49,460
+We do that through another program called the assembler.
+45
+
+46
+00:03:49,770 --> 00:03:55,830
+So this is how we go step by step to the target destination from the high level to the machine level
+46
+
+47
+00:03:55,830 --> 00:03:56,130
+code.
+47
+
+48
+00:03:57,780 --> 00:04:04,440
+The assembler is just another program that you don't see, which is converting your code into assembly
+48
+
+49
+00:04:04,440 --> 00:04:04,890
+language.
+49
+
+50
+00:04:06,600 --> 00:04:13,470
+Finally, when you double click on your executable, which is eventually a bunch of instructions
+50
+
+51
+00:04:13,470 --> 00:04:17,230
+in zeros and ones, these instructions are loaded into the memory,
+51
+
+52
+00:04:17,400 --> 00:04:22,920
+then there is what we call a fetch-execute cycle, which simply takes the instruction executed, then
+52
+
+53
+00:04:22,920 --> 00:04:27,840
+take another instruction executed, fetch another instruction and executed, and so on.
+53
+
+54
+00:04:28,140 --> 00:04:33,300
+So this is the whole cycle that involves, as I said, the compiler and the assembly and also the
+54
+
+55
+00:04:33,690 --> 00:04:35,340
+computer architecture here.
+55
+
+56
+00:04:36,810 --> 00:04:40,090
+So overall, behind the scene, we have the compilation.
+56
+
+57
+00:04:40,110 --> 00:04:46,710
+Remember, we talked about the preprocessor which goes to parse every line that starts with the hash, the preprocessor
+57
+
+58
+00:04:46,710 --> 00:04:52,110
+directives, and then is going to be compiled to give the assembly code and then the assembler would
+58
+
+59
+00:04:52,110 --> 00:04:53,930
+give us what we call object files,
+59
+
+60
+00:04:53,940 --> 00:04:55,990
+and these are bunch of binary files.
+60
+
+61
+00:04:56,580 --> 00:05:02,970
+We also learned about linking, which has a major goal of combining the bunch of object files that
+61
+
+62
+00:05:02,970 --> 00:05:10,650
+you have together in one executable program, and then you may face some resolve reference, the linker
+62
+
+63
+00:05:10,650 --> 00:05:15,690
+also is going to resolve the references, which means searching for implementations. if it didn't find
+63
+
+64
+00:05:15,690 --> 00:05:21,730
+the target implementation, it says an undefined reference as we will show in the next lecture.
+64
+
+65
+00:05:22,470 --> 00:05:26,930
+Finally, execution: we load instructions in the memory and do fetch-execute cycle.
+65
+
+66
+00:05:27,360 --> 00:05:34,200
+This is a big picture of steps that happens mainly in the compilation process.
+66
+
+67
+00:05:34,420 --> 00:05:36,720
+So we have the source codes, in the compilation,
+67
+
+68
+00:05:36,730 --> 00:05:42,300
+they go to the assembly and with the assembler, they go to object files, and the linker is going to take all
+68
+
+69
+00:05:42,300 --> 00:05:48,000
+of these files together with all of you will say std files or libraries, push all of them together
+69
+
+70
+00:05:48,000 --> 00:05:50,560
+to give you that executable file.
+70
+
+71
+00:05:51,210 --> 00:05:56,560
+This is for now about the big picture of the compilation process. That's it.

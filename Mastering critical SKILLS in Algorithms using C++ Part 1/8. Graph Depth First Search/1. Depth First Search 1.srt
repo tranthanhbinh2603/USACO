@@ -1,0 +1,1131 @@
+1
+00:00:01,380 --> 00:00:07,170
+So far, we learned how to represent a group, I hope now you are very comfortable with graph representation.
+
+2
+00:00:07,680 --> 00:00:11,610
+You understand that the representation idea is a very generic idea.
+
+3
+00:00:11,610 --> 00:00:15,060
+We can build the many different representations based on our needs.
+
+4
+00:00:15,510 --> 00:00:18,540
+It could involve sets, hash tables, a lot.
+
+5
+00:00:18,540 --> 00:00:21,270
+A lot of things are based on our needs.
+
+6
+00:00:21,780 --> 00:00:23,820
+So I hope this idea is a good one.
+
+7
+00:00:23,820 --> 00:00:26,700
+So what we learned so far was how to represent the gap.
+
+8
+00:00:27,390 --> 00:00:33,680
+Now, the second part, which is the dominant party in graph theory, is the algorithm so that we run
+
+9
+00:00:33,690 --> 00:00:34,470
+on the graph.
+
+10
+00:00:35,010 --> 00:00:39,590
+There are many algorithms that we use on graph theory.
+
+11
+00:00:39,600 --> 00:00:40,530
+There are many of them.
+
+12
+00:00:41,220 --> 00:00:44,310
+And the reason behind that is graph theory is very powerful field.
+
+13
+00:00:44,520 --> 00:00:51,090
+We can find it everywhere around us, and we met a lot of problems during this course will cover assemble
+
+14
+00:00:51,090 --> 00:00:53,460
+of this graph theory algorithms.
+
+15
+00:00:53,790 --> 00:00:56,160
+I definitely don't intend to cover all of them.
+
+16
+00:00:57,460 --> 00:01:04,330
+So please said that the overall coverage would be pretty good if you have more more algorithms so that
+
+17
+00:01:04,330 --> 00:01:06,370
+you have an interest in them, go ahead and study them.
+
+18
+00:01:06,370 --> 00:01:08,110
+You will find a lot of materials out there.
+
+19
+00:01:08,950 --> 00:01:14,440
+But but the key message that I'm trying to get from the from the courts are here for you to know what
+
+20
+00:01:14,440 --> 00:01:20,080
+are the representation to be very flexible with them, to know how to apply some of the algorithms you
+
+21
+00:01:20,080 --> 00:01:20,710
+overdraft?
+
+22
+00:01:21,130 --> 00:01:22,060
+So let's proceed.
+
+23
+00:01:22,600 --> 00:01:32,650
+The first algorithm that we will will learn during the during this course is mainly the dips, the first
+
+24
+00:01:32,650 --> 00:01:33,400
+search algorithm.
+
+25
+00:01:34,060 --> 00:01:35,680
+So what is the big picture of that?
+
+26
+00:01:35,860 --> 00:01:40,450
+The graph traversal the what are the traversal mean just to iterate on something where they have an
+
+27
+00:01:40,450 --> 00:01:44,170
+array and enter it in all of its elements were traversing their array.
+
+28
+00:01:44,590 --> 00:01:48,940
+If I have a binary tree iterating all of elements, we say we are traversing the binary.
+
+29
+00:01:49,270 --> 00:01:54,760
+So graph traversal mean we have a big graph and we would like to iterate on all of its root.
+
+30
+00:01:55,300 --> 00:01:56,750
+Remember the printing function?
+
+31
+00:01:57,070 --> 00:02:04,930
+It's kind of a very simple traversal, but in reality, we need algorithms that are much more powerful
+
+32
+00:02:04,930 --> 00:02:06,070
+and do a lot of stuff.
+
+33
+00:02:06,550 --> 00:02:12,130
+So that is mainly two fundamental techniques for traversing the graph.
+
+34
+00:02:12,370 --> 00:02:18,040
+One of them named dips, a first search algorithm and another one named Deep Breath for a search algorithm.
+
+35
+00:02:18,730 --> 00:02:23,050
+And as a as a Titan's name with this one focused more on the going deeper.
+
+36
+00:02:23,320 --> 00:02:28,600
+But this one focused more on getting better, as we will at the depth of the research is mainly a recursive
+
+37
+00:02:28,600 --> 00:02:34,000
+technique and the recursion as we know, internet use the ability to stack when the other side.
+
+38
+00:02:34,000 --> 00:02:41,500
+The breadth is mainly an iterative technique, and it's usually used Q in that in the estimate, the
+
+39
+00:02:41,500 --> 00:02:43,880
+focus of this section is merely the depth of research.
+
+40
+00:02:43,900 --> 00:02:45,040
+The next one will be the breadth.
+
+41
+00:02:46,870 --> 00:02:49,510
+The depth already is based on recursion.
+
+42
+00:02:49,690 --> 00:02:52,780
+You must be like comfortable with the recursion.
+
+43
+00:02:53,080 --> 00:02:57,670
+I already added in the course of that, a basic review for the recursion.
+
+44
+00:02:57,970 --> 00:03:00,160
+This is mainly on what you need or in a different way.
+
+45
+00:03:00,370 --> 00:03:05,020
+You need to be comfortable with something like writing Fibonacci of and analyzing it.
+
+46
+00:03:05,770 --> 00:03:11,500
+Um, this kind of techniques work on all of kind of graphs directed and directed multiple.
+
+47
+00:03:11,500 --> 00:03:14,350
+It just looks like all of them are workable here.
+
+48
+00:03:14,590 --> 00:03:17,830
+So don't worry, don't keep asking, is this with the graphics?
+
+49
+00:03:17,830 --> 00:03:20,950
+Is the graph the algorithm works and all of them the same way?
+
+50
+00:03:21,610 --> 00:03:25,780
+So this is mainly the story of the traversal of the graph.
+
+51
+00:03:26,650 --> 00:03:31,540
+Before digging in the topic, in case you do know, I would like to highlight what does it mean to depth
+
+52
+00:03:31,540 --> 00:03:33,340
+and breadth in million our life?
+
+53
+00:03:33,940 --> 00:03:35,590
+So let me give you an example.
+
+54
+00:03:35,680 --> 00:03:40,750
+Let's say we have we have like a six about subjects of interest rate, language biology, chemistry
+
+55
+00:03:40,750 --> 00:03:41,230
+and so on.
+
+56
+00:03:41,980 --> 00:03:44,620
+And let's pretend that there are 100 books in every subject.
+
+57
+00:03:44,950 --> 00:03:49,510
+If you read too much of these books, like maybe 80 or more books, then it would be an expert here.
+
+58
+00:03:50,200 --> 00:03:54,040
+So as you see to be expert, you have to go deeper and deeper in something.
+
+59
+00:03:54,580 --> 00:03:59,530
+Now, every one of us has a maybe a specific measure in his life, like I'm a computer science student,
+
+60
+00:03:59,530 --> 00:04:01,840
+so I learned many computer science topics.
+
+61
+00:04:02,260 --> 00:04:04,180
+I am more specialized now in computer vision.
+
+62
+00:04:04,360 --> 00:04:06,430
+So I went to read deeper in this direction.
+
+63
+00:04:06,430 --> 00:04:07,270
+I learned a lot.
+
+64
+00:04:07,840 --> 00:04:13,750
+But if you asked me about maybe, maybe some networking of it, I would not have that much information.
+
+65
+00:04:14,200 --> 00:04:17,680
+Now this is what we call the Brits in the British side.
+
+66
+00:04:17,920 --> 00:04:21,280
+You do go deeper in something you explore in general.
+
+67
+00:04:21,520 --> 00:04:25,300
+For example, someone would like to have a breadth in these directions.
+
+68
+00:04:25,630 --> 00:04:28,990
+Well, let's start by reading maybe only one book on every subject.
+
+69
+00:04:29,290 --> 00:04:33,100
+So one subject here, one book here, one book here, one book here on book tour and book here.
+
+70
+00:04:33,550 --> 00:04:38,710
+Now this person has some kind of basic information about the different fields.
+
+71
+00:04:39,010 --> 00:04:44,290
+He is no way to be an expert in them, but he has pretty good background.
+
+72
+00:04:44,290 --> 00:04:44,680
+All of them.
+
+73
+00:04:45,250 --> 00:04:47,410
+Now what if the person would like to be more familiar?
+
+74
+00:04:47,740 --> 00:04:50,260
+It would take maybe one more book in every subject of that.
+
+75
+00:04:50,890 --> 00:04:57,730
+So to have a breath as a life concept, you explore different things without going deeper.
+
+76
+00:04:58,030 --> 00:05:04,990
+So you see, we keep exploring different things to have a depth, you keep exploring the same topic
+
+77
+00:05:04,990 --> 00:05:06,340
+and go deeper and deeper.
+
+78
+00:05:06,880 --> 00:05:09,820
+Now this is mainly what are the research topics.
+
+79
+00:05:10,480 --> 00:05:12,010
+The depth of research is about it.
+
+80
+00:05:13,460 --> 00:05:15,560
+So let's go back to our main topic here.
+
+81
+00:05:16,040 --> 00:05:20,570
+This is the first search is a recursive algorithm for traversing the graph.
+
+82
+00:05:22,240 --> 00:05:26,570
+The best thing really to to know what the defense is doing is merely to see how how to proceed.
+
+83
+00:05:26,590 --> 00:05:31,840
+This is the easiest way as a recursive algorithm and like many recursive algorithms, we can write it
+
+84
+00:05:31,840 --> 00:05:34,240
+like an iterative version using our own stack here.
+
+85
+00:05:34,260 --> 00:05:37,210
+But but this isn't of big interest for me at the moment.
+
+86
+00:05:37,720 --> 00:05:39,190
+So here is a flow of defense.
+
+87
+00:05:39,730 --> 00:05:46,840
+The defense starting from a specific mood will try all of the edges of this node for every edge it would
+
+88
+00:05:46,840 --> 00:05:50,540
+mark there the neighbor of this edge as a vista node.
+
+89
+00:05:50,560 --> 00:05:52,690
+This is very fundamental in terms of research.
+
+90
+00:05:53,320 --> 00:05:58,600
+And then it will start to recursive from this pivot and apply the same logic again and again.
+
+91
+00:05:59,080 --> 00:06:05,830
+And when the defense attorney back to this node and check the next edge, you first to check if it is
+
+92
+00:06:05,830 --> 00:06:10,420
+visited or not, if the neighbor is vested, it doesn't want to sit behind it.
+
+93
+00:06:10,720 --> 00:06:12,940
+Now, this could look like a very weird statements.
+
+94
+00:06:13,270 --> 00:06:15,640
+Let's see addressing a let's see a code for that.
+
+95
+00:06:16,680 --> 00:06:18,150
+Let's put that in a context.
+
+96
+00:06:18,360 --> 00:06:24,390
+This is a very common problem we call the reachability problem and the reachability women they would
+
+97
+00:06:24,390 --> 00:06:29,250
+like to know if yes and no due a ritual or not, for example.
+
+98
+00:06:29,250 --> 00:06:33,600
+But here in this graph, we see that no do and not for a ritual from each other.
+
+99
+00:06:33,630 --> 00:06:34,140
+Why?
+
+100
+00:06:34,380 --> 00:06:35,790
+Because there is some birth between them.
+
+101
+00:06:36,360 --> 00:06:41,430
+But we say that no two and no chicks are unreachable because the two cannot find the bath.
+
+102
+00:06:41,760 --> 00:06:42,450
+2.6.
+
+103
+00:06:42,900 --> 00:06:46,770
+So now let's let's have this simple task for every node in the graph.
+
+104
+00:06:47,340 --> 00:06:50,460
+I would like you to list all of the ritual nodes from it.
+
+105
+00:06:51,390 --> 00:06:58,350
+So, for example, here node number zero here has rechargeable of one and four and the three.
+
+106
+00:06:59,300 --> 00:07:04,730
+We don't care about those, I just lost them, but no one is reaching zero from here.
+
+107
+00:07:05,210 --> 00:07:08,900
+And also reaching forward from here and the ferry from here.
+
+108
+00:07:09,830 --> 00:07:11,450
+No, no to reaching No.
+
+109
+00:07:11,450 --> 00:07:18,320
+Zero and one and four, I'm sorry, node number three is reaching one, which also allow it to reach
+
+110
+00:07:18,320 --> 00:07:25,940
+zero and also allowing it to reach a full node number five, candidatura number six, number six reaching,
+
+111
+00:07:25,940 --> 00:07:26,360
+I think.
+
+112
+00:07:27,870 --> 00:07:30,010
+So this is merely the algorithm.
+
+113
+00:07:30,030 --> 00:07:32,220
+This is the reachability problem.
+
+114
+00:07:32,820 --> 00:07:36,570
+So let's let's put the the task for you in such a very high level.
+
+115
+00:07:36,930 --> 00:07:42,810
+Can you write a recursive could that we will give it an initial note and it tell us the ritual needs?
+
+116
+00:07:43,800 --> 00:07:47,730
+If you manage to implement that, you managed to implement to the dips of a social good at it.
+
+117
+00:07:49,090 --> 00:07:53,920
+Let's see the best thing really to understand the depth of her research is to check it's good.
+
+118
+00:07:54,610 --> 00:07:55,930
+So it is it is a good.
+
+119
+00:07:55,930 --> 00:07:58,430
+We have a function that tick the graph.
+
+120
+00:07:58,450 --> 00:08:03,250
+Let's assume for now the graph is a distance this this the this year, a disinterest.
+
+121
+00:08:04,570 --> 00:08:06,670
+Now, the reachability function is very trivial.
+
+122
+00:08:06,980 --> 00:08:08,470
+Iterate on every node.
+
+123
+00:08:09,070 --> 00:08:10,960
+It create a vector of Boolean.
+
+124
+00:08:11,860 --> 00:08:19,270
+Its size is vested out of it initially zeros and then it start to recurs with the defense function,
+
+125
+00:08:19,270 --> 00:08:22,450
+which is recursive function and say, Hey, here is the graph.
+
+126
+00:08:22,930 --> 00:08:23,980
+It is a starting node.
+
+127
+00:08:24,220 --> 00:08:26,150
+It is a Boolean array that all of it is vested.
+
+128
+00:08:26,170 --> 00:08:29,770
+So this is a very iterative, but we do it for every node from scratch.
+
+129
+00:08:30,640 --> 00:08:36,900
+Now that if this function does following, it is thought to by marking this node vested.
+
+130
+00:08:36,910 --> 00:08:44,890
+So it mark in the rate that this is listed node and then iterate on all of my neighbor's edge by edge
+
+131
+00:08:45,520 --> 00:08:46,480
+for every neighbor.
+
+132
+00:08:46,630 --> 00:08:51,580
+Like, if we have an energy to, let's say, starting from zero, let's say you have zero five an each
+
+133
+00:08:51,790 --> 00:08:54,010
+and we have zero and the nine as an edge.
+
+134
+00:08:54,250 --> 00:08:56,680
+So once enabled would be five and once would be night.
+
+135
+00:08:57,190 --> 00:08:59,140
+Now the first thing it will say.
+
+136
+00:08:59,440 --> 00:09:02,650
+Have we ever visited five before?
+
+137
+00:09:04,800 --> 00:09:07,710
+If the answer is yes, then we ignore it.
+
+138
+00:09:07,770 --> 00:09:14,340
+To understand the importance of this condition, imagine we have something like zero five and then we
+
+139
+00:09:14,340 --> 00:09:15,570
+have an to zero back.
+
+140
+00:09:16,020 --> 00:09:23,490
+So the decision is starting with not zero jumping to five, then five jumping two zero zero two five
+
+141
+00:09:23,490 --> 00:09:24,170
+five two zero.
+
+142
+00:09:24,180 --> 00:09:25,380
+This will go for infinity.
+
+143
+00:09:25,800 --> 00:09:28,860
+So what we do is we started with visiting not zero.
+
+144
+00:09:29,130 --> 00:09:31,500
+We marked that zero is wasted.
+
+145
+00:09:32,130 --> 00:09:34,020
+Now, zero has an edge to five.
+
+146
+00:09:34,380 --> 00:09:38,400
+We jumped to five here and then we mark five as Vista.
+
+147
+00:09:39,790 --> 00:09:44,920
+If I find that it has a neighbor that is zero, but zero is vested, so we don't use it anymore.
+
+148
+00:09:45,790 --> 00:09:52,690
+Now, when it comes to the gifts of could it say, hey, go ahead from grief to the neighbor here,
+
+149
+00:09:52,690 --> 00:09:58,750
+which is why, for example, imagine that this recursion is done and the listed array, which is by
+
+150
+00:09:58,750 --> 00:10:00,190
+reference, has been changing a lot.
+
+151
+00:10:00,550 --> 00:10:06,340
+When we go back to the new neighbor zero, the neighbor zero will continue the mortgages, for example,
+
+152
+00:10:06,340 --> 00:10:14,230
+imagine zero as ages seven and or nine, so it will start to recover from seven once a decision is done.
+
+153
+00:10:14,500 --> 00:10:16,510
+It will start to decreasing from that.
+
+154
+00:10:17,350 --> 00:10:21,370
+This is a high level forth happening here, which might not be intuitive for some of you.
+
+155
+00:10:21,610 --> 00:10:24,280
+So let's make a big and good tracing here.
+
+156
+00:10:24,490 --> 00:10:26,470
+I'm taking a small subset of the code here.
+
+157
+00:10:27,220 --> 00:10:33,130
+I'm going to trace for you what was what will the stack therefore like?
+
+158
+00:10:33,130 --> 00:10:37,390
+How is our stack step by step so that you can understand really what's happening here?
+
+159
+00:10:37,960 --> 00:10:45,370
+Assume that the reachability function a miracle here was Griffis and are equal to.
+
+160
+00:10:46,980 --> 00:10:48,180
+So let's see what's happening.
+
+161
+00:10:50,090 --> 00:10:56,060
+The first step in this algorithm is to mark visited Node two visited, introduced to the node is two,
+
+162
+00:10:56,270 --> 00:11:00,050
+so we mark visited here as to now a question for you.
+
+163
+00:11:02,880 --> 00:11:04,650
+Who are the neighbors of two?
+
+164
+00:11:04,950 --> 00:11:06,090
+There's only one neighbor.
+
+165
+00:11:06,450 --> 00:11:12,510
+So this for loop, will it read only one time in the first iteration, the neighbor will be zero.
+
+166
+00:11:14,310 --> 00:11:17,380
+So now the question would be is zero wasted, the answer is no.
+
+167
+00:11:17,440 --> 00:11:18,690
+Only two is wasted so far.
+
+168
+00:11:19,380 --> 00:11:23,730
+So now that it would recurs on the graph, but was able to zero.
+
+169
+00:11:24,210 --> 00:11:25,930
+So now we have a recursive call.
+
+170
+00:11:26,640 --> 00:11:28,160
+So let's go now.
+
+171
+00:11:28,180 --> 00:11:30,150
+The active call is the Office of Zero.
+
+172
+00:11:30,450 --> 00:11:32,730
+Division two is waiting for our return.
+
+173
+00:11:33,540 --> 00:11:34,680
+Now this is zero.
+
+174
+00:11:34,950 --> 00:11:35,570
+What a start.
+
+175
+00:11:35,580 --> 00:11:44,700
+By marking itself as vested vested, then who are the neighbors of note zero zero has two neighbors,
+
+176
+00:11:44,700 --> 00:11:48,540
+node number one and number three.
+
+177
+00:11:49,590 --> 00:11:56,010
+So this four group should work twice in the first time we were check neighbor for that one.
+
+178
+00:11:56,760 --> 00:11:58,890
+And then we will do separate occasion, maybe.
+
+179
+00:11:59,250 --> 00:12:03,570
+And after we return later, we will go back to the next neighbor, which is three.
+
+180
+00:12:03,870 --> 00:12:06,360
+So I would like you to keep this big picture in your mind.
+
+181
+00:12:06,750 --> 00:12:13,400
+Zero will go to one, then some recursive calls, and once it back, zero will try the three, but merely
+
+182
+00:12:13,410 --> 00:12:14,460
+trick of its visited or not.
+
+183
+00:12:15,160 --> 00:12:20,490
+Anyway, so far, zero has an issue for one and has an edge of three zero.
+
+184
+00:12:20,490 --> 00:12:21,960
+The chick is one visited.
+
+185
+00:12:21,960 --> 00:12:22,320
+No.
+
+186
+00:12:22,440 --> 00:12:25,140
+It started decreasing from from the one.
+
+187
+00:12:25,590 --> 00:12:26,250
+So let's see.
+
+188
+00:12:27,490 --> 00:12:31,990
+Now, the active recursive call is one and zero is waiting and two is waiting.
+
+189
+00:12:32,770 --> 00:12:33,700
+One has.
+
+190
+00:12:35,500 --> 00:12:36,070
+Three.
+
+191
+00:12:36,940 --> 00:12:45,130
+One has two neighbors, which are zero and four now, but no one is starting to trade with near zero
+
+192
+00:12:45,190 --> 00:12:49,630
+and then the neighbor thought and the neighbor zero, it will ask, is zero visited?
+
+193
+00:12:49,930 --> 00:12:51,010
+The answer is yes.
+
+194
+00:12:51,280 --> 00:12:52,100
+Ignore it.
+
+195
+00:12:52,480 --> 00:12:55,570
+If we didn't, we would go in an infinite loop here.
+
+196
+00:12:55,900 --> 00:12:59,380
+So this is very common to get a divorce and end up with an infinite loop.
+
+197
+00:13:00,460 --> 00:13:01,890
+OK, so zero is ignored.
+
+198
+00:13:01,900 --> 00:13:03,260
+The next is it.
+
+199
+00:13:03,340 --> 00:13:04,140
+No food, no food.
+
+200
+00:13:04,140 --> 00:13:04,700
+No food.
+
+201
+00:13:04,750 --> 00:13:06,850
+Neighborhood is for visited.
+
+202
+00:13:06,850 --> 00:13:07,720
+The answer is no.
+
+203
+00:13:08,020 --> 00:13:09,910
+So we recurs Ed Wood.
+
+204
+00:13:10,750 --> 00:13:15,220
+I would like you to get the sense that you are a visitor that you have so far retreated from not two,
+
+205
+00:13:15,430 --> 00:13:16,120
+not zero.
+
+206
+00:13:16,810 --> 00:13:18,810
+And now we are iterating to look forward.
+
+207
+00:13:18,820 --> 00:13:23,770
+And I also would like you to note that this age from two to zero is bolded because we made this recursive
+
+208
+00:13:23,770 --> 00:13:25,390
+call 01 is bolded.
+
+209
+00:13:25,390 --> 00:13:27,940
+We ignored one zero and no jumping to four.
+
+210
+00:13:29,030 --> 00:13:38,330
+So here to observe we have this three edges referring to our activist stack, the edges that we really
+
+211
+00:13:38,330 --> 00:13:42,620
+used, the dotted line here refer to an issue that we ignored.
+
+212
+00:13:43,460 --> 00:13:44,690
+Now we are at for.
+
+213
+00:13:44,960 --> 00:13:47,240
+There is only one neighbor here, which is not three.
+
+214
+00:13:47,480 --> 00:13:53,870
+So that recursion will iterate here at the nodes, which is just not three is that he visited.
+
+215
+00:13:54,020 --> 00:13:55,400
+The answer is no.
+
+216
+00:13:55,700 --> 00:13:56,900
+So occurs three.
+
+217
+00:13:57,880 --> 00:14:05,920
+So again, we go here at three three, has only one food, which is one nibble, which is what now that
+
+218
+00:14:05,920 --> 00:14:07,970
+occasion is one visited.
+
+219
+00:14:07,990 --> 00:14:08,530
+Yes.
+
+220
+00:14:08,830 --> 00:14:13,480
+Ignore it now, node number three, does it have any more neighbors?
+
+221
+00:14:14,320 --> 00:14:17,520
+So what would happen is this is now as it occurs.
+
+222
+00:14:17,890 --> 00:14:20,590
+This is the first recursive function that start to end.
+
+223
+00:14:21,340 --> 00:14:28,690
+So this function should go out of the stack and now we go back to the office of node number four.
+
+224
+00:14:29,050 --> 00:14:33,280
+And as you see, this edge has been ignored and this edge has been ignored.
+
+225
+00:14:34,360 --> 00:14:37,210
+Now the DFS at four continue.
+
+226
+00:14:37,660 --> 00:14:41,780
+But remember that difference of what has undergone a child, which is now done.
+
+227
+00:14:42,220 --> 00:14:45,700
+So this recursive could also done, though this function also ended.
+
+228
+00:14:46,060 --> 00:14:49,060
+So this function end and then fast forward is ended.
+
+229
+00:14:49,690 --> 00:14:51,640
+So recursion goes back one step.
+
+230
+00:14:51,970 --> 00:14:58,570
+At the first one, the first one had a child the year which was finished, and it showed the four,
+
+231
+00:14:58,580 --> 00:14:59,560
+which is also finished.
+
+232
+00:14:59,890 --> 00:15:02,950
+So the first one also as a recursion is done.
+
+233
+00:15:03,340 --> 00:15:05,650
+So now we are, there was the first one.
+
+234
+00:15:06,130 --> 00:15:06,940
+Let's go back.
+
+235
+00:15:08,550 --> 00:15:10,620
+No one will go back to the office of Zero.
+
+236
+00:15:11,160 --> 00:15:13,980
+Remember that zero has two neighbors one, two and three.
+
+237
+00:15:14,640 --> 00:15:17,730
+And we were in the active call of the Office of One.
+
+238
+00:15:20,230 --> 00:15:23,350
+When the occasion is done, a divisive one, we go back to zero.
+
+239
+00:15:23,530 --> 00:15:27,220
+It resumes to the next node, which it knew number three.
+
+240
+00:15:27,520 --> 00:15:31,330
+So this Farooq now iterating one more step to check neighboring country.
+
+241
+00:15:31,810 --> 00:15:37,450
+But you will notice that Vista of Neighbor three is true, which means that this one is already visited.
+
+242
+00:15:37,690 --> 00:15:40,090
+So this one will be skipped, too.
+
+243
+00:15:40,390 --> 00:15:42,870
+So now Node zero also is going to end.
+
+244
+00:15:42,880 --> 00:15:44,590
+It's it's a good.
+
+245
+00:15:47,360 --> 00:15:49,780
+Now we go back to node number two.
+
+246
+00:15:53,840 --> 00:15:55,670
+We go now to A..
+
+247
+00:15:56,210 --> 00:16:01,010
+Number two, I should make this that it sort of or that this one should be docked at once.
+
+248
+00:16:01,490 --> 00:16:04,970
+Now number two has only one edge, which is done.
+
+249
+00:16:05,210 --> 00:16:07,070
+So we are just finished.
+
+250
+00:16:07,370 --> 00:16:12,410
+As you see, node number two managed to mark in the budget array two zero one three four.
+
+251
+00:16:12,710 --> 00:16:22,630
+So the Boolean array represent who are the reachable nodes, the twisted array represent who are the,
+
+252
+00:16:23,510 --> 00:16:27,470
+uh, the visited nodes and observed in the reachability function.
+
+253
+00:16:27,740 --> 00:16:33,110
+We were resetting this array every time because in every state, every time we would like to start from
+
+254
+00:16:33,110 --> 00:16:38,210
+scratch from a specific node to cover all of its root just for fun.
+
+255
+00:16:38,510 --> 00:16:43,700
+What if node number two already has another child here, which is going from two to five?
+
+256
+00:16:44,590 --> 00:16:51,310
+If this is the case, then no number two after returning from node number zero would recurso node number
+
+257
+00:16:51,310 --> 00:16:56,260
+six five, which would recursive node number six, which will try to recursion itself.
+
+258
+00:16:56,290 --> 00:16:57,190
+But nothing happened.
+
+259
+00:16:57,430 --> 00:16:58,570
+Go back, go back.
+
+260
+00:16:58,900 --> 00:17:01,960
+So as you see, we we trade back here.
+
+261
+00:17:03,360 --> 00:17:09,150
+And I would like you to I would like to confirm again that this bolded edges represented that Beth is
+
+262
+00:17:09,150 --> 00:17:14,880
+that we took we call this bold edges, we call them tree edges, we call them tree edges.
+
+263
+00:17:15,110 --> 00:17:23,250
+No, that is something very interesting about being a researcher that you should know that this we really
+
+264
+00:17:23,250 --> 00:17:28,920
+ignore the many edges because these edges will create cycads, the remaining of the edges that we didn't
+
+265
+00:17:28,920 --> 00:17:31,060
+ignore under a tree.
+
+266
+00:17:31,770 --> 00:17:35,940
+If you thought about it, you would notice that all of this edges are a tree.
+
+267
+00:17:36,990 --> 00:17:40,510
+You will notice that they are a tree within only the eligible nodes.
+
+268
+00:17:40,540 --> 00:17:47,880
+OK, so the graph, for example, has zero one two and the five from here.
+
+269
+00:17:48,150 --> 00:17:53,850
+So four four four zero, let's say we have also this one and this one four zero, it will get this edge
+
+270
+00:17:54,300 --> 00:17:57,060
+and it will get this edge and it will skip this one.
+
+271
+00:17:57,060 --> 00:17:59,370
+And let's give this one and this one anyway, not reachable for us.
+
+272
+00:17:59,640 --> 00:18:02,910
+So these two represent like a depth of first tree.
+
+273
+00:18:03,330 --> 00:18:04,860
+So what is the depth of first the tree?
+
+274
+00:18:05,070 --> 00:18:08,550
+It is the bolded edges that we have from the tree.
+
+275
+00:18:08,970 --> 00:18:13,290
+And also, if you thought about it, it's actually a rooted tree and two is the root.
+
+276
+00:18:13,290 --> 00:18:19,410
+So every edge, as you see, if you try to grow that, it would be like the following two zero at this
+
+277
+00:18:19,560 --> 00:18:22,440
+level and five at this level five has six.
+
+278
+00:18:22,560 --> 00:18:24,750
+This level here zero has one.
+
+279
+00:18:25,200 --> 00:18:28,410
+Then one has four, then four has three.
+
+280
+00:18:28,680 --> 00:18:33,240
+So this is a rooted tree with the root is the value number two.
+
+281
+00:18:33,860 --> 00:18:43,260
+Um, I hope that this tree thing is good enough as you see every node, richard only through one edge.
+
+282
+00:18:43,470 --> 00:18:44,970
+That's why you must have it as a tree.
+
+283
+00:18:45,510 --> 00:18:50,460
+Uh, yeah, this is mainly what I wanted to explain in the depth first search.

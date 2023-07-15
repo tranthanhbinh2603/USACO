@@ -1,0 +1,375 @@
+1
+00:00:01,090 --> 00:00:04,090
+Let's solve the homework of this problems.
+
+2
+00:00:04,660 --> 00:00:08,770
+So the first one about the shortest path in translating colors the red and blue.
+
+3
+00:00:11,190 --> 00:00:13,320
+Um, so let's see here.
+
+4
+00:00:13,800 --> 00:00:17,880
+This probably introduce us to a very important type of graphs.
+
+5
+00:00:18,540 --> 00:00:24,090
+So in a classical standard, the graph, you can have a graph of symbol nodes zero one, two three and
+
+6
+00:00:24,090 --> 00:00:24,570
+so on.
+
+7
+00:00:25,500 --> 00:00:31,370
+Now this is the graph that is something that I call history the graph in a stick graph.
+
+8
+00:00:31,380 --> 00:00:34,050
+We also have nodes and we also have edges.
+
+9
+00:00:34,470 --> 00:00:36,180
+But the node this time is a bit big.
+
+10
+00:00:36,570 --> 00:00:38,640
+It consists of many different things.
+
+11
+00:00:39,000 --> 00:00:46,620
+For example, what if you if you're not consist of a string and an integer like a string of three letters,
+
+12
+00:00:46,630 --> 00:00:53,430
+maybe, for example, Abbasid and a number from zero to nine, for example, here, maybe six, for
+
+13
+00:00:53,430 --> 00:00:56,850
+example, and that is somehow connection between the nodes.
+
+14
+00:00:57,180 --> 00:00:58,410
+So what is a state?
+
+15
+00:00:58,740 --> 00:01:01,140
+A state is bunch of elements.
+
+16
+00:01:01,680 --> 00:01:06,590
+The most classical state is a number from zero two to minus one, the largest.
+
+17
+00:01:06,630 --> 00:01:08,250
+It can have anything there.
+
+18
+00:01:08,490 --> 00:01:10,590
+The node may be representing a vector.
+
+19
+00:01:10,980 --> 00:01:13,590
+The node may be representing three strings.
+
+20
+00:01:13,980 --> 00:01:17,160
+The node may represent three strings and a single number.
+
+21
+00:01:17,460 --> 00:01:19,690
+The node may represent two numbers.
+
+22
+00:01:19,710 --> 00:01:22,440
+The node represents anything.
+
+23
+00:01:23,510 --> 00:01:29,600
+So, as did Graph is a case where the node consisting of many things together.
+
+24
+00:01:30,050 --> 00:01:30,480
+OK.
+
+25
+00:01:30,500 --> 00:01:31,730
+I hope you got this idea.
+
+26
+00:01:32,240 --> 00:01:37,880
+Now the key to this problem is to realize this problem isn't about a graph of any nodes.
+
+27
+00:01:38,510 --> 00:01:42,140
+They are actually like to any nodes or specifically.
+
+28
+00:01:42,470 --> 00:01:51,380
+It is a state graph where each node is an index from zero to the minus one and a Boolean variable zero
+
+29
+00:01:51,380 --> 00:01:53,120
+or one or higher red and blue.
+
+30
+00:01:55,110 --> 00:02:00,150
+If you realize this fact, you would be able to implement this problem in a very straightforward way.
+
+31
+00:02:00,780 --> 00:02:09,060
+So again, this is a steep graph where the node has to integer one integer representing an index of
+
+32
+00:02:09,060 --> 00:02:13,770
+from zero to minus one and another value representing is it red or blue?
+
+33
+00:02:13,800 --> 00:02:15,600
+A Boolean flag zero or one?
+
+34
+00:02:17,130 --> 00:02:26,030
+And that's why, given that the original graph has in the nodes, but like the connection from from
+
+35
+00:02:26,830 --> 00:02:32,190
+from another to another depends on the color we used to come to this node.
+
+36
+00:02:32,640 --> 00:02:36,540
+So this node isn't just now, but from zero to minus one.
+
+37
+00:02:36,960 --> 00:02:41,730
+It also has the color that has been used to reach this node.
+
+38
+00:02:42,740 --> 00:02:49,970
+So while we are building the graph, we're building it like I have here A. Let's say node number seven
+
+39
+00:02:50,150 --> 00:02:53,960
+and it has edge to node number five was color red.
+
+40
+00:02:55,040 --> 00:02:55,880
+If I.
+
+41
+00:02:56,890 --> 00:03:01,900
+Let's say also, I have another node like mine was color blue.
+
+42
+00:03:02,920 --> 00:03:08,750
+If I Richard Node seven was color, let's see red, then I cannot take this best.
+
+43
+00:03:08,770 --> 00:03:10,120
+I can only take this bus.
+
+44
+00:03:10,510 --> 00:03:15,400
+And once I take the nine, I Amaka that I Richard, nine, with blue.
+
+45
+00:03:16,240 --> 00:03:24,190
+So when you think of it, even in terms of Vista Array, the Vista case is again of two things a number
+
+46
+00:03:24,190 --> 00:03:31,000
+from zero to minus one and a status for Boolean value zero or one.
+
+47
+00:03:31,390 --> 00:03:32,530
+I hope you get the idea.
+
+48
+00:03:32,710 --> 00:03:39,010
+If you thought it this way, you now adjusted the whole standard to be a first to work on estates.
+
+49
+00:03:39,370 --> 00:03:45,340
+What we will do here in terms of coding will be standard and you can use it in all of the problems.
+
+50
+00:03:47,440 --> 00:03:53,380
+So the take home lesson is as following what is a solid graph, the second thing is just to generate
+
+51
+00:03:53,380 --> 00:03:57,370
+the graph and try to create like an explicit to any nodes the graph you get.
+
+52
+00:03:57,700 --> 00:03:59,470
+You might think of that, but don't do that.
+
+53
+00:04:00,070 --> 00:04:01,330
+So now let's see.
+
+54
+00:04:01,360 --> 00:04:05,110
+Let's see the implementation of this idea.
+
+55
+00:04:09,170 --> 00:04:14,360
+First of all, I created an image that this time consist of two and colors.
+
+56
+00:04:14,720 --> 00:04:16,850
+What is the note that we will go to it?
+
+57
+00:04:17,090 --> 00:04:21,680
+What is the color of this, not the color of the edge that has been used to distort?
+
+58
+00:04:22,850 --> 00:04:30,170
+And here in adding edge from from and to with color with just an edge from was there too and color,
+
+59
+00:04:31,310 --> 00:04:33,290
+there'd be a face to start as following.
+
+60
+00:04:33,800 --> 00:04:37,340
+First of all, the Line three is in terms of two.
+
+61
+00:04:37,880 --> 00:04:42,590
+And if I was to know that now you can just say I visited Node seven.
+
+62
+00:04:42,950 --> 00:04:44,660
+You must say, did you visit seven?
+
+63
+00:04:44,660 --> 00:04:47,600
+Was red or did you visit seven was blue?
+
+64
+00:04:48,260 --> 00:04:53,330
+It matters now when you think about that starting point.
+
+65
+00:04:53,690 --> 00:04:55,310
+What is the starting point here?
+
+66
+00:04:55,580 --> 00:04:56,840
+We have a starting node.
+
+67
+00:04:57,470 --> 00:05:01,200
+But wait, what is the color that you used to do the starting node?
+
+68
+00:05:01,220 --> 00:05:05,180
+We are now here, just starting, so we can think of this as a multi source.
+
+69
+00:05:05,360 --> 00:05:06,770
+We have two different cases.
+
+70
+00:05:06,980 --> 00:05:09,860
+We can start to the node with red or we kind of started.
+
+71
+00:05:09,860 --> 00:05:10,670
+The node was blue.
+
+72
+00:05:11,090 --> 00:05:19,790
+We have the freedom to do that and then also do their, uh, their initialization of that in theory.
+
+73
+00:05:20,180 --> 00:05:22,460
+So now we can say the answer to the start is zero.
+
+74
+00:05:22,470 --> 00:05:25,310
+We will keep answering was the best the value we reach.
+
+75
+00:05:25,970 --> 00:05:27,830
+Now let's go.
+
+76
+00:05:27,860 --> 00:05:33,800
+This is very normal as we iterate on every edge I have if.
+
+77
+00:05:34,790 --> 00:05:41,390
+The edgy color different to them might color a year will get the nod and get the color of there over
+
+78
+00:05:41,390 --> 00:05:44,900
+the nude if the color doesn't match the color.
+
+79
+00:05:45,560 --> 00:05:52,280
+And also, we didn't reach to their length not before, so it is invested before then we will watch
+
+80
+00:05:52,280 --> 00:05:53,210
+this new age.
+
+81
+00:05:53,660 --> 00:05:57,470
+We will mark its eleventh hour observed with the following.
+
+82
+00:05:57,710 --> 00:06:00,560
+The answer here is about the shortest way to reach wood.
+
+83
+00:06:00,920 --> 00:06:07,160
+So if we're Richard Node seven from red was value five first, then later.
+
+84
+00:06:07,160 --> 00:06:13,340
+If we try to reach the Note seven was color black, it must be five us, so we see here.
+
+85
+00:06:13,670 --> 00:06:17,930
+If the answer to the Note five is minus one, it means the first time to reach it.
+
+86
+00:06:18,080 --> 00:06:23,300
+Then just a sign this value, you will never reach it with something better than the current level.
+
+87
+00:06:24,770 --> 00:06:28,010
+I know that this could be a bit new for you might be chucking a little bit.
+
+88
+00:06:28,220 --> 00:06:36,170
+But what I would like you here to observe is we were generalizing the BFC could to act on a stick graph.
+
+89
+00:06:36,530 --> 00:06:44,990
+So you need visited array to represent that, um, the streets, you need to decide what are the possible
+
+90
+00:06:44,990 --> 00:06:45,890
+initiative states.
+
+91
+00:06:46,130 --> 00:06:52,280
+You need to iterate on the graph in a normal way, but is take time to review this vigil and to think
+
+92
+00:06:52,280 --> 00:06:52,850
+about it.
+
+93
+00:06:53,060 --> 00:06:55,250
+Think how can we generalize the graph form?
+
+94
+00:06:55,250 --> 00:07:01,340
+Just normal bunch of values that are connected together to as the graph?

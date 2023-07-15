@@ -1,0 +1,336 @@
+1
+00:00:01,410 --> 00:00:03,890
+All right, so let us dive into the solution of the problem.
+
+2
+00:00:04,120 --> 00:00:07,220
+So first of all, I will start by taking input. OK?
+
+3
+00:00:08,480 --> 00:00:12,910
+In the problem, I'm given that there would be a certain number of test cases.
+
+4
+00:00:12,920 --> 00:00:16,820
+OK. so I will scan the inputs here.
+
+5
+00:00:16,910 --> 00:00:17,240
+OK.
+
+6
+00:00:19,320 --> 00:00:24,660
+And I would also create a few big integer object, so I need a big integer to store the value
+
+7
+00:00:24,660 --> 00:00:25,860
+of N and K.
+
+8
+00:00:26,970 --> 00:00:27,570
+Let's see.
+
+9
+00:00:27,720 --> 00:00:29,490
+We will take those as inputs.
+
+10
+00:00:29,500 --> 00:00:34,620
+SO I need to create a scanner object to read those inputs. so I can say system.in.
+
+11
+00:00:35,310 --> 00:00:39,420
+And also I have a number of test cases.
+
+12
+00:00:39,420 --> 00:00:42,300
+Okay, so if I go to the problem statement.
+
+13
+00:00:44,610 --> 00:00:47,850
+Let's look at how many test cases we need to take input.
+
+14
+00:00:53,110 --> 00:00:53,530
+So
+
+15
+00:00:58,400 --> 00:00:58,760
+OK.
+
+16
+00:00:59,330 --> 00:01:00,110
+We have
+
+17
+00:01:01,510 --> 00:01:09,010
+the number of test cases. we have actually hardcoded number of test cases there are 10 testcase. OK.
+
+18
+00:01:09,550 --> 00:01:17,460
+So what I will do? I will simply say OK. the number of test cases I have is 10 and I can say while
+
+19
+00:01:17,530 --> 00:01:23,940
+this test case is greater than zero, I will keep on solving this problem.
+
+20
+00:01:23,950 --> 00:01:25,510
+test equal testcase
+
+21
+00:01:26,760 --> 00:01:28,390
+Equals TC minus one.
+
+22
+00:01:29,040 --> 00:01:32,610
+So I will be doing this problem solving this problem for 10 testcases.
+
+23
+00:01:33,150 --> 00:01:37,320
+I'll read the value of N using SC dot next.
+
+24
+00:01:37,800 --> 00:01:45,780
+OK, so one thing is you can if you want to read something as a big integer, there is also a method
+
+25
+00:01:45,780 --> 00:01:46,620
+which scanner
+
+26
+00:01:46,770 --> 00:01:50,130
+that is SC dot next big integer.
+
+27
+00:01:50,130 --> 00:01:54,030
+You can use this method to directly read something as a integer. OK?
+
+28
+00:01:55,020 --> 00:01:58,020
+Otherwise, you have to read it as a string and then convert to big integer.
+
+29
+00:01:58,020 --> 00:02:05,280
+and K is also a sc dot next big integer. so we are directly reading that input as big integers.
+
+30
+00:02:05,790 --> 00:02:13,440
+And let's say we have a method which is known as solve and which solves for given value N and K. and it prints
+
+31
+00:02:13,440 --> 00:02:14,100
+the output.
+
+32
+00:02:14,700 --> 00:02:16,430
+So what I will do? I'll create this method
+
+33
+00:02:16,440 --> 00:02:16,920
+solve.
+
+34
+00:02:17,100 --> 00:02:19,530
+OK. I'll say static void
+
+35
+00:02:21,040 --> 00:02:22,720
+static void solve.
+
+36
+00:02:23,470 --> 00:02:31,990
+And here we are going to solve for big integer N and and big integer K.
+
+37
+00:02:33,390 --> 00:02:39,780
+OK, now we know that X plus Y is equal to N. so that means if sum of two numbers is a bigger integer,
+
+38
+00:02:40,260 --> 00:02:43,600
+then these two numbers would be also bigger integer.
+
+39
+00:02:43,620 --> 00:02:49,410
+OK. so what we can say is, we have a big integer X and we have a big integer Y. 
+
+40
+00:02:49,980 --> 00:02:58,470
+And from the formula that we derived, we saw the value of X is what? The value of X is nothing but N
+
+41
+00:02:58,470 --> 00:03:00,540
+minus K divided by two.
+
+42
+00:03:01,290 --> 00:03:05,310
+This is what we have seen. so we can simply say X is nothing
+
+43
+00:03:05,310 --> 00:03:14,520
+but from the n you have to subtract the value of K, so you can say  N dot subtract K. OK. and
+
+44
+00:03:14,520 --> 00:03:16,320
+then you have to divide it with two.
+
+45
+00:03:16,330 --> 00:03:19,200
+So X is equal to X dot divide.
+
+46
+00:03:20,370 --> 00:03:23,010
+And you cannot say two because two is not a big integer.
+
+47
+00:03:23,020 --> 00:03:26,610
+And this divide method accepts a big integer, so you can convert this
+
+48
+00:03:27,960 --> 00:03:31,500
+integer into two like this and we are done.
+
+49
+00:03:32,160 --> 00:03:33,810
+And finally, Y is what?
+
+50
+00:03:33,930 --> 00:03:35,670
+Y is K more than x.
+
+51
+00:03:35,850 --> 00:03:38,310
+So Y is X plus k.
+
+52
+00:03:38,310 --> 00:03:45,960
+So you can say, the first object is X. call the add method and then give the K as a big integer.
+
+53
+00:03:46,980 --> 00:03:51,390
+So you can say X equals...sorry. Y equals x 
+
+54
+00:03:51,390 --> 00:03:53,850
+dot add K and you're done.
+
+55
+00:03:54,600 --> 00:04:03,690
+And finally, you can say system dot out dot println and  you first give the value of Y and then you
+
+56
+00:04:03,690 --> 00:04:09,780
+give the value of X because in the output, the bigger number is expected first on SPOJ.
+
+57
+00:04:12,460 --> 00:04:18,279
+And it looks like we are done. just for now, I'm reducing the number of test cases to two. I can say,
+
+58
+00:04:18,279 --> 00:04:25,210
+Ok. I have two testcase. one is 10, one is 20 and it is let's say 2 and it is four.
+
+59
+00:04:25,960 --> 00:04:28,870
+So let's see, what output do we get?
+
+60
+00:04:31,150 --> 00:04:31,540
+OK.
+
+61
+00:04:31,600 --> 00:04:38,320
+We we forgot to import the big integer class from Java.math package.
+
+62
+00:04:39,040 --> 00:04:39,700
+We are done.
+
+63
+00:04:41,190 --> 00:04:42,210
+And let's see.
+
+64
+00:04:45,260 --> 00:04:48,470
+OK, six minus four.  11 and minus nine.
+
+65
+00:04:49,610 --> 00:04:50,290
+Uh.
+
+66
+00:04:52,700 --> 00:04:56,230
+Let me just verify what we are doing here.
+
+67
+00:04:59,130 --> 00:05:02,370
+So let's see the inputs.
+
+68
+00:05:03,300 --> 00:05:04,380
+What are the inputs?
+
+69
+00:05:10,400 --> 00:05:11,610
+We have 10 and 2.
+
+70
+00:05:12,470 --> 00:05:13,670
+10 and 2 is a input.
+
+71
+00:05:13,830 --> 00:05:18,480
+Ok. oh, we do not need to actually give the number of test cases
+
+72
+00:05:18,500 --> 00:05:19,520
+that is hard coded.
+
+73
+00:05:20,390 --> 00:05:22,040
+So let me look now.
+
+74
+00:05:23,360 --> 00:05:29,510
+So yes, we have six and four for ten and 12 and 8 for   20, which is fine and the difference between
+
+75
+00:05:29,510 --> 00:05:32,320
+two them is four and here the difference is two.
+
+76
+00:05:32,990 --> 00:05:33,920
+So it looks fine.
+
+77
+00:05:34,550 --> 00:05:40,400
+Now only thing is, I have to make the testcase as 10 and submit this code on SPOJ.
+
+78
+00:05:40,790 --> 00:05:40,980
+OK.
+
+79
+00:05:43,160 --> 00:05:44,690
+So let's submit it.
+
+80
+00:05:47,880 --> 00:05:48,810
+And let's see.
+
+81
+00:06:03,650 --> 00:06:10,790
+So you can see that our code got accepted and we are done with the julka problem.
+
+82
+00:06:11,320 --> 00:06:16,080
+I hope now you understand how to work with big integers while solving online challenges.
+
+83
+00:06:16,490 --> 00:06:17,780
+That's all for this video.
+
+84
+00:06:17,780 --> 00:06:18,290
+Thank you.
+

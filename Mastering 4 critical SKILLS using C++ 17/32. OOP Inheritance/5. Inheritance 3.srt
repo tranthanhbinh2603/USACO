@@ -1,0 +1,594 @@
+0
+1
+00:00:01,200 --> 00:00:07,860
+Let's continue in inheritance, so far we have experienced that how different hierarchies can
+1
+
+2
+00:00:07,860 --> 00:00:13,860
+be implemented in the inheritance, like the basic single one or even being multilevel.
+2
+
+3
+00:00:14,250 --> 00:00:19,790
+We saw the multiple inheritance case we are inheriting from two cases we saw in the homework,
+3
+
+4
+00:00:19,800 --> 00:00:24,530
+this hybrid inheritance case, which is calling the diamond problem. Class A now
+4
+
+5
+00:00:24,770 --> 00:00:26,840
+is shared between class B and class C.
+5
+
+6
+00:00:27,420 --> 00:00:29,270
+So it's visible from two sides.
+6
+
+7
+00:00:29,970 --> 00:00:37,770
+We didn't see this one. It was just like a hierarchal case, we also see the high-class A is
+7
+
+8
+00:00:37,770 --> 00:00:39,430
+a parent for two different classes.
+8
+
+9
+00:00:40,050 --> 00:00:42,140
+Now, let's move to new issues.
+9
+
+10
+00:00:42,960 --> 00:00:49,860
+What about the constructors? like we have here a class student who has some empty constructor
+10
+
+11
+00:00:49,860 --> 00:00:51,750
+and constructor with name and some destructor.
+11
+
+12
+00:00:52,150 --> 00:00:53,330
+I'm inheriting it.
+12
+
+13
+00:00:53,550 --> 00:00:58,290
+How should I be initializing the data members of the above class?
+13
+
+14
+00:00:58,770 --> 00:01:05,580
+So the right way is to use the initializer list and calling the constructor of the above class.
+14
+
+15
+00:01:05,910 --> 00:01:12,060
+For example, if you have here a student GPA, you first would call the above constructor, let's say was
+15
+
+16
+00:01:12,060 --> 00:01:15,740
+"Ali" as a name here and then you start to define your initializer list.
+16
+
+17
+00:01:16,020 --> 00:01:17,890
+So this is the recommended way that 
+17
+
+18
+00:01:17,910 --> 00:01:18,660
+you should do it.
+18
+
+19
+00:01:19,200 --> 00:01:25,530
+OK, you cannot use the initializer list to access the protected variable here.
+19
+
+20
+00:01:25,770 --> 00:01:28,640
+For example, you can't here and just say :name hany.
+20
+
+21
+00:01:28,680 --> 00:01:30,360
+You cannot do that, OK?
+21
+
+22
+00:01:31,500 --> 00:01:32,280
+You can.
+22
+
+23
+00:01:32,370 --> 00:01:35,790
+However, you can just initialize it inside the class as here.
+23
+
+24
+00:01:38,400 --> 00:01:41,350
+Try to think why C++ doesn't allow that.
+24
+
+25
+00:01:42,030 --> 00:01:45,960
+So again, the right way is just calling the constructor of the above class.
+25
+
+26
+00:01:46,170 --> 00:01:49,790
+You can still change it here if it's definitely protected value.
+26
+
+27
+00:01:50,550 --> 00:01:57,180
+Now, in terms of the order of constructor and destructor, ... , as you
+27
+
+28
+00:01:57,180 --> 00:02:02,520
+see here, we are trying to create the constructor of the student, which first go and create
+28
+
+29
+00:02:02,520 --> 00:02:07,680
+the constructor of the person and the person
+29
+
+30
+00:02:07,680 --> 00:02:10,250
+Class isn't created unless we have this kind of job.
+30
+
+31
+00:02:10,680 --> 00:02:12,700
+So the order is the parent
+31
+
+32
+00:02:12,700 --> 00:02:17,280
+class is going to be constructed first, then the child class,
+32
+
+33
+00:02:17,280 --> 00:02:18,390
+And this is very logical.
+33
+
+34
+00:02:18,930 --> 00:02:22,340
+And in a similar way, the destructor would be the reverse of the order.
+34
+
+35
+00:02:22,740 --> 00:02:27,410
+So the student would be destructed first, then the person class.
+35
+
+36
+00:02:27,600 --> 00:02:32,640
+Please read these two numbers and do some simulation here to make sure like they make sense for you.
+36
+
+37
+00:02:34,410 --> 00:02:40,040
+OK, so what if we have a function here like "GetStr" and a similar one here.
+37
+
+38
+00:02:40,350 --> 00:02:41,910
+So this is could overriding.
+38
+
+39
+00:02:42,300 --> 00:02:47,310
+So this two function are ... do you notice here get value and get value.
+39
+
+40
+00:02:47,610 --> 00:02:53,510
+They are like the same number of data members and the arguments and the return type.
+40
+
+41
+00:02:54,060 --> 00:03:00,040
+So if you define the class B and you say "B.getValue()", it will go first in the B and see
+41
+
+42
+00:03:00,300 --> 00:03:01,070
+have "GetValue()"?
+42
+
+43
+00:03:01,080 --> 00:03:01,560
+Yes.
+43
+
+44
+00:03:01,890 --> 00:03:03,450
+So it will use this "GetValue()".
+44
+
+45
+00:03:03,450 --> 00:03:10,140
+So it will not print 10. It will print 20. If you could "GetStr()" then is going to check
+45
+
+46
+00:03:10,140 --> 00:03:14,760
+does this guy have "GetStr()" ? No. Does have it in public section?
+46
+
+47
+00:03:14,850 --> 00:03:15,560
+Yes.
+47
+
+48
+00:03:15,570 --> 00:03:17,800
+OK, so if so it is going to return it.
+48
+
+49
+00:03:17,940 --> 00:03:21,870
+Remember if it was protected, will not be able to see it. In a similar way,
+49
+
+50
+00:03:21,870 --> 00:03:27,720
+As you define objects you can also define pointer object and just use them with the arrow operator here.
+50
+
+51
+00:03:29,030 --> 00:03:35,390
+Inheriting constructors, if the class A have a lot of constructors, by default you don't see them, you
+51
+
+52
+00:03:35,390 --> 00:03:37,890
+have to write and support your own constructors.
+52
+
+53
+00:03:38,420 --> 00:03:44,180
+What if I would like to use the above constructors as they are and I have some maybe some default initialization
+53
+
+54
+00:03:44,180 --> 00:03:45,620
+to the constructors here.
+54
+
+55
+00:03:46,250 --> 00:03:49,790
+C++ 11 provide us with nice feature, which is you
+55
+
+56
+00:03:49,800 --> 00:03:51,790
+write using "A::A".
+56
+
+57
+00:03:52,100 --> 00:03:53,080
+So "A::A"
+57
+
+58
+00:03:53,480 --> 00:03:56,510
+This is the class name, and this is the constructor name.
+58
+
+59
+00:03:57,080 --> 00:04:00,860
+This statement means you are inheriting also the constructors.
+59
+
+60
+00:04:01,070 --> 00:04:04,810
+OK, definitely the public constructors.
+60
+
+61
+00:04:04,970 --> 00:04:06,430
+So you can now see them here.
+61
+
+62
+00:04:06,710 --> 00:04:11,840
+Now if you define here B(3) of this class, this guy doesn't have B(3), doesn't have an
+62
+
+63
+00:04:11,840 --> 00:04:14,660
+integer, but this guy have and we are inheriting it.
+63
+
+64
+00:04:14,660 --> 00:04:15,350
+So we use it.
+64
+
+65
+00:04:16,990 --> 00:04:21,610
+What if I would like to prevent others from inheriting my class?
+65
+
+66
+00:04:21,730 --> 00:04:27,880
+You can write here the word "final", if you put the word "final" here, you prevent others from inheriting your class.
+66
+
+67
+00:04:29,130 --> 00:04:36,270
+OK, let's refresh the override and overload meaning, in case you forget about it, the overload
+67
+
+68
+00:04:36,270 --> 00:04:39,250
+function happens within the same class.
+68
+
+69
+00:04:39,540 --> 00:04:43,750
+It means that we have function with the same name, but different parameters.
+69
+
+70
+00:04:44,000 --> 00:04:45,420
+Here's thinking about class A::f1
+70
+
+71
+00:04:45,870 --> 00:04:55,020
+A::f1 here, these are three versions of it (f1, f2, f3 ) sorry, it is these three functions
+71
+
+72
+00:04:55,020 --> 00:04:55,830
+here in class A.
+72
+
+73
+00:04:56,070 --> 00:05:00,870
+They are all overloading cases, but overwriting is between classes.
+73
+
+74
+00:05:01,110 --> 00:05:05,040
+So the two classes have the same function with the same parameters.
+74
+
+75
+00:05:05,280 --> 00:05:07,550
+But in practice, which one is being called?
+75
+
+76
+00:05:07,590 --> 00:05:08,350
+This is a question.
+76
+
+77
+00:05:08,610 --> 00:05:14,580
+So if we define here a "B" one object, we calling f1(), f1(1), f1(1,2), we are calling
+77
+
+78
+00:05:14,580 --> 00:05:15,350
+these functions.
+78
+
+79
+00:05:15,600 --> 00:05:20,010
+OK, so override is when the two classes have the same function.
+79
+
+80
+00:05:20,370 --> 00:05:24,210
+So overload is about a same class override about inheritance.
+80
+
+81
+00:05:25,890 --> 00:05:30,720
+So far, we were learning what we call public inheritance, public inheritance actually is the most
+81
+
+82
+00:05:30,720 --> 00:05:35,640
+common case, like 99 percent of the cases you're using public inheritance, but in a way there is
+82
+
+83
+00:05:35,640 --> 00:05:37,110
+something could protected.
+83
+
+84
+00:05:37,110 --> 00:05:38,990
+Inheritance and private inheritance.
+84
+
+85
+00:05:39,120 --> 00:05:41,720
+What is a difference? In public inheritance
+85
+
+86
+00:05:42,000 --> 00:05:44,430
+What is public on the parent class?
+86
+
+87
+00:05:44,430 --> 00:05:48,720
+would be public on your side, what is protected in the parent class. .......
+87
+
+88
+00:05:53,610 --> 00:05:54,960
+Let's say in a different way.
+88
+
+89
+00:05:55,110 --> 00:06:00,540
+You have here something public it will remain public. You have here something protected
+89
+
+90
+00:06:00,720 --> 00:06:07,620
+It will remain protected. In protected inheritance looking at X is public and Y is protected.
+90
+
+91
+00:06:07,620 --> 00:06:09,240
+Both of them would be protected.
+91
+
+92
+00:06:09,660 --> 00:06:14,820
+OK, so I'm inheriting your public and protected, but they will be protected on my side.
+92
+
+93
+00:06:15,500 --> 00:06:16,650
+OK, what does it mean?
+93
+
+94
+00:06:16,650 --> 00:06:18,180
+That they would be protected on my side?
+94
+
+95
+00:06:18,570 --> 00:06:23,730
+It means if someone is using C, he will not be able to access them.
+95
+
+96
+00:06:24,030 --> 00:06:29,060
+So X and Y now would be also externally look like a private values.
+96
+
+97
+00:06:29,880 --> 00:06:31,320
+What about the private D
+97
+
+98
+00:06:31,710 --> 00:06:33,690
+variable? the private
+98
+
+99
+00:06:33,690 --> 00:06:38,120
+It means that the both X and Y will be private also.
+99
+
+100
+00:06:38,550 --> 00:06:44,370
+So again, public A, this guy has X public, Y public,
+100
+
+101
+00:06:44,370 --> 00:06:47,880
+Z public, try to think the visibility from inside the class?
+101
+
+102
+00:06:48,240 --> 00:06:54,390
+If someone is inheriting from me and if someone is in the outside? so the public and protected would
+102
+
+103
+00:06:54,390 --> 00:06:56,670
+remain in public inheritance, public and protected.
+103
+
+104
+00:06:57,000 --> 00:07:03,510
+So the external guys are seeing the public and the guys who are inheriting for me, see my protected.
+104
+
+105
+00:07:03,510 --> 00:07:09,820
+If I'm doing protected inheritance, the public and protected will both be protected.
+105
+
+106
+00:07:09,840 --> 00:07:11,910
+This mean external guys doesn't see them.
+106
+
+107
+00:07:12,210 --> 00:07:18,270
+But if you are inheriting from me, you see the X and Y, if you are doing private inheritance, X and
+107
+
+108
+00:07:18,270 --> 00:07:20,480
+Y would be private on my visibility.
+108
+
+109
+00:07:20,820 --> 00:07:23,450
+So even if you are inheriting from me, you don't see them.
+109
+
+110
+00:07:23,880 --> 00:07:31,350
+This is mainly the difference between the three cases. Finally in UML we know the plus for private,
+110
+
+111
+00:07:31,350 --> 00:07:34,170
+minus for public, the protected has the hash here.
+111
+
+112
+00:07:34,380 --> 00:07:41,160
+So we use the hash variable here and the hash variable for protected.
+112
+
+113
+00:07:41,440 --> 00:07:42,930
+Final note here is a nice note about eclipse.
+113
+
+114
+00:07:43,230 --> 00:07:47,700
+If you have a class and did "ctrl + space", you would see different variables.
+114
+
+115
+00:07:47,700 --> 00:07:49,560
+There are shapes besides these variables.
+115
+
+116
+00:07:50,010 --> 00:07:57,270
+The rectangle is for private and the diamond for protected and the square for public, you can also
+116
+
+117
+00:07:57,540 --> 00:07:59,040
+see them here in the outline.
+117
+
+118
+00:07:59,250 --> 00:08:02,700
+So it's like nice when you click that, you can know what's public.
+118
+
+119
+00:08:02,700 --> 00:08:05,790
+What's protected. That's it.

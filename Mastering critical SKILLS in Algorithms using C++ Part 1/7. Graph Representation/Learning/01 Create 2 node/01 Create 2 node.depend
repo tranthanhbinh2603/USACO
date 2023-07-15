@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1673260610 source:e:\document\project\usaco\mastering critical skills in algorithms using c++ part 1\7. graph representation\01 create 2 node\main.cpp
+	<iostream>
+	<vector>
+

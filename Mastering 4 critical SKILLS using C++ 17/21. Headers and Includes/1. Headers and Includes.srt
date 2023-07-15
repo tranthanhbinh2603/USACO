@@ -1,0 +1,435 @@
+0
+1
+00:00:01,200 --> 00:00:08,550
+In this section, we are going to learn one of the fundamental methods that we use in industry to handle
+1
+
+2
+00:00:08,550 --> 00:00:13,620
+big projects, which involved really what we call header and includes that you were using before
+2
+
+3
+00:00:13,620 --> 00:00:14,020
+already.
+3
+
+4
+00:00:14,700 --> 00:00:18,090
+So let's think about this
+4
+
+5
+00:00:18,090 --> 00:00:24,320
+code. You have here a function that would like to do summation from 1 to n.
+5
+
+6
+00:00:24,750 --> 00:00:30,520
+So we mainly sum from zero to N-1.
+6
+
+7
+00:00:30,540 --> 00:00:32,100
+Anyway, this is a coding mistake,
+7
+
+8
+00:00:32,670 --> 00:00:39,120
+and then here in the cout, we say cout square root 25, which is something we use it in
+8
+
+9
+00:00:39,120 --> 00:00:39,720
+C math,
+9
+
+10
+00:00:40,110 --> 00:00:44,690
+and also we define a vector here, which is coming from here, and we are calling our function here.
+10
+
+11
+00:00:45,150 --> 00:00:52,470
+So thinking back about these three hash includes, the IO stream for the cout, this one for this code,
+11
+
+12
+00:00:52,650 --> 00:00:53,880
+this one for the vector.
+12
+
+13
+00:00:54,660 --> 00:01:00,900
+The moral of the hash includes if you remember that this includes has already a code that is implemented
+13
+
+14
+00:01:00,900 --> 00:01:02,050
+and ready for you to use.
+14
+
+15
+00:01:02,400 --> 00:01:08,070
+So instead of you as a user would go, write out, and compute this sqrt function, or implemented a vector data structure
+15
+
+16
+00:01:08,070 --> 00:01:10,110
+by yourself, you are using existing code.
+16
+
+17
+00:01:10,350 --> 00:01:15,360
+So this is mainly what hash includes means, and now we have a function here that is doing some operation,
+17
+
+18
+00:01:15,540 --> 00:01:20,040
+and we have a question here like — let's say that this is a very common utility,
+18
+
+19
+00:01:20,910 --> 00:01:23,730
+Can we make this function available for others?
+19
+
+20
+00:01:24,000 --> 00:01:28,700
+Like — can others just somehow hash include something then it would involve
+20
+
+21
+00:01:28,710 --> 00:01:32,510
+my code here then everyone is using it instead of rewriting it?
+21
+
+22
+00:01:32,850 --> 00:01:36,630
+So how can we make it easier for our teams to do such a track?
+22
+
+23
+00:01:37,920 --> 00:01:39,930
+This is amends through something we call a header
+23
+
+24
+00:01:39,930 --> 00:01:40,320
+file.
+24
+
+25
+00:01:40,680 --> 00:01:48,270
+We will start to create multiple files where these files include our code content, and then we let
+25
+
+26
+00:01:48,270 --> 00:01:56,610
+others to just hash include that. In any IDE, you can create just a new file. In eclipse,
+26
+
+27
+00:01:56,610 --> 00:02:01,290
+If you did that, you can right-click and select a new then header file.
+27
+
+28
+00:02:01,290 --> 00:02:05,190
+If you did that, some auto-generated code is going to be generated for you.
+28
+
+29
+00:02:05,520 --> 00:02:08,020
+But if it isn't, you just need to create a new file.
+29
+
+30
+00:02:08,940 --> 00:02:15,390
+We typically give it an extension of dot-h, sometimes dot-hpp. So just go ahead
+30
+
+31
+00:02:15,390 --> 00:02:15,930
+with whatever,
+31
+
+32
+00:02:15,930 --> 00:02:22,940
+and then create your file. Once you code that, you asked for the name and just use this dot-h. In C++,
+32
+
+33
+00:02:22,950 --> 00:02:28,200
+you can go more complex and can have some templates for this file, but anyway let's make it simpler
+33
+
+34
+00:02:28,200 --> 00:02:31,160
+for now. For seeing more,
+34
+
+35
+00:02:32,300 --> 00:02:35,000
+the first thing is you get here the sum dot-h file.
+35
+
+36
+00:02:35,310 --> 00:02:37,300
+So we now wrote our code here.
+36
+
+37
+00:02:38,190 --> 00:02:45,030
+Now going to our main file, the first thing we are going to do is we are going to add hash include
+37
+
+38
+00:02:45,330 --> 00:02:49,000
+sum dot-h, and then notice here we are calling the function.
+38
+
+39
+00:02:49,350 --> 00:02:56,820
+Now, this function isn't implemented in our main dot-cpp here,
+39
+
+40
+00:02:57,190 --> 00:02:59,000
+It is implemented in a different file.
+40
+
+41
+00:02:59,310 --> 00:03:03,080
+So someone from our team can simply just go and hash include that here.
+41
+
+42
+00:03:03,090 --> 00:03:06,010
+I would like you to notice two observations here.
+42
+
+43
+00:03:06,390 --> 00:03:10,190
+First, we are using here two double quotes, but less than and greater than.
+43
+
+44
+00:03:10,470 --> 00:03:17,700
+So when we add our own ones, we use double quotes, the less than and greater than are for the official system.
+44
+
+45
+00:03:18,270 --> 00:03:23,100
+The second thing is, if you tried to hash include IO stream more than once, there will be no problem,
+45
+
+46
+00:03:23,580 --> 00:03:29,100
+but if you tried to hash include this sum dot-h twice, the program is going to give you an error until
+46
+
+47
+00:03:29,100 --> 00:03:34,590
+you redefinition of integer sum of int. What happens? I would like to think of
+47
+
+48
+00:03:34,590 --> 00:03:41,490
+sum hash include as following: every time the C++ find you are hash including something, it just to go and
+48
+
+49
+00:03:41,490 --> 00:03:43,700
+copy the whole content as it is and put it here.
+49
+
+50
+00:03:44,310 --> 00:03:49,260
+So when you say hash include sum dot-h, it's going to copy this code and put it here. If it is another
+50
+
+51
+00:03:49,270 --> 00:03:52,160
+sum dot-h, it go to copy it and put it here.
+51
+
+52
+00:03:52,470 --> 00:03:54,490
+So now you have two functions with the same name.
+52
+
+53
+00:03:54,780 --> 00:03:56,700
+That's why you get the error or redefinition.
+53
+
+54
+00:03:56,700 --> 00:04:00,600
+Redefinition means this thing (a variable or a function) exists twice.
+54
+
+55
+00:04:01,620 --> 00:04:08,220
+So now, there is a methodology technique in C++ that helps you to avoid this problem.
+55
+
+56
+00:04:10,230 --> 00:04:11,340
+It's as following:
+56
+
+57
+00:04:12,240 --> 00:04:15,900
+If you are in eclipse, you will find an auto-generated three lines for you.
+57
+
+58
+00:04:16,260 --> 00:04:24,030
+This line and this line and this line here. These lines we call them in C++ include guards,
+58
+
+59
+00:04:24,310 --> 00:04:25,980
+You don't need to understand them,
+59
+
+60
+00:04:25,980 --> 00:04:28,650
+You can just write them as they are. Pick
+60
+
+61
+00:04:28,710 --> 00:04:33,600
+any keyword of your interest. Let's say here it's SUM, then we are using the word sum dot underscore-h
+61
+
+62
+00:04:33,600 --> 00:04:33,900
+...
+62
+
+63
+00:04:34,260 --> 00:04:37,250
+It should be a variable name like in C++, for example,
+63
+
+64
+00:04:37,260 --> 00:04:42,990
+It cannot start with a digit, it cannot have spaces, 
+just any variable name,
+64
+
+65
+00:04:43,440 --> 00:04:45,840
+and use it here once and use it here another,
+65
+
+66
+00:04:46,230 --> 00:04:51,570
+and then in between, you write your own code, and then you write this statement again.
+66
+
+67
+00:04:52,380 --> 00:04:58,980
+This way, the C++ compiler would add this function only once, only the first time, and we will not add it
+67
+
+68
+00:04:58,980 --> 00:04:59,310
+again.
+68
+
+69
+00:04:59,670 --> 00:04:59,940
+So there
+69
+
+70
+00:05:00,020 --> 00:05:01,530
+Will be no multiple redefinition.
+70
+
+71
+00:05:02,600 --> 00:05:06,920
+In case you would like to understand what does this means, just would like to give you some informal idea.
+71
+
+72
+00:05:07,790 --> 00:05:12,150
+This is an if condition, but written in a way named macros directives.
+72
+
+73
+00:05:12,470 --> 00:05:15,580
+So this is an if and this is the end of this if condition,
+73
+
+74
+00:05:16,040 --> 00:05:21,770
+and this is the hash defined for this variable. The logic is as follows: the C++ compiler is saying if
+74
+
+75
+00:05:21,770 --> 00:05:29,480
+not defined sum underscore H, if this variable never used, hash defined it (add it) then add your logic,
+75
+
+76
+00:05:29,570 --> 00:05:30,320
+then end it.
+76
+
+77
+00:05:30,590 --> 00:05:35,140
+So this is traced twice. In the first time, it says is this variable defined?
+77
+
+78
+00:05:35,300 --> 00:05:35,740
+No.
+78
+
+79
+00:05:35,930 --> 00:05:36,890
+OK, define it,
+79
+
+80
+00:05:38,430 --> 00:05:43,360
+get this code, end the if condition. In the second time, is this variable defined?
+80
+
+81
+00:05:43,430 --> 00:05:46,920
+Yes, then it goes out the if condition. In the third time,
+81
+
+82
+00:05:46,920 --> 00:05:48,080
+is this variable defined?
+82
+
+83
+00:05:48,210 --> 00:05:50,320
+Yes, go out of the if condition and so on.
+83
+
+84
+00:05:50,970 --> 00:05:55,110
+So anyway, the moral of that is you need to add these two lines and this one in here,
+84
+
+85
+00:05:55,350 --> 00:05:58,220
+and this word should be unique per the project,
+85
+
+86
+00:05:58,350 --> 00:06:00,930
+and this three lines are auto-generated by eclipse.
+86
+
+87
+00:06:03,480 --> 00:06:04,220
+That's it for now.

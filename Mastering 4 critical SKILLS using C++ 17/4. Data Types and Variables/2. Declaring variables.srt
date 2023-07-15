@@ -1,0 +1,789 @@
+0
+1
+00:00:01,050 --> 00:00:07,680
+In this video, we will start learning how to declare variables in C++. Let's define two variables 
+1
+
+2
+00:00:07,680 --> 00:00:09,450
+one for age and one for week.
+2
+
+3
+00:00:09,930 --> 00:00:11,970
+Let's let's go and browse the code.
+3
+
+4
+00:00:12,510 --> 00:00:20,610
+The first line here that we care about definitely, is "int age = 55;"
+4
+
+5
+00:00:20,610 --> 00:00:22,000
+55, semicolon.
+5
+
+6
+00:00:22,380 --> 00:00:25,890
+So let's decode this line, "int" here
+6
+
+7
+00:00:26,010 --> 00:00:33,330
+represents a data type of this variable, "int" is an abbreviation for the integer data-type, age is the name
+7
+
+8
+00:00:33,330 --> 00:00:34,040
+of the variable,
+8
+
+9
+00:00:34,050 --> 00:00:40,070
+as I said before, it is the identifier. "=" is a message to assign a value.
+9
+
+10
+00:00:40,230 --> 00:00:45,070
+So we take the value in the right side, put it on the left side inside the memory.
+10
+
+11
+00:00:45,390 --> 00:00:49,500
+55 is the value that we put in the memory, we call it "literal".
+11
+
+12
+00:00:49,680 --> 00:00:56,880
+So "literal" for the value, "identifier" for the name. One component two, three, four, five, five elements,
+12
+
+13
+00:00:57,180 --> 00:00:59,850
+to declare a variable in memory.
+13
+
+14
+00:01:01,470 --> 00:01:05,640
+If we started to say "cout << age" what does this line do?
+14
+
+15
+00:01:06,060 --> 00:01:11,040
+This line goes to the memory bringing the value of age, which is now 55.
+15
+
+16
+00:01:11,220 --> 00:01:15,300
+And just print it so we see it here below, we see 55.
+16
+
+17
+00:01:16,680 --> 00:01:23,610
+Now let's declare another variable, which will be of data type double, "double weight = 92.5".
+17
+
+18
+00:01:23,610 --> 00:01:25,140
+"double weight = 92.5"
+18
+
+19
+00:01:25,380 --> 00:01:30,540
+And now we are printing a message of two components, cout << "My weight is: " << weight;
+19
+
+20
+00:01:30,810 --> 00:01:32,980
+OK, it just cut from here.
+20
+
+21
+00:01:33,630 --> 00:01:42,660
+Now if you see declaring the variable just consists of these basic elements that part here is about Eclipse.
+21
+
+22
+00:01:42,690 --> 00:01:47,850
+So you see the word "int" and the word "double" that would have a specific theme so that you figure out that
+22
+
+23
+00:01:48,120 --> 00:01:50,470
+there is something about the definition here.
+23
+
+24
+00:01:53,010 --> 00:01:55,080
+Let's proceed more.
+24
+
+25
+00:01:55,200 --> 00:01:56,940
+Let's take of the following program.
+25
+
+26
+00:01:57,270 --> 00:02:02,370
+We declare the variable in memory like integer, number one, integer number two.
+26
+
+27
+00:02:03,120 --> 00:02:06,980
+The interesting here, there is no equal value that we had.
+27
+
+28
+00:02:07,230 --> 00:02:10,980
+So just three components, integer, number one, semicolon ";".
+28
+
+29
+00:02:11,460 --> 00:02:17,310
+What happens here is that the compiler is going to in the runtime we assign a garbage value.
+29
+
+30
+00:02:17,670 --> 00:02:24,420
+We mean by a garbage value that it could have some random value from the memory itself.
+30
+
+31
+00:02:24,720 --> 00:02:27,590
+Sometimes students assume that this is going to be zero.
+31
+
+32
+00:02:27,870 --> 00:02:31,820
+There is no guarantee for that and this is in a way a bad style.
+32
+
+33
+00:02:32,430 --> 00:02:39,090
+Now in the second step, we started to, after declaring a variable, we did number1 = 30
+33
+
+34
+00:02:39,090 --> 00:02:39,690
+semicolon ";".
+34
+
+35
+00:02:40,020 --> 00:02:43,470
+Now, notice the line before in the previous slide.
+35
+
+36
+00:02:43,620 --> 00:02:45,880
+We had this as one element completely.
+36
+
+37
+00:02:46,210 --> 00:02:52,800
+Now, we also learned now that we can assign in memory, we don't need to say again, integer, we already
+37
+
+38
+00:02:52,800 --> 00:02:53,570
+declared it.
+38
+
+39
+00:02:53,820 --> 00:02:59,730
+So once you declare the variable, you can start to use it within the braces that you have here.
+39
+
+40
+00:02:59,760 --> 00:03:00,950
+You can start to use it.
+40
+
+41
+00:03:01,290 --> 00:03:03,600
+So number1 initially assigned a garbage.
+41
+
+42
+00:03:03,600 --> 00:03:06,270
+Let's say it was assigned for value like -1.
+42
+
+43
+00:03:07,080 --> 00:03:09,420
+Now, when you say number1 = 30.
+43
+
+44
+00:03:10,590 --> 00:03:17,040
+The compiler in the runtime goes in the RAM for the location where number1 exists and put the value of 30
+44
+
+45
+00:03:17,040 --> 00:03:20,480
+then we say number2 equals 10.
+45
+
+46
+00:03:20,520 --> 00:03:23,010
+Again, it goes in the memory says number2
+46
+
+47
+00:03:23,010 --> 00:03:25,020
+equals 10 and so on.
+47
+
+48
+00:03:25,920 --> 00:03:28,920
+So now we declare the variable, we assign the values.
+48
+
+49
+00:03:29,280 --> 00:03:33,510
+The third thing we can do here is get value.
+49
+
+50
+00:03:33,780 --> 00:03:37,800
+If you started to say, "cout << number1 + number2".
+50
+
+51
+00:03:38,280 --> 00:03:40,560
+Number one is a variable in memory.
+51
+
+52
+00:03:40,560 --> 00:03:46,440
+So it goes in memory and get the value of number1, which is now 30 and add it to the number2,
+52
+
+53
+00:03:46,440 --> 00:03:47,170
+which is 10.
+53
+
+54
+00:03:47,370 --> 00:03:49,350
+So when we add them together, they are 40.
+54
+
+55
+00:03:49,530 --> 00:03:55,100
+If we subtracted them together, they are 20, we can again re-assign a value.
+55
+
+56
+00:03:55,120 --> 00:03:58,380
+So I can say, number1 = 50.
+56
+
+57
+00:03:58,650 --> 00:04:05,720
+Now, we will go in the memory and put it now with value 50, we can print a new equation like number times 2 + 1 "* 2 + 1 "
+57
+
+58
+00:04:05,730 --> 00:04:09,560
+Which would be 50 * 2 + 1, which would be a 101.
+58
+
+59
+00:04:09,990 --> 00:04:15,540
+So what you learn from here is that we can deal with the memory to declare something in the memory,
+59
+
+60
+00:04:15,540 --> 00:04:18,420
+assign something in the memory, get value from the memory.
+60
+
+61
+00:04:18,540 --> 00:04:20,130
+Re-assign a value in the memory.
+61
+
+62
+00:04:21,810 --> 00:04:25,710
+The identifier, which is a variable name, has some rules.
+62
+
+63
+00:04:27,300 --> 00:04:33,750
+For example, it consists of letters and digits and underscores"_", but it cannot, for example, be
+63
+
+64
+00:04:33,900 --> 00:04:35,850
+consist of dashes, for example.
+64
+
+65
+00:04:35,850 --> 00:04:37,590
+It cannot consist of spaces.
+65
+
+66
+00:04:37,920 --> 00:04:39,480
+You cannot start it with digit.
+66
+
+67
+00:04:39,480 --> 00:04:41,280
+You cannot say integer "7core".
+67
+
+68
+00:04:41,310 --> 00:04:42,320
+It will not work.
+68
+
+69
+00:04:42,660 --> 00:04:46,410
+So it's, as we said, "Case Sensitive"; that we can say sum (does not equal) SUM.
+69
+
+70
+00:04:46,650 --> 00:04:48,570
+These are two different variable names.
+70
+
+71
+00:04:49,020 --> 00:04:52,620
+In C++ there is something called "Reserved Keywords".
+71
+
+72
+00:04:52,800 --> 00:04:54,430
+These are a set of keywords.
+72
+
+73
+00:04:54,430 --> 00:04:58,590
+The C++ use them like we saw the "int", "double", and so on.
+73
+
+74
+00:04:58,590 --> 00:05:00,240
+There are more keywords in C++.
+74
+
+75
+00:05:00,450 --> 00:05:05,370
+You can not say "int return = 6;", although the statement is valid.
+75
+
+76
+00:05:05,370 --> 00:05:09,090
+But return is a reserved keyword in C++, so you cannot use it.
+76
+
+77
+00:05:12,200 --> 00:05:15,120
+Initialization, if we would like to initialize a variable,
+77
+
+78
+00:05:15,140 --> 00:05:17,030
+there are actually four different cases.
+78
+
+79
+00:05:17,270 --> 00:05:21,260
+The first one is just to write it this way, "int age1;".
+79
+
+80
+00:05:21,560 --> 00:05:23,150
+And this is, as you said, is garbage.
+80
+
+81
+00:05:23,150 --> 00:05:24,720
+Avoid that as much as possible.
+81
+
+82
+00:05:25,100 --> 00:05:31,190
+The second one is more coming from the C languages, so we say as we do it "int age2 = 52;".
+82
+
+83
+00:05:31,520 --> 00:05:37,400
+This is a very popular writing style. During the course I will be using this
+83
+
+84
+00:05:37,400 --> 00:05:38,420
+style all the time.
+84
+
+85
+00:05:38,810 --> 00:05:40,490
+But I would like to say something.
+85
+
+86
+00:05:40,880 --> 00:05:45,710
+The modern one from C++11 and beyond is this way.
+86
+
+87
+00:05:45,720 --> 00:05:50,410
+Instead of writing equal, you use these braces, we call it initialization list.
+87
+
+88
+00:05:50,690 --> 00:05:54,910
+This is the preferred way in C++, so please stick to it.
+88
+
+89
+00:05:54,920 --> 00:05:58,990
+You are new to C++ so you can now get to the habit of writing it all the time.
+89
+
+90
+00:05:59,120 --> 00:06:02,050
+So when you see me writing this way, it is a C style.
+90
+
+91
+00:06:02,300 --> 00:06:03,320
+Nothing wrong with it.
+91
+
+92
+00:06:03,470 --> 00:06:09,080
+Maybe a few cases where this style is important and more later when we come to something called object
+92
+
+93
+00:06:09,080 --> 00:06:10,340
+oriented and learning objects.
+93
+
+94
+00:06:10,520 --> 00:06:12,170
+This would be more valuable.
+94
+
+95
+00:06:14,240 --> 00:06:14,720
+Yeah.
+95
+
+96
+00:06:14,720 --> 00:06:18,530
+Let's now move to the other data types that we saw in C++.
+96
+
+97
+00:06:18,770 --> 00:06:20,030
+We now know about the double.
+97
+
+98
+00:06:20,240 --> 00:06:21,380
+There is also character.
+98
+
+99
+00:06:21,380 --> 00:06:23,090
+We sayو "char group =".
+99
+
+100
+00:06:23,100 --> 00:06:29,480
+You see here what we did, we did a semicolon before, and semicolon after, we defined the boolean, boolean is
+100
+
+101
+00:06:29,480 --> 00:06:33,320
+male equal true "bool male = true;" bool like_football = false, and so on.
+101
+
+102
+00:06:33,350 --> 00:06:34,400
+You see the true and false.
+102
+
+103
+00:06:34,430 --> 00:06:38,120
+They also like look like a reserved keyword in C++.
+103
+
+104
+00:06:38,480 --> 00:06:40,080
+We define age as we did before.
+104
+
+105
+00:06:40,310 --> 00:06:46,910
+We can also say, 'string name = "mostafa" ' and we can start to print all of that.
+105
+
+106
+00:06:47,120 --> 00:06:53,150
+One of the interesting things here to notice, when we "cout" the is_male, it's actually printed as
+106
+
+107
+00:06:53,150 --> 00:06:53,950
+1 and 0.
+107
+
+108
+00:06:54,920 --> 00:07:01,550
+OK, so actually the boolean, true and false, is eventually internally just a number (0 or 1).
+108
+
+109
+00:07:02,000 --> 00:07:05,930
+Interestingly, even the characters are internally just some number.
+109
+
+110
+00:07:09,270 --> 00:07:14,910
+Let's finish the lesson with this concept, let's say you would like to print the average of 
+110
+
+111
+00:07:14,910 --> 00:07:20,820
+two numbers, 10 and 21, in math, we know that (10 + 21) is 31 divided by 2
+111
+
+112
+00:07:20,820 --> 00:07:22,040
+is 15.5.
+112
+
+113
+00:07:22,440 --> 00:07:27,020
+When you start to write a program, you should start thinking about the right data type.
+113
+
+114
+00:07:27,330 --> 00:07:32,430
+So here the guy said, Integer, I want (a + b / 2), it gives wrong answers.
+114
+
+115
+00:07:33,060 --> 00:07:35,310
+OK, now we also get another way.
+115
+
+116
+00:07:35,310 --> 00:07:37,530
+He opened two braces, and put (a + b) divided by two,
+116
+
+117
+00:07:37,530 --> 00:07:39,030
+Also giving another wrong answer.
+117
+
+118
+00:07:39,300 --> 00:07:39,860
+Why?
+118
+
+119
+00:07:40,230 --> 00:07:42,050
+Because it should be 15.5.
+119
+
+120
+00:07:42,450 --> 00:07:45,960
+The reason that this is wrong is we use the integer data-type.
+120
+
+121
+00:07:46,350 --> 00:07:48,510
+But is the output here an integer type?
+121
+
+122
+00:07:48,930 --> 00:07:49,890
+The answer is no.
+122
+
+123
+00:07:50,040 --> 00:07:53,090
+The output is fractional part, so we need double data-type.
+123
+
+124
+00:07:53,370 --> 00:07:55,740
+So these two lines are definitely going to be wrong
+124
+
+125
+00:07:55,740 --> 00:07:59,810
+to compute the average of two numbers, the right way is using double.
+125
+
+126
+00:08:00,000 --> 00:08:06,270
+So let's say we define now the inputs as X and Y, double, X and Y, and we started to do one
+126
+
+127
+00:08:06,420 --> 00:08:13,030
+(X + Y /2), the answer is now 20.5.
+127
+
+128
+00:08:13,650 --> 00:08:15,230
+This is again a wrong answer.
+128
+
+129
+00:08:15,390 --> 00:08:16,260
+What's wrong here?
+129
+
+130
+00:08:16,470 --> 00:08:17,250
+Nothing wrong
+130
+
+131
+00:08:17,250 --> 00:08:20,100
+this time about C++ (about the data type).
+131
+
+132
+00:08:20,110 --> 00:08:22,650
+It's more about the rules of C++.
+132
+
+133
+00:08:23,190 --> 00:08:29,670
+When C++ say (X + Y / 2), it has to decide an order for computing
+133
+
+134
+00:08:29,670 --> 00:08:31,680
+the result, will it compute (X + Y)
+134
+
+135
+00:08:31,680 --> 00:08:34,920
+then divide all of them over 2 as we expected?
+135
+
+136
+00:08:35,220 --> 00:08:36,120
+The answer is no.
+136
+
+137
+00:08:36,390 --> 00:08:43,240
+C++ is going to divide first, then add later, then add the number.
+137
+
+138
+00:08:43,260 --> 00:08:48,460
+So what would happen (Y / 2) is 10.5, + 10 is 20.5.
+138
+
+139
+00:08:48,990 --> 00:08:53,550
+OK, so how now I could force the C++ to follow a specific order?
+139
+
+140
+00:08:53,730 --> 00:08:57,450
+You can use this, this kind of...
+140
+
+141
+00:08:58,410 --> 00:09:00,960
+I think it's named braces this kind of.
+141
+
+142
+00:09:02,490 --> 00:09:02,800
+Yeah.
+142
+
+143
+00:09:03,300 --> 00:09:05,160
+The brackets here.
+143
+
+144
+00:09:05,280 --> 00:09:11,100
+When you say (X + Y), it is going to add them first, then divide by two.
+144
+
+145
+00:09:11,220 --> 00:09:12,940
+This is the expected result.
+145
+
+146
+00:09:13,200 --> 00:09:17,220
+So the lesson here is you also need to be careful about the right way.
+146
+
+147
+00:09:17,220 --> 00:09:19,200
+you need to understand the language very well.
+147
+
+148
+00:09:19,440 --> 00:09:24,810
+The language when it comes to some operators like that would have rules on which one we go first.
+148
+
+149
+00:09:24,840 --> 00:09:28,870
+We call it precedence rules, will go to see them sometime later.
+149
+
+150
+00:09:30,330 --> 00:09:35,490
+The last thing to know about is the as we said, the data types has a min or max value.
+150
+
+151
+00:09:35,700 --> 00:09:39,630
+Integer has a range of minus this big number to this.
+151
+
+152
+00:09:39,630 --> 00:09:42,330
+Character has a limit of this range.
+152
+
+153
+00:09:42,540 --> 00:09:43,710
+Boolean is 0 or 1.
+153
+
+154
+00:09:44,010 --> 00:09:47,700
+If you put a value less than the minimum value, we call it "underflow".
+154
+
+155
+00:09:47,910 --> 00:09:53,210
+If you put a value greater than the maximum value, we call it "overflow".
+155
+
+156
+00:09:53,220 --> 00:10:00,660
+So if you try to do that, you are going to get a warning that you are exceeding the limit of C++
+156
+
+157
+00:10:00,840 --> 00:10:02,310
+for integer data-types.
+157
+
+158
+00:10:03,060 --> 00:10:03,600
+That's it! :)

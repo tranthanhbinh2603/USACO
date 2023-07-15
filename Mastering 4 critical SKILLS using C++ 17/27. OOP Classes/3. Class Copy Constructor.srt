@@ -1,0 +1,684 @@
+0
+1
+00:00:00,930 --> 00:00:07,920
+C++ provides us with the copy constructor to help us in some situations related to the use of pointers.
+1
+
+2
+00:00:08,610 --> 00:00:14,250
+Here in this example, we have a class my number that has a pointer data type of integer and another
+2
+
+3
+00:00:14,260 --> 00:00:20,550
+just normal integer. In the constructor, the val1 is initialized with a new integer memory, and then
+3
+
+4
+00:00:20,550 --> 00:00:26,730
+it puts the value of X and val2 just for y. There is here a destructor that we did nothing at the moment,
+4
+
+5
+00:00:26,730 --> 00:00:34,980
+and we are printing the address of val (the pointer) and also the address of the second integer val.
+5
+
+6
+00:00:35,310 --> 00:00:42,180
+Here we define two objects, A and B. A is using the default values, B is 10 and 20, and we start to print
+6
+
+7
+00:00:42,180 --> 00:00:44,040
+the value and address of A and B.
+7
+
+8
+00:00:44,340 --> 00:00:48,930
+So we notice A is 3 and 5, and these are the two addresses.
+8
+
+9
+00:00:49,200 --> 00:00:51,180
+B is 10 and 20, and these are the two addresses.
+9
+
+10
+00:00:51,840 --> 00:00:52,850
+So far, so good.
+10
+
+11
+00:00:53,280 --> 00:01:01,110
+We now are trying to assign A to B, so B equals A. What happens in assigning objects this way?
+11
+
+12
+00:01:01,650 --> 00:01:05,860
+The compiler is going to copy member by member the values.
+12
+
+13
+00:01:05,940 --> 00:01:17,830
+OK, so let's print B right now after this assigning. We notice here that the value of B
+13
+
+14
+00:01:17,830 --> 00:01:21,270
+became like the value of A. This is good so far,
+14
+
+15
+00:01:21,270 --> 00:01:23,480
+but let's look at the memory itself.
+15
+
+16
+00:01:23,970 --> 00:01:27,570
+We notice here that the val2's address is still as it is,
+16
+
+17
+00:01:27,600 --> 00:01:36,970
+this is normal, but the value of the address for the pointer is the same as the value of A.
+17
+
+18
+00:01:37,200 --> 00:01:38,250
+So what happened here?
+18
+
+19
+00:01:38,250 --> 00:01:40,320
+Where is the address of myself?
+19
+
+20
+00:01:40,620 --> 00:01:42,400
+My address is just gone.
+20
+
+21
+00:01:42,720 --> 00:01:44,740
+So the address of B of va1
+21
+
+22
+00:01:44,790 --> 00:01:46,240
+is gone.
+22
+
+23
+00:01:46,500 --> 00:01:50,480
+Now the B pointer is looking at the A pointer.
+23
+
+24
+00:01:50,730 --> 00:01:57,430
+So first of all, there is a memory leak here because the B pointer is just gone without deleting it.
+24
+
+25
+00:01:57,900 --> 00:02:01,890
+The second problem that we are going to face is here in line 17.
+25
+
+26
+00:02:02,160 --> 00:02:05,890
+If we tried to delete it here, there is a problem that's going to happen.
+26
+
+27
+00:02:06,000 --> 00:02:06,720
+Think about it.
+27
+
+28
+00:02:08,590 --> 00:02:14,480
+This takes us to the problem of the shallow copy and deep copy. When we just assign two objects to itself,
+28
+
+29
+00:02:14,770 --> 00:02:17,500
+we are just going to take your pointer as it is,
+29
+
+30
+00:02:17,860 --> 00:02:20,050
+but my intention wasn't to take your pointer.
+30
+
+31
+00:02:20,050 --> 00:02:21,150
+Your pointer is your own.
+31
+
+32
+00:02:21,160 --> 00:02:22,960
+You created it and you should delete it,
+32
+
+33
+00:02:22,960 --> 00:02:24,010
+and I have my own pointer,
+33
+
+34
+00:02:24,010 --> 00:02:24,840
+I should delete it.
+34
+
+35
+00:02:25,460 --> 00:02:28,020
+Now, this wasn't the intention.
+35
+
+36
+00:02:28,420 --> 00:02:32,350
+So this takes us to what we call the deep copy. In a deep copy,
+36
+
+37
+00:02:32,380 --> 00:02:36,370
+we just don't go and take the pointer copy to us.
+37
+
+38
+00:02:36,610 --> 00:02:42,460
+We go actually to the value of the pointer and start to make a copy from it to us instead of just
+38
+
+39
+00:02:42,460 --> 00:02:44,210
+taking your pointer.
+39
+
+40
+00:02:44,740 --> 00:02:48,100
+So this takes us to what we call the copy constructor.
+40
+
+41
+00:02:48,430 --> 00:02:50,680
+The copy constructor is a special constructor,
+41
+
+42
+00:02:50,770 --> 00:02:55,780
+It has like four different ways when to be called, and is going to help us to make a deep copy.
+42
+
+43
+00:02:56,140 --> 00:03:01,690
+There are two cases when you are initializing from another object and a case for passing objects that
+43
+
+44
+00:03:01,690 --> 00:03:06,070
+doesn't have a reference and fourth case when you are returning from an object.
+44
+
+45
+00:03:06,550 --> 00:03:10,560
+If you didn't provide a copy constructor, it is going to make a default one
+45
+
+46
+00:03:10,630 --> 00:03:17,350
+that just make a shallow copy, which you will take the pointer of the other class as it is. Later we will learn
+46
+
+47
+00:03:17,350 --> 00:03:20,980
+about something named Move constructor that is very related to it.
+47
+
+48
+00:03:22,390 --> 00:03:30,910
+So let's see where is the copy constructor. Here when we say A and B, we are actually having
+48
+
+49
+00:03:30,910 --> 00:03:32,400
+two normal constructors.
+49
+
+50
+00:03:32,920 --> 00:03:39,290
+If I started to say defined my number C of B, B is actually another object of my type.
+50
+
+51
+00:03:39,640 --> 00:03:47,620
+So this has to call the constructor to build C from B, or if you just did D equal B is also coping
+51
+
+52
+00:03:47,620 --> 00:03:53,950
+constructor from one object to another. Fun1 of C is a function that is taking an object and doesn't have any references
+52
+
+53
+00:03:53,950 --> 00:03:54,230
+here,
+53
+
+54
+00:03:54,400 --> 00:04:00,490
+so this is calling using copy constructor, and Fun2 is returning an object here, which I'm taking here,
+54
+
+55
+00:04:00,560 --> 00:04:05,580
+it is another copy constructor. These are the four cases of the copy constructor. Notice here,
+55
+
+56
+00:04:05,590 --> 00:04:09,930
+I started to say A equals B. This is an assignment, not a copy constructor.
+56
+
+57
+00:04:10,210 --> 00:04:15,760
+So what's the difference between line 43, a line 38? that here you are creating a new
+57
+
+58
+00:04:15,760 --> 00:04:16,140
+object.
+58
+
+59
+00:04:16,150 --> 00:04:19,300
+So it's using a constructor, but here just assigning it.
+59
+
+60
+00:04:19,690 --> 00:04:26,940
+If you started to print the addresses of A, B, C, D, you will notice all of them are looking at the pointer
+60
+
+61
+00:04:26,950 --> 00:04:33,660
+of A which means we lost the pointer B and C and D, they are all gone because of this shadow
+61
+
+62
+00:04:33,940 --> 00:04:42,490
+copy that just to take the copy of pointer A to myVal. The way to implement a deep copy is using a copy
+62
+
+63
+00:04:42,490 --> 00:04:44,290
+constructor that goes as following:
+63
+
+64
+00:04:44,680 --> 00:04:46,510
+You define a new constructor,
+64
+
+65
+00:04:46,520 --> 00:04:51,180
+so my number here, and you give it an object of the type my number also,
+65
+
+66
+00:04:51,460 --> 00:04:55,200
+but you have to put a reference here and preferred also to put a const here.
+66
+
+67
+00:04:55,660 --> 00:05:01,750
+Now, the logic of this constructor is as follows: you are giving another object that already
+67
+
+68
+00:05:01,750 --> 00:05:03,880
+exists, please make a copy from it.
+68
+
+69
+00:05:04,150 --> 00:05:08,500
+So the way to make it a deep copy is you go inside it, you create your own value,
+69
+
+70
+00:05:08,500 --> 00:05:14,620
+and start to copy the other one value in your val and whatever other logic. When you think about
+70
+
+71
+00:05:14,620 --> 00:05:20,890
+that logic here, here we define A and B and printing A and B, you will notice they would have different
+71
+
+72
+00:05:20,890 --> 00:05:21,610
+addresses.
+72
+
+73
+00:05:21,940 --> 00:05:22,450
+Why?
+73
+
+74
+00:05:22,630 --> 00:05:26,170
+Because we don't anymore take just its pointer to my pointer.
+74
+
+75
+00:05:26,410 --> 00:05:33,280
+I'm defining my own pointer and taking my value from its value, not putting my pointer with its pointer
+75
+
+76
+00:05:33,280 --> 00:05:33,500
+one.
+76
+
+77
+00:05:33,850 --> 00:05:39,540
+So in the first case, it would be like val1 equals another dot val1. That's it.
+77
+
+78
+00:05:39,820 --> 00:05:44,650
+But here I have my own pointer, I'm taking my copy by myself.
+78
+
+79
+00:05:45,940 --> 00:05:49,740
+The reference is mandatory to be used, const is optional but highly preferred.
+79
+
+80
+00:05:50,920 --> 00:05:54,070
+So this is all about the copy constructor.
+80
+
+81
+00:05:54,610 --> 00:06:01,060
+Let me highlight one more thing that a bit related to the copy constructor, which we call the temporary
+81
+
+82
+00:06:01,060 --> 00:06:05,280
+object. An object that doesn't have a name is named a temporary object.
+82
+
+83
+00:06:05,560 --> 00:06:11,980
+So the main rule, for now, is it cannot be bound to a non-const reference.
+83
+
+84
+00:06:11,980 --> 00:06:12,820
+So what does this mean?
+84
+
+85
+00:06:13,090 --> 00:06:16,280
+If you have a reference, then it have to be const.
+85
+
+86
+00:06:16,330 --> 00:06:21,220
+Later, we will learn about something more complicated in C++ 11 named move semantic,
+86
+
+87
+00:06:21,220 --> 00:06:24,350
+It use this double reference or
+87
+
+88
+00:06:24,480 --> 00:06:29,800
+double ampersand. Let's see these three functions here.
+88
+
+89
+00:06:30,220 --> 00:06:32,120
+We have a function that takes an object A,
+89
+
+90
+00:06:32,170 --> 00:06:33,000
+no references.
+90
+
+91
+00:06:33,220 --> 00:06:33,800
+So is this a reference? no.
+91
+
+92
+00:06:34,360 --> 00:06:37,090
+This is OK now. Play number two,
+92
+
+93
+00:06:37,090 --> 00:06:38,050
+is this a reference?
+93
+
+94
+00:06:38,050 --> 00:06:38,530
+Yes.
+94
+
+95
+00:06:38,960 --> 00:06:39,970
+Is it const? No.
+95
+
+96
+00:06:40,240 --> 00:06:41,530
+And here is this reference?
+96
+
+97
+00:06:41,530 --> 00:06:41,860
+Yes.
+97
+
+98
+00:06:42,040 --> 00:06:43,020
+Is it const? No
+98
+
+99
+00:06:43,480 --> 00:06:49,210
+So if you here tried to call play one with my number brackets.
+99
+
+100
+00:06:49,630 --> 00:06:51,260
+Now, is this a temporary object?
+100
+
+101
+00:06:51,280 --> 00:06:52,210
+The answer is yes.
+101
+
+102
+00:06:52,210 --> 00:06:52,720
+Why?
+102
+
+103
+00:06:52,990 --> 00:06:54,420
+There is no name for this object.
+103
+
+104
+00:06:54,820 --> 00:06:57,840
+So the rule is, are you sending for a reference?
+104
+
+105
+00:06:57,850 --> 00:06:58,930
+No, this isn't a reference,
+105
+
+106
+00:06:58,960 --> 00:07:00,040
+then this is OK.
+106
+
+107
+00:07:00,880 --> 00:07:04,870
+Now here in play two, you are sending also a temporary object.
+107
+
+108
+00:07:05,200 --> 00:07:06,120
+Is this a reference?
+108
+
+109
+00:07:06,130 --> 00:07:07,390
+Yes, it has to be const.
+109
+
+110
+00:07:07,840 --> 00:07:14,200
+Is it const? No, then compilation error. Play number three is calling something.
+110
+
+111
+00:07:14,200 --> 00:07:14,860
+Is it temporary?
+111
+
+112
+00:07:14,860 --> 00:07:15,220
+Yes.
+112
+
+113
+00:07:15,550 --> 00:07:16,450
+Is it a reference?
+113
+
+114
+00:07:16,450 --> 00:07:16,750
+Yes.
+114
+
+115
+00:07:16,750 --> 00:07:17,300
+Is it const?
+115
+
+116
+00:07:17,380 --> 00:07:18,490
+Yes, this is OK.
+116
+
+117
+00:07:18,730 --> 00:07:24,760
+So the rule here is if it's a temporary object, which means it doesn't have a name, then if you are
+117
+
+118
+00:07:24,800 --> 00:07:27,430
+passing to something that isn't reference, this is OK.
+118
+
+119
+00:07:27,760 --> 00:07:30,280
+If it is a reference, it must be const.
+119
+
+120
+00:07:30,610 --> 00:07:37,390
+So here in this case we have a reference then paly two cannot accept temporary objects.
+120
+
+121
+00:07:37,600 --> 00:07:41,950
+Paly three can accept temporary objects, Play one can accept temporary objects.
+121
+
+122
+00:07:44,850 --> 00:07:52,810
+In play-four, we are here returning an object from this function.
+122
+
+123
+00:07:53,110 --> 00:08:00,700
+This is OK, but remember, the returned here is a temporary object because ...
+123
+
+124
+00:08:00,700 --> 00:08:01,000
+this object
+124
+
+125
+00:08:01,000 --> 00:08:03,640
+here is X, but X is going to be destroyed.
+125
+
+126
+00:08:03,640 --> 00:08:07,720
+Something in memory is going to be sent back by play4.
+126
+
+127
+00:08:07,930 --> 00:08:12,110
+So if I called here paly4, the eventually what is here is a temporary object.
+127
+
+128
+00:08:12,370 --> 00:08:18,730
+So again, you cannot pass it to play2 because it has a reference, but without a const. Notice that sometimes
+128
+
+129
+00:08:18,730 --> 00:08:21,010
+the copy constructor will not be called.
+129
+
+130
+00:08:21,530 --> 00:08:28,430
+So while here, we are expecting a return of object that is going to be called, but C++ has a lot of optimization,
+130
+
+131
+00:08:28,430 --> 00:08:35,420
+like something called return value optimization, is going to somehow do a lot of magic and internally
+131
+
+132
+00:08:35,420 --> 00:08:35,870
+in memory,
+132
+
+133
+00:08:35,870 --> 00:08:37,220
+It will handle it in a different way.
+133
+
+134
+00:08:37,390 --> 00:08:42,190
+Sometimes you will wait for the copy constructor to print a message that some construction happen,
+134
+
+135
+00:08:42,410 --> 00:08:48,800
+but sometimes it isn't printed, not because the constructor wasn't called, but more than C++ found a way
+135
+
+136
+00:08:49,100 --> 00:08:52,290
+to make the same thing in a more efficient way.
+136
+
+137
+00:08:52,550 --> 00:08:58,100
+So anyway, this is how the copy constructor is related to this story. That it.

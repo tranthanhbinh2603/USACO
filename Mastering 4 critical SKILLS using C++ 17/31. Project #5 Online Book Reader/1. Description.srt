@@ -1,0 +1,515 @@
+1
+00:00:01,450 --> 00:00:07,270
+In the next project, we will implement an online book reader over all this is a simple project.
+
+2
+00:00:07,420 --> 00:00:10,030
+So from functionality perspective, it's limited.
+
+3
+00:00:10,540 --> 00:00:14,620
+Specifically, let me tell you first the big picture we have something in software engineering that
+
+4
+00:00:14,620 --> 00:00:19,210
+we call functional requirements and we have what we call non-functional requirements.
+
+5
+00:00:19,690 --> 00:00:25,750
+The functional requirements is actually what we initially as a as a Z, students focus on it, which
+
+6
+00:00:25,750 --> 00:00:27,790
+are the functionalities provided by the system.
+
+7
+00:00:28,330 --> 00:00:31,870
+In reality, there are a lot of concerns that are actually non-functional.
+
+8
+00:00:32,440 --> 00:00:38,740
+For example, the usability to what degree the system is understandable, usable compatible with something
+
+9
+00:00:39,940 --> 00:00:45,040
+like customer experience, for example, to a degree, the system is secure, reliable to a degree,
+
+10
+00:00:45,040 --> 00:00:50,530
+the system is fast to what degree we can like maintain the functionalities and scale the system from
+
+11
+00:00:50,530 --> 00:00:53,230
+like 10000 users to one million users.
+
+12
+00:00:53,950 --> 00:00:56,410
+Nothing here like a function that these are expecting.
+
+13
+00:00:56,590 --> 00:00:58,030
+They are non-functional requirements.
+
+14
+00:00:58,510 --> 00:01:01,750
+Please take time to learn more about the non-functional requirements.
+
+15
+00:01:01,750 --> 00:01:07,090
+You should meet this again in the software engineering, of course, but pretty good to have some background.
+
+16
+00:01:07,600 --> 00:01:12,490
+So now going back to our focus, the focus is functional requirements in this project.
+
+17
+00:01:12,760 --> 00:01:19,360
+The user has mainly two users who could log in or sign up the admin user and the customer user.
+
+18
+00:01:20,680 --> 00:01:24,550
+In fact, in this system, the admin user doesn't sign up is just logging.
+
+19
+00:01:24,910 --> 00:01:28,130
+The customer is one that can log in and sign up now.
+
+20
+00:01:28,380 --> 00:01:32,590
+Mainly the main role for the admin is to just add books here in the system.
+
+21
+00:01:33,220 --> 00:01:37,750
+The user himself can read one book at a time, and we will have history.
+
+22
+00:01:37,750 --> 00:01:43,180
+If his session sections of books, as we will see during the session, the user can browse the books
+
+23
+00:01:43,180 --> 00:01:44,260
+and navigate between them.
+
+24
+00:01:44,830 --> 00:01:47,110
+For simplicity, you don't use files in this one.
+
+25
+00:01:47,110 --> 00:01:48,580
+You don't use any better decisions.
+
+26
+00:01:48,850 --> 00:01:51,430
+You focused mainly on the design of the system.
+
+27
+00:01:52,060 --> 00:01:52,750
+So let's see.
+
+28
+00:01:53,150 --> 00:01:55,510
+There are more constraints for simplicity.
+
+29
+00:01:56,260 --> 00:02:01,570
+The admin users are already added to the memory, which is like your database here, so there is no
+
+30
+00:02:01,570 --> 00:02:04,570
+sign up actually for the admin, you don't need to sign up for the admins.
+
+31
+00:02:05,320 --> 00:02:10,870
+The second thing is that you can also add in the system initial books a bit, which will make it easier
+
+32
+00:02:10,870 --> 00:02:12,910
+for you to just test the system.
+
+33
+00:02:13,180 --> 00:02:14,620
+But the admin can add books.
+
+34
+00:02:16,590 --> 00:02:24,360
+And the second thing is, you can also add initially some customers, but the user can sign up in the
+
+35
+00:02:24,370 --> 00:02:30,150
+system, so this is to be the user can sign up and the inputs make everything symbolic.
+
+36
+00:02:30,150 --> 00:02:35,750
+For example, to use all of the strings without spaces, assume the user is behaving verbally.
+
+37
+00:02:35,880 --> 00:02:37,770
+Don't waste a lot of coding in these directions.
+
+38
+00:02:38,160 --> 00:02:39,510
+So let's see some usage here.
+
+39
+00:02:40,140 --> 00:02:48,660
+The system is start by menu that has log in and sign up, and I'm having some users in the system,
+
+40
+00:02:48,660 --> 00:02:50,700
+but in a way I selected to sign up.
+
+41
+00:02:50,970 --> 00:02:54,720
+So I'm adding user name Billard one to three, my user, my name and email.
+
+42
+00:02:55,710 --> 00:02:59,220
+Now we started the system, we see the use that has four items.
+
+43
+00:02:59,760 --> 00:03:03,540
+The first one is his profile and the last one is the logo.
+
+44
+00:03:03,690 --> 00:03:04,740
+So what is the first one?
+
+45
+00:03:04,740 --> 00:03:09,750
+The profile, if you connected to provide it, just will list your current information.
+
+46
+00:03:09,960 --> 00:03:10,800
+This is fair enough.
+
+47
+00:03:12,060 --> 00:03:15,390
+Number three and number two are important here.
+
+48
+00:03:15,750 --> 00:03:20,340
+Number three can list for us the current, the books that are available in the library.
+
+49
+00:03:20,550 --> 00:03:23,100
+So we have here three books, as you see now.
+
+50
+00:03:23,250 --> 00:03:28,270
+The user can select one of these books, let's say selected C++ book later.
+
+51
+00:03:28,320 --> 00:03:33,060
+The user can request the number two, which will show his reading history.
+
+52
+00:03:33,480 --> 00:03:38,310
+So we know that here the C++ C++ book has five widgets.
+
+53
+00:03:38,700 --> 00:03:43,890
+The first we are in the current image, which is the first page, and it has content to plus plus plus.
+
+54
+00:03:43,920 --> 00:03:45,180
+This is just dummy content.
+
+55
+00:03:45,840 --> 00:03:48,660
+No, the user can navigate in the screen.
+
+56
+00:03:48,870 --> 00:03:53,550
+He can go to the next page or go to their previous speech or even stop reading.
+
+57
+00:03:54,000 --> 00:03:54,630
+So let's see.
+
+58
+00:03:55,380 --> 00:03:58,270
+The user here decided to navigate to the next.
+
+59
+00:03:58,320 --> 00:04:00,640
+So now he is in two over five.
+
+60
+00:04:00,660 --> 00:04:01,710
+This is dummy content.
+
+61
+00:04:02,130 --> 00:04:03,010
+Again, next.
+
+62
+00:04:03,030 --> 00:04:06,270
+So now he is in three over five C++.
+
+63
+00:04:06,540 --> 00:04:10,530
+He then click the next, you know, in four five and this is dummy text.
+
+64
+00:04:10,780 --> 00:04:14,610
+Now we decided to go two, which is previous, which this is now three over five.
+
+65
+00:04:15,450 --> 00:04:17,340
+Now these are decided to stop reading here.
+
+66
+00:04:18,300 --> 00:04:24,510
+Remember, we were in a C++ book and with the last image was three page number three.
+
+67
+00:04:25,380 --> 00:04:27,390
+Now the user see again the choices here.
+
+68
+00:04:27,420 --> 00:04:34,730
+If the user selected two, he will notice that he has one entry here which a C++ how to program Beja
+
+69
+00:04:34,780 --> 00:04:35,610
+three were five.
+
+70
+00:04:35,790 --> 00:04:39,450
+And this is the last time and that you were in this session.
+
+71
+00:04:40,620 --> 00:04:44,940
+So now which session to Auburn, you have your only one a choice, so you selected it Auburn again,
+
+72
+00:04:44,940 --> 00:04:48,130
+that you are in big three over five with C and C++.
+
+73
+00:04:48,540 --> 00:04:50,340
+So this is what I call by session here.
+
+74
+00:04:50,550 --> 00:04:54,900
+And I mean here by session, a reading decision for the user what he can navigate.
+
+75
+00:04:56,270 --> 00:05:00,260
+For simplicity, these are can have multiple sessions of the same book.
+
+76
+00:05:00,740 --> 00:05:02,330
+Don't get confused by this request.
+
+77
+00:05:02,330 --> 00:05:07,620
+I'm just meaning that if you go back here, let's say these user decided to go back to this.
+
+78
+00:05:07,620 --> 00:05:09,950
+This he can see C++ again.
+
+79
+00:05:10,130 --> 00:05:12,290
+Then he can select C++ again, which will be added.
+
+80
+00:05:12,410 --> 00:05:14,300
+Don't try to make extra logic.
+
+81
+00:05:14,630 --> 00:05:17,120
+If you are confused about this is that means just ignore it.
+
+82
+00:05:17,870 --> 00:05:23,480
+Now one thing here this program would be random chance, but during the running, everything is maintained
+
+83
+00:05:23,480 --> 00:05:24,050
+in the memory.
+
+84
+00:05:24,290 --> 00:05:27,850
+For example, if the user logged the out, then look the end.
+
+85
+00:05:27,860 --> 00:05:30,530
+He can still see this session again in the system.
+
+86
+00:05:31,370 --> 00:05:33,890
+Now let's move to the admin the admin logged in.
+
+87
+00:05:34,130 --> 00:05:37,850
+My code has like hardcoded user Mustafa and 1-1-1.
+
+88
+00:05:38,090 --> 00:05:41,900
+So this is the admin that Mindy can add a book, which is number two.
+
+89
+00:05:42,170 --> 00:05:44,270
+Then we started to add the information of the book.
+
+90
+00:05:44,480 --> 00:05:49,460
+The book has four pages and I started to add the content of the pages done right in hospice's here.
+
+91
+00:05:49,610 --> 00:05:53,480
+Keep things to be simple, design wise.
+
+92
+00:05:53,510 --> 00:05:58,580
+This has limited features, but meanwhile, if you tried to make a good design, it's going to be like
+
+93
+00:05:58,580 --> 00:06:00,200
+a bunch of lines of codes here.
+
+94
+00:06:00,200 --> 00:06:01,640
+Not not sure to program.
+
+95
+00:06:02,030 --> 00:06:05,330
+Try to make things as simple as possible and focus on the design itself.
+
+96
+00:06:05,690 --> 00:06:07,580
+There is no there are no better decisions.
+
+97
+00:06:07,760 --> 00:06:13,010
+Just run the program only one one run to improve your design skills.
+
+98
+00:06:13,040 --> 00:06:16,490
+Please draw your best to design early before any coding.
+
+99
+00:06:16,820 --> 00:06:24,350
+Then could the system then re update your design and ask yourself this mandatory and fundamental question
+
+100
+00:06:24,680 --> 00:06:27,080
+Why did I miss this voice?
+
+101
+00:06:27,500 --> 00:06:33,590
+You will notice that there is always a gap between our initial design and our final design.
+
+102
+00:06:33,980 --> 00:06:34,580
+Why?
+
+103
+00:06:34,760 --> 00:06:37,730
+Because some some areas in the coding would be shadow.
+
+104
+00:06:39,440 --> 00:06:40,700
+A lot of uncertainties.
+
+105
+00:06:41,000 --> 00:06:43,970
+So when you are done with the coding, everything would be clear.
+
+106
+00:06:44,480 --> 00:06:50,960
+What matters here is you try to compare and think, how can I the next time spot this kind of missing
+
+107
+00:06:50,960 --> 00:06:51,290
+things?
+
+108
+00:06:51,740 --> 00:06:54,860
+Finally, try to read my work, compare and learn about it.
+
+109
+00:06:55,790 --> 00:06:59,090
+Look what if you are done with the project and you would like to go more and more?
+
+110
+00:06:59,720 --> 00:07:02,240
+I suggest for you, you might stop at this point.
+
+111
+00:07:02,240 --> 00:07:05,450
+I would like you to keep going in the in the in the in the in the in the course.
+
+112
+00:07:05,690 --> 00:07:06,920
+Maybe you can come back later.
+
+113
+00:07:07,010 --> 00:07:08,630
+But anyway, here are some thoughts.
+
+114
+00:07:09,260 --> 00:07:14,180
+Sometimes in some systems, the admin must activate the sign up for the user first.
+
+115
+00:07:14,180 --> 00:07:18,230
+So you see you signed up in the system, but you are allowed to just just use it.
+
+116
+00:07:18,470 --> 00:07:20,060
+The admin must activate it first.
+
+117
+00:07:20,090 --> 00:07:21,290
+How can we implement that?
+
+118
+00:07:22,010 --> 00:07:25,400
+What if the admin would like to edit, delete and search the books?
+
+119
+00:07:26,150 --> 00:07:28,430
+What if the customer would like to clear all of his session?
+
+120
+00:07:28,430 --> 00:07:30,350
+Probably this is an easy, easy case.
+
+121
+00:07:31,160 --> 00:07:34,010
+What if we would like to read from file allow better decisions?
+
+122
+00:07:34,310 --> 00:07:36,860
+What if we would like to look information in the system?
+
+123
+00:07:36,980 --> 00:07:41,340
+We can have multiple admins which admin approved, which user like.
+
+124
+00:07:41,630 --> 00:07:46,220
+We need to know this information, which admin added this book and so on.
+
+125
+00:07:46,760 --> 00:07:49,030
+I'm not going to implement for you something like that.
+
+126
+00:07:49,040 --> 00:07:50,560
+I'm not going to provide implementation.
+
+127
+00:07:50,600 --> 00:07:56,660
+I'm not going to provide support for you in this in this features, but just more for you if you would
+
+128
+00:07:56,660 --> 00:07:57,740
+like to keep going.
+
+129
+00:07:58,250 --> 00:07:58,700
+That's all.

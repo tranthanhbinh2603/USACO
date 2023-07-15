@@ -1,0 +1,492 @@
+1
+00:00:01,460 --> 00:00:06,110
+Hi Everyone, in this lecture we're going to discuss the implementation for unique number two.
+
+2
+00:00:06,620 --> 00:00:07,520
+So let's begin.
+
+3
+00:00:08,210 --> 00:00:16,400
+So what we discussed, we are given the 2N+2 numbers and 2 numbers are repeating. oh...sorry...all numbers
+
+4
+00:00:16,400 --> 00:00:18,140
+are repeating except two numbers.
+
+5
+00:00:18,140 --> 00:00:23,000
+OK, we need to find out what is the unique number. for example in this array
+
+6
+00:00:23,420 --> 00:00:25,860
+We have four and we have seven.
+
+7
+00:00:26,360 --> 00:00:30,470
+These two numbers are coming only once so we need to find out these two numbers.
+
+8
+00:00:31,140 --> 00:00:32,049
+So we have this....
+
+9
+00:00:32,600 --> 00:00:33,980
+We have to complete this method.
+
+10
+00:00:33,980 --> 00:00:39,860
+The first step we discussed we will do XOR of all the numbers. I can say ok. I will store the XOR in a
+
+11
+00:00:39,860 --> 00:00:41,030
+variable called the result.
+
+12
+00:00:41,570 --> 00:00:48,860
+And I will iterate over the vector. OK I less than array.size().
+
+13
+00:00:48,930 --> 00:00:49,310
+can say ,OK.I
+
+14
+00:00:50,000 --> 00:00:51,200
+Let us do the XOR
+
+15
+00:00:51,680 --> 00:00:53,810
+then I can say result equal
+
+16
+00:00:55,820 --> 00:00:58,970
+result XOR  array of i.
+
+17
+00:00:59,840 --> 00:01:00,410
+All right.
+
+18
+00:01:01,550 --> 00:01:08,840
+What is the next steps? so we discussed that Ok. if you do the XOR. you will get us out of the two numbers
+
+19
+00:01:09,320 --> 00:01:11,510
+there's all the numbers will get cancelled.
+
+20
+00:01:12,440 --> 00:01:16,670
+we will effectively get 4 XOR 7, so four is like this one.
+
+21
+00:01:17,030 --> 00:01:17,330
+OK.
+
+22
+00:01:17,990 --> 00:01:19,340
+And seven is this like this one.
+
+23
+00:01:20,060 --> 00:01:27,740
+So if you do the XOR, you will get one one and you will get a zero here. we discussed we'll find out the
+
+24
+00:01:28,460 --> 00:01:34,160
+position... one position where the bit set is set. if we start from the right we will get this particular
+
+25
+00:01:34,160 --> 00:01:34,670
+position.
+
+26
+00:01:34,790 --> 00:01:38,480
+OK, so let's find out the position.
+
+27
+00:01:40,560 --> 00:01:47,100
+In this case, I can say int position equals zero and I can say while...
+
+28
+00:01:48,730 --> 00:01:55,540
+Let me just copy this resulted in a variable called temp, so temp equals what? temp equals a result.
+
+29
+00:01:56,080 --> 00:01:57,790
+I'm saying ok  this number is temp.
+
+30
+00:01:58,880 --> 00:02:02,510
+And while the last bit is not equal to one.
+
+31
+00:02:02,630 --> 00:02:02,920
+OK.
+
+32
+00:02:03,320 --> 00:02:10,190
+But while the last bit is going to be equal to zero, I can while temp and one. while this is equal
+
+33
+00:02:10,190 --> 00:02:17,090
+to zero, I will keep on incriminating the position and I will right shift my temp.
+
+34
+00:02:17,280 --> 00:02:24,470
+Ok. so effectively what is going to happen?  Suppose if the number is zero one zero one zero zero.
+
+35
+00:02:24,980 --> 00:02:26,860
+So you find this last bit it does zero.
+
+36
+00:02:26,990 --> 00:02:30,230
+Your discard it and increments position from zero to one.
+
+37
+00:02:31,040 --> 00:02:34,810
+Again it is zero, you're discard it and you increment the position two too.
+
+38
+00:02:35,260 --> 00:02:40,490
+At this point, we will stop and we will say ok, the position is two. Effectively
+
+39
+00:02:40,490 --> 00:02:41,360
+After this loop
+
+40
+00:02:41,390 --> 00:02:44,570
+we will know the value of the position variable.
+
+41
+00:02:45,200 --> 00:02:55,630
+Next, what we need is? we need to filter out the numbers from the array which have set bit at position.
+
+42
+00:02:55,640 --> 00:02:57,920
+OK, now how do we filter that out?
+
+43
+00:02:58,160 --> 00:02:59,480
+Again, it's going to be easy.
+
+44
+00:02:59,690 --> 00:03:00,590
+Let me tell you.
+
+45
+00:03:01,700 --> 00:03:09,980
+So based upon that, we will divide our numbers in to two set, let's say set A and set B. Both of them are
+
+46
+00:03:09,990 --> 00:03:13,630
+zero in the beginning. so for int  i equals to zero.
+
+47
+00:03:14,120 --> 00:03:18,470
+I less then again array.size(). I can say i++.
+
+48
+00:03:20,760 --> 00:03:28,220
+So what I can do, I will create a variable called mask that is nothing but one left shift position,
+
+49
+00:03:28,230 --> 00:03:28,500
+OK?
+
+50
+00:03:28,920 --> 00:03:35,250
+So if your number is like position as two then I'm doing one left shift two.
+
+51
+00:03:35,280 --> 00:03:39,090
+That means I will get a number like in the binary it would look something out this.
+
+52
+00:03:39,720 --> 00:03:46,090
+If you have a number, let's say zero one zero one zero. if you do a
+
+53
+00:03:46,110 --> 00:03:47,350
+AND of these two.
+
+54
+00:03:47,850 --> 00:03:54,600
+And if the final result is zero. so if position is two, I'm creating a mask like this and I'm doing
+
+55
+00:03:55,500 --> 00:03:58,800
+AND with some number B1, B2, B3, B4 so on...
+
+56
+00:03:59,730 --> 00:04:00,420
+OK.
+
+57
+00:04:00,870 --> 00:04:07,350
+So, OK. let me just write B1 B2. B1 B2 is bits the ith bits and 
+
+58
+00:04:08,380 --> 00:04:11,470
+the zeros bit. ok. the nth bit.
+
+59
+00:04:12,710 --> 00:04:20,420
+If you have a mask which has one at ith highest position and if you do a AND here. So effectively,
+
+60
+00:04:20,750 --> 00:04:22,280
+all other Bits are zero, OK?
+
+61
+00:04:22,790 --> 00:04:25,850
+Finally, this number would be either zero.
+
+62
+00:04:27,010 --> 00:04:31,600
+This number would be zero if the ith bit is zero. ok. If ith bit is zero 
+
+63
+00:04:32,110 --> 00:04:37,060
+this number would be zero or if the ith bit is one, this number would be some power of two.
+
+64
+00:04:37,060 --> 00:04:39,280
+That means this number would be greater than zero.
+
+65
+00:04:39,970 --> 00:04:47,410
+So effectively, what I'm going to do?  I'm going to check whether the ith number in the array has a set bit
+
+66
+00:04:47,420 --> 00:04:55,840
+at the position so I can do a AND with the mask to check if this number is greater than zero.
+
+67
+00:04:55,870 --> 00:04:57,010
+Yes, it has a setbit.
+
+68
+00:04:57,020 --> 00:05:03,250
+then I can say ok. set A equals set A XOR
+
+69
+00:05:04,600 --> 00:05:13,130
+What?  the number at Array of i, if this is not the case then I will just add that number in setB. So setB 
+
+70
+00:05:13,150 --> 00:05:16,750
+equals  setB XOR array of . so finaly
+
+71
+00:05:16,750 --> 00:05:22,510
+If you print the value of set A and set B, they will contain the two numbers.
+
+72
+00:05:22,510 --> 00:05:22,810
+OK?
+
+73
+00:05:23,560 --> 00:05:23,940
+Why?
+
+74
+00:05:24,520 --> 00:05:28,000
+Because of the logic that we have discussed in the previous video.
+
+75
+00:05:30,170 --> 00:05:31,940
+So let me just build the code.
+
+76
+00:05:35,510 --> 00:05:37,930
+OK. this should be void.
+
+77
+00:05:39,020 --> 00:05:40,490
+We are printing the numbers, OK?
+
+78
+00:05:41,330 --> 00:05:45,500
+And this call should be like unique number two
+
+79
+00:05:46,490 --> 00:05:47,480
+And that's it.
+
+80
+00:05:48,820 --> 00:05:49,090
+OK.
+
+81
+00:05:49,240 --> 00:05:54,370
+We have built a code and now we can run it. I can say ./uniquetwo.
+
+82
+00:05:57,090 --> 00:05:59,150
+I'm getting the numbers seven and four.
+
+83
+00:05:59,180 --> 00:06:01,100
+That means our solution is correct.
+
+84
+00:06:01,730 --> 00:06:05,600
+If you want a dry run, we can do a quick dry run as well.
+
+85
+00:06:06,170 --> 00:06:15,410
+We have the numbers what? we have these numbers... one three five four three one five seven.
+
+86
+00:06:16,140 --> 00:06:16,910
+First, we do
+
+87
+00:06:16,910 --> 00:06:25,460
+the XOR.  So XOR is nothing but 4 XOR 7 which is like zero... one zero zero and one one one.
+
+88
+00:06:25,490 --> 00:06:27,560
+So we get the result zero one one.
+
+89
+00:06:27,980 --> 00:06:33,290
+We find out the position of the first set bit from the right.
+
+90
+00:06:33,320 --> 00:06:35,270
+So that position is nothing but zero
+
+91
+00:06:35,270 --> 00:06:42,070
+in our case. this temp and one. ok this is temp, temp and one is not equal to zero.
+
+92
+00:06:42,080 --> 00:06:45,290
+This loop will break and position will remain zero.
+
+93
+00:06:45,890 --> 00:06:51,770
+Now what we say? we say ok a mask equals one left shift  position.So mask is nothing but one
+
+94
+00:06:51,770 --> 00:06:52,370
+left shift zero.
+
+95
+00:06:52,610 --> 00:06:55,280
+that means it is nothing but zero zero one.
+
+96
+00:06:55,830 --> 00:06:56,430
+We do a
+
+97
+00:06:56,480 --> 00:06:58,260
+And with all of these numbers.
+
+98
+00:06:58,640 --> 00:06:58,970
+OK.
+
+99
+00:06:59,570 --> 00:07:06,380
+So with one we do AND of one, ok one and one. zero zero one AND one we get one.
+
+100
+00:07:06,440 --> 00:07:06,860
+OK.
+
+101
+00:07:07,610 --> 00:07:12,130
+Three is 011 and one. we again get one. With five
+
+102
+00:07:12,140 --> 00:07:14,280
+also we get one.
+
+103
+00:07:14,300 --> 00:07:14,720
+OK.
+
+104
+00:07:15,190 --> 00:07:18,710
+With four, we will get zero.
+
+105
+00:07:18,740 --> 00:07:19,070
+OK.
+
+106
+00:07:20,090 --> 00:07:21,340
+Four and one will give zero.
+
+107
+00:07:21,350 --> 00:07:22,280
+This will give one.
+
+108
+00:07:22,760 --> 00:07:23,700
+This will give one.
+
+109
+00:07:23,720 --> 00:07:25,210
+This will give one.
+
+110
+00:07:25,220 --> 00:07:27,320
+And this will also give one.
+
+111
+00:07:27,560 --> 00:07:33,680
+So all the numbers in this case are going to give one because they have all set at the last index.
+
+112
+00:07:34,310 --> 00:07:42,770
+So effectively, If you do XOR of all these numbers, so we see one three five, then three, one, five
+
+113
+00:07:43,610 --> 00:07:44,360
+and seven.
+
+114
+00:07:44,390 --> 00:07:45,790
+They lie in setA.
+
+115
+00:07:46,880 --> 00:07:55,400
+Effectively, all these get cancelled. seven is left and in setB we only have four. OK, because
+
+116
+00:07:55,550 --> 00:07:56,620
+with this it is zero.
+
+117
+00:07:56,630 --> 00:07:58,310
+So even if you have six and six.
+
+118
+00:07:59,040 --> 00:08:01,150
+And this would give zero and this would give zero.
+
+119
+00:08:01,150 --> 00:08:05,210
+So it would be 4 XOR 6 XOR 6 and this would be nothing
+
+120
+00:08:05,210 --> 00:08:08,750
+but 4. I hope you understood the logic.
+
+121
+00:08:08,780 --> 00:08:13,400
+And this is how we are figuring out the two unique numbers.
+
+122
+00:08:14,130 --> 00:08:15,830
+So that's all for this lecture.
+
+123
+00:08:15,890 --> 00:08:16,430
+Thank you.
+

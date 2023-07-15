@@ -1,0 +1,192 @@
+1
+00:00:00,760 --> 00:00:07,090
+Hi. So you have seen how to use the big integer  class in Java and now in this lecture will solve
+
+2
+00:00:07,090 --> 00:00:11,930
+one problem that is the factorial problem using the big integer Java class.
+
+3
+00:00:11,950 --> 00:00:15,430
+OK. so let's see how we can write the code for the same.
+
+4
+00:00:15,880 --> 00:00:18,250
+So first of all, you need to make import.
+
+5
+00:00:18,460 --> 00:00:24,040
+So the big integer class is part of Java.math package.
+
+6
+00:00:24,220 --> 00:00:26,350
+So we have imported the class.
+
+7
+00:00:26,920 --> 00:00:30,280
+And now what we need to do? we will maybe take input
+
+8
+00:00:30,280 --> 00:00:30,850
+Some number.
+
+9
+00:00:31,000 --> 00:00:31,330
+OK.
+
+10
+00:00:31,690 --> 00:00:38,590
+So scanner sc equals to new scanner. system.in and we create a scanner object.
+
+11
+00:00:38,770 --> 00:00:41,040
+And using this object, we will take input.
+
+12
+00:00:41,050 --> 00:00:46,690
+So maybe I want to read input which is a integer. so I can say sc.nextInt. 
+
+13
+00:00:46,990 --> 00:00:47,570
+All right.
+
+14
+00:00:48,070 --> 00:00:52,060
+And maybe we will define a method to compute the factorial. OK.
+
+15
+00:00:52,480 --> 00:00:58,890
+So this is going to be a static method because it's not associated with any particular object.
+
+16
+00:00:58,900 --> 00:01:05,440
+It's it's common across all object. ok. Static big integer factorial.
+
+17
+00:01:05,470 --> 00:01:13,780
+OK. return type is big integer and the method name is factorial and we are passing it as a integer N.
+
+18
+00:01:13,780 --> 00:01:20,470
+So in order to compute factorial we know the result would be stored inside a big integer class.
+
+19
+00:01:20,470 --> 00:01:20,740
+OK?
+
+20
+00:01:21,040 --> 00:01:24,220
+So you can say int result, this is not correct. why?
+
+21
+00:01:24,670 --> 00:01:30,160
+Because the result of a lot of multiplication is going to be a big integer. OK?
+
+22
+00:01:30,670 --> 00:01:38,320
+So you can initialize this result as one so you can say new big integer and you can give a string value
+
+23
+00:01:38,320 --> 00:01:38,800
+of one.
+
+24
+00:01:39,340 --> 00:01:46,420
+Or you can simply use the initialization using a constant that is big integer dot one.
+
+25
+00:01:47,110 --> 00:01:55,990
+So once we are done with this what we can do next is, we can say. Ok. for int I equals to two. I less
+
+26
+00:01:55,990 --> 00:01:59,350
+then equals N. I + +.  OK.
+
+27
+00:01:59,710 --> 00:02:06,930
+So why we're using integer here because n is an integer. OK, so anything that that is less than N
+
+28
+00:02:07,240 --> 00:02:09,600
+that would also be an integer. so I can say
+
+29
+00:02:12,850 --> 00:02:18,480
+the result should be multiplied with itself. Ok. so result equals result dot
+
+30
+00:02:19,630 --> 00:02:25,840
+not, not itself but with the current value of I.result dot multiply what?
+
+31
+00:02:26,410 --> 00:02:28,800
+So here you can see I is a integer.
+
+32
+00:02:28,810 --> 00:02:35,050
+Okay, you cannot write I because this multiplier expects a bigger integer. so you want to convert this
+
+33
+00:02:36,700 --> 00:02:44,020
+integer into a big integer and we saw for converting integer, the method is known as value of.
+
+34
+00:02:44,590 --> 00:02:52,240
+we convert I into a big integer and then we can multiply to big integer by having the first
+
+35
+00:02:52,240 --> 00:02:58,650
+object. calling it multiply method followed by the second number that you want to multiply and that
+
+36
+00:02:58,660 --> 00:03:00,730
+should be type casted into big integer.
+
+37
+00:03:00,730 --> 00:03:01,000
+OK?
+
+38
+00:03:01,540 --> 00:03:03,160
+So we can say return result.
+
+39
+00:03:04,130 --> 00:03:04,670
+That's it.
+
+40
+00:03:05,840 --> 00:03:12,950
+So now what we can do? we can verify our output by saying system dot out dot println.
+
+41
+00:03:13,870 --> 00:03:16,600
+and we can call factorial of N.
+
+42
+00:03:16,900 --> 00:03:21,640
+And so this println method already knows how to print a big integer.
+
+43
+00:03:21,640 --> 00:03:26,620
+So maybe if I give a small input five, it should give me the factorial.
+
+44
+00:03:27,820 --> 00:03:28,240
+OK.
+
+45
+00:03:28,750 --> 00:03:32,440
+If I give a large number like hundred, then also it should work.
+
+46
+00:03:34,820 --> 00:03:40,880
+So yes, you can see it's it's working. it's working and it's giving me the correct output.
+
+47
+00:03:41,630 --> 00:03:43,410
+So that's all for this lecture.
+
+48
+00:03:43,430 --> 00:03:44,570
+I hope you understood.
+

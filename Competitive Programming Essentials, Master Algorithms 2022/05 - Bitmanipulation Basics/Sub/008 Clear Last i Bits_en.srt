@@ -1,0 +1,224 @@
+1
+00:00:02,920 --> 00:00:06,820
+Hi Everyone so now we're going to discuss one more method that we're doing, right?
+
+2
+00:00:07,060 --> 00:00:10,000
+So we want to clear the last i bits.
+
+3
+00:00:10,690 --> 00:00:17,410
+So we're give... given a number n and we want to remove the all the last i bits of that particular
+
+4
+00:00:17,410 --> 00:00:17,650
+number.
+
+5
+00:00:17,740 --> 00:00:25,690
+For example, if we have a number one one one zero zero one zero and if I say OK, I is five that
+
+6
+00:00:25,690 --> 00:00:29,770
+means we will remove the bits from zero one two three four.
+
+7
+00:00:30,130 --> 00:00:34,060
+All these bits should be made to zero.
+
+8
+00:00:34,090 --> 00:00:37,090
+OK, so we want to convert them to zero.
+
+9
+00:00:37,450 --> 00:00:40,480
+And this should be the resulting number.
+
+10
+00:00:40,840 --> 00:00:45,100
+This is what is expected from the function.
+
+11
+00:00:45,580 --> 00:00:46,690
+Now how we can do it ?
+
+12
+00:00:46,720 --> 00:00:51,520
+So clearly what we can think of is we actually need a number of this form
+
+13
+00:00:53,790 --> 00:01:00,180
+In which these three bits are set and rest everything is set to zero.
+
+14
+00:01:00,210 --> 00:01:00,540
+OK.
+
+15
+00:01:00,990 --> 00:01:02,010
+And it may happen
+
+16
+00:01:02,010 --> 00:01:09,540
+We... we may also have something like one zero here then this... this should remain intact.
+
+17
+00:01:09,540 --> 00:01:11,880
+OK. so the mask would be like this.
+
+18
+00:01:13,190 --> 00:01:19,490
+So we want to create a mask in which the last i positions are zero.
+
+19
+00:01:19,820 --> 00:01:22,760
+And once we create this mask what we need to do? we need to do
+
+20
+00:01:22,950 --> 00:01:30,020
+AND of these two numbers to get this as  a result. now how do we create this mask ? OK.
+
+21
+00:01:30,040 --> 00:01:32,750
+So it's going to be quite easy.
+
+22
+00:01:32,900 --> 00:01:41,030
+So what if you I tell you if  you have a number in which you have all ones. OK. and then if you left shift it
+
+23
+00:01:41,030 --> 00:01:45,710
+with I, what you will get ? you will get i number of zeros in the right.
+
+24
+00:01:46,100 --> 00:01:53,300
+OK, so basically you will get a number like one one one one followed by a number of zeros and this is
+
+25
+00:01:53,300 --> 00:01:54,440
+what we exactly need.
+
+26
+00:01:54,530 --> 00:01:55,490
+This is what we need.
+
+27
+00:01:56,300 --> 00:01:58,730
+Starting from the index i+1 till the zero th
+
+28
+00:01:58,730 --> 00:02:00,530
+index we need everything as zero.
+
+29
+00:02:01,070 --> 00:02:07,850
+We have already seen if you have this kind of a number, now what is this number in binary?
+
+30
+00:02:07,880 --> 00:02:08,270
+OK.
+
+31
+00:02:08,330 --> 00:02:10,729
+How do we represent this number as a integer?
+
+32
+00:02:11,240 --> 00:02:14,470
+This number can be represented in using two ways.
+
+33
+00:02:14,480 --> 00:02:21,710
+One is it can be represented as NOT of zero because if you talk about zero, zero as all bits set zero and  not of zero as
+
+34
+00:02:21,710 --> 00:02:26,240
+all bits set  one and we... we also said that this number represents minus one.
+
+35
+00:02:26,670 --> 00:02:29,190
+So either you take minus one or you take not of zero.
+
+36
+00:02:29,750 --> 00:02:31,190
+Both are going to remain same.
+
+37
+00:02:31,640 --> 00:02:41,080
+And what you need to do? you need to do the left shift of minus one with i and then do it a AND with
+
+38
+00:02:41,090 --> 00:02:42,560
+your original number.
+
+39
+00:02:42,590 --> 00:02:42,830
+OK.
+
+40
+00:02:43,190 --> 00:02:44,920
+So this is what we need to do.
+
+41
+00:02:44,930 --> 00:02:50,420
+So I can say int mask is nothing but let's say minus one
+
+42
+00:02:53,000 --> 00:02:55,010
+Left shift I. that's it.
+
+43
+00:02:55,550 --> 00:02:58,990
+And the number would be n AND mask.
+
+44
+00:02:59,660 --> 00:03:00,170
+That's it.
+
+45
+00:03:00,500 --> 00:03:02,900
+And our work is done.
+
+46
+00:03:03,530 --> 00:03:05,560
+So maybe let's say n is 15.
+
+47
+00:03:05,750 --> 00:03:12,530
+And let's say I is  two. I don't take input. if I remove the last two bits of 15
+
+48
+00:03:12,950 --> 00:03:14,180
+Let's see what we should get.
+
+49
+00:03:14,810 --> 00:03:22,560
+So 15 is like this one one one one. we are saying... Okay, let us clear the last 2 bits.
+
+50
+00:03:22,580 --> 00:03:24,420
+So it should be one one zero zero.
+
+51
+00:03:25,220 --> 00:03:26,210
+It should be 12.
+
+52
+00:03:26,330 --> 00:03:28,300
+We should be getting output as 12.
+
+53
+00:03:29,240 --> 00:03:37,940
+So instead of calling this method we can call clear last I bit. I give n and I. that's it..
+
+54
+00:03:40,090 --> 00:03:41,800
+OK, this should be void.
+
+55
+00:03:45,200 --> 00:03:49,310
+And yes, we are getting the output as 12.
+
+56
+00:03:49,860 --> 00:03:54,410
+So, I hope this functionality is clear. in the next lecture will discuss one more function.
+

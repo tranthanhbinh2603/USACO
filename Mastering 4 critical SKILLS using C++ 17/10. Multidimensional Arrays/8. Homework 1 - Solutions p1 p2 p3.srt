@@ -1,0 +1,229 @@
+0
+1
+00:00:00,840 --> 00:00:05,610
+Let's see how to solve the easy part of the homework for the first problem "Smaller row".
+1
+
+2
+00:00:06,210 --> 00:00:07,940
+I think this is very straightforward.
+2
+
+3
+00:00:08,370 --> 00:00:10,410
+You need to create an array.
+3
+
+4
+00:00:12,720 --> 00:00:17,070
+I wasn't clear about the N & M here in the problem.
+4
+
+5
+00:00:17,400 --> 00:00:19,910
+Let's say, like we are like less than one hundred.
+5
+
+6
+00:00:22,170 --> 00:00:28,400
+We just need to create the array here and then just read it. You don't  need to initialize it here
+6
+
+7
+00:00:28,410 --> 00:00:29,970
+immediately because you are going to read it directly.
+7
+
+8
+00:00:30,660 --> 00:00:35,250
+You don't need to put your equal zero and then initialize all of it, which is going to take some time.
+8
+
+9
+00:00:35,490 --> 00:00:37,310
+You just are going to read it right now.
+9
+
+10
+00:00:37,680 --> 00:00:45,150
+And after that, for every query, we can just like computed by ourselves, for example, iterate on all
+10
+
+11
+00:00:45,150 --> 00:00:52,500
+of the number of columns and then compare the target first row with the target second row at this column.
+11
+
+12
+00:00:52,710 --> 00:00:58,530
+And check if anything is wrong or not, if all of them are smaller than we are perfect enough, print it, otherwise,
+12
+
+13
+00:00:58,530 --> 00:00:59,070
+just "NO".
+13
+
+14
+00:01:01,310 --> 00:01:03,890
+In the second problem, we would like to
+14
+
+15
+00:01:05,760 --> 00:01:11,490
+read a Matrix and verify Square Matrix. Square means the number of rows like number
+15
+
+16
+00:01:11,490 --> 00:01:16,380
+of columns and check only the lower and triangular part of the Matrix.
+16
+
+17
+00:01:17,940 --> 00:01:21,680
+Again, the solution should be straightforward here.
+17
+
+18
+00:01:22,410 --> 00:01:24,940
+We would like to read and compare.
+18
+
+19
+00:01:25,050 --> 00:01:27,150
+Now, there is one trick here.
+19
+
+20
+00:01:27,540 --> 00:01:36,050
+The trick is we don't actually need to read a matrix as a matrix and compute the values.
+20
+
+21
+00:01:36,270 --> 00:01:39,000
+And this is something that you need to take into consideration.
+21
+
+22
+00:01:39,000 --> 00:01:43,800
+Do I really need to save the data, then process it or I can process on the fly?
+22
+
+23
+00:01:44,130 --> 00:01:48,480
+On the fly means while I am reading, I can get the answer. Observer here,
+23
+
+24
+00:01:48,690 --> 00:01:54,870
+if I am reading, I can figure out exactly if I'm in the diagonal or I am in the left part or in the
+24
+
+25
+00:01:55,680 --> 00:01:56,810
+lower part or upper part.
+25
+
+26
+00:01:57,270 --> 00:02:02,760
+So to do that, we are going to iterate on the Matrix, have our upper and lower variables, and while
+26
+
+27
+00:02:02,760 --> 00:02:04,380
+reading we are going to check.
+27
+
+28
+00:02:05,440 --> 00:02:10,490
+If we are satisfying this condition, then we are at the lower, otherwise, we are at the upper.
+28
+
+29
+00:02:10,520 --> 00:02:17,090
+We are using the equal here because the equal is helping us with the diagonal value itself.
+29
+
+30
+00:02:18,010 --> 00:02:20,650
+So this is mainly a nice trick to memory.
+30
+
+31
+00:02:21,070 --> 00:02:24,640
+And that's why we do need to determine the value.
+31
+
+32
+00:02:24,640 --> 00:02:26,410
+But let's also make it clear for guys here.
+32
+
+33
+00:02:30,070 --> 00:02:34,210
+In the third problem, we would like to make a very, very common problem in computer science, which is
+33
+
+34
+00:02:34,330 --> 00:02:39,840
+Transpose. Transpose just means to flip the matrix like rotating it 90 degrees.
+34
+
+35
+00:02:40,510 --> 00:02:46,000
+To do that, we again need to just prepare the first array and the second array,
+35
+
+36
+00:02:46,360 --> 00:02:48,370
+and then read the first one,
+36
+
+37
+00:02:48,640 --> 00:02:53,500
+and then in the second one, while you are reading you just all what you need is to assign the value
+37
+
+38
+00:02:53,500 --> 00:02:57,070
+"i" & "j" to the values "j" & "i".
+38
+
+39
+00:02:57,070 --> 00:03:01,860
+Do I need to really iterate again 2 loops instead of making this one?
+39
+
+40
+00:03:01,870 --> 00:03:02,140
+No.
+40
+
+41
+00:03:02,590 --> 00:03:07,190
+Can I make it without having to create a array 1 even?
+41
+
+42
+00:03:07,300 --> 00:03:07,770
+Yes.
+42
+
+43
+00:03:08,080 --> 00:03:13,660
+So you'll have here the "i" & "j" position, you can read it as a value and then directly in array2 of "j" & "i"
+43
+
+44
+00:03:13,660 --> 00:03:20,150
+put the value. So, read "i" & "j" and go directly and put it in "j" & "i". This way while reading a raw,
+44
+
+45
+00:03:20,380 --> 00:03:26,230
+we are putting it in a column in the same time without the need to create even this first array.
+45
+
+46
+00:03:26,320 --> 00:03:28,270
+But anyway, for simplicity. That's all.

@@ -1,0 +1,166 @@
+WEBVTT
+
+00:00.210 --> 00:07.020
+Now, let us look at in direct and indirect that there may be more than one function and they are calling
+
+00:07.020 --> 00:13.500
+one another in a circular fashion, so that if the first function called second one and the second call,
+
+00:13.500 --> 00:18.860
+code one and the third one again called back first function, then it becomes a cycle, third becomes
+
+00:18.860 --> 00:19.490
+the recursion.
+
+00:19.830 --> 00:26.610
+Let's suppose that is a function A and the function is calling function B and the function B calling
+
+00:26.610 --> 00:29.650
+function C and C's calling again.
+
+00:30.030 --> 00:34.710
+So so instead of a function calling itself here function, calling another function and it's calling
+
+00:34.710 --> 00:38.400
+another function and Dax's calling it so it's becoming a cycle.
+
+00:38.550 --> 00:38.920
+It becomes.
+
+00:40.140 --> 00:44.070
+So here I have a skeleton for showing you are indirectly caution.
+
+00:44.370 --> 00:49.740
+Here is function A function E isn't having some condition and the condition is satisfied.
+
+00:49.740 --> 00:53.460
+It is calling function B and the function B, there is some condition.
+
+00:53.470 --> 00:55.710
+If it is satisfied, it is calling function A..
+
+00:56.220 --> 01:03.240
+So from here it is calling B and then B calling A, so it becomes indirectly records here.
+
+01:03.240 --> 01:08.160
+B's call would reduce the value of and again is called with some more reduced values often.
+
+01:08.400 --> 01:09.740
+So they are calling each other.
+
+01:09.750 --> 01:11.400
+At one point they stop.
+
+01:11.580 --> 01:17.280
+If the condition fails, if any one function stops, then it will return back to the first starting
+
+01:17.310 --> 01:17.670
+call.
+
+01:18.760 --> 01:25.620
+To explain how this work, I have set of functions as an example here, these are an indirect recursion.
+
+01:25.900 --> 01:30.500
+So let me try this with an example and let us trace this example.
+
+01:30.530 --> 01:34.570
+So, first of all, I really don't see this as a function A.
+
+01:35.900 --> 01:40.850
+I'm taking parameter, and if it is greater than zero, then it is printing and then calling function
+
+01:40.850 --> 01:48.980
+B by and minus one, this function B if anything greater than one, then it is printing and calling
+
+01:48.980 --> 01:51.710
+function A. by passing and the bitou.
+
+01:52.790 --> 02:00.100
+So I'll start this by calling function F first letter C function E is called for value.
+
+02:00.130 --> 02:02.150
+Pretty little strings.
+
+02:02.150 --> 02:06.450
+This one function is taking trends parameter pretty zero.
+
+02:06.740 --> 02:13.580
+Then it has to perform two things that are predictive value and all function B by passing and minus
+
+02:13.580 --> 02:13.860
+one.
+
+02:13.880 --> 02:17.210
+So function they will be calling B by passing in minus one.
+
+02:17.600 --> 02:21.500
+So the first thing it will bring to point B and it will call function B.
+
+02:22.810 --> 02:24.070
+By passing 19.
+
+02:25.440 --> 02:31.510
+Now, what function beat us function B, if N is greater than one, that it will print and call function
+
+02:31.770 --> 02:40.870
+by passing and by two so two step father first print and then all function by half off.
+
+02:40.890 --> 02:47.370
+And so this is function B, so it will print the 19 and it will call function A..
+
+02:47.790 --> 02:50.940
+By passing 19 by two nine.
+
+02:52.950 --> 02:58.770
+So, again, control goes back to function, a function age, the argument, and, you know, well,
+
+02:58.770 --> 03:04.590
+that is sprinting and calling be Sprints nine and Colbie bypassing.
+
+03:05.890 --> 03:08.570
+And minus one, that is nine, minus one, that is eight.
+
+03:09.420 --> 03:15.740
+Now it is back on function B, function B, print and call A by half of this one.
+
+03:16.090 --> 03:23.600
+So print age and call fun of it by passing half of that is in my trophy.
+
+03:23.950 --> 03:33.550
+So sort of for cognitive function, a function in print and call the principal and call B by passing
+
+03:34.420 --> 03:39.730
+four minus one, that is A three function B and is greater than one.
+
+03:39.740 --> 03:47.350
+Yes, three is better than one print and call function E so 3d printed and call function E but passing
+
+03:47.800 --> 03:51.060
+one that is three by two or just integer division.
+
+03:51.070 --> 04:01.000
+We are doing integer division here, not a it will print one and B function B bypassing zero.
+
+04:02.680 --> 04:04.770
+Function B is greater than zero.
+
+04:04.780 --> 04:05.380
+It works.
+
+04:05.380 --> 04:12.070
+Otherwise it stops because and as the zero now so it will not enter inside, it will determine what
+
+04:12.090 --> 04:19.600
+the function terminates that goes back to function A and B, then A and B and then B a third goes back.
+
+04:20.770 --> 04:28.630
+And the starting point and the function calls and the output will be 20, 19, nine, eight, four,
+
+04:28.630 --> 04:29.500
+three and one.
+
+04:30.560 --> 04:35.930
+So that's all about agriculture and I have just taken the sample program to demonstrate how indirect
+
+04:35.930 --> 04:37.640
+requestion works and what does it mean?

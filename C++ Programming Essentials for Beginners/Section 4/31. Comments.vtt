@@ -1,0 +1,88 @@
+WEBVTT
+
+00:01.060 --> 00:01.710
+Hello, everyone.
+
+00:01.860 --> 00:06.730
+So till now, we have been writing programs on in some of the programs, you might have seen that I've
+
+00:06.730 --> 00:09.010
+written something that starts from the last.
+
+00:09.820 --> 00:11.920
+This thing is actually known as a comment.
+
+00:12.160 --> 00:18.280
+OK, so what is a common comment is just a piece of text that is ignored by the compiler.
+
+00:18.940 --> 00:20.380
+It is basically to tell.
+
+00:21.460 --> 00:24.060
+It's basically to annotate what your code is doing.
+
+00:24.070 --> 00:28.990
+Or we can use this command to explain something inside the code.
+
+00:28.990 --> 00:35.260
+OK, so it's just a piece of text that is used to enter the code, and it is ignored by the compiler
+
+00:35.260 --> 00:38.710
+because this is not executed by the compiler.
+
+00:38.740 --> 00:43.660
+And we can also use comments to make certain lines of the code inactive.
+
+00:43.660 --> 00:49.210
+For example, I don't want to take input that I want to make this part inactive.
+
+00:49.870 --> 00:52.240
+I can command out this particular line.
+
+00:52.810 --> 00:57.420
+We can also command out multiple lines by defining a comment like this.
+
+00:57.430 --> 00:57.700
+OK?
+
+00:58.000 --> 01:00.130
+So this is known as a multi line comment.
+
+01:00.190 --> 01:03.000
+So if you start from the baseline.
+
+01:03.580 --> 01:06.040
+So this creates a single line comment.
+
+01:06.520 --> 01:06.790
+OK.
+
+01:07.070 --> 01:10.390
+Anything that is written below will not be a comment.
+
+01:10.690 --> 01:17.470
+So this is an example of a multi line comment that I'm trying to show you is here.
+
+01:17.740 --> 01:20.020
+So, for example, I want to comment this part out.
+
+01:20.650 --> 01:23.720
+So I will start with backslash start.
+
+01:24.370 --> 01:27.670
+I will write the comment and I will end with Star Backslash.
+
+01:28.120 --> 01:30.010
+So this creates a Maryland comment.
+
+01:30.010 --> 01:34.480
+So these are two type two ways of commenting your code in C++.
+
+01:34.900 --> 01:39.540
+So we have seen that we can write a single line automatically line comment in a C++ program.
+
+01:39.550 --> 01:40.900
+So that's all for this video.
+
+01:40.930 --> 01:41.410
+Thank you.

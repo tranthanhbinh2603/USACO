@@ -1,0 +1,404 @@
+0
+1
+00:00:01,470 --> 00:00:06,990
+In this video, you would know about what is happening behind the scene in polymorphism using something
+1
+
+2
+00:00:06,990 --> 00:00:07,920
+named virtual table.
+2
+
+3
+00:00:08,460 --> 00:00:11,700
+This video has no effect on your programming skills,
+3
+
+4
+00:00:11,940 --> 00:00:14,330
+It just more understanding what's happening behind the scenes.
+4
+
+5
+00:00:14,970 --> 00:00:21,450
+Remember, we once in early begin, we took these A, B, C, D, E classes and we started to do tracing to
+5
+
+6
+00:00:21,450 --> 00:00:22,510
+this virtual, virtual,
+6
+
+7
+00:00:22,530 --> 00:00:24,050
+who is virtual and what is it?
+7
+
+8
+00:00:24,360 --> 00:00:25,570
+and then we started these
+8
+
+9
+00:00:25,680 --> 00:00:32,430
+functions here to decide which function really is going to be called on the runtime,
+9
+
+10
+00:00:32,700 --> 00:00:34,080
+so we can easily guess that.
+10
+
+11
+00:00:34,080 --> 00:00:39,090
+We just don't know because if you know the classes exactly types, you can actually
+11
+
+12
+00:00:39,090 --> 00:00:42,750
+know who is going to be called eventually even in a compilation time,
+12
+
+13
+00:00:42,750 --> 00:00:43,010
+right?
+13
+
+14
+00:00:43,200 --> 00:00:46,170
+but we know the actual behavior would happen in the runtime itself.
+14
+
+15
+00:00:47,100 --> 00:00:53,340
+So what happened behind the scene is the combiner actually is going to read your classes and determines
+15
+
+16
+00:00:53,380 --> 00:00:53,900
+the following:
+16
+
+17
+00:00:53,910 --> 00:01:00,360
+It goes for every class in your inheritance hierarchy, and for every function is going to check 
+17
+
+18
+00:01:00,390 --> 00:01:04,080
+which is really the actual function that we will
+18
+
+19
+00:01:04,110 --> 00:01:06,420
+call in a case of polymorphism.
+19
+
+20
+00:01:07,020 --> 00:01:12,990
+So let's say you have four virtual functions, it is going to create a table of four entries and put for
+20
+
+21
+00:01:12,990 --> 00:01:19,050
+every virtual function which a function is really going to be called in the polymorphism time.
+21
+
+22
+00:01:19,710 --> 00:01:23,690
+Now, each class has an internal pointer to this table.
+22
+
+23
+00:01:23,700 --> 00:01:24,800
+We call it vptr,
+23
+
+24
+00:01:25,020 --> 00:01:28,560
+It is in the base class and protected, so inherited by other subclasses.
+24
+
+25
+00:01:28,890 --> 00:01:36,810
+So now, your class has a hidden pointer vptr to this virtual table, and this virtual table has a number
+25
+
+26
+00:01:36,810 --> 00:01:40,330
+of entries equal to the number of virtual functions in your classes.
+26
+
+27
+00:01:40,650 --> 00:01:47,190
+So if you have five classes that are virtual, then you have five tables, and every table will have a number
+27
+
+28
+00:01:47,190 --> 00:01:51,270
+of virtual function corresponds to its total number of virtual functions.
+28
+
+29
+00:01:51,600 --> 00:01:57,090
+For example, in the runtime, if we have a function d1, f1 as you see in the code, the
+29
+
+30
+00:01:57,090 --> 00:02:02,880
+first thing the compiler says "Is a special function?" then yes, it first get the pointer that we have
+30
+
+31
+00:02:02,880 --> 00:02:08,790
+inside the D's table because it is inherited here and then gets the function D f1 from the table to
+31
+
+32
+00:02:08,790 --> 00:02:11,610
+see which one should be called and then just calls it.
+32
+
+33
+00:02:12,120 --> 00:02:13,950
+You have to do nothing with any of that,
+33
+
+34
+00:02:13,950 --> 00:02:15,550
+the compiler is doing all of that for you.
+34
+
+35
+00:02:16,410 --> 00:02:22,070
+So here is little understanding of that.
+35
+
+36
+00:02:22,350 --> 00:02:25,590
+I want to mention that virtual table takes a little extra time in memory,
+36
+
+37
+00:02:25,590 --> 00:02:28,110
+so it's now time to know why this happened.
+37
+
+38
+00:02:29,130 --> 00:02:32,700
+Let's say that we have class A that has a single variable.
+38
+
+39
+00:02:32,790 --> 00:02:35,190
+Notice that this class has nothing virtual here.
+39
+
+40
+00:02:35,520 --> 00:02:41,040
+If you tried to print the size of (which is an operator to get the size) of A is going to say typically
+40
+
+41
+00:02:41,040 --> 00:02:41,550
+four bytes,
+41
+
+42
+00:02:41,550 --> 00:02:43,620
+It depends on your operating system,
+42
+
+43
+00:02:43,620 --> 00:02:45,270
+but anyway, let's say four bytes.
+43
+
+44
+00:02:45,570 --> 00:02:47,220
+They are mainly four bytes of this number.
+44
+
+45
+00:02:48,110 --> 00:02:52,430
+Now, class B has only also single number, but it has a virtual function.
+45
+
+46
+00:02:52,990 --> 00:02:57,730
+Now, if you tried to print to the size of B, it's going to be greater than 4. Why?
+46
+
+47
+00:02:58,130 --> 00:03:00,430
+Because this class has a hidden pointer.
+47
+
+48
+00:03:00,740 --> 00:03:07,730
+Let's name it vptr. It is to the virtual table that involves where are my hidden functions.
+48
+
+49
+00:03:08,120 --> 00:03:13,700
+So now this is why there is little extra memory here because that extra pointer here, and also there
+49
+
+50
+00:03:13,700 --> 00:03:16,620
+is another table that has an entry pair a virtual function.
+50
+
+51
+00:03:18,530 --> 00:03:20,360
+One final administration for that.
+51
+
+52
+00:03:20,750 --> 00:03:26,010
+Let's say that you have a class base with two functions f1 and f2, and D1 is extending from
+52
+
+53
+00:03:26,030 --> 00:03:27,680
+base and D2 is extending from the base.
+53
+
+54
+00:03:28,070 --> 00:03:30,620
+Now, these two functions are virtual
+54
+
+55
+00:03:30,860 --> 00:03:33,050
+so we will have three tables.
+55
+
+56
+00:03:33,470 --> 00:03:36,320
+So we have here table one, table two, table three,
+56
+
+57
+00:03:36,320 --> 00:03:38,350
+and this is class one, class two, class three.
+57
+
+58
+00:03:38,960 --> 00:03:46,160
+Now, thinking about D1, if we are calling function one and it's virtual, then function one is
+58
+
+59
+00:03:46,160 --> 00:03:47,720
+going to call D1 function one,
+59
+
+60
+00:03:48,260 --> 00:03:54,140
+but if we are calling function two, D1 has no function here, so it has to go to
+60
+
+61
+00:03:54,140 --> 00:03:54,870
+the base class.
+61
+
+62
+00:03:55,280 --> 00:04:01,190
+So now in terms of the actual performance in reality, so ..., here is D1 class,
+62
+
+63
+00:04:01,190 --> 00:04:02,240
+and here's its table.
+63
+
+64
+00:04:02,630 --> 00:04:10,970
+If you are calling for the function one, it is going to call the function one
+64
+
+65
+00:04:10,970 --> 00:04:13,820
+of the class D1,
+65
+
+66
+00:04:14,390 --> 00:04:20,810
+but if you are calling function two, it has to call the base function 2. In a similar way,
+66
+
+67
+00:04:21,080 --> 00:04:24,770
+Let's say you have D2. D2 has no f1,
+67
+
+68
+00:04:24,980 --> 00:04:31,370
+so the actual performance of f1 is going to the base f1, but the actual performance of f2 is added to D2.
+68
+
+69
+00:04:31,520 --> 00:04:31,820
+...
+69
+
+70
+00:04:32,120 --> 00:04:39,100
+So now here is the virtual table of D2, and here is the table of the class of the D2.
+70
+
+71
+00:04:39,440 --> 00:04:43,690
+If you are calling function one, it has to call the function one of the base class.
+71
+
+72
+00:04:43,700 --> 00:04:50,480
+So the pointer of function one is pointing to this function, but the pointer function two is pointing to this
+72
+
+73
+00:04:50,480 --> 00:04:50,970
+function.
+73
+
+74
+00:04:51,260 --> 00:04:56,990
+So anyway, the moral of that is we have a vptr pointer in the base, which is inherited in these
+74
+
+75
+00:04:56,990 --> 00:05:03,830
+classes. We have three tables, and we have three classes, and each table has a number of entries equal
+75
+
+76
+00:05:03,830 --> 00:05:05,210
+to the number of virtual functions,
+76
+
+77
+00:05:05,390 --> 00:05:10,640
+and each function is pointing to what is going to be called really in practice.
+77
+
+78
+00:05:10,880 --> 00:05:11,330
+That's it.
+78
+
+79
+00:05:11,330 --> 00:05:15,200
+I hope the arrows don't confuse you, and you have nothing to do with this.
+79
+
+80
+00:05:15,200 --> 00:05:16,540
+It's just all the compilation time.
+80
+
+81
+00:05:16,970 --> 00:05:17,380
+That's it.

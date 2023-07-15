@@ -1,0 +1,154 @@
+0
+1
+00:00:00,840 --> 00:00:03,210
+Homework set number one for recursive functions.
+1
+
+2
+00:00:03,540 --> 00:00:07,850
+First, I would like you to compute the length of 3n+1 sequence.
+2
+
+3
+00:00:08,130 --> 00:00:14,100
+So the final function (int length_3n_plus_1), takes integer n and tells us the length of the
+3
+
+4
+00:00:14,100 --> 00:00:14,560
+sequence.
+4
+
+5
+00:00:14,580 --> 00:00:17,880
+For example, if we give it 6, it's going to give us 9.
+5
+
+6
+00:00:19,000 --> 00:00:23,770
+Power function, we know how to do the power function in an iterative way, and this one, you are
+6
+
+7
+00:00:23,770 --> 00:00:25,320
+going to do it in a recursive way.
+7
+
+8
+00:00:25,420 --> 00:00:33,310
+So (my_pow) should be a recursive function to compute the power of a variable. Array maximum, compute the
+8
+
+9
+00:00:33,310 --> 00:00:40,060
+maximum of array, using recursion. all of these assignments should be done with recursion. Array sum, compute the sum
+9
+
+10
+00:00:40,060 --> 00:00:41,590
+of array using recursion.
+10
+
+11
+00:00:42,790 --> 00:00:51,010
+Array average, compute the average of the array using the recursive function, please don't compute the sum
+11
+
+12
+00:00:51,010 --> 00:00:53,950
+and just divide by the length in the main.
+12
+
+13
+00:00:54,250 --> 00:01:03,040
+Let the function by itself handle the average. Array increment, you are to increment each array of
+13
+
+14
+00:01:03,040 --> 00:01:08,620
+'i' with 'i' for example, if the input is 1, 2, 5, 9, then the new array should be 1 + 0,
+14
+
+15
+00:01:08,620 --> 00:01:10,680
+2 + 1, 5 + 2, 9 + 3,
+15
+
+16
+00:01:10,900 --> 00:01:12,610
+So position 'i' is incremented 
+16
+
+17
+00:01:12,610 --> 00:01:13,130
+with 'i'.
+17
+
+18
+00:01:13,330 --> 00:01:22,390
+So this is the output of the array. Array accumulation, accumulation is popular processing step that we
+18
+
+19
+00:01:22,390 --> 00:01:30,010
+need, which means that the position at any array, is the sum of all numbers from 0 to 'i'.
+19
+
+20
+00:01:30,310 --> 00:01:34,870
+For example, if you have the numbers, 1, 2, 3, 4, 5, 6, then the position 4
+20
+
+21
+00:01:34,870 --> 00:01:37,260
+would be the sum for the number from 1, 2, 3, 4.
+21
+
+22
+00:01:37,570 --> 00:01:41,760
+If you are 6 and the sum is 1, 2, 3, 4, 5, 6 and so on.
+22
+
+23
+00:01:41,920 --> 00:01:47,020
+So the new array is 1, 1 + 2, 1 + 2 + 3, 1 + 2 + 3...and so on.
+23
+
+24
+00:01:47,230 --> 00:01:52,470
+So every position is a summation of the numbers from 0 to index 'i' and so on.
+24
+
+25
+00:01:52,720 --> 00:02:01,700
+And this is one more example of it. Left-max, change element at position 'i' to be the maximum of a numbers
+25
+
+26
+00:02:01,730 --> 00:02:08,860
+from index 0, to the index of 'i', for example, if we are here at position 7, get the maximum
+26
+
+27
+00:02:09,010 --> 00:02:11,950
+from the position 0 to 7, which is now 7.
+27
+
+28
+00:02:12,100 --> 00:02:14,320
+So it's 7, here, at 4,
+28
+
+29
+00:02:14,590 --> 00:02:20,100
+Get the maximum from position 0 'till here, which is still 7 and this one also is still 7.
+29
+
+30
+00:02:20,350 --> 00:02:22,210
+So this is called Lift-max.
+30
+
+31
+00:02:23,350 --> 00:02:23,890
+That's it.

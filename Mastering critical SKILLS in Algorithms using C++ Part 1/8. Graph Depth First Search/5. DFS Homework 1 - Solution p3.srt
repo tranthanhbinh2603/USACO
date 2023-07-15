@@ -1,0 +1,287 @@
+1
+00:00:01,160 --> 00:00:05,600
+Let's solve a number three, the number three is the connected component, the problem.
+
+2
+00:00:06,500 --> 00:00:08,180
+This is a very fundamental problem.
+
+3
+00:00:08,180 --> 00:00:13,100
+You should understand it very well because you will meet it several times during the graph theory.
+
+4
+00:00:13,850 --> 00:00:15,200
+So let's see.
+
+5
+00:00:15,590 --> 00:00:19,910
+The good is actually overall is a minor modification from the reachability.
+
+6
+00:00:19,910 --> 00:00:22,160
+Could we know in the reachability?
+
+7
+00:00:22,820 --> 00:00:26,030
+The moral of it was to find the roots that are ritual for you.
+
+8
+00:00:26,300 --> 00:00:29,870
+So, for example, if we have year node one to.
+
+9
+00:00:30,830 --> 00:00:31,400
+Three.
+
+10
+00:00:32,340 --> 00:00:40,320
+Four and then five here, so starting from one, we go from one to two market to market three market
+
+11
+00:00:40,320 --> 00:00:43,440
+for market, we cannot go to five because the directed graph.
+
+12
+00:00:44,040 --> 00:00:50,430
+Now, when it comes to the connected components, it isn't about directed graph sexually, about the
+
+13
+00:00:50,610 --> 00:00:51,610
+undirected graph.
+
+14
+00:00:52,140 --> 00:00:58,410
+So we have here a component component and we have here another component.
+
+15
+00:00:58,890 --> 00:00:59,850
+So now how can we know?
+
+16
+00:00:59,850 --> 00:01:01,860
+They'll know that these are two components.
+
+17
+00:01:01,860 --> 00:01:03,030
+We will use the same device?
+
+18
+00:01:03,030 --> 00:01:03,600
+Exactly.
+
+19
+00:01:04,050 --> 00:01:07,770
+They did this following you started from another doesn't belong to a component.
+
+20
+00:01:08,160 --> 00:01:14,430
+Then you do a device from this note to Carl to mark all of their reachable nodes are from it, according
+
+21
+00:01:14,430 --> 00:01:15,420
+to undirected graph.
+
+22
+00:01:16,180 --> 00:01:18,400
+Once you're done, let's say this is not number one.
+
+23
+00:01:18,460 --> 00:01:19,240
+This is two.
+
+24
+00:01:19,330 --> 00:01:20,950
+This is war and this is five.
+
+25
+00:01:21,490 --> 00:01:23,320
+This is three, six and seven.
+
+26
+00:01:24,040 --> 00:01:29,680
+Now you started from one, which was unmarked and then you saw a lot of it.
+
+27
+00:01:30,550 --> 00:01:35,260
+After the end of the first third, one two with four or five are all market assisted nodes.
+
+28
+00:01:35,950 --> 00:01:37,990
+Now you moved in with number two revisited?
+
+29
+00:01:37,990 --> 00:01:38,330
+Yes.
+
+30
+00:01:39,100 --> 00:01:41,290
+Move node number three, I revisited no.
+
+31
+00:01:41,680 --> 00:01:46,360
+This being that node number three is in reachable from any previous component.
+
+32
+00:01:46,540 --> 00:01:48,340
+So we have a new component here.
+
+33
+00:01:48,700 --> 00:01:54,640
+So again, the device, which will mark three and seven and six, then we check in with number four
+
+34
+00:01:54,640 --> 00:01:57,400
+market five Market six Market seven market.
+
+35
+00:01:57,880 --> 00:01:58,960
+So that's old.
+
+36
+00:01:58,960 --> 00:02:00,610
+There's no more magic than that.
+
+37
+00:02:01,030 --> 00:02:03,700
+So it's a minor modification to the reachability.
+
+38
+00:02:03,700 --> 00:02:04,630
+Good to do that.
+
+39
+00:02:05,530 --> 00:02:11,440
+Feel free to stop the video at this point and to try to implement the good by yourself in the future.
+
+40
+00:02:11,470 --> 00:02:17,230
+This problem can be done in many other ways, like the Beerfest or the Union find or what we call digital
+
+41
+00:02:17,230 --> 00:02:17,680
+assets.
+
+42
+00:02:18,430 --> 00:02:20,680
+So let's see now the implementation itself.
+
+43
+00:02:22,360 --> 00:02:26,530
+Adding Building, directing graph, all of that is the same, even the defense is a theme.
+
+44
+00:02:27,050 --> 00:02:29,890
+Now the only change here is a function for connected component.
+
+45
+00:02:30,460 --> 00:02:32,950
+The first thing to notice is the twisted array.
+
+46
+00:02:33,370 --> 00:02:37,470
+It will be defined here as a shared among all of them.
+
+47
+00:02:37,480 --> 00:02:44,080
+Remember when we could the rich ability to bring to the reachable note from every node we were iterating
+
+48
+00:02:44,080 --> 00:02:49,060
+and iteration in each iteration, we create a new Boolean array.
+
+49
+00:02:49,570 --> 00:02:56,440
+Now we would like during the after the first to know which nodes are reachable so far.
+
+50
+00:02:57,040 --> 00:03:00,880
+So you need to make something that is shared and then iterate.
+
+51
+00:03:01,300 --> 00:03:06,880
+And if I found and would not vested, then this node doesn't belong to any serious connected component.
+
+52
+00:03:07,270 --> 00:03:12,880
+So we know we have one more connected component here than we did first, starting from this connected
+
+53
+00:03:12,880 --> 00:03:13,420
+component.
+
+54
+00:03:13,870 --> 00:03:20,350
+So in the first connected component, for example, this chain would be market in the second component.
+
+55
+00:03:20,710 --> 00:03:24,100
+Maybe this one would be marketed and the third component.
+
+56
+00:03:24,390 --> 00:03:29,410
+Maybe this one will be marketed and so on.
+
+57
+00:03:29,710 --> 00:03:35,170
+In every one of them, there will be at least one node that was never reachable from all of the other
+
+58
+00:03:35,170 --> 00:03:35,500
+nodes.
+
+59
+00:03:36,100 --> 00:03:38,950
+So someone may claim, OK, what if this node isn't reachable?
+
+60
+00:03:38,950 --> 00:03:45,120
+But this is reachable impossible because of this is reachable using the device or on directed graph,
+
+61
+00:03:45,130 --> 00:03:46,390
+it will cover everything.
+
+62
+00:03:46,990 --> 00:03:54,760
+So this is an informal group that whenever we find a node that is invested so far, it mostly means
+
+63
+00:03:54,760 --> 00:03:58,360
+that this is a component that no one ever recorded before.
+
+64
+00:03:58,870 --> 00:04:05,110
+So as you see, overall, the Defense Code, the building graph, all of the same and minor changes
+
+65
+00:04:05,110 --> 00:04:07,270
+to the reachability function.
+
+66
+00:04:07,750 --> 00:04:09,550
+Now what does the time complexity of that?
+
+67
+00:04:09,760 --> 00:04:12,670
+The same time complexity and the same memory complexity?
+
+68
+00:04:13,000 --> 00:04:13,540
+Why?
+
+69
+00:04:13,960 --> 00:04:19,450
+Because in the connected component case, you will just reach once upset that another subset than a
+
+70
+00:04:19,450 --> 00:04:20,740
+third of the subset and so on.
+
+71
+00:04:21,100 --> 00:04:25,660
+So eventually, governing all of the edges of the graph and covering all of the rules of the graph.
+
+72
+00:04:26,200 --> 00:04:28,690
+So this is merely that reachability problem.

@@ -1,0 +1,889 @@
+0
+1
+00:00:01,260 --> 00:00:09,000
+C++ differentiate between what we call signed variables and unsigned variables. So, the unsigned
+1
+
+2
+00:00:09,000 --> 00:00:12,630
+range is something that doesn't have negative values.
+2
+
+3
+00:00:12,640 --> 00:00:17,060
+For example, for 8 bits, it just from 0 to 255.
+3
+
+4
+00:00:17,760 --> 00:00:19,530
+...
+4
+
+5
+00:00:19,530 --> 00:00:25,020
+Signed variables are on the other side are allowing negative numbers, but to allow this negative
+5
+
+6
+00:00:25,020 --> 00:00:26,970
+number from our maximum range
+6
+
+7
+00:00:27,000 --> 00:00:32,730
+here, we divide into two halves, one half to represent the negative values and the other half to represent
+7
+
+8
+00:00:32,730 --> 00:00:33,570
+it from the positive values.
+8
+
+9
+00:00:33,990 --> 00:00:40,590
+And remember, if you would like to support 255, it isn't like -128 to positive 
+9
+
+10
+00:00:40,590 --> 00:00:41,710
+128.
+10
+
+11
+00:00:42,030 --> 00:00:43,450
+Remember there is a 0 in the middle.
+11
+
+12
+00:00:43,800 --> 00:00:46,530
+So it is actually dividing this range to two halves.
+12
+
+13
+00:00:46,710 --> 00:00:48,150
+It would be 
+13
+
+14
+00:00:48,150 --> 00:00:50,270
+-128, +127.
+14
+
+15
+00:00:50,280 --> 00:00:54,510
+So always notice this difference because of the classical mistakes for beginners.
+15
+
+16
+00:00:56,530 --> 00:01:02,280
+Through the course, when we define integer number equal -10,  notice the integral variable,
+16
+
+17
+00:01:02,500 --> 00:01:03,890
+it allows negative value
+17
+
+18
+00:01:03,910 --> 00:01:07,420
+so we call it actually signed. Typically in C++,
+18
+
+19
+00:01:07,660 --> 00:01:13,570
+the every integer you define is 4 bytes, which is 32 bits.
+19
+
+20
+00:01:13,570 --> 00:01:17,120
+But notice that this is something that's platform dependent.
+20
+
+21
+00:01:17,380 --> 00:01:26,140
+So the laptop that you go and buy to your usage would have different aspects from platform
+21
+
+22
+00:01:26,140 --> 00:01:27,080
+to another and so on.
+22
+
+23
+00:01:27,790 --> 00:01:32,900
+So assuming 32 bits here, this is the range that we noticed before.
+23
+
+24
+00:01:33,310 --> 00:01:38,260
+Remember, we said before if we tried to use the number  after this number,
+24
+
+25
+00:01:38,260 --> 00:01:42,830
+we get an overflow and we try to use a number before this number, we get underflow.
+25
+
+26
+00:01:43,600 --> 00:01:49,330
+This is now the time to understand for you why these ranges; like why this very specific number.
+26
+
+27
+00:01:49,660 --> 00:01:52,120
+This is mainly because the integer is 32 bits.
+27
+
+28
+00:01:52,570 --> 00:01:57,450
+And within this limitation of the maximum number that we can represent with 32 bits,
+28
+
+29
+00:01:57,910 --> 00:02:01,030
+this is your maximum when it comes to supporting the positive and negative value.
+29
+
+30
+00:02:02,040 --> 00:02:03,000
+On the other side,
+30
+
+31
+00:02:04,680 --> 00:02:11,310
+C++ also has more data types than we have just learned. Through the whole course we were using integer
+31
+
+32
+00:02:11,520 --> 00:02:13,040
+which is typically 32 bits.
+32
+
+33
+00:02:13,320 --> 00:02:17,130
+But here I would like you to know that we actually have other data types.
+33
+
+34
+00:02:17,380 --> 00:02:22,950
+We have what we call short, which is just like typical 16 bit, and we have what we call Long long,
+34
+
+35
+00:02:23,160 --> 00:02:24,480
+which is 64 bit.
+35
+
+36
+00:02:24,480 --> 00:02:26,640
+But there are actually other some few names.
+36
+
+37
+00:02:26,640 --> 00:02:33,930
+But for now, I would like you to know that we have more data types than we saw.  Notice here that 
+37
+
+38
+00:02:33,930 --> 00:02:35,660
+64 by 8 is just 8 bytes.
+38
+
+39
+00:02:35,970 --> 00:02:40,320
+So if this guy 64 bit, it means it's 8 bytes.
+39
+
+40
+00:02:41,100 --> 00:02:44,790
+There is also a good note to know that character is internally 
+40
+
+41
+00:02:44,790 --> 00:02:50,910
+1 byte or 8 bits. That's why we said that we internally handle the character as just integer but of
+41
+
+42
+00:02:51,060 --> 00:02:56,070
+0-255 range, actually
+42
+
+43
+00:02:56,070 --> 00:02:56,910
+-128 to 127
+43
+
+44
+00:02:56,910 --> 00:02:58,050
+-128 to 127
+44
+
+45
+00:02:59,220 --> 00:03:07,290
+OK, so in C++ we can define the variable as it signed or unsigned. So we can say signed integer or unsigned
+45
+
+46
+00:03:07,290 --> 00:03:08,790
+integer or signed long long.
+46
+
+47
+00:03:09,540 --> 00:03:11,340
+So there are two information here.
+47
+
+48
+00:03:11,790 --> 00:03:16,850
+The time and the signing status; this defines your big range.
+48
+
+49
+00:03:19,680 --> 00:03:22,920
+So here is some table that give you some sense of ranges.
+49
+
+50
+00:03:22,930 --> 00:03:24,590
+We already discussed this before.
+50
+
+51
+00:03:24,960 --> 00:03:30,600
+If you have a character is typically 1 byte, short typically 2 bytes, integer typically 4, long
+51
+
+52
+00:03:30,600 --> 00:03:31,310
+long is typically 8.
+52
+
+53
+00:03:31,950 --> 00:03:33,270
+This is also what we call long.
+53
+
+54
+00:03:33,270 --> 00:03:34,290
+It's just 4 bytes.
+54
+
+55
+00:03:34,680 --> 00:03:35,310
+Most of the time,
+55
+
+56
+00:03:35,310 --> 00:03:43,380
+I would say just make more use of it. So notice here in a 32 bits use, which is also different than
+56
+
+57
+00:03:43,380 --> 00:03:50,280
+64 bits for use, like notice here, for example, the long here if it is only 32 bit, it's just
+57
+
+58
+00:03:50,280 --> 00:03:52,440
+5. But on the 64-bit CPU,
+58
+
+59
+00:03:52,440 --> 00:03:53,190
+it's just 8.
+59
+
+60
+00:03:55,450 --> 00:04:02,110
+It is a more formal table coming from the reference of the C++. Notice here something interesting, we have
+60
+
+61
+00:04:02,110 --> 00:04:04,290
+here all of the types that you can define.
+61
+
+62
+00:04:04,360 --> 00:04:05,820
+You can say I have integer.
+62
+
+63
+00:04:05,830 --> 00:04:08,740
+This is the one that we deep used all the other course.
+63
+
+64
+00:04:09,100 --> 00:04:13,730
+If you wrote integer or signed or signed integer, this is all just the integer.
+64
+
+65
+00:04:14,380 --> 00:04:15,960
+So we have many other data types here.
+65
+
+66
+00:04:15,970 --> 00:04:18,700
+You have short, we have long, we have long long.
+66
+
+67
+00:04:18,700 --> 00:04:21,030
+We can use it signed, we can use it unsigned and so on.
+67
+
+68
+00:04:21,820 --> 00:04:26,680
+If you didn't use the word signed, then it means signed and it means supporting both negative and positive.
+68
+
+69
+00:04:27,310 --> 00:04:31,470
+Looking here to this C++ standard column, it says at least 16.
+69
+
+70
+00:04:31,480 --> 00:04:32,110
+What does this mean
+70
+
+71
+00:04:32,110 --> 00:04:38,830
+at least? The C++ standard guarantee only for you the minimum number of bits that can be used here.
+71
+
+72
+00:04:39,100 --> 00:04:44,740
+For example, if you define an integer, the minimum number of bits would be to typically minimum 16.
+72
+
+73
+00:04:45,190 --> 00:04:51,250
+If you noticed here, there are different setups for 32 to 64 architectures, most of the time
+73
+
+74
+00:04:51,730 --> 00:04:56,110
+the integer would be 32 actually bits and in one case is just 16.
+74
+
+75
+00:04:56,890 --> 00:05:01,780
+And if you notice here about the long long, the long long is at least 64.
+75
+
+76
+00:05:01,780 --> 00:05:08,350
+And all of these cases just 64 bit. Looking to the long, the minimum is 32,
+76
+
+77
+00:05:08,350 --> 00:05:11,410
+most of the time is 32, except in this case, it's 64.
+77
+
+78
+00:05:11,860 --> 00:05:13,840
+You don't have to memorize these numbers.
+78
+
+79
+00:05:14,210 --> 00:05:20,860
+All I want you to know that the number of bits is actually platform dependent and C++ guaranteed the
+79
+
+80
+00:05:20,860 --> 00:05:22,060
+minimum, but nothing else.
+80
+
+81
+00:05:24,320 --> 00:05:30,800
+OK, let's see some code. We can say here, short short_var1 to -10, this is as same as if you
+81
+
+82
+00:05:30,800 --> 00:05:33,530
+added the word signed and use it.
+82
+
+83
+00:05:33,920 --> 00:05:39,890
+If you try to use the size of operator, it can tell you the number of bits or bytes that are used in
+83
+
+84
+00:05:39,890 --> 00:05:40,340
+the memory.
+84
+
+85
+00:05:40,590 --> 00:05:47,720
+So if I say I short_var, and say out the size of short_var, that is going to print here 2 for 2
+85
+
+86
+00:05:47,720 --> 00:05:48,140
+bytes.
+86
+
+87
+00:05:48,140 --> 00:05:50,090
+Remember the short is 2 bytes.
+87
+
+88
+00:05:50,840 --> 00:05:56,060
+You can also print the min and max values like, say you print SHRT_MIN  and SHRT_MAX , it is going to
+88
+
+89
+00:05:56,060 --> 00:05:57,050
+give you this range.
+89
+
+90
+00:05:57,560 --> 00:06:01,420
+If you try to add one here, it's going to overflow.
+90
+
+91
+00:06:01,760 --> 00:06:06,980
+So if you added a value of one to the max notice here, the max value is this value.
+91
+
+92
+00:06:07,370 --> 00:06:11,030
+If you added one max value, it's going to be negative, this overflow.
+92
+
+93
+00:06:11,300 --> 00:06:12,920
+But notice here is something interesting.
+93
+
+94
+00:06:13,370 --> 00:06:18,120
+The plus one moved the 67, back to the 68.
+94
+
+95
+00:06:18,530 --> 00:06:25,280
+This looks like a circle like these numbers here for some reasons about the internet implementation
+95
+
+96
+00:06:25,280 --> 00:06:25,670
+of that,
+96
+
+97
+00:06:26,180 --> 00:06:27,400
+it's circulating.
+97
+
+98
+00:06:27,450 --> 00:06:28,480
+We'll see that again here.
+98
+
+99
+00:06:28,880 --> 00:06:31,790
+Let's say we define unsigned integer short.
+99
+
+100
+00:06:32,300 --> 00:06:37,440
+OK, so now instead of signed, use the word unsigned. This means its minimum must be 0.
+100
+
+101
+00:06:37,700 --> 00:06:41,960
+What about the maximum? We call the USHRT_MAX here to get the value.
+101
+
+102
+00:06:42,010 --> 00:06:44,730
+So it's now 65.
+102
+
+103
+00:06:45,590 --> 00:06:50,120
+Now, let's increment to this number for one
+103
+
+104
+00:06:50,120 --> 00:06:50,710
+step.
+104
+
+105
+00:06:50,730 --> 00:06:51,710
+What's going to happen?
+105
+
+106
+00:06:52,070 --> 00:06:54,500
+It's going to overflow because you are going after the limit.
+106
+
+107
+00:06:54,830 --> 00:06:59,820
+The interesting part here is the overflow is going to be back to zero.
+107
+
+108
+00:06:59,930 --> 00:07:01,220
+So, again, this is jumping.
+108
+
+109
+00:07:01,270 --> 00:07:02,630
+Think of them like circle.
+109
+
+110
+00:07:02,930 --> 00:07:08,180
+Like if you have 3 numbers, it is like0, 1, 2, 0, 1, 2,  circle.
+110
+
+111
+00:07:08,180 --> 00:07:11,660
+If you have that number is 0, 1, 2, 3, 4, ..., 9, 0, 1, 2, ......., 
+111
+
+112
+00:07:11,870 --> 00:07:16,480
+If you try to go beyond, it circulate to the beginning. 
+112
+
+113
+00:07:16,520 --> 00:07:19,130
+What about if you try to assign a value of minus one?
+113
+
+114
+00:07:19,400 --> 00:07:22,930
+This is underflow, but notice again it is going to circulate in the circle.
+114
+
+115
+00:07:22,940 --> 00:07:29,950
+So -1 is going to jump to the maximum, -2 is going to jump to the max-1.
+115
+
+116
+00:07:30,230 --> 00:07:33,980
+So it's actually like wrapping around, circles are wrapping around it.
+116
+
+117
+00:07:34,490 --> 00:07:35,870
+You don't need to care about that.
+117
+
+118
+00:07:36,050 --> 00:07:39,050
+I'm just telling you something interesting about what's happening behind the scene.
+118
+
+119
+00:07:41,140 --> 00:07:44,030
+Um, uh.
+119
+
+120
+00:07:47,890 --> 00:07:49,150
+This is what we just were saying.
+120
+
+121
+00:07:49,730 --> 00:07:50,800
+OK, so....
+121
+
+122
+00:07:54,610 --> 00:08:02,110
+And if you looked about the previous code, the long long, the long long was like the white strike,
+122
+
+123
+00:08:02,410 --> 00:08:05,300
+like it was supporting a very huge number.
+123
+
+124
+00:08:05,590 --> 00:08:08,890
+So one, we could say, OK, I would like very big numbers in my system.
+124
+
+125
+00:08:08,890 --> 00:08:11,820
+I'm going to use every little data type as a long long not an integer.
+125
+
+126
+00:08:12,130 --> 00:08:13,230
+But this is actually wrong.
+126
+
+127
+00:08:13,240 --> 00:08:13,720
+Why?
+127
+
+128
+00:08:14,230 --> 00:08:18,320
+Because the more bigger datatypes, the slower the system will be.
+128
+
+129
+00:08:18,640 --> 00:08:19,870
+So be very careful.
+129
+
+130
+00:08:19,870 --> 00:08:22,690
+Do not use just long long because it allows more bits.
+130
+
+131
+00:08:22,720 --> 00:08:23,600
+So it would be very big.
+131
+
+132
+00:08:23,620 --> 00:08:24,170
+No, no.
+132
+
+133
+00:08:24,460 --> 00:08:27,220
+Most of the time you would find people are using just the integer.
+133
+
+134
+00:08:27,230 --> 00:08:28,870
+So this is a standard in usage.
+134
+
+135
+00:08:29,860 --> 00:08:35,050
+You should think about what is the smallest datatype that you can use for your system because it
+135
+
+136
+00:08:35,050 --> 00:08:43,510
+means less memory and less size. For the long long, you can define it here long long var or unsigned long
+136
+
+137
+00:08:43,520 --> 00:08:45,700
+long, or unsigned long long int and so on.
+137
+
+138
+00:08:45,700 --> 00:08:50,800
+All of them are very same. This is a long long and these two are the same as unsigned. If you try to print
+138
+
+139
+00:08:50,800 --> 00:08:53,290
+the size of one of these variable, it will be 8 bytes.
+139
+
+140
+00:08:54,840 --> 00:09:01,370
+There is also one interesting thing, the what we call the literals with suffix. So a suffix is something
+140
+
+141
+00:09:01,370 --> 00:09:04,000
+we are adding to the end of of a word.
+141
+
+142
+00:09:04,370 --> 00:09:11,150
+For example, here, if you say 2, this is just an integer. In C++, if you write '2u', this mean this
+142
+
+143
+00:09:11,150 --> 00:09:17,780
+is an unsigned u. If you write '2l', this means long. If you write 2'', it means long long.
+143
+
+144
+00:09:18,050 --> 00:09:25,210
+OK, and this is a bunch of like constants that is defined for you for this outputs.
+144
+
+145
+00:09:26,850 --> 00:09:31,640
+Now, when I try to print something like, say out this number, what is
+145
+
+146
+00:09:31,650 --> 00:09:32,790
+the datatype of this printed number?
+146
+
+147
+00:09:32,790 --> 00:09:36,140
+C++ is going to check the compiler.
+147
+
+148
+00:09:36,300 --> 00:09:41,150
+What is the smallest type of integer, long or long long, that represented this number.
+148
+
+149
+00:09:41,430 --> 00:09:43,440
+So notice this is fit in the integer.
+149
+
+150
+00:09:43,560 --> 00:09:45,380
+So the available of that is just integer.
+150
+
+151
+00:09:46,270 --> 00:09:55,150
+Now, if you try to use this big number, this one fit now in long long, OK, if you try to fit something
+151
+
+152
+00:09:55,150 --> 00:09:59,570
+bigger than that, there would be a compilation error because it's greater than long long.
+152
+
+153
+00:10:00,010 --> 00:10:00,450
+Notice here,
+153
+
+154
+00:10:00,530 --> 00:10:04,330
+C++ doesn't try to check unsigned long long, its maximum is long long.
+154
+
+155
+00:10:05,440 --> 00:10:08,620
+OK, if I would like to force unsigned long long? 
+155
+
+156
+00:10:08,620 --> 00:10:12,400
+The best way is to start to use the literals here, the prefix litterers.
+156
+
+157
+00:10:12,700 --> 00:10:18,400
+So I can say this number and say long long, this is now unsigned long long. This very big number but unsigned long long. 
+157
+
+158
+00:10:18,550 --> 00:10:24,070
+So without this one, you would get a compilation error. There is something also that to standard that
+158
+
+159
+00:10:24,070 --> 00:10:25,510
+I wanted you to be familiar
+159
+
+160
+00:10:25,510 --> 00:10:26,260
+and know about it
+160
+
+161
+00:10:26,530 --> 00:10:33,240
+This what we call the 128 int. The unsigned long long is 8 bytes.
+161
+
+162
+00:10:33,550 --> 00:10:37,300
+This one is much bigger in memory.
+162
+
+163
+00:10:37,480 --> 00:10:42,760
+So you can define a variable in what I think compiler, you can increment it, but you cannot print it in
+163
+
+164
+00:10:42,760 --> 00:10:43,420
+a direct way.
+164
+
+165
+00:10:43,560 --> 00:10:45,520
+OK, you don't use it, you shouldn't.
+165
+
+166
+00:10:46,090 --> 00:10:49,270
+But just I want you to be aware that this exists; 16 bytes one.
+166
+
+167
+00:10:51,760 --> 00:10:52,580
+Um.
+167
+
+168
+00:10:54,430 --> 00:11:00,040
+So for the bike representation, for signed and unsigned variables, if you have assumption that we are
+168
+
+169
+00:11:00,190 --> 00:11:05,890
+using 32 bits and unsigned integer, we use all of them to represent 32 bits.
+169
+
+170
+00:11:06,430 --> 00:11:13,240
+But in the signed integers, we use one bit to represent if it's positive or negative internally
+170
+
+171
+00:11:13,390 --> 00:11:20,570
+and use the other 31 bits for representing the value.
+171
+
+172
+00:11:20,770 --> 00:11:25,810
+That's why the idea of division of our number to two halves is coming from this reason.
+172
+
+173
+00:11:26,020 --> 00:11:33,860
+If you have 8 bits, we take 1 bit to the signed and we take 7 bits to the value.
+173
+
+174
+00:11:34,120 --> 00:11:36,850
+So it is seven, then 2 to the power 7.
+174
+
+175
+00:11:36,850 --> 00:11:38,090
+It is 128.
+175
+
+176
+00:11:38,230 --> 00:11:41,080
+That's why we divide it two halves this way. In the future,
+176
+
+177
+00:11:41,110 --> 00:11:45,070
+this is something relevant to what we call 2'complement, which is something that you should know about it. 
+177
+
+178
+00:11:45,070 --> 00:11:45,250
+That's it

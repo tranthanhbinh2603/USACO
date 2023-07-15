@@ -1,0 +1,519 @@
+0
+1
+00:00:02,020 --> 00:00:07,150
+Let's move to another popular sorting algorithm, which is the selection sort algorithm.
+1
+
+2
+00:00:07,630 --> 00:00:09,130
+So far we've learned
+2
+
+3
+00:00:09,340 --> 00:00:10,750
+what is the sorting problem.
+3
+
+4
+00:00:11,110 --> 00:00:19,140
+We learned how the insertion sort is based on incremental thinking. Now, insertion sort is a,
+4
+
+5
+00:00:20,640 --> 00:00:25,710
+this should be selection, selection sort is another algorithm, but again, slow algorithm, it is based on
+5
+
+6
+00:00:25,710 --> 00:00:32,520
+simple observation. The idea is as following, the first element in the sorted array must be
+6
+
+7
+00:00:32,520 --> 00:00:34,020
+the minimum in the whole array.
+7
+
+8
+00:00:34,650 --> 00:00:36,690
+For example, here what is the first element?
+8
+
+9
+00:00:36,960 --> 00:00:38,400
+It must be the minimum here.
+9
+
+10
+00:00:39,090 --> 00:00:42,930
+Now, what is the second element in the array? After we discard zero,
+10
+
+11
+00:00:43,140 --> 00:00:48,300
+it is again the minimum here, which is the second minimum now, which is two. What is the third
+11
+
+12
+00:00:48,300 --> 00:00:48,840
+minimum?
+12
+
+13
+00:00:49,110 --> 00:00:50,820
+It's three, and so on.
+13
+
+14
+00:00:51,270 --> 00:00:57,960
+So if we tried to keep repeating finding the minimum in the remainder of the array, we will get the
+14
+
+15
+00:00:57,960 --> 00:00:59,160
+next element in the array.
+15
+
+16
+00:00:59,930 --> 00:01:02,880
+Probably, this is more intuitive for you than the previous algorithm.
+16
+
+17
+00:01:03,810 --> 00:01:05,730
+So here is some simulation anyway.
+17
+
+18
+00:01:06,180 --> 00:01:07,980
+What is the minimum in this array?
+18
+
+19
+00:01:08,400 --> 00:01:11,250
+The minimum is zero three.
+19
+
+20
+00:01:11,760 --> 00:01:12,050
+Right?
+20
+
+21
+00:01:12,060 --> 00:01:13,350
+So this is the current minimum.
+21
+
+22
+00:01:13,830 --> 00:01:17,670
+Now, we will swap this element with the first element in the array.
+22
+
+23
+00:01:19,390 --> 00:01:21,400
+Now, the array is two parts for us.
+23
+
+24
+00:01:22,210 --> 00:01:26,500
+The first part is the sorted sub-array and the remaining sorted sub-array.
+24
+
+25
+00:01:27,070 --> 00:01:31,150
+So again, what is the minimum element in all of this array?
+25
+
+26
+00:01:31,810 --> 00:01:32,950
+It is in index
+26
+
+27
+00:01:35,390 --> 00:01:39,140
+seven value two, this one.
+27
+
+28
+00:01:39,650 --> 00:01:45,350
+So, again, swap it, but with which element? With the first element in the unsorted array,
+28
+
+29
+00:01:45,350 --> 00:01:46,510
+which is index one now.
+29
+
+30
+00:01:48,760 --> 00:01:55,770
+Repeat the process, this is the sorted sub-array, and this is the unsorted sub-array.
+30
+
+31
+00:01:56,140 --> 00:01:58,270
+You get the minimum in this one.
+31
+
+32
+00:01:58,750 --> 00:01:59,740
+What is the minimum?
+32
+
+33
+00:02:00,010 --> 00:02:01,900
+It is index five value three.
+33
+
+34
+00:02:02,260 --> 00:02:04,840
+Swap it with the first element in the unsorted array.
+34
+
+35
+00:02:06,330 --> 00:02:07,680
+You get this new sub-array,
+35
+
+36
+00:02:08,690 --> 00:02:11,600
+and so on. So again, what is the next minimum?
+36
+
+37
+00:02:11,840 --> 00:02:16,940
+It is five in index four, swap it, nine and ten are in the same position.
+37
+
+38
+00:02:17,120 --> 00:02:18,230
+What is the minimum here?
+38
+
+39
+00:02:18,410 --> 00:02:20,500
+It is eighty-five, swap it.
+39
+
+40
+00:02:20,840 --> 00:02:22,190
+We are done.
+40
+
+41
+00:02:22,790 --> 00:02:25,720
+I hope the algorithm is easy for you.
+41
+
+42
+00:02:25,730 --> 00:02:26,750
+It's very intuitive.
+42
+
+43
+00:02:27,050 --> 00:02:28,880
+I would like you again to try to code it.
+43
+
+44
+00:02:29,030 --> 00:02:29,750
+Analyze it.
+44
+
+45
+00:02:29,960 --> 00:02:31,190
+Think about the correctness.
+45
+
+46
+00:02:31,490 --> 00:02:32,660
+Think about the properties
+46
+
+47
+00:02:32,660 --> 00:02:33,380
+like,
+47
+
+48
+00:02:34,400 --> 00:02:35,600
+Is it stable algorithm?
+48
+
+49
+00:02:37,670 --> 00:02:39,290
+Is it online algorithm?
+49
+
+50
+00:02:41,100 --> 00:02:45,810
+Is it an adaptive algorithm? Think about these properties, you will find the answers for them in the quiz.
+50
+
+51
+00:02:47,080 --> 00:02:48,760
+Now, let's move to the coding of it.
+51
+
+52
+00:02:51,740 --> 00:02:53,660
+The implementation is fairly simple.
+52
+
+53
+00:02:53,960 --> 00:03:00,410
+We have here a for loop that tries every element, in every step, we iterate on the remaining of the elements,
+53
+
+54
+00:03:00,980 --> 00:03:03,000
+keep the index of the minimum of them.
+54
+
+55
+00:03:03,530 --> 00:03:06,110
+Then we swap it with the current element.
+55
+
+56
+00:03:06,410 --> 00:03:08,760
+So this way the algorithm is done.
+56
+
+57
+00:03:08,810 --> 00:03:13,790
+We definitely don't need to go for the last element because there is nothing after the last element.
+57
+
+58
+00:03:14,030 --> 00:03:20,240
+So the moral of that, you get the minimum, swap, you get the minimum, swap, and so on.
+58
+
+59
+00:03:20,390 --> 00:03:21,610
+So you just need the minimum index.
+59
+
+60
+00:03:21,620 --> 00:03:24,530
+I think the idea is pretty easy for you.
+60
+
+61
+00:03:25,460 --> 00:03:30,530
+Now let's think about the worst analysis and best analysis here.
+61
+
+62
+00:03:31,670 --> 00:03:39,200
+If I give you an array that is completely sorted one, two, three, four, five, six. What does the algorithm
+62
+
+63
+00:03:39,200 --> 00:03:39,470
+do?
+63
+
+64
+00:03:39,830 --> 00:03:41,590
+It will get the minimum, which is one,
+64
+
+65
+00:03:41,600 --> 00:03:43,850
+put it here. Then go all of that,
+65
+
+66
+00:03:44,060 --> 00:03:46,790
+get the minimum, which is two as it is, three as it is.
+66
+
+67
+00:03:47,570 --> 00:03:52,280
+The point here is the algorithm
+67
+
+68
+00:03:53,830 --> 00:03:54,620
+.
+68
+
+69
+00:03:57,240 --> 00:04:00,420
+doesn't depend on the data, the algorithm doesn't depend on the data.
+69
+
+70
+00:04:00,750 --> 00:04:06,360
+Regardless it's sorted or unsorted or whatever, it's going to do the exact number of operations.
+70
+
+71
+00:04:06,660 --> 00:04:10,110
+And this means the best analysis and the average analysis,
+71
+
+72
+00:04:10,110 --> 00:04:16,170
+and the worst case analysis are the same, why? The algorithm doesn't care about your data.
+72
+
+73
+00:04:16,410 --> 00:04:20,310
+This for loop will be done anyway, regardless of your data.
+73
+
+74
+00:04:20,460 --> 00:04:24,690
+So this is another case, which takes us to a nice tip that you should keep in mind.
+74
+
+75
+00:04:25,230 --> 00:04:32,160
+To what degree your algorithm is based on the data, algorithms that are based on the data are the ones
+75
+
+76
+00:04:32,160 --> 00:04:33,480
+that could have best case,
+76
+
+77
+00:04:33,630 --> 00:04:35,250
+worst case, and average case.
+77
+
+78
+00:04:35,520 --> 00:04:40,950
+Algorithms that are systematic, will just do the exact same number of operations, regardless
+78
+
+79
+00:04:40,950 --> 00:04:43,690
+of anything. Correctness,
+79
+
+80
+00:04:43,710 --> 00:04:47,190
+I hope it's very trivial for you to think about it. As a tip,
+80
+
+81
+00:04:47,460 --> 00:04:49,440
+whatever very intuitive for you,
+81
+
+82
+00:04:49,470 --> 00:04:52,290
+just don't waste time, which will happen a lot in trivial algorithms.
+82
+
+83
+00:04:53,910 --> 00:04:54,740
+This is the last thing.
+83
+
+84
+00:04:54,740 --> 00:04:55,530
+It's very optional.
+84
+
+85
+00:04:55,590 --> 00:04:58,530
+Specifically, if you studied the heap data structure before.
+85
+
+86
+00:05:00,040 --> 00:05:05,380
+Now, there is some correspondence between the selection sort and the heap sort, the idea is as following.
+86
+
+87
+00:05:05,820 --> 00:05:13,840
+Remember the heap sort, the heap has a tree, which is internally
+87
+
+88
+00:05:14,440 --> 00:05:15,670
+represented as an array.
+88
+
+89
+00:05:16,120 --> 00:05:21,460
+It finds the largest element, which is typically at the heap, and puts it in the last element in the array.
+89
+
+90
+00:05:23,270 --> 00:05:27,800
+And after that, it removes it from the array, so some numbers are going to be
+90
+
+91
+00:05:27,800 --> 00:05:32,510
+shuffled, and gets the largest again, puts it in the last element of the array, gets the largest,
+91
+
+92
+00:05:32,510 --> 00:05:33,820
+puts it in the last element of the array.
+92
+
+93
+00:05:34,340 --> 00:05:37,130
+If you thought about it, the insertion sort is the opposite.
+93
+
+94
+00:05:37,250 --> 00:05:42,710
+We get the minimum and put it in the begin, begin, begin, begin, so they are the opposite
+94
+
+95
+00:05:42,710 --> 00:05:43,280
+of each other.
+95
+
+96
+00:05:43,310 --> 00:05:44,360
+What is the difference?
+96
+
+97
+00:05:45,200 --> 00:05:48,560
+The heap sort can get this element in only O(log(n)),
+97
+
+98
+00:05:49,870 --> 00:05:55,540
+which is making its all of process O(nlog(n)) to sort numbers, however, selection sort has to
+98
+
+99
+00:05:55,540 --> 00:06:04,300
+get the minimum in O(n). So heap sort gets the maximum in O(1), and removes it in log(n), selection
+99
+
+100
+00:06:04,300 --> 00:06:06,420
+sort gets the minimum in O(n).
+100
+
+101
+00:06:06,550 --> 00:06:09,370
+This is what makes the heap (nlog(n))
+101
+
+102
+00:06:10,770 --> 00:06:18,390
+versus the (n^2) from the selection sort. I just wanted you to show that there is some correspondence
+102
+
+103
+00:06:18,390 --> 00:06:19,680
+between both of them.
+103
+
+104
+00:06:21,080 --> 00:06:21,590
+That's all.

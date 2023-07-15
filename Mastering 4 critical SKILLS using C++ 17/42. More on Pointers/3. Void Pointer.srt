@@ -1,0 +1,79 @@
+1
+00:00:01,470 --> 00:00:06,810
+One of the interesting topics is the white pointer that you should know about, but you should then
+
+2
+00:00:06,810 --> 00:00:13,560
+use also the white pointer is a pointer that can point to objects of any data type.
+
+3
+00:00:13,860 --> 00:00:19,500
+So so far, we were declaring something like a pointer to declare a pointer of type integer of type
+
+4
+00:00:19,770 --> 00:00:20,400
+Embley.
+
+5
+00:00:20,610 --> 00:00:27,330
+But now we are creating a void pointer void means nothing or nothing to be used so it can go into anything
+
+6
+00:00:27,330 --> 00:00:29,750
+and we can change what is pointing to in dynamics.
+
+7
+00:00:29,910 --> 00:00:34,950
+So let's say we have an X and Y and now the pointer can reference X here.
+
+8
+00:00:35,310 --> 00:00:39,750
+So now the pointer is at this moment is looking to the X itself.
+
+9
+00:00:40,890 --> 00:00:43,470
+You cannot use the pointer directly if you would like to use it.
+
+10
+00:00:43,480 --> 00:00:48,140
+Therefore, you need to cast it back to, say, a specific type and use it.
+
+11
+00:00:48,150 --> 00:00:50,570
+I'm guessing here with the system casting to indicate.
+
+12
+00:00:51,480 --> 00:00:57,960
+Now, I changed it here to y to reference Y, which is of type double and I to use it again, you have
+
+13
+00:00:57,960 --> 00:00:58,680
+to cast it back.
+
+14
+00:00:58,680 --> 00:01:07,230
+I'm using here the C++ static cast aside and you call function and you can use it as you see it is flexible
+
+15
+00:01:07,230 --> 00:01:08,580
+but also it is a bit dangerous.
+
+16
+00:01:08,580 --> 00:01:13,400
+Like you need to be very careful about what kind of type it's looking to.
+
+17
+00:01:14,430 --> 00:01:15,510
+It's very cystine.
+
+18
+00:01:15,630 --> 00:01:18,810
+You typically don't need it, but it's good to know about its existence.
+
+19
+00:01:19,170 --> 00:01:24,570
+Typically with the mix of overloading and template, you'd need at all to use a white pointer.
+
+20
+00:01:25,590 --> 00:01:26,070
+That's it.

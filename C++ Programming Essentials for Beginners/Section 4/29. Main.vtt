@@ -1,0 +1,361 @@
+WEBVTT
+
+00:02.060 --> 00:07.190
+Hello, everyone, and this lecture will talk about means what is Maine mean is actually a function.
+
+00:07.340 --> 00:13.940
+We will talk about functions, but it's you can it's a block of code from when the execution of the
+
+00:13.940 --> 00:14.690
+program to time.
+
+00:14.800 --> 00:19.190
+OK, every C C++ program starts executing with me.
+
+00:19.700 --> 00:26.390
+And there is exactly one main function, and at the end of the mean, you will often find return zero.
+
+00:26.540 --> 00:34.520
+So return zero basically denote the exit from the mean, and zero be used to denote the successful execution
+
+00:34.520 --> 00:35.120
+of the mean OK.
+
+00:35.510 --> 00:42.410
+So if you execute a program on it, then you might see something like the program finished with the
+
+00:44.180 --> 00:45.220
+return value zero.
+
+00:45.230 --> 00:48.710
+That means, OK, this we reached this line of code.
+
+00:48.710 --> 00:54.740
+That means everything that was written in this block of gold was successfully executed.
+
+00:54.740 --> 00:55.010
+OK?
+
+00:55.520 --> 00:59.920
+But it may happen that you might have some error in your input on.
+
+01:01.180 --> 01:06.880
+Your program might crash in between, maybe because of some reason like and a lot of memory you have
+
+01:06.880 --> 01:11.680
+used or something because I've done in that case, the return value would be something else.
+
+01:11.710 --> 01:19.760
+OK, so in that case, the return value would be something else if your program crashes in between.
+
+01:19.780 --> 01:23.240
+OK, because of some reason, to get an exception comes up.
+
+01:23.260 --> 01:29.290
+You divide a number with zero or you consume a lot of memory, so it may happen.
+
+01:29.320 --> 01:31.820
+OK, so your program may crash in between.
+
+01:31.860 --> 01:34.690
+And in that case, the program will not return zero.
+
+01:35.230 --> 01:40.570
+And in most cases, when your program is going to execute till the end, it will always return a value
+
+01:40.570 --> 01:40.960
+zero.
+
+01:41.500 --> 01:47.080
+So you can use return five returns, but zero is is the convention means you'll get the return.
+
+01:47.080 --> 01:50.140
+Zero means the successful execution of the mean.
+
+01:50.660 --> 01:54.380
+Oh, you can also see that is something that is right, denies Indomie.
+
+01:54.430 --> 01:58.120
+So why do we write it as a main reason is.
+
+01:59.250 --> 02:01.560
+We are returning Deja, that is zero.
+
+02:01.650 --> 02:07.050
+OK, so whenever you define a function, we have the name of the function that is me.
+
+02:07.170 --> 02:07.470
+OK?
+
+02:08.190 --> 02:12.330
+And before the name of the function, you have the return type.
+
+02:12.720 --> 02:14.100
+What type of data?
+
+02:14.280 --> 02:15.810
+This function is going to return.
+
+02:16.200 --> 02:17.580
+This is known as a return date.
+
+02:18.480 --> 02:21.120
+The return type of mean is because it returns.
+
+02:21.210 --> 02:22.980
+Indeed, it is zero.
+
+02:23.100 --> 02:23.370
+OK.
+
+02:23.910 --> 02:30.930
+This is the point from where your code will start getting executed until this particular point of deleted
+
+02:31.230 --> 02:32.220
+the curly brackets.
+
+02:32.490 --> 02:34.680
+So everything is part of the means.
+
+02:34.680 --> 02:40.230
+All your logic or all the work that you want to do should go into these brackets, OK?
+
+02:41.010 --> 02:43.020
+So that is what I wanted to talk about.
+
+02:43.020 --> 02:43.350
+Mean.
+
+02:43.770 --> 02:46.650
+And there are few more things that we will discuss.
+
+02:47.220 --> 02:50.380
+The most common way of defining the mean is like this.
+
+02:50.400 --> 02:52.020
+This is the boilerplate for me.
+
+02:52.170 --> 02:56.040
+You will be writing this code in almost every program.
+
+02:57.150 --> 02:57.720
+And.
+
+02:59.010 --> 03:04.470
+And in some cases, when you might need to build a command line application, or maybe you want to write
+
+03:04.470 --> 03:13.230
+a C++ program that runs through a command line and that processes some excel files that processes some
+
+03:13.230 --> 03:13.770
+images?
+
+03:14.190 --> 03:14.460
+OK.
+
+03:14.940 --> 03:20.930
+And you want to give the names of the files that you want to process when you're executing this code,
+
+03:20.940 --> 03:21.150
+OK?
+
+03:21.420 --> 03:25.590
+In that case, you can accept something which is known as a command line argument.
+
+03:25.970 --> 03:27.480
+So this is an example of.
+
+03:28.300 --> 03:33.760
+This is a parameter that will accept the file name when you want to run this through a command line.
+
+03:34.390 --> 03:38.840
+So right now, it does not require so we will skip it if needed.
+
+03:38.860 --> 03:45.640
+We will add a video for the scene, which will depict you the demo of how to use a program by a command
+
+03:45.640 --> 03:49.240
+line or we are not going to go into the details right now.
+
+03:49.890 --> 03:55.510
+One thing to note is Maine is not a although you have the right, meaning every program.
+
+03:55.630 --> 03:56.700
+It's not a for keyword.
+
+03:57.760 --> 03:58.300
+And.
+
+03:59.810 --> 04:05.860
+Man is not predefined, it is pretty clear what is the meaning of definition, was this declaration?
+
+04:06.120 --> 04:07.370
+Do two important things.
+
+04:07.490 --> 04:07.790
+OK?
+
+04:08.540 --> 04:15.950
+So whenever you create functions or right now, we have not discussed about functions a lot, but function
+
+04:15.950 --> 04:16.430
+as.
+
+04:17.580 --> 04:23.220
+Bunch of lines of code that I've been inside to company, for example, you want to say, I have a factory
+
+04:23.320 --> 04:23.790
+function.
+
+04:23.940 --> 04:24.210
+OK?
+
+04:24.990 --> 04:26.820
+And this returns an integer.
+
+04:27.930 --> 04:32.010
+So whenever you create a function, this can be divided into two parts.
+
+04:32.550 --> 04:36.300
+One part is known as declaracion this part of the function.
+
+04:36.750 --> 04:38.570
+This is known as declaration.
+
+04:38.860 --> 04:43.140
+We're just saying that there would be a function whose name would be affected.
+
+04:43.290 --> 04:48.540
+So we generally do the declaration like this and like the return type.
+
+04:49.960 --> 04:54.940
+Followed by the name and any parameters that dysfunction is going to accept.
+
+04:55.630 --> 04:57.680
+We can just write this line of the code.
+
+04:58.150 --> 05:03.460
+And this tells the compiler, OK, somewhere in the code that would be a function whose name would be
+
+05:03.460 --> 05:04.180
+factory look.
+
+05:04.180 --> 05:11.290
+And later on, you can define, OK, this is my function and this is how this function performs, then
+
+05:11.290 --> 05:12.070
+case of mean.
+
+05:13.160 --> 05:15.650
+The code, the definition is not there.
+
+05:15.990 --> 05:19.820
+The definition is not the only the declaration, but is already there.
+
+05:19.850 --> 05:21.440
+OK, so intimate.
+
+05:22.570 --> 05:30.280
+This boat is already dead and what we need to do, we also need to define what would go inside this
+
+05:30.280 --> 05:30.820
+mandate.
+
+05:32.020 --> 05:36.520
+So we need to define this part is already declared OK.
+
+05:37.270 --> 05:43.120
+And what we need to do, we need to supply the goal that should go inside me.
+
+05:43.180 --> 05:48.810
+OK, so we need to supply what is going to happen when you were going to run the mine.
+
+05:48.820 --> 05:53.680
+OK, so that is why we are saying that this function is not redefined.
+
+05:53.740 --> 05:58.780
+That means the body of the good anything that is written inside curly brackets that is not defined,
+
+05:58.780 --> 06:00.130
+but it is predicted, OK.
+
+06:00.910 --> 06:05.740
+And we we generally will not see this declaration in the boilerplate code.
+
+06:05.770 --> 06:12.400
+So we directly write the entire definition with the Indomie and the way it works.
+
+06:12.460 --> 06:17.120
+So in C++, our code is linked against the small time time library.
+
+06:17.160 --> 06:20.910
+OK, that constitute the true starting point of your program.
+
+06:20.920 --> 06:28.390
+So whenever you run a C++ program, there is a library that constitutes the true starting point of the
+
+06:28.390 --> 06:28.870
+program.
+
+06:29.260 --> 06:35.050
+And in this small library, a function is called the function name is mean, OK?
+
+06:35.380 --> 06:37.270
+So the mean is actually hardcoded.
+
+06:37.480 --> 06:45.430
+It's not a key, but it's a function that has been declared and that is, it is hardcoded in the library
+
+06:45.430 --> 06:48.550
+or given every program will start, it will always start from me.
+
+06:49.680 --> 06:56.130
+So now, whatever Goldberg's because we supply our gold inside the mine, I'm also known as function
+
+06:56.130 --> 06:56.700
+definition.
+
+06:56.850 --> 06:58.470
+That is what I was trying to tell you.
+
+06:59.130 --> 07:02.010
+Anything that you write inside the body of the function.
+
+07:02.640 --> 07:04.050
+OK, so this part?
+
+07:05.970 --> 07:13.740
+Anything that we would contribute, the body of the function and whatever you supply hit that goal gets
+
+07:13.740 --> 07:18.000
+executed because a function call has been hard coded, OK?
+
+07:18.530 --> 07:23.700
+If you're very new to programming, you will understand this concept in more detail.
+
+07:24.270 --> 07:30.450
+Once we will cover the topic of function, OK, again, because this was slightly important that our
+
+07:30.500 --> 07:33.330
+your code book it always start executing from it.
+
+07:33.360 --> 07:36.120
+So that is all what you need to know at this moment.
+
+07:36.510 --> 07:42.420
+Once we dive deeper into the functions, you will understand these dumps declaration definition of the
+
+07:42.420 --> 07:43.350
+function function.
+
+07:43.350 --> 07:44.500
+Go in more detail.
+
+07:44.520 --> 07:50.190
+Look to hold it for now if you are still confused with some of the terms, but that's OK.
+
+07:50.400 --> 07:52.210
+OK, so that's all for this video.
+
+07:52.260 --> 07:53.340
+See you in the next lecture!

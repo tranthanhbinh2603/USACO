@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1674997997 source:e:\document\project\usaco\competitive programming essentials, master algorithms 2022\12 - prime numbers & factorisation\code\04 prime factory using sieve\main.cpp
+	<iostream>
+	<vector>
+

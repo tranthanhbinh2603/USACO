@@ -1,0 +1,160 @@
+WEBVTT
+
+00:02.800 --> 00:08.470
+I in this lecture will talk about keywords, which is quite an important concept when it comes to learning
+
+00:08.470 --> 00:09.580
+a programming language.
+
+00:10.270 --> 00:17.320
+Every language has keywords on whether keywords, so keywords, special words that have a special meaning
+
+00:17.320 --> 00:18.490
+for the compiler will get.
+
+00:18.820 --> 00:21.190
+That means they are kind of resolved.
+
+00:21.250 --> 00:28.300
+You cannot use these names for any other purpose, like you cannot use these keywords for giving a name
+
+00:28.300 --> 00:30.820
+to a function or giving a name to a variable.
+
+00:31.000 --> 00:32.080
+You cannot use them, OK.
+
+00:32.530 --> 00:35.260
+These keywords cannot be used as identified.
+
+00:35.680 --> 00:40.570
+That is what you need to know on C++ as 95 reserved words.
+
+00:41.040 --> 00:46.030
+So you do not need to memorize how many keywords are there or what all those keywords.
+
+00:46.720 --> 00:53.470
+But I will give you a quick look of what kind of words in a programming language like C and C++.
+
+00:53.980 --> 00:56.290
+You will find and we can call them as keyword tool kit.
+
+00:56.950 --> 01:05.200
+For example, a word like LS, you will use it very frequently word like long, which is kind of a data
+
+01:05.200 --> 01:05.500
+type.
+
+01:06.160 --> 01:09.190
+It's like double auto brake.
+
+01:09.670 --> 01:12.670
+God, Gonzales Lord.
+
+01:13.210 --> 01:13.860
+Continue.
+
+01:14.260 --> 01:14.530
+OK.
+
+01:15.070 --> 01:19.960
+So we are going to see a lot of them while we are going to write code, OK?
+
+01:20.590 --> 01:23.620
+All these are examples of keywords, right?
+
+01:24.400 --> 01:30.730
+And there are 32 keywords which are both common in C and D Plus Plus, and there are some new keywords
+
+01:30.730 --> 01:33.430
+which were introduced in C++, for example.
+
+01:33.430 --> 01:35.950
+A keyword is a namespace is a keyword.
+
+01:36.580 --> 01:40.030
+Rent is a world class, is a keyword.
+
+01:40.540 --> 01:43.330
+The glass is used in object oriented programming.
+
+01:43.810 --> 01:53.010
+D is not an object oriented language, but C++, as C++ has the keyword called class and that is true.
+
+01:53.020 --> 02:00.280
+Falls and type name public private operator OK.
+
+02:00.970 --> 02:07.120
+A lot of lot of keywords you can see are dead and you cannot use these keywords.
+
+02:10.660 --> 02:12.760
+Giving a name to a particular variable look.
+
+02:13.330 --> 02:21.400
+So if we go to this particular code and what we want to identify what all key words this code is using.
+
+02:22.440 --> 02:28.500
+So if you look at from the previous example that ended up given in the very beginning and discovered
+
+02:29.160 --> 02:37.200
+this in dissolve turkey, but if it also achieved OK, this is achieved, this far is achieved, this
+
+02:37.200 --> 02:38.310
+it had done is achieved.
+
+02:38.640 --> 02:38.870
+OK.
+
+02:40.120 --> 02:40.540
+And.
+
+02:41.810 --> 02:42.050
+Yeah.
+
+02:42.200 --> 02:46.670
+So you can see there are a lot of key words we are using in our particular program.
+
+02:46.830 --> 02:47.150
+OK.
+
+02:47.780 --> 02:51.870
+And we're going to see this Ford is actually a key word, right?
+
+02:52.520 --> 02:55.040
+That is what I was trying to show you here.
+
+02:55.130 --> 02:57.650
+This fight isn't even particularly vile.
+
+02:57.650 --> 02:59.600
+It'll give it these key words.
+
+03:00.290 --> 03:01.820
+Each word has a special meaning.
+
+03:01.820 --> 03:08.050
+For example, the four key word is used to create a loop and loop is used.
+
+03:08.060 --> 03:13.790
+If you want to do something again and again in every program, you will find there are certain keywords
+
+03:14.180 --> 03:20.600
+which are specific to that particular language, and many different languages can also have same keywords,
+
+03:20.600 --> 03:21.500
+for example.
+
+03:21.530 --> 03:23.330
+The fight is also given in Java.
+
+03:23.630 --> 03:24.960
+It's also keyword invite.
+
+03:24.980 --> 03:27.620
+Then it's a very commonly used keyword, right?
+
+03:28.620 --> 03:34.830
+And that's all about key words that you need to know, and in the next few days, we'll talk about the
+
+03:34.830 --> 03:36.210
+concept of mean.

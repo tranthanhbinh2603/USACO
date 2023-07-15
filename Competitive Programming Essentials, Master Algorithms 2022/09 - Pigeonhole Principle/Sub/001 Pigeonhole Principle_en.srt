@@ -1,0 +1,140 @@
+WEBVTT
+
+00:00.740 --> 00:05.690
+Hi Everyone, in this lecture we're going to talk about the pigeonhole principle but again, it's a very
+
+00:05.690 --> 00:11.060
+simple principle but sometimes it's very useful in solving competitive programming questions.
+
+00:11.630 --> 00:13.700
+So let's talk about pigeonhole principle.
+
+00:14.270 --> 00:16.310
+So it is based upon a very simple idea.
+
+00:16.430 --> 00:18.020
+And let's start with an example.
+
+00:18.020 --> 00:23.210
+Suppose we are given five pigeons and there are four pigeonholes. OK?
+
+00:24.050 --> 00:28.620
+And you start putting pigeons one by one into each pigeon hole.
+
+00:28.640 --> 00:33.290
+So what is going to happen. if you have five pigeons and you only have four holes
+
+00:33.800 --> 00:35.690
+And if you put this pigeon here.
+
+00:35.720 --> 00:37.130
+If you put this pigeon here.
+
+00:37.130 --> 00:42.770
+If you put this pigeon here, if you put this pigeon here then if you want to put this pigeon then
+
+00:42.770 --> 00:44.060
+this might
+
+00:44.810 --> 00:47.800
+one of the whole will contain at least two pigeons.
+
+00:47.810 --> 00:48.050
+OK?
+
+00:48.590 --> 00:53.870
+This is what is going to happen and you can see it is as obvious as it is.
+
+00:54.350 --> 00:58.700
+Then you will have one pigeon left and you can put it into any one of the pigeon holes.
+
+00:58.730 --> 00:59.390
+That means
+
+01:00.770 --> 01:05.750
+to conclude, when the number of pigeons is greater than the number of pigeonholes then there will
+
+01:05.750 --> 01:11.290
+be at least one pigeon hole with at least two pigeons. OK?
+
+01:12.160 --> 01:14.990
+That's that's the whole idea of a pigeonhole principle.
+
+01:15.350 --> 01:18.500
+And now you may ask, why do we need this?
+
+01:18.530 --> 01:20.660
+This is something that is very obvious.
+
+01:21.320 --> 01:26.930
+But yes, we will be using this simple concept to solve some interesting questions.
+
+01:27.260 --> 01:30.350
+Let me give you another example. Hair counting example.
+
+01:30.820 --> 01:37.100
+Let's say the amount of hair is expressed in terms of number of hair strands.
+
+01:37.700 --> 01:46.460
+The average human hair does about one lac fifty thousand strands of hair. assuming no human has
+
+01:46.610 --> 01:48.770
+more than one million strands of it.
+
+01:48.800 --> 01:54.290
+That is 10 lac. given the population of a city is let's say 30 million.
+
+01:54.350 --> 01:56.330
+OK, then definitely
+
+01:56.330 --> 02:03.560
+we can conclude that there would be many people who would have exactly the same number of hair on their
+
+02:03.560 --> 02:03.740
+head.
+
+02:03.750 --> 02:12.650
+OK, so very simple. we are saying OK. one million so anyone can have a hair in the range zero
+
+02:12.650 --> 02:14.630
+to one million on their head. OK?
+
+02:15.410 --> 02:23.540
+But if the number of people who are there in a city, they are in the range, let's say that 30 million
+
+02:23.540 --> 02:25.070
+ok so there are 30 million people.
+
+02:25.730 --> 02:30.250
+So each of these 30 million people needs to be clubbed into this bucket.
+
+02:30.290 --> 02:32.740
+So this is basically buckets. OK?
+
+02:33.560 --> 02:39.500
+We can say definitely a lot of people are going to have overlap and there will be many people who would
+
+02:39.500 --> 02:41.930
+have the same number of hair on their head.
+
+02:42.860 --> 02:44.420
+This is another way of, you can say
+
+02:45.830 --> 02:48.680
+it's just what way pigeonhole principal.
+
+02:48.680 --> 02:54.650
+ok So we are putting people into buckets where each bucket denotes the amount of hair on
+
+02:54.650 --> 02:55.090
+their head.
+
+02:55.100 --> 02:55.460
+OK?
+
+02:56.360 --> 03:04.070
+And that's all for this small introduction. and in the next lecture will start solving problems on pigeonhole
+
+03:04.070 --> 03:04.640
+principle.
+

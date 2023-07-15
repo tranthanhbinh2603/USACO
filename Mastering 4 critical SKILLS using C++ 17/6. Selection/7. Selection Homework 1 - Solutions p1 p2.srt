@@ -1,0 +1,169 @@
+0
+1
+00:00:01,320 --> 00:00:07,620
+Let's solve the first homework here, problem number one, for the arithmetic of the two numbers, we
+1
+
+2
+00:00:07,620 --> 00:00:13,680
+will read the two numbers and to make our life easier, we will have two variables is_even and is_even for
+2
+
+3
+00:00:13,680 --> 00:00:18,340
+A and B and then based on the check of that, we can easily decide the output.
+3
+
+4
+00:00:18,360 --> 00:00:22,940
+For example, if not even and not even for both of them, then this is an odd number.
+4
+
+5
+00:00:22,950 --> 00:00:29,070
+So multiply both of them, if even and even, then we divide them, if not even
+5
+
+6
+00:00:29,070 --> 00:00:34,350
+and even, then it means odd and even then the addition, otherwise the subtraction.
+6
+
+7
+00:00:34,680 --> 00:00:40,230
+So this is one easy way to develop this problem. In the second
+7
+
+8
+00:00:40,920 --> 00:00:41,530
+In the second
+8
+
+9
+00:00:41,550 --> 00:00:44,460
+problem, we have to order the three integers.
+9
+
+10
+00:00:44,730 --> 00:00:50,430
+And I would like to ask you if you have thought about the numbers, No, sorry, this isn't the
+10
+
+11
+00:00:50,440 --> 00:00:52,290
+case, it is in the third one.
+11
+
+12
+00:00:53,850 --> 00:01:03,090
+Let's see the solution here, to sort of the numbers we were going to make the following.
+12
+
+13
+00:01:03,480 --> 00:01:06,060
+We have the three numbers A and B and C.
+13
+
+14
+00:01:08,410 --> 00:01:16,540
+And I would like to verify first, if B is less than A or not, if B isn't less than A, then I'm going
+14
+
+15
+00:01:16,540 --> 00:01:24,220
+to make sure that they are swept, so that we are expecting A and B. For seek of example here, assume
+15
+
+16
+00:01:24,230 --> 00:01:26,320
+we have the numbers three, two, one.
+16
+
+17
+00:01:26,890 --> 00:01:29,830
+So now A is three.
+17
+
+18
+00:01:29,830 --> 00:01:31,410
+B is two. I'm 
+18
+
+19
+00:01:31,420 --> 00:01:34,450
+verifying, is B less than A? the answer would be yes.
+19
+
+20
+00:01:34,690 --> 00:01:35,910
+So let's swap them here.
+20
+
+21
+00:01:36,400 --> 00:01:40,150
+Now, if we swept them together then now this is two and three.
+21
+
+22
+00:01:41,500 --> 00:01:43,510
+Now let's go with the second part.
+22
+
+23
+00:01:43,750 --> 00:01:45,840
+If C is less than B itself.
+23
+
+24
+00:01:45,850 --> 00:01:48,400
+So we are now comparing the second two numbers here.
+24
+
+25
+00:01:48,880 --> 00:01:53,590
+If C is less than B, we again need to to make similar logic.
+25
+
+26
+00:01:53,590 --> 00:01:55,450
+We need to push this together.
+26
+
+27
+00:01:56,020 --> 00:01:58,480
+For example, we need to swap them.
+27
+
+28
+00:01:58,780 --> 00:02:00,310
+Let's swap them here. Now,
+28
+
+29
+00:02:00,310 --> 00:02:02,590
+One and three, so far seems good.
+29
+
+30
+00:02:02,590 --> 00:02:10,930
+But the problem here is that this guy now is ordered relative to this guy and this guy, but might
+30
+
+31
+00:02:10,930 --> 00:02:12,970
+not be the case between these two ones here.
+31
+
+32
+00:02:13,300 --> 00:02:18,400
+So, again, double check again if B is less than A or not, if this is the case, we again are going to
+32
+
+33
+00:02:18,400 --> 00:02:25,630
+swap both of them here. This is mainly how we can swap three numbers in the future, we will learn about
+33
+
+34
+00:02:25,730 --> 00:02:30,430
+a mechanism that can help us to sort a lot of numbers in an easy way.

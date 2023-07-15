@@ -1,0 +1,184 @@
+0
+1
+00:00:01,110 --> 00:00:06,960
+Let's solve the first homework here, the first one is very straightforward, you should read the five
+1
+
+2
+00:00:06,960 --> 00:00:12,890
+numbers requested from you and then the average is very easy, just sum all of them and divide by five.
+2
+
+3
+00:00:13,320 --> 00:00:14,070
+observer here.
+3
+
+4
+00:00:14,070 --> 00:00:17,520
+I use the double as my data type so that the average is working well.
+4
+
+5
+00:00:17,940 --> 00:00:25,710
+This is the request a, the second request is a sum of the first three numbers divided by the sum of the second
+5
+
+6
+00:00:25,710 --> 00:00:27,860
+two numbers, so far so good.
+6
+
+7
+00:00:28,500 --> 00:00:33,260
+And finally, we would like also to get the first average over the second average.
+7
+
+8
+00:00:33,270 --> 00:00:34,200
+So let's compute here.
+8
+
+9
+00:00:34,200 --> 00:00:37,290
+First average over the second average.
+9
+
+10
+00:00:37,590 --> 00:00:44,250
+that's all, if you thought about the relationship between B and C, you will observe that
+10
+
+11
+00:00:44,250 --> 00:00:47,990
+C is 2/3 relationship like that.
+11
+
+12
+00:00:49,590 --> 00:00:52,430
+This is mainly the relationship.
+12
+
+13
+00:00:54,240 --> 00:01:01,920
+So if you try to divide them, you would observe that this  average would be cancelled with this,
+13
+
+14
+00:01:02,280 --> 00:01:07,620
+this sum here would be cancelled with this sum and this sum would be cancelled with this sum so the
+14
+
+15
+00:01:07,620 --> 00:01:10,980
+remain is just the three over two values, that's all.
+15
+
+16
+00:01:13,570 --> 00:01:19,150
+In the second the program, the fractional part here, we would like to get the fractional part of a
+16
+
+17
+00:01:19,150 --> 00:01:19,550
+number.
+17
+
+18
+00:01:19,900 --> 00:01:25,230
+So the idea is let's first divide the two numbers together.
+18
+
+19
+00:01:25,240 --> 00:01:26,080
+We got a result.
+19
+
+20
+00:01:26,650 --> 00:01:31,800
+If we cast the result to integer, we got rid of the integer part.
+20
+
+21
+00:01:31,840 --> 00:01:36,370
+For example, if we divided here and cast this to integer, we get the eight.
+21
+
+22
+00:01:36,850 --> 00:01:42,630
+Now, if you subtracted all of this number from the eight, we will now get the fractional part here
+22
+
+23
+00:01:45,550 --> 00:01:52,540
+From this subtraction. In the third program, we would like to get the remainder by ourselves, not by
+23
+
+24
+00:01:52,540 --> 00:01:52,940
+the math.
+24
+
+25
+00:01:52,960 --> 00:01:58,600
+The purpose of the assignment is to make sure that you understand and know the equation itself.
+25
+
+26
+00:02:00,970 --> 00:02:02,560
+So let's put it here.
+26
+
+27
+00:02:02,860 --> 00:02:05,110
+Let's try something like 13 over five.
+27
+
+28
+00:02:05,350 --> 00:02:11,830
+If you did integer division for 13 / 5, you get two, which means
+28
+
+29
+00:02:11,830 --> 00:02:15,190
+there are two complete cycles of five, which means two times five.
+29
+
+30
+00:02:15,190 --> 00:02:17,840
+Ten is like the upper bound here.
+30
+
+31
+00:02:18,310 --> 00:02:21,730
+Now, if you subtracted the 13 minus this 10, you get the result.
+31
+
+32
+00:02:22,270 --> 00:02:23,500
+So this is how we can do it.
+32
+
+33
+00:02:23,860 --> 00:02:26,690
+You do float division for N over M.
+33
+
+34
+00:02:27,100 --> 00:02:30,680
+Now we extracted the two multiply
+34
+
+35
+00:02:30,700 --> 00:02:31,550
+it with five.
+35
+
+36
+00:02:31,570 --> 00:02:36,550
+Now you get the ten back, subtract thirteen minus ten, you get the three.
+36
+
+37
+00:02:36,910 --> 00:02:38,500
+That's all, nothing more fancy than that.

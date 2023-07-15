@@ -1,0 +1,344 @@
+0
+1
+00:00:01,890 --> 00:00:08,580
+In this section, we start to something that's completely different perspective from what we were
+1
+
+2
+00:00:08,580 --> 00:00:09,030
+doing.
+2
+
+3
+00:00:10,430 --> 00:00:17,320
+We started the course with learning about the variables and about making expressions, precedence.
+3
+
+4
+00:00:17,390 --> 00:00:23,390
+Then we learned how to make a flow, using if-statements and using loops.
+4
+
+5
+00:00:23,750 --> 00:00:29,670
+Then we started to know how to create many, many instances in easy way, using 1D and 2D array.
+5
+
+6
+00:00:30,260 --> 00:00:34,460
+The function isn't about more syntax
+6
+
+7
+00:00:34,460 --> 00:00:39,470
+items involving extra feature, it is more about organizing the code.
+7
+
+8
+00:00:39,740 --> 00:00:45,630
+So function is one of these great things that help us to organize the code in a very efficient way.
+8
+
+9
+00:00:46,220 --> 00:00:50,530
+So let's remember, how can we do a task like the following?
+9
+
+10
+00:00:50,750 --> 00:00:56,600
+Let's sum the numbers from 1 to n, we read the number, we write sum = 0,
+10
+
+11
+00:00:56,630 --> 00:00:59,550
+We iterate on all numbers, sum it and that's it.
+11
+
+12
+00:01:00,050 --> 00:01:04,110
+Now, if you thought about it, it's easy task, but it's very repetitive task.
+12
+
+13
+00:01:04,460 --> 00:01:11,300
+What if you would like to provide it for the programmers to use it, or like you are in your
+13
+
+14
+00:01:11,300 --> 00:01:14,360
+project, you don't like people to keep repeating the same task.
+14
+
+15
+00:01:14,600 --> 00:01:15,640
+How can we do that?
+15
+
+16
+00:01:15,890 --> 00:01:17,300
+We do that through functions.
+16
+
+17
+00:01:18,060 --> 00:01:19,940
+Here is how we code it as a function.
+17
+
+18
+00:01:20,130 --> 00:01:25,260
+OK, this is the first time we start to learn what is this (main) that we used to see?
+18
+
+19
+00:01:25,730 --> 00:01:31,850
+OK, let's try to stop the video for a minute and read this syntax in a very slowly manner.
+19
+
+20
+00:01:33,820 --> 00:01:41,170
+The first thing that you notice here, that line 5 to line 8 are the same numbers that we were
+20
+
+21
+00:01:41,170 --> 00:01:43,120
+doing the same logic for summing the numbers.
+21
+
+22
+00:01:43,600 --> 00:01:44,780
+What about (int n)?
+22
+
+23
+00:01:44,780 --> 00:01:48,120
+we find it here, OK, in a very weird syntax.
+23
+
+24
+00:01:48,400 --> 00:01:51,040
+OK, let's decode it step by step.
+24
+
+25
+00:01:52,200 --> 00:01:53,650
+This is called a function,
+25
+
+26
+00:01:53,950 --> 00:02:01,270
+The function name is (sum1_to_n), the function needs two things.
+26
+
+27
+00:02:01,580 --> 00:02:07,630
+It needs input parameters and it needs a return data type.
+27
+
+28
+00:02:08,500 --> 00:02:16,630
+So this function takes from me (int n) as a request and returns for me an integer as an answer.
+28
+
+29
+00:02:17,020 --> 00:02:23,380
+So for example, if this function took a request of 5, it's going to iterate here from 1 to 5,
+29
+
+30
+00:02:23,530 --> 00:02:24,100
+sum it.
+30
+
+31
+00:02:24,460 --> 00:02:27,940
+Once we are done with sum, we make (return sum).
+31
+
+32
+00:02:28,270 --> 00:02:32,130
+So return sum is related to this data type.
+32
+
+33
+00:02:32,350 --> 00:02:38,440
+We are returning a variable of type integer and this here an integer data type.
+33
+
+34
+00:02:38,920 --> 00:02:46,420
+So again, we can think of a function here as a separate module that consists of the following items,
+34
+
+35
+00:02:46,570 --> 00:02:53,030
+first, a function name, second, a function parameter, something that the user is asking for us,
+35
+
+36
+00:02:53,350 --> 00:02:57,370
+Third, a return data type, forth, some computations,
+36
+
+37
+00:02:57,610 --> 00:03:00,630
+Finally, a return statement with the data type.
+37
+
+38
+00:03:01,510 --> 00:03:05,080
+Let's read here what's happening, we define (int n),
+38
+
+39
+00:03:05,080 --> 00:03:10,030
+then we say  (cin>>n), let's say the user entered 5, then
+39
+
+40
+00:03:10,180 --> 00:03:14,020
+here we say it's (sum1_to_n) and we give it between
+40
+
+41
+00:03:14,020 --> 00:03:17,500
+these parentheses the variable n, which is 5.
+41
+
+42
+00:03:17,980 --> 00:03:26,740
+The compiler once saw that, it goes to line 4 and tell here, hey, compute for me your answer.
+42
+
+43
+00:03:26,860 --> 00:03:33,760
+If the input is just 5, I go and do the five steps to compute the sum and then I return the sum
+43
+
+44
+00:03:34,300 --> 00:03:38,280
+which should be of the same data type as here or convertible to it.
+44
+
+45
+00:03:38,920 --> 00:03:45,250
+once we are returned here, the compiler gets this expression value which is now 10 and assigns it
+45
+
+46
+00:03:45,250 --> 00:03:48,880
+to the left hand side.
+46
+
+47
+00:03:50,690 --> 00:03:59,480
+So as we see, this is now handled as an expression, this expression is going to be evaluated and
+47
+
+48
+00:03:59,480 --> 00:04:07,870
+returned a value for us, notice here also there are these braces here for the body logic inside the function.
+48
+
+49
+00:04:08,150 --> 00:04:13,970
+And now it is a very good time to know what this (main) is, the (main) we said before, it is a function.
+49
+
+50
+00:04:14,310 --> 00:04:21,980
+when you run your computer, when you run your C++ program, the compiler goes and finds the main function.
+50
+
+51
+00:04:22,220 --> 00:04:24,830
+The main function is the first entry in the program.
+51
+
+52
+00:04:25,130 --> 00:04:28,820
+And as a function, it could have parameters here, which is nothing.
+52
+
+53
+00:04:29,060 --> 00:04:32,930
+And it has its own braces and it's returning some integer.
+53
+
+54
+00:04:33,230 --> 00:04:41,300
+we usually return 0, 0 means that we are telling the compiler we are done
+54
+
+55
+00:04:41,300 --> 00:04:42,320
+in a successful way.
+55
+
+56
+00:04:42,470 --> 00:04:44,240
+We can also return some other values;
+56
+
+57
+00:04:44,240 --> 00:04:46,230
+but this is out of scope for now.
+57
+
+58
+00:04:46,460 --> 00:04:48,950
+So this code has two functions, function
+58
+
+59
+00:04:48,950 --> 00:04:51,350
+number 1, named main. Function
+59
+
+60
+00:04:51,350 --> 00:04:59,480
+number 2, named (sum1_to_n). this function takes a parameter (int n), and returns result int.
+60
+
+61
+00:05:03,060 --> 00:05:09,420
+One interesting thing here to notice is the scope, the variable sum, remember the if-conditions and
+61
+
+62
+00:05:09,420 --> 00:05:12,240
+loops, the variable sum is defined inside these braces,
+62
+
+63
+00:05:13,160 --> 00:05:13,580
+right?
+63
+
+64
+00:05:13,650 --> 00:05:16,850
+So you cannot here, say let's (cout<<sum)
+64
+
+65
+00:05:17,010 --> 00:05:17,970
+You don't see it.
+65
+
+66
+00:05:18,210 --> 00:05:24,870
+It is a local variable; local to these braces, you cannot see outside the braces.
+66
+
+67
+00:05:25,140 --> 00:05:30,690
+So, again, a function is: name, some parameters to request, and some result.
+67
+
+68
+00:05:31,640 --> 00:05:33,180
+yeah, that's it for now,
+68
+
+69
+00:05:33,180 --> 00:05:36,720
+Try to familiarize yourself with the syntax that we saw today.

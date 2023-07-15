@@ -1,0 +1,174 @@
+0
+1
+00:00:00,990 --> 00:00:04,680
+One interesting type of variables is the constant variables.
+1
+
+2
+00:00:05,190 --> 00:00:11,460
+So when you would like to define a constant variable, you just use the word "const" before it and you
+2
+
+3
+00:00:11,460 --> 00:00:13,420
+must give it a value at the moment.
+3
+
+4
+00:00:13,860 --> 00:00:15,390
+But what does it mean to be a "const" value?
+4
+
+5
+00:00:15,410 --> 00:00:23,140
+As its name suggests, if you define a name as "const" it means, the value is going to be fixed.
+5
+
+6
+00:00:23,460 --> 00:00:30,170
+So if you try to change the value here, the compiler is going to...
+6
+
+7
+00:00:30,180 --> 00:00:32,460
+Reject that for you, like give you a compiler error.
+7
+
+8
+00:00:32,760 --> 00:00:35,510
+So this is as simple as what is a "const" value.
+8
+
+9
+00:00:35,670 --> 00:00:38,420
+It is something that you cannot change later.
+9
+
+10
+00:00:38,580 --> 00:00:39,870
+you can define it to double,
+10
+
+11
+00:00:39,900 --> 00:00:41,280
+you can define it to integer,
+11
+
+12
+00:00:41,430 --> 00:00:44,330
+you can define it of character, can define it to string, and so on.
+12
+
+13
+00:00:44,970 --> 00:00:47,770
+You cannot define it without assigning a value.
+13
+
+14
+00:00:47,790 --> 00:00:49,560
+You must give it a value in the beginning.
+14
+
+15
+00:00:49,710 --> 00:00:52,350
+So this is mainly the two common issues with it.
+15
+
+16
+00:00:52,560 --> 00:00:54,060
+You cannot change its value.
+16
+
+17
+00:00:54,240 --> 00:01:01,440
+You cannot define it without providing the value, on the other side C++ as a language has set of limits
+17
+
+18
+00:01:01,710 --> 00:01:07,630
+defined already inside it as constants you can find them in the  "#include <climits>".
+18
+
+19
+00:01:07,980 --> 00:01:10,800
+So here you find in "INT_MAX" and "INT_MIN".
+19
+
+20
+00:01:10,980 --> 00:01:15,730
+So if you cout INT_MAX, you get this big number, and INT_MIN you get this number.
+20
+
+21
+00:01:16,320 --> 00:01:17,610
+There is one missing question here.
+21
+
+22
+00:01:17,820 --> 00:01:20,070
+Why do we need "const" variables?
+22
+
+23
+00:01:20,970 --> 00:01:26,810
+One important reason for that is preventing others from changing to a value.
+23
+
+24
+00:01:26,880 --> 00:01:32,820
+For example, if C++ defined a max value like that and this value depends on the operating system
+24
+
+25
+00:01:33,150 --> 00:01:38,400
+And the code is using it, if we allow the customers or users to change the value, we
+25
+
+26
+00:01:38,400 --> 00:01:40,010
+will corrupt the whole software.
+26
+
+27
+00:01:40,140 --> 00:01:41,680
+So we are preventing that from here.
+27
+
+28
+00:01:42,360 --> 00:01:48,780
+There is another reason, a good programmer would try to communicate his intentions as much as possible.
+28
+
+29
+00:01:49,200 --> 00:01:56,880
+So when I set "PI" as a const, I am sending a message that this is a const value and it isn't
+29
+
+30
+00:01:56,880 --> 00:01:58,470
+expected to be changing.
+30
+
+31
+00:01:58,740 --> 00:02:01,350
+This is a message that I read when I'm trying.
+31
+
+32
+00:02:01,380 --> 00:02:04,020
+I got when I read someone else's code.
+32
+
+33
+00:02:04,230 --> 00:02:11,670
+And if I try to change it, the compiler warns me that this is const, there are some intentions that this value
+33
+
+34
+00:02:11,820 --> 00:02:13,290
+remains as const.
+34
+
+35
+00:02:13,890 --> 00:02:14,430
+That's it! :)

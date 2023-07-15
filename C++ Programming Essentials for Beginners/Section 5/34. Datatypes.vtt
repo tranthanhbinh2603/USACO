@@ -1,0 +1,490 @@
+WEBVTT
+
+00:02.010 --> 00:06.780
+Hello runs in this lecture, we're going to talk about basically tribes in C++.
+
+00:07.450 --> 00:13.740
+These basic data types, they're also known as primitives, that me, that means that the most similar
+
+00:13.740 --> 00:17.970
+data types and these data types cannot be broken down further.
+
+00:18.390 --> 00:18.640
+OK.
+
+00:19.290 --> 00:24.990
+The first step is is a Boolean, so it is denoted using the keyword model, right?
+
+00:26.540 --> 00:31.310
+And suppose you want to create something that stores only true or false.
+
+00:31.520 --> 00:33.920
+Maybe is five greater than three.
+
+00:33.950 --> 00:36.920
+You just want to store the result of this expression.
+
+00:37.310 --> 00:37.710
+Yes.
+
+00:37.730 --> 00:38.990
+Five is greater than three.
+
+00:39.470 --> 00:41.630
+So you want to store this as true.
+
+00:42.290 --> 00:44.510
+So it is not a string, it is not a number.
+
+00:44.940 --> 00:50.840
+OK, it's a special day today which we call quality as a Boolean, and it does denoted using.
+
+00:51.200 --> 00:53.080
+It is written using the bool, keyword or GIF.
+
+00:53.540 --> 01:00.740
+So maybe you going to bowl, maybe some, some Boolean X and that is equal to true.
+
+01:02.110 --> 01:06.610
+OK, or you can also say that some bullying like that is equal to false.
+
+01:06.850 --> 01:07.150
+OK?
+
+01:07.750 --> 01:10.210
+Or you can also put expiration later.
+
+01:10.220 --> 01:11.140
+Some bullying did.
+
+01:12.110 --> 01:20.180
+And maybe you can call the function is whether any is in this function might return, whether the weather
+
+01:20.180 --> 01:25.310
+is rainy or not to get so it does something and then return to value true or false.
+
+01:25.530 --> 01:30.830
+OK, so the return type of dysfunction should be brought forward, but maybe you're going to boil some
+
+01:31.310 --> 01:34.340
+W. That is equal to five greater than three.
+
+01:35.390 --> 01:37.160
+This is this is a exploration.
+
+01:37.430 --> 01:43.540
+This is an exploration that is that will evaluate to true W, Wells told the value right.
+
+01:44.540 --> 01:49.970
+It's a Boolean as one of the basic right, and maybe I can show you in the gold as well.
+
+01:50.390 --> 01:54.320
+But before that, let us try to go through all of these data types one by one.
+
+01:54.710 --> 01:58.130
+The next data type is as a character, many are dying.
+
+01:58.130 --> 02:00.770
+You might require to store a single letter.
+
+02:00.890 --> 02:03.830
+OK, so for that, you will use the gladiator type.
+
+02:05.050 --> 02:09.400
+So, for example, maybe you just want to store a value in a single.
+
+02:09.730 --> 02:16.390
+OK, so you will say, OK, I'm creating a bucket, which is of the type God and you give give some
+
+02:16.390 --> 02:17.220
+name to this bucket.
+
+02:17.230 --> 02:18.310
+Maybe you're going to later.
+
+02:19.930 --> 02:20.950
+And what is the letter?
+
+02:21.220 --> 02:27.340
+The letter is nothing, but a letter is a bucket that is capable of holding nothing.
+
+02:27.340 --> 02:29.740
+The letter that's in the letter is OK.
+
+02:29.770 --> 02:35.020
+It cannot store multiple letters and single letters in C++.
+
+02:35.110 --> 02:36.700
+They are written in single codes.
+
+02:37.240 --> 02:37.510
+OK.
+
+02:38.050 --> 02:39.430
+They are written in single words.
+
+02:40.360 --> 02:42.760
+There can be others in the letters as well.
+
+02:42.790 --> 02:45.940
+Maybe you want to store a dollar, or maybe you want to store a.
+
+02:46.940 --> 02:47.780
+Rupee symbol.
+
+02:48.200 --> 02:48.530
+OK.
+
+02:48.840 --> 02:50.480
+I mean, we want to store L.
+
+02:50.870 --> 02:52.340
+Maybe you want to store Adelaide.
+
+02:53.060 --> 02:57.170
+So all of these odd examples of characters, OK?
+
+02:58.390 --> 03:07.300
+And in C++, the character work, it takes one bite of memory every railway, and Willian also takes
+
+03:07.300 --> 03:08.470
+one bite of storage.
+
+03:09.190 --> 03:12.400
+We'll talk about why this storage is this much.
+
+03:13.030 --> 03:18.620
+OK, but before that, we'll talk about what all other data types that we will see very frequently.
+
+03:18.640 --> 03:21.180
+So we have integer integers.
+
+03:21.190 --> 03:27.190
+You have seen that, OK, I want to store X, which is led to one zero eight two four.
+
+03:27.610 --> 03:28.240
+It's a number.
+
+03:28.270 --> 03:28.570
+OK.
+
+03:29.440 --> 03:31.810
+And this will be stored inside a bucket.
+
+03:32.470 --> 03:33.790
+One zero eight two four.
+
+03:34.330 --> 03:37.060
+And this bucket is of the type integer, right?
+
+03:38.650 --> 03:45.310
+We also have floating point to floating point are the numbers which which have some, but after that
+
+03:45.310 --> 03:52.850
+as when, for example, the number three point one four, which is the approximate value of the bay.
+
+03:52.870 --> 03:57.580
+So maybe you can say I have by and it is of the type float.
+
+03:59.690 --> 04:02.060
+It has been restored 3.1 for.
+
+04:04.140 --> 04:05.550
+The floating point numbers.
+
+04:05.570 --> 04:09.530
+They have less precision.
+
+04:10.790 --> 04:16.730
+And if you want more precision, OK, that means you have a lot of digits after the decimal.
+
+04:17.990 --> 04:23.990
+Then you use a type called double, so double has a higher precision than afloat.
+
+04:24.410 --> 04:24.700
+OK.
+
+04:24.980 --> 04:26.720
+So double means double floating point.
+
+04:26.750 --> 04:28.940
+It has double precision.
+
+04:29.000 --> 04:36.920
+We'll talk about how precise these numbers can be, but maybe double has a better precision.
+
+04:36.950 --> 04:38.490
+You want this door?
+
+04:38.530 --> 04:41.240
+Maybe three point one four two eight six nine.
+
+04:42.080 --> 04:44.780
+The double would be would be a better choice in that case.
+
+04:45.150 --> 04:46.220
+OK, it has.
+
+04:46.730 --> 04:52.070
+It can accommodate more number of digits in the decimal place.
+
+04:52.070 --> 05:04.220
+OK, so you have and float double and maybe some by double, OK, and maybe some bigger value off by
+
+05:04.700 --> 05:04.930
+more.
+
+05:05.060 --> 05:10.580
+It will actually give you more precision in calculations where precision matters a lot.
+
+05:11.030 --> 05:11.930
+Go double.
+
+05:12.320 --> 05:16.020
+Otherwise, float is also fine for most of your calculations.
+
+05:16.040 --> 05:16.250
+OK?
+
+05:17.030 --> 05:20.900
+So these are for you right now, and we will see in our code as well, right?
+
+05:22.050 --> 05:24.780
+And maybe I can give you a quick demo.
+
+05:27.540 --> 05:33.000
+So let's see the demo, so for example, I want to start with a Boolean so I can see Boolean X equals
+
+05:33.000 --> 05:33.540
+two true.
+
+05:34.470 --> 05:41.280
+Or maybe I go into Boolean is whether any is a variable and it tells, OK, this is not really so it
+
+05:41.280 --> 05:41.820
+is false.
+
+05:42.510 --> 05:48.980
+And maybe I can print what is X, followed by Endless Andela's for going to the next line.
+
+05:48.990 --> 05:49.290
+OK?
+
+05:49.500 --> 05:52.380
+I don't want that the output to appear in the same line.
+
+05:53.010 --> 05:59.820
+And then I can say is whether any and that we are going to build this code and we are going to run it.
+
+06:01.360 --> 06:07.100
+Let me run this not like a demo and we're getting one n0.
+
+06:07.200 --> 06:11.600
+So basically, when you're going to print a Boolean, it will be printed as one or zero.
+
+06:11.610 --> 06:15.810
+So it is true, it is printed as one and it is false.
+
+06:15.870 --> 06:18.350
+So it is printed as little while.
+
+06:18.360 --> 06:24.810
+It happens because in the memory, the Boolean, they're being stored in the form of words.
+
+06:25.560 --> 06:31.020
+And this is how true is represented and this is how the fold is represented.
+
+06:31.140 --> 06:31.440
+OK.
+
+06:31.770 --> 06:39.870
+So they are stored as eight bit integers and the decimal equivalent of this number is going to be one.
+
+06:39.900 --> 06:42.150
+And for this number, it is zero.
+
+06:43.080 --> 06:44.640
+So that is an example of a Boolean.
+
+06:45.210 --> 06:49.320
+It's a we have X, which is five one two or if I went to it.
+
+06:50.070 --> 07:00.660
+And so this is an example of in we are flawed, some number by which is three point one four two or
+
+07:00.810 --> 07:07.260
+double by which is three point one four two seven eight nine nine eight seven.
+
+07:07.470 --> 07:07.890
+That's it.
+
+07:08.490 --> 07:10.860
+And let me store the same number here as well.
+
+07:13.440 --> 07:22.050
+And maybe I can say by Underscore D, so I can see out what is the value of pay and tell me what is
+
+07:22.050 --> 07:25.380
+the value of buy that is double?
+
+07:28.140 --> 07:34.560
+OK, we we cannot create hexagons, and when I'm building the code, I'm getting the error, the definition
+
+07:34.560 --> 07:38.350
+of X X, we have declared at least maybe I can make it Y.
+
+07:39.030 --> 07:40.530
+And now I can run my good.
+
+07:41.910 --> 07:44.460
+And I can say the old way as well.
+
+07:45.330 --> 07:46.800
+So let's run this.
+
+07:48.530 --> 07:53.900
+And now you can see that you're not getting the exact.
+
+07:56.260 --> 08:00.040
+Precision and gives off flawed and double OK.
+
+08:08.210 --> 08:15.800
+To know this, this is happening because by default, the C++ brain statement is only printing up to
+
+08:15.800 --> 08:16.700
+four places, OK?
+
+08:17.210 --> 08:21.890
+So you might want this to show up up to maybe up to 10 places.
+
+08:22.340 --> 08:24.890
+OK, and you also want to show this up to 10 places.
+
+08:25.700 --> 08:26.810
+It is actually easier to get.
+
+08:27.390 --> 08:33.110
+So right now we're storing more places, but we are printing only four places, right?
+
+08:33.590 --> 08:38.860
+The story is it is happening for higher precision, but the printing is happening only for fortresses.
+
+08:39.410 --> 08:46.250
+If you want to show a lot of places like I want to show you the exact number in the memory, let's say
+
+08:46.670 --> 08:52.690
+currently there are eight eight numbers after the decimal point.
+
+08:52.850 --> 08:58.100
+Maybe I can call a function, which is present in the header file called I up.
+
+08:59.090 --> 09:01.250
+The function is known as set precision.
+
+09:01.700 --> 09:01.970
+OK.
+
+09:02.810 --> 09:11.090
+So if I use this said precision and I tell this the old statement, I want to bring this number up to
+
+09:11.330 --> 09:14.180
+10 precisely 10 places.
+
+09:14.750 --> 09:16.470
+So let's see if there is a difference now.
+
+09:16.490 --> 09:22.110
+So we are doing it both for the floating number and we are also doing it for the double number as well.
+
+09:22.130 --> 09:27.290
+And this is this number is exactly same what we have stored in both of them, right?
+
+09:28.400 --> 09:30.350
+So that decision, right?
+
+09:35.090 --> 09:38.100
+You know, we have I had this region right?
+
+09:39.270 --> 09:40.780
+And now maybe I can run the good.
+
+09:41.540 --> 09:43.620
+Now what you can do, you can see different, OK?
+
+09:43.680 --> 09:44.700
+You can see the difference.
+
+09:45.090 --> 09:50.730
+The floor does not able to store the exact number, whereas the exact number was.
+
+09:52.360 --> 09:53.680
+Point nine, eight seven.
+
+09:54.460 --> 09:59.570
+And the floating sporting a just an approximation, which is nine seven five two.
+
+09:59.830 --> 10:06.370
+That means it is not able to store the exact digits that we had and the exact digits they're stored
+
+10:06.370 --> 10:07.330
+by double digits.
+
+10:07.570 --> 10:09.340
+That means double is more precise.
+
+10:10.090 --> 10:17.500
+And another thing that we will see is that height is the box height is the size of the bucket.
+
+10:17.650 --> 10:22.990
+The more number of bits that bucket can store and the higher the precision would be.
+
+10:22.990 --> 10:26.590
+So flawed is actually 32 bits in most cases.
+
+10:26.990 --> 10:32.710
+Again, most systems and double is 64 bits, which is eight bytes.
+
+10:32.950 --> 10:33.250
+OK.
+
+10:33.940 --> 10:36.520
+The double is going to take up more storage.
+
+10:37.570 --> 10:38.800
+Double the storage as well.
+
+10:39.250 --> 10:42.070
+But it is going to be more precise when it comes to storage.
+
+10:42.080 --> 10:49.540
+OK, so that is what you wanted to discuss it on the last day today that we will take up is the gadget
+
+10:49.540 --> 10:49.840
+today.
+
+10:49.990 --> 10:58.870
+Maybe you want to say it got a little z letter equals to a look out and maybe get dollar equals two
+
+10:59.080 --> 11:01.480
+dollars so we can talk this out.
+
+11:01.850 --> 11:02.260
+What?
+
+11:02.440 --> 11:03.310
+What is the letter?
+
+11:04.690 --> 11:07.840
+And I will tell the old what is their dollar?
+
+11:09.710 --> 11:13.280
+So let's build a road and see what output do we get?
+
+11:14.240 --> 11:22.250
+So, yes, we are getting the letters and in our output, that is the concept of basic genotypes that
+
+11:22.250 --> 11:26.660
+you will see very frequently while writing Gordon C++.
+
+11:27.140 --> 11:28.700
+And that's all for this we do.

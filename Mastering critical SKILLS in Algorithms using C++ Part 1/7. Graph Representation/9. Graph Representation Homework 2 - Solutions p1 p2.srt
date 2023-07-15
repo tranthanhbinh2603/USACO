@@ -1,0 +1,635 @@
+1
+00:00:01,040 --> 00:00:05,150
+Let's solve the first homework about the Airbus domain.
+
+2
+00:00:05,180 --> 00:00:08,000
+So this is the purpose of the of the homework here.
+
+3
+00:00:08,840 --> 00:00:09,500
+So let's see.
+
+4
+00:00:10,910 --> 00:00:17,150
+First of all, we're going to we have a look at concerns.
+
+5
+00:00:17,930 --> 00:00:22,010
+We have Roman too, that are strings.
+
+6
+00:00:22,560 --> 00:00:27,500
+We would like to maintain an order on the from an order on the tool and order on the coast.
+
+7
+00:00:28,570 --> 00:00:36,640
+So this is thought to be that let's define an age across the age this time would have instead of integrated,
+
+8
+00:00:36,640 --> 00:00:37,720
+it would be string two.
+
+9
+00:00:38,320 --> 00:00:41,230
+And it has integrated, so we are going to build a decent system.
+
+10
+00:00:41,500 --> 00:00:42,880
+That's why we're doing better from here.
+
+11
+00:00:43,630 --> 00:00:45,630
+Now here is little zen operator.
+
+12
+00:00:45,640 --> 00:00:53,200
+There is an operator should commit us following if the are equal in the two like taxes.
+
+13
+00:00:54,250 --> 00:00:57,390
+Hundred and taxes to any.
+
+14
+00:00:57,670 --> 00:00:58,210
+Then it will.
+
+15
+00:00:58,840 --> 00:01:01,460
+But the one that has a smaller cost the first.
+
+16
+00:01:01,480 --> 00:01:02,610
+Otherwise, it would sort of be.
+
+17
+00:01:03,220 --> 00:01:06,910
+This is a standard way that I teach you guys in programming quotes to certain elements.
+
+18
+00:01:07,150 --> 00:01:09,700
+You go ahead with a bunch of equal conditions.
+
+19
+00:01:09,910 --> 00:01:10,570
+One by one.
+
+20
+00:01:10,780 --> 00:01:12,160
+What is your first criteria?
+
+21
+00:01:12,590 --> 00:01:20,260
+The two so you can be equal if they are into equal equal, then you can bear directly based on them.
+
+22
+00:01:20,710 --> 00:01:23,090
+Otherwise, you return to by, by the way.
+
+23
+00:01:23,110 --> 00:01:25,150
+So this is a standard way to combat elements.
+
+24
+00:01:25,630 --> 00:01:29,560
+So the moral of that is we have an edge class that has the two.
+
+25
+00:01:29,560 --> 00:01:34,330
+It has the cost and is ready to of us based on these two criteria.
+
+26
+00:01:35,260 --> 00:01:40,610
+Now the second challenge is we do not have indices anymore to sort of is them.
+
+27
+00:01:41,350 --> 00:01:47,980
+The good news about the map is as following the map can have a key as a string.
+
+28
+00:01:47,990 --> 00:01:53,980
+What is the great advantage of Beheshti will compare to hash table or like a balance of by necessity
+
+29
+00:01:54,160 --> 00:02:01,510
+compared to arrays, the array and the 2D array has to be based on integers zero one two blah blah blah.
+
+30
+00:02:02,020 --> 00:02:07,390
+But the maps can have a key anything like it can be a string.
+
+31
+00:02:08,260 --> 00:02:10,600
+So this is one thing here now.
+
+32
+00:02:10,840 --> 00:02:16,990
+Map in C++ will sort things based on the key because maybe internally is implemented with a balance.
+
+33
+00:02:16,990 --> 00:02:18,910
+Had been there such a tree, which is sort of by keys?
+
+34
+00:02:19,540 --> 00:02:21,490
+So this is now about the key itself.
+
+35
+00:02:22,860 --> 00:02:25,650
+What about the values now, now this is a.
+
+36
+00:02:26,590 --> 00:02:27,370
+Now here.
+
+37
+00:02:28,630 --> 00:02:34,970
+I have here this is addition to this, the style, OK, remember, and this is a great exercise to to
+
+38
+00:02:34,990 --> 00:02:36,340
+learn how to do the right things.
+
+39
+00:02:36,760 --> 00:02:43,090
+What is an just to this is that you have a bunch of elements and every elements has his own directly
+
+40
+00:02:43,570 --> 00:02:44,050
+items.
+
+41
+00:02:44,070 --> 00:02:47,380
+This is a general view of their adjacency list.
+
+42
+00:02:47,680 --> 00:02:52,960
+So now the key here is handled through Map, which is here, for example, string.
+
+43
+00:02:53,080 --> 00:02:55,150
+So let's say here we have your string California.
+
+44
+00:02:56,440 --> 00:03:02,890
+Now we would like to have a decency list here of any type, anything that is a bunch of elements is
+
+45
+00:03:02,890 --> 00:03:03,310
+OK.
+
+46
+00:03:05,080 --> 00:03:09,250
+Now I am going to implement this internal one using multi set.
+
+47
+00:03:10,000 --> 00:03:17,440
+So here is the two advantages set in C++ can also set a multisite can order for us there.
+
+48
+00:03:17,470 --> 00:03:24,280
+Elements set and multisite can order for us their elements and can also allow for us objects or strings
+
+49
+00:03:24,280 --> 00:03:24,820
+or whatever.
+
+50
+00:03:25,390 --> 00:03:27,190
+So this is a multi set of edges.
+
+51
+00:03:27,820 --> 00:03:32,410
+Now this edge has a pretty list then, which is used by the multisite.
+
+52
+00:03:32,410 --> 00:03:35,440
+If you don't have this function here, the code will not work.
+
+53
+00:03:36,760 --> 00:03:41,830
+So again, the map is to have strings and also allow sorting them.
+
+54
+00:03:43,010 --> 00:03:49,820
+There, multisite here, allow us to have edges and allow have them to be sorted, allow them to be
+
+55
+00:03:49,840 --> 00:03:50,390
+duplicate.
+
+56
+00:03:50,540 --> 00:03:56,750
+So if I have to have a trip from California to Texas was very thin and another one from California to
+
+57
+00:03:56,750 --> 00:03:57,660
+Texas with very thin.
+
+58
+00:03:57,950 --> 00:03:59,900
+Both of them would remain here.
+
+59
+00:03:59,900 --> 00:04:03,710
+If you would just set the noblest values would be would be good.
+
+60
+00:04:04,370 --> 00:04:11,930
+The moral of that to maintain the two certainly criteria, I use the map for the key and I use the multisite
+
+61
+00:04:11,930 --> 00:04:13,550
+for their value.
+
+62
+00:04:14,860 --> 00:04:16,630
+I hope the overall structure is simple.
+
+63
+00:04:16,870 --> 00:04:22,000
+Anything after that is just like a very normal, very, very normal goods.
+
+64
+00:04:22,480 --> 00:04:28,150
+So the adage here will go to the graphic from which is kill a group of California and inserted the age
+
+65
+00:04:28,150 --> 00:04:34,120
+of two and cost like a 10 with the value to Texas with value 10.
+
+66
+00:04:34,660 --> 00:04:40,030
+The print for the adjacency would iterate on like a normal, just as it trade key by key.
+
+67
+00:04:40,630 --> 00:04:42,610
+And after that, get the edges.
+
+68
+00:04:43,260 --> 00:04:46,510
+But remember, the map of the map had the first and the second.
+
+69
+00:04:46,510 --> 00:04:47,650
+The first will be the key.
+
+70
+00:04:48,040 --> 00:04:49,630
+And the second would be the value.
+
+71
+00:04:50,140 --> 00:04:51,550
+And the key here is a string.
+
+72
+00:04:52,150 --> 00:04:54,700
+But the value here is a set multisite.
+
+73
+00:04:55,120 --> 00:04:57,460
+So here, not the second will be our monkey set.
+
+74
+00:04:57,490 --> 00:04:59,500
+We iterate on it edge by edge.
+
+75
+00:04:59,750 --> 00:05:02,010
+But the two variants that with.
+
+76
+00:05:02,260 --> 00:05:02,830
+That's it.
+
+77
+00:05:03,430 --> 00:05:07,930
+So I hope overall it wasn't that annoying to at least understand.
+
+78
+00:05:09,310 --> 00:05:14,140
+I would like to stress here that how can we generalize the graphic representations?
+
+79
+00:05:14,350 --> 00:05:18,190
+Don't get too stuck into your mind that we have to do things in a very specific way.
+
+80
+00:05:18,580 --> 00:05:20,410
+Graph theory is all about nodes.
+
+81
+00:05:20,770 --> 00:05:22,630
+It just connected them in some way.
+
+82
+00:05:22,630 --> 00:05:23,320
+In some way.
+
+83
+00:05:24,700 --> 00:05:26,860
+OK, so let's see the second.
+
+84
+00:05:27,020 --> 00:05:30,990
+Um, the second homework, which is asking you for the reduction.
+
+85
+00:05:31,000 --> 00:05:34,330
+This is a very great and very important task.
+
+86
+00:05:34,720 --> 00:05:37,000
+Now the reduction is actually pretty simple.
+
+87
+00:05:38,080 --> 00:05:42,550
+So I asked you to, uh, map for me.
+
+88
+00:05:42,550 --> 00:05:50,860
+For example, California, Texas was Valley ten, maybe California was maybe New York.
+
+89
+00:05:51,800 --> 00:05:53,090
+Was 20 and so on.
+
+90
+00:05:53,540 --> 00:05:58,760
+The idea is, if I would like to use the normal adjacency, less the normal adjacency, this is expecting
+
+91
+00:05:58,760 --> 00:06:00,500
+integers, not strings.
+
+92
+00:06:01,010 --> 00:06:05,120
+What if we just to give a string idea forever, forever, forever string.
+
+93
+00:06:05,510 --> 00:06:09,230
+So you seek a frontier, let's give it zero here and zero here.
+
+94
+00:06:09,590 --> 00:06:10,340
+You see Texas.
+
+95
+00:06:10,340 --> 00:06:10,940
+Give it one.
+
+96
+00:06:11,240 --> 00:06:12,020
+You see New York.
+
+97
+00:06:12,020 --> 00:06:13,370
+Give it to you.
+
+98
+00:06:13,370 --> 00:06:15,790
+See, after Hawaii, New York to Texas.
+
+99
+00:06:16,160 --> 00:06:16,860
+Seventy.
+
+100
+00:06:17,150 --> 00:06:21,080
+OK, so New York is limited already to Texas.
+
+101
+00:06:21,080 --> 00:06:22,070
+We made it already one.
+
+102
+00:06:22,070 --> 00:06:22,790
+And that's it.
+
+103
+00:06:23,270 --> 00:06:25,010
+So it's actually was trivial idea.
+
+104
+00:06:25,490 --> 00:06:32,840
+Like instead of building a complete graph based on strings, just convert every string to some internal
+
+105
+00:06:32,840 --> 00:06:33,830
+idea and use it.
+
+106
+00:06:33,890 --> 00:06:35,300
+That's that simple idea.
+
+107
+00:06:36,530 --> 00:06:40,940
+I remember into Gear, a very useful utility that I used a lot in competitive programming.
+
+108
+00:06:41,810 --> 00:06:48,620
+This utility has emerged from a string to integer and another map from integer two string.
+
+109
+00:06:50,090 --> 00:06:53,530
+By the way, we can use it, we can use an order, the Mab, which is a stable.
+
+110
+00:06:53,540 --> 00:06:55,550
+It would be more efficient because this could now is look.
+
+111
+00:06:55,550 --> 00:07:04,460
+And if you'd like to make it over, just use an order map now and the function is working as following.
+
+112
+00:07:04,940 --> 00:07:08,990
+Every time you give it to string it, ask us if we have this string before or not.
+
+113
+00:07:09,290 --> 00:07:11,210
+If it is an old one, it returned its ID.
+
+114
+00:07:11,750 --> 00:07:14,720
+If it is a new one, it would give it new ID, for example.
+
+115
+00:07:14,720 --> 00:07:15,190
+Let's see.
+
+116
+00:07:15,200 --> 00:07:22,610
+Let's say we have at the moment, California was index zero and Texas with Index two index one, they
+
+117
+00:07:22,610 --> 00:07:24,530
+would be always zero one two sequential.
+
+118
+00:07:25,490 --> 00:07:28,600
+So now let's say you ask it for the get idea of Texas.
+
+119
+00:07:28,610 --> 00:07:33,540
+It would say, does it string two ID has a Texas yes return, it said.
+
+120
+00:07:34,310 --> 00:07:36,860
+If the answer is no, well, first get the size.
+
+121
+00:07:37,220 --> 00:07:40,640
+What is the current size of the hash table or the table two?
+
+122
+00:07:41,480 --> 00:07:42,680
+We call it ID here.
+
+123
+00:07:43,070 --> 00:07:47,210
+No stranger to idea of is t are equal IDs who are mapping now.
+
+124
+00:07:47,210 --> 00:07:48,800
+Let's say we are asking for New York.
+
+125
+00:07:49,100 --> 00:07:51,240
+So New York would be two.
+
+126
+00:07:51,860 --> 00:07:56,470
+So I'm adding New York to two and also adding that two is for New York.
+
+127
+00:07:56,480 --> 00:07:58,070
+So it is a two way mapping.
+
+128
+00:07:58,640 --> 00:07:59,750
+And then I'm returning the ID.
+
+129
+00:08:00,620 --> 00:08:05,330
+Uh, there is implementation bug here that happens inside C++.
+
+130
+00:08:05,330 --> 00:08:06,800
+I would like to tell it about you.
+
+131
+00:08:06,800 --> 00:08:12,950
+Some people would do the following there are two I.D. office.
+
+132
+00:08:12,950 --> 00:08:15,080
+They are equal.
+
+133
+00:08:15,980 --> 00:08:20,510
+They are two I.D. dot size.
+
+134
+00:08:21,490 --> 00:08:24,490
+In other words, he will try to merge these two lines together.
+
+135
+00:08:24,880 --> 00:08:26,080
+This will cause a problem.
+
+136
+00:08:26,410 --> 00:08:31,990
+This will cause a problem because this is getting an information about the star and this one is updating
+
+137
+00:08:31,990 --> 00:08:32,260
+it.
+
+138
+00:08:32,560 --> 00:08:34,750
+So it depends on the internal implementation.
+
+139
+00:08:34,750 --> 00:08:36,010
+This might cause a problem.
+
+140
+00:08:36,310 --> 00:08:42,920
+So the best thing is get the idea first and then of it to avoid this potential mistake that might be
+
+141
+00:08:42,920 --> 00:08:44,000
+based on the implementation.
+
+142
+00:08:44,620 --> 00:08:48,760
+The Guinness Star idea is just taking the idea and returning the corresponding string.
+
+143
+00:08:49,480 --> 00:08:56,410
+So now let's see the implementation, which is if you if you look to here, this is just the normal
+
+144
+00:08:56,410 --> 00:08:57,160
+adjacency list.
+
+145
+00:08:57,160 --> 00:08:58,110
+I did nothing here.
+
+146
+00:08:58,120 --> 00:08:58,810
+No changes.
+
+147
+00:09:00,160 --> 00:09:05,050
+Now here you read from two anchors a Mab, the from to the from index.
+
+148
+00:09:05,230 --> 00:09:14,200
+I met the two to two endings and a direct which so you see this, this couple of flurries of good reduced.
+
+149
+00:09:16,560 --> 00:09:21,060
+The domain of the Airbus to.
+
+150
+00:09:22,310 --> 00:09:23,270
+The standard.
+
+151
+00:09:25,330 --> 00:09:30,850
+Algorithms now, if you have an algorithm to do shortlist to birth, if you have an algorithm to do
+
+152
+00:09:31,090 --> 00:09:35,110
+a minimum spanning three algorithm to do strongly connected component, if you have an algorithm to
+
+153
+00:09:35,110 --> 00:09:38,530
+do blah blah blah, we can use them directly now.
+
+154
+00:09:39,160 --> 00:09:41,710
+This algorithm doesn't know what its airport does in know.
+
+155
+00:09:41,710 --> 00:09:42,660
+What is a flight cost?
+
+156
+00:09:42,670 --> 00:09:43,240
+No, nothing.
+
+157
+00:09:43,510 --> 00:09:46,870
+It just know about at a standard digital presentation.
+
+158
+00:09:47,080 --> 00:09:49,660
+I hope you get the message behind this algorithm.
+
+159
+00:09:49,840 --> 00:09:50,530
+This homework?

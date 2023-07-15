@@ -1,0 +1,167 @@
+1
+00:00:01,230 --> 00:00:07,800
+Remember the assignment operator, if I have a class A and A Class B and I said it equal be, then there
+
+2
+00:00:07,800 --> 00:00:12,950
+is a member by member Cobbe that happened from the first class to the second class.
+
+3
+00:00:13,380 --> 00:00:18,630
+We said before that this is very risky if we have a pointer, because it's going to be a pointer from
+
+4
+00:00:18,630 --> 00:00:20,450
+the second quarter to the first pointer.
+
+5
+00:00:20,670 --> 00:00:24,510
+And now two objects are looking to the pointer and they are going to destroy it.
+
+6
+00:00:25,020 --> 00:00:30,780
+We learned the cubicle structure and we learned how the copy constructor can help us to protect us from
+
+7
+00:00:30,780 --> 00:00:31,070
+that.
+
+8
+00:00:31,410 --> 00:00:37,980
+So we define the before here, like, here's some class that has some value and we are deleting the
+
+9
+00:00:37,980 --> 00:00:39,060
+value in that structure.
+
+10
+00:00:39,300 --> 00:00:41,370
+And then we are providing constructor.
+
+11
+00:00:41,640 --> 00:00:47,230
+If you want to copy it, then we are copying by ourself with the value not taking the pointer.
+
+12
+00:00:47,760 --> 00:00:51,840
+Now we also say that you provide the structure for this case.
+
+13
+00:00:52,230 --> 00:00:57,720
+The missing case here is that we also have to provide assignment operator, because if someone say equal
+
+14
+00:00:57,720 --> 00:01:02,490
+B is again going to take his own copy of the pointer to our own copy to the pointer.
+
+15
+00:01:02,820 --> 00:01:05,310
+That's why we have to provide an assignment.
+
+16
+00:01:05,310 --> 00:01:08,190
+Operator The logic of the assignment operator is following.
+
+17
+00:01:08,340 --> 00:01:12,630
+You provide operator equal and then you provide an object to make an assignment for me.
+
+18
+00:01:13,080 --> 00:01:17,240
+And then you have here a return on time of your b, b, b, b difference.
+
+19
+00:01:17,760 --> 00:01:20,380
+Now implementing the assignment operator is tricky.
+
+20
+00:01:20,640 --> 00:01:22,840
+There are three steps that you have to keep in mind.
+
+21
+00:01:22,860 --> 00:01:27,540
+Remember, the first step is do not assign the variable to itself.
+
+22
+00:01:27,840 --> 00:01:29,050
+Do not assign a variable to.
+
+23
+00:01:29,080 --> 00:01:32,370
+So if someone did equal a you don't.
+
+24
+00:01:32,570 --> 00:01:32,950
+You don't.
+
+25
+00:01:32,970 --> 00:01:36,110
+You don't have to go and do all of the member values could be best.
+
+26
+00:01:36,360 --> 00:01:37,860
+This can be very problematic.
+
+27
+00:01:38,280 --> 00:01:44,880
+So the way is we first double check if this another object is the same as our class, if say we just
+
+28
+00:01:44,880 --> 00:01:46,590
+return, we do not have to do anything else.
+
+29
+00:01:47,620 --> 00:01:53,770
+The second tricky thing is ability class, if the middle class has already some logic, has some assignment
+
+30
+00:01:53,770 --> 00:02:00,010
+operator, then it's much better to even just call the operator equal function of the base class.
+
+31
+00:02:00,730 --> 00:02:04,060
+Once you're done with that, then go ahead with your step by step.
+
+32
+00:02:04,060 --> 00:02:08,760
+Member function could be based on values and just switch them to your internal class.
+
+33
+00:02:09,190 --> 00:02:18,040
+This way you are simply overloading the operator in case you would like to prevent the operator equal.
+
+34
+00:02:18,160 --> 00:02:21,340
+Like you can also prevent the constructor you do in the following.
+
+35
+00:02:21,520 --> 00:02:27,460
+You say here operator equal, equal, delete, equal delete prevented someone from assigning it.
+
+36
+00:02:27,940 --> 00:02:30,180
+Remember this is a B to equal B one.
+
+37
+00:02:30,190 --> 00:02:34,440
+Here is a copy constructor because we are creating an object, but here we are assigning.
+
+38
+00:02:34,780 --> 00:02:40,240
+So again, if you have a pointer inside your class that you have created, you have to do three things.
+
+39
+00:02:40,420 --> 00:02:41,440
+You have to destroy it.
+
+40
+00:02:41,590 --> 00:02:44,950
+You have to constructor, you have to operator assignment.
+
+41
+00:02:45,100 --> 00:02:47,590
+You have to do this three steps in order.
+
+42
+00:02:48,310 --> 00:02:48,910
+That said.

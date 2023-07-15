@@ -1,0 +1,524 @@
+0
+1
+00:00:01,150 --> 00:00:07,900
+In this video, you will know about more advanced ways to use the "if statements" specifically. let's say
+1
+
+2
+00:00:07,910 --> 00:00:10,000
+I need a program with the following logic.
+2
+
+3
+00:00:10,300 --> 00:00:16,450
+If the salary is less than one thousand we print: "you are poor". If it is between 1000, but less than twenty thousand,
+3
+
+4
+00:00:16,450 --> 00:00:17,980
+You have a good salary.
+4
+
+5
+00:00:18,250 --> 00:00:22,310
+Otherwise, if you are greater than twenty thousand, you are a rich guy.
+5
+
+6
+00:00:22,750 --> 00:00:25,550
+Now, how to do that in a syntax.
+6
+
+7
+00:00:25,600 --> 00:00:31,540
+This is one question, but more interestingly here, far from programming, when you are an engineer,
+7
+
+8
+00:00:31,540 --> 00:00:34,820
+a good engineer, think in good ways to test his good.
+8
+
+9
+00:00:35,170 --> 00:00:37,870
+So this is introduce the word "test cases".
+9
+
+10
+00:00:38,110 --> 00:00:39,490
+Test cases are the cases
+10
+
+11
+00:00:39,540 --> 00:00:41,170
+where we are evaluating our program.
+11
+
+12
+00:00:41,440 --> 00:00:46,780
+For example, a good software engineer might decide that I would like to test for a salary of zero and
+12
+
+13
+00:00:46,780 --> 00:00:51,700
+five hundreds, one thousand, ten thousand, twenty thousand and maybe this very big number.
+13
+
+14
+00:00:52,180 --> 00:00:58,060
+OK, so the logic behind this one thousand, ten thousand, twenty thousand, they are the boundary of
+14
+
+15
+00:00:58,060 --> 00:00:59,070
+the conditions here.
+15
+
+16
+00:00:59,320 --> 00:01:02,540
+So it's good to make sure that you are doing well on the boundary of your condition.
+16
+
+17
+00:01:02,800 --> 00:01:05,520
+This is a very big number to make sure that your program is working well.
+17
+
+18
+00:01:05,800 --> 00:01:10,550
+Also, in other cases, you might think, OK, can a user try a negative number? can you enter
+18
+
+19
+00:01:10,570 --> 00:01:13,120
+my salary is minus hundred, for example.
+19
+
+20
+00:01:13,120 --> 00:01:20,770
+And so on. Moving to C++, the C++ offers you what we call the "if, else if chain".
+20
+
+21
+00:01:21,190 --> 00:01:22,740
+What is the "if else chain".
+21
+
+22
+00:01:23,590 --> 00:01:25,840
+Let's focus about line 8 and 9 here.
+22
+
+23
+00:01:26,260 --> 00:01:29,850
+Let's say that you enter the salary like three thousand.
+23
+
+24
+00:01:30,340 --> 00:01:33,160
+So the line 8 and 9 is what we did in the last time.
+24
+
+25
+00:01:33,550 --> 00:01:39,760
+We say if salary less than thousand: you are poor, this condition now isn't satisfied.
+25
+
+26
+00:01:40,030 --> 00:01:45,790
+So we don't get inside line 9. now in C++, we can do more conditions.
+26
+
+27
+00:01:45,970 --> 00:01:48,220
+But in this case we use the word "else if".
+27
+
+28
+00:01:48,550 --> 00:01:52,180
+So now we say "else if" and then we give a new condition, 
+28
+
+29
+00:01:52,450 --> 00:01:54,820
+What was the interest in our second condition?
+29
+
+30
+00:01:55,090 --> 00:02:00,200
+We wanted to know if the salary is between one thousand and twenty thousand, but less than it.
+30
+
+31
+00:02:00,730 --> 00:02:06,130
+So this is our new condition, which is true in our case.
+31
+
+32
+00:02:06,130 --> 00:02:06,700
+No, it isn't
+32
+
+33
+00:02:06,700 --> 00:02:09,870
+true still. So in our case, this also false.
+33
+
+34
+00:02:10,300 --> 00:02:11,830
+Then we said else.
+34
+
+35
+00:02:12,220 --> 00:02:20,860
+So the else here is you are going to get inside it regardless of you were true or not regardless of anything
+35
+
+36
+00:02:20,860 --> 00:02:21,310
+anymore.
+36
+
+37
+00:02:21,820 --> 00:02:23,440
+So again, the logic is as following,
+37
+
+38
+00:02:23,830 --> 00:02:25,690
+You start with first condition.
+38
+
+39
+00:02:26,110 --> 00:02:28,020
+If it is true, you get inside it.
+39
+
+40
+00:02:28,030 --> 00:02:29,650
+Everything else is discarded.
+40
+
+41
+00:02:30,010 --> 00:02:33,040
+If it is false, you go to the next else if condition.
+41
+
+42
+00:02:33,280 --> 00:02:36,340
+If it is true, you get inside it and discard everything else.
+42
+
+43
+00:02:36,710 --> 00:02:42,880
+Otherwise, you go to the next else if condition and the next else if condition and the next else if condition and
+43
+
+44
+00:02:42,880 --> 00:02:43,360
+so on.
+44
+
+45
+00:02:43,810 --> 00:02:48,640
+As long as the condition is false, we are moving to the next condition.
+45
+
+46
+00:02:49,150 --> 00:02:52,240
+We might end up with an else only without else if.
+46
+
+47
+00:02:52,480 --> 00:02:54,890
+If this is the case, you just get inside it.
+47
+
+48
+00:02:55,210 --> 00:03:01,750
+So here, if you thought about the logic, we say: are you less than a thousand, there is one handling here. are you
+48
+
+49
+00:03:02,380 --> 00:03:04,090
+between one thousand and twenty thousand,
+49
+
+50
+00:03:04,600 --> 00:03:07,120
+This is one handling here. else, we are here.
+50
+
+51
+00:03:07,150 --> 00:03:14,290
+Notice, it is in a bit implicit here, but we know that this (else) happens only when you are actually
+51
+
+52
+00:03:14,290 --> 00:03:15,590
+greater than twenty thousand.
+52
+
+53
+00:03:15,760 --> 00:03:20,460
+So this how we handled that when greater than twenty thousand by ourselves.
+53
+
+54
+00:03:20,680 --> 00:03:24,430
+You can still write here else if salary greater than or equal
+54
+
+55
+00:03:24,430 --> 00:03:25,240
+Twenty thousand.
+55
+
+56
+00:03:25,390 --> 00:03:27,070
+But we actually we don't need this condition.
+56
+
+57
+00:03:29,010 --> 00:03:33,810
+Let's make a simple practice, let's say that you are reading an integer and you would like to print
+57
+
+58
+00:03:33,810 --> 00:03:38,970
+if it has one digit, two-digit, three-digit, four-digit or more or five digits and more.
+58
+
+59
+00:03:41,780 --> 00:03:46,700
+For example, if you entered five hundred fifty-six, you would like to say that this is three digits.
+59
+
+60
+00:03:47,000 --> 00:03:53,570
+I would like to use what we learned to think in some code for doing it.
+60
+
+61
+00:03:55,670 --> 00:04:01,520
+Here is the code, The logic would be very simple, we would say as following, if number is less than 10,
+61
+
+62
+00:04:01,520 --> 00:04:06,980
+Print: 1 digit. 100, print: 2 digits. 1000, print: three digits.
+62
+
+63
+00:04:07,250 --> 00:04:08,900
+10000, print: 4 digits.
+63
+
+64
+00:04:09,050 --> 00:04:13,730
+Else we know it is definitely ten thousand or more; so it's 5 digits or more.
+64
+
+65
+00:04:16,310 --> 00:04:22,910
+Let's move to a little bit more complex, although it's very logical, we said before that inside the
+65
+
+66
+00:04:22,910 --> 00:04:26,030
+Braces, we can add whatever body we want.
+66
+
+67
+00:04:26,300 --> 00:04:27,650
+So an interesting question here.
+67
+
+68
+00:04:27,650 --> 00:04:29,330
+Can I put another if condition here?
+68
+
+69
+00:04:29,690 --> 00:04:30,160
+Yes.
+69
+
+70
+00:04:30,350 --> 00:04:31,820
+Can I put more if conditions?
+70
+
+71
+00:04:31,840 --> 00:04:32,180
+Yes.
+71
+
+72
+00:04:32,390 --> 00:04:35,240
+This is what we call nested if condition.
+72
+
+73
+00:04:35,360 --> 00:04:40,540
+We can put more and more and more nested conditions.
+73
+
+74
+00:04:40,670 --> 00:04:41,930
+So let's see the logic of this
+74
+
+75
+00:04:41,930 --> 00:04:47,630
+code. we say read a salary, if salary less than one thousand, we go to this big logic between line
+75
+
+76
+00:04:47,630 --> 00:04:51,430
+11 and line 18, else, we do something.
+76
+
+77
+00:04:51,680 --> 00:04:58,190
+So if someone entered, for example, 2000, it would just print "you are rich", otherwise it would be
+77
+
+78
+00:04:58,220 --> 00:04:58,520
+here,
+78
+
+79
+00:04:58,520 --> 00:05:04,280
+In the body of this logic. if the person is less than 1000, we ask him for his age and read it.
+79
+
+80
+00:05:04,670 --> 00:05:09,450
+And then we tell him here, if age is less then twenty-two, you are still young.
+80
+
+81
+00:05:09,710 --> 00:05:13,120
+What if the person is greater than twenty-two or equal?
+81
+
+82
+00:05:13,370 --> 00:05:14,560
+Nothing is printed.
+82
+
+83
+00:05:14,600 --> 00:05:18,620
+OK, so again here a line to 21.
+83
+
+84
+00:05:18,830 --> 00:05:20,290
+Can we use the variable age?
+84
+
+85
+00:05:20,480 --> 00:05:21,440
+The answer is no.
+85
+
+86
+00:05:21,650 --> 00:05:25,970
+This is a local variable and not visible outside its scope.
+86
+
+87
+00:05:27,020 --> 00:05:30,560
+So in summary, we saw three styles for if condition.
+87
+
+88
+00:05:30,740 --> 00:05:33,470
+You either write a very simple if condition and body.
+88
+
+89
+00:05:33,770 --> 00:05:38,750
+This body can be a single line of code or just two braces with whatever code that you would like.
+89
+
+90
+00:05:39,120 --> 00:05:41,950
+And this can even be like more nested if conditions.
+90
+
+91
+00:05:42,380 --> 00:05:44,570
+The second side is if else chain.
+91
+
+92
+00:05:44,840 --> 00:05:50,360
+So you say if condition, else if condition, else if condition, else if condition, else if condition.
+92
+
+93
+00:05:51,260 --> 00:05:58,560
+The third the case is you say if, else if, else if, else if, but you end it with a single else without the if.
+93
+
+94
+00:05:58,560 --> 00:06:02,750
+To keep going in the chain if condition,
+94
+
+95
+00:06:02,750 --> 00:06:05,570
+If it's true, you go to the body and you stop all of that.
+95
+
+96
+00:06:05,930 --> 00:06:09,050
+If it is false, you go to the next condition and you execute it,
+96
+
+97
+00:06:09,050 --> 00:06:13,100
+If it's true. if the condition is false, you just go to the next condition.
+97
+
+98
+00:06:13,310 --> 00:06:15,290
+If this is false, you go to the next condition.
+98
+
+99
+00:06:15,560 --> 00:06:17,120
+If it is true, you get inside it.
+99
+
+100
+00:06:17,120 --> 00:06:21,350
+If it is false, you go to the next condition, which is just else without if.
+100
+
+101
+00:06:21,380 --> 00:06:23,900
+So we always execute this body. here,
+101
+
+102
+00:06:24,020 --> 00:06:24,890
+We just execute,
+102
+
+103
+00:06:24,890 --> 00:06:28,850
+If we have an else if here,
+103
+
+104
+00:06:29,060 --> 00:06:34,730
+If we satisfy this condition. The word "condition" refers to the relational operators of true or false.
+104
+
+105
+00:06:35,450 --> 00:06:35,840
+That's it.

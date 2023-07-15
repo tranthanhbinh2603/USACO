@@ -1,0 +1,584 @@
+0
+1
+00:00:00,960 --> 00:00:07,110
+So far, we learned about comparison-based algorithms where we mainly have to compare values.
+1
+
+2
+00:00:07,530 --> 00:00:12,840
+But the count sort belongs to another family. So let's give the problem here, I'm calling here version
+2
+
+3
+00:00:12,840 --> 00:00:13,110
+two.
+3
+
+4
+00:00:13,290 --> 00:00:16,020
+You still have to order the numbers from small to large.
+4
+
+5
+00:00:16,470 --> 00:00:19,110
+However, there is an extra information here.
+5
+
+6
+00:00:19,470 --> 00:00:22,200
+The range is from zero to 500.
+6
+
+7
+00:00:22,770 --> 00:00:25,060
+What do you think about this as an extra information?
+7
+
+8
+00:00:25,080 --> 00:00:25,800
+Does it matter?
+8
+
+9
+00:00:26,460 --> 00:00:32,250
+Some people would just go to the general version of the problem with ignoring this kind of specific
+9
+
+10
+00:00:32,250 --> 00:00:40,530
+information. In many problems in your career, the success will depend on specific information.
+10
+
+11
+00:00:40,890 --> 00:00:45,990
+So whenever you are given such extra properties, extra constraints make use of them.
+11
+
+12
+00:00:46,960 --> 00:00:53,830
+So try to take maybe five or ten minutes to think, can we develop an approach based on knowing that
+12
+
+13
+00:00:53,830 --> 00:00:55,660
+the values are of a small range or not?
+13
+
+14
+00:00:59,950 --> 00:01:06,040
+Recall that any algorithm that is comparison-based has some lower bound that we cannot get rid of it,
+14
+
+15
+00:01:06,430 --> 00:01:10,660
+(nlogn). Count sort doesn't use comparisons.
+15
+
+16
+00:01:10,690 --> 00:01:16,030
+It uses frequencies. So here is a hint for you, compute the frequency of the input array.
+16
+
+17
+00:01:16,180 --> 00:01:23,010
+For example, if this is the input array, we can see that three repeated twice, the nine repeated three times,
+17
+
+18
+00:01:23,020 --> 00:01:25,090
+and the other numbers are repeated only once.
+18
+
+19
+00:01:25,660 --> 00:01:30,220
+Can you develop an efficient algorithm based on this frequency information?
+19
+
+20
+00:01:32,190 --> 00:01:34,480
+Here is the procedure of the count sort.
+20
+
+21
+00:01:35,190 --> 00:01:38,130
+First of all, you compute the maximum value in the array.
+21
+
+22
+00:01:39,240 --> 00:01:42,150
+Second, let's say the maximum is 90,
+22
+
+23
+00:01:42,390 --> 00:01:48,180
+You create an array of ninety-one, so you have to add +1, then create a frequency array of all of these
+23
+
+24
+00:01:48,180 --> 00:01:48,600
+numbers.
+24
+
+25
+00:01:48,630 --> 00:01:51,960
+That's why we need the +1 because the array of ninety will be used here.
+25
+
+26
+00:01:52,890 --> 00:01:58,350
+After that, iterate from zero to max value, which is 90, so from zero to 90.
+26
+
+27
+00:01:58,890 --> 00:02:04,740
+If the current frequency value has a frequency, use it to spread it in the output.
+27
+
+28
+00:02:05,160 --> 00:02:11,250
+For example, let's say we computed the frequency, as you see, arr[0], arr[1], arr[2] all of them
+28
+
+29
+00:02:11,250 --> 00:02:12,450
+are zeros, so ignore them.
+29
+
+30
+00:02:13,080 --> 00:02:16,230
+Arr[3] is two, which means we have two threes.
+30
+
+31
+00:02:16,470 --> 00:02:19,860
+So put them here three and three. Arr[4] is zero.
+31
+
+32
+00:02:19,860 --> 00:02:21,420
+Ignore it. Arr[5] is one.
+32
+
+33
+00:02:21,690 --> 00:02:27,840
+So add one five here. Six, seven, eight are zeros, ignore them. Arr[9] is three.
+33
+
+34
+00:02:27,840 --> 00:02:31,530
+So add three nines here. Arr[10] is one.
+34
+
+35
+00:02:31,890 --> 00:02:34,380
+So add one ten here.
+35
+
+36
+00:02:34,380 --> 00:02:35,220
+Arr[90] is one.
+36
+
+37
+00:02:35,490 --> 00:02:36,540
+Add ninety here.
+37
+
+38
+00:02:37,110 --> 00:02:38,370
+Why is that
+38
+
+39
+00:02:39,000 --> 00:02:39,930
+a sorted output?
+39
+
+40
+00:02:40,170 --> 00:02:44,970
+Because we are iterating from zero to max, so we go to them, value by value, in order.
+40
+
+41
+00:02:45,300 --> 00:02:48,600
+So definitely this must be a sorted output here.
+41
+
+42
+00:02:49,080 --> 00:02:53,520
+Now, we would like to take this idea, and just try to implement it, and then analyze it.
+42
+
+43
+00:02:54,420 --> 00:02:56,880
+There is two implementation ways for this algorithm.
+43
+
+44
+00:02:57,540 --> 00:02:59,100
+So here is how to implement it.
+44
+
+45
+00:03:00,380 --> 00:03:06,560
+The idea is as following, first of all, I will iterate through the array to compute the maximum value
+45
+
+46
+00:03:06,560 --> 00:03:07,130
+in the array.
+46
+
+47
+00:03:07,970 --> 00:03:12,440
+After that, I will create a vector where the length is mxValue+1.
+47
+
+48
+00:03:12,770 --> 00:03:14,750
+The default value in C++ is zero.
+48
+
+49
+00:03:15,710 --> 00:03:21,500
+Then I will iterate on the array and create the frequency of every element, so every value, I will just
+49
+
+50
+00:03:21,620 --> 00:03:23,390
+compute its frequency value here.
+50
+
+51
+00:03:24,650 --> 00:03:29,900
+After that, we will spread back the values over the array, so iterate from zero to the mxValue.
+51
+
+52
+00:03:30,170 --> 00:03:33,980
+Then, we make here a for loop on the frequency of the value.
+52
+
+53
+00:03:34,310 --> 00:03:36,260
+So let's say that i, now, is three.
+53
+
+54
+00:03:37,020 --> 00:03:39,320
+And let's say that count[ i ] is seven.
+54
+
+55
+00:03:39,590 --> 00:03:41,420
+This means we have seven threes.
+55
+
+56
+00:03:41,840 --> 00:03:46,220
+So I have here an index that I keep incrementing with every iteration.
+56
+
+57
+00:03:46,520 --> 00:03:50,330
+I keep adding element by element to the current array.
+57
+
+58
+00:03:50,750 --> 00:03:57,770
+This trivial to code algorithm is what we call count sort. In the homework,
+58
+
+59
+00:03:57,780 --> 00:04:03,830
+You will find another way, very popular, to write the count sort algorithm that has different types of properties.
+59
+
+60
+00:04:04,130 --> 00:04:10,040
+So now let's think, what kind of properties do we see here in this algorithm? Is it, for example,
+60
+
+61
+00:04:10,460 --> 00:04:14,420
+an in-place algorithm? No, we have to create here the frequency array.
+61
+
+62
+00:04:15,380 --> 00:04:19,280
+OK, let's analyze first the time complexity.
+62
+
+63
+00:04:19,580 --> 00:04:21,110
+This for loop takes N steps.
+63
+
+64
+00:04:21,380 --> 00:04:21,800
+OK?
+64
+
+65
+00:04:22,100 --> 00:04:26,270
+And this for loop, another N steps, then this loop is a bit tricky.
+65
+
+66
+00:04:26,690 --> 00:04:29,010
+It is iterating on the max value in the array.
+66
+
+67
+00:04:29,120 --> 00:04:29,750
+That's OK.
+67
+
+68
+00:04:29,960 --> 00:04:36,230
+Let's call the max value just M, and then it has another loop that goes to the frequency of the value.
+68
+
+69
+00:04:36,960 --> 00:04:38,040
+Now, what is the
+69
+
+70
+00:04:38,120 --> 00:04:39,440
+time complexity of that?
+70
+
+71
+00:04:40,340 --> 00:04:44,370
+Maybe one would think, Oh, this is O(MN), but this is very bad
+71
+
+72
+00:04:44,390 --> 00:04:50,810
+worst case, actually, it isn't even a worst case, it's more tricky. When you think about it, this internal
+72
+
+73
+00:04:50,810 --> 00:04:54,260
+loop, what is the total number of operation it will do?
+73
+
+74
+00:04:54,910 --> 00:04:59,240
+It is just iterating based on the frequency of the elements which represent N,
+74
+
+75
+00:04:59,300 --> 00:05:00,560
+the number of elements in the array.
+75
+
+76
+00:05:00,980 --> 00:05:01,550
+So let's say
+76
+
+77
+00:05:01,550 --> 00:05:05,840
+the array has only one value, maybe one repeated 70 times.
+77
+
+78
+00:05:06,230 --> 00:05:11,420
+This for loop total number of iterations will be just 70 because it is just the frequency of the different
+78
+
+79
+00:05:11,420 --> 00:05:12,290
+values in the array.
+79
+
+80
+00:05:12,860 --> 00:05:17,630
+This means these two loops are actually O(M+N).
+80
+
+81
+00:05:18,020 --> 00:05:19,310
+These aren't nested loops.
+81
+
+82
+00:05:19,370 --> 00:05:24,380
+This is fake. This one will just be iterating on the values of the array in a different way.
+82
+
+83
+00:05:25,590 --> 00:05:27,990
+This takes us to this nice analysis here.
+83
+
+84
+00:05:28,500 --> 00:05:35,580
+If K is the maximum value in the array, we definitely have O(K) space, and definitely, we have O(N+K)
+84
+
+85
+00:05:35,580 --> 00:05:35,590
+uh,
+85
+
+86
+00:05:36,510 --> 00:05:38,110
+time complexity.
+86
+
+87
+00:05:38,400 --> 00:05:43,440
+Now it's very important to notice here, given that you depend on K as a value,
+87
+
+88
+00:05:43,710 --> 00:05:48,120
+this algorithm, sometimes, could be dangerous, but let's say that K is around N^2.
+88
+
+89
+00:05:48,630 --> 00:05:51,080
+So actually we ended up with N+N^2 values.
+89
+
+90
+00:05:51,600 --> 00:05:53,960
+What if K is up to N^3?
+90
+
+91
+00:05:53,980 --> 00:05:56,220
+Then actually, we have O(N^3) algorithm.
+91
+
+92
+00:05:56,910 --> 00:06:03,150
+That's why when you try to apply the count sort, you must be aware of the min and max values.
+92
+
+93
+00:06:03,630 --> 00:06:08,320
+In other words, usually, we need something like maybe 1000 as a range or so.
+93
+
+94
+00:06:08,340 --> 00:06:10,230
+So that it'll be really added value.
+94
+
+95
+00:06:10,530 --> 00:06:13,200
+Anyway, keep eyes on the min and max values.
+95
+
+96
+00:06:14,420 --> 00:06:17,470
+The last thing is about the properties of the current implementation.
+96
+
+97
+00:06:17,920 --> 00:06:20,320
+First of all, it isn't stable.
+97
+
+98
+00:06:20,590 --> 00:06:21,130
+Why?
+98
+
+99
+00:06:21,580 --> 00:06:25,120
+Because we lost the values when we just created a frequency array.
+99
+
+100
+00:06:25,840 --> 00:06:27,660
+Second, it isn't adaptive.
+100
+
+101
+00:06:28,090 --> 00:06:30,070
+The procedure doesn't depend on the data.
+101
+
+102
+00:06:30,070 --> 00:06:35,030
+It will do the same operation from a run to another. Third,
+102
+
+103
+00:06:35,290 --> 00:06:38,050
+It doesn't fit for online processing.
+103
+
+104
+00:06:38,380 --> 00:06:38,950
+Why?
+104
+
+105
+00:06:39,280 --> 00:06:41,860
+Because we have to compute the process, all of it from scratch.
+105
+
+106
+00:06:42,220 --> 00:06:47,920
+Or if you have the frequency array, you have to update it, and then again, do
+106
+
+107
+00:06:47,920 --> 00:06:51,350
+the O(N+K) operation to get the new output.
+107
+
+108
+00:06:51,820 --> 00:06:57,310
+Finally, this isn't an in-place algorithm because we needed extra memory.
+108
+
+109
+00:06:57,700 --> 00:06:59,590
+Don't think that this is a negative thing.
+109
+
+110
+00:06:59,980 --> 00:07:01,660
+They are just the properties of it.
+110
+
+111
+00:07:02,350 --> 00:07:03,610
+Uh, for example.
+111
+
+112
+00:07:04,150 --> 00:07:05,350
+OK, you are happy.
+112
+
+113
+00:07:05,350 --> 00:07:05,650
+.
+113
+
+114
+00:07:05,650 --> 00:07:07,060
+You don't have any problems with that.
+114
+
+115
+00:07:07,060 --> 00:07:14,260
+You just have like maybe 20K values always and just you need count sort so that you guarantee
+115
+
+116
+00:07:14,440 --> 00:07:18,550
+something that is efficient based on the values, nothing else, and so on.
+116
+
+117
+00:07:19,580 --> 00:07:20,060
+That's all.

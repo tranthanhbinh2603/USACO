@@ -1,0 +1,355 @@
+WEBVTT
+
+00:01.870 --> 00:04.840
+I would everyone in this lecture will talk about to the.
+
+00:05.320 --> 00:09.730
+So what is a suitable pseudocode as a human readable description of an algorithm?
+
+00:09.830 --> 00:10.120
+OK?
+
+00:10.500 --> 00:15.310
+To those who don't know what is an algorithm to algorithm is nothing but a sequence of steps that we
+
+00:15.310 --> 00:17.560
+take to solve a particular problem.
+
+00:18.070 --> 00:23.150
+We have drawn flowcharts, so those steps in the flowchart, they represent a particular algorithm.
+
+00:23.170 --> 00:23.470
+OK?
+
+00:24.010 --> 00:25.170
+And what is the pseudocode?
+
+00:25.210 --> 00:27.310
+So the code is not the real code, OK?
+
+00:27.370 --> 00:30.310
+It is not the code that the machine can execute.
+
+00:30.980 --> 00:35.150
+It's a good that is written in plain English in a human readable form.
+
+00:35.180 --> 00:37.450
+OK, so now why it is helpful.
+
+00:37.920 --> 00:43.210
+So as a beginner, it is helpful if you want to write something that is language independent, OK?
+
+00:43.570 --> 00:49.420
+If you want to write a code and that you want to get it reviewed from a person who does not know a particular
+
+00:49.420 --> 00:55.570
+language like C++ or dollar or Python, so you can write it in the form of a pseudo code, so it will
+
+00:55.570 --> 00:59.020
+help you to write language, independent code or a review.
+
+00:59.710 --> 01:03.400
+It will help you to structure your code before you actually start writing a tool kit.
+
+01:03.700 --> 01:08.830
+Suppose you are not very sure about the structure of your code, and you want to see if it will work
+
+01:08.830 --> 01:14.770
+in corner cases or it will pass all the tests so you can write it quickly in plain English and then
+
+01:14.770 --> 01:19.080
+you can verify that this code works or this code does not look OK.
+
+01:19.510 --> 01:23.200
+So it is the fastest way to verify to get a review as well.
+
+01:23.300 --> 01:23.560
+OK.
+
+01:24.220 --> 01:25.690
+That is what Pseudocode is.
+
+01:26.110 --> 01:29.170
+So you can come up with their own notation of writing Sudoku.
+
+01:29.470 --> 01:37.870
+But there are a few basic ways of writing it, so we can discuss one of those ways to define the pseudocode
+
+01:37.870 --> 01:38.440
+instructions.
+
+01:39.250 --> 01:44.830
+So in a word, flowchart, we have discussed almost six type of instructions OK?
+
+01:45.340 --> 01:49.180
+The first was start or end two into the code.
+
+01:49.180 --> 01:54.490
+We generally don't have anything for this type so that we will skip, but we will have exit for the
+
+01:54.490 --> 01:54.780
+end.
+
+01:54.790 --> 01:59.890
+If you want to the note end of a program, you can write exit.
+
+01:59.920 --> 02:05.800
+OK, then we discussed that we have input and output, so in order to do input and output, you can
+
+02:06.370 --> 02:12.190
+read a number and that is how you will write it or you want to print something, you're going to print
+
+02:12.490 --> 02:15.940
+the number and or print them with print.
+
+02:16.150 --> 02:19.510
+There are two things maybe you want to print something either does.
+
+02:19.690 --> 02:21.160
+So maybe you want to print Hello.
+
+02:22.120 --> 02:23.650
+This will go into double codes.
+
+02:24.010 --> 02:28.750
+If you want to print the value of something like you want to print the value of some, you will put
+
+02:28.750 --> 02:30.010
+it without double quotes.
+
+02:30.010 --> 02:35.230
+OK, that will print whatever is present inside the same bucket.
+
+02:36.700 --> 02:43.630
+And I thing that we have seen is assignment, you want to give a particular value to a variable, but
+
+02:43.630 --> 02:45.790
+example you want to see marks equal to 80.
+
+02:46.970 --> 02:53.960
+That is written like this, using this symbol equal to, OK, so that what's the number 80 inside a
+
+02:53.960 --> 02:55.250
+bucket called marks?
+
+02:56.260 --> 02:56.440
+OK.
+
+02:57.130 --> 03:03.820
+That is what assignment is to assignment can also take the form of simple interest equals to be into
+
+03:03.820 --> 03:05.170
+our entity of 100.
+
+03:05.860 --> 03:07.510
+This is also assignment, OK?
+
+03:07.600 --> 03:08.830
+So you have multiply it.
+
+03:09.520 --> 03:11.450
+This is also a form of assignment.
+
+03:11.470 --> 03:17.020
+What you're doing, you're evaluating the expression and you're putting the value of this exploration
+
+03:17.020 --> 03:19.780
+inside a bucket called simple interest.
+
+03:19.840 --> 03:22.300
+So this is also an example of assignment.
+
+03:22.960 --> 03:26.470
+The next thing that we have seen in flowchart is a conditional box.
+
+03:27.160 --> 03:31.660
+OK is a conditional box, depending on the condition being true.
+
+03:32.170 --> 03:39.910
+We take one of the two directions either yes or no, that is represented using something known as if
+
+03:39.910 --> 03:40.240
+it's.
+
+03:41.340 --> 03:44.260
+If a condition is true, then do this thing.
+
+03:44.310 --> 03:50.250
+OK, so if followed by the condition, for example, in this case, if I was less than an.
+
+03:51.430 --> 03:53.520
+Then do this work, OK?
+
+03:54.470 --> 03:59.870
+Otherwise, if this condition is false, then I will look elsewhere, do this work, OK?
+
+04:00.530 --> 04:07.430
+So if has its own block and has its own block now, there are ways to denote the opening and closing
+
+04:07.430 --> 04:09.380
+of the blocks in Python.
+
+04:10.190 --> 04:16.430
+There is a concept of indentation that means we will leave this space empty before writing these instructions
+
+04:16.580 --> 04:24.110
+that basically tells that these instructions as part of this block in other languages like C++ and Java,
+
+04:24.650 --> 04:27.320
+we have curly brackets here that denote.
+
+04:28.600 --> 04:36.070
+The starting and ending of this blog, what introductions are part of if we denoted using curly brackets
+
+04:36.730 --> 04:43.510
+into the logo, you can also use then and end to denote the starting and ending of the block.
+
+04:43.600 --> 04:51.370
+So it is then and and I personally do not write before writing, then again, because it makes the code
+
+04:51.370 --> 04:51.760
+more.
+
+04:52.510 --> 04:56.530
+Linda and I personally like these curly brackets.
+
+04:56.680 --> 04:56.970
+OK.
+
+04:57.370 --> 05:00.970
+The whenever we will work with the language, we'll follow the rules of the language.
+
+05:01.060 --> 05:06.940
+But into the code, you can use anything, you can use indentation, you can use curly brackets, you
+
+05:06.940 --> 05:09.190
+can use then and it's totally your choice.
+
+05:10.130 --> 05:13.360
+We have seen how to write up a false statement as well.
+
+05:13.900 --> 05:18.010
+Another thing that we have is called as a loop.
+
+05:18.160 --> 05:18.460
+OK.
+
+05:19.560 --> 05:24.240
+So we have seen that we can simulate a loop using flowcharts.
+
+05:25.360 --> 05:31.510
+Well, let's let's recall an example of a look, so he said, let Michael Ausiello, then we said,
+
+05:31.510 --> 05:33.850
+OK, is Islas then?
+
+05:33.850 --> 05:38.340
+And there is no separate component for loop inside of LoJack.
+
+05:39.040 --> 05:41.110
+But we represented a loop.
+
+05:42.270 --> 05:46.260
+Using some components, OK, and then we started, I all like this one.
+
+05:47.260 --> 05:50.940
+This is how we created a loop inside of low-Tech.
+
+05:51.910 --> 05:54.850
+By combining multiple different boxes.
+
+05:56.200 --> 05:59.800
+So far, look to have we had an initial rendition.
+
+06:01.630 --> 06:05.140
+We had defined a stopping criteria when to stop.
+
+06:05.980 --> 06:09.850
+We had to find some work that is repeated inside a loop.
+
+06:11.210 --> 06:13.520
+And we had defined a bad condition.
+
+06:13.640 --> 06:13.970
+OK.
+
+06:14.780 --> 06:21.590
+How to update the variable that is part of the stopping condition inside the loop in order to represent
+
+06:21.830 --> 06:23.000
+this part of the code.
+
+06:23.270 --> 06:27.140
+This part of the flowchart, we have something which is called by loop.
+
+06:28.160 --> 06:28.560
+OK.
+
+06:28.580 --> 06:31.640
+And this is common across all programming languages.
+
+06:31.700 --> 06:32.660
+So how do we write it?
+
+06:33.080 --> 06:40.910
+Let us see an example of this flowchart written in the pharmaceutical will write I equal to zero, then
+
+06:40.910 --> 06:41.780
+we will take a while.
+
+06:43.090 --> 06:46.450
+I is less than 10, followed by curly brackets.
+
+06:47.230 --> 06:50.590
+OK, so this is the condition, the this condition is true.
+
+06:51.430 --> 06:54.650
+This part of the code that will be written here.
+
+06:54.670 --> 07:01.630
+OK, whatever work you want to do, this will be repeated continuously and then you will have I will
+
+07:01.630 --> 07:03.460
+do I +1.
+
+07:04.000 --> 07:05.380
+This part of the code.
+
+07:07.510 --> 07:12.730
+Is running again and again, OK, until this condition is true.
+
+07:13.720 --> 07:16.600
+So you do some work, you in agreement, you again go ahead.
+
+07:16.930 --> 07:17.830
+You check the condition.
+
+07:17.840 --> 07:18.580
+You do some work.
+
+07:18.620 --> 07:19.390
+You again come in.
+
+07:19.750 --> 07:26.110
+And once this condition becomes false, OK, you come out of the loop and you ended.
+
+07:27.220 --> 07:35.050
+OK, so if this condition is false, that means, no, you come here and then you at exit, that head
+
+07:35.320 --> 07:38.500
+will go ahead and then you will exit.
+
+07:39.960 --> 07:47.490
+These are six basic types of instructions that you will find in every programming language and from
+
+07:47.490 --> 07:48.270
+the next video.
+
+07:48.330 --> 07:54.610
+We will discuss some examples of pseudocode and will try to convert our changes charging the code.
+
+07:54.690 --> 07:56.250
+So that's all for this video.
+
+07:56.670 --> 07:57.150
+Thank you.

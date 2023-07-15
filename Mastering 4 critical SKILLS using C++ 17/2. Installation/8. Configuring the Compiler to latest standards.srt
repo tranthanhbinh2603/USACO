@@ -1,0 +1,314 @@
+0
+1
+00:00:00,960 --> 00:00:04,030
+Congratulations on running your first "Hello World" program!
+1
+
+2
+00:00:04,380 --> 00:00:09,990
+The caveat here that I would like to share with you is something about configuring the compiler.
+2
+
+3
+00:00:10,770 --> 00:00:18,300
+C++ has many recent standards, C++ 11 came with a very, very big jump in the C++ syntax,
+3
+
+4
+00:00:18,540 --> 00:00:22,680
+14 did a good refining to 11, 17 has like another good jump and so on.
+4
+
+5
+00:00:24,780 --> 00:00:31,980
+However, the first thing to keep in mind is that different "GCC" compilers support different 
+5
+
+6
+00:00:31,980 --> 00:00:32,760
+versions of C++.
+6
+
+7
+00:00:32,970 --> 00:00:39,450
+So, if you can stick to the latest "GCC" compiler, this is much better for you, but here is the trick, 
+7
+
+8
+00:00:39,780 --> 00:00:44,280
+even having the latest C++ compiler doesn't mean by default 
+8
+
+9
+00:00:44,280 --> 00:00:49,080
+it will compile your latest code.  and here is one thing that you might face a lot,
+9
+
+10
+00:00:49,230 --> 00:00:55,380
+You might have a code from my code collection and it compiles on my side, 
+10
+
+11
+00:00:55,380 --> 00:00:56,250
+but it doesn't compile on your side.
+11
+
+12
+00:00:56,490 --> 00:01:02,370
+When this happens, 99% it doesn't mean something is wrong in the code, just probably something is
+12
+
+13
+00:01:02,370 --> 00:01:04,480
+wrong in the compiler itself.
+13
+
+14
+00:01:05,310 --> 00:01:13,920
+So let's go a little more. In C++, to support C++ 11, you need at least a GCC version of (4.8)
+14
+
+15
+00:01:13,920 --> 00:01:18,060
+to support 14, you need (5.2) at least, 
+15
+
+16
+00:01:18,240 --> 00:01:20,280
+to support 17, you need version (8.0).
+16
+
+17
+00:01:23,010 --> 00:01:26,550
+Sometimes it isn't easy for everyone to have the latest version, Why? 
+17
+
+18
+00:01:26,790 --> 00:01:33,840
+For example, some guys on some Linux based system might prefer to keep using (5.2) in his system, 
+18
+
+19
+00:01:33,840 --> 00:01:34,530
+because it's very stable for example, 
+19
+
+20
+00:01:34,530 --> 00:01:37,860
+or he's hesitant about moving further.
+20
+
+21
+00:01:38,130 --> 00:01:45,870
+So, maybe at least something like (5.2) would be a good idea. In case you can not upgrade, 
+21
+
+22
+00:01:45,870 --> 00:01:47,370
+or you're facing some difficulties with the compiler,
+22
+
+23
+00:01:47,370 --> 00:01:48,240
+Here is some advice.
+23
+
+24
+00:01:48,600 --> 00:01:54,090
+The website from "ideone.com" supports C++ 14, which should cover a lot of your code.
+24
+
+25
+00:01:54,420 --> 00:02:01,710
+The C++ compiler in the "onlinegdb.com" website supports also online compilation for C++ 17.
+25
+
+26
+00:02:01,980 --> 00:02:06,870
+So, if it happens that you suspect that, "Oh, This code might be C++ 17 and I don't have a support for that!",
+26
+
+27
+00:02:06,870 --> 00:02:14,120
+you might try first these C++ online compilers. If your compiler supports C++ 11, 
+27
+
+28
+00:02:14,580 --> 00:02:20,790
+this should be very good for a lot of examples in this course, because C++ 11 already is a very 
+28
+
+29
+00:02:20,790 --> 00:02:24,330
+big jump in the modern C++ syntax. 
+29
+
+30
+00:02:24,390 --> 00:02:29,550
+Here, there are few steps to follow to configure "Eclipse", you right-click on the project, select 'Properties',
+30
+
+31
+00:02:29,550 --> 00:02:35,190
+'C++ Build', 'Settings' and go to this keyword “Miscellaneous”, and add one of these guys.
+31
+
+32
+00:02:35,460 --> 00:02:41,910
+So, here's what you see when you right-click on the project, you go to 'C++ build', 'Settings'. Here in C++ Eclipse
+32
+
+33
+00:02:41,910 --> 00:02:48,000
+there are always two sections, one of them is for C programming language, and the other one
+33
+
+34
+00:02:48,000 --> 00:02:49,170
+is for C++ programming language.
+34
+
+35
+00:02:49,380 --> 00:02:54,960
+Be careful, because in most of the cases guys get confused and configure the C not the C++.
+35
+
+36
+00:02:55,200 --> 00:02:57,540
+You have to be here in the C++ section.
+36
+
+37
+00:02:57,540 --> 00:02:58,780
+Here, you would find this keyword “Miscellaneous” .
+37
+
+38
+00:02:58,780 --> 00:03:04,440
+Click it, now in this text area, you are going to add,
+38
+
+39
+00:03:04,440 --> 00:03:10,530
+" --std=c++14" for example or (C++ 17) or (C++ 11). 
+39
+
+40
+00:03:11,040 --> 00:03:16,770
+If you don't, you are using the default of your compiler.
+40
+
+41
+00:03:16,770 --> 00:03:23,040
+For the "CodeBlocks" guys, you should select the project, then from the top menu find the 'Settings', 'Compiler', 
+41
+
+42
+00:03:23,040 --> 00:03:24,300
+then select the  'Toolchain Executable'.
+42
+
+43
+00:03:24,480 --> 00:03:27,570
+And again, add one of these three choices.
+43
+
+44
+00:03:27,570 --> 00:03:32,880
+Here, when you click the compiler, you will find the global compiler setting, click it, go to this tab 
+44
+
+45
+00:03:32,880 --> 00:03:37,860
+the 'Toolchain Executable' and here in the C++ compiler section add " --std=c++14"
+45
+
+46
+00:03:37,860 --> 00:03:41,910
+or 17 or more.
+46
+
+47
+00:03:42,990 --> 00:03:49,830
+This way you have already configured your compiler. In case you are using another IDE, 
+47
+
+48
+00:03:49,830 --> 00:03:56,400
+just google how to add the C++ version to your code.
+48
+
+49
+00:03:57,190 --> 00:04:04,440
+One concern here, some of the IDEs like "CodeLite" provide different checkboxes, 
+49
+
+50
+00:04:04,440 --> 00:04:07,410
+like one checkbox for 11, another for 14, another for 17.
+50
+
+51
+00:04:07,620 --> 00:04:09,180
+Please select only one of them.
+51
+
+52
+00:04:09,180 --> 00:04:13,800
+For example, the latest. OK, here is an important verification step.
+52
+
+53
+00:04:14,040 --> 00:04:20,000
+I would like you to run this code, this code will tell you what your current configured compiler is.
+53
+
+54
+00:04:20,130 --> 00:04:25,920
+OK, so if you run,  it is going to print either "pre-standard C++",
+54
+
+55
+00:04:25,920 --> 00:04:29,730
+98, 11, 14, 17. If your compiler is printing 11
+55
+
+56
+00:04:29,730 --> 00:04:31,770
+It should be good for most of the cases.
+56
+
+57
+00:04:32,100 --> 00:04:33,990
+If it can print 14, this is great!
+57
+
+58
+00:04:33,990 --> 00:04:35,490
+If it can print 17, this is good!
+58
+
+59
+00:04:35,730 --> 00:04:38,970
+If it is printing 98 or pre-standard, this is bad.
+59
+
+60
+00:04:39,180 --> 00:04:41,970
+Try to figure out what's wrong about your compiler and change it.
+60
+
+61
+00:04:42,240 --> 00:04:44,980
+The code is attached to the lecture content.
+61
+
+62
+00:04:45,030 --> 00:04:46,140
+Please run it and double check it.
+62
+
+63
+00:04:46,830 --> 00:04:47,400
+That's it! :)

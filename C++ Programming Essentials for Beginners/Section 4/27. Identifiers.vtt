@@ -1,0 +1,256 @@
+WEBVTT
+
+00:02.590 --> 00:07.970
+Everyone in this lecture will talk about Randy Fires and a little bit about variables as well.
+
+00:08.140 --> 00:14.140
+OK, what is an identified identifier is derived from the word identity.
+
+00:14.710 --> 00:21.580
+Basically, whenever you want to identify some entity in your program, you define its name using identified
+
+00:21.640 --> 00:23.740
+so identified as just kind of a name.
+
+00:24.160 --> 00:26.640
+OK, so so what?
+
+00:26.650 --> 00:28.770
+And then divide on the variable.
+
+00:29.410 --> 00:35.920
+There are the names allotted by the users to particular entity in the program who is a user.
+
+00:36.250 --> 00:37.540
+It's actually the programmer.
+
+00:37.540 --> 00:43.180
+The programmer can give any name of his choice to a particular entity in the program.
+
+00:43.630 --> 00:45.430
+What could be an entertainer program?
+
+00:45.610 --> 00:48.040
+So an example of entity could be a function.
+
+00:48.920 --> 00:56.480
+OK, maybe I want to compute a function, and that function gives me the factorial of a number.
+
+00:56.500 --> 00:56.950
+Let's see.
+
+00:57.640 --> 01:01.360
+So maybe I can create a function whose name is factorial?
+
+01:04.740 --> 01:07.770
+And it could be some bucket where I'm going to store some data.
+
+01:08.990 --> 01:14.670
+So maybe you want to store some data and that data is stored in that particular bucket called ledger
+
+01:14.670 --> 01:15.090
+marks.
+
+01:15.480 --> 01:18.590
+So you look, I want to store some marks and that Marks is equal to 80.
+
+01:20.170 --> 01:27.880
+Mox is actually identified, but since it is also holding some memory, so we call this Mox as a variable.
+
+01:27.970 --> 01:28.300
+OK?
+
+01:29.140 --> 01:30.870
+We call this as a variable.
+
+01:31.480 --> 01:36.850
+You can have functions or functions are nothing, but it's a group of instructions that are trapped
+
+01:36.850 --> 01:38.740
+inside a block of code.
+
+01:38.740 --> 01:39.760
+And we need to give it.
+
+01:39.760 --> 01:40.630
+Give it some name.
+
+01:40.630 --> 01:40.840
+OK?
+
+01:40.870 --> 01:44.370
+For example, Victoria will adopt certain instruction inside it.
+
+01:44.960 --> 01:51.130
+The logic to compute the Victorian OK, so identified as only used to identify an entity uniquely in
+
+01:51.130 --> 01:53.290
+the program at the time of execution.
+
+01:53.740 --> 02:03.910
+Whereas a variable is a name given to a memory location that is used to hold the value because it's
+
+02:03.910 --> 02:07.570
+a memory location and we are giving it some name.
+
+02:08.110 --> 02:17.950
+We are saying that Marks is a variable and we are identifying this variable marks by the name of marks
+
+02:18.280 --> 02:23.350
+identified as just a name, wherever the concept of variable means the bucket as well, OK?
+
+02:23.950 --> 02:27.520
+Identified as just a name and variables do have a name.
+
+02:27.800 --> 02:28.090
+OK.
+
+02:28.540 --> 02:33.310
+And when we say variable, it also means the bucket where the data is being stored, OK?
+
+02:33.670 --> 02:35.920
+The name of the bucket is just to identify it.
+
+02:36.700 --> 02:42.490
+There is a very slight difference between the two items identified as just a name wherever it bucket.
+
+02:42.880 --> 02:45.280
+The variable is a bucket, which also has a name.
+
+02:45.310 --> 02:53.470
+OK, so identifiers can be used to give names to the buckets, to the bunch of lines of code, to the
+
+02:53.470 --> 02:54.700
+classes and so on.
+
+02:55.160 --> 03:01.060
+I hope you have understood this slight distinction between the concept of a variable and a bucket.
+
+03:01.420 --> 03:02.980
+I suppose you have two dogs.
+
+03:03.880 --> 03:09.010
+And these four, these two dogs, you want to store information in the memory, OK?
+
+03:09.430 --> 03:10.000
+What are you doing?
+
+03:10.270 --> 03:17.590
+You're going to create some kind of bucket which can hold a dog and maybe you can give this bucket a
+
+03:17.590 --> 03:17.820
+name.
+
+03:17.860 --> 03:20.630
+Maybe you can say this dog is screwed up.
+
+03:21.100 --> 03:21.370
+OK.
+
+03:21.940 --> 03:23.050
+And it's stored, OK?
+
+03:23.380 --> 03:24.960
+This dog has curly hair.
+
+03:24.970 --> 03:29.790
+It has a height of eight or something, something like this, and we'll be in for another dog.
+
+03:29.800 --> 03:32.560
+Maybe you want to create another bucket that is brutal.
+
+03:32.860 --> 03:33.130
+OK.
+
+03:33.910 --> 03:35.020
+The name of the bucket.
+
+03:35.930 --> 03:39.740
+Is identified, whereas the bucket itself.
+
+03:40.800 --> 03:44.910
+Is a variable look, it's kind of a variable or object.
+
+03:45.780 --> 03:49.110
+So that's what I wanted to convey.
+
+03:50.180 --> 03:52.370
+And let us have this example.
+
+03:52.790 --> 03:55.550
+We want to identify the identifiers, OK?
+
+03:56.270 --> 03:57.350
+Let us see who can do it.
+
+03:58.560 --> 04:00.270
+So I hope you have given it a try.
+
+04:00.300 --> 04:04.890
+So if you look carefully now, this is actually a function in C++.
+
+04:05.310 --> 04:10.410
+The function is a block of code that robs certain instructions inside it.
+
+04:10.950 --> 04:13.440
+So we are actually sending three things to this function.
+
+04:14.100 --> 04:15.180
+So we are sending.
+
+04:17.090 --> 04:24.110
+B, C and M, which might refer for the marks in physics, chemistry and maths, and we are saying,
+
+04:24.110 --> 04:29.180
+look, these names PCM, they identify a bucket.
+
+04:29.390 --> 04:29.720
+OK.
+
+04:30.410 --> 04:36.650
+They are the names of variables, so they are identifiers and this is the name of the function.
+
+04:36.800 --> 04:39.860
+This is also entered divide, so calculate marks.
+
+04:40.580 --> 04:43.580
+It is also a name that has been defined by the program at.
+
+04:45.030 --> 04:49.020
+And there is also a variable average that is also.
+
+04:50.710 --> 04:56.540
+Defining the name of the bucket, which we call it as a bridge, all of them are identified.
+
+04:56.600 --> 04:56.860
+OK.
+
+04:58.170 --> 04:58.620
+And.
+
+04:59.790 --> 05:07.680
+From all the Red Devils, except calculate marks, bcm and average, they're actually very much look.
+
+05:08.870 --> 05:14.330
+That name is identified, but what they are, they're actually variables because they're holding some
+
+05:14.330 --> 05:15.130
+data inside it.
+
+05:15.920 --> 05:17.390
+They are variables as well.
+
+05:17.420 --> 05:23.900
+OK, so that is what is the difference between an identifiable and variable?
+
+05:24.890 --> 05:33.290
+We'll dive deeper into the concept and will you'll get more comfortable as we do more coding questions,
+
+05:33.710 --> 05:37.370
+and this will bring a lot of clarity in the coming lectures as well.
+
+05:37.400 --> 05:39.230
+OK, so that's all for this video.
+
+05:39.230 --> 05:39.770
+Thank you.

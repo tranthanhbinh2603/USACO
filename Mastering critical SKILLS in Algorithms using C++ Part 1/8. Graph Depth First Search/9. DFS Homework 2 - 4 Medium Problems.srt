@@ -1,0 +1,959 @@
+1
+00:00:01,240 --> 00:00:08,500
+Homework number two for the defense, so this homework is focusing mainly on how to make a defense on
+
+2
+00:00:08,500 --> 00:00:09,100
+a metrics.
+
+3
+00:00:11,070 --> 00:00:11,880
+Don't get scared.
+
+4
+00:00:11,890 --> 00:00:13,150
+The problems are in the throat.
+
+5
+00:00:13,600 --> 00:00:16,720
+The first one is named the islands.
+
+6
+00:00:16,810 --> 00:00:19,060
+So what's the sub island?
+
+7
+00:00:19,570 --> 00:00:26,440
+You will be given specifically two metrics metrics number one, grade one and the grade to the values
+
+8
+00:00:26,440 --> 00:00:30,940
+here, or just zeros and ones zero represent the promoter and one represent like a land.
+
+9
+00:00:31,630 --> 00:00:37,270
+Now, the island is merely a group connected to funds in the four normal directions up, down the right
+
+10
+00:00:37,270 --> 00:00:37,720
+and left.
+
+11
+00:00:38,950 --> 00:00:43,150
+So this is so far like the normal reachability we did.
+
+12
+00:00:43,600 --> 00:00:44,890
+Now here is what we want to do.
+
+13
+00:00:45,700 --> 00:00:51,250
+We would like it in an island, for the island, for an island in grade two.
+
+14
+00:00:51,280 --> 00:00:55,990
+We would call it sub island if it is completely existent.
+
+15
+00:00:55,990 --> 00:00:56,530
+Island one.
+
+16
+00:00:57,700 --> 00:00:59,020
+So let's see an example here.
+
+17
+00:01:02,020 --> 00:01:04,010
+This is great number one.
+
+18
+00:01:04,030 --> 00:01:05,260
+And this is good number two.
+
+19
+00:01:05,980 --> 00:01:11,680
+Now this one here has this Big Island has this island, this island, this is grid number one.
+
+20
+00:01:12,700 --> 00:01:13,660
+For grid number two.
+
+21
+00:01:14,500 --> 00:01:16,360
+When you look at it here.
+
+22
+00:01:17,440 --> 00:01:19,270
+Consider this grid, for example, here.
+
+23
+00:01:20,890 --> 00:01:21,760
+This one here.
+
+24
+00:01:23,490 --> 00:01:27,540
+Is completely inside this one sexually identical.
+
+25
+00:01:27,750 --> 00:01:28,950
+So this is a sub island.
+
+26
+00:01:29,890 --> 00:01:31,660
+Now for this one.
+
+27
+00:01:33,520 --> 00:01:37,030
+We see that it isn't inside any island from here.
+
+28
+00:01:37,330 --> 00:01:39,070
+So this one is an island.
+
+29
+00:01:39,700 --> 00:01:41,820
+This is an island by itself and this is another one.
+
+30
+00:01:41,830 --> 00:01:43,370
+They are in the Orange one island.
+
+31
+00:01:43,390 --> 00:01:44,230
+There are two islands.
+
+32
+00:01:44,860 --> 00:01:47,470
+This island, a subset of this island.
+
+33
+00:01:48,130 --> 00:01:50,320
+This island is a subset of this island.
+
+34
+00:01:50,860 --> 00:01:57,340
+So overall, there are three islands here that are sub islands here.
+
+35
+00:01:58,350 --> 00:02:04,140
+As overall, this one has actually much more than that, like this is one island, this is second island,
+
+36
+00:02:04,170 --> 00:02:06,510
+this third island for Island five island.
+
+37
+00:02:06,870 --> 00:02:12,660
+So Great two has five islands, but only three of them are Sub Island here.
+
+38
+00:02:13,020 --> 00:02:13,890
+So what should we do?
+
+39
+00:02:13,890 --> 00:02:18,270
+Is return the number of the sub islands that we have?
+
+40
+00:02:19,080 --> 00:02:20,310
+So this is this all.
+
+41
+00:02:20,460 --> 00:02:22,590
+Please read the description again if you are confused.
+
+42
+00:02:26,010 --> 00:02:34,320
+This is another example here we can see that this Big Island isn't part of this one, so it isn't counted.
+
+43
+00:02:34,860 --> 00:02:36,780
+This island is part of this one.
+
+44
+00:02:37,230 --> 00:02:43,860
+This island is part of the same island here, so we have two islands that our islands from that one.
+
+45
+00:02:46,140 --> 00:02:48,830
+Problem number two, coloring a word.
+
+46
+00:02:49,470 --> 00:02:56,940
+You would be given a single matrix and a specific rule and the color and a specific color.
+
+47
+00:02:58,220 --> 00:03:05,960
+Each value in the grid represent a color, so think of the think of the color here, like if the given
+
+48
+00:03:06,170 --> 00:03:12,200
+grid is just an image like the footwell problem and the connectivity is exactly as we did in the flood,
+
+49
+00:03:12,500 --> 00:03:13,530
+the four directions.
+
+50
+00:03:14,360 --> 00:03:16,610
+Now we would like here.
+
+51
+00:03:16,910 --> 00:03:21,620
+We want to color the wool grid, as we did in the UM, as we did in the flood.
+
+52
+00:03:21,620 --> 00:03:24,080
+For lecture, we will only color the border.
+
+53
+00:03:24,500 --> 00:03:26,960
+So what is the burden of a connected component?
+
+54
+00:03:27,320 --> 00:03:29,270
+It's actually given for you here as a definition.
+
+55
+00:03:31,510 --> 00:03:35,650
+The sill is a border in two cases, only the first case.
+
+56
+00:03:38,690 --> 00:03:42,410
+It's adjacent to a cell that isn't part of the current two component.
+
+57
+00:03:42,440 --> 00:03:43,220
+This is no.
+
+58
+00:03:43,220 --> 00:03:51,260
+One kiss number two, that the cell is actually a boundary agreed boundary, so on the grid boundary.
+
+59
+00:03:51,710 --> 00:03:57,410
+So maybe you will take this specific initial location, find the connected component, find the border
+
+60
+00:03:57,410 --> 00:04:00,110
+of the connected component and reshape it to the color.
+
+61
+00:04:00,860 --> 00:04:02,060
+There were the border just here.
+
+62
+00:04:02,060 --> 00:04:05,840
+Try to understand it in a normal way, like don't confuse yourself.
+
+63
+00:04:06,590 --> 00:04:12,650
+So to see here the examples we have a Matrix two by two.
+
+64
+00:04:12,890 --> 00:04:14,450
+The first value is one and one.
+
+65
+00:04:14,630 --> 00:04:16,520
+The second values is one and two.
+
+66
+00:04:17,120 --> 00:04:18,860
+Now it's, say, starting from zero zero.
+
+67
+00:04:18,860 --> 00:04:20,030
+So this is zero zero.
+
+68
+00:04:20,980 --> 00:04:25,390
+And then it asks you to recolor the boundary, the border only with three.
+
+69
+00:04:25,630 --> 00:04:27,940
+So this is actually the whole connected component.
+
+70
+00:04:28,450 --> 00:04:36,100
+As you see this three things all of them already are achieving the two conditions they are on the boundary
+
+71
+00:04:36,100 --> 00:04:38,920
+and they are even do not have a neighbor here.
+
+72
+00:04:39,820 --> 00:04:44,320
+The story this one has a different neighbor and this one has a different neighbor.
+
+73
+00:04:44,800 --> 00:04:47,140
+So this to here satisfy the two conditions this one.
+
+74
+00:04:47,160 --> 00:04:48,160
+That's why condition.
+
+75
+00:04:48,400 --> 00:04:51,340
+But in a way, once in a while, one of them satisfied any condition.
+
+76
+00:04:51,490 --> 00:04:52,180
+It is border.
+
+77
+00:04:52,420 --> 00:04:55,330
+So this would be three and three and the three.
+
+78
+00:04:56,200 --> 00:05:01,000
+Let's see another example here we have two times the three matrix.
+
+79
+00:05:03,270 --> 00:05:07,410
+And we have one to two and we have two, three, two.
+
+80
+00:05:07,890 --> 00:05:12,510
+So it's a rosy colored one, so we are at it now.
+
+81
+00:05:12,690 --> 00:05:21,390
+Let's see where is my where is my, uh, my connected?
+
+82
+00:05:21,390 --> 00:05:22,650
+Compare this to here.
+
+83
+00:05:23,370 --> 00:05:25,650
+Now we would like to reconnect with the color three.
+
+84
+00:05:25,660 --> 00:05:29,760
+All of them would be exactly the same case here, so it would be three and the three and three.
+
+85
+00:05:29,770 --> 00:05:31,830
+So overall, one three three two three three.
+
+86
+00:05:32,100 --> 00:05:37,120
+This is a year Casimir in this case, the wool gray.
+
+87
+00:05:37,170 --> 00:05:42,270
+The wool matrix is just a bunch of ones, and let's make it here.
+
+88
+00:05:46,160 --> 00:05:49,010
+One one, one one one one one one one.
+
+89
+00:05:49,520 --> 00:05:52,400
+Now it asks you for one one, so are at this one here.
+
+90
+00:05:52,790 --> 00:05:58,190
+Now let's find the converter to convert is all of this is now coloured with two.
+
+91
+00:05:58,400 --> 00:05:59,630
+All of them would be two.
+
+92
+00:05:59,630 --> 00:06:01,400
+Except this one, it would remain one here.
+
+93
+00:06:01,760 --> 00:06:02,300
+Why?
+
+94
+00:06:02,750 --> 00:06:05,030
+Because this one isn't the border.
+
+95
+00:06:05,780 --> 00:06:06,530
+It doesn't.
+
+96
+00:06:06,680 --> 00:06:08,540
+It isn't on the grid cell boundaries.
+
+97
+00:06:08,840 --> 00:06:09,940
+And it isn't.
+
+98
+00:06:09,950 --> 00:06:17,210
+It doesn't match any any that it doesn't touch any element that is out of the compound.
+
+99
+00:06:17,570 --> 00:06:18,500
+Here we understand it.
+
+100
+00:06:19,400 --> 00:06:22,280
+If you look at it, you look at the examples that are given out very bad.
+
+101
+00:06:22,520 --> 00:06:24,500
+So I think for you one more example here.
+
+102
+00:06:25,100 --> 00:06:30,620
+So we are given this grid here and we would like to find the border of this one here.
+
+103
+00:06:32,000 --> 00:06:35,400
+Now, in terms of the connected component, we have all of that with us.
+
+104
+00:06:35,420 --> 00:06:36,680
+All of that was us.
+
+105
+00:06:36,720 --> 00:06:37,760
+All of that was us.
+
+106
+00:06:37,800 --> 00:06:38,860
+All of that was us.
+
+107
+00:06:38,870 --> 00:06:39,730
+All of that.
+
+108
+00:06:39,740 --> 00:06:40,820
+And that's here.
+
+109
+00:06:41,570 --> 00:06:42,770
+And also this to one here.
+
+110
+00:06:43,460 --> 00:06:45,680
+Now this is a connected components.
+
+111
+00:06:46,190 --> 00:06:51,470
+So which one of this connected component should be marketed should be the boundary?
+
+112
+00:06:52,190 --> 00:06:53,360
+So this one here?
+
+113
+00:06:54,430 --> 00:07:00,130
+All of these tools are neighbors for something that isn't in their connected computer, so they are
+
+114
+00:07:00,130 --> 00:07:00,910
+all boundaries.
+
+115
+00:07:02,700 --> 00:07:07,920
+This two also are matching none elements in the connected components.
+
+116
+00:07:08,850 --> 00:07:13,680
+All of these tools are at the grid boundary, so all of them are outside the connect component.
+
+117
+00:07:14,860 --> 00:07:19,570
+Now, this, too, is neighbor for this forward, so it's neighbor for a dude that is outside of the
+
+118
+00:07:19,570 --> 00:07:20,380
+community with us.
+
+119
+00:07:20,740 --> 00:07:21,940
+These two are at the boundary.
+
+120
+00:07:22,690 --> 00:07:23,810
+This one here.
+
+121
+00:07:24,860 --> 00:07:27,170
+Is enabled for this for it's also a boundary.
+
+122
+00:07:27,620 --> 00:07:36,830
+Now this, too, is the only one that isn't boundary because it's surrounding with normal values.
+
+123
+00:07:37,160 --> 00:07:46,790
+So, so as you see, if a cell is surrounded with four elements coming from its same component, it
+
+124
+00:07:46,790 --> 00:07:46,910
+is.
+
+125
+00:07:46,950 --> 00:07:48,980
+It isn't about the otherwise boundary.
+
+126
+00:07:49,310 --> 00:07:50,420
+The goods are there the boundary.
+
+127
+00:07:50,450 --> 00:07:53,480
+I hope you feel it like, you know, if this is a big sea.
+
+128
+00:07:54,750 --> 00:07:55,890
+And this is an island.
+
+129
+00:07:56,310 --> 00:07:58,800
+So we say that this is the outside one here.
+
+130
+00:08:00,100 --> 00:08:03,820
+Israel is the boundary of the island, so this is a natural human concept.
+
+131
+00:08:04,330 --> 00:08:05,860
+This is the boundary of the island.
+
+132
+00:08:06,670 --> 00:08:09,610
+As you see, if this is the island, this is water.
+
+133
+00:08:12,120 --> 00:08:18,390
+So the boundary must be touching elements from outside the components.
+
+134
+00:08:19,540 --> 00:08:27,340
+And also here we have amended definitions, also touching there, touching the grid, the grid boundary
+
+135
+00:08:27,340 --> 00:08:29,200
+hidden, it's also a boundary.
+
+136
+00:08:29,440 --> 00:08:32,830
+So anyway, here are the two rules given by the problem statement.
+
+137
+00:08:32,830 --> 00:08:33,870
+Just apply them nothing.
+
+138
+00:08:34,210 --> 00:08:35,770
+Don't get yourself confused.
+
+139
+00:08:36,970 --> 00:08:40,990
+And theory the problem would like to count the number of closed islands.
+
+140
+00:08:41,560 --> 00:08:48,310
+So what defines Cruz Island is it's just following, first of all, the connectivity as we did before.
+
+141
+00:08:48,820 --> 00:08:51,910
+All of them are connected this way in this problem.
+
+142
+00:08:52,030 --> 00:08:52,680
+They flipped.
+
+143
+00:08:52,690 --> 00:08:55,280
+So zeros are the ends and ones out of the water.
+
+144
+00:08:55,300 --> 00:08:58,450
+So this problem, you ignore the ones and you depend on the zeros.
+
+145
+00:08:59,140 --> 00:09:03,360
+So now let's say we found seven connected components the close.
+
+146
+00:09:03,370 --> 00:09:12,040
+The island is an island that is surrounded totally by other nodes, by other values, which is once
+
+147
+00:09:12,040 --> 00:09:14,440
+here surrounded totally by the ones.
+
+148
+00:09:14,710 --> 00:09:20,770
+If the island is surrounded completely by ones, then it must be a closed island.
+
+149
+00:09:21,130 --> 00:09:21,940
+So let's see here.
+
+150
+00:09:23,950 --> 00:09:25,090
+So here is an example.
+
+151
+00:09:26,550 --> 00:09:28,080
+This is one island here.
+
+152
+00:09:28,650 --> 00:09:29,310
+This is one.
+
+153
+00:09:29,490 --> 00:09:30,450
+Yes, island here.
+
+154
+00:09:30,990 --> 00:09:33,780
+Now literally the condition is it completely surrounded?
+
+155
+00:09:33,900 --> 00:09:36,330
+Was once the answer is yes.
+
+156
+00:09:36,630 --> 00:09:44,670
+So as you see here and here and here, all of this from the external world is is once and internally
+
+157
+00:09:44,670 --> 00:09:45,720
+also ones.
+
+158
+00:09:45,930 --> 00:09:49,980
+So just round it from everywhere, internally and externally with once.
+
+159
+00:09:51,260 --> 00:09:57,170
+Another scenario is zero, which is surrounded by ones from all of the directions.
+
+160
+00:09:59,430 --> 00:09:59,940
+Now.
+
+161
+00:10:01,350 --> 00:10:09,180
+For this zero, it will not be considered y because it isn't surrounded from here and from here by ones,
+
+162
+00:10:09,600 --> 00:10:14,130
+the zeros are surrounded from here by by ones.
+
+163
+00:10:14,580 --> 00:10:21,210
+OK, so this is merely what defines what is surrounded, what it has to be covered from way.
+
+164
+00:10:21,240 --> 00:10:24,930
+It cannot be a boundary of the of the of the close.
+
+165
+00:10:24,930 --> 00:10:28,370
+The eye of the island is touching the grid boundaries.
+
+166
+00:10:28,380 --> 00:10:29,760
+It cannot be island and so on.
+
+167
+00:10:30,620 --> 00:10:32,010
+Uh, yeah.
+
+168
+00:10:33,630 --> 00:10:34,890
+This is one more example.
+
+169
+00:10:34,920 --> 00:10:38,340
+This is exactly this one has further direction here, so it's OK.
+
+170
+00:10:38,430 --> 00:10:41,250
+This ones are touching the grid, so they are in the boundary anyway.
+
+171
+00:10:51,190 --> 00:10:51,650
+OK.
+
+172
+00:10:51,730 --> 00:10:55,450
+The less the problem, we would like to detect the cycads.
+
+173
+00:10:55,690 --> 00:11:05,230
+So we are in a matrix symptoms and and uh, we would like to know if there is a cycle or not here.
+
+174
+00:11:05,380 --> 00:11:08,050
+So what makes a connected?
+
+175
+00:11:08,290 --> 00:11:09,280
+What makes a cycle?
+
+176
+00:11:09,790 --> 00:11:13,090
+The cycle must be of length of four or more.
+
+177
+00:11:13,490 --> 00:11:23,590
+The first of all, and you must the start and end at the same cells and you can move in the normal for
+
+178
+00:11:23,590 --> 00:11:25,090
+direction up, though in a lift.
+
+179
+00:11:25,270 --> 00:11:26,890
+But they must match of the same value.
+
+180
+00:11:27,010 --> 00:11:32,770
+So this is very close to what built the connected components in Philadelphia lecture.
+
+181
+00:11:33,130 --> 00:11:35,140
+So same values in four directions.
+
+182
+00:11:35,350 --> 00:11:36,850
+But this time we would like a cycle.
+
+183
+00:11:37,060 --> 00:11:40,840
+You cannot move back to the cell that you use it and consider it the cycle.
+
+184
+00:11:40,840 --> 00:11:47,110
+Like, for example, someone at one one go to one two, then one one is, uh, is invalid.
+
+185
+00:11:47,680 --> 00:11:49,360
+Uh, yeah.
+
+186
+00:11:51,460 --> 00:11:55,570
+Let me read that to make sure you cannot move to the side that you visited in your last move.
+
+187
+00:11:55,900 --> 00:12:02,950
+For example, one one one two one one is invalid because for one two, we visited one one, which would
+
+188
+00:12:02,950 --> 00:12:03,970
+allow us to visit the cells.
+
+189
+00:12:04,090 --> 00:12:05,620
+I honestly confused.
+
+190
+00:12:06,350 --> 00:12:08,950
+Uh, let me tell you what I remember here.
+
+191
+00:12:09,460 --> 00:12:13,780
+Uh, let's say you are your eight year.
+
+192
+00:12:18,970 --> 00:12:19,330
+OK.
+
+193
+00:12:21,470 --> 00:12:22,940
+Let's say you are.
+
+194
+00:12:23,600 --> 00:12:24,470
+Looks like very ugly.
+
+195
+00:12:31,580 --> 00:12:32,750
+Let's say you are right here.
+
+196
+00:12:32,960 --> 00:12:37,820
+So here is the best one, so you can go this way, this way, this way and this way.
+
+197
+00:12:38,090 --> 00:12:40,550
+So this way you made one second.
+
+198
+00:12:40,550 --> 00:12:43,700
+As you see the lenses for this is the minimal possible second.
+
+199
+00:12:44,090 --> 00:12:48,450
+OK, so no one can do something like starting from here, go to here, then go back to here.
+
+200
+00:12:48,470 --> 00:12:49,250
+This isn't a cycle.
+
+201
+00:12:49,250 --> 00:12:56,250
+As you see, the lens will be just the three and also you just return it back to your previous cell.
+
+202
+00:12:56,270 --> 00:12:58,730
+It shouldn't be this way.
+
+203
+00:13:01,430 --> 00:13:05,850
+OK, let's see the examples here, which will make things more clear here, this one.
+
+204
+00:13:06,140 --> 00:13:07,650
+If we started from here we go.
+
+205
+00:13:07,680 --> 00:13:10,460
+Go, go, go, go, go, go, go, go, go, go, go, go.
+
+206
+00:13:10,490 --> 00:13:11,390
+We made a cycle.
+
+207
+00:13:11,450 --> 00:13:13,070
+So this is one way to make a cycle.
+
+208
+00:13:13,490 --> 00:13:17,630
+Another one, which is the minimal possible cycle you go from here, here, here and here.
+
+209
+00:13:17,810 --> 00:13:18,440
+Yeah, that's it.
+
+210
+00:13:18,450 --> 00:13:20,960
+So this is now there are two possible, so I can see it.
+
+211
+00:13:21,780 --> 00:13:24,530
+Uh, another case will be here.
+
+212
+00:13:25,010 --> 00:13:31,190
+Uh, I have the impression that I just, uh, I missed an exam, but sorry for that.
+
+213
+00:13:32,090 --> 00:13:34,150
+This one should be example to hit his example.
+
+214
+00:13:34,490 --> 00:13:35,180
+Number three.
+
+215
+00:13:35,540 --> 00:13:37,550
+If you started at this big here, go here.
+
+216
+00:13:37,550 --> 00:13:40,010
+You cannot go back to this B and this one also.
+
+217
+00:13:40,220 --> 00:13:43,490
+So overall, there is no there is no psych in here.
+
+218
+00:13:43,770 --> 00:13:46,610
+So, yeah, just keep in mind the two things that I told you.
+
+219
+00:13:47,330 --> 00:13:49,520
+It is as normal as the reachability problem.
+
+220
+00:13:49,520 --> 00:13:51,110
+You go to your four boundaries.
+
+221
+00:13:51,110 --> 00:13:52,640
+This what create a connected component?
+
+222
+00:13:53,090 --> 00:13:55,200
+We would like to make sure we are in a cycle.
+
+223
+00:13:55,220 --> 00:13:57,230
+The lanes must be at least four.
+
+224
+00:13:57,470 --> 00:14:00,590
+You cannot go back to your your previous cell.
+
+225
+00:14:00,830 --> 00:14:03,620
+You cannot go back to your lost, Twisted said.
+
+226
+00:14:03,620 --> 00:14:06,790
+You have to go to a new set.
+
+227
+00:14:07,490 --> 00:14:07,940
+So.
+
+228
+00:14:08,090 --> 00:14:10,460
+So the matrix four times four would be the.
+
+229
+00:14:12,870 --> 00:14:14,420
+The best one that you can.
+
+230
+00:14:14,880 --> 00:14:16,470
+The smallest, ever cycle.
+
+231
+00:14:17,600 --> 00:14:20,580
+Uh, yeah, this is mainly how can you?
+
+232
+00:14:21,300 --> 00:14:23,040
+This is really the locus of the problem.
+
+233
+00:14:26,700 --> 00:14:29,380
+This is a statement that, I mean, I believe you say just.
+
+234
+00:14:30,910 --> 00:14:32,320
+Uh.
+
+235
+00:14:33,880 --> 00:14:35,020
+Oh, yeah, I got it now.
+
+236
+00:14:35,960 --> 00:14:36,590
+Sorry for that.
+
+237
+00:14:40,260 --> 00:14:46,500
+So let's say one based indexing you are at one one, which you say here, and this is one one two,
+
+238
+00:14:46,500 --> 00:14:47,760
+which is here.
+
+239
+00:14:48,090 --> 00:14:52,390
+Then you go here, you cannot go back here, which is which is what I was saying.
+
+240
+00:14:52,410 --> 00:14:52,820
+That's all.

@@ -1,0 +1,472 @@
+WEBVTT
+
+00:01.420 --> 00:03.820
+I assume now we will try out another problem.
+
+00:04.060 --> 00:08.350
+The problem is given a number we want to check if it is a prime number or not.
+
+00:09.010 --> 00:11.890
+Let us quickly recap what is the prime number to?
+
+00:11.890 --> 00:17.140
+A prime number is a number that has only two dividers, one and the number itself, OK?
+
+00:17.530 --> 00:23.950
+If you're given and and it has only two dividers, one and the number itself, then it is a prime number.
+
+00:25.000 --> 00:26.620
+Few examples of prime numbers.
+
+00:26.890 --> 00:33.430
+For example, seven to only one in seven divide seven the number 11, only one and 11 divide the number
+
+00:33.430 --> 00:33.820
+11.
+
+00:34.480 --> 00:37.990
+Or talk about the number like 13, only one and 13.
+
+00:38.200 --> 00:39.250
+Divide this number.
+
+00:39.580 --> 00:41.680
+So only one end to divide.
+
+00:42.380 --> 00:43.180
+So all of them.
+
+00:44.330 --> 00:46.040
+Numbers are prime numbers.
+
+00:46.700 --> 00:54.860
+So what is a non prime number, so a non prime number will have at least one device it in the range
+
+00:55.190 --> 00:56.330
+to do and minus one?
+
+00:56.510 --> 00:56.840
+OK.
+
+00:57.500 --> 01:01.370
+At least one device that in the range.
+
+01:02.830 --> 01:03.850
+To do and minus one.
+
+01:04.040 --> 01:11.560
+So why do two and minus one, because you have seen that one and then divide all the numbers, they
+
+01:11.560 --> 01:12.580
+divide prime numbers.
+
+01:12.610 --> 01:14.440
+They also divide non-prime numbers.
+
+01:14.450 --> 01:22.720
+But if you have, at least one divides it in this range, starting from two up to n minus one.
+
+01:22.760 --> 01:23.080
+OK.
+
+01:23.560 --> 01:30.910
+If you find at least one it here, then you can see that this number is a non prime number.
+
+01:31.190 --> 01:33.440
+OK, this number is a non brand.
+
+01:33.700 --> 01:41.290
+For example, the number nine, so it has a divisor in the range to do it and the divide that history,
+
+01:41.890 --> 01:43.030
+the three divides nine.
+
+01:43.230 --> 01:45.010
+So you get to nine Model three.
+
+01:45.670 --> 01:46.450
+This is zero.
+
+01:46.840 --> 01:47.290
+And.
+
+01:48.580 --> 01:50.080
+Nine is a non prime number.
+
+01:50.110 --> 01:52.240
+Talk about the number 14.
+
+01:53.380 --> 01:54.500
+So two divides.
+
+01:54.530 --> 01:55.060
+14.
+
+01:56.150 --> 01:58.930
+And this is not brain, OK?
+
+01:58.960 --> 02:05.710
+Seven also divides 14, but we need to find only at least one device that will get one device that is
+
+02:05.710 --> 02:09.700
+sufficient to prove the number is not brain.
+
+02:10.270 --> 02:13.390
+Now, given a number, we need to check if it is prime or not.
+
+02:13.990 --> 02:16.210
+Can we come up with a very simple logic?
+
+02:17.510 --> 02:19.070
+Approval a no is prime or not.
+
+02:19.550 --> 02:30.050
+Yes, logic would be that we can try to find out divisor in the range to do and minus one phone, find
+
+02:30.050 --> 02:33.530
+out or devise it in the range.
+
+02:35.600 --> 02:40.820
+It will do and minus one, if the device that is found, if you are able to get a device it.
+
+02:42.360 --> 02:45.000
+Then, yes, the number is not prime.
+
+02:45.630 --> 02:45.960
+OK.
+
+02:46.980 --> 02:49.020
+And if the device that is not found.
+
+02:50.460 --> 02:52.680
+Then you can set the numbers right.
+
+02:54.330 --> 02:54.590
+OK.
+
+02:54.960 --> 03:00.990
+This is how simple it is to prove a number is primal, not knowing what you can do is you can take a
+
+03:00.990 --> 03:06.420
+pause and try to think of a flowchart approval numbers game or not.
+
+03:07.350 --> 03:08.490
+OK, so let us try.
+
+03:09.080 --> 03:13.200
+The first step, as we discussed, would be a start.
+
+03:15.610 --> 03:23.890
+Then we will try to read the value of the number that we want to prove as prime or not will read the
+
+03:23.890 --> 03:24.640
+value of an.
+
+03:26.700 --> 03:27.870
+The next step would be what?
+
+03:29.020 --> 03:29.590
+We need to.
+
+03:30.840 --> 03:33.990
+Find advisor in the range to do and minus one, OK?
+
+03:34.500 --> 03:38.800
+That means we will need a loop in this range.
+
+03:39.240 --> 03:40.290
+It will do and minus one.
+
+03:40.940 --> 03:41.580
+Let us take.
+
+03:41.610 --> 03:47.660
+I'm currently at the no I initialize my eyes to.
+
+03:48.810 --> 03:49.070
+I will.
+
+03:49.120 --> 03:50.430
+OK, I used to.
+
+03:51.870 --> 03:58.080
+And now what I will do, I trade buildings I as less than equal to minus one.
+
+03:58.860 --> 04:00.720
+This is my stopping point of life.
+
+04:01.460 --> 04:06.060
+I will take if I is less than equal to and minus one.
+
+04:06.180 --> 04:11.850
+So this will go inside diamond at because it's a condition.
+
+04:13.010 --> 04:16.500
+If it is less than equal, then minus one, OK?
+
+04:17.030 --> 04:23.390
+If the case is yes or if the case is no, OK, we'll see what will happen in each of these cases if
+
+04:23.390 --> 04:25.190
+it's less than equal one minus one.
+
+04:25.640 --> 04:31.340
+Then what we will do will try to divide and with I and find out the remainder.
+
+04:31.700 --> 04:38.600
+We will check will give and is divisible by alternate will again put in either condition and that if
+
+04:38.900 --> 04:43.970
+conditions, if I is if modulus I.
+
+04:45.840 --> 04:47.130
+If this is equal to zero.
+
+04:47.790 --> 04:53.370
+Now again, two things can happen, Don, that again, we know or the answer can be yes.
+
+04:55.560 --> 05:03.600
+OK, now, if the answer is yes, what we can do, we can simply say that this number is a prime number.
+
+05:03.720 --> 05:04.050
+OK?
+
+05:04.830 --> 05:10.470
+This number is is not the prime number because, for example, talk about the number nine and you reach
+
+05:10.830 --> 05:11.550
+three to nine.
+
+05:11.550 --> 05:12.780
+Model three is zero.
+
+05:13.140 --> 05:20.670
+And hence, you can see that this number is not prime, so you can print that this is a not prime number.
+
+05:22.270 --> 05:22.960
+And Jordan.
+
+05:24.280 --> 05:25.390
+You're done at this point.
+
+05:28.130 --> 05:29.240
+OK, so what are you going to do?
+
+05:29.270 --> 05:31.160
+You're going straight, go to exit.
+
+05:32.490 --> 05:35.520
+You can safely exit the program from this particular point.
+
+05:36.690 --> 05:41.190
+But what if, if it is not OK, if it is no, then what you're going to do?
+
+05:42.360 --> 05:46.260
+So you are going to say, don't let it.
+
+05:46.440 --> 05:49.140
+It might be possible that the end is not divisible by two.
+
+05:49.530 --> 05:51.080
+It might be divisible by three.
+
+05:51.090 --> 05:53.220
+So you are going to take it to the next place.
+
+05:53.820 --> 05:54.390
+We are doing this.
+
+05:54.390 --> 05:54.680
+OK?
+
+05:55.290 --> 05:57.600
+Let us increment is a plus one.
+
+05:58.680 --> 06:03.000
+And now what we are doing, we are again going to connect back here.
+
+06:03.330 --> 06:03.660
+OK.
+
+06:04.770 --> 06:08.100
+Again, we are going to connect back here again.
+
+06:08.400 --> 06:09.650
+We will go to the next day.
+
+06:09.870 --> 06:12.620
+We will check if that is less than equal to and minus one.
+
+06:12.630 --> 06:15.820
+If it is yes, if it is divisible print, not prime.
+
+06:16.070 --> 06:20.750
+Otherwise, we increment day and we again do the same thing again.
+
+06:20.760 --> 06:21.030
+OK?
+
+06:21.960 --> 06:25.710
+Now finally, if you come out of this direction, OK?
+
+06:26.430 --> 06:29.580
+So in what case you will come out of this?
+
+06:30.240 --> 06:31.230
+No direction, OK?
+
+06:31.350 --> 06:32.100
+So can you think?
+
+06:33.250 --> 06:40.480
+In what NATO, you will come out of it, the only scenario in which you will come out of from this blog
+
+06:40.480 --> 06:47.110
+is via this error is when you do not exit the loop through inside this direction, OK?
+
+06:47.560 --> 06:56.410
+That means we could not find a device that in the range to do and minus one that could divide and and
+
+06:56.410 --> 07:04.530
+hence from here you can say OK, if it is, if I has reached this value, you can simply say print name.
+
+07:06.690 --> 07:10.130
+And then you can simply do exit, OK?
+
+07:10.470 --> 07:12.540
+Or you can connect to the same exit here.
+
+07:13.050 --> 07:13.800
+Not an issue.
+
+07:14.550 --> 07:19.740
+Now let us try to brighten this flow chart for value of any call to seven.
+
+07:19.740 --> 07:27.060
+OK, let's see what happens for an equal to seven eyes, to the words less than equal to six or two
+
+07:27.060 --> 07:28.290
+is less than equal to six.
+
+07:28.950 --> 07:31.320
+Is seven divisible by two than it is?
+
+07:31.320 --> 07:31.620
+No.
+
+07:32.700 --> 07:33.800
+So you increment right?
+
+07:33.870 --> 07:35.250
+So the eye becomes three.
+
+07:35.790 --> 07:37.700
+OK, the eye becomes three.
+
+07:37.710 --> 07:39.060
+Three is less than equal to six.
+
+07:39.480 --> 07:41.640
+Is seven divisible by three boundaries?
+
+07:41.640 --> 07:41.910
+No.
+
+07:42.600 --> 07:44.990
+So you again come here are equal to eight plus one.
+
+07:45.000 --> 07:48.210
+You again go back here, OK, via this route.
+
+07:49.590 --> 07:52.020
+So I is known for the Xenical.
+
+07:52.080 --> 07:54.510
+Six seven is not divisible by four.
+
+07:55.110 --> 07:56.250
+It becomes five.
+
+07:56.400 --> 07:57.780
+Five is less than equal to six.
+
+07:57.870 --> 07:59.580
+Seven is not divisible by five.
+
+08:00.060 --> 08:00.810
+Again, no.
+
+08:00.960 --> 08:03.810
+You come here and it becomes six.
+
+08:05.070 --> 08:08.310
+Texas, less than equal to six seven, is not divisible by six.
+
+08:08.580 --> 08:09.510
+And that is no.
+
+08:10.140 --> 08:12.420
+And the value of, I know becomes seven.
+
+08:12.990 --> 08:18.840
+So when you when you now come here, OK, so I is seven, which is not less than equal than minus one.
+
+08:19.560 --> 08:25.920
+Hence, you come out of this brand and you print that it is a premium, but hence you say, OK, the
+
+08:25.920 --> 08:28.230
+number seven is a prime number.
+
+08:28.320 --> 08:28.620
+OK.
+
+08:30.630 --> 08:35.260
+And then we exit, so it would have been some of the no like nine.
+
+08:35.280 --> 08:37.020
+So you would have been OK.
+
+08:37.950 --> 08:42.030
+There was less than equal to eight, but nine is not divisible by two.
+
+08:43.210 --> 08:49.060
+Make it three trees less than equal to eight and nine more, three is zero.
+
+08:49.990 --> 08:50.770
+You come here.
+
+08:51.220 --> 08:54.780
+Then you hit a yes, your brain does not break and then you exert.
+
+08:55.270 --> 09:00.390
+Then guess of nine, you will print that this number is not plain, OK?
+
+09:01.000 --> 09:07.730
+So I hope this flowchart is now clear to you and your understood how we have implemented a loop.
+
+09:07.760 --> 09:10.990
+OK, so what barred from the loop this box?
+
+09:12.420 --> 09:17.250
+Is the starting point of the new book, if this is just a condition inside the loop?
+
+09:17.700 --> 09:19.590
+This is just a condition inside a loop.
+
+09:20.640 --> 09:20.940
+OK?
+
+09:21.750 --> 09:26.160
+This part is the starting point of the loop, which has this stopping criteria.
+
+09:26.730 --> 09:30.570
+Here we have the update condition, and this part is the work then.
+
+09:30.660 --> 09:30.960
+OK.
+
+09:32.710 --> 09:36.460
+So that's all for this video, I hope you understood the concept.
+
+09:36.760 --> 09:37.300
+Thank you.

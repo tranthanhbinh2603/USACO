@@ -1,0 +1,419 @@
+0
+1
+00:00:00,670 --> 00:00:06,420
+In this video, we will learn about an interesting feature in C++ named namespaces.
+1
+
+2
+00:00:06,420 --> 00:00:11,700
+Let's first motivated, let's say that we have a website and our team is developing it,
+2
+
+3
+00:00:12,090 --> 00:00:16,790
+and we typically have something in the global scope, like let's say we define something like integer total_users.
+3
+
+4
+00:00:16,800 --> 00:00:17,250
+...
+4
+
+5
+00:00:17,610 --> 00:00:21,380
+We have a struct named user, a function named integer read choice, and so on.
+5
+
+6
+00:00:21,660 --> 00:00:22,530
+So far, so good.
+6
+
+7
+00:00:22,960 --> 00:00:27,830
+After some time, we wanted to download an open-source library. For simplicity,
+7
+
+8
+00:00:27,840 --> 00:00:34,170
+think of an open-source as some code ready by others for us to use with some good conditions for us.
+8
+
+9
+00:00:34,170 --> 00:00:36,150
+It's important to know about that.
+9
+
+10
+00:00:36,900 --> 00:00:43,110
+And we started to add this new project to our project and then our code overall didn't compile,
+10
+
+11
+00:00:43,110 --> 00:00:46,130
+Why? the compiler say multiple redefinition,
+11
+
+12
+00:00:46,470 --> 00:00:51,560
+and when we investigated, we noticed that they also have a variable, for example, named total_users.
+12
+
+13
+00:00:51,960 --> 00:00:56,460
+So now the problem is it's like - now, you are defining the same variable twice,
+13
+
+14
+00:00:56,790 --> 00:01:00,750
+and notice that developers everywhere would use similar names in their projects.
+14
+
+15
+00:01:01,350 --> 00:01:03,210
+This is what we call name collision.
+15
+
+16
+00:01:03,570 --> 00:01:06,480
+These guys have a name and we have a name and it is the same name.
+16
+
+17
+00:01:06,480 --> 00:01:12,900
+The compiler now will not compile your code. C++ solved that using a very simple idea named namespaces.
+17
+
+18
+00:01:13,290 --> 00:01:18,320
+namespaces as simple as allows us to group things together under a single name.
+18
+
+19
+00:01:18,870 --> 00:01:24,510
+This way, instead of having your variables in just the very global scope, you have it inside
+19
+
+20
+00:01:24,510 --> 00:01:26,490
+some well-defined scope by you.
+20
+
+21
+00:01:27,270 --> 00:01:28,470
+Let's see an example of that.
+21
+
+22
+00:01:29,580 --> 00:01:30,120
+This is here
+22
+
+23
+00:01:30,120 --> 00:01:32,900
+the integer total_users equals zero variable.
+23
+
+24
+00:01:33,240 --> 00:01:38,310
+If you tried to define it twice, to declare or define twice, you will get a compilation error of multiple
+24
+
+25
+00:01:38,330 --> 00:01:39,110
+redefinition.
+25
+
+26
+00:01:39,720 --> 00:01:41,070
+Now, here is the name space.
+26
+
+27
+00:01:41,070 --> 00:01:43,760
+You define as simple as. You say namespace,
+27
+
+28
+00:01:44,130 --> 00:01:50,400
+give some very unique name, open a brace, you end the brace, and you put here all of your code.
+28
+
+29
+00:01:50,400 --> 00:01:50,940
+Notice here,
+29
+
+30
+00:01:50,970 --> 00:01:54,750
+these total users is now inside the namespace.
+30
+
+31
+00:01:54,750 --> 00:01:56,310
+So it do the same name here,
+31
+
+32
+00:01:56,520 --> 00:01:58,590
+but it's like you can think of this one that
+32
+
+33
+00:01:58,770 --> 00:02:03,420
+Its actual name is like our system dot total_users something that.
+33
+
+34
+00:02:03,840 --> 00:02:07,410
+So although they are the same name, they are actually different names,
+34
+
+35
+00:02:07,950 --> 00:02:12,810
+and then also we define here another namespace, give it like, say, downloaded system,
+35
+
+36
+00:02:13,050 --> 00:02:17,030
+and it also has to total_users. This code is going to compile.
+36
+
+37
+00:02:18,030 --> 00:02:19,410
+here is one more interesting thing.
+37
+
+38
+00:02:19,740 --> 00:02:23,250
+After a few lines of code, we see again namespace our_ system,
+38
+
+39
+00:02:23,490 --> 00:02:26,710
+and then we started to add const integer size 10.
+39
+
+40
+00:02:27,090 --> 00:02:34,490
+So now the grouping scope of our system has this variable and this variable.
+40
+
+41
+00:02:34,800 --> 00:02:37,200
+Can I come here and say integer total size equal 10?
+41
+
+42
+00:02:37,230 --> 00:02:41,880
+No, because under our system there are total users and there is size.
+42
+
+43
+00:02:42,410 --> 00:02:47,820
+Now, I would like to print our things. Instead of just printing total users, we say our system,
+43
+
+44
+00:02:47,820 --> 00:02:51,900
+colon-colon, this is named scope resolution operator,
+44
+
+45
+00:02:52,200 --> 00:02:57,870
+Our system, colon-colon, total users, will print the ten. Downloaded system, total users will print
+45
+
+46
+00:02:57,870 --> 00:03:02,130
+20. Our system, colon-colon, size will print 10 and so on.
+46
+
+47
+00:03:03,540 --> 00:03:07,260
+The word namespace isn't a variable in the memory.
+47
+
+48
+00:03:07,680 --> 00:03:09,690
+This is just grouping things together.
+48
+
+49
+00:03:10,890 --> 00:03:16,710
+You are expected to define all of your systems within such a namespace, but you don't need to have
+49
+
+50
+00:03:16,710 --> 00:03:17,730
+it here in a single file.
+50
+
+51
+00:03:17,730 --> 00:03:21,690
+As as you see, we can open it again and again in different files.
+51
+
+52
+00:03:23,280 --> 00:03:27,710
+Let's go more complex and learn a few extra stuff about that.
+52
+
+53
+00:03:28,050 --> 00:03:34,320
+The first one is using keyword directive declaration. You have here some namespace, we named it
+53
+
+54
+00:03:34,320 --> 00:03:36,340
+customer, another namespace named admin.
+54
+
+55
+00:03:37,110 --> 00:03:42,810
+Now, if you would like to use this first, as we learned from a few in the last slide, you can use
+55
+
+56
+00:03:42,810 --> 00:03:44,520
+here customer, colon-colon first.
+56
+
+57
+00:03:45,210 --> 00:03:51,840
+If you did this declaration here and say using customer, colon-colon first, this variable first is going
+57
+
+58
+00:03:51,840 --> 00:03:57,340
+to be visible through the program, and you can directly refer to it without using the customer now.
+58
+
+59
+00:03:58,050 --> 00:03:59,580
+OK, what about second?
+59
+
+60
+00:03:59,580 --> 00:04:00,800
+Second is invisible.
+60
+
+61
+00:04:01,290 --> 00:04:05,640
+Second is invisible because we didn't declare it here.
+61
+
+62
+00:04:05,970 --> 00:04:07,020
+So we just declare first,
+62
+
+63
+00:04:07,020 --> 00:04:08,640
+we can use it. If you would like use second,
+63
+
+64
+00:04:08,640 --> 00:04:12,090
+you have to say here customer, colon, colon, second.
+64
+
+65
+00:04:13,830 --> 00:04:15,000
+There is another case here.
+65
+
+66
+00:04:15,000 --> 00:04:18,720
+Let's declare here
+66
+
+67
+00:04:18,720 --> 00:04:24,030
+but internally using admin total. We can use here total. The difference between that and this one.
+67
+
+68
+00:04:24,360 --> 00:04:30,360
+This one is defined globally through it's visible from here to the end of the file, but this one is
+68
+
+69
+00:04:30,360 --> 00:04:32,160
+only visible inside the main function.
+69
+
+70
+00:04:32,340 --> 00:04:34,780
+So one of them is global and one of them is local.
+70
+
+71
+00:04:35,190 --> 00:04:42,000
+So using the keyword declaration of using, you can declare it once so that you can use it
+71
+
+72
+00:04:42,240 --> 00:04:47,040
+in the whole program. Definitely, you might face collisions here locally if there is something else
+72
+
+73
+00:04:47,040 --> 00:04:48,000
+that's named first,
+73
+
+74
+00:04:48,270 --> 00:04:54,660
+but this depends on you. Let's take it one more step further.
+74
+
+75
+00:04:55,080 --> 00:04:59,310
+Let's say using namespace customer. 
+75
+
+76
+00:05:00,540 --> 00:05:05,800
+Now, I hope you noticed the similarities between using namespace std and using namespace customer.
+76
+
+77
+00:05:06,150 --> 00:05:11,610
+When you say using namespace customer, this takes everything under the customer and makes it visible.
+77
+
+78
+00:05:12,030 --> 00:05:17,520
+So at this moment, you can say here first and second without compilation error because when you
+78
+
+79
+00:05:17,520 --> 00:05:21,980
+say using namespace, you're telling him, I want all of this namespace to be visible for me.
+79
+
+80
+00:05:22,110 --> 00:05:25,290
+So everything inside it is now visible for you.
+80
+
+81
+00:05:25,650 --> 00:05:32,930
+But for the admin, for example, you have to still, like, access either directly admin, colon-colon, total
+81
+
+82
+00:05:33,240 --> 00:05:34,740
+or you declare it to use it.
+82
+
+83
+00:05:35,100 --> 00:05:41,070
+If you say using namespace admin, then everything also inside the admin is now visible.
+83
+
+84
+00:05:41,820 --> 00:05:42,690
+That's it for today.

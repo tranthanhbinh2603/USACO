@@ -1,0 +1,436 @@
+WEBVTT
+
+00:00.210 --> 00:07.150
+Now, let us look at an example, recursive function for finding some off first and natural number.
+
+00:07.170 --> 00:10.830
+So, first of all, explaining what does it mean by someone of an actual number?
+
+00:11.160 --> 00:16.530
+Then I will be wiser because the function then we will write a recursive procedure that is function
+
+00:16.530 --> 00:18.440
+using C or C++ language.
+
+00:19.320 --> 00:22.800
+Let us understand what is what does it mean by some of the astonishing numbers?
+
+00:23.130 --> 00:31.350
+So if I take some national numbers like one, two, three, four, five, six, seven, simple, they
+
+00:31.350 --> 00:35.130
+want to take up to seven, then I want the sum of all these.
+
+00:35.130 --> 00:36.210
+Sum of all these.
+
+00:38.030 --> 00:40.080
+Submission of forest and natural no.
+
+00:40.100 --> 00:41.960
+So how many natural no.
+
+00:42.050 --> 00:42.980
+Fuster seven.
+
+00:43.010 --> 00:45.440
+So for seven months, one, two, seven.
+
+00:46.130 --> 00:53.000
+See, if I say forest and the natural numbers, then it this one plus two plus three plus four plus
+
+00:53.000 --> 01:00.740
+goes on to last Thomas and and can be anything like in this previous example it was seven.
+
+01:01.200 --> 01:02.260
+It can be anything.
+
+01:02.870 --> 01:07.210
+Now for this submission let us write a recursive definition.
+
+01:07.220 --> 01:16.370
+So for recursive definition I will say some of the tomes as one plus two plus three plus four plus goes
+
+01:16.370 --> 01:22.340
+on to now before end the time there will be any minus one then.
+
+01:22.340 --> 01:25.100
+And so having to read one more second last.
+
+01:25.350 --> 01:27.020
+I'm shooting it now.
+
+01:27.140 --> 01:31.160
+If I take the submission down here this is nothing but.
+
+01:33.030 --> 01:42.720
+Some of tendencies, some of this is Emma minus one dance and dance first, one, two, and then and
+
+01:42.780 --> 01:49.540
+minus 10 will be from one book at minus one, then one, two and minus one will be from here to here.
+
+01:49.680 --> 01:51.000
+That is till this point.
+
+01:51.060 --> 01:51.810
+Till this point.
+
+01:52.170 --> 01:54.270
+Then what more is remaining plus.
+
+01:54.510 --> 01:58.500
+And then if I am good at it, it gives me up too.
+
+01:58.530 --> 02:01.650
+And so this is a recursive definition.
+
+02:02.070 --> 02:04.050
+Now this I can write it like this.
+
+02:04.620 --> 02:12.930
+Some off and doms can be defined as some off the minus one plus.
+
+02:13.080 --> 02:19.200
+And if and as the greater than zero if any is equal to zero then it's not a natural.
+
+02:19.200 --> 02:19.940
+No national.
+
+02:20.000 --> 02:22.440
+What starts from one on word so and is zero.
+
+02:22.470 --> 02:23.730
+So let us say answer this.
+
+02:23.730 --> 02:31.020
+You see, remember whenever you define any recurrence relation or recursive function, then you must
+
+02:31.020 --> 02:33.840
+have two types of statements.
+
+02:33.870 --> 02:36.050
+One is for the large value often.
+
+02:36.390 --> 02:40.680
+What is the formula then for the small value of and what is the answer.
+
+02:40.710 --> 02:43.420
+So usually for small value we give a direct answer.
+
+02:43.440 --> 02:47.220
+So if anything goes to zero, there is no formula that is there.
+
+02:47.910 --> 02:53.580
+So based on the same thing, I can write a recursive function in C or C++.
+
+02:54.000 --> 03:08.310
+Let us see in sum, which takes integer parameter N and if and is equal to zero rigdon zero otherwise
+
+03:08.550 --> 03:09.360
+ripton.
+
+03:11.370 --> 03:21.060
+Some off and minus one plus and so here what I want to explain to you here is if you have a recursive
+
+03:21.060 --> 03:27.900
+definition of any problem, then that you can convert into a recursive function in any programming language
+
+03:27.900 --> 03:29.040
+which supports recursion.
+
+03:29.070 --> 03:35.190
+So in C C++, you have recursion so you can directly convert this fancy some off and some of.
+
+03:35.960 --> 03:40.830
+And if it is equal to zero, return zero, if anything close to zero, return zero.
+
+03:41.040 --> 03:45.490
+Otherwise if friend is better than zero than rate on some off and minus one percent.
+
+03:45.510 --> 03:47.290
+So some off and minus one percent.
+
+03:48.690 --> 03:49.500
+So that's it.
+
+03:49.800 --> 03:53.550
+That is a recursive function for finding some of those definition.
+
+03:53.550 --> 03:53.970
+No.
+
+03:54.850 --> 03:59.620
+Now, finally, I have one more thing to show you that for finding the sum of a national number, there
+
+03:59.620 --> 04:03.820
+is a formula that and in the end plus one by two.
+
+04:04.670 --> 04:05.940
+So this is the formula.
+
+04:05.960 --> 04:11.960
+So it means I don't have to write a function for that one function will consume time and it's a recursive
+
+04:11.960 --> 04:17.780
+function and it will take time for making number of calls and stuff that I can simply use a formula
+
+04:17.780 --> 04:19.170
+and write a program.
+
+04:19.580 --> 04:25.550
+So usually we write just a formula whenever we have to find out some of a national number instead of
+
+04:25.550 --> 04:26.390
+writing a function.
+
+04:26.690 --> 04:34.040
+But for experiencing or learning recursive functions, I have taken this example even the same function.
+
+04:34.040 --> 04:41.380
+We can write it using iteration that is using loop recursion will be costly because it uses stack internally.
+
+04:41.690 --> 04:45.290
+So I will write on two more versions of the same function.
+
+04:45.290 --> 04:50.510
+Instead of recursion, I will use loop and also I will directly use the formula and show you.
+
+04:51.770 --> 04:54.050
+So I will remove this definition, then I will.
+
+04:54.080 --> 04:59.210
+I don't put more functions here, I have a function for some which is directly using the formula if
+
+04:59.210 --> 05:04.820
+you pass the value and then it will take the formula using the formula revolvers and in to end this
+
+05:04.850 --> 05:05.880
+one by 200.
+
+05:06.560 --> 05:12.200
+So the simplest function, and it will take very less time or just just constant time because it has
+
+05:12.200 --> 05:14.450
+to evaluate the simple expression.
+
+05:14.450 --> 05:18.110
+So I can say that the time taken by this function will be constant.
+
+05:19.120 --> 05:24.940
+Few number of operations like one operation to operation and three operations, so total performing,
+
+05:24.940 --> 05:26.360
+three operation, that is constant.
+
+05:26.500 --> 05:28.050
+So this is the fastest method.
+
+05:28.540 --> 05:29.810
+This is using formula.
+
+05:30.280 --> 05:35.830
+Now, here I have a function for finding the sum of just a natural number using loop.
+
+05:37.000 --> 05:42.040
+Now, this function, it takes the value of an and it will start from one to end.
+
+05:42.310 --> 05:46.930
+So I will start the values from one, two and eventually zero.
+
+05:46.960 --> 05:51.760
+So this I value from one to end will be keepon added to that as.
+
+05:51.760 --> 05:58.750
+So first one is that the next time I becomes to and booza then 300 then for up to when all numbers are
+
+05:58.780 --> 06:00.310
+added and this is done.
+
+06:01.240 --> 06:02.920
+So this is using a loop.
+
+06:02.920 --> 06:06.680
+I have it on the function if I find the time complexity of dysfunction.
+
+06:06.700 --> 06:12.820
+So one of the major important statement is this one, and this statement is repeating four and times
+
+06:13.390 --> 06:15.550
+as I is taking the values from one point.
+
+06:15.570 --> 06:17.330
+So this will be repeated for enflames.
+
+06:17.710 --> 06:20.590
+This is statement one time only and this is statement one time.
+
+06:20.770 --> 06:22.930
+And if I can see the for loop mostly deserted.
+
+06:23.260 --> 06:24.140
+And this one time.
+
+06:24.580 --> 06:26.400
+So the main statement is this one.
+
+06:26.410 --> 06:28.150
+So this is executing for End-Time.
+
+06:28.150 --> 06:34.330
+So I should say that the time taken by this algorithms or any time taken this out of.
+
+06:34.330 --> 06:39.070
+And I have found all the frequency of execution of each statement.
+
+06:39.340 --> 06:45.070
+And does the mean statement is this one with the addition of Sadun and that's going to execute for End-Time.
+
+06:45.340 --> 06:49.420
+So our focus is on that statement of Antine.
+
+06:50.590 --> 06:58.660
+And how much memory it takes, just three variables, that is, I guess, and that is part of barometer,
+
+06:58.990 --> 07:00.310
+only three variables Hodor.
+
+07:01.860 --> 07:08.340
+But what about recursive function, recursive function internally, use stack, whatever the value of
+
+07:08.640 --> 07:14.540
+the pass to that, it will make those many calls and it will create those many activation records.
+
+07:14.850 --> 07:21.450
+So it's having just one variable NP so that any variable will be created many times, as many times,
+
+07:21.600 --> 07:28.370
+depending on the value that we are passing, takes more space, but the time will be outdraw and only.
+
+07:28.560 --> 07:32.250
+So let me trace this function and show you for the value five.
+
+07:32.760 --> 07:41.760
+If I call this function some form, I do five, then what it will do if it was five, five is not zero
+
+07:41.970 --> 07:49.500
+then it will call some of and minus one plus and so it will call itself for some of the four and the
+
+07:49.500 --> 07:52.410
+value of and is what five that is added.
+
+07:53.610 --> 07:58.050
+So it's making one more call that in this call again the same thing, it is not zero.
+
+07:58.050 --> 08:05.190
+So it will make a call for some of three and then also add four, then it will make a call for some
+
+08:05.190 --> 08:12.390
+of two and also the three, then some off one and also add.
+
+08:15.160 --> 08:20.800
+To then sum of zero and also add one.
+
+08:22.070 --> 08:25.310
+Now, finally, someone zero as it is zero, return zero.
+
+08:25.540 --> 08:29.100
+So this is zero zero zero plus one as one.
+
+08:29.440 --> 08:30.920
+And this is written here.
+
+08:31.360 --> 08:32.920
+So this is one plus two.
+
+08:32.950 --> 08:33.760
+That is three.
+
+08:34.030 --> 08:35.420
+So three written here.
+
+08:35.680 --> 08:36.970
+So this is three plus three.
+
+08:36.970 --> 08:37.780
+That is six.
+
+08:37.780 --> 08:39.110
+Six is written here.
+
+08:39.460 --> 08:43.310
+So six plus four is ten then is written here.
+
+08:43.630 --> 08:46.390
+So 10 plus five is 15.
+
+08:46.720 --> 08:48.100
+15 is written here.
+
+08:48.310 --> 08:49.550
+So there is in the 15.
+
+08:50.080 --> 08:54.930
+So while returning, the addition is done and you can see that how many calls it has made for five.
+
+08:54.940 --> 08:56.420
+It has made total six calls.
+
+08:56.420 --> 09:02.440
+So the size of the stack is six and the variable is created for six time.
+
+09:02.860 --> 09:03.900
+So memory is more.
+
+09:04.720 --> 09:06.280
+But how much time it is taking?
+
+09:06.580 --> 09:09.060
+There are total six calls for value of five.
+
+09:09.070 --> 09:12.460
+There are six calls for value and there will be endless phone calls.
+
+09:12.470 --> 09:13.710
+So it is four of them.
+
+09:14.080 --> 09:17.010
+So the time taken by this function is out of hand.
+
+09:17.020 --> 09:20.450
+But space is also six time for the value of five.
+
+09:20.770 --> 09:23.080
+So the space is also and plus one.
+
+09:23.320 --> 09:25.510
+So space is also in plus one here.
+
+09:28.120 --> 09:37.420
+This is strain, so their regulation is costly, but it was easy for converting mathematical definition
+
+09:37.420 --> 09:39.760
+that is recursive definition into a function.
+
+09:40.360 --> 09:45.690
+That's how recursions are easy to write compared to loops for loop.
+
+09:45.700 --> 09:51.220
+We have to devise from logic, work on the problem, understand the problem, devise some logic, then
+
+09:51.430 --> 09:57.130
+it may work faster compared to recursion that takes lesser space compared to recursion.
+
+09:57.130 --> 09:58.780
+So mostly in a lot of applications.
+
+09:58.790 --> 10:03.820
+In our program we write loops only instead of using recursions.
+
+10:04.000 --> 10:08.950
+But actually the problems are solved using recursions in mathematics.
+
+10:09.520 --> 10:15.400
+So I have taken a very simple example and I have shown you how we can define the recursive function
+
+10:15.400 --> 10:20.570
+for finding some of the numbers in the coming videos will see more examples on.

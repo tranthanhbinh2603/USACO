@@ -1,0 +1,552 @@
+1
+00:00:00,430 --> 00:00:04,890
+Hi everyone, so let us write the code for computing big factorial in this lecture.
+
+2
+00:00:04,920 --> 00:00:10,440
+So first of all, I'll write the main. In which we are just going to take input something.
+
+3
+00:00:10,650 --> 00:00:20,190
+OK, so we have in integer N. we'll take that as input and may be we will do write a function that computes
+
+4
+00:00:20,730 --> 00:00:22,590
+the Big Factorial. OK.
+
+5
+00:00:23,370 --> 00:00:24,460
+Or the factorial of N.
+
+6
+00:00:24,990 --> 00:00:28,610
+OK, so now we need to compute this.
+
+7
+00:00:28,620 --> 00:00:30,930
+write this method. void big factorial.
+
+8
+00:00:31,560 --> 00:00:34,410
+We get a value N. So what we discuss is
+
+9
+00:00:34,420 --> 00:00:42,300
+we will create an array and in that array we will try to store the output of each multiplication that we are going
+
+10
+00:00:42,300 --> 00:00:42,600
+to do.
+
+11
+00:00:42,720 --> 00:00:51,280
+OK, so first of all, we can create a array or we can also either use a vector or we can create a
+
+12
+00:00:51,900 --> 00:00:52,650
+array. both are fine.
+
+13
+00:00:53,380 --> 00:01:00,840
+I'm creating a vector of size let's say 1000 and it is initialized with values zero.
+
+14
+00:01:00,840 --> 00:01:06,720
+So that means I'm assuming in my output, I will not have more than 1000 digits. OK?
+
+15
+00:01:07,140 --> 00:01:07,560
+So
+
+16
+00:01:09,300 --> 00:01:15,540
+OK. so either I can use pushback to expand this Victor but right now I'm assuming that I won't
+
+17
+00:01:15,540 --> 00:01:17,460
+have more than a thousand digits.
+
+18
+00:01:18,150 --> 00:01:24,450
+So this you will know from the constraints given in the question because I'm just reserving the space
+
+19
+00:01:24,450 --> 00:01:29,590
+of one thousand and each of it is initialized with a value of zero. ok.
+
+20
+00:01:30,450 --> 00:01:35,450
+In the beginning, I will initialize the answer for one factorial. that is going to be one
+
+21
+00:01:35,740 --> 00:01:39,330
+so I can say A of zero is one.
+
+22
+00:01:40,920 --> 00:01:45,630
+And another thing I will need to know is what is the actual size of the output?
+
+23
+00:01:45,630 --> 00:01:50,100
+Okay, so if you reverse this it might be
+
+24
+00:01:51,030 --> 00:01:55,290
+So you will also store up to what position we should print the output.
+
+25
+00:01:55,290 --> 00:02:03,390
+OK, so we should only print the output before index one. ok so I will note what is the size of the output
+
+26
+00:02:03,690 --> 00:02:05,460
+that has been generated so far.
+
+27
+00:02:06,390 --> 00:02:07,740
+The size of the output is one.
+
+28
+00:02:07,940 --> 00:02:11,550
+Okay, so maybe I'll take a variable int size that is equal to one.
+
+29
+00:02:11,620 --> 00:02:20,730
+OK, now from two onwards for int i equal to two. I less than equal to whatever it is my number or whatever
+
+30
+00:02:20,730 --> 00:02:21,390
+is my N.
+
+31
+00:02:23,120 --> 00:02:25,190
+What I need to do? I need to multiply.
+
+32
+00:02:26,320 --> 00:02:28,880
+OK, I need to multiply my array.
+
+33
+00:02:29,690 --> 00:02:32,000
+OK, I need to multiply my array
+
+34
+00:02:33,310 --> 00:02:34,440
+With a number I.
+
+35
+00:02:35,970 --> 00:02:37,230
+And I also need to tell
+
+36
+00:02:37,800 --> 00:02:46,530
+up to what size we have stored the answer. OK. so as we multiplied with two, it will become two.
+
+37
+00:02:46,530 --> 00:02:48,870
+Then we multiply it with three, it will become six.
+
+38
+00:02:49,320 --> 00:02:51,390
+then it will multiply with 4.
+
+39
+00:02:51,390 --> 00:02:54,750
+It will become 24, so once it becomes 24.
+
+40
+00:02:54,870 --> 00:02:56,950
+The size is going to become two.
+
+41
+00:02:57,420 --> 00:02:59,820
+OK, then we multiply it with five.
+
+42
+00:02:59,970 --> 00:03:02,930
+The size is going to become five.
+
+43
+00:03:02,940 --> 00:03:05,090
+OK, so 24 would be stored like this.
+
+44
+00:03:05,100 --> 00:03:05,400
+OK?
+
+45
+00:03:05,730 --> 00:03:07,110
+Then multiply it with five.
+
+46
+00:03:07,110 --> 00:03:09,300
+It becomes 120.
+
+47
+00:03:09,540 --> 00:03:09,840
+OK?
+
+48
+00:03:10,380 --> 00:03:14,460
+So 120, 120 would be stored like this. size would become three.
+
+49
+00:03:15,000 --> 00:03:18,990
+So inside this multiplication function we need to update the size as well.
+
+50
+00:03:19,290 --> 00:03:21,510
+So this is the main function that we need to write.
+
+51
+00:03:22,140 --> 00:03:24,630
+And once we're done, we we need to print
+
+52
+00:03:24,900 --> 00:03:27,750
+the result in the reverse order. OK?
+
+53
+00:03:28,080 --> 00:03:31,290
+That means starting from size minus one.
+
+54
+00:03:32,500 --> 00:03:34,030
+to Index Zero.
+
+55
+00:03:35,090 --> 00:03:36,320
+That's what we need to print.
+
+56
+00:03:36,470 --> 00:03:44,360
+So first of all, we are going to write the multiply method. so void multiply, it accept a vector.
+
+57
+00:03:44,890 --> 00:03:52,190
+OK, and it must be passed by reference because we are going to modify in the same vector and it is
+
+58
+00:03:52,190 --> 00:03:57,020
+also going to accept the value I. The number which we are going to multiply.
+
+59
+00:03:57,110 --> 00:03:57,440
+OK.
+
+60
+00:03:58,570 --> 00:04:00,830
+And we are also passing the size
+
+61
+00:04:00,940 --> 00:04:07,180
+the size is also being passed by the reference because we are going to update this particular size.
+
+62
+00:04:07,210 --> 00:04:13,990
+OK. OK or you can return the size as a integer from this method and you can take it here. that is also
+
+63
+00:04:13,990 --> 00:04:14,380
+fine
+
+64
+00:04:15,070 --> 00:04:17,079
+but let's see how we are going to do it.
+
+65
+00:04:18,310 --> 00:04:23,260
+So when we are doing the multiplication again, we would have some carry and we would have
+
+66
+00:04:25,270 --> 00:04:30,040
+something else as well. So for int I  equal to zero. I less then what?
+
+67
+00:04:30,840 --> 00:04:34,570
+I less than size. I plus plus.
+
+68
+00:04:34,990 --> 00:04:42,170
+So let me tell you for example, if your number is what? if your number is nine two two multiplied by 15
+
+69
+00:04:42,180 --> 00:04:45,360
+so we discussed it would be stored in the array like this.
+
+70
+00:04:45,990 --> 00:04:49,020
+two two nine and it will be multiplied with 15.
+
+71
+00:04:49,050 --> 00:04:50,910
+OK, so it is stored in the reverse order.
+
+72
+00:04:51,410 --> 00:04:53,910
+SO the size of this is what? size is three.
+
+73
+00:04:55,360 --> 00:04:57,970
+We are going to iterate from zero one two.
+
+74
+00:04:58,030 --> 00:05:00,010
+We are going to iterate from zero less than size. 
+
+75
+00:05:00,020 --> 00:05:00,340
+Yes.
+
+76
+00:05:01,060 --> 00:05:04,630
+So first of all, we will form a product between these two. 15 into two.
+
+77
+00:05:04,810 --> 00:05:16,150
+So we'll say, OK. this product is nothing but array of I multiplied with number plus whatever carry we have.
+
+78
+00:05:16,300 --> 00:05:17,890
+So in the beginning the carry is zero.
+
+79
+00:05:18,880 --> 00:05:21,520
+And now from this, we need to extract a digit.
+
+80
+00:05:22,390 --> 00:05:31,960
+Ok. so your digit would be stored in array of I again. array of I would store product Modules 10.
+
+81
+00:05:32,380 --> 00:05:34,690
+OK, so we are going to overwrite.
+
+82
+00:05:35,260 --> 00:05:37,960
+OK, we are actually going to overwrite this array  
+
+83
+00:05:38,560 --> 00:05:43,090
+At the same time. So this two becomes now zero. 15 twos are 30.
+
+84
+00:05:43,780 --> 00:05:45,250
+And three gets carried.
+
+85
+00:05:45,640 --> 00:05:46,530
+carry is three.
+
+86
+00:05:47,170 --> 00:05:47,530
+15
+
+87
+00:05:47,530 --> 00:05:48,670
+into two is 30 plus 3.
+
+88
+00:05:48,670 --> 00:05:50,140
+next iteration. ok.
+
+89
+00:05:50,150 --> 00:05:56,700
+So carry is nothing but carry is what? product by 10.
+
+90
+00:05:57,550 --> 00:06:02,830
+So for the next iteration, we know what is the carry and we are already updating the results.
+
+91
+00:06:03,520 --> 00:06:04,120
+So we put
+
+92
+00:06:05,520 --> 00:06:11,280
+33. so three gets carried. 15 into nine is 135 plus three. 138.
+
+93
+00:06:11,700 --> 00:06:14,790
+And what we have is, this addition is over.
+
+94
+00:06:14,970 --> 00:06:19,610
+And finally, we are left with a carry that is what? carry is this divided by ten.
+
+95
+00:06:19,620 --> 00:06:21,010
+So does this 13..
+
+96
+00:06:21,840 --> 00:06:22,580
+So this is left.
+
+97
+00:06:22,590 --> 00:06:26,610
+OK, so to handle the carry, we need a separate loop.
+
+98
+00:06:27,990 --> 00:06:36,870
+So I can say while this carry is not zero, so I can say starting from what? array of size, what you
+
+99
+00:06:36,870 --> 00:06:41,940
+will put inside array of size? we are going to put carry model size.
+
+100
+00:06:42,450 --> 00:06:50,730
+OK. so array of size is this index, we are putting what? 13 models 10. we are putting three here. OK. and
+
+101
+00:06:50,730 --> 00:06:53,220
+we are going to reduce this carry by dividing it by ten.
+
+102
+00:06:53,240 --> 00:06:57,820
+Ok, so we can say carry equals carry by ten
+
+103
+00:06:58,210 --> 00:07:04,760
+And and since we are actually using extra space here now we are in incrementing.
+
+104
+00:07:04,800 --> 00:07:06,670
+We should increment the value of size.
+
+105
+00:07:06,930 --> 00:07:15,120
+OK, the size should move to the next index. so I can say size equal to size plus one.
+
+106
+00:07:15,780 --> 00:07:16,320
+All right.
+
+107
+00:07:16,800 --> 00:07:19,580
+And finally, when we're going to return. 
+
+108
+00:07:20,900 --> 00:07:22,290
+We are going to put one here.
+
+109
+00:07:22,710 --> 00:07:25,110
+This size is going to move to the next index.
+
+110
+00:07:25,680 --> 00:07:27,270
+Size will come to the five index.
+
+111
+00:07:27,630 --> 00:07:34,230
+And it also tells us that OK. inside your array the output is stored up to five positions. OK?
+
+112
+00:07:34,710 --> 00:07:38,040
+The output is like one three eight three zero.
+
+113
+00:07:38,490 --> 00:07:39,000
+All right.
+
+114
+00:07:39,540 --> 00:07:41,910
+And this correctly updates the size.
+
+115
+00:07:42,630 --> 00:07:46,770
+So what we need is, finally we need to print the result. so I can say for
+
+116
+00:07:47,900 --> 00:07:54,760
+either you convert this into a string or then return or simply print the output. that is also
+
+117
+00:07:54,770 --> 00:07:55,100
+fine.
+
+118
+00:07:55,640 --> 00:07:57,140
+I greater equal to zero.
+
+119
+00:07:58,430 --> 00:07:59,900
+And I do I minus minus.
+
+120
+00:08:01,850 --> 00:08:06,830
+And I can say cout. array of I and that's it.
+
+121
+00:08:07,790 --> 00:08:11,150
+And finally, we can say cout endl.
+
+122
+00:08:14,690 --> 00:08:15,020
+OK.
+
+123
+00:08:15,380 --> 00:08:16,430
+We should include
+
+124
+00:08:17,680 --> 00:08:18,280
+vector.
+
+125
+00:08:20,460 --> 00:08:22,620
+And you can see build is successful.
+
+126
+00:08:23,170 --> 00:08:25,800
+Now we're ready to test our code.
+
+127
+00:08:25,920 --> 00:08:31,320
+So if I say dot Slash Big Factorial. I give five.
+
+128
+00:08:31,350 --> 00:08:32,510
+I get 120.
+
+129
+00:08:32,520 --> 00:08:40,049
+If I say if the input is 100 then you can compare that this answer must be
+
+130
+00:08:41,370 --> 00:08:42,510
+same as this one.
+
+131
+00:08:42,760 --> 00:08:43,080
+OK.
+
+132
+00:08:43,440 --> 00:08:45,360
+Nine three three two six two one.
+
+133
+00:08:45,930 --> 00:08:51,000
+So here nine three three two six two one and forward by lots of zeros in the end.
+
+134
+00:08:53,270 --> 00:08:55,490
+So you can see this actually
+
+135
+00:08:58,890 --> 00:09:05,940
+looks correct and this is how we can do a multiplication between a big integer and a number.
+
+136
+00:09:06,360 --> 00:09:10,620
+And this is how we can compute big factorials in C++.
+
+137
+00:09:11,250 --> 00:09:16,290
+So I hope you understood the concept of basic addition and multiplication.
+
+138
+00:09:16,860 --> 00:09:19,170
+and we will see some more things in the next lecture.
+

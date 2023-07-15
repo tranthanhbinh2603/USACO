@@ -1,0 +1,224 @@
+0
+1
+00:00:00,870 --> 00:00:06,010
+Let's practice. In this task, we named a three-stack max sum.
+1
+
+2
+00:00:06,270 --> 00:00:11,390
+You are giving like a three stack of numbers, a three-stack of different numbers.
+2
+
+3
+00:00:11,400 --> 00:00:13,320
+For example, we have here A, B, C.
+3
+
+4
+00:00:13,650 --> 00:00:18,840
+The first setup of numbers is 1, 2, 3, 4, 2, 2, 2, 4, 0, 0, 3, 3, 5.
+4
+
+5
+00:00:18,990 --> 00:00:19,860
+Remember the stack,
+5
+
+6
+00:00:19,870 --> 00:00:23,160
+If you would like remove, you remove first the end of it.
+6
+
+7
+00:00:23,610 --> 00:00:27,890
+The target is we would like to make the sum of all the stacks to be equal.
+7
+
+8
+00:00:28,140 --> 00:00:32,820
+So you are allowed to remove something from the top of the stack one by one, as you like, but just
+8
+
+9
+00:00:32,820 --> 00:00:33,620
+remove them from the top.
+9
+
+10
+00:00:33,930 --> 00:00:38,340
+The target is we need it to be also the maximum equal sum.
+10
+
+11
+00:00:38,700 --> 00:00:44,460
+So if we looked initially at these three stacks, the sum of that is 10, 10, 11.
+11
+
+12
+00:00:44,760 --> 00:00:45,600
+They are't equal.
+12
+
+13
+00:00:45,600 --> 00:00:47,060
+If they are equal, then this is the best.
+13
+
+14
+00:00:47,130 --> 00:00:49,590
+OK, and remember, all numbers are positive, by the way.
+14
+
+15
+00:00:50,190 --> 00:00:55,560
+Now, if I would like to make them a bit equal, here is the best way, you can remove from A the top of it,
+15
+
+16
+00:00:55,560 --> 00:01:01,230
+which is 4, and you can remove from B the top 2, so you remove 4 and 0 and then you remove from
+16
+
+17
+00:01:01,230 --> 00:01:02,390
+C the top, which is five.
+17
+
+18
+00:01:02,730 --> 00:01:07,710
+Now the sum of every one of them is 6, 6 and 6,
+18
+
+19
+00:01:07,920 --> 00:01:10,430
+this is the maximum sum. on the other side,
+19
+
+20
+00:01:10,650 --> 00:01:14,100
+Let's say that C has 12, not zero here, 12, 3, 3, 5.
+20
+
+21
+00:01:14,490 --> 00:01:16,320
+Now the maximum sum is zero.
+21
+
+22
+00:01:16,330 --> 00:01:21,270
+You cannot find a way to make all of them equal except removing and emptying all of them.
+22
+
+23
+00:01:21,870 --> 00:01:25,760
+So you are to implement a function called max 3 stack sum.
+23
+
+24
+00:01:25,980 --> 00:01:28,740
+It takes 3 vectors, each vector represent this
+24
+
+25
+00:01:30,150 --> 00:01:30,780
+stack.
+25
+
+26
+00:01:30,840 --> 00:01:36,270
+So we are using here a vector because just more convenient in in competitions for you than just a stack.
+26
+
+27
+00:01:36,660 --> 00:01:38,310
+So think, how can you do that.
+27
+
+28
+00:01:40,900 --> 00:01:45,760
+So here is the idea, let's first develop a convenient function sum that takes a vector, sum all
+28
+
+29
+00:01:45,760 --> 00:01:47,740
+of its element and return the sum for us.
+29
+
+30
+00:01:48,280 --> 00:01:54,240
+Now, when we start the function, we compare the sum of A, the sum of B, the sum of C. After that,
+30
+
+31
+00:01:54,250 --> 00:01:58,240
+the idea is as following: so you have now 3 stacks,
+31
+
+32
+00:01:58,240 --> 00:02:01,360
+each one of them has its own sum.
+32
+
+33
+00:02:01,750 --> 00:02:08,530
+If I would like to make them equal, In a greedy sense, you would think like let's get the stack that
+33
+
+34
+00:02:08,530 --> 00:02:13,150
+has the biggest sum and removes only one item from its top. This way
+34
+
+35
+00:02:13,330 --> 00:02:18,440
+step by step, you are trying to figure out if there is a chance for them to be equal or not.
+35
+
+36
+00:02:18,760 --> 00:02:20,740
+So the procedure is as following:
+36
+
+37
+00:02:21,070 --> 00:02:23,650
+As long as the 3 stacks aren't an empty.
+37
+
+38
+00:02:23,920 --> 00:02:29,020
+Your first double-check, if the three stacks are equal, if they are equal, then we are done,
+38
+
+39
+00:02:29,140 --> 00:02:31,570
+then just return the sum of any of them.
+39
+
+40
+00:02:32,080 --> 00:02:38,640
+Otherwise, find the stack that has the highest sum and just remove one element from it.
+40
+
+41
+00:02:38,950 --> 00:02:45,610
+So here we say, Is sum A greater than B and C? If so, remove from A, otherwise from B, otherwise
+41
+
+42
+00:02:45,610 --> 00:02:46,050
+from C.
+42
+
+43
+00:02:46,330 --> 00:02:53,980
+So this way, step by step, we are removing from only the highest stack in hope that we can get them
+43
+
+44
+00:02:53,980 --> 00:02:54,470
+equal.
+44
+
+45
+00:02:55,120 --> 00:02:55,630
+That's it.

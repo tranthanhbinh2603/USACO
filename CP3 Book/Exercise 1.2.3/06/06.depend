@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1677168782 source:c:\users\binh\documents\project\usaco\cp3 book\exercise 1.2.3\06\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+

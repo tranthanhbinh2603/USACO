@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1679492192 source:e:\document\project\usaco\mastering critical skills in algorithms using c++ part 1\9. bfs\homework\03 - easy\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+

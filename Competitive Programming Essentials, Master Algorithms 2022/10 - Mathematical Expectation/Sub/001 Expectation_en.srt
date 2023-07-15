@@ -1,0 +1,472 @@
+1
+00:00:00,800 --> 00:00:06,290
+Hi Everyone, in this lecture we will talk about mathematical expectation and which is an important concept
+
+2
+00:00:06,290 --> 00:00:07,640
+in probability theory.
+
+3
+00:00:08,330 --> 00:00:14,900
+And it is always good to learn about this concept because in programming also you might be facing
+
+4
+00:00:14,900 --> 00:00:20,720
+some problems which are related with calculating the expectation of something. OK?
+
+5
+00:00:21,080 --> 00:00:25,120
+So let us talk about what is this term expectation.
+
+6
+00:00:25,130 --> 00:00:30,260
+So expectation is kind of a weighted average value of a random variable.
+
+7
+00:00:30,310 --> 00:00:33,190
+Now you may ask what is a random variable?
+
+8
+00:00:33,200 --> 00:00:41,300
+OK, so a random variable is one of the outcomes of phenomena or a random event
+
+9
+00:00:41,300 --> 00:00:48,390
+you can say. OK So random variable is one of the outcomes of an experiment. OK?
+
+10
+00:00:49,400 --> 00:00:51,410
+So now you may ask what is a experiment.
+
+11
+00:00:51,950 --> 00:00:53,270
+So let us denote.
+
+12
+00:00:53,540 --> 00:00:56,120
+Let's take few examples of a random experiment.
+
+13
+00:00:56,540 --> 00:00:58,370
+For example, you throw a coin.
+
+14
+00:00:58,490 --> 00:01:00,530
+OK, you throw a coin in the air.
+
+15
+00:01:01,430 --> 00:01:08,270
+And that coin may get a head or a tail as the outcome. OK, so we can say X is  random variable
+
+16
+00:01:08,280 --> 00:01:13,550
+that can take the value head or it can take the value tail. OK.
+
+17
+00:01:13,880 --> 00:01:22,430
+Or maybe another example could be you throw a dice and this is a dice with six sides and you can get
+
+18
+00:01:22,430 --> 00:01:25,910
+the numbers in the range let's say one to six. OK.
+
+19
+00:01:27,020 --> 00:01:32,750
+So x is a random variable that can take the values one, two, three, four, five and six.
+
+20
+00:01:33,380 --> 00:01:36,590
+Now I hope you understood what is a random variable.
+
+21
+00:01:36,590 --> 00:01:37,100
+.
+
+22
+00:01:37,130 --> 00:01:40,280
+So what is the expectation? we will calculate.
+
+23
+00:01:40,280 --> 00:01:42,890
+What is the expected value if you throw a dice.
+
+24
+00:01:42,890 --> 00:01:49,700
+OK, so it's kind of a weighted average. so we'll see how we can calculate this average.
+
+25
+00:01:49,940 --> 00:01:56,720
+So mathematically, for a discrete variable x. ok. now let me also talk about the difference between
+
+26
+00:01:56,720 --> 00:02:02,060
+a discrete and a continuous variable ok. so
+
+27
+00:02:02,060 --> 00:02:03,620
+random variable come in to syllabus.
+
+28
+00:02:04,100 --> 00:02:09,500
+They can have discrete values or they can have continuous values. OK?
+
+29
+00:02:10,009 --> 00:02:17,150
+For example, let's say X is a random variable that denotes what would be the temperature of today.
+
+30
+00:02:17,350 --> 00:02:19,310
+OK, the temperature for today.
+
+31
+00:02:19,310 --> 00:02:25,540
+Today is a cold day so maybe I can say the temperature is around 10 degrees Celsius.
+
+32
+00:02:25,550 --> 00:02:27,770
+OK. but it can be 10.1.
+
+33
+00:02:27,980 --> 00:02:29,420
+It can be 10.2.
+
+34
+00:02:29,570 --> 00:02:30,750
+It can be 10.25.
+
+35
+00:02:30,770 --> 00:02:31,310
+.
+
+36
+00:02:31,640 --> 00:02:41,360
+OK, now you can see X denotes the variable temperature for the day and it is a random variable and
+
+37
+00:02:41,360 --> 00:02:44,150
+it can take continuous values. OK?
+
+38
+00:02:45,080 --> 00:02:53,960
+It can take continuous values so we will say X is a continuous random variable whereas in case of throwing
+
+39
+00:02:53,960 --> 00:02:57,620
+a die, X can take only one of the fixed values.
+
+40
+00:02:57,620 --> 00:03:01,550
+OK. so one of the values in the range one to six.
+
+41
+00:03:02,000 --> 00:03:09,680
+In this case, we say it is a discrete random variable because the outcomes have discrete values. OK?
+
+42
+00:03:10,430 --> 00:03:17,210
+The outcomes have discrete values so I hope you understood the difference between a continuous and
+
+43
+00:03:17,210 --> 00:03:19,610
+a discrete random variable.
+
+44
+00:03:20,060 --> 00:03:26,960
+Most of the problems that we would be discussing they would be based on the concept of discrete random
+
+45
+00:03:26,960 --> 00:03:27,420
+variables.
+
+46
+00:03:27,440 --> 00:03:27,680
+OK.
+
+47
+00:03:28,040 --> 00:03:35,360
+So mathematically, for a discrete random variable X with the probability function P of x the expected
+
+48
+00:03:35,360 --> 00:03:43,910
+value it is denoted using E of X is given by summation of Xi into P of Xi where P stand for the
+
+49
+00:03:43,910 --> 00:03:45,950
+probability of that particular value.
+
+50
+00:03:46,580 --> 00:03:51,930
+The summation runs over all distinct values of Xi, the variable can take.
+
+51
+00:03:51,950 --> 00:03:52,250
+OK.
+
+52
+00:03:53,180 --> 00:03:59,710
+So basically, if I have something like X. what is the possible values of Xi?
+
+53
+00:03:59,750 --> 00:04:06,140
+Say so x.. X can take the values zero. sorry In case of our die it can take the value one.
+
+54
+00:04:06,740 --> 00:04:11,150
+It can take value two.three four five and six.
+
+55
+00:04:12,260 --> 00:04:15,080
+So what is P(xi)? P(xi) denotes
+
+56
+00:04:15,650 --> 00:04:19,399
+What is the probability of each value of Xi.
+
+57
+00:04:19,399 --> 00:04:26,150
+OK, so if this is the ith outcome. the probability that this die will throw one by three, assuming
+
+58
+00:04:26,150 --> 00:04:32,870
+it is a fair die. OK. assuming it is a fair die. like every side has an equal probability of showing
+
+59
+00:04:32,870 --> 00:04:32,990
+up.
+
+60
+00:04:32,990 --> 00:04:39,740
+So we can say this probability is nothing but one by six, one by six, one by six, one by six
+
+61
+00:04:40,460 --> 00:04:41,300
+and one by six.
+
+62
+00:04:42,340 --> 00:04:44,440
+So each of the side has an equal probability.
+
+63
+00:04:44,920 --> 00:04:45,910
+That is one by six.
+
+64
+00:04:47,530 --> 00:04:50,320
+And how do we calculate the expected value?
+
+65
+00:04:51,710 --> 00:04:53,100
+That can show up on a die.
+
+66
+00:04:53,120 --> 00:04:58,390
+So that is nothing but summation of Xi into P(xi).
+
+67
+00:04:58,910 --> 00:04:59,180
+OK.
+
+68
+00:04:59,780 --> 00:05:03,920
+That is nothing but one multiplied by one by six plus two
+
+69
+00:05:04,010 --> 00:05:05,450
+Multiplied by one by six
+
+70
+00:05:06,410 --> 00:05:07,590
+Three multiplied by one
+
+71
+00:05:07,640 --> 00:05:08,960
+by six plus four
+
+72
+00:05:09,110 --> 00:05:09,620
+Into one
+
+73
+00:05:09,620 --> 00:05:10,070
+By six
+
+74
+00:05:10,700 --> 00:05:13,190
+Five by six and six by six.
+
+75
+00:05:13,220 --> 00:05:13,460
+OK.
+
+76
+00:05:14,000 --> 00:05:20,810
+If you just find out this, it is nothing but one by six common. one plus two plus three plus four
+
+77
+00:05:20,810 --> 00:05:22,340
+plus five plus six.
+
+78
+00:05:23,180 --> 00:05:24,680
+This sum is what?
+
+79
+00:05:25,190 --> 00:05:27,470
+So this comes out to be 3.5.
+
+80
+00:05:27,500 --> 00:05:33,440
+OK. so now what you can say is 3.5 is the expected value.
+
+81
+00:05:33,950 --> 00:05:40,250
+It's some kind of average value that you can expect when a die is rolled, let's say infinite number
+
+82
+00:05:40,250 --> 00:05:40,640
+of times.
+
+83
+00:05:40,640 --> 00:05:43,370
+OK. so this is the expected value that you will get.
+
+84
+00:05:43,820 --> 00:05:47,570
+And this is not equal to the most probable value.ok.
+
+85
+00:05:48,530 --> 00:05:51,380
+It is not equal to the most probable values.
+
+86
+00:05:51,390 --> 00:05:57,500
+Expectation is not same as the most probable value because on a diet you can never get a value three point
+
+87
+00:05:57,500 --> 00:05:57,860
+five.
+
+88
+00:05:57,890 --> 00:06:00,300
+But this is kind of an average.
+
+89
+00:06:00,320 --> 00:06:05,780
+If you do a lot of experiment of rolling die, the average would be close to this result.
+
+90
+00:06:05,990 --> 00:06:12,880
+This is what you can expect in the long run that your sum of values divided by the number of dies throws
+
+91
+00:06:12,890 --> 00:06:14,990
+would be close to 3.5.
+
+92
+00:06:15,470 --> 00:06:17,720
+This is what an expectation is.
+
+93
+00:06:17,730 --> 00:06:22,610
+Okay, so I hope you are able to understand what is the meaning of expectation.
+
+94
+00:06:23,930 --> 00:06:29,360
+Let me also talk about for a continuous variable with the probability density function P(x), since
+
+95
+00:06:29,420 --> 00:06:31,850
+a variable is const.. like it's continuous.
+
+96
+00:06:32,210 --> 00:06:34,730
+Let say the variable is like temperature and here we say.
+
+97
+00:06:34,730 --> 00:06:35,060
+OK?
+
+98
+00:06:35,450 --> 00:06:37,670
+Probability of having that particular temperature.
+
+99
+00:06:37,670 --> 00:06:39,050
+OK. so maybe it's a cold day.
+
+100
+00:06:39,500 --> 00:06:42,100
+So the average temperature maybe is around 10.
+
+101
+00:06:42,110 --> 00:06:46,370
+So maybe you might get this kind of a probability distribution curve.
+
+102
+00:06:47,420 --> 00:06:56,240
+So in this case, the expected value of E(x) or E of temperature is given by Xp(x) into the dx, so
+
+103
+00:06:56,240 --> 00:07:00,060
+basically you're doing this integration.
+
+104
+00:07:00,230 --> 00:07:05,300
+OK, so it is integration of xp(x) into the dx.
+
+105
+00:07:05,660 --> 00:07:09,410
+So this is nothing but this is again the area under the curve.
+
+106
+00:07:09,560 --> 00:07:13,180
+So its integration is also a way of summing up.
+
+107
+00:07:13,190 --> 00:07:16,290
+But this is used for continues variables.
+
+108
+00:07:16,290 --> 00:07:21,310
+So it's more into the mathematical side in programming.
+
+109
+00:07:21,320 --> 00:07:25,800
+You might not be needing to implement this integration formula in your code.
+
+110
+00:07:25,820 --> 00:07:27,660
+OK. it's going to be very, very, very rare.
+
+111
+00:07:27,980 --> 00:07:28,260
+OK.
+
+112
+00:07:28,700 --> 00:07:36,020
+But just to tell you that these two formulas are integration is like summation over the continuous
+
+113
+00:07:36,020 --> 00:07:39,410
+variable and the previous case that we just saw.
+
+114
+00:07:39,620 --> 00:07:42,470
+This is summation sign. it's for a discrete variable.
+
+115
+00:07:42,470 --> 00:07:47,600
+This can be easily implemented using for loop.You iterate over the values of X.
+
+116
+00:07:47,900 --> 00:07:55,130
+You should know the values of P(x) and you can find out the expected value of a given variable.
+
+117
+00:07:56,090 --> 00:07:58,970
+So that's all for this lecture.
+
+118
+00:07:59,330 --> 00:08:00,920
+And thank you.
+

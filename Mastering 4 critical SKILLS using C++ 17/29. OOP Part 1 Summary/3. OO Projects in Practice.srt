@@ -1,0 +1,454 @@
+0
+1
+00:00:00,660 --> 00:00:05,930
+In this video, I would like to communicate some of my experience with OOP projects in practice.
+1
+
+2
+00:00:06,480 --> 00:00:09,540
+The first thing is and remember, skills takes time.
+2
+
+3
+00:00:09,990 --> 00:00:12,960
+You also need to do it in a gradual way.
+3
+
+4
+00:00:13,290 --> 00:00:18,750
+So do not try to learn a skill the hard way, like don't a big project before doing a medium project,
+4
+
+5
+00:00:19,170 --> 00:00:22,580
+and don't do a medium project before doing a small project.
+5
+
+6
+00:00:23,590 --> 00:00:29,290
+OK, going back to projects, it's very important to start with the requirements, the functional requirements
+6
+
+7
+00:00:29,290 --> 00:00:30,470
+coming from a customer.
+7
+
+8
+00:00:31,150 --> 00:00:36,520
+One of the big problems is just to jump to solving or coding a project that you don't completely
+8
+
+9
+00:00:36,520 --> 00:00:39,880
+understand. There is something in industry
+9
+
+10
+00:00:39,880 --> 00:00:42,130
+we call it minimum viable product.
+10
+
+11
+00:00:42,160 --> 00:00:42,890
+What does this mean?
+11
+
+12
+00:00:43,000 --> 00:00:49,720
+Let's say someone has an idea about startup, and let's say there are like 20 different features in
+12
+
+13
+00:00:49,720 --> 00:00:50,330
+this product.
+13
+
+14
+00:00:50,890 --> 00:00:51,930
+There are two choices.
+14
+
+15
+00:00:51,970 --> 00:00:58,030
+The first choice is, and this is a bad choice to collect a team, implement the 20 choice in a
+15
+
+16
+00:00:58,030 --> 00:01:00,010
+couple of years and go to the market,
+16
+
+17
+00:01:00,160 --> 00:01:06,100
+and then you might have a sudden shock that most of the people don't have an interest in your application.
+17
+
+18
+00:01:06,610 --> 00:01:11,160
+There is another way you figured out the major use cases in your system.
+18
+
+19
+00:01:11,170 --> 00:01:14,710
+The word use case is a fundamental word in software engineering.
+19
+
+20
+00:01:15,070 --> 00:01:18,170
+It refers to the functionalities that the user is doing in the system.
+20
+
+21
+00:01:18,580 --> 00:01:24,370
+So in a shopping cart system, you might add an item to the shop, you might add your credit card, you might
+21
+
+22
+00:01:24,370 --> 00:01:25,580
+pay, and so on.
+22
+
+23
+00:01:26,170 --> 00:01:33,250
+So when you figured these minimum use cases that are major, you are building a minimum viable product.
+23
+
+24
+00:01:33,550 --> 00:01:40,570
+An MVP product is a product that has, say, the best five features out of the 20, but we still
+24
+
+25
+00:01:40,570 --> 00:01:48,100
+can release number one from it to the customers and see their impression. If they liked it, then
+25
+
+26
+00:01:48,100 --> 00:01:49,140
+we add more features.
+26
+
+27
+00:01:49,150 --> 00:01:52,630
+Otherwise there is no need to go more in the project.
+27
+
+28
+00:01:52,900 --> 00:01:56,300
+So one approach is to implement 20 features in a couple of years.
+28
+
+29
+00:01:56,530 --> 00:02:01,790
+Another one is to implement the best five features in six months, for example.
+29
+
+30
+00:02:03,100 --> 00:02:06,740
+So how was that would be helpful when you are building your own projects?
+30
+
+31
+00:02:07,180 --> 00:02:11,760
+The idea is, let's say that you frame a project to implement.
+31
+
+32
+00:02:12,070 --> 00:02:18,020
+I would encourage you to identify the MVP of this idea and then start to implement it.
+32
+
+33
+00:02:18,160 --> 00:02:19,800
+This is what I meant by gradual here.
+33
+
+34
+00:02:20,050 --> 00:02:25,420
+Take the project, implement a very small version of it, and then in an iterative way, add more and
+34
+
+35
+00:02:25,420 --> 00:02:26,370
+more features for it.
+35
+
+36
+00:02:26,650 --> 00:02:32,110
+Sometimes when the students know about a project, they just get stuck, and they don't know how to start,
+36
+
+37
+00:02:32,110 --> 00:02:32,980
+and how to proceed.
+37
+
+38
+00:02:33,340 --> 00:02:38,410
+The right idea is to figure out the major use cases and just go with them.
+38
+
+39
+00:02:39,340 --> 00:02:42,070
+OK, so here are some fundamental steps.
+39
+
+40
+00:02:42,100 --> 00:02:47,560
+When you are done with what exactly to implement, what exactly features to consider.
+40
+
+41
+00:02:47,920 --> 00:02:50,480
+The first idea is identify the key objects.
+41
+
+42
+00:02:50,530 --> 00:02:52,020
+These will be your own classes.
+42
+
+43
+00:02:52,390 --> 00:02:59,350
+For example, in a parking lot, it might be a vacant, parking spot, parking garage, entrance, exit,
+43
+
+44
+00:02:59,350 --> 00:03:00,240
+garage operators.
+44
+
+45
+00:03:00,430 --> 00:03:02,860
+This might be your major classes in the system.
+45
+
+46
+00:03:03,610 --> 00:03:08,230
+After that, start to consider the operations that every object is providing.
+46
+
+47
+00:03:08,380 --> 00:03:13,870
+For example, Car should be able to move, park in a given spot, and hold the license plate.
+47
+
+48
+00:03:14,230 --> 00:03:19,810
+A parking spot should be able to accommodate a two to four wheeled vehicle, for example, to be
+48
+
+49
+00:03:19,810 --> 00:03:21,250
+able to have a truck in it.
+49
+
+50
+00:03:21,740 --> 00:03:27,580
+After that, you identify the relationships like a car should be able to park in the parking lot spot,
+50
+
+51
+00:03:27,940 --> 00:03:31,090
+parking garage to be able to fit multiple parking spots.
+51
+
+52
+00:03:31,390 --> 00:03:32,620
+You start to figure out that.
+52
+
+53
+00:03:32,770 --> 00:03:36,640
+So key objects, key operations, key relationships.
+53
+
+54
+00:03:36,790 --> 00:03:38,630
+This is how you go in your project.
+54
+
+55
+00:03:40,290 --> 00:03:47,460
+There is something standard in the industry, we call it crud operations. Crud is for create, read,
+55
+
+56
+00:03:47,670 --> 00:03:50,400
+update and delete operations.
+56
+
+57
+00:03:52,770 --> 00:03:57,150
+These are four basic functions of persistent storage.
+57
+
+58
+00:03:57,160 --> 00:04:02,010
+If you are dealing with databases, then these are the four things that we typically might need.
+58
+
+59
+00:04:02,160 --> 00:04:02,940
+Think about it.
+59
+
+60
+00:04:03,150 --> 00:04:05,360
+Let's say that we have a book manager.
+60
+
+61
+00:04:05,580 --> 00:04:10,110
+We might need to create a book, load a book, update a book, delete a book.
+61
+
+62
+00:04:10,260 --> 00:04:14,070
+So these four operations are very standard, and we use them all the time.
+62
+
+63
+00:04:15,630 --> 00:04:22,770
+The third thing about structuring your code. One very interesting way to structure your code is the
+63
+
+64
+00:04:22,770 --> 00:04:24,260
+model view structure.
+64
+
+65
+00:04:24,300 --> 00:04:25,190
+What is that?
+65
+
+66
+00:04:25,620 --> 00:04:31,410
+The model is mainly focusing on the database, business logic.
+66
+
+67
+00:04:31,890 --> 00:04:36,180
+For example, focus on the user and the user manager and so on.
+67
+
+68
+00:04:36,390 --> 00:04:38,230
+You don't print inside the model.
+68
+
+69
+00:04:38,430 --> 00:04:41,460
+This is more of the of the core logic of the system.
+69
+
+70
+00:04:42,030 --> 00:04:46,260
+The view is what takes care of the printing, what takes care of visualizing.
+70
+
+71
+00:04:46,530 --> 00:04:47,660
+There is no logic here.
+71
+
+72
+00:04:47,880 --> 00:04:51,960
+So the logic in the model but not printing, and the view is printing but no logic.
+72
+
+73
+00:04:52,350 --> 00:04:57,640
+For example, you in the View, ask the user manager to get update things for you.
+73
+
+74
+00:04:58,400 --> 00:05:04,050
+Now this separation for viewing code from the logic code.
+74
+
+75
+00:05:04,430 --> 00:05:08,580
+You will notice in the old projects there was a mix between viewing and logic,
+75
+
+76
+00:05:08,730 --> 00:05:10,650
+but this isn't the proper way to do it.
+76
+
+77
+00:05:10,830 --> 00:05:15,330
+The proper way is to split as much as you could. In practice,
+77
+
+78
+00:05:15,510 --> 00:05:20,490
+this makes the development as much as easy.  This is very close to an idea
+78
+
+79
+00:05:20,490 --> 00:05:22,500
+we call it the MVC architectural pattern.
+79
+
+80
+00:05:22,500 --> 00:05:25,300
+It is something to learn in deep in the future.
+80
+
+81
+00:05:27,060 --> 00:05:30,570
+The last thing I would like to highlight here is about the front-end and back-end.
+81
+
+82
+00:05:31,590 --> 00:05:33,420
+This is a probably a key word that you hear.
+82
+
+83
+00:05:33,540 --> 00:05:36,440
+We have front-end developers, and we have back-end developers.
+83
+
+84
+00:05:36,630 --> 00:05:38,670
+Front-end is more about the view,
+84
+
+85
+00:05:39,000 --> 00:05:45,180
+and back-end is more about the model and the business logic and business data.
+85
+
+86
+00:05:45,480 --> 00:05:48,000
+Some guys in the market are front-end developers,
+86
+
+87
+00:05:48,120 --> 00:05:51,420
+some of them are back-end developers, and some of them are fullstak.
+87
+
+88
+00:05:51,420 --> 00:05:59,070
+They do the two tasks. Anyway back to the idea, focus on the view, on the viewing no logic, and focus on
+88
+
+89
+00:05:59,070 --> 00:06:01,220
+the model, on the logic, not the view.
+89
+
+90
+00:06:01,800 --> 00:06:02,270
+That's it.
+90
+
+91
+00:06:02,310 --> 00:06:04,650
+Consider that during development your projects.

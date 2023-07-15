@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1677166786 source:e:\document\project\usaco\cp3 book\exercise 1.2.3\02\main.cpp
+	<iostream>
+	<cmath>
+	<iomanip>
+

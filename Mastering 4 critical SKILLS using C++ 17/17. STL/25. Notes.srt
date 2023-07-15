@@ -1,0 +1,289 @@
+0
+1
+00:00:01,300 --> 00:00:05,300
+So I want to share some, like, final notes about the STL.
+1
+
+2
+00:00:05,740 --> 00:00:12,250
+Remember, we said before that the STL already just provided us with a bunch of data structures that are very
+2
+
+3
+00:00:12,250 --> 00:00:13,120
+common in use.
+3
+
+4
+00:00:13,120 --> 00:00:19,060
+We named them containers, and studying them early would make your life and the data structure course
+4
+
+5
+00:00:19,060 --> 00:00:19,880
+is much easier.
+5
+
+6
+00:00:20,410 --> 00:00:26,140
+We noticed that during our study that there is a usage of templates on data types.
+6
+
+7
+00:00:26,440 --> 00:00:33,090
+So using these templates, the algorithms that we defined were very independent of the data types.
+7
+
+8
+00:00:33,430 --> 00:00:37,900
+So if you would like, for example, to sort a bunch of numbers, you don't care that
+8
+
+9
+00:00:37,900 --> 00:00:38,550
+they are numbers.
+9
+
+10
+00:00:38,560 --> 00:00:44,740
+You care only that they can be like — comparable, either like something like integer or you defined
+10
+
+11
+00:00:44,740 --> 00:00:48,750
+your own employee class with some operators less than, and so on.
+11
+
+12
+00:00:49,210 --> 00:00:55,720
+So the templates help the algorithms to be independent of the data types themselves, which
+12
+
+13
+00:00:55,720 --> 00:00:56,160
+is great.
+13
+
+14
+00:00:56,170 --> 00:01:02,590
+You can also from another perspective, think like I can create a container of vector of integer, vector
+14
+
+15
+00:01:02,590 --> 00:01:05,590
+of employee as like. It is same class,
+15
+
+16
+00:01:05,590 --> 00:01:06,970
+We just are using it over and over again.
+16
+
+17
+00:01:07,750 --> 00:01:11,770
+We also saw how the iterators are very generic interface.
+17
+
+18
+00:01:11,770 --> 00:01:14,560
+They allow us to iterate on the containers.
+18
+
+19
+00:01:14,890 --> 00:01:18,880
+You don't care how this iterating is happening behind the scene.
+19
+
+20
+00:01:18,910 --> 00:01:21,490
+It's actually very different from a data structure to another.
+20
+
+21
+00:01:21,880 --> 00:01:27,270
+But again, so these kinds of iterators make the algorithm itself independent of the container.
+21
+
+22
+00:01:27,610 --> 00:01:30,950
+So the algorithm all what needs is to move to the next and next and next,
+22
+
+23
+00:01:31,060 --> 00:01:32,610
+how this next is happening?
+23
+
+24
+00:01:32,890 --> 00:01:33,580
+We don't care.
+24
+
+25
+00:01:34,830 --> 00:01:41,850
+So some minor details about the data structures, there is something in the algorithm's code named complexity.
+25
+
+26
+00:01:42,120 --> 00:01:47,110
+Complexity is all about how fast is such an algorithm in some criteria.
+26
+
+27
+00:01:47,400 --> 00:01:52,470
+So I would like here to give you some basic notes and then later, when you have the algorithms course, you will understand
+27
+
+28
+00:01:52,470 --> 00:01:58,450
+that it in details. In general, the data structures like a queue, or a vector, or a dequeue
+28
+
+29
+00:01:58,500 --> 00:02:05,560
+are fast with their default implementations, and the unordered set is also fast, but not like them.
+29
+
+30
+00:02:06,270 --> 00:02:07,800
+These are some operations
+30
+
+31
+00:02:07,800 --> 00:02:10,530
+here are what we call like O one.Things here
+31
+
+32
+00:02:10,530 --> 00:02:17,760
+also a bit good to some extent. Any erase or find operation is typically slow in the data structure,
+32
+
+33
+00:02:18,000 --> 00:02:19,250
+maybe unordered set
+33
+
+34
+00:02:19,410 --> 00:02:25,830
+is one of the fastest when it comes to the erase and find relative to others. The set, multiset
+34
+
+35
+00:02:25,830 --> 00:02:27,470
+,and map are in general slow,
+35
+
+36
+00:02:27,810 --> 00:02:29,400
+So be careful.
+36
+
+37
+00:02:29,520 --> 00:02:36,060
+I met some of the software engineers who just you overuse them and they didn't notice that they are, for example,
+37
+
+38
+00:02:36,060 --> 00:02:37,080
+slower than a vector.
+38
+
+39
+00:02:37,410 --> 00:02:39,630
+So don't use unless there is a good reason,
+39
+
+40
+00:02:39,750 --> 00:02:41,640
+but they are very frequent data structures.
+40
+
+41
+00:02:42,190 --> 00:02:46,300
+I would say from my experience, the vector is one of the most used structures,
+41
+
+42
+00:02:46,320 --> 00:02:52,790
+so this is very important. There are a few notes about the capacity and the push-back,
+42
+
+43
+00:02:53,040 --> 00:02:54,600
+lot of push-back is very slow,
+43
+
+44
+00:02:54,960 --> 00:03:00,210
+If you can initialize with some initial capacity, if it happened that you need that, then just go ahead
+44
+
+45
+00:03:00,210 --> 00:03:03,470
+and use it. Set and map make our life very flexible,
+45
+
+46
+00:03:03,480 --> 00:03:10,080
+but again, consider that they are a bit slow. If you notice the set and priority queue has a lot in common,
+46
+
+47
+00:03:10,320 --> 00:03:15,330
+but also notice that set can do the priority queue does, but the opposite isn't true, so set is
+47
+
+48
+00:03:15,330 --> 00:03:16,050
+more generic.
+48
+
+49
+00:03:16,920 --> 00:03:20,520
+I'm not sure it might be some cases where the priority queue is a bit faster,
+49
+
+50
+00:03:20,580 --> 00:03:29,550
+I'm not sure. What else, you might want to find a specific feature about the data structure
+50
+
+51
+00:03:29,790 --> 00:03:31,380
+or even facing some errors,
+51
+
+52
+00:03:31,380 --> 00:03:35,990
+I would just advise you to just Google it and try to find the answer.
+52
+
+53
+00:03:39,540 --> 00:03:44,640
+Here are some other fancy things that you might think about it just like minor homework,
+53
+
+54
+00:03:44,640 --> 00:03:46,700
+maybe like defining 3D vectors,
+54
+
+55
+00:03:46,710 --> 00:03:47,640
+I think we defined it.
+55
+
+56
+00:03:47,880 --> 00:03:52,770
+Maybe you can create a 3D array using maps, so far,
+56
+
+57
+00:03:52,770 --> 00:03:53,730
+you might ignore that.
+57
+
+58
+00:03:54,480 --> 00:03:55,050
+That's it.

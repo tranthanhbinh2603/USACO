@@ -1,0 +1,790 @@
+WEBVTT
+
+00:00.720 --> 00:06.280
+And this video will learn about the treaty question, so first of all, I will compare what is linear
+
+00:06.280 --> 00:08.400
+recursion and prediction.
+
+00:08.430 --> 00:13.560
+Let us see see a linear regression function that is recursive function.
+
+00:13.740 --> 00:19.950
+If it is calling itself only one time, you can see that the function is calling itself only one time,
+
+00:21.090 --> 00:23.340
+then it is a linear regression.
+
+00:23.730 --> 00:28.590
+So already we have seen in the previous video that the functions which are calling just one time and
+
+00:28.590 --> 00:34.740
+we have seen recursion and recursion, but in this example it is having something to process before
+
+00:34.740 --> 00:36.490
+the call as well as after the call.
+
+00:36.750 --> 00:39.180
+So it is just a recursive function.
+
+00:39.930 --> 00:43.200
+We cannot name it as head or tail recursion.
+
+00:44.130 --> 00:47.060
+And this code is not a C or C++ code.
+
+00:47.070 --> 00:51.560
+I have just written a pseudo code here, so it's not a complete function like an integer.
+
+00:51.570 --> 00:52.470
+Everything is not there.
+
+00:52.480 --> 00:59.780
+So don't try to read it as a C language code, just so I'm sure you structure than here prediction.
+
+01:00.120 --> 01:07.470
+So what is prediction if a function that is recursive function is calling itself more than one time.
+
+01:07.680 --> 01:13.200
+So here you can see it is calling itself first time and here it is calling itself second time.
+
+01:13.440 --> 01:18.150
+So all of a recursive function is calling itself more than one time.
+
+01:18.370 --> 01:20.860
+Then it has three recursion.
+
+01:22.170 --> 01:25.170
+So in my example, I have shown it as two times.
+
+01:25.170 --> 01:29.370
+So it may be more than two times also, so that we call it a straight recursion.
+
+01:29.700 --> 01:35.790
+So here I have one example of three recursion, which is similar to the previous examples, only the
+
+01:35.790 --> 01:39.190
+difference that is calling itself more than one time.
+
+01:39.840 --> 01:45.230
+So I will trace this one and show you how it will work and what will be the output.
+
+01:45.420 --> 01:50.160
+And also I will show you how the stack is created in this one.
+
+01:50.820 --> 01:52.910
+Let us look at the tracing of dysfunction.
+
+01:52.920 --> 01:54.920
+The function is caused by passing value.
+
+01:54.940 --> 01:58.140
+Three, I have taken a piece of stack.
+
+01:58.140 --> 02:00.400
+I'm not taking complete memory and data memory.
+
+02:00.430 --> 02:07.230
+Just I'm showing you how it is used by this recursive function, which is a three recursion letter.
+
+02:07.230 --> 02:11.320
+Strix Foster scarred by passing function with value three.
+
+02:11.820 --> 02:18.900
+So the first call as one of three for this function activation, Vegard is created and the value of
+
+02:18.900 --> 02:20.230
+N will be three.
+
+02:20.640 --> 02:27.480
+So this is the first record created and then one of those steps it has to perform first, print the
+
+02:27.480 --> 02:33.980
+value, then make two columns so it will bring the value, then it will make two columns.
+
+02:34.530 --> 02:35.740
+Let us print the value.
+
+02:36.570 --> 02:43.920
+So it will print the value three and make first a function call fun four and a minus one.
+
+02:44.040 --> 02:47.920
+That is two and second call.
+
+02:47.940 --> 02:52.520
+It has to mean that it will be doing once this call has finished.
+
+02:53.370 --> 03:00.750
+So let us first finish first column so far, this call and again activation record is created where
+
+03:00.750 --> 03:04.500
+the value of end will be to two.
+
+03:05.280 --> 03:07.890
+Now for this call, let us see what happens.
+
+03:08.220 --> 03:10.740
+And that is two is greater than zero.
+
+03:10.740 --> 03:14.670
+Yes, two is greater than zero print and then make two calls.
+
+03:15.300 --> 03:16.200
+So let us do it.
+
+03:17.560 --> 03:27.100
+But two and make one call that and minus one, that is, and minus one to two, minus one one, then
+
+03:27.100 --> 03:30.520
+second call it will make after finishing this one.
+
+03:31.270 --> 03:35.580
+So so far we have two value sprinters.
+
+03:35.590 --> 03:38.040
+So I'll also be writing the output here.
+
+03:38.350 --> 03:44.180
+So the output of the function so far is three and two.
+
+03:46.630 --> 03:48.340
+Now, let us continue with this call.
+
+03:48.670 --> 03:57.790
+This call again, activation record is created and the value of end will be one not for the value of
+
+03:57.790 --> 03:58.840
+an as one.
+
+03:59.050 --> 04:00.590
+One is greater than zero.
+
+04:00.610 --> 04:01.990
+Yes, it is greater than zero.
+
+04:02.200 --> 04:06.610
+Then it will perform three steps, first one, then make two calls.
+
+04:06.620 --> 04:13.740
+So first it will bring the value that is one, then it will make first call that reduced the value of
+
+04:13.750 --> 04:14.110
+N.
+
+04:14.110 --> 04:14.980
+So this is one.
+
+04:14.980 --> 04:18.890
+So it will be zero and Schenkkan it will make afterwards.
+
+04:19.750 --> 04:23.520
+So for this call again, a fresh call is made from here.
+
+04:23.710 --> 04:24.910
+So a new activation.
+
+04:24.910 --> 04:28.690
+The code is created where the value of end will be zero.
+
+04:31.140 --> 04:39.900
+Now, this time fan of zero, this is zero zero greater than zero, no, so it will not end in sight
+
+04:40.050 --> 04:42.120
+and it will not perform these steps.
+
+04:43.050 --> 04:48.780
+So the function call terminates, not a function calls terminates.
+
+04:48.990 --> 04:52.740
+This activation record is deleted from the stack.
+
+04:54.210 --> 04:59.880
+So before the election, if you count one, two, three, four, four, Activision recalls how many
+
+04:59.880 --> 05:04.810
+calls one, two, three, four, four calls for Activision records out there.
+
+05:05.100 --> 05:06.270
+So this was deleted.
+
+05:07.830 --> 05:11.760
+Not once it is deleted, it will go back to the previous call.
+
+05:11.760 --> 05:13.320
+It means this has finished.
+
+05:13.680 --> 05:18.120
+It will go back to the previous call in previous call for performing three steps.
+
+05:18.120 --> 05:19.380
+First was completed.
+
+05:20.070 --> 05:21.600
+Second is also complicated.
+
+05:21.600 --> 05:24.440
+The slow third one to actually perform.
+
+05:24.750 --> 05:31.440
+So it will make a call here four and the minus one next call and minus one.
+
+05:31.680 --> 05:34.560
+So N minus one, one minus one is again zero.
+
+05:34.770 --> 05:38.340
+So again, it will make a call with value of zero.
+
+05:38.700 --> 05:41.210
+So again, the activation record is created.
+
+05:41.220 --> 05:42.290
+Actually this was gone.
+
+05:42.540 --> 05:44.770
+So new activation, the code is again created.
+
+05:44.790 --> 05:46.020
+So I have it is this one.
+
+05:46.020 --> 05:48.300
+So let us assume again it is created here.
+
+05:50.470 --> 05:52.780
+So, again, the fate of the Steiger's for.
+
+05:54.840 --> 06:02.580
+Next, four four four zero, this is zero zero is not greater than zero, so it's not going to enter
+
+06:02.580 --> 06:03.560
+inside function.
+
+06:03.570 --> 06:08.100
+And so this activation, the card is deleted and this function terminates.
+
+06:09.090 --> 06:16.350
+So now you can see that for fun of one, all three steps are completed printing, calling itself two
+
+06:16.350 --> 06:23.910
+times with reduced value of and that is one a sprinter and zero zero as call.
+
+06:24.120 --> 06:26.330
+And they have finished and then the output.
+
+06:26.340 --> 06:27.330
+We also have one
+
+06:30.630 --> 06:32.820
+now this call is completed.
+
+06:32.910 --> 06:34.480
+All three steps are over.
+
+06:34.920 --> 06:36.750
+So it will go back to the previous call.
+
+06:36.960 --> 06:41.430
+So go back to the previous comments of this call has finished this activation.
+
+06:41.430 --> 06:42.420
+The code is deleted.
+
+06:42.990 --> 06:45.980
+So right now there are only two activation records, the cards in the stack.
+
+06:46.230 --> 06:49.650
+One is for value of another three and value of those two.
+
+06:50.910 --> 06:58.140
+Note is back on this call where and there's two and in that out of three steps, it has already performed
+
+06:58.860 --> 07:03.370
+first printing of two and then the next.
+
+07:03.390 --> 07:06.250
+Again, it has to make a call that is at minus one.
+
+07:06.540 --> 07:10.320
+So now it will make a call for fun of and minus one.
+
+07:10.830 --> 07:13.920
+So again, fun of and minus one.
+
+07:14.250 --> 07:14.970
+That is two.
+
+07:14.970 --> 07:15.570
+Minus one.
+
+07:15.570 --> 07:16.290
+That is one.
+
+07:17.950 --> 07:19.460
+Now again, a fresh call.
+
+07:19.650 --> 07:22.490
+So new activation record is creating.
+
+07:26.960 --> 07:32.750
+Now, for this, it is one, so it will bring to one now all the things that happens will be similar
+
+07:32.750 --> 07:33.400
+to this one.
+
+07:33.830 --> 07:38.070
+So it means it will print one and then it will call itself for.
+
+07:38.120 --> 07:38.840
+No, I'm not right.
+
+07:38.870 --> 07:40.010
+Complete name fun.
+
+07:40.010 --> 07:44.290
+I'm just using F because of lack of space, F of zero.
+
+07:44.540 --> 07:49.370
+So this Activision record is created again that this ends.
+
+07:49.610 --> 07:50.840
+So this is deleted.
+
+07:51.230 --> 07:52.910
+Then goes back again.
+
+07:53.180 --> 07:54.300
+Call for zero.
+
+07:54.590 --> 08:00.410
+So again, inactivation record is created for zero and this ends and this is deleted.
+
+08:01.280 --> 08:02.890
+Now control goes back to this.
+
+08:03.020 --> 08:04.730
+This is finished, goes back to this.
+
+08:04.970 --> 08:08.900
+All three steps are finished, then goes back to one of three.
+
+08:09.110 --> 08:12.570
+In this, it has to perform one more step.
+
+08:12.580 --> 08:15.190
+That is one of this was two.
+
+08:15.200 --> 08:16.340
+So this is also two.
+
+08:16.580 --> 08:19.340
+So three minus one, three minus one.
+
+08:19.880 --> 08:22.040
+So again, two calls are made.
+
+08:23.030 --> 08:26.150
+So already this portion, we have seen it completely.
+
+08:26.450 --> 08:29.120
+Same thing happens here also.
+
+08:30.400 --> 08:37.480
+He also seemed happens now this I have taken enough space for explaining this one, now this, I have
+
+08:37.480 --> 08:41.970
+to write it in small size, but it will happen as it is what has happened here.
+
+08:42.370 --> 08:43.920
+So let me finish it quickly.
+
+08:44.260 --> 08:48.900
+So the first thing happened is value to spend it, to spend it.
+
+08:49.210 --> 08:51.790
+And here activation record has created.
+
+08:53.850 --> 08:59.820
+Then call for the of one new activation record for this was gone.
+
+09:00.450 --> 09:11.310
+So one is created then for this value, one is printed value one is printed, then called for fun of
+
+09:11.310 --> 09:18.030
+Siedel and the sense activation of the card one more is created with value zero and this ends.
+
+09:18.510 --> 09:23.960
+And again, a call for fan of zero again and zero.
+
+09:24.180 --> 09:25.680
+And this also ends.
+
+09:25.690 --> 09:32.490
+This also goes back here fond of one for this one is printed.
+
+09:33.030 --> 09:34.470
+So output is one.
+
+09:36.430 --> 09:40.690
+Then Khilafah fan of zero call for phone of zero, right?
+
+09:41.080 --> 09:45.260
+So, again, two more activation records than double to finish the finish.
+
+09:45.550 --> 09:47.710
+And finally, also finish up.
+
+09:47.950 --> 09:49.810
+This is the output that we get.
+
+09:51.100 --> 09:55.480
+So I have simultaneously shown you how the activation record works.
+
+09:55.840 --> 10:01.030
+So you can see that maximum size of the stack was how much?
+
+10:01.750 --> 10:03.580
+One, two, three, four.
+
+10:03.580 --> 10:04.810
+Maximum was four.
+
+10:04.810 --> 10:05.920
+One, two, three, four.
+
+10:06.250 --> 10:08.890
+And total, how many activation of records are created?
+
+10:09.100 --> 10:15.460
+And many calls out there, like, I did not draw all just I have given the idea I did not draw each
+
+10:15.460 --> 10:16.330
+and every call here.
+
+10:16.660 --> 10:23.290
+So if I count them one, two, three, four, five, six, seven, eight, nine, 10, 11, 12, 13,
+
+10:23.290 --> 10:24.070
+14, 15.
+
+10:24.280 --> 10:25.950
+So total 15 calls are there.
+
+10:26.140 --> 10:29.620
+So 15 times activation records are created and deleted.
+
+10:30.580 --> 10:34.210
+Nine will remove the stack and redraw this tree once again.
+
+10:34.390 --> 10:36.870
+And we will analyze more on the tree.
+
+10:37.540 --> 10:39.430
+I have read on the tree once again.
+
+10:39.790 --> 10:45.880
+Let us analyze the tree so by which we can analyze the working of this recursive function.
+
+10:46.510 --> 10:47.690
+So here is the tree.
+
+10:48.820 --> 10:53.290
+Now, first of all, let me label the calls in which order they are.
+
+10:53.290 --> 11:00.190
+Karda see the force function call as this one one, then second call.
+
+11:00.700 --> 11:03.050
+This will be done once this has finished.
+
+11:03.370 --> 11:04.380
+It has to finish.
+
+11:04.390 --> 11:06.130
+So I know that there are three things.
+
+11:06.130 --> 11:08.460
+Again, the second call printing is done.
+
+11:08.710 --> 11:09.790
+Then third called.
+
+11:11.450 --> 11:13.670
+Then this one will be done once this has finished.
+
+11:13.840 --> 11:17.850
+So another sprinting, then this gone forward, gone.
+
+11:18.200 --> 11:22.010
+Now this is fun with the value zero, this will terminate.
+
+11:22.430 --> 11:25.460
+Then it will go to Discon.
+
+11:25.670 --> 11:28.010
+So this is fifth one, fifth call.
+
+11:28.490 --> 11:32.780
+Then as this has finished, it will go back and then it will make this call.
+
+11:33.170 --> 11:37.250
+So this is sixth con then under this seven and eight.
+
+11:37.700 --> 11:39.660
+Now these are also finish.
+
+11:39.920 --> 11:45.120
+So under this, if you see all the calls are completed now, it will go to this one.
+
+11:45.230 --> 11:46.280
+So this is the ninth.
+
+11:48.080 --> 11:51.290
+So that is the ninth call, ninth activation.
+
+11:51.290 --> 11:54.500
+The code to be created in the stack now, Heidi, is how much?
+
+11:54.500 --> 11:55.140
+One, two.
+
+11:55.310 --> 11:57.350
+So only two will be there in the stack.
+
+11:57.770 --> 12:00.640
+But the count, if you take this, the ninth one.
+
+12:00.650 --> 12:04.790
+So there's a ninth call, the end of the sprinting is done and this call is made.
+
+12:04.970 --> 12:10.400
+So this is the tenth call and then printing is done and this is mid level call.
+
+12:10.640 --> 12:16.390
+And this will finish now because value of this is zero, then this call to call.
+
+12:16.790 --> 12:19.180
+So this is also finished because the value of zero.
+
+12:19.400 --> 12:20.870
+So this will also complete.
+
+12:21.050 --> 12:22.550
+All three steps are completed.
+
+12:22.550 --> 12:30.920
+And this one, the world can then go back for this one right side, 13th gone, then 14 call and 15.
+
+12:32.540 --> 12:34.840
+So that's what all of you have counted them.
+
+12:35.090 --> 12:42.670
+So total 15 calls are made in this particular function when we pass the value as a three.
+
+12:44.090 --> 12:46.800
+So I have shown you the order in which the calls are made.
+
+12:46.820 --> 12:54.920
+This is very important for you to visualize or trace how these type of functions work, which are calling
+
+12:54.920 --> 12:56.180
+themselves more than one time.
+
+12:57.020 --> 12:59.210
+Now we will analyze the time, complexity.
+
+12:59.210 --> 13:02.050
+So time complexity depends on the number of calls.
+
+13:02.090 --> 13:02.570
+Yes.
+
+13:02.840 --> 13:06.970
+In each call it is printing except in the calls where the value is zero.
+
+13:07.160 --> 13:11.660
+So otherwise it is remaining almost for every call that.
+
+13:12.740 --> 13:15.740
+Now let us see how many calls are made.
+
+13:15.740 --> 13:20.240
+If the value is three so far and how many calls will be made with that.
+
+13:20.240 --> 13:22.500
+We can decide the time complexity of this one.
+
+13:22.640 --> 13:24.120
+So let us analyze this one.
+
+13:24.470 --> 13:32.470
+So if I count the number of calls level twice then and this level, just one call is made.
+
+13:33.680 --> 13:41.270
+And in this level, if I see two calls are made to and in this level, one, two, three, four calls
+
+13:41.270 --> 13:42.710
+are made for.
+
+13:43.250 --> 13:48.680
+And this level, one, two, three, four, five, six, seven, eight, eight calls are made.
+
+13:49.640 --> 13:55.400
+So it means when they have passed the value as a three, then in the first level, one call, next level
+
+13:55.400 --> 14:00.250
+to call, next level for the next eight, four, three, there are four levels.
+
+14:00.770 --> 14:09.260
+And if the value of PN that I am passing here, this value n if it is a four then there will be five
+
+14:09.260 --> 14:09.950
+levels.
+
+14:09.980 --> 14:15.410
+It means the three will be more bigger than this one and how many calls it may be having.
+
+14:16.370 --> 14:17.850
+So let us analyze this one.
+
+14:17.870 --> 14:20.910
+So for any value, often how many calls it will be.
+
+14:21.230 --> 14:29.370
+So let us sum up all this so I will take the sum of all those one plus two plus four plus eight.
+
+14:29.870 --> 14:31.470
+This is total 15.
+
+14:32.060 --> 14:33.680
+Yes, we know.
+
+14:33.680 --> 14:35.090
+Discount all of them.
+
+14:35.100 --> 14:35.780
+That is 15.
+
+14:35.780 --> 14:38.010
+Or you add all these, you get 15.
+
+14:38.360 --> 14:40.760
+So this is nothing but dupa zero plus two.
+
+14:40.760 --> 14:42.020
+Bar one plus two.
+
+14:42.030 --> 14:44.540
+Bovver two plus two, three.
+
+14:46.160 --> 14:55.430
+So this is nothing but some of the terms of that, the summation of terms of cities, that is CBDs.
+
+14:55.850 --> 14:58.910
+That is some of geometric progression.
+
+14:58.910 --> 15:02.080
+Tome's what is all the adjectives and all.
+
+15:02.120 --> 15:05.970
+We will learn some other time, but right now I'll just ride on the formula.
+
+15:06.290 --> 15:09.590
+So this will be nothing but two power.
+
+15:10.040 --> 15:11.360
+Hairston was three.
+
+15:11.360 --> 15:13.660
+So this is three plus one minus one.
+
+15:14.750 --> 15:21.500
+So it means if I have dupa zero plus two, power one plus two, power two goes on two.
+
+15:21.770 --> 15:27.010
+If this is then then this will go tail to power and then how much that is.
+
+15:27.380 --> 15:30.620
+This is dupa and plus one.
+
+15:30.620 --> 15:31.510
+Minus one.
+
+15:32.600 --> 15:34.370
+So that many calls it will make.
+
+15:35.030 --> 15:36.660
+So what is that equal do.
+
+15:36.860 --> 15:40.730
+So this is Order of Tuborg and.
+
+15:42.840 --> 15:46.240
+So total dupa and calls are made.
+
+15:46.560 --> 15:52.800
+So if I substitute the value of three here, so two or three plus one for to perform minus one, that
+
+15:52.800 --> 15:54.340
+is sixteen, minus one is 15.
+
+15:54.750 --> 16:00.330
+So for any value of N, the number of calls will be outdraw dupa.
+
+16:00.340 --> 16:04.080
+And so that's all we have seen.
+
+16:04.080 --> 16:05.280
+What is truly recursion.
+
+16:05.280 --> 16:10.830
+And we have taken one example and we have seen how the treating tree is generated and how the calls
+
+16:10.830 --> 16:14.700
+are made, how the stock is used and what is the time complexity.
+
+16:14.970 --> 16:17.110
+So for this example function, it was too.
+
+16:17.430 --> 16:20.850
+And so it depends on the function, what time complexity may be getting.
+
+16:20.850 --> 16:25.760
+It's not that every tree recursion will have to Boran for this function is too boring.
+
+16:26.190 --> 16:27.210
+So the time is.
+
+16:29.310 --> 16:36.280
+Order of dupa and then what is the space, what is the space complexity?
+
+16:36.630 --> 16:44.520
+So it depends on what is the maximum height of the stack, because total activity of the course depends
+
+16:44.520 --> 16:49.700
+on a number of calls, but how much space it was occupying inside the stack.
+
+16:49.980 --> 16:54.900
+So you have observed that same space was reduced inside the stack.
+
+16:55.260 --> 16:59.920
+One activation on the court was going in the same place, another activation record was created.
+
+17:00.330 --> 17:07.050
+So we don't require much space, just like Boran, but it required the space equal to the height of
+
+17:07.050 --> 17:08.510
+a tree that we got here.
+
+17:08.730 --> 17:10.610
+So one, two, three, four.
+
+17:11.040 --> 17:12.760
+If it is three, four is the space.
+
+17:12.780 --> 17:20.190
+So if it is an endless fun little bit of space or this order of any space complexities of and so maximum
+
+17:20.190 --> 17:24.010
+stack size that we need, and that will be sufficient.
+
+17:24.720 --> 17:26.730
+So that's all about prediction.

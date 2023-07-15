@@ -1,0 +1,354 @@
+0
+1
+00:00:01,080 --> 00:00:09,390
+In a similar way to the functions, Templates are almost the same logic. Llet's say we have a struct
+1
+
+2
+00:00:10,360 --> 00:00:16,030
+like the hospital queue. Remember, we needed a queue of integers and another queue of strings
+2
+
+3
+00:00:16,030 --> 00:00:22,240
+and so on, Thinking about the code of the struct: its code is just copy-paste.
+3
+
+4
+00:00:22,450 --> 00:00:23,100
+What happened?
+4
+
+5
+00:00:23,110 --> 00:00:25,500
+You just replace integer with string,
+5
+
+6
+00:00:25,540 --> 00:00:27,250
+Replace string with double to get a queue of double.
+6
+
+7
+00:00:27,520 --> 00:00:34,450
+That's it, The same everywhere. The class templates come again so that the compiler in the compilation time is
+7
+
+8
+00:00:34,450 --> 00:00:40,890
+going to generates several copies of your struct, Just as much as you used it.
+8
+
+9
+00:00:40,900 --> 00:00:46,510
+If I used a template class of integer and another with double, it is going to generate two versions.
+9
+
+10
+00:00:46,660 --> 00:00:48,040
+one of integer and one of double for you.
+10
+
+11
+00:00:49,330 --> 00:00:51,430
+So here is how the
+11
+
+12
+00:00:51,640 --> 00:00:54,220
+queue class is going to be implemented in
+12
+
+13
+00:00:56,810 --> 00:01:03,100
+the class templates. You first like the function, you come here and find the template type name T
+13
+
+14
+00:01:03,110 --> 00:01:03,390
+...
+14
+
+15
+00:01:03,940 --> 00:01:09,590
+This  means this class is going to be a template, is going to be copy-paste versions
+15
+
+16
+00:01:09,590 --> 00:01:10,820
+for it and the compliation time
+16
+
+17
+00:01:11,270 --> 00:01:17,090
+and the type is T. Nowhere, Instead you define  integer array of hundred, we define it as T array of
+17
+
+18
+00:01:17,090 --> 00:01:17,540
+hundred.
+18
+
+19
+00:01:18,320 --> 00:01:24,470
+The function here is expecting for example in the parameter here an array to copy from it.
+19
+
+20
+00:01:24,470 --> 00:01:26,240
+which type is going to be an integer.
+20
+
+21
+00:01:26,240 --> 00:01:29,380
+You cannot put just integer, it is going to be of type T,
+21
+
+22
+00:01:29,630 --> 00:01:36,950
+So the compiler will know that this is T. Also when you add an element, you wil know it of type T, Ok!. What if i have
+22
+
+23
+00:01:36,950 --> 00:01:43,250
+a function that might need different data types, you can still have functions of different types.
+23
+
+24
+00:01:43,530 --> 00:01:47,960
+So deal with the types as just you are giving more types as much as you need.
+24
+
+25
+00:01:48,320 --> 00:01:50,150
+So this is a global class.
+25
+
+26
+00:01:50,150 --> 00:01:55,620
+We are going to use T, we can define more than one here and this one is specific for the function.
+26
+
+27
+00:01:56,090 --> 00:02:01,930
+Now here I'm defining a queue of type string.
+27
+
+28
+00:02:01,970 --> 00:02:05,790
+Remember the less than and greater than. (should be rare) This is important here
+28
+
+29
+00:02:05,810 --> 00:02:07,490
+as difference in syntax.
+29
+
+30
+00:02:07,670 --> 00:02:12,920
+When you say my queue of type string, it means please make a copy from this class but use it as string
+30
+
+31
+00:02:13,250 --> 00:02:18,740
+and here I'm saying my queue of type Integer so I'm using it. When I come here to add front add front you
+31
+
+32
+00:02:18,740 --> 00:02:20,770
+can add only strings and you can print them.
+32
+
+33
+00:02:21,230 --> 00:02:23,090
+You can also add here integer and integer.
+33
+
+34
+00:02:23,360 --> 00:02:26,300
+Now I wanted to call the function double here at the sum and add.
+34
+
+35
+00:02:26,300 --> 00:02:32,150
+and I can use the type, it has to be one element only and just applied here.
+35
+
+36
+00:02:32,360 --> 00:02:33,170
+So the same logic
+36
+
+37
+00:02:33,170 --> 00:02:33,680
+exactly.
+37
+
+38
+00:02:33,680 --> 00:02:34,270
+Nothing new.
+38
+
+39
+00:02:36,000 --> 00:02:42,050
+There is something also extra when it comes to the classes, what we call the non type parameters for templates.
+39
+
+40
+00:02:42,390 --> 00:02:46,690
+when you look to the array size here in the previous one, it was const, fixed.
+40
+
+41
+00:02:47,100 --> 00:02:53,770
+What if I would like to instantiate the different, not instantiate, to generate in compliation time different versions
+41
+
+42
+00:02:54,110 --> 00:02:56,250
+but with different sizes for a reason and another?
+42
+
+43
+00:02:56,580 --> 00:03:02,110
+You can come here and add here in the template, coma, integer size, and then use the size inside it.
+43
+
+44
+00:03:02,520 --> 00:03:08,930
+Now in the code here, you say my queue, integer, coma 12.
+44
+
+45
+00:03:08,940 --> 00:03:14,570
+It means that the queue of type integer and the size variable is going to be a size.
+45
+
+46
+00:03:15,090 --> 00:03:18,470
+Notice that this variable has to be constant.
+46
+
+47
+00:03:18,510 --> 00:03:19,050
+Why?
+47
+
+48
+00:03:19,290 --> 00:03:27,990
+Because the compiler is going to generate array here of type size, which have to be generated
+48
+
+49
+00:03:27,990 --> 00:03:29,640
+on the completion time.
+49
+
+50
+00:03:30,060 --> 00:03:35,620
+So if the variable would be known in the runtime, the compiler is going to generate code
+50
+
+51
+00:03:35,620 --> 00:03:36,710
+before the runtime.
+51
+
+52
+00:03:36,840 --> 00:03:38,600
+So it have to be a const value.
+52
+
+53
+00:03:38,790 --> 00:03:44,310
+The typical usage for such an addition is when you are defining some constants and arrays sizes.
+53
+
+54
+00:03:44,430 --> 00:03:44,990
+That's it.
+54
+
+55
+00:03:47,440 --> 00:03:52,010
+Remember, we talked about the function specialization. In class
+55
+
+56
+00:03:52,060 --> 00:03:57,100
+There is also something very similar. I don't want to dig behind its details, but in class, if you
+56
+
+57
+00:03:57,100 --> 00:04:04,050
+if you also have some generic, say, a class game that has a specific behavior and then another class,
+57
+
+58
+00:04:04,060 --> 00:04:09,220
+another case for only string, you come here and define here the less than greater than
+58
+
+59
+00:04:09,490 --> 00:04:17,320
+and then you add here the type here you added after the struct name and this
+59
+
+60
+00:04:17,320 --> 00:04:23,240
+way for the generic case, this one would be used as a generic solution for this specific case,
+60
+
+61
+00:04:23,290 --> 00:04:26,650
+This one is going to be used as a specific version.
+61
+
+62
+00:04:26,680 --> 00:04:32,530
+So remember two things, you do here directly the less than the greater than and here you put the specific
+62
+
+63
+00:04:32,530 --> 00:04:33,070
+data type.
+63
+
+64
+00:04:34,760 --> 00:04:37,790
+It worth mentioning about the difference between overloading and templates.
+64
+
+65
+00:04:38,190 --> 00:04:43,940
+Remember here in templates, we have an identical syntax that we keep copy paste for different data types.
+65
+
+66
+00:04:43,940 --> 00:04:44,450
+That's it.
+66
+
+67
+00:04:44,900 --> 00:04:48,730
+In function overloading, the function name is identical.
+67
+
+68
+00:04:48,920 --> 00:04:51,920
+It has different parameters and it has different behavior.
+68
+
+69
+00:04:52,130 --> 00:04:54,500
+So while the complier see different function names,
+69
+
+70
+00:04:54,680 --> 00:04:59,820
+It just see different parameters and different like behaviors. In any case you needed to think about that.
+70
+
+71
+00:05:00,560 --> 00:05:01,130
+That's it.

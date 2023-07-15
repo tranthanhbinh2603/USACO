@@ -1,0 +1,99 @@
+0
+1
+00:00:01,500 --> 00:00:06,090
+In this practice, we also would like to highlight how the hospital system can be written using
+1
+
+2
+00:00:06,200 --> 00:00:10,140
+STL. Remember, we had a queue, we implemented it by ourselves,
+2
+
+3
+00:00:10,170 --> 00:00:16,950
+It has an array for names, another array for the status,...
+3
+
+4
+00:00:16,950 --> 00:00:17,550
+...
+4
+
+5
+00:00:18,060 --> 00:00:21,420
+Sorry, if we would like to add at the end, it was easy, the front was a bit problematic.
+5
+
+6
+00:00:21,720 --> 00:00:26,550
+Removing from the front means that you have to remove something, so you have to do some shift lifting
+6
+
+7
+00:00:26,550 --> 00:00:27,660
+in the array and so on.
+7
+
+8
+00:00:28,350 --> 00:00:34,020
+When it comes to the STL, you think which thing would allow me to insert in the front
+8
+
+9
+00:00:34,020 --> 00:00:37,140
+and in the end. This is as easily as that the dequeue itself,
+9
+
+10
+00:00:37,560 --> 00:00:43,430
+OK, so we can use easily the dequeue for that. You might think, what about the priority queue?
+10
+
+11
+00:00:43,440 --> 00:00:48,250
+It would be a bit problematic because you cannot print the priority queue without freeing it.
+11
+
+12
+00:00:48,780 --> 00:00:52,320
+So going back here, adding end, it's as simple as push back,
+12
+
+13
+00:00:52,320 --> 00:00:54,810
+adding front is as simple as just push front,
+13
+
+14
+00:00:55,080 --> 00:00:57,920
+removing front is as simple as get front and remove front.
+14
+
+15
+00:00:58,320 --> 00:01:01,920
+This way, you are done, that was with very less code.
+15
+
+16
+00:01:02,970 --> 00:01:06,810
+The hospital itself would be like a vector of hospital queues.
+16
+
+17
+00:01:08,490 --> 00:01:11,600
+So it was like a vector of queues.
+17
+
+18
+00:01:11,880 --> 00:01:20,280
+Now, this is a hospital queue, but in our case, we just were going to use our personal and defined the queues.
+18
+
+19
+00:01:20,520 --> 00:01:21,860
+There is no much changes here.
+19
+
+20
+00:01:21,990 --> 00:01:22,500
+That's it.

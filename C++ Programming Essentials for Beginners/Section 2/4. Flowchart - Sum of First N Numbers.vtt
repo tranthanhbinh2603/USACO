@@ -1,0 +1,286 @@
+WEBVTT
+
+00:01.450 --> 00:07.060
+Everyone, so in this lecture, we're going to discuss the problem, we need to find the sum of numbers
+
+00:07.180 --> 00:14.320
+from one doing OK, so end will be given as input to us and we need to iterate over all the numbers
+
+00:14.410 --> 00:16.960
+from one to N and add them up.
+
+00:17.560 --> 00:25.690
+For example, if an as forward, we will start from one, we will add two, we will add three and we
+
+00:25.690 --> 00:27.220
+will add for this.
+
+00:27.220 --> 00:34.870
+Some comes out to be an OK, this is what we need to do and we need to come up with apologized for the
+
+00:34.870 --> 00:35.140
+same.
+
+00:36.010 --> 00:40.480
+One thing to observe in this problem is that we are repeating a task.
+
+00:42.090 --> 00:48.420
+Again and again, OK, so what we are doing, we are maintaining of some the the some is initially zero.
+
+00:49.880 --> 00:55.760
+Then in the next step, we are adding one to it, some becomes one in the next year, adding to do it.
+
+00:57.550 --> 01:01.720
+In the next hour, we're adding three to it in the next hour, we're writing for do it again.
+
+01:01.990 --> 01:03.880
+So what is the word that is getting repeated?
+
+01:04.500 --> 01:07.210
+I think the current number, that is what we are doing.
+
+01:07.990 --> 01:14.770
+And finally, when we reach for, we stop and we print out the smartest thing we need to see how we
+
+01:14.770 --> 01:19.630
+can implement the repeal statement using of logic.
+
+01:20.180 --> 01:23.860
+And when will you work with programming languages?
+
+01:23.890 --> 01:26.650
+We will see that there is a concept of a loop.
+
+01:27.550 --> 01:34.210
+OK, so there is a follow that is a while loop, so there are different ways of implementing the repeat
+
+01:34.210 --> 01:34.730
+instruction.
+
+01:34.750 --> 01:34.990
+OK.
+
+01:35.440 --> 01:39.130
+So let us see how we can repeat some work inside a flow chart.
+
+01:39.730 --> 01:41.920
+So we'll try to draw flowchart for the team.
+
+01:42.550 --> 01:43.360
+We will start.
+
+01:44.840 --> 01:45.140
+OK.
+
+01:46.080 --> 01:52.010
+And the next step would be to read the well, you often will read the value of an.
+
+01:53.210 --> 01:59.720
+And now what we want to do that was and is for someone to look in and is for what do you want to do?
+
+02:00.440 --> 02:06.440
+You want to have the value of some in the memory that is in the beginning, OK?
+
+02:07.010 --> 02:10.760
+What you will do, you will create a bucket called some inside the memory.
+
+02:11.390 --> 02:13.130
+The value of the sum would be zero.
+
+02:13.280 --> 02:14.270
+So how do we do it?
+
+02:15.320 --> 02:17.600
+OK, we have something called as a some.
+
+02:18.570 --> 02:21.690
+And the value of that sum is currently zero.
+
+02:23.120 --> 02:29.420
+And I also need to know what is the current number, so we know that we are starting from a value that
+
+02:29.420 --> 02:30.360
+is equal to one.
+
+02:30.950 --> 02:31.580
+Let us see.
+
+02:31.970 --> 02:36.170
+I denotes the current number and the value of the current number is one.
+
+02:36.290 --> 02:41.150
+So will initialize that we can say, OK, we have the current number that is equal to one.
+
+02:42.180 --> 02:44.430
+We want to do certain work repeatedly.
+
+02:44.820 --> 02:47.940
+So what we will I'll show you how to implement a loop.
+
+02:48.900 --> 02:55.230
+So here we will put a decision box and we will check if the value of I.
+
+02:57.080 --> 02:58.640
+If this is less than equal doing.
+
+02:59.810 --> 03:05.630
+If done that is, yes, then what we will do, we will add this item or something.
+
+03:06.110 --> 03:11.450
+OK, so what we will do, we will say OK, some equals some less I.
+
+03:12.830 --> 03:18.800
+We have added the wealth I to the son and we will update with.
+
+03:20.300 --> 03:23.000
+We will talk, I know, becomes a call to I +1.
+
+03:23.540 --> 03:27.620
+And again will come back to this particular point.
+
+03:28.760 --> 03:35.480
+So this these three boxes, they will formal, OK, we will see how, but if done, there is no that
+
+03:35.480 --> 03:43.340
+means the value of the current number has exceeded the value of and then what we will will print the
+
+03:43.340 --> 03:44.090
+value of some.
+
+03:46.430 --> 03:48.290
+And then we will stop.
+
+03:49.440 --> 03:51.000
+Now we will stop.
+
+03:55.410 --> 04:03.240
+Now you may ask how how this is going to calculate the sum, OK, that this part is called as a loop
+
+04:04.020 --> 04:04.950
+inside the loop.
+
+04:06.030 --> 04:07.950
+There are other things.
+
+04:08.160 --> 04:10.980
+So this thing is known as the stopping criteria.
+
+04:11.400 --> 04:13.710
+It tells when to stop this loop.
+
+04:14.580 --> 04:16.680
+This is the work that we are doing.
+
+04:17.690 --> 04:21.080
+And this is a big statement inside the loop.
+
+04:21.260 --> 04:21.590
+OK.
+
+04:22.100 --> 04:28.650
+And these are the initial values that we have decided, OK, we will start from equal to one.
+
+04:28.670 --> 04:30.590
+The sum is zero, so let's see what happens.
+
+04:31.050 --> 04:32.960
+Initially, Summit zero is one.
+
+04:33.770 --> 04:34.550
+Here we come.
+
+04:34.550 --> 04:37.310
+Here we take is one less than equal to Ford.
+
+04:37.610 --> 04:38.570
+The answer is yes.
+
+04:38.960 --> 04:40.130
+We update our sum.
+
+04:40.130 --> 04:41.630
+So sum becomes, well, how much?
+
+04:42.080 --> 04:42.880
+Some blasé.
+
+04:42.900 --> 04:44.390
+So the new value of some is no.
+
+04:44.390 --> 04:47.600
+One, and I become like, Where do I +1?
+
+04:47.600 --> 04:49.150
+The new value of I is now two.
+
+04:49.980 --> 04:51.050
+OK, this is some.
+
+04:51.050 --> 04:51.710
+This is a.
+
+04:53.310 --> 04:57.720
+Now again, we go here, we check, is Eliza inequality doing?
+
+04:58.560 --> 04:59.520
+The answer is yes.
+
+04:59.520 --> 05:07.170
+Two is less than equal before the Sun becomes one +2 three, and the value of AI becomes a plus one
+
+05:07.170 --> 05:08.160
+that is also three.
+
+05:08.760 --> 05:15.840
+Again, we go here is three less than equal to four, and that is yes, the sum becomes six and the
+
+05:15.840 --> 05:17.160
+value of AI becomes four.
+
+05:17.640 --> 05:20.970
+Again, we go here is four less than equal to four.
+
+05:21.240 --> 05:27.060
+The answer is yes, then becomes six plus four 10, and the value of AI becomes five.
+
+05:27.630 --> 05:31.080
+And this is where your condition will break.
+
+05:31.450 --> 05:33.150
+OK, this is weird.
+
+05:33.870 --> 05:38.580
+Now, the value of AI is five and the value of an is four.
+
+05:38.670 --> 05:43.000
+So what we will do will come out of this front, so we will enter this code.
+
+05:43.620 --> 05:48.120
+This branch of code, we will print the sum the value of some bucket of been.
+
+05:48.690 --> 05:53.700
+This value would get printed as an output and we will stop.
+
+05:53.730 --> 05:54.060
+OK.
+
+05:54.510 --> 05:58.290
+So this is how easy it is to implement a loop using a flowchart.
+
+05:58.830 --> 06:04.410
+So any time you're implementing a loop, take it off three three four things the initial condition,
+
+06:04.950 --> 06:11.130
+the stopping criteria, the work that needs to be repeated inside the loop and the update.
+
+06:11.130 --> 06:13.530
+OK, that's all for this video.
+
+06:13.620 --> 06:18.600
+I hope you understood how to implement a repeat instruction using a loop.
+
+06:18.690 --> 06:19.230
+That's all.
+
+06:19.230 --> 06:19.710
+Thank you.

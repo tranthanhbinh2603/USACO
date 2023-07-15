@@ -1,0 +1,253 @@
+WEBVTT
+
+00:01.990 --> 00:06.640
+Everyone in this lecture will discuss the pseudocode to check if a number is prime one or two.
+
+00:07.360 --> 00:12.220
+Let us recall the flowchart that we have drawn to check a number is prime or not.
+
+00:12.860 --> 00:16.120
+Now let us try to convert this flowchart into the code, OK?
+
+00:16.780 --> 00:19.990
+The first step is read and look read and.
+
+00:21.770 --> 00:27.560
+The next step is, Initialise, is because we are trying to find out it in the range to do n minus one,
+
+00:27.560 --> 00:33.710
+so he's OK, let equal to two and here which is a smaller then.
+
+00:33.710 --> 00:36.560
+And so here we also see that this is a part of a loop.
+
+00:37.280 --> 00:39.080
+This part is done repeatedly.
+
+00:39.710 --> 00:41.210
+We take while.
+
+00:42.620 --> 00:47.960
+I is less than and are you going to do violence less than equal to n minus one?
+
+00:48.650 --> 00:49.370
+Both are fine.
+
+00:50.470 --> 00:56.880
+To hear what you're doing, you're repeatedly checking the foreign number and you're checking that,
+
+00:56.890 --> 01:00.060
+is there any adviser in the range to do and minus one?
+
+01:00.100 --> 01:07.000
+So the value of I is going from two trillion minus one that is less than to what you're taking hit.
+
+01:07.030 --> 01:09.790
+Your checking is and divisible by.
+
+01:09.940 --> 01:13.600
+So you will if it OK, this is this is not a look.
+
+01:13.690 --> 01:15.190
+This is a starting point of the law.
+
+01:16.000 --> 01:18.010
+This is if if.
+
+01:19.480 --> 01:22.410
+And is divisible by I.
+
+01:23.790 --> 01:28.500
+If an is divisible by then, what are you going to do?
+
+01:29.400 --> 01:32.230
+You can simply say that this number is not prime and you can ignore.
+
+01:33.450 --> 01:35.400
+This is what we have seen, so we're going to print.
+
+01:36.670 --> 01:37.450
+Not Prime.
+
+01:39.920 --> 01:44.420
+And begin to exit as soon as we get one device that.
+
+01:46.030 --> 01:47.360
+We consider this number is not.
+
+01:47.650 --> 01:48.850
+And we can exit, OK.
+
+01:49.370 --> 01:51.790
+So for this very look, we have to stop being territorial.
+
+01:52.120 --> 01:54.520
+We have written the work that needs to be done.
+
+01:55.120 --> 01:58.930
+We have done the initial look and listen to what is left as the update condition, OK.
+
+01:59.350 --> 02:03.570
+So if an is not divisible by, I then go to the next day.
+
+02:03.670 --> 02:04.000
+OK.
+
+02:04.450 --> 02:11.500
+That is basically the step I do one day, so it becomes I equal to a plus one.
+
+02:13.110 --> 02:13.410
+OK.
+
+02:14.100 --> 02:15.540
+I called up this one.
+
+02:16.020 --> 02:22.590
+Now, if you come out of this vile loop, that means you could not find a device that in this range
+
+02:22.970 --> 02:29.040
+it would do and minus one if suppose you get that he has a device that often you would simply hit the
+
+02:29.070 --> 02:29.550
+exit.
+
+02:30.480 --> 02:34.800
+But if you're not coming out of the loop, that means you have scanned all numbers still in minus one
+
+02:35.250 --> 02:36.810
+and you could not hit the exit.
+
+02:37.590 --> 02:43.680
+That is why you're coming to this line, where you going to print this as a prime number.
+
+02:43.680 --> 02:50.220
+So basically this direction, if you come out of the loop, you can joke that this number is a prime
+
+02:50.220 --> 02:50.610
+number.
+
+02:50.730 --> 02:52.230
+And now you can hit the exit.
+
+02:53.410 --> 02:54.730
+Your program is complete.
+
+02:55.360 --> 02:59.320
+OK, now let us brighten this for an example, it's a seven.
+
+03:00.340 --> 03:05.530
+So what happens, you start from two do does not divide seven, you make it three.
+
+03:05.990 --> 03:10.090
+OK, we go to three to three is less than seven.
+
+03:10.690 --> 03:11.890
+Three does not divide seven.
+
+03:11.920 --> 03:12.730
+You make it four.
+
+03:14.280 --> 03:17.160
+OK, so you come here again for what, less than seven?
+
+03:17.790 --> 03:19.650
+Or does not divide seven?
+
+03:20.250 --> 03:21.030
+So you come here.
+
+03:21.120 --> 03:22.020
+You make it five.
+
+03:23.260 --> 03:27.500
+Five does not divide, seven, you make it six fixes less than seven.
+
+03:27.520 --> 03:29.150
+But six does not divide seven.
+
+03:29.170 --> 03:30.130
+You will again come here.
+
+03:30.670 --> 03:32.410
+And finally, you make it seven.
+
+03:33.100 --> 03:35.770
+The value of I is now seven, which is not less than him.
+
+03:36.220 --> 03:38.350
+And you end up with this line.
+
+03:38.650 --> 03:40.060
+I knew circa seven is up and I'm am.
+
+03:40.330 --> 03:41.100
+And that is true.
+
+03:41.110 --> 03:43.270
+Seven itself is a prime number.
+
+03:43.270 --> 03:45.180
+And then you exit a couple.
+
+03:45.190 --> 03:46.150
+The number like nine.
+
+03:46.390 --> 03:48.220
+OK, what happens about nine?
+
+03:48.710 --> 03:50.170
+You start from an equal to two.
+
+03:51.280 --> 03:54.400
+It does not divide it with less than nine.
+
+03:54.730 --> 03:56.080
+Two does not divide nine.
+
+03:56.860 --> 03:58.420
+So you come here, you make it three.
+
+03:59.890 --> 04:03.440
+It is less than nine, but nine Model three.
+
+04:03.590 --> 04:12.830
+This is equal to zero, and hence you print that nine is not time and exit writing exit here means nothing
+
+04:12.920 --> 04:17.360
+below exit would get executed and that is the end of your program.
+
+04:17.810 --> 04:25.280
+OK, so that is how you can draw a flowchart and to try to look good logic if a number is prime or not,
+
+04:25.340 --> 04:28.040
+get so a quick recap of what we have done.
+
+04:28.940 --> 04:38.260
+So we start from, let's say, riding bicycles to two while I is less than and keep on dividing, OK?
+
+04:38.960 --> 04:41.690
+So if an is divisible by I.
+
+04:43.020 --> 04:48.720
+Then you can say, OK, this number is not trying to bring, not prime and exit.
+
+04:49.350 --> 04:51.420
+Otherwise, you go to the next location.
+
+04:51.690 --> 04:53.040
+I called you, I +1.
+
+04:53.760 --> 04:58.110
+And if you come out of the loop, that means you could not find a device that you can simply separate
+
+04:58.110 --> 05:00.630
+prime and then you can exert, OK.
+
+05:01.170 --> 05:04.560
+That is the complete robot for this program.
+
+05:04.860 --> 05:05.390
+Thank you.
+
+05:05.400 --> 05:07.110
+I hope you have understood this logic now.

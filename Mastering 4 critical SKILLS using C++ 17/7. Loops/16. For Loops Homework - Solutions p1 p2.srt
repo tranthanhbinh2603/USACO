@@ -1,0 +1,334 @@
+0
+1
+00:00:01,140 --> 00:00:09,960
+Let's solve the for loops homework. In the first one, we need to print the X mark here and this 
+1
+
+2
+00:00:09,990 --> 00:00:15,090
+this assignment has, like, a memory with me because I thought about leaving programming and computer
+2
+
+3
+00:00:15,090 --> 00:00:17,610
+science because some bunch of exercises.
+3
+
+4
+00:00:18,100 --> 00:00:23,790
+This one was one of them, like, I failed when I was very young to recognize the relationship.
+4
+
+5
+00:00:23,790 --> 00:00:25,380
+That would help me to figure out this X line.
+5
+
+6
+00:00:25,400 --> 00:00:31,350
+I'm saying that because I hope if, like, during solving more and more, you don't get disappointed.
+6
+
+7
+00:00:31,350 --> 00:00:34,530
+When we were that young, we also faced
+7
+
+8
+00:00:34,540 --> 00:00:36,270
+a lot of difficulties to get things done.
+8
+
+9
+00:00:36,870 --> 00:00:41,750
+Anyway, I think you should be able to figure out this one easily.
+9
+
+10
+00:00:41,760 --> 00:00:45,660
+And also, it's good to think about the problem in terms of simplification.
+10
+
+11
+00:00:46,020 --> 00:00:48,270
+Let's say you don't know how to print an X line.
+11
+
+12
+00:00:48,450 --> 00:00:49,300
+You can think first.
+12
+
+13
+00:00:49,320 --> 00:00:52,170
+OK, let's print this left diagonal first.
+13
+
+14
+00:00:52,500 --> 00:00:54,860
+If you are done with that, you think about the right diagonal.
+14
+
+15
+00:00:55,050 --> 00:00:56,670
+So try to simplify things for you.
+15
+
+16
+00:00:57,150 --> 00:01:04,120
+If you're thinking about the left diagonal here, observe that it's always, like, at position i and j
+16
+
+17
+00:01:04,140 --> 00:01:05,400
+there is a start.
+17
+
+18
+00:01:05,460 --> 00:01:06,940
+Otherwise, there is no star.
+18
+
+19
+00:01:07,170 --> 00:01:12,010
+So if i == j, then we are at the diagonal, otherwise we aren't at the diagonal.
+19
+
+20
+00:01:12,240 --> 00:01:14,130
+So this is at least one thing we need to do.
+20
+
+21
+00:01:14,550 --> 00:01:19,890
+Iterate over N * N here like a matrix printing or so.
+21
+
+22
+00:01:20,260 --> 00:01:28,230
+And then if i == J, we are sure that this should be a star, otherwise it should be a speace.
+22
+
+23
+00:01:28,530 --> 00:01:30,570
+Now, this should be an easy part.
+23
+
+24
+00:01:30,930 --> 00:01:32,220
+That might be for some of you
+24
+
+25
+00:01:32,220 --> 00:01:35,460
+tricky, what about the the other one?
+25
+
+26
+00:01:36,030 --> 00:01:42,240
+One approach to think about it is just to try to list the answer like let's say for
+26
+
+27
+00:01:42,600 --> 00:01:44,510
+for n equal five.
+27
+
+28
+00:01:44,760 --> 00:01:46,710
+Then start to say at row number one.
+28
+
+29
+00:01:46,820 --> 00:01:48,020
+What is the answer?
+29
+
+30
+00:01:48,420 --> 00:01:53,660
+Where does its start? At row number two, where is the star? At row number three, where does its start?
+30
+
+31
+00:01:53,850 --> 00:01:59,250
+and so on. By looking at the numbers, you should be able to figure out the pattern, whenever  (n - i -1 == j)
+31
+
+32
+00:01:59,250 --> 00:02:00,420
+(n - i -1 == j)
+32
+
+33
+00:02:00,420 --> 00:02:05,820
+we have a star for the right, the right
+33
+
+34
+00:02:05,820 --> 00:02:08,250
+diagonal, so overall, we have two cases.
+34
+
+35
+00:02:08,550 --> 00:02:13,570
+Either we are at (i == j) for the left diagonal or the other one for the right diagonal.
+35
+
+36
+00:02:13,570 --> 00:02:19,590
+If these are the two cases we print the "*", otherwise we just need to print a space.
+36
+
+37
+00:02:21,460 --> 00:02:28,210
+In the second problem, we would like to write a code that will actually get this fixed answer, there
+37
+
+38
+00:02:28,210 --> 00:02:34,170
+are no different answers here, just this answer, all what you are requested to do is to find it.
+38
+
+39
+00:02:34,780 --> 00:02:38,110
+So we are given that X should be in this range and Y in this range.
+39
+
+40
+00:02:38,110 --> 00:02:39,930
+And then this condition and this condition.
+40
+
+41
+00:02:39,980 --> 00:02:40,910
+It should be straightforward.
+41
+
+42
+00:02:41,080 --> 00:02:45,740
+This is two nested loops. To implement that
+42
+
+43
+00:02:45,740 --> 00:02:54,550
+we mainly need to start iterating over the X in the given range and Y in the given range and then
+43
+
+44
+00:02:54,550 --> 00:02:55,480
+make the two checks.
+44
+
+45
+00:02:55,480 --> 00:03:01,050
+One of them is the less than and the second one is the mod seven condition.
+45
+
+46
+00:03:01,240 --> 00:03:02,110
+So far so good.
+46
+
+47
+00:03:03,100 --> 00:03:10,060
+Be careful, all what you are doing is just translating the problem from the
+47
+
+48
+00:03:10,060 --> 00:03:11,170
+given to the code.
+48
+
+49
+00:03:11,380 --> 00:03:13,830
+Sometimes you can think a little more in improve things.
+49
+
+50
+00:03:14,140 --> 00:03:17,100
+So one way to think about, what is a problem here?
+50
+
+51
+00:03:17,740 --> 00:03:20,860
+There is no problem from correctness, from optimization perspective.
+51
+
+52
+00:03:21,190 --> 00:03:28,870
+Let's say X is 100, then all iterations from Y = 70 to Y equals 99 are all of them are failing, why? because
+52
+
+53
+00:03:28,870 --> 00:03:30,310
+this condition isn't satisfied.
+53
+
+54
+00:03:30,640 --> 00:03:34,990
+How can we adjust the code so that this is always satisfied.
+54
+
+55
+00:03:35,590 --> 00:03:36,580
+The idea is simple.
+55
+
+56
+00:03:38,340 --> 00:03:49,170
+We have a start if start is less than (x + 1),
+56
+
+57
+00:03:49,380 --> 00:03:52,560
+then we know that start can be directly assigned to the value.
+57
+
+58
+00:03:52,830 --> 00:03:57,600
+So Y is 70 if X is less than it.
+58
+
+59
+00:03:57,840 --> 00:04:05,210
+But if X is greater than 70, then we can start directly from after it.
+59
+
+60
+00:04:05,460 --> 00:04:09,870
+So let's say that X now is 20, then I can start the start with seventy.
+60
+
+61
+00:04:10,260 --> 00:04:12,030
+Let's say that X is now 50.
+61
+
+62
+00:04:12,240 --> 00:04:14,510
+I can start the Y with fifty-one.
+62
+
+63
+00:04:14,940 --> 00:04:16,500
+This way we did two things.
+63
+
+64
+00:04:16,860 --> 00:04:21,450
+First of all, we are starting directly from the right location, which is more efficient.
+64
+
+65
+00:04:21,900 --> 00:04:26,160
+Second, there is no need anymore to handle the X less than Y condition.
+65
+
+66
+00:04:26,160 --> 00:04:32,250
+We are already maintaining it in our computation, which makes our code much simpler, not simpliler but
+66
+
+67
+00:04:32,430 --> 00:04:33,450
+a more smarter code.

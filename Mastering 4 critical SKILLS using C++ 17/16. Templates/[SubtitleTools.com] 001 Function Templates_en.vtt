@@ -1,0 +1,1109 @@
+﻿WEBVTT
+
+0
+00:00:00.810 --> 00:00:08.220
+In this section, we will introduce the template, which is one of the functionalities in C++, it has
+Trong phần này, chúng tôi sẽ
+giới thiệu mẫu, đây là một trong
+
+1
+00:00:08.220 --> 00:00:10.430
+two types function templates and class templates .
+những chức năng trong C++, nó có
+hai loại mẫu chức năng và mẫu lớp.
+
+2
+00:00:10.800 --> 00:00:15.150
+So let's introduce the problem that encouraged the idea of the templates,
+Vì vậy, hãy giới thiệu vấn đề khuyến khích ý tưởng về các mẫu,
+
+3
+00:00:15.540 --> 00:00:21.570
+if you are looking to this function here, Max of A and B, it's just normal function that is .... A
+nếu bạn đang tìm kiếm chức
+năng này ở đây, Tối đa của A và B,
+
+4
+00:00:21.570 --> 00:00:22.920
+and B, now
+thì đó chỉ là chức năng bình
+thường là.... A và B, bây giờ
+
+5
+00:00:23.100 --> 00:00:28.440
+if I tried to call this function with only double values, I'm going to load the precision so the
+nếu tôi cố gắng gọi hàm này chỉ với các giá
+trị kép, tôi sẽ tải độ chính xác nên cách tiêu
+
+6
+00:00:28.440 --> 00:00:33.570
+standard way to handle this way is to duplicate this code as it is here and  just replace the two types
+chuẩn để xử lý theo cách này là sao chép mã
+này như ở đây và chỉ cần thay thế hai loại
+
+7
+00:00:33.570 --> 00:00:34.570
+with Max and use it.
+với Max và sử dụng nó.
+
+8
+00:00:35.160 --> 00:00:38.820
+Now, let's say you would like to use more data types, let's say would like to get the max between
+Bây giờ, giả sử bạn muốn
+sử dụng nhiều loại dữ liệu
+
+9
+00:00:38.820 --> 00:00:40.080
+two characters and so on.
+hơn, giả sử muốn lấy giá
+trị tối đa giữa hai ký tự, v.v.
+
+10
+00:00:40.440 --> 00:00:43.710
+You have to keep making duplicates and duplicates duplicates of code,
+Bạn phải tiếp tục tạo các bản sao và bản sao mã trùng lặp,
+
+11
+00:00:44.250 --> 00:00:50.940
+but observe that they are exactly the same logic, regard data type here, regardless of its
+nhưng hãy quan sát rằng chúng hoàn toàn
+giống logic, đối với kiểu dữ liệu ở đây,
+
+12
+00:00:50.940 --> 00:00:55.210
+double or integer or character or whatever, it is just exactly the same logic,
+bất kể số kép hay số nguyên hay ký tự hay
+bất cứ thứ gì, nó hoàn toàn giống logic,
+
+13
+00:00:55.680 --> 00:01:01.140
+imagine for a while that we discovered a bug in this function, or that we found that there is a faster
+hãy tưởng tượng trong một thời gian rằng chúng tôi phát
+hiện ra một lỗi trong chức năng này hoặc chúng tôi thấy
+
+14
+00:01:01.140 --> 00:01:08.700
+implementation than it, we have to go for every one of our duplicate functions and just take it and
+rằng có một cách triển khai nhanh hơn nó, chúng tôi phải
+tìm mọi chức năng trùng lặp của mình và chỉ cần lấy nó và
+
+15
+00:01:08.820 --> 00:01:09.990
+make a modification for it.
+thực hiện một sửa đổi cho nó.
+
+16
+00:01:10.800 --> 00:01:16.050
+When it comes to duplication in the code, in the software engineering, we .... a lot that something
+Khi nói đến sự trùng lặp trong
+mã, trong công nghệ phần mềm,
+
+17
+00:01:16.050 --> 00:01:16.400
+is wrong.
+chúng tôi.... rất nhiều điều
+rằng có điều gì đó không ổn.
+
+18
+00:01:16.830 --> 00:01:23.910
+Now templates come to help us to solve this problem as following, the compiler would read
+Bây giờ các mẫu đến để giúp chúng tôi giải quyết vấn đề này như sau, trình biên dịch sẽ đọc
+
+19
+00:01:24.240 --> 00:01:25.350
+something like that,
+một cái gì đó như thế,
+
+20
+00:01:25.530 --> 00:01:28.320
+I'm defining here some function that I'm naming here "MyMax",
+Tôi đang xác định ở đây một số chức năng mà tôi đặt tên ở đây là "MyMax",
+
+21
+00:01:28.620 --> 00:01:33.750
+imagine for a while that we have some structure that of name "Type" and we have type A and type B,
+hãy tưởng tượng một lúc rằng chúng ta có một số cấu trúc có tên "Type" và chúng ta có loại A và loại B,
+
+22
+00:01:34.500 --> 00:01:40.830
+now when the C++ see this word "template type name type" it means that this function will be
+bây giờ khi C++ thấy từ
+này "kiểu tên kiểu mẫu"
+
+23
+00:01:40.830 --> 00:01:42.530
+called with some types
+thì có nghĩa là hàm này
+sẽ được gọi với một số kiểu
+
+24
+00:01:42.540 --> 00:01:45.300
+it could be integer, it could be double, it could be whatever,
+nó có thể là số nguyên, nó có thể là gấp đôi, nó có thể là bất cứ thứ gì,
+
+25
+00:01:45.780 --> 00:01:49.970
+and they all actually share the same logic, they share the same logic,
+và tất cả chúng thực sự chia sẻ cùng một logic, chúng chia sẻ cùng một logic,
+
+26
+00:01:50.310 --> 00:01:56.700
+So instead of the user making the copy-paste by himself, the compiler will do the copy-paste by
+Vì vậy, thay vì người dùng tự thực hiện sao chép-dán, trình biên dịch sẽ thực hiện sao chép-dán bằng cách
+
+27
+00:01:56.700 --> 00:01:57.180
+himself.
+bản thân anh ấy.
+
+28
+00:01:57.600 --> 00:02:01.560
+For example, let's see here, MayMax of two and five,
+Ví dụ, hãy xem ở đây, MayMax hai và năm,
+
+29
+00:02:01.920 --> 00:02:09.330
+so Memex is a function that is expect a generic data type from the word template,
+vì vậy Memex là một chức năng mong đợi một loại dữ liệu chung từ mẫu từ,
+
+30
+00:02:09.870 --> 00:02:12.720
+you can you can think of it like a general guidelining,
+bạn có thể nghĩ về
+nó như một hướng dẫn
+
+31
+00:02:12.720 --> 00:02:14.070
+it isn't something specific,
+chung, nó không phải
+là một cái gì đó cụ thể,
+
+32
+00:02:14.070 --> 00:02:15.870
+it will not exist in our final code,
+nó sẽ không tồn tại trong mã cuối cùng của chúng tôi,
+
+33
+00:02:16.170 --> 00:02:17.860
+it's just a way to help a generic code,
+nó chỉ là một cách để hỗ trợ một mã
+chung, khi chúng tôi nói một mã chung,
+
+34
+00:02:17.880 --> 00:02:25.350
+when we say a generic code, we mean it is it's a good that works like in general, regardless
+chúng tôi muốn nói rằng nó là một thứ
+tốt hoạt động giống như nói chung, bất kể
+
+35
+00:02:25.350 --> 00:02:27.240
+of the of the internal details.
+của các chi tiết bên trong.
+
+36
+00:02:28.700 --> 00:02:35.000
+So here the combiner see my max of two and five and know that this is template function, so now I'm
+Vì vậy, ở đây bộ kết hợp thấy tối đa của tôi là
+hai và năm và biết rằng đây là hàm mẫu, vì vậy
+
+37
+00:02:35.000 --> 00:02:39.250
+telling here, hey, you know what we can call this function with two and five.
+bây giờ tôi đang nói ở đây, này, bạn biết chúng
+ta có thể gọi hàm này là gì với hai và năm không.
+
+38
+00:02:39.680 --> 00:02:46.460
+So now we type in reality in runtime would be resolved to integer and integer,
+Vì vậy, bây giờ chúng tôi nhập vào thực tế trong thời gian chạy sẽ được phân giải thành số nguyên và số nguyên,
+
+39
+00:02:46.760 --> 00:02:51.740
+now, you can imagine this function exactly in runtime like this function with two integrate and returning
+Bây giờ, bạn có thể hình dung
+chính xác hàm này trong thời gian
+
+40
+00:02:51.740 --> 00:02:52.370
+for an integer.
+chạy như hàm này với hai tích
+phân và trả về một số nguyên.
+
+41
+00:02:55.340 --> 00:03:02.030
+OK, so what if I would like to force other kind of cases?
+OK, vậy nếu tôi muốn buộc các loại trường hợp khác thì sao?
+
+42
+00:03:02.450 --> 00:03:05.750
+The C++ allow you to use this notation,
+C++ cho phép bạn sử dụng ký
+hiệu này, nếu bạn đã làm ở đây &lt;
+
+43
+00:03:05.750 --> 00:03:13.670
+if you did here < the word int, >, you are telling the compiler, hey, I want you
+từ int, &gt;, bạn đang nói với trình
+biên dịch, này, tôi muốn bạn
+
+44
+00:03:14.150 --> 00:03:16.870
+prepare for me this function, but using int,
+chuẩn bị cho tôi chức năng này, nhưng sử dụng int,
+
+45
+00:03:17.210 --> 00:03:21.470
+so it's going to replace this type with int and this type with int and this type with int and this type with int,
+vì vậy nó sẽ thay thế loại này bằng int và loại này bằng int và loại này bằng int và loại này bằng int,
+
+46
+00:03:21.860 --> 00:03:24.030
+now we are sending the max between two and five,
+bây giờ chúng tôi đang gửi tối đa từ hai đến năm,
+
+47
+00:03:24.320 --> 00:03:25.680
+here it is again, five.
+nó lại đây, năm.
+
+48
+00:03:25.940 --> 00:03:31.500
+So what was the difference between line nine 15 and line 16? in line 15 you are using two integers,
+Vì vậy, sự khác biệt giữa dòng chín 15 và dòng 16 là gì?  ở dòng 15 bạn đang sử dụng hai số nguyên,
+
+49
+00:03:31.760 --> 00:03:34.670
+so the compiler guess that you probably won't....
+vì vậy trình biên dịch đoán rằng bạn có thể sẽ không....
+
+50
+00:03:34.820 --> 00:03:40.810
+a copy of this function with type is integral in line 17,
+một bản sao của hàm này
+với loại là tích phân trong dòng
+
+51
+00:03:40.820 --> 00:03:44.300
+we say, hey, I wanna this function to be with type double,
+17, chúng tôi nói, này, tôi
+muốn hàm này có loại gấp đôi,
+
+52
+00:03:44.870 --> 00:03:50.660
+so when we hit, the compiler is going to generate a copy for you with the word,
+vì vậy khi chúng ta nhấn, trình
+biên dịch sẽ tạo một bản sao cho
+
+53
+00:03:50.660 --> 00:03:53.630
+type is replaced with a double, double and double,
+bạn với từ đó, kiểu được thay
+thế bằng double, double và double,
+
+54
+00:03:54.140 --> 00:03:56.480
+so the moral of that is as following,
+vì vậy đạo đức của điều đó như sau,
+
+55
+00:03:56.930 --> 00:04:03.260
+instead of you are doing the copy-paste by yourself and keeping integer, integer, integer, double
+thay vì bạn đang tự mình thực hiện sao chép-dán và giữ số nguyên, số nguyên, số nguyên, gấp đôi
+
+56
+00:04:03.260 --> 00:04:08.160
+double, double, character, character, character, the compiler will do the copy-paste for you,
+nhân đôi, nhân đôi, ký tự, ký tự, ký tự, trình biên dịch sẽ thực hiện việc sao chép-dán cho bạn,
+
+57
+00:04:08.540 --> 00:04:10.550
+so it's actually in the competition time,
+vậy thực ra là đang trong thời gian
+thi đấu, điều này đang xảy ra với
+
+58
+00:04:10.730 --> 00:04:18.170
+this is happening for you here in line 18 who are defining Memex or between character E and character
+các bạn ở dòng 18 đang định nghĩa
+Memex hoặc giữa ký tự E và ký tự
+
+59
+00:04:18.170 --> 00:04:18.560
+X..
+x..
+
+60
+00:04:18.890 --> 00:04:24.530
+So in reality, character type would be replaced with a character, character and character.
+Vì vậy, trong thực tế, loại ký tự sẽ được thay thế bằng một ký tự, ký tự và ký tự.
+
+61
+00:04:26.210 --> 00:04:27.510
+OK, let's keep going more.
+OK, chúng ta hãy tiếp tục đi nhiều hơn nữa.
+
+62
+00:04:28.070 --> 00:04:35.080
+What if I say here and to any memex of two and five point four, this would give a compilation error
+Điều gì sẽ xảy ra nếu tôi nói ở đây và với bất kỳ memex
+nào của hai và năm điểm bốn, điều này sẽ gây ra lỗi
+
+63
+00:04:35.270 --> 00:04:41.000
+y because the compiler now see an integer here and double it would be confused should they generate
+biên dịch y vì trình biên dịch hiện nhìn thấy một số
+nguyên ở đây và nhân đôi nó sẽ bị nhầm lẫn nếu chúng tạo ra
+
+64
+00:04:41.000 --> 00:04:44.090
+for you function with type as integer or type as double.
+cho bạn hàm với loại là số nguyên hoặc loại là gấp đôi.
+
+65
+00:04:44.150 --> 00:04:50.660
+This is confusing so it will not work when the other side I can generate function with integer.
+Điều này gây nhầm lẫn vì vậy nó sẽ không hoạt động khi phía bên kia tôi có thể tạo hàm với số nguyên.
+
+66
+00:04:50.660 --> 00:04:52.030
+I'm here more specific.
+Tôi ở đây cụ thể hơn.
+
+67
+00:04:52.580 --> 00:04:53.890
+Now think about that.
+Bây giờ hãy nghĩ về điều đó.
+
+68
+00:04:54.470 --> 00:04:59.420
+Imagine that we have a function with integer integrity or if you are sending two to eight, it will
+Hãy tưởng tượng rằng chúng ta
+có một hàm với tính toàn vẹn của
+
+69
+00:04:59.420 --> 00:05:00.140
+be two.
+số nguyên hoặc nếu bạn đang
+gửi hai đến tám, thì nó sẽ là hai.
+
+70
+00:05:00.260 --> 00:05:04.510
+If you are sending five point four to B, which is no integer, it would be five.
+Nếu bạn đang gửi năm phẩy bốn đến B, không phải là số nguyên, thì nó sẽ là năm.
+
+71
+00:05:04.760 --> 00:05:08.210
+So the Mexia between two and five point four would be five.
+Vì vậy, Mexia giữa hai và năm phẩy bốn sẽ là năm.
+
+72
+00:05:08.210 --> 00:05:11.020
+That's five point four on the other side.
+Đó là năm phẩy bốn ở phía bên kia.
+
+73
+00:05:11.180 --> 00:05:17.360
+If I tell him, hey, you generate a copy for me was the word, the type is replaced with that I double
+Nếu tôi nói với anh ấy, này, bạn tạo một bản sao cho tôi là từ, loại được thay thế bằng mà tôi gấp đôi
+
+74
+00:05:17.780 --> 00:05:23.260
+it would be two point five, four is going to be five for one more trickier.
+nó sẽ là 2 phẩy 5, 4 sẽ là 5 đối với một người phức tạp hơn.
+
+75
+00:05:23.510 --> 00:05:30.620
+What if I have a structure that's named E and B and I said my maxcy between A and B of type Embley,
+Điều gì sẽ xảy ra nếu tôi có một cấu trúc được đặt tên là E và B và tôi đã nói mức tối đa của mình giữa A và B thuộc loại Embley,
+
+76
+00:05:30.950 --> 00:05:32.510
+this would generate a composition error.
+điều này sẽ tạo ra một lỗi thành phần.
+
+77
+00:05:32.870 --> 00:05:37.010
+We don't know how to compare to Embley is using the greater that.
+Chúng tôi không biết làm thế nào để so sánh với Embley đang sử dụng cái lớn hơn.
+
+78
+00:05:37.250 --> 00:05:41.870
+So it will tell you, hey, I don't know how to do this operation if I try to make a copy of this function.
+Vì vậy, nó sẽ cho bạn biết, này, tôi không biết cách thực hiện thao tác này nếu tôi cố tạo một bản sao của chức năng này.
+
+79
+00:05:42.260 --> 00:05:46.460
+So to understand it, imagine that we took this function could be built and replaced every time with
+Vì vậy, để hiểu nó, hãy tưởng
+tượng rằng chúng ta lấy chức năng
+
+80
+00:05:46.460 --> 00:05:47.480
+the word complete.
+này có thể được xây dựng và
+thay thế mọi lúc bằng từ hoàn thành.
+
+81
+00:05:47.840 --> 00:05:49.820
+Can the compiler combine this could.
+Trình biên dịch có thể kết hợp điều này không.
+
+82
+00:05:50.060 --> 00:05:50.810
+No, it cannot.
+Không, nó không thể.
+
+83
+00:05:53.360 --> 00:05:59.080
+So the generation different types of the function memex are going to be generated by time.
+Vì vậy, việc tạo các loại hàm memex khác nhau sẽ được tạo theo thời gian.
+
+84
+00:05:59.420 --> 00:06:07.370
+OK, so on the use cases that the used, for example, if you could use the in our previous case we
+OK, vì vậy đối với các trường hợp sử dụng mà ví
+dụ: nếu bạn có thể sử dụng the trong trường hợp
+
+85
+00:06:07.370 --> 00:06:09.400
+have an integer and we have a double and we have a character.
+trước của chúng tôi, chúng tôi có một số nguyên và
+chúng tôi có một số kép và chúng tôi có một ký tự.
+
+86
+00:06:09.590 --> 00:06:11.210
+So there were three use cases here.
+Vì vậy, có ba trường hợp sử dụng ở đây.
+
+87
+00:06:11.390 --> 00:06:14.720
+This function was going to be replaced with three functions.
+Chức năng này sẽ được thay thế bằng ba chức năng.
+
+88
+00:06:14.900 --> 00:06:20.180
+One that is intent n maximum, double, double, double my character, character, character.
+Một ý định n tối đa, nhân đôi, nhân đôi, nhân đôi nhân vật, nhân vật, nhân vật của tôi.
+
+89
+00:06:20.900 --> 00:06:22.400
+Another another observation here.
+Một quan sát khác ở đây.
+
+90
+00:06:22.400 --> 00:06:24.260
+I didn't use the function name as Max.
+Tôi đã không sử dụng tên hàm là Max.
+
+91
+00:06:24.260 --> 00:06:25.310
+I use it as my Max.
+Tôi sử dụng nó như Max của tôi.
+
+92
+00:06:25.310 --> 00:06:25.670
+Why?
+Tại sao?
+
+93
+00:06:25.910 --> 00:06:29.210
+Because the C++ already defined the max function as a template.
+Bởi vì C++ đã định nghĩa hàm max làm mẫu.
+
+94
+00:06:29.390 --> 00:06:31.670
+So I'm now defining something exactly as it's doing.
+Vì vậy, bây giờ tôi đang xác định một cái gì đó chính xác như nó đang làm.
+
+95
+00:06:31.670 --> 00:06:33.770
+So this is what is going to give a competition.
+Vì vậy, đây là những gì sẽ cung cấp cho một cuộc thi.
+
+96
+00:06:34.370 --> 00:06:39.800
+Please try to replace the function with Max and see what's going to happen in practice.
+Vui lòng thử thay thế chức năng bằng Max và xem điều gì sẽ xảy ra trong thực tế.
+
+97
+00:06:41.030 --> 00:06:47.990
+It sometimes is really very hard and really complicated, but the worst is the error.
+Nó đôi khi thực sự rất khó và thực sự phức tạp, nhưng điều tồi tệ nhất là sai sót.
+
+98
+00:06:47.990 --> 00:06:52.070
+Messages of of templates are typically very hard and ugly to understand.
+Thông báo của các mẫu thường rất khó hiểu và khó hiểu.
+
+99
+00:06:52.430 --> 00:06:55.490
+Try to generate mistakes and see some of these messages.
+Cố gắng tạo ra những sai lầm và xem một số thông báo này.
+
+100
+00:06:56.960 --> 00:06:58.520
+Let's go one more step.
+Hãy tiến thêm một bước nữa.
+
+101
+00:06:59.510 --> 00:07:06.650
+We have the function so that we expect for the first parameter to be of a type and of the second parameter
+Chúng tôi có hàm sao cho chúng tôi mong
+muốn tham số đầu tiên thuộc loại và tham
+
+102
+00:07:06.650 --> 00:07:12.770
+to be of another type and is going to return to something of the type of the first function, for example,
+số thứ hai thuộc loại khác và sẽ trả về
+một thứ thuộc loại của hàm đầu tiên, ví dụ:
+
+103
+00:07:12.920 --> 00:07:13.800
+of this function.
+của chức năng này.
+
+104
+00:07:13.800 --> 00:07:18.770
+Take an integer here and double here is going to do so mission and return as a result in R, which will
+Lấy một số nguyên ở đây và
+nhân đôi ở đây sẽ thực hiện nhiệm
+
+105
+00:07:18.770 --> 00:07:19.640
+be type of integer.
+vụ như vậy và trả về kết quả
+là R, đây sẽ là loại số nguyên.
+
+106
+00:07:19.910 --> 00:07:21.290
+Let's see the examples here.
+Hãy xem các ví dụ ở đây.
+
+107
+00:07:22.190 --> 00:07:23.390
+The model of this example.
+Mô hình của ví dụ này.
+
+108
+00:07:23.390 --> 00:07:25.940
+You can define more than a variable.
+Bạn có thể định nghĩa nhiều hơn một biến.
+
+109
+00:07:26.120 --> 00:07:27.620
+We say here template that.
+Chúng tôi nói ở đây mẫu đó.
+
+110
+00:07:27.730 --> 00:07:33.060
+One came across that two with the second with the finitude as type name and now as a class, what is
+Một người bắt gặp hai cái
+đó với cái thứ hai có tính hữu
+
+111
+00:07:33.070 --> 00:07:33.430
+different?
+hạn là tên loại và bây giờ
+là một lớp, điều gì khác biệt?
+
+112
+00:07:33.460 --> 00:07:33.790
+Nothing.
+Không.
+
+113
+00:07:33.790 --> 00:07:35.330
+I'm just showing you more Sirtex.
+Tôi chỉ cho bạn thấy thêm Sirtex.
+
+114
+00:07:35.530 --> 00:07:37.990
+You can use the the class and you can use the word to type name.
+Bạn có thể sử dụng lớp và bạn có thể sử dụng từ để nhập tên.
+
+115
+00:07:38.450 --> 00:07:43.400
+I'm here saying that this template function might well receive two different types.
+Tôi ở đây nói rằng chức năng mẫu này có thể nhận được hai loại khác nhau.
+
+116
+00:07:43.720 --> 00:07:45.780
+So here I'm saying some one in 10.
+Vì vậy, ở đây tôi đang nói một số một trong 10.
+
+117
+00:07:46.300 --> 00:07:52.270
+And this is going to be guess that the compiler will know that type one is integer and type 10 a type
+Và điều này sẽ được đoán rằng trình
+biên dịch sẽ biết rằng loại một là số
+
+118
+00:07:52.270 --> 00:07:54.520
+two is just what some of them to 11.
+nguyên và loại 10, loại hai chỉ là
+những gì một số trong số chúng là 11.
+
+119
+00:07:55.390 --> 00:07:59.290
+On the other side, I'm sending here one and then Tenebrae five.
+Mặt khác, tôi đang gửi ở đây một và sau đó là Tenebrae năm.
+
+120
+00:07:59.590 --> 00:08:03.320
+So type one would be integer, type two will build will be double.
+Vì vậy, loại một sẽ là số nguyên, loại hai sẽ được xây dựng sẽ là gấp đôi.
+
+121
+00:08:03.850 --> 00:08:08.130
+Now, when you add one last ten point five, it's going to be eleven point five.
+Bây giờ, khi bạn thêm một điểm mười cuối cùng vào năm, nó sẽ là mười một điểm năm.
+
+122
+00:08:08.440 --> 00:08:12.480
+But wait, the return here is of type one, which is integer.
+Nhưng chờ đã, kết quả trả về ở đây thuộc loại một, là số nguyên.
+
+123
+00:08:12.730 --> 00:08:15.610
+So we are returning eleven point five as an integer.
+Vì vậy, chúng tôi đang trả về mười một điểm năm dưới dạng số nguyên.
+
+124
+00:08:15.790 --> 00:08:18.490
+The result would be integer on the other side.
+Kết quả sẽ là số nguyên ở phía bên kia.
+
+125
+00:08:18.490 --> 00:08:21.610
+If I book both of them as double, they would be some return as.
+Nếu tôi đặt cả hai dưới dạng gấp đôi, thì chúng sẽ là một số trả lại như.
+
+126
+00:08:22.780 --> 00:08:27.490
+Now here if I, I said that the first one as double and the second as integer.
+Bây giờ ở đây nếu tôi, tôi đã nói rằng cái đầu tiên là gấp đôi và cái thứ hai là số nguyên.
+
+127
+00:08:27.970 --> 00:08:31.720
+So now the submission would be eleven point two and we return as double.
+Vì vậy, bây giờ đệ trình sẽ là mười một điểm hai và chúng tôi trả về gấp đôi.
+
+128
+00:08:31.730 --> 00:08:37.690
+So to return it as a different way to it for the same function call I said, hey, you know what, I
+Vì vậy, để trả lại nó như một
+cách khác với nó cho cùng một lệnh
+
+129
+00:08:37.690 --> 00:08:39.060
+will know you for the first time.
+gọi, tôi đã nói, này, bạn biết
+không, tôi sẽ biết bạn lần đầu tiên.
+
+130
+00:08:39.160 --> 00:08:41.690
+First, the type to be integer and the second one to be integer.
+Đầu tiên, loại là số nguyên và loại thứ hai là số nguyên.
+
+131
+00:08:42.100 --> 00:08:43.690
+Now one point to do is costly.
+Bây giờ một điểm để làm là tốn kém.
+
+132
+00:08:43.690 --> 00:08:44.510
+To integrate.
+Để tích hợp.
+
+133
+00:08:44.530 --> 00:08:46.570
+To be one one blastin is 11.
+Để trở thành một trong một blastin là 11.
+
+134
+00:08:46.570 --> 00:08:48.790
+Aldy It is more fun.
+Aldy Nó vui hơn.
+
+135
+00:08:48.790 --> 00:08:57.220
+Syntex If you say if you send a and the one eight is going to be type one character and B will be one.
+Cú pháp Nếu bạn nói nếu bạn gửi một và tám sẽ là một ký tự và B sẽ là một ký tự.
+
+136
+00:08:57.430 --> 00:08:59.470
+So the submission of them is sixty six.
+Vì vậy, trình của họ là sáu mươi sáu.
+
+137
+00:08:59.830 --> 00:09:03.360
+If you are returning here from this one it would be costly to character.
+Nếu bạn quay lại đây từ cái này thì sẽ rất tốn kém cho tính cách.
+
+138
+00:09:03.790 --> 00:09:10.450
+So it would return to the variable, the character B but if you did one and eight then that one would
+Vì vậy, nó sẽ trả về biến, ký tự
+B nhưng nếu bạn đã làm một và
+
+139
+00:09:10.450 --> 00:09:15.310
+be integer and E will be, you will be a character.
+tám thì biến đó sẽ là số nguyên
+và E sẽ là, bạn sẽ là một ký tự.
+
+140
+00:09:15.490 --> 00:09:20.100
+You sum them, it would be sixty six but you return as integer so it's going to be sixty six.
+Bạn tính tổng chúng, nó sẽ là sáu mươi sáu nhưng bạn trả về số nguyên nên nó sẽ là sáu mươi sáu.
+
+141
+00:09:21.370 --> 00:09:27.820
+OK, this function is Bloss and remember that the string giclas we can concatenate strings if I have
+OK, chức năng này là Bloss và hãy nhớ rằng
+chuỗi giclas chúng ta có thể nối chuỗi nếu tôi
+
+142
+00:09:27.820 --> 00:09:32.740
+string Mustafa and strings out and I can connect them, I can concatenate them so it doesn't have to
+có chuỗi Mustafa và chuỗi ra và tôi có thể
+nối chúng, tôi có thể nối chúng để không phải
+
+143
+00:09:32.740 --> 00:09:33.730
+work on all integers.
+làm việc trên tất cả các số nguyên.
+
+144
+00:09:33.940 --> 00:09:35.050
+So aligned to any.
+Vì vậy, phù hợp với bất kỳ.
+
+145
+00:09:35.290 --> 00:09:39.560
+I'm seeing some string of ayam space with the string stuff.
+Tôi đang thấy một số chuỗi không gian ayam với nội dung chuỗi.
+
+146
+00:09:39.970 --> 00:09:45.430
+The question here, can the function, can the compiler take a copy of this function and create it of
+Câu hỏi ở đây, hàm có thể
+không, trình biên dịch có thể
+
+147
+00:09:45.430 --> 00:09:46.060
+two strings.
+lấy một bản sao của hàm
+này và tạo ra hai chuỗi không.
+
+148
+00:09:46.310 --> 00:09:47.380
+The answer is yes.
+Câu trả lời là có.
+
+149
+00:09:47.530 --> 00:09:48.930
+So it's going to add them in print.
+Vì vậy, nó sẽ thêm chúng vào bản in.
+
+150
+00:09:48.940 --> 00:09:49.700
+I am spaceball.
+Tôi là quả cầu vũ trụ.
+
+151
+00:09:49.720 --> 00:09:52.550
+Stuff like 19 is going to come by there.
+Những thứ như 19 sẽ đến đó.
+
+152
+00:09:52.900 --> 00:09:57.940
+The difference between line nineteen aligned to any line nineteen here is used is using a character
+Sự khác biệt giữa dòng mười chín được căn
+chỉnh với bất kỳ dòng mười chín nào ở đây
+
+153
+00:09:57.940 --> 00:10:00.180
+pointer, but this one is using a clause.
+được sử dụng là sử dụng một con trỏ ký tự,
+nhưng dòng này đang sử dụng một mệnh đề.
+
+154
+00:10:00.220 --> 00:10:04.110
+The question here is it a plus defined character array?
+Câu hỏi ở đây là một mảng ký tự cộng được xác định?
+
+155
+00:10:04.480 --> 00:10:07.260
+The answer is no is defined only on a string the clause.
+Câu trả lời là không chỉ được xác định trên một chuỗi mệnh đề.
+
+156
+00:10:07.270 --> 00:10:08.890
+We'll know more about that in the future.
+Chúng ta sẽ biết thêm về điều đó trong tương lai.
+
+157
+00:10:10.900 --> 00:10:12.520
+The the static variable.
+Biến tĩnh.
+
+158
+00:10:12.770 --> 00:10:18.760
+One interesting thing here, if you define a static variable inside the template function, every Turnblad
+Một điều thú vị ở đây, nếu bạn định nghĩa
+một biến tĩnh bên trong hàm mẫu, thì mọi
+
+159
+00:10:18.800 --> 00:10:28.570
+function is going to be have it's a static variable y because it if we have your increment to me was
+hàm Turnblad sẽ có biến tĩnh y bởi vì nó nếu
+chúng ta có số gia của bạn đối với tôi là
+
+160
+00:10:28.570 --> 00:10:33.550
+integer and incremental, we was to for I would like you to understand in reality the compiler would
+số nguyên và số gia tăng, chúng tôi muốn bạn
+hiểu rằng trên thực tế, trình biên dịch sẽ nhận
+
+161
+00:10:33.550 --> 00:10:39.570
+take this function, make two copies out of it, one of them for integer, one of them for a double.
+chức năng này, tạo hai bản sao từ nó, một bản
+sao cho số nguyên, một bản sao cho số kép.
+
+162
+00:10:39.760 --> 00:10:45.790
+So in reality there is one I would integrate religion and another set integral I with the double version.
+Vì vậy, trong thực tế, có một tôi tích phân tôn giáo và một tập tích phân I khác với phiên bản kép.
+
+163
+00:10:46.120 --> 00:10:51.580
+So if you tried here to make a static goals and this is a global variable, the static ones would be
+Vì vậy, nếu bạn đã thử ở đây để tạo
+một mục tiêu tĩnh và đây là một biến toàn
+
+164
+00:10:51.580 --> 00:10:53.170
+one, two, three and again, one, two, three.
+cục, thì các mục tiêu tĩnh sẽ là một,
+hai, ba và một lần nữa, một, hai, ba.
+
+165
+00:10:53.380 --> 00:10:55.480
+But the global is going to be incremented.
+Nhưng toàn cầu sẽ được tăng lên.
+
+166
+00:10:57.100 --> 00:10:59.020
+OK, one more thing.
+OK, một điều nữa.
+
+167
+00:10:59.170 --> 00:11:02.410
+What we call function Turnblad specialisation.
+Cái mà chúng tôi gọi là chức năng chuyên môn hóa Turnblad.
+
+168
+00:11:03.100 --> 00:11:09.850
+The question here is what if I would like the function to be working the same for every type except
+Câu hỏi ở đây là nếu tôi muốn
+chức năng hoạt động giống
+
+169
+00:11:09.850 --> 00:11:10.890
+the specific data type?
+nhau cho mọi loại ngoại
+trừ loại dữ liệu cụ thể thì sao?
+
+170
+00:11:11.230 --> 00:11:13.120
+Let's let's let's take an example here.
+Hãy lấy một ví dụ ở đây.
+
+171
+00:11:13.420 --> 00:11:15.130
+Let's think about the ADD function.
+Hãy nghĩ về hàm ADD.
+
+172
+00:11:15.130 --> 00:11:18.400
+If I'm adding here, it must be like the sum that we just were doing.
+Nếu tôi cộng ở đây, nó phải giống như tổng mà chúng ta vừa làm.
+
+173
+00:11:18.760 --> 00:11:20.260
+It works well for integers.
+Nó hoạt động tốt cho số nguyên.
+
+174
+00:11:20.260 --> 00:11:21.320
+It works well for some.
+Nó hoạt động tốt cho một số.
+
+175
+00:11:21.340 --> 00:11:22.180
+Everyone is happy.
+Mọi người đều hạnh phúc.
+
+176
+00:11:22.630 --> 00:11:27.880
+Now let's think about multiply function I have here multiply function that multiply.
+Bây giờ hãy nghĩ về hàm nhân Tôi có ở đây hàm nhân nhân lên.
+
+177
+00:11:28.960 --> 00:11:30.970
+The first one was an integer.
+Cái đầu tiên là một số nguyên.
+
+178
+00:11:30.970 --> 00:11:35.800
+So we are sending where we want one type only class D and we have a factor.
+Vì vậy, chúng tôi đang gửi nơi chúng tôi chỉ muốn một loại D và chúng tôi có một yếu tố.
+
+179
+00:11:36.190 --> 00:11:40.030
+This is going to equal was integer is going to was double was collected everything.
+Điều này sẽ bằng với số nguyên sẽ là gấp đôi được thu thập mọi thứ.
+
+180
+00:11:40.300 --> 00:11:43.200
+But it will fail four characters for Estrich.
+Nhưng nó sẽ thất bại bốn ký tự đối với Estrich.
+
+181
+00:11:43.540 --> 00:11:48.790
+Let's say I have interest to apply for Estrich in a specific way and we know that this good will combine
+Giả sử tôi muốn đăng ký Estrich
+theo một cách cụ thể và chúng
+
+182
+00:11:48.790 --> 00:11:50.260
+if it just is a string.
+tôi biết rằng hàng hóa này sẽ
+kết hợp nếu nó chỉ là một chuỗi.
+
+183
+00:11:50.680 --> 00:11:55.620
+So the way to that is to say, hey, you know what, I would like this multiply to be for every little
+Vì vậy, cách để làm điều đó là
+nói, này, bạn biết không, tôi muốn
+
+184
+00:11:55.630 --> 00:11:58.120
+type except specifically to type.
+phép nhân này áp dụng cho
+mọi loại nhỏ ngoại trừ loại cụ thể.
+
+185
+00:11:58.600 --> 00:12:01.510
+So the syntax to specify something is as follows.
+Vì vậy, cú pháp để chỉ định một cái gì đó như sau.
+
+186
+00:12:01.930 --> 00:12:07.210
+You write the word the template, but you do write at a time here and then you write your will function
+Bạn viết từ mẫu, nhưng bạn viết tại một thời
+điểm ở đây và sau đó bạn viết hàm di chúc
+
+187
+00:12:07.210 --> 00:12:11.480
+as you would write it in the normal case, which is a function that would multiply a string.
+của mình giống như bạn viết nó trong trường
+hợp bình thường, đó là hàm sẽ nhân một chuỗi.
+
+188
+00:12:11.480 --> 00:12:13.630
+Yes, there was some factor and return to string.
+Vâng, đã có một số yếu tố và trở lại chuỗi.
+
+189
+00:12:14.050 --> 00:12:15.070
+This is the same as that.
+Điều này cũng giống như điều đó.
+
+190
+00:12:15.070 --> 00:12:16.840
+But we just thought everything was a string.
+Nhưng chúng tôi chỉ nghĩ mọi thứ là một chuỗi.
+
+191
+00:12:17.110 --> 00:12:21.400
+I'm sitting here, you know what, for the case of string, I'm going to handle it in a different way,
+Tôi đang ngồi đây, bạn biết không, đối với trường hợp chuỗi, tôi sẽ xử lý nó theo một cách khác,
+
+192
+00:12:21.970 --> 00:12:23.110
+which is urologic.
+đó là tiết niệu.
+
+193
+00:12:23.470 --> 00:12:27.570
+And my guess here, I iterated the number of factors and concatenated there is so.
+Và tôi đoán ở đây, tôi đã lặp lại số lượng các yếu tố và nối ở đó.
+
+194
+00:12:28.040 --> 00:12:32.990
+Give the word Mustafa three, it will concubinage Mustafa three times, this is my version logic, one
+Cho từ Mustafa ba lần, nó
+sẽ làm vợ lẽ Mustafa ba lần,
+
+195
+00:12:32.990 --> 00:12:33.350
+might say.
+đây là logic phiên bản
+của tôi, người ta có thể nói.
+
+196
+00:12:33.350 --> 00:12:33.860
+You know what?
+Bạn biết gì?
+
+197
+00:12:33.860 --> 00:12:35.870
+I want a specific logic for David also.
+Tôi cũng muốn có một logic cụ thể cho David.
+
+198
+00:12:36.110 --> 00:12:39.980
+Then he was going to double multiply, double something and factor.
+Sau đó, anh ấy sẽ nhân đôi nhân đôi, nhân đôi một cái gì đó và thừa số.
+
+199
+00:12:40.460 --> 00:12:46.370
+So the moral of that is if in case you would like to have a specific handballing for a specific data
+Vì vậy, đạo đức của điều đó là nếu trong trường
+hợp bạn muốn có một cuộc giao bóng cụ thể cho một
+
+200
+00:12:46.370 --> 00:12:52.220
+type, you are going to use the template specialization in mean we can hear.
+loại dữ liệu cụ thể, thì bạn sẽ sử dụng chuyên môn
+hóa mẫu theo nghĩa mà chúng tôi có thể nghe thấy.
+
+201
+00:12:52.220 --> 00:12:57.950
+Normally you just keep calling the add and multiply in a normal way here in the add, in the interior
+Thông thường, bạn chỉ cần tiếp
+tục gọi phép cộng và phép nhân theo
+
+202
+00:12:57.950 --> 00:12:58.550
+and the string.
+cách bình thường ở đây trong phần
+cộng, trong phần bên trong và chuỗi.
+
+203
+00:12:58.610 --> 00:13:02.150
+This one would be good here in the interior, this one would be cool.
+Cái này sẽ tốt ở đây trong nội thất, cái này sẽ rất tuyệt.
+
+204
+00:13:02.300 --> 00:13:04.910
+But this one here in string, this one would be good.
+Nhưng cái này ở đây trong chuỗi, cái này sẽ tốt.
+
+205
+00:13:05.690 --> 00:13:06.230
+That's it.
+Đó là nó.

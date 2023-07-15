@@ -1,0 +1,654 @@
+0
+1
+00:00:01,460 --> 00:00:04,850
+Homework number one in the binary search.
+1
+
+2
+00:00:07,330 --> 00:00:13,960
+So go back to Donald's statement about the number of tricks that we can see in the binary search implementations.
+2
+
+3
+00:00:13,960 --> 00:00:19,300
+As I mentioned in the lecture, we would like to have a function that takes a vector and
+3
+
+4
+00:00:19,300 --> 00:00:19,870
+a target.
+4
+
+5
+00:00:20,410 --> 00:00:27,130
+Then it will return for us to indices, the first index for the element and the last index for
+5
+
+6
+00:00:27,130 --> 00:00:27,610
+the element.
+6
+
+7
+00:00:27,820 --> 00:00:30,100
+If it doesn't exist, it returns [-1, -1].
+7
+
+8
+00:00:30,430 --> 00:00:32,950
+So this vector will always have just two values.
+8
+
+9
+00:00:33,640 --> 00:00:39,610
+I would like you to once try to implement your own binary search code and in the second one,
+9
+
+10
+00:00:39,610 --> 00:00:42,670
+try to use the STL equal_range function.
+10
+
+11
+00:00:43,210 --> 00:00:44,950
+Let's see some samples in case
+11
+
+12
+00:00:44,950 --> 00:00:49,270
+here. We have here the array which is sorted and the target = 8.
+12
+
+13
+00:00:49,840 --> 00:00:55,300
+So we see here eight exists at the first position here, and last position here, these are [3, 4]
+13
+
+14
+00:00:55,720 --> 00:00:56,140
+Target
+14
+
+15
+00:00:56,140 --> 00:00:56,970
+six doesn't exist
+15
+
+16
+00:00:56,970 --> 00:00:59,890
+here, target zero doesn't exist in an empty array.
+16
+
+17
+00:00:59,890 --> 00:01:00,490
+And so on.
+17
+
+18
+00:01:01,600 --> 00:01:03,910
+So, for example, let me give you a bigger example.
+18
+
+19
+00:01:04,180 --> 00:01:14,350
+Let's say we have 2, 5, 7, 7, 7, 7, 10, and I ask you for seven.
+19
+
+20
+00:01:14,380 --> 00:01:16,180
+So this is the first location for seven.
+20
+
+21
+00:01:16,420 --> 00:01:18,640
+This is the last location for seven.
+21
+
+22
+00:01:21,490 --> 00:01:26,050
+Next, a very similar problem, which is finding right interval.
+22
+
+23
+00:01:26,320 --> 00:01:31,780
+We have an interval, every interval is like a start and end, like when you think about here, numbers
+23
+
+24
+00:01:31,840 --> 00:01:33,970
+zero, one, two, three, four.
+24
+
+25
+00:01:34,570 --> 00:01:36,460
+This could be an interval here.
+25
+
+26
+00:01:36,460 --> 00:01:41,230
+This is another interval, and so on. We would like to find, for every interval, its right
+26
+
+27
+00:01:41,230 --> 00:01:41,560
+one.
+27
+
+28
+00:01:41,560 --> 00:01:43,120
+What is the definition of the right one?
+28
+
+29
+00:01:43,630 --> 00:01:45,820
+It is an interval that is after you.
+29
+
+30
+00:01:45,850 --> 00:01:56,050
+This means the following that the second interval starts after your end, starts after your
+30
+
+31
+00:01:56,050 --> 00:01:56,320
+end.
+31
+
+32
+00:01:56,710 --> 00:02:02,620
+Now, among all of the intervals that are your right intervals, we need the one that starts earlier.
+32
+
+33
+00:02:03,460 --> 00:02:07,960
+I would like you to develop, again, your own binary search, then use the STL binary search.
+33
+
+34
+00:02:08,320 --> 00:02:11,320
+Optionally, you can also use the map lower_bound.
+34
+
+35
+00:02:11,320 --> 00:02:12,580
+Provide a solution for that.
+35
+
+36
+00:02:12,820 --> 00:02:16,180
+Let me give you an example if you aren't aware with intervals.
+36
+
+37
+00:02:16,570 --> 00:02:19,570
+So here in this interval, for example.
+37
+
+38
+00:02:20,110 --> 00:02:21,700
+So let's say we have here a line,
+38
+
+39
+00:02:22,090 --> 00:02:28,810
+this is index value 1, 2, 3, 4, 5, 6, and so on.
+39
+
+40
+00:02:29,320 --> 00:02:32,980
+So we have one interval at three and four, so we have one interval here.
+40
+
+41
+00:02:34,460 --> 00:02:39,590
+And we have, let's call it (3, 4), and we have an interval at two and three.
+41
+
+42
+00:02:39,800 --> 00:02:41,810
+So we have one interval here
+42
+
+43
+00:02:43,120 --> 00:02:43,620
+(2, 3).
+43
+
+44
+00:02:44,650 --> 00:02:47,770
+And we have an interval one, two, so we have an interval here, (1, 2).
+44
+
+45
+00:02:48,730 --> 00:02:52,900
+Now, let's go and see. For interval three and four,
+45
+
+46
+00:02:52,990 --> 00:02:53,860
+there is nothing
+46
+
+47
+00:02:54,100 --> 00:02:54,730
+on its right.
+47
+
+48
+00:02:54,820 --> 00:02:58,960
+So the answer here is -1 for it. For the interval two and three,
+48
+
+49
+00:02:58,990 --> 00:03:02,260
+there is only one interval after it, which is three and four.
+49
+
+50
+00:03:02,590 --> 00:03:04,330
+Three and four has index zero.
+50
+
+51
+00:03:04,480 --> 00:03:05,620
+So we put zero here.
+51
+
+52
+00:03:06,310 --> 00:03:08,110
+Finally, one and two.
+52
+
+53
+00:03:08,410 --> 00:03:13,420
+So (1, 2) has two intervals after, the interval (2, 3) and the interval (3, 4).
+53
+
+54
+00:03:13,660 --> 00:03:17,740
+We need the one that is the first one, the smallest start.
+54
+
+55
+00:03:17,950 --> 00:03:21,010
+So this one starts at two and this one starts at four.
+55
+
+56
+00:03:21,040 --> 00:03:22,900
+So you just use this one.
+56
+
+57
+00:03:24,190 --> 00:03:27,010
+And so on. So here one and four.
+57
+
+58
+00:03:28,030 --> 00:03:28,420
+.
+58
+
+59
+00:03:29,990 --> 00:03:31,970
+There is no right interval for one and four.
+59
+
+60
+00:03:32,180 --> 00:03:33,160
+There is no
+60
+
+61
+00:03:33,470 --> 00:03:34,730
+an interval for one and four.
+61
+
+62
+00:03:34,730 --> 00:03:35,030
+Why?
+62
+
+63
+00:03:35,300 --> 00:03:38,840
+Because (1, 4) is taking the whole interval here.
+63
+
+64
+00:03:39,320 --> 00:03:41,150
+So this is the (1, 4) interval.
+64
+
+65
+00:03:41,180 --> 00:03:43,310
+There is nothing after it.
+65
+
+66
+00:03:43,580 --> 00:03:45,080
+So this is what does it mean.
+66
+
+67
+00:03:50,380 --> 00:03:58,730
+The valid triangle number, you will have an array of integers, and we would like to build triangles
+67
+
+68
+00:03:58,730 --> 00:03:59,210
+from it.
+68
+
+69
+00:04:00,290 --> 00:04:08,090
+The question is to return the number of triplets that satisfy a triangle. Remember from what we learned,
+69
+
+70
+00:04:08,360 --> 00:04:14,210
+If you have three sides of a triangle, then the triangle is valid if and only if the sum of any two
+70
+
+71
+00:04:14,210 --> 00:04:19,490
+sides are greater than the third side, which are these three conditions.
+71
+
+72
+00:04:20,360 --> 00:04:22,530
+So here you have this input.
+72
+
+73
+00:04:22,790 --> 00:04:30,560
+So if you took two and three and four, this is one triangle. The second two and three and
+73
+
+74
+00:04:30,560 --> 00:04:31,970
+four, this is another triangle.
+74
+
+75
+00:04:32,270 --> 00:04:35,060
+Two, three, and four, sorry, two, two, and three
+75
+
+76
+00:04:35,060 --> 00:04:38,690
+also a valid triangle, but you cannot take two and two and four.
+76
+
+77
+00:04:38,930 --> 00:04:40,220
+This is invalid triangle.
+77
+
+78
+00:04:40,550 --> 00:04:41,180
+And so on.
+78
+
+79
+00:04:41,690 --> 00:04:47,090
+One more time, develop your own binary search, then develop based on STL.
+79
+
+80
+00:04:47,860 --> 00:04:53,540
+Now, once you're done with these two, I would like to develop a code that doesn't have even the binary
+80
+
+81
+00:04:53,540 --> 00:04:54,110
+search.
+81
+
+82
+00:04:54,440 --> 00:04:57,890
+So this now needs some more observations from you.
+82
+
+83
+00:04:58,370 --> 00:04:59,630
+I hope you understand the problem.
+83
+
+84
+00:04:59,900 --> 00:05:08,450
+I would like to tell you something here. So early in the explaining in the algorithms
+84
+
+85
+00:05:08,450 --> 00:05:13,100
+what and why, we mentioned that there are many types of algorithms like a decision problem.
+85
+
+86
+00:05:14,990 --> 00:05:16,700
+Like an optimization problem.
+86
+
+87
+00:05:17,680 --> 00:05:21,310
+There is also what we call a counting problem and many other types.
+87
+
+88
+00:05:22,000 --> 00:05:24,900
+Now I told you recently what is an optimization problem.
+88
+
+89
+00:05:24,910 --> 00:05:28,750
+It's a problem that's seeking, for example, maximization or minimization.
+89
+
+90
+00:05:29,650 --> 00:05:32,040
+A decision problem is a binary problem.
+90
+
+91
+00:05:32,050 --> 00:05:33,430
+It says true or false.
+91
+
+92
+00:05:33,820 --> 00:05:38,140
+If I give you an array and ask you to return true, if the number exists, false, if it doesn't
+92
+
+93
+00:05:38,140 --> 00:05:38,470
+exist.
+93
+
+94
+00:05:38,650 --> 00:05:39,760
+This is a decision.
+94
+
+95
+00:05:39,970 --> 00:05:43,180
+So decision is problems with true or false outputs.
+95
+
+96
+00:05:43,690 --> 00:05:47,590
+Now, counting problems are this problem that tries to count something.
+96
+
+97
+00:05:48,190 --> 00:05:52,210
+And usually this involves a lot of computations.
+97
+
+98
+00:05:52,600 --> 00:05:54,240
+So this is a counting problem.
+98
+
+99
+00:05:54,260 --> 00:05:57,490
+We would like to count the number of triplets.
+99
+
+100
+00:05:57,820 --> 00:05:58,240
+So why
+100
+
+101
+00:05:58,240 --> 00:06:04,270
+usually, a number of something is an algorithmic problem? Because you have a lot of choices, and you would
+101
+
+102
+00:06:04,270 --> 00:06:07,540
+like to count specific items within these choices.
+102
+
+103
+00:06:07,900 --> 00:06:10,870
+So this is another type of algorithms.
+103
+
+104
+00:06:11,260 --> 00:06:12,310
+So keep that in mind.
+104
+
+105
+00:06:15,450 --> 00:06:21,730
+The final problem is as following, we have n coins, and we build a staircase with them.
+105
+
+106
+00:06:21,750 --> 00:06:23,330
+This is what we mean by a staircase.
+106
+
+107
+00:06:23,340 --> 00:06:29,220
+So a staircase is something that has one step here, two three, four, five, six in order.
+107
+
+108
+00:06:29,760 --> 00:06:32,340
+Now you have coins and you fill in order.
+108
+
+109
+00:06:32,520 --> 00:06:35,580
+So let's say you have eight coins, you start to put here
+109
+
+110
+00:06:36,000 --> 00:06:40,470
+one element only, there is two here, so you put two, three here, we put a three.
+110
+
+111
+00:06:40,680 --> 00:06:42,330
+So far, we spent six coins.
+111
+
+112
+00:06:42,630 --> 00:06:45,150
+Now we have only eight, so the remaining is two.
+112
+
+113
+00:06:46,140 --> 00:06:50,880
+Now the question is, as you see here, we couldn't complete this row.
+113
+
+114
+00:06:51,060 --> 00:06:56,340
+So the first three rows are the only ones that we can fill with eight coins.
+114
+
+115
+00:06:56,820 --> 00:06:59,370
+So here is the problem. You have
+115
+
+116
+00:07:00,670 --> 00:07:03,580
+n coins, and you would like to build a staircase.
+116
+
+117
+00:07:04,210 --> 00:07:10,500
+And as I said, we would like to find the total number of complete rows.
+117
+
+118
+00:07:10,630 --> 00:07:15,880
+So once you cannot fill it anymore, we are done. We definitely can write a linear loop to do this
+118
+
+119
+00:07:15,880 --> 00:07:16,420
+problem.
+119
+
+120
+00:07:16,870 --> 00:07:19,810
+Now I would like to find the binary search algorithm for this problem.
+120
+
+121
+00:07:20,290 --> 00:07:26,650
+Now there's a question here, where is the array? We used to search an array based on zero, end
+121
+
+122
+00:07:26,650 --> 00:07:27,520
+and get the middle.
+122
+
+123
+00:07:27,730 --> 00:07:28,660
+Where is the array?
+123
+
+124
+00:07:29,260 --> 00:07:32,530
+This is the time to generalize the binary search we learned.
+124
+
+125
+00:07:32,620 --> 00:07:36,850
+We will generalize the binary search we learned. In the next lecture,
+125
+
+126
+00:07:37,060 --> 00:07:40,990
+I will explain how to generalize the binary search to work on functions.
+126
+
+127
+00:07:41,470 --> 00:07:45,880
+By the way, the limit of this function is a very huge number.
+127
+
+128
+00:07:47,290 --> 00:07:48,530
+I would like to give a trial.
+128
+
+129
+00:07:48,610 --> 00:07:51,790
+You can still develop it by yourself but just give a trial.
+129
+
+130
+00:07:51,940 --> 00:07:55,060
+And as I said, I will explain the solution of this problem in the lecture.
+130
+
+131
+00:07:58,040 --> 00:07:58,620
+Yeah, that's all.

@@ -1,0 +1,259 @@
+0
+1
+00:00:01,570 --> 00:00:04,570
+In this video, we will know about the assignment operator.
+1
+
+2
+00:00:04,700 --> 00:00:06,100
+We already saw the assignment operator a lot.
+2
+
+3
+00:00:06,130 --> 00:00:08,140
+It is just this Equal "=".
+3
+
+4
+00:00:08,140 --> 00:00:13,790
+When we say integer X = 2 * Y + 1, we say that we assign a value.
+4
+
+5
+00:00:14,140 --> 00:00:19,750
+So Y is brought from the memory, 2 * Y + 1 is computed and the result is stored again in X.
+5
+
+6
+00:00:20,230 --> 00:00:25,920
+we call X "left Hand-side" and we call this expression the "right-hand side".
+6
+
+7
+00:00:26,230 --> 00:00:29,680
+It could be like just 12, 10+2,  a big expression and so on.
+7
+
+8
+00:00:30,070 --> 00:00:33,070
+It is evaluated first, then assigned to the X.
+8
+
+9
+00:00:34,030 --> 00:00:37,810
+When you look to the right hand side here, let's say that Y is is an integer.
+9
+
+10
+00:00:38,140 --> 00:00:42,130
+So the overall result is just a number which is assignable to X.
+10
+
+11
+00:00:42,130 --> 00:00:43,870
+What does it mean to be assignable here?
+11
+
+12
+00:00:44,290 --> 00:00:49,210
+I mean by that, let's say the right side is just a string, your name for example, then
+12
+
+13
+00:00:49,210 --> 00:00:51,460
+you cannot say integer X equals some string.
+13
+
+14
+00:00:51,690 --> 00:00:53,100
+The compiler will complain.
+14
+
+15
+00:00:53,980 --> 00:01:00,250
+And more interestingly, we can assign several variables in a single line like this way. we can say 
+15
+
+16
+00:01:00,250 --> 00:01:05,260
+X = 2 * Y, Y = 10 + 2, Z =  X + Y.
+16
+
+17
+00:01:05,260 --> 00:01:11,540
+Then semicolon ";". This is very common and the comma here is a comma operator.
+17
+
+18
+00:01:11,950 --> 00:01:15,430
+OK, here are two interesting things about the comma operator.
+18
+
+19
+00:01:15,730 --> 00:01:18,220
+First, it is evaluated from Left-to-right.
+19
+
+20
+00:01:18,250 --> 00:01:25,180
+So every comma expression, every expression before a comma is evaluated first in this order.
+20
+
+21
+00:01:25,210 --> 00:01:26,820
+This is one interesting thing about it.
+21
+
+22
+00:01:27,490 --> 00:01:33,190
+The second thing, the last expression find the last comma did the expression after it, the
+22
+
+23
+00:01:33,190 --> 00:01:35,310
+result of this expression is returned.
+23
+
+24
+00:01:35,710 --> 00:01:41,530
+So if I say, for example, "cout<<(10, x=1, y=3+1 x = ...)"
+24
+
+25
+00:01:41,530 --> 00:01:43,540
+blah blah blah, comma 40.
+25
+
+26
+00:01:43,870 --> 00:01:46,090
+The result of this expression is 40.
+26
+
+27
+00:01:46,240 --> 00:01:47,200
+So two things here,
+27
+
+28
+00:01:47,560 --> 00:01:49,960
+Left-to-right evaluation for every expression.
+28
+
+29
+00:01:50,170 --> 00:01:52,050
+The last item is returned.
+29
+
+30
+00:01:52,360 --> 00:01:59,980
+The comma "," operator is frequently used in this case, but the people less use it based on the evaluation
+30
+
+31
+00:01:59,980 --> 00:02:02,320
+idea from the left to right, which might be helpful sometimes.
+31
+
+32
+00:02:02,320 --> 00:02:11,080
+Another case is this kind of operators,  +=, -=, *=, /=.
+32
+
+33
+00:02:11,470 --> 00:02:13,270
+We call it a compound assignment.
+33
+
+34
+00:02:13,840 --> 00:02:17,680
+The compound assignment means, it combines two things.
+34
+
+35
+00:02:18,010 --> 00:02:21,770
+It combines the assignment operator with some binary operator.
+35
+
+36
+00:02:22,120 --> 00:02:27,010
+So let's say that we have a number and we say number + 1 "num = num + 1.
+36
+
+37
+00:02:27,400 --> 00:02:29,290
+There is a shorter way to do that.
+37
+
+38
+00:02:29,290 --> 00:02:33,070
+We can say "num += 1;".
+38
+
+39
+00:02:33,380 --> 00:02:40,930
+This is exactly as same as "num = num + 1", "num *= 2" this is exactly as "num = num * 2"
+39
+
+40
+00:02:40,930 --> 00:02:48,710
+and so on, "num -= 10" is "num = num - 10" and a "num /= 2" is "num = num / 2".
+40
+
+41
+00:02:50,080 --> 00:02:59,620
+So this is a more of convenient use operator, it is just to make your life a bit easier.
+41
+
+42
+00:02:59,620 --> 00:03:01,120
+For the big picture of operators,
+42
+
+43
+00:03:01,120 --> 00:03:08,440
+At the moment we studied the unary operators, which just takes a single operand, and we studied the binary
+43
+
+44
+00:03:08,440 --> 00:03:10,390
+one which takes 2 operands.
+44
+
+45
+00:03:10,780 --> 00:03:14,260
+And also there is a ternary operator which takes three operants.
+45
+
+46
+00:03:14,260 --> 00:03:15,340
+We will see it in the future,
+46
+
+47
+00:03:15,340 --> 00:03:18,820
+It isn't frequently used. from another perspective,
+47
+
+48
+00:03:18,820 --> 00:03:24,670
+We also saw the arithmetic operators, which are the math operations, and also today the assignment operator,
+48
+
+49
+00:03:24,880 --> 00:03:29,950
+which are these guys. we saw the prefix and postfix operators or unary operators.
+49
+
+50
+00:03:30,460 --> 00:03:37,150
+In the next times we will know more about the relational operators and logical operators. in the future
+50
+
+51
+00:03:37,150 --> 00:03:41,440
+We will know about the bitwise operator, which is a bit advanced operator.
+51
+
+52
+00:03:41,830 --> 00:03:42,370
+That's it.

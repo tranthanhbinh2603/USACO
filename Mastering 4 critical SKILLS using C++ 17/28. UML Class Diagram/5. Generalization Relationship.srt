@@ -1,0 +1,159 @@
+0
+1
+00:00:01,670 --> 00:00:09,200
+The generalization relationship is a relationship. When you figure out that there is some is a relationship,
+1
+
+2
+00:00:09,210 --> 00:00:12,200
+you know there is some generalization or inheritance.
+2
+
+3
+00:00:12,600 --> 00:00:14,970
+So we say that student is a person,
+3
+
+4
+00:00:15,210 --> 00:00:17,740
+teacher is a person, dean is a person.
+4
+
+5
+00:00:17,910 --> 00:00:19,880
+So this is a relationship.
+5
+
+6
+00:00:20,220 --> 00:00:22,020
+The is-a has an implication.
+6
+
+7
+00:00:22,260 --> 00:00:28,980
+It implies that there are some common variables and functions that should exist between a student, teacher, and dean,
+7
+
+8
+00:00:28,980 --> 00:00:34,980
+and also there should be some unique variables and functions for every one of them.
+8
+
+9
+00:00:35,220 --> 00:00:40,610
+For example, you can think that all of these people would have a name, all of them would have an email,
+9
+
+10
+00:00:40,630 --> 00:00:42,120
+all of them would have an address.
+10
+
+11
+00:00:42,240 --> 00:00:43,850
+So this is what's common between them.
+11
+
+12
+00:00:44,100 --> 00:00:50,370
+You can think, for example, the student has a GPA, but the dean has a salary,
+12
+
+13
+00:00:50,550 --> 00:00:52,800
+and so on. Circle is a shape,
+13
+
+14
+00:00:52,800 --> 00:00:55,170
+rectangle is a shape, triangle is a shape.
+14
+
+15
+00:00:55,440 --> 00:00:56,850
+We need to draw all of them,
+15
+
+16
+00:00:56,850 --> 00:00:58,890
+We need to compute the area for all of them,
+16
+
+17
+00:00:59,190 --> 00:01:03,600
+but the rectangle area computation is different from the circle area computation.
+17
+
+18
+00:01:03,990 --> 00:01:08,410
+The software engineer is an employee, the manager is an employee, also office boy
+18
+
+19
+00:01:08,410 --> 00:01:14,070
+is an employee. Although there would be some common features between them, there would be definitely
+19
+
+20
+00:01:14,070 --> 00:01:17,100
+different variables and functions for everyone,
+20
+
+21
+00:01:17,340 --> 00:01:24,450
+and so on. Apple is a fruit, orange is a fruit of food, watermelon is a fruit. Bicycle, motor, vehicle, and railed vehicle
+21
+
+22
+00:01:24,450 --> 00:01:26,370
+are all of them a vehicle, and so on.
+22
+
+23
+00:01:27,840 --> 00:01:36,240
+In terms of UML, we use this empty triangle. So let's say we are in a bank, modeling a bank,
+23
+
+24
+00:01:36,450 --> 00:01:40,530
+then we can have a checking account, savings account, credit account,
+24
+
+25
+00:01:40,830 --> 00:01:45,080
+but all of them are eventually accounts,  there should be something common between them.
+25
+
+26
+00:01:45,480 --> 00:01:52,850
+Here is a bigger hierarchy where we have a mammal is as an animal, and also we have a horse as a mammal.
+26
+
+27
+00:01:53,010 --> 00:01:55,390
+So you see the relationship can get bigger.
+27
+
+28
+00:01:55,830 --> 00:01:59,520
+Let's see an example we were building the composition with the generalization.
+28
+
+29
+00:01:59,880 --> 00:02:02,250
+We have a vehicle which could be water or road,
+29
+
+30
+00:02:02,580 --> 00:02:05,010
+the road vehicle could be bicycle or a car,
+30
+
+31
+00:02:05,280 --> 00:02:08,860
+the car is composed of an engine and of four wheels.
+31
+
+32
+00:02:09,030 --> 00:02:15,270
+This how UML might start to grow up with different relationships. That's it.

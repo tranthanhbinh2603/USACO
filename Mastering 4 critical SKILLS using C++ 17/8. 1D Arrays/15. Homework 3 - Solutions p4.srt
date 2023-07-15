@@ -1,0 +1,600 @@
+0
+1
+00:00:00,990 --> 00:00:07,200
+Let's solve the Josephus problem, which in computer science is a nice problem and has actually bigger solutions
+
+2
+00:00:07,200 --> 00:00:13,410
+that are going to discuss today. We today will try to do it in a very; what we call a simulation algorithm
+
+3
+00:00:13,800 --> 00:00:14,400
+Simulation
+
+4
+00:00:14,400 --> 00:00:16,680
+means just do it as it requested from you.
+
+5
+00:00:17,050 --> 00:00:21,220
+The request is to keep iterating "k" times, remove person, keep iterating, remove it.
+
+6
+00:00:21,240 --> 00:00:25,770
+So this is just a simulation to direct this, what we mean by the by simulation.
+
+7
+00:00:26,530 --> 00:00:31,630
+And we also will show how the modules can handle for us in an easy way a very big "k"  like that one.
+
+8
+00:00:32,280 --> 00:00:34,080
+So let's see how to code it.
+
+9
+00:00:34,650 --> 00:00:38,730
+I have an array here "is_removed" that will be initially zeroes.
+
+10
+00:00:39,090 --> 00:00:40,770
+So zero means it isn't removed.
+
+11
+00:00:40,770 --> 00:00:41,910
+One means it is removed.
+
+12
+00:00:42,300 --> 00:00:45,660
+And the reason behind that is we cannot delete from the array.
+
+13
+00:00:45,670 --> 00:00:51,180
+So far we didn't learn how to remove something from an array so we will use this array to mark what
+
+14
+00:00:51,180 --> 00:00:52,470
+is removed and what isn't.
+
+15
+00:00:52,920 --> 00:00:59,190
+And last position referred to where are we standing in the current circle over the people and
+
+16
+00:00:59,190 --> 00:01:00,760
+initially we are at position zero.
+
+17
+00:01:00,780 --> 00:01:03,440
+So we are converting everything to zero-based.
+
+18
+00:01:04,200 --> 00:01:10,890
+So the idea is as following, we will iterate for loop here, ignore this current block here and we
+
+19
+00:01:10,890 --> 00:01:14,040
+have the "current_k" , which is a "k" like five, for example.
+
+20
+00:01:15,440 --> 00:01:21,350
+And then in this loop, we iterate the five times, but considering the "is_removed", once we find the
+
+21
+00:01:21,350 --> 00:01:25,250
+target person, we remove him and we print him in the circle.
+
+22
+00:01:25,970 --> 00:01:33,790
+Now, let's go in the details. In the for loop I iterate "n" times to keep removing the end persons
+
+23
+00:01:33,800 --> 00:01:34,570
+in the circle.
+
+24
+00:01:35,120 --> 00:01:39,800
+And every time I start from...,  I have a counter "step" equals zero.
+
+25
+00:01:40,160 --> 00:01:42,010
+And let's say the "current_k"  is five.
+
+26
+00:01:42,260 --> 00:01:44,030
+So we will iterate five times.
+
+27
+00:01:44,030 --> 00:01:49,010
+But the problem is sometimes the items are removed.
+
+28
+00:01:49,280 --> 00:01:56,570
+So the idea is following the loop here in every step, will increment the counter from last opposition
+
+29
+00:01:56,570 --> 00:02:03,890
+to last position plus one.  The last position to the last position plus one and observe here "% n"
+
+30
+00:02:04,250 --> 00:02:06,720
+The "% n" , purpose is to cycle in the array.
+
+31
+00:02:06,950 --> 00:02:12,620
+Let's say we have an array full of five elements and the last position is four and would like to move to the next
+
+32
+00:02:12,620 --> 00:02:12,950
+one.
+
+33
+00:02:13,400 --> 00:02:16,040
+Four plus one is five, 5%5 is zero.
+
+34
+00:02:16,040 --> 00:02:18,110
+Getting back, this is very popular trick
+
+35
+00:02:18,110 --> 00:02:25,130
+When you would like to cycle back in an array, you apply modulus n because the array is from zero
+
+36
+00:02:25,130 --> 00:02:25,660
+to four.
+
+37
+00:02:26,000 --> 00:02:30,450
+If now the value is five, then 5%5 will be zero and we get back here.
+
+38
+00:02:30,620 --> 00:02:36,440
+So this is the advantage of this "%n" in here is returning us back. to this loop we will iterate , let's say
+
+39
+00:02:36,440 --> 00:02:37,160
+five times.
+
+40
+00:02:37,400 --> 00:02:38,630
+And this is last position
+
+41
+00:02:38,630 --> 00:02:41,120
+Keep it incrementing step by step to the next one.
+
+42
+00:02:41,780 --> 00:02:44,990
+Now, this if condition is just handling if the current person
+
+43
+00:02:44,990 --> 00:02:50,960
+exists or not, if this person is removed, then we know that one more step counted.
+
+44
+00:02:51,350 --> 00:02:52,850
+And also we are updating the last
+
+45
+00:02:52,850 --> 00:02:59,540
+person that we are met so far. If this person isn't removed, the steps doesn't increase because
+
+46
+00:02:59,540 --> 00:03:01,510
+we didn't find him so far.
+
+47
+00:03:01,970 --> 00:03:06,560
+So, yeah, I hope this is clear.
+
+48
+00:03:06,560 --> 00:03:08,240
+Maybe maybe we can.
+
+49
+00:03:09,290 --> 00:03:10,160
+One, two, three, four.
+
+50
+00:03:10,160 --> 00:03:16,130
+For example, the four and two, for example, here four and the two as a simulation here, maybe it
+
+51
+00:03:16,130 --> 00:03:16,540
+would help.
+
+52
+00:03:18,050 --> 00:03:23,480
+So initially we have four values so the array will have in position zero, one, two, three.
+
+53
+00:03:23,810 --> 00:03:27,560
+We would have the values of initially zero, zero, zero, and zero.
+
+54
+00:03:28,050 --> 00:03:34,040
+And the first step, we will start at step zero.
+
+55
+00:03:34,250 --> 00:03:39,680
+And the last position here is undefined and will iterate two steps.
+
+56
+00:03:39,950 --> 00:03:45,590
+Then we check is this person removed?
+
+57
+00:03:45,890 --> 00:03:46,780
+The answer is no.
+
+58
+00:03:47,000 --> 00:03:53,150
+So we count one step and we count that the last person we met is the position at zero here.
+
+59
+00:03:53,630 --> 00:03:59,000
+And then we move one step then is this person removed?
+
+60
+00:03:59,000 --> 00:03:59,960
+No, count
+
+61
+00:03:59,960 --> 00:04:01,580
+one more step and market.
+
+62
+00:04:01,580 --> 00:04:02,930
+So now we are at position one.
+
+63
+00:04:03,500 --> 00:04:05,990
+And then we we did two iteration.
+
+64
+00:04:05,990 --> 00:04:07,100
+So the loop here is done.
+
+65
+00:04:07,370 --> 00:04:14,330
+Now we are marking in the array that "is_removed" of the person, which is one now would be marked as
+
+66
+00:04:14,540 --> 00:04:14,960
+one.
+
+67
+00:04:14,990 --> 00:04:19,580
+Let's make it here with X. Now in every step,
+
+68
+00:04:19,580 --> 00:04:24,170
+as you notice here, the last position with incrementing is initially to zero, then it's one then.
+
+69
+00:04:24,170 --> 00:04:28,730
+Now the current position is that here, starting from here, we started to count twice.
+
+70
+00:04:29,030 --> 00:04:31,370
+Is this removed? no,  move.
+
+71
+00:04:31,370 --> 00:04:32,180
+Is this removed?
+
+72
+00:04:32,420 --> 00:04:32,900
+No.
+
+73
+00:04:33,110 --> 00:04:36,890
+Then we are done with the loop, then we mark it as removed. 
+
+74
+00:04:36,890 --> 00:04:39,650
+So we go back here and mark it as removed.
+
+75
+00:04:39,920 --> 00:04:46,570
+And as you see now, the last position was at three. last position plus one is four, 4%4 is
+
+76
+00:04:46,580 --> 00:04:46,970
+zero.
+
+77
+00:04:47,300 --> 00:04:53,870
+So we go back here again. Now in the next step,
+
+78
+00:04:54,980 --> 00:04:57,110
+So far we are printing correctly to four?
+
+79
+00:04:57,110 --> 00:04:57,470
+Yes.
+
+80
+00:04:57,770 --> 00:05:00,970
+And the next step, we are at position zero.
+
+81
+00:05:00,980 --> 00:05:01,790
+Let's count two.
+
+82
+00:05:02,030 --> 00:05:03,280
+Is it removed? No. 
+
+83
+00:05:03,290 --> 00:05:05,840
+So count it here and go to the next step.
+
+84
+00:05:06,080 --> 00:05:07,040
+Is it removed?
+
+85
+00:05:07,220 --> 00:05:08,990
+Yes, it is removed.
+
+86
+00:05:09,200 --> 00:05:10,430
+So we do nothing.
+
+87
+00:05:10,430 --> 00:05:11,150
+The step will remain
+
+88
+00:05:11,150 --> 00:05:13,700
+one, we just move to the next position, which is here.
+
+89
+00:05:13,970 --> 00:05:14,780
+Is it removed?
+
+90
+00:05:14,900 --> 00:05:21,170
+No, mark it here as we are here and increment it two steps, then we are done and get out of the loop  and mark it 
+
+91
+00:05:21,170 --> 00:05:27,410
+with X and so and so. This is a moral of the if "is_removed" condition.
+
+92
+00:05:27,410 --> 00:05:33,980
+I hope you understand now the simulation, which is probably you can do it, but it might be a bit problematic
+
+93
+00:05:33,980 --> 00:05:36,470
+in marking and producing errors.
+
+94
+00:05:36,890 --> 00:05:39,590
+The last thing to know about is this if condition here.
+
+95
+00:05:41,730 --> 00:05:48,420
+Observe that the number of the people in the circle are decreasing every time, let's say we have
+
+96
+00:05:48,420 --> 00:05:51,240
+five persons in the circle, one, two, three, four, five.
+
+97
+00:05:51,940 --> 00:05:55,560
+Let's say I told you that the "k" is two.
+
+98
+00:05:55,980 --> 00:05:57,270
+Two is less than five.
+
+99
+00:05:57,280 --> 00:05:58,170
+So perfect.
+
+100
+00:05:58,170 --> 00:06:00,830
+It means that we move here two steps, then move two steps, and so on.
+
+101
+00:06:01,410 --> 00:06:04,190
+But what if I told you that the "k" is seven?
+
+102
+00:06:04,800 --> 00:06:07,260
+So we have five people but we have "k" is seven.
+
+103
+00:06:07,620 --> 00:06:12,930
+"k" is seven means you go one, two, three, four, five, and you go back to one, two again.
+
+104
+00:06:13,440 --> 00:06:18,790
+The observation here is we have one complete round that is useless.
+
+105
+00:06:18,990 --> 00:06:22,830
+Remember, the clock every 12 hours doesn't change the clock.
+
+106
+00:06:23,010 --> 00:06:28,510
+If the clock now is three after 12 hours, it's again three, after another 12 hours it's again three.
+
+107
+00:06:28,860 --> 00:06:33,410
+So every one complete cycle of five values is actually useless.
+
+108
+00:06:33,930 --> 00:06:39,830
+So by removing five from seven, five from seven, we get back the value 2 .
+
+109
+00:06:40,080 --> 00:06:46,130
+In other words, if "k" is two or seven, both of them are of the same value.
+
+110
+00:06:46,260 --> 00:06:52,600
+Both of them are of the same value and in a similar way, the "k" is two, the "k" is five.
+
+111
+00:06:52,830 --> 00:07:00,750
+Sorry,  the "k" is four,  "k" is seven or  "k" is 12 or  "k" is 17 and so on.
+
+112
+00:07:01,050 --> 00:07:07,140
+All of these windows or all of these "k" are the same because you keep repeating, repeating, repeating,
+
+113
+00:07:07,140 --> 00:07:08,760
+repeating, then ending here.
+
+114
+00:07:09,000 --> 00:07:10,590
+That's why we have the % here.
+
+115
+00:07:11,220 --> 00:07:12,390
+This is actually ridiculous.
+
+116
+00:07:12,630 --> 00:07:13,950
+You know, if I told you.
+
+117
+00:07:14,190 --> 00:07:14,820
+What is the clock 
+
+118
+00:07:14,820 --> 00:07:17,790
+after 700 hours, you tell me, you know what?
+
+119
+00:07:17,820 --> 00:07:19,820
+This is as same as 700%12.
+
+120
+00:07:20,400 --> 00:07:27,810
+So we are going to instead of doing all of this ridiculous iteration, we just put the %, and get
+
+121
+00:07:27,810 --> 00:07:28,280
+rid of them.
+
+122
+00:07:28,770 --> 00:07:31,440
+Now, two extra tricks here.
+
+123
+00:07:31,890 --> 00:07:36,830
+The first one is: observe that the circle is reducing in every single step.
+
+124
+00:07:37,290 --> 00:07:41,160
+That's why here we need to consider with the % "remaining_alive".
+
+125
+00:07:41,160 --> 00:07:43,110
+You cannot do that outside the for loop.
+
+126
+00:07:43,800 --> 00:07:45,660
+The circle is reducing it step by step.
+
+127
+00:07:45,990 --> 00:07:51,150
+This is like an hour that is now twelve hours, but one step it's now eleven hours after that is ten
+
+128
+00:07:51,150 --> 00:07:51,450
+hours.
+
+129
+00:07:51,750 --> 00:07:53,280
+The cycle is decreasing.
+
+130
+00:07:53,580 --> 00:07:55,290
+So you have to make it dynamic here.
+
+131
+00:07:55,990 --> 00:07:57,570
+"k % remaining alive".
+
+132
+00:07:57,750 --> 00:07:59,970
+That's why we needed to make it more dynamic.
+
+133
+00:08:01,140 --> 00:08:07,620
+The last trick which like this one might fail is what happen if "k % remaining alive"
+
+134
+00:08:07,620 --> 00:08:08,220
+is zero?
+
+135
+00:08:08,610 --> 00:08:14,190
+What happen if the cycle length is "k" is 5 and "n" is five?Now, 
+
+136
+00:08:14,190 --> 00:08:21,690
+5%5 is zero,  zero means you don't move in the array or the zero means you are actually killing this
+
+137
+00:08:21,690 --> 00:08:22,050
+guy.
+
+138
+00:08:22,050 --> 00:08:22,950
+But this is wrong.
+
+139
+00:08:23,400 --> 00:08:24,840
+We actually should kill this guy.
+
+140
+00:08:25,110 --> 00:08:31,740
+So to handle this as a trick, if "k% remaining_alive" equal zero, we just need
+
+141
+00:08:31,740 --> 00:08:33,720
+to move up to the five steps itself.
+
+142
+00:08:33,750 --> 00:08:35,040
+That's why I'm putting here "remaining_alive".
+
+143
+00:08:35,580 --> 00:08:40,110
+So this is like a special case handling for this "k %  remaining_alive".
+
+144
+00:08:40,110 --> 00:08:40,890
+== zero.
+
+145
+00:08:41,850 --> 00:08:43,020
+This is all about the solution.
+
+146
+00:08:43,860 --> 00:08:48,750
+Later, when you learn how to remove elements from an array, coding that should be a little bit easier
+
+147
+00:08:48,750 --> 00:08:49,380
+experience.
+
+148
+00:08:49,380 --> 00:08:53,760
+For example, you won't need this "is_removed"  array, but also it is a bit less efficient.
+
+149
+00:08:53,760 --> 00:08:55,290
+But it depends, may be, I don't know.
+
+150
+00:08:56,130 --> 00:09:01,110
+But anyway, for now, I hope that you understand the tracing of this solution.

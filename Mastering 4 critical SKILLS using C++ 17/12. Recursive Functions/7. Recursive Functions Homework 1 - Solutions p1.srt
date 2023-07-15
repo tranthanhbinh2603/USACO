@@ -1,0 +1,519 @@
+0
+1
+00:00:01,920 --> 00:00:04,500
+It's solve the first recursive homework.
+1
+
+2
+00:00:05,010 --> 00:00:09,360
+But first, I would like to teach you something,  tell you something. Recursion,
+2
+
+3
+00:00:09,660 --> 00:00:12,270
+is one of the most hard topics in programming.
+3
+
+4
+00:00:12,810 --> 00:00:18,660
+You would notice students in the second year and third year of computer science, and they
+4
+
+5
+00:00:18,660 --> 00:00:21,180
+are complaining about recursive functions.
+5
+
+6
+00:00:21,720 --> 00:00:28,380
+So if you found difficulties in these lessons or even in the next few years, I would like you to
+6
+
+7
+00:00:28,380 --> 00:00:30,120
+know that this is the standard.
+7
+
+8
+00:00:30,690 --> 00:00:31,710
+This is the normal.
+8
+
+9
+00:00:33,060 --> 00:00:38,910
+After some time, you find yourself, you became pretty good at recursive functions. In the
+9
+
+10
+00:00:38,910 --> 00:00:39,600
+algorithms 
+10
+
+11
+00:00:39,810 --> 00:00:42,480
+course, you would meet many types of recursion.
+11
+
+12
+00:00:42,720 --> 00:00:45,840
+Every one of them will give you a lot of hard time.
+12
+
+13
+00:00:46,500 --> 00:00:52,650
+But at some moment, your mind would be reshaped to be to think code trace in a recursive way, in an
+13
+
+14
+00:00:52,650 --> 00:00:53,280
+easy way.
+14
+
+15
+00:00:53,880 --> 00:00:55,080
+So it is a matter of time.
+15
+
+16
+00:00:55,410 --> 00:00:57,420
+So I would like you to not run away.
+16
+
+17
+00:00:57,570 --> 00:00:58,800
+It just a matter of time.
+17
+
+18
+00:00:59,040 --> 00:01:01,200
+You are going to pass with this difficult moment.
+18
+
+19
+00:01:01,230 --> 00:01:02,910
+There are no shortcuts.
+19
+
+20
+00:01:03,510 --> 00:01:05,730
+And you will have to pass way.
+20
+
+21
+00:01:05,730 --> 00:01:09,460
+And it's in about different resources to read from them. Almost
+21
+
+22
+00:01:09,510 --> 00:01:15,660
+it's going to be the same harder way, maybe from one resource to another that might be better visualization,
+22
+
+23
+00:01:16,020 --> 00:01:19,020
+but eventually, recursion is going to give you a hard time.
+23
+
+24
+00:01:19,290 --> 00:01:21,120
+So give yourself the space to that.
+24
+
+25
+00:01:22,500 --> 00:01:28,800
+The second thing is there are two separate skills in recursion: the tracing skills; your ability to trace
+25
+
+26
+00:01:28,800 --> 00:01:29,670
+a recursive code.
+26
+
+27
+00:01:30,030 --> 00:01:34,230
+And coding the recursion by itself. The nice about the
+27
+
+28
+00:01:34,410 --> 00:01:40,830
+tracing recursion is that I believe my way is pretty nice and it can be very educative.
+28
+
+29
+00:01:41,190 --> 00:01:46,860
+You might fail to write a recursive code by yourself, but you can easily understand a given recursive
+29
+
+30
+00:01:46,860 --> 00:01:47,100
+code.
+30
+
+31
+00:01:47,460 --> 00:01:51,780
+So try to sharpen this skill, tracing recursive code. From it
+31
+
+32
+00:01:51,790 --> 00:01:58,360
+you can directly move toward being able to write your own recursive codes by yourself.
+32
+
+33
+00:01:58,680 --> 00:02:04,080
+So all that I'm doing today is not about explaining how I was thinking in the recursion.
+33
+
+34
+00:02:04,470 --> 00:02:06,270
+I will teach you how to trace it.
+34
+
+35
+00:02:06,540 --> 00:02:11,490
+And I believe over time, this will sharpen the coding skill by itself.
+35
+
+36
+00:02:11,820 --> 00:02:12,450
+So let's see.
+36
+
+37
+00:02:13,170 --> 00:02:15,390
+The first task is the '3n+1'.
+37
+
+38
+00:02:15,390 --> 00:02:17,460
+We learned how to print the sequence.
+38
+
+39
+00:02:17,760 --> 00:02:21,900
+Today, we will learn how to get the length of the sequence.
+39
+
+40
+00:02:22,470 --> 00:02:26,130
+So remember, the rule of tracing is as following
+40
+
+41
+00:02:26,760 --> 00:02:28,500
+and it's based on induction.
+41
+
+42
+00:02:28,800 --> 00:02:30,900
+You tell yourself, what does this function
+42
+
+43
+00:02:30,900 --> 00:02:32,250
+do? You tell yourself
+43
+
+44
+00:02:32,520 --> 00:02:33,930
+What does this function do?
+44
+
+45
+00:02:34,440 --> 00:02:39,100
+And every time you see it in the recursive call, you don't keep tracing it.
+45
+
+46
+00:02:39,120 --> 00:02:40,680
+You don't keep tracing it.
+46
+
+47
+00:02:41,040 --> 00:02:42,180
+So the logic is as follows.
+47
+
+48
+00:02:42,570 --> 00:02:43,590
+Let's say we have
+48
+
+49
+00:02:45,870 --> 00:02:47,940
+length 3n+1  of six.
+49
+
+50
+00:02:48,270 --> 00:02:50,910
+So the function here is 3n of six.
+50
+
+51
+00:02:51,270 --> 00:02:53,550
+Is it one? No. Is it even?
+51
+
+52
+00:02:53,580 --> 00:02:54,180
+Yes.
+52
+
+53
+00:02:54,990 --> 00:02:55,440
+OK.
+53
+
+54
+00:02:55,470 --> 00:02:58,830
+What is the answer of one plus length of three?
+54
+
+55
+00:02:59,610 --> 00:03:02,010
+You don't keep tracing length of three.
+55
+
+56
+00:03:02,100 --> 00:03:03,120
+We can do that.
+56
+
+57
+00:03:03,390 --> 00:03:06,630
+But this is a big waste of time and a big source of confusion.
+57
+
+58
+00:03:06,900 --> 00:03:08,610
+You start to think in a recursive way.
+58
+
+59
+00:03:08,880 --> 00:03:11,280
+If the function is correct, then this call is correct.
+59
+
+60
+00:03:11,610 --> 00:03:15,090
+What is the length of three? something.
+60
+
+61
+00:03:15,120 --> 00:03:16,380
+Let's say I forgot.
+61
+
+62
+00:03:16,380 --> 00:03:17,460
+Length of three is what?
+62
+
+63
+00:03:18,210 --> 00:03:19,030
+Three is odd.
+63
+
+64
+00:03:19,300 --> 00:03:22,560
+So let me write the sequence here.
+64
+
+65
+00:03:22,560 --> 00:03:23,370
+I forgot it here.
+65
+
+66
+00:03:23,550 --> 00:03:27,690
+So three is odd,  three should be multiplied by three, then plus one it will be 10.
+66
+
+67
+00:03:27,960 --> 00:03:28,930
+Then it's odd.
+67
+
+68
+00:03:28,950 --> 00:03:32,350
+Then we divide by two.
+68
+
+69
+00:03:32,370 --> 00:03:32,970
+It's five.
+69
+
+70
+00:03:33,150 --> 00:03:36,780
+Then it would be 16, eight, four, two, one.
+70
+
+71
+00:03:37,620 --> 00:03:39,240
+And we started by six, right.
+71
+
+72
+00:03:44,500 --> 00:03:44,700
+Yeah.
+72
+
+73
+00:03:44,890 --> 00:03:45,240
+Six.
+73
+
+74
+00:03:45,430 --> 00:03:51,880
+So one, two, three, four, five, six, seven, eight, nine the overall sequence six is nine.
+74
+
+75
+00:03:52,360 --> 00:03:55,090
+Now, the question here, what is the lenght of three?
+75
+
+76
+00:03:55,660 --> 00:03:57,670
+The length of three is eight.
+76
+
+77
+00:03:58,120 --> 00:04:00,010
+So the function would say I am one plus 
+77
+
+78
+00:04:00,880 --> 00:04:04,420
+the length of the sequence from eight, which is nine.
+78
+
+79
+00:04:04,750 --> 00:04:05,530
+We are done.
+79
+
+80
+00:04:06,340 --> 00:04:07,750
+The tracing is done.
+80
+
+81
+00:04:08,470 --> 00:04:10,750
+Now, is this could completely correct?
+81
+
+82
+00:04:11,440 --> 00:04:12,580
+We are not sure yet.
+82
+
+83
+00:04:12,670 --> 00:04:13,240
+Why?
+83
+
+84
+00:04:13,720 --> 00:04:17,080
+Because we didn't trace this part of the code at the moment.
+84
+
+85
+00:04:17,650 --> 00:04:18,610
+So here is a tip.
+85
+
+86
+00:04:19,030 --> 00:04:26,140
+If the function has, say, four recursive calls, your function is completely correct
+86
+
+87
+00:04:26,380 --> 00:04:30,730
+if you trace the different examples such that you reach all of the four different calls.
+87
+
+88
+00:04:31,000 --> 00:04:34,870
+So at the moment, we implemented, we traced something that gets us here.
+88
+
+89
+00:04:35,320 --> 00:04:37,150
+But we never traced at this moment.
+89
+
+90
+00:04:37,390 --> 00:04:42,550
+So we need another example to make sure that we reach this part, which example? maybe five.
+90
+
+91
+00:04:43,910 --> 00:04:51,770
+So let's start with five, is five equal one? No. Is five even? No. Then one plus the length of three
+91
+
+92
+00:04:51,770 --> 00:04:53,690
+times five plus one, which is 16.
+92
+
+93
+00:04:54,050 --> 00:04:57,260
+Now, what does the length of 16? Don't they trace it.
+93
+
+94
+00:04:57,530 --> 00:05:03,110
+The length of 16 is two, four, five numbers, then one plus five is six.
+94
+
+95
+00:05:03,410 --> 00:05:05,840
+So this means that the length of six is...,
+95
+
+96
+00:05:07,600 --> 00:05:10,270
+is six. the length of five is six.
+96
+
+97
+00:05:10,660 --> 00:05:11,350
+That's all.
+97
+
+98
+00:05:11,680 --> 00:05:16,480
+You don't keep tracing, tracing, tracing, and then you feel that you are confused and you don't know
+98
+
+99
+00:05:16,480 --> 00:05:17,060
+what you are doing.
+99
+
+100
+00:05:17,080 --> 00:05:17,680
+Don't do that.
+100
+
+101
+00:05:18,190 --> 00:05:24,670
+If you traced every recursive call and you came closer to every return
+101
+
+102
+00:05:24,670 --> 00:05:28,810
+function once, then you are sure that this function is correct.
+102
+
+103
+00:05:29,140 --> 00:05:35,590
+I hope you now understand the tracing of this function, we are done with it.
+103
+
+104
+00:05:35,830 --> 00:05:38,890
+We are done without keeping, tracing, tracing, and tracing.

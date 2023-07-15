@@ -1,0 +1,308 @@
+1
+00:00:00,580 --> 00:00:04,990
+Hi So in this lecture, we're going to talk about big numbers in Python.
+
+2
+00:00:05,500 --> 00:00:11,980
+The best thing about Python is you actually don't need to do any extra work to work with big integers.
+
+3
+00:00:11,980 --> 00:00:12,250
+OK?
+
+4
+00:00:12,740 --> 00:00:15,310
+No extra work in Python.
+
+5
+00:00:15,820 --> 00:00:21,020
+But does that mean Python automatically handles big integers.
+
+6
+00:00:21,050 --> 00:00:21,350
+The answer is.
+
+7
+00:00:21,370 --> 00:00:21,730
+Yes.
+
+8
+00:00:22,330 --> 00:00:28,990
+So yes, if you have a number which is beyond the boundaries of integer. OK. so in Python, we do
+
+9
+00:00:28,990 --> 00:00:31,930
+not define data types explicitly.
+
+10
+00:00:32,470 --> 00:00:40,150
+If you have a number which let's say goes beyond the boundaries of int. let's say there is a 32 bit box.
+
+11
+00:00:40,300 --> 00:00:42,200
+ok. which store the integer in Python.
+
+12
+00:00:42,700 --> 00:00:45,730
+But suppose there is a number which is bigger than this boundary.
+
+13
+00:00:46,030 --> 00:00:48,700
+Then what happens? ok.
+
+14
+00:00:48,700 --> 00:00:54,970
+Internally the interpreter is going to check if indeed it is big enough that cannot fit inside a int type of a bucket.
+
+15
+00:00:55,540 --> 00:01:01,990
+Then it automatically uses an efficient array like representation to store that particular number.
+
+16
+00:01:01,990 --> 00:01:02,280
+OK?
+
+17
+00:01:03,280 --> 00:01:06,340
+So maybe internally it's going to use some kind of array.
+
+18
+00:01:07,210 --> 00:01:12,220
+Let's say we have a number, let's say one two three four and so on.
+
+19
+00:01:12,220 --> 00:01:13,150
+Lots of digits.
+
+20
+00:01:13,180 --> 00:01:13,480
+OK.
+
+21
+00:01:14,020 --> 00:01:14,670
+So does it.
+
+22
+00:01:14,680 --> 00:01:22,750
+Does it mean that OK, if we convert this into array, one box of the array or one cell of the array will store
+
+23
+00:01:22,750 --> 00:01:23,350
+one digit?
+
+24
+00:01:23,920 --> 00:01:26,160
+The answer is no.
+
+25
+00:01:26,200 --> 00:01:26,530
+OK.
+
+26
+00:01:26,800 --> 00:01:34,630
+Because this kind of representation will become inefficient because one box is of 32 bits and in order
+
+27
+00:01:34,630 --> 00:01:38,350
+to store just one digit we are just wasting too much of memory.
+
+28
+00:01:38,350 --> 00:01:38,650
+OK?
+
+29
+00:01:38,980 --> 00:01:42,090
+So what happened is, it will convert a bigger number. OK?
+
+30
+00:01:42,100 --> 00:01:46,630
+It will convert a bigger number into a base 32 number.
+
+31
+00:01:46,720 --> 00:01:50,720
+OK and then that number will be stored here. OK?
+
+32
+00:01:50,770 --> 00:01:55,960
+It will be treated as a base 32 number. so maybe you're storing a bigger number inside this something
+
+33
+00:01:55,960 --> 00:01:56,590
+like this. OK?
+
+34
+00:01:56,980 --> 00:01:58,270
+Five, six, seven, eight and so on.
+
+35
+00:01:58,690 --> 00:02:05,470
+So it's actually a bit of a complicated or bit of a efficient representation.
+
+36
+00:02:05,470 --> 00:02:11,260
+So I have a attached a doc. that you can read to understand how big integers are stored internally.
+
+37
+00:02:11,770 --> 00:02:16,330
+But for the programming part, you... you can simply work with them like regular integers.
+
+38
+00:02:16,330 --> 00:02:22,720
+OK, if, for example, if A is a number one one two two three three five and B is the number two three
+
+39
+00:02:22,720 --> 00:02:25,480
+five six seven eight nine 10 11 and so on.
+
+40
+00:02:25,960 --> 00:02:30,010
+And you want to multiply these two numbers so you can simply say print A into B.
+
+41
+00:02:31,010 --> 00:02:34,070
+And this will work as
+
+42
+00:02:35,090 --> 00:02:37,220
+expected. OK. so you get an output. OK?
+
+43
+00:02:37,250 --> 00:02:39,080
+You can also do. OK. I have this number.
+
+44
+00:02:39,080 --> 00:02:46,310
+I want to do A raise to the power of... A raise to the power B. so you can say A raise to the power B.
+
+45
+00:02:46,940 --> 00:02:49,340
+And it will give you the correct output. OK?
+
+46
+00:02:49,670 --> 00:02:56,990
+the only thing that will happen is, in some cases OK. when these two numbers are very big. ok. very
+
+47
+00:02:56,990 --> 00:03:00,330
+big that means right now it is also very big. OK?
+
+48
+00:03:00,370 --> 00:03:04,010
+You can see it is beyond the range of a 64 bit number.
+
+49
+00:03:04,010 --> 00:03:09,950
+The output is definitely needs a lot more bits to store store the answer.
+
+50
+00:03:09,950 --> 00:03:10,250
+OK.
+
+51
+00:03:10,760 --> 00:03:15,080
+But sometimes it is very, very, very big. In that case
+
+52
+00:03:16,410 --> 00:03:23,910
+the time taken to multiply them or the time taken to do the power will be a lot more.
+
+53
+00:03:24,070 --> 00:03:29,850
+And you might get a TLE but that kind of input is generally not expected because we didn't get
+
+54
+00:03:29,850 --> 00:03:34,620
+an output because the program timed out because of time limit exceeded OK.
+
+55
+00:03:35,010 --> 00:03:36,690
+So such multiplications
+
+56
+00:03:36,690 --> 00:03:44,190
+You will not.. or such power bomber operations you will not find or you will have a more time limit to execute
+
+57
+00:03:44,190 --> 00:03:44,730
+them. OK?
+
+58
+00:03:45,630 --> 00:03:52,980
+But the idea that I wanted to convey was you can simply work with big integers in Python without doing
+
+59
+00:03:52,980 --> 00:03:54,040
+any extra effort. OK?
+
+60
+00:03:54,100 --> 00:04:01,200
+For example, if you want to compute a factorial, you can write a method factorial that takes input
+
+61
+00:04:01,470 --> 00:04:07,440
+value N and you can say ok my result as one and you can say, for I in range.
+
+62
+00:04:09,440 --> 00:04:10,940
+One to N plus one.
+
+63
+00:04:10,970 --> 00:04:20,180
+OK. so this is this look will go from one till N. and you can say result equals result multiplied by
+
+64
+00:04:20,630 --> 00:04:20,970
+I.
+
+65
+00:04:21,440 --> 00:04:24,440
+And finally, you can return the result.
+
+66
+00:04:25,990 --> 00:04:29,920
+So let's return the result and let's call the factorial of 100.
+
+67
+00:04:30,670 --> 00:04:34,120
+And we want to print it. so we can print it.
+
+68
+00:04:35,140 --> 00:04:38,410
+So maybe I can just call it inside the main method
+
+69
+00:04:40,630 --> 00:04:42,130
+and it should work fine.
+
+70
+00:04:47,210 --> 00:04:51,910
+So you can see we are getting the 100 factorial as our answer.
+
+71
+00:04:52,550 --> 00:04:53,870
+And that's it.
+
+72
+00:04:53,900 --> 00:04:57,230
+That's how you can work with big integers in Python.
+
+73
+00:04:57,650 --> 00:04:58,760
+No extra effort.
+
+74
+00:04:58,820 --> 00:05:01,340
+Just the regular code and you're done.
+
+75
+00:05:01,460 --> 00:05:01,940
+All right.
+
+76
+00:05:02,420 --> 00:05:03,920
+So thank you for watching.
+
+77
+00:05:03,950 --> 00:05:05,060
+See you in the next video.
+

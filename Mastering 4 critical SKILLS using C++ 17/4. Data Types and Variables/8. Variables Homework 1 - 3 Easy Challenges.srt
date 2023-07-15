@@ -1,0 +1,124 @@
+0
+1
+00:00:01,560 --> 00:00:09,510
+Homework No. on this basic program, you will read 2 numbers and print there +, -, *
+1
+
+2
+00:00:09,510 --> 00:00:14,640
+and / operations, for example, if the input from the user is 12 and three, you output
+2
+
+3
+00:00:14,640 --> 00:00:18,570
+these four entries here with a + - / and *. 
+3
+
+4
+00:00:19,690 --> 00:00:25,870
+Try to think about, like, how to test your code in a good way, maybe considering zero as a first or
+4
+
+5
+00:00:25,870 --> 00:00:29,930
+second number, maybe negative values, maybe even old values,
+5
+
+6
+00:00:29,950 --> 00:00:32,690
+try to think about the max value of int, give some trials
+6
+
+7
+00:00:33,010 --> 00:00:37,540
+this should raise up some questions that during the course you should get some answers for them.
+7
+
+8
+00:00:39,310 --> 00:00:45,910
+In the second program, you will write a program that reads 2 students' information about math exam.
+8
+
+9
+00:00:46,300 --> 00:00:51,400
+You will read per a student is name, ID, and grade, and then you will print them
+9
+
+10
+00:00:51,400 --> 00:00:57,490
+according to the picture here, for example, we read the student number: name, ID, and grade second
+10
+
+11
+00:00:57,490 --> 00:01:04,680
+name I.D. and grade, then you have to print them and also print to the average of the math exam.
+11
+
+12
+00:01:04,840 --> 00:01:06,160
+So we have 20 and 30,
+12
+
+13
+00:01:06,160 --> 00:01:07,880
+The average is twenty five.
+13
+
+14
+00:01:08,200 --> 00:01:17,770
+So please stick to this input and output style, think about your selected data types like an industry,
+14
+
+15
+00:01:17,920 --> 00:01:22,660
+someone like the teacher or the school will give you the following scenario, but you have to be careful
+15
+
+16
+00:01:22,660 --> 00:01:23,620
+about your assumptions.
+16
+
+17
+00:01:23,640 --> 00:01:29,310
+For example, is exam's grade integer?
+17
+
+18
+00:01:29,320 --> 00:01:30,580
+So you have to think about that.
+18
+
+19
+00:01:32,340 --> 00:01:37,130
+Even and Odd sum, in this problem, you will read eight space-separated integers.
+19
+
+20
+00:01:38,430 --> 00:01:46,080
+Here are the eight numbers and then you should find the sum of those in even places and the some of
+20
+
+21
+00:01:46,080 --> 00:01:51,690
+the odd places they even places like the second four, six and eight number, for example here.
+21
+
+22
+00:01:51,850 --> 00:01:58,260
+the second would be 2 then 9, 4, 3, -1, you will sum them,
+22
+
+23
+00:01:58,290 --> 00:02:00,920
+This is even places and the remaining are the other places,
+23
+
+24
+00:02:01,140 --> 00:02:04,110
+So you should just print this even sum and odd sum.
+24
+
+25
+00:02:05,170 --> 00:02:05,700
+That's all.

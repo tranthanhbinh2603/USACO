@@ -1,0 +1,403 @@
+1
+00:00:00,840 --> 00:00:01,680
+Let's continue this.
+
+2
+00:00:02,040 --> 00:00:07,800
+This one is focusing in on the brutal flooding, we can divide the operators to three categories.
+
+3
+00:00:08,130 --> 00:00:12,440
+This operators that can be overloaded either as members function or no person.
+
+4
+00:00:12,870 --> 00:00:16,560
+This they can only be overloaded as member functions only.
+
+5
+00:00:16,920 --> 00:00:17,970
+We experience that.
+
+6
+00:00:18,180 --> 00:00:21,780
+And some of it cannot be overloaded at all like this.
+
+7
+00:00:21,780 --> 00:00:28,500
+Once we do here thinking which one to use the member function or the number function.
+
+8
+00:00:28,680 --> 00:00:33,390
+At this moment, you should realize that the member functions need an object on the left to make a call
+
+9
+00:00:33,390 --> 00:00:34,540
+to the operator function.
+
+10
+00:00:34,740 --> 00:00:36,450
+So this is a general is very limited.
+
+11
+00:00:36,750 --> 00:00:42,120
+But when we came to the number that functions, we noticed that it allowed much more use cases and we
+
+12
+00:00:42,120 --> 00:00:44,820
+can make them function to make them like a bit faster.
+
+13
+00:00:45,510 --> 00:00:49,720
+There is also some point of view here that this is more of improving encapsulation.
+
+14
+00:00:49,770 --> 00:00:50,970
+This is an optional reading.
+
+15
+00:00:51,330 --> 00:00:52,350
+So which way to go?
+
+16
+00:00:53,640 --> 00:00:55,470
+There is nothing specific for some people.
+
+17
+00:00:55,470 --> 00:00:59,130
+They just do as much as possible non-member functions for others.
+
+18
+00:00:59,160 --> 00:01:02,480
+They define it like what can be defined as member function.
+
+19
+00:01:02,490 --> 00:01:08,220
+They define it as member function and what can be defined as being functionally defined as no functions.
+
+20
+00:01:08,490 --> 00:01:11,790
+I'm not sure of like what approach is really better than another.
+
+21
+00:01:13,380 --> 00:01:18,120
+I feel nothing specific in terms of will be.
+
+22
+00:01:18,120 --> 00:01:24,510
+You would notice that the operator overloading not only allowed our code to looks beautiful, but also
+
+23
+00:01:24,510 --> 00:01:26,280
+it allowed the sense of extensibility.
+
+24
+00:01:26,520 --> 00:01:33,470
+Remember, for example, that we managed to do this to see any statement for new objects we have like
+
+25
+00:01:34,080 --> 00:01:35,460
+the cluster vectors.
+
+26
+00:01:35,580 --> 00:01:40,320
+I can I can override it to allow for me, for example, the concatenation between two vectors.
+
+27
+00:01:40,560 --> 00:01:43,530
+So in terms of what will be, it allows extensibility.
+
+28
+00:01:45,330 --> 00:01:52,220
+Remember about the operator overloading that the originally the order of evaluation isn't specified.
+
+29
+00:01:53,010 --> 00:01:58,560
+For example, if we have here three function calls, if one, if two or three, four, why do you think
+
+30
+00:01:58,560 --> 00:02:03,630
+it is intuitive that if one will be called first, if we do first, if a three, a third and then they
+
+31
+00:02:03,630 --> 00:02:04,300
+will be added.
+
+32
+00:02:04,500 --> 00:02:06,540
+But this isn't true in C++.
+
+33
+00:02:06,810 --> 00:02:10,070
+They would be they would be evaluated in different orders.
+
+34
+00:02:10,080 --> 00:02:14,040
+We highlighted that before in the order of evaluation before.
+
+35
+00:02:14,340 --> 00:02:20,760
+So what's important here is that when even you overload your operators again, it's just the same rule.
+
+36
+00:02:20,760 --> 00:02:24,570
+You don't know which operator to be which brand will be evaluated first.
+
+37
+00:02:25,050 --> 00:02:33,680
+I also highlighted before that the sensitivity C++ 17, the extraction operator here, became Left-to-right.
+
+38
+00:02:33,690 --> 00:02:34,630
+So this is a good one.
+
+39
+00:02:34,660 --> 00:02:41,310
+You now know that if one would be called and if it wouldn't be for the 17th, it was like that addition.
+
+40
+00:02:41,520 --> 00:02:46,220
+It might be if it was first F one for a second, then they are printed indexable order.
+
+41
+00:02:48,810 --> 00:02:58,290
+Restrict yourself to two operators and in using them in a way that has similar meaning, like the original
+
+42
+00:02:58,290 --> 00:03:05,190
+operators, for example, if you are using operator like addition to some logic that is close to subtraction.
+
+43
+00:03:05,490 --> 00:03:07,830
+OK, so make it very intuitive for others.
+
+44
+00:03:07,830 --> 00:03:13,770
+Like if I'm seeing you are providing me with some operator that I know without checking the documentation,
+
+45
+00:03:13,890 --> 00:03:14,660
+how does it work?
+
+46
+00:03:15,390 --> 00:03:20,280
+And also try to make sure there is a sensor behind using operator overloading like thinking about the
+
+47
+00:03:20,280 --> 00:03:24,910
+blast strings for communication, the subscript and vectors like extend like an array.
+
+48
+00:03:25,080 --> 00:03:25,920
+So it makes sense.
+
+49
+00:03:25,950 --> 00:03:26,840
+This is a good scenario.
+
+50
+00:03:27,600 --> 00:03:29,280
+Be aware of the briskness rules.
+
+51
+00:03:29,280 --> 00:03:30,860
+We had that in one of the homework.
+
+52
+00:03:30,870 --> 00:03:37,320
+If you have one plus two to the word for in math, two to the four evaluated first, but an operator
+
+53
+00:03:37,320 --> 00:03:39,230
+overloading the plus has her order.
+
+54
+00:03:39,480 --> 00:03:41,670
+So one plus two is embedded at first.
+
+55
+00:03:41,700 --> 00:03:45,060
+Now the math here is wrong, so be careful from such an operator.
+
+56
+00:03:46,890 --> 00:03:51,050
+I would say these are bunch of the typical expected operators here.
+
+57
+00:03:51,420 --> 00:03:53,850
+Be very careful from such operators.
+
+58
+00:03:53,850 --> 00:03:57,260
+They are a bit risky and even many others.
+
+59
+00:03:57,420 --> 00:04:02,060
+So this ones are probably one of the best operators to remember.
+
+60
+00:04:02,370 --> 00:04:08,490
+So retrograding burden comes with you, with the like with GreenPower, but now you have great responsibility
+
+61
+00:04:08,490 --> 00:04:10,380
+to double check what you are doing.
+
+62
+00:04:10,380 --> 00:04:17,030
+Exactly with your operator's thinking about line of code like I times equal to sink for a minute.
+
+63
+00:04:17,040 --> 00:04:17,760
+What does this mean.
+
+64
+00:04:18,900 --> 00:04:25,740
+OK, it just looks like we have a variable multiplied by two and that's it in C++, things now get more
+
+65
+00:04:25,740 --> 00:04:26,420
+complicated.
+
+66
+00:04:26,760 --> 00:04:32,670
+It could be the fact is that two would be converted to an object.
+
+67
+00:04:33,000 --> 00:04:36,280
+And now the Times is operator overloading times two.
+
+68
+00:04:36,600 --> 00:04:37,840
+So why do you think for a while?
+
+69
+00:04:37,840 --> 00:04:39,940
+Oh, just like a simple multiplication.
+
+70
+00:04:39,960 --> 00:04:40,630
+No, it isn't.
+
+71
+00:04:40,830 --> 00:04:42,930
+It could be like this is converted to object.
+
+72
+00:04:43,140 --> 00:04:44,100
+This is a greater value.
+
+73
+00:04:44,730 --> 00:04:52,170
+This means when even you see such a very simple line with some operator, you have to investigate more
+
+74
+00:04:52,530 --> 00:04:53,280
+digital types.
+
+75
+00:04:53,350 --> 00:04:54,620
+The conversions and so on.
+
+76
+00:04:54,900 --> 00:04:55,990
+So it might be more good.
+
+77
+00:04:55,990 --> 00:04:59,280
+Tracing and debugging does not make like people like Father.
+
+78
+00:04:59,280 --> 00:05:04,290
+You might think Olesya, for example, been to the constructor then.
+
+79
+00:05:04,290 --> 00:05:09,290
+No one is now thinking that the data is going to be converted to something and so on.
+
+80
+00:05:09,900 --> 00:05:15,600
+There are some cases where the ability to make a lot of sense, especially the math classes, big integer
+
+81
+00:05:15,600 --> 00:05:21,120
+fraction complex, something like mathematics and vector and so on the rise of linear algebra, I use
+
+82
+00:05:21,120 --> 00:05:23,160
+a lot of the very troubleshooting.
+
+83
+00:05:24,780 --> 00:05:31,650
+As we said before, the operator overloading is just another compile time, but you can overload the
+
+84
+00:05:31,660 --> 00:05:33,300
+operator plus in several ways.
+
+85
+00:05:33,300 --> 00:05:40,740
+For example, to do something we can say operator overloading has really two two goals, extensibility,
+
+86
+00:05:40,740 --> 00:05:41,400
+as we saw.
+
+87
+00:05:41,610 --> 00:05:47,790
+And also it you're reading the code is much easier and easier classes, much easier if you have a bunch
+
+88
+00:05:47,790 --> 00:05:54,600
+of matrices and you said Matrix eight plus B plus three times the this is very simple line of code in
+
+89
+00:05:54,810 --> 00:05:57,150
+troubleshooting the is the associativity.
+
+90
+00:05:57,150 --> 00:05:59,760
+The Arrietty cannot be changed, the default ones are used.
+
+91
+00:06:00,090 --> 00:06:03,630
+Arrietty refers to the number of hours like some overruns are binary.
+
+92
+00:06:03,630 --> 00:06:04,910
+You cannot use them as generate.
+
+93
+00:06:04,950 --> 00:06:06,230
+Some overruns are just unary.
+
+94
+00:06:06,240 --> 00:06:08,160
+You can use them as binary.
+
+95
+00:06:08,160 --> 00:06:10,920
+And so relevant to that.
+
+96
+00:06:10,930 --> 00:06:15,510
+Remember, if you created a pointer provided structure copy constructor and operator assignment.
+
+97
+00:06:15,870 --> 00:06:18,900
+This is a reading gives you for one side note.
+
+98
+00:06:18,900 --> 00:06:22,640
+Some language doesn't provide even greater value like Java.
+
+99
+00:06:22,860 --> 00:06:27,170
+That's why we don't think operator overloading like at all be concept.
+
+100
+00:06:27,420 --> 00:06:30,900
+It's more of a feature that exists in some programming language.
+
+101
+00:06:31,620 --> 00:06:32,160
+That's it.

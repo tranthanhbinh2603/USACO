@@ -1,0 +1,357 @@
+WEBVTT
+
+0
+00:00.400 --> 00:06.030
+In the previous video, already we have studied how a program utilizes the main memory by dividing
+
+1
+00:06.030 --> 00:13.200
+the memory into sections, like stack and heap. And, we have also understood what is static memory
+
+2
+00:13.200 --> 00:16.470
+allocation and what is dynamic memory allocation.
+
+3
+00:16.470 --> 00:22.290
+Now let us move to the topic, that is, Introduction to Data Structures. In this video,
+
+4
+00:22.360 --> 00:26.220
+I will be giving introduction to various data structures.
+
+5
+00:26.220 --> 00:31.650
+I have categorized them here as physical data structures and logical data structures.
+
+6
+00:31.680 --> 00:34.370
+So first, I'll explain what are physical data structures,
+
+7
+00:34.410 --> 00:40.230
+just the introduction. Then, introduction to various Logical Data Structures.
+
+8
+00:40.230 --> 00:43.770
+Now, let us look at Physical Data Structures.
+
+9
+00:43.920 --> 00:49.040
+These are the two physical data structures, Array and Linked List.
+
+10
+00:49.410 --> 00:54.120
+We can have more physical data structures, by taking the combination of these, that is Array
+
+11
+00:54.460 --> 00:57.060
+and Linked List, we can have some variations in them.
+
+12
+00:57.960 --> 00:59.730
+Basically these are two.
+
+13
+00:59.930 --> 01:03.270
+The first thing, why I'm calling them as physical?
+
+14
+01:03.420 --> 01:10.370
+The reason is, these data structure decides or defines how the memory is organized, how the memory is
+
+15
+01:10.380 --> 01:11.130
+allocated.
+
+16
+01:12.090 --> 01:13.860
+So, let us look at them one by one.
+
+17
+01:15.000 --> 01:16.100
+This is an Array.
+
+18
+01:16.140 --> 01:21.420
+This is directly supported by programming languages, like it is there in C language, in C++, and even
+
+19
+01:21.420 --> 01:22.290
+in Java.
+
+20
+01:22.290 --> 01:23.590
+This is directly supported.
+
+21
+01:24.480 --> 01:29.130
+This is a collection of contiguous memory locations, all these locations are side by side.
+
+22
+01:29.610 --> 01:35.610
+If I have an array for seven integers, then all these places for seven integers are together,
+
+23
+01:35.840 --> 01:38.200
+They are at one place.
+
+24
+01:38.550 --> 01:47.640
+This array will have fixed size, once it is created of some size, then that size cannot be increased or
+
+25
+01:47.640 --> 01:48.290
+decreased.
+
+26
+01:49.530 --> 01:54.940
+So, it is a fixed size. So, the size of an array is static.
+
+27
+01:55.290 --> 02:03.780
+Where this array can be created? An array can be created either inside stack or it can be created inside
+
+28
+02:03.820 --> 02:07.230
+heap.
+
+29
+02:07.230 --> 02:15.150
+We can have a pointer, pointing to this array. So, array can be created either inside stack or inside heap,
+
+30
+02:15.410 --> 02:19.030
+any where it can be created. When to use this data structure?
+
+31
+02:19.080 --> 02:24.900
+When you are sure, what is the maximum number of elements that you are going to store, if you know the
+
+32
+02:24.900 --> 02:32.350
+length of the list, then you can go for array. Now, second data structure, Linked List.
+
+33
+02:32.370 --> 02:38.840
+This is a complete dynamic data structure, and it is a collection of nodes, where each node contains data
+
+34
+02:38.970 --> 02:42.300
+and is linked to the next node.
+
+35
+02:42.450 --> 02:50.100
+The length of this list can grow and reduce, dynamically. So, it is having variable length.
+
+36
+02:50.850 --> 02:52.790
+So, as per your requirement,
+
+37
+02:52.800 --> 02:57.180
+You can go on adding more and more nodes and add more elements, or
+
+38
+02:57.390 --> 02:59.570
+You can reduce the size.
+
+39
+02:59.770 --> 03:03.410
+This Linked List is always created in heap.
+
+40
+03:05.530 --> 03:12.580
+Collection of nodes are created always in heap, like head may be a pointer, that is pointing there,
+
+41
+03:12.880 --> 03:15.430
+So the head pointer may be inside the stack.
+
+42
+03:17.530 --> 03:20.830
+So Linked List is always created in heap.
+
+43
+03:20.830 --> 03:25.610
+We go with this one, if you know the limit of list, or the size of the list.
+
+44
+03:25.630 --> 03:28.220
+If it is fixed. And, we go with this,
+
+45
+03:28.230 --> 03:31.070
+If the size of the list is not known.
+
+46
+03:31.120 --> 03:38.950
+So these two are physical because they define how the memory should be organized for storing the elements
+
+47
+03:38.980 --> 03:40.620
+or for storing the data.
+
+48
+03:40.630 --> 03:43.160
+So these are more related to memory.
+
+49
+03:43.240 --> 03:49.230
+So, I've just introduced these two data structures to you, as this is a separate topic in our subject.
+
+50
+03:49.720 --> 03:55.450
+Now, let us move on to the next type of data structures, that is Logical Data Structures.
+
+51
+03:55.550 --> 04:03.220
+Now, let us look at logical data structures. See, here is the list of logical data structures, that are Stack,
+
+52
+04:03.250 --> 04:07.370
+Queues, Trees, Graphs and Hash Table. And, these are physical data structures,
+
+53
+04:07.380 --> 04:12.200
+Already we have seen. Now, let us look at the differences between them.
+
+54
+04:12.310 --> 04:17.830
+Physical data structures are actually meant for storing the data, they will hold the data, they will actually
+
+55
+04:17.830 --> 04:19.870
+store the data in the memory.
+
+56
+04:19.870 --> 04:25.090
+Then, when you have the list of values you may be performing operations like, inserting more values, or
+
+57
+04:25.090 --> 04:30.820
+deleting existing values, or searching for the values, and many more operations.
+
+58
+04:30.910 --> 04:38.210
+Now the question is, How you want to utilize those values? How you will be performing insertion and deletion?
+
+59
+04:38.230 --> 04:45.470
+What is the discipline that you are going to follow? That discipline is defined by these data structures,
+
+60
+04:45.730 --> 04:51.770
+that is, stack, queues, trees, graphs and hash table.
+
+61
+04:52.090 --> 05:03.880
+These are linear data structures, and these are non-linear, and this may be linear or tabular data structure.
+
+62
+05:04.590 --> 05:08.640
+Hash Table, so it is tabular. So, it is a tabular data structure. Stack,
+
+63
+05:08.650 --> 05:11.480
+This works on discipline that is, LIFO,
+
+64
+05:11.500 --> 05:12.660
+Last In First Out.
+
+65
+05:15.580 --> 05:18.720
+Queue works on the discipline that is, FIFO.
+
+66
+05:18.760 --> 05:21.550
+This is a non-linear data structure,
+
+67
+05:21.550 --> 05:26.590
+This will be organized like a hierarchy, and this is collection of nodes and the links between the
+
+68
+05:26.590 --> 05:27.070
+nodes.
+
+69
+05:27.460 --> 05:31.300
+So these data structures are actually used in applications.
+
+70
+05:31.300 --> 05:38.040
+These are data structures are actually used in algorithms. And for implementing these data structures,
+
+71
+05:38.200 --> 05:45.160
+We either use array or Linked List. So, this is the important point that we have to learn in this topic, that
+
+72
+05:45.160 --> 05:52.750
+is, these logical data structures are implemented using any of these physical data structures, either array,
+
+73
+05:52.810 --> 05:56.810
+or linked list, or combination of array and linked list.
+
+74
+05:57.580 --> 06:02.430
+So that's all, I have given the introduction of various types of data structures.
+
+75
+06:02.440 --> 06:03.430
+I have categorized them.
+
+76
+06:03.430 --> 06:08.470
+This was just the introduction, to give you awareness. So, the conclusion of this topic is, I wanted
+
+77
+06:08.470 --> 06:14.140
+to differentiate types of data structures that is, physical data structures, arrays and linked lists, and these
+
+78
+06:14.140 --> 06:20.170
+are logical, and these logical data structures are implemented using physical data structures, either
+
+79
+06:20.170 --> 06:27.880
+using array and linked lists. So, through out our course, we will learn about each data structures and we will implement
+
+80
+06:27.880 --> 06:31.870
+them using array, as well as we'll implement them using linked lists.
+
+81
+06:31.870 --> 06:37.450
+So we have to learn these. Here, I have given just names of the data structures, some of the data structures.
+
+82
+06:37.450 --> 06:42.370
+If you pick up each topic, there are lot of sub topics in them, like there are different types of queues, there
+
+83
+06:42.370 --> 06:45.880
+are different types of trees, and there are different types of graphs.
+
+84
+06:45.880 --> 06:48.640
+So, each and everything, we'll learn all those things in detail.
+
+85
+06:49.520 --> 06:56.920
+So, in our course, we will be first learning in detail about this arrays and linked lists data structures. We will
+
+86
+06:56.920 --> 07:03.360
+implement them, we will write the programs for these, then we'll start learning about these data structures.
+
+87
+07:03.500 --> 07:11.170
+Every data structure, we will implement using array as well as linked list. So, in the next video, I'll
+
+88
+07:11.170 --> 07:15.820
+explain, what is ADT? And, what are the various types of lists?

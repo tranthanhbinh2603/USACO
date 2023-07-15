@@ -1,0 +1,334 @@
+0
+1
+00:00:01,530 --> 00:00:08,820
+One of the very useful data structures in STL is a string data structure, we already we're using this 
+1
+
+2
+00:00:08,820 --> 00:00:13,500
+data structure from the beginning, but it is actually one of the C++ data structures.
+2
+
+3
+00:00:13,710 --> 00:00:15,510
+We already know how to initialize it,
+3
+
+4
+00:00:15,510 --> 00:00:18,930
+how to compare it like equal, equal, less than, greater than, and so on.
+4
+
+5
+00:00:20,550 --> 00:00:28,740
+So the string, it also has a lot of very several functionalities that we are going to see,
+5
+
+6
+00:00:29,010 --> 00:00:33,520
+but let me tell you about something that's a bit interesting. You see this weird 
+6
+
+7
+00:00:33,600 --> 00:00:35,490
+hash include.
+7
+
+8
+00:00:35,910 --> 00:00:39,160
+It includes all the hash includes that you might need.
+8
+
+9
+00:00:39,450 --> 00:00:44,610
+So, let's say that you wrote something here and it doesn't compile as you are missing the right hash
+9
+
+10
+00:00:44,610 --> 00:00:48,310
+include. If you use this hash one, the compiler error is going to go.
+10
+
+11
+00:00:48,660 --> 00:00:53,520
+So this is very useful as you are facing such a compile error. Usually for young guys
+11
+
+12
+00:00:53,520 --> 00:00:59,600
+I do not advise using it because it much useful for you to know where exactly what like hash include
+12
+
+13
+00:01:00,420 --> 00:01:05,520
+vector, hash include stack, and so on, but you can feel free to use it if you are in trouble
+13
+
+14
+00:01:05,520 --> 00:01:06,150
+or something.
+14
+
+15
+00:01:06,750 --> 00:01:12,290
+Anyway, let's go back to the string and check out what are the other functionalities that we have. Here 
+15
+
+16
+00:01:12,300 --> 00:01:15,390
+we have a string like hi, space, A, B, C, blah, blah, blah.
+16
+
+17
+00:01:15,750 --> 00:01:22,920
+The sub-str here is a function that gets for you a substring, for example, here
+17
+
+18
+00:01:23,070 --> 00:01:25,980
+we want to find the substring start from the position 3.
+18
+
+19
+00:01:26,340 --> 00:01:28,790
+So this is position number 3 in the array,
+19
+
+20
+00:01:29,160 --> 00:01:30,800
+so it cuts all of that for you.
+20
+
+21
+00:01:31,260 --> 00:01:33,180
+What if you give it here 5?
+21
+
+22
+00:01:33,180 --> 00:01:39,810
+... You now have a starting index and ending index, so it gives for you 3, 4, 5.
+22
+
+23
+00:01:40,080 --> 00:01:44,580
+Notice, this is in length, it's actually starting and ending indices.
+23
+
+24
+00:01:45,000 --> 00:01:47,220
+You can also search for a string like dot,
+24
+
+25
+00:01:47,250 --> 00:01:54,480
+find, a, b, c is going to find the first position where ABC appears which is here.
+25
+
+26
+00:01:55,170 --> 00:02:01,860
+If you say, find ABC from 5 here, it means to start from position 5, which is the 6th character.
+26
+
+27
+00:02:02,130 --> 00:02:10,350
+So it is going to find starting from here, which is at position 7. What if you are trying to
+27
+
+28
+00:02:10,350 --> 00:02:12,330
+find something that doesn't exist?
+28
+
+29
+00:02:12,690 --> 00:02:16,140
+If you try to print that, it's going to give you a very huge number.
+29
+
+30
+00:02:16,590 --> 00:02:19,460
+If you tried to cast that to integer, it would be minus one.
+30
+
+31
+00:02:19,740 --> 00:02:22,950
+This is actually something called string, colon, colon, no position (string::npos).
+31
+
+32
+00:02:23,250 --> 00:02:26,580
+So C++ return for you this variable
+32
+
+33
+00:02:26,850 --> 00:02:29,400
+when you don't find it.
+33
+
+34
+00:02:29,760 --> 00:02:33,120
+So you can customize and compare with -1.
+34
+
+35
+00:02:33,270 --> 00:02:37,140
+but a more professional way is to compare with string::npos.
+35
+
+36
+00:02:38,460 --> 00:02:42,270
+There are also functionalities that search for a character,
+36
+
+37
+00:02:42,480 --> 00:02:43,560
+so be careful of that.
+37
+
+38
+00:02:43,890 --> 00:02:52,170
+When I say find the last of C, A, B, It is going to search for these characters one by one in the string
+38
+
+39
+00:02:52,410 --> 00:02:57,260
+and for every one of them, It is going to find the last position for it and return it.
+39
+
+40
+00:02:57,570 --> 00:03:04,110
+So when we say C, A, B, It is going to search where is the last C here, where is the last B here,
+40
+
+41
+00:03:04,110 --> 00:03:05,250
+where is the last A here.
+41
+
+42
+00:03:05,670 --> 00:03:08,490
+So C is the last one is going to return it.
+42
+
+43
+00:03:08,910 --> 00:03:11,430
+So this isn't going to search for the string
+43
+
+44
+00:03:11,430 --> 00:03:14,450
+CAP, It is going to search for letter by letter,
+44
+
+45
+00:03:14,460 --> 00:03:18,720
+for C, A and B. In a very similar logic, find the first of
+45
+
+46
+00:03:18,760 --> 00:03:19,500
+A, I, C.
+46
+
+47
+00:03:19,530 --> 00:03:20,610
+So you see hi,
+47
+
+48
+00:03:20,610 --> 00:03:21,810
+so the i is here,
+48
+
+49
+00:03:22,080 --> 00:03:23,870
+this is the first character that appeared here,
+49
+
+50
+00:03:23,880 --> 00:03:29,880
+so this is 1.  If you search it set for A, I and C starting from position 4, It is going to give you
+50
+
+51
+00:03:29,880 --> 00:03:30,990
+the 5th letter here.
+51
+
+52
+00:03:31,200 --> 00:03:35,210
+The letter here in position five, sorry. In similar logic,
+52
+
+53
+00:03:35,340 --> 00:03:39,900
+find first not of A ,I ,C, which is here h in the hi.
+53
+
+54
+00:03:39,990 --> 00:03:42,620
+The high h is the first letter that doesn't appears here.
+54
+
+55
+00:03:42,930 --> 00:03:48,960
+So again, the find underscore functionalities here are about searching character but don't find
+55
+
+56
+00:03:48,960 --> 00:03:51,060
+here is searching for a string.
+56
+
+57
+00:03:51,570 --> 00:03:58,380
+You can also do a replacement. If you say replace from this position this number of characters with
+57
+
+58
+00:03:58,680 --> 00:03:59,490
+this string,
+58
+
+59
+00:03:59,490 --> 00:04:01,200
+it could be many characters.
+59
+
+60
+00:04:01,530 --> 00:04:11,760
+So if position 4 is here at a 0, 1, 2, 3, 4, starting from the B. If you say
+60
+
+61
+00:04:11,760 --> 00:04:18,000
+replace 3 characters, It would be B and C and A, this three characters would be removed with sub-string
+61
+
+62
+00:04:18,000 --> 00:04:19,680
+X, it can be X, Y, Z, whatever.
+62
+
+63
+00:04:20,080 --> 00:04:21,480
+OK, that's it.
+63
+
+64
+00:04:21,630 --> 00:04:26,550
+There are a lot more functionalities in a string, but I think this would be the most common one
+64
+
+65
+00:04:26,850 --> 00:04:27,660
+In practice,
+65
+
+66
+00:04:27,660 --> 00:04:34,080
+I think most of what I use is the dot find and comparing if no position or not,
+66
+
+67
+00:04:34,170 --> 00:04:40,320
+and also the replacement functionalities. Sub-string also is a useful function. That's it.

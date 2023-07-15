@@ -1,0 +1,448 @@
+WEBVTT
+
+00:00.660 --> 00:07.320
+Now, let's take a different approach for evaluation of Taylor CDs, and this material will be faster
+
+00:07.560 --> 00:10.100
+by taking less number of applications.
+
+00:10.440 --> 00:15.960
+So we're actually multiplications have done so for evaluation of factorial, four factorial, that is
+
+00:15.960 --> 00:21.990
+multiplications are in number and then export four than X has to be multiplied by four times.
+
+00:22.000 --> 00:23.100
+So there's a multiplication.
+
+00:23.610 --> 00:26.490
+So for each time, we have to perform some number of multiplications.
+
+00:26.640 --> 00:31.560
+If you analyze four for degree four, that is power for total harmony.
+
+00:31.560 --> 00:32.870
+Multiplication are required.
+
+00:33.180 --> 00:35.670
+Let us do the analysis for this storm.
+
+00:35.670 --> 00:38.720
+There is no multiplication and here also there is no multiplication.
+
+00:39.090 --> 00:46.500
+This system X is square, so X into X, so we need one multiplication and this is one in two.
+
+00:46.710 --> 00:48.500
+We need one multiplication.
+
+00:48.510 --> 00:55.440
+So total to multiplication there and here x q so this X Cubans into X into X.
+
+00:55.770 --> 01:00.720
+So these are two multiplications and this is one and two, two and two, three.
+
+01:00.990 --> 01:04.050
+So these are two medications total for multiplication.
+
+01:04.050 --> 01:09.540
+Soldat now export four means the total three multiplications will be required in numerator.
+
+01:09.540 --> 01:15.030
+And I'm just writing multiplication and here three multiplication will be required to dominate the six.
+
+01:15.360 --> 01:20.030
+So it means the next item, it requires eight multiplication and ten multiplication.
+
+01:20.040 --> 01:23.510
+So this, this is how we are getting the multiplication.
+
+01:23.820 --> 01:30.440
+So if I take Tucumán common, this is one plus two plus three plus four goes on to add ons.
+
+01:30.780 --> 01:33.400
+So this is summation of Andong.
+
+01:33.420 --> 01:37.260
+So this is an endpoint plus one by two, this one.
+
+01:37.440 --> 01:40.130
+And the result is an end to end plus one.
+
+01:40.440 --> 01:47.460
+So if you are evaluating Taylor series for any Tom, so then total harmony multiplication is required
+
+01:47.830 --> 01:50.750
+and one plus one number of multiplication is required.
+
+01:51.120 --> 01:55.160
+So this is nothing but order of degree off and square.
+
+01:55.440 --> 01:58.620
+So I can say that in square multiplication required.
+
+01:59.190 --> 02:01.590
+Yes, roughly means it's not exact.
+
+02:01.600 --> 02:06.510
+You don't have a big exact square is sufficient to understand that these are more the numbers are huge
+
+02:06.510 --> 02:07.070
+in size.
+
+02:07.680 --> 02:14.220
+So for evaluation of Taylor series, by taking combat arms for each item, some modifications are required
+
+02:14.400 --> 02:18.660
+and total multiplication and square can reduce the number of multiplication.
+
+02:18.870 --> 02:22.110
+So let us see how we can reduce the number of multiplications.
+
+02:22.290 --> 02:25.170
+No show how we can reduce multiplication.
+
+02:25.170 --> 02:28.050
+So here I can take that on common.
+
+02:28.410 --> 02:29.430
+So let us start.
+
+02:29.580 --> 02:32.100
+I will take the power forward.
+
+02:32.130 --> 02:41.590
+So I will rewrite that Formula One plus X by one plus X squared by one into two plus execute by one
+
+02:41.590 --> 02:50.430
+in two, two and two three plus export four by one in two, two and two, three in two four.
+
+02:52.350 --> 02:57.870
+Now in this I can take X as common foreign and denominator as one.
+
+02:58.800 --> 03:02.580
+So this is one plus when X is taken as common.
+
+03:02.580 --> 03:05.400
+So this X by just one in to do so.
+
+03:05.400 --> 03:10.830
+Let us just write the two plus X squared X is sticking as common and one is taken as common.
+
+03:10.840 --> 03:20.300
+So this is two to three and plus X is taken as common, so execute by two and two, three and four.
+
+03:20.880 --> 03:25.170
+So I have taken first to comment on numerator and denominator.
+
+03:25.170 --> 03:26.060
+Both have reduced.
+
+03:26.340 --> 03:35.040
+Now let us see if we can take more common values one plus X by one and one plus interest.
+
+03:35.040 --> 03:38.010
+I can take X Y Tucumán six by two is there.
+
+03:38.010 --> 03:43.530
+So this is X Y two and here it is one plus as X is taken.
+
+03:43.530 --> 03:47.910
+So this is just one X and three plus and here X is taken.
+
+03:47.910 --> 04:01.800
+So this X squared by three and two forward then one plus X Y one one plus X Y two one plus here I can
+
+04:01.800 --> 04:07.350
+take X Y three gunmen and this will be one plus X by four.
+
+04:08.610 --> 04:10.440
+So that's how we're taking Corman's.
+
+04:10.440 --> 04:12.600
+I have reduced the number of multiplications.
+
+04:12.930 --> 04:14.040
+How they are reduced.
+
+04:14.070 --> 04:14.590
+Let us see.
+
+04:15.030 --> 04:19.500
+See here there is one multiplication and this item is multiplied here.
+
+04:19.500 --> 04:21.280
+So this is one multiplication Anderson.
+
+04:21.300 --> 04:22.030
+That multiplication.
+
+04:22.320 --> 04:29.580
+So for one, two, three, and if you consider this is multiplied by one, so let say four.
+
+04:29.940 --> 04:31.920
+So only for multiplication are required.
+
+04:31.920 --> 04:37.490
+So if you want up to four to term that degree forward power forward, then only for multiplication are
+
+04:37.500 --> 04:38.070
+required.
+
+04:38.340 --> 04:43.260
+So the number of multiplication has reduced to order of N it's not square.
+
+04:43.500 --> 04:44.900
+Earlier that was a square.
+
+04:44.910 --> 04:46.890
+So now it has already used to out of ten.
+
+04:47.280 --> 04:53.790
+So yes, by taking commands we can reduce the number of multiplication from quadratic that is square
+
+04:53.910 --> 04:54.990
+to linear.
+
+04:55.290 --> 04:58.200
+We have reduced the time earlier it was and square.
+
+04:58.200 --> 04:59.130
+This is quadratic.
+
+05:00.140 --> 05:03.050
+The time was quadratic, now the time is.
+
+05:06.200 --> 05:08.580
+Línea, so this is faster.
+
+05:09.140 --> 05:13.560
+So one of the is by taking Colman's, we can reduce the number of multiplications.
+
+05:14.330 --> 05:18.650
+Now how to write a recursive function for this approach.
+
+05:18.680 --> 05:21.020
+Now let us write a recursive function for this.
+
+05:21.420 --> 05:28.850
+Now let us observe this form of tela cities and let us see how we can devise a recursive function for
+
+05:28.850 --> 05:29.350
+this fund.
+
+05:29.810 --> 05:31.310
+So facilities observe.
+
+05:31.970 --> 05:41.120
+If I call this recursively by passing X and for that it will be at four, then it will call itself four
+
+05:41.120 --> 05:42.640
+three, then two, then one.
+
+05:43.760 --> 05:44.900
+What do you observe?
+
+05:45.230 --> 05:47.750
+This result has to be multiplied with this one.
+
+05:47.870 --> 05:53.480
+Plus one is added and the result is multiplied vertex by two and plus one is harder and the result is
+
+05:53.480 --> 05:53.960
+multiplied.
+
+05:54.110 --> 05:57.110
+So actually multiplication is done in this form.
+
+05:58.280 --> 06:00.680
+Actually multiplication is done in this order.
+
+06:00.680 --> 06:03.820
+First X by four, then X by three, then X by four.
+
+06:04.220 --> 06:06.200
+So and return in time.
+
+06:06.200 --> 06:06.830
+There is nothing.
+
+06:06.830 --> 06:11.170
+If you are multiplying and adding one and multiplying on adding one threatening time, there is nothing.
+
+06:11.420 --> 06:16.580
+So usually the recursive functions that we have written, they were performing the operations mostly
+
+06:16.580 --> 06:17.840
+at returning time.
+
+06:18.290 --> 06:27.410
+But here at calling time itself, I should to find out the storm and multiply X by three and add one
+
+06:27.420 --> 06:33.470
+so I get the stone then this I should multiply by X by two and add one, then they get the stone.
+
+06:33.920 --> 06:37.370
+Then this result should be multiplied by six by one and add one.
+
+06:37.370 --> 06:38.690
+So I get the complete result.
+
+06:39.050 --> 06:44.350
+So it means when I did for X by four so I should multiply it by one item one.
+
+06:44.720 --> 06:48.170
+So actually the processing is done at recording time only.
+
+06:48.170 --> 06:54.230
+So, so when the first call is for before calling the next call that is four minus one, that is N minus
+
+06:54.230 --> 06:56.400
+one, it should perform the multiplication.
+
+06:56.720 --> 07:02.340
+So this is happening at calling time so this can be easily rewritten using loop.
+
+07:02.510 --> 07:07.940
+So first let me write down how it can be done using loop, then I will show recursion.
+
+07:08.600 --> 07:19.330
+So let's write a function for loop integer E integer X an integer and line this.
+
+07:19.340 --> 07:25.340
+I have to start from the stone right this time, so I will dig some variable for holding the results.
+
+07:25.340 --> 07:33.530
+So let us take one variable integer as that is initially one note I have to do in each step.
+
+07:35.190 --> 07:43.110
+X Y four, multiplied by the result as an added one, and this becomes president and this is multiplied
+
+07:43.110 --> 07:45.480
+by X by three plus one, and this becomes a result.
+
+07:45.490 --> 07:52.770
+So rather than taking it an S every time, as it should be multiplied by X, by N, whatever the value
+
+07:52.770 --> 07:54.220
+of one is right now it is four.
+
+07:54.240 --> 07:57.180
+If you start from here, then plus one is added.
+
+07:57.390 --> 07:59.850
+And this result should be taken in as only.
+
+08:00.150 --> 08:06.930
+So this is an S, so this is step I have to keep on repeating so far how many times four.
+
+08:07.200 --> 08:11.100
+And this is greater than zero and N minus.
+
+08:11.100 --> 08:12.730
+Witness that song.
+
+08:13.710 --> 08:18.540
+So and as right now suppose for then it will become three, then go then one.
+
+08:18.720 --> 08:20.290
+So it will get multiplied.
+
+08:20.670 --> 08:24.470
+And finally we get the result so we can return this.
+
+08:24.930 --> 08:27.060
+So this is a step perform every time.
+
+08:27.090 --> 08:31.920
+So if and as a force for it is performed for four times and the results are done.
+
+08:32.460 --> 08:40.050
+So this is easily possible using loop and here I have not taken any extra variable, i.e. because whatever
+
+08:40.050 --> 08:42.430
+the value of this from there I'm reducing.
+
+08:42.720 --> 08:47.740
+So there is no initialization part to semicolon and the condition semicolon and and minus minus.
+
+08:48.030 --> 08:53.250
+So if minus four then it will become three, then bood and one and then zero ready to zero.
+
+08:53.340 --> 08:55.860
+It will not repeat but it will return this.
+
+08:55.860 --> 08:57.720
+S so s is having the result.
+
+08:58.590 --> 09:02.580
+Not the same thing I can write using recursion but in recursion.
+
+09:02.580 --> 09:06.030
+I have to perform multiplication at the calling time.
+
+09:06.600 --> 09:11.690
+So I in time if I have to do then I can take the help of static variable now.
+
+09:11.970 --> 09:17.800
+So let us write it with the help of static variable so it will be on the same fashion recursive function.
+
+09:18.390 --> 09:28.260
+This is a recursive version X an integer and I need one static variable for storing the sum.
+
+09:30.180 --> 09:31.590
+And whose value is one.
+
+09:31.590 --> 09:32.840
+Initially this one.
+
+09:34.080 --> 09:38.540
+Now if and as a zero minutes then it has reached zero.
+
+09:38.550 --> 09:40.100
+Do nothing but return s.
+
+09:40.500 --> 09:49.410
+So here also I will write as and what I have to do ls perform this operation for the same operation
+
+09:49.410 --> 09:58.590
+and perform as assigned one plus X by N multiplied by as the nexus as it is repeating.
+
+09:58.590 --> 10:06.330
+So here call itself again by e x and reduce value of and that is and minus one on here.
+
+10:06.330 --> 10:10.450
+I should write on a statement that is written Nachshon.
+
+10:11.580 --> 10:16.850
+So already we have discussed in the previous lectures that loops will have just ascending.
+
+10:16.860 --> 10:20.100
+There is no descending, but recursion will have ascending and descending.
+
+10:20.400 --> 10:24.380
+But this procedure can be performed only in ascending.
+
+10:24.600 --> 10:30.450
+So I have taken a static variable and I'm storing the result in that one at closing time itself.
+
+10:30.810 --> 10:39.860
+So this is the iterative version and recursive version of a function for evaluation of tailers CDs that
+
+10:40.710 --> 10:47.400
+order of any number of multiplication that is reduced the number of multiplications so that solving
+
+10:47.400 --> 10:48.430
+the data creates more.
+
+10:48.470 --> 10:51.630
+Similarly, there are more cities like Simonides, cities and core cities.
+
+10:52.110 --> 10:54.270
+That is your student exercise.
+
+10:54.280 --> 10:55.990
+So you have to write down the functions.
+
+10:56.000 --> 10:58.170
+So you try to write down those functions.

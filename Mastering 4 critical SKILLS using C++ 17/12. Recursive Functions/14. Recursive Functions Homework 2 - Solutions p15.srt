@@ -1,0 +1,484 @@
+0
+1
+00:00:00,960 --> 00:00:05,580
+In the next challenge, we would like to count the prime numbers in a given range.
+1
+
+2
+00:00:05,940 --> 00:00:09,150
+However, we ask you to not use loops at all.
+2
+
+3
+00:00:09,510 --> 00:00:13,050
+So as usual, like this function with loops is easy.
+3
+
+4
+00:00:13,350 --> 00:00:15,270
+Now we'd like to do it without any loops.
+4
+
+5
+00:00:15,840 --> 00:00:19,140
+And also, I'm asking you to try to compute the answer for something like that big.
+5
+
+6
+00:00:19,990 --> 00:00:22,650
+Now, let's see what's happening here.
+6
+
+7
+00:00:22,890 --> 00:00:23,350
+Um.
+7
+
+8
+00:00:27,860 --> 00:00:32,900
+OK, so let's go, the first function that we need is to count the primes.
+8
+
+9
+00:00:34,520 --> 00:00:37,490
+And the second function is is_prime.
+9
+
+10
+00:00:37,700 --> 00:00:42,180
+So these are two separate functionalities, so let's just pretend that we have functioned
+10
+
+11
+00:00:42,180 --> 00:00:48,890
+this code is_prime that can tell us if the number is prime or not. Now, for this function, start
+11
+
+12
+00:00:48,900 --> 00:00:49,310
+and end.
+12
+
+13
+00:00:50,890 --> 00:00:55,960
+We can say that this function, by definition, is counting the primes from start to end.
+13
+
+14
+00:00:56,960 --> 00:01:02,720
+Now, think about the following if we know if the current element the current start is prime or not,
+14
+
+15
+00:01:03,260 --> 00:01:09,260
+and we recursively code start prime from +1 an end, then we are done with the results.
+15
+
+16
+00:01:09,560 --> 00:01:18,500
+So for example, let's say that we have the numbers one two, let's say the start is one, and let's
+16
+
+17
+00:01:18,500 --> 00:01:21,860
+say the start is one and the end is 10, for example.
+17
+
+18
+00:01:22,730 --> 00:01:25,010
+So the function does as following.
+18
+
+19
+00:01:25,400 --> 00:01:27,650
+You can reverse these two lines if you'd like.
+19
+
+20
+00:01:27,980 --> 00:01:31,970
+It says Here, please count for me, the primes starting from +1.
+20
+
+21
+00:01:32,420 --> 00:01:35,690
+So let's say count primes from two to 10.
+21
+
+22
+00:01:36,720 --> 00:01:41,550
+Now, by the recursive definition, this is going to count the primes, how? I don't care.
+22
+
+23
+00:01:41,820 --> 00:01:49,680
+So what are the numbers from one to 10 one two three four five six seven eight nine 10, the primes
+23
+
+24
+00:01:49,680 --> 00:01:52,320
+are three and five and seven.
+24
+
+25
+00:01:52,770 --> 00:01:58,230
+So when I say count the primes from two to 10, what does it happen? 
+25
+
+26
+00:01:58,590 --> 00:02:00,710
+it all what to do it will return for me four.
+26
+
+27
+00:02:00,750 --> 00:02:01,220
+Why?
+27
+
+28
+00:02:01,230 --> 00:02:04,440
+By the mathematical definition, this function is counting the primes.
+28
+
+29
+00:02:04,460 --> 00:02:05,280
+So it's going to do that.
+29
+
+30
+00:02:05,490 --> 00:02:06,990
+So this function here will return for me
+30
+
+31
+00:02:06,990 --> 00:02:07,350
+four.
+31
+
+32
+00:02:08,370 --> 00:02:12,480
+And the next step is I'm checking is prime of 
+32
+
+33
+00:02:12,480 --> 00:02:13,740
+start. The start is one.
+33
+
+34
+00:02:14,550 --> 00:02:15,810
+So is it prime or not?
+34
+
+35
+00:02:15,810 --> 00:02:16,830
+one is false.
+35
+
+36
+00:02:16,980 --> 00:02:20,340
+Also, by definition, is_prime will return for me true if this is a prime number.
+36
+
+37
+00:02:20,760 --> 00:02:26,200
+We are done with tracing from this function respective. Just to make it easy for you.
+37
+
+38
+00:02:26,220 --> 00:02:27,510
+Let's trace one more step.
+38
+
+39
+00:02:27,750 --> 00:02:29,530
+Let's say that the function actually counted
+39
+
+40
+00:02:29,640 --> 00:02:32,340
+count primes starting from two, so it says now
+40
+
+41
+00:02:32,340 --> 00:02:34,830
+here count the primes from two to 10.
+41
+
+42
+00:02:35,760 --> 00:02:37,110
+The function will do as following.
+42
+
+43
+00:02:37,110 --> 00:02:43,590
+First, it would say, Hey, get for me the result as count the primes of three and the ten, which return
+43
+
+44
+00:02:43,600 --> 00:02:45,900
+the three, four, three and five and seven.
+44
+
+45
+00:02:46,770 --> 00:02:49,260
+After that, we check if two is prime or not.
+45
+
+46
+00:02:49,260 --> 00:02:50,930
+If it's prime, we increment one.
+46
+
+47
+00:02:50,940 --> 00:02:52,470
+So plus one, which is total four.
+47
+
+48
+00:02:54,360 --> 00:02:56,490
+So from this function perspective, we are done.
+48
+
+49
+00:02:57,150 --> 00:03:04,150
+And as you see, the way I handled the request for canceling the loops is just to keep recursively recursing
+49
+
+50
+00:03:04,170 --> 00:03:06,100
+on that next index.
+50
+
+51
+00:03:06,120 --> 00:03:06,690
+That's it.
+51
+
+52
+00:03:07,800 --> 00:03:09,990
+Now let's go for the second function.
+52
+
+53
+00:03:10,020 --> 00:03:13,590
+I would like to check if a number is prime or not without loops.
+53
+
+54
+00:03:14,400 --> 00:03:16,290
+So let's say I'm asking you to check for me
+54
+
+55
+00:03:16,290 --> 00:03:17,490
+number like 17.
+55
+
+56
+00:03:19,910 --> 00:03:25,640
+In the normal case, we loop from three, or even from two.
+56
+
+57
+00:03:26,090 --> 00:03:32,990
+We loop from two up to 16 to check if the number is divided by them or not.
+57
+
+58
+00:03:33,590 --> 00:03:38,810
+Now the trick here is again, and we will replace this loop by recursively
+58
+
+59
+00:03:41,180 --> 00:03:42,770
+recursing on the next index.
+59
+
+60
+00:03:43,430 --> 00:03:44,750
+The function is doing the following.
+60
+
+61
+00:03:45,140 --> 00:03:48,830
+It adds here a default values that is the current test number.
+61
+
+62
+00:03:49,040 --> 00:03:56,840
+So in the normal case, we have for loop the current test number starting from two up to less than
+62
+
+63
+00:03:56,840 --> 00:03:59,120
+n and we do the check if it's prime or not.
+63
+
+64
+00:03:59,480 --> 00:04:05,300
+Now this variable will be actually just the parameter here in the recursive function, which says if
+64
+
+65
+00:04:05,300 --> 00:04:07,220
+this is this number is 
+65
+
+66
+00:04:07,220 --> 00:04:09,710
+Is prime starting from this number or not?
+66
+
+67
+00:04:10,010 --> 00:04:13,430
+Like if I kept starting from testing from this number is going to be prime or not.
+67
+
+68
+00:04:14,180 --> 00:04:18,850
+For example, let's say we have number like five, OK?
+68
+
+69
+00:04:19,010 --> 00:04:24,140
+And I say f of, let's go back to 17,  f of 17 and six.
+69
+
+70
+00:04:24,140 --> 00:04:25,010
+What does it mean?
+70
+
+71
+00:04:25,550 --> 00:04:30,440
+Does 17 is divisible by any number from six up to 16 or not?
+71
+
+72
+00:04:30,710 --> 00:04:31,910
+This is the function definition.
+72
+
+73
+00:04:31,910 --> 00:04:32,630
+I hope you got it.
+73
+
+74
+00:04:32,930 --> 00:04:36,200
+So the function is starting from this number.
+74
+
+75
+00:04:36,770 --> 00:04:42,290
+Is there any number that is divisible by, uh, this number and any number
+75
+
+76
+00:04:42,290 --> 00:04:46,130
+after it or not? This is the function definition, why the function definition is important?
+76
+
+77
+00:04:46,370 --> 00:04:47,540
+We will use it in tracing.
+77
+
+78
+00:04:48,560 --> 00:04:54,770
+OK, I'm handling here two as a special test case, and I'm handling here negative numbers and
+78
+
+79
+00:04:54,770 --> 00:04:57,560
+even numbers, and I'm handling here
+79
+
+80
+00:04:57,560 --> 00:05:03,950
+If we reach to the end of the number. like m is 17 and the test number is 17, we're done. The only remaining case is
+80
+
+81
+00:05:03,950 --> 00:05:07,430
+to start to test actually this number and the numbers after it.
+81
+
+82
+00:05:07,700 --> 00:05:12,320
+So let's say we have f of 17 and initially three here.
+82
+
+83
+00:05:13,350 --> 00:05:17,400
+This three condition doesn't apply, it say here does 17 is divided by three?
+83
+
+84
+00:05:17,430 --> 00:05:18,210
+The answer is no.
+84
+
+85
+00:05:18,570 --> 00:05:21,780
+It say recurs on 17 and the next number, which is 14.
+85
+
+86
+00:05:21,780 --> 00:05:30,390
+So let's say does 17 is divisible by any number in the range four to 16 or not? which were recurs
+86
+
+87
+00:05:30,390 --> 00:05:39,150
+to does, uh, f of 17 and five is 17 divisible per any number,  from five to 16 or not? this is the
+87
+
+88
+00:05:39,150 --> 00:05:40,020
+function definition.
+88
+
+89
+00:05:40,350 --> 00:05:46,590
+So again, we swept, we replaced the loop with an index in a recursive function.
+89
+
+90
+00:05:47,700 --> 00:05:51,630
+And this trick is very important in a topic named as dynamic programming.
+90
+
+91
+00:05:52,770 --> 00:05:59,400
+We remove a loop and replace it with an index in the function.
+91
+
+92
+00:05:59,490 --> 00:06:00,690
+So remember this trick?
+92
+
+93
+00:06:01,140 --> 00:06:03,220
+So how can we get rid of loops?
+93
+
+94
+00:06:03,630 --> 00:06:05,370
+You just make them...,
+94
+
+95
+00:06:07,180 --> 00:06:11,230
+Sorry, here at the start, you make it an index in a function.
+95
+
+96
+00:06:11,380 --> 00:06:16,840
+I hope the idea is now clear for you and again keep in mind what is the function definition?
+96
+
+97
+00:06:17,050 --> 00:06:20,080
+This is how you can trace a recursion in a very first manner.

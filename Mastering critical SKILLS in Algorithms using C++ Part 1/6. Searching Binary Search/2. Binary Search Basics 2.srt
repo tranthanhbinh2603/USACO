@@ -1,0 +1,1044 @@
+0
+1
+00:00:01,430 --> 00:00:07,580
+Let's continue the binary search topic. In the last time, we learned about the process of the binary
+1
+
+2
+00:00:07,580 --> 00:00:08,030
+search.
+2
+
+3
+00:00:08,360 --> 00:00:09,920
+We start from zero here.
+3
+
+4
+00:00:10,100 --> 00:00:11,810
+We start with the end of the array.
+4
+
+5
+00:00:11,960 --> 00:00:14,070
+So this is our range.
+5
+
+6
+00:00:14,090 --> 00:00:18,770
+Every time we go to the middle, we either discard the right or discard the left.
+6
+
+7
+00:00:18,770 --> 00:00:20,490
+So here, for example, we discard the left.
+7
+
+8
+00:00:20,850 --> 00:00:22,060
+Now this is the new array.
+8
+
+9
+00:00:22,070 --> 00:00:27,650
+We get the new middle, we either discard the left or discard the right, let's say we discard this one.
+9
+
+10
+00:00:27,950 --> 00:00:31,810
+Now we have this one here. Again get the middle, either the left or the right,
+10
+
+11
+00:00:31,850 --> 00:00:33,860
+let's discard the right. Now, this one
+11
+
+12
+00:00:33,860 --> 00:00:37,790
+here, we go to the middle, either the left or right, let's discard the right, and so on.
+12
+
+13
+00:00:38,120 --> 00:00:43,790
+So the array, in every step, is losing half of its size.
+13
+
+14
+00:00:43,820 --> 00:00:50,150
+For example, if the array is 256, then in the next step, it's going to be around 128,
+14
+
+15
+00:00:50,390 --> 00:00:52,670
+then around 64, and so on.
+15
+
+16
+00:00:53,060 --> 00:00:55,940
+There is a question here, what is the time complexity of that?
+16
+
+17
+00:00:56,360 --> 00:01:01,040
+And please be very active during the course, when I ask you a question,
+17
+
+18
+00:01:01,610 --> 00:01:03,470
+don't wait for me to answer it.
+18
+
+19
+00:01:03,860 --> 00:01:09,710
+I'm trying to make the course like a very high level of engagement because algorithms is already a hard
+19
+
+20
+00:01:09,710 --> 00:01:10,010
+topic.
+20
+
+21
+00:01:10,010 --> 00:01:10,940
+So help yourself.
+21
+
+22
+00:01:11,210 --> 00:01:14,870
+What's the time complexity of that? Within what we saw so far,
+22
+
+23
+00:01:15,290 --> 00:01:19,400
+You probably didn't know, but you still can figure it out or at least do some progress.
+23
+
+24
+00:01:20,000 --> 00:01:21,560
+So what is the answer of that?
+24
+
+25
+00:01:24,060 --> 00:01:27,960
+In the previous code, as I said, we shrink to half in every step.
+25
+
+26
+00:01:28,110 --> 00:01:29,640
+So this is mainly what's happening here.
+26
+
+27
+00:01:29,640 --> 00:01:34,380
+We either shrink to the right part, or we shrink to the left part.
+27
+
+28
+00:01:34,890 --> 00:01:40,770
+And as you see, 256 will keep reducing to over twos.
+28
+
+29
+00:01:41,250 --> 00:01:45,090
+Does this remember you of something? Like one, two, four, eight, sixteen,
+29
+
+30
+00:01:45,480 --> 00:01:46,550
+these multiplications.
+30
+
+31
+00:01:46,760 --> 00:01:48,360
+This is 2^x, right?
+31
+
+32
+00:01:48,810 --> 00:01:50,640
+The opposite of the division is the log.
+32
+
+33
+00:01:51,030 --> 00:01:57,000
+There is a very strong relationship between 2^x or 2^n and log(n).
+33
+
+34
+00:01:57,660 --> 00:02:01,800
+So the time complexity of that is what we call log(n).
+34
+
+35
+00:02:02,940 --> 00:02:08,010
+And there is something very interesting about the log, you know, the number like 2^32.
+35
+
+36
+00:02:08,040 --> 00:02:11,430
+This is a very huge number, right? Like in billions.
+36
+
+37
+00:02:11,880 --> 00:02:18,450
+The log of such a very huge number in base two is just 32 steps, only 32 steps.
+37
+
+38
+00:02:19,020 --> 00:02:22,560
+So as you see, the log(n) is really a very small factor.
+38
+
+39
+00:02:23,160 --> 00:02:25,920
+Now here is the rule that I would like you to keep in mind.
+39
+
+40
+00:02:26,340 --> 00:02:32,940
+If you have some number like n or a range, and you are reducing it in every step by half, then this is log(n)
+40
+
+41
+00:02:32,940 --> 00:02:39,750
+to the base two. If you are reducing something with, let's say, a third, then this is log(n) to the base three.
+41
+
+42
+00:02:40,440 --> 00:02:43,590
+Practically speaking, they are very small numbers anyway.
+42
+
+43
+00:02:44,130 --> 00:02:50,340
+And this takes us to something like we so far learned about O(1), about O(n), about O(n^2).
+43
+
+44
+00:02:50,370 --> 00:02:57,540
+Where is the log(n) and where is nlog(n) in this? So the log(n) is here between O(1) and O(n). The blog(n)
+44
+
+45
+00:02:57,540 --> 00:03:04,530
+is here between O(n) and log(n^2), and so on. The order that we call it nlog(n)
+45
+
+46
+00:03:04,530 --> 00:03:07,560
+has a name, people call it like this is a log-linear time complexity.
+46
+
+47
+00:03:10,240 --> 00:03:16,600
+OK, so here is the graph that just shows what I was saying, the n^3, as you see, when
+47
+
+48
+00:03:16,600 --> 00:03:17,920
+n is large,
+48
+
+49
+00:03:19,910 --> 00:03:26,390
+then n^3 is bigger than n^2, n^2 is bigger than n, and here somewhere in the middle
+49
+
+50
+00:03:26,840 --> 00:03:31,860
+there is nlog(n), before the n, there is log(n), there is O(1) here.
+50
+
+51
+00:03:31,880 --> 00:03:36,830
+We can divide the log(n) to log(n) base two, log(n) base three.
+51
+
+52
+00:03:37,160 --> 00:03:38,210
+But anyway, we don't care.
+52
+
+53
+00:03:38,780 --> 00:03:43,010
+Also, most of the time when we write the log, we just write log(n) and we don't care a lot about the
+53
+
+54
+00:03:43,010 --> 00:03:45,680
+base because anyway, the number is
+54
+
+55
+00:03:45,680 --> 00:03:46,430
+reduced very fast.
+55
+
+56
+00:03:46,430 --> 00:03:50,060
+Like even log(n) to the base two will make it a very, very small number.
+56
+
+57
+00:03:50,870 --> 00:03:53,090
+Um, yeah.
+57
+
+58
+00:03:53,360 --> 00:03:55,430
+Yeah, what else here?
+58
+
+59
+00:03:55,680 --> 00:03:56,240
+Yeah, nothing.
+59
+
+60
+00:03:56,570 --> 00:04:03,190
+You probably can notice here in the early, and this something has relevance in the time complexity.
+60
+
+61
+00:04:03,590 --> 00:04:12,800
+So you see here in the early stages, uh, the n^3, for example, could be smaller than n maybe or
+61
+
+62
+00:04:12,800 --> 00:04:13,430
+other stuff.
+62
+
+63
+00:04:13,580 --> 00:04:18,080
+This is a real curve like a 0.23 blah, blah, blah.
+63
+
+64
+00:04:18,560 --> 00:04:24,380
+So at some point when n is large, remember what we said in the time complexity, that some n0,
+64
+
+65
+00:04:24,380 --> 00:04:28,790
+one of them is going to be always bigger than the second one.
+65
+
+66
+00:04:29,000 --> 00:04:34,870
+So for O(n) and O(n^2), at this point, n^2 will always be bigger. For the n^3
+66
+
+67
+00:04:34,880 --> 00:04:39,140
+and log(n), at this point, n^3 is always bigger, and so on.
+67
+
+68
+00:04:40,030 --> 00:04:44,660
+Uh, yeah, this is mainly what does it mean to be log(n) complexity.
+68
+
+69
+00:04:46,820 --> 00:04:53,810
+Donald Knuth is a very popular computer scientist, Donald has a very nice statement.
+69
+
+70
+00:04:54,110 --> 00:04:57,020
+He says that binary search looks like very straightforward.
+70
+
+71
+00:04:57,500 --> 00:04:59,750
+But it is very tricky to implement.
+71
+
+72
+00:05:00,350 --> 00:05:06,110
+And in this lecture, I will show you one reason for that. There is something wrong with the middle equation
+72
+
+73
+00:05:06,110 --> 00:05:06,410
+here.
+73
+
+74
+00:05:06,650 --> 00:05:07,850
+Can you figure it out?
+74
+
+75
+00:05:08,600 --> 00:05:16,160
+This mistake has been in the "Programming Pearls" book for twenty years, and the Java programming language
+75
+
+76
+00:05:16,160 --> 00:05:18,440
+has a mistake for nine years.
+76
+
+77
+00:05:18,470 --> 00:05:21,420
+Can you imagine? What is wrong with this statement?
+77
+
+78
+00:05:21,440 --> 00:05:23,420
+It's very trivial, very easy to spot.
+78
+
+79
+00:05:25,150 --> 00:05:31,270
+The problem is in the overflow. Can you figure it out why? Can you develop a fix to
+79
+
+80
+00:05:31,270 --> 00:05:31,930
+this equation?
+80
+
+81
+00:05:33,560 --> 00:05:34,580
+Now here is the point.
+81
+
+82
+00:05:35,330 --> 00:05:40,670
+You would like to add (left+right)/2, let's say that left is an integer and right is an integer,
+82
+
+83
+00:05:41,420 --> 00:05:44,540
+then definitely the middle of them is between them.
+83
+
+84
+00:05:44,540 --> 00:05:45,770
+So it's also an integer.
+84
+
+85
+00:05:46,370 --> 00:05:47,300
+Where is the problem?
+85
+
+86
+00:05:47,930 --> 00:05:54,590
+If you have a vector and it has a very huge vector size, something close to the limit of the int.
+86
+
+87
+00:05:55,520 --> 00:06:00,470
+Now, at some point, the left and right will be very close to the limit of the integer.
+87
+
+88
+00:06:01,130 --> 00:06:07,100
+The problem is, if you added (left+right) at this moment, it will be beyond the integer limits.
+88
+
+89
+00:06:07,280 --> 00:06:08,780
+So we will have an overflow.
+89
+
+90
+00:06:09,650 --> 00:06:11,570
+So
+90
+
+91
+00:06:11,630 --> 00:06:13,800
+always the plus and
+91
+
+92
+00:06:13,800 --> 00:06:18,260
+the multiplication should remember you with potential overflows, always you should remember that.
+92
+
+93
+00:06:19,760 --> 00:06:25,970
+So the problem is, as I said again, if you are in the very end close to the limit of the integer, adding
+93
+
+94
+00:06:25,970 --> 00:06:30,290
+the (left +right) will overflow and the algorithm will never terminate.
+94
+
+95
+00:06:30,650 --> 00:06:31,670
+So there is a question here.
+95
+
+96
+00:06:31,760 --> 00:06:35,600
+Why did these people spend all of these years without figuring the mistake?
+96
+
+97
+00:06:36,080 --> 00:06:41,470
+Because in most of the applications, we don't have an array that has the limit of integer.
+97
+
+98
+00:06:41,480 --> 00:06:42,890
+This is extremely huge number.
+98
+
+99
+00:06:42,890 --> 00:06:49,400
+That's why most of the people will not suffer from this issue until someone hit the problem
+99
+
+100
+00:06:49,700 --> 00:06:50,780
+in the library.
+100
+
+101
+00:06:51,050 --> 00:06:53,150
+Now, how to fix that? In a very easy way.
+101
+
+102
+00:06:53,450 --> 00:07:00,110
+This is another way to write the middle equation, you write left + (right-left)/2.
+102
+
+103
+00:07:00,290 --> 00:07:04,040
+So the idea is, here is the right, here is the left.
+103
+
+104
+00:07:04,420 --> 00:07:06,470
+When you subtract them, you get the range here.
+104
+
+105
+00:07:07,490 --> 00:07:10,970
+So let's say that left is 10 and right is 20.
+105
+
+106
+00:07:11,570 --> 00:07:18,350
+So 20 - 10 is just, let's use something else, maybe 10 and 40.
+106
+
+107
+00:07:19,220 --> 00:07:22,180
+So (40 - 10) is just 30.
+107
+
+108
+00:07:22,190 --> 00:07:23,080
+This is the range.
+108
+
+109
+00:07:23,390 --> 00:07:24,800
+Half of it is just 15.
+109
+
+110
+00:07:24,800 --> 00:07:31,190
+Somewhere here in the middle, ten plus fifteen is twenty-five.
+110
+
+111
+00:07:31,200 --> 00:07:32,780
+So this is the middle between them.
+111
+
+112
+00:07:33,900 --> 00:07:36,540
+This is the middle between them.
+112
+
+113
+00:07:36,780 --> 00:07:39,520
+So in this way, we avoided the division.
+113
+
+114
+00:07:39,550 --> 00:07:42,660
+Now, this way we solve the problem.
+114
+
+115
+00:07:43,110 --> 00:07:43,860
+Now here is the tip.
+115
+
+116
+00:07:44,490 --> 00:07:50,070
+There is more than an algorithm in the algorithms that involves computing the middle.
+116
+
+117
+00:07:50,250 --> 00:07:55,470
+So the same note applies for all of them, like the merge, sort, and all of the divide and conquer algorithms,
+117
+
+118
+00:07:55,620 --> 00:08:01,380
+You should always remember that addition can make a problem for you and always use this replacement.
+118
+
+119
+00:08:04,560 --> 00:08:08,700
+Now here is the fix in the code, you just use this new equation, that's it.
+119
+
+120
+00:08:12,040 --> 00:08:17,170
+Let me take you with a similar problem, we have an array, sorted, unique values.
+120
+
+121
+00:08:17,380 --> 00:08:23,380
+We have a lot of queries, for each query, you will either return the index or -1,
+121
+
+122
+00:08:23,380 --> 00:08:24,130
+if doesn't exist.
+122
+
+123
+00:08:24,160 --> 00:08:25,630
+How can you solve this problem?
+123
+
+124
+00:08:25,870 --> 00:08:27,880
+Can you spot two different ways?
+124
+
+125
+00:08:29,750 --> 00:08:34,580
+In the first approach, we can use the binary research, for every query, you just binary research the
+125
+
+126
+00:08:34,580 --> 00:08:35,130
+array.
+126
+
+127
+00:08:35,150 --> 00:08:41,570
+So it takes like log(n), and we have Q queries, each query is taking log(n), so overall O(qlogn) time.
+127
+
+128
+00:08:42,380 --> 00:08:47,630
+Now the point here is we can definitely make something better than that. In the data structure course,
+128
+
+129
+00:08:47,630 --> 00:08:53,510
+you learned about the hash table, and the hash table can tell us in only O(1) if the element exists or
+129
+
+130
+00:08:53,510 --> 00:08:53,870
+not.
+130
+
+131
+00:08:54,110 --> 00:08:59,450
+So this means we can answer every query in only one step, so we end up with O(q) queries.
+131
+
+132
+00:09:00,050 --> 00:09:03,440
+So here we didn't make use of anything of the sorted property.
+132
+
+133
+00:09:04,190 --> 00:09:05,210
+This is very important.
+133
+
+134
+00:09:05,210 --> 00:09:08,360
+Sometimes people are trapped in the ideas that they know.
+134
+
+135
+00:09:08,510 --> 00:09:10,160
+Like I know binary search as a tool.
+135
+
+136
+00:09:10,280 --> 00:09:11,240
+I just use it.
+136
+
+137
+00:09:11,530 --> 00:09:12,920
+Think bigger.
+137
+
+138
+00:09:12,950 --> 00:09:14,240
+Maybe there are other ways.
+138
+
+139
+00:09:14,540 --> 00:09:18,230
+Remember, the same problem can be seen from many angles.
+139
+
+140
+00:09:18,560 --> 00:09:23,810
+And one of the best and most important skills that you should try to develop during the course is
+140
+
+141
+00:09:24,350 --> 00:09:26,330
+having these multiple angles.
+141
+
+142
+00:09:26,750 --> 00:09:30,650
+There are many problems out there, and they can be tackled in different ways.
+142
+
+143
+00:09:31,190 --> 00:09:37,370
+Tomorrow, when you go to the industry, and you are like, let's say you are in Facebook,
+143
+
+144
+00:09:37,700 --> 00:09:41,390
+and you have a feature, and this feature will be used by millions of users.
+144
+
+145
+00:09:41,420 --> 00:09:45,290
+This is something that is very sensitive and we would like to develop this feature.
+145
+
+146
+00:09:45,560 --> 00:09:54,170
+This feature can be developed in different ways and every way will have its own trade-offs. So try to
+146
+
+147
+00:09:54,170 --> 00:09:57,830
+develop that, this is one critical advantage from studying algorithms.
+147
+
+148
+00:09:59,590 --> 00:10:04,960
+Before ending that, I would like to tell you that binary search is definitely implemented in the STL.
+148
+
+149
+00:10:05,800 --> 00:10:11,710
+It's implemented in three functions, at least, the lower_bound function, the upper_bound
+149
+
+150
+00:10:11,710 --> 00:10:13,420
+function, and the equal_range function.
+150
+
+151
+00:10:14,140 --> 00:10:20,920
+So the lower_bound function finds the first element greater than or equal to the given element.
+151
+
+152
+00:10:21,340 --> 00:10:29,200
+For example, this is here the array, I ask you to find the first element lower_bound 17, lower_bound 17
+152
+
+153
+00:10:29,210 --> 00:10:29,440
+means
+153
+
+154
+00:10:29,440 --> 00:10:32,770
+find the first element f that is greater than or equal 17.
+154
+
+155
+00:10:33,230 --> 00:10:35,250
+So seventeen already exists in the array.
+155
+
+156
+00:10:35,260 --> 00:10:36,310
+So we just find it.
+156
+
+157
+00:10:36,910 --> 00:10:37,390
+That's it.
+157
+
+158
+00:10:38,740 --> 00:10:39,970
+Let's use another example.
+158
+
+159
+00:10:40,330 --> 00:10:44,980
+What if I told you to find five?
+159
+
+160
+00:10:45,640 --> 00:10:47,650
+What is the first element greater than or equal
+160
+
+161
+00:10:47,650 --> 00:10:48,160
+five?
+161
+
+162
+00:10:48,850 --> 00:10:51,850
+It is seventeen, and so on.
+162
+
+163
+00:10:54,210 --> 00:10:59,020
+Uh, this array is buggy.
+163
+
+164
+00:10:59,040 --> 00:11:00,690
+I didn't notice that, sorry for that.
+164
+
+165
+00:11:00,930 --> 00:11:02,280
+This array should be sorted.
+165
+
+166
+00:11:02,610 --> 00:11:03,480
+I'm very sorry for that.
+166
+
+167
+00:11:03,780 --> 00:11:10,920
+So it should be like two, two, you must have the vector sorted before using it because the
+167
+
+168
+00:11:10,920 --> 00:11:11,730
+binary search condition.
+168
+
+169
+00:11:12,000 --> 00:11:15,940
+This should be 2, 2, 3, 4, 9.
+169
+
+170
+00:11:15,960 --> 00:11:16,380
+OK.
+170
+
+171
+00:11:16,770 --> 00:11:17,680
+So be careful from that.
+171
+
+172
+00:11:17,700 --> 00:11:22,770
+I'm very sorry, probably as the values are bigger than the middle, the algorithm anyway worked
+172
+
+173
+00:11:22,770 --> 00:11:22,980
+well.
+173
+
+174
+00:11:23,520 --> 00:11:29,250
+So anyway, um, yeah, assume for a while it's sorted.
+174
+
+175
+00:11:29,400 --> 00:11:37,380
+If I asked you to find the upper_bound, now the upper bound means the first element f greater than seventeen
+175
+
+176
+00:11:37,380 --> 00:11:37,710
+here.
+176
+
+177
+00:11:38,250 --> 00:11:41,000
+What is the first element greater than 17? It is
+177
+
+178
+00:11:41,010 --> 00:11:41,460
+twenty.
+178
+
+179
+00:11:42,060 --> 00:11:42,420
+OK.
+179
+
+180
+00:11:43,020 --> 00:11:47,490
+So this is what does it mean to be upper_bound. Now,
+180
+
+181
+00:11:47,580 --> 00:11:48,270
+What if
+181
+
+182
+00:11:48,510 --> 00:11:51,390
+there is nothing greater than or greater than equal to the element?
+182
+
+183
+00:11:51,570 --> 00:11:54,840
+We just get back the end iterator.
+183
+
+184
+00:11:55,110 --> 00:11:58,930
+So you can always compare here the vector with the end.
+184
+
+185
+00:11:59,310 --> 00:12:02,060
+If they aren't equal, you found something.
+185
+
+186
+00:12:02,070 --> 00:12:03,300
+Otherwise, it doesn't exist.
+186
+
+187
+00:12:04,650 --> 00:12:10,740
+Finally, the equal_range just returns the lower bound and the upper bound, so the equal_range doesn't
+187
+
+188
+00:12:10,740 --> 00:12:13,740
+have its own algorithm, it's actually calling the lower bound and the upper bound.
+188
+
+189
+00:12:13,770 --> 00:12:14,280
+That's it.
+189
+
+190
+00:12:15,300 --> 00:12:21,660
+It's also worth knowing something, that the STL has a set and has a map. Set and map are implemented using
+190
+
+191
+00:12:21,660 --> 00:12:26,070
+what we call a binary search tree, specifically the balanced binary search tree like Red Black
+191
+
+192
+00:12:26,070 --> 00:12:27,300
+Tree or AVL Tree.
+192
+
+193
+00:12:27,780 --> 00:12:33,130
+It's a tree where the depth is just log(n), and it's like a binary,
+193
+
+194
+00:12:33,170 --> 00:12:41,580
+every node has two children, and it always has a height of log(n). So the set and map also have lower
+194
+
+195
+00:12:41,580 --> 00:12:43,080
+bound and upper bound functions.
+195
+
+196
+00:12:43,380 --> 00:12:46,410
+They have the exact meaning as we just explain, they are log(n).
+196
+
+197
+00:12:46,410 --> 00:12:53,730
+So this isn't a binary search code like we were doing, but it is a very close concept.
+197
+
+198
+00:12:53,790 --> 00:12:55,410
+So always remember that.
+198
+
+199
+00:12:57,480 --> 00:13:04,680
+Finally, let's go back to Donald statement, Donald mentions that there are many
+199
+
+200
+00:13:04,680 --> 00:13:06,810
+mistakes that could happen in the binary search. Today,
+200
+
+201
+00:13:06,810 --> 00:13:08,940
+we saw one of them. In the homework,
+201
+
+202
+00:13:08,940 --> 00:13:14,400
+you will find a very important problem and a very important code that as following, you should
+202
+
+203
+00:13:14,400 --> 00:13:19,110
+find the first position of an element in a sorted array and the last position of an element.
+203
+
+204
+00:13:19,680 --> 00:13:25,290
+You will notice that writing the code to find the first or the last, specifically the last, is really
+204
+
+205
+00:13:25,290 --> 00:13:25,740
+tricky.
+205
+
+206
+00:13:27,320 --> 00:13:28,520
+So this is a big problem.
+206
+
+207
+00:13:28,700 --> 00:13:33,650
+By the way, the equal range in STL function can help us to find the first and last element,
+207
+
+208
+00:13:33,650 --> 00:13:35,900
+as we said. You can utilize it to find them.
+208
+
+209
+00:13:37,530 --> 00:13:37,950
+That's all.

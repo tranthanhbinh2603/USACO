@@ -1,0 +1,394 @@
+0
+1
+00:00:01,260 --> 00:00:08,640
+The STL also provides a very powerful and useful data structure named set. The set helps us
+1
+
+2
+00:00:08,640 --> 00:00:10,850
+to maintain the objects sorted.
+2
+
+3
+00:00:10,920 --> 00:00:14,970
+Remember, the priority queue when you insert an item is always sorted.
+3
+
+4
+00:00:15,210 --> 00:00:21,250
+The set is very similar to the priority queue, but it also provides much stronger functionalities.
+4
+
+5
+00:00:21,510 --> 00:00:27,480
+So we here are defining a set of a string, the set exists in the hash include set.
+5
+
+6
+00:00:27,750 --> 00:00:34,710
+So we started to insert Ziad, Mustafa, Mustafa, Mustafa, Ali so that it is going to do two things:
+6
+
+7
+00:00:35,010 --> 00:00:38,970
+First, It is going to remove any duplicates so all of them will be unique.
+7
+
+8
+00:00:39,150 --> 00:00:44,820
+So if there are three Mustafa, only one of them would be remain. The second, It is going to sort them. If we try to
+8
+
+9
+00:00:44,820 --> 00:00:47,420
+print to the set, it would print Ali, Mustafa,
+9
+
+10
+00:00:47,460 --> 00:00:48,040
+and zyad.
+10
+
+11
+00:00:48,480 --> 00:00:55,560
+So how is it to print a function? It like just the normal for-style like range-based loops to print it
+11
+
+12
+00:00:56,280 --> 00:00:56,730
+Now,
+12
+
+13
+00:00:58,050 --> 00:01:04,480
+one of the functionalities in the set is just you can dot count Mustafa to see if it exists or not.
+13
+
+14
+00:01:04,800 --> 00:01:05,820
+So this is an easy way,
+14
+
+15
+00:01:05,820 --> 00:01:06,810
+It's a bit slower way.
+15
+
+16
+00:01:06,990 --> 00:01:12,480
+There is another faster way, you can use the dot find function. The dot-find is going to return an
+16
+
+17
+00:01:12,480 --> 00:01:13,050
+iterator.
+17
+
+18
+00:01:13,410 --> 00:01:15,300
+So what is the type of the iterator?
+18
+
+19
+00:01:15,450 --> 00:01:22,440
+It will be the same as the data structure, set of string, colon, colon, iterator. In C++ 11, you can
+19
+
+20
+00:01:22,440 --> 00:01:26,820
+just save your time and write auto so that you can just skip all of that.
+20
+
+21
+00:01:26,830 --> 00:01:31,290
+I like auto because it makes the code sometimes much easier.
+21
+
+22
+00:01:31,800 --> 00:01:35,260
+If the iterator isn't at the end, then we know it exists,
+22
+
+23
+00:01:35,460 --> 00:01:41,550
+you can also remove it like say dot erase with the iterator. So you can count is a bit slower but more
+23
+
+24
+00:01:41,550 --> 00:01:42,180
+convenient,
+24
+
+25
+00:01:42,390 --> 00:01:46,170
+you can dot find and get the result in an iterator and compare directly with dot-end.
+25
+
+26
+00:01:47,700 --> 00:01:50,650
+Now, if you try to print here, it's going to be empty.
+26
+
+27
+00:01:50,910 --> 00:01:51,810
+So this is a set.
+27
+
+28
+00:01:52,590 --> 00:01:55,170
+There is another thing that called multi-set.
+28
+
+29
+00:01:55,380 --> 00:01:58,740
+The multi-set is same as set, but it allows duplicates.
+29
+
+30
+00:01:58,890 --> 00:02:03,500
+So if you inserted 3 Mustafa, It is going to have 3 Mustafa here.
+30
+
+31
+00:02:03,840 --> 00:02:07,930
+Then again, you can find Mustafa and you can erase it, and  when you erase it,
+31
+
+32
+00:02:08,040 --> 00:02:09,360
+you will erase one of them.
+32
+
+33
+00:02:09,360 --> 00:02:12,420
+So you have Mustafa here and another Mustafa here.
+33
+
+34
+00:02:17,880 --> 00:02:27,930
+So what if I would like to insert objects of type say employee in a set?  We know that if I made
+34
+
+35
+00:02:27,970 --> 00:02:31,170
+set of integer, it would define them from small to large. string?
+35
+
+36
+00:02:31,170 --> 00:02:32,730
+It would define them from small to large,
+36
+
+37
+00:02:32,990 --> 00:02:37,220
+but I'm having my own class.
+37
+
+38
+00:02:37,830 --> 00:02:41,880
+The issue here is how the C++ is going to order
+38
+
+39
+00:02:41,880 --> 00:02:44,110
+the struct? Actually, It doesn't know.
+39
+
+40
+00:02:44,400 --> 00:02:46,700
+So we have to provide a way to compare them.
+40
+
+41
+00:02:47,020 --> 00:02:48,470
+Here is one way to do that.
+41
+
+42
+00:02:48,900 --> 00:02:51,030
+The syntax is a bit weird for you at the moment,
+42
+
+43
+00:02:51,180 --> 00:02:53,910
+We will know that when we study the operator overloading  topic.
+43
+
+44
+00:02:54,180 --> 00:02:58,260
+So you provide syntax as following: bool operator, less than,
+44
+
+45
+00:02:58,560 --> 00:03:04,350
+then you give an object name like const, employee, right-hand side and make it const function.
+45
+
+46
+00:03:05,520 --> 00:03:08,910
+So you always write this line and just change here the class name.
+46
+
+47
+00:03:09,240 --> 00:03:14,580
+So you are comparing the internal variables here with the variables of this one.
+47
+
+48
+00:03:14,880 --> 00:03:20,520
+You are to return
+48
+
+49
+00:03:20,520 --> 00:03:28,140
+true if the of the employee's local objects, this operator here, is less than the right-hand side
+49
+
+50
+00:03:28,140 --> 00:03:29,080
+information here.
+50
+
+51
+00:03:29,550 --> 00:03:34,920
+So again, if you would like to use a set of employee, you have to write all of this line. For your
+51
+
+52
+00:03:34,920 --> 00:03:38,160
+own class, remove this employee and write your own class name.
+52
+
+53
+00:03:38,460 --> 00:03:44,160
+Return true only if the current object is less than the send object to be compared.
+53
+
+54
+00:03:44,550 --> 00:03:49,290
+Now, here I'm using some logic to compare 2 integers in one variable.
+54
+
+55
+00:03:50,430 --> 00:03:53,520
+There are like different ways to do it.
+55
+
+56
+00:03:53,730 --> 00:03:59,820
+So one way like as we did before, you can compare first with  not equal, if name number 1 is not
+56
+
+57
+00:03:59,820 --> 00:04:03,600
+equal number 2, then you are returning based on this one.
+57
+
+58
+00:04:03,930 --> 00:04:09,690
+If they are equal, you move to the second feature. If not equal then you return based on that, otherwise you
+58
+
+59
+00:04:09,690 --> 00:04:10,800
+return the final segment.
+59
+
+60
+00:04:11,040 --> 00:04:13,650
+This is how you should structure it as logic.
+60
+
+61
+00:04:14,580 --> 00:04:16,380
+You can actually do it in an easier way.
+61
+
+62
+00:04:16,410 --> 00:04:20,130
+Let's say you would like to use the pair that we learned. So I can do it as following:
+62
+
+63
+00:04:20,190 --> 00:04:23,810
+I can create a pair of item on another pair of item.
+63
+
+64
+00:04:24,150 --> 00:04:30,090
+So this way I'm creating a big pair for my 3 variables and I can also create a pair for the
+64
+
+65
+00:04:30,090 --> 00:04:31,110
+other 3 variables,
+65
+
+66
+00:04:31,350 --> 00:04:32,910
+Then I can compare both of them
+66
+
+67
+00:04:32,950 --> 00:04:37,440
+normally. The standard way to use is it can be using the std- tie.
+67
+
+68
+00:04:37,710 --> 00:04:40,890
+You can tie the 3 variables in the order that you wish.
+68
+
+69
+00:04:41,040 --> 00:04:42,570
+So we would like to compare in order
+69
+
+70
+00:04:42,570 --> 00:04:43,880
+number 1, then str 1,
+70
+
+71
+00:04:43,890 --> 00:04:45,990
+number 2 with the object
+71
+
+72
+00:04:45,990 --> 00:04:50,820
+num1, str, and num2. The tie is the easiest way and the one that is this roll
+72
+
+73
+00:04:50,970 --> 00:04:54,330
+but I'm just showing you the logic of doing that.
+73
+
+74
+00:04:55,980 --> 00:04:57,960
+So here is a set of employees,
+74
+
+75
+00:04:57,960 --> 00:05:01,560
+we have inserted the employees for Mustafa, Ali, Ziad, and Mustafa.
+75
+
+76
+00:05:01,740 --> 00:05:03,390
+Then we did an auto loop to print.
+76
+
+77
+00:05:03,570 --> 00:05:07,820
+So it printed for us here based on our sorting criteria.
+77
+
+78
+00:05:08,010 --> 00:05:13,130
+So if you defined your own struct to use it with set, you may need to provide the operator
+78
+
+79
+00:05:13,170 --> 00:05:15,330
+less than function. That's it.

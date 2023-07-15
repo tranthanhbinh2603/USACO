@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1681394970 source:e:\document\project\usaco\dynamic programming algorithms master course (2022)\chap 3\05 - sodoku slover\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<set>
+	<iostream>
+	<iomanip>
+	<map>
+	<math.h>
+
+1681395028 source:e:\document\project\usaco\dynamic programming algorithms master course (2022)\chap 4\05 - sodoku slover\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<set>
+	<iostream>
+	<iomanip>
+	<map>
+	<math.h>
+

@@ -1,0 +1,287 @@
+﻿WEBVTT
+
+00:00:01.170 --> 00:00:06.950
+Hãy tiếp tục biểu thức gấp.  Vì vậy, đây là bộ phận mà tôi yêu cầu bạn phát triển nó.
+
+00:00:06.960 --> 00:00:11.760
+Sẽ là khôn ngoan nếu chúng ta phát triển ngay ở đây trường hợp bên phải và trường hợp bên trái.
+
+00:00:12.150 --> 00:00:17.210
+Nếu bạn đã cố in kết quả của điều đó, Bạn sẽ nhận thấy câu trả lời không giống như vậy.
+
+00:00:17.640 --> 00:00:25.170
+Và lý do đằng sau đó là thứ tự
+của phép toán trong phép chia
+
+00:00:25.170 --> 00:00:28.980
+sẽ quan trọng hơn rất nhiều
+so với phép nhân và phép cộng.
+
+00:00:29.340 --> 00:00:33.930
+Vì vậy, nếu chúng tôi gửi ở đây 1, 2, 3, 4, Biểu thức sẽ được tạo bằng
+
+00:00:34.260 --> 00:00:38.380
+tham số theo thứ tự này, về mặt toán học giống như 1 trên 2 trên 3 hoặc 4.
+
+00:00:38.400 --> 00:00:39.240
+Vì vậy, đây là giá trị.
+
+00:00:40.160 --> 00:00:45.860
+Bây giờ, nếu bạn đang thực hiện
+mở rộng đúng, Biểu thức giống
+
+00:00:45.860 --> 00:00:47.090
+như 1 trên tất cả thuật ngữ đó
+và trên tất cả thuật ngữ đó, v.v.
+
+00:00:47.810 --> 00:00:51.470
+Vì vậy, đây sẽ là giá trị này.
+
+00:00:51.950 --> 00:00:55.370
+Và bây giờ là rủi ro khi sử dụng toán tử số nguyên.
+
+00:00:55.640 --> 00:01:03.170
+Nếu bạn đã sử dụng toán tử
+số nguyên với phép chia còn
+
+00:01:03.170 --> 00:01:04.580
+lại, thì nó sẽ kết thúc
+bằng 0 vì 3 trên 4 sẽ là...
+
+00:01:07.280 --> 00:01:11.590
+Phần mở rộng bên trái sẽ bắt đầu với 1 trên 2, bằng 0
+
+00:01:11.750 --> 00:01:14.830
+Vì vậy, toàn bộ thuật ngữ sẽ kết thúc bằng không
+
+00:01:15.260 --> 00:01:21.520
+nhưng nếu bạn làm đúng biểu thức, Cuối cùng nó sẽ chia hết cho 3 cho 4, Cái nào bằng 0
+
+00:01:21.530 --> 00:01:23.470
+Vì vậy, bạn sẽ kết thúc với một lỗi thời gian chạy.
+
+00:01:23.690 --> 00:01:28.870
+Vì vậy, bạn phải cẩn thận về bên trái và bên phải và bạn phải suy nghĩ về ngữ nghĩa của
+
+00:01:30.050 --> 00:01:31.310
+nhà điều hành.
+
+00:01:33.050 --> 00:01:39.220
+Một điều thú vị khác là bạn có thể cho đến
+nay chúng tôi đang sử dụng các đối số theo
+
+00:01:39.410 --> 00:01:42.450
+cách rất trực tiếp và chúng tôi luôn nói
+rằng hãy coi các đối số là phần tử đầu tiên.
+
+00:01:42.890 --> 00:01:47.990
+Vì vậy, thực tế mà nói sẽ được tạo dưới dạng phần
+tử đầu tiên, Chúng tôi thậm chí có thể chuyển
+
+00:01:47.990 --> 00:01:55.340
+một số hàm ở đây hoặc hàm functor hoặc thậm chí
+hàm lambda sau này và chỉ cần áp dụng nó để bạn
+
+00:01:55.340 --> 00:01:57.020
+thậm chí không cần sử dụng chỉ args,
+
+00:01:57.020 --> 00:01:58.670
+Bạn có thể sử dụng một số chức năng trên args.
+
+00:01:58.670 --> 00:02:05.420
+Bạn có thể sử dụng một số biểu thức đôi khi phức tạp hơn trên các đối số nhưng hãy đặt một số tham số xung quanh nó.
+
+00:02:05.420 --> 00:02:09.250
+Vì vậy, ở đây tôi có một số hàm bình phương và tôi đang chuyển hàm bình phương,
+
+00:02:09.470 --> 00:02:14.120
+Vì vậy, hàm bình phương sẽ là phần tử
+đầu tiên ở đây và sau đó nó sẽ được áp dụng
+
+00:02:14.120 --> 00:02:17.140
+cho phần tử đầu tiên và sau đó là phần
+tử thứ hai rồi đến phần tử thứ ba, v.v.
+
+00:02:17.390 --> 00:02:19.170
+Vì vậy, chúng ta cũng có thể truyền một chức năng để sử dụng nó.
+
+00:02:19.370 --> 00:02:26.030
+Và đây thường là cách chúng ta có thể tạo ra những thứ phức tạp với biểu thức nếp gấp.
+
+00:02:27.730 --> 00:02:36.490
+Có một mối quan tâm còn lại là chúng
+tôi đã nói rằng cần phải gấp nhị phân
+
+00:02:36.490 --> 00:02:41.650
+để cho phép xử lý trường hợp của
+một trong danh sách trống, phải không?
+
+00:02:42.280 --> 00:02:45.100
+Có ba toán tử không cần dấu hoa thị.
+
+00:02:45.250 --> 00:02:50.820
+Kết quả là, không có phép gấp nhị phân nào cho chúng, đó là AND-AND, OR-OR và dấu phẩy.
+
+00:02:51.000 --> 00:02:57.260
+ĐƯỢC RỒI!.  Vì vậy, bạn có thể sử dụng AND-AND theo cách này và thậm chí bạn có thể gửi một danh sách trống cho tất cả chúng.
+
+00:02:57.760 --> 00:03:03.560
+Hãy nhớ rằng, Để một biểu thức hoàn toàn đúng, Bạn cần mọi thứ phải đúng.
+
+00:03:03.580 --> 00:03:06.220
+Đó là lý do tại sao theo mặc định nó sẽ được kết thúc bằng một.
+
+00:03:06.430 --> 00:03:12.970
+Vì vậy, giá trị mặc định
+cho một biểu thức trống sẽ là
+
+00:03:12.970 --> 00:03:14.450
+một.  Mặt khác, biểu thức mặc
+định của OR sẽ bằng không.
+
+00:03:14.590 --> 00:03:16.270
+Mặt khác, nó chỉ là ANDING
+hoặc ORING cho những gì
+
+00:03:16.270 --> 00:03:21.810
+tồn tại và bạn cần quan
+tâm đến giá trị ban đầu.
+
+00:03:22.180 --> 00:03:25.570
+Cái còn lại, Cái nào hay hơn là
+dấu phẩy.  Nhớ lại toán tử dấu phẩy
+
+00:03:25.570 --> 00:03:31.690
+đánh giá từ trái sang phải và
+cũng như bạn biết nó trả về giá trị...
+
+00:03:31.690 --> 00:03:32.560
+của biểu thức cuối cùng.
+
+00:03:32.560 --> 00:03:33.710
+Chúng tôi không quan tâm về điều đó cho bây giờ.
+
+00:03:34.330 --> 00:03:41.800
+Vì vậy, nói chung, nếu bạn phải thực
+hiện một loạt việc để được đánh giá
+
+00:03:41.800 --> 00:03:44.230
+từ trái sang phải hoặc theo cách
+tuần tự, thì bạn cần toán tử dấu phẩy.
+
+00:03:44.960 --> 00:03:46.840
+Ở đây chúng ta hãy làm mới
+toán tử dấu phẩy bằng một véc-tơ.
+
+00:03:46.840 --> 00:03:53.280
+Tôi có một vectơ số nguyên
+V, tôi thường đẩy 1 và đẩy 2.
+
+00:03:53.290 --> 00:03:53.890
+Được thôi.
+
+00:03:54.080 --> 00:03:57.880
+Tôi cũng có thể đẩy 3, 4, 5 bằng 3 dấu phẩy.
+
+00:03:57.910 --> 00:03:58.780
+Điều này là hoàn toàn OK.
+
+00:03:59.350 --> 00:04:03.730
+Bây giờ, Chúng tôi biết với biểu thức gấp, Có rất nhiều tham số xung quanh mọi thứ.
+
+00:04:04.030 --> 00:04:06.160
+Vậy còn thông số ở đây thì sao?
+
+00:04:06.430 --> 00:04:13.360
+Rất bình thường, Đơn giản chỉ cần
+đi từ trái sang phải, Các tham số này
+
+00:04:13.360 --> 00:04:15.170
+không ảnh hưởng đến biểu thức
+tổng thể của chúng ta từ trái sang phải
+
+00:04:15.210 --> 00:04:15.430
+đặt hàng để làm theo
+
+00:04:15.430 --> 00:04:17.350
+cách này chẳng hạn.
+
+00:04:20.470 --> 00:04:26.860
+Bây giờ, tôi muốn bạn nghĩ về cách chúng ta có thể
+phát triển một biểu thức gấp cho phép đẩy các số theo
+
+00:04:26.860 --> 00:04:32.080
+cách khác nhau như tôi đang làm ở đây. Vì vậy, hãy
+nghĩ về cách sử dụng toán tử dấu phẩy để làm điều đó.
+
+00:04:32.230 --> 00:04:33.730
+Hãy cho mình một năm phút.
+
+00:04:36.170 --> 00:04:42.310
+Đó là cách chúng ta có thể làm
+điều đó.  Đơn giản như việc chúng
+
+00:04:42.350 --> 00:04:43.400
+ta sẽ sử dụng toán tử co mma,
+không cộng, không trừ, không nhân.
+
+00:04:43.430 --> 00:04:48.640
+Chúng ta sẽ sử dụng dấu phẩy, sẽ đánh giá phần tử đầu tiên, sau đó là phần tử thứ hai.
+
+00:04:48.950 --> 00:04:53.210
+Và đây: Trong phần tử đầu tiên, Chúng ta có thể sử dụng các đối số, Chúng ta có thể sử dụng một hàm của các đối số.
+
+00:04:53.360 --> 00:04:59.000
+Chúng ta có thể sử dụng một biểu thức như V-dot-push-back-args.  Hãy nhớ rằng, trong thế hệ thời gian args thực sự là
+
+00:04:59.180 --> 00:05:00.240
+chỉ là số đầu tiên.
+
+00:05:00.650 --> 00:05:04.160
+Vì vậy, thực tế mà nói, Làm thế nào nó được tạo ra trong số đầu tiên?
+
+00:05:04.160 --> 00:05:06.770
+Nó sẽ giống như V-dot-push-back 10, sau đó là dấu phẩy,
+
+00:05:07.160 --> 00:05:13.130
+Ba chấm.  Ba dấu chấm sẽ được mở rộng một lần nữa để mở dấu ngoặc nhọn, V-dot-push-back 20, dấu phẩy, ba dấu chấm
+
+00:05:13.430 --> 00:05:17.890
+đóng dấu ngoặc nhọn và ba dấu chấm sẽ được mở rộng lại thành V-dot-push-back 30.
+
+00:05:18.140 --> 00:05:21.560
+Vì vậy, cuối cùng điều này giống như V-dot-push-back 10, 20, 30, Đó là tất cả.
+
+00:05:22.560 --> 00:05:31.500
+Tôi cũng muốn nhân
+cơ hội này và nói với bạn
+
+00:05:31.500 --> 00:05:32.120
+rằng bạn có thể chuyển
+các đối số có gói tham số.
+
+00:05:32.310 --> 00:05:38.940
+Vì vậy, tôi ở đây có một chức năng cho biết pass-pack, Nó đang lấy vectơ và gói tham số, tôi đang vượt qua
+
+00:05:38.940 --> 00:05:43.920
+nó sang một chức năng khác để bạn có thể lấy các đối số và chuyển nó sang một chức năng khác.
+
+00:05:44.190 --> 00:05:46.020
+nhưng lưu ý cú pháp ở đây hơi lạ.
+
+00:05:46.050 --> 00:05:50.070
+Ba dấu chấm nằm sau tham số args, OK?
+
+00:05:50.400 --> 00:05:57.330
+Và theo cách tương tự, Bạn
+có thể nói rằng bạn muốn
+
+00:05:57.330 --> 00:05:57.780
+in một loạt các số bằng
+cách sử dụng biểu thức gấp.
+
+00:05:57.780 --> 00:06:01.250
+Bạn có thể in chúng theo logic rất giống nhau bằng cách sử dụng toán tử dấu phẩy.
+
+00:06:02.460 --> 00:06:02.970
+Đó là nó.

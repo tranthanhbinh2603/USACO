@@ -1,0 +1,264 @@
+0
+1
+00:00:00,900 --> 00:00:05,410
+Let's put the relationships and multiplicity together. Thinking about this diagram,
+1
+
+2
+00:00:05,610 --> 00:00:12,080
+we have a university that is composed of departments, and the department is aggregated of professors.
+2
+
+3
+00:00:12,420 --> 00:00:15,660
+Sorry, the department is aggregated of professors.
+3
+
+4
+00:00:16,020 --> 00:00:21,890
+The logic here is if the university got closed, there is no meaning for a department without the university,
+4
+
+5
+00:00:22,380 --> 00:00:26,210
+but if some departments got closed, professors will remain professors.
+5
+
+6
+00:00:26,640 --> 00:00:28,050
+So that's why this aggregation,
+6
+
+7
+00:00:28,060 --> 00:00:29,160
+but this is a composition.
+7
+
+8
+00:00:29,640 --> 00:00:33,900
+By the way, we can read always the relationship in the two directions
+8
+
+9
+00:00:34,110 --> 00:00:39,810
+as I said before like the university has departments, or a department belongs to a single
+9
+
+10
+00:00:39,810 --> 00:00:41,100
+university, and so on.
+10
+
+11
+00:00:41,520 --> 00:00:49,410
+So now thinking about the multiplicity. Now, the department would belong to a single university.
+11
+
+12
+00:00:49,410 --> 00:00:49,760
+Right?
+12
+
+13
+00:00:49,950 --> 00:00:51,000
+You see here the one
+13
+
+14
+00:00:51,600 --> 00:00:55,170
+so there is a consistency here that you should take in mind.
+14
+
+15
+00:00:55,560 --> 00:01:00,540
+If you said that this is a composition relationship, and you said here that this is zero, for example,
+15
+
+16
+00:01:00,660 --> 00:01:01,770
+this is contradiction.
+16
+
+17
+00:01:01,920 --> 00:01:06,740
+If you said it is a composition, it means that these belong only to this university.
+17
+
+18
+00:01:07,050 --> 00:01:14,340
+That's why typically you will find a one as a multiplicity in terms of the composition. 
+18
+
+19
+00:01:14,340 --> 00:01:15,300
+In a similar logic,
+19
+
+20
+00:01:15,390 --> 00:01:20,040
+if you said that this is aggregation, it means a professor may not belong to a department.
+20
+
+21
+00:01:20,400 --> 00:01:22,430
+So this means that it should have zero.
+21
+
+22
+00:01:22,770 --> 00:01:29,320
+So as a rule, you typically put one beside a black diamond, and there is typically some zero beside
+22
+
+23
+00:01:29,320 --> 00:01:31,600
+the empty diamond.
+23
+
+24
+00:01:31,890 --> 00:01:34,230
+So consistency is important.
+24
+
+25
+00:01:35,750 --> 00:01:39,990
+Here is a bigger example of a shopping cart example. We have here a user,
+25
+
+26
+00:01:40,010 --> 00:01:41,240
+there are two types of user,
+26
+
+27
+00:01:41,480 --> 00:01:43,880
+administrator is a user, customer is a user.
+27
+
+28
+00:01:44,000 --> 00:01:45,830
+So this is inheritance relationship.
+28
+
+29
+00:01:46,160 --> 00:01:50,960
+Here we have the common features and variables, and we have the non-common features and variables.
+29
+
+30
+00:01:51,900 --> 00:01:57,570
+You see that the customer has a shopping cart, and there is an aggregation, so you see here the composition
+30
+
+31
+00:01:57,570 --> 00:02:01,570
+has one, a composition has one, a composition has one, a composition has one.
+31
+
+32
+00:02:01,800 --> 00:02:04,890
+This is consistent diagram.
+32
+
+33
+00:02:04,960 --> 00:02:07,020
+The customer also would have a single order.
+33
+
+34
+00:02:07,230 --> 00:02:10,770
+Each order might belong to a specific customer,
+34
+
+35
+00:02:10,830 --> 00:02:13,500
+each customer may have zero or more orders,
+35
+
+36
+00:02:13,620 --> 00:02:16,890
+each order has also exactly one shipping information.
+36
+
+37
+00:02:16,920 --> 00:02:21,810
+This is one to one relationship, and this is one to one relationship.
+37
+
+38
+00:02:22,360 --> 00:02:25,560
+OK, this is one to many relationship.
+38
+
+39
+00:02:26,450 --> 00:02:33,740
+Yeah, These are a bunch of examples. I would like you to think about them in terms of relationships
+39
+
+40
+00:02:33,740 --> 00:02:39,230
+and multiplicity. Thinking between student and course, the student registers in a course,
+40
+
+41
+00:02:39,590 --> 00:02:41,330
+So this is many to many relationship.
+41
+
+42
+00:02:41,630 --> 00:02:47,300
+This means that a student registered in many courses, and the course attended by many students. Think about
+42
+
+43
+00:02:47,300 --> 00:02:48,560
+the following in a similar logic.
+43
+
+44
+00:02:48,830 --> 00:02:51,800
+Customer, bank account, savings account, checking account.
+44
+
+45
+00:02:51,830 --> 00:02:52,870
+What is the relationship?
+45
+
+46
+00:02:53,270 --> 00:02:55,730
+Let's say we are modeling a parking lot.
+46
+
+47
+00:02:55,850 --> 00:03:01,660
+We have a vehicle, car, seat, engine, door, driver, passenger, gasoline, garage.
+47
+
+48
+00:03:01,850 --> 00:03:04,480
+Let's say that these are a bunch of classes in our system.
+48
+
+49
+00:03:04,490 --> 00:03:10,340
+What is a relationship? If we have a google form of question and answer and options, how to model it? 
+49
+
+50
+00:03:10,340 --> 00:03:11,090
+The computer,
+50
+
+51
+00:03:11,120 --> 00:03:12,020
+its cpu,
+51
+
+52
+00:03:12,020 --> 00:03:18,480
+its motherboard, cache, memory, relationships.  Project, project manager, and so on.
+52
+
+53
+00:03:18,520 --> 00:03:22,400
+Just think of them as an exercise for you. That's it.

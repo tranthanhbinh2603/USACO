@@ -1,0 +1,936 @@
+1
+00:00:01,070 --> 00:00:01,819
+Welcome back.
+
+2
+00:00:02,560 --> 00:00:09,080
+I have this first example that I want to present, which is a find eternal number of permutations of
+
+3
+00:00:09,080 --> 00:00:17,300
+zero two nine eight, so we have all single digits and the total number of permutations, which contains
+
+4
+00:00:17,900 --> 00:00:18,680
+one three.
+
+5
+00:00:19,220 --> 00:00:20,480
+OK, so let's say which.
+
+6
+00:00:21,960 --> 00:00:28,560
+Does not contain and will do otherwise, resulting in total populations of 0.9, which does not contain
+
+7
+00:00:28,560 --> 00:00:32,920
+13, 49, 34 or 23.
+
+8
+00:00:32,940 --> 00:00:34,650
+OK, well, no problem.
+
+9
+00:00:34,890 --> 00:00:38,330
+We can do the does not bite also, and we can do the other part too, right?
+
+10
+00:00:38,640 --> 00:00:41,010
+Let's do one part and then come to the other one.
+
+11
+00:00:42,250 --> 00:00:45,330
+So how many permutations of 0.9 are possible?
+
+12
+00:00:46,110 --> 00:00:50,980
+We have 10 numbers here, so there are 10 factorial permutations which are possible today.
+
+13
+00:00:51,020 --> 00:00:53,340
+So this is total number of permutations which are possible.
+
+14
+00:00:54,840 --> 00:01:00,030
+So there are OK, how many permutations are there, which contains 13?
+
+15
+00:01:01,000 --> 00:01:06,880
+So as we know that there can be many permutations which contain certain right, there can be many permutations
+
+16
+00:01:06,880 --> 00:01:10,750
+which contains 49, 34 and 23 eight.
+
+17
+00:01:11,380 --> 00:01:12,860
+So how do we solve this?
+
+18
+00:01:12,880 --> 00:01:19,450
+And of course, there will be many permutations which will contain both 13 and 34 eight, like one,
+
+19
+00:01:19,450 --> 00:01:20,560
+three, four and something.
+
+20
+00:01:21,310 --> 00:01:22,540
+Let me give you some examples.
+
+21
+00:01:22,540 --> 00:01:22,840
+First.
+
+22
+00:01:23,710 --> 00:01:28,000
+So let's let's call up a mutation, which just contains one three eight.
+
+23
+00:01:28,240 --> 00:01:30,160
+That means it should not contain other elements.
+
+24
+00:01:30,340 --> 00:01:32,140
+So let's call it 13.
+
+25
+00:01:32,380 --> 00:01:37,320
+And let's straight forward here nine here so that it doesn't intersect and two here.
+
+26
+00:01:37,960 --> 00:01:38,190
+Cool.
+
+27
+00:01:38,470 --> 00:01:41,620
+And it's just fill it at seven.
+
+28
+00:01:43,370 --> 00:01:44,810
+Five six.
+
+29
+00:01:45,700 --> 00:01:47,170
+And zero eight.
+
+30
+00:01:47,580 --> 00:01:51,860
+So this is a population which just contains 13, and it does not contain 49.
+
+31
+00:01:51,880 --> 00:01:55,570
+It does not contain 34 and it does not contain 23.
+
+32
+00:01:57,490 --> 00:02:01,900
+Similarly, you can make other permutations, which contains 49, 34 and 23.
+
+33
+00:02:02,180 --> 00:02:08,289
+But let me give you an example of accommodation, which contains both 13 and 49.
+
+34
+00:02:08,560 --> 00:02:15,100
+So what I can do is it's very easy to make it just bare them 13 and 49 and just fill the rest of the
+
+35
+00:02:15,430 --> 00:02:15,880
+digits.
+
+36
+00:02:16,150 --> 00:02:27,370
+It's a zero two three seven four five six seven eight and nine is already eight zip zero mutation,
+
+37
+00:02:27,370 --> 00:02:31,330
+which contains thirteen and forty nine point eight.
+
+38
+00:02:31,360 --> 00:02:37,150
+So this does not contain 23, and this also does not contain 30 foot, as you can see.
+
+39
+00:02:37,600 --> 00:02:39,700
+And similarly, you can make other examples, right?
+
+40
+00:02:40,300 --> 00:02:45,280
+There can be of a mutation which contains 13 and 34 like together, like I mean this way.
+
+41
+00:02:46,100 --> 00:02:53,270
+Ain't the how can I do this if I are going to find out whether a permutation contains 13 and 34, it
+
+42
+00:02:53,270 --> 00:02:54,650
+can contain it this way.
+
+43
+00:02:55,390 --> 00:02:55,690
+Right.
+
+44
+00:02:55,790 --> 00:02:58,100
+That means it has 13, also 34.
+
+45
+00:02:59,330 --> 00:02:59,960
+There's a difference.
+
+46
+00:02:59,960 --> 00:03:06,980
+Guys up there cannot be of a mutation, which contains 13 and 34 separately named because it can only
+
+47
+00:03:06,980 --> 00:03:10,580
+be used once in a mutation if it contains both.
+
+48
+00:03:11,060 --> 00:03:12,650
+One three four it has to be together.
+
+49
+00:03:13,340 --> 00:03:13,640
+Eight.
+
+50
+00:03:16,810 --> 00:03:19,040
+Yeah, two, one, three four.
+
+51
+00:03:19,120 --> 00:03:24,610
+And similarly, fill the rest of the digits over here so that there are no other permutations watchable.
+
+52
+00:03:25,300 --> 00:03:26,860
+So how will you solve this problem?
+
+53
+00:03:27,070 --> 00:03:30,550
+As we can see, there can be some combinations of these.
+
+54
+00:03:31,580 --> 00:03:33,860
+Numbers inside the permutations, right?
+
+55
+00:03:34,280 --> 00:03:38,510
+I will find out the total number of permutations which contains 13 and these these these.
+
+56
+00:03:41,470 --> 00:03:44,410
+So as I know, there are 10 factorial told by Malaysian trade.
+
+57
+00:03:46,330 --> 00:03:52,270
+So again, I will simply use inclusion exclusion over there, and it's not a very tough problem.
+
+58
+00:03:52,660 --> 00:03:52,880
+Eight.
+
+59
+00:03:53,410 --> 00:03:59,550
+And also this won't be required that this problem won't required much to could also aid.
+
+60
+00:04:00,130 --> 00:04:04,240
+But let's find out the total number of, let's call it b b.
+
+61
+00:04:04,240 --> 00:04:10,840
+And if I did like 13, that means there are no permutations, which contains 13 13 means.
+
+62
+00:04:10,840 --> 00:04:11,920
+I mean only 13.
+
+63
+00:04:11,920 --> 00:04:12,520
+Nothing else.
+
+64
+00:04:12,940 --> 00:04:13,240
+Eight.
+
+65
+00:04:14,550 --> 00:04:14,940
+And.
+
+66
+00:04:16,310 --> 00:04:22,580
+Then we can find out the total number of permutations, which contains 49 permutations, which contains
+
+67
+00:04:22,580 --> 00:04:26,840
+34 permutations, which contain 23 and so on.
+
+68
+00:04:27,820 --> 00:04:28,040
+So.
+
+69
+00:04:30,110 --> 00:04:36,110
+So how many more mutations are possible, which contains all these elements, we can see 13 plus 49
+
+70
+00:04:36,110 --> 00:04:38,000
+plus 34 plus 23, right?
+
+71
+00:04:38,330 --> 00:04:38,870
+That means.
+
+72
+00:04:40,460 --> 00:04:46,130
+All the permutations which have been included till now, which contains 13, but I'm not sure about
+
+73
+00:04:46,130 --> 00:04:51,260
+others and whether it may or may not contain 49, 34 and 23 in it.
+
+74
+00:04:51,860 --> 00:04:57,800
+If I include P. 49, that means it contains 49, but we are not sure about whether it contains 34 22
+
+75
+00:04:57,800 --> 00:05:00,690
+you in with it or not, and so date.
+
+76
+00:05:01,310 --> 00:05:05,720
+So this is the individual contributions of these elements.
+
+77
+00:05:05,870 --> 00:05:08,450
+Now let's subtract readable part of it.
+
+78
+00:05:08,630 --> 00:05:09,140
+That means.
+
+79
+00:05:10,170 --> 00:05:12,450
+Let's find out the permutations which contains.
+
+80
+00:05:15,170 --> 00:05:17,010
+Putting 49 in them, right?
+
+81
+00:05:17,400 --> 00:05:23,120
+Village break be 13 and 49 with this, let's celebrate B.
+
+82
+00:05:23,690 --> 00:05:31,310
+13 and 34 with this subject P. 13 and 23 with this subject B.
+
+83
+00:05:32,620 --> 00:05:39,740
+49 and 34 with this be 49, 23 and B 34, 23.
+
+84
+00:05:39,970 --> 00:05:42,160
+I hope you're getting the major point here.
+
+85
+00:05:42,340 --> 00:05:45,730
+And how will you figure out what is a certain number of elements here?
+
+86
+00:05:46,510 --> 00:05:47,680
+OK, we'll do that later.
+
+87
+00:05:47,860 --> 00:05:50,910
+Now, after this, what we'll do is we will need to add them individually.
+
+88
+00:05:51,100 --> 00:05:59,440
+That means permutations which contain 13 as well as 49, as well as 34 plus permutations, which contains
+
+89
+00:05:59,440 --> 00:06:03,220
+13 as well as 49 as well, is 23 eight.
+
+90
+00:06:03,400 --> 00:06:04,870
+And how will we find this out?
+
+91
+00:06:04,930 --> 00:06:06,610
+What are the total number of these permutations?
+
+92
+00:06:06,610 --> 00:06:07,240
+I'll tell you.
+
+93
+00:06:07,270 --> 00:06:08,200
+We'll figure that out.
+
+94
+00:06:08,920 --> 00:06:11,950
+And the second one can be 13.
+
+95
+00:06:13,420 --> 00:06:16,200
+34 and 23.
+
+96
+00:06:16,840 --> 00:06:17,100
+Right.
+
+97
+00:06:17,500 --> 00:06:23,460
+And the next one can be be 49, 34 and 23 will.
+
+98
+00:06:24,190 --> 00:06:30,310
+And the last one is simply subject, which contains all four of them, if possible.
+
+99
+00:06:30,710 --> 00:06:30,900
+Eight.
+
+100
+00:06:31,570 --> 00:06:32,530
+How do we do this?
+
+101
+00:06:32,530 --> 00:06:33,780
+How do we figure this out?
+
+102
+00:06:33,790 --> 00:06:35,950
+How can we calculate what their total number of elements?
+
+103
+00:06:36,190 --> 00:06:37,090
+It's very simple.
+
+104
+00:06:37,360 --> 00:06:41,420
+It's normal combinatorics, which is how many permutations are different.
+
+105
+00:06:41,420 --> 00:06:42,910
+The line which contains 13 in them.
+
+106
+00:06:42,910 --> 00:06:45,970
+So what you can do is speed up 13 together.
+
+107
+00:06:46,540 --> 00:06:50,080
+And what we have is we have either how many elements are left.
+
+108
+00:06:51,180 --> 00:06:55,980
+If I bring up other elements are left rate, which is zero point two.
+
+109
+00:06:56,160 --> 00:06:57,000
+OK, no one.
+
+110
+00:06:58,920 --> 00:07:04,070
+No one one two three four five six seven eight nine eight.
+
+111
+00:07:04,290 --> 00:07:09,540
+That means if I build this up, if I find out all the permutations of these numbers, that means, you
+
+112
+00:07:09,540 --> 00:07:11,250
+know, I live imitations of these numbers.
+
+113
+00:07:11,250 --> 00:07:12,430
+How many numbers are there now?
+
+114
+00:07:12,450 --> 00:07:19,200
+We have only nine am with eight because we have taken to them two numbers as one, because we are kind
+
+115
+00:07:19,200 --> 00:07:21,900
+of grouping them between all them relations.
+
+116
+00:07:21,900 --> 00:07:23,040
+One in three will be together.
+
+117
+00:07:23,310 --> 00:07:28,920
+The total nine factorial permutations are possible nine factorial possible, nine factorial possible,
+
+118
+00:07:28,950 --> 00:07:31,380
+nine factorial four days and nine Victorian for this.
+
+119
+00:07:31,980 --> 00:07:34,320
+Similarly, how many are there possible?
+
+120
+00:07:34,320 --> 00:07:36,140
+Four, 13 and 49 just.
+
+121
+00:07:37,200 --> 00:07:43,550
+Entertain and 49 together, if you're betting and voting in together, we have the rest of the remaining
+
+122
+00:07:43,550 --> 00:07:47,680
+numbers, which are zero two five six seven eight.
+
+123
+00:07:48,080 --> 00:07:49,520
+How many total number area?
+
+124
+00:07:49,550 --> 00:07:52,220
+One two three four five six seven eight eight two.
+
+125
+00:07:52,220 --> 00:07:54,470
+I have to tell it elements in this.
+
+126
+00:07:54,740 --> 00:07:57,500
+And if I pursued these eight elements were delegates.
+
+127
+00:07:57,500 --> 00:08:04,100
+I'll get eight factorial permutations in all those infected by mutations, 13 will be together and 49
+
+128
+00:08:04,100 --> 00:08:04,940
+will be together.
+
+129
+00:08:05,060 --> 00:08:09,290
+That means I got all the populations of 18 49 that together.
+
+130
+00:08:09,680 --> 00:08:09,900
+Eight.
+
+131
+00:08:10,250 --> 00:08:12,530
+And similarly, we can find out for this.
+
+132
+00:08:12,530 --> 00:08:15,950
+This, this, this, this similarly for three, we can.
+
+133
+00:08:16,970 --> 00:08:21,120
+Pair them together, so so in this case, what we'll have is we'll have one.
+
+134
+00:08:21,140 --> 00:08:21,610
+Three.
+
+135
+00:08:22,160 --> 00:08:22,970
+Warren nine.
+
+136
+00:08:23,540 --> 00:08:29,120
+Together eight and then only responsible 13 with 34 with 49.
+
+137
+00:08:29,810 --> 00:08:34,370
+It's it will just bind them together like all the other numbers and which is zero to.
+
+138
+00:08:35,270 --> 00:08:38,690
+Five, six, seven, eight, eight two, how many are there now?
+
+139
+00:08:38,960 --> 00:08:44,750
+This will be counted as one two three four five six seven two seven factorial such permutations are
+
+140
+00:08:44,750 --> 00:08:45,290
+possible.
+
+141
+00:08:46,250 --> 00:08:51,920
+Well, Emily, you can find out for others and do it too late, so I hope you understand how inclusion
+
+142
+00:08:51,920 --> 00:08:55,370
+exclusion elders in solving these same problems.
+
+143
+00:08:55,640 --> 00:08:58,670
+You can take an example of three of them, four of them or five of them.
+
+144
+00:08:58,670 --> 00:09:01,940
+You already know how it works for any of them, right?
+
+145
+00:09:02,390 --> 00:09:06,500
+You can do is use a Brakebills Datablitz a break in force.
+
+146
+00:09:07,390 --> 00:09:10,840
+Add in five subject and six and so on, it will keep on going, Dylan.
+
+147
+00:09:11,980 --> 00:09:12,230
+Eight.
+
+148
+00:09:13,460 --> 00:09:21,440
+OK, now let's go on to another example, and this is the example, which we can, right, because right
+
+149
+00:09:21,440 --> 00:09:25,870
+now I'm taking very less numbers, which are 500 and just 48.
+
+150
+00:09:26,390 --> 00:09:29,720
+But when when will call will take very big constraint.
+
+151
+00:09:31,040 --> 00:09:35,930
+So those constant will not be so easy to be solved using.
+
+152
+00:09:38,160 --> 00:09:40,950
+And we will we will have to call them.
+
+153
+00:09:41,960 --> 00:09:47,960
+The next problem that I took is it's a very again famous problem, which is find a total look to total
+
+154
+00:09:47,960 --> 00:09:51,830
+numbers which are less than 500 and diesel by the first four prime numbers.
+
+155
+00:09:52,760 --> 00:09:53,900
+So I would just want to find out.
+
+156
+00:09:53,900 --> 00:09:59,180
+The total numbers, which are less than 500 and by differs for prime numbers are going to do this.
+
+157
+00:10:00,100 --> 00:10:02,480
+So what are the first four prime numbers, first of all?
+
+158
+00:10:02,590 --> 00:10:07,000
+Right, so let's call prime numbers as B and the first four numbers are two three five seven.
+
+159
+00:10:08,380 --> 00:10:09,220
+So how many?
+
+160
+00:10:12,100 --> 00:10:19,030
+Again, I'm taking an example of food, OK, let's let's burn it down to three or implicitly eight.
+
+161
+00:10:19,240 --> 00:10:24,360
+So total number of numbers, which are less than 500 individual by first three frames.
+
+162
+00:10:25,330 --> 00:10:26,380
+We can also do it for food.
+
+163
+00:10:26,380 --> 00:10:27,070
+It's very easy.
+
+164
+00:10:27,070 --> 00:10:28,970
+No look.
+
+165
+00:10:29,470 --> 00:10:33,250
+So what nobody will lose are divided into individual, said Aito said.
+
+166
+00:10:33,250 --> 00:10:34,810
+It contains or let's say.
+
+167
+00:10:37,310 --> 00:10:41,930
+And that means the most, which is about over less than 500, so how many of them are there?
+
+168
+00:10:42,870 --> 00:10:47,370
+Right now, I'm not including zero, OK, so let's call them natural numbers.
+
+169
+00:10:48,180 --> 00:10:49,050
+So how many are there?
+
+170
+00:10:49,410 --> 00:10:50,010
+Very simple.
+
+171
+00:10:50,010 --> 00:10:54,990
+It's 500 by two, the right 250 such numbers, or it is NY three.
+
+172
+00:10:54,990 --> 00:10:56,940
+That means 500 by three.
+
+173
+00:10:57,450 --> 00:11:01,530
+That means if I divide one by three, what what will I get?
+
+174
+00:11:01,530 --> 00:11:04,950
+I'll get one, six and six again.
+
+175
+00:11:04,950 --> 00:11:06,160
+Later, there are 160.
+
+176
+00:11:06,780 --> 00:11:07,290
+Fix them.
+
+177
+00:11:07,860 --> 00:11:12,510
+Yeah, 166 numbers which are divisible by three and less than 500.
+
+178
+00:11:13,020 --> 00:11:16,320
+Well, and and by five, it'll be 500 by.
+
+179
+00:11:17,530 --> 00:11:17,770
+Right.
+
+180
+00:11:18,430 --> 00:11:22,600
+And so here I have 100, 100 members out there, which are less than 500 and whose.
+
+181
+00:11:23,050 --> 00:11:24,310
+I hope this is very clear.
+
+182
+00:11:24,640 --> 00:11:26,350
+No, what is and two three here?
+
+183
+00:11:27,200 --> 00:11:29,510
+Now must be introduced by both three and five.
+
+184
+00:11:29,720 --> 00:11:33,320
+That means the numbers which are divisible by six.
+
+185
+00:11:34,160 --> 00:11:34,460
+Eight.
+
+186
+00:11:34,900 --> 00:11:39,650
+If if the numbers are disturbing to all three, although that means the numbers are usually by two three
+
+187
+00:11:39,650 --> 00:11:40,100
+six.
+
+188
+00:11:40,670 --> 00:11:41,020
+Right.
+
+189
+00:11:41,240 --> 00:11:44,090
+Because two and three does not have anything.
+
+190
+00:11:45,560 --> 00:11:49,970
+Means the cobra, I'm late, so if I wanted to find it Elysium the least common multiple of two three
+
+191
+00:11:49,970 --> 00:11:51,290
+and it will be six eight.
+
+192
+00:11:51,780 --> 00:11:53,210
+So how many numbers are diesel by?
+
+193
+00:11:54,990 --> 00:12:01,110
+It would reveal just six, which is it goes to and six, which is equal to 500 by six eight and this
+
+194
+00:12:01,110 --> 00:12:01,590
+will be.
+
+195
+00:12:04,090 --> 00:12:04,510
+OK.
+
+196
+00:12:06,450 --> 00:12:10,970
+Eight and 20 will give me three, eight, I think did three is correct.
+
+197
+00:12:15,070 --> 00:12:16,660
+What is +2 five?
+
+198
+00:12:17,170 --> 00:12:24,080
+It is nothing but and then eight, which is nothing but 500 by 10, which is 50.
+
+199
+00:12:24,910 --> 00:12:33,610
+And the final one is N3 five, which is N15, which is 500 by 15, which is three and three.
+
+200
+00:12:36,760 --> 00:12:37,030
+Well.
+
+201
+00:12:38,310 --> 00:12:42,070
+Now, finally, what we need is we need all which individual right to three and five.
+
+202
+00:12:42,090 --> 00:12:48,300
+So this is nothing but at a team of two, three and five, which is the three and five, which is 30.
+
+203
+00:12:49,320 --> 00:12:49,580
+Cool.
+
+204
+00:12:50,070 --> 00:12:53,100
+So how many of them are diesel by 30 and less than 500?
+
+205
+00:12:53,500 --> 00:12:54,150
+We have.
+
+206
+00:12:55,220 --> 00:12:58,460
+Fifty by three, and it gives me one in it.
+
+207
+00:12:59,800 --> 00:13:04,630
+Well, now we have all these numbers, eight, and I want to find out the total number of elements which
+
+208
+00:13:04,630 --> 00:13:10,190
+are less than 500 and usable by just first three planes, so I cannot add all I can take individually.
+
+209
+00:13:10,210 --> 00:13:12,250
+That means 250.
+
+210
+00:13:15,350 --> 00:13:17,370
+166 plus hundred.
+
+211
+00:13:17,390 --> 00:13:21,080
+Because they're individuals now subject 83.
+
+212
+00:13:21,560 --> 00:13:23,180
+Fifty three.
+
+213
+00:13:24,350 --> 00:13:26,540
+And then finally, add it in.
+
+214
+00:13:28,890 --> 00:13:35,520
+It this is nothing but inclusion, exclusion for picking individuals, a breaking event.
+
+215
+00:13:35,940 --> 00:13:37,080
+And then again, taking out.
+
+216
+00:13:38,240 --> 00:13:38,570
+All.
+
+217
+00:13:40,810 --> 00:13:42,490
+This was an example of three, right?
+
+218
+00:13:42,820 --> 00:13:47,200
+What if the constraints were, let's say, 10 to the power rating?
+
+219
+00:13:48,780 --> 00:13:52,500
+Instead of 500 and let's say, 10.
+
+220
+00:13:53,870 --> 00:14:01,520
+And there were 10, I mean, how many numbers are less than 10 to the power rating, which is divisible
+
+221
+00:14:01,520 --> 00:14:03,680
+by first and prime numbers.
+
+222
+00:14:05,070 --> 00:14:05,880
+How would you do that?
+
+223
+00:14:09,080 --> 00:14:14,780
+So that will become a very tricky for us to solve, right, because we have to make to do the power
+
+224
+00:14:14,790 --> 00:14:17,000
+10 different combinations.
+
+225
+00:14:17,810 --> 00:14:23,780
+As I already explained, rate individual prime numbers, then we'll take them twice and then we'll know
+
+226
+00:14:24,150 --> 00:14:26,150
+raising force and so on.
+
+227
+00:14:26,980 --> 00:14:30,080
+So this is not very feasible by doing it, doing it by hand.
+
+228
+00:14:30,410 --> 00:14:32,030
+So I just wanted to give you this example.
+
+229
+00:14:32,030 --> 00:14:33,320
+So then we can call this out.
+
+230
+00:14:34,670 --> 00:14:42,200
+And in the next tutorial, I'll just go this particular example, which is will take you into less than
+
+231
+00:14:42,200 --> 00:14:43,840
+this, which is of the first interregnum.
+
+232
+00:14:45,010 --> 00:14:48,040
+Well, oh, thank you, everyone.
+
+233
+00:14:48,340 --> 00:14:48,790
+And.
+
+234
+00:14:50,020 --> 00:14:50,800
+In the next part.
+

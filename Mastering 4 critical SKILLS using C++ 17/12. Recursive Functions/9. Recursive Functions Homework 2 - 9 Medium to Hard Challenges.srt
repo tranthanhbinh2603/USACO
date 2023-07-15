@@ -1,0 +1,254 @@
+0
+1
+00:00:01,230 --> 00:00:06,770
+The set number 2 in the recursive functions for the homework includes some of the medium and hard problems.
+1
+
+2
+00:00:07,440 --> 00:00:10,820
+The first one is Right-max, close to the Left-max problem,
+2
+
+3
+00:00:10,830 --> 00:00:13,290
+But now we are doing it from right to left.
+3
+
+4
+00:00:13,530 --> 00:00:20,070
+For example, the position at 5 here is taking the maximum from here, this position till the end
+4
+
+5
+00:00:20,070 --> 00:00:20,760
+of the array.
+5
+
+6
+00:00:21,210 --> 00:00:24,750
+I would like you to introduce a new parameter to be helpful for
+6
+
+7
+00:00:24,750 --> 00:00:29,280
+You, "int start_position", use it to help you implement this task.
+7
+
+8
+00:00:30,460 --> 00:00:36,590
+Suffix sum, you are to sum only the last elements of an array, for example, if this is an array
+8
+
+9
+00:00:36,640 --> 00:00:40,500
+and you would like the last three numbers, then you need to sum 4 and 6 and 7.
+9
+
+10
+00:00:40,750 --> 00:00:43,300
+I'm not going to tell you how to define the function this time,
+10
+
+11
+00:00:43,520 --> 00:00:45,370
+Define its signature by yourself.
+11
+
+12
+00:00:46,480 --> 00:00:48,230
+Prefix sum is the same concept,
+12
+
+13
+00:00:48,250 --> 00:00:54,550
+but this time you are summing the first three numbers, 1, 3, 4. Is Palindrome, define a
+13
+
+14
+00:00:54,550 --> 00:00:57,820
+function that takes an array and tells us if it is palindrome or not.
+14
+
+15
+00:00:59,020 --> 00:01:04,510
+Is prefix, you take a string main, and a string prefix, this is a helpful variable for you,
+15
+
+16
+00:01:04,660 --> 00:01:06,730
+and also check if is prefix or not.
+16
+
+17
+00:01:08,270 --> 00:01:14,750
+Tracing, I would like you to read this code, you shouldn't run the code, by your tracing
+17
+
+18
+00:01:14,960 --> 00:01:17,060
+tell us what does this function really do?
+18
+
+19
+00:01:17,300 --> 00:01:19,220
+And I would like also to answer another question,
+19
+
+20
+00:01:19,430 --> 00:01:22,600
+What happened if we switched line 7 with line 6,
+20
+
+21
+00:01:23,160 --> 00:01:28,070
+what is the output of that?. Counting primes,
+21
+
+22
+00:01:28,190 --> 00:01:34,730
+I would like you to give a start and an end to count how many primes between start and end, inclusive,
+22
+
+23
+00:01:35,000 --> 00:01:37,140
+you shouldn't use loops at all.
+23
+
+24
+00:01:37,400 --> 00:01:40,990
+So if I give you 10 and 20, there are 4 primes only between them.
+24
+
+25
+00:01:41,360 --> 00:01:43,100
+There is also an interesting question,
+25
+
+26
+00:01:43,370 --> 00:01:49,220
+Can you compute answer for range ten to this
+26
+
+27
+00:01:49,520 --> 00:01:50,600
+Five millions or not?
+27
+
+28
+00:01:52,120 --> 00:01:58,600
+Grid sum, there is a robot starting in a 2D array at position (0, 0) can only move to the right
+28
+
+29
+00:01:58,600 --> 00:01:59,790
+or left or diagonal.
+29
+
+30
+00:02:00,070 --> 00:02:03,180
+It will select the one with the maximum value like we did before.
+30
+
+31
+00:02:03,460 --> 00:02:06,650
+I would like you to print the total path sum of this robot.
+31
+
+32
+00:02:06,970 --> 00:02:10,000
+So define a recursive function (int path_sum),
+32
+
+33
+00:02:10,330 --> 00:02:16,510
+It takes a 2d array and the current row and current column and the maximum row and the maximum column.
+33
+
+34
+00:02:16,900 --> 00:02:19,600
+You should call this function definitely with (0, 0).
+34
+
+35
+00:02:20,890 --> 00:02:28,000
+The robot is starting here at one is going to go 10 as a maximum, then going to 11 as a maximum
+35
+
+36
+00:02:28,000 --> 00:02:29,230
+and then 9 as a maximum.
+36
+
+37
+00:02:30,720 --> 00:02:37,260
+Fibonacci, Fibonacci is a sequence that we saw several times where every position is the summation of
+37
+
+38
+00:02:37,260 --> 00:02:44,550
+the two previous summations, so Fibonacci can be written recursively as following: Fibonacci(n) = 
+38
+
+39
+00:02:44,700 --> 00:02:48,350
+fibonacci(n - 1) + fibonacci(n-2).
+39
+
+40
+00:02:48,660 --> 00:02:51,810
+There is a very unique property in this problem
+40
+
+41
+00:02:51,810 --> 00:02:58,500
+Comparing to all the homework and the practice, this is the first time you have to make two calls to
+41
+
+42
+00:02:58,500 --> 00:02:59,520
+the recursive function.
+42
+
+43
+00:02:59,730 --> 00:03:03,000
+Before that, you have to make only one call like (print_
+43
+
+44
+00:03:03,030 --> 00:03:09,390
+triangle) of Level five is calling (print_Triangle) of level 4. but Fibonacci(n) needs a summation like
+44
+
+45
+00:03:09,390 --> 00:03:13,940
+here 13, 13 is Fibonacci of this guy and this guy,
+45
+
+46
+00:03:13,950 --> 00:03:16,830
+So it's the two previous before it, anyway,
+46
+
+47
+00:03:17,280 --> 00:03:20,570
+code it.
+47
+
+48
+00:03:20,690 --> 00:03:22,050
+Can you compute fibonacci(40)?
+48
+
+49
+00:03:22,230 --> 00:03:24,930
+Can you compute fibonacci(50)? why?
+49
+
+50
+00:03:25,350 --> 00:03:26,100
+Think about it.
+50
+
+51
+00:03:27,530 --> 00:03:28,150
+That's it.

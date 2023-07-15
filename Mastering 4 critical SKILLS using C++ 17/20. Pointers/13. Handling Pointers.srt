@@ -1,0 +1,575 @@
+0
+1
+00:00:01,170 --> 00:00:07,020
+What we learned so far in pointers is good, but however, in real projects, it can give you a lot
+1
+
+2
+00:00:07,020 --> 00:00:08,850
+of troubles and I would like to highlight why.
+2
+
+3
+00:00:10,530 --> 00:00:13,890
+Let's first highlight the first issue, which is the number of copies in memory.
+3
+
+4
+00:00:14,130 --> 00:00:20,000
+If you have a class ( struct ) that referring to another struct, let's say that you have an employee and
+4
+
+5
+00:00:20,000 --> 00:00:25,460
+departments and the department class want to say a vector of employee, departments.
+5
+
+6
+00:00:25,740 --> 00:00:30,330
+The problem with this line as we know is to get the number of copies. If you have a department and you pushed
+6
+
+7
+00:00:30,330 --> 00:00:33,590
+it in the vector, there are now two copies in the memory.
+7
+
+8
+00:00:33,600 --> 00:00:38,410
+If you got it back from the vector without reference, there's a third copy now.
+8
+
+9
+00:00:38,640 --> 00:00:45,150
+So this is a lot of copies and you will get a lot of bugs in the code with assume that the vector
+9
+
+10
+00:00:45,150 --> 00:00:49,380
+now is updated, but it isn't updated because they are actually several copies in the ram.
+10
+
+11
+00:00:50,550 --> 00:00:55,160
+So the way to go with that is the standard way is to refer to it using a pointer.
+11
+
+12
+00:00:55,410 --> 00:01:00,780
+So you say vector of employee pointer, now you created it once and people just are pushing back the pointer
+12
+
+13
+00:01:00,780 --> 00:01:02,970
+reference, which is just the address of the object.
+13
+
+14
+00:01:04,350 --> 00:01:10,020
+There is a workaround to avoid that like — we did in one of the projects, we just use the object
+14
+
+15
+00:01:10,020 --> 00:01:14,070
+once and other guys have an id about where is this object.
+15
+
+16
+00:01:14,100 --> 00:01:17,310
+This way, I avoided making a lot of copies in ram.
+16
+
+17
+00:01:17,310 --> 00:01:21,000
+I just have multiple ids like here multiple addresses, multiple ids.
+17
+
+18
+00:01:22,050 --> 00:01:23,410
+Still, there are two troubles.
+18
+
+19
+00:01:23,460 --> 00:01:26,280
+One of them is easily manageable and one of them is hell.
+19
+
+20
+00:01:26,640 --> 00:01:31,280
+the easy one to be managed is who is going to create a pointer and who is going to delete it.
+20
+
+21
+00:01:31,440 --> 00:01:33,830
+The deletion is important to avoid memory leaks.
+21
+
+22
+00:01:34,350 --> 00:01:39,240
+The second one is a potential loss of pointers, which might end up with some dangling pointers
+22
+
+23
+00:01:39,240 --> 00:01:44,520
+as we'll see. Later in object-oriented programming, we will learn how to reduce the pain from that,
+23
+
+24
+00:01:45,160 --> 00:01:50,250
+and in modern C++, there is something called smart pointers that makes our life much much easier.
+24
+
+25
+00:01:50,730 --> 00:01:55,990
+So let's tackle the first type of problems. We have here a struct employee, which has a pointer to an array,
+25
+
+26
+00:01:56,040 --> 00:02:00,870
+we create here an array of five elements and initialize them with this list of numbers,
+26
+
+27
+00:02:01,230 --> 00:02:07,170
+and here we are printing the value of what it (pointer) points, the address
+27
+
+28
+00:02:07,170 --> 00:02:09,170
+of where it points and the address of the pointer itself.
+28
+
+29
+00:02:09,310 --> 00:02:11,970
+Now, here there are two cases.
+29
+
+30
+00:02:12,090 --> 00:02:16,010
+If I created a normal integer with new int, I deleted it.
+30
+
+31
+00:02:16,140 --> 00:02:16,830
+Very good.
+31
+
+32
+00:02:17,520 --> 00:02:23,330
+But here if I created an object e, which creates here an array, and then it goes out of the scope.
+32
+
+33
+00:02:23,340 --> 00:02:24,390
+So it's now destroyed.
+33
+
+34
+00:02:24,750 --> 00:02:26,100
+Who deleted that one?
+34
+
+35
+00:02:26,460 --> 00:02:27,540
+No one deleted it.
+35
+
+36
+00:02:27,750 --> 00:02:32,670
+This is a memory leak. Let's make a simple rule.
+36
+
+37
+00:02:32,910 --> 00:02:38,210
+The one who creates a memory has to release it by himself.
+37
+
+38
+00:02:38,520 --> 00:02:41,700
+So the employee class created it, the employee class has to remove it.
+38
+
+39
+00:02:42,190 --> 00:02:45,140
+Here is a simple solution from C++ itself.
+39
+
+40
+00:02:45,480 --> 00:02:46,890
+There's something called destructor,
+40
+
+41
+00:02:47,310 --> 00:02:52,200
+remember, the constructor is something that creates the object, the destructor is something that
+41
+
+42
+00:02:52,200 --> 00:02:56,640
+is going to be called automatically if the object is out of scope.
+42
+
+43
+00:02:57,810 --> 00:02:59,400
+So what we do is as following:
+43
+
+44
+00:02:59,400 --> 00:03:04,890
+We use this character here, and then the struct name, and we write the logic to delete whatever we want
+44
+
+45
+00:03:04,890 --> 00:03:05,250
+to delete.
+45
+
+46
+00:03:05,280 --> 00:03:07,860
+So here I'm deleting the array pointer to xPtr.
+46
+
+47
+00:03:08,490 --> 00:03:10,210
+At this moment, I release the memory.
+47
+
+48
+00:03:10,380 --> 00:03:16,350
+So now in the creation, this construct here is called and going out of scope, this destructor
+48
+
+49
+00:03:16,350 --> 00:03:17,220
+is going to be called.
+49
+
+50
+00:03:17,580 --> 00:03:22,010
+So now this one is releasing memory. When do you need to provide a destructor?
+50
+
+51
+00:03:22,530 --> 00:03:27,810
+If you have a pointer that you used a new operator for it, pointer-new.
+51
+
+52
+00:03:27,930 --> 00:03:34,140
+If you have these two cases jointly, then you need a destructor to avoid the
+52
+
+53
+00:03:34,140 --> 00:03:34,770
+memory leak.
+53
+
+54
+00:03:35,190 --> 00:03:36,150
+So far, so good.
+54
+
+55
+00:03:36,390 --> 00:03:38,030
+Let's go to harder issue.
+55
+
+56
+00:03:38,670 --> 00:03:40,200
+Let's define two objects,
+56
+
+57
+00:03:40,200 --> 00:03:43,470
+e1 and e2, let's play with e1, the first element in the array
+57
+
+58
+00:03:43,500 --> 00:03:44,970
+we get 20. Let's print
+58
+
+59
+00:03:45,330 --> 00:03:46,220
+e1 and e2.
+59
+
+60
+00:03:46,650 --> 00:03:48,660
+So the value of e1 here, first value is
+60
+
+61
+00:03:48,660 --> 00:03:49,470
+20, here is 1.
+61
+
+62
+00:03:49,470 --> 00:03:50,220
+So far so good.
+62
+
+63
+00:03:50,640 --> 00:03:53,310
+This is the address of the memory that we created.
+63
+
+64
+00:03:53,340 --> 00:03:55,260
+This is the address of the memory that we created.
+64
+
+65
+00:03:55,530 --> 00:03:57,160
+This is the address of the pointer itself.
+65
+
+66
+00:03:57,180 --> 00:03:58,200
+This is the address of pointer so far.
+66
+
+67
+00:03:58,200 --> 00:04:04,290
+Now, let's execute line 30. Line 30 is assigning e1 to e2.
+67
+
+68
+00:04:04,680 --> 00:04:09,660
+This is going to take every element in e1 and put it in e2, which is here
+68
+
+69
+00:04:09,660 --> 00:04:16,470
+the value where xPtr is pointing to the value of e2 is pointing.
+69
+
+70
+00:04:16,470 --> 00:04:19,560
+Try to take a minute to think about what's going to happen in this program.
+70
+
+71
+00:04:19,810 --> 00:04:21,360
+There is two severe issues here.
+71
+
+72
+00:04:21,690 --> 00:04:23,310
+Take a minute and think about it.
+72
+
+73
+00:04:25,020 --> 00:04:31,050
+If you try to print now the e2-print, you discover the following: the value of
+73
+
+74
+00:04:31,050 --> 00:04:36,970
+my pointer is the value of the e1 pointer ( the value of the first element of the array ).
+74
+
+75
+00:04:37,560 --> 00:04:44,370
+The address where this pointing to is the same of the address where this pointing to. My personal
+75
+
+76
+00:04:44,370 --> 00:04:47,010
+address is different than this personal address.
+76
+
+77
+00:04:47,370 --> 00:04:48,660
+So what happened?
+77
+
+78
+00:04:48,670 --> 00:04:56,160
+Where is the critical part? the address where he is pointing to is now the same as my address where
+78
+
+79
+00:04:56,160 --> 00:04:56,790
+I point to,
+79
+
+80
+00:04:57,090 --> 00:05:00,960
+but this is a memory that I created and this is my memory that I created.
+80
+
+81
+00:05:01,320 --> 00:05:07,300
+If e2 called his memory address, then we lost 0xaaa.
+81
+
+82
+00:05:07,320 --> 00:05:08,120
+We lost it.
+82
+
+83
+00:05:08,130 --> 00:05:09,670
+We don't have this pointer anymore.
+83
+
+84
+00:05:10,170 --> 00:05:11,760
+So this is a memory leak.
+84
+
+85
+00:05:11,790 --> 00:05:15,850
+We lost this pointer because I took the where is pointing to me.
+85
+
+86
+00:05:16,620 --> 00:05:18,120
+So now this is a first memory leak.
+86
+
+87
+00:05:18,660 --> 00:05:25,530
+The second and actually the worst is the following: e1 destructor is going to destroy 
+87
+
+88
+00:05:25,530 --> 00:05:33,050
+0x19c from the memory, and then this guy e2 in the destructor is going also to destroy the same memory.
+88
+
+89
+00:05:33,780 --> 00:05:37,050
+So this memory is going to be released twice.
+89
+
+90
+00:05:37,260 --> 00:05:39,000
+This is what we call dangling pointer.
+90
+
+91
+00:05:39,240 --> 00:05:42,510
+This program is going to be crashed at that moment.
+91
+
+92
+00:05:43,050 --> 00:05:46,380
+If you look at line 41, it also has this equal operation
+92
+
+93
+00:05:46,560 --> 00:05:48,630
+so it's going also to do the same issue.
+93
+
+94
+00:05:48,630 --> 00:05:53,280
+However, line 30 and line 41 are different. 
+Line 30 is a pure assignment.
+94
+
+95
+00:05:53,310 --> 00:05:54,810
+There is no object creation here.
+95
+
+96
+00:05:54,840 --> 00:05:56,310
+This exists and this one exists.
+96
+
+97
+00:05:56,700 --> 00:05:57,630
+Line 40,
+97
+
+98
+00:05:57,630 --> 00:06:00,440
+this one only exists but this one we are creating it.
+98
+
+99
+00:06:00,810 --> 00:06:05,850
+So in the creation, the problem also can happen if we are using another object.
+99
+
+100
+00:06:07,200 --> 00:06:10,590
+For now, I would like to teach you a temporary solution for this problem.
+100
+
+101
+00:06:10,860 --> 00:06:15,390
+You are going to these two lines 20 and 21. Read them carefully.
+101
+
+102
+00:06:16,950 --> 00:06:23,190
+These two lines as following: line number 20 is going to prevent line number 29
+102
+
+103
+00:06:24,120 --> 00:06:24,420
+Line
+103
+
+104
+00:06:24,480 --> 00:06:30,120
+number 20 is going to prevent line number 29 and the line number 21 is
+104
+
+105
+00:06:30,120 --> 00:06:31,740
+going to prevent the line 28.
+105
+
+106
+00:06:31,980 --> 00:06:36,810
+If you try to do these two lines now, the compiler will complain about them, which is good
+106
+
+107
+00:06:36,810 --> 00:06:42,060
+So that you are warned that these two lines will create for you a big problem and your
+107
+
+108
+00:06:42,060 --> 00:06:46,080
+program will crash if and only if you have an internal pointer.
+108
+
+109
+00:06:46,290 --> 00:06:51,420
+You don't need to do these two lines if you don't have a pointer internally because if we don't have
+109
+
+110
+00:06:51,420 --> 00:06:56,400
+a pointer internally, we aren't afraid neither from memory leaks nor dangling pointers.
+110
+
+111
+00:06:56,400 --> 00:07:00,160
+Only if you have an internal pointer that you initialize with new, use
+111
+
+112
+00:07:00,180 --> 00:07:05,490
+these two lines. Later in OOP, we will learn how to handle these problems in an easier way.
+112
+
+113
+00:07:05,850 --> 00:07:10,980
+But for now, in your projects, I would like you to be warned by the compiler that three is something
+113
+
+114
+00:07:10,980 --> 00:07:12,870
+that will create a big problem for you.
+114
+
+115
+00:07:13,810 --> 00:07:14,380
+That's it.

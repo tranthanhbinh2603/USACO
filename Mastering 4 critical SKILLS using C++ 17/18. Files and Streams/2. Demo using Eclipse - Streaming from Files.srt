@@ -1,0 +1,99 @@
+0
+1
+00:00:01,790 --> 00:00:06,580
+This video will be like a demo for how to read from a file in eclipse.
+1
+
+2
+00:00:06,770 --> 00:00:10,140
+So here we wrote our code that's going to read from this file.
+2
+
+3
+00:00:10,160 --> 00:00:15,620
+So let's take it here and let's create a file right-click here on the project.
+3
+
+4
+00:00:15,620 --> 00:00:17,930
+new and then you select the file.
+4
+
+5
+00:00:18,320 --> 00:00:20,270
+You give it a name and.
+5
+
+6
+00:00:21,300 --> 00:00:22,370
+That's it going for you.
+6
+
+7
+00:00:22,390 --> 00:00:26,040
+Let's try 10, 20 now.
+7
+
+8
+00:00:26,130 --> 00:00:30,570
+Our code is ready to read in this file and write in this file, which doesn't exist at the moment.
+8
+
+9
+00:00:30,720 --> 00:00:32,100
+So let's just run this code.
+9
+
+10
+00:00:35,550 --> 00:00:39,900
+After we run it, the file is created here, but you may not see it, so you come here maybe and
+10
+
+11
+00:00:39,900 --> 00:00:44,670
+refresh the project you see now here my output file is 30.
+11
+
+12
+00:00:44,670 --> 00:00:47,160
+Sometimes you see the output file is empty.
+12
+
+13
+00:00:47,350 --> 00:00:52,680
+If this is the case, you need to add the word of flush, which you will learn more about it in the
+13
+
+14
+00:00:54,150 --> 00:00:55,340
+more fundamental topics.
+14
+
+15
+00:00:55,500 --> 00:00:57,270
+It's force the output here to come.
+15
+
+16
+00:00:57,360 --> 00:01:03,280
+So if you don't see the output in the file, you just need to write the flush here in the file.
+16
+
+17
+00:01:03,300 --> 00:01:03,900
+I'm not sure why.
+17
+
+18
+00:01:03,920 --> 00:01:07,270
+It's why is it sad, oh, there's a missing come.
+18
+
+19
+00:01:09,300 --> 00:01:09,660
+Yeah.
+19
+
+20
+00:01:09,660 --> 00:01:11,360
+That set about creating file an eclipse.

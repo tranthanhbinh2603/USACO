@@ -1,0 +1,171 @@
+1
+00:00:01,350 --> 00:00:06,630
+When you study algorithms, you will hear the word in place, which means you are doing something in
+
+2
+00:00:06,630 --> 00:00:08,050
+a memory efficient way.
+
+3
+00:00:08,700 --> 00:00:12,750
+The optional and the other rivers provide some implicit functionalities.
+
+4
+00:00:12,790 --> 00:00:14,280
+Let's see the reasoning behind that.
+
+5
+00:00:14,710 --> 00:00:19,960
+It is a class for an employee that provides a copy constructor and a constructor.
+
+6
+00:00:20,610 --> 00:00:24,630
+And here we have a normal MBT option.
+
+7
+00:00:24,640 --> 00:00:25,350
+That's OK.
+
+8
+00:00:25,350 --> 00:00:29,980
+And we have the direct initialization for an employee for the option.
+
+9
+00:00:30,390 --> 00:00:31,280
+It looks perfect.
+
+10
+00:00:31,290 --> 00:00:33,180
+You are just doing their initialization.
+
+11
+00:00:33,750 --> 00:00:40,740
+But sadly, due to the way that Oakshott is implemented, this would involve unnecessary kobie browsing
+
+12
+00:00:40,740 --> 00:00:42,150
+the output here.
+
+13
+00:00:42,150 --> 00:00:45,900
+From this example, you would notice that there is an extra copy that would be destroyed.
+
+14
+00:00:46,800 --> 00:00:49,380
+So these are necessary, Kobie, and this is unexpected.
+
+15
+00:00:49,550 --> 00:00:52,610
+Also, note that you have to duplicate the word Embley here and here.
+
+16
+00:00:52,860 --> 00:00:56,430
+Also here you have a vector of integrated obbligato, the vector of integral.
+
+17
+00:00:57,470 --> 00:01:01,040
+The employees functionality come to help us to solve these two problems.
+
+18
+00:01:02,930 --> 00:01:11,240
+So you provided the word in place and then you just did the arguments looking to the output that doesn't
+
+19
+00:01:11,240 --> 00:01:13,010
+exist, looking to the output.
+
+20
+00:01:13,010 --> 00:01:15,440
+It should be Embley and destroying the employee only.
+
+21
+00:01:15,470 --> 00:01:22,150
+So the employees would help you to directly really construct the employee object in a similar way.
+
+22
+00:01:22,160 --> 00:01:23,300
+This is a victory of integrity.
+
+23
+00:01:23,300 --> 00:01:25,160
+You don't have to repeat the entire world.
+
+24
+00:01:25,160 --> 00:01:31,500
+You just passed the arguments here, looking to the parameters we have here, like a template, arguments
+
+25
+00:01:31,550 --> 00:01:35,930
+receiving a bunch of parameters and forwarding them to the constructor here.
+
+26
+00:01:38,340 --> 00:01:45,480
+However, there is actually one important scenario where the object actually cannot be Kobe isn't copyable
+
+27
+00:01:45,540 --> 00:01:46,670
+and is immovable.
+
+28
+00:01:46,980 --> 00:01:51,240
+In this case, the normal directress solution will not work.
+
+29
+00:01:51,660 --> 00:01:54,460
+So the way to go here is just to go with the place.
+
+30
+00:01:54,630 --> 00:02:02,250
+So this is a mandatory amendatory case for the emblazed choice usage.
+
+31
+00:02:04,470 --> 00:02:10,290
+Another replacement for the EMBLAZED, if you would like to suggest to you the make optional, make
+
+32
+00:02:10,290 --> 00:02:14,310
+optional is like make any make unique, make shared all of that.
+
+33
+00:02:14,550 --> 00:02:20,280
+They all share the same implementation estate and same idea, and they use that recapitulation.
+
+34
+00:02:20,280 --> 00:02:23,780
+So they return it from here would be directly constructed here.
+
+35
+00:02:24,000 --> 00:02:27,110
+So no extra Koby's also would be used from here.
+
+36
+00:02:28,630 --> 00:02:32,590
+Finally, if you would like to replace an object like let's say you have an employee and would like
+
+37
+00:02:32,590 --> 00:02:39,250
+to replace the content with another way so that employees function can be used to directly construct
+
+38
+00:02:39,250 --> 00:02:44,800
+a new object inside an object and in a similar way, if you have a picture of it together, we can embellish
+
+39
+00:02:44,800 --> 00:02:53,380
+to replace internally and in place again, take a look and take a very template and pass it to the target
+
+40
+00:02:53,380 --> 00:02:53,860
+object.
+
+41
+00:02:54,430 --> 00:03:01,600
+Overall, if you would like to have a memory efficient usage use in place or make optional or emplace
+
+42
+00:03:01,600 --> 00:03:02,960
+for your needs.
+
+43
+00:03:03,400 --> 00:03:03,960
+That's it.

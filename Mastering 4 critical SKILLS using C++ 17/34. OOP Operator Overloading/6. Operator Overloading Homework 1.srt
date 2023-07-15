@@ -1,0 +1,91 @@
+1
+00:00:00,870 --> 00:00:06,270
+In decision, we will meet our first homework interpreter overloading the first one is about adding
+
+2
+00:00:06,270 --> 00:00:06,850
+to victors.
+
+3
+00:00:06,870 --> 00:00:09,390
+We know that we can define two victories in C++.
+
+4
+00:00:09,390 --> 00:00:09,770
+We do.
+
+5
+00:00:09,810 --> 00:00:12,360
+We can compare them, but we can't add them together.
+
+6
+00:00:12,750 --> 00:00:19,290
+I would like you to provide the adding operator that takes two vectors and add them together.
+
+7
+00:00:19,320 --> 00:00:22,940
+Specifically, add the smallest one to the largest one in order.
+
+8
+00:00:23,190 --> 00:00:27,900
+So if you have these two arrays, it's going to add the 10 to the one and 20 to the two, and then the
+
+9
+00:00:27,900 --> 00:00:29,340
+three and four would be as this.
+
+10
+00:00:29,550 --> 00:00:34,020
+So are now extending the functionality of something that is in our class.
+
+11
+00:00:35,740 --> 00:00:41,110
+In a similar way, the multiplication, I would like to introduce the multiplication function to the
+
+12
+00:00:41,110 --> 00:00:42,230
+string class already.
+
+13
+00:00:42,460 --> 00:00:47,830
+So if you have something like that here that times the three would repeat the word about three times.
+
+14
+00:00:48,020 --> 00:00:55,020
+So extend the C++ string class to support the multiplication operator ordering beers for our beer class.
+
+15
+00:00:55,030 --> 00:01:02,770
+I would like you to support an operator less than as a as a member function in the code to allow such
+
+16
+00:01:03,610 --> 00:01:10,090
+such operator also override the print function in the class to bring to the new to bring to the workless.
+
+17
+00:01:11,900 --> 00:01:19,940
+Sorry, the debate was already defined, just the rhetoric is that in the order of debates, you are
+
+18
+00:01:19,940 --> 00:01:24,800
+going to define a new class name, the name debate is going to inherit from the previous class.
+
+19
+00:01:25,130 --> 00:01:30,640
+So now it has one new barometer, the way you are going to define or brutalisation.
+
+20
+00:01:31,070 --> 00:01:32,290
+But be careful.
+
+21
+00:01:32,420 --> 00:01:39,470
+I don't want you to duplicate any efforts first to utilize the Berent operator Lisanne to make a comparison
+
+22
+00:01:39,800 --> 00:01:42,220
+as much as you could, then just talk to them.
+
+23
+00:01:42,500 --> 00:01:48,440
+You need to go right now the brain to function to be able to bring to the added animals that it.

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1681308215 source:e:\document\project\usaco\dynamic programming algorithms master course (2022)\chap 3\01 - finding subsets\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<set>
+	<iostream>
+	<iomanip>
+	<map>
+	<math.h>
+

@@ -1,0 +1,459 @@
+1
+00:00:01,200 --> 00:00:08,130
+In this video, you would know about some of the other algorithms in still the first one Max element,
+
+2
+00:00:08,130 --> 00:00:12,780
+which is a very basic function, you give it the beginning and end and it's going to find the maximum
+
+3
+00:00:12,780 --> 00:00:15,710
+one in this range and return and iterate over it.
+
+4
+00:00:16,290 --> 00:00:20,580
+If the iterator equal to the end, it doesn't exist, otherwise it exists.
+
+5
+00:00:22,920 --> 00:00:27,930
+So we have here a vector of employees and we put all of the employees here.
+
+6
+00:00:27,990 --> 00:00:35,700
+When you think about it, the next element would need some operator to figure out if something is the
+
+7
+00:00:35,700 --> 00:00:36,680
+maximum or not.
+
+8
+00:00:37,020 --> 00:00:42,040
+So to know the maximum or all what you need is something like the Lizanne operator.
+
+9
+00:00:42,210 --> 00:00:48,620
+So this guy must have a list then operator so that they can figure out which one is the maximum.
+
+10
+00:00:49,320 --> 00:00:52,820
+You can also assemble as right here, Pastrick and then Puducherry.
+
+11
+00:00:52,830 --> 00:00:54,150
+You know, this is an iterator.
+
+12
+00:00:54,420 --> 00:01:00,720
+So astrally is an object and the third is the actual object, but is also another function in Estela's
+
+13
+00:01:00,750 --> 00:01:00,990
+good.
+
+14
+00:01:01,020 --> 00:01:08,940
+The distance which would tell you how many how many items between the two iterators years it the distance
+
+15
+00:01:08,940 --> 00:01:09,810
+of the beginning.
+
+16
+00:01:09,810 --> 00:01:15,790
+And it is going to tell me to because the maximum here is in the position.
+
+17
+00:01:15,810 --> 00:01:16,590
+Twenty five.
+
+18
+00:01:16,860 --> 00:01:23,550
+So twenty five from zero is just the position here is to zero as to the distances to
+
+19
+00:01:26,820 --> 00:01:29,750
+the next function is find and find.
+
+20
+00:01:29,760 --> 00:01:36,520
+If, let's say you have here some vector from police and you have beginning and you would like to find
+
+21
+00:01:36,520 --> 00:01:37,080
+the E to.
+
+22
+00:01:38,770 --> 00:01:46,930
+Now, thinking about it, that the algorithm I need to to do in equal, equal comparison, so this Victor
+
+23
+00:01:46,930 --> 00:01:54,010
+here, this embley here must support an equal equal function to be able to find this guy because it
+
+24
+00:01:54,010 --> 00:01:58,720
+need to iterate from here to here and do an equal equal comparison with that.
+
+25
+00:01:58,960 --> 00:02:02,920
+Again, is returning the net result, which could be the end or not.
+
+26
+00:02:02,920 --> 00:02:04,840
+The end depends if the item exists or not.
+
+27
+00:02:05,740 --> 00:02:11,170
+There is another variant of the function name defined def, and this guy is going to iterate on the
+
+28
+00:02:11,170 --> 00:02:13,420
+algorithm, but it takes some predicate function.
+
+29
+00:02:13,690 --> 00:02:16,330
+Say here, I'm checking if the salary is odd.
+
+30
+00:02:16,780 --> 00:02:22,030
+So it is going to find if there is someone with an odd salary or not, which would be the case that
+
+31
+00:02:22,030 --> 00:02:29,740
+we have a couple of odd employees, that they're the variant here is fine, if not, which again is
+
+32
+00:02:29,740 --> 00:02:35,430
+taking some function to check if we find that element that doesn't satisfy this condition.
+
+33
+00:02:35,590 --> 00:02:38,770
+And in a very similar way, you can bet it just as an anonymous function.
+
+34
+00:02:42,270 --> 00:02:46,950
+The city has a county method, but would like to would like to see first hand account method on the
+
+35
+00:02:46,950 --> 00:02:48,960
+settlements that we already saw this before.
+
+36
+00:02:49,020 --> 00:02:55,110
+So I have four here, four employees, and I define the multi set which allow duplicates and we have
+
+37
+00:02:55,260 --> 00:02:56,220
+one to two.
+
+38
+00:02:56,220 --> 00:03:03,450
+It will have three items would be to try to bring to the count of two is going to give you three and
+
+39
+00:03:03,450 --> 00:03:05,190
+the count of four is one.
+
+40
+00:03:10,300 --> 00:03:19,570
+Now, thinking about the mindset, the mindset would like to figure out the order of the items, so
+
+41
+00:03:19,570 --> 00:03:21,300
+you must bust this then here.
+
+42
+00:03:21,880 --> 00:03:30,340
+And one of the things to keep in mind about the set multisite the map and multi map is you cannot change
+
+43
+00:03:30,340 --> 00:03:30,790
+the value.
+
+44
+00:03:30,790 --> 00:03:32,920
+Like let's say you get an iterator this way.
+
+45
+00:03:33,100 --> 00:03:40,780
+You can just say as tricky territory what you want because this guy is returning a constant iterator.
+
+46
+00:03:41,170 --> 00:03:42,160
+You cannot change it.
+
+47
+00:03:42,160 --> 00:03:43,930
+If you'd like to change it, you have to find it.
+
+48
+00:03:43,940 --> 00:03:48,130
+Then you have to remove it and insert something new internally.
+
+49
+00:03:48,370 --> 00:03:52,570
+The set and multisite are based on some specific types of data structures.
+
+50
+00:03:53,050 --> 00:03:58,630
+And you can a change in this way and observe also here this function here.
+
+51
+00:03:58,810 --> 00:04:05,860
+The list then must have a constant constant because remember from the will be when you put it means
+
+52
+00:04:05,860 --> 00:04:10,530
+that the function can change the member variables.
+
+53
+00:04:10,870 --> 00:04:14,650
+So this is a constant, constant iterator object.
+
+54
+00:04:14,860 --> 00:04:17,110
+It must call a constant function.
+
+55
+00:04:18,000 --> 00:04:25,440
+But there is also another interesting observation, supposedly the county method need to make an equally
+
+56
+00:04:25,440 --> 00:04:27,220
+equal comparison with objects.
+
+57
+00:04:27,720 --> 00:04:31,360
+However, we didn't provide an equal operator.
+
+58
+00:04:31,740 --> 00:04:33,650
+We only use the IS operator.
+
+59
+00:04:34,380 --> 00:04:41,790
+The data structures like Set and map can use that operator to figure out if they are equal, equal or
+
+60
+00:04:41,790 --> 00:04:42,120
+not.
+
+61
+00:04:42,390 --> 00:04:44,100
+Specifically and mathematically.
+
+62
+00:04:44,280 --> 00:04:50,490
+If you have A and B and you found that it is, then B is false and B this, then E false, then just
+
+63
+00:04:50,490 --> 00:04:52,470
+just means that A equal equal.
+
+64
+00:04:52,470 --> 00:04:52,890
+B.
+
+65
+00:04:55,240 --> 00:04:57,970
+Yeah, now let's start to move to the east.
+
+66
+00:04:58,030 --> 00:05:03,970
+The count would like now to just call this the recount, would like to give it the start and end and
+
+67
+00:05:03,970 --> 00:05:04,450
+E two.
+
+68
+00:05:05,050 --> 00:05:12,070
+So observer here, the county method is more flexible that you can provide a specific start and end.
+
+69
+00:05:12,700 --> 00:05:14,710
+But notice the following.
+
+70
+00:05:15,460 --> 00:05:22,540
+You need also here to provide the equal equal operator because the the county method here doesn't know
+
+71
+00:05:22,540 --> 00:05:27,520
+that this is set or what the system doesn't support this then or just going to check and make sure that
+
+72
+00:05:27,520 --> 00:05:28,480
+there is an equal degree.
+
+73
+00:05:28,750 --> 00:05:31,860
+So for one side you have to provide another another operator.
+
+74
+00:05:32,560 --> 00:05:38,560
+But what's more importantly, and we speak about that before, if if you have a data structure that
+
+75
+00:05:38,560 --> 00:05:44,050
+supports the function that the county for the set and the Esteve function, the one that you should
+
+76
+00:05:44,050 --> 00:05:51,340
+use is the one that in the data structure itself, not in the namespace, because this function would
+
+77
+00:05:51,340 --> 00:05:56,440
+be typically much better, making use of the internal representation of the data structure.
+
+78
+00:05:58,000 --> 00:06:04,360
+Variables function as you can expect you would like to replace in a given range.
+
+79
+00:06:04,750 --> 00:06:09,100
+You would like to replace something with something else so we can just give it here.
+
+80
+00:06:09,430 --> 00:06:14,530
+Notice again, we needed the equal equal operator, which is also a similar one to replace F, which
+
+81
+00:06:14,530 --> 00:06:16,320
+is taking the condition.
+
+82
+00:06:16,480 --> 00:06:20,890
+So every time this condition is achieved, you replace it with E one.
+
+83
+00:06:22,620 --> 00:06:30,060
+The search and the search and the search in is going to search for any items, so, for example, if
+
+84
+00:06:30,060 --> 00:06:35,730
+you give it begin and end and you give it three, it's going to search for three consecutive items of
+
+85
+00:06:35,730 --> 00:06:41,200
+value to if it haven't found them to return and iterator to the first item of them.
+
+86
+00:06:41,760 --> 00:06:46,290
+So if we try to get into the distance between the beginning and that return is going to be one here
+
+87
+00:06:46,290 --> 00:06:48,540
+because it is in this position.
+
+88
+00:06:48,540 --> 00:06:51,780
+So we're searching for three consecutive, which is this guy.
+
+89
+00:06:53,590 --> 00:06:58,630
+We have here a victor, by the way, remember that we can compare vectors with equal, equal and greater
+
+90
+00:06:58,630 --> 00:07:04,920
+than and so on, and we took this at this begin and we did.
+
+91
+00:07:04,930 --> 00:07:05,740
+And it is for it.
+
+92
+00:07:06,160 --> 00:07:11,230
+There is another method, namely search, which you can search for a subject or a subliterate or in
+
+93
+00:07:11,230 --> 00:07:14,650
+a territory, give it begin and end and you give another beginning.
+
+94
+00:07:14,650 --> 00:07:21,100
+End is going to search of this iterator range exist in this iterator range.
+
+95
+00:07:21,400 --> 00:07:26,680
+Again, notice that you need the equally good operators to be able to do the search function.
+
+96
+00:07:28,900 --> 00:07:35,740
+Another interesting function is the for each method, the for each can take a begin and end to iterate
+
+97
+00:07:35,740 --> 00:07:40,270
+over the range and another function to apply difficulty as you see.
+
+98
+00:07:40,420 --> 00:07:41,000
+Probably.
+
+99
+00:07:41,140 --> 00:07:43,970
+Can you just use the normal for us to iterate on something?
+
+100
+00:07:43,990 --> 00:07:45,990
+Maybe this is more flexible in the beginning end.
+
+101
+00:07:46,360 --> 00:07:48,400
+But there is one interesting thing about it.
+
+102
+00:07:49,150 --> 00:07:55,000
+Given that we can better function, we can also Balbus a function like that, some some class or struct
+
+103
+00:07:55,000 --> 00:07:57,570
+that overload the function called operator.
+
+104
+00:07:58,090 --> 00:08:03,760
+Now the interesting part is we can wire this guy is iterating with the class.
+
+105
+00:08:03,760 --> 00:08:08,920
+We can maintain whatever information we need to do in the class so that you can think of it as a more
+
+106
+00:08:08,920 --> 00:08:10,450
+statistics and more information.
+
+107
+00:08:10,750 --> 00:08:12,310
+So for example, here I have an assembly.
+
+108
+00:08:12,320 --> 00:08:13,950
+I would like to sum all of the salaries.
+
+109
+00:08:14,320 --> 00:08:20,290
+So I give it the sum function called, which is an an object will be created from the guy.
+
+110
+00:08:20,890 --> 00:08:29,200
+And every time it takes an object from the whole range, it's going to incrementally sum the for each
+
+111
+00:08:29,200 --> 00:08:32,280
+is going to return for you in this case, an object of type.
+
+112
+00:08:32,320 --> 00:08:34,180
+So now you can use it here.
+
+113
+00:08:34,480 --> 00:08:42,010
+So the model of that is you can have a class that can maintain some information and existence and whatever
+
+114
+00:08:42,010 --> 00:08:43,540
+about every kind of element.
+
+115
+00:08:43,750 --> 00:08:46,270
+If you have interest in that, that's it.

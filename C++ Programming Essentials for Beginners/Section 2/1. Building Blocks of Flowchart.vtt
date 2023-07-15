@@ -1,0 +1,274 @@
+WEBVTT
+
+00:01.490 --> 00:07.160
+Everyone in this module, we will talk about flowcharts, the water flow times, the flowcharts Otto
+
+00:07.180 --> 00:11.450
+diagrammatic representation illustrating a solution to a given problem we'll get.
+
+00:11.870 --> 00:14.980
+So what is the problem so it can be any problem?
+
+00:15.010 --> 00:17.480
+OK, for example, making a cup of coffee?
+
+00:17.870 --> 00:18.890
+It can be a problem.
+
+00:19.190 --> 00:24.290
+And you want to depict what are the steps needed to make a cup of coffee, OK?
+
+00:24.620 --> 00:28.430
+So all the steps in a given order they can be represented.
+
+00:28.430 --> 00:36.440
+Using a flowchart to a flowchart allows you to break down any process into smaller steps and display
+
+00:36.440 --> 00:38.300
+them in a visually appealing way again.
+
+00:38.300 --> 00:45.320
+So it it becomes very easy for the beginners to draw and understand a flowchart again without writing
+
+00:45.320 --> 00:46.200
+complex code.
+
+00:46.220 --> 00:50.720
+You can easily understand what steps you will perform in order to solve a problem.
+
+00:51.020 --> 00:52.430
+That is what a flowchart is.
+
+00:53.090 --> 01:00.080
+We have several components that are used inside logic, so you can call these components as building
+
+01:00.080 --> 01:05.690
+blocks of the flowchart to get the first building block or the component is a Starbucks.
+
+01:05.690 --> 01:08.210
+It denotes the starting step again.
+
+01:08.210 --> 01:15.310
+That means the solution starts from this particular box, and it can also be used to terminate the process.
+
+01:15.530 --> 01:22.100
+For example, if you want to end the process, then you can draw a box like this.
+
+01:22.580 --> 01:28.910
+It's a oval shaped box, and you will draw this box to denote the start or the end of the process.
+
+01:29.750 --> 01:33.020
+One thing that you would be doing very frequently is reading it.
+
+01:33.140 --> 01:41.150
+For example, if you want to make coffee, you will read the input for how many guests you want to read
+
+01:41.150 --> 01:42.320
+to make the coffee.
+
+01:42.320 --> 01:48.530
+OK, so you will read the value of in the note the number of guests will want to have coffee.
+
+01:49.380 --> 01:52.940
+OK, so we understood this value inside a bucket.
+
+01:53.090 --> 01:55.820
+That bucket is created inside your room.
+
+01:56.060 --> 01:57.530
+That is random access memory.
+
+01:57.980 --> 02:02.120
+The way to depict the read statement is by using this.
+
+02:03.740 --> 02:10.760
+Walks in a shape of a parallelogram and misread the value of so this will create a bucket inside Iran.
+
+02:11.390 --> 02:16.320
+And for example, there are four guests, so this bucket will store the value for it.
+
+02:16.380 --> 02:21.140
+OK, this will store the value for the middle if you want to put in.
+
+02:21.580 --> 02:28.460
+OK, you want to print something you're going to print the value of in this kind of a box, which is
+
+02:28.460 --> 02:29.930
+in the form of a parallelogram.
+
+02:30.440 --> 02:32.270
+It is used for input and output.
+
+02:32.870 --> 02:34.520
+The what you want to print something.
+
+02:35.910 --> 02:38.630
+Directly, suppose you want to print high.
+
+02:39.510 --> 02:42.930
+Anything that you want to display as it is, OK?
+
+02:43.170 --> 02:45.090
+It is written inside double goods.
+
+02:45.700 --> 02:46.710
+So these are the real goods.
+
+02:47.430 --> 02:48.570
+And here you are writing.
+
+02:48.570 --> 02:52.080
+And so this will actually print the value for it or it will not print.
+
+02:52.080 --> 02:55.200
+And because it is, it will print the value of it.
+
+02:56.160 --> 02:57.990
+So I hope these two components will clear.
+
+02:58.740 --> 03:03.690
+The next component is a rectangle that is used anywhere.
+
+03:03.690 --> 03:11.190
+You have to process some data, for example, you want to see that my marks of a particular student.
+
+03:11.820 --> 03:14.490
+They will be average of marks in maths.
+
+03:15.510 --> 03:18.180
+Less physics by two by example.
+
+03:18.240 --> 03:19.590
+You want to do something like this.
+
+03:20.250 --> 03:22.440
+So this is kind of a process.
+
+03:22.600 --> 03:28.320
+So what you are doing, your calculating this value and you're putting this value inside a bucket called
+
+03:28.320 --> 03:28.800
+marks.
+
+03:29.280 --> 03:31.680
+But this is known as assignment statement.
+
+03:31.980 --> 03:32.250
+OK.
+
+03:32.820 --> 03:34.560
+This is known as assignment.
+
+03:37.010 --> 03:41.540
+You're saying some equal to zero, so what you're doing, your assigning the value zero to a bucket
+
+03:41.540 --> 03:43.250
+called some some is a bucket.
+
+03:44.530 --> 03:46.030
+And that is not during a value.
+
+03:47.440 --> 03:47.670
+OK.
+
+03:48.490 --> 03:51.800
+All these instructions where the processing is happening.
+
+03:51.820 --> 03:52.130
+OK.
+
+03:52.150 --> 03:57.580
+Anything except from input output or you're assigning certain value, they will be depicted using a
+
+03:57.580 --> 04:01.810
+rectangle the same as a bucket that is not storing the value beetle.
+
+04:02.050 --> 04:02.320
+OK.
+
+04:03.440 --> 04:08.750
+So this is known as assignment to later on, we will see the difference between the liquid, which is
+
+04:08.770 --> 04:13.210
+known as assignment and the equal of which is known as equality.
+
+04:13.780 --> 04:15.370
+These two are different.
+
+04:16.740 --> 04:24.810
+Operators in programming, OK, so right now we have seen what as an assignment, the next component
+
+04:25.290 --> 04:26.730
+is a decision box.
+
+04:26.760 --> 04:30.570
+It has denoted using this diamond shape box, also known as rhombus.
+
+04:31.170 --> 04:36.840
+So whenever you have a certain condition to check, that means you want to check whether this condition
+
+04:36.840 --> 04:37.890
+is true or false.
+
+04:38.220 --> 04:44.340
+You will have this kind of a box and based upon a condition, there can be two branches.
+
+04:45.090 --> 04:48.570
+If the condition is true, then I will go in this yes branch.
+
+04:49.020 --> 04:52.320
+If the condition is false, I will go in this particular branch.
+
+04:52.740 --> 04:58.500
+An example of a condition could be is whether any OK is, is the weather rainy?
+
+04:58.980 --> 04:59.670
+If it is raining?
+
+04:59.690 --> 05:02.490
+OK, I want to go out with the umbrella.
+
+05:02.970 --> 05:05.040
+If it does not, let us assume it is sunny.
+
+05:05.460 --> 05:08.010
+I will go with sunglasses, something like this.
+
+05:09.120 --> 05:14.790
+Every time you have to do some work based on a certain condition, then you will depict the condition
+
+05:14.790 --> 05:18.480
+inside this both shape boxed.
+
+05:18.900 --> 05:22.680
+OK, so this box is used to denote the condition.
+
+05:23.430 --> 05:26.880
+The next thing that you will find in a flowchart is arrows.
+
+05:26.880 --> 05:30.610
+OK, so these arrows are used to connect to different boxes, OK?
+
+05:30.670 --> 05:33.510
+For example, I want to connect start with read.
+
+05:33.930 --> 05:39.480
+That means after a start, go to this box, read and after you then go to this box.
+
+05:39.900 --> 05:45.990
+These arrows are used to connect multiple building blocks inside the flowchart.
+
+05:46.200 --> 05:46.500
+OK.
+
+05:46.980 --> 05:54.600
+So in the next lecture, we will see certain examples and will solve some problems and will draw flowchart
+
+05:54.600 --> 05:55.050
+for them.
+
+05:55.140 --> 05:56.790
+So I hope the building blocks are clear.
+
+05:56.820 --> 05:57.840
+See you in the next video.

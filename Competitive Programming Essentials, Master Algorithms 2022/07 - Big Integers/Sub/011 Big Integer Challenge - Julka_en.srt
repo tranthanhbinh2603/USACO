@@ -1,0 +1,324 @@
+1
+00:00:01,020 --> 00:00:07,620
+Hi Everyone. in this lecture, we're going to solve a challenge from the online platform that is a SPOJ.
+
+2
+00:00:08,189 --> 00:00:13,260
+And it's a very simple problem that deals with big integer operations.
+
+3
+00:00:13,890 --> 00:00:17,970
+So let us look at the problem statement and then we will try to solve it.
+
+4
+00:00:18,450 --> 00:00:25,440
+OK. so let's say. so the Julka is given by her teacher is the very simple puzzle.
+
+5
+00:00:26,040 --> 00:00:31,050
+There are two friends and they have 10 apples together.
+
+6
+00:00:31,120 --> 00:00:31,440
+OK.
+
+7
+00:00:36,560 --> 00:00:37,070
+And
+
+8
+00:00:38,720 --> 00:00:41,870
+one of the girls has two more apples than the other girl.
+
+9
+00:00:42,420 --> 00:00:43,730
+How many apples they have?
+
+10
+00:00:43,780 --> 00:00:45,530
+OK. so this is a simple example.
+
+11
+00:00:45,920 --> 00:00:47,270
+The actual question is here.
+
+12
+00:00:48,010 --> 00:00:53,650
+Let us first look at the example, then we will look at the problem. In the example it is given ok 
+
+13
+00:00:53,650 --> 00:00:54,140
+one girl has
+
+14
+00:00:54,140 --> 00:00:57,920
+apple x, another girl has y number of apples.
+
+15
+00:00:58,520 --> 00:01:00,320
+The sum of the apples is 10.
+
+16
+00:01:00,530 --> 00:01:05,330
+That is X plus y it is 10 and the other girl has two more apples
+
+17
+00:01:05,330 --> 00:01:09,500
+then the first girl. So y is having X plus 2 apples.
+
+18
+00:01:09,560 --> 00:01:15,740
+So if effectively you can say. OK. Y it's nothing but x plus two so x plus x plus two.
+
+19
+00:01:15,950 --> 00:01:16,820
+This is 10.
+
+20
+00:01:17,330 --> 00:01:20,780
+That means 2X is equal to 10 minus two. eight.
+
+21
+00:01:21,230 --> 00:01:24,260
+It means X is nothing but eight by two
+
+22
+00:01:24,260 --> 00:01:26,750
+that is four. the value of X is four.
+
+23
+00:01:27,170 --> 00:01:28,640
+And what is the value of Y?
+
+24
+00:01:28,700 --> 00:01:30,470
+That is X plus two that is 10.
+
+25
+00:01:31,070 --> 00:01:34,160
+So you can see this is the number of apples the first girl has.
+
+26
+00:01:34,160 --> 00:01:36,380
+This is a number of apples the second girl has.
+
+27
+00:01:37,010 --> 00:01:42,080
+Now the question is let us make the problem a little more difficult instead of saying they have 10 apples,
+
+28
+00:01:42,950 --> 00:01:45,020
+so the teacher is trying to check that
+
+29
+00:01:46,590 --> 00:01:52,280
+If it increases the value of some of apples then whether they can solve it correctly or not. ok.
+
+30
+00:01:52,950 --> 00:01:59,280
+the teacher wants to continue asking the question but with big numbers. OK. so help the teacher to write
+
+31
+00:01:59,280 --> 00:02:02,220
+a program which will tell her the right answers. so what we are given?
+
+32
+00:02:02,220 --> 00:02:02,940
+So we are given
+
+33
+00:02:03,420 --> 00:02:07,710
+that X plus Y is now not 10 but it's a big number. OK?
+
+34
+00:02:08,400 --> 00:02:12,990
+And it is also given that the second girl has instead of having... ok.
+
+35
+00:02:16,860 --> 00:02:23,670
+So it is given that the second goal is having K more apples than the first girl.
+
+36
+00:02:23,700 --> 00:02:29,130
+OK, so if you go through the problem statement, you will get to know. In the input you're given
+
+37
+00:02:29,130 --> 00:02:31,230
+every test case consist of two lines.
+
+38
+00:02:31,260 --> 00:02:34,050
+The first says how many apples both the girls have.
+
+39
+00:02:34,710 --> 00:02:41,220
+The second line is how many more apples the second girls. OK and both are the positive integers and the value
+
+40
+00:02:41,220 --> 00:02:44,010
+of the integer is of the order 10 power 100.
+
+41
+00:02:44,010 --> 00:02:47,220
+But that means you cannot fit this number inside the regular integer.
+
+42
+00:02:47,220 --> 00:02:49,130
+you need a big integer. ok.
+
+43
+00:02:50,870 --> 00:02:56,350
+So every test case should output two lines. and first should contain the number of apples belonging to
+
+44
+00:02:56,370 --> 00:03:00,320
+the first girl. second should contain the number of apples belonging to the second girl.
+
+45
+00:03:00,890 --> 00:03:02,780
+All right, so this is what we have.
+
+46
+00:03:05,440 --> 00:03:08,660
+So let's see how we can approach this question now.
+
+47
+00:03:08,680 --> 00:03:17,740
+So if I say, it is given that OK. let us assume the first girl has x apples.
+
+48
+00:03:18,820 --> 00:03:21,610
+The second girl has Y number of apples.
+
+49
+00:03:22,420 --> 00:03:27,070
+It is given X plus y is what? X plus Y is what?
+
+50
+00:03:27,730 --> 00:03:34,490
+It's a big integer N. OK. and it is also given that Y is K more than X.
+
+51
+00:03:34,510 --> 00:03:38,140
+OK, so I can say x plus x plus k.
+
+52
+00:03:38,920 --> 00:03:40,570
+This is equal to N OK.
+
+53
+00:03:40,960 --> 00:03:45,670
+That means 2X plus K is equal to N.
+
+54
+00:03:46,720 --> 00:03:52,390
+And N and K is input. ok. the input is given. input is N and K.
+
+55
+00:03:52,960 --> 00:04:00,940
+And in the output, we need to find the values of X and Y. so we can simply say X is nothing but N minus
+
+56
+00:04:00,940 --> 00:04:01,750
+K by two.
+
+57
+00:04:02,380 --> 00:04:02,950
+All right.
+
+58
+00:04:03,580 --> 00:04:07,780
+And what would be the value of a Y. Y is nothing but x plus K.
+
+59
+00:04:08,170 --> 00:04:08,500
+OK.
+
+60
+00:04:09,040 --> 00:04:14,140
+So using this formula, we can find out values of both X and Y.
+
+61
+00:04:14,560 --> 00:04:20,140
+And what I would suggest is you try to write a program on your own, which works with big integers.
+
+62
+00:04:20,290 --> 00:04:20,589
+OK.
+
+63
+00:04:21,610 --> 00:04:23,320
+So what is what we are doing here?
+
+64
+00:04:23,500 --> 00:04:24,940
+We are doing a subtraction.
+
+65
+00:04:25,510 --> 00:04:32,500
+If you use Java, you can use the subtract method on the big integer object.
+
+66
+00:04:32,740 --> 00:04:33,100
+OK.
+
+67
+00:04:33,820 --> 00:04:39,310
+And here you are also doing a division, so you can use the divide method.
+
+68
+00:04:39,430 --> 00:04:39,760
+OK.
+
+69
+00:04:40,750 --> 00:04:45,970
+And one thing you need to notice if N and K are big integers then you can easily do subtraction.
+
+70
+00:04:46,420 --> 00:04:47,980
+But this two is an integer
+
+71
+00:04:47,980 --> 00:04:54,760
+So maybe you have to convert this to into a big integer object and then you have to divide it with two.
+
+72
+00:04:54,760 --> 00:05:00,070
+Okay. so you can say something like OK. let's create a big integer using this two.
+
+73
+00:05:01,040 --> 00:05:01,820
+Something like this.
+
+74
+00:05:03,140 --> 00:05:05,990
+So we will see in the next video, how you can write the code.
+
+75
+00:05:06,320 --> 00:05:09,110
+And this is what? this is nothing but addition operation.
+
+76
+00:05:09,470 --> 00:05:14,840
+You're again adding a big integer X with a big integer K. and you are done.
+
+77
+00:05:14,870 --> 00:05:18,950
+OK, so let's see the code in the next lecture.
+
+78
+00:05:18,980 --> 00:05:25,000
+But before that, I want you to try this problem on your own and try to submit it on SPOJ in Java.
+
+79
+00:05:25,010 --> 00:05:25,340
+OK?
+
+80
+00:05:25,850 --> 00:05:26,340
+That's all.
+
+81
+00:05:26,510 --> 00:05:27,500
+See you in the next video.
+

@@ -1,0 +1,79 @@
+1
+00:00:00,900 --> 00:00:05,940
+Similar to the Dubina binary operator overloading, we can also override the owner operators.
+
+2
+00:00:05,970 --> 00:00:10,530
+Remember, there were many generators we can have the single minus, we can have the not.
+
+3
+00:00:10,680 --> 00:00:12,870
+We can have the plus, plus and minus minus and so on.
+
+4
+00:00:12,870 --> 00:00:17,850
+And many of them in next, which somewhere will explain the plus, plus and minus minus because it has
+
+5
+00:00:17,850 --> 00:00:19,700
+some electrics.
+
+6
+00:00:19,920 --> 00:00:21,450
+So let's add to the mix here.
+
+7
+00:00:21,490 --> 00:00:27,360
+And let's say that our logic is if you use the operator not we are multiplying each number with the
+
+8
+00:00:27,360 --> 00:00:27,880
+minus one.
+
+9
+00:00:28,230 --> 00:00:31,680
+So I can I can inside the class and find a new operator.
+
+10
+00:00:31,680 --> 00:00:38,060
+Not and then notice here, this is unary greater so you don't take a second parameter.
+
+11
+00:00:38,370 --> 00:00:43,840
+So we got the Meyerbeer here and just multiply created the new one with the minus one would definitely
+
+12
+00:00:44,100 --> 00:00:44,760
+make it more easier.
+
+13
+00:00:44,760 --> 00:00:49,650
+Just, just first equals minus first and so on in a very similar way.
+
+14
+00:00:49,680 --> 00:00:51,140
+We do find it inside the class.
+
+15
+00:00:51,150 --> 00:00:53,130
+We can also define it outside the class.
+
+16
+00:00:53,130 --> 00:00:56,470
+But if we defined it out of the class, it would have a single parameter only.
+
+17
+00:00:56,850 --> 00:00:58,980
+So inside the class, what parameters?
+
+18
+00:00:59,220 --> 00:01:03,150
+Outside the class, the first parameter, which will act like the lift operator.
+
+19
+00:01:03,390 --> 00:01:11,550
+So here we say X equals X is going to find additional objects are going to find, if not can be applied
+
+20
+00:01:11,550 --> 00:01:14,790
+to the operator or not.

@@ -1,0 +1,347 @@
+1
+00:00:01,170 --> 00:00:07,950
+One of the topics in C++ is about what we call extreme manipulators and manipulator is something that
+
+2
+00:00:07,950 --> 00:00:11,370
+changes the format of the many of the stream itself.
+
+3
+00:00:11,910 --> 00:00:17,880
+For example, remember we used in Fluting when we something would fixate on scientific and point.
+
+4
+00:00:18,330 --> 00:00:22,540
+Remember, the rule mainly was to change the output format itself.
+
+5
+00:00:22,560 --> 00:00:26,430
+So we use scientific you start to see some some scientific notation.
+
+6
+00:00:26,590 --> 00:00:30,360
+This is what we mean by changing the format of the parameters here.
+
+7
+00:00:30,380 --> 00:00:35,610
+For example, if you also use a key word like our case, there is more will be printed.
+
+8
+00:00:36,840 --> 00:00:39,570
+Also one, we want to mention the word alpha.
+
+9
+00:00:39,570 --> 00:00:45,710
+When you citable the Alpha, the value of the word is printed as true and the value of Foulds is printed
+
+10
+00:00:45,720 --> 00:00:47,290
+as a zero.
+
+11
+00:00:47,430 --> 00:00:50,040
+So this is also when a change to the Elbit itself.
+
+12
+00:00:50,400 --> 00:00:53,640
+So today we are going to know about little other manipulators.
+
+13
+00:00:53,880 --> 00:00:55,500
+One of them is called the Schubas.
+
+14
+00:00:55,800 --> 00:00:58,080
+Schabas is just forcing the same.
+
+15
+00:00:58,380 --> 00:01:03,870
+Well, if you printed the hundred, it's typically printed without a plus sign.
+
+16
+00:01:03,890 --> 00:01:05,610
+But what if you would like a sign for it?
+
+17
+00:01:05,970 --> 00:01:10,070
+When you use a city, your position is going to show the sign here.
+
+18
+00:01:10,260 --> 00:01:13,500
+If you'd like to cancel it, you can say, is that a no show position?
+
+19
+00:01:13,800 --> 00:01:15,540
+So now it is going to print without it.
+
+20
+00:01:16,890 --> 00:01:23,170
+They said CW is one of the most important ones to know about them when you try to bring something like
+
+21
+00:01:23,170 --> 00:01:28,260
+that one, two, three, four, with two brackets here, it just printed as we expected.
+
+22
+00:01:28,750 --> 00:01:31,970
+What if you would like to bring it in a field of any characters?
+
+23
+00:01:32,080 --> 00:01:35,260
+But if you do, we mean think of it like any different slots.
+
+24
+00:01:35,980 --> 00:01:43,420
+For example, here, if I say said W5, it is going to set a window of five spaces and then when you
+
+25
+00:01:43,420 --> 00:01:50,250
+write one, two, three, four is going by default to write them to the end of the five slots here.
+
+26
+00:01:50,530 --> 00:01:55,270
+If you have set of six out of six, the characters are here and then you put the four characters here,
+
+27
+00:01:55,570 --> 00:01:56,710
+seven and so on.
+
+28
+00:01:57,980 --> 00:02:03,320
+What if you would like the printing to be on the left side, so I know say said, but I come here first
+
+29
+00:02:03,380 --> 00:02:10,660
+and said it is Flagg's to left now when you try to print, it is going to print them in the left side.
+
+30
+00:02:11,180 --> 00:02:17,330
+This interview is very important in when you have a printing, say, for tables or so, I would like
+
+31
+00:02:17,330 --> 00:02:18,770
+the other to be very organized.
+
+32
+00:02:18,770 --> 00:02:20,570
+So S.W. is your way to do that.
+
+33
+00:02:22,490 --> 00:02:24,380
+There is something called business.
+
+34
+00:02:24,450 --> 00:02:29,780
+We know about the the DISMEMBERS and we talked about the Minorities' before.
+
+35
+00:02:29,790 --> 00:02:34,000
+There are other types of abuses like what we call Octagon and hexagon.
+
+36
+00:02:34,700 --> 00:02:36,710
+You do know about the hexadecimal.
+
+37
+00:02:36,720 --> 00:02:38,210
+You do know about these types at the moment.
+
+38
+00:02:38,210 --> 00:02:44,120
+But just I wanted you to know that we can bring to the numbers in different ways in Boynton's, because
+
+39
+00:02:44,130 --> 00:02:47,680
+you will notice that the numbers are always printed in this hexadecimal format.
+
+40
+00:02:48,230 --> 00:02:51,900
+If you read the text of the deal, it's going to bring to the the the number.
+
+41
+00:02:51,920 --> 00:02:54,770
+This way, if you use the other case, it would be printed this way.
+
+42
+00:02:54,890 --> 00:02:56,890
+If you don't understand that, this is totally OK.
+
+43
+00:02:58,340 --> 00:03:00,110
+OK, there is one interesting thing here.
+
+44
+00:03:00,410 --> 00:03:05,090
+Sometimes when you on your program and there is a crash for it, let's say you divide it by zero.
+
+45
+00:03:05,360 --> 00:03:08,090
+And there was a lot of how would you expect to see in the console.
+
+46
+00:03:08,090 --> 00:03:10,200
+But you look to the console, you don't see the output.
+
+47
+00:03:10,370 --> 00:03:14,630
+This is one one of the bothering, puzzling things for a for a newcomer for gaming.
+
+48
+00:03:15,080 --> 00:03:15,910
+What is the issue?
+
+49
+00:03:16,490 --> 00:03:19,400
+The issue is in the sea out object.
+
+50
+00:03:20,450 --> 00:03:26,660
+When you write your data, the actually not printed directly to the console, which is internally buffer,
+
+51
+00:03:26,870 --> 00:03:31,910
+they think of the buffer like an internal array of characters with every time you bring to something,
+
+52
+00:03:32,150 --> 00:03:34,160
+the combinat is just in the runtime.
+
+53
+00:03:34,370 --> 00:03:37,670
+They put this out in the array of characters printed.
+
+54
+00:03:38,180 --> 00:03:43,070
+And this array has a limited size, let's say a hundred character or eighty characters.
+
+55
+00:03:43,700 --> 00:03:47,780
+Every time you reach the end, the limit of the array, let's say you print it.
+
+56
+00:03:47,780 --> 00:03:52,220
+So far, 80 characters is going to print it, print it wants.
+
+57
+00:03:52,250 --> 00:03:53,210
+What is the point.
+
+58
+00:03:53,960 --> 00:03:59,260
+So it is writing to a console or writing to a file is very slow operation.
+
+59
+00:03:59,600 --> 00:04:03,140
+So the behind the scenes they would like to minimize the number of writings.
+
+60
+00:04:03,350 --> 00:04:06,890
+That's why they keep putting in the content in an array and the printed it.
+
+61
+00:04:07,190 --> 00:04:11,090
+It's all of it felt the problem was behind the scenes crashes.
+
+62
+00:04:11,300 --> 00:04:14,840
+The crash happens, but the real content is imprinted so far.
+
+63
+00:04:15,140 --> 00:04:20,360
+That's why it could happen that there is a crash and there is an output buffer that is imprinted.
+
+64
+00:04:20,360 --> 00:04:22,480
+So you didn't see what you already wrote.
+
+65
+00:04:23,060 --> 00:04:24,290
+Now, here's an interesting fact.
+
+66
+00:04:24,590 --> 00:04:29,690
+What if I would like to force the printing to heaven directly without being put in the buffer?
+
+67
+00:04:29,960 --> 00:04:31,220
+You would the would the flash.
+
+68
+00:04:32,270 --> 00:04:38,300
+So the model of all of what I was saying, if you would force an elbow to really come outside of the
+
+69
+00:04:38,300 --> 00:04:40,690
+once you did writing, you just put the word flash.
+
+70
+00:04:40,700 --> 00:04:42,760
+Once you put the word flush it go.
+
+71
+00:04:42,770 --> 00:04:46,550
+And the force of taking the output of the buffer so far and just print it.
+
+72
+00:04:46,970 --> 00:04:52,600
+So if it happened that you have a crash and you don't see all of the L would try to put a flash to force
+
+73
+00:04:53,140 --> 00:04:54,920
+you feel free to here more.
+
+74
+00:04:57,170 --> 00:05:00,380
+There's also another thing that I would like to know about through the whole course.
+
+75
+00:05:00,380 --> 00:05:04,070
+We were using the out for printing, which is actually two other things.
+
+76
+00:05:04,070 --> 00:05:07,730
+One of them, the named Serhan said, is abbreviation to console error.
+
+77
+00:05:08,090 --> 00:05:15,740
+When there is some kind of errors that you feel in there, could you might use the third A.D.s in eclipse.
+
+78
+00:05:15,740 --> 00:05:18,440
+You will notice the third is printed in a red color.
+
+79
+00:05:19,010 --> 00:05:24,620
+So the interest in here, if you send a message said, does it have an internal buffer?
+
+80
+00:05:24,620 --> 00:05:25,770
+So it's always the flush.
+
+81
+00:05:25,910 --> 00:05:27,140
+It's always printed.
+
+82
+00:05:27,260 --> 00:05:30,620
+You do need to put a flush with the Wesser.
+
+83
+00:05:30,860 --> 00:05:35,420
+So try to use see our concert to see maybe cut difference.
+
+84
+00:05:36,380 --> 00:05:41,480
+What is it, what is the like the consequence of flushing a lot.
+
+85
+00:05:41,690 --> 00:05:44,390
+As I said, writing is an expensive operation.
+
+86
+00:05:44,390 --> 00:05:48,350
+So if you are trying a lot of writing, this is very slow.
+
+87
+00:05:48,710 --> 00:05:52,130
+You would notice that if you are writing a huge amount of it, that's it.

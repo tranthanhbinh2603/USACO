@@ -1,0 +1,331 @@
+﻿WEBVTT
+
+00:00:01.920 --> 00:00:04.500
+Nó chỉ là bài tập về nhà đệ quy đầu tiên.
+
+00:00:05.010 --> 00:00:09.360
+Nhưng trước tiên, tôi muốn dạy bạn một vài thứ để làm một cái gì đó đệ quy.
+
+00:00:09.660 --> 00:00:12.270
+Đây là một trong những chủ đề khó nhất trong lập trình.
+
+00:00:12.810 --> 00:00:18.660
+Bạn sẽ chú ý đến các sinh viên
+năm thứ hai và năm thứ ba của
+
+00:00:18.660 --> 00:00:21.180
+khoa học máy tính, và họ đang
+phàn nàn về các hàm đệ quy.
+
+00:00:21.720 --> 00:00:28.380
+Vì vậy, nếu bạn gặp khó khăn
+trong những bài học này hoặc thậm
+
+00:00:28.380 --> 00:00:30.120
+chí trong vài năm tới, tôi muốn
+bạn biết rằng đây là tiêu chuẩn.
+
+00:00:30.690 --> 00:00:31.710
+Đây là điều bình thường.
+
+00:00:33.060 --> 00:00:38.910
+Sau một thời gian, bạn
+thấy mình đã trở nên khá
+
+00:00:38.910 --> 00:00:39.600
+giỏi trong các hàm đệ
+quy và các thuật toán.
+
+00:00:39.810 --> 00:00:42.480
+Tất nhiên, bạn sẽ gặp nhiều loại đệ quy.
+
+00:00:42.720 --> 00:00:45.840
+Mỗi người trong số họ sẽ cho bạn rất nhiều thời gian khó khăn.
+
+00:00:46.500 --> 00:00:52.650
+Nhưng tại một thời điểm nào đó,
+tâm trí của bạn sẽ được định hình
+
+00:00:52.650 --> 00:00:53.280
+lại để nghĩ về những cái cây tốt
+theo cách đệ quy, một cách dễ dàng.
+
+00:00:53.880 --> 00:00:55.080
+Vì vậy, nó là một vấn đề thời gian.
+
+00:00:55.410 --> 00:00:57.420
+Vì vậy, nó sẽ khiến bạn không chạy trốn.
+
+00:00:57.570 --> 00:00:58.800
+Đó chỉ là vấn đề thời gian.
+
+00:00:59.040 --> 00:01:01.200
+Bạn sẽ gây rối với thời điểm khó khăn này.
+
+00:01:01.230 --> 00:01:02.910
+Không có vết cắt ngắn.
+
+00:01:03.510 --> 00:01:05.730
+Và bạn sẽ phải chờ đợi tốt nhất.
+
+00:01:05.730 --> 00:01:09.460
+Và đó là về các tài nguyên khác nhau để đọc từ chúng gần như.
+
+00:01:09.510 --> 00:01:15.660
+Nó sẽ diễn ra như cũ, có thể từ nghiên cứu này sang nghiên cứu khác có thể trực quan hóa tốt hơn.
+
+00:01:16.020 --> 00:01:19.020
+Nhưng cuối cùng, đệ quy sẽ gây khó khăn cho bạn.
+
+00:01:19.290 --> 00:01:21.120
+Vì vậy, hãy cho mình không gian để làm điều đó.
+
+00:01:22.500 --> 00:01:28.800
+Điều thứ hai là có hai
+đệ quy Eskelsen riêng biệt
+
+00:01:28.800 --> 00:01:29.670
+giúp bạn rèn luyện khả
+năng theo dõi mã đệ quy.
+
+00:01:30.030 --> 00:01:34.230
+Và tùy theo trường hợp, bản thân họ rất hài lòng về đệ quy.
+
+00:01:34.410 --> 00:01:40.830
+Tôi tin rằng cách của tôi khá hay và nó có thể gây nghiện.
+
+00:01:41.190 --> 00:01:46.860
+Bạn có thể không viết được
+mã đệ quy một mình, nhưng
+
+00:01:46.860 --> 00:01:47.100
+bạn có thể dễ dàng hiểu được
+tâm trạng đệ quy nhất định.
+
+00:01:47.460 --> 00:01:51.780
+Vì vậy, hãy cố gắng hiểu rõ đây là lần theo dõi cuộc gọi, cuộc gọi đệ quy từ nó.
+
+00:01:51.790 --> 00:01:58.360
+Bạn có thể trực tiếp tiến tới việc có thể viết các pháo hạm đệ quy của riêng mình.
+
+00:01:58.680 --> 00:02:04.080
+Vì vậy, những gì tôi đang làm hôm nay không phải là giải thích cách tôi nghĩ trong đệ quy.
+
+00:02:04.470 --> 00:02:06.270
+Tôi sẽ dạy bạn làm thế nào để theo dõi nó.
+
+00:02:06.540 --> 00:02:11.490
+Và tôi tin rằng theo thời gian, điều này sẽ tự nâng cao kỹ năng viết mã của họ.
+
+00:02:11.820 --> 00:02:12.450
+Vì vậy, hãy xem.
+
+00:02:13.170 --> 00:02:15.390
+Nhiệm vụ đầu tiên là một ba và một cộng một.
+
+00:02:15.390 --> 00:02:17.460
+Chúng tôi đã học cách in là một dãy.
+
+00:02:17.760 --> 00:02:21.900
+Hôm nay, chúng ta sẽ học cách lấy độ dài của dãy số.
+
+00:02:22.470 --> 00:02:26.130
+Vì vậy, hãy nhớ, quy tắc truy tìm như sau.
+
+00:02:26.760 --> 00:02:28.500
+Và nó dựa trên cảm ứng.
+
+00:02:28.800 --> 00:02:30.900
+Bạn tự nhủ cái này có chức năng gì?
+
+00:02:30.900 --> 00:02:32.250
+Bạn có nói cho mình biết không?
+
+00:02:32.520 --> 00:02:33.930
+Chức năng này làm gì?
+
+00:02:34.440 --> 00:02:39.100
+Và mỗi khi bạn nhìn thấy nó trong mã đệ quy, bạn không cần phải truy tìm nó nữa.
+
+00:02:39.120 --> 00:02:40.680
+Bạn không tiếp tục theo dõi nó.
+
+00:02:41.040 --> 00:02:42.180
+Vì vậy, logic là như sau.
+
+00:02:42.570 --> 00:02:43.590
+Hãy nói rằng chúng ta có.
+
+00:02:45.870 --> 00:02:47.940
+Hạ cánh ba ở Nablus, một trong sáu.
+
+00:02:48.270 --> 00:02:50.910
+Vì vậy, chức năng ở đây là ba phần sáu.
+
+00:02:51.270 --> 00:02:53.550
+Nó là một hay nó chẵn.
+
+00:02:53.580 --> 00:02:54.180
+Đúng.
+
+00:02:54.990 --> 00:02:55.440
+ĐƯỢC RỒI.
+
+00:02:55.470 --> 00:02:58.830
+Câu trả lời cho độ dài của một Blu là bao nhiêu?
+
+00:02:59.610 --> 00:03:02.010
+Bạn không giữ ba một chiều dài duy nhất của ba.
+
+00:03:02.100 --> 00:03:03.120
+Chúng ta có thể làm điều đó.
+
+00:03:03.390 --> 00:03:06.630
+Nhưng đây là một sự lãng phí lớn về thời gian và là nguyên nhân gây nhầm lẫn lớn.
+
+00:03:06.900 --> 00:03:08.610
+Bạn bắt đầu suy nghĩ theo cách đệ quy.
+
+00:03:08.880 --> 00:03:11.280
+Nếu chức năng là chính xác, thì mã này là chính xác.
+
+00:03:11.610 --> 00:03:15.090
+chiều dài của ba cái gì đó là gì?
+
+00:03:15.120 --> 00:03:16.380
+Hãy nói rằng tôi đã quên.
+
+00:03:16.380 --> 00:03:17.460
+Chiều dài của ba là gì?
+
+00:03:18.210 --> 00:03:19.030
+Ba là số lẻ.
+
+00:03:19.300 --> 00:03:22.560
+Vì vậy, hãy để tôi viết trình tự ở đây.
+
+00:03:22.560 --> 00:03:23.370
+Tôi để quên nó ở đây.
+
+00:03:23.550 --> 00:03:27.690
+Vì vậy, ba là ba nên được nhân với ba, sau đó cộng với một sẽ là 10.
+
+00:03:27.960 --> 00:03:28.930
+Sau đó, nó là số lẻ.
+
+00:03:28.950 --> 00:03:32.350
+Sau đó, chúng tôi chia cho hai.
+
+00:03:32.370 --> 00:03:32.970
+Nó là năm.
+
+00:03:33.150 --> 00:03:36.780
+Sau đó, chúng tôi sẽ là 16, tám, bốn đối một.
+
+00:03:37.620 --> 00:03:39.240
+Và chúng tôi bắt đầu lúc sáu giờ, phải.
+
+00:03:44.500 --> 00:03:44.700
+Ừ.
+
+00:03:44.890 --> 00:03:45.240
+Sáu.
+
+00:03:45.430 --> 00:03:51.880
+Vì vậy, một, hai, ba, bốn, năm, sáu, bảy, tám, chín XOVER đối tượng của Điều sáu là chín.
+
+00:03:52.360 --> 00:03:55.090
+Bây giờ, câu hỏi ở đây, ba bé là gì?
+
+00:03:55.660 --> 00:03:57.670
+Phạm vi của ba là tám.
+
+00:03:58.120 --> 00:04:00.010
+Vì vậy, chức năng sẽ nói tôi là một.
+
+00:04:00.880 --> 00:04:04.420
+Độ dài của chuỗi từ tám, là chín.
+
+00:04:04.750 --> 00:04:05.530
+Chúng ta xong rồi.
+
+00:04:06.340 --> 00:04:07.750
+Việc truy tìm được thực hiện.
+
+00:04:08.470 --> 00:04:10.750
+Bây giờ, điều này có thể hoàn toàn chính xác.
+
+00:04:11.440 --> 00:04:12.580
+Chúng tôi được tạo ra.
+
+00:04:12.670 --> 00:04:13.240
+Tại sao?
+
+00:04:13.720 --> 00:04:17.080
+Bởi vì chúng tôi không theo dõi phần mã này vào lúc này.
+
+00:04:17.650 --> 00:04:18.610
+Vì vậy, đây là một tab.
+
+00:04:19.030 --> 00:04:26.140
+Nếu hàm có bốn lệnh gọi đệ quy, hàm của bạn hoàn toàn chính xác.
+
+00:04:26.380 --> 00:04:30.730
+Nếu bạn theo dõi các ví dụ khác nhau sao cho bạn đạt được tất cả bốn mã khác nhau.
+
+00:04:31.000 --> 00:04:34.870
+Vì vậy, tại thời điểm này, chúng tôi đã triển khai một số thứ đưa chúng tôi đến đây.
+
+00:04:35.320 --> 00:04:37.150
+Nhưng chúng tôi không bao giờ điều trị tại thời điểm này.
+
+00:04:37.390 --> 00:04:42.550
+Vì vậy, chúng tôi cần một ví dụ khác để đảm bảo rằng chúng tôi tiếp cận được cuốn sách này, cuốn sách này có thể đã xem xét năm ví dụ.
+
+00:04:43.910 --> 00:04:51.770
+Vì vậy, hãy bắt đầu với năm là
+năm bằng nhau, một không là năm,
+
+00:04:51.770 --> 00:04:53.690
+mặc dù khi đó một là số dư
+của ba nhân năm cộng một, là 16.
+
+00:04:54.050 --> 00:04:57.260
+Bây giờ, những gì ít hơn 16 họ không theo dõi nó?
+
+00:04:57.530 --> 00:05:03.110
+Độ dài của 16 là hai, bốn, năm số, sau đó một cộng với năm là sáu.
+
+00:05:03.410 --> 00:05:05.840
+Vì vậy, điều này có nghĩa là chiều dài của sáu là.
+
+00:05:07.600 --> 00:05:10.270
+Là sáu tỷ hay năm là sáu.
+
+00:05:10.660 --> 00:05:11.350
+Đó là tất cả.
+
+00:05:11.680 --> 00:05:16.480
+Bạn không tiếp tục truy tìm,
+truy tìm, truy tìm, và sau đó
+
+00:05:16.480 --> 00:05:17.060
+bạn cảm thấy mình bối rối và
+không biết mình đang làm gì.
+
+00:05:17.080 --> 00:05:17.680
+Đừng làm thế.
+
+00:05:18.190 --> 00:05:24.670
+Nếu nếu bạn theo dõi từng hai lần, nếu
+bạn theo dõi mọi cuộc gọi đệ quy và bạn đã
+
+00:05:24.670 --> 00:05:28.810
+tiến gần hơn đến mọi hàm trả về một lần,
+thì bạn chắc chắn rằng hàm này là chính xác.
+
+00:05:29.140 --> 00:05:35.590
+Tôi hy vọng bây giờ bạn đã hiểu rằng việc theo dõi chức năng này, chúng ta đã hoàn thành việc đó.
+
+00:05:35.830 --> 00:05:38.890
+Chúng tôi đã hoàn thành việc lưu giữ, truy tìm và truy tìm và truy tìm.

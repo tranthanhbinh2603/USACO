@@ -1,0 +1,312 @@
+1
+00:00:01,540 --> 00:00:07,770
+Hi everyone, so let's look at the implementation of finding  all subsets or subsequences of a given string.
+
+2
+00:00:07,790 --> 00:00:13,320
+Ok, so I'm taking the input in a character, you can also use the string as well.
+
+3
+00:00:13,330 --> 00:00:14,380
+That is also fine.
+
+4
+00:00:15,460 --> 00:00:21,430
+So let's write a function void generate all the sequences.
+
+5
+00:00:21,940 --> 00:00:23,710
+And here's what we're going to do?
+
+6
+00:00:24,550 --> 00:00:26,980
+We're going to accept the character array.
+
+7
+00:00:27,940 --> 00:00:34,060
+And here first we'll find out the length. length is strlen of array
+
+8
+00:00:34,750 --> 00:00:36,080
+Now what you can do?
+
+9
+00:00:36,100 --> 00:00:37,500
+You can say ok.
+
+10
+00:00:37,600 --> 00:00:43,720
+For int I equal to zero, so we saw we need to go from zero till what? two raise to the power N-1.
+
+11
+00:00:43,720 --> 00:00:43,990
+.
+
+12
+00:00:44,020 --> 00:00:44,380
+OK.
+
+13
+00:00:44,950 --> 00:00:48,220
+This two raise to the power N can also be written as one left shift N.
+
+14
+00:00:48,220 --> 00:00:52,240
+because it is faster and minus one will come as it is.
+
+15
+00:00:52,330 --> 00:00:54,490
+So I can see I less than...um
+
+16
+00:00:56,900 --> 00:01:02,330
+Two raise to the power N that is one left shift N and I can do
+
+17
+00:01:02,570 --> 00:01:03,440
+i++.
+
+18
+00:01:03,620 --> 00:01:04,160
+All right.
+
+19
+00:01:05,239 --> 00:01:12,470
+So once we are done with this, we can say OK. For every number, I need to filter the bit. Ok.
+
+20
+00:01:12,680 --> 00:01:17,030
+so maybe I can make a method void filter 
+
+21
+00:01:17,630 --> 00:01:25,090
+Or maybe I can say overly. overly a number on string array
+
+22
+00:01:25,130 --> 00:01:31,310
+that is our array and I'm getting some number that I need to overlay on this particular array.
+
+23
+00:01:31,670 --> 00:01:38,990
+So here we will overlay the number, that is the number as I and array is array.
+
+24
+00:01:39,620 --> 00:01:44,150
+So this will actually print the subset.
+
+25
+00:01:44,480 --> 00:01:47,640
+OK, if needed you can store them in a vector or array.
+
+26
+00:01:48,080 --> 00:01:49,970
+But right now we are just going to print it.
+
+27
+00:01:50,560 --> 00:01:51,330
+How do we do it?
+
+28
+00:01:51,350 --> 00:01:53,250
+Let's say the number is six.
+
+29
+00:01:54,020 --> 00:01:55,790
+And the array is ABC.
+
+30
+00:01:56,180 --> 00:01:58,790
+So we are going to extract the last bit.
+
+31
+00:01:59,420 --> 00:02:00,840
+We are going say ok it is zero.
+
+32
+00:02:00,860 --> 00:02:07,820
+That means we will not print A. So I can say while this number is greater than zero
+
+33
+00:02:08,389 --> 00:02:09,860
+Find out the last bit.
+
+34
+00:02:10,340 --> 00:02:19,480
+so the last bit is what? number AND one. if the last bit is set, Let us keep a variable J.
+
+35
+00:02:20,030 --> 00:02:20,330
+OK.
+
+36
+00:02:21,060 --> 00:02:21,540
+Um.
+
+37
+00:02:22,920 --> 00:02:24,030
+Let's keep a variable.
+
+38
+00:02:24,990 --> 00:02:31,880
+let say J that was initially zero that means ok, we are not going to do any wor. int J is equal to 
+
+39
+00:02:31,890 --> 00:02:32,250
+zero.
+
+40
+00:02:32,850 --> 00:02:39,450
+If the last bit is one then we are going to print this character at the jth index. so I can say cout
+
+41
+00:02:39,990 --> 00:02:41,240
+array of J.
+
+42
+00:02:41,790 --> 00:02:42,420
+That's it.
+
+43
+00:02:43,440 --> 00:02:50,430
+Otherwise you go to the next position. so you say ok. J equals J+1 or J++ and  you
+
+44
+00:02:50,430 --> 00:02:58,410
+also discard this bit. so you can say number equals number right shift one. that's it.
+
+45
+00:02:59,100 --> 00:03:03,300
+And now we can print and endl here.
+
+46
+00:03:05,840 --> 00:03:11,400
+And it seems like we are done. what is going to happen next time on this bit is gone.
+
+47
+00:03:11,420 --> 00:03:17,810
+So we extract the last bit, which is this one. And J is one, so if this is one we print array of J, so we
+
+48
+00:03:17,810 --> 00:03:21,450
+print the number B then we discard this.
+
+49
+00:03:21,470 --> 00:03:23,630
+We go to the next position J equal to 2.
+
+50
+00:03:24,170 --> 00:03:27,770
+And here we say Ok. this bit again one so we print the letter C.
+
+51
+00:03:28,460 --> 00:03:33,780
+And after that we print the new line and this is printed as a string in a single line.
+
+52
+00:03:33,800 --> 00:03:34,130
+OK.
+
+53
+00:03:34,470 --> 00:03:39,410
+Similarly, we do it for all the numbers from zero to two raise to the power N-1.
+
+54
+00:03:40,040 --> 00:03:41,810
+And hopefully they should work.
+
+55
+00:03:43,220 --> 00:03:50,480
+All right, so we are making this function call generators  all subsequences and now we can test our code.
+
+56
+00:03:50,720 --> 00:03:53,570
+So let's run this ./subsets.
+
+57
+00:03:54,360 --> 00:04:01,100
+Let me give a input ABC so you can see we're getting Null followed by A, AB, C and so on.
+
+58
+00:04:01,460 --> 00:04:07,360
+And finally, it is like seven and we are getting a b c. so maybe I can run with the different input
+
+59
+00:04:07,370 --> 00:04:07,820
+as well.
+
+60
+00:04:08,450 --> 00:04:15,650
+So you can see in this case, the length of the string is four and we are going from zero till what ?
+
+61
+00:04:15,950 --> 00:04:16,550
+15.
+
+62
+00:04:17,029 --> 00:04:19,519
+The 15 is in binaries like one one one one.
+
+63
+00:04:20,149 --> 00:04:21,890
+And you can see four one one one one.
+
+64
+00:04:21,890 --> 00:04:24,500
+We have a B, C or D as the output and for zero
+
+65
+00:04:24,500 --> 00:04:28,260
+We have NULL string as output. for zero zero zero one
+
+66
+00:04:28,280 --> 00:04:32,890
+We have only this one which corresponds to this A.
+
+67
+00:04:33,020 --> 00:04:33,740
+ABCD.
+
+68
+00:04:33,770 --> 00:04:34,070
+OK.
+
+69
+00:04:34,500 --> 00:04:40,490
+We are iterating in this particular order so that's what we get A as output. for two we have zero zero
+
+70
+00:04:40,490 --> 00:04:40,970
+one zero.
+
+71
+00:04:40,970 --> 00:04:45,290
+so we are getting B as output. for three, we have zero zero one one.
+
+72
+00:04:45,290 --> 00:04:48,410
+So we are getting AB as the output and so on.
+
+73
+00:04:48,440 --> 00:04:48,710
+OK.
+
+74
+00:04:49,100 --> 00:04:56,660
+So I hope you really understood this part and this is nothing but we are finding out the position
+
+75
+00:04:56,660 --> 00:05:02,360
+of the set bits and correspondingly we are picking a character from our array as well.
+
+76
+00:05:02,540 --> 00:05:03,020
+All right.
+
+77
+00:05:03,650 --> 00:05:05,590
+So that's all for this lecture.
+
+78
+00:05:05,600 --> 00:05:06,190
+Thank you.
+

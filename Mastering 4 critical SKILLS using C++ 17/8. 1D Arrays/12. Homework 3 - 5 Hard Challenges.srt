@@ -1,0 +1,824 @@
+0
+1
+00:00:01,260 --> 00:00:08,100
+homework set number three, the first one is for a butler sequence named Recaman's sequence, the word
+1
+
+2
+00:00:08,100 --> 00:00:12,790
+sequence is just a bunch of elements consecutive following some relationship,
+2
+
+3
+00:00:12,810 --> 00:00:18,420
+if I told you we have a sequence, 10, 20, 30, 40, you can figure out that this is like the iTH number
+3
+
+4
+00:00:18,420 --> 00:00:19,930
+multiplied by ten and so on.
+4
+
+5
+00:00:20,520 --> 00:00:25,960
+So this is a full sequence here, zero one three six two seven, blah, blah, blah, very big sequence.
+5
+
+6
+00:00:26,610 --> 00:00:32,400
+Now, let's focus on this small one here and let's focus on the value and the index zero-based.
+6
+
+7
+00:00:32,700 --> 00:00:34,950
+So the last item here in the sequence is seven,
+7
+
+8
+00:00:34,960 --> 00:00:39,320
+so this is last item value is seven and its index is number five,
+8
+
+9
+00:00:40,230 --> 00:00:44,120
+now, to get the next item in this sequence, there are two rules for that.
+9
+
+10
+00:00:44,610 --> 00:00:50,640
+The first one is to compute the expression, last value, which is seven here, - the index,
+10
+
+11
+00:00:50,640 --> 00:00:52,620
+which is five here, -one.
+11
+
+12
+00:00:53,100 --> 00:00:56,130
+Compute this condition and double check two 
+12
+
+13
+00:00:56,130 --> 00:00:56,760
+things
+13
+
+14
+00:00:57,090 --> 00:00:59,280
+First, is this value is greater than zero?
+14
+
+15
+00:00:59,760 --> 00:01:01,940
+The second, did it appear before or not?
+15
+
+16
+00:01:02,460 --> 00:01:05,390
+If these two conditions are okay, you are going to use it.
+16
+
+17
+00:01:05,730 --> 00:01:10,800
+So here in our case, the last value is seven - last index is five - one
+17
+
+18
+00:01:10,830 --> 00:01:11,570
+this is one.
+18
+
+19
+00:01:12,150 --> 00:01:14,130
+The question here is a greater than zero?
+19
+
+20
+00:01:14,130 --> 00:01:14,550
+Yes.
+20
+
+21
+00:01:15,060 --> 00:01:16,200
+It didn't appear before?
+21
+
+22
+00:01:16,200 --> 00:01:17,690
+No, one appeared before.
+22
+
+23
+00:01:18,000 --> 00:01:22,980
+If this is a case and this condition failed, you are going to use the next term as the following last
+23
+
+24
+00:01:22,980 --> 00:01:25,710
+value plus last index plus 1, which is thirteen.
+24
+
+25
+00:01:25,950 --> 00:01:30,960
+Now you put thirteen here as the next value, and again now thirteen is the last value,
+25
+
+26
+00:01:31,140 --> 00:01:32,640
+Its index is number six,
+26
+
+27
+00:01:32,850 --> 00:01:35,820
+Apply the formula, decide if it's negative or not.
+27
+
+28
+00:01:36,120 --> 00:01:37,980
+Is it appeared before or not.
+28
+
+29
+00:01:38,190 --> 00:01:42,930
+If it satisfied the two conditions, you put it otherwise, you use the plus version.
+29
+
+30
+00:01:43,260 --> 00:01:44,580
+That's how you can do it.
+30
+
+31
+00:01:45,120 --> 00:01:52,110
+You will read an integer, which will be zero-based index, but it will be from one to two hundred and
+31
+
+32
+00:01:52,110 --> 00:01:54,330
+then print to the value of this index,
+32
+
+33
+00:01:54,660 --> 00:01:59,010
+For example, if I give you the index of six, then the output should be thirteen.
+33
+
+34
+00:01:59,340 --> 00:02:02,580
+If the index is nine, then the output should be twenty one.
+34
+
+35
+00:02:02,880 --> 00:02:05,160
+Seventeen, it should be twenty five and so on.
+35
+
+36
+00:02:05,310 --> 00:02:10,500
+Do not use nested loops. before introducing the next problem,
+36
+
+37
+00:02:10,500 --> 00:02:17,820
+I would like to stress the sliding window idea with visualizations, the word sliding window refer
+37
+
+38
+00:02:17,820 --> 00:02:24,450
+to a group of consecutive numbers and in computer science we have fixed sliding window and variables 
+38
+
+39
+00:02:24,450 --> 00:02:25,310
+sliding the window.
+39
+
+40
+00:02:25,500 --> 00:02:27,480
+So let's focus on fixed sliding window.
+40
+
+41
+00:02:28,050 --> 00:02:34,770
+As you see here, we have a window of eight numbers and we call a sliding because we slide it one
+41
+
+42
+00:02:34,770 --> 00:02:35,250
+step.
+42
+
+43
+00:02:35,550 --> 00:02:38,640
+So if we slided this one step, it would be again of fixed size,
+43
+
+44
+00:02:38,900 --> 00:02:43,140
+so it would be again, eight numbers, but now starting from eight, from two to nine,
+44
+
+45
+00:02:43,830 --> 00:02:50,520
+think for a minute, what is the most very apparent relationship between the first window and the
+45
+
+46
+00:02:50,520 --> 00:02:51,120
+next window?
+46
+
+47
+00:02:52,500 --> 00:02:58,740
+The very visible observation is that all of the number from two to eight will come in and we have a
+47
+
+48
+00:02:58,740 --> 00:03:01,530
+first number removed and we have a new number added.
+48
+
+49
+00:03:01,830 --> 00:03:06,420
+If we try to slide this one step more, it will be starting from three to ten.
+49
+
+50
+00:03:06,630 --> 00:03:09,720
+This is what we call a sliding window, fixed-size sliding window.
+50
+
+51
+00:03:10,980 --> 00:03:16,060
+Let's assume for a while that we have this list: one zero three minus four to minus six and nine,
+51
+
+52
+00:03:16,450 --> 00:03:22,290
+and let's generate all the sliding windows, all the windows coming from sliding in a length of three,
+52
+
+53
+00:03:22,800 --> 00:03:24,360
+so what are the first three numbers?
+53
+
+54
+00:03:24,360 --> 00:03:25,290
+One zero three.
+54
+
+55
+00:03:25,650 --> 00:03:27,330
+What are the second three numbers?
+55
+
+56
+00:03:27,330 --> 00:03:31,770
+Zero three minus four after that, three minus four, two and so on.
+56
+
+57
+00:03:32,550 --> 00:03:36,780
+Now, sometimes we would like to make operations that, for example, we would like to give the sum of
+57
+
+58
+00:03:36,780 --> 00:03:37,470
+every window.
+58
+
+59
+00:03:38,400 --> 00:03:42,960
+It would be here sum equal four, sum = minus one, one, minus eight five, the sum of the items in the
+59
+
+60
+00:03:42,960 --> 00:03:43,260
+window.
+60
+
+61
+00:03:43,650 --> 00:03:47,520
+Sometimes I would like to find the maximum among all of these windows and so on.
+61
+
+62
+00:03:47,970 --> 00:03:53,610
+And as I said, observe that the relationship between any two consecutive window is made about the
+62
+
+63
+00:03:53,610 --> 00:03:57,960
+first and the last one, the variable sliding window which is out of scope
+63
+
+64
+00:03:57,960 --> 00:04:01,680
+now its size grows and shrinks based on some conditions.
+64
+
+65
+00:04:03,790 --> 00:04:05,420
+OK, let's move to our problem.
+65
+
+66
+00:04:05,800 --> 00:04:12,820
+You will read integers K and N and K will always be less than or equal N, and then you read N
+66
+
+67
+00:04:12,820 --> 00:04:20,440
+integers, you have to find a sub-array, which is a window or a consecutive number of key elements that
+67
+
+68
+00:04:20,440 --> 00:04:21,610
+has the maximum sum.
+68
+
+69
+00:04:21,940 --> 00:04:25,420
+This is the input that we tried in the previous slide.
+69
+
+70
+00:04:25,750 --> 00:04:28,580
+And we are generating here all the windows of length three,
+70
+
+71
+00:04:28,840 --> 00:04:31,630
+this is the sum of all of them observed here.
+71
+
+72
+00:04:31,840 --> 00:04:36,310
+That window of five starting a position four to the position,
+72
+
+73
+00:04:36,310 --> 00:04:40,230
+six of sum five is the maximum among all of the windows.
+73
+
+74
+00:04:41,350 --> 00:04:47,380
+Try to do it without nested loop, but start first with nested loop, then try to do it without nested
+74
+
+75
+00:04:47,380 --> 00:04:47,670
+loops.
+75
+
+76
+00:04:47,980 --> 00:04:49,090
+There are two ways.
+76
+
+77
+00:04:49,090 --> 00:04:54,020
+One of them based on the observation that we mentioned here, and another way that is harder as a hint
+77
+
+78
+00:04:54,020 --> 00:04:58,320
+think about accumulation if it helped, but anyway it's a harder way.
+78
+
+79
+00:04:58,570 --> 00:04:59,560
+So give your best.
+79
+
+80
+00:05:01,490 --> 00:05:09,910
+The third problem, we should count the increasing sum-arrays, specifically, you will read N integers and count how many
+80
+
+81
+00:05:09,910 --> 00:05:11,520
+sub-arrays are increasing,
+81
+
+82
+00:05:11,680 --> 00:05:15,040
+we already know from the previous assignments what is an increasing array,
+82
+
+83
+00:05:15,340 --> 00:05:19,710
+now, we would like to count how many ones, so let's say, as an example, we have the input,
+83
+
+84
+00:05:19,720 --> 00:05:20,850
+one, two, three, four.
+84
+
+85
+00:05:21,400 --> 00:05:26,260
+Let's generate all the sub-windows that we have, which would be some windows of length one and two
+85
+
+86
+00:05:26,260 --> 00:05:27,010
+and three and four.
+86
+
+87
+00:05:27,520 --> 00:05:29,440
+For a length one we will have only,
+87
+
+88
+00:05:29,470 --> 00:05:32,320
+here, one list, second list, fourth list
+88
+
+89
+00:05:33,010 --> 00:05:40,390
+For all the windows of length two, we have one two, two three, three four, of length three we have
+89
+
+90
+00:05:40,390 --> 00:05:45,630
+one, two, three, then two, three, four. of length four we have one, two, three, four as a number
+90
+
+91
+00:05:45,670 --> 00:05:47,290
+one, two, three, four is sorted,
+91
+
+92
+00:05:47,530 --> 00:05:49,720
+all of them will be valid sequences.
+92
+
+93
+00:05:50,080 --> 00:05:54,180
+so we have ten different sub-areas that are already increasing.
+93
+
+94
+00:05:54,520 --> 00:05:58,450
+So here are the inputs, four number of items, four items.
+94
+
+95
+00:05:58,570 --> 00:06:00,550
+This case would be ten.
+95
+
+96
+00:06:01,150 --> 00:06:06,640
+If the input is reversed, then this is just four because we cannot build any increasing sub-array.
+96
+
+97
+00:06:06,970 --> 00:06:12,820
+You can think of these first two cases here giving what we call lower bound and upper bound, the lower bound
+97
+
+98
+00:06:12,820 --> 00:06:14,860
+and the answer would be the length of the sequence,
+98
+
+99
+00:06:15,070 --> 00:06:21,520
+the upper bound of the answer has some equation that can help you to develop an efficient solution
+99
+
+100
+00:06:22,210 --> 00:06:22,930
+and is another.
+100
+
+101
+00:06:23,050 --> 00:06:25,740
+input, forget about the idea of lower bound and upper bound,
+101
+
+102
+00:06:25,900 --> 00:06:28,480
+I hope you understand now what is a problem.
+102
+
+103
+00:06:28,840 --> 00:06:30,460
+Try to do it with three nested loops.
+103
+
+104
+00:06:30,730 --> 00:06:35,350
+Think how can we do it with two nested loops and think how can we do it only with one loop.
+104
+
+105
+00:06:36,610 --> 00:06:42,790
+By the way, when I mean something like two loops, I don't necessarily mean only two loops.
+105
+
+106
+00:06:42,790 --> 00:06:48,550
+You can have two different two loops or three different loops, but they shouldn't be nested like I have
+106
+
+107
+00:06:48,550 --> 00:06:52,300
+two loops doing something, then another two loops are doing something and so on.
+107
+
+108
+00:06:52,300 --> 00:06:56,470
+So I'm referring to this flexibility because time-wise all of them are equal.
+108
+
+109
+00:06:56,710 --> 00:07:01,750
+But if you have four nested loops, this is so different from two nested loops followed by two separate,
+109
+
+110
+00:07:01,750 --> 00:07:08,890
+two separate nested loops, In the fourth problem, we'll slove a very common problem in computer science named
+110
+
+111
+00:07:08,890 --> 00:07:10,070
+as Josef's
+111
+
+112
+00:07:10,070 --> 00:07:16,720
+problem. For this problem, you'll read two integers N, which is like two hundred and K, which is a very
+112
+
+113
+00:07:16,720 --> 00:07:19,240
+big number, but for now consider it as a small number
+113
+
+114
+00:07:19,240 --> 00:07:19,750
+in the beginning.
+114
+
+115
+00:07:21,010 --> 00:07:23,260
+This is a game and there's a game winning and failding here,
+115
+
+116
+00:07:23,410 --> 00:07:24,640
+the idea goes as follows.
+116
+
+117
+00:07:25,120 --> 00:07:27,610
+There is a group of N people in a circle.
+117
+
+118
+00:07:28,570 --> 00:07:35,950
+Numbered one, two, three, four up to N,  and then someone out of this N  numbers is acting like
+118
+
+119
+00:07:35,950 --> 00:07:36,940
+the master of the game.
+119
+
+120
+00:07:37,420 --> 00:07:42,850
+The guy starts from person number one and starts counting at key times like person
+120
+
+121
+00:07:42,850 --> 00:07:44,260
+number one, two, three, four.
+121
+
+122
+00:07:44,530 --> 00:07:51,340
+Once he counted K, he killed this person or for now, let's say, removing his from the from the circle.
+122
+
+123
+00:07:52,180 --> 00:07:56,140
+He keeps doing this process until there is only one person remaining.
+123
+
+124
+00:07:56,140 --> 00:07:57,010
+This is the winner.
+124
+
+125
+00:07:57,250 --> 00:07:58,330
+Let's see an example here.
+125
+
+126
+00:07:58,600 --> 00:08:00,270
+We have four persons in a circle.
+126
+
+127
+00:08:00,430 --> 00:08:01,810
+One, two, three, four.
+127
+
+128
+00:08:02,260 --> 00:08:03,610
+And let's say the K is two.
+128
+
+129
+00:08:03,940 --> 00:08:10,870
+So now the guy will count one, two, then remove this guy from the list, starting from the three counting
+129
+
+130
+00:08:10,870 --> 00:08:11,770
+one, two.
+130
+
+131
+00:08:11,890 --> 00:08:14,290
+We are here removing four from the list,
+131
+
+132
+00:08:14,590 --> 00:08:17,950
+now, the one after it is on here counting one two.
+132
+
+133
+00:08:18,190 --> 00:08:19,600
+Removing three from the list.
+133
+
+134
+00:08:19,780 --> 00:08:20,830
+One is remaining.
+134
+
+135
+00:08:20,980 --> 00:08:22,480
+One is the winner.
+135
+
+136
+00:08:22,960 --> 00:08:26,050
+You should print the order of removing people from the circle,
+136
+
+137
+00:08:26,230 --> 00:08:30,100
+We remove two first, four, three, then one.
+137
+
+138
+00:08:30,940 --> 00:08:33,480
+Now, I would like you first to solve this problem.
+138
+
+139
+00:08:33,490 --> 00:08:38,920
+when K is a small and after that thinking an efficient solution that can act with K that is very,
+139
+
+140
+00:08:38,920 --> 00:08:39,430
+very big.
+140
+
+141
+00:08:39,430 --> 00:08:45,700
+even bigger than that, I'm giving here you more examples and fixing seven as a number of people in the
+141
+
+142
+00:08:45,700 --> 00:08:51,580
+circle and then giving you different counters, so that you can verify your solution.
+142
+
+143
+00:08:53,170 --> 00:08:58,270
+In the fifth problem you are to read an integer array
+143
+
+144
+00:08:58,540 --> 00:09:06,370
+all the values are either zero, or one, you should find the longest subarray such that it's
+144
+
+145
+00:09:06,370 --> 00:09:09,370
+number of zeros equal to it's the number of ones,
+145
+
+146
+00:09:09,550 --> 00:09:15,190
+so we need array as big as possible in terms of size, but zeros and ones are equal.
+146
+
+147
+00:09:17,030 --> 00:09:18,640
+Here is is an example.
+147
+
+148
+00:09:18,730 --> 00:09:22,300
+Seven for the input and this is the input, the longest array is six.
+148
+
+149
+00:09:22,300 --> 00:09:23,560
+There are two examples here.
+149
+
+150
+00:09:23,770 --> 00:09:28,810
+The first one is the starting from this one to this one here, which have three zeros and three
+150
+
+151
+00:09:28,810 --> 00:09:33,460
+ones or the last six numbers also are a good solution. in this input.
+151
+
+152
+00:09:33,460 --> 00:09:40,090
+Here we have nineteen zeros and ones and then this sub-array here of length 8 is the longest it has
+152
+
+153
+00:09:40,090 --> 00:09:43,030
+one, two, three, four, four ones and four zeros.
+153
+
+154
+00:09:44,050 --> 00:09:49,870
+Start with doing this problem with three loops, it will be easy  for you, then trying to think, can
+154
+
+155
+00:09:49,870 --> 00:09:53,970
+you do it with two loops? even without any extra arrays?
+155
+
+156
+00:09:54,310 --> 00:09:59,320
+And if you would like to go one extra mile, try to do it without any nested loops.
+156
+
+157
+00:09:59,890 --> 00:10:05,770
+And an extra question, if you would like to try, there is what we call in computer science reduction, reduction 
+157
+
+158
+00:10:05,770 --> 00:10:09,160
+a problem to another means converting it to another format.
+158
+
+159
+00:10:09,170 --> 00:10:12,470
+So you describe another problem, but they are actually the same.
+159
+
+160
+00:10:12,970 --> 00:10:16,180
+So can you reduce this problem to another problem as following?
+160
+
+161
+00:10:16,630 --> 00:10:22,740
+It should be the longest sub-array of zero sum, another very popular problem in computer science.
+161
+
+162
+00:10:22,900 --> 00:10:28,530
+So can we convert this problem from number of zeros equal number of ones to this problem of longest
+162
+
+163
+00:10:28,580 --> 00:10:29,620
+subarray of zero sum?
+163
+
+164
+00:10:29,770 --> 00:10:30,520
+Think about it.
+164
+
+165
+00:10:31,300 --> 00:10:31,570
+That's all.

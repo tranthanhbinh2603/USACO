@@ -1,0 +1,199 @@
+1
+00:00:01,200 --> 00:00:07,830
+Ruled the time using the setout, which are eventually a stream, and as you know, they keep keep moving
+
+2
+00:00:07,830 --> 00:00:14,320
+forward typically in the in their in their processing, their obituary.
+
+3
+00:00:14,550 --> 00:00:16,020
+We can create the streams.
+
+4
+00:00:16,020 --> 00:00:24,120
+We can create like some some streams over this iterators, some streams over some iterators, over streams
+
+5
+00:00:24,120 --> 00:00:24,770
+in a nice way.
+
+6
+00:00:25,110 --> 00:00:32,700
+So let's say that we have here some vector V, I can create some output stream iterator and it's going
+
+7
+00:00:32,700 --> 00:00:39,030
+to receive some integers and stream object that would use this out and is going to separate them space
+
+8
+00:00:39,030 --> 00:00:39,570
+by space.
+
+9
+00:00:40,020 --> 00:00:46,850
+So now I'm going to call and still function in this Cobbe and giving it vector one and vector victor
+
+10
+00:00:46,860 --> 00:00:47,640
+begin and end.
+
+11
+00:00:47,940 --> 00:00:53,620
+And this iterator, the copy function would have started to take element by element here and copy it
+
+12
+00:00:53,620 --> 00:00:56,520
+to whatever iterator you can give it back, insert or whatever.
+
+13
+00:00:57,660 --> 00:01:03,110
+But now I'm giving here and Iterator is going to cool the stream straight over this item.
+
+14
+00:01:03,120 --> 00:01:08,670
+So the Charlotte will be equal to the current iteration and then with the next element, Espace would
+
+15
+00:01:08,670 --> 00:01:09,970
+be printed after it.
+
+16
+00:01:10,290 --> 00:01:13,230
+So if you try to print that is going to print for you.
+
+17
+00:01:13,230 --> 00:01:15,620
+A string is going to print on the console.
+
+18
+00:01:15,870 --> 00:01:17,860
+One, two, one, three, two, six, three.
+
+19
+00:01:18,240 --> 00:01:24,120
+I know the syntax of that is a bit weird compared to many things, but after time you will be familiar
+
+20
+00:01:24,120 --> 00:01:24,450
+with that.
+
+21
+00:01:25,470 --> 00:01:26,440
+It is a different way.
+
+22
+00:01:26,640 --> 00:01:30,330
+Let's say I don't want to write over the console.
+
+23
+00:01:30,330 --> 00:01:34,790
+I would like to write over a specific string so you can create the string extreme like that.
+
+24
+00:01:35,220 --> 00:01:41,780
+And then on the fly here, instead of taking it in a traitor, I'm creating 033 iterator.
+
+25
+00:01:42,090 --> 00:01:48,000
+It's going to receive integers and this is the object to write it and then again use the spaces as operator.
+
+26
+00:01:48,480 --> 00:01:54,250
+If you try to run this copy function here is going to give you a string of one three six two six of
+
+27
+00:01:54,270 --> 00:01:54,540
+the.
+
+28
+00:01:55,410 --> 00:01:56,390
+Here is another one.
+
+29
+00:01:56,580 --> 00:01:57,210
+Let's read.
+
+30
+00:01:57,570 --> 00:02:00,810
+I'm creating a string is three overstand.
+
+31
+00:02:01,020 --> 00:02:06,690
+OK, you can also read from from from from just here but we have a string and I'm creating, I string
+
+32
+00:02:06,690 --> 00:02:07,380
+a stream over it.
+
+33
+00:02:08,040 --> 00:02:15,330
+I'm going to call the partial sum function which remember it just doing an accumulation and I'm going
+
+34
+00:02:15,330 --> 00:02:27,030
+to give it the iterator string stream iterator over this, over this ETR stream and I'm giving here
+
+35
+00:02:27,360 --> 00:02:30,080
+an elbow to stream over it and.
+
+36
+00:02:31,290 --> 00:02:38,370
+So this guy is going to read from this source and write to this destination is going to bring the following
+
+37
+00:02:38,610 --> 00:02:44,130
+zero point one, which is the first guy, the sum some of the second one, 0.01, which will be there
+
+38
+00:02:44,130 --> 00:02:50,890
+with three comma separated zero going to three, Blasdel going to three is zero point six zero point
+
+39
+00:02:51,600 --> 00:02:55,290
+zero six is what notice this is an extra comma here.
+
+40
+00:02:55,320 --> 00:03:04,260
+Why with everything out here is going to be printed at something and also bring to the coma as a delimiter
+
+41
+00:03:04,260 --> 00:03:07,920
+or separator here in a very similar way.
+
+42
+00:03:08,100 --> 00:03:12,800
+You can run the program to read from this end and do partial sums to the CIA.
+
+43
+00:03:13,020 --> 00:03:17,370
+But this will keep reading based on what you provide to the notice here.
+
+44
+00:03:17,580 --> 00:03:22,220
+I did those three metadata to be of type integer, but the input was double's.
+
+45
+00:03:22,350 --> 00:03:28,530
+So this means whatever final value would be costly to integrate this all about stream iterator at the
+
+46
+00:03:28,530 --> 00:03:29,420
+syntax looks will.
+
+47
+00:03:29,430 --> 00:03:29,970
+I know that.
+
+48
+00:03:30,120 --> 00:03:36,990
+But I wanted to know that we can iterate the SNC and to read, write and send it from source to some
+
+49
+00:03:36,990 --> 00:03:38,840
+destination in a in a nice way.
+
+50
+00:03:39,960 --> 00:03:40,500
+That's it.

@@ -1,0 +1,444 @@
+0
+1
+00:00:02,400 --> 00:00:09,210
+Let's proceed, in this one, we would like to check if a string is a prefix or not.
+1
+
+2
+00:00:09,990 --> 00:00:17,160
+I'm trying to help you here that you can have something like the starting position in the string, uh,
+2
+
+3
+00:00:17,370 --> 00:00:18,880
+in a real company actually
+3
+
+4
+00:00:19,410 --> 00:00:24,300
+this two ones would be like with a constant, with reference, and you cannot keep changing them.
+4
+
+5
+00:00:25,920 --> 00:00:31,890
+Now, let's see how to implement that, uh, the function is going to be pretty easy.
+5
+
+6
+00:00:33,610 --> 00:00:39,970
+So what is the definition of the function? Always the first thing to do with recursion is to focus
+6
+
+7
+00:00:39,970 --> 00:00:42,010
+a lot on how do we define the function?
+7
+
+8
+00:00:42,460 --> 00:00:48,070
+The function is defined as following we have a string and we have another string and we would like from
+8
+
+9
+00:00:48,070 --> 00:00:53,170
+this starting position to make sure that this string is matching this one.
+9
+
+10
+00:00:53,860 --> 00:01:01,790
+For example, if I have something like 'abcd' and I say I have 'abc', does it match?
+10
+
+11
+00:01:01,790 --> 00:01:02,140
+yes, it 
+11
+
+12
+00:01:02,140 --> 00:01:02,630
+matches.
+12
+
+13
+00:01:02,650 --> 00:01:07,720
+But from which index? match from index starting position equals zero
+13
+
+14
+00:01:08,800 --> 00:01:09,960
+What about 'bc'?
+14
+
+15
+00:01:10,000 --> 00:01:13,060
+Does it match from starting position equals zero?
+15
+
+16
+00:01:13,150 --> 00:01:13,990
+No, it does not match.
+16
+
+17
+00:01:15,190 --> 00:01:17,950
+What about 'bc' from starting position equal one?
+17
+
+18
+00:01:17,980 --> 00:01:18,760
+Does it match?
+18
+
+19
+00:01:19,090 --> 00:01:20,860
+Yes, it match. Why?
+19
+
+20
+00:01:21,100 --> 00:01:24,020
+Because from starting position one, we have a match here.
+20
+
+21
+00:01:24,340 --> 00:01:28,270
+So this is a function definition from this starting index.
+21
+
+22
+00:01:28,690 --> 00:01:33,280
+Does this prefix completely match this part or not?
+22
+
+23
+00:01:34,360 --> 00:01:35,300
+The answer is yes.
+23
+
+24
+00:01:36,370 --> 00:01:43,120
+You might think, Oh, OK, but wait a second,  like, this isn't a nice string definition, why? like the
+24
+
+25
+00:01:43,120 --> 00:01:51,400
+name here is not good because when you pass a string and you call the function prefix, then it
+25
+
+26
+00:01:51,400 --> 00:01:52,130
+isn't a good name.
+26
+
+27
+00:01:52,270 --> 00:01:52,870
+This is true.
+27
+
+28
+00:01:53,380 --> 00:01:57,790
+I would say a better name is something like is substring.
+28
+
+29
+00:01:58,710 --> 00:02:01,530
+And we give it a starting position.
+29
+
+30
+00:02:01,800 --> 00:02:09,810
+Now the definition is going to be pretty good and 'is prefix' is just a substring with a starting position
+30
+
+31
+00:02:09,810 --> 00:02:10,350
+equals zero.
+31
+
+32
+00:02:10,950 --> 00:02:14,800
+So in practice, your company should say, Hey, you know what?
+32
+
+33
+00:02:14,820 --> 00:02:17,970
+This isn't a smart name.
+33
+
+34
+00:02:18,780 --> 00:02:21,390
+Actually, it can act like just a substring.
+34
+
+35
+00:02:21,870 --> 00:02:26,910
+And when it's substring, it will be much more logical because when I say is this one a substring
+35
+
+36
+00:02:26,910 --> 00:02:28,680
+from this one starting from this index?
+36
+
+37
+00:02:28,740 --> 00:02:29,790
+The answer would be yes.
+37
+
+38
+00:02:30,150 --> 00:02:31,260
+So what is the lesson here?
+38
+
+39
+00:02:31,830 --> 00:02:38,250
+The lesson is you should think about your function definition and it should be logic, and it should
+39
+
+40
+00:02:38,460 --> 00:02:39,120
+make sense.
+40
+
+41
+00:02:39,480 --> 00:02:42,960
+Anyway, let's go back to our problem here.
+41
+
+42
+00:02:43,840 --> 00:02:46,770
+Pretend that this is like substring of the....,
+42
+
+43
+00:02:46,780 --> 00:02:47,910
+It's confusing for you.
+43
+
+44
+00:02:48,970 --> 00:02:56,290
+Now, the first thing we need to do is, uh, what if we are done with tracing the function?
+44
+
+45
+00:02:56,560 --> 00:03:02,650
+so we can say, Hey, if we are done, if a starting position equal equal the length, we are done.
+45
+
+46
+00:03:03,340 --> 00:03:03,910
+This is true.
+46
+
+47
+00:03:04,600 --> 00:03:10,030
+If you would like to secure yourself, you can also say here if the position is after the prefix size, 
+47
+
+48
+00:03:10,210 --> 00:03:16,330
+return false. This would be good in software engineering, why?  because it takes care of people who
+48
+
+49
+00:03:16,330 --> 00:03:22,240
+will misuse your library, like if someone give you a very big starting position or a negative starting
+49
+
+50
+00:03:22,240 --> 00:03:22,690
+position.
+50
+
+51
+00:03:23,050 --> 00:03:24,730
+This code will runtime error.
+51
+
+52
+00:03:25,120 --> 00:03:29,260
+So in a more cleaner code in software engineering, you would actually validate the starting position.
+52
+
+53
+00:03:29,680 --> 00:03:34,450
+But for now, let's pretend everything is still good enough because we anyway wanted this function
+53
+
+54
+00:03:34,450 --> 00:03:35,920
+to be used only for is prefix.
+54
+
+55
+00:03:36,190 --> 00:03:38,470
+So we assume that people actually would not pass starting
+55
+
+56
+00:03:38,470 --> 00:03:39,340
+position equals zero.
+56
+
+57
+00:03:40,960 --> 00:03:41,320
+OK.
+57
+
+58
+00:03:41,350 --> 00:03:42,730
+Let's go to our definition.
+58
+
+59
+00:03:44,100 --> 00:03:44,850
+We see here.
+59
+
+60
+00:03:47,440 --> 00:03:54,850
+If the current start doesn't match the current prefix position, return false. For example,
+60
+
+61
+00:03:54,850 --> 00:04:01,210
+if the big string is 'abcde' and the small string is 'xy'.
+61
+
+62
+00:04:02,490 --> 00:04:04,260
+And the starting position is zero.
+62
+
+63
+00:04:04,890 --> 00:04:07,620
+So the first thing we do is; we compare this
+63
+
+64
+00:04:08,680 --> 00:04:13,260
+person with this person; does x equal a? no, doesn't. Then it cannot be a prefix anymore.
+64
+
+65
+00:04:14,070 --> 00:04:14,490
+OK.
+65
+
+66
+00:04:14,700 --> 00:04:18,180
+What if this actually was something like 'ab' ? Now,
+66
+
+67
+00:04:20,230 --> 00:04:21,850
+Does 'a' match 'a'?
+67
+
+68
+00:04:22,660 --> 00:04:23,200
+Yes.
+68
+
+69
+00:04:23,470 --> 00:04:25,270
+Now what is the new sub-definition?
+69
+
+70
+00:04:25,750 --> 00:04:31,150
+We need to match this remaining of the string with this remaining of the string.
+70
+
+71
+00:04:32,410 --> 00:04:38,710
+So let's prepare our recursive call. The recursive call will take the two strings as they are.
+71
+
+72
+00:04:39,640 --> 00:04:42,340
+But now my starting position just shifted one.
+72
+
+73
+00:04:42,520 --> 00:04:45,430
+So I'm one here and one here.
+73
+
+74
+00:04:46,540 --> 00:04:51,760
+Without tracing the function by function definition, especially if we renamed it to be is substring,
+74
+
+75
+00:04:52,000 --> 00:04:52,600
+it would be.
+75
+
+76
+00:04:52,810 --> 00:04:55,560
+I would like to match of this string here.
+76
+
+77
+00:04:56,370 --> 00:05:03,270
+This big string here and this big string here are matched starting from the index one.
+77
+
+78
+00:05:04,110 --> 00:05:04,890
+And it will keep.
+78
+
+79
+00:05:05,370 --> 00:05:06,360
+And it will keep going.
+79
+
+80
+00:05:06,570 --> 00:05:09,630
+For example, let's say let's pretend we have something like 'abz'.
+80
+
+81
+00:05:09,630 --> 00:05:16,590
+So the 'a' would match with 'a', and we recursively jump at index one 'b' match with 'b', recursively would
+81
+
+82
+00:05:16,590 --> 00:05:19,860
+jump at index two , 'c' with 'z' doesn't match.
+82
+
+83
+00:05:19,860 --> 00:05:20,760
+So we just return.
+83
+
+84
+00:05:21,390 --> 00:05:24,780
+If it happened that this actually 'c' then 'c' and 'c' match.
+84
+
+85
+00:05:24,780 --> 00:05:26,100
+Yes, jump next.
+85
+
+86
+00:05:26,430 --> 00:05:27,450
+The size is done.
+86
+
+87
+00:05:28,050 --> 00:05:29,640
+Then we return true.
+87
+
+88
+00:05:30,180 --> 00:05:33,870
+I hope overall you understood how to think about it
+88
+
+89
+00:05:33,870 --> 00:05:34,050
+here.

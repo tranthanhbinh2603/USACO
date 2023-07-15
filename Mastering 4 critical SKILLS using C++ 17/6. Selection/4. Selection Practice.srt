@@ -1,0 +1,734 @@
+0
+1
+00:00:01,140 --> 00:00:02,610
+Let's practice on selection.
+1
+
+2
+00:00:03,760 --> 00:00:10,570
+In the first program we would like to create a simple calculator that just do for us the basic addition,
+2
+
+3
+00:00:10,570 --> 00:00:12,570
+subtraction, division and multiplication.
+3
+
+4
+00:00:12,910 --> 00:00:17,410
+So we'll read two numbers and a sign between them and then just apply it.
+4
+
+5
+00:00:17,440 --> 00:00:24,070
+So for example, if we read 7+55 it gives 62. 7*10, it gives 70,
+5
+
+6
+00:00:24,520 --> 00:00:31,480
+stop the video for a few minutes, and try to sketch the code, and always try to challenge yourself
+6
+
+7
+00:00:31,480 --> 00:00:33,760
+earlier, always challenge yourself.
+7
+
+8
+00:00:33,820 --> 00:00:39,970
+This is much better for you so that you can give your trial then compare your trial with my trial. here,
+8
+
+9
+00:00:39,990 --> 00:00:41,410
+this is a very basic program.
+9
+
+10
+00:00:41,690 --> 00:00:43,020
+we would like to read two numbers,
+10
+
+11
+00:00:43,030 --> 00:00:45,730
+We also would like to read the operation, which is of type character.
+11
+
+12
+00:00:45,730 --> 00:00:49,710
+So we read two numbers. given that we would like to do the division operator,
+12
+
+13
+00:00:49,960 --> 00:00:52,710
+So choosing double here is more wise choice.
+13
+
+14
+00:00:53,020 --> 00:00:57,820
+So you read and just we need to start to apply our if else conditions.
+14
+
+15
+00:00:58,150 --> 00:01:00,250
+If we thought about it, we need to check:
+15
+
+16
+00:01:00,250 --> 00:01:02,130
+Are you "+" operation?
+16
+
+17
+00:01:02,440 --> 00:01:05,410
+If yes, then we do the "+" operation. else,
+17
+
+18
+00:01:05,650 --> 00:01:12,520
+Are you "-" operation? if yes, do the minus operation. else, are you the "*" operation?
+18
+
+19
+00:01:12,670 --> 00:01:18,160
+If yes you do the multiplication. else, we can say if operation == division.
+19
+
+20
+00:01:18,790 --> 00:01:23,740
+But if we are sure that the user is just inputting one of these four values, we can just write here else.
+20
+
+21
+00:01:23,740 --> 00:01:30,500
+OK in another case if you would like to verify more the input for the user, you would write
+21
+
+22
+00:01:30,590 --> 00:01:37,150
+here, else if operation == Division "/", then you would have another else only and tell him this
+22
+
+23
+00:01:37,150 --> 00:01:39,550
+isn't a supported operation.
+23
+
+24
+00:01:42,520 --> 00:01:42,880
+here,
+24
+
+25
+00:01:42,880 --> 00:01:46,560
+We would like to read two numbers and print the minimum of them.
+25
+
+26
+00:01:46,870 --> 00:01:51,790
+So if I give you 10, 20; you print 10, which is minimum. give you 70 and 5 you
+26
+
+27
+00:01:51,790 --> 00:01:51,920
+give 5.
+27
+
+28
+00:01:51,940 --> 00:01:53,380
+again, give a trial by yourself.
+28
+
+29
+00:01:55,660 --> 00:01:56,890
+This is very easy program,
+29
+
+30
+00:01:56,890 --> 00:02:03,040
+We can read the two numbers and then easily we can compare if the first is a smaller one, just to print it.
+30
+
+31
+00:02:03,340 --> 00:02:03,680
+else,
+31
+
+32
+00:02:03,740 --> 00:02:07,600
+Then the second is the  smaller one. in this program
+32
+
+33
+00:02:07,930 --> 00:02:11,280
+We don't need any more to write here any other else if.
+33
+
+34
+00:02:11,530 --> 00:02:12,700
+So this is very fair if-else program.
+34
+
+35
+00:02:15,010 --> 00:02:16,960
+Let's move to a more challenging case.
+35
+
+36
+00:02:17,080 --> 00:02:21,460
+You are reading three numbers and you are printing which one is minimum.
+36
+
+37
+00:02:22,030 --> 00:02:26,800
+I would like to think in this could and there are really more than an approach to do it.
+37
+
+38
+00:02:28,370 --> 00:02:34,640
+In the first approach here, we are reading the first three numbers, and here is the logic. We first
+38
+
+39
+00:02:34,640 --> 00:02:38,900
+are comparing the first two numbers, is number one less than number two or not.
+39
+
+40
+00:02:39,380 --> 00:02:43,970
+If so, then we need now to compare number one with number three.
+40
+
+41
+00:02:44,870 --> 00:02:50,480
+If false, then, number one is definitely not the smallest one, but it could be number
+41
+
+42
+00:02:50,480 --> 00:02:51,550
+two or number three.
+42
+
+43
+00:02:51,680 --> 00:02:53,510
+So we are here doing the logic of it.
+43
+
+44
+00:02:53,840 --> 00:02:59,510
+So the way we are doing it is mainly based on the comparison of the first two numbers and
+44
+
+45
+00:02:59,510 --> 00:03:00,320
+and second two numbers.
+45
+
+46
+00:03:00,590 --> 00:03:09,530
+So this one created for us a nested-if set up, as you see, compare the first two, compare the second two and
+46
+
+47
+00:03:09,530 --> 00:03:14,870
+so on. in a second way, we got rid of the nested-if conditions.
+47
+
+48
+00:03:15,200 --> 00:03:24,190
+We know number one would be the smallest, if it is smaller than number two and smaller than number three.
+48
+
+49
+00:03:24,500 --> 00:03:28,280
+So we are making condition for every one of them, if I'm smaller than all of them,
+49
+
+50
+00:03:28,280 --> 00:03:32,810
+Print number one. if not, then if number two is smaller than all of them,
+50
+
+51
+00:03:32,810 --> 00:03:39,680
+Then number two. if number one isn't the answer and the number two isn't the answer, definitely
+51
+
+52
+00:03:40,010 --> 00:03:47,630
+number three is directly the answer. here is a much more nicer way better than both of them.
+52
+
+53
+00:03:49,340 --> 00:03:55,400
+We are taking some temporary variable, let's call it answer, and we put number one inside it, and
+53
+
+54
+00:03:55,400 --> 00:04:02,180
+then if "answer" is greater than "num2", then definitely "num2" is a smaller than the current answer.
+54
+
+55
+00:04:02,780 --> 00:04:03,850
+at this moment,
+55
+
+56
+00:04:04,100 --> 00:04:06,710
+Answer has a minimum of "num1" and "num2".
+56
+
+57
+00:04:07,810 --> 00:04:13,550
+Otherwise, if answer is greater than number three, then we can say answer equal number three.
+57
+
+58
+00:04:14,110 --> 00:04:15,900
+Now, what is good about this approach?
+58
+
+59
+00:04:16,420 --> 00:04:19,390
+This approach is easily scalable.
+59
+
+60
+00:04:20,140 --> 00:04:22,570
+Scalable means we can add more values
+60
+
+61
+00:04:22,610 --> 00:04:27,720
+And it works well, like let's say I would like to get the minimum of five numbers, using this logic
+61
+
+62
+00:04:27,730 --> 00:04:32,210
+We can extend it easily, but the previous two ways weren't extendible.
+62
+
+63
+00:04:32,230 --> 00:04:33,670
+It will be very tough
+63
+
+64
+00:04:33,670 --> 00:04:34,000
+code.
+64
+
+65
+00:04:34,000 --> 00:04:36,250
+And it will keep increasing in a complex way.
+65
+
+66
+00:04:37,800 --> 00:04:38,880
+OK, let's go more.
+66
+
+67
+00:04:39,450 --> 00:04:45,540
+Let's read an integer and we have the logic already, we just need to transfer this logic to code.
+67
+
+68
+00:04:45,540 --> 00:04:47,190
+It says if the number is even,
+68
+
+69
+00:04:47,400 --> 00:04:52,940
+Print last digit of it, for example, if you go 234, this is an even number
+69
+
+70
+00:04:52,970 --> 00:04:54,650
+you print the last digit, which is 4.
+70
+
+71
+00:04:55,320 --> 00:05:03,150
+If the number is odd, we do the following, if the number is less than 1000, we print the last two
+71
+
+72
+00:05:03,150 --> 00:05:09,480
+digits of it, for example, 157, which is odd, and less than 1000 we print the last
+72
+
+73
+00:05:09,480 --> 00:05:11,660
+two digits here, which is 57.
+73
+
+74
+00:05:12,360 --> 00:05:19,020
+Otherwise, if the number is greater than 1000 but less than this million, we print the last four
+74
+
+75
+00:05:19,020 --> 00:05:19,770
+digits of it.
+75
+
+76
+00:05:20,280 --> 00:05:25,620
+For example, if this is the number, we print the last four digits of it. otherwise we print
+76
+
+77
+00:05:25,620 --> 00:05:27,120
+the negative of the input value.
+77
+
+78
+00:05:27,150 --> 00:05:32,100
+So if I give you this number we print the negative one, as you see, the logic almost exist.
+78
+
+79
+00:05:32,100 --> 00:05:38,100
+We just need mainly to print either the last digit, last two digits, last four digits or a negative
+79
+
+80
+00:05:38,100 --> 00:05:38,460
+value.
+80
+
+81
+00:05:38,850 --> 00:05:39,180
+Write
+81
+
+82
+00:05:39,210 --> 00:05:39,870
+a code for that.
+82
+
+83
+00:05:41,600 --> 00:05:46,640
+Here we just to go ahead with the logic of the code, the first one, we need to know if the number
+83
+
+84
+00:05:46,640 --> 00:05:52,400
+is even or not, which we can know that using just the mod 2 "% 2" is it == zero or not.
+84
+
+85
+00:05:52,500 --> 00:05:52,860
+OK.
+85
+
+86
+00:05:58,550 --> 00:06:06,410
+Otherwise, we go in the else and say, if num less than 1000, if then print the last two
+86
+
+87
+00:06:06,410 --> 00:06:11,450
+digits. if it is less than this number, then we print these digits. notice here,
+87
+
+88
+00:06:12,530 --> 00:06:17,000
+this condition has an implicit condition, in the request
+88
+
+89
+00:06:17,030 --> 00:06:20,240
+It was like if the number between 1000 and one million.
+89
+
+90
+00:06:20,750 --> 00:06:26,270
+But if we know that now the number isn't less than 1000, then this means it is must be greater than
+90
+
+91
+00:06:26,270 --> 00:06:27,490
+1000.
+91
+
+92
+00:06:27,680 --> 00:06:29,630
+So here we omitted a condition.
+92
+
+93
+00:06:29,630 --> 00:06:34,700
+We removed a condition because it definitely applies.
+93
+
+94
+00:06:34,980 --> 00:06:37,700
+Else, again, has here an implicit condition,
+94
+
+95
+00:06:38,090 --> 00:06:43,370
+If the number isn't less than 1000 and it isn't less than one million, then definitely, it is
+95
+
+96
+00:06:43,370 --> 00:06:44,850
+greater than or equal to one million.
+96
+
+97
+00:06:44,870 --> 00:06:47,180
+So we don't need to put specific condition here.
+97
+
+98
+00:06:47,450 --> 00:06:49,800
+This is more than enough.
+98
+
+99
+00:06:55,400 --> 00:06:58,640
+Yes, let's proceed more. Last three digits,
+99
+
+100
+00:06:58,800 --> 00:07:03,320
+Again, you are given the logic of a program here and you are to print it.
+100
+
+101
+00:07:04,610 --> 00:07:08,960
+The logic here if a number is less than ten-thousand, you just say this is a small number.
+101
+
+102
+00:07:09,350 --> 00:07:12,010
+Otherwise you sum the last three digits,
+102
+
+103
+00:07:12,020 --> 00:07:16,940
+And then if the sum is odd of the last three digits, you say this is a great number.
+103
+
+104
+00:07:17,360 --> 00:07:19,640
+If the sum is even, you do the following,
+104
+
+105
+00:07:20,060 --> 00:07:26,510
+If any digit for the last three digits is odd, say this is a good number, otherwise say this is a
+105
+
+106
+00:07:26,510 --> 00:07:27,140
+bad number.
+106
+
+107
+00:07:27,470 --> 00:07:31,170
+Again, try to take the logic of the conditions and just write a code for it.
+107
+
+108
+00:07:33,380 --> 00:07:34,020
+Here we go,
+108
+
+109
+00:07:34,250 --> 00:07:37,930
+First of all, we we do the basic two cases,
+109
+
+110
+00:07:37,940 --> 00:07:39,140
+If the number less than 1000,
+110
+
+111
+00:07:39,140 --> 00:07:45,480
+Then just a small number, else we start to prepare our program. To make it easy,
+111
+
+112
+00:07:45,620 --> 00:07:49,100
+I started to get the digits of the last three numbers.
+112
+
+113
+00:07:49,400 --> 00:07:56,630
+So, you know, remember that mode 10 "% 10" can take for us the last digit and then division by 10 can remove
+113
+
+114
+00:07:56,630 --> 00:07:56,800
+it.
+114
+
+115
+00:07:57,140 --> 00:07:59,090
+So I took the last digit and then removed
+115
+
+116
+00:07:59,090 --> 00:08:04,700
+It, take the second digit and removed it, take the next digit and removed it. this way,
+116
+
+117
+00:08:04,910 --> 00:08:11,330
+If we have a number like say 330, then I have now the zero and the three and the three.
+117
+
+118
+00:08:12,230 --> 00:08:15,590
+At this moment we can continue our logic.
+118
+
+119
+00:08:16,550 --> 00:08:25,980
+I'm going here to sum the three digits and then if the sum is odd, OK, this is a great number.
+119
+
+120
+00:08:26,600 --> 00:08:31,610
+else, we started to do the following three computations,
+120
+
+121
+00:08:32,030 --> 00:08:35,230
+we know if every digit
+121
+
+122
+00:08:35,240 --> 00:08:38,330
+of them is odd or even, if this is odd,
+122
+
+123
+00:08:40,570 --> 00:08:46,760
+Yeah, we get the digits here either our three digits are odd or not, and then we just go
+123
+
+124
+00:08:46,760 --> 00:08:49,180
+ahead and see if any of them is odd or not.
+124
+
+125
+00:08:49,520 --> 00:08:51,050
+Otherwise, it's just a bad number.
+125
+
+126
+00:08:52,940 --> 00:08:56,870
+So just go ahead and try to trace it here on these test cases.
+126
+
+127
+00:08:57,200 --> 00:09:03,560
+If you notice, as an engineer, I'm trying to cover all the possible and important test cases. one interesting
+127
+
+128
+00:09:03,560 --> 00:09:09,110
+thing about the comparison, you might think, if I would like to know if
+128
+
+129
+00:09:09,110 --> 00:09:16,030
+the number is even, I can say if mod 2 == zero, and if it's odd I can say mod 2 == 1
+129
+
+130
+00:09:16,040 --> 00:09:18,080
+I can also know for the odd
+130
+
+131
+00:09:18,110 --> 00:09:21,650
+If mod 2 is not equal zero, which one is better?
+131
+
+132
+00:09:21,650 --> 00:09:23,360
+Give a minute for thinking.
+132
+
+133
+00:09:23,360 --> 00:09:24,890
+I would like to know if a number is odd.
+133
+
+134
+00:09:25,370 --> 00:09:30,620
+Which one to say? "% 2 == 1" or "% 2 != 0"  ?
+134
+
+135
+00:09:32,000 --> 00:09:34,700
+The "!= 0" is actually much better.
+135
+
+136
+00:09:34,730 --> 00:09:35,260
+Why?
+136
+
+137
+00:09:35,690 --> 00:09:41,660
+Because it works for even numbers and odd numbers. sorry, it works for positive numbers and negative
+137
+
+138
+00:09:41,660 --> 00:09:42,070
+numbers.
+138
+
+139
+00:09:42,380 --> 00:09:45,130
+Let's say that sum is -11.
+139
+
+140
+00:09:45,740 --> 00:09:51,210
+If you took "-11 % 2", it will be -1, not 1.
+140
+
+141
+00:09:51,470 --> 00:09:52,480
+So this is tricky.
+141
+
+142
+00:09:52,820 --> 00:09:54,530
+You have to be more careful.
+142
+
+143
+00:09:54,920 --> 00:09:58,650
+But in both cases, it would be not equal zero.
+143
+
+144
+00:09:58,910 --> 00:10:03,310
+So this way is more valid for negative and positive cases.
+144
+
+145
+00:10:03,590 --> 00:10:07,950
+So always when it comes to compare even, compare with zero or not equal zero.
+145
+
+146
+00:10:07,970 --> 00:10:09,260
+Not with zero or one.
+146
+
+147
+00:10:10,570 --> 00:10:11,130
+That's it.

@@ -1,0 +1,389 @@
+0
+1
+00:00:01,200 --> 00:00:06,660
+There are three important types of variables, what we call a global variable, local variable and a
+1
+
+2
+00:00:06,660 --> 00:00:07,560
+static variable.
+2
+
+3
+00:00:08,160 --> 00:00:09,990
+So remember the local variable,
+3
+
+4
+00:00:09,990 --> 00:00:12,630
+we actually we're using it all the time.
+4
+
+5
+00:00:12,630 --> 00:00:16,830
+It is this variable inside your main function, a variable that has a scope,
+5
+
+6
+00:00:17,370 --> 00:00:22,050
+braces, once the braces are done, the variable is destroyed.
+6
+
+7
+00:00:22,060 --> 00:00:26,580
+You cannot use it outside of braces, say outside if-condition or outside the function.
+7
+
+8
+00:00:27,240 --> 00:00:32,730
+Now there is on the other side what we call a global variable, and this is variable is defined outside
+8
+
+9
+00:00:32,730 --> 00:00:33,670
+all of the functions.
+9
+
+10
+00:00:33,960 --> 00:00:37,290
+So you see here, we have here the #include..., "using namespace",
+10
+
+11
+00:00:37,290 --> 00:00:44,460
+We have here some function "main", but from line 4 to line 10, we have some variable defined in the very
+11
+
+12
+00:00:44,460 --> 00:00:46,740
+public scope, in the very general scope.
+12
+
+13
+00:00:46,740 --> 00:00:48,080
+You see them, they are here.
+13
+
+14
+00:00:48,750 --> 00:00:54,330
+So this kind of variables we call them global variables. similar to the local variables, if the variable
+14
+
+15
+00:00:54,330 --> 00:00:55,740
+is defined at line 5,
+15
+
+16
+00:00:55,740 --> 00:00:58,460
+It is visible only for the lines under it.
+16
+
+17
+00:00:58,800 --> 00:01:00,710
+So this is where you can define some global variables.
+17
+
+18
+00:01:00,720 --> 00:01:05,550
+You cannot come here and say, "cout<<global_val", you cannot do that, but you can define and declare
+18
+
+19
+00:01:05,550 --> 00:01:07,080
+them here in this scope.
+19
+
+20
+00:01:07,080 --> 00:01:09,220
+So this is mainly what we call a global variable.
+20
+
+21
+00:01:09,220 --> 00:01:12,570
+There is also a case where you can make it global and static.
+21
+
+22
+00:01:12,570 --> 00:01:16,470
+We will discuss this later in the headers and "include" topic.
+22
+
+23
+00:01:18,660 --> 00:01:25,300
+So there is also another very interesting type, what we call a local static, a static variable let's call it
+23
+
+24
+00:01:25,470 --> 00:01:26,510
+just a static variable.
+24
+
+25
+00:01:26,880 --> 00:01:33,090
+So you see here, we have oh, by the way, I want to go one step back here,
+25
+
+26
+00:01:33,330 --> 00:01:37,430
+If you didn't initialize a global variable, it's by default would be initialized to zero.
+26
+
+27
+00:01:37,440 --> 00:01:40,980
+So like in this case, it will be just 0. Going back to here,
+27
+
+28
+00:01:41,100 --> 00:01:42,360
+this is your local variable,
+28
+
+29
+00:01:42,600 --> 00:01:44,770
+here we are initializing it to zero,
+29
+
+30
+00:01:44,820 --> 00:01:46,050
+This is good. Here,
+30
+
+31
+00:01:46,050 --> 00:01:47,550
+We didn't initialize it to anything,
+31
+
+32
+00:01:47,580 --> 00:01:48,840
+So this is garbage.
+32
+
+33
+00:01:49,410 --> 00:01:52,860
+Now we have here something we call "static int si",
+33
+
+34
+00:01:52,940 --> 00:01:55,790
+Now, this is a static variable, the static variables
+34
+
+35
+00:01:55,980 --> 00:02:03,480
+are allocated only once in the first time they are called, and they are visible, and the same variable
+35
+
+36
+00:02:03,630 --> 00:02:07,260
+through the whole content, they will be visible from the same place.
+36
+
+37
+00:02:07,470 --> 00:02:12,510
+So only the guys here inside the "fun" function can see "si", no one else.
+37
+
+38
+00:02:13,050 --> 00:02:20,310
+Now the interesting is every time the function is called the variable is using his last value, it isn't
+38
+
+39
+00:02:20,310 --> 00:02:22,290
+initialized from scratch like a local variable.
+39
+
+40
+00:02:22,330 --> 00:02:23,610
+This is the difference between them.
+40
+
+41
+00:02:24,120 --> 00:02:32,460
+For example, let's say we have here "i1" with 0, and "si" with 0, every time we try to increment "i1"
+41
+
+42
+00:02:32,460 --> 00:02:36,090
+And "si", and also we try to increment the global variable with 10.
+42
+
+43
+00:02:36,870 --> 00:02:39,030
+Now let's call the function "fun" three times.
+43
+
+44
+00:02:39,930 --> 00:02:42,810
+The first time you noticed here the printing of 
+44
+
+45
+00:02:44,320 --> 00:02:46,200
+"i1", forget about this,
+45
+
+46
+00:02:46,240 --> 00:02:48,720
+this is a mistake, "i1" would be 1 1 1.
+46
+
+47
+00:02:49,500 --> 00:02:55,590
+But when you see the "si" printing, you will notice it will be 1, 2, 3, wait a second,
+47
+
+48
+00:02:55,590 --> 00:02:57,230
+Every time this guy has a value 0.
+48
+
+49
+00:02:57,240 --> 00:03:01,020
+Why it is once 1 and then once 2 and once 3!
+49
+
+50
+00:03:01,620 --> 00:03:08,360
+The reason behind that is the the last value of this variable will be used, this way the static is
+50
+
+51
+00:03:08,370 --> 00:03:11,460
+defined only once and the same through the whole program.
+51
+
+52
+00:03:11,850 --> 00:03:16,620
+So in the first call is "si" defined and declared? no,
+52
+
+53
+00:03:16,650 --> 00:03:19,980
+OK, give it value zero and increment it, print it,
+53
+
+54
+00:03:19,990 --> 00:03:22,380
+So it's 1. in the second call,
+54
+
+55
+00:03:22,770 --> 00:03:24,990
+The function would say is "si" defined?
+55
+
+56
+00:03:25,020 --> 00:03:26,360
+yes, what is its
+56
+
+57
+00:03:26,370 --> 00:03:27,380
+last value?
+57
+
+58
+00:03:27,390 --> 00:03:29,070
+It was 1, increment it,
+58
+
+59
+00:03:29,090 --> 00:03:33,570
+It is now 2, print it, so it's now 2. Call function
+59
+
+60
+00:03:33,570 --> 00:03:36,770
+number 3, is "si" defined?
+60
+
+61
+00:03:36,780 --> 00:03:37,410
+Yes,
+61
+
+62
+00:03:37,410 --> 00:03:40,750
+What is the last value? 2, increment it, 3, and so on.
+62
+
+63
+00:03:41,070 --> 00:03:48,000
+So you notice it is a very great advantage when you have a function that can maintain an information
+63
+
+64
+00:03:48,000 --> 00:03:49,110
+through its history.
+64
+
+65
+00:03:49,560 --> 00:03:51,900
+The global variable here also visible in the public.
+65
+
+66
+00:03:51,900 --> 00:03:56,640
+So every time you increment it, you will notice that its value is here visible.
+66
+
+67
+00:03:57,150 --> 00:04:00,570
+It's visible from the global variable, visible from the "fun" function.
+67
+
+68
+00:04:00,720 --> 00:04:02,730
+And we can increment it.
+68
+
+69
+00:04:03,120 --> 00:04:08,670
+But there is difference here, the variable "si" is visible only from inside, but the global is visible
+69
+
+70
+00:04:08,670 --> 00:04:09,840
+through the whole program.
+70
+
+71
+00:04:12,480 --> 00:04:17,900
+That's all, the global and static variables are initialized to their default values, which is zero.
+71
+
+72
+00:04:18,150 --> 00:04:20,200
+There are later topic named pointers,
+72
+
+73
+00:04:20,220 --> 00:04:27,330
+So the value of pointers is null pointer. a global variable as said: visible from where we declare 'till like every
+73
+
+74
+00:04:27,330 --> 00:04:28,100
+line under it.
+74
+
+75
+00:04:28,560 --> 00:04:30,630
+In practice, we don't use static local variables
+75
+
+76
+00:04:30,630 --> 00:04:32,020
+or global variables.
+76
+
+77
+00:04:32,150 --> 00:04:35,260
+This isn't good practice, but however, it's good to know about them.
+77
+
+78
+00:04:35,970 --> 00:04:36,480
+That's it.

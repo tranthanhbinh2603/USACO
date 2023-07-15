@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1673948468 source:e:\document\project\usaco\mastering critical skills in algorithms using c++ part 1\8. graph depth first search\homework\13 hard\main.cpp
+	<iostream>
+	<vector>
+	<climits>
+

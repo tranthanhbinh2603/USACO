@@ -1,0 +1,488 @@
+1
+00:00:00,820 --> 00:00:01,540
+Hello, everyone.
+
+2
+00:00:01,810 --> 00:00:07,780
+So let's generalize all of it to in the previous video we saw, how does it go for two point and we
+
+3
+00:00:07,870 --> 00:00:14,230
+saw that in the audience and I just, you know, coming up really quick before the reset, how does
+
+4
+00:00:14,230 --> 00:00:14,730
+it happen?
+
+5
+00:00:14,740 --> 00:00:15,610
+How does it work?
+
+6
+00:00:15,670 --> 00:00:16,500
+It's very simple.
+
+7
+00:00:16,510 --> 00:00:17,470
+It's ABC.
+
+8
+00:00:17,470 --> 00:00:24,670
+I've already done them and we know what is a common be a intersection C and B intersection C.
+
+9
+00:00:24,670 --> 00:00:30,910
+Right now we have a third thing, which is intersection B, intersection C, which is common to all
+
+10
+00:00:30,910 --> 00:00:32,710
+three A, B and C eight.
+
+11
+00:00:32,980 --> 00:00:38,830
+For example, let's take the below example, which is numbers which are less than 15 and divisible by
+
+12
+00:00:38,830 --> 00:00:39,100
+two.
+
+13
+00:00:40,060 --> 00:00:43,720
+So we can see those are two four six eight, 10, 12, 14 eight.
+
+14
+00:00:43,720 --> 00:00:48,940
+And what is B numbers, which are less than 15 and diesel by the late?
+
+15
+00:00:50,460 --> 00:00:56,040
+Finally, we have numbers of what you see, which is Diesel five, which is five, 10, 15.
+
+16
+00:00:56,230 --> 00:00:58,320
+So I'm seeing less than or less than equal to here.
+
+17
+00:00:58,890 --> 00:01:00,470
+Now what is Eagleman B?
+
+18
+00:01:00,790 --> 00:01:00,960
+Eight.
+
+19
+00:01:00,990 --> 00:01:05,040
+So what is in this case, he was able to and B it is.
+
+20
+00:01:05,040 --> 00:01:11,010
+But the it's again, we see that a common B is nothing but which are divisible by six.
+
+21
+00:01:12,310 --> 00:01:17,810
+Eight, because those would be the breeding rate, because the one which are used by six are already
+
+22
+00:01:17,810 --> 00:01:18,820
+sold by two and three.
+
+23
+00:01:19,300 --> 00:01:22,620
+We have six and 12 here, but we have 10.
+
+24
+00:01:22,630 --> 00:01:22,930
+Why?
+
+25
+00:01:22,930 --> 00:01:30,280
+Because two and five the humans and and four B and C, we have 15 those which are December 15.
+
+26
+00:01:30,710 --> 00:01:35,080
+What about which are diesel by Altria area and C we have.
+
+27
+00:01:36,290 --> 00:01:42,650
+No, right, so this might be a common knowledge to all of us that how do we calculate this, how do
+
+28
+00:01:42,650 --> 00:01:44,810
+we calculate aiding in beating A.?
+
+29
+00:01:45,380 --> 00:01:50,810
+Very simple rate, which is we say OK, we include air include being Lootie.
+
+30
+00:01:51,200 --> 00:01:55,380
+And we don't include Eagleman B in the S.C. and being D-S.C.
+
+31
+00:01:56,090 --> 00:01:57,800
+And then what we realize is that.
+
+32
+00:01:58,960 --> 00:02:05,980
+There's a certain part which we have actually not included, which got included three times in ABC and
+
+33
+00:02:05,980 --> 00:02:12,920
+got subjected three times in a BBC, NBC at eight will include included again to understand this.
+
+34
+00:02:12,940 --> 00:02:15,490
+Let's keep on adding things here, right?
+
+35
+00:02:15,820 --> 00:02:18,580
+If I'm including air, that means I'm doing a +1.
+
+36
+00:02:19,640 --> 00:02:20,000
+If.
+
+37
+00:02:20,870 --> 00:02:24,850
+So that plus one means that we have included this, that's one plus one.
+
+38
+00:02:25,600 --> 00:02:31,850
+So in all the parts of EA, in all, these are parts of AAA and these subsections, I just added +1
+
+39
+00:02:31,850 --> 00:02:32,750
+because they're included.
+
+40
+00:02:33,260 --> 00:02:34,460
+Now let's include B.
+
+41
+00:02:35,460 --> 00:02:42,120
+The to include B plus one plus one will be here also again and again, that means these are the parts
+
+42
+00:02:42,120 --> 00:02:44,040
+which will be included when include B.
+
+43
+00:02:44,670 --> 00:02:49,020
+Now if I include C, so c included plus one here.
+
+44
+00:02:49,290 --> 00:02:50,940
+Plus one here and plus one here.
+
+45
+00:02:51,870 --> 00:02:53,360
+Now what I what I was trying to do.
+
+46
+00:02:53,370 --> 00:02:56,910
+We are trying to remove a common B ito.
+
+47
+00:02:57,330 --> 00:03:02,490
+If this is a this is B and this is C, then e common because we all know what it is.
+
+48
+00:03:03,620 --> 00:03:05,330
+Despite the audience, Bartlett.
+
+49
+00:03:09,410 --> 00:03:14,960
+Let's subtract this part, so what where this subduction means, I'm doing a minus a day to do a minus
+
+50
+00:03:14,960 --> 00:03:20,180
+around is remove unpleasant, so minus one and minus one, that means this has been included.
+
+51
+00:03:20,420 --> 00:03:23,390
+So in the end, what we want to do is we want to include all of these.
+
+52
+00:03:24,370 --> 00:03:25,540
+Exactly when they made.
+
+53
+00:03:27,910 --> 00:03:31,240
+So now what knowledge subject a common be?
+
+54
+00:03:32,300 --> 00:03:35,420
+A common wisdom knowledge object, a common see and then become A..
+
+55
+00:03:35,890 --> 00:03:41,870
+So a common see we have this part in Eagleman sees a let's remove vine from here and one from you.
+
+56
+00:03:42,440 --> 00:03:43,880
+Well, that means we have removed this.
+
+57
+00:03:44,300 --> 00:03:46,400
+Now let's subtract bekommen.
+
+58
+00:03:46,400 --> 00:03:52,700
+See, one day right now you when you can easily see that you get this whole part is included.
+
+59
+00:03:53,240 --> 00:03:54,560
+This hole is included.
+
+60
+00:03:54,560 --> 00:03:55,490
+This hole is included.
+
+61
+00:03:55,490 --> 00:03:56,360
+One, So that's good.
+
+62
+00:03:57,420 --> 00:03:58,530
+This part is included.
+
+63
+00:03:58,860 --> 00:04:03,990
+This is also included, and this is also included, that is also good, but what about the middle part
+
+64
+00:04:03,990 --> 00:04:04,560
+here, right?
+
+65
+00:04:04,890 --> 00:04:08,090
+It was plus one three times and then minus one three times eight.
+
+66
+00:04:08,100 --> 00:04:09,660
+So we need the included separately.
+
+67
+00:04:09,960 --> 00:04:13,380
+That's where we have less a common be common.
+
+68
+00:04:15,430 --> 00:04:15,730
+Right.
+
+69
+00:04:17,420 --> 00:04:19,640
+So let's move forward.
+
+70
+00:04:19,700 --> 00:04:25,910
+And I also, yeah, let's talk about Ford, OK, so we have seen how this something in three states
+
+71
+00:04:25,910 --> 00:04:27,560
+work before, Ford said.
+
+72
+00:04:27,560 --> 00:04:32,420
+What we have is we have we are adding them individually, then we are subtracting them.
+
+73
+00:04:32,600 --> 00:04:38,300
+When we are taking them in pairs, then we are adding them again in triplets and then we are again subjecting
+
+74
+00:04:38,300 --> 00:04:38,660
+them in.
+
+75
+00:04:39,570 --> 00:04:40,190
+All right.
+
+76
+00:04:40,980 --> 00:04:42,930
+That's the burden that you can observe read.
+
+77
+00:04:43,710 --> 00:04:44,310
+We add.
+
+78
+00:04:45,470 --> 00:04:49,790
+We subtract, we add, and then we subtract and so on.
+
+79
+00:04:50,150 --> 00:04:50,450
+Right?
+
+80
+00:04:50,840 --> 00:04:52,010
+So how does it become?
+
+81
+00:04:52,460 --> 00:04:54,110
+We add the odd elements.
+
+82
+00:04:54,140 --> 00:04:57,980
+What do I mean by broad benefit contains odd number of.
+
+83
+00:04:59,020 --> 00:05:04,390
+That's in them, right, so this is a state which is unique, which is the intersection of even number
+
+84
+00:05:04,390 --> 00:05:04,810
+of states.
+
+85
+00:05:05,140 --> 00:05:08,170
+This is a state which is intersection of our number of states.
+
+86
+00:05:08,710 --> 00:05:08,860
+Eight.
+
+87
+00:05:09,460 --> 00:05:12,700
+If it is all we are, including it, we're adding +1 date.
+
+88
+00:05:13,090 --> 00:05:16,270
+Otherwise, we are subtracting it so it becomes minus one.
+
+89
+00:05:16,450 --> 00:05:19,420
+It is to the public if NW is hard.
+
+90
+00:05:20,700 --> 00:05:25,230
+If any, even state, if any, is even then it becomes.
+
+91
+00:05:27,690 --> 00:05:31,710
+But action, if an is art, then it becomes outdated and need to begin.
+
+92
+00:05:32,130 --> 00:05:34,200
+I mean, you can easily derive this formula.
+
+93
+00:05:34,710 --> 00:05:36,770
+It doesn't interfere.
+
+94
+00:05:37,720 --> 00:05:37,960
+No.
+
+95
+00:05:38,380 --> 00:05:43,330
+OK, so that was off for right when we have four sets, we add, subtract, add subject to how many
+
+96
+00:05:43,330 --> 00:05:44,060
+elements are there.
+
+97
+00:05:44,110 --> 00:05:46,060
+We choose one one one in them.
+
+98
+00:05:46,540 --> 00:05:47,980
+We have four one element.
+
+99
+00:05:48,310 --> 00:05:49,630
+We have four see two elements.
+
+100
+00:05:49,630 --> 00:05:52,840
+We have 43 elements and we have foresee what elements.
+
+101
+00:05:53,470 --> 00:05:56,040
+So similarly will happen in its 05.
+
+102
+00:05:56,040 --> 00:05:59,350
+I want you to write it, although there will be many sets here.
+
+103
+00:06:01,700 --> 00:06:09,230
+Because I will be including a weakened individual element and will be subjecting a B, e C and so on
+
+104
+00:06:09,230 --> 00:06:10,820
+and then will be including ABC.
+
+105
+00:06:12,110 --> 00:06:15,080
+And then we'll be subjecting a record above things.
+
+106
+00:06:17,190 --> 00:06:19,680
+And then we will be again adding ABC.
+
+107
+00:06:22,480 --> 00:06:22,740
+E!
+
+108
+00:06:23,200 --> 00:06:28,720
+Well, so this is how it works, so how many are how many individual elements, five seven.
+
+109
+00:06:29,230 --> 00:06:33,310
+How many in fields five c two five six three five C for five C.
+
+110
+00:06:33,850 --> 00:06:34,080
+Right.
+
+111
+00:06:34,300 --> 00:06:35,850
+So how many total are there?
+
+112
+00:06:35,860 --> 00:06:39,940
+So if you take this sum, if you remember this, this is nothing to restore.
+
+113
+00:06:39,940 --> 00:06:43,910
+The power and brand is five in this case, minus one.
+
+114
+00:06:44,740 --> 00:06:49,120
+If you add all of them, it becomes two to power and minus one.
+
+115
+00:06:49,630 --> 00:06:53,320
+And also, if you take five six zero, then it is this really about eight eight.
+
+116
+00:06:54,070 --> 00:06:55,880
+This is how inclusion exclusion works.
+
+117
+00:06:55,880 --> 00:06:56,140
+Great.
+
+118
+00:06:56,140 --> 00:07:02,610
+So when we have our number of elements in our particular intersection, we added otherwise we subjected,
+
+119
+00:07:02,980 --> 00:07:05,710
+well, I'll be using this in the next.
+
+120
+00:07:06,640 --> 00:07:10,000
+A problem discussion and also in the cold video, right?
+
+121
+00:07:10,510 --> 00:07:11,150
+We'll see you there.
+
+122
+00:07:11,170 --> 00:07:11,590
+Thank you.
+

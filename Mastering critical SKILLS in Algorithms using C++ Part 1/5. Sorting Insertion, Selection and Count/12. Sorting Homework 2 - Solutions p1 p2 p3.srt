@@ -1,0 +1,689 @@
+0
+1
+00:00:01,130 --> 00:00:02,840
+Let's solve homework number two.
+1
+
+2
+00:00:03,990 --> 00:00:04,620
+Um.
+2
+
+3
+00:00:07,940 --> 00:00:08,400
+OK.
+3
+
+4
+00:00:08,440 --> 00:00:11,300
+In the first problem about the minimum absolute difference.
+4
+
+5
+00:00:11,990 --> 00:00:13,550
+There is an observation here.
+5
+
+6
+00:00:14,000 --> 00:00:16,820
+I want the minimum among all of the pairs.
+6
+
+7
+00:00:17,330 --> 00:00:23,030
+Logically, the closest pair for every number is what could bring a minimum value.
+7
+
+8
+00:00:23,720 --> 00:00:29,140
+So if you try to think about it, the sorted array is the best location to find the closest to me.
+8
+
+9
+00:00:29,150 --> 00:00:31,760
+The one after me is the closest one to me.
+9
+
+10
+00:00:33,080 --> 00:00:33,710
+That simple.
+10
+
+11
+00:00:33,770 --> 00:00:41,120
+So the idea is to start by sorting the numbers, and from the consecutive pairs, just find the minimum difference.
+11
+
+12
+00:00:41,570 --> 00:00:47,330
+And again, iterate on all of the pairs, again in a consecutive way, and find the minimum difference.
+12
+
+13
+00:00:47,810 --> 00:00:54,260
+The trick here again is what really helps us to get rid of thinking about two nested loops
+13
+
+14
+00:00:54,260 --> 00:01:04,610
+to compare the values is the fact if I have something like 10, 17, 19, 25, the minimum
+14
+
+15
+00:01:04,610 --> 00:01:08,800
+pair for this 19 is only coming from the 25 or the 17.
+15
+
+16
+00:01:08,810 --> 00:01:10,190
+It will never come from the ten.
+16
+
+17
+00:01:10,190 --> 00:01:16,460
+It will never come from the thirty, it definitely comes from the neighbor, the neighbor in the sorted
+17
+
+18
+00:01:16,460 --> 00:01:16,880
+array.
+18
+
+19
+00:01:17,330 --> 00:01:18,830
+So this is the core observation.
+19
+
+20
+00:01:18,830 --> 00:01:23,960
+So you start by sorting here, then iterate on every consecutive element to get the minimum.
+20
+
+21
+00:01:24,320 --> 00:01:29,330
+Then again, iterate back on the array, check if they have the minimum, then we need this pair.
+21
+
+22
+00:01:29,780 --> 00:01:35,000
+So how did we get rid of the comparison with all of the pairs? Because we only needed the
+22
+
+23
+00:01:36,050 --> 00:01:36,980
+neighbors' values.
+23
+
+24
+00:01:37,100 --> 00:01:40,970
+That simple. Let's a move to the second problem.
+24
+
+25
+00:01:43,610 --> 00:01:49,340
+In the second problem, we wanted to find the largest perimeter of a triangle.
+25
+
+26
+00:01:50,180 --> 00:01:52,640
+Now it's important first to remember,
+26
+
+27
+00:01:53,360 --> 00:01:59,090
+uh, by the way, sometimes LeetCode itself has an editorial, and usually, it will have a lot of other
+27
+
+28
+00:01:59,090 --> 00:01:59,460
+solution.
+28
+
+29
+00:01:59,480 --> 00:02:03,920
+It is good to read about them, but skip the ideas that you cannot get it.
+29
+
+30
+00:02:04,730 --> 00:02:07,220
+Sometimes the editorial is good, sometimes not, anyway.
+30
+
+31
+00:02:07,640 --> 00:02:16,460
+Now, what makes a triangle is valid abc? In math for the triangle to be valid, the summation
+31
+
+32
+00:02:16,490 --> 00:02:20,780
+of any two sides must be bigger than the third side.
+32
+
+33
+00:02:20,960 --> 00:02:21,950
+So we have three sides.
+33
+
+34
+00:02:21,950 --> 00:02:22,940
+We have three equations.
+34
+
+35
+00:02:23,390 --> 00:02:27,980
+(a + b) must be greater than c, (a + c) must be greater than b,
+35
+
+36
+00:02:28,920 --> 00:02:30,960
+(b + c) must be greater than a.
+36
+
+37
+00:02:31,290 --> 00:02:36,090
+If you have a triangle with these conditions, this is a valid triangle.
+37
+
+38
+00:02:36,920 --> 00:02:45,300
+Now there is a trick here. If a, b, c are sorted, such that a is less than b, is less c, then you only
+38
+
+39
+00:02:45,300 --> 00:02:46,230
+need to make one check
+39
+
+40
+00:02:46,260 --> 00:02:53,250
+among all of these conditions, which c here is the largest.
+40
+
+41
+00:02:53,460 --> 00:02:57,750
+So (a + b) is greater than c.
+41
+
+42
+00:03:01,150 --> 00:03:02,500
+Uh, yeah.
+42
+
+43
+00:03:02,530 --> 00:03:07,150
+So this is a good condition to remember. If the numbers are sorted, you only need one of them.
+43
+
+44
+00:03:07,480 --> 00:03:14,200
+Now going back to the problem, which one can generate for us the largest triangle? As simple
+44
+
+45
+00:03:14,200 --> 00:03:16,990
+as the largest three values.
+45
+
+46
+00:03:18,450 --> 00:03:25,370
+But the largest three values might not be enough for the solution, why?
+46
+
+47
+00:03:25,380 --> 00:03:29,130
+Because they might be invalid.
+47
+
+48
+00:03:29,730 --> 00:03:37,230
+So the idea is you will scan from large to small, and take every three consecutive
+48
+
+49
+00:03:37,230 --> 00:03:37,770
+values.
+49
+
+50
+00:03:38,340 --> 00:03:44,430
+If it happens that they are valid ones, then you don't need to check anyones anymore.
+50
+
+51
+00:03:44,880 --> 00:03:49,190
+First of all, start by sorting the array from large to small. In C++,
+51
+
+52
+00:03:49,200 --> 00:03:50,520
+we can do that in different ways.
+52
+
+53
+00:03:50,790 --> 00:03:55,020
+One of them is just to use rbegin() and rend(), which is the reverse iterator.
+53
+
+54
+00:03:55,620 --> 00:03:59,070
+Now, after that, iterate on the array normally, take three values,
+54
+
+55
+00:03:59,100 --> 00:04:02,010
+nums[ i ], nums[ i + 1 ], and nums[ i + 2 ].
+55
+
+56
+00:04:02,020 --> 00:04:08,370
+So let's say the values are maybe 20, 18, and 10.
+56
+
+57
+00:04:09,830 --> 00:04:15,230
+So now all what we need to do is as following, we would like to sum these two ones, which is 8 and 20,
+57
+
+58
+00:04:15,560 --> 00:04:17,360
+and compare them with the largest one.
+58
+
+59
+00:04:17,810 --> 00:04:23,390
+If these two ones are greater than me, then I definitely found a proper triangle.
+59
+
+60
+00:04:23,600 --> 00:04:27,860
+So this is the sense here of the solution.
+60
+
+61
+00:04:28,520 --> 00:04:35,510
+I will leave for you to think more about the proof of this code, like could be something that we need
+61
+
+62
+00:04:35,510 --> 00:04:36,350
+to do more.
+62
+
+63
+00:04:36,710 --> 00:04:40,010
+Is there a case that we really to be sure out of it?
+63
+
+64
+00:04:40,220 --> 00:04:42,980
+For example, in this
+64
+
+65
+00:04:42,980 --> 00:04:46,850
+code, I assume the following 20, 18, 10, 7.
+65
+
+66
+00:04:47,540 --> 00:04:54,500
+I assume if these three ones are invalid, then we move to check these three ones.
+66
+
+67
+00:04:55,070 --> 00:04:58,070
+Could it be that 20, 10, and 7 a solution?
+67
+
+68
+00:04:58,340 --> 00:05:00,290
+Here we are skipping that.
+68
+
+69
+00:05:00,290 --> 00:05:00,620
+.
+69
+
+70
+00:05:00,620 --> 00:05:01,940
+Could this be the case?
+70
+
+71
+00:05:02,210 --> 00:05:03,170
+Think more about that.
+71
+
+72
+00:05:05,700 --> 00:05:09,510
+Anyway, this is the second problem.
+72
+
+73
+00:05:10,080 --> 00:05:17,400
+So let's move to the third problem. In the third problem, we would like to partition group of 2N
+73
+
+74
+00:05:17,400 --> 00:05:18,330
+numbers.
+74
+
+75
+00:05:19,680 --> 00:05:27,720
+Um, two groups such that the minimum of the pairs, and the summation is maximum.
+75
+
+76
+00:05:28,230 --> 00:05:31,530
+So this involves some kind of observations.
+76
+
+77
+00:05:32,640 --> 00:05:33,780
+Now here is the idea.
+77
+
+78
+00:05:34,470 --> 00:05:38,310
+Um, let's say we have the following numbers from one to eight.
+78
+
+79
+00:05:39,630 --> 00:05:43,290
+Now, I know that if I have a pair of (a, b), I take the minimum.
+79
+
+80
+00:05:44,200 --> 00:05:50,430
+So my target is to keep the large values as much as I can, right? So that I can make it a minimum.
+80
+
+81
+00:05:51,060 --> 00:05:58,260
+And when you think about it, the value one anyway is going to be assigned with someone, and it will
+81
+
+82
+00:05:58,260 --> 00:06:07,170
+be the smallest, let's say we have values like 10, 20, 30, and 40. Ten is going anyway to be
+82
+
+83
+00:06:07,170 --> 00:06:08,070
+part of the summation.
+83
+
+84
+00:06:08,070 --> 00:06:08,290
+Why?
+84
+
+85
+00:06:08,310 --> 00:06:11,910
+Because it's the smallest one, so regardless being of 20 or 30 or 40.
+85
+
+86
+00:06:12,030 --> 00:06:14,970
+It must be part of the output.
+86
+
+87
+00:06:15,390 --> 00:06:16,710
+So here is the logical thinking.
+87
+
+88
+00:06:17,100 --> 00:06:23,760
+I have now the minimum value, which is one, and I know that
+88
+
+89
+00:06:24,000 --> 00:06:28,740
+the answer is going to be one anyway because one is the minimum.
+89
+
+90
+00:06:29,550 --> 00:06:35,120
+So now the choice is I would like to greedily or logically as we mentioned before.
+90
+
+91
+00:06:35,490 --> 00:06:38,670
+I would like to keep the large values as much as I can.
+91
+
+92
+00:06:39,150 --> 00:06:45,600
+So if I said, OK, I'm going to take one and eight, which is one, I lost the value of eight.
+92
+
+93
+00:06:46,260 --> 00:06:53,000
+But if I took something like one and two, this is more smarter because we got rid of two, but we kept
+93
+
+94
+00:06:53,050 --> 00:06:54,480
+all of the other bigger values.
+94
+
+95
+00:06:54,840 --> 00:06:59,040
+When you think about the logic from this perspective, you can think the following.
+95
+
+96
+00:07:00,400 --> 00:07:03,520
+If I have a bunch of values like that,
+96
+
+97
+00:07:04,750 --> 00:07:06,070
+I can simply
+97
+
+98
+00:07:07,510 --> 00:07:09,490
+start from the smallest number,
+98
+
+99
+00:07:10,920 --> 00:07:19,080
+pair it with the second smallest number, which is two, and then the next is three, three anyway must
+99
+
+100
+00:07:19,080 --> 00:07:20,400
+be now part of the output.
+100
+
+101
+00:07:20,730 --> 00:07:25,950
+I will pair it with the next smallest number, which is four, and so on.
+101
+
+102
+00:07:26,850 --> 00:07:28,620
+This is what we call, by the way, greedy.
+102
+
+103
+00:07:28,620 --> 00:07:33,450
+So anyway we will end up splitting the values from one to eight to pair one, two, three, four, five, six,
+103
+
+104
+00:07:33,450 --> 00:07:34,320
+seven, and eight.
+104
+
+105
+00:07:34,710 --> 00:07:36,690
+Let me show you first the implementation.
+105
+
+106
+00:07:40,470 --> 00:07:42,900
+The implementation is now straightforward.
+106
+
+107
+00:07:43,590 --> 00:07:49,920
+Sort the numbers, and now we know the summation will be the first value here, the first value
+107
+
+108
+00:07:49,920 --> 00:07:52,380
+here, the first value here, and the first value here.
+108
+
+109
+00:07:52,560 --> 00:07:55,950
+So we take nums[ i ] from this group of pairs, and I'm here
+109
+
+110
+00:07:55,950 --> 00:07:56,670
+jumping with two.
+110
+
+111
+00:07:57,030 --> 00:08:01,980
+That's why we sorted the numbers so that we take the smallest number, pair it with the second smallest
+111
+
+112
+00:08:01,980 --> 00:08:02,340
+number.
+112
+
+113
+00:08:03,330 --> 00:08:08,010
+Let me go back here and tell you what do I mean that this is a greedy algorithm.
+113
+
+114
+00:08:08,340 --> 00:08:10,620
+So greedy is about problem
+114
+
+115
+00:08:10,620 --> 00:08:13,470
+and sub-problem, we will explain greedy later in details.
+115
+
+116
+00:08:13,890 --> 00:08:15,690
+So, what is the problem?
+116
+
+117
+00:08:15,690 --> 00:08:22,650
+The problem that we have here is to make pairs of the values from one to eight.
+117
+
+118
+00:08:25,240 --> 00:08:29,830
+We logically or greedily, sorry, one, two, three, four up to eight, one to eight.
+118
+
+119
+00:08:30,160 --> 00:08:30,480
+OK.
+119
+
+120
+00:08:32,700 --> 00:08:40,650
+Why when we're pairing one, two, three, four, five, six, seven, eight, we found that the best choice
+120
+
+121
+00:08:40,650 --> 00:08:42,180
+is to take one and two together?
+121
+
+122
+00:08:43,240 --> 00:08:49,720
+Now, what is the next? The next is to apply the same solution to the remaining numbers, we call the values
+122
+
+123
+00:08:49,720 --> 00:08:55,720
+from three to eight a sub-problem, and we will apply exactly the same logic on the sub-problem.
+123
+
+124
+00:08:55,960 --> 00:08:57,880
+So this is what we call a greedy algorithm.
+124
+
+125
+00:08:57,970 --> 00:09:03,820
+We made here a smart choice, and reduced the problem to another sub-problem that will be applied
+125
+
+126
+00:09:03,820 --> 00:09:04,540
+in the same way.
+126
+
+127
+00:09:04,840 --> 00:09:11,620
+Three and four will be applied the same, so we get a new sub-problem for the numbers five, six,
+127
+
+128
+00:09:11,620 --> 00:09:15,070
+seven, and eight, and so on.
+128
+
+129
+00:09:15,340 --> 00:09:16,420
+.
+129
+
+130
+00:09:16,460 --> 00:09:17,050
+If you don't get this,
+130
+
+131
+00:09:17,080 --> 00:09:18,070
+this is totally OK.
+131
+
+132
+00:09:18,190 --> 00:09:20,530
+What I wanted you to know is we have a problem,
+132
+
+133
+00:09:22,110 --> 00:09:28,830
+we have a smart choice that reduces the problem to a sub-problem, and we applied exactly the same logic on it.
+133
+
+134
+00:09:28,830 --> 00:09:31,680
+Every time we say the world greedily,
+134
+
+135
+00:09:31,860 --> 00:09:36,540
+It means we have a problem that we converted to another problem of the same type,
+135
+
+136
+00:09:36,570 --> 00:09:37,410
+smaller size,
+136
+
+137
+00:09:37,590 --> 00:09:40,500
+and we apply the same procedure to solve it.
+137
+
+138
+00:09:41,070 --> 00:09:41,550
+That's it.

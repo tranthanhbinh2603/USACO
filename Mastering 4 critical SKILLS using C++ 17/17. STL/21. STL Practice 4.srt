@@ -1,0 +1,344 @@
+0
+1
+00:00:00,810 --> 00:00:07,620
+Let's continue our practice. In this one, you would be first given N full names, what is a full name?
+1
+
+2
+00:00:08,220 --> 00:00:10,110
+It is like  — your name more than a K words.
+2
+
+3
+00:00:10,380 --> 00:00:15,120
+So it starts with K for the number of words in your name, then the list of keywords.
+3
+
+4
+00:00:15,420 --> 00:00:20,880
+For example, as an input, you take first, 5, five her is for 5 full names, then every full name
+4
+
+5
+00:00:21,090 --> 00:00:24,570
+starts with a number. let's say 3, then Mustafa Saad Ibrahim.
+5
+
+6
+00:00:24,570 --> 00:00:26,790
+These are 3 words for my full name.
+6
+
+7
+00:00:27,060 --> 00:00:30,790
+3 Mustafa Saad Ali, 3 Asmaa Talaat Morsi, and so on.
+7
+
+8
+00:00:31,110 --> 00:00:39,360
+So as you see, you have here like — a number of full names, then the number of words per
+8
+
+9
+00:00:39,360 --> 00:00:41,350
+a name then the three words here.
+9
+
+10
+00:00:41,970 --> 00:00:45,120
+Now for queries, you are also reading queue for Q queries.
+10
+
+11
+00:00:45,270 --> 00:00:50,100
+each query is a sub full name. It again starts with K then K words.
+11
+
+12
+00:00:50,220 --> 00:00:52,950
+For example, one query will be here,
+12
+
+13
+00:00:52,950 --> 00:00:53,580
+3 queries.
+13
+
+14
+00:00:53,580 --> 00:00:55,020
+One query is 2 words,
+14
+
+15
+00:00:55,020 --> 00:01:01,560
+Mustafa Saad. You are to find all full names that start with Mustafa Saad, which are
+15
+
+16
+00:01:01,710 --> 00:01:03,480
+if you go here one step back.
+16
+
+17
+00:01:03,750 --> 00:01:05,190
+This is start with Mustafa Saad,
+17
+
+18
+00:01:05,310 --> 00:01:07,910
+this is start with Mustafa Saad, and this is start with Mustafa Saad.
+18
+
+19
+00:01:08,130 --> 00:01:10,220
+So we have 3 names starting with that.
+19
+
+20
+00:01:10,650 --> 00:01:18,170
+So you are given full names as an input and the sub full name as a query and you are to find the sub name.
+20
+
+21
+00:01:18,180 --> 00:01:22,830
+If we give one Asmaa, it's going to give you Asmaa here and Asmaa here, 2 entries.
+21
+
+22
+00:01:23,160 --> 00:01:32,100
+So you print this vector of all of the items that are starting with this sub full names. Give yourself a couple
+22
+
+23
+00:01:32,100 --> 00:01:34,140
+of minutes to think about it and maybe put it.
+23
+
+24
+00:01:35,650 --> 00:01:44,650
+Here is one nice way using the map, we're going to build a map of string and vector of a string, and here is
+24
+
+25
+00:01:44,650 --> 00:01:51,200
+the idea, here is how we will build this map: For every input full name, we are going to generate all possible
+25
+
+26
+00:01:51,490 --> 00:01:52,570
+sub full names from it,
+26
+
+27
+00:01:53,080 --> 00:01:56,190
+then we are going to map them to the full name.
+27
+
+28
+00:01:56,320 --> 00:02:01,450
+For example, if you have the full name of Mostafa Saad Ibrahim, which consist of three words, we will
+28
+
+29
+00:02:01,450 --> 00:02:03,420
+add 3 entries in the map from it.
+29
+
+30
+00:02:03,730 --> 00:02:06,260
+You notice here, the two is the full name, Mustafa Saad Ibrahim, Mustafa Saad Ibrahim,
+30
+
+31
+00:02:07,280 --> 00:02:08,440
+and so on. This is the full way.
+31
+
+32
+00:02:08,860 --> 00:02:10,780
+Here are the three possible generation,
+32
+
+33
+00:02:11,060 --> 00:02:16,400
+It could be the first word only Mostafa, the first and second Mostafa Saad, the first and second and third
+33
+
+34
+00:02:16,440 --> 00:02:17,050
+Mostafa Saad Ibrahim.
+34
+
+35
+00:02:17,440 --> 00:02:23,770
+So if I give you a name of 5 entries, 5 words, you are going to generate five
+35
+
+36
+00:02:23,770 --> 00:02:24,670
+entries for me.
+36
+
+37
+00:02:25,270 --> 00:02:31,240
+Once you generated all of that for every map you can, simply for a query, build its sub full name
+37
+
+38
+00:02:31,240 --> 00:02:33,940
+and just go and check in the map 
+38
+
+39
+00:02:34,600 --> 00:02:35,320
+its list.
+39
+
+40
+00:02:35,710 --> 00:02:36,990
+So here is how to code it.
+40
+
+41
+00:02:37,420 --> 00:02:42,160
+We first defined the map, and we read number of inputs.
+41
+
+42
+00:02:42,550 --> 00:02:46,890
+We read here the number of K words and then we iterate. We have two things here,
+42
+
+43
+00:02:47,170 --> 00:02:48,570
+I have a current full name,
+43
+
+44
+00:02:48,580 --> 00:02:50,620
+this will be the concatenation of the whole names.
+44
+
+45
+00:02:50,620 --> 00:02:54,730
+So if I give it Mustafa Saad Ibrahim, it will be a concatenation of  Mustafa Saad
+45
+
+46
+00:02:54,730 --> 00:03:02,530
+Ibrahim with a space-separated. The vector of string names here is the list of all the sub full names.
+46
+
+47
+00:03:02,950 --> 00:03:08,440
+So I go on the input, one by one, take the word, let's say first I take the word Mustafa, then I
+47
+
+48
+00:03:08,440 --> 00:03:14,320
+am concatenating it to the string and pushing it in the string, then I took the word saad then
+48
+
+49
+00:03:14,340 --> 00:03:25,030
+I'm concatenating it here and now pushing back here the word saad. Now I'm taking
+49
+
+50
+00:03:25,030 --> 00:03:31,650
+here the word Ibrahim, concatenating it here and then I am adding here also Mustafa Saad Ibrahim.
+50
+
+51
+00:03:31,990 --> 00:03:39,430
+So notice here, this current full name, we are building it step by step and we are adding it here.
+51
+
+52
+00:03:39,700 --> 00:03:41,920
+So now we are added so far 3 things.
+52
+
+53
+00:03:42,190 --> 00:03:48,110
+... OK. We have now here in the names 3 things, Mostafa 
+53
+
+54
+00:03:48,160 --> 00:03:48,790
+as a string,
+54
+
+55
+00:03:48,970 --> 00:03:51,390
+Mostafa Saad Ibrahim as a string, Mostafa Saad as a string.
+55
+
+56
+00:03:51,820 --> 00:03:55,450
+We iterate in all of the strings and we start to push back
+56
+
+57
+00:03:56,380 --> 00:04:01,540
+the str that we have, Mustafa, then Mostafa Saad, then Mustafa Saad Ibrahim to that full
+57
+
+58
+00:04:01,540 --> 00:04:03,240
+name, which is just Mustafa Saad Ibrahim.
+58
+
+59
+00:04:03,580 --> 00:04:05,290
+By the way, this is inefficient iterating,
+59
+
+60
+00:04:05,290 --> 00:04:06,700
+you better use the reference here.
+60
+
+61
+00:04:08,880 --> 00:04:16,890
+Let's go more. Now for the querying, we are reading a query here, we are again going back to the current full name
+61
+
+62
+00:04:16,890 --> 00:04:18,110
+in the same exact way.
+62
+
+63
+00:04:18,360 --> 00:04:24,030
+So if I give a query, like Mostafa saad, two items, It is going to be one string Mustafa, space, Saad then I'm
+63
+
+64
+00:04:24,030 --> 00:04:25,030
+double checking the map,
+64
+
+65
+00:04:25,060 --> 00:04:25,950
+does it exist?
+65
+
+66
+00:04:25,950 --> 00:04:29,530
+If it exists, we retrieve it and we just print it, that simple.
+66
+
+67
+00:04:29,940 --> 00:04:36,900
+So I hope you see how the map here can make our life much much easier than probably the iterative way
+67
+
+68
+00:04:36,900 --> 00:04:38,660
+that you were thinking about it.
+68
+
+69
+00:04:38,720 --> 00:04:38,850
+That's it.

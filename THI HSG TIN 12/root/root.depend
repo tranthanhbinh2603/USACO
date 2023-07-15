@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1673837404 source:e:\document\pack\root\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<math.h>
+	<map>
+
+1673924796 source:e:\document\project\usaco\thi hsg tin 12\root\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<math.h>
+	<map>
+

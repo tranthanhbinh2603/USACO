@@ -1,0 +1,106 @@
+WEBVTT
+
+00:01.030 --> 00:04.000
+So let us recap what we have learned in this particular section.
+
+00:04.180 --> 00:06.370
+The first thing we have learned is about keywords.
+
+00:06.730 --> 00:11.230
+Two keywords other terms that have special meaning for the compiler and they are resolved.
+
+00:12.040 --> 00:18.910
+Second thing we learned about identifiers to identifiers are the names that are used to name an entropy
+
+00:19.480 --> 00:21.760
+variable name is also a type of identified.
+
+00:22.360 --> 00:25.720
+And third thing we talked about header files.
+
+00:26.290 --> 00:32.740
+These files contain some pre-written good that is required to provide additional functionality inside
+
+00:32.740 --> 00:33.460
+of a program.
+
+00:34.420 --> 00:40.960
+The program execution always starts would mean this you need to remember on curly brackets, they are
+
+00:40.960 --> 00:42.460
+used to enclose a block.
+
+00:42.700 --> 00:45.050
+So this block can be a block of function.
+
+00:45.070 --> 00:48.100
+It can be a block of if it can be block of file.
+
+00:48.520 --> 00:54.950
+So these concepts we are going to see in the next sections to C++ compiler ignores whitespace.
+
+00:55.090 --> 01:00.100
+OK, so that means in your code, you can have as many white spaces as you want.
+
+01:01.060 --> 01:08.200
+So all the spaces, new lines, Dobbs, they are ignored by the compiler when it is compiling the code
+
+01:08.200 --> 01:08.350
+book.
+
+01:08.380 --> 01:13.760
+So for example, if you are writing and you can give a single space, or maybe you're going to end,
+
+01:14.260 --> 01:19.540
+followed by a lot of space, followed by OK, then maybe you can leave these two lanes empty, then
+
+01:19.540 --> 01:20.310
+you will gained.
+
+01:21.130 --> 01:27.370
+Some see that is equal to, let's say, A-plus, because something like this, all these spaces that
+
+01:27.370 --> 01:33.640
+ignored by the company that OK, it is only what is the actual part of the code that does the thing
+
+01:33.640 --> 01:35.620
+that only matters for the compiler.
+
+01:36.520 --> 01:41.650
+The output is done using code and input is done using scene.
+
+01:42.280 --> 01:44.080
+So both of them are special objects.
+
+01:44.590 --> 01:49.960
+And right now we have not talked about object oriented programming, so I will not dive into the details
+
+01:49.960 --> 01:52.840
+of how out or housing works.
+
+01:52.930 --> 01:54.730
+So we'll discuss them later on.
+
+01:54.880 --> 01:55.150
+OK.
+
+01:55.660 --> 01:57.970
+And we have seen the water comments.
+
+01:58.210 --> 02:04.270
+So there are two ways a single engagement and a multi comment on last night were the list.
+
+02:04.540 --> 02:07.270
+So every statement must end with a semicolon.
+
+02:07.270 --> 02:11.800
+So you will see that most statements that you write, they end with a semicolon.
+
+02:11.890 --> 02:12.220
+OK.
+
+02:13.180 --> 02:15.670
+That is what you need to remember inside.
+
+02:17.050 --> 02:19.480
+This module, and that's all for this video.

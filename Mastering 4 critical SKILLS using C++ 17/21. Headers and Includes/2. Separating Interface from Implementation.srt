@@ -1,0 +1,890 @@
+0
+1
+00:00:01,200 --> 00:00:09,440
+In this video, we're going to learn one more standard feature in the industry. So far,
+1
+
+2
+00:00:09,940 --> 00:00:12,810
+we learned to have two files in our project.
+2
+
+3
+00:00:13,170 --> 00:00:17,330
+One of them, let's call it the main dot cpp, and another one is sum dot-h.
+3
+
+4
+00:00:17,340 --> 00:00:22,740
+When we defined sum code in sum dot-h, we just hang hash include in the main dot-cpp.
+4
+
+5
+00:00:23,250 --> 00:00:24,630
+Now imagine the following:
+5
+
+6
+00:00:25,230 --> 00:00:29,250
+Our current implementation is slow, so we sum from one to n.
+6
+
+7
+00:00:29,700 --> 00:00:32,490
+What if we would like later to provide sum faster version?
+7
+
+8
+00:00:32,880 --> 00:00:37,350
+What if we like to provide something that fixes bugs and so on.
+8
+
+9
+00:00:37,350 --> 00:00:41,880
+Let's say that we have an implementation for Windows implementation, for ubuntu, for Mac, for reading
+9
+
+10
+00:00:41,880 --> 00:00:43,590
+something from the hard disk and so on.
+10
+
+11
+00:00:44,220 --> 00:00:46,000
+So C++ allow one more
+11
+
+12
+00:00:46,050 --> 00:00:51,270
+very interesting feature.
+12
+
+13
+00:00:51,270 --> 00:00:56,070
+It now creates a new dot-cpp file to have the implementation of sum dot-h.
+13
+
+14
+00:00:57,630 --> 00:01:04,620
+So we actually now have a new file, but it is of the type source file (In your IDE like Eclipse or other,
+14
+
+15
+00:01:04,920 --> 00:01:08,060
+you can just create a source file or something that you name dot-cpp.
+15
+
+16
+00:01:08,490 --> 00:01:12,000
+So here is what you have. Now you are going to have three files.
+16
+
+17
+00:01:12,480 --> 00:01:18,000
+The first one is the main file, like the first time you hash include the sum dot-h and you are going
+17
+
+18
+00:01:18,000 --> 00:01:18,510
+to call it.
+18
+
+19
+00:01:18,590 --> 00:01:19,020
+That's it,
+19
+
+20
+00:01:19,050 --> 00:01:19,650
+like we did.
+20
+
+21
+00:01:20,190 --> 00:01:22,880
+The second one is the sum dot-h file,
+21
+
+22
+00:01:22,890 --> 00:01:27,390
+but notice here we are declaring only the function not defining it.
+22
+
+23
+00:01:27,400 --> 00:01:34,140
+So when we say a declaration of a function, we just mean the function return, name, parameter and
+23
+
+24
+00:01:34,140 --> 00:01:40,170
+then semicolon without the details of it. When we say a function definition, we actually mean
+24
+
+25
+00:01:40,170 --> 00:01:41,020
+the whole function.
+25
+
+26
+00:01:41,400 --> 00:01:43,650
+So now what is the difference between that one and that one?
+26
+
+27
+00:01:44,010 --> 00:01:47,600
+This way here, the declaration, it's focusing on the what, not the how.
+27
+
+28
+00:01:48,000 --> 00:01:48,840
+What does this mean?
+28
+
+29
+00:01:49,320 --> 00:01:49,920
+This function,
+29
+
+30
+00:01:49,930 --> 00:01:50,430
+what is it?
+30
+
+31
+00:01:50,430 --> 00:01:54,230
+Just some function doing summation from 1 to n.How is it done?
+31
+
+32
+00:01:54,240 --> 00:01:54,840
+We don't know.
+32
+
+33
+00:01:54,960 --> 00:01:58,190
+Is it just the summation from zero to n-1.
+33
+
+34
+00:01:58,560 --> 00:01:59,700
+Is it an equation,
+34
+
+35
+00:01:59,700 --> 00:02:00,390
+just multiply
+35
+
+36
+00:02:01,470 --> 00:02:03,270
+n items plus one over two? we don't know.
+36
+
+37
+00:02:04,410 --> 00:02:11,100
+So when we separate this declaration from the implementation, or the declaration
+37
+
+38
+00:02:11,100 --> 00:02:16,170
+from the definition, we have one file that's focusing on the what and another file that's focusing on the
+38
+
+39
+00:02:16,170 --> 00:02:17,450
+how.
+39
+
+40
+00:02:17,510 --> 00:02:21,540
+Now this dot-cpp file, do I care here how this function is implemented?
+40
+
+41
+00:02:21,540 --> 00:02:22,070
+I don't care.
+41
+
+42
+00:02:22,560 --> 00:02:28,470
+Have you ever cared about how the square root function is implemented or how the vector of
+42
+
+43
+00:02:29,070 --> 00:02:30,180
+integer is implemented?
+43
+
+44
+00:02:30,180 --> 00:02:33,180
+You never care, you care about the what.
+44
+
+45
+00:02:33,180 --> 00:02:38,010
+Guys, I would like a function that sum from one to N, and this one is about the how. It's now slow.
+45
+
+46
+00:02:38,010 --> 00:02:43,530
+Maybe in the future, we faster one or someone that is bug-free and so on. We don't care.
+46
+
+47
+00:02:43,890 --> 00:02:51,170
+So anyway, the moral of that we now have three files. The dot-h file and two dot-cpp files. What is a cpp file?
+47
+
+48
+00:02:51,180 --> 00:02:58,380
+(which are we are calling here sum-slow dot-cpp) Just has a definition of this declaration.
+48
+
+49
+00:02:58,710 --> 00:03:02,550
+And another fun, which is our main dot-cpp, has one main function.
+49
+
+50
+00:03:02,950 --> 00:03:09,150
+Remember, in C++ when you have one compilation unit, you have to have only one function that is named
+50
+
+51
+00:03:09,150 --> 00:03:09,540
+main.
+51
+
+52
+00:03:09,960 --> 00:03:15,000
+So this file, although it's dot-cpp, it doesn't have any main function. In practice,
+52
+
+53
+00:03:15,000 --> 00:03:17,070
+we also call the declaration the interface.
+53
+
+54
+00:03:17,140 --> 00:03:20,370
+That's why they call it separting interface from implementation.
+54
+
+55
+00:03:20,370 --> 00:03:25,800
+Think of the word interface like — let's say you are seeing a building, then you are seeing the interface
+55
+
+56
+00:03:25,800 --> 00:03:26,400
+of the building.
+56
+
+57
+00:03:26,400 --> 00:03:31,560
+You see, oh, this building is like ten floors and it has windows of this style. You don't see...
+57
+
+58
+00:03:31,560 --> 00:03:34,650
+... how the building is designed from the internal,
+58
+
+59
+00:03:34,890 --> 00:03:37,560
+you just see the external thing. When you are visiting
+59
+
+60
+00:03:37,560 --> 00:03:42,990
+an atm machine, you see the interface of the machine.
+You see a button to enter the password,
+60
+
+61
+00:03:42,990 --> 00:03:45,300
+a button to cancel, you see the interface.
+61
+
+62
+00:03:45,300 --> 00:03:47,940
+You don't know how the ATM machine is implemented.
+62
+
+63
+00:03:48,180 --> 00:03:50,520
+That's what we called interface and implementation.
+63
+
+64
+00:03:50,940 --> 00:03:56,400
+So the moral of that, we are going one more step in dividing things.
+64
+
+65
+00:03:56,790 --> 00:04:02,940
+So in reality, this hash includes sum dot-h is referring to this sum dot-h,
+65
+
+66
+00:04:03,270 --> 00:04:08,130
+and the compiler is going to relate the sum dot-h with this dot-cpp file. In the future,
+66
+
+67
+00:04:08,130 --> 00:04:13,890
+If the company decided to remove this file and replace it with a faster one, file number one main dot cpp
+67
+
+68
+00:04:13,890 --> 00:04:15,600
+doesn't change.
+68
+
+69
+00:04:15,600 --> 00:04:17,550
+File number 2 sum-dot-h doesn't change.
+69
+
+70
+00:04:17,550 --> 00:04:21,930
+Only this file is changed, and this is very important and useful in reality.
+70
+
+71
+00:04:23,280 --> 00:04:29,580
+One more interesting thing here to know is about the global variables across files. At this
+71
+
+72
+00:04:29,580 --> 00:04:30,030
+moment,
+72
+
+73
+00:04:30,030 --> 00:04:33,270
+you see one dot h and one dot cpp. In reality,
+73
+
+74
+00:04:33,270 --> 00:04:38,340
+you can have like 10 files dot h and 10 dot cpp files.
+74
+
+75
+00:04:38,490 --> 00:04:42,120
+So we have in total like one plus all of these files that we have.
+75
+
+76
+00:04:42,540 --> 00:04:49,920
+There is one interesting thing here is: can I have one global variable that is visible from all the files?
+76
+
+77
+00:04:50,280 --> 00:04:53,520
+C++ do that through the extern feature.
+77
+
+78
+00:04:54,810 --> 00:04:59,310
+The process is as following: you first declare a variable
+78
+
+79
+00:04:59,890 --> 00:05:07,300
+in the header file with extern (The header file the one with dot h) then you define it in sum dot cpp typically to
+79
+
+80
+00:05:07,300 --> 00:05:13,380
+the corresponding to the dot h then uses it whatever the hash included exist.
+80
+
+81
+00:05:14,260 --> 00:05:18,040
+So here is what happens: the first thing you are declaring the variable,
+81
+
+82
+00:05:18,400 --> 00:05:22,570
+(This is the sum dot h) you say extern integer total calls. Notice,
+82
+
+83
+00:05:22,620 --> 00:05:28,030
+this is just a declaration(a declaration for a variable meaning it doesn't have equal and some initialization
+83
+
+84
+00:05:28,030 --> 00:05:28,430
+variable.)
+84
+
+85
+00:05:29,140 --> 00:05:35,800
+Now in sum-dot-cpp, let's say here sum dot h the corresponding sum dot cpp, then we are
+85
+
+86
+00:05:35,800 --> 00:05:37,390
+here defining the variable.
+86
+
+87
+00:05:37,930 --> 00:05:43,990
+Now, this total calls variable is used here because hash include sum dot h, it is also visible
+87
+
+88
+00:05:43,990 --> 00:05:44,520
+in the main.
+88
+
+89
+00:05:44,530 --> 00:05:47,060
+So we have here a main that has sum dot h,
+89
+
+90
+00:05:47,140 --> 00:05:49,030
+It called our function three times,
+90
+
+91
+00:05:49,270 --> 00:05:51,420
+and this is a number of total calls.
+91
+
+92
+00:05:51,820 --> 00:05:55,720
+So with every call to this function, this call variable is going to increase.
+92
+
+93
+00:05:56,920 --> 00:05:58,480
+So we are doing three calls.
+93
+
+94
+00:05:58,480 --> 00:06:01,350
+So we expect this variable to be incremented three times.
+94
+
+95
+00:06:01,360 --> 00:06:05,200
+You see here with every call, the variable can be updated.
+95
+
+96
+00:06:05,480 --> 00:06:10,300
+We are incrementing here in the main, the variable, and then we are giving calls again.
+96
+
+97
+00:06:10,330 --> 00:06:12,820
+You see, again, the same variable is incrementing again.
+97
+
+98
+00:06:13,240 --> 00:06:21,400
+So this variable, total calls, is visible and we can change and affect it from the main dot cpp, from the
+98
+
+99
+00:06:21,700 --> 00:06:22,560
+sum dot cpp.
+99
+
+100
+00:06:24,190 --> 00:06:30,740
+The moral of that is you want a variable that is visible from any file that does hash include, do the following:
+100
+
+101
+00:06:30,910 --> 00:06:37,090
+declare it here with extern, do not initialize it, initialize it in the dot cpp and start to
+101
+
+102
+00:06:37,090 --> 00:06:37,450
+use it.
+102
+
+103
+00:06:37,930 --> 00:06:39,360
+Who can see this variable?
+103
+
+104
+00:06:39,640 --> 00:06:41,680
+Who ever have the sum dot h?
+104
+
+105
+00:06:41,840 --> 00:06:47,070
+I would like also to know something about this file.
+105
+
+106
+00:06:47,080 --> 00:06:50,530
+What is really visible for him is only this file, not this file.
+106
+
+107
+00:06:50,860 --> 00:06:52,360
+So when we defined things here,
+107
+
+108
+00:06:52,630 --> 00:06:54,060
+they are invisible here.
+108
+
+109
+00:06:54,910 --> 00:07:01,720
+OK, so this is something very important, and that's why we separated the implementation from the declaration.
+109
+
+110
+00:07:01,960 --> 00:07:08,740
+So the main dot cpp know only about sum dot h, it doesn't know about what's happening in
+110
+
+111
+00:07:08,740 --> 00:07:09,240
+sum dot cpp.
+111
+
+112
+00:07:09,250 --> 00:07:12,040
+Just the compiler is doing the linking.
+112
+
+113
+00:07:12,040 --> 00:07:16,480
+All what you know is you have sum total calls variable that will have some value in the future.
+113
+
+114
+00:07:16,840 --> 00:07:21,010
+You have sum function, sum-underscore-one which will have some implementation in the future.
+114
+
+115
+00:07:21,250 --> 00:07:23,320
+What are the other details here?
+115
+
+116
+00:07:23,320 --> 00:07:30,880
+We don't know. If this file, sum-dot-cpp has extra functions here, sum-dot-h doesn't see them, the
+116
+
+117
+00:07:30,880 --> 00:07:32,020
+main-dot-cpp doesn't see them.
+117
+
+118
+00:07:32,320 --> 00:07:37,150
+So again, and remember, the main-dot-cpp see only what is in sum-dot-h, it doesn't see
+118
+
+119
+00:07:37,150 --> 00:07:38,140
+more details here,
+119
+
+120
+00:07:39,610 --> 00:07:46,450
+and this takes us to some interesting comparison between the external, static, and global
+120
+
+121
+00:07:46,450 --> 00:07:46,840
+things.
+121
+
+122
+00:07:47,050 --> 00:07:53,140
+So here is the point because there are different cases.
+122
+
+123
+00:07:53,140 --> 00:07:56,230
+The first case is defining the extern variable.
+123
+
+124
+00:07:56,230 --> 00:07:57,430
+This is just what we did
+124
+
+125
+00:07:57,430 --> 00:08:03,670
+right now. if you defined a header in the header variable and extern variable, and you defined later
+125
+
+126
+00:08:03,670 --> 00:08:10,720
+in sum-dot-cpp with every hash include for sum-dot-h, for example, the same variable would be visible
+126
+
+127
+00:08:10,720 --> 00:08:11,290
+and used.
+127
+
+128
+00:08:12,220 --> 00:08:18,730
+Now, notice the following: if you decided in the header file to create the variable as a static not
+128
+
+129
+00:08:18,730 --> 00:08:26,170
+as extern with every hash includes to sum-dot-h, there are a different copy of it would be used.
+129
+
+130
+00:08:26,530 --> 00:08:30,550
+Now, this is very confusing and useless, so we don't use that in the industry.
+130
+
+131
+00:08:30,580 --> 00:08:35,990
+I'm just telling you that you can have a static variable in the header variable, but don't use it.
+131
+
+132
+00:08:36,010 --> 00:08:39,390
+OK, it just very confusing and really very useless.
+132
+
+133
+00:08:40,120 --> 00:08:41,830
+The other two cases is following:
+133
+
+134
+00:08:42,340 --> 00:08:45,410
+You are defining a variable in the dot-cpp file,
+134
+
+135
+00:08:46,000 --> 00:08:49,520
+but it is neither external nor static, OK?
+135
+
+136
+00:08:49,570 --> 00:08:54,880
+It just exists in the dot-cpp function and you are defining it definitely out of function. If it's inside
+136
+
+137
+00:08:54,880 --> 00:08:56,110
+the function, it just local variable.
+137
+
+138
+00:08:57,280 --> 00:08:58,270
+There are two cases:
+138
+
+139
+00:08:58,630 --> 00:09:02,520
+The first case is you are defining it like integer
+139
+
+140
+00:09:02,530 --> 00:09:03,930
+some global equals zero.
+140
+
+141
+00:09:04,540 --> 00:09:08,210
+This means what?  this something we have file scope.
+141
+
+142
+00:09:08,300 --> 00:09:09,910
+What does it mean to be file scope?
+142
+
+143
+00:09:10,210 --> 00:09:14,290
+File scope means it is visible in this file. Definitely
+143
+
+144
+00:09:14,500 --> 00:09:19,160
+if you defined it in line hundred, then it's visible from line hundred till the end of the file.
+144
+
+145
+00:09:19,780 --> 00:09:21,340
+However, there is a point here.
+145
+
+146
+00:09:21,910 --> 00:09:26,980
+There is no other cpp file that can have the same variable name.
+146
+
+147
+00:09:27,520 --> 00:09:34,660
+So for example, let's say you have a file named sum-dot-cpp  and file named hello-dot-cpp, and defined
+147
+
+148
+00:09:34,660 --> 00:09:37,660
+integer some-global equals zero in sum-dot-cpp.
+148
+
+149
+00:09:37,990 --> 00:09:44,410
+You cannot in the hello-dot-cpp define a variable globally named integer
+149
+
+150
+00:09:44,410 --> 00:09:45,400
+some global equals zero.
+150
+
+151
+00:09:45,640 --> 00:09:49,600
+C++ will give you a compiler error, and say multiple redefinition error.
+151
+
+152
+00:09:49,780 --> 00:09:52,960
+OK, think of them as if they are in one big file.
+152
+
+153
+00:09:53,110 --> 00:09:54,930
+You are defining the same variable twice.
+153
+
+154
+00:09:55,390 --> 00:09:56,250
+Do not use that.
+154
+
+155
+00:09:56,290 --> 00:09:56,890
+This is bad again,
+155
+
+156
+00:09:57,130 --> 00:09:57,880
+don't use that.
+156
+
+157
+00:09:58,420 --> 00:10:00,970
+What we use is actually what we call a static integer
+157
+
+158
+00:10:00,970 --> 00:10:03,010
+some global view.
+158
+
+159
+00:10:03,460 --> 00:10:04,630
+This is the same as the above one,
+159
+
+160
+00:10:04,630 --> 00:10:06,370
+it has a file scope,
+160
+
+161
+00:10:06,700 --> 00:10:08,160
+it is visible in this file,
+161
+
+162
+00:10:08,380 --> 00:10:13,390
+However, other files can use the same name in the dot-cpp.
+162
+
+163
+00:10:14,200 --> 00:10:20,410
+So if someone defined here static integer global, someone in another file (let's say hello-dot-cpp)
+163
+
+164
+00:10:20,420 --> 00:10:23,410
+can define also integer some-global.
+164
+
+165
+00:10:24,040 --> 00:10:26,470
+So this is has a very great advantage.
+165
+
+166
+00:10:26,800 --> 00:10:32,710
+Your friends while they are defining their own global variable and this
+166
+
+167
+00:10:32,710 --> 00:10:37,270
+is a bad thing, but in case they are doing it, they will not get compiler errors because of you
+167
+
+168
+00:10:38,050 --> 00:10:42,270
+are defining some variables. So the moral of that is as following:
+168
+
+169
+00:10:42,480 --> 00:10:46,260
+I'm telling you two bad things to not do, but what you can do is as following:
+169
+
+170
+00:10:46,680 --> 00:10:51,660
+You either are defining a global variable that is visible everywhere.
+170
+
+171
+00:10:51,750 --> 00:10:56,730
+In this case, you define it in the header with extern, declare in the header with extern, and define
+171
+
+172
+00:10:56,730 --> 00:10:57,950
+it in the dot-cpp file.
+172
+
+173
+00:10:58,410 --> 00:11:04,590
+The second case is I would like a local variable per my file. In this case, you define it as a static
+173
+
+174
+00:11:04,590 --> 00:11:09,990
+integer some-global. So you can use it in your file, and your friends can define in the team
+174
+
+175
+00:11:10,290 --> 00:11:13,560
+other dot-cpp files and both global names
+175
+
+176
+00:11:13,800 --> 00:11:17,030
+without caring that you used this variable name.
+176
+
+177
+00:11:17,400 --> 00:11:20,610
+I have attached some code for this point.
+177
+
+178
+00:11:21,090 --> 00:11:24,710
+Feel free to to check it in case you would like. That's it.

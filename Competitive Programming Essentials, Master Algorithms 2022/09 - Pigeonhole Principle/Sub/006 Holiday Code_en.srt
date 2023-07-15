@@ -1,0 +1,972 @@
+1
+00:00:00,830 --> 00:00:06,420
+So let us discuss the implementation of the Holiday accommodation problem and we will write the code for the
+
+2
+00:00:06,420 --> 00:00:06,689
+same.
+
+3
+00:00:07,440 --> 00:00:12,180
+So first of all, we'll write the code for main. So in the problem.,
+
+4
+00:00:12,190 --> 00:00:17,550
+we have multiple test cases so we have to take input how many task cases we have.
+
+5
+00:00:18,240 --> 00:00:25,200
+And for each test case we need to input the total number of nodes and the list of edges. OK.
+
+6
+00:00:25,320 --> 00:00:30,420
+So there is an edge from u to v with the weight w and we need to create a graph.
+
+7
+00:00:30,570 --> 00:00:36,550
+OK, so for Graph will create a adjacency list and it is a weighted graph
+
+8
+00:00:36,570 --> 00:00:39,820
+so i will need a pair to
+
+9
+00:00:40,470 --> 00:00:42,140
+store it.to store each...
+
+10
+00:00:43,530 --> 00:00:45,240
+So let's tell you what we are doing.
+
+11
+00:00:46,680 --> 00:00:50,490
+I need Vector and I also need that's it.
+
+12
+00:00:50,610 --> 00:00:51,690
+OK, I need a vector.
+
+13
+00:00:52,590 --> 00:00:54,900
+Now what we are doing is, we are taking input an edge.
+
+14
+00:00:56,320 --> 00:01:01,860
+OK, there is an edge from u to v who's wait is w. we are storing it in the form of a,
+
+15
+00:01:02,200 --> 00:01:05,379
+So this is nothing but an array of vector.  OK?
+
+16
+00:01:06,070 --> 00:01:08,590
+It's an array of vector.
+
+17
+00:01:10,550 --> 00:01:11,360
+So we have
+
+18
+00:01:14,680 --> 00:01:19,150
+each element of the array which is a vector. ok. So if I say this is node
+
+19
+00:01:19,220 --> 00:01:20,290
+u. u is one.
+
+20
+00:01:20,710 --> 00:01:25,870
+So then it is connected with let's say, node v. It is connected with node v2.
+
+21
+00:01:26,080 --> 00:01:32,220
+It is connected with node v3. that store the neighbors here that v1 has weight w1
+
+22
+00:01:32,230 --> 00:01:33,390
+v2 has weight w3.
+
+23
+00:01:34,150 --> 00:01:34,480
+v3 has
+
+24
+00:01:34,480 --> 00:01:35,650
+weight w3.
+
+25
+00:01:36,070 --> 00:01:41,380
+That's why I need a vector of pair and this v have as an array of
+
+26
+00:01:42,710 --> 00:01:44,030
+size 10 power five
+
+27
+00:01:44,510 --> 00:01:52,640
+because that's the constraint given the problem. ok So if you see here N is of the order 10 power five.
+
+28
+00:01:53,180 --> 00:01:55,640
+That's why we need to create this vector. OK?
+
+29
+00:01:56,660 --> 00:02:02,720
+And so what we are going to do? we are going to say. OK/ let's say we are on the first test case.
+
+30
+00:02:03,410 --> 00:02:10,699
+So while this testcase is less than equal to total test cases. I can say TC equals to TC+1.
+
+31
+00:02:11,240 --> 00:02:13,820
+So here we are going to do the work for each test case.
+
+32
+00:02:15,010 --> 00:02:17,770
+So We will take input the number of nodes for that graph.
+
+33
+00:02:18,640 --> 00:02:24,850
+And for every test case, we need to reset the adjacency list that we are creating so we can say for
+
+34
+00:02:24,850 --> 00:02:28,450
+int i equal to one, I less than equal to N, I++.  
+
+35
+00:02:28,450 --> 00:02:31,780
+I can say adjacency of I.clear.
+
+36
+00:02:32,230 --> 00:02:38,020
+So why I am doing from one not from zero because the numbering of the nodes in the problem, this
+
+37
+00:02:38,020 --> 00:02:39,210
+numbering is one based.
+
+38
+00:02:39,220 --> 00:02:40,520
+It is not zero based.
+
+39
+00:02:40,540 --> 00:02:40,840
+OK.
+
+40
+00:02:41,440 --> 00:02:45,890
+So that's why we're just not using the zeroth vector.
+
+41
+00:02:45,910 --> 00:02:47,590
+We are starting from the first vector.
+
+42
+00:02:48,490 --> 00:02:57,040
+So reset the adjacency list before every test case because the graph is different. ok Before every
+
+43
+00:02:57,340 --> 00:02:57,970
+test case.
+
+44
+00:02:59,140 --> 00:02:59,620
+All right.
+
+45
+00:03:00,100 --> 00:03:01,600
+So after that, we need to scan
+
+46
+00:03:01,600 --> 00:03:04,660
+the graph. We will take input N minus one edges.
+
+47
+00:03:04,750 --> 00:03:08,020
+So for int I equal to one, I less than equal N minus one.
+
+48
+00:03:08,800 --> 00:03:12,690
+So we'll scan a edge. we will say  cin U, V and W.
+
+49
+00:03:13,280 --> 00:03:17,680
+If there is a edge from U to V. we will say ok just scan it.
+
+50
+00:03:18,310 --> 00:03:23,230
+And in order to construct that edge in the memory, what we need is, we'll say OK.
+
+51
+00:03:23,260 --> 00:03:30,680
+In the adjacency list of u, we will push back pair of v and w and in the adjacency list of v
+
+52
+00:03:30,700 --> 00:03:35,560
+We will push back a pair of u comma w. ok that's how we push.
+
+53
+00:03:36,190 --> 00:03:48,340
+So adjacency list of U dot push back a pair of v common W and adjacency list of v 
+
+54
+00:03:49,030 --> 00:03:50,470
+dot push back
+
+55
+00:03:52,380 --> 00:04:00,480
+u comma w. So we are done. Now what we need to do? what we need to do dfs to calculate
+
+56
+00:04:00,480 --> 00:04:05,220
+our answer. so I can say a long long answer that is equal to zero.
+
+57
+00:04:05,610 --> 00:04:13,680
+Ok. and now we need to write to the this dfs function that will work on this graph and that will compute
+
+58
+00:04:13,770 --> 00:04:14,790
+the answer for us.
+
+59
+00:04:15,090 --> 00:04:15,390
+OK.
+
+60
+00:04:16,529 --> 00:04:19,850
+AnN once the answer is there we can print it. Now
+
+61
+00:04:20,490 --> 00:04:25,650
+The way we're going to define this DFS function is it's actually not going to return as the answer,
+
+62
+00:04:26,250 --> 00:04:29,730
+but it is going to give us the size of the tree.
+
+63
+00:04:29,730 --> 00:04:30,210
+ok so this dfs
+
+64
+00:04:30,210 --> 00:04:36,480
+will give us the size of the tree from the node where it is called.
+
+65
+00:04:36,840 --> 00:04:39,810
+It is called. but we will do
+
+66
+00:04:39,810 --> 00:04:43,500
+two things. we will take the current node Let's say we are at u.
+
+67
+00:04:43,500 --> 00:04:46,200
+we  will take what is a parent node?
+
+68
+00:04:46,590 --> 00:04:48,540
+We will soon see why this is needed.
+
+69
+00:04:49,050 --> 00:04:53,700
+We will need the adjacency list so I can say a vector of pair of int.
+
+70
+00:04:54,390 --> 00:04:54,750
+OK.
+
+71
+00:04:55,380 --> 00:04:59,460
+And we need this just adjacency list array with us.
+
+72
+00:05:00,800 --> 00:05:07,100
+And we need the answer variable and we need the number of nodes. OK.
+
+73
+00:05:07,670 --> 00:05:09,200
+So here we are passing this array.
+
+74
+00:05:09,830 --> 00:05:15,350
+So array by default is passed by reference. ok. so we don't need to
+
+75
+00:05:16,630 --> 00:05:17,550
+Um yeah.
+
+76
+00:05:17,600 --> 00:05:21,920
+So we're passing this array and this array is passed by reference.
+
+77
+00:05:21,930 --> 00:05:25,590
+Okay, so what is this answer?
+
+78
+00:05:25,610 --> 00:05:28,550
+So this is the final answer that we need to compute.
+
+79
+00:05:29,060 --> 00:05:33,230
+We are accepting an answer by reference and we are going to update this answer.
+
+80
+00:05:33,230 --> 00:05:36,870
+OK, So maybe I can do hash define  ll as long long.
+
+81
+00:05:37,790 --> 00:05:39,500
+And here I can do ll answer.
+
+82
+00:05:39,890 --> 00:05:40,890
+That is also finally.
+
+83
+00:05:42,020 --> 00:05:45,200
+And this N is the total number of nodes in the tree.
+
+84
+00:05:46,190 --> 00:05:54,170
+So now what we are going to do? let say we, we we we are going to DFS on a tree ok. Starting
+
+85
+00:05:54,170 --> 00:05:55,010
+from node one.
+
+86
+00:05:55,430 --> 00:05:57,230
+And let's say there are so many other nodes.
+
+87
+00:05:58,660 --> 00:06:03,520
+let's say three four five and may be two six seven and so on.
+
+88
+00:06:03,560 --> 00:06:04,900
+OK, let's say there are so many nodes.
+
+89
+00:06:05,230 --> 00:06:07,840
+We start from this node and what we are going to do ?
+
+90
+00:06:08,140 --> 00:06:08,670
+We are going to say
+
+91
+00:06:08,680 --> 00:06:08,980
+Okay?
+
+92
+00:06:09,520 --> 00:06:11,850
+Let's go and traverse the entire tree.
+
+93
+00:06:11,860 --> 00:06:14,050
+So first, let's say we traverse this edge.
+
+94
+00:06:14,110 --> 00:06:15,760
+OK, so what
+
+95
+00:06:15,760 --> 00:06:20,230
+we are going to do? we are going to say OK. let us assume the current size of the tree
+
+96
+00:06:20,770 --> 00:06:27,190
+the current tree size is nothing but one and then we will iterate over all the neighbors of this
+
+97
+00:06:27,190 --> 00:06:27,520
+node.
+
+98
+00:06:28,150 --> 00:06:33,460
+So for every pair that is present in adjacency list of u. what we are going to do?
+
+99
+00:06:34,120 --> 00:06:35,480
+So if you look at one.
+
+100
+00:06:35,500 --> 00:06:43,660
+So one would have neighbors as what? it would have six and its weight, it would have three and its weight.
+
+101
+00:06:44,200 --> 00:06:46,750
+That it. One has only two neighbors in this case.
+
+102
+00:06:47,920 --> 00:06:50,110
+So what we are going to do? we going to say ok.
+
+103
+00:06:50,470 --> 00:06:57,640
+The node v is nothing but p dot first and the weight is nothing but p dot second. effectively in their
+
+104
+00:06:57,640 --> 00:06:58,300
+adjacency list
+
+105
+00:06:58,310 --> 00:07:01,180
+we are starting two things, W1 and W2 as well.
+
+106
+00:07:01,750 --> 00:07:04,120
+This is p dot first and this is p dot second.
+
+107
+00:07:04,810 --> 00:07:10,570
+What we are going to do? we are going to say. OK. we are going to make a call on these child nodes.
+
+108
+00:07:10,660 --> 00:07:18,370
+So I can say int child tree size is nothing but bfs of that node.
+
+109
+00:07:18,370 --> 00:07:20,830
+So that node is v, so parent of that node.
+
+110
+00:07:20,840 --> 00:07:23,260
+that node is nothing but the current node, which is u.
+
+111
+00:07:23,470 --> 00:07:26,650
+So the parent value would be u. the adjacency
+
+112
+00:07:26,650 --> 00:07:28,060
+list will remain as it is.
+
+113
+00:07:28,690 --> 00:07:30,400
+The answer will remain as it is.
+
+114
+00:07:30,400 --> 00:07:32,320
+The number of nodes will remain as it is. ok.
+
+115
+00:07:32,320 --> 00:07:34,330
+So we make a DFS call.
+
+116
+00:07:34,330 --> 00:07:41,110
+Now this node is going to tell ok. it will again do recursively some work and it will return okay my sizes
+
+117
+00:07:41,110 --> 00:07:41,350
+three.
+
+118
+00:07:41,350 --> 00:07:44,050
+So this child tree size would be now three.
+
+119
+00:07:44,890 --> 00:07:46,780
+And what we are going to do? we are we are.
+
+120
+00:07:46,780 --> 00:07:56,140
+We now know that this child tree size is three. so we will count the contribution of this particular edge in the
+
+121
+00:07:56,140 --> 00:07:56,790
+final answer.
+
+122
+00:07:56,800 --> 00:07:57,070
+OK?
+
+123
+00:07:57,430 --> 00:07:58,710
+The edge contribution
+
+124
+00:07:58,720 --> 00:08:03,070
+that means what is the contribution of this edge in the final answer.
+
+125
+00:08:03,130 --> 00:08:07,900
+So that would be nothing but two into minimum off child tree size.
+
+126
+00:08:08,590 --> 00:08:11,230
+What is the number of nodes in the other part of the tree?
+
+127
+00:08:11,590 --> 00:08:14,720
+In this part, this is nothing but N minus child three size.
+
+128
+00:08:15,670 --> 00:08:16,030
+OK.
+
+129
+00:08:17,050 --> 00:08:20,420
+Into the weight of this edge, that is nothing but Wt.
+
+130
+00:08:21,190 --> 00:08:29,410
+So what we can do is, we can add this to our answer. So edge answer plus this edge contribution
+
+131
+00:08:29,950 --> 00:08:37,299
+and another thing we need to do is, since one has already called on this part of the tree, the size
+
+132
+00:08:37,299 --> 00:08:39,400
+of one would increment by this value.
+
+133
+00:08:39,400 --> 00:08:42,700
+One plus three. now one would make a call on this part of the tree.
+
+134
+00:08:43,390 --> 00:08:48,850
+When, when we want to compute the contribution of this edge. OK. because we are iterating inside this
+
+135
+00:08:48,850 --> 00:08:51,070
+for loop. now we come to this edge
+
+136
+00:08:51,520 --> 00:08:53,890
+that is one comma three. for that
+
+137
+00:08:53,920 --> 00:08:55,570
+It will again make a call
+
+138
+00:08:55,570 --> 00:08:56,500
+It will say ok my age
+
+139
+00:08:56,500 --> 00:08:59,690
+contribution is three so it will become 1 plus 3 plus 3.
+
+140
+00:08:59,710 --> 00:09:02,020
+OK, but that will happen in the next iteration.
+
+141
+00:09:02,050 --> 00:09:09,730
+So I can say also update the tree size by adding child tree size.
+
+142
+00:09:10,270 --> 00:09:14,920
+So I can say current tree size plus equals child trees.
+
+143
+00:09:15,100 --> 00:09:15,390
+OK?
+
+144
+00:09:15,700 --> 00:09:19,050
+So once you have done with all the neighbors what you can return is,
+
+145
+00:09:19,050 --> 00:09:21,940
+you can return the current tree size.
+
+146
+00:09:21,970 --> 00:09:22,270
+OK.
+
+147
+00:09:23,430 --> 00:09:23,770
+return 
+
+148
+00:09:23,770 --> 00:09:29,440
+current tree size. So this one will actually return seven in the main which again is not very useful
+
+149
+00:09:29,440 --> 00:09:37,090
+for us but what do we need is to know there is one case that that is left that we have not handled
+
+150
+00:09:37,090 --> 00:09:41,230
+is. now suppose you have again this kind of tree.
+
+151
+00:09:41,500 --> 00:09:47,800
+OK, let's see one two, three four and you come here, you come here.
+
+152
+00:09:48,370 --> 00:09:52,300
+And in the neighboring neighbors of two you have three and four.
+
+153
+00:09:52,630 --> 00:09:52,960
+OK.
+
+154
+00:09:53,350 --> 00:09:56,890
+In the neighbors of three, you only have one node that is two.
+
+155
+00:09:58,030 --> 00:10:02,880
+So at two, when you make a call on three, three will make a call on its neighbors.
+
+156
+00:10:02,890 --> 00:10:05,720
+So three will see  two at two as its neighbor.
+
+157
+00:10:05,760 --> 00:10:12,920
+OK, so what we are doing is? Since no cycle is present. OK. so we are not maintaining a visited array.
+
+158
+00:10:13,210 --> 00:10:14,890
+We are not maintaining a visited array.
+
+159
+00:10:15,490 --> 00:10:21,100
+So either you maintain a visited array to make sure you do not visit a node twice.
+
+160
+00:10:21,340 --> 00:10:23,170
+But in this case, what is going to happen?
+
+161
+00:10:24,590 --> 00:10:30,200
+When you come from two to three and you look at the neighbors of three. you say ok I will make a call to two.
+
+162
+00:10:30,320 --> 00:10:36,500
+So that will actually give you a segmentation fault. OK, because of kind of in infinite recursion. you're
+
+163
+00:10:36,500 --> 00:10:39,710
+going to three via two and you're going to two via three.
+
+164
+00:10:40,070 --> 00:10:41,810
+So you will you will be stuck inside a loop.
+
+165
+00:10:42,020 --> 00:10:48,980
+OK, so what do you need to do is, if the neighbor of a node is the parent. OK. like the neighbor of
+
+166
+00:10:48,980 --> 00:10:53,030
+three is is the parent two,you
+
+167
+00:10:53,210 --> 00:10:55,250
+don't do any work in that case. OK?
+
+168
+00:10:55,460 --> 00:10:58,130
+So for example, one, two three.
+
+169
+00:10:59,060 --> 00:11:04,580
+So from one you come to two. from two you come to three, from three you go to two. like from two you go
+
+170
+00:11:04,580 --> 00:11:04,910
+to one.
+
+171
+00:11:05,450 --> 00:11:08,410
+So u two also have the neighbor one. OK?
+
+172
+00:11:08,750 --> 00:11:12,290
+One also has a neighbor two. three also has a neighbor two.
+
+173
+00:11:12,290 --> 00:11:17,430
+and two also has a neighbor three. ok So what you need to do is,
+
+174
+00:11:17,450 --> 00:11:21,090
+you don't need to make a recursive bfs call on it's parent.
+
+175
+00:11:21,110 --> 00:11:26,780
+OK, so you can check if the value of V is equal to the parent of current node.
+
+176
+00:11:27,080 --> 00:11:28,130
+You will skip that node.
+
+177
+00:11:28,220 --> 00:11:29,240
+You will say continue.
+
+178
+00:11:29,300 --> 00:11:29,570
+OK.
+
+179
+00:11:30,020 --> 00:11:35,180
+So this will actually serve the purpose of having a visited array. we don't maintain
+
+180
+00:11:35,180 --> 00:11:39,290
+a visited array explicitly since the graph does not contain a cycle.
+
+181
+00:11:39,620 --> 00:11:44,520
+So we use a handle for cyclic case.
+
+182
+00:11:44,570 --> 00:11:53,810
+kind of OK, or skip the parent node. skip the parent node which is acting as a neighbor
+
+183
+00:11:53,810 --> 00:11:54,520
+in this case.
+
+184
+00:11:55,790 --> 00:11:58,520
+ok. So this will avoid the work for us.
+
+185
+00:11:58,760 --> 00:12:04,580
+And now what we can do is, we can say OK, let's make a DFS call and in this DFS call what we
+
+186
+00:12:04,580 --> 00:12:05,150
+are going to do?
+
+187
+00:12:05,630 --> 00:12:09,830
+We are going to pass in the parameters ok. The starting node is
+
+188
+00:12:09,830 --> 00:12:17,510
+one. the parent of starting node, you can put any value. let's put minus one. the adjacency list, the answer
+
+189
+00:12:17,990 --> 00:12:23,630
+and the value of N. OK. that's what you need to do and you need to print
+
+190
+00:12:24,970 --> 00:12:33,130
+the output for every test case. so I say OK. let's see cout the testcase number and the answer.
+
+191
+00:12:33,630 --> 00:12:35,570
+so we need to give some inputs
+
+192
+00:12:35,990 --> 00:12:37,090
+to test our code.
+
+193
+00:12:37,270 --> 00:12:40,450
+So I'll just copy the input from SPOJ.
+
+194
+00:12:40,600 --> 00:12:40,960
+OK.
+
+195
+00:12:41,500 --> 00:12:44,020
+And we should get 18 and 62 for this input.
+
+196
+00:12:44,100 --> 00:12:44,950
+Let's run the code.
+
+197
+00:12:48,800 --> 00:12:51,630
+OK, so we're getting 18 and 52.
+
+198
+00:12:51,650 --> 00:12:52,080
+OK.
+
+199
+00:12:52,100 --> 00:12:53,750
+Did we miss something?
+
+200
+00:12:53,780 --> 00:12:55,430
+Let us let me see.
+
+201
+00:12:57,510 --> 00:12:59,160
+Let me see if I missed something.
+
+202
+00:13:01,460 --> 00:13:06,500
+OK, so what I missed was just this last line of input. if I run my code again.
+
+203
+00:13:06,680 --> 00:13:09,860
+You see, we are getting the correct answer.
+
+204
+00:13:11,090 --> 00:13:16,370
+And I just submitted on SPOJ also, I got the correct answer there as well.
+
+205
+00:13:16,400 --> 00:13:16,680
+OK.
+
+206
+00:13:17,390 --> 00:13:19,850
+So I hope you really understood this one.
+
+207
+00:13:20,270 --> 00:13:26,700
+And what we have done is exactly same what we discussed in the algorithm.
+
+208
+00:13:26,700 --> 00:13:28,710
+ok  so what we are doing for this node.
+
+209
+00:13:28,730 --> 00:13:29,540
+Let's say we have this tree
+
+210
+00:13:30,500 --> 00:13:32,990
+one, two, three and four.
+
+211
+00:13:33,680 --> 00:13:35,420
+We start doing DFS
+
+212
+00:13:35,630 --> 00:13:41,510
+from this node. we say ok what is the tree size? two tells tells ok this size is three.
+
+213
+00:13:41,510 --> 00:13:44,450
+But two first make the call on three, three makes a call four
+
+214
+00:13:44,450 --> 00:13:48,890
+at four what we have? OK. this current tree size is one.
+
+215
+00:13:49,430 --> 00:13:50,950
+And what is a neighbor of four?
+
+216
+00:13:50,960 --> 00:13:53,060
+There is only one neighbor of four that is three.
+
+217
+00:13:53,060 --> 00:13:54,970
+In that case, we continue the for loop 
+
+218
+00:13:55,580 --> 00:14:00,780
+And it does not run for any iteration. so we return current tree size that is one to avoid effectively
+
+219
+00:14:00,780 --> 00:14:01,370
+return to one.
+
+220
+00:14:01,940 --> 00:14:06,080
+So then we contribute the contribution of this edge when tree made a call on four. 
+
+221
+00:14:07,040 --> 00:14:07,340
+OK.
+
+222
+00:14:07,760 --> 00:14:11,480
+So during this iteration only. so when three made the call on four.
+
+223
+00:14:11,630 --> 00:14:21,440
+What happened is we computed OK, this will be used two into the minimum of size that is one and other
+
+224
+00:14:21,440 --> 00:14:25,150
+option is four minus one that is three into the edge weight
+
+225
+00:14:25,160 --> 00:14:26,680
+that is two. it,
+
+226
+00:14:27,080 --> 00:14:28,700
+It is four.
+
+227
+00:14:28,790 --> 00:14:31,690
+OK, this contribution is four and three says OK.
+
+228
+00:14:31,700 --> 00:14:34,040
+My size is one plus my child size
+
+229
+00:14:34,040 --> 00:14:38,170
+that is also one so three will return two to its parent.
+
+230
+00:14:38,180 --> 00:14:45,860
+OK. so this contribution would be nothing but two into  minimum of two two that is two into two that
+
+231
+00:14:45,860 --> 00:14:46,730
+so that is nothing but 8.
+
+232
+00:14:47,270 --> 00:14:50,530
+So this contribution comes out to be four. So this two returns
+
+233
+00:14:50,540 --> 00:14:53,660
+one plus child size that is three two one.
+
+234
+00:14:54,200 --> 00:15:00,890
+So this edge is used how many times. so it says two into  a minimum of three and N minus three.
+
+235
+00:15:00,890 --> 00:15:04,220
+That is one into the weight of this edge.
+
+236
+00:15:04,310 --> 00:15:05,000
+That is three.
+
+237
+00:15:05,000 --> 00:15:08,060
+So it is used for six.
+
+238
+00:15:08,720 --> 00:15:09,700
+four plus eight plus six
+
+239
+00:15:09,740 --> 00:15:15,210
+that is the sum that we are in the answer every time and to the main we return an answer four. 
+
+240
+00:15:15,230 --> 00:15:19,510
+But in this answer we have six that we print here.
+
+241
+00:15:19,520 --> 00:15:21,980
+OK, so that's answer, we are printing here.
+
+242
+00:15:22,490 --> 00:15:24,770
+So I hope you understood this problem.
+
+243
+00:15:24,770 --> 00:15:25,550
+And that's all.
+

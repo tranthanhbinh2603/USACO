@@ -1,0 +1,874 @@
+WEBVTT
+
+00:00.590 --> 00:02.700
+Now, the topic is Fibonacci series.
+
+00:03.230 --> 00:10.190
+So here we will learn what is happening to kids and then we will devise recursive definition and we
+
+00:10.190 --> 00:14.010
+will write a recursive function for that one.
+
+00:14.330 --> 00:16.930
+And finally, we will analyze that function.
+
+00:17.840 --> 00:18.890
+So let us talk.
+
+00:20.550 --> 00:26.570
+See, this is a fabulous subsidies, the zero to zero next term is one than one, then good and three
+
+00:26.640 --> 00:27.670
+and five and so on.
+
+00:27.690 --> 00:29.250
+So how we're paying these, Tom?
+
+00:29.610 --> 00:36.120
+Each Tom is obtained by adding previous to DOMS, so that is five plus eight is 13 and the storm is
+
+00:36.120 --> 00:37.710
+obtained by adding these two domes.
+
+00:38.070 --> 00:39.820
+So initially, what are the terms?
+
+00:39.840 --> 00:41.380
+These are the starting dumps.
+
+00:41.840 --> 00:45.120
+If the zero the dome then it is zero for the system.
+
+00:45.130 --> 00:47.220
+One then is one rust.
+
+00:47.250 --> 00:53.570
+Every other dome as obtained by adding previous to done so initially you must have two terms then all
+
+00:53.580 --> 00:58.360
+you can define like this that every time is converting previous times.
+
+01:00.120 --> 01:15.000
+So this can be defined mathematically of and can really finance Ferb of and minus two plus fizbo and
+
+01:15.000 --> 01:27.060
+minus one then and is greater than one if and as a zero or as one then four zero two zero four one.
+
+01:27.060 --> 01:27.720
+And this one.
+
+01:29.600 --> 01:36.570
+So if anybody is one down for this directly, one for zero, the values are directly zero for is equal
+
+01:36.680 --> 01:40.330
+to one answer, strictly one otherwise are the previous two dumps.
+
+01:41.630 --> 01:43.210
+So let me put it on the table.
+
+01:46.370 --> 01:52.910
+Now, this is no end, and this is in some ways I want to know what the Tom answer is.
+
+01:52.910 --> 01:53.300
+Fine.
+
+01:53.600 --> 01:57.060
+If I want to know seven to Tom, answer this 13.
+
+01:57.620 --> 02:04.580
+So first, let me write a recursive function for Fibonacci series based on this recurrence relation
+
+02:04.580 --> 02:10.550
+or or based on based on this recursive definition, I will write the function.
+
+02:12.180 --> 02:16.760
+Integer fape of integer nd.
+
+02:17.970 --> 02:22.550
+So here it says that if it is zero, return zero for this one dritan one.
+
+02:22.800 --> 02:31.770
+So it means if anything less than or equal to one are written and itself means if and as one return
+
+02:31.770 --> 02:33.840
+one zero return Siedel.
+
+02:36.190 --> 02:38.200
+Otherwise, Ripton.
+
+02:40.140 --> 02:48.090
+Think of any minus two plus feet of and the minus one.
+
+02:50.110 --> 02:51.550
+The very definition.
+
+02:52.950 --> 03:00.840
+That's all if you want to find out any time, like seven to or 10, the Tom or any Tom, you call off,
+
+03:01.140 --> 03:04.150
+then you get turned Tom off, will not you?
+
+03:04.170 --> 03:07.620
+Chris golfBall seven, you get seven.
+
+03:07.670 --> 03:10.860
+Tom will come back to that function afterwards.
+
+03:10.860 --> 03:16.070
+For first of all, let us write an iterative version that is a function using loop.
+
+03:16.410 --> 03:21.960
+So let me write our Fibonacci function using loop integer FEBA.
+
+03:22.080 --> 03:24.570
+I'll give the name once again C.M.A.
+
+03:24.570 --> 03:31.000
+I'm using here then if the number is less than or equal to 100 and the number itself.
+
+03:31.020 --> 03:38.640
+So here if and there's less than or equal to one then written and it's.
+
+03:41.460 --> 03:52.200
+But otherwise, I need to dance to add them one by one, so integer don't zero as zero and dumb one
+
+03:52.410 --> 03:53.160
+as one.
+
+03:53.410 --> 03:55.950
+And also I have to add the value.
+
+03:55.960 --> 04:02.100
+So for addition, I will take some as so I have three variables.
+
+04:02.430 --> 04:09.780
+Now, using these three variables, I will write on a loop for finding out and the Dom S..
+
+04:09.780 --> 04:15.530
+Suppose I have to find the seven atoms then all they it on zero is available down.
+
+04:15.540 --> 04:16.710
+One is also available.
+
+04:16.920 --> 04:18.570
+Then I have to obtain this storm.
+
+04:18.870 --> 04:22.300
+One, two, three, four, five, six.
+
+04:22.740 --> 04:29.370
+So actually I should generate only six domme so I should perform additions only six time.
+
+04:29.640 --> 04:30.900
+Obviously I have these two.
+
+04:30.900 --> 04:32.140
+Dong's right.
+
+04:32.430 --> 04:35.960
+So two, three, four, five, six, seven NetSol.
+
+04:36.180 --> 04:41.130
+So I should start from second time onwards and stop at seven Tatong.
+
+04:41.580 --> 04:43.530
+So whichever time I want, I should stop that.
+
+04:43.530 --> 04:45.410
+So I should start from two onwards.
+
+04:45.750 --> 04:48.660
+So let me run a loop for.
+
+04:50.350 --> 04:58.700
+I sign, so I need one more variable, I and I is less than or equal to N and I plus plus.
+
+04:58.840 --> 05:04.050
+So this is for repeating the procedure for and the minus one times for.
+
+05:04.060 --> 05:07.120
+I'm starting from two to n not every time.
+
+05:07.120 --> 05:12.580
+What I have to do is I should be assigned with 30 zero plus at one.
+
+05:13.120 --> 05:16.020
+So this storm should be obtained by adding these to the DTG.
+
+05:16.030 --> 05:18.920
+Twenty one then after getting the same.
+
+05:18.970 --> 05:21.640
+Now this should become disillusioned, it should become T1.
+
+05:21.640 --> 05:22.990
+So forgetting the next storm.
+
+05:23.260 --> 05:27.430
+So I should change this value to zero and this I should make it as T1.
+
+05:27.700 --> 05:37.420
+So the variable should be made as a T one and T one should be made as s and repeat this procedure.
+
+05:37.660 --> 05:41.080
+So finally a result will be in S.
+
+05:46.620 --> 05:50.420
+So this is an Israeli version, so it's a diversion.
+
+05:50.460 --> 05:54.400
+What is the time taken by this algorithm or this procedure?
+
+05:54.810 --> 05:59.940
+This procedure takes let us take it, this statement will execute for one time and one time.
+
+06:00.360 --> 06:04.660
+This loop is written as one plus and plus one, but starting from two onwards.
+
+06:04.660 --> 06:11.620
+So let's say it is only 10 and the things inside will be four and minus one times and minus one times.
+
+06:11.880 --> 06:12.780
+And this is one.
+
+06:13.170 --> 06:16.080
+So total is one, two, three, four, four.
+
+06:16.080 --> 06:18.180
+End and minus one.
+
+06:18.180 --> 06:18.800
+Minus one one.
+
+06:18.850 --> 06:20.390
+So this plus one gets canceled.
+
+06:20.400 --> 06:21.030
+So this four.
+
+06:21.030 --> 06:23.510
+And so the time is for any order.
+
+06:23.550 --> 06:26.430
+And basically we wanted to know the degree.
+
+06:26.430 --> 06:27.380
+So to sort of offend.
+
+06:27.900 --> 06:30.260
+So we don't want exact formula.
+
+06:30.630 --> 06:31.490
+We want the degree.
+
+06:31.620 --> 06:35.940
+You can see that there is one for loop and for loop will repeat for End-Time.
+
+06:35.940 --> 06:40.090
+So the time this order and it's obvious from the function.
+
+06:40.830 --> 06:43.800
+So this algorithm takes a lot of time.
+
+06:45.660 --> 06:53.460
+So already we have it, it's a diversion now let us go back to recursive version and analyze that one
+
+06:53.730 --> 06:59.270
+and see how much time it takes and if any improvement required, we will do some improvements.
+
+06:59.280 --> 07:03.600
+And so I removed this one and then we will analyze that function.
+
+07:03.630 --> 07:09.420
+Now, let us stress this recursive function for five of five.
+
+07:10.860 --> 07:12.600
+If it passed five, what happens?
+
+07:12.870 --> 07:14.640
+Five is not less than one.
+
+07:14.640 --> 07:16.140
+So it will make two calls.
+
+07:16.320 --> 07:17.580
+So we know what the function is.
+
+07:17.580 --> 07:18.200
+Very simple.
+
+07:18.420 --> 07:20.810
+So I will just go on tracing this one.
+
+07:20.820 --> 07:25.350
+So here it will call five of three and there it will qualifiable for afterwards.
+
+07:25.350 --> 07:25.950
+Not now.
+
+07:26.220 --> 07:28.890
+First, this call will be made as this is three.
+
+07:28.890 --> 07:34.830
+So it will make a call for football for one and two afterwards.
+
+07:34.830 --> 07:35.370
+Not now.
+
+07:35.670 --> 07:36.450
+If it was one.
+
+07:36.450 --> 07:37.110
+This is the end.
+
+07:37.200 --> 07:38.780
+One end is less than equal to one.
+
+07:38.790 --> 07:39.390
+So yes.
+
+07:39.390 --> 07:40.460
+And this one now.
+
+07:40.770 --> 07:42.450
+So this will not call further.
+
+07:42.630 --> 07:47.030
+And the result, this one then here it has two calls for both two.
+
+07:47.250 --> 07:55.110
+So I'm just writing here for then if it was two further calls, fizbo of zero and feeB of one three
+
+07:55.110 --> 07:56.640
+one zero gives the other zero one.
+
+07:56.640 --> 07:59.550
+This gives the other one and they are added to that are done.
+
+07:59.550 --> 08:02.130
+And this is added as it is written on here.
+
+08:02.130 --> 08:04.920
+It will call fizbo four.
+
+08:05.220 --> 08:15.140
+So for the people for this is of two and three three three two five zero and of one.
+
+08:15.570 --> 08:22.530
+So these results are obtained 011 and they are added result this written and on this side of three again
+
+08:22.530 --> 08:26.970
+this is figure of one and off to then type of two.
+
+08:27.220 --> 08:30.930
+This is above zero and the figure of one.
+
+08:31.500 --> 08:34.860
+So here the call is so here the result is zero one.
+
+08:34.860 --> 08:41.160
+This is zero and this is one and added on added return added and final edition is done.
+
+08:41.850 --> 08:48.030
+So this is how our three looks like our recursion tree looks like four or five.
+
+08:48.660 --> 08:54.330
+If you look at the functions in the order in which they are called, this is the first function call
+
+08:54.330 --> 09:00.390
+in the second call and the third call, then forward call, fifth column, sixth call, then seven,
+
+09:00.750 --> 09:03.000
+eight, nine, ten.
+
+09:03.210 --> 09:08.910
+Then this is 11 call 12, 13, 14, 15.
+
+09:09.360 --> 09:11.430
+So forceable five.
+
+09:11.610 --> 09:13.320
+Number of calls are 15.
+
+09:14.160 --> 09:17.160
+Calls are 15, then three or four.
+
+09:17.160 --> 09:18.170
+How many calls are there.
+
+09:18.180 --> 09:21.630
+One, two, three, four, five, six, seven, eight, nine, nine calls.
+
+09:21.630 --> 09:23.240
+Are they then three of three.
+
+09:23.250 --> 09:24.200
+How many calls are there.
+
+09:24.210 --> 09:27.270
+One, two, three, four, five, five calls are there.
+
+09:27.690 --> 09:31.860
+So no, if we try to observe any pattern, there is no pattern here.
+
+09:32.280 --> 09:33.000
+This is five.
+
+09:33.000 --> 09:34.890
+So this is fifteen five.
+
+09:34.890 --> 09:35.820
+Three fifteen.
+
+09:36.420 --> 09:37.830
+Then for three it should be twelve.
+
+09:38.870 --> 09:39.200
+Then.
+
+09:40.720 --> 09:48.080
+This is forward into four or two in the four plus one, so we cannot figure out what pattern it is following.
+
+09:48.400 --> 09:55.510
+So if you want to know the time taken by this one, then assume that this off and the minus two is also
+
+09:55.510 --> 09:56.570
+for your boyfriend, minus one.
+
+09:56.890 --> 10:01.630
+So this is calling itself four two times and minus one and minus one and minus one.
+
+10:01.930 --> 10:06.790
+So many functions calling two times by a reduced value of one and the minus one.
+
+10:07.100 --> 10:10.060
+Then the timers order of Cooper and.
+
+10:11.580 --> 10:20.580
+So the time taken by this function is to pour in approximately Dupa, and so if you observe the previous
+
+10:20.580 --> 10:29.470
+function, iterative version was order of and and recursive version is too poor and too much time consuming.
+
+10:30.720 --> 10:36.170
+Now, is there any method to make it faster than to pour in?
+
+10:36.660 --> 10:39.860
+Let us observe now this analysis is important.
+
+10:40.710 --> 10:48.000
+If you see the tracing that is regression tree, the value of every function after is called here.
+
+10:48.270 --> 10:50.220
+And again, it is called here.
+
+10:51.510 --> 10:53.610
+F2 is called here first time.
+
+10:53.830 --> 10:56.700
+Then again, if two is called, then again if two is called.
+
+10:56.880 --> 11:01.110
+So similarly s01 F1 they are also called multiple times.
+
+11:01.530 --> 11:06.680
+So a recursive function is calling itself multiple times for the same values.
+
+11:07.620 --> 11:10.560
+So such a recursive function is called as.
+
+11:13.660 --> 11:15.580
+Excessive regulation.
+
+11:17.270 --> 11:25.520
+So, yes, this Fibonacci function is all excessive recursion, because it will call itself multiple
+
+11:25.520 --> 11:27.890
+times for the same parameters.
+
+11:28.880 --> 11:30.290
+This is a problem in this fund.
+
+11:30.680 --> 11:39.890
+So is there any way to avoid the excessive calls and just make a call only once and utilize it in further
+
+11:39.890 --> 11:40.530
+comments?
+
+11:41.420 --> 11:43.770
+So, yes, what is the matter?
+
+11:43.790 --> 11:51.200
+Let us devise a method if you want a function to retain the these values so that they can be utilized
+
+11:51.200 --> 11:56.990
+here, then for retaining the values, you have to take the help of static variable, or you can also
+
+11:56.990 --> 11:58.220
+take global variables.
+
+11:58.880 --> 12:05.660
+Let us take one uhry, maybe a static or globality, whatever you want, you can take it.
+
+12:12.480 --> 12:18.540
+Index zero, one, two, three, four, five, six times higher than the one you can take it, so just
+
+12:18.540 --> 12:20.530
+have to concentrate to be one up to five.
+
+12:21.570 --> 12:23.710
+Now, how to write a.
+
+12:25.220 --> 12:31.070
+Now, how to modify this algorithm to make it faster, so I remove fuel tanks from board and show you
+
+12:31.280 --> 12:33.050
+this global area or study.
+
+12:33.740 --> 12:39.770
+Let us initialize it with the minus one, minus one, since we don't know the value minus one.
+
+12:41.790 --> 12:48.400
+Now, let us stress it once again by taking the help of this global or static threat.
+
+12:48.790 --> 12:54.080
+First, I will show you that Preysing what modifications we can do, then we will modify our function.
+
+12:54.780 --> 12:55.350
+Let us see.
+
+12:56.340 --> 13:01.910
+golfBall five, do we really need to call it a check for five minus one?
+
+13:01.920 --> 13:03.380
+We don't know the answer for this.
+
+13:03.600 --> 13:04.760
+OK, call this one.
+
+13:05.040 --> 13:08.210
+So it is called it will make two calls.
+
+13:08.250 --> 13:11.970
+So the first call, if it was three, do we really need to make three more.
+
+13:11.990 --> 13:12.290
+Three?
+
+13:12.300 --> 13:14.310
+Yes, we have to because we don't know the answer.
+
+13:14.700 --> 13:16.200
+Then this will make it more fun.
+
+13:17.220 --> 13:19.190
+But we need to make a call for both.
+
+13:19.230 --> 13:21.420
+One guess because it is minus one.
+
+13:21.720 --> 13:22.690
+What can make the call?
+
+13:22.920 --> 13:25.120
+So once you make the call, the result is one.
+
+13:25.260 --> 13:30.300
+So once you got the result, because there's a small function and it's less than equal to one on one,
+
+13:30.300 --> 13:32.320
+so return zero or one, whatever it is.
+
+13:32.760 --> 13:33.890
+So this is one.
+
+13:34.140 --> 13:35.250
+So we got the answer.
+
+13:35.400 --> 13:36.840
+So change this to one.
+
+13:37.770 --> 13:40.140
+Now we know the answer for five off one.
+
+13:40.590 --> 13:41.160
+Yes.
+
+13:41.790 --> 13:42.570
+Then go back.
+
+13:43.170 --> 13:45.030
+Do we have to make a call to flip off two?
+
+13:45.030 --> 13:45.450
+Yes.
+
+13:45.450 --> 13:47.160
+We don't know the answer then.
+
+13:47.160 --> 13:49.130
+Do we have to make a call to triple zero?
+
+13:49.140 --> 13:49.380
+Yes.
+
+13:49.380 --> 13:51.650
+We don't know the answer to this function.
+
+13:51.660 --> 13:53.130
+So this result will be zero.
+
+13:53.550 --> 13:56.220
+But this one then it is less than equal to one return the same value.
+
+13:56.580 --> 13:58.120
+So zero return zero sum.
+
+13:58.160 --> 13:59.280
+Modify this also.
+
+13:59.760 --> 14:06.430
+Now, in order for those to then make a call for this one, do we need to make a call for this check?
+
+14:06.600 --> 14:07.020
+No, no.
+
+14:07.020 --> 14:07.890
+We don't answer.
+
+14:08.190 --> 14:09.360
+Don't call us.
+
+14:10.570 --> 14:11.420
+It's not clear.
+
+14:11.940 --> 14:15.860
+Yes, so avoid the call, because all of you have got the answer here.
+
+14:16.030 --> 14:21.370
+So this call is skipped, then I have to get an answer for this one.
+
+14:21.380 --> 14:23.050
+This was zero and this was one.
+
+14:23.050 --> 14:24.010
+So this is zero.
+
+14:24.010 --> 14:25.240
+Plus one is one.
+
+14:25.450 --> 14:26.620
+So this one's for this one.
+
+14:26.920 --> 14:28.270
+So modify this one.
+
+14:28.270 --> 14:29.500
+We Noonans for this.
+
+14:30.040 --> 14:33.450
+Then we got this answer one and this answer one plus one.
+
+14:33.700 --> 14:35.100
+So this is two.
+
+14:35.290 --> 14:36.130
+So we got Don.
+
+14:36.130 --> 14:41.410
+So that is to then let us go on that site, three or four.
+
+14:41.770 --> 14:44.070
+Do we know if it was for chicken?
+
+14:44.200 --> 14:45.130
+No, we don't know.
+
+14:45.370 --> 14:46.780
+So we have to call this one.
+
+14:46.780 --> 14:50.530
+So if you call this, there are two calls inside if you want to do.
+
+14:50.530 --> 14:51.450
+Benoit Yeah.
+
+14:51.460 --> 14:53.890
+Benoit, don't call this one.
+
+14:53.890 --> 14:55.150
+So don't call this.
+
+14:55.150 --> 14:58.510
+All sorts of other calls will also be avoided.
+
+14:58.900 --> 15:05.080
+Then the reason we know how much of this and this one, if you want to, is and then football three,
+
+15:05.080 --> 15:06.810
+shall we call it check it.
+
+15:07.120 --> 15:10.030
+No, we know the answer, so don't call this one.
+
+15:10.030 --> 15:13.690
+So then falling calls will also be avoided.
+
+15:13.900 --> 15:18.760
+And answer for this one is how much to then perform edition one plus two.
+
+15:18.790 --> 15:24.790
+This is three novenas answer for the side also that said also plus so this becomes two plus three.
+
+15:24.790 --> 15:25.600
+That is five.
+
+15:25.630 --> 15:29.390
+So this I did not read this so no this is five.
+
+15:29.950 --> 15:31.270
+Know the answer for all.
+
+15:32.590 --> 15:34.630
+So these calls are avoided.
+
+15:34.780 --> 15:42.610
+So if you remove those calls and check one, two, three, four, five, six.
+
+15:42.820 --> 15:48.580
+So it is making just six of function calls for five, six calls.
+
+15:48.580 --> 15:54.430
+Reason five, four, three, two, one and zero is also included so far.
+
+15:54.460 --> 15:58.750
+And how many calls and plus one that is end to zero.
+
+15:59.050 --> 16:05.210
+So the time taken by this method will be outdraw and so time is reduced.
+
+16:05.260 --> 16:06.550
+So just no use for that.
+
+16:06.880 --> 16:13.090
+That function, if you analyze it, will take outdraw to power and that is exponential.
+
+16:13.090 --> 16:14.650
+I did not analyze it thoroughly.
+
+16:14.650 --> 16:18.400
+Just have told you that it takes to board and time approximately.
+
+16:18.700 --> 16:20.590
+There is no problem to board and it's inoperable.
+
+16:21.340 --> 16:29.020
+But now by storing the result of the function in an area, we have reduced the excessive calls and the
+
+16:29.020 --> 16:35.020
+time is less than two percent and it has reduced down to just outdraw.
+
+16:35.020 --> 16:39.640
+And so a big change in the time complexity of Fibonacci function.
+
+16:40.060 --> 16:48.340
+So this reduction in time is because of storing the value was in early holding the reserves so that
+
+16:48.580 --> 16:50.220
+avoid excessive call.
+
+16:50.560 --> 16:58.630
+So this approach is called as memorisation, storing the results of the function call so that they can
+
+16:58.630 --> 17:03.220
+be utilized again when we need the same call or avoiding excessive calls.
+
+17:03.550 --> 17:07.480
+This approach is called as a memorisation means storing the results.
+
+17:08.260 --> 17:12.490
+So this is applicable here in Fibonacci series.
+
+17:12.700 --> 17:15.160
+So I have given introduction of memorisation.
+
+17:15.160 --> 17:18.190
+So this example, suitable example for memorisation.
+
+17:18.820 --> 17:24.760
+Now, based on this memorisation, I have to modify that function so I will remove the function and
+
+17:24.760 --> 17:28.540
+write a better function that is using memorisation.
+
+17:28.840 --> 17:29.950
+Let us write a function.
+
+17:31.180 --> 17:37.180
+Suppose there is some global effort which is initialized by some function that is a main function on
+
+17:37.180 --> 17:46.510
+minus one, not fill in min function now Fibonacci function, Fibonacci function the parameter and and
+
+17:46.510 --> 17:56.530
+if and is less than equal to one then in f also n store the value end and also return.
+
+17:56.530 --> 18:02.200
+And so if you observe the previous function was having just written and but now this function is also
+
+18:02.200 --> 18:12.750
+storing the resulting global array of four memorisation it is storing in f then and spot ls only are
+
+18:12.760 --> 18:13.240
+blindly.
+
+18:13.240 --> 18:18.640
+We were making two functions called that is for both and minus two and minus one but Novacek and then
+
+18:18.640 --> 18:19.330
+make it call.
+
+18:19.660 --> 18:22.080
+If value is not known then we'll make a call.
+
+18:22.420 --> 18:33.360
+So if F of and minus two is minus one means if you don't know the value then F of and minus two you
+
+18:33.730 --> 18:36.620
+get the result of football and minus two.
+
+18:36.640 --> 18:38.070
+So here we will make a call.
+
+18:38.500 --> 18:45.760
+Similarly, if we don't know the value of above and minus one and it is minus one that we don't know,
+
+18:46.150 --> 18:53.310
+then make a call for football and minus one and two, the result in F and minus one.
+
+18:53.830 --> 19:00.580
+Now we have two values then simplification addition of these two values that is free of and minus two
+
+19:01.150 --> 19:04.030
+plus feebles and minus one.
+
+19:07.700 --> 19:16.040
+So this version is that memorisation assume that that globality is initialise that minus one somewhere
+
+19:16.040 --> 19:19.170
+inside the main function before the function is utilized.
+
+19:19.430 --> 19:21.410
+So that's all about Fibonacci.
+
+19:21.790 --> 19:26.150
+We have learned that it can be done using iteration and using recursion.
+
+19:26.150 --> 19:27.710
+And the time is sort of to part.
+
+19:27.710 --> 19:31.250
+And then we have reduced the time by using memorisation.
+
+19:32.550 --> 19:33.020
+Before.

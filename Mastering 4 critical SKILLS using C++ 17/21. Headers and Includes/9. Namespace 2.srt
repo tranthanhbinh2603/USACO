@@ -1,0 +1,560 @@
+0
+1
+00:00:01,080 --> 00:00:06,930
+Let's continue our talk about the namespaces. we would like to learn how to use the namespaces
+1
+
+2
+00:00:06,930 --> 00:00:14,550
+when it comes to headers and includes. So, I have here an employee_dot_h and employee_dot_cpp file. To use
+2
+
+3
+00:00:14,550 --> 00:00:15,510
+the namespace with them
+3
+
+4
+00:00:15,510 --> 00:00:19,380
+as simple as come to your code and start with namespace, our system, brace,
+4
+
+5
+00:00:19,800 --> 00:00:22,650
+and then in the end, you put another end brace,
+5
+
+6
+00:00:23,220 --> 00:00:28,730
+and when it comes to the employee_dot_cpp, again come to the top of the file, write here namespace, our system,
+6
+
+7
+00:00:28,740 --> 00:00:34,140
+brace, and after your last line of code here, close the brace.
+7
+
+8
+00:00:34,590 --> 00:00:41,660
+At this moment of time, this code is invisible without our_ system's scope, and this code is invisible without
+8
+
+9
+00:00:42,000 --> 00:00:42,990
+our_system's scope.
+9
+
+10
+00:00:43,810 --> 00:00:49,770
+To use that in the main, you can come and do the following: using namespace, our system, If you did that,
+10
+
+11
+00:00:49,920 --> 00:00:52,800
+now this global variable here is now visible for you,
+11
+
+12
+00:00:53,100 --> 00:00:57,900
+you can use it. If you didn't using namespace, our system,
+12
+
+13
+00:00:58,110 --> 00:01:04,760
+you can come and say here our system, colon-colon, employee, global, or you can say here using our system, colon-colon,
+13
+
+14
+00:01:05,250 --> 00:01:05,960
+employee, global.
+14
+
+15
+00:01:06,330 --> 00:01:09,870
+So this is like the last session
+15
+
+16
+00:01:09,870 --> 00:01:10,440
+exactly,
+16
+
+17
+00:01:10,620 --> 00:01:15,210
+but you just here is defining our system in different areas.
+17
+
+18
+00:01:16,720 --> 00:01:23,260
+Now, let's go back to the IO_stream, and let's start to browse it. If you tried to open the IO_stream, you
+18
+
+19
+00:01:23,260 --> 00:01:26,350
+would notice here something called namespaces std.
+19
+
+20
+00:01:26,770 --> 00:01:30,700
+You will also notice the I_stream cin and  O_stream cout with the word extern.
+20
+
+21
+00:01:31,150 --> 00:01:37,960
+We talked before that when you hash_include the file IO_stream, it is going to copy all of this code inside your code.
+21
+
+22
+00:01:38,410 --> 00:01:42,760
+That's why you see  I_stream cin and O_stream cout, and they are global everywhere.
+22
+
+23
+00:01:43,210 --> 00:01:52,000
+But now what is the interesting thing about this using namespace std. The reason that we see cin and cout
+23
+
+24
+00:01:52,000 --> 00:01:53,080
+in our code is two things:
+24
+
+25
+00:01:53,440 --> 00:01:55,830
+The first is we hash include their files.
+25
+
+26
+00:01:56,200 --> 00:01:59,590
+The second is we are actually using the namespace std.
+26
+
+27
+00:01:59,920 --> 00:02:03,010
+If any of them is missing, you get a compilation error.
+27
+
+28
+00:02:03,910 --> 00:02:10,090
+If you try to browse more files like the C math and the vector, you will notice also they are under
+28
+
+29
+00:02:10,090 --> 00:02:17,800
+the namespace std. The namespace std, all the files in the C++ Standard Library are declaring
+29
+
+30
+00:02:17,800 --> 00:02:19,810
+in all of its entities within the std.
+30
+
+31
+00:02:20,180 --> 00:02:25,400
+That's why when you use in your code some hash include, let's say vector or map with the
+31
+
+32
+00:02:25,420 --> 00:02:26,630
+using namespace std,
+32
+
+33
+00:02:26,890 --> 00:02:29,640
+you are seeing them visible in your code.
+33
+
+34
+00:02:31,000 --> 00:02:37,840
+Let's try to remove using namespace from our code to see the effect of that in our code, like how to
+34
+
+35
+00:02:37,840 --> 00:02:39,000
+handle it in a proper way.
+35
+
+36
+00:02:39,580 --> 00:02:42,340
+So let's go back first to our employee_dot_h.
+36
+
+37
+00:02:42,790 --> 00:02:49,930
+If you thought about it, is there any reason to have hash include IO_stream? the answer is no because
+37
+
+38
+00:02:49,930 --> 00:02:51,060
+we aren't reading or writing.
+38
+
+39
+00:02:51,130 --> 00:02:52,420
+OK, but we have a problem now.
+39
+
+40
+00:02:52,600 --> 00:02:56,490
+We have here something that named string which is inside the namespace std.
+40
+
+41
+00:02:56,710 --> 00:02:58,890
+OK, hash include the string for it.
+41
+
+42
+00:02:59,710 --> 00:03:06,160
+OK, but still this is invisible because this is inside the using namespace std. Use here std
+42
+
+43
+00:03:06,160 --> 00:03:06,730
+colon-colon,
+43
+
+44
+00:03:06,880 --> 00:03:13,570
+now you see the string, use here std colon-colon string. There is another way, you can come here and say using std
+44
+
+45
+00:03:13,570 --> 00:03:14,740
+colon-colon, string,
+45
+
+46
+00:03:15,160 --> 00:03:19,540
+but this is a more standard way in the industry. At this moment,
+46
+
+47
+00:03:19,540 --> 00:03:20,260
+We are done with this file.
+47
+
+48
+00:03:20,980 --> 00:03:24,070
+Now going back to the employee_dot_cpp, there are two things here.
+48
+
+49
+00:03:24,520 --> 00:03:30,280
+The signature of the function which you need the std and the body of the function itself.
+49
+
+50
+00:03:30,280 --> 00:03:31,290
+For the signature itself,
+50
+
+51
+00:03:31,300 --> 00:03:36,430
+there would be nothing missing because the declaration here is the same as the declaration here.
+51
+
+52
+00:03:36,760 --> 00:03:42,700
+So if employee_dot_h is OK, then it means that it has a proper declaration that you need for the signature
+52
+
+53
+00:03:42,700 --> 00:03:43,110
+itself.
+53
+
+54
+00:03:43,600 --> 00:03:44,530
+Now going to the body,
+54
+
+55
+00:03:44,530 --> 00:03:46,090
+What is the extra thing here?
+55
+
+56
+00:03:47,020 --> 00:03:53,430
+The extra thing is we need to cout.  Cout exists in the IO_stream.
+56
+
+57
+00:03:53,440 --> 00:03:57,160
+Now, so the first thing you have put the hash_include that includes it.
+57
+
+58
+00:03:58,000 --> 00:04:05,520
+The second idea is you either use using namespace std, or you are going to access using the namespace itself
+58
+
+59
+00:04:05,540 --> 00:04:05,990
+directly.
+59
+
+60
+00:04:06,370 --> 00:04:07,600
+That's how you handle it here
+60
+
+61
+00:04:07,600 --> 00:04:13,150
+the employee_dot_cpp. Going back to the main itself, let's get rid of this using namespace std and this
+61
+
+62
+00:04:13,150 --> 00:04:18,940
+one. Now, you have to access all of these guys using the scope resolution.
+62
+
+63
+00:04:19,270 --> 00:04:24,400
+So far, we've learned the three ways. Learn to access directly using that one or come and say using
+63
+
+64
+00:04:24,700 --> 00:04:30,630
+std, colon-colon, cout, or using namespace std, or using namespace our system.
+64
+
+65
+00:04:31,000 --> 00:04:31,870
+This is what happen
+65
+
+66
+00:04:31,870 --> 00:04:37,330
+if you tried to get rid of completely using namespace, you have to define every one of them by yourself,
+66
+
+67
+00:04:37,690 --> 00:04:39,790
+and this takes us to an interesting question.
+67
+
+68
+00:04:40,120 --> 00:04:46,750
+What is good and what is bad in using namespace std? the good part is it is an easier educational experience for
+68
+
+69
+00:04:46,750 --> 00:04:48,280
+beginners. Notice that
+69
+
+70
+00:04:48,280 --> 00:04:52,390
+since the beginning, we didn't have to tell you what is really  cout and what is defined and all
+70
+
+71
+00:04:52,390 --> 00:04:52,780
+of that.
+71
+
+72
+00:04:53,510 --> 00:04:59,620
+The second thing is when you use using namespace std, it makes your code shorter and readable so you don't have
+72
+
+73
+00:04:59,620 --> 00:05:06,400
+this bunch of std, colon-colon, cin, std, colon-colon, cout, std, colon-colon, square root, and all
+73
+
+74
+00:05:06,400 --> 00:05:06,790
+of that.
+74
+
+75
+00:05:07,330 --> 00:05:15,040
+But here is the bad part: When you say using namespace std, it makes all what in std visible, which is a lot
+75
+
+76
+00:05:15,040 --> 00:05:16,930
+everything in C++ under std.
+76
+
+77
+00:05:17,350 --> 00:05:22,420
+This typically creates a lot of issues and then conflicts in real projects because now the visibility
+77
+
+78
+00:05:22,420 --> 00:05:27,940
+of your program is colliding with the visibility of a huge thing. 
+In industry,
+78
+
+79
+00:05:27,940 --> 00:05:31,210
+We don't use at all using namespace std.
+79
+
+80
+00:05:31,450 --> 00:05:32,290
+We do not do that.
+80
+
+81
+00:05:32,590 --> 00:05:37,810
+What we typically do is we are accessing things using something like std, colon-colon, cout.
+81
+
+82
+00:05:38,260 --> 00:05:39,640
+we just keep them this way.
+82
+
+83
+00:05:40,000 --> 00:05:45,220
+It makes the code a bit bigger, less readable, but overall, fewer collisions.
+83
+
+84
+00:05:45,790 --> 00:05:47,110
+here is one choice:
+84
+
+85
+00:05:47,350 --> 00:05:50,560
+During the course, I decided that I'm going to keep it simple.
+85
+
+86
+00:05:50,920 --> 00:05:54,480
+By that I mean through the whole course I'm using using namespace std,
+86
+
+87
+00:05:54,880 --> 00:05:57,730
+but remember, this isn't a professional choice.
+87
+
+88
+00:05:57,730 --> 00:05:59,170
+We don't do that in the industry.
+88
+
+89
+00:05:59,380 --> 00:06:04,870
+I'm just doing it because I believe it is an easier educational experience. The negative side of
+89
+
+90
+00:06:04,870 --> 00:06:05,200
+that,
+90
+
+91
+00:06:05,200 --> 00:06:11,110
+Your eyes don't see the proper way a lot, however, as you see, this just
+91
+
+92
+00:06:11,110 --> 00:06:12,670
+very systematic code change.
+92
+
+93
+00:06:14,140 --> 00:06:15,650
+Let's go back to our topic.
+93
+
+94
+00:06:16,650 --> 00:06:21,190
+One last thing, C++ allows you to have nested namespaces.
+94
+
+95
+00:06:21,240 --> 00:06:24,740
+This means you have more and more divisions inside your code.
+95
+
+96
+00:06:24,900 --> 00:06:27,360
+So we have a group and subgroup and subgroup and so on.
+96
+
+97
+00:06:27,660 --> 00:06:33,510
+So here I have something named namespace, our system inside it, namespace customer, and another
+97
+
+98
+00:06:33,510 --> 00:06:34,500
+namespace for admin.
+98
+
+99
+00:06:35,040 --> 00:06:41,550
+If I would like to use a variable limit, I can use it as following: our system, colon-colon, customer, colon-colon, limit.
+99
+
+100
+00:06:41,850 --> 00:06:45,980
+So as you see, the colon_colon is just getting one more inside level.
+100
+
+101
+00:06:46,440 --> 00:06:49,140
+You can also defining in C++ what we call alias.
+101
+
+102
+00:06:49,440 --> 00:06:52,800
+So let's say you don't need to use this very big name all the time.
+102
+
+103
+00:06:52,810 --> 00:06:57,300
+You can see something like namespace, whatever name here, then our system colon-colon customer.
+103
+
+104
+00:06:57,660 --> 00:07:00,780
+Now you can access the limit variable directly with the scope
+104
+
+105
+00:07:00,810 --> 00:07:05,460
+colon_colon. If it happened here to have a namespace inside a namespace
+105
+
+106
+00:07:05,460 --> 00:07:06,360
+inside a namespace,
+106
+
+107
+00:07:07,370 --> 00:07:08,460
+the code looks ugly.
+107
+
+108
+00:07:08,640 --> 00:07:11,610
+C++ 17 simplifies that as follows:
+108
+
+109
+00:07:11,620 --> 00:07:17,670
+You can define it as follows: namespace, our system, colon_colon, customer, and then you define what you
+109
+
+110
+00:07:17,670 --> 00:07:17,910
+have.
+110
+
+111
+00:07:18,390 --> 00:07:22,800
+Do not compile this code unless your compiler supports C++ 17 or beyond.
+111
+
+112
+00:07:23,720 --> 00:07:24,290
+That's it.

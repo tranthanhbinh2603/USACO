@@ -1,0 +1,523 @@
+1
+00:00:01,410 --> 00:00:06,990
+I referred more than once to the value, and I think you had a good sense of it now, but it may be
+
+2
+00:00:06,990 --> 00:00:09,690
+time to make it more, more, more explicit.
+
+3
+00:00:10,170 --> 00:00:13,110
+Recall that Analia value is something that has an identity.
+
+4
+00:00:13,380 --> 00:00:15,410
+It has like personality.
+
+5
+00:00:15,450 --> 00:00:17,460
+It has a name or identifiable address.
+
+6
+00:00:17,880 --> 00:00:23,520
+And also we named the we are values, the bureau values here to be tamburri, something like the Electra's.
+
+7
+00:00:24,120 --> 00:00:30,100
+I learned also that kersting and value can generate an R value difference, which is there is more.
+
+8
+00:00:30,720 --> 00:00:35,610
+Now, going back to the diagram here, we say that we have three primary values.
+
+9
+00:00:35,610 --> 00:00:37,290
+They value their value.
+
+10
+00:00:37,470 --> 00:00:42,930
+And also there is this value and there are two different classes here, the value and our value and
+
+11
+00:00:42,930 --> 00:00:44,830
+every one of them is good and expression.
+
+12
+00:00:45,690 --> 00:00:54,240
+The value is something now between what is the R value add, between what is the value, something very
+
+13
+00:00:54,240 --> 00:00:54,560
+narrow.
+
+14
+00:00:55,440 --> 00:00:57,330
+So far we learned about it.
+
+15
+00:00:57,720 --> 00:01:01,980
+The X value is something that has an identity and also movable.
+
+16
+00:01:02,520 --> 00:01:08,940
+Remember that L values has an identity, but the current market, like with the casting operation as
+
+17
+00:01:08,940 --> 00:01:15,060
+movable, it means that they will expire or would be terminated their life at a specific time in the
+
+18
+00:01:15,060 --> 00:01:15,690
+normal way.
+
+19
+00:01:17,130 --> 00:01:21,780
+Now when we try to move in value, we convert it to our value reference.
+
+20
+00:01:22,050 --> 00:01:23,370
+Why do we do that?
+
+21
+00:01:23,790 --> 00:01:30,690
+When we do that, we have a message that this object will be stolen soon by some other guy.
+
+22
+00:01:30,930 --> 00:01:32,760
+It means it's about to expire.
+
+23
+00:01:33,060 --> 00:01:38,670
+And this should be always the reason that you try to move something, because after it has been moved,
+
+24
+00:01:38,940 --> 00:01:40,830
+you shouldn't try to make use of it.
+
+25
+00:01:40,860 --> 00:01:48,710
+Remember the session of the when we tried to use the object after it was use it because a runtime error.
+
+26
+00:01:49,050 --> 00:01:55,470
+So the moral of that is when a move on value, there is an intention that this guy, someone will take
+
+27
+00:01:55,470 --> 00:01:58,220
+its internal and it will expire soon.
+
+28
+00:01:58,230 --> 00:02:02,700
+And from here, the extra value comes, the extra value is an by adding value.
+
+29
+00:02:03,120 --> 00:02:07,730
+It's something that originally has an identity, but now it's about to expire.
+
+30
+00:02:08,190 --> 00:02:09,550
+So it's movable object.
+
+31
+00:02:09,960 --> 00:02:14,760
+This is the overall difference between the X value and other guys.
+
+32
+00:02:15,030 --> 00:02:16,950
+It it's something in the middle.
+
+33
+00:02:17,250 --> 00:02:21,210
+It's something movable because we we apply the custom over it.
+
+34
+00:02:21,450 --> 00:02:24,060
+But also originally it's something has an identity.
+
+35
+00:02:24,420 --> 00:02:30,540
+And and and remember one question about the difference between X value and be our values.
+
+36
+00:02:30,690 --> 00:02:35,430
+You have to be careful when it comes to coding like you shouldn't use it after it has been moved.
+
+37
+00:02:37,080 --> 00:02:39,390
+And this take us to this very nice diagram.
+
+38
+00:02:39,690 --> 00:02:44,670
+Every every one of the five types can be identified by these two properties.
+
+39
+00:02:44,820 --> 00:02:47,100
+Is it has does it has an identity or not?
+
+40
+00:02:47,490 --> 00:02:49,030
+And is it movable or not?
+
+41
+00:02:49,320 --> 00:02:54,150
+So thinking about the values, the value cannot move.
+
+42
+00:02:54,930 --> 00:03:00,690
+But he has an identity thinking about the we are values that implies they do not have an identity like
+
+43
+00:03:00,750 --> 00:03:06,240
+hundred, but they are ready to be moved and destroyed in the memory in a way only in the intersection
+
+44
+00:03:06,240 --> 00:03:09,570
+between something that has an L value and is movable.
+
+45
+00:03:09,570 --> 00:03:15,930
+We find extra value, which may only happen by taking an value object and casting it, for example,
+
+46
+00:03:16,200 --> 00:03:16,620
+to.
+
+47
+00:03:16,830 --> 00:03:19,500
+And this is one one one good way.
+
+48
+00:03:20,010 --> 00:03:25,740
+Now going back to the to the parenting classes and our value is something that is ready to move.
+
+49
+00:03:25,770 --> 00:03:27,240
+That is it in the diagram.
+
+50
+00:03:27,870 --> 00:03:30,900
+And the value is something that has an identity.
+
+51
+00:03:31,050 --> 00:03:33,090
+That's it in the in the diagram.
+
+52
+00:03:35,150 --> 00:03:40,740
+Let's see, some examples do have the value more in our in our minds.
+
+53
+00:03:41,120 --> 00:03:43,570
+So let's say we have an X here, which is 50.
+
+54
+00:03:43,610 --> 00:03:47,450
+This initial value we have here ulcerate value reference to 15.
+
+55
+00:03:47,570 --> 00:03:53,030
+But Exide itself is still Annell Value, which has a name, has an identity, hasn't addressed to me.
+
+56
+00:03:53,420 --> 00:03:55,220
+Is it simply in the memory?
+
+57
+00:03:55,460 --> 00:03:56,460
+It is a better value.
+
+58
+00:03:56,510 --> 00:03:57,460
+We know that so far.
+
+59
+00:03:58,100 --> 00:04:04,310
+If you could move on an L value, the return here is in value that is ready to move.
+
+60
+00:04:04,400 --> 00:04:13,370
+This is an X, but if you try to move X and receive it in Y, Y again, come back as a value because
+
+61
+00:04:13,910 --> 00:04:16,010
+it now has a name.
+
+62
+00:04:16,400 --> 00:04:23,270
+So you can think of X as something that is hiding the name for us because everything that has a name
+
+63
+00:04:23,270 --> 00:04:24,100
+is in value.
+
+64
+00:04:24,470 --> 00:04:26,780
+So the move here is hiding the name.
+
+65
+00:04:27,170 --> 00:04:29,950
+But the move here, we received it again in a name.
+
+66
+00:04:30,020 --> 00:04:31,210
+So the name is clear.
+
+67
+00:04:31,220 --> 00:04:32,150
+It is an L value.
+
+68
+00:04:32,180 --> 00:04:39,400
+Again, no thinking about here if it is a function that is returning our value.
+
+69
+00:04:39,770 --> 00:04:43,090
+This is wrong, as you know, because it pointing to a local reference.
+
+70
+00:04:43,100 --> 00:04:49,860
+But in a way, if it is returning an R value difference and we don't have an access to its name here.
+
+71
+00:04:50,270 --> 00:04:55,000
+So if one calling if true, this is an extra value example.
+
+72
+00:04:55,160 --> 00:04:58,190
+If you try to do something like integrate, you qualify to that.
+
+73
+00:04:58,190 --> 00:05:00,820
+If Y again is an L value.
+
+74
+00:05:01,400 --> 00:05:09,480
+And now I hope I hope you over all of that, you get the sense of marking something with an clustering,
+
+75
+00:05:09,500 --> 00:05:15,590
+something to reference reference, make it as X value as long as you can have a name for it like you,
+
+76
+00:05:15,740 --> 00:05:17,090
+you don't receive it in a name.
+
+77
+00:05:18,170 --> 00:05:20,120
+Now there are other two interesting cases.
+
+78
+00:05:20,450 --> 00:05:27,140
+If you try to use the subscript operator on an value, let's say here string stuff and then you exis
+
+79
+00:05:27,140 --> 00:05:30,020
+it with one, this become now an X value.
+
+80
+00:05:30,170 --> 00:05:36,800
+OK, so String Mustafa is an R value, but this subscript operator goes, it goes as to to have some
+
+81
+00:05:36,800 --> 00:05:39,860
+like pointing to something, some internal address inside it.
+
+82
+00:05:40,130 --> 00:05:44,590
+That's why we convert it from our value to an extra value in a very similar way.
+
+83
+00:05:44,810 --> 00:05:50,630
+If you use the good operator to access some temporary object, the name if it is an anesthetic member,
+
+84
+00:05:51,230 --> 00:05:52,430
+Zigged and Xibalba.
+
+85
+00:05:53,830 --> 00:06:00,280
+Now, one might ask himself, do we really need to differentiate between what is effectively a PR value
+
+86
+00:06:00,550 --> 00:06:03,460
+and highlight that there is now an identity?
+
+87
+00:06:03,760 --> 00:06:08,830
+They are in a way, you know, movable, and we are going to pass it to someone who is going to steal
+
+88
+00:06:08,830 --> 00:06:09,760
+the data from them.
+
+89
+00:06:10,420 --> 00:06:11,650
+There are differences.
+
+90
+00:06:11,950 --> 00:06:17,230
+The first one that we said here in the previous slide that you need to be careful about the dealing
+
+91
+00:06:17,230 --> 00:06:18,310
+with the values.
+
+92
+00:06:18,310 --> 00:06:21,690
+You should try to use them if you have an access to the identity.
+
+93
+00:06:22,360 --> 00:06:24,190
+And here is one more interesting difference.
+
+94
+00:06:24,520 --> 00:06:31,720
+You can cast the exact values to a difference here, because we know there is an address, but you cannot
+
+95
+00:06:31,720 --> 00:06:36,790
+cast a we value because you don't have an address identifiable for you.
+
+96
+00:06:36,850 --> 00:06:37,980
+So this is one difference.
+
+97
+00:06:38,200 --> 00:06:43,630
+And also in some of the readings, you will notice that there is even a physical difference between
+
+98
+00:06:43,630 --> 00:06:43,870
+them.
+
+99
+00:06:44,790 --> 00:06:50,380
+Overall, I hope you will still I hope you manage to figure out the differences in case here are some
+
+100
+00:06:50,380 --> 00:06:51,700
+useful informal rules.
+
+101
+00:06:52,000 --> 00:06:57,970
+If it has a name, then it has an identity, something like in the value nonconscious value reference,
+
+102
+00:06:58,330 --> 00:06:59,640
+the value difference and so on.
+
+103
+00:07:00,130 --> 00:07:02,530
+If it doesn't have a name, it is another value.
+
+104
+00:07:02,920 --> 00:07:04,780
+And then now there are two types.
+
+105
+00:07:05,050 --> 00:07:11,410
+Either we are values like the reference and the like like literals.
+
+106
+00:07:13,450 --> 00:07:16,810
+But these are and this.
+
+107
+00:07:17,840 --> 00:07:22,930
+Yeah, but this aren't they do not have an identity.
+
+108
+00:07:23,950 --> 00:07:24,910
+This is a mistake.
+
+109
+00:07:25,630 --> 00:07:31,000
+The second case, an exit value, for example, the very popular case would be the return of a esteemable
+
+110
+00:07:31,300 --> 00:07:36,040
+where the function here, the move goes to the need in the name to be hidden for us.
+
+111
+00:07:36,280 --> 00:07:39,510
+But we still have some identifiable address for it.
+
+112
+00:07:40,090 --> 00:07:41,280
+So overall, it's movable.
+
+113
+00:07:41,290 --> 00:07:46,900
+So the value is something that really has an identity identifiable address, but still movable one.
+
+114
+00:07:49,090 --> 00:07:51,970
+It also worth mentioning something about the big picture.
+
+115
+00:07:52,360 --> 00:07:56,950
+Now, when we try to bessen an argument to a function, there are mainly three value categories that
+
+116
+00:07:56,950 --> 00:07:57,430
+we have.
+
+117
+00:07:57,760 --> 00:08:04,050
+We canvas and value or be are value and x value from the function that receiving the parameter itself.
+
+118
+00:08:04,240 --> 00:08:05,620
+We have military cases.
+
+119
+00:08:05,830 --> 00:08:11,530
+It can like have a barometer for an hour value or value or add value, reference or value difference.
+
+120
+00:08:11,680 --> 00:08:13,900
+You can even think about the corresponding cases here.
+
+121
+00:08:14,890 --> 00:08:19,960
+If you would like to be very good in the proper optimizations of both of them, you have to remember
+
+122
+00:08:19,960 --> 00:08:21,930
+the many to many relationship between them.
+
+123
+00:08:22,240 --> 00:08:27,850
+For example, where we are three values and we have we are receiving here in three scenarios or even
+
+124
+00:08:27,850 --> 00:08:32,110
+five scenarios you have to have in your mind and you should be able to do that.
+
+125
+00:08:32,110 --> 00:08:38,080
+Now, for all of these scenarios, for example, in some scenarios there will be a comparison error.
+
+126
+00:08:38,350 --> 00:08:45,130
+If you try to pass a constant reference to the parameter, this would be a comparison, a comparison
+
+127
+00:08:45,130 --> 00:08:45,420
+error.
+
+128
+00:08:45,760 --> 00:08:52,060
+If you try to pass, for example, a variable to a function that has a reference, you are expecting
+
+129
+00:08:52,060 --> 00:08:55,870
+the function to be able to change the variable and so on.
+
+130
+00:08:56,080 --> 00:09:03,460
+Having the inmind these relationships is it is useful for the relationships and here some readings,
+
+131
+00:09:04,090 --> 00:09:04,570
+that's all.

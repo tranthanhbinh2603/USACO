@@ -1,0 +1,119 @@
+0
+1
+00:00:01,110 --> 00:00:04,950
+For the Is Subsequence problem, it can be solved in a nice way.
+1
+
+2
+00:00:06,000 --> 00:00:07,480
+I hope it wasn't so hard for you.
+2
+
+3
+00:00:07,950 --> 00:00:09,780
+The idea is based on matching.
+3
+
+4
+00:00:09,870 --> 00:00:16,380
+Let's say let's say we have here a string like aaabcd
+4
+
+5
+00:00:16,380 --> 00:00:23,310
+Let's say the target string is, for example, it is only b, and d. it seems we would like this b to be
+5
+
+6
+00:00:23,310 --> 00:00:29,550
+matched with this b and this d needs to be matched with this d so the idea you start from the a and
+6
+
+7
+00:00:29,550 --> 00:00:34,350
+check if it matched with b or not, if it matches, you mark that you match at the first letter, second
+7
+
+8
+00:00:34,600 --> 00:00:35,620
+letter and so on.
+8
+
+9
+00:00:36,030 --> 00:00:41,140
+So here does a match the first? No.  Does a match? No. does a match? No.  Does B match?
+9
+
+10
+00:00:41,160 --> 00:00:41,550
+Yes.
+10
+
+11
+00:00:41,730 --> 00:00:46,260
+Then now we are here would like to match with the d. Does c match? No. Does d match?
+11
+
+12
+00:00:46,270 --> 00:00:48,440
+Yes we are here so we are done with the string.
+12
+
+13
+00:00:48,930 --> 00:00:54,630
+So the idea is to iterate on the big string and try to keep matching with the small one.
+13
+
+14
+00:00:54,660 --> 00:00:56,280
+So here is the next to_match here.
+14
+
+15
+00:00:56,280 --> 00:00:57,960
+The next match position in the small_str 
+15
+
+16
+00:00:57,960 --> 00:01:04,040
+is zero. I am iterating on the big one and then I'm comparing if the current big match the current 
+16
+
+17
+00:01:04,050 --> 00:01:07,620
+small if it matched a current letter, we increase the match.
+17
+
+18
+00:01:08,100 --> 00:01:13,710
+If it happens that we are done with the whole small string, then we will have completely found a subsequent
+18
+
+19
+00:01:14,160 --> 00:01:15,870
+otherwise, 
+19
+
+20
+00:01:15,870 --> 00:01:18,210
+the case is no, there are different cases here.
+20
+
+21
+00:01:18,210 --> 00:01:23,490
+You might, for example, match all of these small substring, but still more letters to match.
+21
+
+22
+00:01:23,520 --> 00:01:26,060
+So it will end up here and so on.
+22
+
+23
+00:01:26,070 --> 00:01:28,860
+So, yeah, I hope you understood this.
+23
+
+24
+00:01:28,860 --> 00:01:29,580
+Nice idea.

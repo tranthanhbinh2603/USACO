@@ -1,0 +1,663 @@
+1
+00:00:00,720 --> 00:00:06,090
+Uh, homework, no food, which many to this to their real values problems.
+
+2
+00:00:06,540 --> 00:00:12,540
+And the first to probably you will be given, uh, an integer X and you would like to compute their
+
+3
+00:00:12,540 --> 00:00:14,130
+square root value of it.
+
+4
+00:00:14,670 --> 00:00:20,190
+But you just return to their integer about four square of twenty years for something, you just return
+
+5
+00:00:20,190 --> 00:00:20,280
+it.
+
+6
+00:00:20,280 --> 00:00:23,220
+Therefore, we definitely can do that with the normal.
+
+7
+00:00:24,330 --> 00:00:25,230
+It's the library.
+
+8
+00:00:25,410 --> 00:00:28,290
+But here you have to use binary search to compute that.
+
+9
+00:00:28,620 --> 00:00:29,790
+And this is an easy problem.
+
+10
+00:00:30,810 --> 00:00:36,840
+The second problem isn't from, uh, Likud, I couldn't find good examples at Likud problems.
+
+11
+00:00:37,140 --> 00:00:38,970
+So this is mainly for from s'posed.
+
+12
+00:00:39,000 --> 00:00:41,100
+Um, well, lane judge.
+
+13
+00:00:41,520 --> 00:00:45,660
+Uh, I would add a video for these online jokes.
+
+14
+00:00:46,130 --> 00:00:48,510
+Um, this visual mean judges like Likud.
+
+15
+00:00:48,510 --> 00:00:54,450
+But this time you have to right the main function by yourself and you have to read from the council
+
+16
+00:00:54,840 --> 00:00:56,280
+and write to the council.
+
+17
+00:00:57,060 --> 00:01:02,970
+Um, anyway, let me explain for you, uh, this is a function that you can implement here.
+
+18
+00:01:03,360 --> 00:01:08,120
+The function will take a vector of double values which represent some bar.
+
+19
+00:01:08,130 --> 00:01:09,360
+You reduce it by here.
+
+20
+00:01:10,730 --> 00:01:16,550
+And also an integrated for the number of people the idea is following, each boy is a search console
+
+21
+00:01:16,570 --> 00:01:18,740
+and each boy has a different ages.
+
+22
+00:01:19,400 --> 00:01:25,020
+Remember we the the area of a circle is to buy our square, right?
+
+23
+00:01:25,100 --> 00:01:26,230
+This is the idea of a circle.
+
+24
+00:01:26,540 --> 00:01:30,230
+So everybody is a circle and we are given the radius of everybody.
+
+25
+00:01:31,400 --> 00:01:33,440
+We are a nobody and we have any people.
+
+26
+00:01:33,860 --> 00:01:41,060
+We would like to give them every one of them equally sized a piece from the body.
+
+27
+00:01:41,660 --> 00:01:44,150
+The beast doesn't have to follow any specific shape.
+
+28
+00:01:44,150 --> 00:01:47,480
+It could be for any shape, however, and even little pieces, whatever.
+
+29
+00:01:47,810 --> 00:01:49,520
+But it must come from a single body.
+
+30
+00:01:49,850 --> 00:01:51,410
+It must account from a single buy.
+
+31
+00:01:51,950 --> 00:01:54,200
+And there could be some leftovers from your pie.
+
+32
+00:01:54,620 --> 00:01:59,270
+So again, we have several bodies and we have some people in the body.
+
+33
+00:02:00,440 --> 00:02:04,260
+Everyone would like to think B will take a piece from one specific bite.
+
+34
+00:02:04,280 --> 00:02:10,850
+Maybe he will take this piece here, and maybe this person will take this little piece here and maybe
+
+35
+00:02:10,850 --> 00:02:11,930
+this little piece here.
+
+36
+00:02:12,740 --> 00:02:20,930
+And then what we hear here is the area of there received from a specific by the total area here for
+
+37
+00:02:20,930 --> 00:02:23,630
+this guy would be equally sized.
+
+38
+00:02:24,200 --> 00:02:29,390
+Now the question is what is the largest possible besides each person can take?
+
+39
+00:02:29,990 --> 00:02:31,070
+Let's see an example.
+
+40
+00:02:31,310 --> 00:02:33,560
+We have three boys at three.
+
+41
+00:02:33,830 --> 00:02:36,570
+This are the ridges and we have four persons here.
+
+42
+00:02:37,370 --> 00:02:39,170
+So here is how we can solve it here.
+
+43
+00:02:39,440 --> 00:02:41,210
+The answer is twenty five point something.
+
+44
+00:02:41,210 --> 00:02:47,570
+This is the largest area of an equally sized piece so that for the beast, no vote for the body.
+
+45
+00:02:47,570 --> 00:02:47,990
+No.
+
+46
+00:02:48,350 --> 00:02:52,310
+The first body was reduced for the idea of this piece is 50 something.
+
+47
+00:02:52,610 --> 00:02:56,540
+So we give this one to two persons, so every one of them take twenty five something here.
+
+48
+00:02:57,380 --> 00:02:59,840
+And then so then we cover two persons.
+
+49
+00:02:59,990 --> 00:03:07,220
+We take from this by 25 and from this by twenty five over all five people for four persons are covered
+
+50
+00:03:07,220 --> 00:03:08,150
+using twenty five here.
+
+51
+00:03:08,960 --> 00:03:14,940
+Another one, we have only a single bite of Regis five, and we have 25 person in the scene, so it
+
+52
+00:03:14,960 --> 00:03:17,930
+logically we will divide it equally between all of them.
+
+53
+00:03:18,170 --> 00:03:23,410
+So the that circle area of fridges for is this value divided by twenty five.
+
+54
+00:03:23,420 --> 00:03:24,320
+You get this value.
+
+55
+00:03:26,330 --> 00:03:32,000
+Another case here, if you have all of these resources and six people, so this is answers.
+
+56
+00:03:34,110 --> 00:03:41,040
+Now, as I mentioned, uh, a sport in the sport, you have to write me and you have to read from the
+
+57
+00:03:41,040 --> 00:03:44,430
+console and write to the console, you got it from fights.
+
+58
+00:03:45,000 --> 00:03:48,690
+Now if you try to read the description of his book itself, it will be lengthy.
+
+59
+00:03:48,690 --> 00:03:49,320
+But read it.
+
+60
+00:03:49,320 --> 00:03:50,160
+It will be a good idea.
+
+61
+00:03:50,370 --> 00:03:51,990
+I shortened it to be good for you.
+
+62
+00:03:52,290 --> 00:03:54,000
+There is also a trick in the text.
+
+63
+00:03:54,270 --> 00:03:57,630
+The trick is they say that the material should be added to the total case.
+
+64
+00:03:57,930 --> 00:04:02,490
+So in the text, they would mention 24 Burswood and you had lost one making here.
+
+65
+00:04:02,490 --> 00:04:04,890
+You would love easier and entering you this trick.
+
+66
+00:04:05,130 --> 00:04:09,750
+This tricks haven't a lot in competitive programming, and this is okay in computer programming context.
+
+67
+00:04:09,750 --> 00:04:15,120
+But as an algorithm, because I do not, I don't want to waste your time in such a minor concerns.
+
+68
+00:04:16,050 --> 00:04:22,980
+So, uh, uh, for for a sports, you have to write a mean and read and write.
+
+69
+00:04:23,220 --> 00:04:26,010
+And they also retest the cases like you did seven to eight cases.
+
+70
+00:04:26,010 --> 00:04:27,230
+And this is why it is the case.
+
+71
+00:04:27,960 --> 00:04:33,360
+Now I would like to make your life easier, so I did the following I'm providing you with this file.
+
+72
+00:04:34,450 --> 00:04:38,410
+It is, it says, something like Bush by I think it was 02, yes.
+
+73
+00:04:39,160 --> 00:04:44,860
+Now this file has the mean ready for you and has the function that I asked you to implement to year
+
+74
+00:04:44,860 --> 00:04:46,660
+ready for you to just try to do.
+
+75
+00:04:47,080 --> 00:04:53,500
+If you just took this file and filled only this specific function, it would be for more for you more
+
+76
+00:04:53,500 --> 00:04:56,140
+or less like it could you only and it could all the function.
+
+77
+00:04:56,410 --> 00:04:59,620
+So you take the template and fill only this function and submit it.
+
+78
+00:05:00,280 --> 00:05:06,060
+So this is just will be much shorter for you and could be based on the text from the website so that
+
+79
+00:05:06,070 --> 00:05:07,300
+it still could be herself.
+
+80
+00:05:08,560 --> 00:05:11,770
+One concern here we mentioned the minor search we can do.
+
+81
+00:05:11,770 --> 00:05:13,420
+Why look this way or better?
+
+82
+00:05:13,420 --> 00:05:15,040
+It it up to 100 iterations?
+
+83
+00:05:15,460 --> 00:05:19,600
+This one will fail with this problem responsibly and use this iteration this thing.
+
+84
+00:05:21,530 --> 00:05:22,050
+OK.
+
+85
+00:05:22,100 --> 00:05:29,360
+Another problem, sadly, from Bush, is as following, uh, I tried to simplify the text, it's a bit
+
+86
+00:05:29,360 --> 00:05:30,980
+challenging problem to understand.
+
+87
+00:05:32,550 --> 00:05:33,870
+We have a line.
+
+88
+00:05:35,240 --> 00:05:39,020
+And there are many people positioned somewhere in this line.
+
+89
+00:05:39,530 --> 00:05:43,880
+So the first thing that you think is victor oppositions for the people.
+
+90
+00:05:45,400 --> 00:05:47,770
+And you have a message of distance.
+
+91
+00:05:49,330 --> 00:05:56,010
+And our message is if someone here shouted a message, a person who is far like, let's say distance
+
+92
+00:05:56,050 --> 00:05:59,380
+of three is far three from you cannot listen to the distance.
+
+93
+00:05:59,770 --> 00:06:03,130
+So let's say this is better than here at six and this person is at three.
+
+94
+00:06:03,820 --> 00:06:04,520
+Mm.
+
+95
+00:06:05,170 --> 00:06:07,480
+Let's make it two and five.
+
+96
+00:06:08,830 --> 00:06:14,080
+So this person at to the distance of hearing is three, two and three five Callison, yes, if this
+
+97
+00:06:14,440 --> 00:06:21,990
+person is at 12 from five to 12 is seven greater than the distance, so he cannot hear, OK, here is
+
+98
+00:06:22,000 --> 00:06:23,290
+a it is what's going to happen.
+
+99
+00:06:23,860 --> 00:06:32,110
+The first person will hear the message and we would like to deliver this message to the last person.
+
+100
+00:06:32,560 --> 00:06:39,040
+So this people in the business as a team will start to arrange it with their positions such that in
+
+101
+00:06:39,040 --> 00:06:45,400
+the minimum time we can deliver this message, every person run at a speed of one unit, their second,
+
+102
+00:06:45,490 --> 00:06:50,680
+which you mean just like one unit in a way like the time is like the distance here.
+
+103
+00:06:51,670 --> 00:06:54,460
+And he either move to the left or moved to the right.
+
+104
+00:06:55,120 --> 00:06:59,320
+And from that, he will hear the message and shoot it to the next person.
+
+105
+00:06:59,890 --> 00:07:05,290
+And we would like the team to committee to collaborate together so that he can deliver the message as
+
+106
+00:07:05,290 --> 00:07:06,280
+fast as possible.
+
+107
+00:07:06,820 --> 00:07:09,550
+You would like to find that a minimum time for such a delivery.
+
+108
+00:07:10,120 --> 00:07:11,980
+The position array is sorted, right?
+
+109
+00:07:12,010 --> 00:07:15,580
+Let's give an example so that this very generic statements are more clear.
+
+110
+00:07:16,780 --> 00:07:19,690
+We have two persons only at positions zero.
+
+111
+00:07:20,720 --> 00:07:21,890
+And musician, six.
+
+112
+00:07:23,420 --> 00:07:24,920
+The message distance is three.
+
+113
+00:07:25,190 --> 00:07:32,510
+So if the first person who showed the message, then the only one at position three can hear it.
+
+114
+00:07:33,320 --> 00:07:39,200
+This people can arrange themselves in only 1.5 second to deliver the message as fast as possible.
+
+115
+00:07:39,380 --> 00:07:42,500
+Here is what will happen after rainbow in five seconds.
+
+116
+00:07:42,560 --> 00:07:46,610
+The first person will move to a location, one being fired in burial.
+
+117
+00:07:46,610 --> 00:07:50,660
+Two that the last person will move back to 4.5.
+
+118
+00:07:52,500 --> 00:07:59,250
+Now, the minimum distance is three, if this person is 30 to should this message a that is his three
+
+119
+00:07:59,250 --> 00:08:02,430
+steps before will be able to hear the message.
+
+120
+00:08:02,970 --> 00:08:05,700
+So now in all 1.5, I move here.
+
+121
+00:08:05,940 --> 00:08:06,810
+You move here.
+
+122
+00:08:07,080 --> 00:08:08,250
+I should the message.
+
+123
+00:08:08,520 --> 00:08:09,390
+You hear it?
+
+124
+00:08:10,440 --> 00:08:10,800
+Let's see.
+
+125
+00:08:10,800 --> 00:08:11,550
+Another example.
+
+126
+00:08:14,820 --> 00:08:16,620
+We have someone at position zero.
+
+127
+00:08:17,670 --> 00:08:22,770
+Another opposition foot and another one, a position four and someone a position eight.
+
+128
+00:08:23,610 --> 00:08:29,040
+And the distance for a hearing is only to the optimal for this one would be only one second of time.
+
+129
+00:08:29,100 --> 00:08:34,590
+Here's what would happen first, the opposition's zero will move to position one.
+
+130
+00:08:35,370 --> 00:08:37,020
+So he take one one unit of time.
+
+131
+00:08:37,380 --> 00:08:40,260
+Everyone in this one unit of time will decide his location.
+
+132
+00:08:40,590 --> 00:08:45,360
+So this one might be and also one unit of time go back to position of three.
+
+133
+00:08:45,990 --> 00:08:50,550
+And this one will go to the right to position five.
+
+134
+00:08:51,060 --> 00:08:53,310
+And this it will go back here to position seven.
+
+135
+00:08:53,910 --> 00:09:00,020
+Now for a one to three is just two from three to five is just through from five to seven.
+
+136
+00:09:00,040 --> 00:09:00,600
+Is just two.
+
+137
+00:09:00,840 --> 00:09:03,420
+So this person should the message to this one, will hear it.
+
+138
+00:09:03,600 --> 00:09:05,470
+Then this one should it immediately.
+
+139
+00:09:05,490 --> 00:09:08,220
+This one here it that this one should the message immediately.
+
+140
+00:09:08,400 --> 00:09:09,810
+This one here it.
+
+141
+00:09:11,350 --> 00:09:16,750
+Another a few other examples there, the message distance now is 70.
+
+142
+00:09:17,230 --> 00:09:20,290
+So the first person just should read it right now.
+
+143
+00:09:20,530 --> 00:09:21,770
+This person is very close.
+
+144
+00:09:21,770 --> 00:09:22,420
+You will listen to.
+
+145
+00:09:22,480 --> 00:09:24,940
+So we do not care about the immediate ones.
+
+146
+00:09:27,100 --> 00:09:27,970
+Another example.
+
+147
+00:09:32,240 --> 00:09:35,930
+We have a person at zero and a person at nine and Blitzen at it.
+
+148
+00:09:36,800 --> 00:09:40,080
+So the answer is for this person will go here for you.
+
+149
+00:09:40,260 --> 00:09:42,230
+It's sorry, will move back.
+
+150
+00:09:42,470 --> 00:09:43,380
+We'll move forward.
+
+151
+00:09:43,380 --> 00:09:46,460
+The four year position for this one would remain as a year.
+
+152
+00:09:46,730 --> 00:09:49,970
+This one would move back here at 14 in four seconds.
+
+153
+00:09:50,300 --> 00:09:55,550
+So you know, the distance here is five and the distance here is five in just five steps.
+
+154
+00:09:55,730 --> 00:10:01,250
+Everyone is now connected so we can shoot and propagate directly to the person.
+
+155
+00:10:01,880 --> 00:10:07,700
+Things can be more like a fraction here if you couldn't get what I am saying.
+
+156
+00:10:07,730 --> 00:10:08,690
+That's the trick.
+
+157
+00:10:08,720 --> 00:10:10,340
+It is very annoying problem.
+
+158
+00:10:10,610 --> 00:10:12,740
+Please go to the website itself.
+
+159
+00:10:13,070 --> 00:10:13,580
+Read it.
+
+160
+00:10:13,580 --> 00:10:14,960
+Understand the problem by yourself.
+
+161
+00:10:15,320 --> 00:10:17,120
+Again, I'm doing you a favor here.
+
+162
+00:10:17,270 --> 00:10:18,410
+You can use this template.
+
+163
+00:10:18,410 --> 00:10:22,760
+It is ready for you to use to build your own.
+
+164
+00:10:23,000 --> 00:10:25,280
+Could just the function and read them in.
+
+165
+00:10:25,460 --> 00:10:30,590
+Feel free to write them by yourself, or at least review my text to learn about it.
+
+166
+00:10:31,850 --> 00:10:32,390
+Let's hope.

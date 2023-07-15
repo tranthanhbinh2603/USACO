@@ -1,0 +1,1059 @@
+0
+1
+00:00:01,370 --> 00:00:07,550
+Let's talk about Precedence, remember math rules, if I told you to solve 2 + 3
+1
+
+2
+00:00:07,550 --> 00:00:14,550
+* 4 - 6 / 2, in math, we know that the division and multiplication are applied first.
+2
+
+3
+00:00:14,750 --> 00:00:18,280
+So, for example, we take the 3 * 4 and evaluate them to 12.
+3
+
+4
+00:00:18,620 --> 00:00:20,390
+Then we apply the division to 6.
+4
+
+5
+00:00:20,390 --> 00:00:22,070
+Divided by 2 is 3.
+5
+
+6
+00:00:22,460 --> 00:00:25,860
+When we have now 3 items, we take them left to right.
+6
+
+7
+00:00:25,880 --> 00:00:27,740
+So 2 + 12 is 14.
+7
+
+8
+00:00:27,740 --> 00:00:29,210
+Then - 3 is 11.
+8
+
+9
+00:00:29,630 --> 00:00:31,250
+So this is how we do it.
+9
+
+10
+00:00:31,550 --> 00:00:35,460
+If we have The parenthesis in math, we know that it gives more priority.
+10
+
+11
+00:00:35,720 --> 00:00:37,880
+So we now, although it is the same expression,
+11
+
+12
+00:00:37,880 --> 00:00:43,700
+We know that this sub-expression should be solved first; so 4 - 6 / 2.
+12
+
+13
+00:00:43,970 --> 00:00:47,610
+Again, we do the division first, now 4 - 3 overall, this is 1.
+13
+
+14
+00:00:47,990 --> 00:00:52,490
+Now, this whole expression is 1. 2 + 3 * 1,
+14
+
+15
+00:00:52,490 --> 00:00:53,660
+It is 2 + 3.
+15
+
+16
+00:00:53,660 --> 00:00:54,360
+It is 5.
+16
+
+17
+00:00:54,920 --> 00:00:59,350
+So the math defines for us the order of operations.
+17
+
+18
+00:00:59,600 --> 00:01:06,710
+So it tells us if there is a parentheses, it is applied first, if there are times and division, they are before plus
+18
+
+19
+00:01:06,710 --> 00:01:13,700
+and minus, this is called precedence and we have the same in C++. but now in C++ we have a lot more
+19
+
+20
+00:01:13,700 --> 00:01:14,410
+operators.
+20
+
+21
+00:01:14,630 --> 00:01:16,580
+So which one is before what?
+21
+
+22
+00:01:16,970 --> 00:01:18,680
+So here are some rules.
+22
+
+23
+00:01:18,980 --> 00:01:21,440
+We took this unary operators.
+23
+
+24
+00:01:21,440 --> 00:01:28,280
+The unary operators are applied first before anything, then the math operations, division and multiplication,
+24
+
+25
+00:01:28,520 --> 00:01:29,840
+then the plus(addition) and minus(subtraction).
+25
+
+26
+00:01:30,140 --> 00:01:35,200
+Eventually the assigning operations are done in the end.
+26
+
+27
+00:01:35,750 --> 00:01:42,640
+So let's say that we have such an expression and how C++ is going to tackle it, thinking about who
+27
+
+28
+00:01:42,680 --> 00:01:44,510
+are the highest here in the priority.
+28
+
+29
+00:01:44,960 --> 00:01:50,780
+This guy ++ and this guy (--) are the highest then this guy is the second highest then these guys
+29
+
+30
+00:01:50,780 --> 00:01:51,950
+are the next one.
+30
+
+31
+00:01:52,550 --> 00:01:57,200
+Items inside the group are of equal priority, like they can be applied in any order.
+31
+
+32
+00:01:57,650 --> 00:02:00,380
+So here we first apply for example, the ++X.
+32
+
+33
+00:02:00,410 --> 00:02:01,580
+So this is the first term.
+33
+
+34
+00:02:01,880 --> 00:02:04,930
+Then we apply the -- for the T this is the second term.
+34
+
+35
+00:02:05,180 --> 00:02:10,060
+Then eventually we apply the Y over Z and then do the final math operation.
+35
+
+36
+00:02:11,810 --> 00:02:17,180
+So, and the parentheses, as we said, it helps us to force order or resolve some ambiguity.
+36
+
+37
+00:02:17,180 --> 00:02:24,060
+If you feel the expression may be tricky for someone you may put parantheses to clarify your goal.
+37
+
+38
+00:02:24,500 --> 00:02:27,650
+So here we have 7 - 6 in this expression,
+38
+
+39
+00:02:27,650 --> 00:02:28,490
+We do it first.
+39
+
+40
+00:02:28,820 --> 00:02:33,320
+So we resolve it here and then we do the normal of the expression. again,
+40
+
+41
+00:02:33,320 --> 00:02:39,200
+In this case here, we know that this expression should be done first. in the last time, the
+41
+
+42
+00:02:39,290 --> 00:02:40,550
+++X was the first.
+42
+
+43
+00:02:40,550 --> 00:02:43,450
+But now this expression should be at least evaluated first.
+43
+
+44
+00:02:43,850 --> 00:02:48,320
+So we go and evaluate it first and then we notice the T-- here.
+44
+
+45
+00:02:48,330 --> 00:02:49,760
+So it could be applied first.
+45
+
+46
+00:02:50,030 --> 00:02:52,430
+Then we apply the whole expression, then ++X.
+46
+
+47
+00:02:52,700 --> 00:02:57,400
+The now Y is divided by the result of this expression, then the overall and so on.
+47
+
+48
+00:02:57,650 --> 00:02:58,580
+So very intuitive.
+48
+
+49
+00:02:58,940 --> 00:02:59,350
+Nothing new.
+49
+
+50
+00:02:59,350 --> 00:03:07,310
+In a math expression, if you have a lot of parentheses, how would you solve it. as simple
+50
+
+51
+00:03:07,310 --> 00:03:11,800
+as you figure out one of the deepest parentheses and solve it first.
+51
+
+52
+00:03:12,020 --> 00:03:17,300
+For example, we can solve with this expression first or we can solve this expression first and
+52
+
+53
+00:03:17,300 --> 00:03:17,670
+so on.
+53
+
+54
+00:03:17,900 --> 00:03:19,010
+So let me pick one here.
+54
+
+55
+00:03:19,280 --> 00:03:23,090
+I here made some assumptions about the values. we started with
+55
+
+56
+00:03:23,090 --> 00:03:28,010
+This X + Y, which is a very deep parentheses nothing more inside it.
+56
+
+57
+00:03:28,310 --> 00:03:32,810
+So, let's replace it, X and Y, X is 6, Y is 7.
+57
+
+58
+00:03:32,810 --> 00:03:34,220
+So we replace it with 13.
+58
+
+59
+00:03:34,640 --> 00:03:37,850
+We can now take this expression, replace it with 26.
+59
+
+60
+00:03:37,850 --> 00:03:40,700
+We can now take this expression, replace it with 27.
+60
+
+61
+00:03:41,330 --> 00:03:44,850
+We can take now this expression, replace it again with 27.
+61
+
+62
+00:03:45,140 --> 00:03:49,010
+Now let's figure out another parenthesis that has nothing inside it.
+62
+
+63
+00:03:49,280 --> 00:03:54,290
+This is one good example, so we can replace it with 5.
+63
+
+64
+00:03:57,220 --> 00:04:01,430
+but when definitely we come to apply  it, then the ++C was applied first.
+64
+
+65
+00:04:02,000 --> 00:04:05,240
+So C was valued 3 we ++ it first.
+65
+
+66
+00:04:05,240 --> 00:04:07,510
+it was replaced with four.
+66
+
+67
+00:04:07,850 --> 00:04:11,180
+Now we can here take this expression to 20.
+67
+
+68
+00:04:11,180 --> 00:04:16,840
+Then we did this expression and then it's now -17 / 5.
+68
+
+69
+00:04:17,090 --> 00:04:23,990
+So as we see what we did was, we kept taking an expression after an expression after an expression and
+69
+
+70
+00:04:23,990 --> 00:04:24,490
+we did it.
+70
+
+71
+00:04:24,920 --> 00:04:26,210
+Now there is a question here.
+71
+
+72
+00:04:26,870 --> 00:04:30,260
+Let's say that this one wasn't ++C.
+72
+
+73
+00:04:30,260 --> 00:04:33,170
+it was ++B, what is wrong now?
+73
+
+74
+00:04:33,780 --> 00:04:40,760
+The problem now here is that the expression has B and ++B and we don't know which one the compiler
+74
+
+75
+00:04:40,760 --> 00:04:42,290
+is going to evaluate first.
+75
+
+76
+00:04:42,590 --> 00:04:45,050
+So the compiler evaluates this one first,
+76
+
+77
+00:04:45,380 --> 00:04:49,570
+It will use it as original value, then this one will be used next.
+77
+
+78
+00:04:49,580 --> 00:04:50,960
+Probably this is what we meant.
+78
+
+79
+00:04:51,530 --> 00:04:57,050
+But if the compiler still can go and come here evaluate this guy first, so if it evaluated this guy
+79
+
+80
+00:04:57,050 --> 00:04:59,390
+first, it would be incremented here.
+80
+
+81
+00:04:59,620 --> 00:05:03,100
+For example, let's say that B was 10, if it evaluated this guy first, ++B,
+81
+
+82
+00:05:04,060 --> 00:05:04,670
+It would be now
+82
+
+83
+00:05:04,720 --> 00:05:07,100
+11 and here it would be used as 11.
+83
+
+84
+00:05:07,120 --> 00:05:10,650
+So used here 11, and the used here is 11. on the other side,
+84
+
+85
+00:05:10,660 --> 00:05:13,660
+If it started with this one, B was 10, it will use it as 10.
+85
+
+86
+00:05:13,960 --> 00:05:15,810
+Then ++ 10 it will be used as 11.
+86
+
+87
+00:05:16,090 --> 00:05:20,840
+So in one case, it could be 10 and 11, and in another case it could be 11 and 11.
+87
+
+88
+00:05:21,160 --> 00:05:27,790
+That's why something like the ++ operator is very risky to use it when there are more than a
+88
+
+89
+00:05:27,790 --> 00:05:30,460
+copy of it in the same statement.
+89
+
+90
+00:05:30,470 --> 00:05:31,750
+So be very careful with that.
+90
+
+91
+00:05:34,070 --> 00:05:39,640
+Associativity, as we said, what if there are more than operator of the same priority, like
+91
+
+92
+00:05:39,650 --> 00:05:46,010
+when we have an expression with + or -, associativity is about grouping, about how to group,
+92
+
+93
+00:05:46,010 --> 00:05:47,910
+is it from left to right or right or left?
+93
+
+94
+00:05:47,930 --> 00:05:49,670
+What does this mean? in math,
+94
+
+95
+00:05:49,880 --> 00:05:54,800
+when we have something like 10 - 6 + 3, we actually start to solve it from left to
+95
+
+96
+00:05:54,800 --> 00:05:55,210
+right.
+96
+
+97
+00:05:55,490 --> 00:06:00,470
+So we first solve 10 - 6, and then this gives us four.
+97
+
+98
+00:06:00,680 --> 00:06:02,420
+Then we add the 3, which is 7.
+98
+
+99
+00:06:02,420 --> 00:06:07,160
+If we have a bigger expression like that, you take the first two terms with 1, then the first
+99
+
+100
+00:06:07,160 --> 00:06:12,770
+two terms with 6, the first two terms with 2 and so on, right to left grouping here will give
+100
+
+101
+00:06:12,770 --> 00:06:16,060
+us a wrong answer, which means starting from the right and start to go.
+101
+
+102
+00:06:16,340 --> 00:06:18,200
+So we first take the 6 + 3.
+102
+
+103
+00:06:19,110 --> 00:06:24,600
+To give us 9, then 10 - 9 was 1, which is wrong in a bigger statement, 2 plus 1
+103
+
+104
+00:06:24,600 --> 00:06:30,670
+is evaluated first to 3. 3 - 3 to 0, 0 + 4 to 4, 5 - 4 to 1
+104
+
+105
+00:06:30,670 --> 00:06:32,650
+6 + 1 with 7, eventually 0.
+105
+
+106
+00:06:33,180 --> 00:06:38,190
+So the associativity is about grouping and it is from left to right or right to left.
+106
+
+107
+00:06:40,590 --> 00:06:45,450
+Now we have a lot of operator(s), who should be grouped from left to right and who should be grouped from right
+107
+
+108
+00:06:45,450 --> 00:06:45,980
+to left.
+108
+
+109
+00:06:46,410 --> 00:06:52,310
+Most of the operators are typically grouped from left to right and there is a few are grouped from right to left.
+109
+
+110
+00:06:52,530 --> 00:06:57,240
+So here these are some of them, like the assignment operators are grouped  from right to left.
+110
+
+111
+00:06:58,610 --> 00:07:04,210
+Let's see an example for that, let's say that we have X was 10, Y was 20, and Z was 3.
+111
+
+112
+00:07:04,700 --> 00:07:06,440
+I would like you to read this variable.
+112
+
+113
+00:07:06,710 --> 00:07:09,350
+Remember that it has a lot of assignments.
+113
+
+114
+00:07:09,650 --> 00:07:13,120
+Remember that assignment is right-to-left, take a moment and try to guess what is the answer.
+114
+
+115
+00:07:14,830 --> 00:07:21,430
+Now, the first thing we do is asking about the priority, who are the highest in priority, the highest in
+115
+
+116
+00:07:21,610 --> 00:07:28,270
+priority here is --Z, then in the next priority, +=, +=, *=
+116
+
+117
+00:07:28,270 --> 00:07:29,260
+all of the same priority.
+117
+
+118
+00:07:29,680 --> 00:07:34,230
+So we first solve the --Z, Z here is 3, so --Z
+118
+
+119
+00:07:34,240 --> 00:07:35,590
+would be 2.
+119
+
+120
+00:07:37,750 --> 00:07:47,050
+Now, in the next case, we have the += and the += and *= are
+120
+
+121
+00:07:47,050 --> 00:07:48,230
+all in same priority.
+121
+
+122
+00:07:48,640 --> 00:07:49,240
+So now
+122
+
+123
+00:07:51,850 --> 00:07:57,350
+solving this right expression, 9 - 3 - 1, should be our first step.
+123
+
+124
+00:07:57,400 --> 00:08:00,060
+OK, like we are going from right to left now.
+124
+
+125
+00:08:00,240 --> 00:08:01,870
+OK, we're going from right to left.
+125
+
+126
+00:08:02,230 --> 00:08:03,350
+So this is the highest,
+126
+
+127
+00:08:03,350 --> 00:08:06,360
+The most right one.
+127
+
+128
+00:08:06,490 --> 00:08:08,510
+So 9 - 3 - 1 is now 5.
+128
+
+129
+00:08:08,800 --> 00:08:14,090
+So the expression now is like the following X += Y += Z *= 5.
+129
+
+130
+00:08:14,810 --> 00:08:16,610
+Again, they are all of equal priority.
+130
+
+131
+00:08:16,630 --> 00:08:18,000
+Who is the most right one?
+131
+
+132
+00:08:18,250 --> 00:08:18,640
+It is 
+132
+
+133
+00:08:18,640 --> 00:08:20,460
+Z *= 5.
+133
+
+134
+00:08:20,830 --> 00:08:22,900
+So now Z *= 5.
+134
+
+135
+00:08:22,900 --> 00:08:24,690
+Z would be now 10.
+135
+
+136
+00:08:25,120 --> 00:08:26,970
+So remove it from the expression.
+136
+
+137
+00:08:27,130 --> 00:08:33,610
+Now the expression is X += Y += 10, again two operators of same priority.
+137
+
+138
+00:08:33,640 --> 00:08:36,250
+Take the most right one Y += 10.
+138
+
+139
+00:08:36,250 --> 00:08:40,660
+Y is 20 and when we add 10 for it it's now 30.
+139
+
+140
+00:08:41,020 --> 00:08:44,120
+So, finally X += 30 is 40.
+140
+
+141
+00:08:44,440 --> 00:08:50,170
+So overall X was 40, Y was 30 and Z was 10, please make sure that you can trace it as I did.
+141
+
+142
+00:08:50,860 --> 00:08:52,420
+This is a bad coding style.
+142
+
+143
+00:08:52,430 --> 00:08:53,620
+Don't do that in reality.
+143
+
+144
+00:08:53,620 --> 00:08:55,660
+I'm just telling you, like how to do it.
+144
+
+145
+00:08:57,340 --> 00:09:03,250
+There is one final thing that I would like to share with you something that is rarely explained and
+145
+
+146
+00:09:03,250 --> 00:09:05,260
+is a bit tricky for even many programmers.
+146
+
+147
+00:09:05,440 --> 00:09:07,370
+It's called the order of evaluation.
+147
+
+148
+00:09:07,480 --> 00:09:09,420
+We already highlighted something about it.
+148
+
+149
+00:09:09,880 --> 00:09:16,780
+Let's say that we have an expression like X + Y, and X is some expression, and Y is some expression.
+149
+
+150
+00:09:17,830 --> 00:09:23,730
+Once this X is computed and Y is computed, they are now operant values.
+150
+
+151
+00:09:23,740 --> 00:09:25,990
+We know that X is going to be added to Y.
+151
+
+152
+00:09:26,320 --> 00:09:30,070
+But an interesting question here, which one is evaluated first?
+152
+
+153
+00:09:30,070 --> 00:09:31,830
+Is it the X or Y?
+153
+
+154
+00:09:32,200 --> 00:09:34,960
+Sadly, we don't know which one would be evaluated.
+154
+
+155
+00:09:35,080 --> 00:09:37,320
+And this is what's called the order of evaluation.
+155
+
+156
+00:09:37,720 --> 00:09:42,780
+Order of evolution is unspecified in C++ in general, unless a few cases.
+156
+
+157
+00:09:43,150 --> 00:09:49,120
+So it could be evaluated X then Y or Y then X. we already highlighted before this kind of example,
+157
+
+158
+00:09:49,330 --> 00:09:56,830
+if we have something like X + ++X, this is very tricky because let's say X is one.
+158
+
+159
+00:09:57,250 --> 00:10:01,390
+If X is evaluated first, then it will be here 1 and here 2.
+159
+
+160
+00:10:01,750 --> 00:10:07,840
+But if the other side, ++X happened(evalutaed) first, now X is 2 and here is 2 also.
+160
+
+161
+00:10:08,050 --> 00:10:11,470
+So in one case, it is 1 and 2 and in another case it was 2 and 2.
+161
+
+162
+00:10:11,470 --> 00:10:14,140
+We didn't know, this is called side effect.
+162
+
+163
+00:10:14,140 --> 00:10:15,830
+What a side effect?
+163
+
+164
+00:10:15,850 --> 00:10:22,090
+A change happens in a state like this variable has been changed due to this expression, due to this
+164
+
+165
+00:10:22,090 --> 00:10:22,720
+operation.
+165
+
+166
+00:10:23,140 --> 00:10:29,230
+If an expression has a potential side effect, which means something inside it is affecting values
+166
+
+167
+00:10:29,230 --> 00:10:33,790
+like ++X, *=, and so on, then this could be risky.
+167
+
+168
+00:10:34,090 --> 00:10:40,660
+Another expression here, the ++A here and A here, we don't know if this expression would be
+168
+
+169
+00:10:40,660 --> 00:10:42,850
+resolved first or this expression.
+169
+
+170
+00:10:43,030 --> 00:10:46,660
+Mathematically, we can even evaulate this or this or this and this and so on.
+170
+
+171
+00:10:47,860 --> 00:10:53,350
+A bit relevant to that is an expression like the following: "cout << i << " " << i++;".
+171
+
+172
+00:10:53,350 --> 00:10:57,250
+Thinking about this statement for a while.
+172
+
+173
+00:10:57,250 --> 00:11:02,800
+You would say, OK, the compiler is going to print I then I++, if I is 10, it will be printed
+173
+
+174
+00:11:02,800 --> 00:11:04,960
+10 and 10. Surprisingly,
+174
+
+175
+00:11:05,110 --> 00:11:06,760
+No, this isn't the case.
+175
+
+176
+00:11:07,220 --> 00:11:11,260
+You should differentiate between evaluation and printing.
+176
+
+177
+00:11:13,180 --> 00:11:15,250
+It could happen as following,
+177
+
+178
+00:11:15,250 --> 00:11:16,680
+First we need to evaluate them.
+178
+
+179
+00:11:16,900 --> 00:11:22,590
+So this one might be evaluated first and this one may be evaluated second, or this one may be evaluated
+179
+
+180
+00:11:22,600 --> 00:11:22,960
+first.
+180
+
+181
+00:11:22,960 --> 00:11:24,790
+And then this guy evaluated second.
+181
+
+182
+00:11:25,210 --> 00:11:29,140
+But they are going really differently to be printed this guy first, then this guy.
+182
+
+183
+00:11:29,500 --> 00:11:32,410
+But there is a difference between the evaluation and the printing.
+183
+
+184
+00:11:32,470 --> 00:11:38,410
+OK, 'till C++17 this was the case, starting from C++17,
+184
+
+185
+00:11:38,590 --> 00:11:43,450
+they are going really to be like evaluate this guy and print it, then evaluate this guy and print it.
+185
+
+186
+00:11:43,570 --> 00:11:47,480
+So this is going to be more like your own logic, like what you expect, really.
+186
+
+187
+00:11:47,830 --> 00:11:53,230
+So, again, if you noticed this, I++ has a side effect, so you should be very careful about
+187
+
+188
+00:11:53,230 --> 00:11:53,530
+that.
+188
+
+189
+00:11:54,010 --> 00:11:58,600
+As an optional reading, you might Google something like "undefined", "unspecified" and "implementation
+189
+
+190
+00:11:58,600 --> 00:12:02,980
+defined behavior" to know what is the difference between what is unspecified and what is undefined.
+190
+
+191
+00:12:04,270 --> 00:12:10,670
+Let's put the three items together, just in case you got lost of the real differences between them.
+191
+
+192
+00:12:10,720 --> 00:12:10,800
+Operator precedence
+192
+
+193
+00:12:11,170 --> 00:12:14,160
+Is all about the order of operations.
+193
+
+194
+00:12:14,170 --> 00:12:15,670
+So there is some ordering here.
+194
+
+195
+00:12:15,880 --> 00:12:16,330
+OK.
+195
+
+196
+00:12:17,200 --> 00:12:21,580
+Specifically, we know, like asterisk "*" is before plus "+". notice here,
+196
+
+197
+00:12:21,730 --> 00:12:23,520
+Nothing here about the operands still.
+197
+
+198
+00:12:24,270 --> 00:12:26,090
+It's now about the operations itself.
+198
+
+199
+00:12:26,110 --> 00:12:31,900
+I'm telling you, if you see an asterisk operation, multiplication, do it first before the addition.
+199
+
+200
+00:12:32,560 --> 00:12:37,040
+Associativity is about grouping operands of equal priority.
+200
+
+201
+00:12:37,300 --> 00:12:43,890
+So now we are going to try this again kind of ordering, but just depends on which one to group together.
+201
+
+202
+00:12:44,500 --> 00:12:49,480
+But before we group, we need to evaluate expressions.
+202
+
+203
+00:12:49,480 --> 00:12:54,050
+And here come the order of evaluation, which in C++ can come in any order.
+203
+
+204
+00:12:54,430 --> 00:13:01,600
+So if we have an expression A - B - C, let's say that A, B, C are some expressions.
+204
+
+205
+00:13:01,930 --> 00:13:04,450
+We don't know which expression would be applied first.
+205
+
+206
+00:13:04,780 --> 00:13:11,920
+We know later that minus would have say a specific order of operation and we know it will be grouped like
+206
+
+207
+00:13:11,920 --> 00:13:17,680
+A - B and eventually with C, but which one will be evaluated first? we don't know.
+207
+
+208
+00:13:17,830 --> 00:13:21,340
+There are 6 different ways to evaluate this term
+208
+
+209
+00:13:21,390 --> 00:13:29,440
+OK. if there is something here that has a side effect like "++A", "A++", "A *=", blah,
+209
+
+210
+00:13:29,480 --> 00:13:33,610
+blah, then this side effect might fire on you. In practice,
+210
+
+211
+00:13:33,760 --> 00:13:38,230
+If we avoided these side effects, then we don't care about the evaluation.
+211
+
+212
+00:13:38,650 --> 00:13:39,190
+That's it.

@@ -1,0 +1,394 @@
+0
+1
+00:00:00,900 --> 00:00:04,340
+Let's discuss more points about the char array.
+1
+
+2
+00:00:05,430 --> 00:00:13,340
+The first is reading, we used to read the string array, the string here, and we used to read it without
+2
+
+3
+00:00:13,340 --> 00:00:13,910
+spaces.
+3
+
+4
+00:00:14,190 --> 00:00:19,800
+Now, an interesting thing, what if I would like to input something like I am Mostafa, this is
+4
+
+5
+00:00:19,800 --> 00:00:21,270
+a string that has spaces.
+5
+
+6
+00:00:21,540 --> 00:00:26,700
+If we use the normal cin and we have to read three different words, what if I would like to read
+6
+
+7
+00:00:26,700 --> 00:00:30,860
+all of it. C++ introduces the "reading line" idea.
+7
+
+8
+00:00:31,080 --> 00:00:33,060
+So you do that using something called "getline".
+8
+
+9
+00:00:33,450 --> 00:00:39,110
+But if you're reading the string, it is different from using a character array. in a string, you just say
+9
+
+10
+00:00:39,330 --> 00:00:43,590
+"getline(cin, name1)" and then just "cout << name1"
+10
+
+11
+00:00:43,800 --> 00:00:46,260
+that's it. Here,
+11
+
+12
+00:00:46,260 --> 00:00:54,060
+In our case, it just be "cin.getline(name2, 50)", and you have to give it a specific length and
+12
+
+13
+00:00:54,060 --> 00:00:54,850
+define the length
+13
+
+14
+00:00:54,870 --> 00:00:56,860
+here, you can even give less than that.
+14
+
+15
+00:00:57,390 --> 00:01:01,230
+So this is how you can read a line in C++.
+15
+
+16
+00:01:08,280 --> 00:01:16,140
+Yeah, what about creating array of strings ? this is now going to be little more, like, complex,
+16
+
+17
+00:01:16,140 --> 00:01:21,450
+like we saw an array of integers, array of characters and we can even create array of strings.
+17
+
+18
+00:01:21,660 --> 00:01:27,750
+So this now, like "Mostafa Saad", "Never Ever", "Hello world", these are three different statements.
+18
+
+19
+00:01:27,930 --> 00:01:31,370
+Every one of them is in a statement by itself.
+19
+
+20
+00:01:31,380 --> 00:01:33,270
+If we try to print them, we can print them.
+20
+
+21
+00:01:33,630 --> 00:01:36,270
+So I would like you here to notice something,
+21
+
+22
+00:01:36,480 --> 00:01:39,330
+We have an array of 5 items,
+22
+
+23
+00:01:39,750 --> 00:01:41,980
+Every one of them is an array.
+23
+
+24
+00:01:42,180 --> 00:01:44,970
+This looks like an array of arrays.
+24
+
+25
+00:01:44,990 --> 00:01:49,440
+And we will introduce later something interesting, called multidimensional arrays.
+25
+
+26
+00:01:50,430 --> 00:01:55,590
+OK, in a similar way, we can read array of strings, like we have a string name[2],
+26
+
+27
+00:01:55,590 --> 00:01:56,700
+We have two numbers,
+27
+
+28
+00:01:56,880 --> 00:01:58,580
+We can just cin>>names[i].
+28
+
+29
+00:01:59,510 --> 00:02:05,300
+What else, the escape characters, yeah, we saw this \0 and we named it.
+29
+
+30
+00:02:07,910 --> 00:02:10,490
+We named it the null character.
+30
+
+31
+00:02:10,670 --> 00:02:15,360
+This is part of something big called "the escape characters" here are some of the interesting escape characters.
+31
+
+32
+00:02:15,530 --> 00:02:20,720
+We also know the \n, which is just new line, there is something called \t, which is tab
+32
+
+33
+00:02:21,110 --> 00:02:24,610
+like if you said "hello \t world", it is going to print a tab.
+33
+
+34
+00:02:24,740 --> 00:02:29,510
+Tab is a bunch of spaces defined in the tool.
+34
+
+35
+00:02:30,150 --> 00:02:32,720
+Also what if you would like to print a double quote "" in the string.
+35
+
+36
+00:02:32,750 --> 00:02:38,540
+You cannot do that without a \, so the compiler can differentiate if this is the ending double quote
+36
+
+37
+00:02:38,570 --> 00:02:39,050
+or not.
+37
+
+38
+00:02:40,910 --> 00:02:43,460
+Character VS string.
+38
+
+39
+00:02:43,610 --> 00:02:46,870
+The character array is more of a C style.
+39
+
+40
+00:02:47,600 --> 00:02:50,120
+You need to carefully handle the null and other things.
+40
+
+41
+00:02:50,450 --> 00:02:53,960
+The string, the string isn't a primitive.
+41
+
+42
+00:02:54,530 --> 00:02:55,810
+The string is a class.
+42
+
+43
+00:02:55,820 --> 00:02:58,970
+This is something that we will study later, is more of C++ side.
+43
+
+44
+00:02:58,970 --> 00:03:03,210
+Like we say, string name {"Mustafa"}, notice here
+44
+
+45
+00:03:03,210 --> 00:03:04,130
+I didn't put the equal.
+45
+
+46
+00:03:04,140 --> 00:03:06,100
+This is the C++ initialization style.
+46
+
+47
+00:03:06,830 --> 00:03:08,960
+It's part of something called stl library.
+47
+
+48
+00:03:09,260 --> 00:03:14,360
+We are going to learn it later, and we'll learn more C++ capabilities like it supports, for example
+48
+
+49
+00:03:14,360 --> 00:03:15,680
+Addition, comparisons.
+49
+
+50
+00:03:15,680 --> 00:03:17,990
+We already did that, so please use it.
+50
+
+51
+00:03:17,990 --> 00:03:24,380
+You will rarely need to use the C-style-character-array, but we need to introduce it.
+51
+
+52
+00:03:24,680 --> 00:03:32,270
+I would like you to go and practice what we just said, and be careful with the (getline).
+52
+
+53
+00:03:32,570 --> 00:03:38,840
+For example, when you getline a line, you're reading some characters, but you are stopped before
+53
+
+54
+00:03:38,960 --> 00:03:39,830
+\n.
+54
+
+55
+00:03:40,340 --> 00:03:46,520
+If you wanted to read two getline after each other, then you probably would need to read and empty another
+55
+
+56
+00:03:46,540 --> 00:03:52,310
+getline to read the \n. go ahead and play with it, before ending.
+56
+
+57
+00:03:52,310 --> 00:03:57,710
+I would like to introduce some concepts that we use when it comes to strings, something called the
+57
+
+58
+00:03:57,710 --> 00:04:03,650
+prefix and suffix, substring and sub-sequence, a prefix is any string that starts from the first
+58
+
+59
+00:04:03,650 --> 00:04:04,160
+characters.
+59
+
+60
+00:04:04,160 --> 00:04:14,060
+For example, if you have, let's say this string: "aaa...blabla", the 'a' here is a prefix, 'aa'
+60
+
+61
+00:04:14,060 --> 00:04:15,740
+is a prefix, 'aaa' is a prefix,
+61
+
+62
+00:04:15,740 --> 00:04:18,750
+'aaab' is a prefix, any string
+62
+
+63
+00:04:18,790 --> 00:04:22,820
+that starts from the beginning and ends somewhere is called a prefix.
+63
+
+64
+00:04:23,300 --> 00:04:25,610
+The suffix is the other side, it is the ending.
+64
+
+65
+00:04:25,910 --> 00:04:33,070
+So here with 'g' is a suffix, 'gg' is suffix, 'fgg' is a suffix, 'efgg' is another suffix and so on.
+65
+
+66
+00:04:34,240 --> 00:04:36,170
+A sub-string is like the sub-array,
+66
+
+67
+00:04:36,380 --> 00:04:37,520
+It should be consecutive.
+67
+
+68
+00:04:37,760 --> 00:04:42,350
+So for example we can say 'aab' this is a sub-string or a sub-array.
+68
+
+69
+00:04:43,010 --> 00:04:44,750
+The last one is a sub-sequence.
+69
+
+70
+00:04:44,900 --> 00:04:48,500
+Sub-sequence isn't consecutive but must be in order.
+70
+
+71
+00:04:48,770 --> 00:04:51,380
+For example, the next letter must have a bigger index.
+71
+
+72
+00:04:51,590 --> 00:04:56,630
+An example of that might be, take this 'A' with this 'B' with this 'F' and this 'G'.
+72
+
+73
+00:04:56,900 --> 00:04:58,850
+So this way, it is a sub-sequence.
+73
+
+74
+00:04:59,000 --> 00:05:02,360
+These are 4 definitions that we use in our discussions.
+74
+
+75
+00:05:02,930 --> 00:05:08,830
+Finally, practicing a character array is exactly the same as practicing an array.
+75
+
+76
+00:05:08,840 --> 00:05:10,430
+We didn't introduce a new thing.
+76
+
+77
+00:05:10,430 --> 00:05:15,050
+We really needed to introduce the null character and the difference between it and the string array.
+77
+
+78
+00:05:15,440 --> 00:05:21,350
+For example, you can reverse a string, you can say if a string is palindrome or not and so on. it just
+78
+
+79
+00:05:21,350 --> 00:05:25,310
+you might need some conversion between characters or so. That's it.

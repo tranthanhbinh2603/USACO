@@ -1,0 +1,916 @@
+1
+00:00:00,700 --> 00:00:01,609
+Welcome, everyone.
+
+2
+00:00:01,660 --> 00:00:07,360
+So in this section, we will understand what is exponentiation, how does exponentiation works
+
+3
+00:00:07,360 --> 00:00:09,550
+and why do we need exponentiation?
+
+4
+00:00:10,030 --> 00:00:12,190
+First of all, let us see what is the exponentiation.
+
+5
+00:00:12,330 --> 00:00:19,240
+Again, it's a very simple mathematical formula, and that is if I multiply a b times.
+
+6
+00:00:20,590 --> 00:00:22,420
+Then I write it as a to the power b.
+
+7
+00:00:23,230 --> 00:00:24,700
+This is normal exponentiation.
+
+8
+00:00:24,810 --> 00:00:27,820
+b is exponent of a and
+
+9
+00:00:29,210 --> 00:00:33,710
+This is basically the number of times is b right now b is 4.
+
+10
+00:00:34,760 --> 00:00:41,810
+If I say is 2 and b is 4, i don't think i need to explain this but still, 2 too the power 4 will give me 16
+
+11
+00:00:41,810 --> 00:00:42,020
+me.
+
+12
+00:00:43,160 --> 00:00:44,360
+16 .
+
+13
+00:00:45,500 --> 00:00:50,720
+So this is exponentiation, we all know this that if I want to multiply a term b times, we
+
+14
+00:00:50,720 --> 00:00:51,290
+get this.
+
+15
+00:00:52,160 --> 00:00:54,540
+So that's not what this lecture is about.
+
+16
+00:00:54,560 --> 00:01:02,930
+It is about how to find an optimal solution to finding and to finding the best complexity of exponentiation.
+
+17
+00:01:03,140 --> 00:01:09,500
+if I want to find out the best complexity of exponentiation that, OK, find me a to the power
+
+18
+00:01:09,500 --> 00:01:11,360
+b in very, very optimal time.
+
+19
+00:01:11,840 --> 00:01:12,950
+What are the best you can do?
+
+20
+00:01:13,550 --> 00:01:19,430
+The first approach is very simple that, OK, I can simply multiply a b times.
+
+21
+00:01:21,470 --> 00:01:28,580
+so whats a total complexity of this if I multiply a b times by using a for loop, it will be o of b
+
+22
+00:01:28,640 --> 00:01:30,590
+But that is not the complexity we want.
+
+23
+00:01:31,040 --> 00:01:33,740
+We want it to be better than o of b
+
+24
+00:01:34,790 --> 00:01:42,290
+So here what we'll do is we will take help of binary functions right and we will call it binary exponentiation
+
+25
+00:01:43,010 --> 00:01:43,250
+would.
+
+26
+00:01:44,230 --> 00:01:50,800
+This will be very, very handy, guys, believe me or not, in most of those of problems in which we
+
+27
+00:01:50,800 --> 00:01:56,530
+use mathematical expressions in which like, let's say, there's an recurrance relation is being 
+
+28
+00:01:56,530 --> 00:02:02,260
+solved and that recurrance relation is being like, there's finally a formula that is coming up for a
+
+29
+00:02:02,260 --> 00:02:09,220
+particular n, let's say, n square minus two n plus one, or n to the power sum m minus something
+
+30
+00:02:09,220 --> 00:02:09,820
+plus something.
+
+31
+00:02:09,820 --> 00:02:10,350
+And it 
+
+32
+00:02:11,470 --> 00:02:15,130
+So whenever there's a formula for generally, we have some exponent.
+
+33
+00:02:15,390 --> 00:02:21,190
+We have some of variables in there, we have some constraints and some exponent how to solve those
+
+34
+00:02:21,190 --> 00:02:22,990
+exponents in really very less time
+
+35
+00:02:23,560 --> 00:02:25,690
+So right now we are looking at binary exponentiation.
+
+36
+00:02:26,080 --> 00:02:30,450
+And after this, we'll be looking at a Modular exponentiation
+
+37
+00:02:31,520 --> 00:02:35,150
+cool, there will be require binary exponentiation, but still.
+
+38
+00:02:37,530 --> 00:02:40,500
+Now, let's move ahead with binary exponentiation
+
+39
+00:02:40,770 --> 00:02:44,460
+And let's take an example, so it's a very easy topic.
+
+40
+00:02:44,550 --> 00:02:50,150
+It's not a big deal and a very short code for this, so it won't take like more than two minutes.
+
+41
+00:02:51,120 --> 00:02:54,570
+But yeah, let's say I want to find out 2 to the power 10.
+
+42
+00:02:56,030 --> 00:03:02,240
+Cool, what we'll do is we'll take their exponent 10 and write it in a binary numbers them, as we know, exponent
+
+43
+00:03:02,240 --> 00:03:03,080
+is this 10.
+
+44
+00:03:03,080 --> 00:03:06,230
+If divided into binary, it is written as one zero one zero.
+
+45
+00:03:07,540 --> 00:03:15,190
+right, if this 10 is written as one zero  one zero, it means 8+2 , so what does 8+2 means
+
+46
+00:03:15,190 --> 00:03:16,640
+that yes, I do.
+
+47
+00:03:16,660 --> 00:03:19,210
+I divided this 10 into binary.
+
+48
+00:03:20,420 --> 00:03:20,870
+So.
+
+49
+00:03:26,000 --> 00:03:29,180
+So now let's see, how does binary exponentiation work right?
+
+50
+00:03:29,490 --> 00:03:30,290
+Right now what i'll say is
+
+51
+00:03:30,470 --> 00:03:40,490
+I'll take a I take B and I will take another dumb called resultant, so in resultant what I'll do is I'll
+
+52
+00:03:40,490 --> 00:03:43,400
+keep on multiplying a at some specific locations.
+
+53
+00:03:43,550 --> 00:03:45,410
+We'll just see this initially.
+
+54
+00:03:45,410 --> 00:03:53,990
+What happens is a is equal to two B is equals 10 and resultant is equal to one right because if I'm going
+
+55
+00:03:54,000 --> 00:03:57,980
+to multiply something to resultant, I want some answers.
+
+56
+00:03:57,980 --> 00:04:03,230
+So I should take one as a resultant value, not zero, because if I'm multiply anything with zero returns, me
+
+57
+00:04:03,230 --> 00:04:05,720
+zero zero is like a black gold right.
+
+58
+00:04:05,810 --> 00:04:07,430
+You do anything with it.
+
+59
+00:04:07,580 --> 00:04:09,800
+It will just absorb that thing and make it zero.
+
+60
+00:04:12,350 --> 00:04:12,650
+Yeah.
+
+61
+00:04:12,880 --> 00:04:18,410
+So in the first step, what we'll do is, OK, so right now i'll write b in binary form
+
+62
+00:04:18,410 --> 00:04:18,800
+over here.
+
+63
+00:04:20,769 --> 00:04:24,910
+So there are some steps that we need to follow, the first step is very simple.
+
+64
+00:04:26,240 --> 00:04:26,600
+That.
+
+65
+00:04:28,110 --> 00:04:31,680
+Check if b's last set bit
+
+66
+00:04:38,710 --> 00:04:42,490
+last Bit of B is set.
+
+67
+00:04:43,280 --> 00:04:43,500
+Right.
+
+68
+00:04:44,660 --> 00:04:50,780
+If the last and last set last bit of B set no it is not set, then what we'll do is we'll simply
+
+69
+00:04:50,780 --> 00:04:52,610
+say this will simply multiply.
+
+70
+00:04:54,100 --> 00:04:58,930
+Resultant into a, so I'm just not giving you an algorithm here, I'm just not giving you a dry run
+
+71
+00:04:58,930 --> 00:05:05,350
+enough to read about, and I also explain you like how did it come right before before moving on to
+
+72
+00:05:05,350 --> 00:05:10,120
+that, I just simply write 2 to the power 10 can be written as 2 to the power 8 into two to the power 2.
+
+73
+00:05:10,120 --> 00:05:11,100
+to right.
+
+74
+00:05:11,470 --> 00:05:17,530
+This is the whole funda guys is that we will simply divide 2 2 powers and multiply them right.
+
+75
+00:05:17,560 --> 00:05:22,420
+If I multiply 2 to the power to into 2 to the power 8, this will give me 2 to the power 8 plus 2 ie 10
+
+76
+00:05:23,410 --> 00:05:29,900
+2 to the power 10, this is a normal funda guys, the the main idea behind binary exponentiation
+
+77
+00:05:30,680 --> 00:05:34,850
+and how is that being done that I simply show you where they go.
+
+78
+00:05:35,800 --> 00:05:40,300
+Well, before moving on to the algorithm, let's take this quick example.
+
+79
+00:05:40,930 --> 00:05:42,730
+We have one zero one zero here.
+
+80
+00:05:43,090 --> 00:05:43,780
+what i'll do is
+
+81
+00:05:44,770 --> 00:05:47,620
+Zero, one, two and three, right?
+
+82
+00:05:48,040 --> 00:05:54,550
+If I take powers of two what i'll get is 2 to the power 0,  2 to the power 1, 2 to the power 2,
+
+83
+00:05:54,550 --> 00:05:55,920
+and 2 to the power 3,
+
+84
+00:05:56,190 --> 00:05:57,400
+I have 1 2 4 8
+
+85
+00:05:57,400 --> 00:05:59,500
+I just written to the two powers over here.
+
+86
+00:06:00,250 --> 00:06:01,510
+These are two powers.
+
+87
+00:06:02,710 --> 00:06:04,360
+And this is binary of ten.
+
+88
+00:06:04,900 --> 00:06:09,410
+And these are just indexes of my bits set bits
+
+89
+00:06:09,940 --> 00:06:12,070
+Now what I need to do is simple.
+
+90
+00:06:12,520 --> 00:06:14,520
+So here I'll get  2 to the power 1
+
+91
+00:06:14,540 --> 00:06:18,180
+One initially right now my a is 2 to the power 1, so this will be a.
+
+92
+00:06:19,130 --> 00:06:26,240
+Then 2 to the power 2,  2 to the power 4and  2 to the power 8 is the simple thing to notice
+
+93
+00:06:26,240 --> 00:06:32,540
+is that if I have one as a set bit, then I'll simply include these two values into my resultant and I
+
+94
+00:06:32,540 --> 00:06:37,690
+simply multiply these two values into my resultant so resultant into  2 to the power 8
+
+95
+00:06:37,700 --> 00:06:40,160
+2 to the power 4 is equal to resultant
+
+96
+00:06:40,460 --> 00:06:41,840
+And this will become.
+
+97
+00:06:43,230 --> 00:06:47,210
+To sorry 2 to the power 10,
+
+98
+00:06:47,520 --> 00:06:48,960
+clear guys.
+
+99
+00:06:49,500 --> 00:06:50,190
+Not a big deal.
+
+100
+00:06:50,940 --> 00:06:51,740
+So this is not 2 
+
+101
+00:06:51,750 --> 00:06:52,440
+This is a.
+
+102
+00:06:53,950 --> 00:06:59,070
+That's what we are going to do, right, so for another example, let's say I want to find  2 to the power 14,
+
+103
+00:07:00,130 --> 00:07:00,750
+14
+
+104
+00:07:01,360 --> 00:07:03,340
+It is eight plus six successful.
+
+105
+00:07:03,340 --> 00:07:04,190
+6 is 4+2.
+
+106
+00:07:04,690 --> 00:07:07,060
+So this is 14 for this how?
+
+107
+00:07:07,060 --> 00:07:12,850
+How can I write  2 to the power 14 in binary form, it becomes simple to  2 to the power 8 2 to the power 4 and 2 to the power 2
+
+108
+00:07:12,870 --> 00:07:13,240
+2
+
+109
+00:07:13,660 --> 00:07:17,560
+So I formed these three terms how do I find these three terms very easy
+
+110
+00:07:18,080 --> 00:07:19,900
+I initially I have 2 guys
+
+111
+00:07:20,140 --> 00:07:22,510
+If I squared it, it becomes two squared.
+
+112
+00:07:22,750 --> 00:07:24,880
+If I square it, it becomes  2 to the power four.
+
+113
+00:07:25,240 --> 00:07:27,700
+If I squared it, it becomes 2 to the power 8,
+
+114
+00:07:28,180 --> 00:07:34,480
+If I squared it, it becomes a 2 to the power 16,  2 to the power 32  2 to the power 64, and so on.
+
+115
+00:07:34,660 --> 00:07:40,500
+so, whatever, a I'll have at that moment after one iteration what I will say is a equal to a.
+
+116
+00:07:40,570 --> 00:07:41,380
+That is a square.
+
+117
+00:07:42,830 --> 00:07:43,710
+Simple as that .
+
+118
+00:07:44,180 --> 00:07:45,740
+So that's what we are going to.
+
+119
+00:07:46,760 --> 00:07:51,510
+Do over here check last set bit if it is set or not
+
+120
+00:07:51,530 --> 00:07:56,030
+What does it mean if the last set bit is set and simply include, multiply.
+
+121
+00:07:58,570 --> 00:08:04,360
+A in two resultant, make sure simply multiply a into resultant not a big deal.
+
+122
+00:08:05,860 --> 00:08:10,160
+And if the bit is not set no problem, what is the second step?
+
+123
+00:08:10,210 --> 00:08:16,360
+No problem if it is not set simply right shift b, because I'm always taking the last set bit.
+
+124
+00:08:16,800 --> 00:08:22,450
+So if B is one zero one zero initially in the next iteration, B will be zero one zero one.
+
+125
+00:08:22,480 --> 00:08:28,090
+In the next iteration, B will be zero zero one zero next iteration, zero zero zero one in the next
+
+126
+00:08:28,090 --> 00:08:30,670
+iteration zero and right shifting B right.
+
+127
+00:08:30,850 --> 00:08:31,780
+What does right shift mean?
+
+128
+00:08:31,780 --> 00:08:36,250
+Just shift the bit right wards cool because I want to check all these.
+
+129
+00:08:38,620 --> 00:08:40,150
+Bit of B, right?
+
+130
+00:08:40,270 --> 00:08:45,310
+And while I am like shifting B so, right shift B.
+
+131
+00:08:49,470 --> 00:08:52,950
+And if I am right shifting b to.
+
+132
+00:08:53,850 --> 00:08:57,510
+What is the third step, both at the same time, I have to say.
+
+133
+00:08:57,600 --> 00:08:59,020
+a is equal to a square
+
+134
+00:08:59,370 --> 00:09:09,120
+I have to keep on multiplying a 2, right guys, so a will become  2 to the power 4 here,  2 to the power 8,  
+
+135
+00:09:09,120 --> 00:09:09,600
+the power.
+
+136
+00:09:09,690 --> 00:09:10,470
+16.
+
+137
+00:09:16,940 --> 00:09:22,020
+It will become too square  2 to the power 4,  2 to the power 8, and  2 to the power 16 
+
+138
+00:09:22,610 --> 00:09:27,050
+If the last set bit is set, then what I'll do is I'll simply multiply it into the resultant
+
+139
+00:09:27,050 --> 00:09:30,710
+what i'll multiply and multiply it into the resulting.
+
+140
+00:09:30,710 --> 00:09:36,050
+Whatever the resultant value I have, if I multiply a into the resultant,what I'll get is 2 square.
+
+141
+00:09:36,510 --> 00:09:38,270
+Then again, let's move to the third step.
+
+142
+00:09:38,780 --> 00:09:39,650
+This is the third step.
+
+143
+00:09:39,650 --> 00:09:42,530
+Here is the last bit of b set?.
+
+144
+00:09:42,800 --> 00:09:44,870
+No, if it is not set, do nothing right.
+
+145
+00:09:45,430 --> 00:09:49,670
+So resultant is still 2 square and then move to 2 a
+
+146
+00:09:50,240 --> 00:09:51,080
+2 to the power 8,
+
+147
+00:09:51,080 --> 00:09:57,020
+And what happens here is just check last set bit is set, yes it is set, then simply multiply a into resultant.
+
+148
+00:09:57,030 --> 00:09:59,180
+so  2 to the power 2,
+
+149
+00:09:59,420 --> 00:10:01,070
+into 2 to the power 8.
+
+150
+00:10:01,310 --> 00:10:04,100
+And then finally, what we have is b becomes zero.
+
+151
+00:10:04,990 --> 00:10:06,410
+If b becomes zero.
+
+152
+00:10:06,470 --> 00:10:07,280
+What does it mean?
+
+153
+00:10:09,610 --> 00:10:15,160
+And we don't have to carry on further calculations, because anything to the power zero is zero right,
+
+154
+00:10:15,160 --> 00:10:17,050
+so I don't have to calculate anything else.
+
+155
+00:10:17,350 --> 00:10:19,970
+So here I'll break what is the resultant that we got.
+
+156
+00:10:19,990 --> 00:10:20,980
+It is 2 to the power 10.
+
+157
+00:10:21,550 --> 00:10:26,560
+And so of course, you can apply for loop.
+
+158
+00:10:26,560 --> 00:10:28,720
+Check if the bit is set multiply it
+
+159
+00:10:28,720 --> 00:10:30,280
+If not, continue forward.
+
+160
+00:10:30,430 --> 00:10:34,780
+And I'll be using a while loop because the code becomes really easy to code.
+
+161
+00:10:35,320 --> 00:10:35,560
+right.
+
+162
+00:10:35,980 --> 00:10:36,880
+Let us quickly.
+
+163
+00:10:38,710 --> 00:10:45,160
+Do this, part after this, we'll move on to modular exponentiation guys, and that's also an interesting
+
+164
+00:10:45,160 --> 00:10:47,000
+part and very easy part.
+
+165
+00:10:47,080 --> 00:10:47,680
+Right, so.
+
+166
+00:10:48,940 --> 00:10:50,650
+Let's call this function power
+
+167
+00:10:52,670 --> 00:10:58,130
+So this returns me a to the power to b, what I have is I take resultant initially and resultant
+
+168
+00:10:58,130 --> 00:11:02,130
+should be one while b until b is greater than zero.
+
+169
+00:11:02,150 --> 00:11:06,800
+What I'll do is simple I'll check the last set bit, if b and  one, that means.
+
+170
+00:11:08,190 --> 00:11:13,080
+The last bit of b is set, so if you're not clear with all these big manipulation and and or and other things
+
+171
+00:11:13,080 --> 00:11:15,420
+things and simply watch out the number theory section
+
+172
+00:11:15,840 --> 00:11:16,740
+These are the basics.
+
+173
+00:11:17,100 --> 00:11:21,770
+right, what else is resultant into equals to a, i'll simply multiply a into resultant.
+
+174
+00:11:21,780 --> 00:11:24,640
+Otherwise, whether it b set or not.
+
+175
+00:11:24,660 --> 00:11:26,900
+I'll simply say a is equal to a square
+
+176
+00:11:26,910 --> 00:11:33,180
+That means multiplying a into a and b slash equals to 2 means I'm rightshifting b.
+
+177
+00:11:33,600 --> 00:11:34,400
+So you can do it.
+
+178
+00:11:34,410 --> 00:11:38,220
+This way also b rightshift two times or you can divide it by.
+
+179
+00:11:39,190 --> 00:11:43,810
+b rightshift one times, or you can divide b by two, it is.
+
+180
+00:11:45,230 --> 00:11:50,820
+rightshift b one times, if I do, if i multiply b by two, it becomes left shift b by 1
+
+181
+00:11:51,660 --> 00:11:51,950
+right.
+
+182
+00:11:51,990 --> 00:11:55,650
+So these are small, small tricks that you should know.
+
+183
+00:11:55,950 --> 00:11:58,920
+finally what i'll do is i'll return the result.
+
+184
+00:11:58,950 --> 00:12:00,360
+let's print this
+
+185
+00:12:01,410 --> 00:12:03,990
+But yeah, so let's take 2 and 10.
+
+186
+00:12:06,950 --> 00:12:09,090
+We got one thousand twenty four, right?
+
+187
+00:12:09,470 --> 00:12:15,050
+If you want to check, if you want to print out all these things, you can check that the directly cout
+
+188
+00:12:15,680 --> 00:12:21,080
+whatever stuff you want to and check, how is it working right if I do 2 to the power 20.
+
+189
+00:12:21,240 --> 00:12:22,070
+It's very simple.
+
+190
+00:12:22,580 --> 00:12:27,480
+I'll get a perfect answer because here we have used binary into work.
+
+191
+00:12:27,800 --> 00:12:30,230
+why we have used binary into work because
+
+192
+00:12:32,340 --> 00:12:37,080
+If I write, if I write B as in binary and let's say B approximately.
+
+193
+00:12:38,550 --> 00:12:40,230
+10 to the power 18.
+
+194
+00:12:41,730 --> 00:12:45,000
+Look, if I if I multiply it, if I find out this term.
+
+195
+00:12:45,910 --> 00:12:46,690
+Cool, let me.
+
+196
+00:12:47,870 --> 00:12:52,130
+If I say a into a to the Power B where b is approximately.
+
+197
+00:12:52,670 --> 00:12:57,070
+10 to the power 18 that I cannot find out this value.
+
+198
+00:12:57,260 --> 00:12:58,280
+It will be too huge.
+
+199
+00:12:59,000 --> 00:13:01,610
+for that i have modular exponentiation, do not worry about that
+
+200
+00:13:02,510 --> 00:13:09,440
+The second thing is that, OK, I do not have the machining capability of calculating this.
+
+201
+00:13:09,440 --> 00:13:12,800
+If b is 10 to the power 18, it will take a lot of time.
+
+202
+00:13:13,220 --> 00:13:19,550
+So in one second, for an like an average in one second, I can calculate 10 to the power seven steps
+
+203
+00:13:19,610 --> 00:13:19,810
+right.
+
+204
+00:13:19,850 --> 00:13:23,690
+So how many seconds will be required to calculate 10 to the power 18 iterations?
+
+205
+00:13:23,990 --> 00:13:27,020
+It will be 10 to the power 11 seconds.
+
+206
+00:13:27,620 --> 00:13:30,410
+I guess that is nearly equal to life of earth.
+
+207
+00:13:30,870 --> 00:13:31,040
+right.
+
+208
+00:13:31,730 --> 00:13:32,540
+It's too huge.
+
+209
+00:13:33,380 --> 00:13:33,740
+So.
+
+210
+00:13:35,600 --> 00:13:41,300
+So what we'll do is simply, we will simply convert this number into binary, so in binary, its length
+
+211
+00:13:41,300 --> 00:13:48,310
+will be at most 64 off length 10 to the power 18 and in only 64 operations, only 64 operations.
+
+212
+00:13:48,320 --> 00:13:52,460
+We will simply find out a the power B where B is very huge.
+
+213
+00:13:53,620 --> 00:13:55,930
+Always, you can check this out.
+
+214
+00:13:56,510 --> 00:13:58,030
+So this works in o of.
+
+215
+00:13:59,180 --> 00:14:00,860
+Log b.
+
+216
+00:14:01,830 --> 00:14:02,040
+right.
+
+217
+00:14:02,550 --> 00:14:02,820
+Why?
+
+218
+00:14:02,820 --> 00:14:08,580
+Because we are always dividing by two in every step, so there will be a time and b will be zero.
+
+219
+00:14:08,850 --> 00:14:13,920
+And how much time it will be zero when the last set, when the first set bit of B becomes the last bit of
+
+220
+00:14:13,920 --> 00:14:14,730
+B and it goes.
+
+221
+00:14:15,630 --> 00:14:16,560
+away in b
+
+222
+00:14:17,810 --> 00:14:23,390
+It so it's a very good complexity guys o of log b, so guys this power function.
+
+223
+00:14:24,710 --> 00:14:29,180
+It will be used in many problems and many statement, and it will also be used in many.
+
+224
+00:14:31,150 --> 00:14:36,620
+Mathematical sections right, it will also be used to calculate NCR.
+
+225
+00:14:36,640 --> 00:14:42,700
+It will be used to calculate inverse of a number using mod many things right after these guys will
+
+226
+00:14:42,850 --> 00:14:49,900
+discuss about a snippet and that snippet is, will be very useful to all, so we'll discuss it
+
+227
+00:14:49,900 --> 00:14:51,980
+and this is just a part of it.
+
+228
+00:14:52,660 --> 00:15:00,330
+Next section we'll discuss about modular exponentiation, not a five minutes, so we'll think
+
+229
+00:15:00,340 --> 00:15:00,690
+Thank you guys!
+

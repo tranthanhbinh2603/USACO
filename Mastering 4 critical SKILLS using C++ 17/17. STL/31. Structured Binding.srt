@@ -1,0 +1,859 @@
+0
+1
+00:00:01,410 --> 00:00:10,610
+One of the very nice features of the modern C++ 17 is the structured binding, It isn't an STL
+1
+
+2
+00:00:10,620 --> 00:00:11,120
+topic.
+2
+
+3
+00:00:11,250 --> 00:00:16,790
+However, it makes a lot of code simpler, especially in STL.
+3
+
+4
+00:00:17,130 --> 00:00:19,320
+So let's see how this feature is working.
+4
+
+5
+00:00:21,320 --> 00:00:27,530
+Let's say you have an array here. If you would like to take  some variables to point to the array's elements,
+5
+
+6
+00:00:27,540 --> 00:00:33,050
+you have to write something like integer A equal array of zero, integer B equal array of one and
+6
+
+7
+00:00:33,050 --> 00:00:33,470
+so on.
+7
+
+8
+00:00:33,950 --> 00:00:40,730
+So C++ is trying to make this a bit simpler, something like in Python, for example, and here is the
+8
+
+9
+00:00:40,730 --> 00:00:42,410
+syntax of the structured binding.
+9
+
+10
+00:00:42,440 --> 00:00:48,950
+You can write the word auto, then you open two brackets, your list of variables and equals something
+10
+
+11
+00:00:48,950 --> 00:00:53,680
+that has a structured way in its coding,
+11
+
+12
+00:00:54,170 --> 00:00:59,330
+then after this line of code, you will notice that the value A1 B1, C1,
+12
+
+13
+00:00:59,330 --> 00:01:02,510
+and D1 are matching these 4 variables.
+13
+
+14
+00:01:02,900 --> 00:01:04,370
+Now, there are two ways here.
+14
+
+15
+00:01:04,760 --> 00:01:07,760
+Are you matching by value or by reference?
+15
+
+16
+00:01:08,120 --> 00:01:11,900
+This is matching by ending by value,
+16
+
+17
+00:01:12,230 --> 00:01:15,980
+but this guy here, if you put the reference here, you will bind them by reference.
+17
+
+18
+00:01:16,280 --> 00:01:22,460
+For example, if you try to change C2 here and printed the array element itself, you will notice
+18
+
+19
+00:01:22,460 --> 00:01:24,560
+the array element changed.
+19
+
+20
+00:01:25,880 --> 00:01:31,520
+The number of elements here has to match the size of the array, which is 4, for example. Please
+20
+
+21
+00:01:31,520 --> 00:01:36,140
+take a moment to make your eyes familiar with the syntax
+21
+
+22
+00:01:36,170 --> 00:01:36,700
+style code.
+22
+
+23
+00:01:37,370 --> 00:01:42,770
+By the way, when you see these errors in code, you notice that something is wrong.
+23
+
+24
+00:01:43,850 --> 00:01:46,030
+This is an eclipse problem
+24
+
+25
+00:01:46,040 --> 00:01:49,670
+Eclipse so far, we are here in 2020, Eclipse is supporting
+25
+
+26
+00:01:49,670 --> 00:01:51,250
+so far C++ 14.
+26
+
+27
+00:01:51,620 --> 00:01:54,460
+So when it sees syntax from C++ 17,
+27
+
+28
+00:01:54,470 --> 00:01:55,420
+It doesn't work well.
+28
+
+29
+00:01:57,410 --> 00:02:02,600
+I think maybe Visual Studio would be one of the ides that doesn't have this problem at the
+29
+
+30
+00:02:02,600 --> 00:02:02,950
+moment.
+30
+
+31
+00:02:03,350 --> 00:02:09,050
+So in eclipse, this is what call syntax checking.
+31
+
+32
+00:02:09,230 --> 00:02:15,560
+The compiler itself is working well, but Eclipse doesn't figure out the syntax. Let's go more,
+32
+
+33
+00:02:15,830 --> 00:02:25,010
+If you have here a struct of an employee with like say something like a name and salary and then you define
+33
+
+34
+00:02:25,010 --> 00:02:27,130
+it here. You can bind by value
+34
+
+35
+00:02:27,140 --> 00:02:32,780
+this way, you can say auto str1, val1, or whatever equals emp
+35
+
+36
+00:02:32,990 --> 00:02:35,890
+or if you would like to do this by reference, you can do it this way.
+36
+
+37
+00:02:36,290 --> 00:02:45,200
+Now, the public variables here from the struct will be taken and binded here to these two values. If you
+37
+
+38
+00:02:45,200 --> 00:02:46,310
+would like to make it const,
+38
+
+39
+00:02:46,340 --> 00:02:48,140
+also you can make here a word const.
+39
+
+40
+00:02:48,620 --> 00:02:53,390
+Now, there is one only thing that I hate about the features so far. Notice,
+40
+
+41
+00:02:54,170 --> 00:02:56,600
+these are like variable declaration,
+41
+
+42
+00:02:56,900 --> 00:03:01,470
+so you have to make a new variable every time you need to use it.
+42
+
+43
+00:03:01,490 --> 00:03:04,310
+Also, what if I don't need the second variable here?
+43
+
+44
+00:03:05,300 --> 00:03:10,370
+These are at the moment of C++ 17 aren't options, but maybe in the future, they will be available.
+44
+
+45
+00:03:10,700 --> 00:03:18,080
+But anyway, the point is you can decompose this struct elements to these two guys in a single line
+45
+
+46
+00:03:18,320 --> 00:03:22,520
+and we'll see how this feature will be very helpful during the remaining of the session.
+46
+
+47
+00:03:24,290 --> 00:03:31,350
+The pair, you know, we can define the pair like pair of integer, string, p, 33, Belal.
+47
+
+48
+00:03:31,400 --> 00:03:32,970
+We are defining a pair here.
+48
+
+49
+00:03:33,320 --> 00:03:39,590
+I would like to tell you that the pair can be, also in C++17, constructed in two different ways.
+49
+
+50
+00:03:39,710 --> 00:03:43,020
+You can say something like auto B equals pair of 33
+50
+
+51
+00:03:43,070 --> 00:03:44,570
+and some name here.
+51
+
+52
+00:03:45,080 --> 00:03:51,770
+OK, what about the integer and string? In C++, there is what we call template argument deduction.
+52
+
+53
+00:03:52,070 --> 00:03:55,280
+The compiler will know that this 33 must to be an integer,
+53
+
+54
+00:03:55,490 --> 00:03:57,340
+This must be string.
+54
+
+55
+00:03:57,360 --> 00:04:00,470
+So it doesn't need to define them, or even a simpler way,
+55
+
+56
+00:04:00,470 --> 00:04:07,320
+you can say pair P of the arguments, and again if the compiler can deduce the arguments, you don't
+56
+
+57
+00:04:07,340 --> 00:04:10,430
+need to write them, so its like a better syntax.
+57
+
+58
+00:04:10,940 --> 00:04:16,480
+Now, in a very similar way, you can do something like auto reference these two elements,
+58
+
+59
+00:04:16,490 --> 00:04:20,470
+for example, equal the P, so now we are defining it.
+59
+
+60
+00:04:22,730 --> 00:04:28,850
+Let's see more of that, let's say you have a function, I am defining here a global pair, and
+60
+
+61
+00:04:28,850 --> 00:04:34,200
+trying once to return it by reference and another one tring to return it by value.
+61
+
+62
+00:04:34,880 --> 00:04:40,070
+So if you have here again a function returning by reference, you can take them by reference.
+62
+
+63
+00:04:40,610 --> 00:04:44,680
+But don't try to take by reference what is returned by value,
+63
+
+64
+00:04:44,690 --> 00:04:45,920
+this will be a compiler error.
+64
+
+65
+00:04:46,340 --> 00:04:47,690
+There are two ways to do that.
+65
+
+66
+00:04:47,720 --> 00:04:50,420
+The first one is just take it by value.
+66
+
+67
+00:04:50,970 --> 00:04:53,400
+Later, when we will learn the semantic moves,
+67
+
+68
+00:04:53,470 --> 00:04:59,350
+you will know that we can put here reference reference to take what is returned by value.
+68
+
+69
+00:04:59,630 --> 00:05:00,610
+Skip that for now.
+69
+
+70
+00:05:00,620 --> 00:05:03,270
+When we go to semantic moves, we will learn about that.
+70
+
+71
+00:05:03,680 --> 00:05:08,000
+So as you see again here, something like the pair, we composed it in easily here.
+71
+
+72
+00:05:08,180 --> 00:05:11,150
+You will see several applications for that in the next slides.
+72
+
+73
+00:05:12,840 --> 00:05:18,720
+In a similar way to the pair, there are tuples. I can make a tuple here. Let's say I have a tuple,
+73
+
+74
+00:05:19,410 --> 00:05:22,500
+then I can construct it here
+74
+
+75
+00:05:22,500 --> 00:05:28,110
+normally. I think you can remove all of that and just write auto. The make-tuple again
+75
+
+76
+00:05:28,680 --> 00:05:32,060
+can use a template argument deduction.
+76
+
+77
+00:05:32,640 --> 00:05:34,200
+But here's what's more interesting
+77
+
+78
+00:05:34,200 --> 00:05:38,010
+with the templates, you see here, we are defining variables
+78
+
+79
+00:05:38,010 --> 00:05:43,370
+M, N, Q, and we are initializing them in a very simple way. In a normal way,
+79
+
+80
+00:05:43,390 --> 00:05:45,330
+one have to write three lines.
+80
+
+81
+00:05:45,570 --> 00:05:51,330
+You would write a character M equals A, integer N equals 123, boolean
+81
+
+82
+00:05:51,330 --> 00:05:59,760
+Q equals true. Here, with the mix of the structure binding in the tuple, we did one direct initialization
+82
+
+83
+00:05:59,760 --> 00:06:00,780
+for the three variables,
+83
+
+84
+00:06:00,780 --> 00:06:01,800
+and this is very interesting,
+84
+
+85
+00:06:01,800 --> 00:06:04,430
+you are initializing different things in a single line of code.
+85
+
+86
+00:06:06,200 --> 00:06:17,030
+Let's see another example, the map, let's define a multi-map, and let's also make an addition to
+86
+
+87
+00:06:17,030 --> 00:06:18,500
+what we say about the map here.
+87
+
+88
+00:06:18,980 --> 00:06:25,010
+If you defined a multi-map before C++11, if you would like to insert some elements initialized with
+88
+
+89
+00:06:25,010 --> 00:06:27,230
+some elements, you would have to use the insert function.
+89
+
+90
+00:06:27,410 --> 00:06:29,850
+You have to call pair of integer and integer for matching
+90
+
+91
+00:06:29,870 --> 00:06:31,820
+here, you have to push the parameters.
+91
+
+92
+00:06:32,030 --> 00:06:38,780
+All of this verbs code to initialize a multi-map. In the modern C++ and with the template deduction
+92
+
+93
+00:06:38,820 --> 00:06:43,250
+and uniform initialization all of that together, you can now define it in this very nice way.
+93
+
+94
+00:06:43,550 --> 00:06:50,840
+You just open one big braces and then for every pair here, you just put braces for it, so it will
+94
+
+95
+00:06:50,850 --> 00:06:51,950
+be initialized directly.
+95
+
+96
+00:06:51,960 --> 00:06:53,030
+So now this is perfect code.
+96
+
+97
+00:06:54,170 --> 00:06:56,020
+Let's now iterate on the map.
+97
+
+98
+00:06:56,450 --> 00:07:04,270
+We know we can iterate with const auto and get here a pair that we can print
+98
+
+99
+00:07:04,280 --> 00:07:05,660
+its value,
+99
+
+100
+00:07:05,660 --> 00:07:06,020
+Right?
+100
+
+101
+00:07:06,410 --> 00:07:10,220
+So we know that the map's iterator is going to return a pair of type integer and integer.
+101
+
+102
+00:07:10,460 --> 00:07:14,160
+You can also decompose it easily to just reference key and value.
+102
+
+103
+00:07:14,540 --> 00:07:20,840
+So now instead of getting an item of type pair, we are decomposing it directly to key and value and
+103
+
+104
+00:07:20,840 --> 00:07:23,810
+using it. Another similar application,
+104
+
+105
+00:07:24,080 --> 00:07:30,230
+let's say you would like to get all of the elements from the multi-map that has a value
+105
+
+106
+00:07:30,230 --> 00:07:34,220
+one as a key. This function in multi-map called equal range.
+106
+
+107
+00:07:34,580 --> 00:07:40,810
+You give it the key, it's going to return for you â€” a pair of the first iterator and end iterator.
+107
+
+108
+00:07:41,210 --> 00:07:46,760
+So again, you can here take it in a pair and then say pair dot  first, pair dot second, but we can
+108
+
+109
+00:07:46,880 --> 00:07:53,670
+combine it directly and say iterator-start, iterator-end, and then use this iterator start and end to just
+109
+
+110
+00:07:53,700 --> 00:07:56,090
+go and print all of the values,
+110
+
+111
+00:07:57,170 --> 00:08:02,240
+and every iterator here will have a first and second for the pair here itself.
+111
+
+112
+00:08:02,480 --> 00:08:09,380
+So this is returning a pair for the start and end, but this pair is for the integer and integer.
+112
+
+113
+00:08:09,800 --> 00:08:17,500
+So as you see, again, the pair here is playing a nice role in initializing these guys. With insertion,
+113
+
+114
+00:08:17,660 --> 00:08:24,410
+again, we can see how the pair is very nice in that. In a normal case, when we would like to insert
+114
+
+115
+00:08:24,920 --> 00:08:31,250
+something, we know by default it returns a pair where the first is an iterator and the second is true or
+115
+
+116
+00:08:31,250 --> 00:08:32,430
+false if it succeeded.
+116
+
+117
+00:08:32,990 --> 00:08:38,750
+Now, we can directly again, instead of receiving in a pair and using dot first and dot second, we just
+117
+
+118
+00:08:38,750 --> 00:08:43,880
+take it here in one pair directly and binding it directly.
+118
+
+119
+00:08:44,450 --> 00:08:46,630
+But notice that the function is returning by value,
+119
+
+120
+00:08:46,640 --> 00:08:53,480
+you cannot here take a reference, and also you can make it with the selection initialization.
+120
+
+121
+00:08:53,510 --> 00:08:57,110
+Remember, this lesson in the if condition,
+121
+
+122
+00:08:58,370 --> 00:09:08,450
+If you say here if, auto, st.insert, this is going to be like binded to these two variables and
+122
+
+123
+00:09:08,450 --> 00:09:10,760
+then you can here check if success or not.
+123
+
+124
+00:09:10,940 --> 00:09:18,230
+So this is an if condition if you managed to insert the object or not, and you can get inside the object,
+124
+
+125
+00:09:19,160 --> 00:09:22,640
+but you still have the iterator here. Previously,
+125
+
+126
+00:09:22,850 --> 00:09:30,440
+if you don't want to do that, you will say " st.insert 15; " to check if it's true
+126
+
+127
+00:09:30,440 --> 00:09:30,790
+or not,
+127
+
+128
+00:09:30,950 --> 00:09:33,410
+but what if you still want to the iterator with you?
+128
+
+129
+00:09:33,660 --> 00:09:35,930
+This, again, is going to make your life much easier.
+129
+
+130
+00:09:35,960 --> 00:09:37,790
+All of that are applications for the pair.
+130
+
+131
+00:09:40,110 --> 00:09:46,410
+Here is one more about how the pair can be very nice for us. Let's say we have a string here, and we
+131
+
+132
+00:09:46,410 --> 00:09:50,340
+can make an 'istringstream' over this guy, which is going to return an 'iss'.
+132
+
+133
+00:09:50,700 --> 00:09:57,630
+So we see how initialization can help us here in a for loop. We are going to declare
+133
+
+134
+00:09:57,930 --> 00:09:59,370
+and initialize two variables,
+134
+
+135
+00:09:59,370 --> 00:10:00,570
+iss and line.
+135
+
+136
+00:10:00,990 --> 00:10:06,330
+The line would be initialized to string, and iss is going to be initialized with the istringstream.
+136
+
+137
+00:10:06,690 --> 00:10:11,050
+And now, we can keep going and get-line from this iss here and using it here.
+137
+
+138
+00:10:11,430 --> 00:10:17,760
+So in a single line, we are now just creating our objects in the for-loop
+138
+
+139
+00:10:17,940 --> 00:10:22,710
+directly. Previously, you would have to define istring stream here, which would be...
+139
+
+140
+00:10:22,710 --> 00:10:25,230
+..., in a bigger scope in the function here,
+140
+
+141
+00:10:25,380 --> 00:10:33,930
+but now we are defining it directly here. So the auto with the pair or auto with tuple can
+141
+
+142
+00:10:33,930 --> 00:10:37,200
+give you great power in the initialization.
+142
+
+143
+00:10:39,300 --> 00:10:43,580
+The last thing is about structs with arrays.
+143
+
+144
+00:10:43,950 --> 00:10:46,200
+Let's define an integer array here.
+144
+
+145
+00:10:47,160 --> 00:10:51,940
+If you try to do something like integer-salary for an equal array,
+145
+
+146
+00:10:52,260 --> 00:10:54,160
+this will be an error.
+146
+
+147
+00:10:54,510 --> 00:10:56,810
+Remember that the array is like a pointer here,
+147
+
+148
+00:10:56,970 --> 00:10:59,480
+...
+148
+
+149
+00:10:59,880 --> 00:11:01,200
+You cannot make this line.
+149
+
+150
+00:11:01,200 --> 00:11:03,990
+It would be like converting from an integer pointer to an integer.
+150
+
+151
+00:11:04,740 --> 00:11:09,660
+Now, let's say that we have here, yeah,
+151
+
+152
+00:11:09,840 --> 00:11:10,950
+this is now a pointer here.
+152
+
+153
+00:11:11,880 --> 00:11:19,680
+Let's say we have a struct, and we initialized its array with aggregate initialization
+153
+
+154
+00:11:19,680 --> 00:11:20,990
+to these three items.
+154
+
+155
+00:11:21,750 --> 00:11:29,860
+And then if you started to decompose it to an item here, it's actually going to be an array.
+155
+
+156
+00:11:30,270 --> 00:11:35,810
+So the purpose of that is to tell you that it doesn't work like this guy.
+156
+
+157
+00:11:35,960 --> 00:11:37,530
+It will not be a pointer,
+157
+
+158
+00:11:37,530 --> 00:11:38,770
+It will be an actual array.
+158
+
+159
+00:11:39,090 --> 00:11:42,870
+Here is a way to verify that what is returning it from this guy is actually an array.
+159
+
+160
+00:11:43,200 --> 00:11:51,200
+You can use what we call type ID.  Every variable will have a compile-time data type.
+160
+
+161
+00:11:51,630 --> 00:12:00,660
+So we are saying here what is a type of the return my-array dot salaries from here, which
+161
+
+162
+00:12:00,660 --> 00:12:06,510
+is an array, and we are comparing it with the type of this guy. If this was a pointer for example,
+162
+
+163
+00:12:06,720 --> 00:12:07,650
+...
+163
+
+164
+00:12:08,310 --> 00:12:10,360
+This should give a compiler error.
+164
+
+165
+00:12:10,800 --> 00:12:13,290
+So the moral of that are two things.
+165
+
+166
+00:12:13,540 --> 00:12:15,370
+The first is by default,
+166
+
+167
+00:12:15,420 --> 00:12:16,640
+...
+167
+
+168
+00:12:16,860 --> 00:12:18,180
+This is an integer pointer,
+168
+
+169
+00:12:18,360 --> 00:12:24,180
+but here it's actually an array, and also the type-id can help you to make verification about the different data
+169
+
+170
+00:12:24,360 --> 00:12:24,780
+types.
+170
+
+171
+00:12:25,890 --> 00:12:26,530
+That's it.
+171
+
+172
+00:12:26,550 --> 00:12:28,310
+Try to make use of it as possible.

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1672407248 source:c:\users\binh\documents\project\usaco\mastering 4 critical skills using c++ 17\17. stl\homework\04 separation with struct\struct3.cpp
+	"struct3.h"
+	<iostream>
+
+1672407181 c:\users\binh\documents\project\usaco\mastering 4 critical skills using c++ 17\17. stl\homework\04 separation with struct\struct3.h
+
+1672407491 source:c:\users\binh\documents\project\usaco\mastering 4 critical skills using c++ 17\17. stl\homework\04 separation with struct\main.cpp
+	<iostream>
+	"struct3.h"
+

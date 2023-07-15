@@ -1,0 +1,451 @@
+1
+00:00:00,790 --> 00:00:02,530
+Homework number two in brain research.
+
+2
+00:00:04,180 --> 00:00:11,590
+The first task is we have an array of integers and we also given an integer that represent the threshold.
+
+3
+00:00:12,430 --> 00:00:19,240
+If we have some integer value, we can divide the array by the value integer division where you are
+
+4
+00:00:19,240 --> 00:00:21,910
+sealing the values and some of the values in the.
+
+5
+00:00:22,630 --> 00:00:27,700
+The divisor that you used is valid if the submission is less than or equal to it.
+
+6
+00:00:28,360 --> 00:00:34,360
+Now what is the turkeys would like to find the smallest, the positive integer that is valid here.
+
+7
+00:00:35,470 --> 00:00:40,210
+By the way, whenever I skip the limits, I usually mean you shouldn't depend on them.
+
+8
+00:00:40,210 --> 00:00:43,360
+Like you might ask what is the maximum number of the items in the tray?
+
+9
+00:00:43,690 --> 00:00:45,830
+I just mean, just consider it as big as 1000000.
+
+10
+00:00:45,850 --> 00:00:46,630
+What is the threshold?
+
+11
+00:00:46,630 --> 00:00:47,440
+Just a big value.
+
+12
+00:00:47,920 --> 00:00:50,680
+You can almost double check the values in the liquid itself.
+
+13
+00:00:51,370 --> 00:00:57,310
+Let me here clarify on an example so that if things are not clear enough, here is the array.
+
+14
+00:00:58,060 --> 00:01:03,730
+We can divide this array on different values, whatever we need as an integer, but do like a sealing
+
+15
+00:01:03,730 --> 00:01:04,180
+division.
+
+16
+00:01:04,630 --> 00:01:08,080
+So integer division was saved if we tried to divide this array by one.
+
+17
+00:01:08,590 --> 00:01:15,190
+So whatever one is, one one to over one is two five or one is five nine and so on.
+
+18
+00:01:15,190 --> 00:01:19,510
+Some of the values seventeen is 17 literary classics.
+
+19
+00:01:19,510 --> 00:01:21,220
+No, so we cannot divide by one.
+
+20
+00:01:21,880 --> 00:01:26,800
+Let's try, for example, the visor like put one over four a zero something.
+
+21
+00:01:26,800 --> 00:01:33,850
+So we set it up to one two over four is zero something set it up to one five or four is one something.
+
+22
+00:01:33,850 --> 00:01:37,270
+So set it up to two nine over four is two something.
+
+23
+00:01:37,270 --> 00:01:38,200
+Set it up to three.
+
+24
+00:01:38,420 --> 00:01:41,980
+So all of the values seven is seven.
+
+25
+00:01:41,980 --> 00:01:42,870
+Laser equals six.
+
+26
+00:01:43,090 --> 00:01:44,860
+It's also an invalid device.
+
+27
+00:01:45,370 --> 00:01:46,270
+Now use five.
+
+28
+00:01:47,050 --> 00:01:51,670
+When you use five in division, you will have one one one two, which is two that adds five.
+
+29
+00:01:52,030 --> 00:01:58,390
+So have less than three six five is the smallest, the positive integer that do that.
+
+30
+00:01:58,750 --> 00:02:04,870
+So as you see the small value like one, give me like one value, give it a high value.
+
+31
+00:02:05,200 --> 00:02:07,210
+The next value is four is still high value.
+
+32
+00:02:07,420 --> 00:02:13,840
+Five is a bit less value, so you'll find the smallest integer that satisfy that threshold.
+
+33
+00:02:13,870 --> 00:02:15,400
+This is where the problem means.
+
+34
+00:02:17,630 --> 00:02:20,690
+Yeah, but there is more examples to make sure that you understand the problem.
+
+35
+00:02:22,540 --> 00:02:26,000
+The second problem is a problem for my garden.
+
+36
+00:02:26,020 --> 00:02:32,890
+We have, uh, we have different flowers, every flower has some bloom day.
+
+37
+00:02:33,250 --> 00:02:35,350
+So let's say we have here some flower number one.
+
+38
+00:02:36,870 --> 00:02:37,890
+Here is another flower.
+
+39
+00:02:38,010 --> 00:02:42,000
+You know, the flower, flower flower and so on.
+
+40
+00:02:45,410 --> 00:02:45,860
+Now.
+
+41
+00:02:47,220 --> 00:02:52,120
+After this given Bloom Day, the flower is ready to be used.
+
+42
+00:02:52,320 --> 00:02:54,300
+Before that, it isn't easy to use.
+
+43
+00:02:54,720 --> 00:03:01,020
+So we have any flowers and anyone has a day where we can use it now in the garden or the in the in the
+
+44
+00:03:01,020 --> 00:03:01,390
+shop.
+
+45
+00:03:01,440 --> 00:03:03,000
+We need to make Emma buckets.
+
+46
+00:03:04,990 --> 00:03:10,120
+And it must have gay flowers, but must be a decent one.
+
+47
+00:03:10,870 --> 00:03:13,680
+So, for example, let's say gay is free.
+
+48
+00:03:14,050 --> 00:03:16,420
+Then I need to reconsider the flowers.
+
+49
+00:03:16,420 --> 00:03:20,800
+Maybe this three, maybe this three, maybe this three, whatever.
+
+50
+00:03:20,980 --> 00:03:22,630
+If you take it once, you cannot take it anymore.
+
+51
+00:03:23,650 --> 00:03:27,880
+Now the problem is we need em buckets.
+
+52
+00:03:29,260 --> 00:03:30,250
+OK, we need them.
+
+53
+00:03:30,940 --> 00:03:33,220
+And the problem, they call this one, and they call this key.
+
+54
+00:03:33,670 --> 00:03:39,580
+We need them a box and we would like to see the minimum number of days notice that we are limited with
+
+55
+00:03:39,580 --> 00:03:41,320
+their flowers day here.
+
+56
+00:03:42,010 --> 00:03:43,390
+So let's see an example here.
+
+57
+00:03:45,590 --> 00:03:49,040
+Um, here in this example.
+
+58
+00:03:50,690 --> 00:03:56,030
+We have, uh, one two, three four five where fake flowers.
+
+59
+00:03:56,420 --> 00:03:58,200
+We would like to create three buckets.
+
+60
+00:03:58,220 --> 00:03:59,900
+Everyone has only a single flower.
+
+61
+00:04:00,680 --> 00:04:05,150
+So now let's simulate after day number one, this flower is ready.
+
+62
+00:04:05,840 --> 00:04:08,900
+After day number two, this flower is ready.
+
+63
+00:04:09,530 --> 00:04:14,270
+After day number three, this flower is ready from these four to nine.
+
+64
+00:04:14,330 --> 00:04:15,380
+Nothing is ready.
+
+65
+00:04:15,380 --> 00:04:17,870
+At day number 10, this one is ready and this one is ready.
+
+66
+00:04:18,200 --> 00:04:23,210
+Now we need it three buckets so we can only with three days, which is the minimum number of days to
+
+67
+00:04:23,210 --> 00:04:26,450
+have booked so that we can create.
+
+68
+00:04:27,700 --> 00:04:28,810
+Let's see another example.
+
+69
+00:04:31,110 --> 00:04:37,650
+We need to book it if one of them has three flowers, so the minimum number here is seven, so let's
+
+70
+00:04:37,650 --> 00:04:39,540
+wait seven days after seven days.
+
+71
+00:04:39,750 --> 00:04:44,130
+We have here four flowers ready for us and two flowers ready for us.
+
+72
+00:04:45,110 --> 00:04:48,980
+Now, why is this only give us one?
+
+73
+00:04:49,430 --> 00:04:51,980
+Give us one one bucket, we need more than that.
+
+74
+00:04:51,980 --> 00:04:53,060
+We need, we need to.
+
+75
+00:04:53,660 --> 00:04:55,400
+So we would have to wait today, No.
+
+76
+00:04:55,400 --> 00:04:59,780
+12 or so that this not now is ready to add a date well on day 12.
+
+77
+00:05:00,050 --> 00:05:03,850
+So now we take this three and maybe these three, two and so on.
+
+78
+00:05:03,860 --> 00:05:07,880
+So I hope you, I hope now you understand the simulation of the task itself.
+
+79
+00:05:10,790 --> 00:05:18,020
+In the third dusk, we have houses, we have the location of the houses and we have the location of
+
+80
+00:05:18,020 --> 00:05:26,210
+heaters, and we would like to, uh, cover all of the current houses with the current leaders.
+
+81
+00:05:26,900 --> 00:05:30,770
+But we need to set their rediscovery of every heater.
+
+82
+00:05:30,770 --> 00:05:37,020
+So see if there is a heater here and the it is one, then it can cover one one, have one element before
+
+83
+00:05:37,020 --> 00:05:38,340
+and one element after.
+
+84
+00:05:38,360 --> 00:05:45,320
+It would like to find the minimum radius so that interior use so that we would add to all of the heaters
+
+85
+00:05:45,470 --> 00:05:47,720
+such that all of the houses are covered.
+
+86
+00:05:48,080 --> 00:05:49,190
+Let me give an example.
+
+87
+00:05:51,440 --> 00:05:53,360
+We have here three heaters.
+
+88
+00:05:53,930 --> 00:05:56,480
+So here is the location at point number one.
+
+89
+00:05:56,810 --> 00:05:57,230
+One.
+
+90
+00:05:57,380 --> 00:06:01,110
+There is a house at two, there is another house at three.
+
+91
+00:06:01,130 --> 00:06:04,310
+There is a third house and there is one heater here already.
+
+92
+00:06:06,490 --> 00:06:12,910
+If I use the use of one, then I can cover one unit before and one unit after, which is now covering
+
+93
+00:06:13,180 --> 00:06:14,650
+all of the houses that you have.
+
+94
+00:06:14,800 --> 00:06:16,060
+So the minimum wages is what?
+
+95
+00:06:17,650 --> 00:06:23,320
+In the second, the problem is following, we have four house his house at one, at two, at three,
+
+96
+00:06:23,320 --> 00:06:23,800
+at four.
+
+97
+00:06:24,160 --> 00:06:25,960
+So here is the house is.
+
+98
+00:06:27,460 --> 00:06:32,890
+And we have two heaters, one heater at one and one heater at four.
+
+99
+00:06:35,500 --> 00:06:42,100
+Now we would like to cover all of the heaters if we use reduce often this heater will cover one here
+
+100
+00:06:42,100 --> 00:06:45,580
+and here, so this one nose cover and this heater will cover one here and here.
+
+101
+00:06:45,700 --> 00:06:53,560
+So this heater is covered, as is the case we have here two houses one at House one and one at House
+
+102
+00:06:53,560 --> 00:06:54,040
+five.
+
+103
+00:06:55,050 --> 00:06:56,940
+The heater here is at medal at two.
+
+104
+00:06:59,570 --> 00:07:05,060
+That was the radius of three I can cover three units before, so this one is covered and three units
+
+105
+00:07:05,060 --> 00:07:06,350
+after this one, no is covered.
+
+106
+00:07:06,470 --> 00:07:10,210
+So the minimum Regis is three and so on.
+
+107
+00:07:11,180 --> 00:07:16,730
+In case you don't understand exactly the questions we need, read the text very carefully with the examples.
+
+108
+00:07:17,060 --> 00:07:21,530
+As I said earlier, don't wait for me to explain for you what is a problem statement?
+
+109
+00:07:21,560 --> 00:07:22,550
+It's actually your role.
+
+110
+00:07:23,090 --> 00:07:25,850
+I just know some people have weak English skills.
+
+111
+00:07:26,150 --> 00:07:27,830
+The immediate the problem and don't get it.
+
+112
+00:07:27,950 --> 00:07:29,480
+So I'm trying to give more help.
+
+113
+00:07:29,900 --> 00:07:35,570
+But it is an important skill for you to be able to understand the problem requirements by yourself.

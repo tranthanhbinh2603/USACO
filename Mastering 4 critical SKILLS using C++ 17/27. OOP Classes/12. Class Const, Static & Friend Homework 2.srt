@@ -1,0 +1,540 @@
+0
+1
+00:00:01,140 --> 00:00:08,190
+For the second set of homework, which involves some like, might be a bit hard for you. The first
+1
+
+2
+00:00:08,190 --> 00:00:09,960
+one is black box testing.
+2
+
+3
+00:00:10,830 --> 00:00:18,570
+Testing is a very critical part of any software engineering process, like the very popular unit testing.
+3
+
+4
+00:00:18,930 --> 00:00:19,760
+A black box
+4
+
+5
+00:00:19,770 --> 00:00:23,190
+testing is a black box that focus on what, not how.
+5
+
+6
+00:00:23,940 --> 00:00:24,870
+What does it mean?
+6
+
+7
+00:00:24,870 --> 00:00:31,320
+It cares about the public functions only of the class and doesn't care about how does it work or any Internenal
+7
+
+8
+00:00:31,320 --> 00:00:31,630
+of it.
+8
+
+9
+00:00:31,980 --> 00:00:36,810
+So if the class has a few functionalities, you provide them. You can think of it like the following:
+9
+
+10
+00:00:36,810 --> 00:00:43,100
+You have some class named black box tester, test_all function, you call it. The test_all function
+10
+
+11
+00:00:43,100 --> 00:00:46,020
+start to test one by one internal functionality,
+11
+
+12
+00:00:46,380 --> 00:00:51,750
+every functionality here is testing something of the public interface. You might expect if a class
+12
+
+13
+00:00:51,750 --> 00:00:57,870
+has five public functions, you might, for example, have here five or more just functionalities.
+13
+
+14
+00:00:58,020 --> 00:01:03,600
+So think of it as a tester, you are testing the WHAT logic of the other class.
+14
+
+15
+00:01:04,680 --> 00:01:07,410
+The white box testing is a bit different.
+15
+
+16
+00:01:07,710 --> 00:01:09,590
+You now care about the internals.
+16
+
+17
+00:01:09,810 --> 00:01:14,250
+This means you care about the private variables, and you care about internal updates.
+17
+
+18
+00:01:14,540 --> 00:01:19,500
+This isn't the standard the way that we do in it in the market, but it's a good approach to know.
+18
+
+19
+00:01:19,500 --> 00:01:22,320
+So the question is how to test a class from outside,
+19
+
+20
+00:01:22,620 --> 00:01:24,930
+and you still know about its inner details?
+20
+
+21
+00:01:25,380 --> 00:01:27,090
+There are several approaches for that.
+21
+
+22
+00:01:27,100 --> 00:01:28,560
+Feel free to make it like a future
+22
+
+23
+00:01:28,560 --> 00:01:34,770
+reading. The one that I would like you to follow is: define a friend class inside the students
+23
+
+24
+00:01:34,770 --> 00:01:38,070
+grades info as a friend class. Now, the friend
+24
+
+25
+00:01:38,070 --> 00:01:42,030
+the class can access all the internal functions and external functions,
+25
+
+26
+00:01:42,210 --> 00:01:48,360
+and now please start to do testing for the class in terms of white box testing to make
+26
+
+27
+00:01:48,360 --> 00:01:51,960
+sure that everything is OK. About testing and using a friend,
+27
+
+28
+00:01:52,000 --> 00:01:54,210
+this is a future reading for you after the course.
+28
+
+29
+00:01:55,790 --> 00:02:01,670
+Code extension, the previous code (we are actually referring here to the code from
+29
+
+30
+00:02:02,000 --> 00:02:09,530
+last homework, OK) has 2 limitations. The printing functionality is just printing to console and printing
+30
+
+31
+00:02:09,530 --> 00:02:10,340
+all content,
+31
+
+32
+00:02:10,580 --> 00:02:15,260
+but this isn't flexible, so we would like more flexibility.
+For some reasons,
+32
+
+33
+00:02:15,290 --> 00:02:16,900
+we cannot change the old code,
+33
+
+34
+00:02:16,910 --> 00:02:22,730
+and this is a case always in the industry that you shouldn't, in most of the cases, touch others code, but you
+34
+
+35
+00:02:22,730 --> 00:02:24,080
+should try to extend them.
+35
+
+36
+00:02:24,350 --> 00:02:27,560
+There is something that we call closed and extension.
+36
+
+37
+00:02:27,710 --> 00:02:32,540
+So by close, we mean it cannot be changed for a reason or another and extension,
+37
+
+38
+00:02:32,540 --> 00:02:35,090
+we just is extending with more functionality.
+38
+
+39
+00:02:35,480 --> 00:02:37,100
+Here is the idea from your team lead.
+39
+
+40
+00:02:37,550 --> 00:02:44,770
+You are to develop a class that mainly works on an object from a student_grades_info.
+40
+
+41
+00:02:44,960 --> 00:02:48,080
+So our class would be composed of one object here,
+41
+
+42
+00:02:48,410 --> 00:02:56,910
+and then it satisfies two critical functionalities for iterating on a student_grades_info. Function
+42
+
+43
+00:02:56,910 --> 00:02:57,830
+name has_next
+43
+
+44
+00:02:58,070 --> 00:03:03,370
+tell us if there are more items to retrieve, and a function named get_next that returns
+44
+
+45
+00:03:03,440 --> 00:03:09,230
+the actual object to read. With these two functions, has_next and get_next,
+45
+
+46
+00:03:09,350 --> 00:03:14,510
+we are providing more flexible functions to return the items and print them in whatever way you
+46
+
+47
+00:03:14,620 --> 00:03:14,950
+like.
+47
+
+48
+00:03:15,320 --> 00:03:20,390
+There is also a function called reset that can reset printing from the beginning. Develop a class to satisfy
+48
+
+49
+00:03:20,390 --> 00:03:22,120
+that. Here is the main function.
+49
+
+50
+00:03:22,400 --> 00:03:30,410
+Now, we have here a student grades info as we did, and we have a new class of info printer that takes
+50
+
+51
+00:03:30,410 --> 00:03:32,480
+an object from the class that we defined.
+51
+
+52
+00:03:32,870 --> 00:03:35,990
+We can now add grades info as we would like.
+52
+
+53
+00:03:35,990 --> 00:03:36,730
+No problem here.
+53
+
+54
+00:03:36,740 --> 00:03:38,540
+So we are adding to the original object,
+54
+
+55
+00:03:38,990 --> 00:03:42,310
+but when comes to printing, we use our info printer object.
+55
+
+56
+00:03:42,590 --> 00:03:46,880
+So here are the has_info, has_next, and get_next behavior.
+56
+
+57
+00:03:47,240 --> 00:03:51,100
+Let's say we want to print a maximum of three courses only.
+57
+
+58
+00:03:51,590 --> 00:03:53,540
+So we say while limit minus minus
+58
+
+59
+00:03:53,540 --> 00:03:56,870
+as long as we have a limit, check with the printer if it has next or not.
+59
+
+60
+00:03:57,290 --> 00:04:00,800
+If it has nixed, then you are getting the text and printing it.
+60
+
+61
+00:04:01,250 --> 00:04:03,560
+Now let's say we are added other couple of courses,
+61
+
+62
+00:04:03,560 --> 00:04:05,630
+so in total now we have 4, and still
+62
+
+63
+00:04:05,630 --> 00:04:06,440
+the limit is 3,
+63
+
+64
+00:04:06,650 --> 00:04:14,100
+Reset the iterator, and now again using has_next and get_next, print the courses up to three which happened here.
+64
+
+65
+00:04:14,330 --> 00:04:20,810
+So as you see, the printer has an object of st1 and providing has next, get next, and reset iterator
+65
+
+66
+00:04:21,140 --> 00:04:27,960
+to provide a more flexible iterating on a class that we cannot change. Wrapper,
+66
+
+67
+00:04:28,190 --> 00:04:30,590
+wrapper is a very common idea in industry.
+67
+
+68
+00:04:32,360 --> 00:04:38,060
+Let's say that the student grades info is a class from the open-source. In industry,
+68
+
+69
+00:04:38,210 --> 00:04:43,070
+if there is something good available from open source, and it has a good license, we might use it to save
+69
+
+70
+00:04:43,070 --> 00:04:43,580
+our time,
+70
+
+71
+00:04:44,120 --> 00:04:45,530
+but there is always a concern
+71
+
+72
+00:04:45,920 --> 00:04:50,960
+what if there are hidden bugs in the future, and no one is planning to maintain them and solve them?
+72
+
+73
+00:04:51,380 --> 00:04:56,780
+Let's say we have 20 classes using this grades info. If you decide for some reason to replace this
+73
+
+74
+00:04:56,780 --> 00:05:02,740
+open-source project using your own project, all of your code is going to be changed.
+74
+
+75
+00:05:03,260 --> 00:05:05,270
+Now, we don't want to face such an issue.
+75
+
+76
+00:05:05,600 --> 00:05:06,220
+So here is 
+76
+
+77
+00:05:06,520 --> 00:05:08,360
+what your team lead is suggesting.
+77
+
+78
+00:05:08,660 --> 00:05:10,580
+You are to build a class and name it wrapper.
+78
+
+79
+00:05:11,000 --> 00:05:17,000
+The wrapper class will provide the same public functionalities as the student gades info,
+79
+
+80
+00:05:17,780 --> 00:05:24,110
+It will have an internal object of type student_grades_info. Every call to the wrapper
+80
+
+81
+00:05:24,110 --> 00:05:27,710
+is just delegating the call to the local object that it had inside it.
+81
+
+82
+00:05:28,070 --> 00:05:32,660
+Now, let all your code depend on this wrapper, not on this open source code.
+82
+
+83
+00:05:32,990 --> 00:05:38,090
+If in the future you decided to remove the open-source code, you are only changing the implementation
+83
+
+84
+00:05:38,090 --> 00:05:38,630
+of the wrapper.
+84
+
+85
+00:05:38,810 --> 00:05:45,680
+So you change only one class and nothing else in your system. You are also to extend your current functionalities
+85
+
+86
+00:05:45,860 --> 00:05:53,240
+with two public methods to help us to maintain, to count the total number of prints for the user prints
+86
+
+87
+00:05:53,240 --> 00:05:56,720
+and to the total number of created student info.
+87
+
+88
+00:05:57,200 --> 00:05:58,190
+Let's see an example.
+88
+
+89
+00:05:58,430 --> 00:06:04,520
+We are here creating info_wrapper, as you see is just acting here now
+89
+
+90
+00:06:04,520 --> 00:06:05,840
+add_grade, add_grade, add_grade.
+90
+
+91
+00:06:06,020 --> 00:06:10,100
+It's acting exactly like the old object from the student
+91
+
+92
+00:06:10,220 --> 00:06:15,320
+grades info. When you call add_grade here, it is going internally to call add_grade
+92
+
+93
+00:06:15,320 --> 00:06:19,310
+In student_grade_info, printing is going to printing, and so on.
+93
+
+94
+00:06:19,550 --> 00:06:24,760
+You are doing here some logic, then you can call these two static functions to do the printing for you.
+94
+
+95
+00:06:24,860 --> 00:06:32,060
+So this is the overall logic that we would like to see. Future features, you are a team lead 
+95
+
+96
+00:06:32,060 --> 00:06:34,700
+and you have a discussion with your team member.
+96
+
+97
+00:06:34,880 --> 00:06:40,940
+He told you that in an informal discussion with the customer, he was told that in six months, there
+97
+
+98
+00:06:40,940 --> 00:06:47,510
+will be a need to do print for different things like printing to file and console, and maintaining statistics
+98
+
+99
+00:06:47,510 --> 00:06:49,160
+about every used function.
+99
+
+100
+00:06:49,490 --> 00:06:54,700
+He suggested implementing all of these extensions now to save our time
+100
+
+101
+00:06:54,800 --> 00:06:57,500
+in the future to do other work. As a leader,
+101
+
+102
+00:06:57,710 --> 00:06:59,220
+do you accept or reject that?
+102
+
+103
+00:06:59,570 --> 00:07:00,980
+Do you have other suggestions?
+103
+
+104
+00:07:01,130 --> 00:07:01,610
+Why?
+104
+
+105
+00:07:04,270 --> 00:07:10,480
+We have a class that has answer text, and you are debating with some fresh software engineer about
+105
+
+106
+00:07:10,480 --> 00:07:12,880
+which style to use among all of these guys.
+106
+
+107
+00:07:13,090 --> 00:07:17,620
+I would like you to discuss the differences in providing the function in this way.
+107
+
+108
+00:07:18,550 --> 00:07:18,730
+That's it.

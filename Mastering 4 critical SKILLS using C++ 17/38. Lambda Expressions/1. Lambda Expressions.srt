@@ -1,0 +1,747 @@
+1
+00:00:00,900 --> 00:00:09,810
+One of the most interesting features in the modern C++ is what we call the lambda exhibition's, the
+
+2
+00:00:09,840 --> 00:00:14,970
+lambda expressions is an anonymous function or Unnim to function.
+
+3
+00:00:15,000 --> 00:00:16,340
+So this is unnamed.
+
+4
+00:00:17,310 --> 00:00:22,630
+This idea is very popular in other programming languages like Java and Python.
+
+5
+00:00:23,040 --> 00:00:29,550
+The idea that you can write a function on the fly without having a name for it, make the code very,
+
+6
+00:00:29,550 --> 00:00:31,980
+very flexible in many cases.
+
+7
+00:00:32,320 --> 00:00:36,700
+So whenever you need to create a function you just created where you would like to use it.
+
+8
+00:00:36,720 --> 00:00:37,650
+That is does.
+
+9
+00:00:37,870 --> 00:00:39,820
+It could make things much more simpler.
+
+10
+00:00:40,290 --> 00:00:45,120
+It started in C++ for living and enhance it in C++ for team.
+
+11
+00:00:48,050 --> 00:00:54,380
+Looking here to a function, if for some the function, if someone is taking into your X, Y, just
+
+12
+00:00:54,380 --> 00:00:59,930
+serving them and turning them back and defining a function, it's an anonymous function, but it has
+
+13
+00:00:59,930 --> 00:01:00,850
+a name at the moment.
+
+14
+00:01:01,370 --> 00:01:07,670
+So look to this index and try to familiarize yourself with of the video for a minute and compare the
+
+15
+00:01:07,680 --> 00:01:09,050
+Syntex with this index.
+
+16
+00:01:10,130 --> 00:01:10,840
+Look into it.
+
+17
+00:01:11,080 --> 00:01:20,810
+You notice the following starting from this Brontë's, that this tell this place it's very, very exact.
+
+18
+00:01:21,470 --> 00:01:24,830
+Now we have a year or two if for some two.
+
+19
+00:01:24,840 --> 00:01:31,790
+So if some two here is the same function name as if someone and also here is the time of this if for
+
+20
+00:01:31,790 --> 00:01:40,310
+some to so think of it like integer e so the the variable name here, it looks like this is acting like
+
+21
+00:01:40,310 --> 00:01:41,090
+a variable name.
+
+22
+00:01:41,480 --> 00:01:45,770
+And also here is more like the specific function definition.
+
+23
+00:01:45,770 --> 00:01:50,570
+Here they are saving our time from defining explicitly how to represent a function.
+
+24
+00:01:52,050 --> 00:01:57,510
+And then we are seeing this function is equal, this separation, and now this.
+
+25
+00:01:57,830 --> 00:01:59,890
+This line is now like an exhibition.
+
+26
+00:01:59,910 --> 00:02:01,800
+It needs a semicolon in its end.
+
+27
+00:02:02,160 --> 00:02:04,590
+This is a very common mistake for a for beginners.
+
+28
+00:02:04,730 --> 00:02:06,590
+They they just forget this semicolon.
+
+29
+00:02:07,320 --> 00:02:13,950
+Now, once you define the function this way, you can use it exactly like if someone here so we can
+
+30
+00:02:13,950 --> 00:02:20,590
+say if someone three and six to get nine, we can also call if if some two, three and six and get nine.
+
+31
+00:02:21,060 --> 00:02:24,120
+So this is how we define an anonymous function.
+
+32
+00:02:24,120 --> 00:02:25,080
+But give it name for now.
+
+33
+00:02:25,090 --> 00:02:29,640
+Remember, anonymous function is like all the exhibition is something that doesn't have a name, but
+
+34
+00:02:29,640 --> 00:02:29,990
+we can.
+
+35
+00:02:30,120 --> 00:02:32,540
+I started with an invitation to make it simpler for you.
+
+36
+00:02:33,060 --> 00:02:36,980
+So please make sure you can you can match the connection between these two cases.
+
+37
+00:02:37,860 --> 00:02:43,460
+Now, sometimes you would like to develop a function, but it has different return types.
+
+38
+00:02:43,920 --> 00:02:47,000
+So overall, the compiler will get confused.
+
+39
+00:02:47,010 --> 00:02:53,190
+For example, let's say your function have somewhere aligned that return to point five and another point
+
+40
+00:02:53,210 --> 00:02:55,300
+that then explains why you chose to integrate.
+
+41
+00:02:55,710 --> 00:03:00,810
+So now the compiler would like to generate the function for you, but he is confused about what is the
+
+42
+00:03:00,810 --> 00:03:01,760
+return for it.
+
+43
+00:03:01,800 --> 00:03:08,390
+It cannot like here when we say the dysfunction, the compiler can do this into an integer.
+
+44
+00:03:08,400 --> 00:03:09,540
+So this is an integer.
+
+45
+00:03:09,540 --> 00:03:12,440
+So we it can we call this operation deducing?
+
+46
+00:03:12,660 --> 00:03:15,260
+Well, the compiler did use the data type.
+
+47
+00:03:15,930 --> 00:03:19,260
+So here in our case, this is confusing for the compiler.
+
+48
+00:03:19,260 --> 00:03:20,730
+It will not be able to figure it out.
+
+49
+00:03:21,120 --> 00:03:28,350
+So the way to do that is to use this syntax to both here all int to say, hey, you know what, this
+
+50
+00:03:28,350 --> 00:03:29,520
+function will be integer.
+
+51
+00:03:29,520 --> 00:03:32,150
+You need to to try to guess the output by.
+
+52
+00:03:33,630 --> 00:03:40,730
+So if if the if the overall of the function is confusing for the compiler, it will generate an error
+
+53
+00:03:41,190 --> 00:03:46,770
+and in this case you have to go and modify the function and add something that force the return type
+
+54
+00:03:46,770 --> 00:03:47,550
+of dysfunction.
+
+55
+00:03:48,450 --> 00:03:51,710
+However, there are some things that are invalid as a return.
+
+56
+00:03:52,080 --> 00:04:00,270
+For example, you cannot return an initialization list with this way, the compiler will fail to create
+
+57
+00:04:00,270 --> 00:04:01,140
+a function for that.
+
+58
+00:04:01,200 --> 00:04:01,770
+This way.
+
+59
+00:04:04,190 --> 00:04:05,120
+Let's go more.
+
+60
+00:04:05,990 --> 00:04:11,420
+This is a function is odd one, just verifying if a number is good.
+
+61
+00:04:11,480 --> 00:04:12,450
+Not now.
+
+62
+00:04:12,500 --> 00:04:19,250
+We have a vector here of five numbers and now the finding a very similar function to this function.
+
+63
+00:04:19,430 --> 00:04:22,030
+But this one now is more of an anonymous function.
+
+64
+00:04:22,400 --> 00:04:27,440
+So I'm seeing here, as you see, starting from this parenthesis to this place, it's exactly the same
+
+65
+00:04:27,440 --> 00:04:33,830
+function I'm giving here, or to giving the function name and equal assigning it to this expression.
+
+66
+00:04:34,070 --> 00:04:37,370
+So think of starting from this bracket to this.
+
+67
+00:04:37,790 --> 00:04:44,090
+But this is what we call lambda expression in the algorithms headers.
+
+68
+00:04:44,090 --> 00:04:47,030
+There is a function named count.
+
+69
+00:04:47,030 --> 00:04:54,650
+If the count in the algorithms, the function, the take a start and take an end and take a function,
+
+70
+00:04:56,580 --> 00:05:00,650
+function or take along like you can give it is one which is the pointer function.
+
+71
+00:05:00,650 --> 00:05:04,310
+We can give it anonymous function here and so on.
+
+72
+00:05:05,330 --> 00:05:12,050
+Now it's going to iterate over every element in the vector or whatever in the container here and evaluate
+
+73
+00:05:12,050 --> 00:05:14,780
+is odd and evaluate this function.
+
+74
+00:05:15,050 --> 00:05:18,500
+So this function is just as checking if the number is not so is one.
+
+75
+00:05:18,500 --> 00:05:21,920
+Odiase two know three four five.
+
+76
+00:05:21,920 --> 00:05:22,230
+Yes.
+
+77
+00:05:22,460 --> 00:05:23,840
+So we have the answer is three.
+
+78
+00:05:24,260 --> 00:05:32,000
+So counting is an algorithm that starts from start to end and apply the function and count.
+
+79
+00:05:32,000 --> 00:05:38,310
+How many times of this function is going to return to this function is tied to that have boolean study.
+
+80
+00:05:38,360 --> 00:05:39,470
+We call it predicate.
+
+81
+00:05:39,470 --> 00:05:41,360
+It's going to indicate true or false.
+
+82
+00:05:43,690 --> 00:05:50,590
+Now, so far, so good, we are defining the Alamdar function, we are running the exhibition and we
+
+83
+00:05:50,590 --> 00:05:52,270
+are using it now.
+
+84
+00:05:52,300 --> 00:05:57,940
+Let's go one more step briefly to anonymous function, really are going to write the same line as line
+
+85
+00:05:57,940 --> 00:05:58,540
+13.
+
+86
+00:05:58,840 --> 00:06:04,330
+But this time we are going to remove the what is two and directly write what it equals.
+
+87
+00:06:04,510 --> 00:06:06,760
+So it equals here, starting from this bracket.
+
+88
+00:06:06,830 --> 00:06:10,780
+This is what it did to this great race.
+
+89
+00:06:11,380 --> 00:06:14,700
+We are going to just copy paste it here and put it here.
+
+90
+00:06:15,160 --> 00:06:20,170
+So I would like you to always deal with this part of the exhibition as just like any expression, like
+
+91
+00:06:20,170 --> 00:06:21,480
+two times a three plus one.
+
+92
+00:06:21,490 --> 00:06:22,320
+It's an expression.
+
+93
+00:06:22,780 --> 00:06:27,970
+So instead of passing the function, we are passing the exhibition.
+
+94
+00:06:28,180 --> 00:06:30,530
+We are passing the exhibition directly here.
+
+95
+00:06:30,880 --> 00:06:33,930
+Now, this is really what we call the exhibition.
+
+96
+00:06:33,940 --> 00:06:34,870
+It is anonymous.
+
+97
+00:06:34,870 --> 00:06:35,810
+There's no name here.
+
+98
+00:06:36,250 --> 00:06:38,320
+This is your first time to see such a syntax.
+
+99
+00:06:38,530 --> 00:06:43,780
+You are seeing that we are passing a function in this way or a passing exhibition this way.
+
+100
+00:06:46,900 --> 00:06:48,610
+We can also use it in different ways.
+
+101
+00:06:48,610 --> 00:06:54,960
+Like, for example, I can I can call is old one with eleven, which is a chicken is eleven is although
+
+102
+00:06:54,970 --> 00:06:57,100
+not now in a very similar way.
+
+103
+00:06:57,380 --> 00:07:03,130
+Remove the word is good one and take the expression from starting from the breakfast table here.
+
+104
+00:07:03,670 --> 00:07:05,420
+Take it as it is then.
+
+105
+00:07:05,440 --> 00:07:06,690
+Now call the function.
+
+106
+00:07:07,120 --> 00:07:13,610
+So remember once you put this expression it just means a function.
+
+107
+00:07:13,670 --> 00:07:15,640
+OK, so you have to evaluate it.
+
+108
+00:07:15,640 --> 00:07:21,760
+So every time you see a lambda function starting from here to here, just imagine that this is some
+
+109
+00:07:21,760 --> 00:07:24,210
+function name like let's call it EF1.
+
+110
+00:07:24,400 --> 00:07:27,820
+So we are calling if one of value 11.
+
+111
+00:07:28,450 --> 00:07:31,450
+So looking here to this index, what does the syntax mean?
+
+112
+00:07:31,450 --> 00:07:32,110
+It looks weird.
+
+113
+00:07:32,110 --> 00:07:32,620
+I know that.
+
+114
+00:07:32,980 --> 00:07:40,180
+So we have here from this bracket still here, imagine that it's just some function that the word anonymise
+
+115
+00:07:40,480 --> 00:07:45,080
+and then when you put these two branches, you are actually evaluating it.
+
+116
+00:07:45,190 --> 00:07:49,300
+So this line of code here is going to write the word anonymous.
+
+117
+00:07:49,570 --> 00:07:55,870
+One of the very common mistakes with no is to forget to to forget the function call operator here.
+
+118
+00:07:56,200 --> 00:07:58,090
+So you are defining the roundabout.
+
+119
+00:07:58,090 --> 00:07:59,110
+You are not using it.
+
+120
+00:08:01,190 --> 00:08:09,020
+So here is another function, the function that we give it, the sort of function I would like to call
+
+121
+00:08:09,020 --> 00:08:14,900
+a sort, I would like to give it begin and end, and I would like to give it some comparator to sort
+
+122
+00:08:14,900 --> 00:08:17,540
+of the numbers for me from small to large.
+
+123
+00:08:17,870 --> 00:08:24,590
+So I'm calling the function sort and they're asking for eight anonymous expression or lambda expression
+
+124
+00:08:24,890 --> 00:08:30,830
+that is going to take two numbers and compare them from greater to smaller.
+
+125
+00:08:31,100 --> 00:08:35,780
+So once we get that, the vector is going to be sorted from large to small.
+
+126
+00:08:36,290 --> 00:08:44,420
+So remember, in the best we either you sort of begin to end or we used to assembly function or a function.
+
+127
+00:08:44,840 --> 00:08:47,420
+Now we are passing along the expression also.
+
+128
+00:08:48,920 --> 00:08:54,890
+Also, in the modern C++, we have this two function begin and end, which can help you to correspond
+
+129
+00:08:54,890 --> 00:08:59,890
+to the vector, end and vector to begin, but it also works on arrays.
+
+130
+00:08:59,900 --> 00:09:04,610
+So this is like it helps you to be more generic function in a way.
+
+131
+00:09:06,590 --> 00:09:12,170
+So this is now the the core of the exhibition, we're going to work more on this idea, but I need you
+
+132
+00:09:12,170 --> 00:09:16,650
+to be very familiar with the new syntax of creating a function this way.
+
+133
+00:09:17,210 --> 00:09:18,770
+So make sure you are familiar with that.
+
+134
+00:09:21,360 --> 00:09:29,070
+Let's proceed more, you see here we are defining a normal function take to a number and some of them
+
+135
+00:09:29,640 --> 00:09:33,750
+you can also go morganatic you can say here also X and Ottavi.
+
+136
+00:09:34,020 --> 00:09:43,500
+So in the generalized lameduck solutions, we can also define this kind of very general, complex simulation.
+
+137
+00:09:43,650 --> 00:09:50,460
+So you can now call it once with the integers, for example, and you can also call it with the like
+
+138
+00:09:50,460 --> 00:09:53,820
+say here a double value, an integer value.
+
+139
+00:09:54,060 --> 00:09:56,950
+So this is going to be they have some conversion here.
+
+140
+00:09:58,320 --> 00:10:06,510
+Now, the compiler can make automatic calls for this one and decide everything that's going to happen
+
+141
+00:10:06,510 --> 00:10:07,920
+for you if it's possible for it.
+
+142
+00:10:08,700 --> 00:10:13,410
+Again, if it happens that there is some confusion, then you force a return, a specific return.
+
+143
+00:10:13,420 --> 00:10:21,660
+So if you have two, you can also provide a note except here keyword to indicate that this function
+
+144
+00:10:21,660 --> 00:10:23,790
+isn't going to throw an exception.
+
+145
+00:10:27,860 --> 00:10:35,080
+Let's see one more complicated case to to try to get more sense of what London can do for you.
+
+146
+00:10:35,600 --> 00:10:38,060
+So let's say that we have a function here.
+
+147
+00:10:38,070 --> 00:10:39,290
+We named it for each.
+
+148
+00:10:39,680 --> 00:10:43,920
+And this function is taking a picture of each year and taking a template.
+
+149
+00:10:43,940 --> 00:10:48,400
+We named your function and we name we give it the name operation.
+
+150
+00:10:48,650 --> 00:10:54,210
+So I'm not iterating on every item and applying this operation on the item.
+
+151
+00:10:54,350 --> 00:10:56,630
+This also looks like a new syntax for you.
+
+152
+00:10:56,930 --> 00:11:04,760
+But remember a few minutes ago we showed the for each function, the a function which is iterating from
+
+153
+00:11:04,760 --> 00:11:05,550
+the beginning to end.
+
+154
+00:11:05,810 --> 00:11:11,440
+So and we were basing in the function that we are doing something very similar to its internal implementation.
+
+155
+00:11:11,690 --> 00:11:18,730
+We are basing a function or it could be a functional equivalent, the and it could be a function.
+
+156
+00:11:19,010 --> 00:11:23,340
+We are basing it here and we are using here in the function.
+
+157
+00:11:23,600 --> 00:11:29,890
+So if this is for example, here are to here, I'm actually showing you the three cases that could have
+
+158
+00:11:29,900 --> 00:11:36,380
+in for example, I'm sorry, I'm saying here, a square function that Bio-Reference X and just to square
+
+159
+00:11:36,380 --> 00:11:36,570
+it.
+
+160
+00:11:37,450 --> 00:11:41,080
+So now if we based here the square function.
+
+161
+00:11:41,480 --> 00:11:45,290
+So imagine now this is like square x square item.
+
+162
+00:11:45,290 --> 00:11:51,290
+So the item is going to be square and also creating a function with the operator function called giving
+
+163
+00:11:51,290 --> 00:11:58,520
+it to X and incrementing it with one rootsier we cannot here just to use, we can use it, but here
+
+164
+00:11:58,520 --> 00:11:59,720
+we can normally use it.
+
+165
+00:12:00,270 --> 00:12:02,360
+I'm also having a third case.
+
+166
+00:12:02,360 --> 00:12:10,490
+I'm using a lambda expression, the squid print and it's going to take some X with also and is going
+
+167
+00:12:10,490 --> 00:12:11,420
+to just print it.
+
+168
+00:12:11,900 --> 00:12:14,050
+So it seems that we have three cases here.
+
+169
+00:12:14,060 --> 00:12:18,590
+The pointer to function or just what you used to say, a function.
+
+170
+00:12:18,770 --> 00:12:22,040
+And we have the add one struct and we have the brain to function.
+
+171
+00:12:22,340 --> 00:12:25,090
+Now let's make a use of them here.
+
+172
+00:12:25,100 --> 00:12:27,440
+I have a vector of five numbers.
+
+173
+00:12:27,830 --> 00:12:34,130
+I'm now calling the for each function and they're saying the function of add one but with the function
+
+174
+00:12:34,130 --> 00:12:35,600
+call here function collaborator.
+
+175
+00:12:35,990 --> 00:12:40,580
+So this is more like we are passing something that can be applied on the function here and then I'm
+
+176
+00:12:40,580 --> 00:12:43,940
+calling it again bombastically function in here.
+
+177
+00:12:44,450 --> 00:12:52,760
+And I'm also calling it here with a function that is going subtraction to the number here where the
+
+178
+00:12:52,760 --> 00:12:55,760
+expression just does take a number and subtract it.
+
+179
+00:12:56,210 --> 00:12:58,950
+And I'm also now quoting the function of it with a print.
+
+180
+00:12:58,970 --> 00:13:00,710
+So every element is going to be printed.
+
+181
+00:13:01,040 --> 00:13:02,470
+When you apply this function.
+
+182
+00:13:02,720 --> 00:13:07,730
+We are adding one and then squaring and then subtracting, for example, for three.
+
+183
+00:13:07,910 --> 00:13:13,650
+We adding one right now for we are squaring it now 16 who are subtracting it's now 50.
+
+184
+00:13:14,030 --> 00:13:19,660
+So as you see here with the expression a similar to thing, the function function better.
+
+185
+00:13:19,820 --> 00:13:24,260
+We can now base the lump acceleration in different ways.
+
+186
+00:13:26,400 --> 00:13:26,980
+That's it.
+
+187
+00:13:27,000 --> 00:13:30,590
+Please make sure you are familiar with the Land Exhibition Center's.

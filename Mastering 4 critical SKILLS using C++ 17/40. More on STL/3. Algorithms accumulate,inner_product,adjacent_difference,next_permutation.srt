@@ -1,0 +1,551 @@
+1
+00:00:01,500 --> 00:00:06,590
+Let's introduce more algorithm's the let's say that you have some two vectors here.
+
+2
+00:00:06,750 --> 00:00:07,500
+One and two.
+
+3
+00:00:08,130 --> 00:00:13,950
+And you would like to say to them, but from the large to the small, there are several ways that one
+
+4
+00:00:13,950 --> 00:00:14,590
+can do that.
+
+5
+00:00:14,610 --> 00:00:20,280
+For example, you can give the beginning and then some function that just come off a greater than a
+
+6
+00:00:20,280 --> 00:00:26,730
+abuela, actually, is that he has some function that's named the greater, which you can do this comparison
+
+7
+00:00:26,730 --> 00:00:27,200
+for you.
+
+8
+00:00:27,630 --> 00:00:29,960
+So the greater function is just returning it through.
+
+9
+00:00:29,970 --> 00:00:36,930
+If it is greater than than B before the modern C++, we used to say greater it and that's it.
+
+10
+00:00:38,460 --> 00:00:40,440
+There is a nice advantage here.
+
+11
+00:00:41,200 --> 00:00:45,860
+When you see greater, you know that the purpose is to sort them from small to large.
+
+12
+00:00:46,170 --> 00:00:49,820
+There is a good intention communicated, but there is a common bug.
+
+13
+00:00:50,160 --> 00:00:52,440
+What if someone changed at any point of time?
+
+14
+00:00:52,440 --> 00:00:54,360
+The enter to longlong, but forget to change.
+
+15
+00:00:54,390 --> 00:00:58,040
+This one is going to compare or sought in a wrong way.
+
+16
+00:00:58,530 --> 00:01:03,090
+So in the modern C++ you can amet this year and it would be used automatically.
+
+17
+00:01:04,110 --> 00:01:07,080
+Now let's move to the next function in the activity.
+
+18
+00:01:07,590 --> 00:01:14,480
+This is more of some math operation if you would like to accumulate this array here.
+
+19
+00:01:14,970 --> 00:01:17,130
+So let's say you have one, two, three, four, five.
+
+20
+00:01:17,340 --> 00:01:23,940
+If you call and accommodate with this initial value, it's just going to sum all of the elements together,
+
+21
+00:01:23,970 --> 00:01:29,440
+which is if you tried to sum, it would be one, two, three, six, 10, five, 15.
+
+22
+00:01:30,300 --> 00:01:31,200
+Forget about this.
+
+23
+00:01:31,200 --> 00:01:32,700
+One hundred is wrong.
+
+24
+00:01:35,580 --> 00:01:42,120
+So far, this is intuitive, the C++ provides on full functionality that doesn't make sense for the
+
+25
+00:01:42,120 --> 00:01:44,340
+name, but it can provide different functionality.
+
+26
+00:01:44,590 --> 00:01:48,530
+We know when we are accumulating are typically adding it together.
+
+27
+00:01:48,940 --> 00:01:51,130
+So when we add one, two, three, four, five.
+
+28
+00:01:51,180 --> 00:01:53,580
+They are eventually 15.
+
+29
+00:01:53,970 --> 00:01:59,750
+But you can also, instead of the plus operation, you can override and provide the multiply operation.
+
+30
+00:02:00,000 --> 00:02:06,990
+When you say multiplies, it's going to apply a multiplication operation over every one of these guys.
+
+31
+00:02:07,290 --> 00:02:09,660
+You can think of it like the for each method.
+
+32
+00:02:09,690 --> 00:02:15,630
+Remember, the for each the four each is going to iterate over every element and take some maybe functor
+
+33
+00:02:15,630 --> 00:02:16,290
+and apply it.
+
+34
+00:02:16,440 --> 00:02:18,320
+So what we're building here is a multiplication.
+
+35
+00:02:18,720 --> 00:02:22,620
+If you multiply one, two, three, four, five, it will be twenty four.
+
+36
+00:02:24,130 --> 00:02:29,410
+You can also use something good in your product if you if it happens that you study it, then you can
+
+37
+00:02:29,410 --> 00:02:30,320
+understand this easily.
+
+38
+00:02:30,670 --> 00:02:36,700
+But if you have here a vector one and let's use it the same vector here, then our product is going
+
+39
+00:02:36,700 --> 00:02:40,620
+by default to some the product of them like it.
+
+40
+00:02:40,620 --> 00:02:45,940
+We're going to multiply the first element from that guy with the first element of the guy, plus the
+
+41
+00:02:45,940 --> 00:02:48,580
+first second element from the guy with the second element.
+
+42
+00:02:49,300 --> 00:02:54,000
+So we're here by saying we want and we want to add actually multiplying the vector in itself so we can
+
+43
+00:02:54,100 --> 00:02:58,700
+have zero times of on year plus two of zero times a bit of zero.
+
+44
+00:02:59,380 --> 00:03:00,210
+I mix it here.
+
+45
+00:03:00,520 --> 00:03:02,730
+It should be like one times if you want.
+
+46
+00:03:02,950 --> 00:03:14,140
+Plus it depends like a V to the V one, OK, to be one of zero times a two of zero plus the one of one
+
+47
+00:03:14,140 --> 00:03:17,180
+time the v two of one of them stick.
+
+48
+00:03:18,640 --> 00:03:21,730
+This is just the product if you know it from some math.
+
+49
+00:03:22,760 --> 00:03:28,560
+Again, C++ provide you that you can change the actual meaning of it.
+
+50
+00:03:28,900 --> 00:03:33,820
+For example, if we use the here the plus by default.
+
+51
+00:03:33,850 --> 00:03:36,700
+This is Blosser multiplies with some initial value of zero.
+
+52
+00:03:37,000 --> 00:03:43,960
+So if you if you see here we are actually computing some of products, if you switch on it and you provided
+
+53
+00:03:43,960 --> 00:03:48,550
+multiply Ramblas and use the initial value of one, this is what is computed.
+
+54
+00:03:49,030 --> 00:03:50,700
+It's compute one times.
+
+55
+00:03:51,010 --> 00:03:56,030
+So you see again at times plus times a plus this why we call it product of some.
+
+56
+00:03:56,440 --> 00:04:04,450
+So this is applied first and then this guy and then is going to sum the first two elements and multiply
+
+57
+00:04:04,450 --> 00:04:09,950
+them in the sum of the second two elements and multiply them in the sum of the 32 elements and so on.
+
+58
+00:04:10,180 --> 00:04:13,540
+I'm going to fix to the slide with changing these two equations.
+
+59
+00:04:14,970 --> 00:04:20,400
+So the values of zeros and ones are the initial values, if you felt confused about the product, then
+
+60
+00:04:20,400 --> 00:04:22,270
+you just don't know what is in a product.
+
+61
+00:04:22,290 --> 00:04:24,030
+So just forget about it.
+
+62
+00:04:25,230 --> 00:04:30,950
+The virtual sum is just doing accumulation, that element by element.
+
+63
+00:04:30,960 --> 00:04:34,350
+For example, if you have here one, two, three, four, five.
+
+64
+00:04:34,650 --> 00:04:40,730
+And this accumulated accumulation here means you add the current value to the previous sum so far.
+
+65
+00:04:40,980 --> 00:04:42,150
+So let's start with one.
+
+66
+00:04:42,150 --> 00:04:42,990
+One is zero one.
+
+67
+00:04:43,560 --> 00:04:45,760
+Then the two would be added to the previous element.
+
+68
+00:04:45,760 --> 00:04:47,340
+Two plus one is three.
+
+69
+00:04:48,030 --> 00:04:49,830
+The three would be added to the previous element.
+
+70
+00:04:49,840 --> 00:04:52,830
+But from here three and the three will be six.
+
+71
+00:04:53,520 --> 00:04:55,340
+Four would be added to previous element.
+
+72
+00:04:55,350 --> 00:04:57,930
+So it was going to be four and six is ten.
+
+73
+00:04:58,380 --> 00:04:59,070
+And that's it.
+
+74
+00:04:59,070 --> 00:05:00,350
+We say here minus one.
+
+75
+00:05:00,540 --> 00:05:04,620
+And again, we're giving back and sort of resolve to keep pushing back in this vector.
+
+76
+00:05:04,950 --> 00:05:09,150
+This is called the eventually, but also in a very similar way.
+
+77
+00:05:09,150 --> 00:05:13,620
+You can change the meaning and instead of just the accumulating with plus you can override with the
+
+78
+00:05:13,620 --> 00:05:14,080
+minus.
+
+79
+00:05:14,100 --> 00:05:15,600
+So it will start to subtract.
+
+80
+00:05:16,050 --> 00:05:22,560
+For example, one is here is initially then two, minus one is minus one, three minus one is minus
+
+81
+00:05:22,560 --> 00:05:28,740
+four for minus four is minus eight, five minus eight, minus 30 and so on.
+
+82
+00:05:30,510 --> 00:05:36,960
+There is also what we call a just indifference, and I just find you just give it the vector, begin
+
+83
+00:05:36,960 --> 00:05:46,160
+and end and another vector, and it's going to do a decent step by step subtraction to the vector itself.
+
+84
+00:05:50,010 --> 00:05:52,650
+If you want to begin, here is your elbow.
+
+85
+00:05:52,690 --> 00:05:55,800
+So it's going to go right in your eye with victory itself.
+
+86
+00:05:55,980 --> 00:05:58,080
+Probably it depends on your need.
+
+87
+00:05:58,090 --> 00:06:03,160
+Sometimes you would like to change in the actual vector and sometimes you would like to just give it
+
+88
+00:06:03,160 --> 00:06:06,200
+another vector back and certain another victim so different.
+
+89
+00:06:06,520 --> 00:06:12,490
+So here, if we have a vector of one, three, two, six, three, that Gissen difference now will will
+
+90
+00:06:12,490 --> 00:06:12,640
+do.
+
+91
+00:06:12,650 --> 00:06:16,550
+They will do exactly like the partial sum here with the minus.
+
+92
+00:06:16,870 --> 00:06:21,910
+So one will be here, three minus one is two to minus three is minus one.
+
+93
+00:06:22,090 --> 00:06:26,350
+Six minus two is four three minus six is a minus three.
+
+94
+00:06:26,530 --> 00:06:27,600
+So there is a difference.
+
+95
+00:06:27,610 --> 00:06:34,270
+The adjacent accumulation is the bending with the accumulated output, not the original, but the function
+
+96
+00:06:34,270 --> 00:06:37,450
+here as you see is subtracting when the actual vector itself.
+
+97
+00:06:37,780 --> 00:06:40,720
+So here three minus six will be minus three.
+
+98
+00:06:40,900 --> 00:06:44,380
+That's why we call it a decent difference supplied on the current vector.
+
+99
+00:06:44,680 --> 00:06:47,200
+But as I give it here, we want to begin here.
+
+100
+00:06:47,470 --> 00:06:52,410
+That is going to override in the actual actual vector itself.
+
+101
+00:06:54,850 --> 00:07:01,480
+Notice that it's not going to push back after the arrest, if the element exists, it will just use
+
+102
+00:07:01,480 --> 00:07:01,750
+them.
+
+103
+00:07:01,750 --> 00:07:04,270
+If they don't exist, it adds new elements.
+
+104
+00:07:06,630 --> 00:07:11,400
+Now, here it is, I'm showing you the two things different.
+
+105
+00:07:11,460 --> 00:07:17,070
+The first is I'm not providing the film to begin.
+
+106
+00:07:17,090 --> 00:07:22,380
+I'm actually providing a new iterator here and providing the iterator.
+
+107
+00:07:25,260 --> 00:07:26,760
+I consulted on a new vector's.
+
+108
+00:07:26,930 --> 00:07:33,860
+Pushing back and this guy using back inserted, the second thing is switching the default of the difference
+
+109
+00:07:33,860 --> 00:07:34,400
+to be plus.
+
+110
+00:07:34,760 --> 00:07:41,100
+So I was going to be like you, but your one three plus one is for two, but three is five three one
+
+111
+00:07:41,150 --> 00:07:49,010
+two eight six two plus two is eight, three plus six is nine, which is also what we call adjacent to
+
+112
+00:07:49,010 --> 00:07:55,700
+find, which is searching in the array for two adjacent according to some predicate function.
+
+113
+00:07:55,710 --> 00:07:55,930
+You.
+
+114
+00:07:58,630 --> 00:08:05,470
+The function, take your array or your vector and push it one step to the left, for example, if you
+
+115
+00:08:05,470 --> 00:08:11,150
+have one three to six three three, it will take every element and push it on the left side.
+
+116
+00:08:11,290 --> 00:08:17,530
+So the three will go here to be three and two will go here, six to go here, three go here.
+
+117
+00:08:17,710 --> 00:08:21,910
+And this one is going to rotate to the back of the vector.
+
+118
+00:08:22,840 --> 00:08:28,630
+If, you know, if you studied probabilities and you knew about what a random numbers and what is shuffling,
+
+119
+00:08:28,630 --> 00:08:34,020
+then you can also understand that one, if you have a vector of numbers, you can shuffle, shuffle.
+
+120
+00:08:34,030 --> 00:08:37,450
+It would make it like a random random order of the items.
+
+121
+00:08:37,600 --> 00:08:40,960
+For example, you take it from here and just shuffle it this way.
+
+122
+00:08:41,830 --> 00:08:44,500
+This is just important in some real life applications.
+
+123
+00:08:45,520 --> 00:08:50,260
+Before C++ 14, would you use usually using something called random underscore shuffle.
+
+124
+00:08:50,410 --> 00:08:51,850
+But now this is deprecated.
+
+125
+00:08:51,970 --> 00:08:56,320
+So please use the new shuffle method, which you Internet use more modern C++.
+
+126
+00:08:59,140 --> 00:09:01,330
+The lost function is the next permutation.
+
+127
+00:09:01,540 --> 00:09:05,980
+If you studied the discrete mathematics, then you can understand what is next permutation.
+
+128
+00:09:06,310 --> 00:09:14,020
+If you started with a sorted vector of items and you listed the next permutation, which is do while
+
+129
+00:09:14,470 --> 00:09:21,190
+and then you say next permutation will be the one and will end beginning, end the next permutation
+
+130
+00:09:21,190 --> 00:09:22,150
+is going to return.
+
+131
+00:09:22,180 --> 00:09:26,250
+True, if there are more permutations of this vector.
+
+132
+00:09:26,620 --> 00:09:31,930
+So for example here, if we started with one, two, three, it's going to list the six items here of
+
+133
+00:09:31,930 --> 00:09:32,910
+the different permutation.
+
+134
+00:09:32,920 --> 00:09:38,170
+If they were four elements of distinct values to return six and so on.
+
+135
+00:09:40,660 --> 00:09:46,120
+That's all I know that today topic might be a bit weird to some of the people.
+
+136
+00:09:46,120 --> 00:09:47,620
+It will depend on your background.
+
+137
+00:09:47,620 --> 00:09:53,290
+Like if you don't know what is inappropriate or what is an permutation or suffering, you probably will
+
+138
+00:09:53,290 --> 00:09:56,510
+not be able to make use of that, that's all.

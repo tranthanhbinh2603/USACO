@@ -1,0 +1,89 @@
+0
+1
+00:00:01,470 --> 00:00:08,220
+In this video, we will discuss the operators' homework, there will be several homeworks in this lecture.
+1
+
+2
+00:00:08,220 --> 00:00:09,040
+to divide it,
+2
+
+3
+00:00:09,930 --> 00:00:12,870
+The first one is a guessing program output.
+3
+
+4
+00:00:13,200 --> 00:00:17,550
+So you proceed with the program step by step and act like a compiler.
+4
+
+5
+00:00:19,320 --> 00:00:22,740
+Most of the tracing here is what we said,
+5
+
+6
+00:00:23,400 --> 00:00:24,150
+Good
+6
+
+7
+00:00:24,150 --> 00:00:31,500
+expressions like they either have no side effects, like the A B, nothing weird, or just one operator
+7
+
+8
+00:00:31,500 --> 00:00:32,520
+that we are increasing.
+8
+
+9
+00:00:32,550 --> 00:00:36,810
+So it is fair enough tracing without weird things.
+9
+
+10
+00:00:38,670 --> 00:00:46,260
+The second program is another tracing that mainly tests your understanding to the comma operator
+10
+
+11
+00:00:46,770 --> 00:00:48,240
+in a "cout" statement.
+11
+
+12
+00:00:50,540 --> 00:00:58,400
+In the third program, you have again, good tracing here for the code, but there
+12
+
+13
+00:00:58,400 --> 00:01:01,580
+are like two codes that I would like to test your understanding.
+13
+
+14
+00:01:02,090 --> 00:01:09,470
+But in practice, like, we still avoid coding this way, although it's correct, but it needs more
+14
+
+15
+00:01:09,470 --> 00:01:11,420
+understanding of what's happening.
+15
+
+16
+00:01:11,690 --> 00:01:13,040
+But still don't go this way.
+16
+
+17
+00:01:13,040 --> 00:01:14,710
+I'm just testing your understanding.
+17
+
+18
+00:01:15,890 --> 00:01:16,490
+That's it.

@@ -1,0 +1,369 @@
+0
+1
+00:00:01,260 --> 00:00:05,650
+Sometimes you would like to throw some types of exceptions and also to try to catch them.
+1
+
+2
+00:00:06,210 --> 00:00:07,820
+Let's see this function.
+2
+
+3
+00:00:07,830 --> 00:00:13,470
+Let's say we are trying to create an array, a function that returns an integer pointer for create an array,
+3
+
+4
+00:00:13,620 --> 00:00:17,090
+but we are in memory, so we have limited memory here.
+4
+
+5
+00:00:17,340 --> 00:00:22,380
+So the first thing is, what if someone sent for us an array length that is negative, for example, this should
+5
+
+6
+00:00:22,380 --> 00:00:23,420
+be an invalid argument.
+6
+
+7
+00:00:23,420 --> 00:00:24,550
+No one should ask us for that.
+7
+
+8
+00:00:24,810 --> 00:00:31,020
+So if this happened, throw an invalid argument and say that the array's length is very big. On the other
+8
+
+9
+00:00:31,020 --> 00:00:36,750
+type, if the array is greater than 10000, let's say that this is a limitation in our application, and
+9
+
+10
+00:00:36,750 --> 00:00:39,620
+we don't like to reserve such a big memory.
+10
+
+11
+00:00:39,900 --> 00:00:45,510
+So now, we throw another type of exception called runtime error and say that this is too big, otherwise
+11
+
+12
+00:00:45,510 --> 00:00:47,400
+we will create a new int length.
+12
+
+13
+00:00:48,000 --> 00:00:50,930
+By the way, C++ can throw an exception from this call.
+13
+
+14
+00:00:51,090 --> 00:00:55,050
+That's called bad_aloc if even the system memory doesn't have such a memory.
+14
+
+15
+00:00:55,380 --> 00:00:59,730
+So this function can return three different types of exceptions.
+15
+
+16
+00:01:00,270 --> 00:01:04,430
+Now, let's see the function that is calling this function.
+16
+
+17
+00:01:04,650 --> 00:01:11,390
+So we have here a try-catch with integer pointer creating an array, and we sent -10,
+17
+
+18
+00:01:12,060 --> 00:01:18,360
+but when you run this program, you will notice that the system will actually crash and we want to
+18
+
+19
+00:01:18,480 --> 00:01:19,980
+try-catch to not crash it,
+19
+
+20
+00:01:20,400 --> 00:01:23,370
+but the problem is here, you are catching the wrong exception.
+20
+
+21
+00:01:23,610 --> 00:01:28,200
+So we now, here going back one step. We know it is a negative value, it will throw something called
+21
+
+22
+00:01:28,200 --> 00:01:29,180
+invalid argument.
+22
+
+23
+00:01:29,610 --> 00:01:36,210
+But here we are trying to catch the runtime error. So what happened in the catch statement is that the catch
+23
+
+24
+00:01:36,500 --> 00:01:39,420
+statement is going to match the type with the type.
+24
+
+25
+00:01:39,480 --> 00:01:43,130
+So does this an invalid argument type?
+25
+
+26
+00:01:43,140 --> 00:01:43,560
+No.
+26
+
+27
+00:01:43,620 --> 00:01:45,170
+So this will not be entered.
+27
+
+28
+00:01:45,420 --> 00:01:51,300
+So this catch statement will not be activated because it doesn't match the type of this error that
+28
+
+29
+00:01:51,300 --> 00:01:51,700
+we have.
+29
+
+30
+00:01:52,140 --> 00:01:53,640
+So how to solve this problem?
+30
+
+31
+00:01:54,720 --> 00:01:56,610
+We solve it with multiple catch statements.
+31
+
+32
+00:01:56,850 --> 00:01:57,900
+So here is what I'm doing.
+32
+
+33
+00:01:58,230 --> 00:02:03,330
+I'm saying if the called exception was of time invalid argument, do that.
+33
+
+34
+00:02:03,570 --> 00:02:04,980
+You think of it like an if-else.
+34
+
+35
+00:02:05,380 --> 00:02:10,290
+Otherwise, if the called exception of runtime error, do that, it's going to do it.
+35
+
+36
+00:02:10,890 --> 00:02:14,310
+Otherwise, three dots here means that
+36
+
+37
+00:02:14,310 --> 00:02:19,860
+you can catch anything that we couldn't call in the previous statements.
+37
+
+38
+00:02:20,250 --> 00:02:27,570
+So let's now try to trace. If you give -10, it is going to jump to an invalid argument, which is here
+38
+
+39
+00:02:27,570 --> 00:02:35,130
+I print it. Now, the program didn't crash with throw an exception, and we caught it also. The dot-dot here should be in
+39
+
+40
+00:02:35,130 --> 00:02:41,130
+the end of the processing and it isn't so welcomed unless in the very very high level of the application.
+40
+
+41
+00:02:41,130 --> 00:02:41,930
+You would not like it.
+41
+
+42
+00:02:41,940 --> 00:02:48,060
+You aren't sure of anything, code goes out of your control, then you put three dots just in case.
+42
+
+43
+00:02:48,510 --> 00:02:51,270
+But the default is you should handle the different types of errors.
+43
+
+44
+00:02:53,650 --> 00:02:59,050
+Let's see another type of throwing, you can also throw other data types, not just the class here.
+44
+
+45
+00:02:59,230 --> 00:03:04,450
+so I can throw something like 17, for example, and this for now, let's say an error code.
+45
+
+46
+00:03:05,470 --> 00:03:13,720
+Now, if we try again this code, this code is going to again fail because you are throwing an integer.
+46
+
+47
+00:03:13,900 --> 00:03:14,740
+Is this an integer?
+47
+
+48
+00:03:14,740 --> 00:03:20,040
+No. Sorry, it will not fail. The integer here will not match the runtime error.
+48
+
+49
+00:03:20,170 --> 00:03:21,950
+It is going to go to the dot-dot-dot
+49
+
+50
+00:03:21,950 --> 00:03:24,930
+so it will print caught unknown exception.
+50
+
+51
+00:03:26,140 --> 00:03:28,480
+Notice here printing the p here.
+51
+
+52
+00:03:28,480 --> 00:03:33,610
+I'm saying if it's not a null pointer, then it has been created, then just delete
+52
+
+53
+00:03:33,610 --> 00:03:33,970
+it here.
+53
+
+54
+00:03:35,140 --> 00:03:36,930
+Now let's catch the integer itself.
+54
+
+55
+00:03:37,090 --> 00:03:42,020
+I can come here and say if you caught an integer error code, then print
+55
+
+56
+00:03:42,020 --> 00:03:46,030
+the error code. if it isn't an error code, runtime error, print runtime error. Otherwise, dot-dot-dot.
+56
+
+57
+00:03:46,810 --> 00:03:50,170
+So you see now we caught here the error code.
+57
+
+58
+00:03:50,560 --> 00:03:55,060
+If we tried to return a double from here, then the double would not be casted to an integer.
+58
+
+59
+00:03:55,390 --> 00:03:56,560
+It would be caught.
+59
+
+60
+00:03:56,560 --> 00:04:02,260
+in the dot-dot-dot. So again, you have to catch a double variable. So you can throw different things, but you have
+60
+
+61
+00:04:02,260 --> 00:04:03,040
+to catch them.
+61
+
+62
+00:04:03,040 --> 00:04:04,900
+Otherwise, they will not be caught.
+62
+
+63
+00:04:07,240 --> 00:04:13,870
+We highlighted that there are different types of classes, they are actually something called inheritance,
+63
+
+64
+00:04:14,170 --> 00:04:19,630
+and when we come back to the inheritance topic, we will come back again to these different types so
+64
+
+65
+00:04:19,630 --> 00:04:22,690
+that we know exactly how to use them in a proper way.
+65
+
+66
+00:04:23,860 --> 00:04:25,590
+At the last thing, which is very intuitive.
+66
+
+67
+00:04:25,630 --> 00:04:30,490
+You can have like nested loops, nested if conditions, you can have normally nested
+67
+
+68
+00:04:30,490 --> 00:04:32,030
+try-catch, nothing wrong about that.
+68
+
+69
+00:04:32,320 --> 00:04:38,350
+So here I have a big try-catch of type int, and inside it, I have try-catch which throwing int and this
+69
+
+70
+00:04:38,350 --> 00:04:39,370
+guy prints something
+70
+
+71
+00:04:39,370 --> 00:04:40,240
+then throw it again.
+71
+
+72
+00:04:40,570 --> 00:04:46,570
+This throw jumps to this catch. Very normally, you can have like if you have a lot of function and every
+72
+
+73
+00:04:46,570 --> 00:04:52,420
+one of them is having some try-catch-throw then actually have a lot of nested try-catch functionalities.
+73
+
+74
+00:04:52,960 --> 00:04:53,470
+That's all.

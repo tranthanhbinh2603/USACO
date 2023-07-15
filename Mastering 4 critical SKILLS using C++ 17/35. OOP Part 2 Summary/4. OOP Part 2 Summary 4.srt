@@ -1,0 +1,391 @@
+1
+00:00:01,320 --> 00:00:08,910
+Let's continue this summary so visual functions cannot be global, cannot be static and a different
+
+2
+00:00:08,910 --> 00:00:09,370
+function.
+
+3
+00:00:09,390 --> 00:00:10,860
+Think about the logic behind that.
+
+4
+00:00:11,370 --> 00:00:17,580
+Remember, the visual tables are more or less just an extra pointer that is found in your base class,
+
+5
+00:00:17,580 --> 00:00:18,680
+inherited by others.
+
+6
+00:00:19,140 --> 00:00:24,380
+Then we have one table per class and the number of rows is in this table equal to the number of visual
+
+7
+00:00:24,390 --> 00:00:27,750
+functions that should be available to class.
+
+8
+00:00:28,080 --> 00:00:31,230
+And all of that is eventually computed in the individual time.
+
+9
+00:00:32,400 --> 00:00:37,830
+Remember, one week when we combine, we definitely know all the classes and the relationships.
+
+10
+00:00:38,220 --> 00:00:44,430
+So from one perspective, we might think it's about runtime then how in comparison time when all of
+
+11
+00:00:44,430 --> 00:00:44,690
+that.
+
+12
+00:00:45,060 --> 00:00:52,050
+Yes, because combinat eventually can can resolve which which visual function will be called based on
+
+13
+00:00:52,050 --> 00:00:53,210
+a specific object.
+
+14
+00:00:53,210 --> 00:00:59,730
+The inheritance hierarchy eventually is well known, but beyond that the, the function, the behavior
+
+15
+00:00:59,730 --> 00:01:02,460
+in runtime is going to be, it's going to be different
+
+16
+00:01:05,580 --> 00:01:12,770
+if we are conducting eyes like you are conducting save for money by means of contacting airlines eyes.
+
+17
+00:01:13,350 --> 00:01:15,240
+The eyes have their own structures.
+
+18
+00:01:15,240 --> 00:01:16,770
+Do not depend on them directly.
+
+19
+00:01:17,040 --> 00:01:24,900
+User interfaces and obstructer classes do maybe like, for example, Rahab these classes or design your
+
+20
+00:01:24,900 --> 00:01:27,860
+own classes to implement something that implemented them and so on.
+
+21
+00:01:28,110 --> 00:01:34,680
+So the point here do not depend on something external like that, otherwise would preclude a change.
+
+22
+00:01:34,680 --> 00:01:36,300
+You will take a lot of time to change in your.
+
+23
+00:01:38,010 --> 00:01:44,490
+Also, like many framework's you, the invasion of control, where your function or cross would be just
+
+24
+00:01:44,490 --> 00:01:47,180
+cold by itself in a very specific point of time.
+
+25
+00:01:47,640 --> 00:01:53,070
+So instead of you are calling a function like you do in the library, actually, if someone is trying
+
+26
+00:01:53,070 --> 00:01:58,010
+to call you and we show that this person can play a role in helping.
+
+27
+00:01:58,060 --> 00:01:59,760
+That was highlighted.
+
+28
+00:01:59,760 --> 00:02:03,130
+The difference between templates and bullimore fit in templates.
+
+29
+00:02:03,210 --> 00:02:08,730
+The behavior doesn't depend on like a stack of integer is acting like a stack of string is acting like
+
+30
+00:02:08,730 --> 00:02:09,770
+a stack of employees.
+
+31
+00:02:10,050 --> 00:02:12,120
+So the type doesn't play a role here.
+
+32
+00:02:12,270 --> 00:02:17,400
+We know that this is more of templates, but in polymorphism, the behavior of rectangle is different
+
+33
+00:02:17,400 --> 00:02:18,960
+than the behavior of sheep.
+
+34
+00:02:20,730 --> 00:02:27,480
+Coupling and cohesion, we mentioned the word decoupling allowed the word decoupling refers to the number
+
+35
+00:02:27,480 --> 00:02:30,060
+of connections that are between different classes.
+
+36
+00:02:30,300 --> 00:02:33,600
+Cohesion is something that refers to within a class.
+
+37
+00:02:33,820 --> 00:02:36,720
+So to a degree, there are relationship between.
+
+38
+00:02:37,140 --> 00:02:44,250
+And so the class itself, the more that the class has connections internally, then the more the more
+
+39
+00:02:44,250 --> 00:02:46,320
+integrity between the items in this class.
+
+40
+00:02:46,620 --> 00:02:51,240
+And other words, the items in this class are really relevant and depend on each other.
+
+41
+00:02:51,660 --> 00:02:57,480
+So what we are actually talking is we would like the cohesion to be very high, which means that the
+
+42
+00:02:57,480 --> 00:03:03,480
+class has really relevant items that have some relevant to be and would like the coupling between the
+
+43
+00:03:03,480 --> 00:03:09,540
+different classes or modules to be minimized, because these dependencies give us half the time when
+
+44
+00:03:09,540 --> 00:03:11,190
+it comes to changing the code.
+
+45
+00:03:13,320 --> 00:03:18,460
+Far from that, users must depend on its public needs.
+
+46
+00:03:18,510 --> 00:03:23,060
+The public interface, but a class shouldn't depend on its users.
+
+47
+00:03:23,190 --> 00:03:30,480
+So when you are when you are building some class, you don't you never try to implement it, such as
+
+48
+00:03:30,940 --> 00:03:34,370
+it knows who is calling it and how is calling it and all of that.
+
+49
+00:03:34,650 --> 00:03:37,020
+You are more independent than others.
+
+50
+00:03:38,280 --> 00:03:40,560
+Capability, data and behavior in one place.
+
+51
+00:03:40,800 --> 00:03:43,440
+The more you do that, the better cohesion that you will have.
+
+52
+00:03:43,890 --> 00:03:47,480
+And remember, every class should have it like a single responsibility should.
+
+53
+00:03:47,530 --> 00:03:49,530
+It should have a single reason to change.
+
+54
+00:03:50,100 --> 00:03:56,070
+So while we are trying to gather relevant things in one place, but don't don't end up with having a
+
+55
+00:03:56,070 --> 00:04:02,010
+lot of logic in one in one class, probably you need to separate them in different classes as much as
+
+56
+00:04:02,010 --> 00:04:05,730
+you could try to depend on interfaces, not on the classes itself.
+
+57
+00:04:05,760 --> 00:04:07,770
+This reduces allow the coupling.
+
+58
+00:04:07,780 --> 00:04:12,420
+You can make a lot of the changes in the future with less impact on this division.
+
+59
+00:04:12,440 --> 00:04:18,880
+This is as a diagram to to ensure the public and cohesion look to these two different goods.
+
+60
+00:04:19,110 --> 00:04:25,680
+So first of all, try to evaluate the the cohesion this class seems has very good internal connections,
+
+61
+00:04:25,920 --> 00:04:26,670
+dependencies.
+
+62
+00:04:26,700 --> 00:04:28,320
+These are like variables and functions.
+
+63
+00:04:28,320 --> 00:04:29,190
+One, two, three, four, five.
+
+64
+00:04:29,460 --> 00:04:35,310
+And this one has also and from the other time, it seems that there is some connection between this
+
+65
+00:04:35,760 --> 00:04:37,290
+and this item on this item.
+
+66
+00:04:37,560 --> 00:04:39,090
+There are a couple of connections here.
+
+67
+00:04:39,120 --> 00:04:40,010
+One connection here.
+
+68
+00:04:40,290 --> 00:04:42,790
+This looks like a local cabling system.
+
+69
+00:04:42,840 --> 00:04:43,440
+This is good.
+
+70
+00:04:43,860 --> 00:04:48,030
+But here, when you look to that system, you will notice here, for example, the one, two, three.
+
+71
+00:04:48,420 --> 00:04:50,310
+They have nothing in connection.
+
+72
+00:04:50,490 --> 00:04:53,210
+So why they are gathered in one class.
+
+73
+00:04:53,220 --> 00:04:53,910
+This is wrong.
+
+74
+00:04:54,390 --> 00:04:56,340
+And also, we you look to the cabling.
+
+75
+00:04:56,550 --> 00:04:59,070
+All of the classes have a lot of connections together.
+
+76
+00:04:59,520 --> 00:05:06,210
+So this is, again, probably drawing the relationship between your class diagram items would help you
+
+77
+00:05:06,210 --> 00:05:09,800
+to realize that this is bad and bad modularization for your system.
+
+78
+00:05:11,920 --> 00:05:17,310
+We also highlighted before the intention behind your messages, when you provide an inversion function,
+
+79
+00:05:17,560 --> 00:05:22,930
+you are telling others that you are going you please do not override this function, but if you make
+
+80
+00:05:22,930 --> 00:05:26,500
+it a virtual function, you are telling him we have some default implementation.
+
+81
+00:05:26,740 --> 00:05:33,820
+But you are you are expected to implement your wants and in polymorphism set up, it will be use if
+
+82
+00:05:33,820 --> 00:05:39,070
+it's a virtual function or giving a message that we have no idea how to implement this function.
+
+83
+00:05:39,310 --> 00:05:44,800
+Or maybe, OK, this is just an interface to just who are telling you what is our public functionalities.
+
+84
+00:05:46,280 --> 00:05:53,900
+Back to the conversation over inheritance, so we highlighted more than once in industry at the moment,
+
+85
+00:05:54,170 --> 00:05:58,690
+it's very common that if you can go with wood composition, then you go with it.
+
+86
+00:05:59,120 --> 00:06:03,090
+So to make the composition look be more effective.
+
+87
+00:06:03,290 --> 00:06:10,400
+We typically use it with interfaces so that it'd be more dynamic and it avoids us all of the trouble.
+
+88
+00:06:10,730 --> 00:06:16,130
+So from one direction, the composition would get us for the like the combination that have an inheritance
+
+89
+00:06:16,370 --> 00:06:21,560
+and the interfaces would help us in reducing the advantages.
+
+90
+00:06:21,860 --> 00:06:23,210
+Now it is an important thing.
+
+91
+00:06:24,140 --> 00:06:30,080
+You might find it hard to, in most of the cases when you try to switch inheritance to composition and
+
+92
+00:06:30,080 --> 00:06:33,290
+it is again designed better and could help us from this perspective.
+
+93
+00:06:33,820 --> 00:06:41,750
+When you when you studied more about design patterns, you will notice nice ways to to make some some
+
+94
+00:06:41,750 --> 00:06:42,690
+composition effort.
+
+95
+00:06:42,710 --> 00:06:43,960
+So this is a good idea.
+
+96
+00:06:44,360 --> 00:06:50,180
+But remember, the composition would require two types of extra code and extra good to do more delegation
+
+97
+00:06:50,180 --> 00:06:58,370
+of the functions and codes and also an extra code to create instances of your of your different interfaces.
+
+98
+00:06:58,370 --> 00:06:59,800
+Objects that it.

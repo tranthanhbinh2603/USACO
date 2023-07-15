@@ -1,0 +1,255 @@
+1
+00:00:01,210 --> 00:00:09,280
+Let's solve the first problem about the walls and gates, and the really positive thing is we we have
+
+2
+00:00:09,280 --> 00:00:15,910
+several rooms and we have several gates and we know we can use one before us to find many things, but
+
+3
+00:00:15,910 --> 00:00:17,800
+we have many things to start from.
+
+4
+00:00:17,800 --> 00:00:21,580
+How can we still keep that as efficient as possible?
+
+5
+00:00:22,270 --> 00:00:29,140
+OK, so the first way to go is as simple as brute force by running the office from every room.
+
+6
+00:00:29,740 --> 00:00:31,450
+So far, so straightforward.
+
+7
+00:00:32,230 --> 00:00:34,630
+Now the question Can we do better than that?
+
+8
+00:00:35,830 --> 00:00:44,350
+Observed each room can be connected to one of the newest gates, but each gate can be used by many rooms.
+
+9
+00:00:45,190 --> 00:00:46,510
+If it's a virtual target.
+
+10
+00:00:47,780 --> 00:00:50,720
+So, no, this would be kind of reverse the thinking.
+
+11
+00:00:50,750 --> 00:00:56,680
+First of all, don't start from the room to find the single matching gate.
+
+12
+00:00:56,720 --> 00:01:02,140
+We will reverse it, that we will start from the gate and find the distance to every rule.
+
+13
+00:01:04,190 --> 00:01:08,780
+OK, so far, we didn't change the problem, we still have many things to start from them, so what
+
+14
+00:01:08,780 --> 00:01:09,380
+can we do?
+
+15
+00:01:09,920 --> 00:01:15,250
+We can introduce a new variant of the beef as it is called the multi source.
+
+16
+00:01:15,250 --> 00:01:24,140
+With this so far, we did what we call one two m bénéfice, which means you have one starting note and
+
+17
+00:01:24,140 --> 00:01:24,890
+you have multi.
+
+18
+00:01:24,890 --> 00:01:32,150
+This finishes because the first single before school will compute the BFS answer for the distance answer
+
+19
+00:01:32,180 --> 00:01:36,050
+for all of their neighbor nodes for all of the graph nodes.
+
+20
+00:01:36,890 --> 00:01:38,120
+So it's good one to em.
+
+21
+00:01:38,870 --> 00:01:45,170
+Now we would introduce what we call a multi source, where instead of just starting from one source,
+
+22
+00:01:45,380 --> 00:01:47,300
+we can start with many sources.
+
+23
+00:01:47,690 --> 00:01:49,060
+The idea is very simple.
+
+24
+00:01:49,070 --> 00:01:55,010
+The only change that you do in the code is if you have multiple starting nodes, you can add all of
+
+25
+00:01:55,010 --> 00:01:57,770
+them together in the queue initially.
+
+26
+00:01:59,190 --> 00:02:00,270
+So here is the idea.
+
+27
+00:02:01,770 --> 00:02:07,260
+And the news to the Q, so instead of singular starting point, you have multiple starting points.
+
+28
+00:02:07,650 --> 00:02:14,910
+OK, what's now happening in the Q when you think about it, this means Level zero has, for example,
+
+29
+00:02:14,910 --> 00:02:21,600
+five gates, level zero has five gates after level one each.
+
+30
+00:02:21,600 --> 00:02:22,380
+Get them.
+
+31
+00:02:23,070 --> 00:02:27,090
+I want all of the rooms that are one to stay far from them.
+
+32
+00:02:28,540 --> 00:02:33,880
+A level to each gate, actually like each new cell added to the queue.
+
+33
+00:02:34,240 --> 00:02:36,730
+Found the nearest room in two steps.
+
+34
+00:02:37,510 --> 00:02:44,620
+But remember and observe the following If one room is already visited from a single stab, it will be
+
+35
+00:02:44,620 --> 00:02:45,910
+already processed.
+
+36
+00:02:46,120 --> 00:02:47,500
+So we do need to process it.
+
+37
+00:02:47,800 --> 00:02:49,720
+And this is the advantage that we gained.
+
+38
+00:02:50,110 --> 00:02:57,910
+If you try to run beef's beer again by itself, you will have its kind of repeating the effort of others.
+
+39
+00:02:58,390 --> 00:03:05,260
+If you run all of them together, this means the gates the first, the gate that will reach a room will
+
+40
+00:03:05,260 --> 00:03:10,270
+block others from really consuming time to reach to this destination.
+
+41
+00:03:10,630 --> 00:03:17,980
+I hope the overall idea is clear for you, so the minute changes that we do in the multi-sports is as
+
+42
+00:03:17,980 --> 00:03:18,490
+following.
+
+43
+00:03:18,760 --> 00:03:24,900
+Initially, we start from one single note in the queue, which you keep finding notes.
+
+44
+00:03:25,210 --> 00:03:30,970
+Now we start from multiple different sources nodes, and this one in level one would add all of its
+
+45
+00:03:30,970 --> 00:03:31,810
+children here.
+
+46
+00:03:32,230 --> 00:03:34,750
+But let's say this one has also the same two children.
+
+47
+00:03:34,960 --> 00:03:35,710
+We add nothing.
+
+48
+00:03:36,040 --> 00:03:40,570
+Let's say that this one has one child, the from here and one child from here, we are nothing.
+
+49
+00:03:40,930 --> 00:03:43,660
+So this way they are collaborating together.
+
+50
+00:03:44,350 --> 00:03:50,950
+So the whole idea is they work together and once something is visited, no one else have to do anything
+
+51
+00:03:50,950 --> 00:03:51,340
+else.
+
+52
+00:03:51,880 --> 00:03:52,270
+OK.
+
+53
+00:03:52,450 --> 00:03:53,260
+I hope you.
+
+54
+00:03:53,440 --> 00:03:54,590
+It's more clear for you.
+
+55
+00:03:54,600 --> 00:04:00,730
+Like in the first, once you are done with level zero, level one has all of the knowledge at level
+
+56
+00:04:00,730 --> 00:04:01,030
+one.
+
+57
+00:04:01,360 --> 00:04:05,980
+So the whole idea here is living zero itself has multiple starting points.
+
+58
+00:04:06,310 --> 00:04:11,560
+And this is the take home lesson that I would like you to keep in mind if you have multiple starting
+
+59
+00:04:11,560 --> 00:04:15,280
+points or what you would like to do is to add them to the queue.
+
+60
+00:04:15,580 --> 00:04:20,290
+So this is only the way to change that you need to do to the queue, and that is one more change that
+
+61
+00:04:20,290 --> 00:04:22,440
+you need to be careful about it the size.
+
+62
+00:04:22,780 --> 00:04:25,180
+Remember, we used to initialize those to be equal one.
+
+63
+00:04:25,630 --> 00:04:27,190
+Now the size has to be equal.
+
+64
+00:04:27,190 --> 00:04:31,060
+What equals the total number of units that we started with them?

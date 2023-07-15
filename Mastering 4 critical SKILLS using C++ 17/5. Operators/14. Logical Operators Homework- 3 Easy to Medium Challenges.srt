@@ -1,0 +1,79 @@
+0
+1
+00:00:01,140 --> 00:00:06,630
+For the homework of the logical operators, the first step is to guess the output of all of this program.
+1
+
+2
+00:00:06,990 --> 00:00:14,400
+and then run it and make a comparison, in the second step, you are to creating a line of code for all
+2
+
+3
+00:00:14,400 --> 00:00:15,150
+of these cases.
+3
+
+4
+00:00:15,870 --> 00:00:22,020
+Assume, go ahead and read 3 integers, one for the number of boys, number of girls and number of teachers
+4
+
+5
+00:00:22,020 --> 00:00:22,830
+in some classroom.
+5
+
+6
+00:00:23,190 --> 00:00:27,290
+Then for every one of them, I would like you to figure out how to write a code that expresses it.
+6
+
+7
+00:00:27,420 --> 00:00:29,900
+So this is more about converting logic to code.
+7
+
+8
+00:00:30,780 --> 00:00:36,300
+So you say, for example, number of boys greater than 25, do an statement for that.
+8
+
+9
+00:00:36,330 --> 00:00:40,910
+So every statement read it and decide the statement for it here we say, for example, the difference between
+9
+
+10
+00:00:40,920 --> 00:00:47,910
+number of boys, and number of girls is more than 10 or number of teachers is greater than 5 and so
+10
+
+11
+00:00:47,910 --> 00:00:48,020
+on.
+11
+
+12
+00:00:48,030 --> 00:00:53,760
+So read every line and create a line of code for it, the final thing is a simplification.
+12
+
+13
+00:00:53,910 --> 00:00:59,700
+Take every line of these guys and simplify it by hand, step by step and tell if they are true
+13
+
+14
+00:00:59,700 --> 00:01:00,210
+or false.
+14
+
+15
+00:01:00,450 --> 00:01:05,220
+Then you optionally write a line of code to verify if your simplification is correct or not.
+15
+
+16
+00:01:05,820 --> 00:01:06,330
+That's it.

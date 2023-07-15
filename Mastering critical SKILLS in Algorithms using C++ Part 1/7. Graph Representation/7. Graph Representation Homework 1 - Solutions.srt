@@ -1,0 +1,507 @@
+1
+00:00:01,290 --> 00:00:05,880
+Let's solve the homework, the first problem is about the ageless, the representation.
+
+2
+00:00:06,210 --> 00:00:08,460
+So this is an easy example.
+
+3
+00:00:08,470 --> 00:00:09,330
+So let's see here.
+
+4
+00:00:10,200 --> 00:00:14,760
+First of all, the edge is what the ages from and to and wait.
+
+5
+00:00:15,120 --> 00:00:16,680
+I created a constructor here.
+
+6
+00:00:17,790 --> 00:00:22,800
+Now, one of the tasks in this problem, if we have a bunch of edges, would like to search to them
+
+7
+00:00:22,800 --> 00:00:24,210
+based on their weight.
+
+8
+00:00:24,450 --> 00:00:28,190
+So this means they can C++, they can provide the pool operator Lizette.
+
+9
+00:00:28,200 --> 00:00:33,630
+You can also make this like a class and public and private just kept it simple here and just compared
+
+10
+00:00:33,640 --> 00:00:34,470
+the weight with the weight.
+
+11
+00:00:34,890 --> 00:00:40,060
+In this way we can compare to is the brain function is just printing the content here.
+
+12
+00:00:40,500 --> 00:00:41,850
+And this is our graph now.
+
+13
+00:00:43,240 --> 00:00:48,240
+Now, when you think about the adage you function well, what does it do is adding for your victory,
+
+14
+00:00:48,340 --> 00:00:50,950
+it just the from too and cost as an edge.
+
+15
+00:00:51,190 --> 00:00:59,890
+So this is merely what's happening here and there is now no way to like to to bring things just on what
+
+16
+00:00:59,890 --> 00:01:00,310
+you can do.
+
+17
+00:01:00,310 --> 00:01:02,530
+It did it on the edge of the edge and just sprinted.
+
+18
+00:01:02,560 --> 00:01:04,030
+Sprinting here is very simple.
+
+19
+00:01:05,250 --> 00:01:11,550
+The last thing that the graph here is pretty straightforward, given that we define the greater less
+
+20
+00:01:11,820 --> 00:01:15,320
+in our function, we can search the graph in a very normal way.
+
+21
+00:01:16,650 --> 00:01:21,850
+In terms of the complexity, the space complexity is very clear.
+
+22
+00:01:21,870 --> 00:01:28,740
+We have a victor of a just so it's only now now imagine that the complexity for operations like I would
+
+23
+00:01:28,740 --> 00:01:33,120
+like to know if two is connected with three or not, you have to threaten all of the edges.
+
+24
+00:01:33,360 --> 00:01:40,320
+So only if you would like to maybe get the neighbors of node number three, you have to threaten all
+
+25
+00:01:40,320 --> 00:01:40,770
+of the nodes.
+
+26
+00:01:40,950 --> 00:01:43,020
+So I think all of the operations are all.
+
+27
+00:01:45,120 --> 00:01:47,850
+This representation in general is a slower representation.
+
+28
+00:01:48,870 --> 00:01:54,270
+That's why it has a very limited usage like Billman for the, for example, algorithm.
+
+29
+00:01:54,270 --> 00:01:54,630
+Use it.
+
+30
+00:01:54,870 --> 00:01:57,920
+But generally speaking, a few a few algorithms use it.
+
+31
+00:01:58,440 --> 00:02:02,130
+But as you see the advantages, it is very similar to a large extent.
+
+32
+00:02:03,340 --> 00:02:10,180
+Okay, so what is the next problem and the next problem I would like to make, the agency has it, which
+
+33
+00:02:10,180 --> 00:02:15,610
+is a very interesting program, I hope here, you know, the deal with it so that you can get the advantage
+
+34
+00:02:15,610 --> 00:02:16,720
+and learn about that.
+
+35
+00:02:17,560 --> 00:02:24,820
+So the adjacency CET approach is a try to get the get the best of two worlds.
+
+36
+00:02:25,090 --> 00:02:29,170
+We know the adjacency adjacency matrix is a 2D matrix like that.
+
+37
+00:02:31,780 --> 00:02:40,300
+It is great to know that if edge like zero one zero one two, if you'd like to know adjacency of one
+
+38
+00:02:40,310 --> 00:02:43,880
+and two exist or not, it would be all one from adjacency matrix.
+
+39
+00:02:44,710 --> 00:02:49,450
+But you have to iterate linearly to get the numbers when we go to that.
+
+40
+00:02:51,670 --> 00:02:53,620
+That the the list, the state.
+
+41
+00:02:54,760 --> 00:03:00,190
+We can't get the neighbors in all the green, but you know, if there is a GNC, we have to iterate
+
+42
+00:03:00,190 --> 00:03:00,820
+on all of them.
+
+43
+00:03:01,660 --> 00:03:03,130
+Now the question is, who comes here?
+
+44
+00:03:03,490 --> 00:03:08,530
+Can we get something that is one to check if one and two are adjacent?
+
+45
+00:03:08,890 --> 00:03:13,810
+And also is would agree if we would like to get the neighbors of would number seven, for example,
+
+46
+00:03:14,350 --> 00:03:17,500
+this can be achieved by an adjacent, he has said.
+
+47
+00:03:17,860 --> 00:03:20,710
+The idea is as following we will have again a victor.
+
+48
+00:03:22,030 --> 00:03:29,710
+Onwards, but then instead of having a vector of engine lists, we would have a vector of hash that
+
+49
+00:03:31,120 --> 00:03:36,070
+the hash cities, the hash table that we just can put items in it in and remove them in 01.
+
+50
+00:03:36,880 --> 00:03:41,920
+So you want to add, you want to remove along to look up, but you lose the advantage of the order.
+
+51
+00:03:41,920 --> 00:03:46,810
+The current order, like they would be seven to 20 zero.
+
+52
+00:03:47,110 --> 00:03:48,550
+You lose the order in hash tables.
+
+53
+00:03:49,150 --> 00:03:54,130
+Now, if you would like to add directed edge, you get a graph from which is the asset.
+
+54
+00:03:54,400 --> 00:03:56,710
+Then you inserted the two down there.
+
+55
+00:03:56,870 --> 00:03:59,380
+It is the same logic if you would like to print.
+
+56
+00:03:59,740 --> 00:04:02,080
+Then we iterate on the node by node.
+
+57
+00:04:02,710 --> 00:04:08,710
+It is easy to use the other like for like this is tied in C++ to Brent to them.
+
+58
+00:04:09,010 --> 00:04:14,770
+So graph from here is this is this set your data on them one by one to two printed.
+
+59
+00:04:15,940 --> 00:04:20,650
+As you see, the code is almost the same as the hash that GC list.
+
+60
+00:04:21,070 --> 00:04:26,680
+The advantage is you cannot check a graphical graph like if we'd like to know the to exist or not,
+
+61
+00:04:26,680 --> 00:04:30,970
+you can check if graph graph of from.
+
+62
+00:04:33,700 --> 00:04:34,630
+Don't count.
+
+63
+00:04:35,970 --> 00:04:41,790
+To if this function return a value that is greater than zero, then the room has this too.
+
+64
+00:04:42,090 --> 00:04:47,490
+So this is mainly what we get, get a full frontal view of the adjacency neighbors that count, will
+
+65
+00:04:47,490 --> 00:04:51,600
+you and 01 the if there is an edge or not.
+
+66
+00:04:52,350 --> 00:04:54,930
+OK, so now about the complexity.
+
+67
+00:04:55,590 --> 00:05:01,920
+It's again this this complexity was, oh, we have to keep all of the edges now as you see, it is all
+
+68
+00:05:01,920 --> 00:05:06,840
+one to add, remove and a chicken edge, which is a great advantage, including the remove here.
+
+69
+00:05:07,230 --> 00:05:12,660
+And it's all degree of degree of specific not to iterative neighbors, but there are some disadvantages
+
+70
+00:05:12,660 --> 00:05:14,850
+for this representation that you have to keep in mind.
+
+71
+00:05:15,570 --> 00:05:19,170
+First of all, there is no order guarantee for edges.
+
+72
+00:05:19,740 --> 00:05:21,810
+There is no order guarantee for edges.
+
+73
+00:05:22,230 --> 00:05:25,090
+Has set her stable doesn't guarantee any order.
+
+74
+00:05:25,800 --> 00:05:29,340
+The second thing it is impractical for a multiple edges.
+
+75
+00:05:29,610 --> 00:05:30,890
+It is hard to extend it.
+
+76
+00:05:30,890 --> 00:05:36,420
+It's doable, probably, but it's hard to extend it to multiple edges because the Hashid, by definition,
+
+77
+00:05:36,600 --> 00:05:37,500
+just about one thing.
+
+78
+00:05:37,920 --> 00:05:41,630
+Maybe, maybe we can use the I think I do remember.
+
+79
+00:05:41,940 --> 00:05:42,930
+I think there should be.
+
+80
+00:05:43,020 --> 00:05:44,270
+Maybe, maybe not.
+
+81
+00:05:44,310 --> 00:05:46,920
+I do remember if there is an order, the multisite or not.
+
+82
+00:05:47,940 --> 00:05:56,150
+The third thing is, remember that the the hash tables has internally extra memory, so the hash table
+
+83
+00:05:56,150 --> 00:06:03,230
+internally has, uh, with them, the representations has a bunch of internal variables internally to
+
+84
+00:06:03,230 --> 00:06:04,460
+do this stuff.
+
+85
+00:06:05,420 --> 00:06:09,980
+Generally speaking, like any hash table, high tables are very powerful.
+
+86
+00:06:10,280 --> 00:06:12,620
+But one has to be careful about using them.
+
+87
+00:06:12,980 --> 00:06:18,080
+For example, if you remember from the hash table study, you have to be careful about the root factor
+
+88
+00:06:19,040 --> 00:06:24,020
+because in a in a in a longer setup, you can end up with a very slow procedure.
+
+89
+00:06:24,140 --> 00:06:27,920
+And what we thought is one could be very high value.
+
+90
+00:06:28,340 --> 00:06:31,220
+So overall, it's very interesting data structure.
+
+91
+00:06:31,370 --> 00:06:36,980
+But still, there are a lot of things that we need to take into consideration before deciding to go
+
+92
+00:06:36,980 --> 00:06:37,370
+with it.
+
+93
+00:06:39,390 --> 00:06:43,110
+This is mainly about the second homework.
+
+94
+00:06:44,030 --> 00:06:45,500
+OK, let's see the third one.
+
+95
+00:06:46,500 --> 00:06:53,430
+The third one is about creating multiple edges, using adjacency metrics like how can you change that
+
+96
+00:06:53,440 --> 00:06:56,700
+distance in metrics to include multiple edges?
+
+97
+00:06:56,880 --> 00:06:58,980
+This isn't a hard division at all.
+
+98
+00:06:59,250 --> 00:07:01,620
+So here's the here's the idea.
+
+99
+00:07:02,010 --> 00:07:03,270
+Remember the metrics?
+
+100
+00:07:03,300 --> 00:07:09,330
+Originally it was a 2D matrix like that like, say, two times the three or three times the three metrics.
+
+101
+00:07:09,540 --> 00:07:11,010
+And we put a single value.
+
+102
+00:07:11,490 --> 00:07:14,910
+What if we were yet another victor victor of edges?
+
+103
+00:07:15,180 --> 00:07:16,790
+So now it's vector vector.
+
+104
+00:07:16,800 --> 00:07:23,130
+These two vectors are the matrix, and the internal vector are for their multiple edges.
+
+105
+00:07:23,250 --> 00:07:23,820
+That's it.
+
+106
+00:07:24,090 --> 00:07:24,870
+Now you start.
+
+107
+00:07:24,990 --> 00:07:31,170
+If you would like to put across the four of RAM two, this internal vector would be for the cost.
+
+108
+00:07:31,650 --> 00:07:37,050
+If you would like to put a cluster here, you would go to graph from and two, which is this cell and
+
+109
+00:07:37,050 --> 00:07:39,990
+then you push back a cost in its its value.
+
+110
+00:07:40,740 --> 00:07:41,450
+That's symbolic.
+
+111
+00:07:41,790 --> 00:07:45,030
+That's all about the how to extend it.
+
+112
+00:07:45,800 --> 00:07:49,120
+Um, now the complexity might be a bit more tricky.
+
+113
+00:07:49,140 --> 00:07:51,660
+We are sure that we have at least v squared here.
+
+114
+00:07:51,990 --> 00:07:56,730
+But now, as you see, every single node has has the corresponding edges.
+
+115
+00:07:57,000 --> 00:08:01,870
+So this means that we have also built each year in the complexity.
+
+116
+00:08:01,890 --> 00:08:03,830
+So this is a time complex.
+
+117
+00:08:03,990 --> 00:08:09,810
+This is a space complex, you know, v squared for the original metrics and e for every single, um,
+
+118
+00:08:09,870 --> 00:08:15,750
+like the total order, like a ghost in every one of them.
+
+119
+00:08:16,260 --> 00:08:18,810
+Uh, the pushback is all one.
+
+120
+00:08:18,820 --> 00:08:20,370
+So insertion is now.
+
+121
+00:08:20,370 --> 00:08:26,910
+Is it still, um, adding a vector is one if you would like to check if this is enabled or not.
+
+122
+00:08:27,030 --> 00:08:29,520
+You can just check if the list has a size or not.
+
+123
+00:08:29,520 --> 00:08:29,820
+So.
+
+124
+00:08:30,450 --> 00:08:34,260
+So it's still one to get the uh, I want to know that.
+
+125
+00:08:34,260 --> 00:08:39,270
+Just see if you'd like to know if there is an edge with the specific cost, then you have to check to
+
+126
+00:08:39,270 --> 00:08:41,400
+have to iterate through the digits.
+
+127
+00:08:42,240 --> 00:08:43,710
+Um, yeah, that's all here.

@@ -1,0 +1,299 @@
+0
+1
+00:00:01,020 --> 00:00:07,980
+In this section, we will learn the "STL" or the Standard Template Library. Every strong programming language 
+1
+
+2
+00:00:07,980 --> 00:00:14,850
+like C++, Java, C#, and so on, would have something that allows you to make use of the available
+2
+
+3
+00:00:14,850 --> 00:00:16,400
+data structures and algorithms.
+3
+
+4
+00:00:16,680 --> 00:00:22,920
+But let's first try to motivate that a little bit more. So in computer science,
+4
+
+5
+00:00:23,670 --> 00:00:29,850
+I view the fundamentals in two layers, in the first layer we have four things: programming, algorithms,
+5
+
+6
+00:00:29,850 --> 00:00:35,820
+data structures and OOP, this course is mainly about programming and in its first half and OOP
+6
+
+7
+00:00:35,820 --> 00:00:37,400
+in its second half and design.
+7
+
+8
+00:00:38,050 --> 00:00:39,320
+There are also two things: 
+8
+
+9
+00:00:39,330 --> 00:00:40,950
+the algorithms and data structures,
+9
+
+10
+00:00:41,250 --> 00:00:49,710
+algorithms are very computational problems like think about sorting a few numbers, during the first part
+10
+
+11
+00:00:49,710 --> 00:00:50,270
+of the course
+11
+
+12
+00:00:50,430 --> 00:00:57,420
+you were already exposed to many computational problems like you have an array of n the numbers,
+12
+
+13
+00:00:57,750 --> 00:00:59,520
+find the three numbers of sum X.
+13
+
+14
+00:01:00,090 --> 00:01:02,310
+This will require a lot of competition.
+14
+
+15
+00:01:02,520 --> 00:01:04,770
+So you already are exposed to algorithms.
+15
+
+16
+00:01:05,220 --> 00:01:08,160
+You are also exposed implicitly to the data structures,
+16
+
+17
+00:01:08,460 --> 00:01:11,990
+and this is what you will see right now in the queue example.
+17
+
+18
+00:01:12,390 --> 00:01:17,430
+As a side note, there are more fundamentals in computer science, like your next step would be software
+18
+
+19
+00:01:17,430 --> 00:01:24,420
+engineering, design patterns, databases, operating systems and networking, and in any strong software
+19
+
+20
+00:01:24,420 --> 00:01:30,390
+engineering you will meet in your career is to a good extent, very good in these fundamentals.
+20
+
+21
+00:01:30,660 --> 00:01:32,390
+Anyway, let's go back to our topic.
+21
+
+22
+00:01:32,730 --> 00:01:39,520
+So the queue data structure that we used before in the hospital when we wanted to add in the front end
+22
+
+23
+00:01:39,520 --> 00:01:45,720
+and the end and print, that was, if you remember it internally, had an array and just supported
+23
+
+24
+00:01:45,720 --> 00:01:49,510
+to adjust to the array to do these functionalities for us.
+24
+
+25
+00:01:49,890 --> 00:01:57,750
+So now thinking that in many cases we would need to organize and process and retrieve data in very specific
+25
+
+26
+00:01:57,750 --> 00:02:00,910
+ways, something similar to the queue. Thinking about the queue,
+26
+
+27
+00:02:01,260 --> 00:02:03,210
+this is a very repetitive task,
+27
+
+28
+00:02:03,240 --> 00:02:04,550
+we will need it over and over.
+28
+
+29
+00:02:04,830 --> 00:02:10,710
+So it is the STL here comes to save our time and say: okay I'm going to implement to the queue for
+29
+
+30
+00:02:10,710 --> 00:02:10,960
+you.
+30
+
+31
+00:02:11,400 --> 00:02:21,960
+So this is why we have STL, these classes that support some data and operations
+31
+
+32
+00:02:21,960 --> 00:02:22,680
+on this data.
+32
+
+33
+00:02:22,680 --> 00:02:24,120
+we call them data structures.
+33
+
+34
+00:02:24,420 --> 00:02:28,770
+Okay, that's why we have the word data-structure, they arrange the date somehow 
+34
+
+35
+00:02:28,980 --> 00:02:32,000
+and they provide a lot of functionalities relevant to this data.
+35
+
+36
+00:02:33,270 --> 00:02:35,890
+And as I said, in practice, the structures a lot.
+36
+
+37
+00:02:36,000 --> 00:02:42,330
+So STL comes and provides us with a bunch of containers to implement these data structures.
+37
+
+38
+00:02:42,670 --> 00:02:47,100
+In a typical basic data structure course, you will learn something called 
+38
+
+39
+00:02:47,210 --> 00:02:49,140
+queue, dequeue, vector, 
+39
+
+40
+00:02:49,140 --> 00:02:53,910
+linked list, binary search tree, in more advanced sense you might learn something like hash table
+40
+
+41
+00:02:54,390 --> 00:02:57,830
+balanced binary search tree, or even sometimes, trie and segment tree. 
+41
+
+42
+00:02:58,590 --> 00:03:01,400
+So the STL is just implemented it for you
+42
+
+43
+00:03:01,560 --> 00:03:04,730
+All of these data structures in really in a very efficient way.
+43
+
+44
+00:03:04,950 --> 00:03:06,210
+They call them containers.
+44
+
+45
+00:03:06,570 --> 00:03:12,840
+And interesting thing about learning STL early is they are actually the black box of these
+45
+
+46
+00:03:12,840 --> 00:03:13,640
+data structures,
+46
+
+47
+00:03:13,800 --> 00:03:18,840
+so when you go to really study the structure course itself, you find like you already
+47
+
+48
+00:03:18,840 --> 00:03:23,780
+know about how to use them and just now how to make their internals.
+48
+
+49
+00:03:24,410 --> 00:03:29,320
+The C++ is using templates which allow it to be very generic containers,
+49
+
+50
+00:03:29,380 --> 00:03:34,650
+So you, for example, laterally you will see us defining a queue of integer or queue of string or a queue
+50
+
+51
+00:03:34,650 --> 00:03:36,120
+of employees and so on.
+51
+
+52
+00:03:36,600 --> 00:03:42,340
+And without templates, you will have to make a queue for integer, another class queue for strings and
+52
+
+53
+00:03:42,340 --> 00:03:44,940
+another class queue for employees and so on, which is impractical,
+53
+
+54
+00:03:44,940 --> 00:03:47,310
+so templates would help a lot us with that.
+54
+
+55
+00:03:47,700 --> 00:03:53,750
+Also, the language provides us with something named iterators. iterators help us in a very generic way to
+55
+
+56
+00:03:53,760 --> 00:03:55,230
+iterate on the containers,
+56
+
+57
+00:03:55,410 --> 00:04:02,640
+so the algorithms this way would be independent of the data types using templates and also the iterators
+57
+
+58
+00:04:02,640 --> 00:04:06,120
+would be independent of the container itself using algorithms.
+58
+
+59
+00:04:06,480 --> 00:04:11,670
+This a bit puzzled at this moment, but this would be clarified more in the next videos.
+59
+
+60
+00:04:12,050 --> 00:04:12,570
+Thank you.

@@ -1,0 +1,139 @@
+0
+1
+00:00:01,050 --> 00:00:06,150
+Many students complained about the design skills, and how to improve them, so I would like to share with
+1
+
+2
+00:00:06,150 --> 00:00:09,590
+you a tip from my personal experience.
+2
+
+3
+00:00:09,870 --> 00:00:13,080
+First of all, remember something skills takes time.
+3
+
+4
+00:00:13,500 --> 00:00:18,660
+There is no course that teaches you skills, the only way to teach in courses is knowledge.
+4
+
+5
+00:00:18,840 --> 00:00:21,660
+So how to gain skills? Through practice.
+5
+
+6
+00:00:21,810 --> 00:00:25,550
+That's why this course emphasizes a lot of homework and projects.
+6
+
+7
+00:00:25,950 --> 00:00:30,810
+So don't feel bad if you cannot design your project from the first step.
+7
+
+8
+00:00:30,870 --> 00:00:32,760
+This is very natural and very normal.
+8
+
+9
+00:00:33,090 --> 00:00:35,040
+Remember, for example, the class diagram.
+9
+
+10
+00:00:35,040 --> 00:00:37,930
+The class diagram helps you to see the big picture.
+10
+
+11
+00:00:38,160 --> 00:00:44,110
+One way to improve the design skills and seeing the big picture and all of the details is as follows:
+11
+
+12
+00:00:44,850 --> 00:00:49,260
+Before coding anything, you start to sketch your initial UML diagram.
+12
+
+13
+00:00:49,470 --> 00:00:55,410
+This means you think about the potential class diagrams, the relationships between them, the multiplicity
+13
+
+14
+00:00:55,410 --> 00:01:01,500
+between them, and some of the major features like variables and functions, and so on.
+14
+
+15
+00:01:01,950 --> 00:01:04,650
+Once you're done with that, start coding your system.
+15
+
+16
+00:01:05,040 --> 00:01:07,020
+There is a common observation here.
+16
+
+17
+00:01:07,380 --> 00:01:11,580
+You will notice there are a lot that is missing, critical variables, and functions.
+17
+
+18
+00:01:11,820 --> 00:01:16,130
+You will notice also some classes were wrong, some relationships were wrong, or some multiplicity was wrong.
+18
+
+19
+00:01:16,740 --> 00:01:17,520
+This is OK.
+19
+
+20
+00:01:18,090 --> 00:01:21,780
+Once you are done with your project, redraw your final UML diagram.
+20
+
+21
+00:01:22,140 --> 00:01:25,680
+Start to compare your initial diagram with your final diagram.
+21
+
+22
+00:01:26,040 --> 00:01:32,880
+Ask yourself why I missed this thing, why I missed this class, and through the answer of why, you will
+22
+
+23
+00:01:32,880 --> 00:01:38,460
+notice what got wrong in your thinking process. Iteratively, you will learn from your mistakes this
+23
+
+24
+00:01:38,460 --> 00:01:42,360
+way, and you will realize that you became a good designer
+24
+
+25
+00:01:42,520 --> 00:01:48,690
+when you bridge the gap between your first and last diagram. You will never have your first diagram
+25
+
+26
+00:01:48,690 --> 00:01:49,920
+like your last diagram,
+26
+
+27
+00:01:50,130 --> 00:01:51,810
+but what is a gap between them?
+27
+
+28
+00:01:51,990 --> 00:01:57,090
+If it is a small gap, then you became a good designer and have good design skills. That it.

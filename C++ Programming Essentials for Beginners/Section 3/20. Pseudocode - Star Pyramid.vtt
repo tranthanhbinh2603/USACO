@@ -1,0 +1,301 @@
+WEBVTT
+
+00:01.810 --> 00:07.720
+I so now we will solve this pyramid pardon problem, so we have to print this kind of a burden for a
+
+00:07.720 --> 00:08.070
+given.
+
+00:08.190 --> 00:10.330
+And so in this burden, we have three rows.
+
+00:11.020 --> 00:15.870
+And as you can see in each row, there are some spaces followed by some started OK.
+
+00:16.330 --> 00:18.760
+So first of all, I will write the observations.
+
+00:20.220 --> 00:23.430
+So the observation is there are Andrews.
+
+00:24.180 --> 00:24.480
+OK.
+
+00:25.200 --> 00:28.770
+And in each row, there are some spaces.
+
+00:30.880 --> 00:32.920
+How in this business that we will figure it out?
+
+00:34.060 --> 00:39.340
+Followed by some number of stops, OK, followed by some number of stunts.
+
+00:39.880 --> 00:43.030
+We have to generalize this for any.
+
+00:44.580 --> 00:45.180
+I threw.
+
+00:46.400 --> 00:48.970
+So let us see what happened in this president.
+
+00:49.790 --> 00:54.380
+If you look carefully that there are those places it.
+
+00:55.650 --> 01:01.140
+OK, and they're the ones buried under zeros, basically zero, because we've right the number of spaces
+
+01:01.800 --> 01:05.790
+in the air through two spaces, one space, zero space.
+
+01:05.880 --> 01:13.710
+So as we are going down, as the value of I is increasing, OK, the number of spaces is decreasing.
+
+01:14.400 --> 01:18.480
+We can see as one is two and three.
+
+01:18.540 --> 01:20.070
+That is the rule number two.
+
+01:20.070 --> 01:20.880
+Can you relate?
+
+01:21.570 --> 01:24.810
+Can you generalize how many spaces are there in our group?
+
+01:25.470 --> 01:33.360
+Clearly, we can see that this is nothing but three minus two to the three minus one.
+
+01:33.870 --> 01:36.960
+That is, we have two spaces, OK?
+
+01:37.620 --> 01:41.520
+In the second row, we have three minus the rule number.
+
+01:42.210 --> 01:45.600
+We have one space in the third row, we have three minus three.
+
+01:46.560 --> 01:47.370
+That is zeros.
+
+01:47.410 --> 01:51.090
+But clearly we can get these spaces by doing.
+
+01:52.280 --> 02:00.830
+And miners say in the Dietro era and miners ice business, this we figured out through our observation
+
+02:01.460 --> 02:04.490
+the better and miners ice bases in the hydro.
+
+02:05.380 --> 02:12.970
+Now, let us talk about the number of stars, how many stars we have one star, three stars and five
+
+02:12.970 --> 02:13.480
+stars.
+
+02:14.290 --> 02:16.480
+Let's figure out the formula for stars.
+
+02:17.110 --> 02:20.470
+One Star Resort and five stars.
+
+02:20.870 --> 02:21.190
+OK.
+
+02:22.720 --> 02:25.390
+Now, let's see how we can generalize this one.
+
+02:26.510 --> 02:29.960
+So the role no doubt, is a.
+
+02:31.200 --> 02:33.870
+That is nothing but one, two and three.
+
+02:34.500 --> 02:40.530
+So if you look carefully in the first rule, one starts, they wrote three star third Rule five stars
+
+02:41.190 --> 02:42.300
+by observation.
+
+02:42.480 --> 02:49.020
+I considered in in the intro that there is doing to a minus one stars because this value is nothing
+
+02:49.020 --> 02:50.910
+but two into one minus one.
+
+02:51.600 --> 02:54.440
+This is nothing but two into the minus one that is three.
+
+02:54.450 --> 02:55.860
+This is doing two three minus one.
+
+02:56.440 --> 02:59.560
+So yes, we are able to generalize the number of stars.
+
+02:59.580 --> 02:59.820
+OK.
+
+03:00.360 --> 03:02.400
+So again, this is through observation.
+
+03:02.760 --> 03:03.030
+OK.
+
+03:03.450 --> 03:07.650
+If you don't want to observe if you want to use a predefined formula.
+
+03:08.580 --> 03:16.230
+So what happens is that the number of stars, the former sequence of the type, which is known as automatic
+
+03:16.230 --> 03:19.620
+progression in a bizarre sequence.
+
+03:20.790 --> 03:24.470
+Split the difference between two consecutive terms is consent.
+
+03:24.880 --> 03:30.780
+So this is common difference, which is to this is common difference that just this different is constant
+
+03:30.780 --> 03:32.610
+across all their terms.
+
+03:32.940 --> 03:42.270
+So if you want to find out the item of this AP, there is a formula which is a plus a minus one in duty.
+
+03:42.750 --> 03:47.650
+So what is it is the first dump b the difference between two consecutive terms.
+
+03:47.730 --> 03:48.420
+So what is it?
+
+03:49.000 --> 03:56.460
+Is one is A and B is due so you can do one plus do a minus two.
+
+03:57.480 --> 04:04.140
+It does alter the way mine is, either you use the AP formula or you can use the observation, what
+
+04:04.230 --> 04:05.700
+are going to give you the same result?
+
+04:06.180 --> 04:10.050
+And hence we can see that there are two into a minus one stars.
+
+04:12.620 --> 04:13.820
+In the eye.
+
+04:14.060 --> 04:19.130
+OK, now we we have seen how to break down this pattern.
+
+04:19.450 --> 04:19.730
+OK?
+
+04:20.210 --> 04:24.500
+And after printing to a minus one size, I will also print a new line.
+
+04:26.990 --> 04:31.590
+So now you can write the pseudocode for this problem, so that is very easy.
+
+04:31.670 --> 04:36.890
+So first, we will read how many doors we have, then we will need a loop.
+
+04:37.280 --> 04:39.560
+Why did our those first Rosekind again?
+
+04:40.280 --> 04:43.010
+So let's say we are starting from the first rule.
+
+04:43.100 --> 04:45.410
+We will go till the end that rule.
+
+04:46.720 --> 04:47.850
+What we will do, we need you.
+
+04:48.490 --> 04:49.840
+We will do three things.
+
+04:50.170 --> 04:52.060
+First, we will print faces.
+
+04:52.810 --> 04:56.890
+Let's face it is one how many spaces and minors spaces?
+
+04:57.610 --> 05:00.550
+Wild spaces is less than equal to and minus.
+
+05:01.180 --> 05:07.900
+What we will do will print a space and we will implement the ground of spaces that has been printed
+
+05:08.020 --> 05:08.650
+by one.
+
+05:08.680 --> 05:09.250
+That's it.
+
+05:09.790 --> 05:13.030
+The next thing that we have to do is doing do a minus one start.
+
+05:13.270 --> 05:14.590
+So let us print us.
+
+05:15.250 --> 05:20.830
+Let's say the ground started this one wireless dodgers less than equal to two and do a minus one.
+
+05:21.100 --> 05:27.430
+What we will do will print a style and will increment the count of stars by one.
+
+05:28.570 --> 05:36.490
+The article to plus one gadget, followed by a new line, so we will talk it will print a new line.
+
+05:37.490 --> 05:40.670
+And we will go to the next drill by doing a call like this one.
+
+05:40.700 --> 05:41.240
+That's it.
+
+05:42.260 --> 05:43.940
+That completes our zero vote.
+
+05:44.420 --> 05:46.320
+And here we can write exit.
+
+05:46.760 --> 05:54.050
+Now you can see this is how we have broken down our logic into smaller components.
+
+05:54.620 --> 05:57.410
+This loop is responsible for borrowers.
+
+05:58.240 --> 06:00.810
+And the inner parts responsible for.
+
+06:02.050 --> 06:02.800
+Some part of the.
+
+06:03.040 --> 06:05.980
+So this part is responsible for spaces in each row.
+
+06:06.700 --> 06:09.040
+This is responsible for stars they need to do.
+
+06:09.730 --> 06:13.600
+This is responsible for shifting the cursor to the new line.
+
+06:13.780 --> 06:16.180
+And this I called my plus one maintains.
+
+06:17.290 --> 06:20.370
+It is a great condition for the out-of-date book.
+
+06:22.520 --> 06:22.930
+So.
+
+06:24.660 --> 06:30.420
+This is how we can afford this burden now as a homework, you can write in this pardon on your own.
+
+06:31.080 --> 06:39.190
+But I do write in this for and value and equal look forward and try to see what pattern do you get?
+
+06:39.210 --> 06:41.520
+OK, so that's all for this video.
+
+06:41.550 --> 06:42.060
+Thank you.

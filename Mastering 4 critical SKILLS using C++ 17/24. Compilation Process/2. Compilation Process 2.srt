@@ -1,0 +1,494 @@
+0
+1
+00:00:01,200 --> 00:00:06,900
+Let's go into more interesting details about the compilation process, as you see, there is nothing here
+1
+
+2
+00:00:06,900 --> 00:00:11,200
+that you are going to do eventually, but it's good to understand something about what is happening.
+2
+
+3
+00:00:11,610 --> 00:00:13,650
+This is a big picture as we talked about them.
+3
+
+4
+00:00:14,220 --> 00:00:18,520
+Now, I would like to go with you with some examples that help you to clarify a bit of things.
+4
+
+5
+00:00:19,110 --> 00:00:21,230
+This is the directory of the files.
+5
+
+6
+00:00:21,480 --> 00:00:23,910
+We have three CPP files,
+6
+
+7
+00:00:23,910 --> 00:00:31,770
+each one of them has a header file, and we had a 4th dot_cpp file, Test here, which has a main. I'm doing a simple
+7
+
+8
+00:00:31,770 --> 00:00:37,350
+hash-defined Mostafa, which is just defining constant Mostafa, and another constant saad here, and
+8
+
+9
+00:00:37,350 --> 00:00:40,530
+a constant Ibrahim here, and a constant hello here.
+9
+
+10
+00:00:40,530 --> 00:00:43,320
+Please give a minute to familiarize yourself with the code.
+10
+
+11
+00:00:44,550 --> 00:00:51,060
+Interestingly here, Fun2 is referring to Fun1, and the Test is referring to Fun1 and Fun2,
+11
+
+12
+00:00:51,480 --> 00:00:52,720
+but Fun3 here,
+12
+
+13
+00:00:53,070 --> 00:00:55,200
+there is no one is referencing this file,
+13
+
+14
+00:00:55,320 --> 00:00:58,470
+so it exists, but it isn't used by the Test file at least.
+14
+
+15
+00:00:58,770 --> 00:01:08,280
+So we have four CPP files in total. When we try to compile this code, we notice in the directory
+15
+
+16
+00:01:08,280 --> 00:01:11,160
+we typically have five binary files.
+16
+
+17
+00:01:12,300 --> 00:01:17,050
+Four of them for the O object files, and one of them for the executable.
+17
+
+18
+00:01:17,430 --> 00:01:21,480
+Remember, we said that before the binary file isn't a text ASCII file.
+18
+
+19
+00:01:21,540 --> 00:01:23,940
+You cannot open it with notepad and read it normally.
+19
+
+20
+00:01:24,660 --> 00:01:31,280
+So in the code, we had three header files, three CPP, one CPP. Eventually, you have four CPP files.
+20
+
+21
+00:01:31,470 --> 00:01:37,050
+So we have corresponding four object files, and we have one main file which would also have another
+21
+
+22
+00:01:37,050 --> 00:01:44,580
+executable file. The compiler generates for us these four object files, and then the linking is going to
+22
+
+23
+00:01:44,580 --> 00:01:46,140
+generates for us the executable.
+23
+
+24
+00:01:46,380 --> 00:01:53,250
+So the compiler will give us these four dot_O files, but the linker is going to give us the dot_exe file. More interestingly,
+24
+
+25
+00:01:53,250 --> 00:01:57,250
+here, the linker mainly only needs Fun1, Fun2, and Test_O,
+25
+
+26
+00:01:57,300 --> 00:01:58,130
+OK.
+26
+
+27
+00:01:58,150 --> 00:01:59,940
+Why it doesn't need Fun3_dot_O?
+27
+
+28
+00:02:00,360 --> 00:02:07,200
+Because the linker doesn't see the main is using the Fun3, so it can be discarded normally like
+28
+
+29
+00:02:07,230 --> 00:02:08,390
+simply can be discarded.
+29
+
+30
+00:02:09,380 --> 00:02:14,690
+Now, let's go a little more in details, if you would like to view the code that is written in C++
+30
+
+31
+00:02:14,690 --> 00:02:18,110
+or an assembly, you can do that with any notepad or eclipse,
+31
+
+32
+00:02:18,530 --> 00:02:21,210
+but what if I like to view the code in the machine code?
+32
+
+33
+00:02:21,440 --> 00:02:24,940
+This isn't very useful, but sometimes it would help you in some debugging.
+33
+
+34
+00:02:25,340 --> 00:02:31,190
+You can search and download for Hex editor. If you are using Linux just search in the computer
+34
+
+35
+00:02:31,190 --> 00:02:34,480
+software part some Hex editor. In Windows,
+35
+
+36
+00:02:34,490 --> 00:02:36,470
+I think I forget the name.
+36
+
+37
+00:02:37,460 --> 00:02:39,480
+Just Google for the Hex editor if you have interest.
+37
+
+38
+00:02:39,950 --> 00:02:46,880
+Now, let's view the code for the Fun1_dot_O.
+38
+
+39
+00:02:47,250 --> 00:02:54,440
+When you open it, it would be actually a bunch of zeros and ones, but the Hex editor would
+39
+
+40
+00:02:54,440 --> 00:03:00,200
+do some combination for the zero's and one's and print it in this hexadecimal style.
+40
+
+41
+00:03:00,530 --> 00:03:05,640
+More importantly, it will try to decode here some of what is seen here.
+41
+
+42
+00:03:05,960 --> 00:03:09,420
+So if you tried to go to Fun1 here, you will notice the word
+42
+
+43
+00:03:09,480 --> 00:03:11,960
+Mostafa here. Remember here back to the code,
+43
+
+44
+00:03:12,320 --> 00:03:18,540
+the test here has Fun1, Fun2, and hello,
+44
+
+45
+00:03:18,540 --> 00:03:24,650
+so Fun1 has only the word Mustafa, Fun2 has only the word Saad, and the Test has the word hello,
+45
+
+46
+00:03:24,650 --> 00:03:28,240
+and looking Fun1 and Fun2. So now Fun1 has the word Mostafa.
+46
+
+47
+00:03:28,430 --> 00:03:34,250
+What about Fun2? Fun2 should have the word Saad and also referring to Fun1 which had the word
+47
+
+48
+00:03:34,250 --> 00:03:34,760
+Mostafa.
+48
+
+49
+00:03:35,150 --> 00:03:40,940
+So going here to Fun2, for example, we noticed that it has read the Mostafa and noticed that it has
+49
+
+50
+00:03:41,120 --> 00:03:41,660
+the Saad.
+50
+
+51
+00:03:41,660 --> 00:03:46,370
+OK, so it actually contained both of them. Going to Fun3,
+51
+
+52
+00:03:46,370 --> 00:03:48,910
+we find the word Ibrahim here, also exists.
+52
+
+53
+00:03:50,210 --> 00:03:55,670
+Now, going to the Test, we find Mostafa and we'll find Saad and we'll find hello, but you don't find
+53
+
+54
+00:03:55,670 --> 00:03:56,500
+Ibrahim here.
+54
+
+55
+00:03:56,540 --> 00:03:57,080
+Why?
+55
+
+56
+00:03:57,410 --> 00:04:02,420
+Because Test_dot_cpp doesn't include the Fun3.
+56
+
+57
+00:04:03,080 --> 00:04:06,130
+That's why it doesn't see the word Ibrahim. In a similar way,
+57
+
+58
+00:04:06,140 --> 00:04:08,510
+we find the similar three things in the test_dot_exe.
+58
+
+59
+00:04:09,200 --> 00:04:14,240
+So as you see here, you can see how these files have a good dependency between each other.
+59
+
+60
+00:04:15,240 --> 00:04:17,130
+Now, here is one more interesting thing.
+60
+
+61
+00:04:17,460 --> 00:04:25,110
+Let's come to the Fun1 and add a header file for add A and B, and also here in Fun1_dot_cpp,
+61
+
+62
+00:04:25,110 --> 00:04:26,150
+we have a function add,
+62
+
+63
+00:04:26,160 --> 00:04:27,810
+but we have commented it.
+63
+
+64
+00:04:28,230 --> 00:04:29,630
+I would like to ask you a question.
+64
+
+65
+00:04:29,880 --> 00:04:33,750
+What happened if you tried to compile this project, and can you run it or not?
+65
+
+66
+00:04:35,490 --> 00:04:44,370
+OK, if you tried to compile it, it's going to compile successfully, it is going to give you the three dot_O files,
+66
+
+67
+00:04:44,370 --> 00:04:46,210
+and the dot_O for the test file.
+67
+
+68
+00:04:46,410 --> 00:04:51,350
+So eventually compiled. This is a surprise because, oh, I do not have an implementation for that.
+68
+
+69
+00:04:52,080 --> 00:04:59,250
+By the end of the compilation process, you are going to get a linking error.
+69
+
+70
+00:04:59,580 --> 00:05:03,180
+It say is undefined reference to add int and int.
+70
+
+71
+00:05:03,180 --> 00:05:10,680
+It means that when I tried as a linker to put all of them together, I was trying to search for
+71
+
+72
+00:05:10,680 --> 00:05:14,790
+the implementation of the add, but I didn't find the reference for it
+72
+
+73
+00:05:15,000 --> 00:05:20,010
+among what you give to me. That's why there would be no executable generated for you here.
+73
+
+74
+00:05:20,250 --> 00:05:21,900
+There would be only the dot_O files.
+74
+
+75
+00:05:22,470 --> 00:05:24,840
+Let's make this more formal.
+75
+
+76
+00:05:26,100 --> 00:05:33,660
+The compiler outputs two tables in every object file, so it reads the CPP file and generates an object file.
+76
+
+77
+00:05:33,660 --> 00:05:41,540
+The compiler identifies what exists internally and listed it in one table, and also identifies symbols
+77
+
+78
+00:05:41,550 --> 00:05:43,720
+for what should exists externally.
+78
+
+79
+00:05:44,160 --> 00:05:52,230
+This means that the compiler actually will compile successfully even if it doesn't see the implementation
+79
+
+80
+00:05:52,230 --> 00:05:52,830
+of something.
+80
+
+81
+00:05:53,190 --> 00:05:56,910
+OK, so it can see only the declaration in the header file.
+81
+
+82
+00:05:57,270 --> 00:06:03,390
+If it's seen only the declaration in the header file and doesn't see the implementation, it marks in this external
+82
+
+83
+00:06:03,390 --> 00:06:03,760
+table,
+83
+
+84
+00:06:03,930 --> 00:06:08,100
+hey guys, I'm waiting later someone to provide this implementation,
+84
+
+85
+00:06:08,760 --> 00:06:15,510
+but if the add function neither exists in the header nor in the implementation, it is going definitely to give
+85
+
+86
+00:06:15,510 --> 00:06:16,460
+a compilation error.
+86
+
+87
+00:06:16,980 --> 00:06:24,810
+But if the information exists in the header file that the declaration, but it doesn't exist in the implementation
+87
+
+88
+00:06:24,930 --> 00:06:31,950
+part, it just going to mark it that I expect later that someone externally another dot_cpp file
+88
+
+89
+00:06:31,950 --> 00:06:36,060
+or something is going to give me the implementation of that.
+89
+
+90
+00:06:36,600 --> 00:06:37,760
+...
+90
+
+91
+00:06:37,770 --> 00:06:39,160
+And here's the role of the linker.
+91
+
+92
+00:06:39,540 --> 00:06:43,110
+The linker takes all of these object files together to link them.
+92
+
+93
+00:06:43,620 --> 00:06:50,370
+So if dot_cpp1 is expecting a function and market it externally, it should exist in one of these other
+93
+
+94
+00:06:50,370 --> 00:06:51,440
+files that we have.
+94
+
+95
+00:06:51,900 --> 00:06:58,200
+If it doesn't exist in any of the modules that we provided together, then it is going to give you the
+95
+
+96
+00:06:58,200 --> 00:06:59,850
+undefined reference that you have seen.
+96
+
+97
+00:07:00,390 --> 00:07:06,030
+So that's why the compiler can work if you see something in the declaration but doesn't see the definition,
+97
+
+98
+00:07:06,480 --> 00:07:09,680
+but the linker would like to get all of them together.
+98
+
+99
+00:07:10,440 --> 00:07:11,040
+That's it.

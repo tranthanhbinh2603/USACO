@@ -1,0 +1,259 @@
+1
+00:00:01,200 --> 00:00:06,630
+In this video, you will know about some of the algorithms that are in the library.
+
+2
+00:00:07,320 --> 00:00:09,840
+The first one is the equal method.
+
+3
+00:00:09,990 --> 00:00:18,120
+The equal method can take an iterator begin and some in the position for one sequence and then some
+
+4
+00:00:18,120 --> 00:00:20,120
+starting point from another sequence.
+
+5
+00:00:20,580 --> 00:00:27,770
+And then for every item from the beginning to the end is going to check with the corresponding one here.
+
+6
+00:00:28,110 --> 00:00:34,770
+If it if it is equal or not, if all of the matching positions are equal, then it returns.
+
+7
+00:00:34,770 --> 00:00:35,040
+True.
+
+8
+00:00:35,310 --> 00:00:40,020
+So, for example, if you if you have a vector, for example, and you bust the begin and for example,
+
+9
+00:00:40,020 --> 00:00:46,920
+the beginning plus say seven or so is going to iterate on this given range, compare it with the corresponding
+
+10
+00:00:46,920 --> 00:00:52,830
+range from here to check if this Kurama and its application to that might be, let's say we would like
+
+11
+00:00:52,830 --> 00:00:54,540
+to write is Ballenden function.
+
+12
+00:00:54,930 --> 00:00:56,800
+If you would like to check a function is Bolinder.
+
+13
+00:00:56,830 --> 00:01:04,010
+We would like to know if it is from that, from the Left-to-right, it can be read as the same as right
+
+14
+00:01:04,020 --> 00:01:04,470
+or left.
+
+15
+00:01:05,160 --> 00:01:08,910
+So one nice idea here is to just use the equal method.
+
+16
+00:01:09,180 --> 00:01:15,900
+You give it the string begin and end and you would like to start from the end also to start to compare.
+
+17
+00:01:15,930 --> 00:01:22,920
+So here we start from the beginning, which is the last element in the array, and then is going to
+
+18
+00:01:23,100 --> 00:01:26,660
+element by element from this range compared with this range.
+
+19
+00:01:26,850 --> 00:01:33,210
+If it turns out that all of them are equal, then we have an equal result, if you like, a more efficient
+
+20
+00:01:33,210 --> 00:01:33,520
+way.
+
+21
+00:01:33,540 --> 00:01:36,540
+We need to compare a palindrome, all of it.
+
+22
+00:01:36,540 --> 00:01:38,610
+You just need to compare half of its size.
+
+23
+00:01:40,640 --> 00:01:50,240
+The second set of algorithms here are all of any of none of let's say you have a victory here and you
+
+24
+00:01:50,240 --> 00:01:56,190
+have some function f the check if the element is even or not.
+
+25
+00:01:56,450 --> 00:01:58,220
+So it isn't the function.
+
+26
+00:01:58,820 --> 00:02:08,000
+The function of is going to take a range start and end and the function F is it will check if every
+
+27
+00:02:08,000 --> 00:02:11,150
+element satisfy this predicate or this function here.
+
+28
+00:02:11,600 --> 00:02:14,730
+So if every element is even, it will be even.
+
+29
+00:02:14,750 --> 00:02:16,120
+So this isn't the case here.
+
+30
+00:02:16,850 --> 00:02:22,340
+The function, any of what a check, if any of them is even and this is happening.
+
+31
+00:02:22,340 --> 00:02:23,490
+We have you two and six.
+
+32
+00:02:23,510 --> 00:02:24,770
+So, yes, this will be true.
+
+33
+00:02:25,520 --> 00:02:31,730
+The function, none of will make sure that none of them satisfy the condition that mean that all of
+
+34
+00:02:31,730 --> 00:02:34,470
+them are even all of them are old, which isn't the case here.
+
+35
+00:02:34,910 --> 00:02:35,360
+So,
+
+36
+00:02:38,540 --> 00:02:42,140
+yeah, this is mainly some some boolean function that you can apply.
+
+37
+00:02:43,200 --> 00:02:53,850
+There is also a function name, the Kobe underscore in the Kobe underscore and just take from you some
+
+38
+00:02:53,850 --> 00:02:58,790
+starting position and accounted for the number of elements to make a copy.
+
+39
+00:02:59,370 --> 00:03:06,570
+And then there is something here that you first time to see is good back into the concert to return
+
+40
+00:03:07,920 --> 00:03:15,980
+a specific type of iterators that can that will start to cool your Bush back, Bush back function.
+
+41
+00:03:16,380 --> 00:03:25,890
+So this target function here, the vector to return an iterator for its for its back for its it will
+
+42
+00:03:25,980 --> 00:03:26,300
+return.
+
+43
+00:03:26,310 --> 00:03:30,000
+And an attribute that you can call Bush pushed back over it.
+
+44
+00:03:30,300 --> 00:03:35,700
+So this could be in the function will call the bush back over the iterator that's coming mainly from
+
+45
+00:03:35,700 --> 00:03:36,010
+here.
+
+46
+00:03:36,810 --> 00:03:42,480
+So now here the source is a string from one to nine and zero here plus one.
+
+47
+00:03:42,480 --> 00:03:47,220
+Then we are at starting position to end asking to be before enemies.
+
+48
+00:03:47,220 --> 00:03:49,310
+So it would be two, three, four, five.
+
+49
+00:03:49,800 --> 00:03:53,880
+So this guy is going to copy four elements starting from two.
+
+50
+00:03:54,330 --> 00:04:02,310
+And it would insert in the it will call the Bush back in the end of this of this target, which here
+
+51
+00:04:02,310 --> 00:04:02,970
+is empty.
+
+52
+00:04:03,150 --> 00:04:06,500
+So the Bush back four times or just the Bush back four letters.
+
+53
+00:04:07,710 --> 00:04:12,650
+So for simplicity, back and circle is just calling the bush back over whatever is best here.
+
+54
+00:04:13,940 --> 00:04:19,820
+The last method I would like to say in this video is I to eight, which is a nice function of the function
+
+55
+00:04:19,820 --> 00:04:25,610
+take from you some some begin and some end and some initial value.
+
+56
+00:04:26,000 --> 00:04:30,510
+And it's going to incrementally assign the values from here to there.
+
+57
+00:04:30,860 --> 00:04:36,500
+So, for example, if you give it a and it was five, which are five votes and you give it starting
+
+58
+00:04:36,500 --> 00:04:41,580
+value, ten is going to incrementally assign 10, 11, 12, 13 and 14.
+
+59
+00:04:42,410 --> 00:04:44,210
+Here is a more interesting case.
+
+60
+00:04:44,450 --> 00:04:48,290
+Let's say you constructed a little string of twenty six letters.
+
+61
+00:04:48,290 --> 00:04:49,280
+All of them are empty.
+
+62
+00:04:50,000 --> 00:04:52,280
+Then you give it the beginning end and give it later.
+
+63
+00:04:52,280 --> 00:04:58,040
+Eight then is going to incrementally assign A, B, C, the block, the Z.
+
+64
+00:04:58,640 --> 00:05:06,500
+So the to A is it takes an initial value, iterate over the range and give incrementing with one.
+
+65
+00:05:07,490 --> 00:05:08,060
+That's it.

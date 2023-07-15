@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1674209532 source:e:\document\project\usaco\competitive programming essentials, master algorithms 2022\07 - big integers\code by me\01 - sum\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+

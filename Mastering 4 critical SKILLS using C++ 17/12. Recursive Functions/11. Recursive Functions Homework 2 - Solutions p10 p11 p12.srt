@@ -1,0 +1,834 @@
+0
+1
+00:00:01,520 --> 00:00:10,820
+Let's continue the homework from this lecture and also from the recursive lecture and some
+1
+
+2
+00:00:10,820 --> 00:00:16,400
+homework in this till end would be using a new markers, so don't wonder why the remaining of the
+2
+
+3
+00:00:16,400 --> 00:00:19,640
+course doesn't have something to point on the screen.
+3
+
+4
+00:00:20,570 --> 00:00:22,610
+Um, so what's next?
+4
+
+5
+00:00:22,940 --> 00:00:28,310
+We wanted to implement this function, I was a little puzzled in the last session for a reason.
+5
+
+6
+00:00:28,340 --> 00:00:34,670
+But anyway, so we would like to sum only the last N elements in the array.
+6
+
+7
+00:00:34,670 --> 00:00:38,600
+So in this case here, we have this input array and we have these three numbers.
+7
+
+8
+00:00:39,080 --> 00:00:42,020
+Then the last three elements would be seventeen coming from them.
+8
+
+9
+00:00:42,590 --> 00:00:48,620
+So to design a function for that, here is what I implemented eventually.
+9
+
+10
+00:00:49,130 --> 00:00:56,550
+We have the array here and we have the current counter; the current length of the array.
+10
+
+11
+00:00:56,570 --> 00:01:05,510
+So for example, here, if we have the one, eight, two. ten and three, so initially we have five elements.
+11
+
+12
+00:01:05,810 --> 00:01:07,160
+So the length is five.
+12
+
+13
+00:01:08,180 --> 00:01:13,310
+Now, if I would like to print the last three, get the last three, I would like to get this three elements.
+13
+
+14
+00:01:14,030 --> 00:01:15,080
+So when you think about it?
+14
+
+15
+00:01:16,460 --> 00:01:21,470
+You either try to get this element and then get the next one or maybe get this element and go this one.
+15
+
+16
+00:01:21,560 --> 00:01:23,960
+So this is are the two thinking perspectives.
+16
+
+17
+00:01:24,560 --> 00:01:26,780
+So from here, I would just go with that.
+17
+
+18
+00:01:28,010 --> 00:01:31,070
+I would just go with getting the last element.
+18
+
+19
+00:01:31,790 --> 00:01:37,310
+Now the idea is as following, I need a counter so that I can know if I am done or not.
+19
+
+20
+00:01:37,430 --> 00:01:40,340
+This is a must. No way you can get rid of the counter.
+20
+
+21
+00:01:40,700 --> 00:01:43,340
+So here we can easily define the base case.
+21
+
+22
+00:01:43,790 --> 00:01:48,920
+If we do not need any elements anymore, we are done with tracing the task.
+22
+
+23
+00:01:49,640 --> 00:01:52,400
+OK, now what is this element here?
+23
+
+24
+00:01:53,340 --> 00:01:56,640
+Three is the array of length minus one.
+24
+
+25
+00:01:57,210 --> 00:02:01,290
+So we know that we need this variable with us, we need this index with us.
+25
+
+26
+00:02:01,560 --> 00:02:02,580
+OK, so we got it.
+26
+
+27
+00:02:03,150 --> 00:02:05,600
+Now let's define our recursive problem.
+27
+
+28
+00:02:05,610 --> 00:02:09,270
+When you think about it, it seems that we need to work on this sub-array.
+28
+
+29
+00:02:10,330 --> 00:02:10,620
+Right.
+29
+
+30
+00:02:10,980 --> 00:02:18,000
+So in terms of our function definition, this seems to be the suffix sum of the array, but its
+30
+
+31
+00:02:18,140 --> 00:02:22,830
+length now decreased one element and also its counter decreased one element.
+31
+
+32
+00:02:23,490 --> 00:02:27,900
+So this way, we can define simply the recursive function.
+32
+
+33
+00:02:28,620 --> 00:02:34,050
+The thing that bothered me last time that actually the length it doesn't really express the the function.
+33
+
+34
+00:02:34,050 --> 00:02:37,230
+But but anyway, that's what the function definition I see is still valid.
+34
+
+35
+00:02:37,620 --> 00:02:46,500
+The function is given an array and the length and the count elements just get them for me.
+35
+
+36
+00:02:46,860 --> 00:02:53,150
+So when you think about it, the function is valid now from the tracing perspective that we learned
+36
+
+37
+00:02:53,160 --> 00:02:59,280
+before, the function is doing as following, like according to the definition, what is suffix sum
+37
+
+38
+00:02:59,280 --> 00:03:00,510
+of five and three?
+38
+
+39
+00:03:00,750 --> 00:03:03,030
+It is just the submission of the last three elements.
+39
+
+40
+00:03:03,600 --> 00:03:04,500
+What does this function
+40
+
+41
+00:03:04,500 --> 00:03:12,000
+do? It says I would like three plus the submission of the array of length four and two
+41
+
+42
+00:03:12,000 --> 00:03:12,480
+elements.
+42
+
+43
+00:03:13,440 --> 00:03:16,590
+This is array of length four and two elements are two and 10.
+43
+
+44
+00:03:16,920 --> 00:03:19,890
+So you don't have to keep tracing the function.
+44
+
+45
+00:03:20,130 --> 00:03:22,050
+You just by the function logic
+45
+
+46
+00:03:22,050 --> 00:03:25,680
+you can simply decide what is the goal of it.
+46
+
+47
+00:03:27,280 --> 00:03:30,550
+OK, so let's see, what else do we have?
+47
+
+48
+00:03:32,470 --> 00:03:41,200
+The second task, which is the opposite,  we would like to compute the prefix sum. Now
+48
+
+49
+00:03:41,200 --> 00:03:44,590
+this time is a bit easier, but just different perspective.
+49
+
+50
+00:03:44,890 --> 00:03:49,480
+And this time, if I would like the three, it would mean the first three numbers, which are here
+50
+
+51
+00:03:49,480 --> 00:03:49,870
+eight.
+51
+
+52
+00:03:49,970 --> 00:03:52,930
+Now, how can we implement that? Similar logic
+52
+
+53
+00:03:53,170 --> 00:03:54,850
+but there are some advantages here.
+53
+
+54
+00:03:55,960 --> 00:03:59,280
+OK, so let's use exactly the same strategy as the last
+54
+
+55
+00:03:59,290 --> 00:03:59,560
+one.
+55
+
+56
+00:04:01,650 --> 00:04:09,630
+We have here our array, which is one, eight,  two, ten, and three, I would like to get the first three
+56
+
+57
+00:04:09,630 --> 00:04:11,760
+elements, which are these three elements.
+57
+
+58
+00:04:12,270 --> 00:04:20,490
+So now if I would like to think recursively. Again, I have two thinking strategies, either I would
+58
+
+59
+00:04:20,490 --> 00:04:24,690
+like to get this one and then try to get the eight and two in the recursive way.
+59
+
+60
+00:04:25,260 --> 00:04:27,810
+Or I can get the two.
+60
+
+61
+00:04:28,990 --> 00:04:33,700
+And recursively, I will try to get the one and eight.
+61
+
+62
+00:04:33,790 --> 00:04:37,810
+So this is how I would arrange my thinking strategy.
+62
+
+63
+00:04:37,990 --> 00:04:39,140
+So let's go with the first one.
+63
+
+64
+00:04:39,160 --> 00:04:44,510
+The first one will be exactly the same logic as we did before in the previous suffix sum.
+64
+
+65
+00:04:44,540 --> 00:04:48,280
+So the idea would be as following I would need the length.
+65
+
+66
+00:04:48,820 --> 00:04:53,170
+And I also need a counter. If the counter is zero,
+66
+
+67
+00:04:53,200 --> 00:04:54,310
+we are done with that task.
+67
+
+68
+00:04:54,880 --> 00:05:00,150
+Now, if I would like to get this element where its  position, its position is array of count
+68
+
+69
+00:05:00,160 --> 00:05:00,730
+minus one.
+69
+
+70
+00:05:01,120 --> 00:05:02,290
+OK, we got this one.
+70
+
+71
+00:05:02,770 --> 00:05:05,140
+Now I want to define my sub-problem.
+71
+
+72
+00:05:05,560 --> 00:05:08,980
+My sub-problem now is the array is as it is.
+72
+
+73
+00:05:11,410 --> 00:05:14,650
+But the counter here is two.
+73
+
+74
+00:05:15,250 --> 00:05:16,270
+What about the length?
+74
+
+75
+00:05:16,840 --> 00:05:19,000
+The length actually didn't change.
+75
+
+76
+00:05:19,000 --> 00:05:20,540
+I do not think that we need to
+76
+
+77
+00:05:20,830 --> 00:05:24,730
+We don't need to do this minus one, because anyway, we don't depend on it.
+77
+
+78
+00:05:25,570 --> 00:05:31,630
+So now when you think about it, my new problem is, hey, in the same array count for me, the first
+78
+
+79
+00:05:31,630 --> 00:05:34,150
+two elements, which is just one and eight.
+79
+
+80
+00:05:34,480 --> 00:05:37,060
+So this is how recursively you think about it.
+80
+
+81
+00:05:37,810 --> 00:05:44,710
+When the count with three I was saying, please count for me, sum for me these three elements.
+81
+
+82
+00:05:45,160 --> 00:05:46,460
+Mathematically, what is the sum?
+82
+
+83
+00:05:46,490 --> 00:05:47,170
+Just add it.
+83
+
+84
+00:05:48,550 --> 00:05:55,090
+OK, if I told you please sum for me, the first two elements, then the mathematically we just
+84
+
+85
+00:05:55,090 --> 00:05:56,170
+one and eight is nine.
+85
+
+86
+00:05:56,590 --> 00:05:59,260
+So this is how we trivially can trace it.
+86
+
+87
+00:06:00,010 --> 00:06:06,600
+Now given that in C++, we can trivially decide a new array start.
+87
+
+88
+00:06:06,610 --> 00:06:11,710
+We can make use of this add factor to code it in a different way.
+88
+
+89
+00:06:14,110 --> 00:06:22,990
+Which is this following in the array here, one, eight, two, ten and three who will do the
+89
+
+90
+00:06:22,990 --> 00:06:27,140
+following, I told you I can take the last element and get the first elements.
+90
+
+91
+00:06:27,160 --> 00:06:29,140
+What if I get need to get the first element?
+91
+
+92
+00:06:29,710 --> 00:06:31,360
+OK, the first element is one.
+92
+
+93
+00:06:31,630 --> 00:06:33,520
+OK, so we got one plus something.
+93
+
+94
+00:06:34,060 --> 00:06:36,130
+What did the remaining of the function?
+94
+
+95
+00:06:36,850 --> 00:06:39,700
+It is the array from eight.
+95
+
+96
+00:06:41,110 --> 00:06:42,340
+And the count is two.
+96
+
+97
+00:06:43,590 --> 00:06:44,490
+What is 8?
+97
+
+98
+00:06:44,850 --> 00:06:46,980
+Eight is array plus one.
+98
+
+99
+00:06:47,700 --> 00:06:53,790
+So given that C++ allow us to do that, which might not be the case in other languages or at least
+99
+
+100
+00:06:53,790 --> 00:06:57,720
+not efficient, we can define also the signature in another way.
+100
+
+101
+00:06:58,050 --> 00:07:03,450
+So this function has this advantage, given that we depend on the begin.
+101
+
+102
+00:07:03,720 --> 00:07:05,760
+This wasn't possible with the suffix sum.
+102
+
+103
+00:07:06,270 --> 00:07:10,590
+So this was easy or doable here
+103
+
+104
+00:07:10,860 --> 00:07:15,810
+much more compared with the previous functionality.
+104
+
+105
+00:07:17,390 --> 00:07:20,110
+Uh, let's proceed.
+105
+
+106
+00:07:21,260 --> 00:07:24,140
+The third one here
+106
+
+107
+00:07:26,440 --> 00:07:33,370
+is for Is Palindrome, we would like to decide if the array is palindrome or not, and I would like you
+107
+
+108
+00:07:33,370 --> 00:07:36,370
+to define the signature of the function.
+108
+
+109
+00:07:37,830 --> 00:07:38,320
+OK.
+109
+
+110
+00:07:41,450 --> 00:07:45,980
+So I'm defining here two definitions for is palindrome.
+110
+
+111
+00:07:46,520 --> 00:07:54,200
+One of them where I have to use a start and end and another one, I will not have to use a start and end.
+111
+
+112
+00:07:55,040 --> 00:07:57,890
+So let's see how. This is
+112
+
+113
+00:07:58,250 --> 00:08:03,080
+palindrome array, we see that one is one, eight is eight two in the middle.
+113
+
+114
+00:08:03,110 --> 00:08:04,300
+This is a palindrome array.
+114
+
+115
+00:08:05,630 --> 00:08:12,590
+So here's what I'm going to do now again, we would like to think recursively one, eight, two, eight, one.
+115
+
+116
+00:08:12,950 --> 00:08:14,260
+What is a palindrome array?
+116
+
+117
+00:08:14,840 --> 00:08:22,920
+It's an array recursively that its start is as same as its end, and the middle is also palindrome.
+117
+
+118
+00:08:23,600 --> 00:08:25,550
+So this is how you think and implement it.
+118
+
+119
+00:08:25,820 --> 00:08:28,310
+I'm first of all, comparing the start with the end.
+119
+
+120
+00:08:28,880 --> 00:08:30,290
+If they are not equal, we return false.
+120
+
+121
+00:08:31,430 --> 00:08:36,920
+Otherwise I am shifting the start pointer here and the end pointer here.
+121
+
+122
+00:08:38,690 --> 00:08:43,070
+To check if this is palindrome or not, according to that, what is the function definition?
+122
+
+123
+00:08:43,640 --> 00:08:51,620
+The function definition is given an array, check if the values from this start to this end is palindrome.
+123
+
+124
+00:08:52,100 --> 00:08:53,510
+This is the function definition.
+124
+
+125
+00:08:53,870 --> 00:09:00,260
+So initially, if you pass zero and four, then it means if this all is palindrome or not. The next step
+125
+
+126
+00:09:00,260 --> 00:09:05,090
+when you pass one and three, it check only if this is palindrome or not.
+126
+
+127
+00:09:05,600 --> 00:09:08,930
+And the next step will check if two and two is palindrome or not.
+127
+
+128
+00:09:08,960 --> 00:09:13,190
+It will be, yes, because if there is a single element, then we are done.
+128
+
+129
+00:09:14,990 --> 00:09:20,000
+Again, in practice, you shouldn't keep tracing the function, you should only ask yourself, what
+129
+
+130
+00:09:20,000 --> 00:09:21,620
+is the definition of this function?
+130
+
+131
+00:09:22,070 --> 00:09:25,760
+The definition is, is it palindrome in this range or not?
+131
+
+132
+00:09:26,600 --> 00:09:33,650
+We check the boundaries, we recurs on the body and then we just ask, is it palindrome or not?
+132
+
+133
+00:09:34,130 --> 00:09:35,600
+This is the first way to do it.
+133
+
+134
+00:09:36,140 --> 00:09:40,910
+Now I'm going to make use of the fact that we can adjust to the C++ in an easy way.
+134
+
+135
+00:09:41,690 --> 00:09:44,960
+So here is how I will implement it. In a similar way,
+135
+
+136
+00:09:46,100 --> 00:09:51,140
+now the definition is as following given an array and its length; 'end' here represents the length,
+136
+
+137
+00:09:51,410 --> 00:09:53,390
+just a check for me if this is palindrome or not.
+137
+
+138
+00:09:53,660 --> 00:10:01,220
+So now one, eight, two, eight, one, according to the recursive definition, if I give it all of this array,
+138
+
+139
+00:10:01,220 --> 00:10:02,090
+it should work well.
+139
+
+140
+00:10:02,150 --> 00:10:07,580
+Right. Now, we need to make some tracing. How can I check if I don't have a start?
+140
+
+141
+00:10:07,730 --> 00:10:11,880
+Now the definition of the function is the whole array, not just from the start to the end.
+141
+
+142
+00:10:12,620 --> 00:10:23,000
+If the whole array is palindrome or not, 'end' here is actually, um uh, let me think about something.
+142
+
+143
+00:10:25,020 --> 00:10:30,840
+Yeah, 'end' here is an index; 'end' represents the last index of the array, not the length of that array
+143
+
+144
+00:10:30,840 --> 00:10:31,770
+The length of this array is 5.
+144
+
+145
+00:10:32,040 --> 00:10:37,070
+So 'end' is actually an index and 'end' here is index two, end plus one is the length.
+145
+
+146
+00:10:37,980 --> 00:10:39,480
+Here is the base case.
+146
+
+147
+00:10:39,480 --> 00:10:45,590
+I'm saying if we have only a single element in the array, then definitely this is a palindrome.
+147
+
+148
+00:10:46,720 --> 00:10:51,430
+And the second one, I would like to compare the first element in the array with the last element in
+148
+
+149
+00:10:51,430 --> 00:10:51,920
+the array.
+149
+
+150
+00:10:51,940 --> 00:10:54,820
+This is end position and this is zero position.
+150
+
+151
+00:10:55,330 --> 00:10:58,660
+So is it not equal, if not equal, we return false.
+151
+
+152
+00:10:59,470 --> 00:11:02,830
+Now, after that, I would like to to prepare my new definition.
+152
+
+153
+00:11:03,340 --> 00:11:08,530
+I know that I want to check from here and I need this end here.
+153
+
+154
+00:11:09,440 --> 00:11:15,470
+So I can say the following: through this, I can say, Hey, I need array plus one, which is this 8.
+154
+
+155
+00:11:16,250 --> 00:11:16,640
+Now,
+155
+
+156
+00:11:18,150 --> 00:11:20,080
+what is the end from this perspective?
+156
+
+157
+00:11:20,100 --> 00:11:22,110
+This is zero, this is one, this is two.
+157
+
+158
+00:11:22,770 --> 00:11:26,040
+Previously, this was zero, one, two, three, four.
+158
+
+159
+00:11:26,700 --> 00:11:33,300
+As you see, the new end is two steps minus the previous end; this why I shift here end minus two?
+159
+
+160
+00:11:33,750 --> 00:11:38,010
+If you want to think of it from another logic, we actually are done with two characters.
+160
+
+161
+00:11:38,550 --> 00:11:42,120
+So the length or the end must shift to be by two parameters.
+161
+
+162
+00:11:42,660 --> 00:11:44,790
+I hope the second definition is clear for you.
+162
+
+163
+00:11:45,000 --> 00:11:48,420
+We are making use of C++, but we are defining it in an nicer way.
+163
+
+164
+00:11:48,720 --> 00:11:55,500
+I would say the second one is more nicer than the first one because the definition is much more logical.
+164
+
+165
+00:11:55,860 --> 00:11:59,070
+You are saying something like, is this a palindrome array or not?
+165
+
+166
+00:11:59,340 --> 00:12:02,640
+And then you are preparing your new array.
+166
+
+167
+00:12:02,970 --> 00:12:07,010
+I hope the overall idea of this part is clear enough.

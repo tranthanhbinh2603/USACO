@@ -1,0 +1,384 @@
+1
+00:00:00,890 --> 00:00:07,250
+Hi Everyone, in this lecture we're going to discuss how we can compute all subsequences of given string
+
+2
+00:00:07,430 --> 00:00:12,590
+and we are going to use a bit masking based approach to solve this problem. OK?
+
+3
+00:00:12,890 --> 00:00:19,010
+So generally speaking... there are two ways in which we can generate subsequence as a whole given string.
+
+4
+00:00:19,020 --> 00:00:19,360
+OK?
+
+5
+00:00:19,880 --> 00:00:27,830
+One is using a recursive approach where we know that each for each character we have two choices either
+
+6
+00:00:27,830 --> 00:00:31,520
+it will be included in the substring or it will not be included in the string.
+
+7
+00:00:31,520 --> 00:00:36,170
+Ok. so then we can say OK, if we do this, we have two options for A.
+
+8
+00:00:36,230 --> 00:00:37,430
+We have two options for B.
+
+9
+00:00:37,430 --> 00:00:38,810
+We have two options for C.
+
+10
+00:00:39,230 --> 00:00:43,130
+That means we can have eight possible sub sequences, OK?
+
+11
+00:00:44,030 --> 00:00:49,070
+So what we want to do is we want to print all possible sub sequences. so effectively
+
+12
+00:00:49,070 --> 00:00:53,260
+If we do not include anything Ok that would be like null string.
+
+13
+00:00:53,270 --> 00:01:01,190
+If we include a single letter that would be like either A or B or C or if we include two letters,
+
+14
+00:01:01,610 --> 00:01:10,130
+then it would be either AB or it would be either AC or it would be BC or if we include all the
+
+15
+00:01:10,130 --> 00:01:12,740
+three letters, then it would be ABC OK.
+
+16
+00:01:13,010 --> 00:01:20,630
+So you can easily see that this are eight possible sub sequences that we can generate.
+
+17
+00:01:21,870 --> 00:01:24,740
+Now how we can do it using bit masking.
+
+18
+00:01:25,220 --> 00:01:33,680
+So one thing we are going to do is we are going to write the numbers from zero to seven that are eight numbers.
+
+19
+00:01:33,680 --> 00:01:40,640
+Ok. so zero, one, two three, four, five, six and seven.
+
+20
+00:01:41,030 --> 00:01:46,550
+So if you look at the binary representation of these numbers so you will observe a pattern, OK?
+
+21
+00:01:46,940 --> 00:01:50,360
+So zero is what? zero is zero zero zero.
+
+22
+00:01:50,450 --> 00:01:51,140
+What is one?
+
+23
+00:01:51,650 --> 00:01:53,270
+It is zero zero one.
+
+24
+00:01:53,930 --> 00:01:55,130
+Then what is two?
+
+25
+00:01:55,130 --> 00:01:56,740
+It is zero one zero.
+
+26
+00:01:56,750 --> 00:01:58,460
+What is three? zero one one.
+
+27
+00:01:58,460 --> 00:02:00,170
+What is four? one zero zero.
+
+28
+00:02:00,620 --> 00:02:04,580
+What is five? one zero one. what is six? one one zero and 
+
+29
+00:02:04,580 --> 00:02:06,360
+what is seven? one one one.
+
+30
+00:02:06,380 --> 00:02:06,800
+OK.
+
+31
+00:02:07,160 --> 00:02:11,630
+So effectively, if you treat these as a mask, Ok?
+
+32
+00:02:12,050 --> 00:02:18,710
+And if you try to overlay your string ABC over these three numbers, you will find out that OK.
+
+33
+00:02:19,100 --> 00:02:24,580
+Zero means do not include that corresponding what ?character.
+
+34
+00:02:24,590 --> 00:02:24,860
+OK.
+
+35
+00:02:25,250 --> 00:02:29,660
+So if you put zero zero zero over ABC, you can see nothing is included.
+
+36
+00:02:29,780 --> 00:02:31,220
+That means it is a null string.
+
+37
+00:02:31,910 --> 00:02:33,680
+Zero zero one means OK.
+
+38
+00:02:33,680 --> 00:02:41,360
+Let us overlay this over ABC and you can see that OK, if you want to include C, that means this would
+
+39
+00:02:41,360 --> 00:02:43,220
+correspond to the output C.
+
+40
+00:02:43,490 --> 00:02:44,900
+OK, what about two
+
+41
+00:02:44,910 --> 00:02:47,210
+that mean, it is nothing but B.
+
+42
+00:02:47,750 --> 00:02:48,950
+What about 1 1?
+
+43
+00:02:48,950 --> 00:02:50,330
+Include B and C.
+
+44
+00:02:50,570 --> 00:02:50,900
+OK.
+
+45
+00:02:51,770 --> 00:02:52,580
+What about one?
+
+46
+00:02:53,030 --> 00:02:54,230
+Just include A.
+
+47
+00:02:54,680 --> 00:02:57,290
+What about this? AC.
+
+48
+00:02:57,320 --> 00:02:58,310
+What about this?
+
+49
+00:02:58,710 --> 00:02:59,360
+AB
+
+50
+00:02:59,750 --> 00:03:00,650
+What about this?
+
+51
+00:03:00,740 --> 00:03:02,780
+It is nothing but ABC OK.
+
+52
+00:03:03,320 --> 00:03:13,600
+So again, what you can see here is you're able to generate... you're able to generate all possible sub
+
+53
+00:03:13,610 --> 00:03:16,850
+sequences because for...
+
+54
+00:03:18,750 --> 00:03:19,050
+OK.
+
+55
+00:03:20,250 --> 00:03:25,500
+Because the bit pattern is such that it can generate all possible subsequences.
+
+56
+00:03:25,640 --> 00:03:32,640
+OK, now the question is how do we know that we need to iterate from zero to seven? okay so we know for
+
+57
+00:03:32,640 --> 00:03:39,480
+a string of length N, there are two raise to the power N possible subsequences. Ok.
+
+58
+00:03:40,970 --> 00:03:43,540
+So subsequences.
+
+59
+00:03:43,940 --> 00:03:49,010
+Now  the question is, if we have a string of length N then I can easily iterate from zero
+
+60
+00:03:49,550 --> 00:03:53,240
+till what ? two raise to the power N-1.
+
+61
+00:03:53,510 --> 00:04:01,190
+This is the range and this range will give us all the combination of bits that we can overlay on the
+
+62
+00:04:01,190 --> 00:04:05,060
+given string and find out what the string is. OK?
+
+63
+00:04:06,520 --> 00:04:11,590
+So now one thing you may ask is Ok, how do we know, how do we how do we do the filtering logic.
+
+64
+00:04:11,590 --> 00:04:17,950
+OK, how do we filter. Ok. so if the number is  let say six, six is what? one one zero
+
+65
+00:04:18,220 --> 00:04:21,610
+How do we extract the digits A and B OK?
+
+66
+00:04:22,150 --> 00:04:26,110
+Effectively, what I'm going to do is, I'm going to extract the last bit.
+
+67
+00:04:27,430 --> 00:04:28,300
+So let me tell you.
+
+68
+00:04:31,690 --> 00:04:37,030
+OK, so what we're going to do? we're going to find out the last bit if it is zero.
+
+69
+00:04:37,210 --> 00:04:46,720
+OK, so we would do it in a reverse manner so we will extract the digits from right to left and we are
+
+70
+00:04:46,720 --> 00:04:49,780
+going to iterate over the string in the left right order, OK?
+
+71
+00:04:50,320 --> 00:04:53,250
+If it is zero, we say we're not going to include A.
+
+72
+00:04:53,500 --> 00:04:54,670
+OK A is dis gone.
+
+73
+00:04:55,120 --> 00:04:57,690
+If this is one, then we are going to take B.
+
+74
+00:04:57,700 --> 00:04:59,230
+If this is one, we are going to take C.
+
+75
+00:04:59,450 --> 00:05:04,350
+So effectively, the order of picking the later it is reversed.
+
+76
+00:05:04,360 --> 00:05:06,910
+That means in the output of this is one
+
+77
+00:05:06,940 --> 00:05:09,760
+So instead of taking C again, I will take A.ok.
+
+78
+00:05:10,210 --> 00:05:12,070
+If this is B, I will take B.
+
+79
+00:05:12,310 --> 00:05:14,980
+This is what BC, I will take AB OK.
+
+80
+00:05:16,190 --> 00:05:21,750
+Then if it is what? if this is one then I will take C. OK, if this is one zero one, I will again
+
+81
+00:05:21,750 --> 00:05:22,560
+take A and C.
+
+82
+00:05:23,030 --> 00:05:28,120
+This is one one zero, so I will take what BC and this is one one, i will take ABC.
+
+83
+00:05:28,130 --> 00:05:31,970
+only change that will have is the
+
+84
+00:05:33,270 --> 00:05:38,910
+outputs are produced in a different order and you can store them in a vector and you can also do the
+
+85
+00:05:38,910 --> 00:05:41,320
+sorting based on length or based on lexicography order.
+
+86
+00:05:41,890 --> 00:05:44,010
+That.... that is easier, easily doable.
+
+87
+00:05:44,640 --> 00:05:50,450
+So in the implementation of filter, I'm going to extract all the bits of the number from right to
+
+88
+00:05:50,460 --> 00:05:51,450
+left one by one.
+
+89
+00:05:51,870 --> 00:05:59,760
+And if the bit is one, I'm going to include the corresponding letter from the string that I'm going to
+
+90
+00:05:59,760 --> 00:06:00,960
+read from left to right order.
+
+91
+00:06:01,230 --> 00:06:01,410
+OK?
+
+92
+00:06:01,430 --> 00:06:03,120
+You can also read it from right to left.
+
+93
+00:06:03,120 --> 00:06:04,200
+That is not an issue.
+
+94
+00:06:05,070 --> 00:06:07,010
+You can modify the logic accordingly as well.
+
+95
+00:06:07,020 --> 00:06:10,410
+OK, so that's all for the theory.
+
+96
+00:06:10,560 --> 00:06:13,140
+And in the next video, we will see the implementation.
+

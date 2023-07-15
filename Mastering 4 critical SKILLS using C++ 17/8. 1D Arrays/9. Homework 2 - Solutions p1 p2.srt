@@ -1,0 +1,339 @@
+0
+1
+00:00:01,350 --> 00:00:08,250
+Let's see the second set of the problems, we would like to find the minimum of three values, this problem
+1
+
+2
+00:00:08,250 --> 00:00:10,190
+might be coded in many different ways.
+2
+
+3
+00:00:10,200 --> 00:00:13,590
+So don't feel bad if your solution is different than mine.
+3
+
+4
+00:00:14,940 --> 00:00:16,810
+So here is one way to do it.
+4
+
+5
+00:00:17,280 --> 00:00:24,540
+The idea is as following. In the first three numbers that we read, I'm reading here, and the first three
+5
+
+6
+00:00:24,540 --> 00:00:24,990
+values,
+6
+
+7
+00:00:24,990 --> 00:00:30,330
+We are just putting it in a very small array of length three, which is equal to the minimum three values
+7
+
+8
+00:00:30,330 --> 00:00:31,170
+that we would like to do.
+8
+
+9
+00:00:32,010 --> 00:00:36,780
+And then if we have more elements than three elements, I do a very basic trick.
+9
+
+10
+00:00:37,170 --> 00:00:41,930
+I iterate on the whole array of three elements to find the maximum one among them.
+10
+
+11
+00:00:42,480 --> 00:00:47,430
+And then if the current value is less than this maximum one among the current three values,
+11
+
+12
+00:00:47,810 --> 00:00:50,400
+I just replace it. In this way
+12
+
+13
+00:00:50,430 --> 00:00:57,150
+In every single iteration, I keep the main array updated with the minimum value among all of the current
+13
+
+14
+00:00:58,410 --> 00:00:59,700
+elements.
+14
+
+15
+00:01:00,150 --> 00:01:04,680
+So overall, this is an efficient solution because G is just a small one.
+15
+
+16
+00:01:05,730 --> 00:01:12,050
+In practice, if we have to find like much more bigger than three, then we should find better solutions
+16
+
+17
+00:01:12,060 --> 00:01:14,610
+using STD as we'll learn later.
+17
+
+18
+00:01:14,970 --> 00:01:16,460
+So this is mainly the idea here.
+18
+
+19
+00:01:16,680 --> 00:01:23,250
+Keep iterating the first three values put them here, otherwise, get the maximum and replace them with it. After that,
+19
+
+20
+00:01:23,250 --> 00:01:29,520
+I would like to order the three values so that we print them in a sorted way.
+20
+
+21
+00:01:32,470 --> 00:01:40,300
+To do that, I'm just having here some logic also to just order them, and we already ordered
+21
+
+22
+00:01:40,300 --> 00:01:41,990
+the three values before, if you remember.
+22
+
+23
+00:01:42,310 --> 00:01:46,450
+So this is just one also logic to just sort them from small to large.
+23
+
+24
+00:01:46,840 --> 00:01:50,530
+And after that, I'm just printing the array as it is.
+24
+
+25
+00:01:50,720 --> 00:01:55,960
+Again, if you're having the ordering in the way that we did before or any different way, that's
+25
+
+26
+00:01:55,960 --> 00:01:56,380
+OK.
+26
+
+27
+00:01:57,860 --> 00:02:04,580
+And the second problem, we would like to search for a number and one of the given information that
+27
+
+28
+00:02:04,580 --> 00:02:07,820
+we should utilize is a zero up to 500.
+28
+
+29
+00:02:08,090 --> 00:02:10,130
+Definitely this problem is very easy with nested loops.
+29
+
+30
+00:02:10,130 --> 00:02:12,670
+It looks like you don't need to do a lot of magic.
+30
+
+31
+00:02:12,950 --> 00:02:14,900
+But the point is how to get rid of the nested loops.
+31
+
+32
+00:02:14,930 --> 00:02:20,830
+to do that, we need to make use of the frequency array style.
+32
+
+33
+00:02:21,650 --> 00:02:23,270
+So let's see.
+33
+
+34
+00:02:27,320 --> 00:02:35,960
+Here is the direct way, You read the array, with every query you iterate on the array from the end to
+34
+
+35
+00:02:35,960 --> 00:02:42,380
+find the target number and stop, we iterate from the end because we have here a request to find the last
+35
+
+36
+00:02:42,380 --> 00:02:44,390
+occurrence, and that's all.
+36
+
+37
+00:02:44,420 --> 00:02:47,150
+So this is nested loops. to get rid of the nested loops.
+37
+
+38
+00:02:47,360 --> 00:02:48,940
+We will do a simple trick.
+38
+
+39
+00:02:49,280 --> 00:02:54,110
+We will create an array of length 500 plus one.
+39
+
+40
+00:02:54,410 --> 00:03:00,890
+So this is our frequency array or marking array call it whatever we are using plus one here, because the
+40
+
+41
+00:03:00,890 --> 00:03:05,980
+values itself are from zero to five hundred and this means we need 501 numbers.
+41
+
+42
+00:03:06,020 --> 00:03:13,790
+So always be very careful when you are accessing an array with a value, and then we initialize all of
+42
+
+43
+00:03:13,790 --> 00:03:15,780
+this array with minus ones.
+43
+
+44
+00:03:15,800 --> 00:03:18,400
+There are easier way to initialize than this way.
+44
+
+45
+00:03:18,410 --> 00:03:27,620
+But anyway, for now we can just iterate and initialize minus one. the meaning of
+45
+
+46
+00:03:27,620 --> 00:03:29,600
+minus one here that it doesn't exist.
+46
+
+47
+00:03:29,630 --> 00:03:33,510
+OK, so that's why you have minus one here after that, when we read the array.
+47
+
+48
+00:03:33,830 --> 00:03:40,820
+We keep getting the value as an index and mark it with "I", for example, let's say in the
+48
+
+49
+00:03:40,820 --> 00:03:42,980
+first position we read value two hundred.
+49
+
+50
+00:03:43,280 --> 00:03:46,080
+Then we go to array of 200 and mark zero here.
+50
+
+51
+00:03:46,460 --> 00:03:48,250
+After that we get the value 70.
+51
+
+52
+00:03:48,500 --> 00:03:50,810
+So we go to array of 70 and assign one.
+52
+
+53
+00:03:51,090 --> 00:03:58,350
+After that we got 200 again, we'll go to array of 200 and now set the value of 2 observe that 200
+53
+
+54
+00:03:58,370 --> 00:03:59,300
+appeared twice.
+54
+
+55
+00:03:59,300 --> 00:04:04,730
+But as we are updating the answer, this means the array will always have the last occurrence 
+55
+
+56
+00:04:04,730 --> 00:04:05,390
+value here.
+56
+
+57
+00:04:05,810 --> 00:04:09,110
+And then after that we just answering the query with a single loop.
+57
+
+58
+00:04:09,500 --> 00:04:14,560
+As you see, we have a single loop here, and a single loop here, and a single loop here, so we're perfect.
+58
+
+59
+00:04:15,290 --> 00:04:17,990
+So we have three single loops.
+59
+
+60
+00:04:18,470 --> 00:04:25,580
+This is very, very efficient compared with having nested loops. ...I don't want
+60
+
+61
+00:04:25,580 --> 00:04:30,080
+to dig in the details now, but in algorithms you learn about the complexity.
+61
+
+62
+00:04:30,410 --> 00:04:35,180
+And when you have a single loop like that that's actually doing kind of any steps, we call it like
+62
+
+63
+00:04:35,180 --> 00:04:36,000
+linear order.
+63
+
+64
+00:04:36,920 --> 00:04:42,500
+So this is fine as long as you have multiple single loops.
+64
+
+65
+00:04:42,530 --> 00:04:50,270
+This is OK also if you have multiple nested loops, but independent ones, they are also of the same
+65
+
+66
+00:04:50,270 --> 00:04:53,490
+number of overall total number of steps in the solution.
+66
+
+67
+00:04:54,090 --> 00:04:55,540
+Anyway, let's skip that for now.
+67
+
+68
+00:04:58,270 --> 00:05:00,690
+Let's stop here.

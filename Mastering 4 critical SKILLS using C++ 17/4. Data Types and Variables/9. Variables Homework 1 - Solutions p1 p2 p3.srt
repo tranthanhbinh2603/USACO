@@ -1,0 +1,194 @@
+0
+1
+00:00:00,870 --> 00:00:05,820
+Let's see how to solve the problems of the homework, the first one, I guess, is very straightforward.
+1
+
+2
+00:00:07,350 --> 00:00:12,530
+You just need to start to read the values here, I selected integer,
+2
+
+3
+00:00:12,540 --> 00:00:17,070
+But I guess this isn't the best value that you should choose.
+3
+
+4
+00:00:17,430 --> 00:00:21,000
+For example, the integer here will make a problem when it comes to that division.
+4
+
+5
+00:00:21,360 --> 00:00:25,770
+So a more proper way is to use a float number.
+5
+
+6
+00:00:25,780 --> 00:00:33,630
+So this is like a bad choice here, a proper way is to say, like, for example, double a and b, because
+6
+
+7
+00:00:34,110 --> 00:00:39,640
+this will fit with more reading in the input and also fit with the output itself.
+7
+
+8
+00:00:41,130 --> 00:00:43,110
+Otherwise, we are just printing all of them.
+8
+
+9
+00:00:43,120 --> 00:00:48,750
+If you tried with yourself to divide by zero, you will notice that this isn't working very well.
+9
+
+10
+00:00:49,050 --> 00:00:53,400
+It will actually crash if b is zero, the more we go in the course,
+10
+
+11
+00:00:53,400 --> 00:00:56,070
+You should understand that and you should learn
+11
+
+12
+00:00:56,070 --> 00:00:58,710
+how can you handle this division by zero.
+12
+
+13
+00:01:00,000 --> 00:01:07,380
+In the second problem, also another straightforward, you should read and do the 
+13
+
+14
+00:01:08,610 --> 00:01:10,250
+the average part.
+14
+
+15
+00:01:10,260 --> 00:01:14,450
+So let's see this code here. In this one here,
+15
+
+16
+00:01:14,460 --> 00:01:17,840
+I started to read the first person.
+16
+
+17
+00:01:17,850 --> 00:01:18,830
+So here is its name.
+17
+
+18
+00:01:19,110 --> 00:01:19,890
+Here is the ID.
+18
+
+19
+00:01:20,070 --> 00:01:23,190
+I selected double because this is a good choice for the average.
+19
+
+20
+00:01:23,430 --> 00:01:25,260
+And then also in a very similar way,
+20
+
+21
+00:01:25,410 --> 00:01:32,430
+Reading the second guy information here and after that, I follow the screen by printing the grade number
+21
+
+22
+00:01:32,430 --> 00:01:36,870
+one and two, and after that, I am printing here the average of the two numbers.
+22
+
+23
+00:01:37,800 --> 00:01:43,890
+I was tricky in the sample input, I used 20 and 30 which will have definitely the output as twenty-five.
+23
+
+24
+00:01:44,280 --> 00:01:50,910
+But if I use something else like let's say twenty and thirty-one, then the output will fail.
+24
+
+25
+00:01:50,910 --> 00:01:53,580
+If grade one or two is integers.
+25
+
+26
+00:01:53,790 --> 00:01:58,530
+And also this isn't a double format like this point is zero.
+26
+
+27
+00:01:58,950 --> 00:02:03,330
+So be careful about the used data types here.
+27
+
+28
+00:02:05,240 --> 00:02:11,630
+In the third problem, we would like to get the even and odd sums, so it's all about the positions, this
+28
+
+29
+00:02:11,630 --> 00:02:17,990
+would need, like a few thinking or a few minutes to think about how to do it in a smart way as an
+29
+
+30
+00:02:17,990 --> 00:02:18,620
+advice.
+30
+
+31
+00:02:18,830 --> 00:02:22,680
+When you have an idea to solve the problem, don't just go directly with it.
+31
+
+32
+00:02:23,030 --> 00:02:27,250
+There are too many ways to solve the same problem, especially when the problem is a bit hard.
+32
+
+33
+00:02:27,590 --> 00:02:31,270
+So give yourself the time to think about how to solve a specific problem.
+33
+
+34
+00:02:31,820 --> 00:02:38,870
+The easiest way, in my opinion, I defined here four variables for even and four variables for odd.
+34
+
+35
+00:02:39,080 --> 00:02:43,220
+And then I'm reading them in a direct way, odd one then
+35
+
+36
+00:02:43,220 --> 00:02:45,350
+Even one, odd two, even two, odd three, even three.
+36
+
+37
+00:02:45,680 --> 00:02:51,410
+This way the even variables are together and odd variables together are ready for me to just use
+37
+
+38
+00:02:51,410 --> 00:02:52,340
+them and print directly.
+38
+
+39
+00:02:52,550 --> 00:02:58,400
+So I hope this is like an elegant way to try the problem. That's all.

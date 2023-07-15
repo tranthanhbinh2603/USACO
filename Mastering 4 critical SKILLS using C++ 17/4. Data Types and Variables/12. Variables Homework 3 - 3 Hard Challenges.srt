@@ -1,0 +1,249 @@
+0
+1
+00:00:01,140 --> 00:00:02,340
+Homework set number three.
+1
+
+2
+00:00:03,490 --> 00:00:08,650
+In this program, we will extend the swapping two numbers, to swapping to three numbers, maybe swapping 
+2
+
+3
+00:00:08,650 --> 00:00:10,230
+here is in the best name for it,
+3
+
+4
+00:00:10,480 --> 00:00:15,480
+but anyway, what I mean by that, let's say we have three variables, A, B and c with these values:
+4
+
+5
+00:00:15,490 --> 00:00:21,190
+One hundred and fifty two, any three hundred and one, then the new values will be 20 you see,
+5
+
+6
+00:00:21,190 --> 00:00:29,080
+like the B content in A and then C and B, so three hundred and one and the A and C one hundred and fifty.
+6
+
+7
+00:00:29,500 --> 00:00:36,910
+I would like you to read these three numbers and print them to apply the exchange that we mentioned here.
+7
+
+8
+00:00:37,390 --> 00:00:38,740
+Try to do it in any way.
+8
+
+9
+00:00:38,740 --> 00:00:43,090
+But if you would like to challenge yourself, you can do it only in four lines of code.
+9
+
+10
+00:00:44,620 --> 00:00:52,390
+In the second program, we will read two numbers, A & B, integers, I'm sorry, during the course I read
+10
+
+11
+00:00:52,390 --> 00:00:56,320
+the word the wrong way, but this is how I used to pronounce it.
+11
+
+12
+00:00:56,790 --> 00:00:59,740
+The proper way is, I guess, integer.
+12
+
+13
+00:00:59,830 --> 00:01:09,670
+But anyway, you get used to me saying it's like integer, you are to read  integers here A and B and B will be either
+13
+
+14
+00:01:09,670 --> 00:01:10,750
+minus one or one.
+14
+
+15
+00:01:11,080 --> 00:01:14,290
+If B is minus one, you will print two times A plus one.
+15
+
+16
+00:01:14,920 --> 00:01:17,080
+If B is one, you'll print A times A.
+16
+
+17
+00:01:17,290 --> 00:01:19,900
+I would like you to think of these two formulas as just big formulas 
+17
+
+18
+00:01:20,290 --> 00:01:25,270
+For example, it can be A times A times A times A because I found so many students are
+18
+
+19
+00:01:25,270 --> 00:01:28,400
+trying to find a way to handle the printing part.
+19
+
+20
+00:01:28,420 --> 00:01:29,930
+It's all about the B
+20
+
+21
+00:01:29,950 --> 00:01:37,120
+here, you are to find a way to print this content based on the value of B try to think in a simple one
+21
+
+22
+00:01:37,120 --> 00:01:44,170
+line formula to guess that the output here, in the future we will learn about the (if) conditions and you
+22
+
+23
+00:01:44,170 --> 00:01:49,810
+will see how this problem would be much, much easier when we learn the (if) conditions later,
+23
+
+24
+00:01:50,080 --> 00:01:56,530
+And the purpose of this homework is to see how when you have more and more programming tools, you can
+24
+
+25
+00:01:56,530 --> 00:01:58,920
+do things in much more simpler and elegant way.
+25
+
+26
+00:02:00,210 --> 00:02:06,270
+In the 3th program, you will write a program that read a simple integer and print the sum from one to
+26
+
+27
+00:02:06,270 --> 00:02:12,630
+N, for example, if the input is N equal five, the output would be 15 because the sum from one to
+27
+
+28
+00:02:12,630 --> 00:02:13,980
+five is 15.
+28
+
+29
+00:02:14,370 --> 00:02:15,710
+here are more examples,
+29
+
+30
+00:02:15,870 --> 00:02:17,280
+4 is output 10.
+30
+
+31
+00:02:17,280 --> 00:02:19,320
+5 is 15, 3 is 6.
+31
+
+32
+00:02:19,320 --> 00:02:26,280
+And so on, you need to find a simple one line formula to solve this problem, again
+32
+
+33
+00:02:26,280 --> 00:02:28,740
+in the future, we'll learn something named for loops.
+33
+
+34
+00:02:28,750 --> 00:02:30,900
+It will be easier way to do this problem.
+34
+
+35
+00:02:30,900 --> 00:02:35,240
+However, with a simple formula, this solution would be much more efficient.
+35
+
+36
+00:02:36,180 --> 00:02:42,000
+The more we go in the course, you will know that the same problem might be solved in several ways and
+36
+
+37
+00:02:42,000 --> 00:02:44,820
+there might be differences in the efficiency of the solutions.
+37
+
+38
+00:02:46,140 --> 00:02:50,100
+To get the hint for this problem, listen to the remaining of the of the picture.
+38
+
+39
+00:02:50,700 --> 00:02:52,240
+The hint is as following,
+39
+
+40
+00:02:52,740 --> 00:02:54,900
+Let's say that the input in is equal eight,
+40
+
+41
+00:02:55,050 --> 00:02:55,380
+write
+41
+
+42
+00:02:55,380 --> 00:02:56,850
+The numbers from one to eight.
+42
+
+43
+00:02:57,240 --> 00:03:02,400
+Then think about the sum of the first and the last number and then the second and seventh number and
+43
+
+44
+00:03:02,400 --> 00:03:02,880
+so on.
+44
+
+45
+00:03:02,940 --> 00:03:04,020
+What do you observe?
+45
+
+46
+00:03:04,710 --> 00:03:12,150
+Find the formula that is good for even numbers first, like N is even and then think of an odd N. as an
+46
+
+47
+00:03:12,150 --> 00:03:14,370
+extra thing you might think about what is the maximum
+47
+
+48
+00:03:14,370 --> 00:03:20,790
+N after it the submission from one to N will be more than the maximum of the integer?
+48
+
+49
+00:03:20,880 --> 00:03:22,050
+You might think about that too.
+49
+
+50
+00:03:22,960 --> 00:03:23,440
+That's all.

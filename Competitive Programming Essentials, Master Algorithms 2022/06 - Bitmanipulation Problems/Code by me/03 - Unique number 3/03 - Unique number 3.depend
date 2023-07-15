@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1674139579 source:e:\document\project\usaco\competitive programming essentials, master algorithms 2022\06 - bitmanipulation problems\code by me\03 - unique number 3\main.cpp
+	<iostream>
+	<vector>
+	<math.h>
+

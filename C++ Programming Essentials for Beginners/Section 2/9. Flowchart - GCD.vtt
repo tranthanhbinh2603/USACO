@@ -1,0 +1,430 @@
+WEBVTT
+
+00:01.480 --> 00:06.700
+Alright, so let us do one more problem on flowcharts and this problem, we want to find the greatest
+
+00:06.700 --> 00:08.410
+common divisor of two numbers, OK?
+
+00:08.950 --> 00:12.060
+And it is also known as DCD on Etsy.
+
+00:12.080 --> 00:19.140
+If, for example, let's say there is a number that is eight, it is a number B that has led to 12.
+
+00:19.840 --> 00:23.550
+So what is the largest number that divides both of these numbers?
+
+00:23.560 --> 00:23.800
+OK.
+
+00:24.730 --> 00:25.660
+So by.
+
+00:26.890 --> 00:29.200
+And division we can do this number is nothing went forward.
+
+00:29.680 --> 00:33.460
+What is the largest number that will divide eight and 12 would.
+
+00:34.060 --> 00:37.930
+OK, for example, is eight and B is letter 24.
+
+00:38.500 --> 00:43.990
+In this case, the DCT would be nothing but it because it divides aid.
+
+00:44.170 --> 00:46.120
+And it also divides 24.
+
+00:47.110 --> 00:51.100
+And maybe there is a no, let's say is nine.
+
+00:51.850 --> 01:01.360
+And let's be is living in this case, the desert is one that is no common divisor except one between
+
+01:01.360 --> 01:02.320
+the two numbers, OK?
+
+01:03.160 --> 01:11.410
+So if you look carefully, you can see that if you have a number a, it's A and a No.
+
+01:11.410 --> 01:11.680
+B.
+
+01:12.710 --> 01:21.790
+We can clearly see that the DCD of these numbers and we would always be less than equal to minimum of
+
+01:21.790 --> 01:22.570
+the two numbers.
+
+01:22.900 --> 01:23.200
+OK.
+
+01:24.710 --> 01:28.040
+It would always be less than equal to a minimum of two numbers.
+
+01:28.480 --> 01:31.870
+So, for example, is it and B is 12?
+
+01:32.430 --> 01:37.670
+You cannot have a number that is greater than the smaller number that will divide both, OK?
+
+01:38.000 --> 01:41.390
+So you cannot say I will have a number 10 that will also divide it.
+
+01:41.420 --> 01:42.770
+No, this is not possible.
+
+01:43.250 --> 01:50.540
+The decree would always be less than or equal to the minimum of two numbers and the minimum value of
+
+01:51.170 --> 01:53.780
+a number that can divide both the numbers would be one.
+
+01:54.380 --> 02:00.950
+So we can say that the DCD would lie in the range.
+
+02:02.960 --> 02:06.170
+Think from one to the minimum of.
+
+02:07.710 --> 02:09.420
+A common be, OK?
+
+02:10.140 --> 02:15.090
+This would be the end so that we know that our answer would always lie in this range.
+
+02:15.570 --> 02:20.880
+OK, so we are trying to build a very brute force logic for computing logically.
+
+02:21.270 --> 02:27.980
+Again, we are going to try out all possibilities what numbers can be a desired offer given them, but.
+
+02:29.090 --> 02:34.970
+To this, we know, and if we know this, we can easily I dread over the strange using the loop.
+
+02:35.570 --> 02:41.990
+And now we want to find out the greatest number in this range, which divides what end.
+
+02:42.710 --> 02:46.040
+So let us see how we will build this particular algorithm.
+
+02:46.580 --> 02:48.470
+Let's dig an example, let's say.
+
+02:49.420 --> 02:51.380
+Is it?
+
+02:52.390 --> 03:00.010
+And let it be is Wendy makes it to what is minimum of a.
+
+03:00.850 --> 03:04.090
+It is, of course, it will outrage over the range.
+
+03:04.510 --> 03:11.140
+One two three four five six seven eight.
+
+03:11.690 --> 03:14.680
+In the beginning, we attract one.
+
+03:15.340 --> 03:17.920
+Does one divide A and B none.
+
+03:17.920 --> 03:18.580
+Three Yes.
+
+03:20.260 --> 03:22.540
+And we will have we will update our decision.
+
+03:22.600 --> 03:26.500
+OK, so what is the largest number we have seen that divides both?
+
+03:26.920 --> 03:28.920
+That number is nothing but one.
+
+03:30.330 --> 03:34.950
+We go to do those to divide and us to divide be the answer is yes.
+
+03:35.550 --> 03:41.660
+So we will update our DCD studios to those three divide, but it does not divide it.
+
+03:41.670 --> 03:45.450
+It does not divide 20 does four divide eight and 20?
+
+03:45.670 --> 03:50.580
+Yes, it divides the four divides eight and four divides 20.
+
+03:50.700 --> 03:55.050
+So hence the decision is for now we go to five.
+
+03:55.290 --> 03:57.270
+Does not divide, does not divide.
+
+03:57.300 --> 03:58.080
+We go to six.
+
+03:58.890 --> 03:59.760
+Does not divide.
+
+03:59.970 --> 04:00.840
+Does not divide.
+
+04:01.200 --> 04:01.980
+We go to seven.
+
+04:02.130 --> 04:03.030
+Does not divide.
+
+04:03.600 --> 04:04.440
+Does not divide.
+
+04:05.040 --> 04:05.760
+We go to eight.
+
+04:06.090 --> 04:07.410
+It divides eight.
+
+04:07.620 --> 04:09.540
+But it does not divide 20.
+
+04:09.900 --> 04:11.640
+OK, so that means.
+
+04:13.190 --> 04:16.020
+And what would be the value of these hidden all these iterations?
+
+04:16.040 --> 04:19.340
+We have not updated the value of decision in all of these arbitrations.
+
+04:19.700 --> 04:22.550
+Finally, the DCD would be nothing but forward.
+
+04:22.970 --> 04:25.260
+OK, the decision would be same.
+
+04:25.280 --> 04:26.130
+That would be for.
+
+04:26.990 --> 04:33.230
+So we've found all three numbers one, two and four that divides, what, 18 20.
+
+04:33.410 --> 04:40.880
+Hence the largest number as forward and hence the decision is for now, take a pause and think, can
+
+04:40.880 --> 04:43.610
+you come up with a flowchart to solve this problem?
+
+04:43.760 --> 04:47.330
+OK, now let us discuss the solution.
+
+04:48.290 --> 04:51.410
+Let's solve using a flowchart.
+
+04:52.010 --> 04:53.330
+The first step would be start.
+
+04:54.740 --> 05:01.280
+As usual, then it would be read they're doing numbers that is read and be.
+
+05:03.680 --> 05:11.020
+And now what we are going to do, we are going to initialize what we are doing to initialize led to
+
+05:11.120 --> 05:13.640
+AI that is equal to one.
+
+05:15.210 --> 05:24.210
+And we're going to go to a minimum of envy, so if I is less than equal to a minimum of a comma B.
+
+05:26.160 --> 05:26.490
+OK.
+
+05:28.280 --> 05:29.330
+If it does, yes.
+
+05:30.510 --> 05:33.150
+So what we are going to do is we are going to check.
+
+05:34.560 --> 05:40.500
+If I divides and divides me also, so we are again going to put our decision box here.
+
+05:42.780 --> 05:45.780
+Is a divisible by.
+
+05:47.520 --> 05:49.820
+And be divisible by.
+
+05:51.720 --> 05:54.390
+If the answer is yes, OK?
+
+05:55.640 --> 05:56.810
+Then what we are going to do.
+
+05:57.380 --> 05:59.250
+We are going to update our DVD.
+
+06:00.310 --> 06:06.520
+We are going to say that what do you see is equal, do I because I is the largest number so far we have
+
+06:06.520 --> 06:09.330
+seen that divides both NBA?
+
+06:10.510 --> 06:17.110
+That divides both N.B., so we have to complete this brand of norm, and we have to complete this brand
+
+06:17.120 --> 06:17.800
+of noise with.
+
+06:19.410 --> 06:23.700
+So after updating this will do we will go to the next day.
+
+06:24.420 --> 06:27.960
+That is I will do I +1.
+
+06:28.620 --> 06:36.580
+And even if I does not divide and we would, then also we will go to the snakes branch and we will say,
+
+06:36.580 --> 06:36.870
+OK.
+
+06:37.940 --> 06:38.870
+I was, too.
+
+06:40.190 --> 06:40.880
+A-plus.
+
+06:41.000 --> 06:41.300
+What?
+
+06:42.520 --> 06:46.600
+And from here, we are again going to connect bucket.
+
+06:47.990 --> 06:53.660
+We are again going to connect bank it, so if we come out of the loop, that means we have explored
+
+06:53.660 --> 06:54.440
+all options.
+
+06:55.160 --> 06:56.120
+What we are going to do.
+
+06:56.300 --> 07:01.220
+We are going to bring the value of diversity so we can bring.
+
+07:02.300 --> 07:07.310
+The do you study the greatest common divisor, and that's it.
+
+07:07.740 --> 07:09.210
+Not X-rated.
+
+07:10.160 --> 07:10.450
+OK.
+
+07:11.250 --> 07:11.810
+We are done.
+
+07:14.710 --> 07:18.300
+Now, let us try to brighten this cold for, let's say.
+
+07:19.930 --> 07:20.890
+Six on foot.
+
+07:21.550 --> 07:21.850
+OK.
+
+07:22.270 --> 07:23.800
+It's a six and B is.
+
+07:26.510 --> 07:30.020
+Later, this is what end is will run this code from one to four.
+
+07:30.800 --> 07:40.370
+OK, so when I choose, one is one less than minimum of N.B., so minimum of India's vote, so is four
+
+07:40.400 --> 07:41.540
+divisible by one.
+
+07:43.550 --> 07:46.760
+Is six divisible by one, yes, is Florida eligible were one, yes.
+
+07:47.270 --> 07:47.940
+So what we do?
+
+07:47.990 --> 07:50.090
+Do you think we're the ones over these three days?
+
+07:50.090 --> 07:50.390
+One?
+
+07:51.680 --> 07:52.090
+Great.
+
+07:52.190 --> 07:56.480
+We go to makes no I equal I plus one, I becomes too.
+
+07:57.730 --> 08:01.540
+Is six divisible by one for divisible by 200?
+
+08:01.570 --> 08:05.470
+Yes, we are going to go ahead and we update a verdict.
+
+08:05.740 --> 08:06.360
+Do you see this?
+
+08:06.370 --> 08:08.350
+Do we go to three?
+
+08:09.840 --> 08:14.820
+The next number that is three is six divisible by three, yes, is four divisible.
+
+08:14.850 --> 08:17.010
+No, we do not update our duty.
+
+08:17.550 --> 08:21.300
+We simply take this route and go to the next number.
+
+08:21.630 --> 08:24.900
+We go to four is six divisible by four.
+
+08:24.900 --> 08:26.280
+No is four divisible by four.
+
+08:26.290 --> 08:26.700
+Yes.
+
+08:26.940 --> 08:28.770
+So we don't update our destiny.
+
+08:29.370 --> 08:30.890
+So this really remains same.
+
+08:30.900 --> 08:31.620
+That is true.
+
+08:32.580 --> 08:34.920
+So finally, we make is five.
+
+08:36.230 --> 08:42.410
+And five is not less than equal to minimum of envy, so what we do, we come out of this loop, we bring
+
+08:42.410 --> 08:44.360
+the GST and then we exit.
+
+08:45.110 --> 08:45.710
+That's all.
+
+08:45.740 --> 08:53.420
+That is how we have computed the OECD using a very basic solution, OK, data optimized algorithms to
+
+08:53.420 --> 08:53.840
+do it.
+
+08:55.010 --> 09:00.460
+That is a Euclid's algorithm, but that would be that would not be covered yet.
+
+09:00.680 --> 09:06.530
+It's slightly advanced algorithm, and this is the most basic way of computing the DCT.
+
+09:07.250 --> 09:08.520
+That's all for this video.
+
+09:08.540 --> 09:09.050
+Thank you.

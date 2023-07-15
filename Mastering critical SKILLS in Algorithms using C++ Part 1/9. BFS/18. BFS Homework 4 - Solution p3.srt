@@ -1,0 +1,263 @@
+1
+00:00:00,960 --> 00:00:05,090
+The sliding buzzer problem looks scary at the beginning, however, it isn't that bad.
+
+2
+00:00:06,150 --> 00:00:08,440
+So this is an operation is the problem.
+
+3
+00:00:08,460 --> 00:00:13,740
+But remember, in Operation Base the problem, you have some source like a string or victor or something
+
+4
+00:00:14,070 --> 00:00:16,290
+and you apply an operation and you get something else.
+
+5
+00:00:16,680 --> 00:00:21,590
+And we learned already when you see this kind of operation, this directly create that for you, like
+
+6
+00:00:22,010 --> 00:00:23,370
+a graph based, the problem.
+
+7
+00:00:23,790 --> 00:00:30,360
+So what you need here is actually you need to start from an initial state of the operation and get there.
+
+8
+00:00:30,540 --> 00:00:31,140
+That's it.
+
+9
+00:00:31,860 --> 00:00:35,990
+Uh, yeah, this is all what you need now.
+
+10
+00:00:37,110 --> 00:00:40,680
+Uh, the sit in, but can be represented as a victor.
+
+11
+00:00:40,920 --> 00:00:46,080
+But this would mean you have to create a like a hash, like a hash function to a victor.
+
+12
+00:00:46,350 --> 00:00:47,600
+But there's an easier way here.
+
+13
+00:00:47,610 --> 00:00:51,510
+What if you just represented the grid, as is just a string, not as a victor?
+
+14
+00:00:51,900 --> 00:00:54,150
+So in this way, you can keep using it.
+
+15
+00:00:55,440 --> 00:00:57,180
+Just sit on the on the string.
+
+16
+00:00:57,960 --> 00:01:00,660
+Now let's see some number of states.
+
+17
+00:01:01,350 --> 00:01:03,780
+We have six digits, right?
+
+18
+00:01:03,810 --> 00:01:05,520
+Zero one two three four five.
+
+19
+00:01:05,970 --> 00:01:10,200
+So in the worst case, we have factorial N. different states.
+
+20
+00:01:10,350 --> 00:01:15,270
+So the number of states here are actually very limited, which that the time complexity of this algorithm
+
+21
+00:01:15,270 --> 00:01:16,710
+is all in the factory.
+
+22
+00:01:16,800 --> 00:01:19,590
+We never see a similar order before.
+
+23
+00:01:19,600 --> 00:01:24,810
+So this is in the factorial because in the the time the memory complex, there is only factorial.
+
+24
+00:01:25,650 --> 00:01:27,900
+OK, let's see some coding things here.
+
+25
+00:01:28,750 --> 00:01:31,020
+Uh, the first thing is the numbers.
+
+26
+00:01:31,020 --> 00:01:36,930
+You can write an ugly code here, but if you would like to make things easy, remember that the dictionary
+
+27
+00:01:37,290 --> 00:01:40,680
+and the dictionary wiki were sitting with his word, right?
+
+28
+00:01:41,070 --> 00:01:48,660
+So if you have a string of six digits zero, one, two, three, four and five.
+
+29
+00:01:49,470 --> 00:01:51,930
+Now think of it here, back to the original grid.
+
+30
+00:01:53,210 --> 00:01:55,850
+You look to that, we have six indices.
+
+31
+00:01:55,940 --> 00:02:01,850
+Zero one, two three, four five, and for each index of them, you can know exactly where it's neighbors.
+
+32
+00:02:02,060 --> 00:02:06,740
+So the idea here, this is a victory of one two three four five six elements.
+
+33
+00:02:07,010 --> 00:02:11,450
+Every one of them is saying which what are the indices of my neighbors?
+
+34
+00:02:11,870 --> 00:02:12,920
+So the moral of that?
+
+35
+00:02:13,220 --> 00:02:17,750
+Remember that the election rhetoric, this is just one more like generalization freight.
+
+36
+00:02:18,900 --> 00:02:22,250
+Uh, so this will make our could very lovely and very nice.
+
+37
+00:02:22,580 --> 00:02:28,160
+We start the year by converting that import from Vector, a vector to just a single string.
+
+38
+00:02:29,030 --> 00:02:33,050
+This is a best case if the good is what we call the start to return.
+
+39
+00:02:33,500 --> 00:02:38,180
+Otherwise, we have normal set and we have the we wish elements in the vector.
+
+40
+00:02:38,630 --> 00:02:41,510
+The remaining of the good is very straightforward.
+
+41
+00:02:42,140 --> 00:02:43,190
+We get the root.
+
+42
+00:02:43,430 --> 00:02:48,550
+We babette's, OK, then search for the index in the current string.
+
+43
+00:02:48,740 --> 00:02:51,920
+Let's say the string is one two zero three four five.
+
+44
+00:02:52,130 --> 00:02:53,600
+So you get the index from here.
+
+45
+00:02:53,600 --> 00:02:54,950
+Now it's index number two.
+
+46
+00:02:55,430 --> 00:02:56,840
+You go to the direction of two.
+
+47
+00:02:56,840 --> 00:03:04,960
+It gives you the list of so let's say the list is of two is here zero one two one five.
+
+48
+00:03:04,970 --> 00:03:07,640
+So let's say that one and five are the neighbors.
+
+49
+00:03:08,000 --> 00:03:12,410
+Now you try to swear there the neighborhood, you got the new string.
+
+50
+00:03:12,890 --> 00:03:13,910
+Now check the good.
+
+51
+00:03:13,910 --> 00:03:14,900
+Is it okay or not?
+
+52
+00:03:15,320 --> 00:03:16,610
+If not, keep going.
+
+53
+00:03:16,970 --> 00:03:19,340
+Now you bush in the visited sets.
+
+54
+00:03:19,910 --> 00:03:24,110
+And the second, as we learned before, if it's true, then it is the new element.
+
+55
+00:03:24,440 --> 00:03:28,370
+Then you push it here and this is an important step undoing it.
+
+56
+00:03:28,550 --> 00:03:30,320
+Like I swabbed the two characters.
+
+57
+00:03:30,680 --> 00:03:33,500
+I swap them again to undo and get back my string.
+
+58
+00:03:33,800 --> 00:03:35,660
+If you didn't do that, you have.
+
+59
+00:03:35,660 --> 00:03:41,060
+At least two could be the original string in a new one, which is unnecessarily and waste of time.
+
+60
+00:03:41,660 --> 00:03:45,060
+As you see, the good overall is pretty simple, but still it.
+
+61
+00:03:45,530 --> 00:03:49,550
+The the main thing here you see the sted graph when strings.
+
+62
+00:03:50,030 --> 00:03:54,110
+Now I hope you learned to generalize things that are based on like sted graph.
+
+63
+00:03:54,410 --> 00:03:59,360
+You see, I know it can have a string, can have two strings, can have a victor, can have a bunch
+
+64
+00:03:59,360 --> 00:04:01,010
+of valleys and bunch of integers.
+
+65
+00:04:01,760 --> 00:04:03,570
+You just recognize it as a state.
+
+66
+00:04:03,590 --> 00:04:04,130
+That's it.

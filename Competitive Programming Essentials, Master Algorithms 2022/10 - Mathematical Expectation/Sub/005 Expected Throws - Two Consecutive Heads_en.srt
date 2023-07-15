@@ -1,0 +1,197 @@
+1
+00:00:01,650 --> 00:00:06,210
+Hi Everyone, so let us move on to the next problem statement.so we have seen what is the expected number
+
+2
+00:00:06,210 --> 00:00:07,590
+of throws to get a head.
+
+3
+00:00:08,010 --> 00:00:14,220
+So in this question, we are slightly going to change the question. so the question is, what is the expected
+
+4
+00:00:14,220 --> 00:00:18,720
+number of throws that you would need to get two consecutive heads?
+
+5
+00:00:18,970 --> 00:00:22,740
+OK, so that means we want to get a head
+
+6
+00:00:23,720 --> 00:00:24,920
+Followed by a head again.
+
+7
+00:00:24,950 --> 00:00:33,140
+Ok. so now what may happen is let us assume that our that is equal to x. the expected number of coin flip
+
+8
+00:00:33,140 --> 00:00:33,950
+is equal to X.
+
+9
+00:00:34,490 --> 00:00:38,960
+Suppose you throw a coin once and you end up getting 
+a head.
+
+10
+00:00:38,990 --> 00:00:44,720
+Ok. so what would be the probability of getting a head one by two?
+
+11
+00:00:45,050 --> 00:00:45,350
+OK.
+
+12
+00:00:46,100 --> 00:00:49,580
+And suppose you again throw a coin you again and get a head.
+
+13
+00:00:50,150 --> 00:00:52,430
+So what would be this probability? one by two.
+
+14
+00:00:53,030 --> 00:00:59,750
+So we actually throw a coin two times and suppose we got a head and again a head.
+
+15
+00:01:00,140 --> 00:01:05,120
+That would be equal to one by two into one by two multiplied with two.
+
+16
+00:01:05,660 --> 00:01:07,070
+What could be the other case?
+
+17
+00:01:07,730 --> 00:01:10,280
+Suppose on the first throw you get ahead.
+
+18
+00:01:11,420 --> 00:01:12,980
+On the second throw you get a tail.
+
+19
+00:01:13,310 --> 00:01:15,440
+OK, so what would be this probability? Half.
+
+20
+00:01:16,010 --> 00:01:17,680
+And again, it would be half.
+
+21
+00:01:18,110 --> 00:01:27,380
+That means now you have wasted two throws and you again... you would require X number of more throws to
+
+22
+00:01:27,380 --> 00:01:28,850
+expect two more heads.
+
+23
+00:01:28,910 --> 00:01:33,910
+OK, so that means in total you would require x+2 t in throws this case.
+
+24
+00:01:33,920 --> 00:01:41,810
+So it would be one by two into one by two into the number of throws that is equal to x+2.
+
+25
+00:01:42,300 --> 00:01:45,950
+So what may happen in other case as well?
+
+26
+00:01:46,310 --> 00:01:50,210
+Suppose you throw a coin and you get a tail in the first throw.
+
+27
+00:01:50,720 --> 00:01:57,370
+And in this case, what you will say? you will say. ok, I will try my experiment again and I will require
+
+28
+00:01:57,410 --> 00:02:00,650
+X number of more throws to get two heads. OK?
+
+29
+00:02:01,100 --> 00:02:04,970
+So in this case, you have wasted one throw.
+
+30
+00:02:05,210 --> 00:02:05,510
+OK.
+
+31
+00:02:05,810 --> 00:02:11,240
+So you can say one by two into X plus one. any other case?
+
+32
+00:02:11,540 --> 00:02:13,790
+No, we have already covered all the cases.
+
+33
+00:02:14,360 --> 00:02:16,910
+So let's see how we can solve this equation.
+
+34
+00:02:16,910 --> 00:02:18,830
+So it becomes X equals two.
+
+35
+00:02:18,890 --> 00:02:19,940
+This two goes off.
+
+36
+00:02:20,600 --> 00:02:27,860
+It is equal to half plus one by four into X plus two into again.
+
+37
+00:02:29,140 --> 00:02:32,020
+Half into x plus one.
+
+38
+00:02:32,470 --> 00:02:40,360
+So let us multiply everything with four. it becomes 4x, it becomes four, it becomes four, and it
+
+39
+00:02:40,360 --> 00:02:41,350
+also becomes four.
+
+40
+00:02:41,440 --> 00:02:47,050
+OK, so this becomes two. this goes off and this becomes two.
+
+41
+00:02:47,380 --> 00:02:48,370
+Let's expand.
+
+42
+00:02:49,150 --> 00:02:55,720
+So four x equals two plus x plus two plus 2x plus two.
+
+43
+00:02:56,440 --> 00:03:02,710
+So effectively it becomes two plus two plus two six and this is x plus two x three x.
+
+44
+00:03:02,890 --> 00:03:06,190
+So four x minus three x is equal to six.
+
+45
+00:03:06,400 --> 00:03:08,230
+That means X is equal to six.
+
+46
+00:03:08,410 --> 00:03:12,550
+OK, so that... this is how you can solve this equation.
+
+47
+00:03:13,120 --> 00:03:20,820
+And what we are saying is we would... we can expect two consecutive heads if we throw a coin six times.
+
+48
+00:03:20,840 --> 00:03:21,320
+OK?
+
+49
+00:03:21,670 --> 00:03:26,290
+So I hope you understood this problem as well and see you in the next video.
+

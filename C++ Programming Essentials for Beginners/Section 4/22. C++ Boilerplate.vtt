@@ -1,0 +1,241 @@
+WEBVTT
+
+00:01.650 --> 00:05.510
+Everyone in this lecture, we're going to start with the basics of C++.
+
+00:05.840 --> 00:10.910
+What we are going to do, we are going to first say hello and we are going to look at the boilerplate
+
+00:10.910 --> 00:11.240
+code.
+
+00:11.600 --> 00:16.460
+And we're also going to look at how you can build Andrena code using C++.
+
+00:17.180 --> 00:19.910
+First of all, let's look at this.
+
+00:20.180 --> 00:22.220
+So this code is a boilerplate code.
+
+00:22.220 --> 00:28.970
+So that basically means this is kind of a template that we will use in every C++ program to write some
+
+00:28.970 --> 00:29.210
+good.
+
+00:30.170 --> 00:32.390
+So it may explain you this template.
+
+00:32.990 --> 00:35.480
+So whenever you write code, that is a starting point.
+
+00:35.990 --> 00:43.370
+The program starts executing from Maine to Maine is known as the starting point and.
+
+00:45.230 --> 00:49.580
+And Maine is the starting point of the C++ program.
+
+00:50.540 --> 00:55.010
+Maine is where Discord is going to start executing right now.
+
+00:55.550 --> 00:58.730
+This curly brackets denote the block of domain.
+
+00:59.270 --> 01:03.480
+And there are no instructions written inside this block of code.
+
+01:03.530 --> 01:11.090
+OK, so this code will not do anything under the instruction or line number seven that is written zero
+
+01:11.780 --> 01:13.970
+return zero is more like an exit.
+
+01:14.150 --> 01:17.480
+It means it is the end of the program.
+
+01:17.480 --> 01:19.880
+OK, so it is the end of the mean grade.
+
+01:20.750 --> 01:26.450
+We have depicted this stock from end mean that is red and yellow, which denote the ending of the mean.
+
+01:27.170 --> 01:30.170
+So I'm not diving into a lot of technical terms at this point.
+
+01:30.290 --> 01:38.000
+So later on, we will see that mean as a special kind of a function from which this program starts executing.
+
+01:38.030 --> 01:41.360
+We can define one or more functions inside the C++ program.
+
+01:42.890 --> 01:44.930
+And what are these first two lines?
+
+01:45.530 --> 01:51.220
+The first line is hash include Io String, so I stream is a header file.
+
+01:51.230 --> 01:51.500
+OK?
+
+01:51.860 --> 02:00.440
+It is a header file, so basically it contains certain code that we would be using for doing input and
+
+02:00.440 --> 02:00.830
+output.
+
+02:01.010 --> 02:04.070
+So right on, we have not used this interface anywhere.
+
+02:04.640 --> 02:08.360
+But in the next example, like we're going to do, we will see the use of this header.
+
+02:08.360 --> 02:12.740
+If I look and hash include this is known as a directive.
+
+02:12.910 --> 02:19.010
+So anything you see in the beginning that begins with the hash, it's a pre processor directive.
+
+02:19.470 --> 02:22.940
+Again, we will dive deep into these details, but a little later on.
+
+02:23.630 --> 02:30.050
+And using namespace as a steady means, we are using the standard C++ namespace.
+
+02:30.770 --> 02:34.910
+So we'll also talk about namespaces in little more detail.
+
+02:35.510 --> 02:41.930
+But right now, what you need to understand that in every C++ code, you will find a structure like
+
+02:41.930 --> 02:47.720
+this and whatever you want to write accordingly, it will go inside me.
+
+02:47.750 --> 02:48.050
+OK.
+
+02:48.570 --> 02:54.530
+So the program execution starts from this line, and we'll also talk about the two phases.
+
+02:54.980 --> 02:56.780
+One is a compilation phase.
+
+02:57.530 --> 03:00.620
+OK, and another is the execution phase.
+
+03:00.620 --> 03:05.970
+When your code is actually running, the compilation always happens from top to bottom.
+
+03:05.990 --> 03:11.060
+So from line number one to line number eight, the first step would be your code would get compiled.
+
+03:11.630 --> 03:15.880
+It will create the object file, then a Lincoln would combine all object files.
+
+03:15.890 --> 03:20.420
+It will create something called executable file that can run on a particular machine.
+
+03:21.650 --> 03:29.720
+So we'll go into all those details, but let's see, I suppose I instead of just running the empty program,
+
+03:29.720 --> 03:35.150
+I want to print Hello World on the screen to what change I would need to make.
+
+03:35.660 --> 03:36.680
+If you look carefully.
+
+03:37.100 --> 03:40.580
+So this was our template on line number six.
+
+03:40.580 --> 03:41.630
+I'm making a change.
+
+03:41.630 --> 03:43.910
+I'm saying see out a little word.
+
+03:44.660 --> 03:46.130
+So what is this thing?
+
+03:47.030 --> 03:49.460
+So code is kind of a special object.
+
+03:49.460 --> 03:50.840
+I would say it is.
+
+03:51.020 --> 03:55.960
+You can treat it as a statement that you would be using or printing something on the screen.
+
+03:55.970 --> 04:00.320
+So hello, world is a string, so anything that is written in double codes.
+
+04:01.340 --> 04:04.640
+This is a string and we are saying that.
+
+04:04.670 --> 04:05.930
+OK, go and print.
+
+04:06.140 --> 04:06.830
+Hello world.
+
+04:06.980 --> 04:14.390
+OK, so yoed means you output something on the console that is that is and of a terminal.
+
+04:14.390 --> 04:17.750
+OK, and nowhere is this CO2 defined.
+
+04:18.560 --> 04:19.760
+There is the output.
+
+04:19.760 --> 04:21.250
+Not not the magical world.
+
+04:21.260 --> 04:24.350
+OK, it it has a certain functionality written behind it.
+
+04:24.860 --> 04:29.480
+The code behind CO2 is in the file o stream.
+
+04:29.480 --> 04:30.650
+It is coming from there.
+
+04:31.280 --> 04:32.870
+We are using a specific.
+
+04:34.640 --> 04:39.260
+Keyword scout and we are saying, OK, go and print something on this.
+
+04:39.500 --> 04:45.560
+So this is kind of an operator on every statement.
+
+04:46.620 --> 04:47.250
+In.
+
+04:48.250 --> 04:50.680
+C++ ends with a semicolon, OK?
+
+04:50.920 --> 04:56.890
+So these are examples of statements, and they will end up end up with a semicolon to be the rules of
+
+04:56.890 --> 04:59.920
+the programming language in the coming modules.
+
+05:00.010 --> 05:07.000
+We will be learning about these rules and we would be diving deeper into these details before we go
+
+05:07.000 --> 05:07.390
+ahead.
+
+05:07.420 --> 05:13.630
+What we will do in the next few will write this code and we will try to build it, and I will explain
+
+05:13.630 --> 05:15.630
+to the compilation underbid process.
+
+05:16.130 --> 05:23.290
+So that's a small intro about what is this boilerplate code and how we are going to use it to solve
+
+05:23.290 --> 05:24.100
+some problems.
+
+05:24.290 --> 05:25.810
+So let's see in the next we do.

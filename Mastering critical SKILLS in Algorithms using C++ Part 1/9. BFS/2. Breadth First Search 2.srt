@@ -1,0 +1,599 @@
+1
+00:00:01,740 --> 00:00:07,380
+Let's continue our talk about the business in this time, we will learn how actually the business algorithm
+
+2
+00:00:07,890 --> 00:00:10,330
+works to get the news delivered by Liberty.
+
+3
+00:00:10,360 --> 00:00:11,610
+It's actually an easy idea.
+
+4
+00:00:12,210 --> 00:00:18,000
+So here is a graph I restructured and read through this graph to look like level relevant so that the
+
+5
+00:00:18,000 --> 00:00:20,640
+tracing is is an easy idea for you.
+
+6
+00:00:21,150 --> 00:00:27,600
+So as we see here with our eyes clearly there, that this is a first level here.
+
+7
+00:00:27,630 --> 00:00:30,630
+Level one, this is the will to live in 3D before.
+
+8
+00:00:31,050 --> 00:00:37,140
+So as you see, as I drew it to look like a structure, it it just looks like very nice here.
+
+9
+00:00:37,350 --> 00:00:43,260
+Now, the way it first goes as following, first of all, we need the cue data structure.
+
+10
+00:00:44,340 --> 00:00:49,110
+And then we will we need also something to mark what is vested so far like the difference.
+
+11
+00:00:49,770 --> 00:00:53,760
+And this is the first note, so we will add this note to the queue.
+
+12
+00:00:54,860 --> 00:01:01,790
+And also would mark this not as vested and the flu was as following as long as the cue has notes, we
+
+13
+00:01:01,790 --> 00:01:04,580
+get one of the nuts and get its enablers.
+
+14
+00:01:05,240 --> 00:01:12,290
+If the neighbor is invested so far, we market as vested and added to the end of the queue.
+
+15
+00:01:12,800 --> 00:01:15,620
+This is a procedure, so let's see it into action.
+
+16
+00:01:17,210 --> 00:01:22,190
+Here's a starting point we could hear the cue add one to the cue market as vested.
+
+17
+00:01:22,190 --> 00:01:23,540
+So here is the status of us.
+
+18
+00:01:24,020 --> 00:01:24,950
+The cue has one.
+
+19
+00:01:25,190 --> 00:01:26,000
+Vista is one.
+
+20
+00:01:26,660 --> 00:01:29,300
+As long as the queue is in, this isn't empty.
+
+21
+00:01:29,930 --> 00:01:32,320
+We will begin with which you note will come from the queue.
+
+22
+00:01:32,330 --> 00:01:34,130
+The front and one is just not number one.
+
+23
+00:01:34,910 --> 00:01:38,960
+What are the numbers of neighbors of note number one, three, five and six?
+
+24
+00:01:39,710 --> 00:01:44,330
+Now we will mark them as visited and add all of them to the queue.
+
+25
+00:01:46,060 --> 00:01:47,170
+So here is what would happen.
+
+26
+00:01:48,490 --> 00:01:55,360
+The queue now will have three, five and six, and the Vista nodes are one, three, five and six.
+
+27
+00:01:56,530 --> 00:01:59,440
+Give the next note from the queue, which is node number three.
+
+28
+00:02:00,450 --> 00:02:01,320
+Observed now.
+
+29
+00:02:02,200 --> 00:02:04,960
+We just started processing the first level.
+
+30
+00:02:06,160 --> 00:02:08,200
+What are the neighbors of November three?
+
+31
+00:02:08,560 --> 00:02:09,400
+We have no no.
+
+32
+00:02:09,400 --> 00:02:09,670
+One.
+
+33
+00:02:09,970 --> 00:02:10,780
+We have five.
+
+34
+00:02:10,810 --> 00:02:12,340
+We have food and we have seven.
+
+35
+00:02:12,970 --> 00:02:19,030
+But what is the following mood number one and number five are already market as listed in the queue.
+
+36
+00:02:19,390 --> 00:02:21,640
+So there is no meaning to consider them again.
+
+37
+00:02:22,060 --> 00:02:26,230
+So we only add a mark as wasted no deference given.
+
+38
+00:02:28,600 --> 00:02:30,250
+So here is the next view.
+
+39
+00:02:31,900 --> 00:02:36,100
+The queue has five, six, four, seven, and all of this news are wasted.
+
+40
+00:02:36,460 --> 00:02:38,120
+Do we have still more news yet?
+
+41
+00:02:38,140 --> 00:02:40,480
+Which one is the next nude nude number five?
+
+42
+00:02:40,630 --> 00:02:41,830
+So get it from the queue.
+
+43
+00:02:43,090 --> 00:02:46,990
+We are still in the processing of the first level.
+
+44
+00:02:48,380 --> 00:02:48,890
+Now.
+
+45
+00:02:51,870 --> 00:02:57,560
+You know, there is an observation here, also that the queue here has five and six and seven.
+
+46
+00:02:57,890 --> 00:03:03,290
+So it actually have have to move from level two and two loads of room level.
+
+47
+00:03:04,520 --> 00:03:11,450
+You would always observe that the queue has nodes in order, so the queue order would always be there
+
+48
+00:03:12,350 --> 00:03:13,220
+be a first order?
+
+49
+00:03:14,760 --> 00:03:20,100
+Now we get the frontal nude, which is five, get the neighbors of five one three four.
+
+50
+00:03:20,340 --> 00:03:21,210
+One is twisted.
+
+51
+00:03:21,420 --> 00:03:23,540
+These twisted four is twisted already.
+
+52
+00:03:24,180 --> 00:03:28,080
+OK, so we then add them here, so we do nothing.
+
+53
+00:03:28,320 --> 00:03:30,060
+So they just get five outside of the cube.
+
+54
+00:03:30,930 --> 00:03:32,670
+Next, we get them with number six.
+
+55
+00:03:32,910 --> 00:03:36,210
+Nude number six is the last nude here in live in number one.
+
+56
+00:03:36,780 --> 00:03:38,790
+Now it has only one neighbor, which is zero.
+
+57
+00:03:38,850 --> 00:03:41,880
+It is invested before and then market zero here.
+
+58
+00:03:42,570 --> 00:03:50,100
+At this moment, I would like to get to you to get the sense that we end it from one by visiting three,
+
+59
+00:03:50,100 --> 00:03:53,790
+five and six observe that the first delivery is done.
+
+60
+00:03:54,600 --> 00:03:55,410
+Why?
+
+61
+00:03:56,010 --> 00:03:58,690
+Because we added in the queue, the neighbors have.
+
+62
+00:03:59,430 --> 00:04:00,570
+So this was the queue.
+
+63
+00:04:01,830 --> 00:04:03,270
+We initially added one.
+
+64
+00:04:04,080 --> 00:04:09,720
+Then we removed a the one and added the neighbors, which are three, five and six, which means in
+
+65
+00:04:09,720 --> 00:04:14,850
+the next two, three times when we process the queue, we will get three, five and six, which are
+
+66
+00:04:14,850 --> 00:04:15,870
+and never number one.
+
+67
+00:04:16,980 --> 00:04:22,920
+Now, three added For us, uh, for us then would like four and seven.
+
+68
+00:04:24,960 --> 00:04:27,600
+And six added for us the number zero.
+
+69
+00:04:28,580 --> 00:04:34,520
+So when we are done with number five, number six, we will have the next nodes in the queue ready for
+
+70
+00:04:34,520 --> 00:04:36,390
+us and so on.
+
+71
+00:04:36,410 --> 00:04:37,340
+So let's continue.
+
+72
+00:04:38,570 --> 00:04:43,460
+Service number six will be removed from the queue and adding new number zero zero No.
+
+73
+00:04:43,460 --> 00:04:46,760
+Zero go to the queue and also go to devasted array.
+
+74
+00:04:47,510 --> 00:04:49,640
+The next node is Node No food node.
+
+75
+00:04:49,640 --> 00:04:56,360
+No food has neighbors of three, five and two, three and five are visited, but two is a new node.
+
+76
+00:04:56,750 --> 00:05:00,380
+We add and mark a node number two to the queue.
+
+77
+00:05:00,740 --> 00:05:05,210
+So let's see here now to get here and get here.
+
+78
+00:05:05,690 --> 00:05:12,110
+We add the next node, which is get the next node, which is seven seven, has number number three,
+
+79
+00:05:12,110 --> 00:05:12,800
+which is vested.
+
+80
+00:05:12,800 --> 00:05:15,230
+So we just do not think get the next.
+
+81
+00:05:15,650 --> 00:05:20,060
+The next node will be zero zero has one neighbor, which is two also visited.
+
+82
+00:05:20,060 --> 00:05:22,190
+So we just ignore it.
+
+83
+00:05:22,340 --> 00:05:25,310
+Give it the next node is node number two in the queue.
+
+84
+00:05:25,790 --> 00:05:28,390
+So that number two has one new neighbour, which is not number eight.
+
+85
+00:05:28,400 --> 00:05:31,520
+We added here and mark as listed.
+
+86
+00:05:32,030 --> 00:05:37,010
+So now we get the number two and we are the I hope you get the idea.
+
+87
+00:05:37,280 --> 00:05:40,340
+The tracing of this idea is as simple as I was doing.
+
+88
+00:05:40,730 --> 00:05:43,160
+You started from the node and its neighbors.
+
+89
+00:05:43,490 --> 00:05:45,370
+Now I would like to give you again one more.
+
+90
+00:05:45,380 --> 00:05:47,300
+I want more trial to get a sense.
+
+91
+00:05:47,570 --> 00:05:50,540
+Why really is this level by level processing?
+
+92
+00:05:51,020 --> 00:05:58,130
+We started by one in the queue and added its neighbours, which are three and five and six to one and
+
+93
+00:05:58,130 --> 00:06:01,370
+then one get outside of the queue and added three, five and six.
+
+94
+00:06:02,210 --> 00:06:07,610
+When we process the queue in the next time, the next two three steps will process three, five and
+
+95
+00:06:07,610 --> 00:06:08,030
+six.
+
+96
+00:06:08,720 --> 00:06:14,030
+So we are short now from two things we are sure that we process delivery number zero in order.
+
+97
+00:06:14,330 --> 00:06:16,790
+We are sure to process live number one in order.
+
+98
+00:06:17,480 --> 00:06:24,140
+So now when we when we process three and five and six, each one of them will add his new neighbors.
+
+99
+00:06:25,070 --> 00:06:29,130
+Now, neighbour number seven and four and zero will be the next.
+
+100
+00:06:29,130 --> 00:06:32,060
+The rules are to be added here in some order.
+
+101
+00:06:32,060 --> 00:06:32,600
+We don't care.
+
+102
+00:06:32,600 --> 00:06:33,100
+We don't care.
+
+103
+00:06:33,110 --> 00:06:35,060
+Two zero four seven four seven zero.
+
+104
+00:06:35,180 --> 00:06:35,780
+We just care.
+
+105
+00:06:35,780 --> 00:06:36,860
+They are the next level.
+
+106
+00:06:37,340 --> 00:06:43,490
+So when these three nodes are processed, seven, four and zero would be the next nodes in the queue.
+
+107
+00:06:44,430 --> 00:06:50,640
+When seven get Brussels, it do nothing for Brussels, it will get to zero, Brussels do nothing.
+
+108
+00:06:51,600 --> 00:06:56,310
+So when the four seven four zero are Brussels as the next level, their children?
+
+109
+00:06:57,460 --> 00:06:59,950
+Will be added here, the neighbors will be added here.
+
+110
+00:07:00,790 --> 00:07:07,600
+So that's why the DFS is actually going level by level this way, level whatever level level level limit
+
+111
+00:07:07,600 --> 00:07:10,600
+it gets to the rules level by level in this order.
+
+112
+00:07:13,410 --> 00:07:18,180
+I hope you get the sense why the first is actually resisting the elements in this audit.
+
+113
+00:07:18,870 --> 00:07:27,330
+Now remember, we infer to that the first is actually about the level of the road, which is the surface
+
+114
+00:07:27,330 --> 00:07:27,750
+to Beth.
+
+115
+00:07:28,350 --> 00:07:34,980
+So when we reach number two, is this really this to Beth or when you think about it?
+
+116
+00:07:37,500 --> 00:07:41,880
+Um, let me give you some some highlights for now.
+
+117
+00:07:42,000 --> 00:07:46,830
+When you think about it here, no no one will add the first level.
+
+118
+00:07:49,420 --> 00:07:54,790
+And level one, when we process it, it will add the second level and this one, when we added it,
+
+119
+00:07:54,790 --> 00:07:56,620
+will add the third level this way.
+
+120
+00:07:56,770 --> 00:08:00,190
+Number two must be the edge is far from the not number one.
+
+121
+00:08:00,520 --> 00:08:06,610
+What if not, no one has an edge early to number two, then actually in the first two step node number
+
+122
+00:08:06,610 --> 00:08:12,760
+two would be in the queue with three and five and six as just this dips of one level of one.
+
+123
+00:08:13,660 --> 00:08:16,030
+I hope the idea is clear for you.
+
+124
+00:08:16,420 --> 00:08:20,740
+In the next vid, you will learn how to, uh, how to implement it.
+
+125
+00:08:20,950 --> 00:08:23,140
+So the idea would be like hopefully more clear for you.
+
+126
+00:08:24,100 --> 00:08:26,830
+Now, one thing before finishing remember is dip in the first three.
+
+127
+00:08:27,250 --> 00:08:30,610
+The first is actually traversing the graph in in the same logic.
+
+128
+00:08:30,880 --> 00:08:35,830
+We never consider an edge that is ending at node that is listed before.
+
+129
+00:08:36,280 --> 00:08:40,510
+So the edges here, the bolded and black edges, this one should be this way.
+
+130
+00:08:40,870 --> 00:08:46,150
+The bolded and black edges are only the ones that are considered for them, but the three were not at
+
+131
+00:08:46,150 --> 00:08:52,960
+five because five was listed five or not at four because four was listed as zero at two because two
+
+132
+00:08:52,960 --> 00:08:53,530
+is listed.
+
+133
+00:08:53,890 --> 00:08:56,290
+So the actual edges would be this bolded edges.
+
+134
+00:08:57,010 --> 00:09:04,300
+And as each edge of of them is touching a new node, this means we never have a cycle and it means we
+
+135
+00:09:04,300 --> 00:09:06,640
+have a three, specifically a rooted tree.
+
+136
+00:09:07,210 --> 00:09:08,380
+Now starting from one.
+
+137
+00:09:08,710 --> 00:09:13,270
+So in a very similar way, like the defense, the defense is building this root tree.
+
+138
+00:09:13,630 --> 00:09:17,470
+If you look through to the graph, you will notice we have eight nodes.
+
+139
+00:09:18,040 --> 00:09:26,890
+Sorry, we have nine nodes and edges that we count them to make sure one two three four five six seven.
+
+140
+00:09:27,510 --> 00:09:28,690
+Uh, what do I missed?
+
+141
+00:09:28,690 --> 00:09:30,100
+I missed this edge here.
+
+142
+00:09:32,310 --> 00:09:32,670
+OK.
+
+143
+00:09:32,850 --> 00:09:37,630
+We have actually nine edges and we have nine nodes and we have eight inches.
+
+144
+00:09:37,650 --> 00:09:37,980
+OK.
+
+145
+00:09:38,280 --> 00:09:42,690
+So this is the graph that we have the first of three.
+
+146
+00:09:43,290 --> 00:09:43,650
+OK.
+
+147
+00:09:45,040 --> 00:09:51,020
+Um, try to implement this idea by yourself, defy an accused, started to add things and analyze and
+
+148
+00:09:51,610 --> 00:09:54,490
+do the time complexity for you, even if you don't completely get it.
+
+149
+00:09:54,820 --> 00:09:56,200
+You can still implement it.
+
+150
+00:09:57,360 --> 00:09:57,760
+That's all.

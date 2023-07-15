@@ -1,0 +1,459 @@
+0
+1
+00:00:01,080 --> 00:00:06,390
+Let's solve the count increasing sub-array problem, which might be a bit hard to get an efficient
+1
+
+2
+00:00:06,390 --> 00:00:12,500
+solution, the first version is a brute-force solution, which is just try every possible array length
+2
+
+3
+00:00:12,630 --> 00:00:13,250
+and that's all.
+3
+
+4
+00:00:13,800 --> 00:00:20,970
+So we are going to try every possible length for the array and for every one of them.
+4
+
+5
+00:00:21,270 --> 00:00:26,340
+We will start from zero and move to n - length + 1, we talked before about
+5
+
+6
+00:00:26,340 --> 00:00:32,430
+the correctness of this expression and then for every one of them, we will iterate over the whole list starting
+6
+
+7
+00:00:32,430 --> 00:00:35,490
+from one to the length as long as it is OK.
+7
+
+8
+00:00:35,970 --> 00:00:41,610
+And then we would like to verify if every element is less than or equal to the next element.
+8
+
+9
+00:00:42,030 --> 00:00:44,010
+And you have to be careful about the indexing 
+9
+
+10
+00:00:44,020 --> 00:00:46,980
+a little bit of the expression.
+10
+
+11
+00:00:48,470 --> 00:00:53,950
+Yeah, and that's all, if the window is perfect, that's good, otherwise we make it false result
+11
+
+12
+00:00:54,050 --> 00:00:59,640
+plus equal is OK, would either add one or false.
+12
+
+13
+00:00:59,990 --> 00:01:06,380
+So this is over all three nested loops, try every length, start from every start, iterate over the
+13
+
+14
+00:01:06,380 --> 00:01:11,240
+whole window, make sure it's correct otherwise ok, I hope it is easy and clear for you.
+14
+
+15
+00:01:11,660 --> 00:01:14,840
+So now let's see how can we make this in an efficient way.
+15
+
+16
+00:01:16,130 --> 00:01:19,490
+The observation is in the second and the third solutions,
+16
+
+17
+00:01:19,700 --> 00:01:25,430
+There are a lot of duplications in terms of the computation that we are doing and if we started to observe
+17
+
+18
+00:01:25,430 --> 00:01:28,130
+what are these duplication, then
+18
+
+19
+00:01:28,160 --> 00:01:30,410
+we are going to save our time.
+19
+
+20
+00:01:31,300 --> 00:01:38,350
+Now, the idea is as following, why keep starting from every possible start and keep going like let's
+20
+
+21
+00:01:38,350 --> 00:01:41,530
+say the first four elements are increasing.
+21
+
+22
+00:01:42,150 --> 00:01:46,210
+Why when you would like to start to test the next element,
+22
+
+23
+00:01:46,210 --> 00:01:51,430
+You start from scratch again, like this solution keeps starting from every start for every end.
+23
+
+24
+00:01:51,820 --> 00:01:57,520
+But if the first, thinking about array that's completely sorted, for example, and the first four numbers
+24
+
+25
+00:01:57,520 --> 00:02:01,640
+now in length four are sorted, then they are also will be sorted
+25
+
+26
+00:02:01,710 --> 00:02:02,400
+in length five
+26
+
+27
+00:02:02,440 --> 00:02:05,530
+if the next element after the four elements is also sorted.
+27
+
+28
+00:02:06,070 --> 00:02:10,800
+So the idea is to avoid all of these duplications. To make use of that,
+28
+
+29
+00:02:10,810 --> 00:02:11,800
+The idea is as following.
+29
+
+30
+00:02:13,270 --> 00:02:22,690
+We will start from every start and then from that start, as long as we can keep going, then keep
+30
+
+31
+00:02:22,690 --> 00:02:24,700
+going and add one more element.
+31
+
+32
+00:02:25,840 --> 00:02:29,410
+So, maybe an example would be better
+32
+
+33
+00:02:29,410 --> 00:02:29,920
+idea.
+33
+
+34
+00:02:31,270 --> 00:02:36,670
+Let's say that we have something like one, five, seven, eight and two
+34
+
+35
+00:02:36,670 --> 00:02:39,870
+and three, we are starting at one here.
+35
+
+36
+00:02:40,480 --> 00:02:45,100
+So, we are incrementing result++ first because we definitely have an array of length one.
+36
+
+37
+00:02:45,100 --> 00:02:46,740
+So ++ here.
+37
+
+38
+00:02:47,350 --> 00:02:51,670
+Now this for Loop will keep going as long as the sequence is increasing now.
+38
+
+39
+00:02:52,300 --> 00:02:53,290
+Is five increasing?
+39
+
+40
+00:02:53,300 --> 00:02:53,660
+Yes.
+40
+
+41
+00:02:53,830 --> 00:02:59,500
+So now we are adding one more ++ because we have now one more sequence and then one five seven.
+41
+
+42
+00:02:59,650 --> 00:03:01,630
+Yes, add one more sequence.
+42
+
+43
+00:03:01,840 --> 00:03:03,040
+One five seven eight.
+43
+
+44
+00:03:03,220 --> 00:03:03,910
+Yes.
+44
+
+45
+00:03:03,910 --> 00:03:06,880
+Add one more sequence. one five seven eight two?
+45
+
+46
+00:03:06,880 --> 00:03:10,500
+No, break it and go ahead and start from five again.
+46
+
+47
+00:03:10,960 --> 00:03:13,330
+Now five is one sequence here.
+47
+
+48
+00:03:13,630 --> 00:03:15,730
+Five seven is another sequence.
+48
+
+49
+00:03:15,880 --> 00:03:21,660
+Five, seven, eight is another sequence, five seven eight two isn't and so on.
+49
+
+50
+00:03:21,790 --> 00:03:27,010
+So the idea is, keep expanding the current window as long as you can.
+50
+
+51
+00:03:27,160 --> 00:03:32,100
+And with every expansion we actually have one more result and so on.
+51
+
+52
+00:03:32,650 --> 00:03:40,000
+I hope if you are doing that with me, although we make it now two nested loops only, you should
+52
+
+53
+00:03:40,000 --> 00:03:45,520
+also figure out that we are actually having one more source of duplication, when we kept computing
+53
+
+54
+00:03:45,520 --> 00:03:46,720
+from one to eight.
+54
+
+55
+00:03:47,290 --> 00:03:53,440
+And we added four sequences because the length is four when we started at five, we again added five,
+55
+
+56
+00:03:53,440 --> 00:03:57,030
+seven, eight, which we know from the previous result should be OK.
+56
+
+57
+00:03:57,040 --> 00:04:02,740
+It is just from the suffix direction and now seven, eight also and eight
+57
+
+58
+00:04:02,740 --> 00:04:10,050
+now, actually the observation is, do we need to start from five and seven and eight or just to jump
+58
+
+59
+00:04:10,060 --> 00:04:10,630
+to the two?
+59
+
+60
+00:04:11,050 --> 00:04:19,630
+The answer is to jump directly to the two, if one five seven eight is a valid increasing sequence,
+60
+
+61
+00:04:19,960 --> 00:04:23,380
+every subsequence inside it is a valid subsequence.
+61
+
+62
+00:04:23,770 --> 00:04:26,830
+Now, how many increasing subsequences do we have here?
+62
+
+63
+00:04:27,070 --> 00:04:31,720
+It will be n*n+1/2 where n is the length here, which is four.
+63
+
+64
+00:04:33,040 --> 00:04:39,430
+And this is the idea of the third solution, which is linear one and very efficient.
+64
+
+65
+00:04:39,880 --> 00:04:47,830
+The idea is as long as the sequence is increasing, then yeah, the idea is if we have an increasing
+65
+
+66
+00:04:47,830 --> 00:04:54,670
+sequence of length four, then all of the four times five over two subsequences inside it are actually
+66
+
+67
+00:04:54,670 --> 00:04:55,000
+valid one.
+67
+
+68
+00:04:55,630 --> 00:05:01,540
+So we can keep going, get the one increasing sub-sequence and add n*(n+1)/2
+68
+
+69
+00:05:01,540 --> 00:05:02,590
+..
+69
+
+70
+00:05:02,590 --> 00:05:05,710
+Or for simplicity, we can just keep adding the current length for us.
+70
+
+71
+00:05:06,100 --> 00:05:08,470
+So, we keep reading here
+71
+
+72
+00:05:08,680 --> 00:05:12,970
+as long as the sequence is increasing, we keep adding its length.
+72
+
+73
+00:05:14,590 --> 00:05:20,410
+If it failed at any point, we mark its length with one and then the i is starting from the next, from
+73
+
+74
+00:05:20,410 --> 00:05:21,050
+the next element.
+74
+
+75
+00:05:21,280 --> 00:05:22,570
+So let's make an example.
+75
+
+76
+00:05:22,720 --> 00:05:29,650
+Let's again say one five, seven, eight, nine, ten, and then two, three, four, five, for example.
+76
+
+77
+00:05:30,190 --> 00:05:32,980
+Now one, add one.
+77
+
+78
+00:05:33,370 --> 00:05:36,640
+We start here with this one, one five.
+78
+
+79
+00:05:36,940 --> 00:05:37,360
+Yes.
+79
+
+80
+00:05:37,360 --> 00:05:42,340
+Add two, because we have now a sequence of length two, one five seven, add three.
+80
+
+81
+00:05:42,340 --> 00:05:49,720
+Because we now have three sequences, one five seven eight, add four because we now have four sequences
+81
+
+82
+00:05:49,720 --> 00:05:57,010
+ending at eight, one five seven eight nine, add five because we have five sequences ending at nine.
+82
+
+83
+00:05:57,460 --> 00:06:03,700
+They are the nine, 8 9, 7 8 9, 5 7 8 9, 1 5 7 8 9 and so
+83
+
+84
+00:06:03,700 --> 00:06:03,970
+on.
+84
+
+85
+00:06:04,180 --> 00:06:06,820
+When we reach to the two we find that this is violating.
+85
+
+86
+00:06:06,820 --> 00:06:11,980
+So we start again from scratch with length equal one for the two and do the same, if you don't get the logic
+86
+
+87
+00:06:11,980 --> 00:06:17,860
+why adding the length, you can just compute the length so far and multiply n*(n+1)/2 
+87
+
+88
+00:06:18,490 --> 00:06:19,030
+not n
+88
+
+89
+00:06:19,030 --> 00:06:22,570
+Let's call it m, m+(m+1)/2, but I hope you can get it.
+89
+
+90
+00:06:23,170 --> 00:06:30,400
+So, the moral of these three solutions, this is what we call observation skills, by observing
+90
+
+91
+00:06:30,400 --> 00:06:30,730
+what is
+91
+
+92
+00:06:30,860 --> 00:06:36,050
+happening by digging in the details, you can figure out more and more optimizations.

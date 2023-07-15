@@ -1,0 +1,1219 @@
+1
+00:00:01,070 --> 00:00:04,820
+Graph theory field is filled with many, many terminologies.
+
+2
+00:00:06,020 --> 00:00:11,600
+It is impractical to keep explaining all of them in the beginning because most of them would be just
+
+3
+00:00:11,600 --> 00:00:12,530
+confusing for you.
+
+4
+00:00:12,890 --> 00:00:17,660
+So I selected here a subset of examples that are fit enough to be explained early.
+
+5
+00:00:18,320 --> 00:00:24,650
+It is OK if you don't get some of the like the concepts now, maybe when you meet it later again, just
+
+6
+00:00:24,830 --> 00:00:26,020
+revise it later again.
+
+7
+00:00:26,890 --> 00:00:29,000
+Uh, again, as we learned so far.
+
+8
+00:00:30,200 --> 00:00:38,450
+Graph is just consisting of V vertices, we call them vertices or we call them nodes and also consisting
+
+9
+00:00:38,450 --> 00:00:39,590
+of edges.
+
+10
+00:00:39,890 --> 00:00:44,570
+So when you think about this graph, we have here six nodes one two three four five six.
+
+11
+00:00:44,990 --> 00:00:49,370
+Usually, the graph nodes would be actually zero based, but here in this example, they are one be.
+
+12
+00:00:50,750 --> 00:00:53,520
+The second thing would be the edges e um.
+
+13
+00:00:53,660 --> 00:00:57,770
+So we have here one edge here two, three, four five, six and so on.
+
+14
+00:00:58,310 --> 00:01:06,050
+Each is a bit of vertices, so edge is a connection between vertices and in mathematics.
+
+15
+00:01:06,200 --> 00:01:09,620
+When we say this symbol here, it means that the count.
+
+16
+00:01:09,830 --> 00:01:12,680
+So the count of V here is just six.
+
+17
+00:01:13,070 --> 00:01:19,130
+And the count of E is one two three four five six seven seven.
+
+18
+00:01:19,220 --> 00:01:19,550
+OK.
+
+19
+00:01:19,850 --> 00:01:23,360
+Sometimes I would mention something like o e actually.
+
+20
+00:01:23,360 --> 00:01:25,820
+I mean, all that is itself.
+
+21
+00:01:27,100 --> 00:01:33,520
+When we have an edge of remote, it would be in some context, we would say that it is a source A. And
+
+22
+00:01:33,520 --> 00:01:34,300
+B is a target.
+
+23
+00:01:34,510 --> 00:01:38,890
+For example, I told you I would like to go from one to node number six.
+
+24
+00:01:39,130 --> 00:01:42,640
+So one here is the source and six is the target.
+
+25
+00:01:43,030 --> 00:01:49,120
+And we would like to go from one to six, which is one way this way like thinking that like whenever
+
+26
+00:01:49,120 --> 00:01:52,300
+you get lost and need a context, think about computer networks.
+
+27
+00:01:52,480 --> 00:01:53,440
+One is a machine.
+
+28
+00:01:53,440 --> 00:02:00,010
+Five is a machine for an exercise machine or c think Airbus one is an Airbus, five is an airport,
+
+29
+00:02:00,010 --> 00:02:02,590
+four is an Airbus and six is in Edwards and so on.
+
+30
+00:02:03,040 --> 00:02:04,870
+So anyway, this is a graph of definition.
+
+31
+00:02:05,740 --> 00:02:09,490
+Let's go in more a subdivision.
+
+32
+00:02:09,820 --> 00:02:12,880
+There are a lot of probabilities that are involved in the graph.
+
+33
+00:02:13,000 --> 00:02:18,040
+The most important of them is what we call directed graph and undirected graph.
+
+34
+00:02:18,520 --> 00:02:23,050
+So the word undirected means the issue doesn't have a direction.
+
+35
+00:02:23,320 --> 00:02:26,110
+It means it is a two way direction.
+
+36
+00:02:26,350 --> 00:02:32,270
+For example, node number four can go to number six and node number six can go to new number four.
+
+37
+00:02:33,540 --> 00:02:34,780
+Do you know the streets?
+
+38
+00:02:34,780 --> 00:02:41,470
+When you are on the streets, you can see like you can see a street that is cars can go in the two direction,
+
+39
+00:02:41,470 --> 00:02:43,540
+can go this way and can go this way.
+
+40
+00:02:43,690 --> 00:02:45,550
+So this is a two way your relationship.
+
+41
+00:02:46,420 --> 00:02:47,920
+So this is what we model it here.
+
+42
+00:02:48,340 --> 00:02:53,350
+An example in real life would be Facebook friends if Mustafa is a friend of Bilal.
+
+43
+00:02:53,680 --> 00:02:55,420
+Bilal is also a friend of Mustafa.
+
+44
+00:02:55,510 --> 00:03:01,120
+If we have a new one here for Mustafa and another new year for Bilal and we have an edge, it will be
+
+45
+00:03:01,120 --> 00:03:06,250
+undirected edge, which means the semantic is working well in both directions.
+
+46
+00:03:06,400 --> 00:03:07,750
+Mustafa is a friend of BLAT.
+
+47
+00:03:07,960 --> 00:03:09,850
+Bilal is friend of Mustafa,
+
+48
+00:03:13,180 --> 00:03:18,610
+another type of Graf's which is much more common than the interactive graph is a directed graph.
+
+49
+00:03:19,000 --> 00:03:22,360
+In the directed graph, it is only one way direction.
+
+50
+00:03:22,600 --> 00:03:27,550
+So you see here in this graph, we say three Arrow two.
+
+51
+00:03:27,760 --> 00:03:30,820
+So this arrow represented their relationship direction.
+
+52
+00:03:31,030 --> 00:03:35,440
+It means we can go from three to two, but we cannot go from two to three.
+
+53
+00:03:35,470 --> 00:03:38,620
+So this arrow direction is this way only.
+
+54
+00:03:39,400 --> 00:03:42,700
+OK, what if I would like to support both ways for specific nodes?
+
+55
+00:03:42,700 --> 00:03:43,810
+We can have something like that.
+
+56
+00:03:44,050 --> 00:03:46,450
+Three goes to four and four goes to three.
+
+57
+00:03:46,870 --> 00:03:48,660
+This is a very edge.
+
+58
+00:03:48,670 --> 00:03:50,050
+This is a direct edge.
+
+59
+00:03:50,320 --> 00:03:52,840
+These two together allow me to go in both direction.
+
+60
+00:03:53,500 --> 00:03:58,510
+So as you see, we can represent undirected graph was a directed graph, but the opposite isn't true.
+
+61
+00:03:59,230 --> 00:04:04,300
+Like if I would like to make an edge to be undirected or like two ways, I can add another edge here.
+
+62
+00:04:06,540 --> 00:04:14,000
+In terms of like building a graph, if I would like to build this, like if I would like to build it
+
+63
+00:04:14,010 --> 00:04:17,100
+is like I told you, this is undirected graph and I would like you to build it.
+
+64
+00:04:17,290 --> 00:04:20,430
+I will give you seven nodes one two three four five six seven.
+
+65
+00:04:20,790 --> 00:04:23,310
+So I give you only one edge between four and six.
+
+66
+00:04:23,790 --> 00:04:25,710
+But here the three four.
+
+67
+00:04:25,710 --> 00:04:30,540
+I must give you two edges because if one of them is an independent edge.
+
+68
+00:04:30,750 --> 00:04:33,450
+So this graph has one two three four five.
+
+69
+00:04:33,460 --> 00:04:34,860
+This one has five edges.
+
+70
+00:04:35,130 --> 00:04:36,360
+This one has seven edges.
+
+71
+00:04:36,570 --> 00:04:41,100
+So in terms of programming, you must take seven elements here seven beers as an input.
+
+72
+00:04:41,250 --> 00:04:43,410
+But for this one, you need only five inputs.
+
+73
+00:04:43,590 --> 00:04:47,010
+So these two, I must give them independently here.
+
+74
+00:04:47,730 --> 00:04:52,710
+As an example, if Mustafa follows, is the ad in the Facebook.
+
+75
+00:04:52,710 --> 00:04:54,720
+Mustafa is a person that is a person.
+
+76
+00:04:55,500 --> 00:04:57,390
+Then Mustafa can see the Adbusters.
+
+77
+00:04:57,900 --> 00:05:03,030
+But the opposite isn't true because Z doesn't necessarily follow Mustafa.
+
+78
+00:05:03,780 --> 00:05:06,330
+So the semantic here is just one direction.
+
+79
+00:05:06,450 --> 00:05:08,190
+Maybe Z also would follow Mustafa.
+
+80
+00:05:08,190 --> 00:05:08,520
+Maybe?
+
+81
+00:05:08,520 --> 00:05:09,180
+Yes, maybe no.
+
+82
+00:05:11,320 --> 00:05:15,820
+Yeah, so it can have also fallen support, but this is optional one.
+
+83
+00:05:16,210 --> 00:05:22,090
+So as you see from a domain to another, it decides, is it directed or undirected graph?
+
+84
+00:05:24,920 --> 00:05:27,830
+The second concept in graphs is waiting.
+
+85
+00:05:28,340 --> 00:05:31,340
+Sometimes we don't need to wait on the edge.
+
+86
+00:05:32,120 --> 00:05:33,590
+Sometimes we need it.
+
+87
+00:05:33,800 --> 00:05:39,080
+So let's say we have a computer network here and all what we care about it that we need to know that
+
+88
+00:05:39,410 --> 00:05:43,280
+edge number six, the computer number six, is connected with network number four.
+
+89
+00:05:43,700 --> 00:05:45,770
+So it ends up like a zero one case.
+
+90
+00:05:45,980 --> 00:05:46,460
+Is it?
+
+91
+00:05:46,550 --> 00:05:47,740
+Does it exist to exist?
+
+92
+00:05:47,750 --> 00:05:49,460
+Does it exist or not?
+
+93
+00:05:49,880 --> 00:05:52,370
+We say that this is unweighted graph.
+
+94
+00:05:53,760 --> 00:05:59,370
+In other contexts, we might need a value, a weed or acoustic on the edge itself.
+
+95
+00:06:00,120 --> 00:06:03,780
+For example, if we are modeling Airbus, it doesn't matter.
+
+96
+00:06:03,780 --> 00:06:09,660
+Just you tell me that Cairo is connected with a flight with maybe Toronto.
+
+97
+00:06:10,080 --> 00:06:11,580
+This by itself isn't important.
+
+98
+00:06:11,850 --> 00:06:15,570
+I need to know that this cost me $5000.
+
+99
+00:06:16,290 --> 00:06:19,020
+And this trip cost me $2000.
+
+100
+00:06:19,200 --> 00:06:21,850
+This trip cost me $3000.
+
+101
+00:06:22,470 --> 00:06:29,190
+So in unweighted graph, we in graph, we need to need a weed or a cost or a value.
+
+102
+00:06:29,790 --> 00:06:31,800
+We can even bet going back to the network.
+
+103
+00:06:31,800 --> 00:06:36,150
+Maybe we have here the time that it needs, if what Eric was to go from here to here.
+
+104
+00:06:36,510 --> 00:06:40,430
+This happened a lot in companies that would like their services to be very fast.
+
+105
+00:06:40,440 --> 00:06:46,590
+We need to know how much time does it take for a query to reach from like network number four or service
+
+106
+00:06:46,590 --> 00:06:49,230
+number four to service number number five?
+
+107
+00:06:49,680 --> 00:06:54,780
+So yeah, this way, as you see, sometimes we need weed, sometimes you don't.
+
+108
+00:06:55,080 --> 00:07:00,660
+If you are modeling your courses dependency, and I would like to say that algorithm scores.
+
+109
+00:07:02,800 --> 00:07:04,180
+That programming course.
+
+110
+00:07:05,220 --> 00:07:07,830
+So algorithm scores depend on a programming course.
+
+111
+00:07:08,100 --> 00:07:12,420
+So a student shouldn't take algorithm scores without taking a programming course.
+
+112
+00:07:12,630 --> 00:07:13,830
+So this is dependency.
+
+113
+00:07:14,160 --> 00:07:15,370
+We do need it here.
+
+114
+00:07:15,390 --> 00:07:19,010
+We just need just to know there is a dependency on.
+
+115
+00:07:21,330 --> 00:07:25,160
+This examples here show what is very common when the value is an edge.
+
+116
+00:07:25,170 --> 00:07:29,430
+But I would like to tell you that graph something or something is very generic sometimes to the note
+
+117
+00:07:29,430 --> 00:07:32,100
+itself has a has a has has a value.
+
+118
+00:07:32,310 --> 00:07:37,440
+We might say that Node six here has value of seventeen, not five here has value of two.
+
+119
+00:07:37,650 --> 00:07:39,120
+But this isn't the common case.
+
+120
+00:07:39,120 --> 00:07:42,300
+The common case is about ages themselves.
+
+121
+00:07:45,400 --> 00:07:53,590
+Sometimes there are a phenomena where the same two nodes may have multiple edges between them.
+
+122
+00:07:54,160 --> 00:07:57,460
+For example, the node here four and five.
+
+123
+00:07:58,090 --> 00:08:02,620
+Let's say that this is airborne modeling and food is Cairo and five is New York.
+
+124
+00:08:03,040 --> 00:08:04,360
+There are two trips here.
+
+125
+00:08:04,370 --> 00:08:05,800
+One trip was just the two.
+
+126
+00:08:06,340 --> 00:08:08,060
+And another trip was corsetti.
+
+127
+00:08:08,530 --> 00:08:13,180
+Maybe this one is in the morning and this one is in the in the in the night.
+
+128
+00:08:13,780 --> 00:08:17,590
+So sometimes we need this kind of multiple edges between two nodes.
+
+129
+00:08:18,690 --> 00:08:21,680
+A graph with multiple edges, sometimes we call it multi graph.
+
+130
+00:08:26,060 --> 00:08:31,400
+What could be really weird is sometimes that these are age from the new itself.
+
+131
+00:08:32,270 --> 00:08:33,830
+We call it lube or cell volume.
+
+132
+00:08:34,220 --> 00:08:38,630
+So the loop or loop is when the edge connected the node by itself.
+
+133
+00:08:38,900 --> 00:08:41,170
+It might look like a weird case for you.
+
+134
+00:08:41,180 --> 00:08:44,540
+Like, why do we have an idea from a to itself, the domain itself?
+
+135
+00:08:44,540 --> 00:08:47,030
+We can specify that, for example.
+
+136
+00:08:48,600 --> 00:08:52,500
+For example, in social media, like a graph, maybe.
+
+137
+00:08:55,810 --> 00:08:56,130
+Yeah.
+
+138
+00:08:56,170 --> 00:09:02,770
+Let's say you are in a social media and you you bought a very nice profile for yourself and then you
+
+139
+00:09:02,770 --> 00:09:04,660
+made the like on your personal boost.
+
+140
+00:09:04,870 --> 00:09:07,690
+So it's more or less something between the person.
+
+141
+00:09:07,690 --> 00:09:13,640
+Like if we would like to know which Burson like, which Ibbotson OK based on the posts.
+
+142
+00:09:14,020 --> 00:09:17,340
+So we'll find that Mustafa made a liking to his own post.
+
+143
+00:09:17,350 --> 00:09:20,680
+So it's more or less like Mustafa has a sales loop here.
+
+144
+00:09:21,160 --> 00:09:22,600
+Let me give you another example.
+
+145
+00:09:23,440 --> 00:09:29,590
+Let's say we are in a basement beach, so this is a big here and there are the basement information
+
+146
+00:09:29,590 --> 00:09:31,150
+like your credit card information.
+
+147
+00:09:31,540 --> 00:09:36,550
+And let's say here we have a successful beach or a failure beach.
+
+148
+00:09:37,360 --> 00:09:39,660
+If basement is succeed, we go to success.
+
+149
+00:09:39,670 --> 00:09:41,320
+If they meet fail, we get to fail.
+
+150
+00:09:41,740 --> 00:09:47,530
+But we need if there is a basic error in the bridge itself, we need to stay on the bridge itself.
+
+151
+00:09:48,160 --> 00:09:52,540
+So for example, let's say you entered your age with the negative value.
+
+152
+00:09:52,750 --> 00:09:54,790
+We don't need to make it successful.
+
+153
+00:09:54,790 --> 00:09:57,670
+We can depicted that very, very, very early.
+
+154
+00:09:58,030 --> 00:10:00,790
+So we say here that this is a silver loop.
+
+155
+00:10:05,610 --> 00:10:12,120
+If the graph has an edge between every two bit of nodes, every bit of distinct nodes, we see that
+
+156
+00:10:12,120 --> 00:10:15,300
+this is a complete graph or a fully connected graph.
+
+157
+00:10:15,480 --> 00:10:19,110
+You see here we have one two three four five six seven.
+
+158
+00:10:20,230 --> 00:10:21,160
+Four, five, six seven.
+
+159
+00:10:21,370 --> 00:10:28,360
+And if it is connected with one two three four five six zero connected with everything in such aircraft
+
+160
+00:10:28,400 --> 00:10:32,500
+and under two kids, we have a total of in terms of minus one over two inches.
+
+161
+00:10:32,740 --> 00:10:37,630
+This is a very dense figure that will come back to the audience in a few seconds.
+
+162
+00:10:40,190 --> 00:10:45,080
+Graf Bath there wanted the bath would be very common during this course, so there's a very important
+
+163
+00:10:45,590 --> 00:10:45,950
+term.
+
+164
+00:10:47,220 --> 00:10:53,580
+The bus is a sequence of images that joins the deceased together, for example, in this undirected
+
+165
+00:10:53,580 --> 00:10:58,530
+graph, one five four six is a graph.
+
+166
+00:10:58,890 --> 00:11:03,930
+So I write it as follows I write it like a graph of one, five, four and six.
+
+167
+00:11:04,230 --> 00:11:10,710
+It means that we go from one two six one five, then age five four, then age four to six.
+
+168
+00:11:11,580 --> 00:11:13,020
+So this is what a graph.
+
+169
+00:11:13,380 --> 00:11:15,990
+So as you see, there must be an age, for example.
+
+170
+00:11:16,230 --> 00:11:17,520
+Five four three two one.
+
+171
+00:11:18,030 --> 00:11:18,690
+Elizabeth.
+
+172
+00:11:19,020 --> 00:11:22,620
+But one two four six isn't like see one to exist.
+
+173
+00:11:22,800 --> 00:11:23,260
+Four.
+
+174
+00:11:23,640 --> 00:11:27,420
+There is nothing too much between between two and four.
+
+175
+00:11:27,930 --> 00:11:29,460
+So this isn't the best.
+
+176
+00:11:29,790 --> 00:11:35,580
+So the best was this must be an age in a very similar way in the in the directed case.
+
+177
+00:11:35,970 --> 00:11:39,210
+We have a birth from one to three to four.
+
+178
+00:11:39,990 --> 00:11:42,420
+But we don't have a bus from four to three to one.
+
+179
+00:11:42,430 --> 00:11:45,750
+We have from four to three, but we then have from four to three to one.
+
+180
+00:11:46,350 --> 00:11:52,680
+So this is what about and it's a very, a very important concept during that graph three sections.
+
+181
+00:11:53,610 --> 00:12:00,810
+There is also what we call a cycle, and a cycle is about the start and end at the same node.
+
+182
+00:12:02,020 --> 00:12:04,420
+Usually there are no other repeated moves.
+
+183
+00:12:04,600 --> 00:12:06,040
+So we call it symbol cycle.
+
+184
+00:12:06,550 --> 00:12:07,390
+So let's see here.
+
+185
+00:12:08,950 --> 00:12:19,450
+Here we can say that one two three four five one is a cycle we started and ended at the same note.
+
+186
+00:12:19,460 --> 00:12:20,590
+So we call this a cycle.
+
+187
+00:12:21,100 --> 00:12:24,190
+A smaller cycle would be one two five one.
+
+188
+00:12:24,220 --> 00:12:26,350
+This also is a that's like it.
+
+189
+00:12:27,760 --> 00:12:38,380
+If I if I wrote something like one two five three three one two three five one two three four five one.
+
+190
+00:12:38,950 --> 00:12:43,810
+Now you see, there are a lot of the locations we call that this is not a symbol cycle.
+
+191
+00:12:43,960 --> 00:12:47,530
+So if the cycle doesn't have repetition in the middle, we call the symbol cycle.
+
+192
+00:12:49,710 --> 00:12:57,900
+In The Daily Telegraph, in a very similar way we can have we can have cycles like here you see we go
+
+193
+00:12:57,900 --> 00:12:58,900
+from three to four.
+
+194
+00:12:58,920 --> 00:12:59,540
+This is a cycle.
+
+195
+00:12:59,550 --> 00:13:04,650
+This is the only way I could hear like one to three is in a cycle because there is no energy from two
+
+196
+00:13:05,070 --> 00:13:05,580
+to three.
+
+197
+00:13:07,940 --> 00:13:13,670
+If the directed graph doesn't have any cycles, we call it D&amp;G, and that is a very special and very
+
+198
+00:13:13,670 --> 00:13:14,570
+important case.
+
+199
+00:13:14,870 --> 00:13:21,770
+So directed acyclic graph or the DAG is a graph of the record graph that doesn't have cycles.
+
+200
+00:13:23,030 --> 00:13:24,620
+That doesn't have psychics.
+
+201
+00:13:26,630 --> 00:13:29,270
+Another concept is, is a graph connected or not?
+
+202
+00:13:29,510 --> 00:13:32,750
+When you look through this graph, we notice it is completely connected.
+
+203
+00:13:33,410 --> 00:13:36,340
+But when you look to this graph, we see it is disconnected.
+
+204
+00:13:36,350 --> 00:13:42,590
+We have one unit here, one unit here, one unit here, every unit of them is a sub-groups.
+
+205
+00:13:42,980 --> 00:13:48,650
+In the undirected case, we call it a connected component, a connected component.
+
+206
+00:13:49,190 --> 00:13:52,700
+Um, this is also we call it a forest here.
+
+207
+00:13:53,000 --> 00:13:57,560
+The forest is bunch of separated groups, so sometimes force is more about trees as we'll see.
+
+208
+00:13:59,150 --> 00:14:02,010
+Spurts and then SIGGRAPH is a very important information.
+
+209
+00:14:02,570 --> 00:14:05,800
+The Spurs means the graft has relatively few edges.
+
+210
+00:14:06,140 --> 00:14:08,270
+The density in the group has too much edges.
+
+211
+00:14:08,810 --> 00:14:10,730
+If it would like to quantify that.
+
+212
+00:14:11,660 --> 00:14:17,390
+We can say the following a spot SIGGRAPH would be all or we spoke of V this way.
+
+213
+00:14:17,390 --> 00:14:19,220
+As I said, I didn't.
+
+214
+00:14:19,220 --> 00:14:20,600
+SIGGRAPH would be obvious where.
+
+215
+00:14:20,630 --> 00:14:24,620
+This means that the Densey graph is very close to be a complete graph.
+
+216
+00:14:25,340 --> 00:14:25,730
+OK.
+
+217
+00:14:26,060 --> 00:14:28,400
+So here are a bunch of examples.
+
+218
+00:14:28,610 --> 00:14:29,960
+This one is a sports here.
+
+219
+00:14:29,960 --> 00:14:31,520
+We have six nodes.
+
+220
+00:14:31,520 --> 00:14:33,200
+We have seven edges.
+
+221
+00:14:33,200 --> 00:14:33,770
+Very close.
+
+222
+00:14:34,310 --> 00:14:37,700
+This one is a sparse also, but this one is dense.
+
+223
+00:14:37,730 --> 00:14:43,820
+This one is dense because the number of edges are very close to the total number of a complete graph.
+
+224
+00:14:44,240 --> 00:14:45,200
+So in a way it is.
+
+225
+00:14:45,200 --> 00:14:46,460
+How can you quantify that?
+
+226
+00:14:47,500 --> 00:14:53,200
+Why is it important because, well, some algorithms are good for denser graphs, some others are for
+
+227
+00:14:53,710 --> 00:14:54,520
+sparse graphs.
+
+228
+00:14:56,010 --> 00:15:02,190
+The new neighbor is a very simple concept, which I mean, simply, what are my neighbors and what is
+
+229
+00:15:02,190 --> 00:15:06,090
+your neighbor if there is an issue between you and the node itself?
+
+230
+00:15:06,390 --> 00:15:12,330
+So for example, here we see in this undirected graph number three, there are no three has a neighbor
+
+231
+00:15:12,330 --> 00:15:13,470
+to a neighbor food.
+
+232
+00:15:13,500 --> 00:15:19,080
+It means that there is an Egyptian 01:57, an aged from three to four and a direct last year.
+
+233
+00:15:19,080 --> 00:15:21,390
+The Note two has no neighbors.
+
+234
+00:15:21,780 --> 00:15:25,860
+The two has no neighbors because it doesn't go to anyone.
+
+235
+00:15:27,030 --> 00:15:31,350
+Meanwhile, no no one here has two neighbors, which are two and three.
+
+236
+00:15:34,110 --> 00:15:41,000
+There is also a very relevant concept here, what we call the new degree, the new degree represents
+
+237
+00:15:41,010 --> 00:15:42,300
+your number of neighbors.
+
+238
+00:15:42,750 --> 00:15:49,050
+So in the undirected graph and number three, the degree is to which because we have to do neighbors
+
+239
+00:15:49,560 --> 00:15:57,540
+now in the directed graph, it's a bit a bit tricky that the our degrees is the same as the concept
+
+240
+00:15:57,540 --> 00:15:59,160
+of the number of neighbors we established.
+
+241
+00:15:59,790 --> 00:16:07,470
+So for example, here we see that the degree of two is zero, which means it doesn't have any neighbors.
+
+242
+00:16:08,160 --> 00:16:10,710
+Then degrees represent for a directed graph.
+
+243
+00:16:10,770 --> 00:16:16,140
+The number of incoming edges, for example, then it to the degree of no.
+
+244
+00:16:16,160 --> 00:16:22,140
+Two, is two, which means there are two edges that come to node number two.
+
+245
+00:16:22,590 --> 00:16:28,980
+Then degree of four is one, the degree of one is zero because there are no nodes coming here.
+
+246
+00:16:29,520 --> 00:16:33,180
+So the degree and our degree is only concept of what directed graph.
+
+247
+00:16:33,480 --> 00:16:38,940
+That degree means that what's playing out, which is not my number of neighbors, then degree is what?
+
+248
+00:16:38,940 --> 00:16:39,750
+What's coming in?
+
+249
+00:16:43,000 --> 00:16:47,230
+The three is a special case, three is an undirected graph.
+
+250
+00:16:48,120 --> 00:16:51,180
+And there is there are lots of interesting birds about trees.
+
+251
+00:16:51,390 --> 00:16:55,380
+First of all, any two vertices are connected by exactly one.
+
+252
+00:16:56,130 --> 00:17:01,770
+So you see in the number six connected by five here, four here, three here two one one here, that
+
+253
+00:17:01,770 --> 00:17:04,260
+is only one way to reach a graph.
+
+254
+00:17:04,590 --> 00:17:06,900
+Another note now there is a question here.
+
+255
+00:17:07,440 --> 00:17:10,470
+How can I figure out this is a tree you cannot keep counting?
+
+256
+00:17:10,470 --> 00:17:17,490
+The bat is an easier ways, as following a tree is if there are any nodes, if it will be only in the
+
+257
+00:17:17,490 --> 00:17:19,680
+minus one edges and it will be all connected.
+
+258
+00:17:20,010 --> 00:17:23,160
+So look, here we have six nodes and we have five edges.
+
+259
+00:17:23,340 --> 00:17:27,090
+This is a tree without any further way to verify it.
+
+260
+00:17:27,240 --> 00:17:28,560
+So how can you verify tree?
+
+261
+00:17:28,740 --> 00:17:29,190
+It should be.
+
+262
+00:17:29,190 --> 00:17:30,900
+All of the nodes are connected together.
+
+263
+00:17:31,140 --> 00:17:33,570
+You should have any news and the minus one edges.
+
+264
+00:17:34,530 --> 00:17:37,440
+There are two other interesting but burgess about trees.
+
+265
+00:17:37,890 --> 00:17:41,130
+If you remove any edge, the graph must be disconnected.
+
+266
+00:17:41,280 --> 00:17:43,080
+Like, let's say you do this one here.
+
+267
+00:17:44,220 --> 00:17:48,210
+If you remove this one here, then we have one component here and another component here.
+
+268
+00:17:49,050 --> 00:17:53,040
+Another interesting fact If you connected anyone edge, you could it one cycle.
+
+269
+00:17:53,250 --> 00:17:57,690
+For example, if we connected the one in six, this is creating here, one cycle here.
+
+270
+00:17:59,250 --> 00:18:03,610
+A very relevant the concept is rooted tree in a tree.
+
+271
+00:18:03,630 --> 00:18:10,170
+You take one root from the undirected graph and like, let's say that this was an underrated graph.
+
+272
+00:18:10,170 --> 00:18:14,910
+You started from five as a root, every edge coming out of it, you make it in the other direction.
+
+273
+00:18:15,280 --> 00:18:17,220
+It and other direction make it in the other direction.
+
+274
+00:18:17,460 --> 00:18:23,460
+Then you go to this one every edge you make at other direction, the other direction, every other direction.
+
+275
+00:18:23,610 --> 00:18:30,720
+So now you see, it's to become rooted as if there are as if there are like a flu in a specific way.
+
+276
+00:18:31,110 --> 00:18:34,240
+So this is a rotary that is one interesting bit here.
+
+277
+00:18:34,260 --> 00:18:35,820
+Remember, this is a directed graph.
+
+278
+00:18:36,360 --> 00:18:40,140
+Um, every node has only one parent in this routing graph.
+
+279
+00:18:40,380 --> 00:18:45,990
+Every node, if you if you look to the undirected graph, you do know like there is no better and the
+
+280
+00:18:45,990 --> 00:18:49,890
+concept here, we have just something connected to something in trees.
+
+281
+00:18:50,100 --> 00:18:51,480
+We have this beer.
+
+282
+00:18:51,480 --> 00:18:58,740
+And the reason we say that Note5 is the parent of two, not three, so too is the parent of three.
+
+283
+00:18:58,770 --> 00:19:00,160
+Not one is abilita four.
+
+284
+00:19:00,180 --> 00:19:01,410
+So it follows the direction.
+
+285
+00:19:01,620 --> 00:19:02,700
+This is only for three.
+
+286
+00:19:03,030 --> 00:19:10,440
+The concept of the parent coming from a life like this is the John who is the father of Adam and is
+
+287
+00:19:10,440 --> 00:19:13,570
+the father of also, um, Maryam.
+
+288
+00:19:14,310 --> 00:19:17,090
+So we say that John is a parent of Adam and Mary.
+
+289
+00:19:17,280 --> 00:19:24,930
+So in a very similar way, when you create a rooted tree, it is, uh, it is like there are the parent
+
+290
+00:19:24,930 --> 00:19:28,480
+concept that then noted that doesn't have any children.
+
+291
+00:19:28,500 --> 00:19:29,580
+We call them leaves.
+
+292
+00:19:29,850 --> 00:19:35,100
+So this one Node two has two children, three and six, and six is a child of two.
+
+293
+00:19:35,520 --> 00:19:35,810
+Six.
+
+294
+00:19:35,820 --> 00:19:42,120
+It doesn't have any children, so we say three, four six are we call them leaves like a leaf of a tree.
+
+295
+00:19:43,320 --> 00:19:47,340
+There are different types of fruit, a tree of liberty, every angle for every arrow, for example,
+
+296
+00:19:47,340 --> 00:19:48,120
+here to the up.
+
+297
+00:19:48,360 --> 00:19:52,230
+It's also a rooted tree, so after you build it this way, you'll flip it.
+
+298
+00:19:52,690 --> 00:19:54,600
+Then it's also around the tree.
+
+299
+00:19:56,200 --> 00:19:57,340
+Sorry for the British boy.
+
+300
+00:19:58,710 --> 00:20:03,060
+So great theory and very dense in definitions.
+
+301
+00:20:03,420 --> 00:20:06,900
+It doesn't work for now if you miss some of the concepts that struck.
+
+302
+00:20:07,230 --> 00:20:13,450
+I would like you to know that graph is a data structure because it's a class that is built around its
+
+303
+00:20:13,460 --> 00:20:16,500
+seeded, around its roads and around its edges.
+
+304
+00:20:17,010 --> 00:20:19,410
+And we have many algorithms to it.
+
+305
+00:20:19,710 --> 00:20:20,190
+That's all.

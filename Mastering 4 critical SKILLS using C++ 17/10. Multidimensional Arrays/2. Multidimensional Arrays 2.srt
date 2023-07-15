@@ -1,0 +1,509 @@
+0
+1
+00:00:01,320 --> 00:00:06,180
+In the previous video, we studied mainly the 2D array, so let's proceed more.
+1
+
+2
+00:00:08,790 --> 00:00:11,550
+This is how we read the array, as we did before.
+2
+
+3
+00:00:11,790 --> 00:00:19,460
+But now I would like to show you what we call "column-row order accessing". when we access row by row,
+3
+
+4
+00:00:19,470 --> 00:00:20,820
+then column by column,
+4
+
+5
+00:00:21,030 --> 00:00:25,630
+This is a column-row accessing. but we can also access it column by column.
+5
+
+6
+00:00:25,650 --> 00:00:31,200
+For example, you iterate on every column, then iterate on every row, then again use a notation of row and the
+6
+
+7
+00:00:31,200 --> 00:00:31,600
+column.
+7
+
+8
+00:00:31,950 --> 00:00:35,040
+This is now is accessing the array column by column.
+8
+
+9
+00:00:35,250 --> 00:00:35,560
+OK.
+9
+
+10
+00:00:35,580 --> 00:00:39,900
+Remember the grades, what was the column in the grades.
+10
+
+11
+00:00:39,900 --> 00:00:40,200
+Yeah.
+11
+
+12
+00:00:40,200 --> 00:00:42,210
+The column was for the subjects.
+12
+
+13
+00:00:42,540 --> 00:00:47,700
+So it's like now you would like to see it from the angle of math subject.
+13
+
+14
+00:00:47,700 --> 00:00:53,180
+So previously we wanted to know what are the grades of Mostafa, what are the grades of Asmaa.
+14
+
+15
+00:00:53,190 --> 00:00:59,970
+So we were focusing on the row perspective. when you iterate by column, you are iterating from the column perspective.
+15
+
+16
+00:00:59,970 --> 00:01:06,510
+So now say what are the grades of the math, what are the grades of science
+16
+
+17
+00:01:06,510 --> 00:01:07,050
+and so on.
+17
+
+18
+00:01:08,250 --> 00:01:17,760
+One interesting thing to know, is that when when we access array 2D, using row then column, we are
+18
+
+19
+00:01:17,790 --> 00:01:21,030
+iterating on it directly in the memory.
+19
+
+20
+00:01:21,600 --> 00:01:27,480
+But when you are accessing it column by column, we are making a lot of jumps in the memory, you should
+20
+
+21
+00:01:27,480 --> 00:01:29,980
+know later the reason behind that.
+21
+
+22
+00:01:30,240 --> 00:01:35,040
+So the column-row accessing is typically slower than the row-access.
+22
+
+23
+00:01:35,100 --> 00:01:41,430
+And this is a very interesting thing about the memory, like although this is the same as a number of
+23
+
+24
+00:01:41,430 --> 00:01:43,800
+operations of row-column order,
+24
+
+25
+00:01:44,080 --> 00:01:48,180
+However, this is making a lot of jumps in the memory and in the cache.
+25
+
+26
+00:01:48,360 --> 00:01:50,760
+So, it is a bit slower.
+26
+
+27
+00:01:51,060 --> 00:01:56,820
+And this is interesting because it has something more about the hardware of your machine.
+27
+
+28
+00:01:58,660 --> 00:02:01,810
+Let's compute the average grade per student,
+28
+
+29
+00:02:01,990 --> 00:02:05,750
+OK. so we would like to know the average of Mostafa, the average of blah, blah, blah.
+29
+
+30
+00:02:06,100 --> 00:02:08,490
+OK, this is very simple exercise. Here,
+30
+
+31
+00:02:08,500 --> 00:02:14,710
+we read the numbers, and then if we would like to get the average, then we iterate row by row, then we will
+31
+
+32
+00:02:14,710 --> 00:02:18,970
+have a (sum) variable to sum for all the grades of a specific student.
+32
+
+33
+00:02:19,270 --> 00:02:21,280
+Then we sum it and divide it by 7.
+33
+
+34
+00:02:21,550 --> 00:02:25,310
+This is how we get the average per row for a student.
+34
+
+35
+00:02:25,600 --> 00:02:27,310
+You can also think in a similar way,
+35
+
+36
+00:02:27,490 --> 00:02:31,070
+I would like to compute the average math grade, for example.
+36
+
+37
+00:02:31,330 --> 00:02:35,920
+Then you have to switch the column with the row and sum and divide by 7.
+37
+
+38
+00:02:37,510 --> 00:02:37,930
+OK,
+38
+
+39
+00:02:38,040 --> 00:02:42,170
+Here is a very interesting thing, what we call flattening an array.
+39
+
+40
+00:02:42,300 --> 00:02:47,830
+When we say a flattened array, it means we simply switch it from 2D to 1D.
+40
+
+41
+00:02:47,830 --> 00:02:50,350
+How to do that? you simply accumulate them row by row.
+41
+
+42
+00:02:51,010 --> 00:02:54,370
+So this is a 2D array, 8, 16, 9, 52,
+42
+
+43
+00:02:54,400 --> 00:02:55,540
+It's here the first row,
+43
+
+44
+00:02:55,810 --> 00:02:57,790
+Then you take the second row to be here,
+44
+
+45
+00:02:57,790 --> 00:03:00,970
+the second row, you take the third row to put it here in the third row.
+45
+
+46
+00:03:01,310 --> 00:03:05,670
+If you look at it this way, you notice, and this is by the way, how it is in the memory.
+46
+
+47
+00:03:05,950 --> 00:03:09,990
+So this 2D array is actually always in the memory, 1D array.
+47
+
+48
+00:03:10,420 --> 00:03:17,350
+So the 2D array, and 3D array, and 4D array are all in the memory 1D, ok. they are flattened,
+48
+
+49
+00:03:17,680 --> 00:03:21,940
+and that's why the row accessing, is just accessing it one by one in the memory.
+49
+
+50
+00:03:22,720 --> 00:03:25,600
+On the other side, the column accessing is making jumps.
+50
+
+51
+00:03:26,290 --> 00:03:31,860
+Now there is a question that we will try to stress on later,
+51
+
+52
+00:03:32,170 --> 00:03:35,650
+I would like you to flatten the array as following,
+52
+
+53
+00:03:35,860 --> 00:03:39,190
+I'm writing for you here, a simple
+53
+
+54
+00:03:39,190 --> 00:03:44,650
+code that iterate on a matrix that is 3x4, for every one of them,
+54
+
+55
+00:03:44,860 --> 00:03:50,940
+I'm printing its index in the 1D array and it's position in the 2D array.
+55
+
+56
+00:03:51,310 --> 00:03:55,240
+I would like you to find the formula that can do the following,
+56
+
+57
+00:03:55,570 --> 00:04:02,830
+It can take a position i and j in a 2D array, and tell me what really would be the index of it in a 1D array.
+57
+
+58
+00:04:03,250 --> 00:04:10,360
+And on the other side, it takes the index in 1D array and it tells you the index in the 2D
+58
+
+59
+00:04:10,360 --> 00:04:12,010
+array, the position in 2D array.
+59
+
+60
+00:04:12,280 --> 00:04:16,570
+So print this statement, try to find the relationship.
+60
+
+61
+00:04:17,860 --> 00:04:22,110
+Another interesting thing, and it isn't about syntax, it's about useful utility.
+61
+
+62
+00:04:23,110 --> 00:04:28,000
+Let's say you are here in position I and j, and then there are neighbors for you.
+62
+
+63
+00:04:28,210 --> 00:04:31,270
+There are two scenarios usually, and it can be more. here,
+63
+
+64
+00:04:31,420 --> 00:04:36,940
+The scenario number one, we have only four neighbors, 1, 2, 3, 4, or 1, 2, 3,
+64
+
+65
+00:04:36,940 --> 00:04:37,170
+4.
+65
+
+66
+00:04:37,180 --> 00:04:38,250
+It depends on the order.
+66
+
+67
+00:04:38,470 --> 00:04:39,820
+So how many neighbors? 4.
+67
+
+68
+00:04:40,090 --> 00:04:45,940
+In another case, you can have eight neighbors like 1, 2, 3, 4, 5, 6, 7,
+68
+
+69
+00:04:45,940 --> 00:04:46,390
+8.
+69
+
+70
+00:04:46,640 --> 00:04:49,330
+OK, or 1, 2, 3, 4, 5, 6, 7, 8.
+70
+
+71
+00:04:49,540 --> 00:04:54,580
+Regardless of the order, they are like 4 neighbors or 8 neighbors.
+71
+
+72
+00:04:54,580 --> 00:04:55,990
+They can even be more.
+72
+
+73
+00:04:55,990 --> 00:04:58,300
+But anyway, this is the most common one.
+73
+
+74
+00:04:58,720 --> 00:05:01,750
+So one interesting question for you also to think about it,
+74
+
+75
+00:05:02,080 --> 00:05:10,720
+If you have a position here for some i and j, can we in an elegant way, get the whole positions of these
+75
+
+76
+00:05:10,870 --> 00:05:11,500
+8 steps?
+76
+
+77
+00:05:11,650 --> 00:05:12,800
+How can we do that?
+77
+
+78
+00:05:12,830 --> 00:05:13,810
+Think also about it.
+78
+
+79
+00:05:15,520 --> 00:05:20,620
+Finally, we would like to move to a more generalization to the 2D array.
+79
+
+80
+00:05:20,950 --> 00:05:22,330
+Can we do more?
+80
+
+81
+00:05:22,630 --> 00:05:23,650
+Let's motivate that.
+81
+
+82
+00:05:23,980 --> 00:05:27,280
+What if we have five years in the school, for each year
+82
+
+83
+00:05:27,280 --> 00:05:31,060
+we have hundred students maximum and we have a 20 subjects.
+83
+
+84
+00:05:31,060 --> 00:05:33,370
+How now can we represent that?
+84
+
+85
+00:05:33,370 --> 00:05:34,180
+one may think again, 
+85
+
+86
+00:05:34,180 --> 00:05:37,450
+OK, let's make five arrays, one array for every year.
+86
+
+87
+00:05:37,840 --> 00:05:39,550
+That's OK, but not convenient.
+87
+
+88
+00:05:39,820 --> 00:05:43,780
+C++ give you the ability to create a 3D array.
+88
+
+89
+00:05:43,780 --> 00:05:50,170
+a 3D array, is a 3D-dimensional, so it has 5, 100, and 20. So we can create it this way, you
+89
+
+90
+00:05:50,170 --> 00:05:57,220
+can access the grade for like if you would like to access the 3rd year student number 71
+90
+
+91
+00:05:57,220 --> 00:06:01,600
+9th subject, this will access to a 2, 70. and 8.
+91
+
+92
+00:06:01,780 --> 00:06:05,350
+So this would give you the information of this student.
+92
+
+93
+00:06:05,560 --> 00:06:06,400
+Can I do bigger?
+93
+
+94
+00:06:06,430 --> 00:06:08,920
+Yeah, you can do more and more. but be careful,
+94
+
+95
+00:06:09,220 --> 00:06:11,480
+The number of memory is growing up.
+95
+
+96
+00:06:11,740 --> 00:06:18,280
+When you say 5, 100, 20, you are creating 5 * 100 * 200 numbers in
+96
+
+97
+00:06:18,280 --> 00:06:18,900
+the memory,
+97
+
+98
+00:06:18,910 --> 00:06:19,720
+This is a lot.
+98
+
+99
+00:06:19,930 --> 00:06:22,450
+For example, one, two, three, four, five, six,
+99
+
+100
+00:06:22,670 --> 00:06:25,660
+This is one million numbers in the memory.
+100
+
+101
+00:06:25,810 --> 00:06:30,970
+So be very careful from the dimensionalities because it just grows up in memory very fast.
+101
+
+102
+00:06:31,480 --> 00:06:32,050
+That's it.

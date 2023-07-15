@@ -1,0 +1,214 @@
+0
+1
+00:00:00,750 --> 00:00:07,470
+So far, we learned about printing, in this session, we'll learn about reading also. In previous time
+1
+
+2
+00:00:07,470 --> 00:00:13,680
+we used what we call the "Extraction operator" '>>' to write to the console where 
+2
+
+3
+00:00:13,680 --> 00:00:17,280
+c is "console" and out is for "output", for reading.
+3
+
+4
+00:00:17,280 --> 00:00:21,240
+We use something called "cin", 'c' for console and 'in' for input.
+4
+
+5
+00:00:21,390 --> 00:00:27,060
+And this time we use the '>>' which is called "Insertion operator".
+5
+
+6
+00:00:27,210 --> 00:00:34,680
+One of the very classical mistakes from newcomers is using "cout" with '>>' or using
+6
+
+7
+00:00:34,700 --> 00:00:35,560
+"cin" with '<<'.
+7
+
+8
+00:00:35,580 --> 00:00:39,060
+It will take time till you get used to that.
+8
+
+9
+00:00:40,620 --> 00:00:44,220
+The way to read the variable is first to declare it and then just read it,
+9
+
+10
+00:00:44,220 --> 00:00:49,770
+wait for the user to input number from a console. Here we say integer
+10
+
+11
+00:00:49,770 --> 00:00:51,420
+number, we just declare a number.
+11
+
+12
+00:00:51,630 --> 00:00:53,100
+It's now garbage in memory.
+12
+
+13
+00:00:53,340 --> 00:00:56,240
+We ask the user to enter "your lucky number".
+13
+
+14
+00:00:56,610 --> 00:01:02,730
+Now the compiler is going to see here "cin>>num" no spaces between them.
+14
+
+15
+00:01:03,120 --> 00:01:04,740
+When we do that.
+15
+
+16
+00:01:05,010 --> 00:01:10,140
+And here you see your program is going to be freezing till you enter some number.
+16
+
+17
+00:01:10,140 --> 00:01:13,080
+So it will be red here all the time, till you enter number.
+17
+
+18
+00:01:13,290 --> 00:01:19,740
+Once you enter the number it's going to print for you, let's say I input 10, is going to print for you 2
+18
+
+19
+00:01:19,920 --> 00:01:20,310
+times
+19
+
+20
+00:01:20,310 --> 00:01:23,100
+10 + 1 equals 21
+20
+
+21
+00:01:24,200 --> 00:01:30,680
+Remember, do not enter a value less than minimum limit or the maximum limit, or you are going to face
+21
+
+22
+00:01:30,680 --> 00:01:31,670
+some flow issues.
+22
+
+23
+00:01:33,590 --> 00:01:40,340
+When we learned about printing more than a message in a same way, we can read more than a
+23
+
+24
+00:01:40,340 --> 00:01:40,700
+number.
+24
+
+25
+00:01:40,880 --> 00:01:44,980
+So I can say here, define a and b, notice how I use the comma here.
+25
+
+26
+00:01:44,990 --> 00:01:46,850
+I define two variables together
+26
+
+27
+00:01:46,850 --> 00:01:50,510
+in one line, I could say "int a; int b;"
+27
+
+28
+00:01:50,720 --> 00:01:53,720
+I use "int a, b", to define more than a variable.
+28
+
+29
+00:01:54,020 --> 00:02:00,290
+And then we say "cout" the message, and then I read two numbers, (a and b) and then printing the
+29
+
+30
+00:02:00,290 --> 00:02:02,030
+multiplication and addition.
+30
+
+31
+00:02:02,330 --> 00:02:08,270
+If we input 2 and 5 then the multiplication would be ten and the summation would be 7.
+31
+
+32
+00:02:08,420 --> 00:02:13,040
+This way we can also read multiple numbers, in a similar way.
+32
+
+33
+00:02:13,070 --> 00:02:17,590
+We can define more other variables and start to just enter them.
+33
+
+34
+00:02:17,840 --> 00:02:23,630
+But remember, the data-type that you are reading, so I can define an age and say "cin>>age"
+34
+
+35
+00:02:23,660 --> 00:02:28,800
+So I'm entering here 55, I can define double and write a double and read a double.
+35
+
+36
+00:02:29,000 --> 00:02:36,230
+So it could be 92 or 92.5, I am creating a character and entering character entering
+36
+
+37
+00:02:36,230 --> 00:02:36,950
+here character Q.
+37
+
+38
+00:02:36,950 --> 00:02:42,860
+You don't enter a colon before and after you just enter the Q directly.
+38
+
+39
+00:02:43,310 --> 00:02:43,760
+You are.
+39
+
+40
+00:02:43,850 --> 00:02:48,740
+We are defining also here a name now we are reading name, so we are writing Mostafa we don't enter.
+40
+
+41
+00:02:48,740 --> 00:02:52,610
+It was double quotes just Mostafa directly. Far from that
+41
+
+42
+00:02:52,610 --> 00:02:59,300
+we can just print whatever we entered here, so we can read more than a variable in a single line.
+42
+
+43
+00:02:59,480 --> 00:03:04,240
+We can read several, different data types. That's it! :)

@@ -1,0 +1,287 @@
+1
+00:00:00,950 --> 00:00:06,390
+Let's solve the first homework, the first one about money printing, they're bringing their bath,
+
+2
+00:00:06,410 --> 00:00:08,570
+and this is actually a symbol of change here.
+
+3
+00:00:09,020 --> 00:00:15,650
+We started by creating an array that we will call their parents and we initialize it with minus one.
+
+4
+00:00:16,340 --> 00:00:16,790
+Now.
+
+5
+00:00:18,310 --> 00:00:22,690
+We expected the following, like, let's say we have a disconnected Gadhafi's following, for example.
+
+6
+00:00:24,860 --> 00:00:30,620
+And let's say zero one two, and we started from zero.
+
+7
+00:00:30,890 --> 00:00:35,780
+So expected that no one would have been in zero, not two would have burnt one.
+
+8
+00:00:36,350 --> 00:00:40,190
+This knew, and this would have been a minus one minus one because they are disconnected and no zero
+
+9
+00:00:40,190 --> 00:00:42,590
+would have minus one as this connected.
+
+10
+00:00:43,100 --> 00:00:45,290
+So what happened here is as normal.
+
+11
+00:00:45,290 --> 00:00:47,240
+We just add this here line here.
+
+12
+00:00:47,240 --> 00:00:52,880
+Load of could we see that the parent of the neighbor is currently the parent of the neighbor is current?
+
+13
+00:00:53,270 --> 00:00:59,060
+So we are told, for example, food we have here child five, a child, the sixth child seven.
+
+14
+00:00:59,390 --> 00:01:00,710
+And I am saying that you know what?
+
+15
+00:01:00,710 --> 00:01:08,450
+The parent of five is food and the parent of six is food, and the parent of seven is four.
+
+16
+00:01:08,840 --> 00:01:14,840
+So in this way, we are building a building their relationships, and there is an interesting thing
+
+17
+00:01:14,840 --> 00:01:15,710
+here to highlight.
+
+18
+00:01:16,160 --> 00:01:22,160
+I previously told you that in the rooted graph, one way to represent it is just a single area.
+
+19
+00:01:22,160 --> 00:01:22,850
+Remember that?
+
+20
+00:01:23,930 --> 00:01:30,800
+We mentioned before, if you have a tree like zero one here, two and maybe four.
+
+21
+00:01:31,770 --> 00:01:38,520
+I told you that in a routine directed graph like that, where every node has only one parent we can
+
+22
+00:01:38,520 --> 00:01:40,200
+represent, that was an array, right?
+
+23
+00:01:40,590 --> 00:01:41,910
+So I can say here that.
+
+24
+00:01:44,020 --> 00:01:45,530
+Zero one, two, three four.
+
+25
+00:01:45,650 --> 00:01:51,020
+I can see the berrent of zero is minus one parent of two is you parent of one?
+
+26
+00:01:51,020 --> 00:01:53,090
+Is you parent of four is two?
+
+27
+00:01:53,840 --> 00:01:55,010
+This is minus one here.
+
+28
+00:01:56,170 --> 00:02:02,380
+So this way we represented the complete three using an array, and this is very compact representation.
+
+29
+00:02:02,410 --> 00:02:04,240
+When you think about the parent relationship.
+
+30
+00:02:04,540 --> 00:02:07,840
+The parent relationship is actually where we are building that we are.
+
+31
+00:02:07,840 --> 00:02:13,540
+But I cannot say what is the child of zero using a single tree because it cannot work.
+
+32
+00:02:13,870 --> 00:02:19,630
+But if every node in I wrote it in a rooted tree has one parent, only we can use this representation.
+
+33
+00:02:19,930 --> 00:02:26,230
+So the built array here is actually a tree representation, and it's the best of format because all
+
+34
+00:02:26,230 --> 00:02:29,530
+what we need is just weird automobiles.
+
+35
+00:02:30,340 --> 00:02:33,250
+Now, let's see, how can that help us?
+
+36
+00:02:33,760 --> 00:02:35,530
+Let's say we would like to bring to the bath.
+
+37
+00:02:36,310 --> 00:02:39,580
+OK, so let's give it a very simple example.
+
+38
+00:02:39,580 --> 00:02:40,020
+Zero.
+
+39
+00:02:40,360 --> 00:02:41,050
+Go to one.
+
+40
+00:02:41,380 --> 00:02:42,070
+Go to two.
+
+41
+00:02:42,610 --> 00:02:43,340
+Go to three.
+
+42
+00:02:44,020 --> 00:02:44,680
+Go to four.
+
+43
+00:02:45,990 --> 00:02:53,760
+So we know that the parent of four three two one zero minus one, let's say I'm asking you to bring
+
+44
+00:02:53,760 --> 00:02:57,030
+two for me, the shortest the bath, the bath from zero to four.
+
+45
+00:02:58,800 --> 00:03:02,280
+We're going to start way forward here and say, what does your parent?
+
+46
+00:03:02,890 --> 00:03:04,140
+Three, OK?
+
+47
+00:03:04,740 --> 00:03:07,310
+Three What is your parent to do?
+
+48
+00:03:07,320 --> 00:03:09,100
+What is Berrent one one with?
+
+49
+00:03:09,100 --> 00:03:10,890
+Is your parent two zero zero?
+
+50
+00:03:11,070 --> 00:03:13,140
+What is your minus one already, Richard?
+
+51
+00:03:13,470 --> 00:03:15,260
+So we see the best is three two one zero.
+
+52
+00:03:15,270 --> 00:03:17,070
+But this is the reverse at Beth.
+
+53
+00:03:17,430 --> 00:03:20,460
+We actually need it to be zero one two three.
+
+54
+00:03:20,490 --> 00:03:21,570
+Why is it reverted?
+
+55
+00:03:21,960 --> 00:03:27,060
+Because we started from the four going back to the zero through the parents, so we need to revert to
+
+56
+00:03:27,060 --> 00:03:27,300
+that.
+
+57
+00:03:27,990 --> 00:03:32,850
+So you have two ways now, either you do that in any threat of way to get the rest and reverse reversal
+
+58
+00:03:33,060 --> 00:03:37,290
+or maybe an easier way to do that in the decision how we recurs.
+
+59
+00:03:37,440 --> 00:03:38,400
+We start here.
+
+60
+00:03:38,400 --> 00:03:46,050
+Why not force and then we we recurs on the parent to fool with Jeffrey after we are done from that,
+
+61
+00:03:46,050 --> 00:03:47,950
+we bring to their current mood.
+
+62
+00:03:48,360 --> 00:03:54,030
+Remember parenting their triangle in a forward way and in a backward way?
+
+63
+00:03:54,060 --> 00:03:55,650
+We did that in the recurring right.
+
+64
+00:03:56,520 --> 00:04:01,200
+So please, if you aren't confused about why is this recursion is bringing it in the right way?
+
+65
+00:04:01,590 --> 00:04:06,900
+Please go ahead and review the, uh, started sprinting in the recursion section.
+
+66
+00:04:07,440 --> 00:04:12,390
+By the way, if you got this line here before it would print to three two one zero.
+
+67
+00:04:12,660 --> 00:04:16,140
+If you bought it after it, it would bring it to zero one two three.
+
+68
+00:04:16,350 --> 00:04:20,510
+So this is mainly the first problem about the, uh, about the printing.
+
+69
+00:04:20,520 --> 00:04:21,600
+This is all what we did.
+
+70
+00:04:21,600 --> 00:04:25,290
+We started from this is thought we iterated on all of the values.
+
+71
+00:04:25,590 --> 00:04:30,180
+If variant of IE equal minus one, it means that we never found the path for it, so we ignored it.
+
+72
+00:04:30,510 --> 00:04:32,850
+Otherwise we bring into their target, Beth.

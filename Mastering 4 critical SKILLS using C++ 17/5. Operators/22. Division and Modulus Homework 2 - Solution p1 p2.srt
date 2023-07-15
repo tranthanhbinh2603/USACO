@@ -1,0 +1,234 @@
+0
+1
+00:00:00,930 --> 00:00:07,860
+Let's solve the second homework sets here, so the first problem is about checking if a number is even
+1
+
+2
+00:00:07,860 --> 00:00:09,420
+or not in three ways.
+2
+
+3
+00:00:09,780 --> 00:00:13,890
+Using number mod two is the standard way to know if a number is even or not.
+3
+
+4
+00:00:14,400 --> 00:00:22,050
+By the way, using mod two and comparing with zero is better for both even
+4
+
+5
+00:00:22,050 --> 00:00:28,530
+and odd, for example, if you'd like to check if a number is odd or not, then check number mod two not equals
+5
+
+6
+00:00:28,530 --> 00:00:28,720
+zero.
+6
+
+7
+00:00:28,740 --> 00:00:29,260
+Why?
+7
+
+8
+00:00:29,940 --> 00:00:35,760
+Because if the number is negative in the even case, it would not matter, because in both cases it
+8
+
+9
+00:00:35,760 --> 00:00:36,350
+would be zero.
+9
+
+10
+00:00:36,930 --> 00:00:38,870
+But if the number is odd, three mod
+10
+
+11
+00:00:38,880 --> 00:00:41,920
+two is one, minus three mod two is negative one.
+11
+
+12
+00:00:42,090 --> 00:00:44,320
+So now it's going to be tricky and you have to be careful.
+12
+
+13
+00:00:44,580 --> 00:00:49,020
+So the best thing is to compare against zero, equal equal for even and not equal for odd.
+13
+
+14
+00:00:49,530 --> 00:00:50,970
+Now this is a standard one.
+14
+
+15
+00:00:50,970 --> 00:00:55,320
+How can we use the division two and modulus 10 to make a check?
+15
+
+16
+00:00:56,100 --> 00:01:01,800
+Remember that when we divide a number by two, there are one of two cases for the fractional
+16
+
+17
+00:01:01,800 --> 00:01:07,570
+part it is either point zero for an even number or point five for the odd number.
+17
+
+18
+00:01:08,190 --> 00:01:12,810
+So the idea here is to get the fractional part, similar to what we did before,
+18
+
+19
+00:01:12,810 --> 00:01:19,320
+We can get the double number minus the integer vision to get the fractional part,it the fractional
+19
+
+20
+00:01:19,320 --> 00:01:20,310
+part is zero.
+20
+
+21
+00:01:20,310 --> 00:01:23,270
+Then this means this must be an even number.
+21
+
+22
+00:01:24,090 --> 00:01:30,350
+The mod ten is different case and easier one, if you noticed when we take a number with mod ten
+22
+
+23
+00:01:30,360 --> 00:01:30,900
+if it is even,
+23
+
+24
+00:01:30,900 --> 00:01:35,880
+then the last digit has to be zero, two four, six or eight.
+24
+
+25
+00:01:36,210 --> 00:01:38,790
+So we can double check against all of the choices.
+25
+
+26
+00:01:38,790 --> 00:01:41,230
+If it's any of them, then this is an even number.
+26
+
+27
+00:01:41,610 --> 00:01:42,270
+Definitely.
+27
+
+28
+00:01:42,270 --> 00:01:44,070
+We go with this approach in industry.
+28
+
+29
+00:01:44,070 --> 00:01:46,530
+But it is good to be aware of other approaches.
+29
+
+30
+00:01:48,560 --> 00:01:54,650
+In the second problem, we would like to get the sum of the last three digits.
+30
+
+31
+00:01:55,370 --> 00:01:56,960
+OK, so let's see.
+31
+
+32
+00:01:58,370 --> 00:02:05,600
+The idea here is using the modulus ten and division by ten idea, if you divide the number by 10, 10,
+32
+
+33
+00:02:05,600 --> 00:02:07,950
+10 or by 1000, you actually.
+33
+
+34
+00:02:09,620 --> 00:02:11,710
+OK, I'm sorry, I switched.
+34
+
+35
+00:02:11,730 --> 00:02:13,520
+This is the fourth one.
+35
+
+36
+00:02:14,450 --> 00:02:17,270
+Let me get this one.
+36
+
+37
+00:02:18,860 --> 00:02:19,240
+Sorry.
+37
+
+38
+00:02:19,250 --> 00:02:21,080
+Can I switch it, sorry for that.
+38
+
+39
+00:02:22,370 --> 00:02:27,950
+If you would like to get the last three digits then you can take modulus ten, you get the last digit
+39
+
+40
+00:02:28,190 --> 00:02:34,500
+and then divide by ten, you remove it, modulus ten, get the last digit, division by ten you get it,  modulus ten 
+40
+
+41
+00:02:34,550 --> 00:02:36,740
+you divide by ten to get it.
+41
+
+42
+00:02:36,920 --> 00:02:42,950
+So for example, if the number is five, eight, six, seven, two, if you did modulus ten, then you get
+42
+
+43
+00:02:42,950 --> 00:02:43,490
+the five.
+43
+
+44
+00:02:43,520 --> 00:02:45,980
+If you divided by ten, you remove the five.
+44
+
+45
+00:02:45,980 --> 00:02:50,150
+Modulus ten, you get the seven division by ten, you remove the seven, modulus ten 
+45
+
+46
+00:02:50,150 --> 00:02:53,520
+you get the six, division by ten, you remove it.
+46
+
+47
+00:02:53,780 --> 00:02:56,560
+This is how you can get that three digits sum.

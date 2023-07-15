@@ -1,0 +1,121 @@
+WEBVTT
+
+00:01.680 --> 00:02.280
+Everyone.
+
+00:02.490 --> 00:08.190
+So let us discuss this problem of finding simple interest and in order to compute simple interest,
+
+00:09.030 --> 00:12.060
+we need three things we need to know the principal amount.
+
+00:12.570 --> 00:15.300
+The rate of interest on diamond years.
+
+00:15.990 --> 00:21.080
+And if given to these three things, you can simply compute the simple interest OK.
+
+00:21.360 --> 00:23.610
+So you might have done it in school level maths.
+
+00:24.240 --> 00:32.070
+We also know the formula for simple interest is given as principal that is denoted using be multiplied,
+
+00:32.070 --> 00:36.300
+but it multiplied by time and divided by 100 OK.
+
+00:36.810 --> 00:42.780
+For example, if your principal is 100, the rate is five and dime is two.
+
+00:43.470 --> 00:50.820
+And if you divide it with 100, it gives you the value, then it gives you the value and.
+
+00:52.570 --> 00:55.240
+Now, this is what the simple interest is.
+
+00:55.270 --> 01:01.690
+Now suppose we want to write a program or we want to write a flowchart for this problem.
+
+01:02.200 --> 01:04.270
+Let's see what steps we have to follow.
+
+01:05.290 --> 01:11.740
+So as we discussed, the first step would always be start, OK, the next step in this problem is to
+
+01:11.740 --> 01:16.450
+take input because once you have the input only, then you can process your data.
+
+01:17.020 --> 01:20.080
+That will take input and we will read three numbers.
+
+01:20.440 --> 01:23.200
+That is the principal date and time.
+
+01:23.320 --> 01:27.550
+OK, so doing this step will create three buckets in the memory.
+
+01:27.940 --> 01:30.760
+OK, so one bucket will store the principal.
+
+01:31.180 --> 01:32.920
+Another bucket will store the read.
+
+01:33.190 --> 01:35.160
+Another bucket will store the name.
+
+01:35.500 --> 01:40.540
+OK, and now we are saying that, OK, we are going to process simple interest.
+
+01:40.690 --> 01:45.370
+So we are creating another bucket whose name is simple interest.
+
+01:45.910 --> 01:50.060
+And we are evaluating the value of this expression.
+
+01:50.080 --> 01:56.770
+So we are multiplying three numbers 1.5 and two dividing it with a constant that is under it, and we
+
+01:56.770 --> 02:03.240
+are storing the result here that is going to store the value in here.
+
+02:03.280 --> 02:03.570
+OK.
+
+02:04.030 --> 02:10.600
+That means if we deposit 200 rupees at a five percent interest for a period of two years, we will get.
+
+02:11.680 --> 02:13.990
+Ben Rubies as a simple interest.
+
+02:15.080 --> 02:22.550
+So let's see, let's put it in the simple interest that will bring the value of this bucket that Dennis
+
+02:22.550 --> 02:23.060
+printed.
+
+02:23.690 --> 02:27.380
+And here we were, consuming three inputs under advisement.
+
+02:28.010 --> 02:28.310
+OK.
+
+02:28.790 --> 02:30.140
+They go as input.
+
+02:30.620 --> 02:33.020
+And this simple interest is the output.
+
+02:33.410 --> 02:34.160
+And that's it.
+
+02:34.580 --> 02:37.600
+Now we are done with the process and hence we write them.
+
+02:37.970 --> 02:39.430
+And that's it.
+
+02:39.470 --> 02:41.990
+That is how simple it is to draw a flowchart.
+
+02:42.020 --> 02:45.170
+So I hope this problem is clear for you in the next video.

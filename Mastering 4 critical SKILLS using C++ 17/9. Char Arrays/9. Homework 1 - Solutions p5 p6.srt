@@ -1,0 +1,139 @@
+0
+1
+00:00:01,440 --> 00:00:10,620
+To convert a string to a number, we will just go in a very, very, very simple way and we will just
+1
+
+2
+00:00:11,080 --> 00:00:14,190
+iterate on the string and convert it to integer.
+2
+
+3
+00:00:14,670 --> 00:00:16,760
+To do that, let's refresh something.
+3
+
+4
+00:00:16,770 --> 00:00:20,970
+If you have five digits, like one, two, three, four, five. I would like to convert 12345
+4
+
+5
+00:00:20,970 --> 00:00:21,730
+12345
+5
+
+6
+00:00:22,260 --> 00:00:28,200
+The way to do that in math is to keep multiplying with 10 and adding a digit, for example, starting with
+6
+
+7
+00:00:28,200 --> 00:00:32,120
+one. One times 10 is 20, add the next digit 2.
+7
+
+8
+00:00:32,160 --> 00:00:37,560
+Now we have 12, 12 times 10 is one hundred and twenty adds the plus.
+8
+
+9
+00:00:37,570 --> 00:00:38,190
+It is what now?
+9
+
+10
+00:00:38,190 --> 00:00:41,780
+123 multiplied by ten and add four. it's now
+10
+
+11
+00:00:41,790 --> 00:00:44,280
+1234 multiplied by ten, add five.
+11
+
+12
+00:00:44,280 --> 00:00:45,490
+It's 12345. 
+12
+
+13
+00:00:45,900 --> 00:00:49,830
+So we actually all what we need is to keep iterating five steps. In every step,
+13
+
+14
+00:00:49,830 --> 00:00:54,840
+we take the current number, multiply it by ten and add the current digit.
+14
+
+15
+00:00:55,410 --> 00:00:57,510
+The digit is in a string format.
+15
+
+16
+00:00:57,510 --> 00:01:03,690
+If you would like to extract the corresponding integer of it, we can just subtract a zero digit from
+16
+
+17
+00:01:03,690 --> 00:01:10,290
+it because the digits...,  the characters are from zero to nine matches the character from zero to 90 integers.
+17
+
+18
+00:01:10,620 --> 00:01:14,880
+Just we need to remove this zero because it will have some value let's say maybe 50.
+18
+
+19
+00:01:14,880 --> 00:01:15,910
+I forget the actual number.
+19
+
+20
+00:01:16,260 --> 00:01:20,910
+So this is how we convert a character digit to an integer digit and then we keep adding it.
+20
+
+21
+00:01:23,730 --> 00:01:25,560
+Once we are done with that.
+21
+
+22
+00:01:26,670 --> 00:01:31,050
+Once we are done with that, then the one number would be converted.
+22
+
+23
+00:01:31,950 --> 00:01:35,130
+And the second problem would like to do the grouping
+23
+
+24
+00:01:36,690 --> 00:01:46,200
+of the numbers here. To do that, we will simply iterate on the string, and whenever the current letter
+24
+
+25
+00:01:46,200 --> 00:01:49,490
+doesn't match the previous letter, we know we have a new group.
+25
+
+26
+00:01:50,070 --> 00:01:55,010
+But be careful if you are at "i" equal to zero, then there are no groups at the moment.
+26
+
+27
+00:01:55,170 --> 00:02:00,760
+So if this is the case, we separate them by spaces, otherwise we just print the current letter.
+27
+
+28
+00:02:00,900 --> 00:02:05,190
+So this how we can split the groups with the spaces in an easy way.

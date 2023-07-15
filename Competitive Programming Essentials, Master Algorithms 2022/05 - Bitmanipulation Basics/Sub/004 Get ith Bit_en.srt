@@ -1,0 +1,236 @@
+1
+00:00:01,900 --> 00:00:09,250
+Hi Everyone, in this lecture we will talk about some common operations that we can do using bitwise
+
+2
+00:00:09,250 --> 00:00:09,880
+operators.
+
+3
+00:00:11,690 --> 00:00:13,580
+So let us look at some examples.
+
+4
+00:00:13,610 --> 00:00:16,490
+Let's say we want to get the i th bit of a number.
+
+5
+00:00:16,670 --> 00:00:18,530
+For example, let's say the number is five
+
+6
+00:00:19,340 --> 00:00:25,640
+And in binary, it would look something like this zero zero one zero one and the numbering of bits that
+
+7
+00:00:25,640 --> 00:00:27,440
+I'm going to do is from the right.
+
+8
+00:00:27,470 --> 00:00:28,730
+So this is the zero th bit.
+
+9
+00:00:28,880 --> 00:00:31,430
+This is the first, but this is the second and so on.
+
+10
+00:00:32,030 --> 00:00:37,580
+If I say OK, give me the second bit then I'm talking about this bit .I want to check the value
+
+11
+00:00:37,580 --> 00:00:38,780
+of this particular bit, OK?
+
+12
+00:00:39,080 --> 00:00:45,740
+Similarly, there would be a function like set ith bit or update ith bit then clear ith bit
+
+13
+00:00:45,890 --> 00:00:47,450
+then clear a range of bits.
+
+14
+00:00:47,600 --> 00:00:51,470
+So we are going to see multiple functions in this set of lectures.
+
+15
+00:00:51,920 --> 00:00:53,660
+So let us start with the first one.
+
+16
+00:00:54,080 --> 00:00:57,590
+I want to get the ith bit
+
+17
+00:00:58,950 --> 00:00:59,700
+of a number n.
+
+18
+00:01:00,030 --> 00:01:06,670
+And so now you may ask. OK, how we can extract that bit ? so it's going to be pretty easy. let's
+
+19
+00:01:06,780 --> 00:01:15,150
+let's int n is five and the position of bit that is I that I'm going to take input, OK?
+
+20
+00:01:15,540 --> 00:01:19,530
+And we will print the ith bit of
+
+21
+00:01:21,210 --> 00:01:21,780
+the number.
+
+22
+00:01:24,280 --> 00:01:29,410
+OK, so now let's see how we can do it ? so we know we can use bitwise operators but how ?
+
+23
+00:01:29,920 --> 00:01:34,360
+So if I do something like this if I have let's say, one zero one. OK.
+
+24
+00:01:35,080 --> 00:01:38,560
+And I actually want to extract this particular bit.
+
+25
+00:01:38,560 --> 00:01:40,540
+So we have seen how to get the last bit. OK.
+
+26
+00:01:40,540 --> 00:01:48,050
+So we basically do with the AND with the one but doing a AND one will not help us in this case.
+
+27
+00:01:48,070 --> 00:01:53,680
+So what we want? we actually want a variable in which we have, uh...
+
+28
+00:01:56,820 --> 00:02:03,060
+We have one at this particular location and everything else is going to be zero so if I put everything
+
+29
+00:02:03,060 --> 00:02:06,330
+else as zero then I will get this number.
+
+30
+00:02:06,750 --> 00:02:08,130
+And how do I get this number?
+
+31
+00:02:08,910 --> 00:02:12,150
+So it is nothing, but it is one left shift i.
+
+32
+00:02:12,220 --> 00:02:15,150
+if you left shift one i times.
+
+33
+00:02:15,150 --> 00:02:19,560
+Okay, so I is two. OK. and we are talking about zero one two.
+
+34
+00:02:19,740 --> 00:02:20,930
+We are talking about this bit.
+
+35
+00:02:20,940 --> 00:02:25,290
+So one left shift two basically means this number one zero zero which is this.
+
+36
+00:02:25,710 --> 00:02:30,180
+And if you do AND here what you're going to get ? you're going to get a number
+
+37
+00:02:30,390 --> 00:02:32,670
+Zero zero zero one zero zero.
+
+38
+00:02:33,330 --> 00:02:36,410
+OK, because everything else is zero.
+
+39
+00:02:36,420 --> 00:02:39,120
+So doing a AND will convert everything else into zero.
+
+40
+00:02:39,660 --> 00:02:45,210
+And for this position, since you have one here so doing AND with one will give you this number.
+
+41
+00:02:45,600 --> 00:02:48,240
+Now you can check if this number is greater than zero.
+
+42
+00:02:48,270 --> 00:02:49,950
+That means the bit is one.
+
+43
+00:02:50,490 --> 00:02:57,480
+And if this number is equal to zero. OK, which would happen if this bit to zero then you can say
+
+44
+00:02:58,680 --> 00:03:00,340
+this bit is actually zero.
+
+45
+00:03:00,370 --> 00:03:03,960
+So what we need to do, we need to create a small variable. let's say mask.
+
+46
+00:03:04,210 --> 00:03:10,260
+OK, I'm calling this number as a mask and we will do the AND with the mask. ok. So mosques is nothing but
+
+47
+00:03:10,260 --> 00:03:18,240
+one left shift i and I can see the last bit is nothing but the number AND mask.
+
+48
+00:03:18,510 --> 00:03:18,840
+OK.
+
+49
+00:03:19,530 --> 00:03:26,370
+If I do the AND and if it gives me a result which is greater than zero then I can return one.
+
+50
+00:03:26,400 --> 00:03:30,960
+Otherwise, I can return zero and this is going to give me the ith bit.
+
+51
+00:03:31,500 --> 00:03:34,110
+So let's run the code and see.
+
+52
+00:03:36,480 --> 00:03:43,450
+So if I do ./commanoperation ,so I say,ok. tell me the second bit of five, so
+
+53
+00:03:43,450 --> 00:03:43,950
+it is one.
+
+54
+00:03:44,430 --> 00:03:45,960
+Tell me the first bit.
+
+55
+00:03:46,360 --> 00:03:47,040
+It does zero.
+
+56
+00:03:47,070 --> 00:03:48,120
+Tell me what does it not?
+
+57
+00:03:48,330 --> 00:03:51,570
+It does one that means it is working fine.
+
+58
+00:03:52,210 --> 00:03:54,180
+So that's all for this lecture.
+
+59
+00:03:54,210 --> 00:03:55,190
+See you in the next video.
+

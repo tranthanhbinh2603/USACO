@@ -1,0 +1,1479 @@
+0
+1
+00:00:01,270 --> 00:00:09,110
+Let's continue our talk about the insertion sort, um, so the question is now, how can we implement
+1
+
+2
+00:00:09,160 --> 00:00:12,040
+this algorithm? If you tried to think about it,
+2
+
+3
+00:00:12,370 --> 00:00:18,460
+we are implementing the shift right operation, which simply means if we have an array of values,
+3
+
+4
+00:00:20,720 --> 00:00:21,890
+and we would like to
+4
+
+5
+00:00:23,590 --> 00:00:25,090
+get this value here,
+5
+
+6
+00:00:26,190 --> 00:00:30,090
+where these values are just moving, this is actually like a shifting operation.
+6
+
+7
+00:00:30,510 --> 00:00:31,830
+So consider, for example,
+7
+
+8
+00:00:33,580 --> 00:00:34,420
+this array here.
+8
+
+9
+00:00:35,710 --> 00:00:40,010
+The first four values are sorted values, two, four, five, six.
+9
+
+10
+00:00:40,030 --> 00:00:42,170
+Now we need to put one in its right place.
+10
+
+11
+00:00:42,580 --> 00:00:48,010
+So the one will take a journey going back, and with every element that is less than it, the number
+11
+
+12
+00:00:48,010 --> 00:00:49,300
+will just be shifted right
+12
+
+13
+00:00:49,300 --> 00:00:49,850
+one step.
+13
+
+14
+00:00:49,870 --> 00:00:51,760
+So six goes to the one position.
+14
+
+15
+00:00:52,120 --> 00:00:53,740
+Five goes to the six position.
+15
+
+16
+00:00:54,010 --> 00:00:57,070
+Four goes to the five position. Two goes to the four position.
+16
+
+17
+00:00:57,280 --> 00:00:59,680
+Then one is empty and ready for us.
+17
+
+18
+00:00:59,920 --> 00:01:04,900
+This is a very classical right shift operation, right shift.
+18
+
+19
+00:01:05,440 --> 00:01:06,970
+So keep it in mind.
+19
+
+20
+00:01:07,090 --> 00:01:08,620
+The opposite is left shift here.
+20
+
+21
+00:01:08,830 --> 00:01:11,880
+So the moral of that is I want to insert something here,
+21
+
+22
+00:01:12,250 --> 00:01:13,240
+I shift right
+22
+
+23
+00:01:13,240 --> 00:01:14,050
+all what I need to
+23
+
+24
+00:01:14,050 --> 00:01:17,320
+put, then I put the value in this location.
+24
+
+25
+00:01:18,490 --> 00:01:19,090
+That simple.
+25
+
+26
+00:01:19,510 --> 00:01:23,470
+So in terms of implementation, I hope you ended up with something close to that.
+26
+
+27
+00:01:23,980 --> 00:01:28,660
+We start with (i = 1), because (i = 0) is already a sorted
+27
+
+28
+00:01:28,660 --> 00:01:29,230
+sub-array.
+28
+
+29
+00:01:29,800 --> 00:01:37,830
+Remember, the assumption of the internal operation is the numbers from 0 up to (i - 1) are
+29
+
+30
+00:01:37,840 --> 00:01:38,680
+sorted already
+30
+
+31
+00:01:38,680 --> 00:01:43,060
+sub-array, and all what we want to do is to put a value in its right location.
+31
+
+32
+00:01:43,570 --> 00:01:45,460
+So we start with the Ith element,
+32
+
+33
+00:01:45,730 --> 00:01:46,390
+call it here
+33
+
+34
+00:01:46,390 --> 00:01:49,840
+key, and we will start from the back.
+34
+
+35
+00:01:50,200 --> 00:01:55,870
+So the last element in the older sorted sub-array is (j = i - 1).
+35
+
+36
+00:01:56,320 --> 00:02:00,430
+Now we will start from the back and keep moving back to the front.
+36
+
+37
+00:02:00,490 --> 00:02:01,990
+So, what is the ending condition?
+37
+
+38
+00:02:02,380 --> 00:02:07,780
+J is greater than or equal zero, or more efficient you can say j is greater than minus one.
+38
+
+39
+00:02:08,320 --> 00:02:10,180
+So we'll keep going forward.
+39
+
+40
+00:02:10,600 --> 00:02:17,530
+And as long as the current key is greater than the element, then this one should be shifted.
+40
+
+41
+00:02:17,860 --> 00:02:24,440
+So we go to j + 1, and shift it here, and then we move to one element before that.
+41
+
+42
+00:02:25,210 --> 00:02:27,840
+So notice that the value of the nums[ j ] is gone.
+42
+
+43
+00:02:27,850 --> 00:02:31,120
+We don't care because we took a value already here.
+43
+
+44
+00:02:31,450 --> 00:02:38,350
+So let's say we have something like maybe 10, 20, 30, 40 as our sorted sub-array.
+44
+
+45
+00:02:38,710 --> 00:02:40,660
+And now, we would like to put the value 17.
+45
+
+46
+00:02:41,200 --> 00:02:46,060
+So first we take seventeen a copy in the key, and then compare forty
+46
+
+47
+00:02:46,060 --> 00:02:48,130
+with key, which is seventeen.
+47
+
+48
+00:02:48,130 --> 00:02:49,390
+Is it greater than?
+48
+
+49
+00:02:49,390 --> 00:02:50,680
+Yes, move forty here.
+49
+
+50
+00:02:51,010 --> 00:02:55,840
+So forty is here. Now thirty, thirty and seventeen,
+50
+
+51
+00:02:55,840 --> 00:02:58,570
+it's greater, so move thirty here.
+51
+
+52
+00:03:00,110 --> 00:03:01,340
+Twenty and seventeen,
+52
+
+53
+00:03:01,370 --> 00:03:03,320
+Yes, greater, move twenty here.
+53
+
+54
+00:03:04,620 --> 00:03:05,530
+Ten and seventeen.
+54
+
+55
+00:03:05,750 --> 00:03:08,460
+No, put seventeen here now.
+55
+
+56
+00:03:08,730 --> 00:03:16,620
+So once we end up at a position j that is smaller than or equal to us, we put in the next
+56
+
+57
+00:03:16,630 --> 00:03:22,350
+element the value, this element now is empty, is waiting for us at the moment.
+57
+
+58
+00:03:22,560 --> 00:03:23,970
+So this is the moral of the code.
+58
+
+59
+00:03:24,240 --> 00:03:25,990
+I hope it is pretty easy for you.
+59
+
+60
+00:03:26,010 --> 00:03:28,760
+I don't want to invest time in easy things.
+60
+
+61
+00:03:28,770 --> 00:03:33,570
+I see some courses that try to take too much time in what is really very clear.
+61
+
+62
+00:03:33,960 --> 00:03:35,580
+So I hope this is clear for you.
+62
+
+63
+00:03:36,090 --> 00:03:38,640
+When you think about the time complexity of this algorithm,
+63
+
+64
+00:03:38,640 --> 00:03:40,050
+like, what's the worst case?
+64
+
+65
+00:03:40,560 --> 00:03:44,290
+We definitely have this complete for loop to be done here.
+65
+
+66
+00:03:44,310 --> 00:03:45,540
+So this is O(n) one.
+66
+
+67
+00:03:46,770 --> 00:03:50,580
+And inside this loop, we are iterating back on the whole array
+67
+
+68
+00:03:50,810 --> 00:03:51,450
+one more time.
+68
+
+69
+00:03:51,450 --> 00:03:52,590
+So this is another O(n).
+69
+
+70
+00:03:53,100 --> 00:03:56,520
+So clearly, this is an O(n^2) time algorithm.
+70
+
+71
+00:03:57,340 --> 00:04:03,550
+Most of the time, when the time complexity and the memory complexity are very clear for me, maybe
+71
+
+72
+00:04:03,550 --> 00:04:07,990
+I forget to mention it. If it happened that there is something missing and you cannot figure it out by yourself,
+72
+
+73
+00:04:08,260 --> 00:04:10,450
+just please raise up a question in the Q/A.
+73
+
+74
+00:04:11,110 --> 00:04:13,660
+So this is mainly the algorithm.
+74
+
+75
+00:04:14,740 --> 00:04:22,450
+Now the second thing, which is a very important skill that you should build during your career is
+75
+
+76
+00:04:22,450 --> 00:04:24,490
+the testing feature. When you are a software engineer,
+76
+
+77
+00:04:24,730 --> 00:04:28,180
+you will implement too much code, some of it very small, some of it very big.
+77
+
+78
+00:04:28,390 --> 00:04:34,510
+You have to test your code before asking people to make a code review for you. And the algorithms course 
+78
+
+79
+00:04:34,510 --> 00:04:36,130
+is one way to enhance
+79
+
+80
+00:04:36,130 --> 00:04:36,940
+this test case.
+80
+
+81
+00:04:37,670 --> 00:04:41,980
+One critical thing here is how to think in a systematic way, it's a skill.
+81
+
+82
+00:04:42,310 --> 00:04:43,570
+But this is something important.
+82
+
+83
+00:04:43,570 --> 00:04:46,420
+It isn't about just finding some test cases.
+83
+
+84
+00:04:46,810 --> 00:04:50,290
+It's about being systematic so that you cover what needs to be covered.
+84
+
+85
+00:04:51,430 --> 00:04:57,040
+So thinking about an array and sorting it, maybe I need an array of length(1), length(2), and length(3) as some
+85
+
+86
+00:04:57,040 --> 00:04:57,730
+small arrays.
+86
+
+87
+00:04:58,270 --> 00:05:03,850
+If we have some known max N, maybe some max N or a big value like ten, for example, you need to
+87
+
+88
+00:05:03,850 --> 00:05:07,000
+think about this kind of boundary thinking.
+88
+
+89
+00:05:07,240 --> 00:05:12,970
+So when I think about a very small array size, very big array size, this is boundaries and this is
+89
+
+90
+00:05:12,970 --> 00:05:19,000
+very important. In terms of the values, one might think about odd and even, although they are irrelevant here.
+90
+
+91
+00:05:19,750 --> 00:05:24,340
+But what is important here is the duplicate arrays or unique values.
+91
+
+92
+00:05:24,730 --> 00:05:29,290
+This is something important because we wanna make sure the duplicate values are handled correctly.
+92
+
+93
+00:05:30,490 --> 00:05:34,750
+In terms of also, you might have interest to know what if the array is completely sorted.
+93
+
+94
+00:05:35,020 --> 00:05:36,550
+What if it's almost sorted?
+94
+
+95
+00:05:36,880 --> 00:05:39,310
+What if it's completely not ordered?
+95
+
+96
+00:05:39,820 --> 00:05:43,180
+Does the algorithm behave properly or not? In this problem,
+96
+
+97
+00:05:43,180 --> 00:05:45,520
+as I said, what matters is mainly the length one.
+97
+
+98
+00:05:46,090 --> 00:05:49,030
+And then some random test, and some test for the duplicate values.
+98
+
+99
+00:05:49,330 --> 00:05:53,050
+This is what I meant by systematic thinking.
+99
+
+100
+00:05:53,050 --> 00:05:55,300
+So try to be that systematic.
+100
+
+101
+00:05:57,380 --> 00:06:04,160
+OK, so let's proceed, assume you are done with your testing, I would like to show you some observations,
+101
+
+102
+00:06:04,160 --> 00:06:08,600
+and it's very important sometimes to make some analysis about your algorithm.
+102
+
+103
+00:06:08,630 --> 00:06:12,980
+This is, in many cases, a key to make better improvements.
+103
+
+104
+00:06:13,340 --> 00:06:17,510
+So one think is assume the array is sorted or almost sorted.
+104
+
+105
+00:06:17,840 --> 00:06:19,550
+What do you think is the time complexity?
+105
+
+106
+00:06:20,300 --> 00:06:23,690
+Please visit the code and try to answer this question.
+106
+
+107
+00:06:25,450 --> 00:06:31,060
+You will notice that the second loop is trying to put an element in its sorted location.
+107
+
+108
+00:06:31,720 --> 00:06:37,180
+If the element already like, let's say we have the first four elements, and we want to put five, the five already
+108
+
+109
+00:06:37,180 --> 00:06:43,210
+is greater than four, the second loop will not work here in this case, again for six, and again for seven.
+109
+
+110
+00:06:43,600 --> 00:06:49,960
+You will observe that the algorithm is O(n) if the array is sorted or almost sorted.
+110
+
+111
+00:06:50,410 --> 00:06:53,230
+This is what we call best-case performance.
+111
+
+112
+00:06:53,710 --> 00:06:59,230
+And specifically, it refers to when exactly can the algorithm do really the best of it.
+112
+
+113
+00:07:00,750 --> 00:07:02,550
+Now, observe the opposite.
+113
+
+114
+00:07:02,820 --> 00:07:05,580
+What if the array is sorted from large to small?
+114
+
+115
+00:07:06,030 --> 00:07:11,940
+So we have initially seven, then six go here, five have to go here, four here,
+115
+
+116
+00:07:12,390 --> 00:07:12,800
+three
+116
+
+117
+00:07:12,810 --> 00:07:17,900
+here. Do you observe? The second loop will do full iteration.
+117
+
+118
+00:07:17,910 --> 00:07:19,770
+It will go a complete looping.
+118
+
+119
+00:07:20,160 --> 00:07:23,550
+This is what we call the worst-case performance.
+119
+
+120
+00:07:24,240 --> 00:07:29,430
+Now, in practice, most of the time, we don't care about the best-case or worst-case because
+120
+
+121
+00:07:29,430 --> 00:07:30,960
+they are anyway rare cases.
+121
+
+122
+00:07:31,200 --> 00:07:34,080
+We care about what we call the average case. Computing
+122
+
+123
+00:07:34,080 --> 00:07:40,170
+the average case is seriously a hard thing, and in some domains, it might depend on probability and
+123
+
+124
+00:07:40,170 --> 00:07:41,010
+expectations.
+124
+
+125
+00:07:41,460 --> 00:07:50,070
+But anyway, you should have some sense that this is O(n^2) algorithm. Probably when the
+125
+
+126
+00:07:50,070 --> 00:07:51,900
+arrays are like random arrays,
+126
+
+127
+00:07:52,110 --> 00:07:57,270
+we expect that the second loop will be partially or fully executed most of the time.
+127
+
+128
+00:07:58,020 --> 00:08:02,580
+So anyway, if you got confused about what is the average case, then just use the worst case.
+128
+
+129
+00:08:03,270 --> 00:08:05,400
+But sometimes this is tricky.
+129
+
+130
+00:08:07,620 --> 00:08:11,280
+Many algorithms have really seriously bad worst-case algorithms.
+130
+
+131
+00:08:11,850 --> 00:08:15,000
+Meanwhile, their average case is pretty good one.
+131
+
+132
+00:08:16,090 --> 00:08:21,820
+If this is the case, what does it mean? Like, let's say out of every one thousand different test cases,
+132
+
+133
+00:08:22,090 --> 00:08:29,620
+only one of them like, let's say, in every one thousand test cases, the algorithm is like O(n long),
+133
+
+134
+00:08:29,620 --> 00:08:32,620
+and only in one case out of every one thousand, it's O(n^2).
+134
+
+135
+00:08:33,460 --> 00:08:35,680
+And let's say we have a website or a service doing that.
+135
+
+136
+00:08:36,010 --> 00:08:43,540
+It means, occasionally from time to time, the algorithm will be slow for this very
+136
+
+137
+00:08:43,540 --> 00:08:44,470
+special test case.
+137
+
+138
+00:08:44,740 --> 00:08:46,480
+Otherwise, it's working pretty good.
+138
+
+139
+00:08:47,650 --> 00:08:49,780
+So this is one thing that you should be careful about it.
+139
+
+140
+00:08:50,290 --> 00:08:55,390
+Although the worst case can give us a good impression about what's going to happen, but actually,
+140
+
+141
+00:08:55,780 --> 00:09:00,370
+it could be the case that this is only a few cases and most of the time we're doing something much better.
+141
+
+142
+00:09:01,060 --> 00:09:04,390
+Let's take another scenario, the hash table.
+142
+
+143
+00:09:04,660 --> 00:09:09,790
+The hash table is very common in industry.
+143
+
+144
+00:09:10,830 --> 00:09:16,500
+If you tried to analyze the hash table, you will notice that it has a very poor worst-case behavior.
+144
+
+145
+00:09:17,680 --> 00:09:20,380
+However, there are two things that we keep in mind.
+145
+
+146
+00:09:20,740 --> 00:09:26,110
+First, if the hash table implementation is a good implementation, like the built-in implementation.
+146
+
+147
+00:09:26,590 --> 00:09:33,060
+Second, there is a sufficient size, which is based on the expected number of entries in the hash table.
+147
+
+148
+00:09:33,070 --> 00:09:35,200
+Remember, the load balance thing in the hash table.
+148
+
+149
+00:09:37,050 --> 00:09:43,200
+If you have a good implementation like the internal one, and you properly use the hash table, and
+149
+
+150
+00:09:43,200 --> 00:09:50,790
+you also had a good hash function, most probably 99%, the hash table will do a very good job.
+150
+
+151
+00:09:51,390 --> 00:09:52,380
+So while the worst
+151
+
+152
+00:09:52,380 --> 00:09:54,450
+case behavior looks like terrible,
+152
+
+153
+00:09:54,720 --> 00:09:59,400
+however, the devil in the details with a good implementation, with good
+153
+
+154
+00:09:59,400 --> 00:10:00,400
+size, with good
+154
+
+155
+00:10:00,420 --> 00:10:04,290
+hash table, proper usage, you are in the safe side.
+155
+
+156
+00:10:04,950 --> 00:10:06,780
+So here is the take home message.
+156
+
+157
+00:10:07,200 --> 00:10:08,490
+Don't be so systematic.
+157
+
+158
+00:10:08,490 --> 00:10:09,750
+We aren't machines here.
+158
+
+159
+00:10:10,050 --> 00:10:11,250
+It isn't about computing
+159
+
+160
+00:10:11,250 --> 00:10:13,650
+what is the worst case and claiming this is the average case.
+160
+
+161
+00:10:14,280 --> 00:10:15,840
+Uh, it isn't like that.
+161
+
+162
+00:10:16,080 --> 00:10:22,020
+Try to have some intuition, some deeper thinking about the typical usage, or how can we make
+162
+
+163
+00:10:22,020 --> 00:10:23,280
+the usage in a better way.
+163
+
+164
+00:10:24,060 --> 00:10:26,160
+So, yeah, this is the point.
+164
+
+165
+00:10:26,400 --> 00:10:30,390
+Like, forget about the style in academic courses,
+165
+
+166
+00:10:30,540 --> 00:10:33,180
+where you have to keep computing the worst-case analysis,
+166
+
+167
+00:10:33,180 --> 00:10:38,190
+the best-case analysis, the average case analysis, and all of this nice stuff. In practice,
+167
+
+168
+00:10:38,400 --> 00:10:39,390
+Don't be systematic,
+168
+
+169
+00:10:39,630 --> 00:10:44,040
+think deeper, and try to get a sense about what might happen for your code.
+169
+
+170
+00:10:45,870 --> 00:10:51,780
+Correctness, remember in the introduction, we mentioned that the algorithm value is really actually
+170
+
+171
+00:10:51,780 --> 00:10:52,830
+about being correct.
+171
+
+172
+00:10:53,400 --> 00:10:56,940
+So we have to prove the correctness of our algorithms.
+172
+
+173
+00:10:57,420 --> 00:10:59,610
+But there is a catch here that I have to clarify.
+173
+
+174
+00:11:00,640 --> 00:11:08,010
+You'll find that some books go very formal, and they might take a few pages explaining a lot of terms.
+174
+
+175
+00:11:08,400 --> 00:11:14,070
+So the proof sometimes is very lengthy, and many people might find it very exhausting for them.
+175
+
+176
+00:11:15,260 --> 00:11:20,540
+Understanding the proofs is still very added value, but most of the time, it is an easier experience
+176
+
+177
+00:11:20,540 --> 00:11:22,910
+for people with mathematical background.
+177
+
+178
+00:11:23,660 --> 00:11:26,540
+Now I need you to try to read formal proofs.
+178
+
+179
+00:11:27,050 --> 00:11:31,260
+But this course is trying to take you to the easiest way.
+179
+
+180
+00:11:31,280 --> 00:11:36,470
+It just tries to make it very informal because it's way easier to explain things. If you have an interest
+180
+
+181
+00:11:36,470 --> 00:11:37,730
+to read formal proofs,
+181
+
+182
+00:11:38,000 --> 00:11:42,980
+you can check out the very common books, the CLRS book, which is the introduction to algorithms,
+182
+
+183
+00:11:42,980 --> 00:11:45,530
+there are like three or four authors for that.
+183
+
+184
+00:11:45,950 --> 00:11:50,060
+I learned from this book when I was back then in 2005 in the university.
+184
+
+185
+00:11:51,020 --> 00:11:52,100
+It's very mathematical.
+185
+
+186
+00:11:52,250 --> 00:11:53,690
+It gives me a lot of hard times.
+186
+
+187
+00:11:53,900 --> 00:11:55,820
+But I believe it was very nice experience.
+187
+
+188
+00:11:56,150 --> 00:12:01,220
+Some other books, like Algorithms Design Manual by Steven Skiena, is more practical one.
+188
+
+189
+00:12:01,400 --> 00:12:02,360
+You don't need this book.
+189
+
+190
+00:12:02,360 --> 00:12:05,690
+The course is already doing a great job in this perspective.
+190
+
+191
+00:12:05,810 --> 00:12:06,800
+Feel free to have it.
+191
+
+192
+00:12:10,120 --> 00:12:16,000
+OK, so here is what I suggest, so that you have a faster learning experience about algorithms, and
+192
+
+193
+00:12:16,000 --> 00:12:21,840
+this is very important because many people take too much time in algorithms courses, and they have a
+193
+
+194
+00:12:21,850 --> 00:12:23,290
+very limited productivity.
+194
+
+195
+00:12:23,920 --> 00:12:28,750
+First, I would like you to focus too much on the intuition itself behind the approach.
+195
+
+196
+00:12:29,170 --> 00:12:32,590
+So don't just jump to read a couple of pages algorithm proof.
+196
+
+197
+00:12:32,980 --> 00:12:34,570
+I need you to focus on the intuition.
+197
+
+198
+00:12:35,770 --> 00:12:41,470
+There's something here worth sharing with you, you probably aware of competitive
+198
+
+199
+00:12:41,470 --> 00:12:42,040
+programming,
+199
+
+200
+00:12:42,040 --> 00:12:44,470
+like ICPC, Codeforces.
+200
+
+201
+00:12:44,990 --> 00:12:52,810
+The talented guys and the senior guys can solve very hard problems in a few minutes, only based
+201
+
+202
+00:12:52,810 --> 00:12:55,900
+on their intuition, which is corrected to a large extent.
+202
+
+203
+00:12:56,770 --> 00:12:59,590
+So I want you to develop this intuition.
+203
+
+204
+00:12:59,770 --> 00:13:03,880
+You can read many hard problems, and figure out what is the solution in a few minutes.
+204
+
+205
+00:13:03,910 --> 00:13:09,580
+It takes too much time to reach this stage, like figuring out in five minutes, for example.
+205
+
+206
+00:13:09,580 --> 00:13:14,290
+This is a very tough skill, but intuition here is a very important key.
+206
+
+207
+00:13:14,800 --> 00:13:20,650
+If you had good intuition about the problem, the second is to try to implement it or understand
+207
+
+208
+00:13:20,650 --> 00:13:22,450
+the code, try to think about
+208
+
+209
+00:13:22,450 --> 00:13:24,700
+test cases, play with the code and the test cases.
+209
+
+210
+00:13:25,270 --> 00:13:29,140
+Try to think in informal thoughts about the correctness, like, why do you think this is correct?
+210
+
+211
+00:13:30,290 --> 00:13:34,760
+The third thing is to solve a lot of problems. When you solve a lot of problems,
+211
+
+212
+00:13:35,030 --> 00:13:38,570
+you will be really very strong about what you are doing.
+212
+
+213
+00:13:39,140 --> 00:13:43,220
+The last thing is to go formal and read the proof, which is optional.
+213
+
+214
+00:13:43,250 --> 00:13:44,030
+You don't need it.
+214
+
+215
+00:13:44,750 --> 00:13:49,280
+In many cases, however, I still suggest it, at least you can do that for some of the problems.
+215
+
+216
+00:13:50,630 --> 00:13:52,790
+OK, let's go back about the insertion sort.
+216
+
+217
+00:13:53,810 --> 00:14:00,400
+You probably can find in a very informal way that insertion sort is very true.
+217
+
+218
+00:14:00,410 --> 00:14:04,760
+Like, I don't need to read a couple of pages that are trying to prove what is insertion sort doing.
+218
+
+219
+00:14:05,150 --> 00:14:11,690
+So we can see that clearly when n = 1, the array is definitely sorted, and we can see that starting
+219
+
+220
+00:14:11,690 --> 00:14:18,320
+from n = 2, we have a sorted sub-array, and we can linearly go to definitely find the correct position.
+220
+
+221
+00:14:19,260 --> 00:14:24,930
+Then according to that, with a proper right shifting to the array, the new array is a new sorted
+221
+
+222
+00:14:24,930 --> 00:14:28,390
+sub-array with the current elements from zero to index i.
+222
+
+223
+00:14:29,190 --> 00:14:35,100
+So this way, we are sure that the array is actually sorting elements because in every single step,
+223
+
+224
+00:14:36,260 --> 00:14:40,060
+It has one more element, and it is already sorted.
+224
+
+225
+00:14:40,430 --> 00:14:46,670
+So I hope just this informal proof is more than enough for you. Now,
+225
+
+226
+00:14:47,690 --> 00:14:51,710
+It is useful sometimes to discuss some properties about sorting algorithms.
+226
+
+227
+00:14:52,280 --> 00:14:59,240
+So one of the most important features is what we call the stable sort.
+227
+
+228
+00:14:59,840 --> 00:15:01,580
+Stable sort means the following.
+228
+
+229
+00:15:01,910 --> 00:15:06,800
+If there are elements of equal values, their order doesn't change.
+229
+
+230
+00:15:07,130 --> 00:15:10,520
+Imagine we have an array [ 1, 2, 5, 5, 3, 5 ].
+230
+
+231
+00:15:12,700 --> 00:15:18,570
+Or just showing you what does it mean to be equal keys, and marking five here as 5A, 5B, 5C, but
+231
+
+232
+00:15:18,790 --> 00:15:19,600
+just integers.
+232
+
+233
+00:15:20,260 --> 00:15:25,330
+If you change the code, you will notice the following, when the algorithm order them, it will be
+233
+
+234
+00:15:25,330 --> 00:15:26,950
+5A, 5B, 5C.
+234
+
+235
+00:15:27,610 --> 00:15:33,370
+So this means that this element of five will never be before these guys because we keep going
+235
+
+236
+00:15:33,370 --> 00:15:35,410
+to the left side to lower values.
+236
+
+237
+00:15:35,740 --> 00:15:40,150
+And once we are less than the current value, we just put ourselves.
+237
+
+238
+00:15:40,540 --> 00:15:46,660
+So this means the values will be in the right place given their original relative order.
+238
+
+239
+00:15:47,020 --> 00:15:49,480
+This is what we mean by stable algorithm.
+239
+
+240
+00:15:51,150 --> 00:15:57,250
+The second feature is in-place algorithm. In-place algorithm will do changes for the given
+240
+
+241
+00:15:57,270 --> 00:16:02,580
+input itself without taking extra memory or maybe very limited memory.
+241
+
+242
+00:16:02,970 --> 00:16:09,150
+If you notice the function that we wrote about sorting, it was updating the array itself, and it doesn't take
+242
+
+243
+00:16:09,150 --> 00:16:10,080
+any extra memory.
+243
+
+244
+00:16:10,170 --> 00:16:12,870
+We call this an in-place algorithm.
+244
+
+245
+00:16:13,290 --> 00:16:16,530
+These are the most two important features. For fun,
+245
+
+246
+00:16:16,740 --> 00:16:19,290
+there are other few things, online feature.
+246
+
+247
+00:16:19,830 --> 00:16:25,110
+Online means we can keep receiving more elements and update our content smoothly with them.
+247
+
+248
+00:16:25,770 --> 00:16:26,670
+Think about that.
+248
+
+249
+00:16:27,060 --> 00:16:31,110
+We have some online service, and we keep receiving numbers from it.
+249
+
+250
+00:16:31,770 --> 00:16:35,370
+When you think about the insertion sort, it can easily take the new number,
+250
+
+251
+00:16:35,550 --> 00:16:36,990
+put it in its right place.
+251
+
+252
+00:16:37,380 --> 00:16:41,790
+So in O(n), with every new number, we can put it in the right place.
+252
+
+253
+00:16:42,030 --> 00:16:50,250
+This means insertion sort is very efficient for online services. In the next algorithms,
+253
+
+254
+00:16:50,250 --> 00:16:54,240
+you will see that this isn't the case, and we have to repeat the whole processing from scratch again.
+254
+
+255
+00:16:55,260 --> 00:16:57,600
+The last thing is maybe the adaptive feature.
+255
+
+256
+00:17:00,330 --> 00:17:06,780
+Imagine that the data was almost sorted, does the algorithm behave in a very efficient
+256
+
+257
+00:17:06,780 --> 00:17:07,650
+way or not?
+257
+
+258
+00:17:08,250 --> 00:17:12,020
+As we mentioned, when the array was almost sorted, it took only O(n),
+258
+
+259
+00:17:12,180 --> 00:17:12,570
+right?
+259
+
+260
+00:17:13,110 --> 00:17:15,240
+So here is the definition.
+260
+
+261
+00:17:15,540 --> 00:17:23,790
+The time complexity is O(kn), where we have no more than k elements far from their right position.
+261
+
+262
+00:17:24,600 --> 00:17:29,550
+Now, if the array, all of it, is sorted, this means k = 1 because every element is in its right
+262
+
+263
+00:17:29,550 --> 00:17:30,090
+position.
+263
+
+264
+00:17:30,390 --> 00:17:35,850
+So let's say every element is like two steps only far from its position, the array will take 2n
+264
+
+265
+00:17:35,850 --> 00:17:36,270
+steps.
+265
+
+266
+00:17:36,690 --> 00:17:42,840
+So adaptivity means, does the algorithm care about the data content, and does it affect it or not?
+266
+
+267
+00:17:43,260 --> 00:17:49,200
+If the algorithm taken into consideration, the values such that if the array, for example, is fully
+267
+
+268
+00:17:49,200 --> 00:17:50,820
+sorted, it almost do nothing.
+268
+
+269
+00:17:50,940 --> 00:17:52,170
+This is an adaptive algorithm.
+269
+
+270
+00:17:52,890 --> 00:17:59,640
+If the algorithm will do exactly the same processing, regardless of the values, we say this isn't
+270
+
+271
+00:17:59,640 --> 00:18:01,350
+an adaptive algorithm.
+271
+
+272
+00:18:03,310 --> 00:18:03,700
+OK.
+272
+
+273
+00:18:04,780 --> 00:18:07,480
+This is what we call a comparison-based algorithm.
+273
+
+274
+00:18:07,510 --> 00:18:10,450
+We will see another comparison-based algorithm when we study
+274
+
+275
+00:18:10,690 --> 00:18:15,040
+the selection sort algorithm, but there is something interesting.
+275
+
+276
+00:18:15,040 --> 00:18:15,770
+It's theoretical.
+276
+
+277
+00:18:15,790 --> 00:18:21,340
+Some courses mentioned it, and I like to mention it also that a comparison-based algorithm, first
+277
+
+278
+00:18:21,340 --> 00:18:25,780
+of all, is the algorithm that compares numbers or strings to decide something, or objects.
+278
+
+279
+00:18:27,240 --> 00:18:35,430
+Now, the best efficient algorithm known for comparison-based algorithms is O(n logn), but this isn't
+279
+
+280
+00:18:35,430 --> 00:18:36,180
+the interesting thing.
+280
+
+281
+00:18:36,810 --> 00:18:44,400
+The interesting thing is any comparison-based sorting algorithm must make at least (n log n) comparisons
+281
+
+282
+00:18:44,400 --> 00:18:45,010
+on average.
+282
+
+283
+00:18:45,030 --> 00:18:45,960
+What does it mean?
+283
+
+284
+00:18:47,010 --> 00:18:54,570
+We will never be able to find an algorithm that uses comparisons and is better than (n long). In some strong
+284
+
+285
+00:18:54,570 --> 00:18:58,860
+courses, people will be required to prove this property, so you might search for how to prove it.
+285
+
+286
+00:19:00,290 --> 00:19:05,930
+Now, there are other types of algorithms, as we will study, like count sort, they aren't comparison-based
+286
+
+287
+00:19:05,930 --> 00:19:10,850
+algorithms. So these algorithms, in some scenarios, can be way efficient than (n logn).
+287
+
+288
+00:19:11,420 --> 00:19:13,010
+But in practice, we don't use them.
+288
+
+289
+00:19:13,010 --> 00:19:19,310
+In practice, we typically use the standard sorting algorithms.
+289
+
+290
+00:19:20,330 --> 00:19:24,290
+So the key here is to understand that (n logn) represents like a lower bound.
+290
+
+291
+00:19:26,020 --> 00:19:33,010
+And the good thing about proofing lower bounds is, as a scientist or as a researcher, you don't
+291
+
+292
+00:19:33,010 --> 00:19:37,780
+have to try to find an algorithm that is working based than (n logn) and still based on comparing
+292
+
+293
+00:19:37,780 --> 00:19:38,560
+items together.
+293
+
+294
+00:19:38,560 --> 00:19:40,600
+You know that this is impossible.
+294
+
+295
+00:19:40,990 --> 00:19:47,110
+By the way, sorting is one of the problems that we heavily studied in computer science.
+295
+
+296
+00:19:47,110 --> 00:19:51,850
+You'll find too much sorting algorithms in literature.

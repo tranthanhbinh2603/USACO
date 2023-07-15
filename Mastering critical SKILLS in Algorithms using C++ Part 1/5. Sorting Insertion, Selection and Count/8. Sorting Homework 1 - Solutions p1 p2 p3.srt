@@ -1,0 +1,464 @@
+0
+1
+00:00:00,960 --> 00:00:06,690
+Let's solve the first homework. In the first one, we just would like to rewrite the insertion sort.
+1
+
+2
+00:00:07,200 --> 00:00:10,500
+The measure of the focus of the code is mainly the swap function.
+2
+
+3
+00:00:10,920 --> 00:00:11,820
+So let's see here.
+3
+
+4
+00:00:13,940 --> 00:00:16,920
+The implementation is going to be straightforward.
+4
+
+5
+00:00:17,250 --> 00:00:23,570
+Instead of this right shift operation, all what you need is to make swapping for the current element
+5
+
+6
+00:00:23,570 --> 00:00:24,980
+with the previous element.
+6
+
+7
+00:00:25,250 --> 00:00:29,960
+This will have the exact same effect as the normal operations.
+7
+
+8
+00:00:29,960 --> 00:00:33,230
+So instead of just shifting, you're just swapping them.
+8
+
+9
+00:00:33,260 --> 00:00:38,810
+The only advantage here is you don't have to take a copy from the key to assign it later.
+9
+
+10
+00:00:39,290 --> 00:00:40,160
+Like, let's say.
+10
+
+11
+00:00:41,360 --> 00:00:41,840
+Maybe.
+11
+
+12
+00:00:43,820 --> 00:00:48,140
+Yeah, if the array is sorted, and you have, let's do here an example.
+12
+
+13
+00:00:48,500 --> 00:00:56,120
+So let's say we have so far something like 10, 20, 30, 40 and you have now the value 17.
+13
+
+14
+00:00:56,630 --> 00:00:59,740
+So what's going to happen is you will swap 17 and 40.
+14
+
+15
+00:00:59,750 --> 00:01:01,190
+So this is going to be 40.
+15
+
+16
+00:01:01,610 --> 00:01:05,530
+And this is going to be 17, then yeah, we still have to do go.
+16
+
+17
+00:01:05,570 --> 00:01:08,030
+So this is going to be swapped.
+17
+
+18
+00:01:08,690 --> 00:01:12,470
+So this is going to be 17 and this will be 30.
+18
+
+19
+00:01:12,830 --> 00:01:15,200
+And again, here we will have to swap.
+19
+
+20
+00:01:15,470 --> 00:01:16,970
+So this one will be 17.
+20
+
+21
+00:01:17,180 --> 00:01:18,440
+And this one will be 20.
+21
+
+22
+00:01:18,740 --> 00:01:20,450
+And now nothing else, so we stop.
+22
+
+23
+00:01:20,810 --> 00:01:23,300
+So you just like implementation skills,
+23
+
+24
+00:01:23,300 --> 00:01:28,280
+you rearrange things so that you keep going. As we keep moving the index for us,
+24
+
+25
+00:01:28,610 --> 00:01:33,400
+So it's actually a comparison between the index [ j ] and [ j-1]. The index [ j ]
+25
+
+26
+00:01:33,500 --> 00:01:35,390
+will always have the current key.
+26
+
+27
+00:01:35,770 --> 00:01:41,360
+So we don't need anymore to put it here. Given that we now would like to sort from large to
+27
+
+28
+00:01:41,360 --> 00:01:46,310
+small, we're actually using less than here, nothing else. In terms of operation,
+28
+
+29
+00:01:46,700 --> 00:01:52,280
+If the swap operation is internally like three steps, you can expect that this code is going to be
+29
+
+30
+00:01:53,570 --> 00:01:54,140
+slower.
+30
+
+31
+00:01:54,380 --> 00:01:59,450
+So although it looks like a nicer code, it's actually a bit slower code. Which one you should implement
+31
+
+32
+00:01:59,450 --> 00:02:00,230
+in the industry?
+32
+
+33
+00:02:01,480 --> 00:02:04,240
+In the industry, we care a lot about the efficiency.
+33
+
+34
+00:02:06,380 --> 00:02:14,930
+But if the two codes are very almost of the same complexity, like maybe O(n^2), and nothing is really
+34
+
+35
+00:02:14,930 --> 00:02:18,450
+sensitive, you should always go to the readable code.
+35
+
+36
+00:02:18,470 --> 00:02:20,750
+So if the code is readable, you just go with it.
+36
+
+37
+00:02:21,680 --> 00:02:26,150
+I would say this code is more readable, but the other code is also readable.
+37
+
+38
+00:02:26,150 --> 00:02:29,630
+So anyway, you just go with the more efficient one in this case.
+38
+
+39
+00:02:30,170 --> 00:02:35,590
+Sometimes there is really an efficient way to write an implementation, but the code is really complicated.
+39
+
+40
+00:02:35,600 --> 00:02:36,330
+You don't do that.
+40
+
+41
+00:02:36,350 --> 00:02:37,710
+Readability is more important.
+41
+
+42
+00:02:37,750 --> 00:02:41,960
+Some people will come in the future, and they will need to understand your implementation.
+42
+
+43
+00:02:43,720 --> 00:02:44,120
+OK.
+43
+
+44
+00:02:44,740 --> 00:02:50,560
+The second problem, the remaining of the sessions is all about the count sort in this one, as you realized.
+44
+
+45
+00:02:50,950 --> 00:02:54,850
+So here the new point is we have negative values.
+45
+
+46
+00:02:55,210 --> 00:03:00,100
+So how can we adjust our implementation to have the negative values?
+46
+
+47
+00:03:00,430 --> 00:03:01,420
+This is the
+47
+
+48
+00:03:01,900 --> 00:03:05,710
+first problem that we are using the LeetCode online judge for it.
+48
+
+49
+00:03:07,360 --> 00:03:09,040
+So here is what we will do.
+49
+
+50
+00:03:10,180 --> 00:03:16,000
+First of all, I would like you to notice that the LeetCode shouldn't be submitted with a main function.
+50
+
+51
+00:03:16,000 --> 00:03:17,470
+The main function shouldn't be submitted.
+51
+
+52
+00:03:17,470 --> 00:03:21,070
+You can copy all of this code, but you don't need the main function.
+52
+
+53
+00:03:21,070 --> 00:03:23,320
+If you did, you will get a compilation error, so don't do that.
+53
+
+54
+00:03:23,920 --> 00:03:25,000
+The second thing that
+54
+
+55
+00:03:28,100 --> 00:03:33,530
+you will always need to put your codes inside a public solution, at least the target function here.
+55
+
+56
+00:03:33,970 --> 00:03:35,020
+Uh yeah.
+56
+
+57
+00:03:35,030 --> 00:03:39,140
+And if you would like to test, you can test by yourself or test on their website.
+57
+
+58
+00:03:39,680 --> 00:03:43,610
+Now going back to the problem itself, the idea is very straightforward.
+58
+
+59
+00:03:43,970 --> 00:03:47,090
+The idea is as following, we now have negative problems.
+59
+
+60
+00:03:47,510 --> 00:03:50,870
+If I told you the array has positive problems, would it be a problem?
+60
+
+61
+00:03:51,050 --> 00:03:51,860
+The answer is no.
+61
+
+62
+00:03:52,130 --> 00:03:54,680
+So the problem is mainly coming now from the negative values.
+62
+
+63
+00:03:55,340 --> 00:03:58,100
+What is the smallest negative value? -50K
+63
+
+64
+00:03:58,850 --> 00:04:02,270
+What if just we added 50k to all of the values?
+64
+
+65
+00:04:02,840 --> 00:04:11,450
+So if all of the values are from -50k to 50k, adding positive 50k will just switch them
+65
+
+66
+00:04:11,450 --> 00:04:13,010
+from zero to 100K.
+66
+
+67
+00:04:13,610 --> 00:04:17,050
+Now, the current array is positive values again,
+67
+
+68
+00:04:17,060 --> 00:04:21,590
+non-negative values. So now we can do count sort normally.
+68
+
+69
+00:04:21,920 --> 00:04:23,000
+So here is the idea.
+69
+
+70
+00:04:24,370 --> 00:04:33,820
+You mainly will start by adding the shift factor here, which is 50k, you will add it to all
+70
+
+71
+00:04:33,820 --> 00:04:39,310
+of the input array, then do the normal operation to do the count sort.
+71
+
+72
+00:04:39,510 --> 00:04:44,740
+The only thing when you return the value here, you should minus shift it again, the 50k that we added.
+72
+
+73
+00:04:45,850 --> 00:04:46,250
+The third
+73
+
+74
+00:04:46,250 --> 00:04:48,340
+problem is very similar.
+74
+
+75
+00:04:49,620 --> 00:04:56,700
+But the problem here is we wanted in this problem that although the values are extremely huge, they
+75
+
+76
+00:04:56,700 --> 00:04:59,400
+are following a very small range.
+76
+
+77
+00:05:00,300 --> 00:05:01,320
+So here is the idea.
+77
+
+78
+00:05:01,680 --> 00:05:05,700
+Let's say we have an array of 10, 20, and 30, and 10 is the minimum.
+78
+
+79
+00:05:06,180 --> 00:05:10,350
+If I subtracted 10 from all of this array, it's going to be then 0, 10, and 20.
+79
+
+80
+00:05:11,160 --> 00:05:14,970
+Now, we can do count sort on that one, and return values back again.
+80
+
+81
+00:05:15,660 --> 00:05:18,720
+So the same idea here, we know the difference is up to 500.
+81
+
+82
+00:05:19,260 --> 00:05:23,010
+So first of all, get the minimum in the array, and also the maximum.
+82
+
+83
+00:05:23,520 --> 00:05:27,900
+And now when you try to compute the frequency, subtract the minimum from the values.
+83
+
+84
+00:05:28,260 --> 00:05:33,840
+So now although the value could be like one billion, for example, but one billion minus one billion
+84
+
+85
+00:05:33,840 --> 00:05:34,920
+will be just zero.
+85
+
+86
+00:05:35,340 --> 00:05:37,260
+So the array anyway is in the safe side.
+86
+
+87
+00:05:38,390 --> 00:05:45,540
+Um, and when you are trying to return back the values, just add the main value, so we subtracted
+87
+
+88
+00:05:45,800 --> 00:05:51,980
+million, we added back to the values here. For the range, it should be one plus the difference between
+88
+
+89
+00:05:52,130 --> 00:05:53,780
+the minimum and the maximum.
+89
+
+90
+00:05:54,170 --> 00:05:58,610
+So this way we managed, in general, to handle, this code now is generic.
+90
+
+91
+00:05:58,610 --> 00:05:59,920
+It handles negative values.
+91
+
+92
+00:06:00,100 --> 00:06:07,470
+It handles positive values. It handles that the values are extremely huge, but the range is small.
+92
+
+93
+00:06:07,490 --> 00:06:14,960
+These are the different scenarios where the count sort can work beyond the initial scenario.

@@ -1,0 +1,209 @@
+0
+1
+00:00:01,560 --> 00:00:05,100
+Let's discuss a little more details about the composition relationship.
+1
+
+2
+00:00:06,500 --> 00:00:12,740
+As we said, a composition relationship is has a relationship between a whole and a part, so the car has
+2
+
+3
+00:00:12,740 --> 00:00:17,980
+an engine, thinking about the car, it is composed of too many components.
+3
+
+4
+00:00:18,590 --> 00:00:23,270
+More importantly, thinking about the relationship of the engine to the car, to what degree it is a
+4
+
+5
+00:00:23,270 --> 00:00:24,260
+stronger relationship.
+5
+
+6
+00:00:24,500 --> 00:00:27,560
+The engine has no value to be used independently,
+6
+
+7
+00:00:27,710 --> 00:00:32,470
+and if a car got destroyed for a reason or another, then this part has no value.
+7
+
+8
+00:00:32,630 --> 00:00:33,770
+The same for car's wheels.
+8
+
+9
+00:00:34,130 --> 00:00:35,870
+Another example might be a room.
+9
+
+10
+00:00:35,870 --> 00:00:38,600
+A room has walls and floors,
+10
+
+11
+00:00:39,290 --> 00:00:42,300
+but these walls and floor has no value without a room.
+11
+
+12
+00:00:42,320 --> 00:00:47,780
+If we mentioned to the room, they are definitely existing. if got destroyed, then they are also destroyed
+12
+
+13
+00:00:48,560 --> 00:00:49,970
+semantically or practically.
+13
+
+14
+00:00:51,560 --> 00:00:53,770
+In terms of code, you would decide
+14
+
+15
+00:00:53,930 --> 00:00:59,300
+here you would build a class engine, then you build the class wheel, and then a class car would have an engine
+15
+
+16
+00:00:59,300 --> 00:01:01,220
+object and wheel object.
+16
+
+17
+00:01:01,280 --> 00:01:03,830
+This isn't the first time that you see actually this composition.
+17
+
+18
+00:01:03,830 --> 00:01:04,670
+You were doing it.
+18
+
+19
+00:01:04,940 --> 00:01:09,310
+When we do a class employee that has an object of type full name,
+19
+
+20
+00:01:09,470 --> 00:01:10,450
+this is a composition
+20
+
+21
+00:01:10,450 --> 00:01:13,430
+relationship. As we said, it's a strong relationship.
+21
+
+22
+00:01:13,670 --> 00:01:14,300
+Let's say
+22
+
+23
+00:01:14,300 --> 00:01:21,680
+what might this imply in terms of coding, this kind of strong ownership?
+23
+
+24
+00:01:22,010 --> 00:01:26,030
+First of all, the whole typically creates or destroys the parts,
+24
+
+25
+00:01:26,030 --> 00:01:31,310
+for example, the car would be the one that creates an engine and creates a wheel, and use it.
+25
+
+26
+00:01:31,940 --> 00:01:37,460
+Also about is used only by the whole, so the engine will not be shared between two cars.
+26
+
+27
+00:01:37,970 --> 00:01:41,240
+In addition, the part has no life of itself,
+27
+
+28
+00:01:41,240 --> 00:01:48,350
+it is attached to the life of the whole object. Semantically, if a university is closed, not departments anymore.
+28
+
+29
+00:01:48,890 --> 00:01:55,730
+So composition is very critical in OOP because it allows reusability.
+29
+
+30
+00:01:55,970 --> 00:02:00,500
+Reusability refers to the ability to reuse something over and over.
+30
+
+31
+00:02:00,980 --> 00:02:03,350
+For example, here the engine.
+31
+
+32
+00:02:03,350 --> 00:02:05,750
+If it's a class, we are reusing it.
+32
+
+33
+00:02:06,080 --> 00:02:10,520
+So instead of writing our own logic for a car from scratch, we can reuse something.
+33
+
+34
+00:02:10,700 --> 00:02:20,090
+If we have an object of full name, we can reuse it inside, say class like an employee.
+34
+
+35
+00:02:20,510 --> 00:02:25,760
+In terms of UML, reading here, here is a car and has doors an engine.
+35
+
+36
+00:02:26,060 --> 00:02:28,850
+This black diamond represent the composition.
+36
+
+37
+00:02:29,150 --> 00:02:32,420
+You find it typically at the whole part,
+37
+
+38
+00:02:32,600 --> 00:02:38,480
+so it means that the car is composed of doors, the car is composed of an engine.
+38
+
+39
+00:02:38,600 --> 00:02:41,150
+You can also read the relationship in the reverse
+39
+
+40
+00:02:41,150 --> 00:02:44,390
+like engine belongs to a car,
+40
+
+41
+00:02:44,690 --> 00:02:47,960
+doors belongs to a car, and so on.
+41
+
+42
+00:02:48,530 --> 00:02:49,070
+That's it.

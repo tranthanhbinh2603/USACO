@@ -1,0 +1,179 @@
+1
+00:00:01,110 --> 00:00:08,130
+In the in the end of the second part of the Obbie, I would like again to make some summaries with some
+
+2
+00:00:08,730 --> 00:00:11,020
+notes that would be helpful to see the big picture.
+
+3
+00:00:11,440 --> 00:00:15,960
+Remember, we want to start with what is overtime and highlighted.
+
+4
+00:00:15,970 --> 00:00:17,750
+There are different concepts for it.
+
+5
+00:00:17,970 --> 00:00:20,250
+This is the core of the course here in the will.
+
+6
+00:00:20,400 --> 00:00:25,850
+But there are also to design things relevant to that, the principles of ALBE and that design.
+
+7
+00:00:26,550 --> 00:00:31,860
+There were several principles and some patterns that were embedded in the homework already for you.
+
+8
+00:00:32,740 --> 00:00:36,750
+These are the main concepts that you are now very familiar with them.
+
+9
+00:00:36,760 --> 00:00:39,110
+They are the fundamental ones of them.
+
+10
+00:00:39,330 --> 00:00:44,850
+We studied them, all of them, the first to four in the past one and the second to the greater operating
+
+11
+00:00:45,090 --> 00:00:46,400
+in Battuta to.
+
+12
+00:00:47,130 --> 00:00:53,520
+So going forward, like thinking about the big picture here is what will be the object and the classes
+
+13
+00:00:53,520 --> 00:00:54,450
+and the blah blah blah.
+
+14
+00:00:54,690 --> 00:00:56,940
+You can think of its relationship with other things.
+
+15
+00:00:57,180 --> 00:00:58,860
+For example, designing strategies.
+
+16
+00:00:59,100 --> 00:01:04,860
+The objects and classes play a role in this, in the obstruction of things and the separation of things.
+
+17
+00:01:05,340 --> 00:01:11,430
+Thinking about inheritance and the polymorphism and the zone better's they would allow us to make good
+
+18
+00:01:11,430 --> 00:01:16,920
+generalisations for the software, like we see how the polymorphism in the image editor would help us
+
+19
+00:01:16,920 --> 00:01:18,440
+to be very generic, for example.
+
+20
+00:01:18,570 --> 00:01:25,380
+And so from the perspective of software engineering schools, also, we see, for example, how the
+
+21
+00:01:25,380 --> 00:01:31,770
+polymorphism is allowing to have an extensible sense and we see how the objects and classes would allow
+
+22
+00:01:31,770 --> 00:01:35,000
+us to do some reusability and overall flexibility.
+
+23
+00:01:35,190 --> 00:01:40,470
+So this is part of the big picture that involved the object oriented with the strategies and the software
+
+24
+00:01:40,470 --> 00:01:42,230
+engineering goals that we would like to achieve.
+
+25
+00:01:42,810 --> 00:01:48,450
+We would like to highlight more about the reusability we would think usability, the IT to reduce something
+
+26
+00:01:48,450 --> 00:01:53,310
+that already exists, to avoid duplicating effort of coding and testing and all of that.
+
+27
+00:01:53,700 --> 00:02:00,150
+C++ or OBE in general has to do usability battens, then inheritance better and the composition better.
+
+28
+00:02:00,390 --> 00:02:05,190
+So competition is like CA has an engine and has four wheels and it has a relationship.
+
+29
+00:02:05,430 --> 00:02:10,380
+But inheritance is more of something is and something like a manager is an employee.
+
+30
+00:02:10,920 --> 00:02:17,010
+Decomposition, as we said, is more of like it has an ownership and it is like very strong relationship.
+
+31
+00:02:17,370 --> 00:02:20,010
+But aggregation return is a bit weaker relationship.
+
+32
+00:02:20,340 --> 00:02:25,170
+We can think an example of that would be like university is composed of a department and department
+
+33
+00:02:25,170 --> 00:02:27,060
+composed of aggregated of professors.
+
+34
+00:02:27,420 --> 00:02:30,560
+If a university got closed, the department must be closed.
+
+35
+00:02:30,780 --> 00:02:34,880
+This an indicator of a strong relationship, but of the department would closed.
+
+36
+00:02:35,130 --> 00:02:36,840
+The professors would remain professors.
+
+37
+00:02:37,050 --> 00:02:43,440
+This is an indicator of the aggregation relationship and we discussed it being consistent when it comes
+
+38
+00:02:43,440 --> 00:02:47,370
+to the multiplicity of the classes moving to the inheritance.
+
+39
+00:02:47,550 --> 00:02:52,890
+We have met many, many common, many, many, many formats for it.
+
+40
+00:02:53,100 --> 00:02:55,140
+And we mentioned inheritance.
+
+41
+00:02:55,140 --> 00:03:01,380
+The cool thing is to two classes with a better class would definitely have something in common and every
+
+42
+00:03:01,380 --> 00:03:02,990
+one of them would have something unique.
+
+43
+00:03:03,360 --> 00:03:10,070
+We highlighted how the dayman, the classes that here might be very problematic because class the secrecy
+
+44
+00:03:10,080 --> 00:03:11,280
+from two directions.
+
+45
+00:03:12,510 --> 00:03:13,080
+That's it.

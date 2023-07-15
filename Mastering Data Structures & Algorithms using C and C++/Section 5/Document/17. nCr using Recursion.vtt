@@ -1,0 +1,448 @@
+WEBVTT
+
+00:00.720 --> 00:07.470
+And this video, we look at a function for Fibonacci's kids, first of all, I will show you a charity
+
+00:07.480 --> 00:10.320
+function that I have explained you in the previous video.
+
+00:12.720 --> 00:19.050
+I was going to function, I will the function, the mass index parameter, and that is the item number
+
+00:19.050 --> 00:23.340
+that we want to find out in the cities inside the function.
+
+00:23.340 --> 00:28.650
+First of all, I will write a return zero because if you see this error message, function is having
+
+00:28.650 --> 00:30.890
+any return date, but it is not returning anything.
+
+00:30.900 --> 00:35.450
+So that's what data is controlled regions and of nonvote function.
+
+00:35.470 --> 00:39.400
+So to avoid this error for timing, I will write down return zero.
+
+00:39.420 --> 00:41.340
+Then later we'll see what we have to return.
+
+00:43.030 --> 00:44.220
+So this threat is gone.
+
+00:46.670 --> 00:54.530
+No, I learned on the function, I've taken some variables like easy to initialize with the zero and
+
+00:54.560 --> 00:56.190
+even initialized with one.
+
+00:56.210 --> 01:04.010
+And as for finding some and also we need variable ifour for loop that the very first thing inside a
+
+01:04.020 --> 01:11.180
+function is if and is less than or equal to one, then return same number and.
+
+01:13.810 --> 01:20.740
+Otherwise, we'll find out the term using follow ups, so follow will start I from two onwards and I
+
+01:20.770 --> 01:25.180
+reaches less than a week or two and then I switched.
+
+01:25.480 --> 01:29.860
+So it will start from two and reaches up to the total number and the Tom.
+
+01:30.550 --> 01:33.190
+So every time we have to.
+
+01:34.510 --> 01:45.310
+Find out some that is by adding zero, and even then, DS3 should get the value of four to one and B
+
+01:45.310 --> 01:51.590
+one should get the value of something that is new that we have obtained by repeating this loop for end
+
+01:51.610 --> 01:52.030
+times.
+
+01:52.030 --> 01:53.950
+So we get the result in s.
+
+01:54.760 --> 02:02.420
+So then lots of statements should be written as earlier I wrote it at zero to avoid error return.
+
+02:02.440 --> 02:04.780
+S here.
+
+02:04.780 --> 02:08.140
+I'm getting a warning that s may be only initialized when used here.
+
+02:08.440 --> 02:13.320
+If it doesn't enter into for loop s will not be modified and the US is having some garbage value.
+
+02:13.330 --> 02:15.580
+So let us initialize as with the Zettl.
+
+02:15.910 --> 02:17.260
+So this warning will be gone.
+
+02:18.100 --> 02:20.200
+Will not get any wrong answers due to this.
+
+02:20.200 --> 02:25.480
+But to avoid this one I have just initialize Esposito not inside mean function.
+
+02:25.480 --> 02:31.900
+I will directly print the result obtained by that function, but it's entirely and new line.
+
+02:33.340 --> 02:40.110
+Then I will call the function fizbo but passing then that's OK.
+
+02:41.020 --> 02:42.550
+So now the whole program is ready.
+
+02:43.030 --> 02:44.290
+I will run the program.
+
+02:50.010 --> 02:59.130
+Yes, 22 as 55, let us see, 50, Tom answered is five for 50, Tom.
+
+03:00.480 --> 03:04.510
+Yes, the fifth item is five, then six, the term is eight.
+
+03:04.670 --> 03:06.000
+Let us try that also.
+
+03:08.350 --> 03:15.250
+Yes, I got the result, eight search for perfect normal right recursive function for finding Fibonacci
+
+03:15.250 --> 03:23.770
+Dom, let me call the function name are Fab Four recursive then parameters.
+
+03:23.770 --> 03:32.890
+And that is the term number, as we have already seen the code if and as less than or equal to one then.
+
+03:35.690 --> 03:50.700
+Written and itself, otherwise written are of and the minus two plus are of an A minus one, that's
+
+03:50.700 --> 03:50.880
+all.
+
+03:50.880 --> 03:55.560
+The function is so simple because it's recursive, it has finished in just two lines.
+
+03:57.590 --> 04:02.600
+Instead of calling a fib, I will call r fib here inside the main function.
+
+04:03.140 --> 04:06.980
+Now let us run program and see what the output is for this.
+
+04:06.980 --> 04:08.050
+It should get eight.
+
+04:08.510 --> 04:10.760
+Yes, our afterwards was also giving eight.
+
+04:13.000 --> 04:21.990
+Not to reduce this number of calls we have seen memorisation, so I will write on a function using memorisation,
+
+04:22.000 --> 04:28.870
+so already I have one function that is a utility function called then recursive function for Fibonacci.
+
+04:29.290 --> 04:34.210
+Then next I will write a memoir position function for Fibonacci.
+
+04:37.320 --> 04:44.550
+For memorisation function, we need one global F, so I will take the array size as a 10 limited size
+
+04:45.120 --> 04:46.020
+if you want larger.
+
+04:46.050 --> 04:46.800
+You can take it.
+
+04:47.520 --> 04:51.780
+And inside the main function, I will first initialize this array.
+
+04:55.370 --> 05:04.880
+Using for a loop, I will initialise, for I signed zero, I use less than 10 I plus plus I remember
+
+05:04.880 --> 05:07.300
+the array should be initialized with minus one.
+
+05:07.310 --> 05:13.000
+So all these locations, I will fill them with minus one because zero is also if you will not see Tom.
+
+05:13.020 --> 05:14.410
+So we should have the Tom.
+
+05:15.230 --> 05:18.980
+So you should have a number, not a Fibonacci tone.
+
+05:18.980 --> 05:21.160
+So minus one is not a Fibonacci term.
+
+05:22.070 --> 05:25.180
+So I have initialized this array with minus one.
+
+05:26.090 --> 05:29.240
+Now here I will write on memorisation function.
+
+05:29.510 --> 05:36.620
+That is a function for finding Fibonacci dom using memorisation integer is the return type.
+
+05:36.620 --> 05:44.900
+So I will call the function Ima's moussab for memorisation then it sticking dom number and as parameter
+
+05:46.310 --> 05:53.750
+fustiness if any, is less than or equal to one then in as of an assignment itself.
+
+05:56.140 --> 06:04.840
+And also right on and so these are two statements inside if condition, so I will write them in flowback
+
+06:04.840 --> 06:04.990
+at.
+
+06:08.450 --> 06:09.750
+So this is the body of.
+
+06:13.040 --> 06:25.490
+Then else, if the number is greater than one, then check if that's of any minus two is equals to minus
+
+06:25.490 --> 06:25.810
+one.
+
+06:25.820 --> 06:31.680
+If it is equal to minus one, then call em Saib of A..
+
+06:31.820 --> 06:33.980
+Minus to call this function.
+
+06:34.400 --> 06:39.880
+And whatever the result we obtain, take it in F off and the minus two.
+
+06:40.190 --> 06:41.660
+So I'm writing in a single line.
+
+06:42.170 --> 06:47.090
+I will take it in the next line then next one again four and the minus one.
+
+06:47.090 --> 06:48.080
+Also I have to check it.
+
+06:48.440 --> 06:58.190
+If F of and minus one is equal to minus one then call the function for and minus one and take its result
+
+06:58.190 --> 07:00.570
+and F of and minus one.
+
+07:02.090 --> 07:05.060
+So call method of and minus one.
+
+07:06.680 --> 07:13.380
+Once we got this result, whether the function is called or not call we get the results here then return.
+
+07:16.470 --> 07:26.160
+And fourth and minus two, plus F off and minus one, because the results are kept in a global area
+
+07:26.170 --> 07:31.010
+F, so that's all it is, a function using memorization.
+
+07:31.290 --> 07:39.690
+So F is a global area that will help this function to store the results of the function to avoid excessive
+
+07:39.690 --> 07:40.250
+costs.
+
+07:43.550 --> 07:48.980
+Now, here inside main function is of calling Ares, I will call em Fab Four or five and I should get
+
+07:48.980 --> 07:49.450
+the result.
+
+07:49.450 --> 07:50.150
+That's five.
+
+07:53.410 --> 07:56.380
+I have deleted the breakpoint now let us run the program.
+
+07:58.920 --> 08:03.750
+Yes, the answer is five, if we call it four, six, then let us see.
+
+08:06.340 --> 08:14.500
+Aid, it's looking now, will put a break point and debug the function, so you have to count how many
+
+08:14.500 --> 08:17.620
+function calls it is making for value.
+
+08:17.650 --> 08:19.890
+Five, it should make six calls.
+
+08:19.900 --> 08:21.270
+I have made the value as five.
+
+08:21.280 --> 08:24.900
+So it should make total six calls, run the program.
+
+08:25.870 --> 08:28.630
+So it has game on this printer function.
+
+08:29.140 --> 08:35.480
+So you have to watch this watch window and debug navigation to count the number of calls it is making.
+
+08:35.830 --> 08:36.580
+Let us stop.
+
+08:39.830 --> 08:42.380
+First call value of an EF five.
+
+08:44.410 --> 08:49.960
+Second, gold value of an as a three, so here you can see the value of an industry and here at this
+
+08:49.960 --> 08:51.940
+place you can see there are two calls.
+
+08:56.170 --> 09:00.640
+So in the previous call, it is in this statement Cedar's and this statement.
+
+09:04.310 --> 09:12.140
+So to call so far then, for three, 2013 Seidel's blog, then again, it is going to call itself for
+
+09:12.140 --> 09:13.580
+one, that is three minus two.
+
+09:14.450 --> 09:17.780
+So this is the third call for one.
+
+09:17.780 --> 09:22.620
+This conditional statement will be true and it will come out of the function after excluding this safe
+
+09:22.680 --> 09:23.110
+block.
+
+09:23.930 --> 09:25.400
+So we are on the third call.
+
+09:27.710 --> 09:30.180
+Third call has finish back on the second call.
+
+09:30.710 --> 09:33.800
+Now it is entering into second if part of this one.
+
+09:33.800 --> 09:40.370
+So it will make a call for and minus one that is three is that is and is a three to three minus one
+
+09:40.370 --> 09:40.680
+too.
+
+09:41.060 --> 09:43.280
+So for two it is a fourth call.
+
+09:44.420 --> 09:46.220
+For two, it will enter into its part.
+
+09:48.840 --> 09:51.060
+Then first if fifth call.
+
+09:55.290 --> 09:56.340
+Then second, if.
+
+10:01.640 --> 10:12.280
+It has kept because already the value of one is found so total five calls so far, then back on three.
+
+10:12.290 --> 10:18.900
+So it is making a second, but so far three this it has finished now is going to call this one.
+
+10:19.850 --> 10:21.470
+So already for of two is known.
+
+10:21.480 --> 10:25.160
+So it doesn't make a call then back on five.
+
+10:25.940 --> 10:26.960
+No second part.
+
+10:28.180 --> 10:28.930
+A five.
+
+10:30.470 --> 10:37.910
+Now, it is the sixth call for four and four for already feeble four, two was known, that is four
+
+10:37.910 --> 10:38.480
+minus two.
+
+10:38.480 --> 10:42.320
+So that's why it didn't call this one the next.
+
+10:42.620 --> 10:46.310
+Again, this four three, although that is four minus one is a three so far.
+
+10:46.310 --> 10:47.510
+This also devalues.
+
+10:47.540 --> 10:49.610
+No, I did not call this one.
+
+10:50.390 --> 10:52.010
+So total six calls so far.
+
+10:52.130 --> 10:53.690
+Now from forward it will come out.
+
+10:53.840 --> 10:59.930
+See it has not expanded the function call with four because all the values were found on back on 5th.
+
+11:00.320 --> 11:01.460
+That is value five.
+
+11:01.460 --> 11:04.190
+So it is the first call and it will terminate.
+
+11:04.340 --> 11:08.900
+So total calls are six, only six calls it has made and got the result.
+
+11:09.560 --> 11:16.490
+And if I expand this Fibonacci array, you can see that the values are filled in this one zero one one,
+
+11:16.760 --> 11:19.850
+two, three, four, four and five.
+
+11:19.850 --> 11:28.010
+The values are not there because one thing I have missed here that is inside this before returning the
+
+11:28.010 --> 11:36.170
+result, I should fill up the value that is fizbo and should be filled with five of and the minus two
+
+11:37.220 --> 11:40.290
+plus five of and the minus one.
+
+11:40.970 --> 11:46.100
+Now let us run the program once again and see how the value of global RF are changing.
+
+11:54.010 --> 12:01.180
+You can see that the global array is all filled with minus one, if I continue execution, see first
+
+12:01.510 --> 12:02.850
+if one is found.
+
+12:12.510 --> 12:14.210
+Then EF zero is found.
+
+12:18.740 --> 12:20.510
+Then ever to as one now.
+
+12:22.580 --> 12:23.930
+F of is to.
+
+12:27.870 --> 12:38.550
+I for forty three, then four, five years, five that fall, so this is how the values are being stored
+
+12:38.550 --> 12:42.120
+and global, and if so, that's all in this video.
+
+12:42.120 --> 12:45.650
+We have seen three different versions of Fibonacci function.
+
+12:45.960 --> 12:52.320
+One is iterative version and recursive function, and the third one was recursive function with memorization
+
+12:52.320 --> 12:54.210
+to avoid excessive calls.

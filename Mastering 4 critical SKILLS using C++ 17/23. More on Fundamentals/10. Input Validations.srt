@@ -1,0 +1,531 @@
+1
+00:00:01,020 --> 00:00:06,130
+One of the important topics is about how to handle the Imbert, if it had been a mistake from the user.
+
+2
+00:00:06,600 --> 00:00:11,550
+But before that, let's say motivated in a different way, I would like you to read this program and
+
+3
+00:00:11,550 --> 00:00:13,380
+imagine that the user enter the 10.
+
+4
+00:00:13,770 --> 00:00:15,890
+What's going to happen in the flow of this program?
+
+5
+00:00:16,770 --> 00:00:23,400
+You are not the following you entered the value ten and then indirectly printed the intervening message,
+
+6
+00:00:23,550 --> 00:00:25,330
+then your each message.
+
+7
+00:00:25,590 --> 00:00:31,860
+So the problem here, it seems that line twenty six as it was, and use that as if there is no value
+
+8
+00:00:31,860 --> 00:00:32,820
+from line twenty six.
+
+9
+00:00:32,820 --> 00:00:33,990
+Here it is.
+
+10
+00:00:33,990 --> 00:00:35,340
+What's going to happen behind the scene.
+
+11
+00:00:35,340 --> 00:00:35,900
+Exactly.
+
+12
+00:00:36,510 --> 00:00:41,210
+You're right, you're on the program and then you enter ten for the age.
+
+13
+00:00:41,610 --> 00:00:44,910
+So when you enter ten you are actually enter two things too far.
+
+14
+00:00:45,480 --> 00:00:51,000
+You enter the ten and you entered that backslash in the end.
+
+15
+00:00:51,000 --> 00:00:51,300
+Right.
+
+16
+00:00:51,960 --> 00:00:58,010
+So now the edge is going to read the ten, but the getline here is going to read the end.
+
+17
+00:00:58,320 --> 00:01:02,760
+That's why the program will not wait for you to enter the getline and it will not.
+
+18
+00:01:02,760 --> 00:01:04,920
+It's actually is going to read your backslash end.
+
+19
+00:01:05,370 --> 00:01:11,310
+So age is now ten, but your name is now backslash and no one is waiting for your input for the full
+
+20
+00:01:11,310 --> 00:01:11,550
+name.
+
+21
+00:01:12,390 --> 00:01:14,910
+So to solve this problem, there are two ways.
+
+22
+00:01:15,360 --> 00:01:18,140
+The first way is to use Getline twice.
+
+23
+00:01:18,390 --> 00:01:23,440
+So one of them, you know, it's going to read the enter from here and the second one is going to read
+
+24
+00:01:23,440 --> 00:01:28,620
+that what you really want to enter there is another way to do that, what we call a IT ignore.
+
+25
+00:01:29,510 --> 00:01:35,130
+The scene ignored is a function that its purpose is to discard or ignore the impulse.
+
+26
+00:01:35,190 --> 00:01:36,660
+Well, two things could happen.
+
+27
+00:01:37,070 --> 00:01:42,490
+The first one is you provided a number of characters to ignore after it, just us to be ignoring.
+
+28
+00:01:42,980 --> 00:01:45,980
+The second is to give it a character to stop over it.
+
+29
+00:01:45,990 --> 00:01:48,270
+Typically, we use the end for this scenario.
+
+30
+00:01:48,680 --> 00:01:51,080
+So there are two uses scenario for it.
+
+31
+00:01:51,380 --> 00:01:53,390
+The first is a reading.
+
+32
+00:01:53,390 --> 00:01:58,590
+This extra backslash in the second, as you will see, is ignoring the invalid input.
+
+33
+00:01:59,000 --> 00:02:00,170
+Let's see an example here.
+
+34
+00:02:00,860 --> 00:02:02,060
+If you here to switch it up.
+
+35
+00:02:02,070 --> 00:02:07,530
+Terzian each if you added the line for the end of the ignore 256 and backslash.
+
+36
+00:02:07,590 --> 00:02:14,360
+And so this means please ignore up to two hundred fifty six or if you found the backslash end.
+
+37
+00:02:14,840 --> 00:02:20,010
+So now we would see an edge then backslash in the next character directly would be backslash end.
+
+38
+00:02:20,300 --> 00:02:27,290
+So this line is going to ignore the backslash end and now you can read your full name directly.
+
+39
+00:02:29,070 --> 00:02:34,830
+So the moral of that, as I said, is either ignoring the up to up to this number or if you found this
+
+40
+00:02:34,830 --> 00:02:38,370
+backslash and you can use another character, you can use a bigger number as you like.
+
+41
+00:02:39,210 --> 00:02:40,860
+Let's go to our topic directly.
+
+42
+00:02:41,130 --> 00:02:46,620
+The validation so far, we were assuming the user would be a good boy and would just enter the values
+
+43
+00:02:46,620 --> 00:02:47,860
+as we expected from him.
+
+44
+00:02:48,240 --> 00:02:51,650
+However, the user could easily provide wrong data.
+
+45
+00:02:51,660 --> 00:02:53,910
+You asked him for an age and he entered his name.
+
+46
+00:02:54,120 --> 00:02:55,590
+So the program is going to crash.
+
+47
+00:02:55,590 --> 00:02:56,670
+How to handle that?
+
+48
+00:02:57,420 --> 00:03:01,740
+CNN has has what we call CNN did fail, send it fail for simplicity.
+
+49
+00:03:01,740 --> 00:03:04,320
+It's just going to check if something is wrong.
+
+50
+00:03:04,620 --> 00:03:07,650
+And what we were reading was not the same.
+
+51
+00:03:07,650 --> 00:03:13,560
+Ignore can help us to skip the remaining of the line because something wrong happened with both of them
+
+52
+00:03:13,560 --> 00:03:14,690
+who can handle invalid.
+
+53
+00:03:14,790 --> 00:03:16,650
+But it is an example.
+
+54
+00:03:17,010 --> 00:03:20,790
+Let's say I need to make a program that a couple of numbers, a couple of entities.
+
+55
+00:03:20,810 --> 00:03:22,650
+So I'm sending them here by reference.
+
+56
+00:03:22,980 --> 00:03:25,050
+And I started to read X and Y.
+
+57
+00:03:25,830 --> 00:03:31,170
+If the user did something wrong in X, then this is now become invalid in Brookline.
+
+58
+00:03:31,530 --> 00:03:33,980
+You can also provide something wrong with Y.
+
+59
+00:03:34,320 --> 00:03:36,960
+So let's say that he entered two numbers, X and Y.
+
+60
+00:03:38,440 --> 00:03:44,310
+But he did something wrong in itself if he did something wrong and in the end, reading the this year
+
+61
+00:03:44,320 --> 00:03:45,740
+did feel is going to return.
+
+62
+00:03:45,770 --> 00:03:46,010
+True.
+
+63
+00:03:46,330 --> 00:03:47,950
+So we think we can do something like that.
+
+64
+00:03:48,160 --> 00:03:50,100
+If CNN did fail, if something went wrong.
+
+65
+00:03:51,070 --> 00:03:52,750
+We can ask a visa to enter again.
+
+66
+00:03:52,930 --> 00:03:54,340
+Then we do a couple of things.
+
+67
+00:03:54,700 --> 00:04:00,850
+First, we call the clear function, which is going to clear the mistake that happened inside the CIA
+
+68
+00:04:00,870 --> 00:04:02,800
+and we get ready to read new values.
+
+69
+00:04:03,430 --> 00:04:07,600
+The second thing we are going to ignore to tell the end of the line, we don't expect to.
+
+70
+00:04:07,600 --> 00:04:12,850
+More than two hundred fifty six characters, typically up to backslash in character, which is typical
+
+71
+00:04:12,850 --> 00:04:13,250
+would happen.
+
+72
+00:04:13,690 --> 00:04:19,120
+So if these are entered into something wrong at X, we are going to ignore the X and the remaining of
+
+73
+00:04:19,120 --> 00:04:21,850
+X line, which typically have the Y.
+
+74
+00:04:22,210 --> 00:04:24,420
+So here are a bunch of trials.
+
+75
+00:04:24,850 --> 00:04:29,800
+I started the program with entering Mustafa and then Mustafa is in an interview.
+
+76
+00:04:29,830 --> 00:04:36,720
+So the program will either entertain of Field and me feed ten point four and twenty four.
+
+77
+00:04:37,000 --> 00:04:38,100
+This is going to fail.
+
+78
+00:04:38,590 --> 00:04:39,710
+What is the failure here?
+
+79
+00:04:39,730 --> 00:04:46,620
+Notice that the X is going to return and I stopped by the DOD because its character, the Y will find.
+
+80
+00:04:46,630 --> 00:04:51,430
+Good point for this is failure for the White House is expecting any integer.
+
+81
+00:04:52,330 --> 00:04:54,160
+Now it is a tricky case when you.
+
+82
+00:04:54,370 --> 00:04:55,120
+Twenty four.
+
+83
+00:04:55,690 --> 00:05:00,040
+It's going to return the X when you write the ten point four.
+
+84
+00:05:00,370 --> 00:05:02,190
+Ten is going to be to the way.
+
+85
+00:05:02,350 --> 00:05:06,620
+The problem though is going very well because it's really written to to an integer.
+
+86
+00:05:06,910 --> 00:05:12,760
+But noted that your stream is that has this point for I'm not going to handle that here, but I'm pointing
+
+87
+00:05:12,760 --> 00:05:14,940
+out the problem so that you be aware of it.
+
+88
+00:05:15,910 --> 00:05:21,580
+There is no other way to read this email, by the way, which is using oyster industry.
+
+89
+00:05:21,880 --> 00:05:27,700
+Oyster industry, as you remember, can take a complete line, a string, and just you can read from
+
+90
+00:05:27,700 --> 00:05:31,540
+the line as you like, just the one side of a string stream.
+
+91
+00:05:31,540 --> 00:05:36,850
+It is a very slow function, but in a way that the logic here, I'm going to read you rule number and
+
+92
+00:05:36,850 --> 00:05:38,380
+try to read the two numbers for me.
+
+93
+00:05:38,410 --> 00:05:40,390
+If I failed, I just try again.
+
+94
+00:05:40,810 --> 00:05:41,440
+Rootsier.
+
+95
+00:05:41,680 --> 00:05:44,650
+I need to make a clearing for the function.
+
+96
+00:05:44,800 --> 00:05:47,890
+I don't need to to ignore the remaining of the function of the line.
+
+97
+00:05:47,890 --> 00:05:53,410
+I don't need to do that because anyway, it is a temporary stream so we don't care about it.
+
+98
+00:05:55,180 --> 00:05:57,520
+One more thing to know about it is white spaces.
+
+99
+00:05:58,000 --> 00:05:59,260
+We do this piece.
+
+100
+00:05:59,260 --> 00:06:01,750
+We also know that tab, which is like four spaces.
+
+101
+00:06:01,750 --> 00:06:09,250
+Typically there is the other type of of of of of spaces and C++ call of all of them what we call a white
+
+102
+00:06:09,250 --> 00:06:09,700
+space.
+
+103
+00:06:10,120 --> 00:06:14,660
+There is internally a function is a space to check if a character is one of the spaces or not.
+
+104
+00:06:15,250 --> 00:06:19,690
+So let's see if we can foresee squibbing or not giving for the white spaces.
+
+105
+00:06:19,900 --> 00:06:22,210
+I mean, defining a string of three spaces.
+
+106
+00:06:22,210 --> 00:06:25,390
+One, two, three attempted taking care, skip white spaces.
+
+107
+00:06:25,690 --> 00:06:27,580
+The three character ABC.
+
+108
+00:06:27,940 --> 00:06:32,650
+What I see is kibbitz basis and will take any spaces at any depth and just ignore them.
+
+109
+00:06:33,040 --> 00:06:36,000
+Then reading the three letters, ABC would be one and two or three.
+
+110
+00:06:36,580 --> 00:06:46,030
+Now let's say that I would like to to, I would like to not, not, not skip spaces.
+
+111
+00:06:46,420 --> 00:06:48,550
+Look to this line of function here like 13.
+
+112
+00:06:48,550 --> 00:06:54,810
+I say I with six zero six is causing it.
+
+113
+00:06:54,910 --> 00:06:59,230
+If, if you notice here, we already read ISIS six characters.
+
+114
+00:06:59,230 --> 00:07:00,220
+We are done with reading.
+
+115
+00:07:00,430 --> 00:07:03,700
+If you try to read anything more, it's like no input in the city.
+
+116
+00:07:03,970 --> 00:07:09,130
+Ciggy Zero is returning the reading till the start of the program.
+
+117
+00:07:09,130 --> 00:07:11,290
+We said ciggy one.
+
+118
+00:07:11,290 --> 00:07:13,840
+It would be from the second from the second character here.
+
+119
+00:07:14,140 --> 00:07:18,880
+Sixty two it would, it would read from the.
+
+120
+00:07:19,180 --> 00:07:20,170
+So this is zero.
+
+121
+00:07:20,180 --> 00:07:22,940
+This is one, this is two to three and so on.
+
+122
+00:07:23,110 --> 00:07:28,960
+So in a way you can ISIS from the scratch telling you one more functionality is leading you to move
+
+123
+00:07:28,960 --> 00:07:30,820
+to the beginning of the stream.
+
+124
+00:07:31,000 --> 00:07:33,020
+You can use it, use it also in files.
+
+125
+00:07:33,430 --> 00:07:36,780
+So here what I care with more is the no, skip the.
+
+126
+00:07:37,020 --> 00:07:42,950
+So if you say it, the US, it means very don't skip characters, don't skip white spaces.
+
+127
+00:07:43,240 --> 00:07:47,170
+So here, here there are actually there are two spaces on here.
+
+128
+00:07:47,170 --> 00:07:48,280
+There are two spaces.
+
+129
+00:07:48,880 --> 00:07:54,370
+So character would read the space character building the space characters, you will read one.
+
+130
+00:07:54,850 --> 00:07:57,160
+If you read to them you will have a space space one.
+
+131
+00:07:57,490 --> 00:08:03,100
+So the more of that is with the skip the US or skip the books you control more what you would like to
+
+132
+00:08:03,100 --> 00:08:06,040
+do with the spaces and tabs and carriage return and so on.
+
+133
+00:08:08,810 --> 00:08:14,030
+This is mainly Morreau, this is what really I wanted to say about the workspace, that's all.

@@ -1,0 +1,399 @@
+1
+00:00:01,220 --> 00:00:08,190
+This situation, we will start to discussing the lost topic in the ALBE hierarchy and concepts, the
+
+2
+00:00:08,190 --> 00:00:15,780
+operator overloading starting with the binary operator overloading operator overloading isn't a good
+
+3
+00:00:15,880 --> 00:00:16,350
+or B.
+
+4
+00:00:17,010 --> 00:00:22,140
+For example, some language doesn't have even operator ability, but it is something that would make
+
+5
+00:00:22,950 --> 00:00:27,220
+the good looks look more look more nicer and more useful.
+
+6
+00:00:27,630 --> 00:00:29,310
+So that's all about it.
+
+7
+00:00:31,020 --> 00:00:38,730
+So starting from this quarter, we're doing things like CNN X setout X and we're using such Lizelle
+
+8
+00:00:38,730 --> 00:00:41,520
+as that and to to make reading.
+
+9
+00:00:41,730 --> 00:00:44,880
+So now we know the CNNSI are just two objects.
+
+10
+00:00:45,120 --> 00:00:49,530
+But what how these two things are implemented in a similar way.
+
+11
+00:00:49,650 --> 00:00:55,050
+If you define the string across like Mustafah, any string is just your own is just an object.
+
+12
+00:00:55,380 --> 00:01:00,310
+We can do something like a star of one equals Z, but this is more like an array.
+
+13
+00:01:00,460 --> 00:01:01,680
+How is that happening?
+
+14
+00:01:02,050 --> 00:01:03,540
+And also we can say estab.
+
+15
+00:01:03,540 --> 00:01:04,470
+Lassard Ibrahim.
+
+16
+00:01:04,470 --> 00:01:06,330
+So we are doing some concatenation.
+
+17
+00:01:06,840 --> 00:01:11,010
+So like there are here Operators' how these operators are playing with the struct.
+
+18
+00:01:11,160 --> 00:01:12,570
+We know how to implement a struct.
+
+19
+00:01:12,570 --> 00:01:16,530
+We have to add variables and how to make functions, but how to make such things.
+
+20
+00:01:16,950 --> 00:01:18,950
+This is called operator overloading.
+
+21
+00:01:19,560 --> 00:01:23,140
+So remember from our discussion, the operators are of different types.
+
+22
+00:01:23,160 --> 00:01:24,350
+Some of them are unity.
+
+23
+00:01:24,360 --> 00:01:27,470
+So are binary, some are ternary.
+
+24
+00:01:27,780 --> 00:01:32,220
+We can also classify them like arithmetic, relational, logical, bitwise and so on.
+
+25
+00:01:33,780 --> 00:01:38,520
+So we already have played with this kind of apparatus.
+
+26
+00:01:38,760 --> 00:01:46,560
+And if I have two variables, X and Y, I can say integrate X equals Y or I can say plus plus X.
+
+27
+00:01:46,860 --> 00:01:49,050
+But what if I have a struct operator?
+
+28
+00:01:49,050 --> 00:01:51,090
+Overloading is all about that.
+
+29
+00:01:51,120 --> 00:01:56,440
+Some of these operators can be available to be applied with an object itself.
+
+30
+00:01:56,700 --> 00:02:02,630
+So we are doing the overloading here by the meaning that the object itself can't allow that.
+
+31
+00:02:02,880 --> 00:02:08,470
+This way you see something like the string class, it has the Bloss function, for example.
+
+32
+00:02:08,700 --> 00:02:14,160
+So instead of coming to numbers, the scene is a sense here now is we are concatenating two strings
+
+33
+00:02:14,160 --> 00:02:14,640
+to visit.
+
+34
+00:02:15,270 --> 00:02:20,040
+We we start here with the simple math class, which will be like our friend during the discussion,
+
+35
+00:02:20,040 --> 00:02:27,270
+most of the cases to highlight the what how can overexaggerating be implemented and how can make our
+
+36
+00:02:27,270 --> 00:02:28,460
+coding more beautiful.
+
+37
+00:02:28,800 --> 00:02:33,870
+So the middle class has two numbers, first and second, and has a constructor for that.
+
+38
+00:02:34,260 --> 00:02:37,270
+And then we have here some printing and getters and setters.
+
+39
+00:02:37,800 --> 00:02:44,360
+Now, interestingly, we have a function named Ed, so we add another function to us.
+
+40
+00:02:44,550 --> 00:02:45,960
+So the logic goes as following.
+
+41
+00:02:46,140 --> 00:02:54,380
+We get the pointer of our this class and return a new object of my first plus his first and my second.
+
+42
+00:02:54,390 --> 00:02:55,220
+The second.
+
+43
+00:02:55,560 --> 00:02:56,100
+That's it.
+
+44
+00:02:56,700 --> 00:03:04,770
+OK, so now if I created my idea of one and two and my bit of 10 and 20 and I started to say X and Y
+
+45
+00:03:05,130 --> 00:03:09,380
+and Z, if I try to print it, that would give me that eleven and twenty two.
+
+46
+00:03:09,690 --> 00:03:14,750
+So one plus 10, 11 tubeless two is twenty two.
+
+47
+00:03:15,180 --> 00:03:16,040
+So far so good.
+
+48
+00:03:16,050 --> 00:03:21,720
+Nothing without the could but thinking from a more convenient code.
+
+49
+00:03:22,980 --> 00:03:24,810
+What if you can do the following.
+
+50
+00:03:24,810 --> 00:03:28,800
+Z equals exodus Y instead of X and Y.
+
+51
+00:03:29,160 --> 00:03:32,460
+This is all about operator overloading the whole idea here.
+
+52
+00:03:32,460 --> 00:03:35,070
+The plus makes sense a lot in this city.
+
+53
+00:03:35,070 --> 00:03:36,840
+We know that two plus three is five.
+
+54
+00:03:37,140 --> 00:03:40,370
+But what if I want to add I can add these two objects.
+
+55
+00:03:40,650 --> 00:03:41,820
+This is operator overloading.
+
+56
+00:03:42,030 --> 00:03:47,190
+You start to overload this plus operator so that the class support plus operation.
+
+57
+00:03:47,700 --> 00:03:53,370
+OK, so we now want to get rid of this add function and add a new thing named Operators'.
+
+58
+00:03:53,730 --> 00:03:59,670
+So the logic and the syntax of the operator goes as far when you write the same syntax exactly.
+
+59
+00:03:59,670 --> 00:04:03,050
+Here, but you know you're right, operator plus operator.
+
+60
+00:04:03,060 --> 00:04:08,520
+Plus here is the function name literally the new function name is Operator Plus.
+
+61
+00:04:08,760 --> 00:04:15,810
+So we removed the word add and we added the the word operator plus now this is the function code.
+
+62
+00:04:16,170 --> 00:04:19,850
+So here is the it's a member function noticia.
+
+63
+00:04:19,870 --> 00:04:21,940
+Its function is defined inside the plus.
+
+64
+00:04:22,880 --> 00:04:25,480
+The word agreed to by the way is a reserved keyword.
+
+65
+00:04:25,830 --> 00:04:36,230
+So here the compiler, here we are writing X plus Y when the compiler x it say that O X is an object.
+
+66
+00:04:36,510 --> 00:04:40,650
+So now it says plus this is an operator, it goes and double check.
+
+67
+00:04:40,650 --> 00:04:46,290
+If there is a function in your class named Obreht or Bloss, when it finds it, it just send for you
+
+68
+00:04:46,290 --> 00:04:50,570
+here the second parameter, which is why doing this and returning the result for you.
+
+69
+00:04:51,030 --> 00:04:57,870
+So practically speaking on the compiler, see the plus here, it just replace it with dot operator plus
+
+70
+00:04:57,870 --> 00:04:58,290
+y.
+
+71
+00:04:58,590 --> 00:04:59,700
+So as.
+
+72
+00:04:59,720 --> 00:05:04,610
+He said a brutal brasier is actually a functioning notice here.
+
+73
+00:05:04,640 --> 00:05:07,750
+The plus is a vulnerability, so it takes two items.
+
+74
+00:05:07,760 --> 00:05:09,110
+Where are the two items?
+
+75
+00:05:09,380 --> 00:05:10,250
+The second item?
+
+76
+00:05:10,280 --> 00:05:14,390
+It is clear visibility, the parameter, but with the first parameter.
+
+77
+00:05:14,540 --> 00:05:16,480
+The first parameter is that this is said.
+
+78
+00:05:16,790 --> 00:05:20,150
+So the flaw in the compiler is X is an object.
+
+79
+00:05:20,430 --> 00:05:21,350
+Does it have an operator?
+
+80
+00:05:22,130 --> 00:05:22,580
+Yes.
+
+81
+00:05:22,580 --> 00:05:26,380
+Then call the operator plus function and give it the device.
+
+82
+00:05:27,680 --> 00:05:31,610
+OK, so what we did, we call it the member function operator.
+
+83
+00:05:31,610 --> 00:05:35,300
+Plus I can also define it outside the class.
+
+84
+00:05:35,660 --> 00:05:41,510
+But now if you decided outside the class, you need to give the two parameters explicitly for the for
+
+85
+00:05:41,510 --> 00:05:42,260
+the plus operator.
+
+86
+00:05:42,270 --> 00:05:46,400
+So you see here we are one and two again.
+
+87
+00:05:46,610 --> 00:05:52,550
+When the compiler see the first object of type operator plus one is try to identify a function that
+
+88
+00:05:52,550 --> 00:05:58,860
+matches its style and then it can call it if it wants, then we just use it.
+
+89
+00:05:59,060 --> 00:06:02,660
+So this we call it normal function or no function of global function.
+
+90
+00:06:02,660 --> 00:06:08,000
+The word no member function is the way we always describe the external operator.
+
+91
+00:06:08,000 --> 00:06:13,220
+This way, somewhere in the in the end of the section, we will highlight the differences between the
+
+92
+00:06:13,220 --> 00:06:14,510
+member and member functions.
+
+93
+00:06:16,460 --> 00:06:23,150
+OK, so in a very similar way to the front function, if you if you if you view highlighted this function
+
+94
+00:06:23,150 --> 00:06:26,690
+with a friend, you can just access the variables here in an easy way.
+
+95
+00:06:26,960 --> 00:06:32,580
+So I would like you to think all the time in the word operator plus as just the function name.
+
+96
+00:06:32,600 --> 00:06:33,120
+That's it.
+
+97
+00:06:33,320 --> 00:06:42,080
+So we have here like say add was two objects, just the compiler is doing more or more magic to to resolve
+
+98
+00:06:42,080 --> 00:06:47,060
+with the greater blast and provide the same function with the two variable names that you would like.
+
+99
+00:06:47,480 --> 00:06:52,790
+As usual, when you provide something as a friend, you are you are violating some of the object oriented
+
+100
+00:06:52,790 --> 00:06:57,080
+programming, but it might just make your code more efficient that it.

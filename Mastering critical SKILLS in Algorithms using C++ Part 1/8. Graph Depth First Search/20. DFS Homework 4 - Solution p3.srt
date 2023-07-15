@@ -1,0 +1,455 @@
+1
+00:00:00,950 --> 00:00:06,050
+Let's solve the problem, number three, this is actually the heart of the problem here, like the this
+
+2
+00:00:06,050 --> 00:00:10,550
+problem is in an easy one, even for an experienced programmer who might get lost to here.
+
+3
+00:00:11,030 --> 00:00:16,310
+I will provide you with a single hint that will make this problem from the heart of the problem to an
+
+4
+00:00:16,310 --> 00:00:17,030
+easy problem.
+
+5
+00:00:17,300 --> 00:00:19,310
+The hint is to use binary search.
+
+6
+00:00:19,790 --> 00:00:20,300
+Remember?
+
+7
+00:00:21,410 --> 00:00:25,610
+That it could six, six, eight problem, the one about the multiplication when we have the multiplication
+
+8
+00:00:25,610 --> 00:00:30,380
+of in in values is very similar by necessity.
+
+9
+00:00:31,400 --> 00:00:33,170
+So how can you make use of this hint?
+
+10
+00:00:34,450 --> 00:00:34,880
+OK.
+
+11
+00:00:35,410 --> 00:00:36,130
+Here is the key.
+
+12
+00:00:36,610 --> 00:00:44,830
+Assume we have function that takes of the heights matrix and limit it returns through if and only if
+
+13
+00:00:45,280 --> 00:00:50,350
+the maximum possible absolute difference of some bears is less than or equal the limit.
+
+14
+00:00:50,800 --> 00:00:53,370
+And remember that inequality?
+
+15
+00:00:53,380 --> 00:00:54,940
+We mentioned that in the in decision.
+
+16
+00:00:54,940 --> 00:01:00,130
+The equality of inequality can help us to create a multi-ethnic space.
+
+17
+00:01:00,550 --> 00:01:05,440
+If I say equal the limit, it would be like a zero zero zero one zero zero zero zero.
+
+18
+00:01:05,740 --> 00:01:10,250
+If I said Lizelle Equal, it would be like zero zero zero one one one one one, which is monotonic.
+
+19
+00:01:10,900 --> 00:01:15,550
+Now again, I would give you the heights and a limit.
+
+20
+00:01:15,880 --> 00:01:23,800
+I'm asking you, can we find a Abarth such that the maximum possible difference is less than or equal
+
+21
+00:01:23,800 --> 00:01:24,280
+the limit?
+
+22
+00:01:25,150 --> 00:01:26,080
+Now think about it.
+
+23
+00:01:26,740 --> 00:01:30,040
+Assume that for, for example, limit number 10.
+
+24
+00:01:30,370 --> 00:01:32,680
+The answer is true, then definitely.
+
+25
+00:01:32,680 --> 00:01:33,970
+Those are true for limited living.
+
+26
+00:01:34,240 --> 00:01:41,320
+Like, if I can think of us was value seven, which is this an equal 10, then also equal 11 also deserve
+
+27
+00:01:41,320 --> 00:01:42,190
+equal 12.
+
+28
+00:01:42,220 --> 00:01:45,250
+That's why the social space like are zero zero zero one one one one.
+
+29
+00:01:46,240 --> 00:01:47,500
+OK, what is the.
+
+30
+00:01:47,740 --> 00:01:48,880
+I'm asking you for limits?
+
+31
+00:01:48,880 --> 00:01:49,520
+17.
+
+32
+00:01:50,320 --> 00:01:52,660
+Sorry if the minimum is 17.
+
+33
+00:01:52,930 --> 00:01:54,010
+So 10 doesn't work.
+
+34
+00:01:54,490 --> 00:01:55,480
+It even then.
+
+35
+00:01:55,540 --> 00:01:56,470
+Nine doesn't work.
+
+36
+00:01:56,470 --> 00:01:57,490
+It doesn't work.
+
+37
+00:01:57,910 --> 00:02:01,720
+So going backward will feel going forward will succeed.
+
+38
+00:02:02,020 --> 00:02:04,900
+This is clearly a monotonically increasing function.
+
+39
+00:02:05,530 --> 00:02:10,990
+So the first observation here, the possible function in this problem is a one trick function.
+
+40
+00:02:11,800 --> 00:02:14,500
+Now let's do a binary search.
+
+41
+00:02:15,720 --> 00:02:22,050
+Such that we would like to find the first limit that is possible, so let's say this limited add value
+
+42
+00:02:22,050 --> 00:02:24,210
+eat, so we actually return to eat.
+
+43
+00:02:24,750 --> 00:02:28,050
+OK, it is like a first occurrence, as we did a lot to like that before.
+
+44
+00:02:28,800 --> 00:02:35,340
+So the the homework here, we first decoded it using the binary search in a very similar way to the
+
+45
+00:02:35,700 --> 00:02:37,650
+case number three in the binary.
+
+46
+00:02:37,650 --> 00:02:41,700
+Such a case, as we mentioned before, the heart of the case where you are using something like that
+
+47
+00:02:42,030 --> 00:02:43,740
+to find a reasonable function.
+
+48
+00:02:44,460 --> 00:02:48,540
+And now using the limit, we would like to find the answer.
+
+49
+00:02:48,900 --> 00:02:51,570
+I hope you got the the algorithm so far.
+
+50
+00:02:52,170 --> 00:02:57,270
+Binary search on the limit find the first limit that the possible function is returning through.
+
+51
+00:02:57,830 --> 00:02:59,520
+No, the remaining question, which is easy.
+
+52
+00:02:59,880 --> 00:03:02,130
+How can we implement the possible function?
+
+53
+00:03:02,610 --> 00:03:03,900
+We have a matrix here.
+
+54
+00:03:08,030 --> 00:03:09,110
+I started from here.
+
+55
+00:03:09,170 --> 00:03:13,070
+I would like to go from here, but my limit is seven, for example.
+
+56
+00:03:13,850 --> 00:03:15,830
+So that's the idea is very easy to do.
+
+57
+00:03:15,830 --> 00:03:17,210
+Afloat fell and this graph.
+
+58
+00:03:18,230 --> 00:03:25,070
+And you cannot go to any vote if and only if it needs a more than seven that symbol.
+
+59
+00:03:25,700 --> 00:03:28,970
+Again, do edifice reachability office.
+
+60
+00:03:28,970 --> 00:03:30,980
+Remember the day on the grid?
+
+61
+00:03:31,670 --> 00:03:33,500
+You can go to the four directions.
+
+62
+00:03:35,260 --> 00:03:38,560
+Previously in the flat world, you go to the neighbor if it has the same color.
+
+63
+00:03:39,160 --> 00:03:44,770
+Now I can go to the neighbor if the difference between me and him, the absolute difference is less
+
+64
+00:03:44,770 --> 00:03:46,000
+than or equal.
+
+65
+00:03:46,000 --> 00:03:48,220
+Seven If this is the case, we can just proceed.
+
+66
+00:03:48,670 --> 00:03:50,140
+And in this way, we are done.
+
+67
+00:03:50,740 --> 00:03:55,570
+Now why this problem is a bit hard for an experienced programmer because there can be a lot of ideas
+
+68
+00:03:55,570 --> 00:03:56,680
+that can come to his mind.
+
+69
+00:03:56,830 --> 00:03:58,330
+Maybe the right programming problem?
+
+70
+00:03:58,570 --> 00:03:59,670
+Maybe backtracking.
+
+71
+00:03:59,680 --> 00:04:01,780
+Maybe Minkus smacks of law, maybe binary search.
+
+72
+00:04:02,110 --> 00:04:05,380
+So as someone who has a lot of tools, this problem can be confusing.
+
+73
+00:04:06,100 --> 00:04:10,810
+I give you this problem now where what what we have so far in the courts, we learned the sorting,
+
+74
+00:04:11,620 --> 00:04:13,420
+we learned the searching way in research.
+
+75
+00:04:13,720 --> 00:04:15,340
+We learned the defense, right?
+
+76
+00:04:15,670 --> 00:04:21,550
+So clearly, your toolbox is just consist of these three items, and we actually needed this to here.
+
+77
+00:04:22,120 --> 00:04:24,040
+If I give you the same problem.
+
+78
+00:04:25,020 --> 00:04:29,970
+After the end of what to do with, you know, all of these algorithms, all of these directions might
+
+79
+00:04:29,970 --> 00:04:30,390
+be bad.
+
+80
+00:04:30,810 --> 00:04:35,880
+So sometimes when you have more and more tools, while it is very advantage, but also it's a bigger
+
+81
+00:04:35,880 --> 00:04:36,570
+challenge here.
+
+82
+00:04:37,140 --> 00:04:38,670
+Anyway, let's see them alimentacion.
+
+83
+00:04:40,840 --> 00:04:44,940
+Um, here is the brain research I started with the minimum.
+
+84
+00:04:44,980 --> 00:04:50,280
+Zero, the maximum is just that the max, the value in the problem statement that we do normal brain
+
+85
+00:04:50,300 --> 00:04:50,860
+research.
+
+86
+00:04:51,220 --> 00:04:57,940
+And if it is possible, then we assign the result to the med and move to the lower body so that we can
+
+87
+00:04:58,270 --> 00:04:58,810
+mix them.
+
+88
+00:04:58,820 --> 00:05:02,980
+I'm mixing that less than an equal condition here, as we did many times before.
+
+89
+00:05:03,640 --> 00:05:10,330
+Now the possible function is as following the possible function is creating visited array on the size
+
+90
+00:05:10,330 --> 00:05:16,440
+of the matrix and starting from zero and zero, giving the heights array, giving the vista ray and
+
+91
+00:05:16,480 --> 00:05:17,920
+there the limit.
+
+92
+00:05:19,210 --> 00:05:29,710
+Now going to the function itself, this is as we did before, the directions of the AFC and um oh,
+
+93
+00:05:29,710 --> 00:05:34,780
+I made this function to be bullion so that it can directly stop once we found the field.
+
+94
+00:05:35,260 --> 00:05:36,850
+So here is a function.
+
+95
+00:05:36,850 --> 00:05:43,240
+It started from raw and see if we manage at any time to reach the end of their grid like we started
+
+96
+00:05:43,240 --> 00:05:44,170
+from zero to zero.
+
+97
+00:05:45,040 --> 00:05:50,800
+If at any point of time the DFS is here, then we are done now.
+
+98
+00:05:50,810 --> 00:05:53,470
+Otherwise, as usual, we market their sit as vested.
+
+99
+00:05:53,470 --> 00:05:54,790
+We trade on the news.
+
+100
+00:05:55,210 --> 00:05:56,770
+Now here it is our condition.
+
+101
+00:05:57,280 --> 00:06:01,240
+If it is invalid, sell cancel it if it is visited before cancel it.
+
+102
+00:06:01,690 --> 00:06:05,860
+If the difference between me and my neighbor is greater than the limit, cancel it.
+
+103
+00:06:06,250 --> 00:06:09,370
+Otherwise, we DFS on the neighbor observer.
+
+104
+00:06:09,370 --> 00:06:15,460
+This if condition, I say if true, which means that this direction managed to reach the said we can
+
+105
+00:06:15,460 --> 00:06:16,660
+return true.
+
+106
+00:06:17,440 --> 00:06:19,750
+I can implement that was the bullion.
+
+107
+00:06:20,380 --> 00:06:25,990
+We did many times before we defined here a variable we can say we can define here a boolean and say
+
+108
+00:06:26,140 --> 00:06:30,700
+is rigid and we run the defense the normal way a market is, Richard withdrew.
+
+109
+00:06:30,940 --> 00:06:33,940
+But this is a different way, another way to cool things.
+
+110
+00:06:34,360 --> 00:06:37,210
+The function itself is containing the Boolean variable.
+
+111
+00:06:37,420 --> 00:06:40,210
+This condition here is important condition.
+
+112
+00:06:40,720 --> 00:06:42,720
+I hope the idea is manageable for you.
+
+113
+00:06:42,730 --> 00:06:43,750
+It is in that nightmare.
+
+114
+00:06:43,760 --> 00:06:45,490
+You can still get its components.

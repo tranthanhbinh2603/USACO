@@ -1,0 +1,724 @@
+1
+00:00:01,730 --> 00:00:06,560
+Hi Everyone, So let us look at the DP based solution for  traveling salesman problem.
+
+2
+00:00:06,960 --> 00:00:10,160
+First we will do recursion and then we will optimize it using DP.
+
+3
+00:00:10,730 --> 00:00:11,600
+So let's begin.
+
+4
+00:00:11,630 --> 00:00:14,030
+So firstly, I'm going to create a function.
+
+5
+00:00:15,290 --> 00:00:17,560
+It is called as let's say in TSP
+
+6
+00:00:18,200 --> 00:00:20,510
+And here we are going to pass in the graph.
+
+7
+00:00:20,990 --> 00:00:27,200
+The graph is now represented as a 2D vector because we said we know the distance between every
+
+8
+00:00:27,200 --> 00:00:27,620
+pair of vertices.
+
+9
+00:00:27,620 --> 00:00:31,910
+This is the data structure that we will required.
+
+10
+00:00:33,210 --> 00:00:40,020
+And apart from it, we also need to know the set of cities that has been visited. so I will create
+
+11
+00:00:40,020 --> 00:00:40,680
+one variable.
+
+12
+00:00:40,890 --> 00:00:48,500
+Ok. I will call it as set of cities. it's say integer and I will tell you how we are going to use it.
+
+13
+00:00:48,510 --> 00:00:48,780
+OK?
+
+14
+00:00:50,120 --> 00:00:54,830
+So let me just tell you. set of cities, what we are going to do?
+
+15
+00:00:54,950 --> 00:01:01,850
+We are going to represent it using integer because it would be easier for us to use this in DP state.
+
+16
+00:01:02,540 --> 00:01:03,640
+So let's say we are at A
+
+17
+00:01:04,250 --> 00:01:05,600
+We want to go to B.
+
+18
+00:01:05,610 --> 00:01:06,530
+Then we go to C.
+
+19
+00:01:06,540 --> 00:01:07,510
+Then we go to D.
+
+20
+00:01:08,360 --> 00:01:13,280
+And from B, we go to D and then we go to C and so on.
+
+21
+00:01:13,880 --> 00:01:17,210
+So this we have already seen. so what I will do.
+
+22
+00:01:17,240 --> 00:01:18,770
+So initially this would be zero.
+
+23
+00:01:19,160 --> 00:01:21,900
+But when I am standing at A. I will make it as one.
+
+24
+00:01:21,920 --> 00:01:25,430
+Ok. so one in binary looks like this.
+
+25
+00:01:25,910 --> 00:01:28,910
+When I come to B I will mark the second bit.
+
+26
+00:01:29,210 --> 00:01:33,300
+Ok. so this represent city A. this represents B.
+
+27
+00:01:33,320 --> 00:01:35,180
+This represents C, and this represents D.
+
+28
+00:01:35,450 --> 00:01:41,270
+So we are talking about bits. bits of this number. when I come to B I mark it as one.
+
+29
+00:01:41,840 --> 00:01:42,140
+OK.
+
+30
+00:01:43,100 --> 00:01:46,400
+And from B, when I come to C I mark this bit as one.
+
+31
+00:01:46,760 --> 00:01:49,640
+And from the C I come to D. I mark all the bit as one.
+
+32
+00:01:50,330 --> 00:01:56,180
+Effectively, when we reached the last node, all we will have last
+
+33
+00:01:56,420 --> 00:02:03,860
+N bit as one that means we have covered all the cities. From here we will return the cost coming back
+
+34
+00:02:03,860 --> 00:02:04,220
+to the original city.
+
+35
+00:02:05,580 --> 00:02:12,210
+ok. so one more thing we should have here is. the number of cities we have. Effectively,
+
+36
+00:02:12,210 --> 00:02:20,490
+I can say the base case would look something like this if set of cities if this is equal to, ok.
+
+37
+00:02:20,820 --> 00:02:26,430
+what is this number?  for N equal to four this number is equal to 15. for N equal to four,
+
+38
+00:02:27,090 --> 00:02:32,130
+This number is equal to two raise to the power four minus one, which can be written as one left shift four
+
+39
+00:02:32,130 --> 00:02:32,790
+minus one.
+
+40
+00:02:33,210 --> 00:02:37,590
+And for a given value of N can be written as one left shift N-1.
+
+41
+00:02:37,860 --> 00:02:38,190
+OK.
+
+42
+00:02:38,820 --> 00:02:49,740
+So we can check if this is equal to one left shift N-1 then that means we have covered all
+
+43
+00:02:49,740 --> 00:02:50,640
+the cities. ok.
+
+44
+00:02:54,640 --> 00:02:57,220
+That means return the cost
+
+45
+00:02:59,180 --> 00:03:06,260
+from the current city that is position or maybe you can just call it as city. From the current city
+
+46
+00:03:06,710 --> 00:03:07,760
+to the original.
+
+47
+00:03:07,880 --> 00:03:10,400
+So the original cities are at the index zero.
+
+48
+00:03:10,400 --> 00:03:11,380
+So I can say return.
+
+49
+00:03:11,990 --> 00:03:17,180
+The distance from the current city to the original city.
+
+50
+00:03:17,180 --> 00:03:18,620
+So original city is A.
+
+51
+00:03:18,710 --> 00:03:20,990
+So that is going to be zero.
+
+52
+00:03:21,350 --> 00:03:26,890
+ok. so this is what we return. so we return the cost of going from D to A.
+
+53
+00:03:27,320 --> 00:03:29,900
+This cost is returned back to C.
+
+54
+00:03:31,670 --> 00:03:33,590
+Otherwise, what we need to do?
+
+55
+00:03:33,760 --> 00:03:38,490
+Otherwise, we can say try all possible options.
+
+56
+00:03:38,510 --> 00:03:39,360
+Ok. Try
+
+57
+00:03:39,470 --> 00:03:41,300
+all possible options.
+
+58
+00:03:41,900 --> 00:03:45,050
+So I can say I have a choice
+
+59
+00:03:47,350 --> 00:03:49,780
+From city zero till...
+
+60
+00:03:53,600 --> 00:04:04,610
+choice till N, choice plus plus. I have multiple choices. ok. and I need to check... need to check if the city
+
+61
+00:04:04,610 --> 00:04:05,780
+is visited or not.
+
+62
+00:04:06,110 --> 00:04:09,920
+ok. cities is visited or not. how we are going to check?
+
+63
+00:04:11,980 --> 00:04:15,720
+So we are going to check it like this if set of cities, let say set of cities is
+
+64
+00:04:15,910 --> 00:04:24,010
+a number in binary. ok. so we can check whether a particular cities is visited or not by checking
+
+65
+00:04:24,010 --> 00:04:25,940
+if the I th bit is set or not.
+
+66
+00:04:25,960 --> 00:04:32,410
+Suppose I want to check for C. ok. from B I need to to make a call on C. C is not visited. D
+
+67
+00:04:32,410 --> 00:04:33,240
+is also not visited.
+
+68
+00:04:33,260 --> 00:04:39,130
+So I can make a call here and I can also make a call here. so I can check by doing AND. so I can create 
+
+69
+00:04:39,130 --> 00:04:39,520
+the mask
+
+70
+00:04:39,520 --> 00:04:41,330
+Like this zero one zero zero.
+
+71
+00:04:41,950 --> 00:04:43,330
+This is my choice index.
+
+72
+00:04:43,780 --> 00:04:45,760
+This is choice zero choice one.
+
+73
+00:04:46,360 --> 00:04:46,960
+choice two.
+
+74
+00:04:47,410 --> 00:04:49,420
+I can do one left shift choice.
+
+75
+00:04:50,380 --> 00:04:50,680
+OK?
+
+76
+00:04:51,160 --> 00:04:57,400
+It will give me effectively number like this zero one zero zero and I can do a AND with this one.
+
+77
+00:04:58,060 --> 00:04:59,950
+If this AND
+
+78
+00:05:01,350 --> 00:05:02,400
+Is equal to zero.
+
+79
+00:05:03,090 --> 00:05:11,100
+That means this bit must be zero and the city is not visited, the city is not visited.
+
+80
+00:05:11,580 --> 00:05:14,340
+So let us try to do. The AND
+
+81
+00:05:16,280 --> 00:05:17,660
+With one
+
+82
+00:05:18,940 --> 00:05:19,900
+Left shift
+
+83
+00:05:21,200 --> 00:05:21,730
+choice.
+
+84
+00:05:22,200 --> 00:05:22,450
+OK.
+
+85
+00:05:24,100 --> 00:05:30,340
+If this is equal to zero then that means this particular city is not been visited.
+
+86
+00:05:32,580 --> 00:05:37,280
+We are checking whether it is visited or not, so we can compute the sub problem.
+
+87
+00:05:37,430 --> 00:05:44,570
+So sub problem will have a solution that is equal to. so let's say.... let's say at B, we come to know
+
+88
+00:05:44,570 --> 00:05:45,730
+that C is not visited.
+
+89
+00:05:45,740 --> 00:05:53,780
+So we will add this edge that is the distance of B to C, So  the distance of city to the
+
+90
+00:05:53,780 --> 00:05:54,920
+city that we are going.
+
+91
+00:05:55,130 --> 00:05:56,080
+That is choice.
+
+92
+00:05:57,140 --> 00:06:02,810
+Plus, the recursive call so that recursive call will be nothing but TSP of distance.
+
+93
+00:06:03,500 --> 00:06:06,620
+Now we're sending a set of cities, so set of cities
+
+94
+00:06:06,620 --> 00:06:09,100
+was 0011.
+
+95
+00:06:09,110 --> 00:06:11,690
+We need to send the updated set of cities.
+
+96
+00:06:11,720 --> 00:06:12,020
+OK.
+
+97
+00:06:12,860 --> 00:06:14,900
+The updated set of cities would be.
+
+98
+00:06:16,150 --> 00:06:24,490
+we need to set this particular bit. so we have 0011. we have to set this bit as one, so we will do a OR
+
+99
+00:06:24,490 --> 00:06:29,110
+operation with this particular mask variable that we have created.
+
+100
+00:06:29,170 --> 00:06:31,380
+So it is going to be zero one one one.
+
+101
+00:06:32,530 --> 00:06:35,890
+So what we are going to do? we are going to do
+
+102
+00:06:37,100 --> 00:06:44,510
+city that is the original city that we are sorry.... set if cities that we have and we are going
+
+103
+00:06:44,510 --> 00:06:49,010
+to do a  OR operation with the current chosen city.
+
+104
+00:06:49,040 --> 00:06:52,460
+Okay, so the current choices is choice the one left shift choice.
+
+105
+00:06:54,170 --> 00:06:54,460
+OK.
+
+106
+00:06:55,100 --> 00:07:03,380
+And finally, we can give here the final parameters is city 2 which we are going so that it is now choice.
+
+107
+00:07:05,600 --> 00:07:08,950
+And is N equal to n. ok. so I'll just erase this one.
+
+108
+00:07:09,910 --> 00:07:13,390
+And I'lll tell to try to explain you what we are trying to do.
+
+109
+00:07:13,870 --> 00:07:19,870
+And here also we will keep a global answer that is int because we are taking minimum of all possible
+
+110
+00:07:19,870 --> 00:07:20,270
+options.
+
+111
+00:07:20,850 --> 00:07:27,520
+We can say the answer is minimum of whatever answer we earlier computed and what we got from sub problem.
+
+112
+00:07:27,730 --> 00:07:28,300
+That's it.
+
+113
+00:07:29,140 --> 00:07:33,670
+And finally, from here we can return the answer.
+
+114
+00:07:34,210 --> 00:07:36,670
+So this is actually the recursive call
+
+115
+00:07:37,900 --> 00:07:44,530
+To solve this problem. Now some of you might get confused with this and this, I'll explain what we
+
+116
+00:07:44,530 --> 00:07:44,950
+are doing.
+
+117
+00:07:45,490 --> 00:07:51,250
+Once again, we have A, B, C and D.
+
+118
+00:07:51,550 --> 00:07:51,880
+OK.
+
+119
+00:07:52,270 --> 00:07:57,570
+And from here we can go to C, D, C and D.
+
+120
+00:07:57,760 --> 00:08:02,110
+OK, so I'm not going to draw for this part because it is going to be very similar.
+
+121
+00:08:02,530 --> 00:08:08,110
+But a, we are going to say we have already visited City so it is zero zero one. From here,
+
+122
+00:08:08,500 --> 00:08:12,490
+When we come back here, we say we have visited B.
+
+123
+00:08:12,700 --> 00:08:13,030
+OK.
+
+124
+00:08:13,490 --> 00:08:17,140
+So at A we are going to make three calls because we have three zero zero.
+
+125
+00:08:17,140 --> 00:08:20,050
+OK. choice is equal to zero one two three four.
+
+126
+00:08:20,800 --> 00:08:25,330
+So when the choice is zero, we will see that this bit is already set.
+
+127
+00:08:25,360 --> 00:08:27,130
+OK. so one left zero is one.
+
+128
+00:08:27,610 --> 00:08:34,000
+And if you do a AND of 0001 with 0001, yo.. nothing is going to happen.
+
+129
+00:08:34,000 --> 00:08:34,320
+So this
+
+130
+00:08:34,330 --> 00:08:35,559
+If condition will not true.
+
+131
+00:08:35,559 --> 00:08:41,350
+So A will not make a call to A. but we will make a call to B, C and D. so we'll make three
+
+132
+00:08:41,350 --> 00:08:45,820
+calls. So firstly we made a call on B. so when we came to B
+
+133
+00:08:47,410 --> 00:08:54,340
+Oh, what we did in the... in the particular call from when we made a call from A to B, we said the new
+
+134
+00:08:54,340 --> 00:09:00,140
+set of cities should add one more city because we have... we are visiting B.
+
+135
+00:09:00,160 --> 00:09:06,640
+Ok. so the original set of city is was zero zero zero one and one left of choice because this index
+
+136
+00:09:06,640 --> 00:09:08,470
+was one. one left shift one
+
+137
+00:09:08,470 --> 00:09:13,840
+is nothing but one zero. and this new set of cities now becomes zero zero one one.
+
+138
+00:09:14,680 --> 00:09:16,390
+This is because of the call.
+
+139
+00:09:16,390 --> 00:09:21,400
+When we arrived at this particular node we get zero zero one one as the mask.
+
+140
+00:09:21,410 --> 00:09:21,720
+OK?
+
+141
+00:09:23,070 --> 00:09:26,970
+And at A was the city and this was the choice.
+
+142
+00:09:27,810 --> 00:09:33,540
+But when you came to B, you have B as the city and you have these two as the choices.
+
+143
+00:09:33,690 --> 00:09:34,590
+This is choice.
+
+144
+00:09:35,160 --> 00:09:35,460
+OK.
+
+145
+00:09:37,060 --> 00:09:42,760
+The choice would be from A to ABCD everything, but only two choices are
+
+146
+00:09:43,080 --> 00:09:48,820
+where we will make a call. C and D because they are not yet visited. similarly from B 
+
+147
+00:09:48,820 --> 00:09:53,230
+When you come to C. we say okay compute the answer for the sub problem.
+
+148
+00:09:53,620 --> 00:09:58,930
+And tell me how much cost it will take for the subtour to complete and get back to A.
+
+149
+00:09:59,050 --> 00:10:01,450
+So this returns some cost which will tell B.
+
+150
+00:10:01,870 --> 00:10:04,290
+And then B makes another call on this branch.
+
+151
+00:10:04,300 --> 00:10:06,810
+It returns some cost and then B takes.
+
+152
+00:10:06,820 --> 00:10:07,210
+OK.
+
+153
+00:10:07,480 --> 00:10:10,000
+Given option one and  option  two. what is the minimum?
+
+154
+00:10:10,000 --> 00:10:15,890
+Whatever the minimum returns back to A. now A makes call on C and the same story repeats.
+
+155
+00:10:15,910 --> 00:10:21,430
+So C return some answer here, A makes a call on D. The same story repeats and they return something
+
+156
+00:10:21,430 --> 00:10:21,880
+back here.
+
+157
+00:10:21,940 --> 00:10:28,690
+Ok, now the interesting thing to appreciate in this question is we have represented a set using the
+
+158
+00:10:28,720 --> 00:10:31,150
+integer and this is going to help us
+
+159
+00:10:32,950 --> 00:10:34,960
+in using DP. ok?
+
+160
+00:10:35,350 --> 00:10:36,160
+And using DP.
+
+161
+00:10:38,080 --> 00:10:44,310
+OK, because it would be easy for us to make a integer state in the DP. so in every call you can see,
+
+162
+00:10:44,320 --> 00:10:46,030
+what are the variables that are changing?
+
+163
+00:10:46,190 --> 00:10:52,900
+So one is this set of cities that is changing.  another is the current cities that is changing. ok.
+
+164
+00:10:52,900 --> 00:10:58,700
+So we are replacing the city with choice and set of cities with this updated set of cities.
+
+165
+00:10:58,720 --> 00:11:00,580
+So we are adding one city every time.
+
+166
+00:11:02,660 --> 00:11:07,860
+And this is just checking whether city is visited or not .visited or not.
+
+167
+00:11:09,610 --> 00:11:15,520
+Here we are adding a city and you can see these are the two variables that are changing all the time.
+
+168
+00:11:15,960 --> 00:11:22,960
+So we can use to 2D  DP here because of the overlapping sub problems property that I have already discussed
+
+169
+00:11:22,960 --> 00:11:24,490
+with you in the previous lecture.
+
+170
+00:11:25,550 --> 00:11:29,850
+OK, so let's first run this code on try to see.
+
+171
+00:11:29,870 --> 00:11:32,300
+So I think the answer for this problem should be 85.
+
+172
+00:11:32,810 --> 00:11:37,610
+So for this test case. so I can say cout TSP of... what ? 
+
+173
+00:11:39,450 --> 00:11:48,810
+we have distance, we have set of cities.so Initially it is zero zero zero one, which is one. the current city
+
+174
+00:11:48,810 --> 00:11:55,080
+the current city is zero, A is at zero and number of cities we have is four. ok.
+
+175
+00:11:56,590 --> 00:11:58,450
+We are going to build this code.
+
+176
+00:12:00,640 --> 00:12:01,870
+Yeah, there should be comma.
+
+177
+00:12:03,490 --> 00:12:03,850
+OK.
+
+178
+00:12:07,270 --> 00:12:08,350
+So let's run this one.
+
+179
+00:12:08,920 --> 00:12:14,920
+So we are going to run a traveling salesman and you can see the answer is 85.
+
+180
+00:12:15,130 --> 00:12:18,580
+That means it is correct and
+
+181
+00:12:20,600 --> 00:12:25,730
+our code is working fine. ok. so in the next lecture, we will add the DP based logic for the same.
+

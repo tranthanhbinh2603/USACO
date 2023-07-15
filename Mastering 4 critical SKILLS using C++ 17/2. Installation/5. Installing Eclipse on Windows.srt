@@ -1,0 +1,254 @@
+0
+1
+00:00:00,900 --> 00:00:06,840
+In this video, we will learn how to install Eclipse on Windows. Installing Eclipse on Windows is
+1
+
+2
+00:00:06,840 --> 00:00:10,020
+a bit problematic because it involves three steps.
+2
+
+3
+00:00:10,470 --> 00:00:13,100
+This video is about Windows 10.
+3
+
+4
+00:00:13,320 --> 00:00:17,330
+It is very impractical to support all "OSs" and their different versions.
+4
+
+5
+00:00:17,730 --> 00:00:18,860
+Check out the approach here.
+5
+
+6
+00:00:18,870 --> 00:00:21,710
+If it isn't your version or doesn't work, just google your version.
+6
+
+7
+00:00:22,230 --> 00:00:23,760
+Sadly, from OS to another,
+7
+
+8
+00:00:23,970 --> 00:00:27,270
+and even within the same OS setup, you may face different errors.
+8
+
+9
+00:00:27,510 --> 00:00:32,430
+The good news, typically googling for the problem will end up with a solution, especially on 
+9
+
+10
+00:00:32,430 --> 00:00:34,590
+a "StackOverFlow" website.
+10
+
+11
+00:00:35,980 --> 00:00:40,000
+The first step is to install the "Java JDK", just google it.
+11
+
+12
+00:00:40,300 --> 00:00:41,470
+It should be something like that,
+12
+
+13
+00:00:41,470 --> 00:00:45,550
+but Oracle guys change things from time to time, so it should be something like that.
+13
+
+14
+00:00:45,940 --> 00:00:57,040
+You go to their website. You will find that at the bottom you have (X86 for a 32bit) and (X64 for a 64bit).
+14
+
+15
+00:00:57,040 --> 00:00:58,270
+It should be something like that.
+15
+
+16
+00:00:58,480 --> 00:01:02,630
+Be careful, select the one that has ".exe" in its end.
+16
+
+17
+00:01:02,670 --> 00:01:04,600
+Okay, then download and install
+17
+
+18
+00:01:04,610 --> 00:01:05,700
+normally, nothing fancy.
+18
+
+19
+00:01:06,340 --> 00:01:09,730
+The second step and very critical is installing the "MinGW".
+19
+
+20
+00:01:10,090 --> 00:01:13,990
+The "MinGW" exists in two places on the web.
+20
+
+21
+00:01:14,000 --> 00:01:19,990
+Just google "mingw". And one of the best ways is just to go to the "sourceforge" website and just click it,
+21
+
+22
+00:01:20,200 --> 00:01:21,700
+download, and install normally.
+22
+
+23
+00:01:21,700 --> 00:01:26,810
+If it asks you to the path, please provide this path.This one, OK.
+23
+
+24
+00:01:28,210 --> 00:01:29,500
+The
+24
+
+25
+00:01:29,500 --> 00:01:29,880
+third
+25
+
+26
+00:01:29,880 --> 00:01:35,260
+critical step is adding the Windows to , the same path to the "System environment".
+26
+
+27
+00:01:36,100 --> 00:01:43,390
+We mainly need to add 2 paths the "MinGw" path and the "JDK" path.  The "MinGw" path will be like (MinGW\bin).
+27
+
+28
+00:01:43,840 --> 00:01:47,720
+This is a standard step. For the "JDK" it should be something like that.
+28
+
+29
+00:01:47,980 --> 00:01:51,850
+There should be some post-fix here based on your version.
+29
+
+30
+00:01:52,780 --> 00:01:54,970
+This is a standard step to add the System Environment,
+30
+
+31
+00:01:54,970 --> 00:01:57,760
+so check out here your operating system version 
+31
+
+32
+00:01:57,760 --> 00:02:03,040
+if you are in Windows 10. For Windows 10 you write here "env" in the search box,
+32
+
+33
+00:02:03,040 --> 00:02:05,320
+it gives you here, "Edit the system environment variables".
+33
+
+34
+00:02:05,680 --> 00:02:10,330
+You click on the "System Properties", and on "Advanced" then on "Environment Variables",
+34
+
+35
+00:02:10,780 --> 00:02:13,360
+then you see some variables.
+35
+
+36
+00:02:13,540 --> 00:02:17,230
+Click with the one that is "Path". Here in the path,
+36
+
+37
+00:02:17,230 --> 00:02:23,710
+add "New" and write 2 paths, where the "MinGW\bin" path and the "JDK" path.
+37
+
+38
+00:02:24,040 --> 00:02:28,660
+Click OK and save. If you face problems, please
+38
+
+39
+00:02:28,660 --> 00:02:31,150
+double check first that you really added the path here,
+39
+
+40
+00:02:31,270 --> 00:02:33,610
+second, restart your whole machine.
+40
+
+41
+00:02:34,890 --> 00:02:37,900
+The last step is installing the "Eclipse" itself.
+41
+
+42
+00:02:38,200 --> 00:02:40,000
+Just google the "download eclipse IDE".
+42
+
+43
+00:02:40,000 --> 00:02:44,710
+Notice here (C++ CDT) and download
+43
+
+44
+00:02:44,980 --> 00:02:47,350
+the OS version, download the version that is good with your setup.
+44
+
+45
+00:02:47,650 --> 00:02:51,940
+Typically, there is auto-generating one that is nice for you.
+45
+
+46
+00:02:52,840 --> 00:02:56,830
+The second step, just launch the installer and start to follow the steps.
+46
+
+47
+00:02:56,830 --> 00:02:58,180
+Select C++ here.
+47
+
+48
+00:02:58,480 --> 00:03:03,310
+If it asks for certificates, mark all and keep going, then just run the Eclipse.
+48
+
+49
+00:03:03,310 --> 00:03:05,190
+It is going to show you a welcome page like that.
+49
+
+50
+00:03:05,210 --> 00:03:06,690
+Click the 'X', and that is it.
+50
+
+51
+00:03:07,300 --> 00:03:07,750
+Thank you. :)

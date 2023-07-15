@@ -1,0 +1,435 @@
+1
+00:00:01,670 --> 00:00:04,160
+Let's solve brain researcher homework, No.
+
+2
+00:00:04,520 --> 00:00:04,850
+Two.
+
+3
+00:00:06,160 --> 00:00:12,970
+In the first task here, we would like to compute the smallest given threshold, as you see, we started
+
+4
+00:00:12,970 --> 00:00:17,140
+to work on functions and now not just the normal array.
+
+5
+00:00:17,470 --> 00:00:23,650
+So the first step always will be one or two minutes to verify that your function is monotonic, increasing
+
+6
+00:00:23,650 --> 00:00:26,710
+or decreasing strictly or not, but it must be monotonic function.
+
+7
+00:00:27,220 --> 00:00:28,570
+So this is the first thing here.
+
+8
+00:00:28,930 --> 00:00:30,370
+What is the target of the problem?
+
+9
+00:00:30,850 --> 00:00:32,750
+The target of the problem is the dividers.
+
+10
+00:00:32,800 --> 00:00:34,810
+So the first idea that you should think about it?
+
+11
+00:00:35,110 --> 00:00:37,750
+Let's say we have divisor the.
+
+12
+00:00:38,680 --> 00:00:43,630
+Air Force is telling us if it is valid or not, but it's very based on what?
+
+13
+00:00:43,870 --> 00:00:44,950
+Based on the submission.
+
+14
+00:00:45,190 --> 00:00:52,210
+So we have our if one which make the submission mainly and we use this to check the possible function.
+
+15
+00:00:52,960 --> 00:00:56,020
+Now let's think about about this submission function here.
+
+16
+00:00:57,450 --> 00:01:04,420
+Assume you tried some divisor and made the sealing submission, and let's say we get four foot four
+
+17
+00:01:04,530 --> 00:01:06,360
+divisor, the submission is.
+
+18
+00:01:07,790 --> 00:01:09,770
+What is the result of this plus one?
+
+19
+00:01:10,880 --> 00:01:15,170
+Is it random or increasing or decreasing when you have a bigger?
+
+20
+00:01:16,650 --> 00:01:19,230
+Divisor, the submission must decrease.
+
+21
+00:01:20,310 --> 00:01:23,400
+So it's a two year must be smaller than or equal to IS two one.
+
+22
+00:01:24,240 --> 00:01:29,370
+OK, D-plus two, it must generate a smaller value then is it all?
+
+23
+00:01:29,370 --> 00:01:30,270
+Is there equal to it?
+
+24
+00:01:30,510 --> 00:01:33,090
+So this means we have a metric decrease in function.
+
+25
+00:01:34,510 --> 00:01:36,520
+Again, the logic is as follows.
+
+26
+00:01:37,090 --> 00:01:38,350
+What does this function?
+
+27
+00:01:38,350 --> 00:01:43,810
+Does this problem search for it, search for a device, then tell yourself, can we buy in the research
+
+28
+00:01:43,810 --> 00:01:44,620
+on the devices?
+
+29
+00:01:45,310 --> 00:01:45,730
+OK.
+
+30
+00:01:45,760 --> 00:01:47,500
+To do that, we need to verify.
+
+31
+00:01:47,830 --> 00:01:48,940
+We need to make submission.
+
+32
+00:01:49,180 --> 00:01:50,440
+And we need to check possible.
+
+33
+00:01:50,710 --> 00:01:53,560
+We need to know if the possible function is mutagenic or not.
+
+34
+00:01:53,890 --> 00:01:56,230
+The possible function depends on the submission function.
+
+35
+00:01:56,590 --> 00:02:02,230
+And with every increase in the days in the devices that the submission is decreasing.
+
+36
+00:02:02,470 --> 00:02:03,790
+This is montoyo function.
+
+37
+00:02:04,060 --> 00:02:06,400
+So now we've verified it in a couple of minutes.
+
+38
+00:02:06,850 --> 00:02:07,450
+So the idea?
+
+39
+00:02:07,450 --> 00:02:10,840
+Let's just buy the research on the on the results.
+
+40
+00:02:11,230 --> 00:02:12,290
+So here we go.
+
+41
+00:02:12,310 --> 00:02:15,370
+First of all, let's make our submission function, the submission function.
+
+42
+00:02:15,370 --> 00:02:21,010
+Take the NUM's and the divisor iterate on every number and it should do.
+
+43
+00:02:21,010 --> 00:02:26,260
+The division was saying you can do the sitting in when amazed, like in C++, you can compute the seal
+
+44
+00:02:26,650 --> 00:02:33,610
+of a over B and then add here a small epsilon for any errors and then cost to integer.
+
+45
+00:02:33,640 --> 00:02:38,410
+This is one way, but there is a smarter way to do the ceiling, which you keep everything in integers
+
+46
+00:02:38,770 --> 00:02:41,500
+as following you would like to divide it over B.
+
+47
+00:02:42,510 --> 00:02:44,160
+Let's let's give an example.
+
+48
+00:02:44,460 --> 00:02:52,690
+Let's say you would like to divide the 16 and let's say who would like to do that over overfull now
+
+49
+00:02:52,890 --> 00:02:54,480
+16 over four is four perfect.
+
+50
+00:02:55,020 --> 00:02:56,640
+16 17.
+
+51
+00:02:58,300 --> 00:03:02,560
+Overfull is for something, this should be five.
+
+52
+00:03:02,580 --> 00:03:04,930
+How to make this five as easy as possible.
+
+53
+00:03:05,200 --> 00:03:06,430
+There are also two ways.
+
+54
+00:03:06,730 --> 00:03:11,120
+One way is you do the integer division, so 17 over four is four.
+
+55
+00:03:11,410 --> 00:03:13,480
+And the chick with the modernists is 17.
+
+56
+00:03:13,480 --> 00:03:15,220
+Modulus four equals zero.
+
+57
+00:03:15,220 --> 00:03:17,860
+If yes, then incrementally models answer.
+
+58
+00:03:17,980 --> 00:03:19,690
+But this is also a nice idea.
+
+59
+00:03:20,200 --> 00:03:22,240
+Let's make it way smarter than that.
+
+60
+00:03:28,110 --> 00:03:32,040
+What happened if you added for the 17 four minus one?
+
+61
+00:03:33,670 --> 00:03:39,430
+The idea is this following was every four values from here, when we divide them by four, we get extra
+
+62
+00:03:39,430 --> 00:03:45,430
+one when you try 17 17 plus four is 21, minus one is.
+
+63
+00:03:47,000 --> 00:03:48,920
+Twenty over four is fight.
+
+64
+00:03:50,100 --> 00:03:55,800
+So the moral of that is we're minus one is just one less value than here.
+
+65
+00:03:56,190 --> 00:04:02,380
+So if the mother is from 17 has at least one extra value, it will push this one to be one.
+
+66
+00:04:02,400 --> 00:04:04,110
+I hope it's clear for you, though.
+
+67
+00:04:04,200 --> 00:04:07,980
+OK, what about 16, which is already perfect if you added four minus one?
+
+68
+00:04:08,640 --> 00:04:15,570
+And here's four 16 over food is already the model is zero and complete, so four minus one over four
+
+69
+00:04:15,810 --> 00:04:16,620
+is just zero.
+
+70
+00:04:17,160 --> 00:04:19,980
+So the model of that is if you don't get it just right more.
+
+71
+00:04:20,340 --> 00:04:26,490
+If you would like to complete the of and be in integer domain, you just say A-plus B minus one over
+
+72
+00:04:26,490 --> 00:04:26,720
+B.
+
+73
+00:04:26,730 --> 00:04:30,130
+This is a seed in the integral domain and it is a smart trick.
+
+74
+00:04:30,150 --> 00:04:33,180
+So keep in mind, let's go back to our problem.
+
+75
+00:04:35,310 --> 00:04:40,050
+If you are puzzled with this line of equation, as I told you several ways to the seed, so just don't
+
+76
+00:04:40,050 --> 00:04:40,980
+confuse yourself with that.
+
+77
+00:04:41,280 --> 00:04:42,510
+We iterate on the rate.
+
+78
+00:04:42,720 --> 00:04:48,030
+We do the division by the number, but we keep it in the seed and this is the sum function and this
+
+79
+00:04:48,030 --> 00:04:50,160
+function is maintaining decreasing.
+
+80
+00:04:51,030 --> 00:04:55,110
+So now we would like their smallest possible variable.
+
+81
+00:04:56,110 --> 00:05:01,840
+So let's say that we were, first of all, what is the range of the values that we can try?
+
+82
+00:05:02,170 --> 00:05:05,240
+The minimum is one, the first, the smallest device that is one.
+
+83
+00:05:05,620 --> 00:05:10,340
+What is the average device or the largest device, which is the largest value in the race, the maximum
+
+84
+00:05:10,340 --> 00:05:12,220
+in the array in C++?
+
+85
+00:05:12,220 --> 00:05:17,860
+We can give the maximum with this equation in an easy way, so extra element would return to that maximum
+
+86
+00:05:17,860 --> 00:05:18,910
+value in the given array.
+
+87
+00:05:20,380 --> 00:05:22,570
+But the array must have at least regulated single value.
+
+88
+00:05:23,940 --> 00:05:31,440
+So now this is the start and the end result is want and end is the maximum because it doesn't make sense
+
+89
+00:05:31,440 --> 00:05:32,490
+to compute answers.
+
+90
+00:05:32,790 --> 00:05:36,930
+The voters want the maximum because the writing about all the maximum will just convert all of it once
+
+91
+00:05:37,000 --> 00:05:38,280
+you need more to good at that.
+
+92
+00:05:38,490 --> 00:05:41,610
+So this is a first a question, and you should always ask yourself about that.
+
+93
+00:05:41,790 --> 00:05:43,260
+What is the state and in the values?
+
+94
+00:05:43,410 --> 00:05:44,880
+Usually it is just little thinking.
+
+95
+00:05:46,200 --> 00:05:48,750
+Now the second, the question is.
+
+96
+00:05:51,390 --> 00:05:55,290
+I would like to do the search, so this condition is normal.
+
+97
+00:05:55,410 --> 00:05:56,400
+This one is normal.
+
+98
+00:05:56,850 --> 00:06:03,330
+I would like to find the smallest divisor, so let's say this is very divisor, this is very divisor,
+
+99
+00:06:03,330 --> 00:06:04,290
+this is very divisor.
+
+100
+00:06:04,290 --> 00:06:05,160
+This is very divisor.
+
+101
+00:06:05,550 --> 00:06:07,230
+I will take the smallest one.
+
+102
+00:06:07,500 --> 00:06:10,260
+This could should be look like the first occurrence of an element.
+
+103
+00:06:10,260 --> 00:06:12,330
+We need the first one, the first valid one.
+
+104
+00:06:12,840 --> 00:06:18,360
+So we are going to mix the condition for the small with the condition less so.
+
+105
+00:06:18,360 --> 00:06:23,820
+This here is mixing for the smallest and that the equality together.
+
+106
+00:06:24,300 --> 00:06:30,510
+So we say here, if the submission is less than or equal the threshold, it is a valid submission.
+
+107
+00:06:31,080 --> 00:06:35,610
+Please save this divisor for us, but we are searching for a smaller divisor.
+
+108
+00:06:35,760 --> 00:06:37,560
+So let's move to the left part.
+
+109
+00:06:37,830 --> 00:06:40,470
+I hope the overall good is clear for you.

@@ -1,0 +1,64 @@
+0
+1
+00:00:00,870 --> 00:00:02,020
+In the problem here.
+1
+
+2
+00:00:02,040 --> 00:00:08,940
+We would like to get the forth digit from the back, which should have a very similar solution to
+2
+
+3
+00:00:08,940 --> 00:00:09,540
+the last one.
+3
+
+4
+00:00:10,440 --> 00:00:14,100
+Remember, if we kept dividing by 10, we are removing digits.
+4
+
+5
+00:00:14,250 --> 00:00:19,540
+So dividing by 1000 is actually removing the last three digits at one
+5
+
+6
+00:00:19,680 --> 00:00:20,350
+One step.
+6
+
+7
+00:00:20,880 --> 00:00:25,740
+Now, if you took a modulus one for the remaining of this division, then you get the
+7
+
+8
+00:00:25,740 --> 00:00:26,030
+fourth number.
+8
+
+9
+00:00:26,100 --> 00:00:27,780
+Observer here,
+9
+
+10
+00:00:27,780 --> 00:00:32,070
+I am having parenthesis here to give priority to the division first.
+10
+
+11
+00:00:32,640 --> 00:00:35,070
+What if the number is less than three digits?
+11
+
+12
+00:00:35,520 --> 00:00:41,610
+Then dividing it by ten will make it zero, zero modulus ten would be again zero.
+12
+
+13
+00:00:41,910 --> 00:00:44,940
+So, it's safe to use this approach. That's all.

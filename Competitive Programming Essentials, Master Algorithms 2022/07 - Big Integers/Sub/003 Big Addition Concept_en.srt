@@ -1,0 +1,540 @@
+1
+00:00:01,550 --> 00:00:05,420
+Hi Everyone, so let us build our first algorithm involving big integers.
+
+2
+00:00:05,780 --> 00:00:11,750
+So The problem that we are going to solve is larger addition that we are given to large numbers and we
+
+3
+00:00:11,750 --> 00:00:13,250
+need to add them.
+
+4
+00:00:13,850 --> 00:00:15,200
+So this is what we need to do.
+
+5
+00:00:15,680 --> 00:00:22,370
+So given to large numbers, the numbers may not fit into long long int hence the task is to add
+
+6
+00:00:22,550 --> 00:00:23,600
+these numbers OK.
+
+7
+00:00:23,900 --> 00:00:29,630
+So that means we cannot say. OK, we take input and we will just output the number A+B.
+
+8
+00:00:29,810 --> 00:00:30,060
+OK.
+
+9
+00:00:30,080 --> 00:00:35,900
+This will not work because the numbers are very large and they are not going to fit inside long long int.
+
+10
+00:00:35,900 --> 00:00:36,410
+OK.
+
+11
+00:00:36,800 --> 00:00:44,930
+So maybe one option to take input these numbers as strings and we can write an algorithm that adds
+
+12
+00:00:45,350 --> 00:00:49,430
+two large strings and those strings must be treated as numbers.
+
+13
+00:00:49,910 --> 00:00:51,680
+So let us look at one example.
+
+14
+00:00:52,010 --> 00:00:57,920
+So let's say we have a number one which is I'm going to take it as a small number. let's say N1,
+
+15
+00:00:58,400 --> 00:01:04,459
+which is let's say 938. OK. because the algorithm will also work for small numbers. OK?
+
+16
+00:01:04,730 --> 00:01:06,740
+And let's say N2 is 65.
+
+17
+00:01:07,230 --> 00:01:14,660
+So let us see how do we do this addition on pen and paper and how we can convert this into a very simple
+
+18
+00:01:14,690 --> 00:01:15,740
+addition algorithm.
+
+19
+00:01:16,220 --> 00:01:22,580
+So we have 938. OK. and we have 65 and this is how you do an addition.
+
+20
+00:01:22,590 --> 00:01:26,090
+So you say 8 and five 13. one carry.
+
+21
+00:01:26,540 --> 00:01:30,650
+This becomes ten. one carry. nine and one is also 10.
+
+22
+00:01:30,650 --> 00:01:33,650
+so you put zero here and one comes here.
+
+23
+00:01:33,650 --> 00:01:37,730
+ok. so what you can see is when you're doing additions. OK?
+
+24
+00:01:38,330 --> 00:01:47,000
+If you treat this thing kind of array. OK. if this thing is a array and if this thing is also array then
+
+25
+00:01:47,000 --> 00:01:49,610
+it may happen that you have carry. ok. 
+
+26
+00:01:49,640 --> 00:01:50,330
+you have a carry.
+
+27
+00:01:51,500 --> 00:01:54,820
+And this final result may expand on the left.
+
+28
+00:01:54,830 --> 00:02:02,150
+OK. but in array we know that if if this index is zero. OK. if this is zero, this is one.
+
+29
+00:02:02,150 --> 00:02:05,350
+this is two or if this is zero, this is one, this is two. 
+
+30
+00:02:05,720 --> 00:02:11,570
+You cannot expand on the left side of this particular array. ok so what we can do is what we may have
+
+31
+00:02:11,580 --> 00:02:14,270
+a array which may have a lot of space on the right.
+
+32
+00:02:14,690 --> 00:02:14,960
+OK.
+
+33
+00:02:15,260 --> 00:02:20,510
+So when we're filling this array, we're filling in the left or right fashion and we don't know how much
+
+34
+00:02:20,960 --> 00:02:21,890
+space we would need.
+
+35
+00:02:22,430 --> 00:02:25,820
+So we we generally fill the array in the left to right fashion.
+
+36
+00:02:25,850 --> 00:02:32,360
+So what you can do is, if you want to build this addition algorithm on an array and you want to do the
+
+37
+00:02:32,360 --> 00:02:38,240
+filling from left to right. OK. because this digit may not fit inside the output array. what you can
+
+38
+00:02:38,240 --> 00:02:45,320
+do is, you can actually reverse these two numbers and then you can start addition from left to right.
+
+39
+00:02:45,320 --> 00:02:45,440
+OK?
+
+40
+00:02:46,430 --> 00:02:48,740
+So one thing we can do is, we can fix.
+
+41
+00:02:48,780 --> 00:02:53,210
+OK. one of the numbers is 938, so will reverse it.
+
+42
+00:02:54,080 --> 00:02:56,630
+So we will say. OK. we have.
+
+43
+00:02:58,850 --> 00:03:01,610
+What? we have what? we have 65.
+
+44
+00:03:01,910 --> 00:03:03,560
+So we reverse it.
+
+45
+00:03:03,830 --> 00:03:08,660
+It is written like this 56 and we have nine three eight.
+
+46
+00:03:09,500 --> 00:03:11,540
+So again, we are going to reverse it.
+
+47
+00:03:12,060 --> 00:03:16,310
+It is going to be eight, three and nine.
+
+48
+00:03:16,340 --> 00:03:16,820
+OK.
+
+49
+00:03:17,000 --> 00:03:18,650
+So this is your array one.
+
+50
+00:03:20,850 --> 00:03:21,120
+OK.
+
+51
+00:03:21,720 --> 00:03:23,370
+And this is your array two.
+
+52
+00:03:24,430 --> 00:03:27,510
+And maybe your output array is is a little bigger array.
+
+53
+00:03:28,120 --> 00:03:30,970
+And you have reserved little more space in that.
+
+54
+00:03:31,420 --> 00:03:31,720
+OK.
+
+55
+00:03:32,350 --> 00:03:34,290
+So this is array1.
+
+56
+00:03:34,300 --> 00:03:35,680
+This is your output array.
+
+57
+00:03:36,520 --> 00:03:37,840
+so What you can do is,
+
+58
+00:03:39,470 --> 00:03:44,900
+Let me just tell you. you can start adding from left to right.
+
+59
+00:03:46,070 --> 00:03:47,010
+In a similar manner.
+
+60
+00:03:47,100 --> 00:03:52,550
+OK. so you can say OK, let us go to the zeroth index and add the two numbers.
+
+61
+00:03:52,850 --> 00:03:53,960
+So we are at zero.
+
+62
+00:03:54,500 --> 00:03:56,090
+It becomes eight plus five.
+
+63
+00:03:56,300 --> 00:03:57,410
+The sum is 13.
+
+64
+00:03:57,920 --> 00:04:01,380
+What we do? we put sum mode
+
+65
+00:04:01,410 --> 00:04:01,790
+10.
+
+66
+00:04:01,820 --> 00:04:09,370
+We just want to put the digit that is sum mode ten here. ok. sum modules 10.
+
+67
+00:04:09,380 --> 00:04:11,720
+so three will be stored here.
+
+68
+00:04:12,170 --> 00:04:17,320
+ok. and this would be copied in the array of I. ok. so instead of writing digit.
+
+69
+00:04:17,329 --> 00:04:23,660
+I can say in the output of I, just put this value and for the next position generate a carry.
+
+70
+00:04:23,660 --> 00:04:29,300
+OK, by default the carry is zero. for the next position the carry is going to be 
+
+71
+00:04:29,300 --> 00:04:29,550
+What?
+
+72
+00:04:30,790 --> 00:04:33,190
+sum by ten. ok. sum by ten.
+
+73
+00:04:34,520 --> 00:04:36,860
+So 13 by 10, the carry is what?
+
+74
+00:04:38,700 --> 00:04:44,570
+This is going to be carry. ok. so carry is what? carry is equal to sum by 10.
+
+75
+00:04:45,000 --> 00:04:48,580
+so carry is sum by 10.
+
+76
+00:04:49,560 --> 00:04:55,020
+That means you are going to add one here so at this point, what you're going to do? you're going
+
+77
+00:04:55,020 --> 00:05:03,900
+to add the Ith number, Ith digit from N1, the number one and the Ith digit from number two.
+
+78
+00:05:04,110 --> 00:05:06,780
+And the carry, so it becomes six plus three
+
+79
+00:05:08,130 --> 00:05:09,900
+plus one which is ten.
+
+80
+00:05:10,020 --> 00:05:10,350
+OK.
+
+81
+00:05:11,050 --> 00:05:18,210
+Again. now you have the sum as 10. you put zero here and you put one as the carry. OK.
+
+82
+00:05:18,390 --> 00:05:22,710
+sum divided by 10. so one will go as a carry for the next position.
+
+83
+00:05:23,760 --> 00:05:27,240
+This position, what you can see is that the number N1
+
+84
+00:05:27,240 --> 00:05:28,230
+is finished.
+
+85
+00:05:28,380 --> 00:05:29,910
+We don't have anything from here.
+
+86
+00:05:30,390 --> 00:05:33,720
+The number N2 still has the number of digits.
+
+87
+00:05:34,080 --> 00:05:38,440
+So what we will do ? we will just add carry and the digits from two.
+
+88
+00:05:38,550 --> 00:05:41,280
+So that means we'll add nine plus one that is 10.
+
+89
+00:05:41,680 --> 00:05:48,550
+Again, the the sum is ten. we will put what? will put zero here and we will make...
+
+90
+00:05:48,570 --> 00:05:49,640
+We'll make forward
+
+91
+00:05:49,650 --> 00:05:50,810
+carry has one.
+
+92
+00:05:51,240 --> 00:05:56,810
+So at this point, the number N2 is also finished and the number N1 is also finished and we can
+
+93
+00:05:56,820 --> 00:05:59,830
+check if the carry has some value.
+
+94
+00:05:59,850 --> 00:06:05,740
+So the carry can be either zero or it can be one because when you are going to add three digits.
+
+95
+00:06:05,760 --> 00:06:12,120
+OK, so the largest number it could be nine plus nine plus one. ok the largest digit can be nine.
+
+96
+00:06:12,540 --> 00:06:14,010
+the largest digit can be nine.
+
+97
+00:06:14,340 --> 00:06:16,020
+And the largest carry would be one.
+
+98
+00:06:16,080 --> 00:06:23,160
+OK. so if this carry is one then what you're going to do? you're going to put a one here and this
+
+99
+00:06:23,160 --> 00:06:25,620
+is what is going to happen in your output array.
+
+100
+00:06:26,010 --> 00:06:28,350
+And finally, you're going to reverse.
+
+101
+00:06:29,630 --> 00:06:31,340
+You are going to reverse this result.
+
+102
+00:06:31,610 --> 00:06:31,910
+OK.
+
+103
+00:06:32,360 --> 00:06:37,470
+And in order to get the final answer you will reverse it and the final answer would be one zero zero.
+
+104
+00:06:39,470 --> 00:06:43,790
+This is the very simple addition algorithm that we are going to see. Now
+
+105
+00:06:43,910 --> 00:06:48,140
+one thing that may happen is, there are three special cases.
+
+106
+00:06:48,530 --> 00:06:53,570
+So first cases when the number N1 is finished. OK?
+
+107
+00:06:54,140 --> 00:06:57,140
+The case one, when N1 is finished
+
+108
+00:06:57,740 --> 00:07:00,170
+we will not add digits from N1.
+
+109
+00:07:00,240 --> 00:07:03,950
+case 2 is when N2 is also finished.
+
+110
+00:07:05,240 --> 00:07:08,570
+We will handle the case of carry separately.
+
+111
+00:07:08,780 --> 00:07:09,080
+OK.
+
+112
+00:07:09,650 --> 00:07:12,120
+These are the two cases that we need to see.
+
+113
+00:07:12,140 --> 00:07:12,470
+OK.
+
+114
+00:07:12,860 --> 00:07:14,980
+And case three is when N2 is finished.
+
+115
+00:07:15,420 --> 00:07:18,320
+We just need to look at what is the value of carry.
+
+116
+00:07:19,420 --> 00:07:26,550
+Now it may happen is, sometimes you might get a number like 56 and one three eight zero or
+
+117
+00:07:26,690 --> 00:07:30,370
+maybe you may get one three eight zero followed by 56.OK.
+
+118
+00:07:31,340 --> 00:07:38,240
+In order to just make our work easier, we will assume that the second number is always the largest.
+
+119
+00:07:38,240 --> 00:07:45,170
+OK. that means if you have two numbers A and B. you will always make sure the second number is largest.
+
+120
+00:07:46,490 --> 00:07:56,270
+This will actually help us in building the algorithm and not looking at the case when you have second
+
+121
+00:07:56,270 --> 00:07:57,400
+number as a smaller number.
+
+122
+00:07:57,580 --> 00:07:59,900
+ok So this is a case you can swap them.
+
+123
+00:07:59,910 --> 00:08:02,060
+You can just swap the numbers.
+
+124
+00:08:02,060 --> 00:08:08,870
+OK. so if it is A comma B, you make it B comma A. OK. this will we will see while writing the code
+
+125
+00:08:08,960 --> 00:08:15,440
+that, it is going to be helpful because we do not need to put the conditions on both the numbers.
+
+126
+00:08:15,440 --> 00:08:19,430
+OK, so just to simplify the algorithm, we will do a swapping.
+
+127
+00:08:19,430 --> 00:08:26,740
+If number two is smaller than number one. we will make sure that the larger number is always coming to the bottom.
+
+128
+00:08:26,780 --> 00:08:27,140
+OK?
+
+129
+00:08:28,590 --> 00:08:33,720
+So that we can look at ok. when this number is finished, we can only work with this number.
+
+130
+00:08:33,750 --> 00:08:34,049
+OK.
+
+131
+00:08:34,830 --> 00:08:41,460
+So this is the idea of swapping the two numbers so that the largest number is at the bottom
+
+132
+00:08:41,789 --> 00:08:43,870
+or you can keep at the top as well.
+
+133
+00:08:43,870 --> 00:08:46,260
+ok that's also perfectly fine.
+
+134
+00:08:46,620 --> 00:08:50,610
+So I hope you got an idea about the algorithm.
+
+135
+00:08:50,610 --> 00:08:54,150
+In the next video, we will see the implementation of addition.
+

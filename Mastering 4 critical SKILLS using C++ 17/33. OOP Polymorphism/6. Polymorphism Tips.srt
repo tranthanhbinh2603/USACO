@@ -1,0 +1,204 @@
+0
+1
+00:00:01,000 --> 00:00:07,710
+In this session, I want to highlight some generic motivate your code to could like safer code. The first
+1
+
+2
+00:00:07,710 --> 00:00:12,990
+thing is the override Keyword. Let's say you have a function integer area. You didn't put in
+2
+
+3
+00:00:12,990 --> 00:00:14,700
+the class here override
+3
+
+4
+00:00:14,880 --> 00:00:21,690
+so you probably mean that you don't want others to override it because you didn't put virtual
+4
+
+5
+00:00:21,690 --> 00:00:21,950
+here.
+5
+
+6
+00:00:22,200 --> 00:00:24,810
+So a better tip is you put the word final.
+6
+
+7
+00:00:25,080 --> 00:00:29,270
+When you put the word final after the function, it means no one can override it.
+7
+
+8
+00:00:29,550 --> 00:00:32,640
+So say class square is extending from a rectangle.
+8
+
+9
+00:00:32,820 --> 00:00:34,940
+It cannot now override the function area.
+9
+
+10
+00:00:35,250 --> 00:00:40,610
+So if you are going to provide it with a virtual, and you know that this isn't going to be virtual, so
+10
+
+11
+00:00:40,620 --> 00:00:45,630
+no one is going to inherit it, provide with final so that you can directly prevent
+11
+
+12
+00:00:45,630 --> 00:00:47,580
+others from failing in this mistake.
+12
+
+13
+00:00:49,890 --> 00:00:55,920
+If you are overriding a method also, right for yourself, here, the word override.
+13
+
+14
+00:00:55,950 --> 00:00:59,460
+OK, so the compiler when see the word override,
+14
+
+15
+00:00:59,460 --> 00:01:05,040
+he understands that there should be a parent  class with the same function so that you can override
+15
+
+16
+00:01:05,040 --> 00:01:05,220
+it.
+16
+
+17
+00:01:05,430 --> 00:01:10,290
+But here the function perimeter doesn't exist in the shape class, so you are not actually overriding
+17
+
+18
+00:01:10,290 --> 00:01:10,620
+it,
+18
+
+19
+00:01:10,620 --> 00:01:12,530
+there is no parent class to override it.
+19
+
+20
+00:01:12,720 --> 00:01:20,250
+So this also, again, another compiler error that helps you. Remember, if you have a virtual function,
+20
+
+21
+00:01:20,250 --> 00:01:21,630
+provide virtual destructor,
+21
+
+22
+00:01:21,840 --> 00:01:24,310
+otherwise you may fail in a memory leak.
+22
+
+23
+00:01:26,010 --> 00:01:31,380
+If a function is virtual from some base class, also provide it with virtual keyword like we know here,
+23
+
+24
+00:01:31,680 --> 00:01:35,400
+the integer area is a virtual function, even if we didn't put the virtual word,
+24
+
+25
+00:01:35,700 --> 00:01:40,130
+but the virtual would be like very triggering for others that this is a virtual function
+25
+
+26
+00:01:40,380 --> 00:01:43,200
+so this is like a good coding practice.
+26
+
+27
+00:01:45,060 --> 00:01:48,200
+One of the potential mistakes is as following:
+27
+
+28
+00:01:48,720 --> 00:01:51,430
+This is a parent class that has parameter X
+28
+
+29
+00:01:51,450 --> 00:01:57,210
+with a default argument of 1. This is another class overriding this function with a default argument
+29
+
+30
+00:01:57,210 --> 00:01:57,600
+of 2.
+30
+
+31
+00:01:58,080 --> 00:02:03,870
+If you are creating an object of Type B, you are thinking that it will have an initial value of 2.
+31
+
+32
+00:02:04,320 --> 00:02:11,250
+Surprisingly, it will always have the parent class of 1, so never override function with some
+32
+
+33
+00:02:11,250 --> 00:02:12,240
+default parameters,
+33
+
+34
+00:02:12,480 --> 00:02:15,880
+they will not be called, only the parent default parameters will be called.
+34
+
+35
+00:02:15,930 --> 00:02:17,040
+So be careful from that.
+35
+
+36
+00:02:18,490 --> 00:02:27,940
+Also, if a function isn't a virtual function, don't override it,  although it
+36
+
+37
+00:02:27,940 --> 00:02:33,790
+would be good with normal objects, but in practice, people will tend to use things with pointers.
+37
+
+38
+00:02:34,090 --> 00:02:39,070
+So they would expect a polymorphism behavior, but it will not be a polymorphism behavior because it
+38
+
+39
+00:02:39,070 --> 00:02:40,200
+isn't a virtual function.
+39
+
+40
+00:02:40,510 --> 00:02:43,510
+If you see a function isn't virtual, do not override it.
+40
+
+41
+00:02:43,540 --> 00:02:45,160
+OK, that's it.

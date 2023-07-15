@@ -1,0 +1,756 @@
+1
+00:00:00,780 --> 00:00:02,280
+Hey, welcome everyone.
+
+2
+00:00:02,460 --> 00:00:02,910
+And.
+
+3
+00:00:04,740 --> 00:00:10,650
+In this part, what we'll do is we'll try and code this problem that we discussed and we discussed it
+
+4
+00:00:10,650 --> 00:00:12,180
+for the first three frames.
+
+5
+00:00:12,510 --> 00:00:12,930
+And.
+
+6
+00:00:14,920 --> 00:00:21,620
+508 as a number, and but now what we'll do is we'll try and call this problem for them, and we sure
+
+7
+00:00:21,640 --> 00:00:22,330
+will fill out.
+
+8
+00:00:22,780 --> 00:00:23,800
+And let's call it.
+
+9
+00:00:24,460 --> 00:00:26,320
+OK, let's take this as an important.
+
+10
+00:00:27,220 --> 00:00:27,470
+Eight.
+
+11
+00:00:27,820 --> 00:00:31,210
+And let's take the first and prime numbers.
+
+12
+00:00:33,660 --> 00:00:33,930
+Eight.
+
+13
+00:00:35,200 --> 00:00:40,000
+I'm just taking them and then we'll discuss how do we call this out, how do we make individual elements
+
+14
+00:00:40,000 --> 00:00:42,240
+out of them and take their seems right?
+
+15
+00:00:42,400 --> 00:00:46,900
+So it's not necessarily the daily claims you can pick any of those numbers, right?
+
+16
+00:00:47,230 --> 00:00:53,980
+But do remember when you're considering their Elysium's, then you will have to divide by their new
+
+17
+00:00:53,990 --> 00:00:54,430
+series.
+
+18
+00:00:54,940 --> 00:00:56,860
+OK, so just remember this part.
+
+19
+00:00:57,460 --> 00:00:59,800
+I'm just taking planes, so they're in a team.
+
+20
+00:00:59,800 --> 00:01:03,820
+I just multiply all of them and not divide anything in their.
+
+21
+00:01:05,340 --> 00:01:07,350
+You know, communities will find the ultimate.
+
+22
+00:01:07,650 --> 00:01:11,190
+One of the first frames are two three five seven.
+
+23
+00:01:12,300 --> 00:01:12,900
+Eleven.
+
+24
+00:01:14,850 --> 00:01:15,420
+Thirteen.
+
+25
+00:01:16,550 --> 00:01:16,750
+There.
+
+26
+00:01:18,400 --> 00:01:23,020
+I don't know, my calculations have become very big after I completed my bachelors.
+
+27
+00:01:23,650 --> 00:01:25,130
+It was good.
+
+28
+00:01:25,150 --> 00:01:26,920
+Does everything right so.
+
+29
+00:01:27,960 --> 00:01:29,580
+I've stopped using mine.
+
+30
+00:01:30,150 --> 00:01:30,420
+Yeah.
+
+31
+00:01:31,020 --> 00:01:31,950
+These are the primes.
+
+32
+00:01:32,490 --> 00:01:35,460
+The first eight frames made.
+
+33
+00:01:35,580 --> 00:01:37,350
+So we want to take 10.
+
+34
+00:01:37,350 --> 00:01:41,610
+Let's take 10 or 23 is a prime number, according to me.
+
+35
+00:01:42,150 --> 00:01:44,130
+And 29 is a premium, but then eight.
+
+36
+00:01:47,830 --> 00:01:52,660
+So what I need to do is I have to make all types of sex now, right?
+
+37
+00:01:52,840 --> 00:01:54,880
+So how do I make all types of sex?
+
+38
+00:01:55,240 --> 00:01:58,170
+We have already gone through the manipulation section.
+
+39
+00:01:58,510 --> 00:02:02,630
+If not, there's a big manipulation section in this code.
+
+40
+00:02:03,160 --> 00:02:04,030
+You can go through it.
+
+41
+00:02:04,720 --> 00:02:06,400
+So how do I make all this sets?
+
+42
+00:02:06,550 --> 00:02:11,020
+Let's say I have three numbers A, B and C, and I want to make all possible sets of these three.
+
+43
+00:02:11,480 --> 00:02:12,610
+Then what do I do?
+
+44
+00:02:12,640 --> 00:02:12,970
+Just.
+
+45
+00:02:14,020 --> 00:02:17,950
+Quickly going through it said zero means not including anyone.
+
+46
+00:02:18,100 --> 00:02:20,760
+OK, let's write binary of zero eight.
+
+47
+00:02:21,110 --> 00:02:26,080
+So I have three elements that means I'll start from zero and go to the two to the bar with three, minus
+
+48
+00:02:26,080 --> 00:02:26,560
+four and eight.
+
+49
+00:02:26,830 --> 00:02:29,820
+How many elements are there from zero to seven included?
+
+50
+00:02:30,070 --> 00:02:31,350
+We have to delete elements.
+
+51
+00:02:31,460 --> 00:02:37,810
+Eight These eight elements that actually the number of sets we can make from A B and C I have zero one
+
+52
+00:02:37,810 --> 00:02:44,800
+two three four five six seven eight nine the binary zero zero zero.
+
+53
+00:02:44,860 --> 00:02:45,940
+This is one's binary.
+
+54
+00:02:46,690 --> 00:02:47,530
+It was binary.
+
+55
+00:02:48,800 --> 00:02:50,510
+These binary or.
+
+56
+00:02:51,480 --> 00:02:51,960
+Five.
+
+57
+00:02:53,480 --> 00:02:54,920
+Six and seven eight.
+
+58
+00:02:55,160 --> 00:03:01,430
+That means at the time when we have one will simply consider that eliminate the Indy rules by Indy,
+
+59
+00:03:01,430 --> 00:03:03,560
+there is no one that means it's an empty suit.
+
+60
+00:03:04,430 --> 00:03:07,700
+Here we can't see to see here we consider be here.
+
+61
+00:03:07,700 --> 00:03:13,970
+We consider B and C because B and C rate B and C are we are getting this.
+
+62
+00:03:14,450 --> 00:03:20,360
+So now here we consider e who we consider AC, a b and a B and C.
+
+63
+00:03:20,360 --> 00:03:28,880
+So here you can see I was able to derive all these sets using some bit manipulation.
+
+64
+00:03:29,570 --> 00:03:35,150
+If I just iterate from zero to two to the power and minus one, then I'll have to roll to the debout
+
+65
+00:03:35,150 --> 00:03:36,380
+end numbers later.
+
+66
+00:03:36,470 --> 00:03:39,200
+How many total sets we have to retrieve our end sets?
+
+67
+00:03:39,590 --> 00:03:43,220
+All those numbers can help us generate all these sets.
+
+68
+00:03:44,410 --> 00:03:46,240
+In theory of an element.
+
+69
+00:03:47,110 --> 00:03:50,950
+So this is what is already described to you and just quickly revising it.
+
+70
+00:03:52,760 --> 00:03:56,270
+They will generate all sorts of these fame numbers.
+
+71
+00:03:57,800 --> 00:03:58,040
+Right.
+
+72
+00:03:59,150 --> 00:03:59,480
+Yeah.
+
+73
+00:04:01,320 --> 00:04:09,030
+OK, so as I said, ill, which number do we have to go, we have to go still to do the power in minus
+
+74
+00:04:09,030 --> 00:04:15,120
+one day, so we just simply left shift one endings and will simply get rid of the power and they and
+
+75
+00:04:15,180 --> 00:04:16,430
+we are moving less than that.
+
+76
+00:04:16,430 --> 00:04:21,630
+That means so I'm starting from zero so that you don't get confused because zero is actually not needed
+
+77
+00:04:21,630 --> 00:04:23,880
+here, but still no problem with it.
+
+78
+00:04:24,680 --> 00:04:25,130
+And.
+
+79
+00:04:27,570 --> 00:04:31,860
+If I take a Pfizer, which is zero, that means how many elements are you using to buy that?
+
+80
+00:04:32,520 --> 00:04:34,160
+So there isn't any eliminate.
+
+81
+00:04:34,500 --> 00:04:36,900
+What else to do is I'll simply start with one.
+
+82
+00:04:37,670 --> 00:04:41,940
+So let's start with one and let's try and make all the possible subsets first.
+
+83
+00:04:42,570 --> 00:04:42,810
+Well.
+
+84
+00:04:44,270 --> 00:04:47,510
+Let's call it in its May Day Go, Darling.
+
+85
+00:04:48,170 --> 00:04:52,940
+So if the jet a bit of elite element is said liquidated.
+
+86
+00:05:01,840 --> 00:05:02,710
+Then included.
+
+87
+00:05:03,790 --> 00:05:04,810
+That's what we did.
+
+88
+00:05:05,590 --> 00:05:09,580
+So how how will it check if the G8, the bit of ice element is certainly or not?
+
+89
+00:05:10,300 --> 00:05:14,170
+I'll just regift idea names and end with one.
+
+90
+00:05:14,980 --> 00:05:20,440
+If this is true, that means the G8, the weight of eight elements that if it is said, I would simply
+
+91
+00:05:20,440 --> 00:05:25,330
+sit out right now, I'm just printing it so that it's very clear to all of us.
+
+92
+00:05:25,330 --> 00:05:27,160
+I read and it said they'd.
+
+93
+00:05:28,990 --> 00:05:29,950
+OK, OK, sorry.
+
+94
+00:05:30,370 --> 00:05:31,480
+And is the total.
+
+95
+00:05:33,090 --> 00:05:39,060
+And is the number in which we are going to find a date or we just have to find these subsets of this
+
+96
+00:05:39,060 --> 00:05:39,660
+primes?
+
+97
+00:05:40,430 --> 00:05:43,980
+Victor, let's take em as prime start place.
+
+98
+00:05:44,460 --> 00:05:45,000
+Very sorry.
+
+99
+00:05:45,000 --> 00:05:45,630
+Sorry for that.
+
+100
+00:05:47,970 --> 00:05:50,100
+Yeah, let's take em here, Norton in.
+
+101
+00:05:51,680 --> 00:05:53,680
+And so Mr.
+
+102
+00:05:54,050 --> 00:05:54,340
+Right.
+
+103
+00:05:54,740 --> 00:05:58,220
+And we'll simply say, Scott Primes do.
+
+104
+00:06:00,960 --> 00:06:04,380
+Well, after this and I simply.
+
+105
+00:06:05,300 --> 00:06:05,620
+Brent.
+
+106
+00:06:07,220 --> 00:06:12,470
+Now you can see that we are generating all subsets in two three two three five two five.
+
+107
+00:06:13,370 --> 00:06:16,100
+We have three also, we have four also there.
+
+108
+00:06:16,430 --> 00:06:19,190
+And if I just keep on going down, we will see many more.
+
+109
+00:06:20,210 --> 00:06:24,140
+To the and this is the last one, I guess, which contains.
+
+110
+00:06:25,310 --> 00:06:30,240
+All the elements in disarray to how many are there 1023 eight?
+
+111
+00:06:30,860 --> 00:06:33,740
+If I have 1200, that means which one have I not included?
+
+112
+00:06:33,740 --> 00:06:34,610
+I have not included.
+
+113
+00:06:35,420 --> 00:06:36,630
+Zero zero.
+
+114
+00:06:43,120 --> 00:06:46,290
+I'm always so.
+
+115
+00:06:47,530 --> 00:06:47,860
+OK.
+
+116
+00:06:47,950 --> 00:06:49,690
+I think I just changed my.
+
+117
+00:06:52,910 --> 00:06:53,420
+Notifying.
+
+118
+00:06:54,520 --> 00:06:58,240
+OK, so this way we can just generate all the possible subsets of.
+
+119
+00:06:59,130 --> 00:06:59,460
+Ms.
+
+120
+00:07:00,600 --> 00:07:07,870
+Now what I what I need to do is instead of printing them, I just have to find their LC ms rate.
+
+121
+00:07:08,220 --> 00:07:11,160
+So let me again be recalled, Tim.
+
+122
+00:07:11,160 --> 00:07:12,480
+Let me get equal to one.
+
+123
+00:07:12,870 --> 00:07:18,420
+And whenever I'm finding any number eight, whenever I get a number, what will I do?
+
+124
+00:07:18,840 --> 00:07:19,380
+Let me.
+
+125
+00:07:22,250 --> 00:07:23,790
+Well, so whenever I'm.
+
+126
+00:07:25,220 --> 00:07:30,750
+When I including a number in my state, let's just multiply them because I've considered only prime
+
+127
+00:07:30,750 --> 00:07:37,460
+numbers and I don't have divided loyalties, I say Altium in two equals two this times.
+
+128
+00:07:37,950 --> 00:07:38,190
+Yeah.
+
+129
+00:07:39,550 --> 00:07:44,260
+So if that bit is said, the wins included prime number include means just multiplied into the.
+
+130
+00:07:45,820 --> 00:07:47,560
+And now what we'll do is we'll have a.
+
+131
+00:07:49,880 --> 00:07:50,740
+Final answer.
+
+132
+00:07:50,930 --> 00:07:53,300
+That means how many of them were actually included?
+
+133
+00:07:53,660 --> 00:07:54,320
+How many do.
+
+134
+00:07:54,470 --> 00:07:55,550
+How many so.
+
+135
+00:07:56,430 --> 00:07:57,240
+I do I do this.
+
+136
+00:07:58,190 --> 00:07:59,090
+It's very simple.
+
+137
+00:07:59,720 --> 00:08:01,160
+If the.
+
+138
+00:08:02,710 --> 00:08:04,740
+If the number of OK, just give me.
+
+139
+00:08:05,700 --> 00:08:06,960
+I'm sorry for that.
+
+140
+00:08:09,870 --> 00:08:16,470
+Now, what we have to see is that if the number of elements included, but.
+
+141
+00:08:17,470 --> 00:08:21,280
+Even then, subtract them or if they were all at them.
+
+142
+00:08:22,120 --> 00:08:27,070
+So there's dysfunction we all know about this, which is building popcorn trade, so.
+
+143
+00:08:28,280 --> 00:08:30,620
+Yeah, built, built in.
+
+144
+00:08:33,200 --> 00:08:35,309
+Funk, what does this do?
+
+145
+00:08:35,330 --> 00:08:42,730
+I just I just pass into it, and this will tell me what is the total number of Dead Birds in eight eight?
+
+146
+00:08:43,309 --> 00:08:50,840
+If the number of said Virginia is even that means it is doable by two, then employee excluded.
+
+147
+00:08:51,850 --> 00:08:58,870
+They'd want to exclude anybody else, him it is in and is the number we'll provide, let's provide a
+
+148
+00:08:58,870 --> 00:09:00,100
+very big number right now.
+
+149
+00:09:00,400 --> 00:09:05,110
+Where does Elysium, which is nothing but the multiplications of all the primes and.
+
+150
+00:09:06,710 --> 00:09:12,590
+Biomass objecting because there isn't even said that which contains even number of frames and other
+
+151
+00:09:12,590 --> 00:09:16,520
+ways, I simply add it into my LTM the odd frames.
+
+152
+00:09:17,670 --> 00:09:21,750
+Well, and after this is done, there's nothing much left.
+
+153
+00:09:21,900 --> 00:09:23,490
+So we'll just see out answer.
+
+154
+00:09:26,080 --> 00:09:31,150
+So there are these many numbers, which are lives in the first ten frames, which are less than this
+
+155
+00:09:31,390 --> 00:09:33,580
+particular in data, literally 200.
+
+156
+00:09:33,910 --> 00:09:35,770
+Let's take if it works or not.
+
+157
+00:09:36,860 --> 00:09:38,510
+It before and if I do 10.
+
+158
+00:09:41,300 --> 00:09:47,570
+So there are total nine numbers which are usually by the first in primes.
+
+159
+00:09:48,080 --> 00:09:50,140
+What is the number which is left?
+
+160
+00:09:50,150 --> 00:09:54,030
+It is when one is not used by any of these great.
+
+161
+00:09:55,610 --> 00:10:02,420
+Filled in, so I hope this court is very clear to you all, we didn't do much, we just calculated all
+
+162
+00:10:02,420 --> 00:10:02,720
+the.
+
+163
+00:10:03,690 --> 00:10:07,680
+Upsets and welcome greetings, absurd, we just checked that.
+
+164
+00:10:08,620 --> 00:10:15,460
+We just found out the him if the number of elements in the set was even suppressed them, because that's
+
+165
+00:10:15,460 --> 00:10:16,420
+what we noticed, right?
+
+166
+00:10:17,980 --> 00:10:22,260
+That's what we noticed if you went to break them, if it's ordered them into one.
+
+167
+00:10:22,990 --> 00:10:30,130
+So as we can see here and missed any rate, what if and was more it, what if 31 was also here?
+
+168
+00:10:31,680 --> 00:10:33,150
+Admits and was equal to 11.
+
+169
+00:10:33,570 --> 00:10:40,290
+But this this particular court work, according to the 11th IT subset, it will generate all possible
+
+170
+00:10:40,290 --> 00:10:44,430
+subsets of these 11 prime numbers and add and subtract accordingly.
+
+171
+00:10:44,940 --> 00:10:51,540
+So this is where computers help us aid and towards the complexity of the code.
+
+172
+00:10:52,080 --> 00:10:56,400
+So this particular for loop goes straight to the the program, which is in the middle of crimes.
+
+173
+00:10:57,000 --> 00:11:00,290
+It has 11 brains are destroyed, about 11 in 211.
+
+174
+00:11:00,900 --> 00:11:02,130
+It just goes to land only.
+
+175
+00:11:02,550 --> 00:11:06,500
+And this is nothing we're just checking and this is alternating just over.
+
+176
+00:11:07,350 --> 00:11:07,710
+Brilliant.
+
+177
+00:11:07,950 --> 00:11:11,130
+So we have some brilliant popcorn functions if you do not know about them.
+
+178
+00:11:11,730 --> 00:11:18,570
+You can refer to the brain manipulation section in this particular course or by searching for them online.
+
+179
+00:11:18,750 --> 00:11:23,400
+So just find out some building functions, which comes very handy during the contest.
+
+180
+00:11:23,700 --> 00:11:28,860
+Otherwise, you'll have to make another function parsing data to check the number of.
+
+181
+00:11:29,980 --> 00:11:32,170
+Which certainly state just.
+
+182
+00:11:33,330 --> 00:11:36,960
+Move ahead and find some interesting building functions in C++.
+
+183
+00:11:37,680 --> 00:11:42,690
+Well, so that said, guys, in the next part, I hope you understood how it is.
+
+184
+00:11:42,690 --> 00:11:44,620
+Inclusion Exclusion Bug eight.
+
+185
+00:11:45,180 --> 00:11:51,210
+Next part will be a little advance in which I'll be explaining what is Mobius function in number 30,
+
+186
+00:11:51,690 --> 00:11:53,430
+which is all to use for inclusion exclusion.
+
+187
+00:11:53,430 --> 00:11:54,960
+But that's very advanced.
+
+188
+00:11:55,890 --> 00:12:01,020
+So just get your hands on this practice few problems regarding inclusion, exclusion and then move ahead.
+
+189
+00:12:01,590 --> 00:12:01,980
+Thank you.
+

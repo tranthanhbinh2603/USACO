@@ -1,0 +1,320 @@
+1
+00:00:02,420 --> 00:00:05,890
+Hi Everyone, now we're going to talk about binary left shift.
+
+2
+00:00:05,960 --> 00:00:10,840
+So what is this operator ? so generally you will find this operator a written like this.
+
+3
+00:00:10,850 --> 00:00:13,310
+Let's have five left shift 2.
+
+4
+00:00:13,610 --> 00:00:15,080
+So what does it mean?
+
+5
+00:00:15,530 --> 00:00:18,260
+It basically means we have a number five.
+
+6
+00:00:18,590 --> 00:00:18,880
+OK.
+
+7
+00:00:20,000 --> 00:00:23,150
+And whatever is the bit it has.
+
+8
+00:00:23,970 --> 00:00:27,460
+We're going to left shift all the bits by a factor of two.
+
+9
+00:00:27,470 --> 00:00:30,980
+So everything is going to move towards left by a factor of two.
+
+10
+00:00:31,010 --> 00:00:31,400
+So what?
+
+11
+00:00:31,400 --> 00:00:32,150
+What will happen?
+
+12
+00:00:32,689 --> 00:00:35,210
+These two bits will fall off, OK?
+
+13
+00:00:36,080 --> 00:00:38,240
+And you will have something like this.
+
+14
+00:00:38,750 --> 00:00:41,000
+Zero zero one zero one.
+
+15
+00:00:41,510 --> 00:00:44,010
+And from here, you will add two zeros.
+
+16
+00:00:44,030 --> 00:00:44,360
+OK.
+
+17
+00:00:44,930 --> 00:00:50,480
+So you will add like this. if you try to understand what is different in this number?
+
+18
+00:00:50,510 --> 00:00:52,970
+So this was two raise to the power zero.
+
+19
+00:00:53,630 --> 00:00:55,220
+This was two raise to the power one.
+
+20
+00:00:55,430 --> 00:01:00,290
+This was two raise to the power two and here it is two raise to the power zero, two raise to the power one,
+
+21
+00:01:00,830 --> 00:01:03,680
+And this is two raise to the power two.
+
+22
+00:01:03,710 --> 00:01:05,870
+This is two raise to the power 3 and this is two raise to the power 4.
+
+23
+00:01:06,830 --> 00:01:08,060
+What is the original number?
+
+24
+00:01:08,060 --> 00:01:09,440
+So original number is five.
+
+25
+00:01:09,770 --> 00:01:10,070
+OK.
+
+26
+00:01:10,460 --> 00:01:12,590
+And that is equal to 2's square plus
+
+27
+00:01:13,750 --> 00:01:17,350
+2 raise to the power zero and we know this is five.
+
+28
+00:01:18,070 --> 00:01:20,380
+And let let let us call this number as x.
+
+29
+00:01:21,310 --> 00:01:23,620
+Now if I talk about this number.
+
+30
+00:01:23,830 --> 00:01:24,960
+OK, so what is this number?
+
+31
+00:01:25,000 --> 00:01:28,990
+So it is nothing, but it is two's square less plus 2 four.
+
+32
+00:01:29,780 --> 00:01:35,020
+If you take two square common, what you're left with ? you're left with two square plus two raise to the power zero.
+
+33
+00:01:35,020 --> 00:01:35,410
+zero.
+
+34
+00:01:36,020 --> 00:01:42,640
+That means it has two square off the original Number X, basically doing a left shift by two
+
+35
+00:01:44,300 --> 00:01:47,760
+Has multiplied that number by two's square.
+
+36
+00:01:47,780 --> 00:01:48,050
+OK.
+
+37
+00:01:48,380 --> 00:01:56,510
+So basically A left shift B will multiply A with 2 raise to the  power B.
+
+38
+00:01:56,720 --> 00:01:58,460
+This is what I'm trying to say.
+
+39
+00:01:58,820 --> 00:02:00,440
+And if you see what is this number?
+
+40
+00:02:00,470 --> 00:02:03,890
+This number is nothing but 16 plus 4.
+
+41
+00:02:03,950 --> 00:02:05,040
+This number is 20.
+
+42
+00:02:05,670 --> 00:02:09,370
+Effectively have got multiplied by two raise to 2.
+
+43
+00:02:09,530 --> 00:02:12,080
+that is five into 4 that is 20.
+
+44
+00:02:13,160 --> 00:02:18,620
+Effectively, when you do a left shift the number is multiplied with the power of two.
+
+45
+00:02:19,070 --> 00:02:21,380
+So this is the left shift operator.
+
+46
+00:02:21,410 --> 00:02:23,270
+I hope this one is now clear.
+
+47
+00:02:23,810 --> 00:02:27,440
+Similarly, we also have something known as a right shift.
+
+48
+00:02:28,010 --> 00:02:32,600
+The left shift does multiplication, right shift divides OK?
+
+49
+00:02:32,990 --> 00:02:35,180
+Let us start with one example.
+
+50
+00:02:35,180 --> 00:02:41,270
+Let's say I have a number 10 and if I do a right shift with one, that means I'm going to divide by
+
+51
+00:02:41,270 --> 00:02:42,290
+two raise to the power one.
+
+52
+00:02:42,500 --> 00:02:42,740
+OK.
+
+53
+00:02:43,100 --> 00:02:46,730
+So if I show you this number 10 in binary is one zero one zero.
+
+54
+00:02:47,330 --> 00:02:54,110
+And that means if this is the number doing the right shift means we are moving every bit towards right
+
+55
+00:02:54,110 --> 00:02:54,770
+by one step.
+
+56
+00:02:55,370 --> 00:03:01,130
+This bit will get discarded and the original number would become zero zero zero one zero one.
+
+57
+00:03:01,970 --> 00:03:02,260
+OK.
+
+58
+00:03:02,540 --> 00:03:05,390
+And clearly, we know this number is five.
+
+59
+00:03:05,390 --> 00:03:13,610
+So if we do 10 right shift one that means divide by... 10 divided by two raise to the power one.
+
+60
+00:03:13,730 --> 00:03:16,220
+This number is five and this number is also five.
+
+61
+00:03:16,640 --> 00:03:19,480
+Again, if you do right shift one here, it's a odd number.
+
+62
+00:03:19,850 --> 00:03:24,950
+You should get two. this doing right shift one here means zero zero zero.
+
+63
+00:03:25,310 --> 00:03:30,260
+This one will fall off and we will get something like this one zero.
+
+64
+00:03:30,440 --> 00:03:31,580
+So this number is two.
+
+65
+00:03:32,060 --> 00:03:35,430
+So this same as doing five divided by two raise to the power one?
+
+66
+00:03:35,600 --> 00:03:37,550
+That is. OK.
+
+67
+00:03:37,820 --> 00:03:42,260
+And similarly, if you do it once again you will end up getting zero zero zero one.
+
+68
+00:03:42,740 --> 00:03:43,850
+And this number is one.
+
+69
+00:03:44,090 --> 00:03:45,480
+And let's do it once more.
+
+70
+00:03:45,650 --> 00:03:47,600
+You will do zero zero zero zero.
+
+71
+00:03:47,630 --> 00:03:49,190
+This number would be zero.
+
+72
+00:03:49,490 --> 00:03:55,790
+If I do 10 right shift four then that means 10 divided by two raise to the power four.
+
+73
+00:03:56,720 --> 00:03:58,300
+And that is 16.
+
+74
+00:03:58,310 --> 00:04:00,380
+So this number would be zero.
+
+75
+00:04:00,920 --> 00:04:01,250
+OK.
+
+76
+00:04:01,550 --> 00:04:08,280
+So A right night shift B basically means A divided by two raise to the power B. OK.
+
+77
+00:04:08,960 --> 00:04:15,800
+So I hope both left shift and right shift are now clear to you and in the coming lectures, we will see
+
+78
+00:04:15,800 --> 00:04:19,040
+some examples where these operators can be used.
+
+79
+00:04:19,399 --> 00:04:20,720
+That's all for this lecture.
+
+80
+00:04:20,720 --> 00:04:21,200
+Thank you.
+

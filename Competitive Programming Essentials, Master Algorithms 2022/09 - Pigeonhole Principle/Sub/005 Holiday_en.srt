@@ -1,0 +1,1400 @@
+1
+00:00:00,550 --> 00:00:03,640
+I so in this lecture, we're going to solve this problem it.
+
+2
+00:00:04,450 --> 00:00:06,480
+It's actually a pretty big problem.
+
+3
+00:00:06,880 --> 00:00:08,300
+So I have written to somebody.
+
+4
+00:00:09,070 --> 00:00:16,570
+The actual version is on the platform spot and let us try to go through the problem statement and try
+
+5
+00:00:16,570 --> 00:00:18,760
+to understand this question.
+
+6
+00:00:19,510 --> 00:00:25,270
+So it says people have many ways to save money on accommodation when they're on vacation, OK?
+
+7
+00:00:26,170 --> 00:00:30,150
+One of these ways is to exchange house with other people, OK?
+
+8
+00:00:30,910 --> 00:00:33,700
+So instead of going to hotel, people want to exchange houses.
+
+9
+00:00:34,190 --> 00:00:37,790
+So there is a group of people who want to travel around the world.
+
+10
+00:00:38,230 --> 00:00:42,660
+They live in different cities and they can travel to other people's city.
+
+11
+00:00:43,840 --> 00:00:45,010
+And use that house.
+
+12
+00:00:45,580 --> 00:00:47,770
+Now they want to make a plan.
+
+13
+00:00:49,120 --> 00:00:54,820
+For a destination for each person, there are two rules to which, despite all the people, should go
+
+14
+00:00:54,820 --> 00:00:56,360
+to one of the other people's cities.
+
+15
+00:00:56,380 --> 00:00:58,120
+So if there are multiple cities.
+
+16
+00:00:58,180 --> 00:01:02,600
+OK, that said, this person be one, it will go to some other city.
+
+17
+00:01:02,620 --> 00:01:04,920
+This person will do it may go to some other city.
+
+18
+00:01:05,200 --> 00:01:06,470
+This is better than be treatment.
+
+19
+00:01:06,470 --> 00:01:07,450
+Go to some other city.
+
+20
+00:01:08,170 --> 00:01:09,220
+This is than before.
+
+21
+00:01:09,220 --> 00:01:15,830
+It may go to some of the city so that all people are able to exchange those who have them never go to
+
+22
+00:01:15,830 --> 00:01:18,390
+the same routine because they're not willing to share ours.
+
+23
+00:01:18,410 --> 00:01:25,930
+OK, so that means in the final output, there would be some kind of permutation among the people they
+
+24
+00:01:25,930 --> 00:01:29,440
+want to maximize some of people's travel distance.
+
+25
+00:01:29,450 --> 00:01:32,740
+OK, the total travelling distance should be maximized.
+
+26
+00:01:33,490 --> 00:01:37,610
+The travel distance is the distance between the city and the city he travels to.
+
+27
+00:01:37,630 --> 00:01:42,640
+OK, so the entire distance traveled from source to a particular destination.
+
+28
+00:01:43,030 --> 00:01:50,120
+OK, that is known as the travel distance for a Person B and other entities.
+
+29
+00:01:50,140 --> 00:01:52,840
+And did it end minus one I was going to give them?
+
+30
+00:01:54,460 --> 00:02:01,420
+The travelers always choose the shortest, but when traveling, this is something that we need to see.
+
+31
+00:02:01,810 --> 00:02:02,020
+OK.
+
+32
+00:02:02,500 --> 00:02:11,980
+So effectively what it is given there are entities, OK and did it and minus highways which are connecting
+
+33
+00:02:11,980 --> 00:02:12,220
+them.
+
+34
+00:02:13,480 --> 00:02:20,050
+That basically means if you have three cities, then there are only two highways, OK, that means it
+
+35
+00:02:20,050 --> 00:02:21,390
+will be in the form of three.
+
+36
+00:02:21,400 --> 00:02:23,100
+It will not be a growth again.
+
+37
+00:02:23,110 --> 00:02:24,820
+So that means all that you can take.
+
+38
+00:02:24,820 --> 00:02:26,950
+It is a graph without a cycle.
+
+39
+00:02:27,070 --> 00:02:30,100
+OK, it's a graph without a cycle.
+
+40
+00:02:30,670 --> 00:02:32,460
+And that is also called as a tree.
+
+41
+00:02:33,770 --> 00:02:37,780
+The structure of the cities is in the form of the restructure.
+
+42
+00:02:39,150 --> 00:02:43,950
+So maybe the most it is here, here who go.
+
+43
+00:02:44,430 --> 00:02:53,460
+So you're going to if you have one two three four five six seven seven cities and there are only six
+
+44
+00:02:53,460 --> 00:02:53,940
+cities.
+
+45
+00:02:54,150 --> 00:03:03,480
+OK, so any anything that follows this kind of a structure, it is a graph without a cycle.
+
+46
+00:03:03,490 --> 00:03:10,490
+Look, if you add the edge like this, then it will violate this property that did and minus one is
+
+47
+00:03:10,500 --> 00:03:14,640
+in this case, you have neighbors, so this edge should not be there.
+
+48
+00:03:15,270 --> 00:03:21,130
+Now what is the meaning of the shortest possible path to get an ideal condition that is given to us
+
+49
+00:03:21,130 --> 00:03:23,370
+is they always take the.
+
+50
+00:03:24,640 --> 00:03:27,130
+Shortest possible, but.
+
+51
+00:03:28,650 --> 00:03:37,410
+While traveling, and second thing is we have to maximize the total distance we can maximize the total
+
+52
+00:03:37,410 --> 00:03:39,230
+distance off the road.
+
+53
+00:03:40,110 --> 00:03:46,050
+That effectively means if this person zero, if it wants to go to the Node two.
+
+54
+00:03:47,320 --> 00:03:54,880
+It will take the direct route, it will not go go like this one possible way could be it's going to
+
+55
+00:03:54,880 --> 00:03:56,470
+go like this from zero.
+
+56
+00:03:57,560 --> 00:03:59,690
+Well, this particular year, this is the shortest.
+
+57
+00:04:00,050 --> 00:04:00,350
+OK.
+
+58
+00:04:00,620 --> 00:04:06,680
+It will not do something like this, that it first goes to the Note eight and then it comes back, OK?
+
+59
+00:04:07,070 --> 00:04:10,340
+This is not how you're going to maximize the but.
+
+60
+00:04:10,460 --> 00:04:11,960
+You're going to take the shortest route.
+
+61
+00:04:12,440 --> 00:04:16,730
+But the distance might be maximized if you choose a different note.
+
+62
+00:04:17,089 --> 00:04:24,920
+Zero traveled from this node to maybe just note in that case, it is possible that it covers more distance
+
+63
+00:04:24,920 --> 00:04:28,260
+because this is how you need to maximize the total distance.
+
+64
+00:04:28,550 --> 00:04:32,900
+And I hope you also understood what is the meaning of shortest possible.
+
+65
+00:04:33,920 --> 00:04:43,460
+But so let us discuss the rest of the statement and they want to maximize the total distance travelled.
+
+66
+00:04:44,060 --> 00:04:47,760
+The travel distance is a distance between the city and distance traveled to.
+
+67
+00:04:47,780 --> 00:04:48,260
+All right.
+
+68
+00:04:48,950 --> 00:04:55,610
+And we have already seen, given the highways information, it is your job to find out the maximum total
+
+69
+00:04:55,610 --> 00:04:58,340
+travel distance of all people that it would need to find out.
+
+70
+00:04:59,150 --> 00:04:59,740
+And then what?
+
+71
+00:04:59,750 --> 00:05:01,880
+We are given the number of best guesses.
+
+72
+00:05:01,910 --> 00:05:02,360
+OK.
+
+73
+00:05:03,120 --> 00:05:10,880
+East-West Good contains two integers and the number of it is followed by PN minus one lines, which
+
+74
+00:05:10,880 --> 00:05:13,790
+denote the city ex the city by.
+
+75
+00:05:15,250 --> 00:05:16,480
+And the land of diving.
+
+76
+00:05:17,170 --> 00:05:20,680
+So these are basically nodes and edges.
+
+77
+00:05:20,890 --> 00:05:21,220
+OK.
+
+78
+00:05:22,330 --> 00:05:29,050
+And here we are given how many sorties we have in this particular test case, and this is a number of
+
+79
+00:05:29,800 --> 00:05:30,670
+excuses.
+
+80
+00:05:32,390 --> 00:05:39,980
+Alright, so let us look at the input example one, so in the input example and what we have, we have
+
+81
+00:05:39,980 --> 00:05:40,800
+four cities.
+
+82
+00:05:40,820 --> 00:05:48,440
+Let's call them as 81, 82, 83 and 84.
+
+83
+00:05:49,040 --> 00:05:57,200
+If you look carefully now from one to two, there is an edge that contains a distance of what.
+
+84
+00:05:58,550 --> 00:06:01,460
+It contains a distance the.
+
+85
+00:06:06,290 --> 00:06:09,050
+So this edge is of distance.
+
+86
+00:06:09,540 --> 00:06:13,070
+Three, then there is also an edge between.
+
+87
+00:06:16,950 --> 00:06:20,130
+The note to entry this is Outdistance two.
+
+88
+00:06:20,280 --> 00:06:23,550
+There is alternate between three and four, which is also of distance.
+
+89
+00:06:24,840 --> 00:06:31,740
+So this is two, this is two, and now we need to see what is the maximum possible distance that all
+
+90
+00:06:31,740 --> 00:06:33,660
+the travels can travel.
+
+91
+00:06:34,050 --> 00:06:40,140
+So one way is if we just exchange these two, if I exchange one and two.
+
+92
+00:06:40,840 --> 00:06:46,110
+OK, the person one goes here, the person to go, is it the person three?
+
+93
+00:06:46,140 --> 00:06:48,410
+Was it the person forgoes it?
+
+94
+00:06:48,410 --> 00:06:55,370
+In this case, the total distance traveled would be three blustery or one and less two plus two.
+
+95
+00:06:56,130 --> 00:06:59,880
+That is how much the entry is X and four.
+
+96
+00:06:59,880 --> 00:07:01,020
+This is 10 units, OK?
+
+97
+00:07:01,560 --> 00:07:06,480
+But the answer is 18, because this is not the best way of arranging.
+
+98
+00:07:07,530 --> 00:07:11,170
+No, this is not the way that will maximize the total travel look.
+
+99
+00:07:11,730 --> 00:07:14,070
+So let us look at another way.
+
+100
+00:07:16,210 --> 00:07:24,910
+So, yeah, this is this is three, this is two, and this is to another, if would be, let us exchange
+
+101
+00:07:25,420 --> 00:07:26,340
+one word for.
+
+102
+00:07:28,050 --> 00:07:34,260
+And let us exchange two with three, that means this person comes here and this person comes here.
+
+103
+00:07:34,770 --> 00:07:37,800
+This person comes here and this person goes it.
+
+104
+00:07:38,280 --> 00:07:41,280
+So what would be the total distance traveled by person?
+
+105
+00:07:41,280 --> 00:07:43,440
+One, It would be three plus two plus two.
+
+106
+00:07:44,520 --> 00:07:50,250
+And similar distance traveled by Ford, so we can do twice of it between two and three.
+
+107
+00:07:50,760 --> 00:07:54,000
+We will travel distance two and three will also travel distance.
+
+108
+00:07:54,120 --> 00:07:56,040
+So this is for this is how much.
+
+109
+00:07:57,030 --> 00:07:57,930
+This is 14.
+
+110
+00:07:57,930 --> 00:07:59,970
+So 14 plus foot is what this is.
+
+111
+00:07:59,970 --> 00:08:00,300
+18.
+
+112
+00:08:00,990 --> 00:08:03,530
+So you're going to in this case, the answer is 18.
+
+113
+00:08:03,540 --> 00:08:03,820
+OK?
+
+114
+00:08:04,270 --> 00:08:07,750
+Another possible way could we exchange one with three?
+
+115
+00:08:08,220 --> 00:08:12,750
+OK, one comes to today's location and two it goes to four locations.
+
+116
+00:08:12,750 --> 00:08:18,050
+In this case, the total distance I will be right off, one goes to three.
+
+117
+00:08:18,060 --> 00:08:19,140
+So it is three plus two.
+
+118
+00:08:19,260 --> 00:08:19,860
+It is five.
+
+119
+00:08:20,160 --> 00:08:20,580
+There it is.
+
+120
+00:08:21,420 --> 00:08:25,500
+It goes to four, which is like this twice our foot.
+
+121
+00:08:26,280 --> 00:08:27,180
+This is also fine.
+
+122
+00:08:27,270 --> 00:08:29,310
+This distance is also 10 plus eight.
+
+123
+00:08:30,990 --> 00:08:35,909
+So one of so there can be multiple possible combinations which are leading to the same output.
+
+124
+00:08:36,510 --> 00:08:39,270
+But we are interested in the final output.
+
+125
+00:08:39,419 --> 00:08:43,400
+Instead of finding out the combination, we need to find out.
+
+126
+00:08:44,950 --> 00:08:46,030
+The final output.
+
+127
+00:08:46,570 --> 00:08:52,450
+OK, so now let us see how we can approach this particular problem.
+
+128
+00:08:52,660 --> 00:09:03,370
+OK, so let's discuss and approach that will help us to solve this particular question, OK?
+
+129
+00:09:04,060 --> 00:09:12,850
+So one one thing is clear the value of A. Large OK, we cannot find out all possible permutations of
+
+130
+00:09:12,850 --> 00:09:15,880
+nodes and then try to find out their distance.
+
+131
+00:09:15,880 --> 00:09:16,180
+OK?
+
+132
+00:09:16,270 --> 00:09:18,130
+The graph may be complex graph.
+
+133
+00:09:18,160 --> 00:09:19,000
+OK, we don't know.
+
+134
+00:09:19,600 --> 00:09:21,130
+OK, so now.
+
+135
+00:09:22,520 --> 00:09:27,000
+One thing we know is not the total distance, OK, the total distance.
+
+136
+00:09:28,200 --> 00:09:37,500
+Travel would be nothing, but it would be let's see if the edges are like this, if the edges are.
+
+137
+00:09:41,940 --> 00:09:48,060
+If the do that, even if the entity E4 and so on.
+
+138
+00:09:48,130 --> 00:09:51,180
+OK, then the total distance would be nothing but.
+
+139
+00:09:52,510 --> 00:10:04,390
+Some constraints even and when times even plus and two times you do less and three times E3 and so on.
+
+140
+00:10:04,420 --> 00:10:04,660
+OK.
+
+141
+00:10:04,990 --> 00:10:08,920
+So total distance would be nothing, but it would be weighted sum of.
+
+142
+00:10:09,970 --> 00:10:12,520
+They did some of it is.
+
+143
+00:10:13,940 --> 00:10:21,380
+This everyone agrees, and what we need to figure out is we already know the Atlantic, we know even
+
+144
+00:10:21,380 --> 00:10:23,330
+if that as given in the input.
+
+145
+00:10:23,840 --> 00:10:28,370
+What we don't know is how many times each edge would be used.
+
+146
+00:10:28,400 --> 00:10:33,170
+OK, we need to find out what are the values of and one and two and three.
+
+147
+00:10:33,620 --> 00:10:42,470
+And these values should be such that they follow the consensus and they should be able to maximize these
+
+148
+00:10:42,470 --> 00:10:49,220
+in one and two and three should be equal to the maximum number of people.
+
+149
+00:10:52,010 --> 00:10:54,200
+That will travel.
+
+150
+00:10:55,890 --> 00:11:02,850
+Through the adage that will travel through that edge, if we are able to find out what is the maximum
+
+151
+00:11:02,850 --> 00:11:08,460
+number of people that will travel through that edge, we can easily find evidence.
+
+152
+00:11:08,730 --> 00:11:10,650
+By taking this, we did so OK.
+
+153
+00:11:11,160 --> 00:11:16,980
+The question is how do we find out how many people are going to travel through a particular age?
+
+154
+00:11:16,980 --> 00:11:17,250
+OK?
+
+155
+00:11:17,640 --> 00:11:19,860
+Now let me try to figure this thing out.
+
+156
+00:11:20,400 --> 00:11:21,390
+How we're going to do it?
+
+157
+00:11:21,420 --> 00:11:24,870
+Let us talk about a particular edge to this edges eatery.
+
+158
+00:11:25,410 --> 00:11:29,060
+I want to find out what should be the value of entry.
+
+159
+00:11:29,070 --> 00:11:32,630
+That means how many people will actually travel through this edge.
+
+160
+00:11:32,640 --> 00:11:34,380
+OK, and we want to maximize that.
+
+161
+00:11:35,160 --> 00:11:39,030
+So this edge breaks over graph or the three into two parts.
+
+162
+00:11:40,220 --> 00:11:44,090
+So one part is clearly visible.
+
+163
+00:11:44,150 --> 00:11:44,500
+OK.
+
+164
+00:11:45,200 --> 00:11:46,490
+The one part of this one?
+
+165
+00:11:47,810 --> 00:11:49,750
+Let me just Margaret Green.
+
+166
+00:11:50,600 --> 00:11:53,930
+So this is one part of the graph.
+
+167
+00:11:54,650 --> 00:11:55,010
+OK.
+
+168
+00:11:55,370 --> 00:11:59,270
+Let me read this part one and let me read it as part two.
+
+169
+00:11:59,810 --> 00:12:00,110
+OK.
+
+170
+00:12:01,100 --> 00:12:01,580
+Let me know.
+
+171
+00:12:01,740 --> 00:12:02,300
+That's part.
+
+172
+00:12:04,000 --> 00:12:10,150
+Now, if you look carefully, what is going to happen, how many what do you think, how many people
+
+173
+00:12:10,150 --> 00:12:12,370
+will travel through this particular age?
+
+174
+00:12:12,940 --> 00:12:16,470
+How many people will travel through this particular age effectively?
+
+175
+00:12:16,480 --> 00:12:22,960
+We have five percent in this part a b, c d e f.
+
+176
+00:12:23,320 --> 00:12:25,390
+So we have six percent here, OK?
+
+177
+00:12:26,050 --> 00:12:32,890
+We have six persons in this graph in this part, and we have three persons in this part.
+
+178
+00:12:32,890 --> 00:12:35,020
+OK, maybe some JJ.
+
+179
+00:12:38,070 --> 00:12:40,430
+Now, what is going to happen?
+
+180
+00:12:40,470 --> 00:12:48,300
+OK, so I want maximum people should travel, so if I want to maximize the use of this edge, I would
+
+181
+00:12:48,300 --> 00:12:51,840
+be sending maximum people from part one to part two.
+
+182
+00:12:52,620 --> 00:12:55,980
+And I will be sending maximum people from part to part one.
+
+183
+00:12:56,020 --> 00:13:02,910
+OK, if I want to maximize the use of every age to now, one thing is very clear that if I try to send
+
+184
+00:13:03,060 --> 00:13:08,700
+all six people back to work again, I send six people to buy two from part one.
+
+185
+00:13:09,360 --> 00:13:14,670
+The answer is no, because part two has only three transit is available.
+
+186
+00:13:14,680 --> 00:13:21,320
+OK, there are only three rooms or transit is available there that can accommodate at most it even.
+
+187
+00:13:22,020 --> 00:13:22,320
+OK.
+
+188
+00:13:22,770 --> 00:13:24,810
+So I cannot send six people in part two.
+
+189
+00:13:24,810 --> 00:13:29,790
+I cannot send four people in part two, but I can send three people in part.
+
+190
+00:13:30,060 --> 00:13:30,900
+OK, that means.
+
+191
+00:13:31,650 --> 00:13:37,020
+And similarly, since three people are coming here, I can send three people from here as well.
+
+192
+00:13:37,140 --> 00:13:37,470
+OK.
+
+193
+00:13:37,980 --> 00:13:44,910
+So what is the number of people that would be traveling through this particular age?
+
+194
+00:13:45,060 --> 00:13:45,390
+OK.
+
+195
+00:13:45,850 --> 00:13:50,700
+Some I think that would be nothing but a minimum of.
+
+196
+00:13:52,290 --> 00:13:54,960
+I sense in part one, OK?
+
+197
+00:13:56,390 --> 00:14:02,540
+And part two and twice of it drives off it.
+
+198
+00:14:03,310 --> 00:14:09,440
+It is nothing but the window minimum of this is what this is six.
+
+199
+00:14:09,590 --> 00:14:13,110
+This is three and this is nothing but two into three.
+
+200
+00:14:13,790 --> 00:14:20,540
+Effectively, in the best case or in the maximum case, there would be six people who would be using
+
+201
+00:14:20,540 --> 00:14:24,560
+this edge to travel from one part of the graph to another part.
+
+202
+00:14:24,650 --> 00:14:28,970
+If you do this thing for all ages, then you will get these coefficients.
+
+203
+00:14:29,570 --> 00:14:31,610
+And you can easily find out the way it did.
+
+204
+00:14:31,850 --> 00:14:32,150
+OK.
+
+205
+00:14:32,480 --> 00:14:40,190
+So if this very dense led to forward, then this edge would be contributing six in 2004, that is 24
+
+206
+00:14:40,190 --> 00:14:45,890
+in Dover, and we will add 24 to your answer.
+
+207
+00:14:46,040 --> 00:14:46,310
+OK.
+
+208
+00:14:46,520 --> 00:14:53,800
+So I hope this part is it and that this this is what where we have used the the general principle.
+
+209
+00:14:53,810 --> 00:15:01,820
+OK, so effectively on the right, we have three holes, but we have six regions, so only three parents
+
+210
+00:15:01,820 --> 00:15:03,530
+can travel to these three holes.
+
+211
+00:15:03,590 --> 00:15:10,190
+OK, and three three three regions from here will travel to these three holds, OK.
+
+212
+00:15:10,490 --> 00:15:13,010
+So it does not matter where they are traveling to.
+
+213
+00:15:13,340 --> 00:15:19,070
+The only thing that matters is how many times they would be using this edge, OK, how many times this
+
+214
+00:15:19,070 --> 00:15:20,660
+edge is being used?
+
+215
+00:15:20,930 --> 00:15:27,230
+And we will do it for all ages, and this will effectively help us find out the total.
+
+216
+00:15:27,230 --> 00:15:30,800
+And I will call this approach as a greedy approach.
+
+217
+00:15:31,850 --> 00:15:33,890
+We are kind of finding the local maxima.
+
+218
+00:15:34,190 --> 00:15:34,490
+OK.
+
+219
+00:15:34,970 --> 00:15:42,620
+And so we are finding multiple local maximums and adding the answer for all that is OK.
+
+220
+00:15:42,860 --> 00:15:47,450
+So if you want me to drive around on the give an example, we can do it.
+
+221
+00:15:47,570 --> 00:15:57,320
+So let's say this is a this is B, this is C and this is D, OK now, along with this dry run, I would
+
+222
+00:15:57,320 --> 00:16:02,270
+be discussing the implementation aspect as well, or we can implement it.
+
+223
+00:16:02,810 --> 00:16:03,080
+OK.
+
+224
+00:16:03,710 --> 00:16:08,630
+So one way is you break the graph around every page and then you say, OK, I will.
+
+225
+00:16:08,960 --> 00:16:10,910
+I will do what the DFS on this part.
+
+226
+00:16:12,290 --> 00:16:18,830
+OK, so if you do all the affairs on this bond and you do whatever's on this, but it's you get the
+
+227
+00:16:18,830 --> 00:16:21,920
+size of the first part one, the size of the second part is three.
+
+228
+00:16:22,850 --> 00:16:25,130
+And then you say again, this edge lenders three.
+
+229
+00:16:25,180 --> 00:16:25,510
+So I will.
+
+230
+00:16:25,560 --> 00:16:29,300
+A minimum of one entry multiplied with two.
+
+231
+00:16:29,780 --> 00:16:30,920
+Multiplied with three.
+
+232
+00:16:30,950 --> 00:16:32,630
+OK, this is the weight of debt.
+
+233
+00:16:33,140 --> 00:16:38,990
+This is because twice the number of people will travel twice of the minimum and this is the minimum.
+
+234
+00:16:39,050 --> 00:16:42,530
+OK, so this minimize kind of coming from the general.
+
+235
+00:16:43,280 --> 00:16:44,290
+So we can do this.
+
+236
+00:16:44,320 --> 00:16:48,860
+This is going to contribute to how much it's going to contribute one into two into three.
+
+237
+00:16:48,980 --> 00:16:50,480
+That means six units.
+
+238
+00:16:51,790 --> 00:16:58,180
+OK, but what is going to happen for the other edge that we also need to figure it out?
+
+239
+00:16:58,660 --> 00:17:00,580
+So what we are going to do is.
+
+240
+00:17:01,810 --> 00:17:04,510
+So this we know that this edge will contribute six units.
+
+241
+00:17:05,220 --> 00:17:07,810
+So let us talk about the complexity of this approach.
+
+242
+00:17:07,900 --> 00:17:15,430
+So we are doing DFS that takes a lot of time and we are doing doing it for every edge, so multiplied
+
+243
+00:17:15,430 --> 00:17:22,569
+with it again and the E squared plus, even though it may not pass all the test cases.
+
+244
+00:17:23,290 --> 00:17:29,800
+So let me discuss a slightly efficient implementation of doing the office.
+
+245
+00:17:30,370 --> 00:17:34,520
+So what we are going to do, we are going to traverse this graph edge badge.
+
+246
+00:17:34,570 --> 00:17:34,870
+OK.
+
+247
+00:17:35,950 --> 00:17:38,050
+So let's say we start from this edge.
+
+248
+00:17:39,160 --> 00:17:45,390
+This is having a very of three, this is having a bit of two, this is that angry enough to bother you,
+
+249
+00:17:45,850 --> 00:17:47,980
+but I was this edge in Mexico alone.
+
+250
+00:17:48,730 --> 00:17:53,080
+And you ask me, OK, give me the size of the subsidy that is below you.
+
+251
+00:17:53,080 --> 00:17:56,080
+So be Bivol again of us on it.
+
+252
+00:17:56,590 --> 00:18:00,910
+It will make a call on see, and we will again relative as on its own.
+
+253
+00:18:01,240 --> 00:18:07,240
+It will run a deficit once we run the affairs on the does not have any neighbors that are not visited,
+
+254
+00:18:07,750 --> 00:18:09,820
+they will return or get my XYZ is one.
+
+255
+00:18:10,000 --> 00:18:10,330
+OK.
+
+256
+00:18:10,840 --> 00:18:13,400
+This had just visited so that one.
+
+257
+00:18:13,420 --> 00:18:18,820
+Once this, I just visited what we can do, we will start building a transit from this edge.
+
+258
+00:18:19,270 --> 00:18:21,010
+OK, because we are coming back.
+
+259
+00:18:21,610 --> 00:18:29,120
+Now what we know is we have a node CE and it has a charity D, so details its parent.
+
+260
+00:18:29,140 --> 00:18:29,520
+OK.
+
+261
+00:18:29,890 --> 00:18:33,190
+I have only one person inside this entire sub.
+
+262
+00:18:33,910 --> 00:18:34,540
+That means.
+
+263
+00:18:36,400 --> 00:18:39,090
+How many nodes you have in the rest of the tree?
+
+264
+00:18:39,400 --> 00:18:43,540
+How many nodes you have in the rest of the tree, that is nothing, but if one not, is it?
+
+265
+00:18:44,110 --> 00:18:46,000
+The rest of the tree will have n minus one.
+
+266
+00:18:46,660 --> 00:18:48,250
+And what is the minimum of these two?
+
+267
+00:18:48,760 --> 00:18:50,530
+That is nothing but one.
+
+268
+00:18:50,680 --> 00:18:52,480
+OK, so a minimum of one.
+
+269
+00:18:52,520 --> 00:18:57,690
+And or minus one that is three into two into the weight of this edge.
+
+270
+00:18:57,910 --> 00:19:03,820
+That is how much this this, this adds, is going to contribute four units to the answer.
+
+271
+00:19:03,820 --> 00:19:04,120
+OK?
+
+272
+00:19:05,560 --> 00:19:12,870
+All right now from see, we're going to go back and we are saying what you see is also one note the
+
+273
+00:19:12,880 --> 00:19:18,490
+sea is going to tell its parent that I actually have two nodes here, OK?
+
+274
+00:19:19,330 --> 00:19:26,200
+And if you have two nodes in this sub, the remaining the three, the remaining sub three is also going
+
+275
+00:19:26,200 --> 00:19:26,740
+to have.
+
+276
+00:19:32,080 --> 00:19:33,270
+It just lost a leg on.
+
+277
+00:19:35,260 --> 00:19:37,720
+So we just lost their diagram, so.
+
+278
+00:19:38,980 --> 00:19:46,030
+Let us let us recap what we were doing, so we said we will try to break between this edge, so we will
+
+279
+00:19:46,030 --> 00:19:51,340
+figure out how many people will travel travel through this edge, so it would be a minimum off.
+
+280
+00:19:51,670 --> 00:19:57,940
+On the left side, there is one person on the right side that are three percent rise of it multiplied
+
+281
+00:19:57,940 --> 00:20:01,060
+with the weight of it, it would be two into one into three.
+
+282
+00:20:01,060 --> 00:20:01,840
+That is six.
+
+283
+00:20:02,350 --> 00:20:05,150
+We said we will try to break it for this edge.
+
+284
+00:20:05,470 --> 00:20:05,770
+OK.
+
+285
+00:20:06,280 --> 00:20:08,090
+Then there are two persons in this part.
+
+286
+00:20:08,110 --> 00:20:14,590
+There are two wasn't in this, but it would be twice into a minimum of two into two multiplied with
+
+287
+00:20:14,710 --> 00:20:16,520
+the attachment that is two.
+
+288
+00:20:16,690 --> 00:20:20,860
+So it would be two in two to four into two eight eight units.
+
+289
+00:20:21,220 --> 00:20:26,320
+And if we try to break this edge, so there is one one one or two and there are three nodes, it it
+
+290
+00:20:26,320 --> 00:20:33,310
+would be the window minimum of one entry multiplied with what?
+
+291
+00:20:34,470 --> 00:20:37,030
+So it would be again at 3:40.
+
+292
+00:20:37,690 --> 00:20:40,240
+So this is 12+ +6, that is 18.
+
+293
+00:20:40,240 --> 00:20:42,220
+So you can divide still getting the right answer.
+
+294
+00:20:42,220 --> 00:20:42,640
+18.
+
+295
+00:20:43,120 --> 00:20:51,190
+But now the question is how you can do the DFS that we were discussing effectively what happened in
+
+296
+00:20:51,190 --> 00:20:51,970
+the offices?
+
+297
+00:20:52,600 --> 00:20:54,790
+Let me just pick a different marker.
+
+298
+00:20:56,800 --> 00:21:00,420
+So what happened is a miracle on me.
+
+299
+00:21:00,890 --> 00:21:08,240
+OK, we made a call on C, C Miracle on D, and it does not have any better details.
+
+300
+00:21:08,350 --> 00:21:09,280
+See, OK, I am.
+
+301
+00:21:09,310 --> 00:21:13,870
+I am a single note, so we get to know one of the values is one, OK?
+
+302
+00:21:14,590 --> 00:21:17,800
+From this note, we get to know if you're talking about this edge.
+
+303
+00:21:18,820 --> 00:21:19,870
+Then what happens?
+
+304
+00:21:20,560 --> 00:21:25,860
+So this child basically returns of illusion because it is returning the size of this entry.
+
+305
+00:21:26,470 --> 00:21:29,290
+It becomes one, followed by n minus one.
+
+306
+00:21:29,290 --> 00:21:33,430
+So n minus one is and is what for four, minus one is three.
+
+307
+00:21:34,150 --> 00:21:37,790
+So we get to know this value and we multiplied with two.
+
+308
+00:21:37,810 --> 00:21:39,700
+And we also know the advert is two.
+
+309
+00:21:39,760 --> 00:21:42,100
+So we get to know this answer that is four.
+
+310
+00:21:42,790 --> 00:21:44,140
+So I'd see this.
+
+311
+00:21:44,140 --> 00:21:44,890
+Is this a three?
+
+312
+00:21:45,340 --> 00:21:50,080
+And he says, OK, whatever is the size of the child three, I will add one to it.
+
+313
+00:21:50,440 --> 00:21:51,640
+I will return to my parent.
+
+314
+00:21:51,650 --> 00:21:53,300
+So she returns to to the parent.
+
+315
+00:21:53,340 --> 00:21:58,640
+It becomes to a minimum of two and minus two.
+
+316
+00:21:58,690 --> 00:22:00,340
+OK, what is the size of this?
+
+317
+00:22:00,410 --> 00:22:02,800
+So that is an adequate and minus two.
+
+318
+00:22:02,920 --> 00:22:06,020
+That is two multiplied with the agent.
+
+319
+00:22:06,070 --> 00:22:06,700
+That is two.
+
+320
+00:22:06,760 --> 00:22:09,790
+So it becomes too intolerant to do that, is it?
+
+321
+00:22:09,790 --> 00:22:12,220
+So we effectively get the answer for this rule.
+
+322
+00:22:12,910 --> 00:22:19,180
+The night three, we get to know the size of the subsidy is what it does to we are one do it.
+
+323
+00:22:19,660 --> 00:22:24,700
+It becomes doing to a minimum of three comma and minus three.
+
+324
+00:22:24,700 --> 00:22:26,680
+That is one into three.
+
+325
+00:22:27,040 --> 00:22:28,130
+This ad is now three.
+
+326
+00:22:29,710 --> 00:22:32,230
+So it becomes went to 3.6.
+
+327
+00:22:32,410 --> 00:22:39,030
+So we again get this one and we say, OK, this sum is what this sum is nothing but 18.
+
+328
+00:22:39,520 --> 00:22:45,880
+So effectively what we are doing is we are doing our depth first search and from every child node,
+
+329
+00:22:46,120 --> 00:22:49,060
+we are returning the size of the Sabry.
+
+330
+00:22:49,600 --> 00:22:49,900
+OK.
+
+331
+00:22:50,330 --> 00:22:57,490
+So both you have a complex tree like this in this case, if you make a call, if you make a call.
+
+332
+00:22:58,740 --> 00:22:59,010
+Here.
+
+333
+00:22:59,220 --> 00:23:05,130
+OK, if you make a call here, it will automatically make a call here, head hit and this so will return
+
+334
+00:23:05,130 --> 00:23:06,430
+as a tree to its spirit.
+
+335
+00:23:06,450 --> 00:23:06,750
+OK.
+
+336
+00:23:07,050 --> 00:23:09,870
+And we want to see how many times this edge is being used.
+
+337
+00:23:10,620 --> 00:23:15,830
+We'll find out the minimum of three and how many nodes are there in the other part of the tree.
+
+338
+00:23:15,840 --> 00:23:18,630
+That is nothing but n minus three.
+
+339
+00:23:18,630 --> 00:23:18,780
+OK?
+
+340
+00:23:18,910 --> 00:23:23,880
+We are not using the first to find out that bad because we know the total nodes.
+
+341
+00:23:24,300 --> 00:23:28,650
+If Tree are in one part, the other part is going to contain and minus three and we are taking this
+
+342
+00:23:28,650 --> 00:23:30,360
+minimum because.
+
+343
+00:23:31,770 --> 00:23:37,770
+We cannot fit a larger number of people into a small, smaller number of cities.
+
+344
+00:23:37,800 --> 00:23:43,440
+OK, so that's why we are taking minimum and that's nothing but an obligation of business.
+
+345
+00:23:43,690 --> 00:23:46,470
+OK, so I hope now you understood.
+
+346
+00:23:46,920 --> 00:23:50,940
+So what we have to do is we have just do the office in a single pass.
+
+347
+00:23:51,390 --> 00:23:54,690
+And while doing the office, you have to keep track of.
+
+348
+00:23:55,930 --> 00:24:00,550
+These values and this will take overall complexity of order off.
+
+349
+00:24:00,580 --> 00:24:02,340
+We see that as linear anything.
+
+350
+00:24:02,650 --> 00:24:06,940
+OK, so that's all for this lecture and thank you.
+

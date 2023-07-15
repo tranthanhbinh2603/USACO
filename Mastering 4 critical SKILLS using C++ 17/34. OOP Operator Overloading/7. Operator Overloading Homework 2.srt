@@ -1,0 +1,255 @@
+1
+00:00:00,720 --> 00:00:06,080
+The second set of homework, which might be a little harder, the first one, it's a tracing program.
+
+2
+00:00:06,090 --> 00:00:11,690
+This is the end, the end ability to remember it if you have some through and through to falsify through
+
+3
+00:00:11,700 --> 00:00:17,410
+fossil fuels, the oil would be like a true false unless both of them are true.
+
+4
+00:00:17,790 --> 00:00:23,550
+So we have some boolean cross that Rabson true value and we have the operator and then taking another
+
+5
+00:00:23,550 --> 00:00:25,150
+boolean and just ending them together.
+
+6
+00:00:25,560 --> 00:00:27,370
+Now we would like to try something here.
+
+7
+00:00:27,720 --> 00:00:29,700
+This is a function through false.
+
+8
+00:00:29,700 --> 00:00:30,390
+Just returning.
+
+9
+00:00:30,390 --> 00:00:31,030
+True or false.
+
+10
+00:00:31,060 --> 00:00:31,700
+Very normal.
+
+11
+00:00:31,950 --> 00:00:35,700
+So we have here some elbit just that this is a normal one.
+
+12
+00:00:36,090 --> 00:00:41,790
+The second one, every one of them is returning some object of type boolean and then doing some.
+
+13
+00:00:41,800 --> 00:00:45,420
+And then I would like you to trace this program out.
+
+14
+00:00:46,260 --> 00:00:51,900
+In the second program, we are going to create our map, the remember the C++ map where you can access
+
+15
+00:00:51,900 --> 00:00:55,300
+with a string using the subscript operator.
+
+16
+00:00:55,320 --> 00:00:56,850
+This was really magic like you are.
+
+17
+00:00:57,210 --> 00:00:58,530
+You are dealing with an array.
+
+18
+00:00:58,530 --> 00:01:04,380
+But the index, the key was with the string was in the value today to implement our own mind map.
+
+19
+00:01:04,710 --> 00:01:07,590
+The map internally have two things.
+
+20
+00:01:07,830 --> 00:01:11,240
+It have a victor for strings and it have victor of integrase.
+
+21
+00:01:11,400 --> 00:01:12,800
+So they use it should be as follows.
+
+22
+00:01:12,810 --> 00:01:20,130
+You can say Mustafah 20, then you can say Mustafah 40, then you can say Saied 20.
+
+23
+00:01:21,000 --> 00:01:25,590
+If you try to bring to the value of Mostapha, it would be just the 40 the last one so far.
+
+24
+00:01:25,590 --> 00:01:29,250
+The behavior is like they are very normal C++ map.
+
+25
+00:01:29,850 --> 00:01:32,340
+On the other side you can also exit with into it.
+
+26
+00:01:32,340 --> 00:01:37,460
+If you exit with entier, it will find all the variables, all the strings with this value.
+
+27
+00:01:37,830 --> 00:01:44,340
+For example, if I was 20, then you notice here that say that they are the values of the also the class
+
+28
+00:01:44,340 --> 00:01:45,210
+would support us.
+
+29
+00:01:45,210 --> 00:01:49,260
+The Iterator has an X next to bring to the whole string content.
+
+30
+00:01:49,470 --> 00:01:54,080
+I would like you to provide a data structure functionality that allow such a papier.
+
+31
+00:01:55,790 --> 00:02:00,680
+The Doublecross, remember, we once talked about the double, if you did these two double values,
+
+32
+00:02:00,680 --> 00:02:04,190
+surprisingly, they will not be equal in most of the cases.
+
+33
+00:02:04,430 --> 00:02:07,100
+That's because the double representation isn't accurate.
+
+34
+00:02:07,550 --> 00:02:13,880
+Now, we would like to still like a let's say I would like to make a C++ map of Dublin something.
+
+35
+00:02:13,880 --> 00:02:18,590
+It will not work because the values aren't equal as you expect them.
+
+36
+00:02:18,890 --> 00:02:25,490
+So what we want to say that never compare W directly to compare them, that you need for us to compare
+
+37
+00:02:25,490 --> 00:02:32,930
+with some epsilon or use the word class would I would like you to create a double class that allow us
+
+38
+00:02:32,930 --> 00:02:38,690
+to use double Frehley so now we can have a C++ map of our class and some values.
+
+39
+00:02:39,020 --> 00:02:45,140
+This way if you if you noticed here, if you, if you define here to doubles of even these two values,
+
+40
+00:02:45,290 --> 00:02:46,150
+they are going to give you.
+
+41
+00:02:46,160 --> 00:02:48,050
+True, you can use them with a map.
+
+42
+00:02:48,320 --> 00:02:51,110
+So define a double class that acceptable value.
+
+43
+00:02:51,230 --> 00:02:55,610
+But allow us to compare the values together with the resident operator.
+
+44
+00:02:55,610 --> 00:03:03,230
+You can define a map of this variable mathematically if you have two double values and they are very
+
+45
+00:03:03,230 --> 00:03:08,420
+close in the representation, how to how to compare them the right way is using absolute function.
+
+46
+00:03:08,690 --> 00:03:10,850
+Subtracted is two values from each other.
+
+47
+00:03:10,850 --> 00:03:11,750
+Do one and two.
+
+48
+00:03:12,110 --> 00:03:17,330
+If the difference is very, very, very small, like one E to minus ten for example, then we know they
+
+49
+00:03:17,330 --> 00:03:17,890
+are equal.
+
+50
+00:03:18,080 --> 00:03:21,310
+Otherwise we can normally compare them for less than and greater that.
+
+51
+00:03:21,530 --> 00:03:25,050
+So the idea is about the difference between the two numbers to make sure.
+
+52
+00:03:25,080 --> 00:03:27,010
+Is it really very, very, very small?
+
+53
+00:03:27,260 --> 00:03:29,000
+If yes, they are equal.
+
+54
+00:03:29,030 --> 00:03:31,460
+Otherwise you can compare with this and agree to that.
+
+55
+00:03:31,610 --> 00:03:32,770
+Try to make use of this I.
+
+56
+00:03:34,480 --> 00:03:38,300
+Gispert, we have some classic chess board with some 2000 columns.
+
+57
+00:03:38,320 --> 00:03:39,690
+Think of it as a theory.
+
+58
+00:03:40,090 --> 00:03:44,920
+We would like to be able to exit this board with sitting and getting into ways.
+
+59
+00:03:45,220 --> 00:03:49,790
+We would like to be accessing it with function call collaborator and would like to be accessing it within
+
+60
+00:03:49,840 --> 00:03:50,960
+subscript operator.
+
+61
+00:03:51,250 --> 00:03:54,230
+Remember that C++ only allowed one subscript operator.
+
+62
+00:03:54,250 --> 00:03:55,630
+So how can you do this trick?
+
+63
+00:03:55,900 --> 00:03:56,660
+Think about it.
+
+64
+00:03:57,490 --> 00:03:58,030
+That's it.

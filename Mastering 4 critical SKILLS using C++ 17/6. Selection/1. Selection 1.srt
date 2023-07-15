@@ -1,0 +1,394 @@
+0
+1
+00:00:01,260 --> 00:00:08,580
+So far, we were learning how to make basic and simple statements. From now on, we are going to take
+1
+
+2
+00:00:08,580 --> 00:00:12,360
+more steps in creating more and more complex programs.
+2
+
+3
+00:00:13,260 --> 00:00:18,730
+So there is what we call in C++, the flow, like the if conditions and the for loops and so on.
+3
+
+4
+00:00:18,870 --> 00:00:23,070
+So this this is like a step in a bigger journey.
+4
+
+5
+00:00:24,870 --> 00:00:30,960
+Let's say that you want to write a program and the program is going to read the salary of someone an
+5
+
+6
+00:00:30,960 --> 00:00:31,500
+integer
+6
+
+7
+00:00:31,770 --> 00:00:36,870
+And then if the salary is less than one thousand, you are to print: you are poor.
+7
+
+8
+00:00:37,200 --> 00:00:38,820
+Otherwise you do nothing.
+8
+
+9
+00:00:39,150 --> 00:00:45,780
+If you thought about it for a while, you almost don't have tools in C++ so far to do that.
+9
+
+10
+00:00:46,140 --> 00:00:52,950
+This is where C++ comes to tell you "if conditions". The if condition is something that says the following:
+10
+
+11
+00:00:53,280 --> 00:00:56,010
+If there is something that is true, do something.
+11
+
+12
+00:00:56,010 --> 00:00:57,420
+Otherwise, don't do anything.
+12
+
+13
+00:00:57,670 --> 00:00:58,750
+Here is the logic of it.
+13
+
+14
+00:00:58,830 --> 00:01:04,380
+But here is the syntax of it, let's say we are reading integer salary and then cin the salary.
+14
+
+15
+00:01:04,380 --> 00:01:05,310
+So far, so good.
+15
+
+16
+00:01:05,880 --> 00:01:10,020
+Check out what is inside these braces for now, salary less than one thousand.
+16
+
+17
+00:01:10,260 --> 00:01:12,210
+Let's say that the person entered here.
+17
+
+18
+00:01:12,210 --> 00:01:12,920
+Five hundred.
+18
+
+19
+00:01:13,260 --> 00:01:16,140
+So is 500 less than 1000
+19
+
+20
+00:01:16,140 --> 00:01:16,550
+The answer is yes.
+20
+
+21
+00:01:16,860 --> 00:01:19,330
+So salary is less than one thousand is true.
+21
+
+22
+00:01:19,800 --> 00:01:23,700
+So now this weird syntax is like if true.
+22
+
+23
+00:01:24,120 --> 00:01:26,010
+Then there is a statement inside it.
+23
+
+24
+00:01:26,280 --> 00:01:32,730
+OK, so the if condition goes as following, you write here if two parentheses and put a condition.
+24
+
+25
+00:01:33,000 --> 00:01:39,570
+If this condition is true, this line would be executed, otherwise it would be ignored.
+25
+
+26
+00:01:39,780 --> 00:01:44,540
+So let's try the program you entered five hundred, five hundred less than one thousand.
+26
+
+27
+00:01:44,730 --> 00:01:45,420
+This is true.
+27
+
+28
+00:01:45,720 --> 00:01:53,730
+If true, we go inside the condition we print "you are poor", then we print the word "salam" and we end the program on the other
+28
+
+29
+00:01:53,730 --> 00:01:54,210
+the other side.
+29
+
+30
+00:01:54,450 --> 00:01:59,510
+Let's say the person entered ten thousand so ten thousand less than one thousand.
+30
+
+31
+00:01:59,670 --> 00:02:00,930
+This is false.
+31
+
+32
+00:02:01,230 --> 00:02:08,420
+If false mean that the condition isn't satisfied, this line is going to be ignored.
+32
+
+33
+00:02:08,610 --> 00:02:17,730
+So this only would be printed so that if condition allows us to decide if somebody's logic will be executed
+33
+
+34
+00:02:17,730 --> 00:02:18,300
+or not.
+34
+
+35
+00:02:18,540 --> 00:02:20,490
+OK, please read and double check that.
+35
+
+36
+00:02:20,490 --> 00:02:21,210
+You understand that.
+36
+
+37
+00:02:23,060 --> 00:02:26,570
+Now, what if I just don't want to print a single line of code?
+37
+
+38
+00:02:26,600 --> 00:02:28,820
+What if I need something that's more complex?
+38
+
+39
+00:02:29,060 --> 00:02:33,240
+So C++ allows you to use the braces; to use more logic.
+39
+
+40
+00:02:33,440 --> 00:02:38,740
+So let's say I'm reading a number and I would like to do more logic if a number turns out to be ten.
+40
+
+41
+00:02:38,990 --> 00:02:47,000
+So if number is ten and now open in two braces, all the logic that we are writing here now is executed
+41
+
+42
+00:02:47,000 --> 00:02:49,160
+only if this condition is true.
+42
+
+43
+00:02:49,370 --> 00:02:52,190
+So if I enter ten is going to print 10 is 
+43
+
+44
+00:02:52,190 --> 00:02:57,830
+lucky number, also ten times two plus three, which is twenty-three.
+44
+
+45
+00:02:58,160 --> 00:03:06,530
+So now with if conditions, we get inside the body either one statement like in the previous code or much
+45
+
+46
+00:03:06,530 --> 00:03:07,480
+more logic.
+46
+
+47
+00:03:08,240 --> 00:03:10,240
+This is one very critical thing here.
+47
+
+48
+00:03:10,250 --> 00:03:16,160
+Now that we are going to learn something called the "scope" and local variable, a local variable.
+48
+
+49
+00:03:16,250 --> 00:03:23,850
+It is something that has a specific scope when we use braces here and define this integer here.
+49
+
+50
+00:03:24,140 --> 00:03:32,780
+Can I come here and say cout << x the answer is no, why? because this X is visible only through these two
+50
+
+51
+00:03:32,780 --> 00:03:36,140
+braces, only visible through these braces.
+51
+
+52
+00:03:36,560 --> 00:03:39,590
+So this is what we call this variable local variable.
+52
+
+53
+00:03:39,800 --> 00:03:44,120
+We later will know more about something called global variable, which can be defined here in line
+53
+
+54
+00:03:44,120 --> 00:03:44,430
+three.
+54
+
+55
+00:03:44,930 --> 00:03:46,030
+So what is inside
+55
+
+56
+00:03:46,040 --> 00:03:48,390
+braces, is invisible outside it.
+56
+
+57
+00:03:48,530 --> 00:03:50,440
+So this is the scope of a variable.
+57
+
+58
+00:03:52,430 --> 00:03:53,420
+That's it for today.
+58
+
+59
+00:03:53,540 --> 00:03:56,210
+But let's know about some common mistakes.
+59
+
+60
+00:03:56,780 --> 00:04:02,570
+Let's say that you define that integer "age" for 45 and you would like to compare if age is 45
+60
+
+61
+00:04:02,570 --> 00:04:03,050
+to five.
+61
+
+62
+00:04:03,050 --> 00:04:06,600
+Say wow, 40 years ago, something like that.
+62
+
+63
+00:04:06,920 --> 00:04:08,080
+This is the right way.
+63
+
+64
+00:04:08,420 --> 00:04:10,460
+There are two common mistakes that happen.
+64
+
+65
+00:04:10,790 --> 00:04:17,750
+The first that you write it this way: if age equals forty, now equals forty is an assignment, not a
+65
+
+66
+00:04:17,750 --> 00:04:18,380
+comparison
+66
+
+67
+00:04:18,390 --> 00:04:19,320
+or a relational operator.
+67
+
+68
+00:04:19,640 --> 00:04:23,650
+So what happened here that age equal 40 is assigned to age.
+68
+
+69
+00:04:24,020 --> 00:04:27,500
+So the first mistake is the original value change.
+69
+
+70
+00:04:28,040 --> 00:04:29,330
+The second mistake is.
+70
+
+71
+00:04:30,200 --> 00:04:36,860
+Age equals 40 ends up with 40, if here is going to be executed, it is going to be treated as true.
+71
+
+72
+00:04:36,870 --> 00:04:37,370
+Why?
+72
+
+73
+00:04:37,620 --> 00:04:39,830
+Because it is only false if the value is zero.
+73
+
+74
+00:04:40,070 --> 00:04:45,020
+OK, so the second mistake is this is going to be executed like here.
+74
+
+75
+00:04:45,170 --> 00:04:53,210
+If you said if age, this is going to be executed because the condition is true if it's a value not
+75
+
+76
+00:04:53,450 --> 00:04:53,950
+zero.
+76
+
+77
+00:04:54,230 --> 00:04:58,490
+So be careful about the assigning and the mistake that it causes.
+77
+
+78
+00:04:59,150 --> 00:04:59,740
+That's it.
+78
+
+79
+00:04:59,750 --> 00:05:02,600
+Please make sure to practice that before the next session.

@@ -1,0 +1,251 @@
+1
+00:00:00,630 --> 00:00:07,560
+And this video will learn how to do operator overloading for the input and output stream things.
+
+2
+00:00:07,840 --> 00:00:10,520
+Remember the stream insertion, for example?
+
+3
+00:00:10,530 --> 00:00:13,120
+Operator, we can define integrated.
+
+4
+00:00:13,170 --> 00:00:14,130
+This is very OK.
+
+5
+00:00:14,430 --> 00:00:18,790
+But surprisingly, we notice also that we can read the C++ history, the class.
+
+6
+00:00:19,080 --> 00:00:21,870
+So how did the C++ string class did that?
+
+7
+00:00:22,170 --> 00:00:25,650
+They are also bruta overruling that insertion operator.
+
+8
+00:00:26,910 --> 00:00:29,600
+This should be greater than greater than less than that.
+
+9
+00:00:30,450 --> 00:00:31,540
+Now what?
+
+10
+00:00:31,620 --> 00:00:32,380
+What about us?
+
+11
+00:00:32,400 --> 00:00:38,520
+We would like to define our own insertion operator here to read into what you know so far is enough
+
+12
+00:00:38,520 --> 00:00:40,380
+for you to do this by yourself.
+
+13
+00:00:40,590 --> 00:00:46,600
+Try to see an X if you managed to do it, try to send X Y and try to do it if you can.
+
+14
+00:00:46,980 --> 00:00:48,920
+Let's think together here in the next slide.
+
+15
+00:00:51,960 --> 00:00:53,360
+Let's think about it.
+
+16
+00:00:54,030 --> 00:01:02,460
+We would like to to use C an X now thinking about that, there are two ways to implement things either
+
+17
+00:01:02,460 --> 00:01:05,780
+at the member function or as a non-member function.
+
+18
+00:01:06,090 --> 00:01:07,610
+This is not to the member function.
+
+19
+00:01:07,980 --> 00:01:09,060
+If you thought about it.
+
+20
+00:01:09,210 --> 00:01:13,290
+We have two objects here sitting on the left X on the right.
+
+21
+00:01:13,710 --> 00:01:20,370
+Now, if we would like to implement this on the on the as a member function, we need to go to the class
+
+22
+00:01:20,370 --> 00:01:27,090
+of C in which is the stream and inside it defined this operator, the taking X parameter.
+
+23
+00:01:27,120 --> 00:01:28,010
+Now this is weird.
+
+24
+00:01:28,320 --> 00:01:29,560
+We will now.
+
+25
+00:01:29,720 --> 00:01:34,350
+Now this is weird because the the C in the class I stay stream class excludes the class.
+
+26
+00:01:34,350 --> 00:01:35,790
+We cannot adjust it this way.
+
+27
+00:01:36,060 --> 00:01:39,360
+So you cannot do this logic because C++ will not allow you.
+
+28
+00:01:39,960 --> 00:01:41,490
+OK, let's do more practical.
+
+29
+00:01:41,670 --> 00:01:44,170
+Let's define it as a member function, non-member function.
+
+30
+00:01:44,370 --> 00:01:49,260
+Now we can define it just as the first object, the extreme and the second object in the X.
+
+31
+00:01:49,380 --> 00:01:50,260
+This is fair enough.
+
+32
+00:01:50,790 --> 00:01:52,310
+So here is how we are going to do it.
+
+33
+00:01:52,590 --> 00:01:57,230
+You are defining an operator greater than greater than for reading.
+
+34
+00:01:57,630 --> 00:02:03,750
+You give it the object from type C in which is I remembered, and the object of type beer.
+
+35
+00:02:04,140 --> 00:02:08,010
+Then you do the normal reading for m b as to variable and set them together.
+
+36
+00:02:08,610 --> 00:02:12,750
+Now we have here Meyerbeer X and Y, we are in X and then we are renting.
+
+37
+00:02:12,750 --> 00:02:14,480
+Get one concern here.
+
+38
+00:02:14,760 --> 00:02:18,360
+What if I would like to read X and why this would not work.
+
+39
+00:02:18,610 --> 00:02:20,400
+Give yourself a minute to think about it.
+
+40
+00:02:21,210 --> 00:02:25,650
+The reason that this will not work is C an X is by itself a function call.
+
+41
+00:02:25,770 --> 00:02:30,210
+It's going to be replaced by the return of the greater the return is here void.
+
+42
+00:02:30,450 --> 00:02:34,100
+So it's now become void greater than greater than y it will not work.
+
+43
+00:02:34,680 --> 00:02:36,810
+What if I would like to read another number?
+
+44
+00:02:37,140 --> 00:02:42,780
+We would like this thing greater than greater than X to be replaced with again C and so we are going
+
+45
+00:02:42,780 --> 00:02:45,090
+to we need to return it this way.
+
+46
+00:02:45,420 --> 00:02:47,850
+When you take the extreme, you return it again.
+
+47
+00:02:48,240 --> 00:02:55,040
+Now saying X is resolved here within the return with the ice cream again, which is the end.
+
+48
+00:02:55,260 --> 00:03:03,810
+So now it becomes in Y, so an X in Y is now C in what if you have X, Y, Z it would be X, Y, Z,
+
+49
+00:03:03,980 --> 00:03:06,150
+then why is it Vincey in that.
+
+50
+00:03:06,360 --> 00:03:08,700
+So the return of the object is what helped us.
+
+51
+00:03:09,180 --> 00:03:16,110
+If you would like to avoid this ugly that said first, the second you can just define it as a friend
+
+52
+00:03:16,140 --> 00:03:16,620
+function.
+
+53
+00:03:17,940 --> 00:03:20,540
+So if I needed a friend to function and you just use it.
+
+54
+00:03:20,910 --> 00:03:26,940
+So now everything is perfect in reading, you see how we managed to use that to the extensibility using
+
+55
+00:03:26,940 --> 00:03:28,290
+the non-member function?
+
+56
+00:03:28,530 --> 00:03:29,610
+We cannot do that.
+
+57
+00:03:29,820 --> 00:03:33,960
+We cannot read this way using a member function site in a similar way.
+
+58
+00:03:33,960 --> 00:03:37,700
+We can define also the S function here.
+
+59
+00:03:38,040 --> 00:03:41,400
+So the S is it's a very similar logic.
+
+60
+00:03:41,670 --> 00:03:45,260
+But notice here we will here in the C out.
+
+61
+00:03:45,300 --> 00:03:46,800
+This is optional but is good.
+
+62
+00:03:47,040 --> 00:03:50,600
+If you are renting, you have no need to change the variable.
+
+63
+00:03:51,930 --> 00:03:52,920
+Yeah, that's it.

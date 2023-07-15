@@ -1,0 +1,324 @@
+0
+1
+00:00:00,900 --> 00:00:09,660
+The keyword const with classes. One of the highly recommended things in the OOP programming
+1
+
+2
+00:00:09,930 --> 00:00:13,410
+is to create as much as possible constant functions.
+2
+
+3
+00:00:13,770 --> 00:00:19,500
+So what is a constant function, and how to do that? The constant function in a constant member function,
+3
+
+4
+00:00:19,710 --> 00:00:24,150
+when you come inside the function and after the braces, you put the word const.
+4
+
+5
+00:00:24,490 --> 00:00:25,740
+So what does it imply?
+5
+
+6
+00:00:26,010 --> 00:00:33,330
+It means that the data members of this class will not be changed through
+6
+
+7
+00:00:33,330 --> 00:00:33,930
+this function.
+7
+
+8
+00:00:34,230 --> 00:00:40,230
+Thinking about compute_area, compute_area as a function is expected to just multiply width and height,
+8
+
+9
+00:00:40,230 --> 00:00:42,120
+but not to change the width and height.
+9
+
+10
+00:00:42,540 --> 00:00:48,210
+So if you tried here to change the width to one, the compiler will complain because this is a const function.
+10
+
+11
+00:00:48,630 --> 00:00:50,460
+Getters are typically const functions,
+11
+
+12
+00:00:50,460 --> 00:00:57,540
+no getters are expected to change the variable, but setters cannot be const function because they are expected
+12
+
+13
+00:00:57,900 --> 00:01:03,780
+to change the value. Creating as much as possible const
+13
+
+14
+00:01:04,050 --> 00:01:11,310
+functions will reduce the errors because if the developer decided to change
+14
+
+15
+00:01:11,310 --> 00:01:15,780
+something that intention wasn't supposed to be changed, he would get a compilation error.
+15
+
+16
+00:01:16,230 --> 00:01:19,310
+You can also definitely make your object to const,
+16
+
+17
+00:01:19,470 --> 00:01:20,670
+but this is a different thing.
+17
+
+18
+00:01:20,670 --> 00:01:23,330
+...
+18
+
+19
+00:01:23,640 --> 00:01:24,420
+Oh, no, sorry,
+19
+
+20
+00:01:24,420 --> 00:01:25,560
+there is an important trick here.
+20
+
+21
+00:01:25,950 --> 00:01:31,830
+When you defined an object R1 here, you can call its own functions.
+21
+
+22
+00:01:32,160 --> 00:01:40,230
+If you defined the object as const, you can only call the const functions, but you cannot
+22
+
+23
+00:01:40,230 --> 00:01:41,690
+call the non-const functions.
+23
+
+24
+00:01:41,820 --> 00:01:43,230
+So this is an important difference.
+24
+
+25
+00:01:43,470 --> 00:01:45,900
+So const means internally you cannot change them,
+25
+
+26
+00:01:46,320 --> 00:01:52,680
+and also you if the class is const, you cannot call function
+26
+
+27
+00:01:52,710 --> 00:01:53,640
+that is not-const.
+27
+
+28
+00:01:53,910 --> 00:01:58,800
+So set width, for example here, isn't function with const,
+28
+
+29
+00:01:59,250 --> 00:02:08,250
+so you cannot call it because the object supposed to not be changed. In terms of pointers for the sake of
+29
+
+30
+00:02:08,250 --> 00:02:08,760
+knowledge,
+30
+
+31
+00:02:09,130 --> 00:02:10,410
+let's say... 
+31
+
+32
+00:02:10,410 --> 00:02:12,390
+there are three ways to define pointers here
+32
+
+33
+00:02:12,390 --> 00:02:13,830
+to be careful with them.
+33
+
+34
+00:02:13,950 --> 00:02:19,410
+You can say const rectangle pointer or rectangle pointer const or const rectangle pointer.
+34
+
+35
+00:02:19,770 --> 00:02:22,230
+OK, let's think about this case here.
+35
+
+36
+00:02:22,230 --> 00:02:25,530
+First R3, R3 is a variable,
+36
+
+37
+00:02:25,770 --> 00:02:28,170
+its data type is a rectangle point const.
+37
+
+38
+00:02:28,290 --> 00:02:29,760
+This is the data type variable.
+38
+
+39
+00:02:30,000 --> 00:02:32,460
+So it means that the pointer is constant.
+39
+
+40
+00:02:32,700 --> 00:02:38,160
+This means once you created the pointer, you cannot change the pointer
+40
+
+41
+00:02:38,160 --> 00:02:43,680
+here, like put its referencing to one, but you can change the values of it, so the limitation  
+41
+
+42
+00:02:43,680 --> 00:02:45,620
+here is you cannot change the pointer itself,
+42
+
+43
+00:02:46,230 --> 00:02:51,980
+but on the other side here, R2 itself is of type rectangle pointer, but R2 is const
+43
+
+44
+00:02:52,290 --> 00:02:57,510
+This means what? this means that...( R2 itself is const)
+44
+
+45
+00:02:57,510 --> 00:03:00,010
+you cannot change R2 itself, ok.
+45
+
+46
+00:03:00,240 --> 00:03:04,590
+You cannot make a set width, for example, but you can assign it to another pointer.
+46
+
+47
+00:03:04,770 --> 00:03:10,740
+OK, which is ok because the pointer itself is inconst. Here
+47
+
+48
+00:03:10,920 --> 00:03:16,230
+in this case, both the pointer and the data are both, so you cannot change them.
+48
+
+49
+00:03:17,520 --> 00:03:22,380
+You can always make a pointer const-const that restricted to look out to something,
+49
+
+50
+00:03:22,620 --> 00:03:23,850
+but the opposite isn't true.
+50
+
+51
+00:03:23,850 --> 00:03:27,960
+It has to be like I'm having here more, more, more restrictions.
+51
+
+52
+00:03:29,760 --> 00:03:36,930
+If you have a const member variable, as we say before, you cannot use it inside the class this way.
+52
+
+53
+00:03:37,200 --> 00:03:40,360
+It has to be inside the initializer list.
+53
+
+54
+00:03:40,440 --> 00:03:47,670
+OK, the const variables like that are a bit slower, so they are not recommended unless there is
+54
+
+55
+00:03:47,670 --> 00:03:48,450
+a reason for that.
+55
+
+56
+00:03:49,720 --> 00:03:55,840
+Finally, there is something that we call the principle of least privilege, one way to think about const
+56
+
+57
+00:03:56,140 --> 00:04:03,100
+functions is: you are giving less space for someone who is using something.
+57
+
+58
+00:04:03,100 --> 00:04:10,480
+You know, when you install a program on your mobile, you are allowing only the program to access what
+58
+
+59
+00:04:10,480 --> 00:04:11,390
+it needs to access.
+59
+
+60
+00:04:11,410 --> 00:04:13,300
+So you are giving specific permissions.
+60
+
+61
+00:04:13,600 --> 00:04:17,720
+If you installed a program that has a lot of permissions that it doesn't need, something is wrong.
+61
+
+62
+00:04:18,010 --> 00:04:24,030
+So when we make a function const, we are limiting the scope that someone can do it.
+62
+
+63
+00:04:24,280 --> 00:04:27,040
+So this like make the program much more stronger.
+63
+
+64
+00:04:27,370 --> 00:04:29,930
+So please use const function as much as you could.
+64
+
+65
+00:04:30,400 --> 00:04:30,880
+That's it.

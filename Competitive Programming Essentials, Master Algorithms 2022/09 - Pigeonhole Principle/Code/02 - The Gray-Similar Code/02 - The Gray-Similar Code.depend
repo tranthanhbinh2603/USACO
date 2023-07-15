@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1674825196 source:e:\document\project\usaco\competitive programming essentials, master algorithms 2022\09 - pigeonhole principle\code\02 - the gray-similar code\main.cpp
+	<iostream>
+	<unordered_map>
+

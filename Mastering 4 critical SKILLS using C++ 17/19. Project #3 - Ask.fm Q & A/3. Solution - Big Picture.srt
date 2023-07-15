@@ -1,0 +1,754 @@
+0
+1
+00:00:00,960 --> 00:00:09,090
+We will start explaining some points about the ask.me project, the project in size is like double
+1
+
+2
+00:00:09,180 --> 00:00:12,240
+the size of the last project, so it might be like a big jump.
+2
+
+3
+00:00:12,720 --> 00:00:17,760
+Make sure to not try a new project unless you are good with the previous projects.
+3
+
+4
+00:00:18,600 --> 00:00:20,870
+Otherwise, it would be frustrating for you.
+4
+
+5
+00:00:21,870 --> 00:00:26,400
+You should know that it takes time to learn how to write a good code.
+5
+
+6
+00:00:26,430 --> 00:00:29,650
+It takes time to learn how to divide a problem to sub-problems.
+6
+
+7
+00:00:29,970 --> 00:00:30,750
+It takes time.
+7
+
+8
+00:00:31,350 --> 00:00:38,130
+And in many of the courses' projects, maybe the best project is like 100 or 200 lines
+8
+
+9
+00:00:38,130 --> 00:00:38,450
+of code.
+9
+
+10
+00:00:38,460 --> 00:00:44,550
+But in my opinion, we should go further than that so that students realize that the path is much
+10
+
+11
+00:00:44,550 --> 00:00:46,110
+longer than what they think.
+11
+
+12
+00:00:47,610 --> 00:00:49,580
+Expect that you will have difficulties.
+12
+
+13
+00:00:49,590 --> 00:00:51,360
+Take it easy, don't get frustrated.
+13
+
+14
+00:00:51,990 --> 00:00:55,410
+You will learn by struggling and suffering.
+14
+
+15
+00:00:55,430 --> 00:00:57,120
+There is no way to skip that.
+15
+
+16
+00:00:57,930 --> 00:00:59,490
+And also it will take time.
+16
+
+17
+00:00:59,790 --> 00:01:02,840
+And more importantly, it will be like an iterative style
+17
+
+18
+00:01:03,120 --> 00:01:08,250
+So try not to get disappointed, like having this spirit of a fighter who try to get things done.
+18
+
+19
+00:01:09,420 --> 00:01:18,600
+The other advice is when you try to approach a hard project, try to think in the most
+19
+
+20
+00:01:18,600 --> 00:01:24,870
+easy and simple features of the system and start implementing them. The more building blocks that you
+20
+
+21
+00:01:24,870 --> 00:01:28,800
+do in the system, the more capabilities to make it bigger and bigger.
+21
+
+22
+00:01:29,430 --> 00:01:34,440
+Whenever you try a project that you think it is too much for you to get, too much for you to start,
+22
+
+23
+00:01:34,830 --> 00:01:40,350
+simplify the project, call it like a project version number one, which is a very simplified view of
+23
+
+24
+00:01:40,350 --> 00:01:40,900
+the system.
+24
+
+25
+00:01:41,160 --> 00:01:47,060
+For example, you might discard the thread's idea or whatever and so on. Anyway let's start
+25
+
+26
+00:01:47,070 --> 00:01:52,800
+and it's very challenging to be able to explain something that big. In industry,
+26
+
+27
+00:01:54,030 --> 00:01:55,620
+when you get a new team, 
+27
+
+28
+00:01:55,620 --> 00:01:57,450
+no one comes and explains for you everything.
+28
+
+29
+00:01:57,510 --> 00:02:04,920
+Just we we explain for guys the big picture and we let them deep dive in the code by themselves.
+29
+
+30
+00:02:05,460 --> 00:02:07,730
+So anyway, that's a start and try to give a trial.
+30
+
+31
+00:02:09,300 --> 00:02:11,010
+I have here a bunch of utilities.
+31
+
+32
+00:02:11,610 --> 00:02:16,860
+It's very good whenever you realize some utility to develop it in a separate function or a separate
+32
+
+33
+00:02:16,860 --> 00:02:20,070
+class; this makes your life easy to code, easy to debug.
+33
+
+34
+00:02:20,290 --> 00:02:26,520
+I have here some function to read the lines of code, some function to write the lines of code.
+34
+
+35
+00:02:27,440 --> 00:02:34,140
+If I would like to append or start from scratch, a function to take a string s and split it and there
+35
+
+36
+00:02:34,140 --> 00:02:35,610
+is a default delimiter here: comma ',' .
+36
+
+37
+00:02:36,090 --> 00:02:41,210
+So for example, if I give it here like this string, it is going to split it to this word.
+37
+
+38
+00:02:41,220 --> 00:02:42,040
+There is a comma here.
+38
+
+39
+00:02:42,060 --> 00:02:45,210
+This number, this number, this number, this string.
+39
+
+40
+00:02:45,270 --> 00:02:45,850
+This is string.
+40
+
+41
+00:02:46,290 --> 00:02:47,560
+This is what the function is doing.
+41
+
+42
+00:02:48,480 --> 00:02:52,950
+There is also a function that convert a string to integer. A function that reads integer
+42
+
+43
+00:02:52,950 --> 00:02:57,690
+but it must be between low and high. And a function that displays a menu and return a choice.
+43
+
+44
+00:02:58,590 --> 00:03:00,120
+So there are the utilities.
+44
+
+45
+00:03:00,600 --> 00:03:07,700
+Considering the big picture of the system, we can all easily notice that the system has questions.
+45
+
+46
+00:03:08,040 --> 00:03:10,350
+So I have here a class question.
+46
+
+47
+00:03:10,830 --> 00:03:13,590
+The answers in this system are very simple.
+47
+
+48
+00:03:13,590 --> 00:03:14,930
+The answer is just a text.
+48
+
+49
+00:03:15,220 --> 00:03:18,150
+That's why we don't need a specific class for it.
+49
+
+50
+00:03:18,600 --> 00:03:23,700
+In reality, the answer can be a text, an audio or a video. In such a system,
+50
+
+51
+00:03:23,700 --> 00:03:26,110
+you will also expect a struct for the answer itself.
+51
+
+52
+00:03:26,790 --> 00:03:30,340
+So we have here a class for question and another class for a user.
+52
+
+53
+00:03:30,750 --> 00:03:33,660
+The question is a class representing a single question.
+53
+
+54
+00:03:34,140 --> 00:03:39,450
+But what if I would like to have something that manage for me a bunch of questions? Here is the idea
+54
+
+55
+00:03:39,450 --> 00:03:40,110
+of the manager.
+55
+
+56
+00:03:40,350 --> 00:03:47,010
+So the questions manager is another class that is representing my struct that handle a lot of different
+56
+
+57
+00:03:47,010 --> 00:03:48,870
+questions. In a similar way,
+57
+
+58
+00:03:48,870 --> 00:03:54,930
+the user representing a single user, but the users manager is representing the something that can
+58
+
+59
+00:03:54,930 --> 00:03:56,700
+handle the overall of the system.
+59
+
+60
+00:03:57,900 --> 00:04:03,120
+Starting the system we would create an object from this front end surface of the ask.me system, which is a
+60
+
+61
+00:04:03,120 --> 00:04:07,110
+front end and I'm telling it to run so it would keep running forever.
+61
+
+62
+00:04:07,440 --> 00:04:11,580
+And the preparing bunch of choices here for the user.
+62
+
+63
+00:04:11,970 --> 00:04:15,870
+And then we have a while loop that keep taking a choice.
+63
+
+64
+00:04:16,170 --> 00:04:20,370
+And then you have here a function for every choice.
+64
+
+65
+00:04:20,670 --> 00:04:24,510
+So something closer to what we did already before in the previous projects.
+65
+
+66
+00:04:25,440 --> 00:04:30,810
+Important here to notice that the front end system needs to contact the back end system, which
+66
+
+67
+00:04:30,810 --> 00:04:38,520
+are here like our user manager, our questions manager. The word "front end" refers to what the user is interfacing
+67
+
+68
+00:04:38,520 --> 00:04:39,600
+with, which is here
+68
+
+69
+00:04:39,600 --> 00:04:47,040
+the menu options. The word "back end" refers to what is behind the scene doing the logic,
+69
+
+70
+00:04:47,040 --> 00:04:50,990
+doing the processing, reading from file, adding data to database and so on.
+70
+
+71
+00:04:51,600 --> 00:04:56,850
+So these two in fact are more of like back end, but that guy is more of a front end. You don't study the 
+71
+
+72
+00:04:56,860 --> 00:05:01,170
+word of front end and the back end in C++, you typically start to see them when you start to learn web
+72
+
+73
+00:05:01,170 --> 00:05:02,670
+development and mobile development.
+73
+
+74
+00:05:02,940 --> 00:05:07,010
+But I like to like make it easier for you to get a sense of what does this mean?
+74
+
+75
+00:05:07,620 --> 00:05:11,340
+Let's try to inspect a high level of the functionalities here.
+75
+
+76
+00:05:12,120 --> 00:05:15,300
+The question class: every question should have an ID.
+76
+
+77
+00:05:15,480 --> 00:05:19,470
+The idea of an ID is very important here in software engineering.
+77
+
+78
+00:05:19,770 --> 00:05:22,290
+We typically need IDs for questions.
+78
+
+79
+00:05:22,620 --> 00:05:28,590
+In reality, if, for example, you have a database, the ID is typically coming from the database because
+79
+
+80
+00:05:28,590 --> 00:05:34,290
+the database will be generating unique IDs for like every question, every ID and so on.
+80
+
+81
+00:05:34,770 --> 00:05:38,010
+For now, we are maintaining here an ID by ourselves.
+81
+
+82
+00:05:39,600 --> 00:05:46,350
+There is one issue that we want to support threads and there is a nice idea here, what we call
+82
+
+83
+00:05:46,350 --> 00:05:46,770
+the parent
+83
+
+84
+00:05:46,780 --> 00:05:52,380
+question ID. The parent question ID is either another ID in the system or minus one.
+84
+
+85
+00:05:52,380 --> 00:05:55,170
+If it is minus one, it means the first question in the thread.
+85
+
+86
+00:05:55,920 --> 00:06:00,630
+For example, let's say we created the first question, then its parent ID would be -1.
+86
+
+87
+00:06:00,960 --> 00:06:02,820
+Let's say that the ID is 77.
+87
+
+88
+00:06:03,330 --> 00:06:04,450
+Now we created a thread
+88
+
+89
+00:06:04,460 --> 00:06:06,540
+question over this question.
+89
+
+90
+00:06:06,900 --> 00:06:08,830
+So let's say the new ID is
+90
+
+91
+00:06:08,890 --> 00:06:14,340
+99, but the parent ID would be the 77 of the parent ID and so on.
+91
+
+92
+00:06:14,740 --> 00:06:21,550
+In reality, if you would like to do something that has a like a reply on a reply on a reply on a reply, then you can make
+92
+
+93
+00:06:21,550 --> 00:06:24,290
+like every parent ID is referring to a parent.
+93
+
+94
+00:06:24,640 --> 00:06:27,610
+But here in our case, it's just one level relationship
+94
+
+95
+00:06:27,610 --> 00:06:28,840
+to make your life easier.
+95
+
+96
+00:06:29,710 --> 00:06:33,520
+Every question should be from a specific user to a specific user.
+96
+
+97
+00:06:33,580 --> 00:06:36,310
+Again, we depend on the IDs.
+97
+
+98
+00:06:36,610 --> 00:06:42,130
+By the way, one of the reasons we depend on IDs for now is also that we don't use pointers.
+98
+
+99
+00:06:42,640 --> 00:06:48,490
+If you try to make like, say, a user_from & user_to, they would be typically by copy unless you are
+99
+
+100
+00:06:48,490 --> 00:06:49,200
+careful enough.
+100
+
+101
+00:06:49,540 --> 00:06:54,310
+So one of the things that make our life easier is just depending on IDs itself.
+101
+
+102
+00:06:55,210 --> 00:07:00,550
+We have a variable for the is_anonymous or not, string for the question and a string for the answer.
+102
+
+103
+00:07:01,300 --> 00:07:02,800
+We have here a constructor.
+103
+
+104
+00:07:02,800 --> 00:07:07,300
+One of them is empty doing nothing and another one that read the line from a file.
+104
+
+105
+00:07:07,300 --> 00:07:10,870
+Take a line from a file, convert it to a question.
+105
+
+106
+00:07:11,110 --> 00:07:12,310
+So we have questions.
+106
+
+107
+00:07:12,640 --> 00:07:20,050
+I can take this line, pass it to this constructor to split it item by item, convert it back to a question.
+107
+
+108
+00:07:20,920 --> 00:07:25,450
+And we have some functionality, a function to convert the question to print it to, to print it 
+108
+
+109
+00:07:25,450 --> 00:07:28,420
+from; just a bunch of printing functionalities.
+109
+
+110
+00:07:31,030 --> 00:07:36,340
+As you see, the more functionalities related to the question should be pushed in the question class not outside
+110
+
+111
+00:07:36,340 --> 00:07:36,820
+the class.
+111
+
+112
+00:07:38,200 --> 00:07:43,660
+In the second struct, we have here the struct user, which again has a user ID.
+112
+
+113
+00:07:43,840 --> 00:07:52,960
+Then we have some of the popular attributes of all the new users and we have vector
+113
+
+114
+00:07:52,960 --> 00:07:58,990
+and map. The first victor for the IDs for the questions coming for me, like let's say you asked
+114
+
+115
+00:07:58,990 --> 00:08:00,610
+the question here and here and here.
+115
+
+116
+00:08:00,850 --> 00:08:04,090
+So all of the questions that you asked are in this list.
+116
+
+117
+00:08:05,120 --> 00:08:13,490
+Now, we would like to have a question ID to the list of questions on this question, like thread here.
+117
+
+118
+00:08:17,110 --> 00:08:25,930
+So I have here a map from a question ID to the list of the IDs, these are the list of IDs representing
+118
+
+119
+00:08:25,930 --> 00:08:27,320
+this current thread.
+119
+
+120
+00:08:27,760 --> 00:08:33,670
+So this is how the user has its own from questions and the two questions.
+120
+
+121
+00:08:33,760 --> 00:08:37,150
+But observe that the two questions need to be more like a thread style.
+121
+
+122
+00:08:37,150 --> 00:08:38,710
+At least this is what I selected here.
+122
+
+123
+00:08:39,130 --> 00:08:42,420
+By the way, feel free to have your own data structure for map.
+123
+
+124
+00:08:42,670 --> 00:08:50,260
+So for me, I am mapping my ID a question ID to the list of the questions under this ID.
+124
+
+125
+00:08:50,590 --> 00:08:55,690
+So for example, if you have a question and three questions in this thread, then for this 
+125
+
+126
+00:08:55,690 --> 00:09:00,850
+ID would have a vector of three question IDs.  In a similar way,
+126
+
+127
+00:09:00,850 --> 00:09:08,510
+we can take a line from the users line and convert it to a single user class here.
+127
+
+128
+00:09:09,490 --> 00:09:12,060
+This is mainly the two things here, the question and the user.
+128
+
+129
+00:09:12,580 --> 00:09:16,150
+Now what if I would like to manage a set of questions?
+129
+
+130
+00:09:16,330 --> 00:09:24,660
+The question manager has this role. We have here map: the first map is questionID_ questionID_thread_
+130
+
+131
+00:09:25,120 --> 00:09:30,370
+to_map, which is a map from the question ID to the questions IDs.
+131
+
+132
+00:09:30,580 --> 00:09:36,070
+This is the same as the previous one, but it is now for all the users.
+132
+
+133
+00:09:36,340 --> 00:09:40,040
+So the one that was here, as you notice, they are very similar.
+133
+
+134
+00:09:40,270 --> 00:09:45,220
+This one is for this specific user, but this one is for all of the users.
+134
+
+135
+00:09:45,220 --> 00:09:53,740
+All of the questions and all of the IDs. We have here another map which is map for us an ID to the
+135
+
+136
+00:09:53,740 --> 00:09:55,030
+corresponding question.
+136
+
+137
+00:09:57,090 --> 00:09:59,470
+The reason for 
+137
+
+138
+00:09:59,530 --> 00:10:05,370
+mapping, as I said, and actually the dependence on integer IDs here is I'm avoiding to have multiple
+138
+
+139
+00:10:05,370 --> 00:10:05,730
+objects.
+139
+
+140
+00:10:05,740 --> 00:10:10,770
+I'm trying to make sure every single question is just in this map so that we avoid duplicates, all
+140
+
+141
+00:10:10,770 --> 00:10:12,540
+of them to be in one place later.
+141
+
+142
+00:10:12,540 --> 00:10:17,160
+Later when we learn about pointers, this problem would be much easier to be handled.
+142
+
+143
+00:10:18,720 --> 00:10:22,760
+The question manager here have a lot of functionality.
+143
+
+144
+00:10:22,950 --> 00:10:28,140
+One of them is loading database, which is going to read the data from the questions.text and just pass it.
+144
+
+145
+00:10:28,560 --> 00:10:34,140
+And then other functionalities here like fill and fill, read, answer a question, delete a question and
+145
+
+146
+00:10:34,140 --> 00:10:34,530
+so on.
+146
+
+147
+00:10:36,580 --> 00:10:40,790
+The second class is the users manager. In the users manager,
+147
+
+148
+00:10:40,830 --> 00:10:47,480
+we again loading the users and we have a trial to access the system by log in
+148
+
+149
+00:10:47,480 --> 00:10:48,090
+to sign up.
+149
+
+150
+00:10:48,400 --> 00:10:54,380
+And here we have the couple of functionalities and we have more functionalities related to that.
+150
+
+151
+00:10:54,940 --> 00:11:00,750
+I hope in this video you got a good big picture of the system and its nature.

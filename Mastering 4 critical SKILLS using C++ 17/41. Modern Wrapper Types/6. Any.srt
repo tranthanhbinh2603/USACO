@@ -1,0 +1,291 @@
+1
+00:00:01,230 --> 00:00:09,840
+The third interesting river in the Sebesta 17 is that any river the Indian River can is to any data
+
+2
+00:00:09,860 --> 00:00:19,080
+type and you can use it in the own time and it change the data types normally, but definitely at a
+
+3
+00:00:19,090 --> 00:00:21,630
+specific point it has just one data type.
+
+4
+00:00:22,320 --> 00:00:24,320
+The more of it is the flexibility.
+
+5
+00:00:24,330 --> 00:00:26,680
+You can change it to whatever data that you would like.
+
+6
+00:00:27,030 --> 00:00:33,170
+So we hope we can say here any in the header file, any and we say any nothing.
+
+7
+00:00:33,210 --> 00:00:37,940
+This we have nothing or maybe all to nothing with any pretenses.
+
+8
+00:00:37,980 --> 00:00:38,970
+There's also the finding.
+
+9
+00:00:38,970 --> 00:00:40,060
+It wasn't easy.
+
+10
+00:00:40,620 --> 00:00:43,690
+Another way is say any twelve point five.
+
+11
+00:00:44,010 --> 00:00:50,540
+So now this has an integer or now equal string to change it to string or equal 16.
+
+12
+00:00:50,580 --> 00:00:54,170
+You can make a copy, observe any here is in a template.
+
+13
+00:00:54,180 --> 00:00:55,650
+You don't see any of integrity.
+
+14
+00:00:55,660 --> 00:00:56,430
+Just any.
+
+15
+00:00:56,430 --> 00:00:56,960
+That's it.
+
+16
+00:00:57,300 --> 00:01:02,970
+The type of any would be reduced from the value that you are going to assign if you would like to get
+
+17
+00:01:02,970 --> 00:01:09,240
+the value using the function any cost and give it the specific use the parameter to cast it for you.
+
+18
+00:01:09,690 --> 00:01:16,740
+But if you try to cast it to the wrong time, you will get an exception of bad and you can also use
+
+19
+00:01:16,740 --> 00:01:19,860
+the any cost with reference here to get back a pointer.
+
+20
+00:01:20,010 --> 00:01:22,830
+If it exists, it will be pointing to it.
+
+21
+00:01:22,830 --> 00:01:24,360
+If it doesn't, it would be better.
+
+22
+00:01:24,450 --> 00:01:30,120
+You can also make use of that and also the any custom with reference here is going to be like a like
+
+23
+00:01:30,330 --> 00:01:31,340
+retaining reference.
+
+24
+00:01:31,350 --> 00:01:37,410
+So you can you get a site, you can use the reset function to to adjust the cancer value inside it.
+
+25
+00:01:37,740 --> 00:01:43,830
+And it has value will tell you if there is a value inside it or not behind the scene that can do a lot
+
+26
+00:01:43,830 --> 00:01:50,370
+of memory allocations for your objects, that's going to destroy the previous object when you're using
+
+27
+00:01:50,370 --> 00:01:52,200
+it in practice.
+
+28
+00:01:53,130 --> 00:01:58,200
+There are no use cases for any, so we typically don't need it.
+
+29
+00:01:58,440 --> 00:02:02,080
+And you are actually advised to avoid it unless there is a reason for it.
+
+30
+00:02:02,280 --> 00:02:03,690
+So in practice, you will not use it.
+
+31
+00:02:06,190 --> 00:02:12,170
+Let's just try to use it with the objects, let's say we have an MBA class here and then we can use
+
+32
+00:02:12,170 --> 00:02:16,540
+the function, make any, for example, to create for us an object.
+
+33
+00:02:16,540 --> 00:02:21,030
+We best the arguments here and make any is an efficient function.
+
+34
+00:02:21,280 --> 00:02:26,830
+And if you would like to reassign, you can also use the endless function, which is also memory efficient
+
+35
+00:02:26,830 --> 00:02:28,750
+function to construct an object here.
+
+36
+00:02:29,200 --> 00:02:41,430
+And you can also use the in-place function, which is going to be much more memory efficient to to to
+
+37
+00:02:41,440 --> 00:02:42,260
+put the variable here.
+
+38
+00:02:42,280 --> 00:02:45,950
+So it is in place of one thing to observe.
+
+39
+00:02:45,970 --> 00:02:51,920
+Here is the any work only with objects that must be capable of copyable and movable.
+
+40
+00:02:52,210 --> 00:02:58,190
+So you see here the if you try to uncommented this to raise this good will not work.
+
+41
+00:02:58,450 --> 00:03:02,350
+The object must be be copyable and movable.
+
+42
+00:03:02,730 --> 00:03:09,790
+OK, thinking here about the content here about this guy, I created an employee so I could construct
+
+43
+00:03:09,790 --> 00:03:12,520
+a code for it and then I tried to replace it.
+
+44
+00:03:12,640 --> 00:03:14,930
+So it was destroyed first and so on.
+
+45
+00:03:15,070 --> 00:03:18,750
+So behind the scenes there's a broader memory structure for you.
+
+46
+00:03:19,090 --> 00:03:20,480
+There are no problems with that.
+
+47
+00:03:21,820 --> 00:03:23,560
+Let's see one more application for it.
+
+48
+00:03:23,590 --> 00:03:28,030
+I'm going to create a map, the take a string and maybe two any.
+
+49
+00:03:28,450 --> 00:03:29,880
+So now this is very interesting.
+
+50
+00:03:29,980 --> 00:03:31,870
+The the the key here is a string.
+
+51
+00:03:31,870 --> 00:03:37,250
+So you can say map of integer and you give it value, creating a map of a string and you can give it
+
+52
+00:03:37,390 --> 00:03:37,910
+string.
+
+53
+00:03:39,010 --> 00:03:41,160
+Be careful here if it's a map string.
+
+54
+00:03:41,180 --> 00:03:42,970
+Hello, this is the pointer.
+
+55
+00:03:43,240 --> 00:03:54,490
+So don't be seated by the float then 1.0 sorry 1.0 is 1.0 is above to float this.
+
+56
+00:03:57,060 --> 00:03:57,930
+This is is it.
+
+57
+00:03:58,900 --> 00:04:04,870
+The word here is wrong in a way less iterate over the map and we can use the beer here, get the second
+
+58
+00:04:04,870 --> 00:04:09,340
+value or you can even use the structure of the binding.
+
+59
+00:04:09,670 --> 00:04:13,450
+But the more of that is I would like now to bring to the value.
+
+60
+00:04:13,810 --> 00:04:15,520
+But what is a type of the value?
+
+61
+00:04:15,530 --> 00:04:16,270
+I don't know.
+
+62
+00:04:16,270 --> 00:04:17,230
+Like it's very dynamic.
+
+63
+00:04:17,230 --> 00:04:17,480
+Right.
+
+64
+00:04:17,740 --> 00:04:21,430
+So one way is to use the type ID or overeaten.
+
+65
+00:04:22,510 --> 00:04:28,300
+The type ID can can help us to compare the data type of different objects.
+
+66
+00:04:28,540 --> 00:04:34,520
+So for example, I'm saying the any is providing a function of the type, which are the type of idea
+
+67
+00:04:34,540 --> 00:04:35,050
+of the function.
+
+68
+00:04:35,060 --> 00:04:40,780
+So I'm saying if this type is the type of the integer then custo into you, if the time is type of a
+
+69
+00:04:40,780 --> 00:04:42,280
+string, then cast a string.
+
+70
+00:04:42,460 --> 00:04:47,790
+If it's type of double, then to double this one should be double and this will should be double.
+
+71
+00:04:48,190 --> 00:04:55,690
+So the moral of that is we manage here to see how this good can help us to be pointing to any generic
+
+72
+00:04:55,690 --> 00:04:55,960
+thing.
+
+73
+00:04:57,280 --> 00:04:57,850
+That's it.

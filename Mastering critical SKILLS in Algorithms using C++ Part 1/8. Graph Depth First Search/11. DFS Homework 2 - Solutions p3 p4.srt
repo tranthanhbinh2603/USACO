@@ -1,0 +1,711 @@
+1
+00:00:00,980 --> 00:00:04,480
+Problem number three, and we would like to find the closed islands.
+
+2
+00:00:05,670 --> 00:00:12,120
+Now in this problem, what will really make our life easier is assemble observation.
+
+3
+00:00:13,100 --> 00:00:16,400
+What really makes a connected component to closed?
+
+4
+00:00:17,500 --> 00:00:20,290
+Simply, it doesn't touch any boundary at all.
+
+5
+00:00:21,010 --> 00:00:22,440
+So we have here agreed here.
+
+6
+00:00:33,390 --> 00:00:35,850
+Now, let's say there is some connected component here.
+
+7
+00:00:36,210 --> 00:00:39,840
+It is definitely, definitely across the connected component.
+
+8
+00:00:40,140 --> 00:00:40,650
+Why?
+
+9
+00:00:40,950 --> 00:00:46,590
+Because it would be surrounding from here and from any internet, if any case, with other, with other
+
+10
+00:00:46,590 --> 00:00:48,030
+ones, with other values.
+
+11
+00:00:48,330 --> 00:00:50,040
+This is the definition of a connected component.
+
+12
+00:00:50,190 --> 00:00:52,860
+There is nothing else that can connect to it.
+
+13
+00:00:53,280 --> 00:01:00,270
+Now, if there is a connected component is here, this is definitely Boundary Y because it is has it
+
+14
+00:01:00,270 --> 00:01:04,200
+is enclosed because it is touching the extent of that of the boundary.
+
+15
+00:01:04,470 --> 00:01:05,940
+So it's actually in this problem.
+
+16
+00:01:06,240 --> 00:01:11,700
+If you understood the problem statement really well before just the jumping to solve it, you recognize
+
+17
+00:01:11,700 --> 00:01:18,600
+that if my connected component is touching this great boundary here or this grid boundary here or this
+
+18
+00:01:18,600 --> 00:01:22,360
+grid boundary here or this grid boundary here, it cannot be a closed island.
+
+19
+00:01:22,380 --> 00:01:24,270
+Otherwise, it's just a closed island.
+
+20
+00:01:24,720 --> 00:01:25,530
+So that symbol?
+
+21
+00:01:25,980 --> 00:01:31,560
+So the message here is sometimes you need to make some thinking, some analysis.
+
+22
+00:01:31,560 --> 00:01:33,520
+Don't rush with the first idea in your mind.
+
+23
+00:01:33,540 --> 00:01:38,340
+I know that you might eventually managed to get it accepted, but maybe you wrote a lot of unnecessary
+
+24
+00:01:38,340 --> 00:01:38,700
+goods.
+
+25
+00:01:39,000 --> 00:01:41,220
+Maybe you observe yourself in a wrong direction.
+
+26
+00:01:41,670 --> 00:01:42,830
+So this is a point here.
+
+27
+00:01:43,110 --> 00:01:46,320
+Think a little bit deeper now for educational purposes.
+
+28
+00:01:46,590 --> 00:01:54,510
+I'm going to instead of the building the the the Vista array as a Boolean, I'm replacing it with something
+
+29
+00:01:54,510 --> 00:01:54,810
+else.
+
+30
+00:01:55,110 --> 00:01:58,080
+I'm going to replace it with the connected component, i.e. no.
+
+31
+00:01:58,530 --> 00:02:01,200
+For example, let's say that this is a first connected component to meet.
+
+32
+00:02:01,200 --> 00:02:03,360
+I would give it what is one one one one one one.
+
+33
+00:02:03,840 --> 00:02:06,500
+This is the second communiqu convert that would make it two two to two.
+
+34
+00:02:06,870 --> 00:02:09,150
+This is the third connector, what, three three three three.
+
+35
+00:02:09,600 --> 00:02:14,910
+This is very useful in some other problems where we would like to know what are the exact indices of
+
+36
+00:02:14,910 --> 00:02:16,470
+a connected component or anything.
+
+37
+00:02:16,890 --> 00:02:22,140
+So this is another way if you if you need the exact values of the connected component, you can use
+
+38
+00:02:22,140 --> 00:02:22,620
+the values.
+
+39
+00:02:22,620 --> 00:02:25,170
+Otherwise we can use a Boolean for one.
+
+40
+00:02:25,200 --> 00:02:28,230
+So to see the could here, the goods are going to be very straightforward.
+
+41
+00:02:29,790 --> 00:02:38,070
+I have here a Boolean variable that say during building there, during building that connected component.
+
+42
+00:02:38,100 --> 00:02:43,540
+Have we ever touched one of the four boundaries the top left, top row?
+
+43
+00:02:43,580 --> 00:02:45,750
+Last call us through the first two column.
+
+44
+00:02:45,750 --> 00:02:46,770
+Not any of them.
+
+45
+00:02:47,100 --> 00:02:49,530
+If yes, then this isn't and is a closed island.
+
+46
+00:02:50,430 --> 00:02:54,780
+And here the implementation would be very straightforward, like any normal connected component.
+
+47
+00:02:55,080 --> 00:03:02,550
+We trade on the rows and columns and then, uh, CCI ID is the connector converter ID instead of the
+
+48
+00:03:02,550 --> 00:03:03,230
+Vista Ray.
+
+49
+00:03:03,630 --> 00:03:06,230
+So see here the connector computers.
+
+50
+00:03:06,300 --> 00:03:11,040
+You market them starting from one so that you can differentiate if it's listed or not.
+
+51
+00:03:11,400 --> 00:03:15,330
+So I would always from what you see here, the connected component is zero.
+
+52
+00:03:15,780 --> 00:03:16,320
+I will.
+
+53
+00:03:16,470 --> 00:03:18,750
+What I would like to make a device, I would make B+ Plus.
+
+54
+00:03:18,810 --> 00:03:22,830
+This is very important to avoid bugs, and it's not always connected computers from one.
+
+55
+00:03:23,850 --> 00:03:30,030
+So now the collector convert, it is zero then it never touched before, and in the same time, the
+
+56
+00:03:30,030 --> 00:03:32,520
+value should be zero.
+
+57
+00:03:32,550 --> 00:03:35,290
+They say that the zeros would represent their goods.
+
+58
+00:03:35,640 --> 00:03:41,250
+So what I said to the touch boundary was false to the defense increment if it never touched the boundary.
+
+59
+00:03:41,640 --> 00:03:43,390
+The difference now is very straightforward.
+
+60
+00:03:43,410 --> 00:03:44,460
+This is the normal part.
+
+61
+00:03:44,550 --> 00:03:45,210
+This is a normal.
+
+62
+00:03:46,030 --> 00:03:48,330
+I'm guessing here the current convert is.
+
+63
+00:03:48,480 --> 00:03:51,210
+So every time we visit the route, we give it the same idea.
+
+64
+00:03:51,220 --> 00:03:52,860
+Previously, we just put it one here.
+
+65
+00:03:53,670 --> 00:03:59,880
+Now, the only change is if we have ever at any point of time, Touch ID, one of the four boundaries
+
+66
+00:04:00,300 --> 00:04:02,520
+we just the market that is touch boundary is true.
+
+67
+00:04:02,850 --> 00:04:04,500
+And how is this function implemented?
+
+68
+00:04:07,280 --> 00:04:12,200
+Somebody, you have the row and column, you just need to check if you are the first through or through
+
+69
+00:04:12,470 --> 00:04:15,910
+the first column or the rascal, if any of that is false, then.
+
+70
+00:04:16,320 --> 00:04:18,920
+And if that's true, then we actually touched the boundary.
+
+71
+00:04:18,920 --> 00:04:20,780
+Otherwise we are on the syllabus.
+
+72
+00:04:21,260 --> 00:04:27,500
+So as you see, the problem is straightforward when you think in it based on this observation, otherwise
+
+73
+00:04:27,500 --> 00:04:28,820
+you might actually complicate the code.
+
+74
+00:04:29,180 --> 00:04:30,720
+As you see, this is the third.
+
+75
+00:04:30,720 --> 00:04:32,420
+The problem we are managed.
+
+76
+00:04:33,050 --> 00:04:35,780
+I managed to solve it with the standard defense as it is.
+
+77
+00:04:35,960 --> 00:04:40,340
+I haven't to change, like bring a new theory or any advanced thing so far.
+
+78
+00:04:41,510 --> 00:04:46,250
+OK, let's see the fourth problem which is detecting their cycle.
+
+79
+00:04:47,690 --> 00:04:54,880
+I added the second example here, so we would like to detect this like and now this might be might seems
+
+80
+00:04:54,900 --> 00:04:57,950
+for a while tricky, but I will show you that it isn't.
+
+81
+00:04:58,880 --> 00:05:02,080
+Now let's remember, why do we need Vistara?
+
+82
+00:05:03,830 --> 00:05:13,070
+I'm here at this node, and I let's maybe this is a better example, this one, this one.
+
+83
+00:05:14,500 --> 00:05:15,610
+None of them is good enough.
+
+84
+00:05:15,640 --> 00:05:17,530
+Let me let me build my own grades.
+
+85
+00:05:18,040 --> 00:05:19,810
+Let's say we have a grade here.
+
+86
+00:05:24,690 --> 00:05:30,410
+Let's pretend you have your ay ay ay ay ay ay ay ay ay ay ay ay ay ay ay.
+
+87
+00:05:30,950 --> 00:05:32,270
+Let's say you started here.
+
+88
+00:05:32,960 --> 00:05:34,460
+Why do we need the victory?
+
+89
+00:05:35,210 --> 00:05:36,380
+There are two cases.
+
+90
+00:05:36,680 --> 00:05:38,180
+Why do we need the victory?
+
+91
+00:05:38,630 --> 00:05:42,800
+The first one is well when we move to the next node.
+
+92
+00:05:44,690 --> 00:05:48,110
+Let's go and market this one here, market this one here, a market, this one here.
+
+93
+00:05:49,040 --> 00:05:50,060
+I'm lucky this one here.
+
+94
+00:05:50,240 --> 00:05:54,410
+This one here might go up to try this one here, but we visited it already.
+
+95
+00:05:55,070 --> 00:06:01,880
+So one reason to avoid their cycles is to use this array here so that I don't go to a node that is visited
+
+96
+00:06:01,880 --> 00:06:02,270
+or ready.
+
+97
+00:06:03,200 --> 00:06:07,100
+The other case, which is successful here, you moved from this one to this one.
+
+98
+00:06:07,730 --> 00:06:09,620
+This one will try to go back to this one.
+
+99
+00:06:09,630 --> 00:06:12,920
+So this one is like its appearance and it came to me.
+
+100
+00:06:13,310 --> 00:06:15,500
+Now we should also go back to that.
+
+101
+00:06:16,500 --> 00:06:17,580
+To the beer and to note.
+
+102
+00:06:18,680 --> 00:06:25,760
+So if you thought about it, this is why we use the mystery to avoid the infinite cycles, which come
+
+103
+00:06:25,760 --> 00:06:31,460
+for two reasons you are there trying to go back to your parent, the one that called you or you are
+
+104
+00:06:31,460 --> 00:06:35,570
+visiting and know that you visited before now thinking about the cycles.
+
+105
+00:06:36,140 --> 00:06:43,210
+The reason that we have a site is we are revisiting a route that we visited before.
+
+106
+00:06:43,220 --> 00:06:47,140
+So I moved from here to here to here to here to here.
+
+107
+00:06:47,150 --> 00:06:47,550
+Wait.
+
+108
+00:06:47,570 --> 00:06:52,670
+We visited this one before, so we would like actually to say, you know what, if you visited the node
+
+109
+00:06:52,670 --> 00:06:54,530
+that you visited before, this is like?
+
+110
+00:06:55,130 --> 00:06:58,070
+But there is a problem here now.
+
+111
+00:06:59,410 --> 00:07:08,710
+If I if am trying to visit my beer and let's say we have only here we have this food is OK, which is
+
+112
+00:07:08,710 --> 00:07:09,800
+the minimum length of the cycle.
+
+113
+00:07:10,090 --> 00:07:11,590
+So we go from here to here to here.
+
+114
+00:07:11,980 --> 00:07:15,220
+If this one is trying to go back here, it would say it is visited.
+
+115
+00:07:15,730 --> 00:07:17,080
+But wait, it is in a cycle.
+
+116
+00:07:17,260 --> 00:07:18,550
+This is your appearance.
+
+117
+00:07:20,320 --> 00:07:23,260
+So this is the node that generated you.
+
+118
+00:07:25,960 --> 00:07:27,160
+So this isn't a cycle.
+
+119
+00:07:28,390 --> 00:07:30,550
+So now it the trick.
+
+120
+00:07:31,620 --> 00:07:39,240
+We will we need the vista, Ray, to tell us if this node is visited before or not, but we need to
+
+121
+00:07:39,240 --> 00:07:42,060
+be careful about going back to where you came from.
+
+122
+00:07:43,240 --> 00:07:50,980
+So if we managed to split these two cases, we would be able to use the Vista Array as air signal if
+
+123
+00:07:50,980 --> 00:07:53,920
+we are a cycle or not.
+
+124
+00:07:54,370 --> 00:07:55,700
+Let me show you the implementation.
+
+125
+00:07:55,720 --> 00:07:57,160
+This might be a bit hard.
+
+126
+00:07:58,300 --> 00:08:02,020
+The idea is this following this is our defense.
+
+127
+00:08:02,170 --> 00:08:03,970
+We will use a very normal device.
+
+128
+00:08:04,540 --> 00:08:11,860
+We will have two extra indices for one column, which is the bit through and bittencourt it means which
+
+129
+00:08:11,860 --> 00:08:14,800
+Birand, which rows and column I am coming from them.
+
+130
+00:08:15,750 --> 00:08:21,900
+And never, ever try to go back to your parents, if you did that, then the visited array would be
+
+131
+00:08:21,900 --> 00:08:25,080
+visited only in one case if you are making a cycle.
+
+132
+00:08:25,560 --> 00:08:26,580
+So here's what happened.
+
+133
+00:08:29,050 --> 00:08:30,130
+This is very normal.
+
+134
+00:08:30,220 --> 00:08:32,710
+Vistara, this is a very normal defence.
+
+135
+00:08:32,860 --> 00:08:34,000
+We have the row and column.
+
+136
+00:08:34,120 --> 00:08:34,910
+We have the grid.
+
+137
+00:08:35,020 --> 00:08:36,040
+We have the brilliant array.
+
+138
+00:08:36,040 --> 00:08:36,760
+We have the color.
+
+139
+00:08:37,240 --> 00:08:38,670
+If it is inverted, you go back.
+
+140
+00:08:38,680 --> 00:08:40,330
+If it doesn't match the color, you go back.
+
+141
+00:08:41,490 --> 00:08:42,840
+Leave this one for now here.
+
+142
+00:08:43,410 --> 00:08:47,160
+Now we mark visited with urgency, as usual, we get the the election as usual.
+
+143
+00:08:47,430 --> 00:08:53,580
+Now this is only one condition Europe adding Here I'm say, let's say I am in this thread, which is
+
+144
+00:08:53,580 --> 00:08:54,300
+RNC.
+
+145
+00:08:55,200 --> 00:09:02,220
+And a zombie to this one, which is new or new, see here, but I know that my variant is this and see
+
+146
+00:09:02,460 --> 00:09:04,730
+if this one is trying to go back to the Birand.
+
+147
+00:09:04,950 --> 00:09:05,850
+Don't do that.
+
+148
+00:09:06,480 --> 00:09:09,510
+So actually, we will go only to three choices, not four.
+
+149
+00:09:10,470 --> 00:09:11,490
+So if I'm here.
+
+150
+00:09:17,610 --> 00:09:22,210
+If I was here and jump to hear this one would have only three choices go up.
+
+151
+00:09:22,230 --> 00:09:23,340
+Go ride, go down.
+
+152
+00:09:23,550 --> 00:09:25,800
+But it would not go to the beer and it would not go.
+
+153
+00:09:25,830 --> 00:09:28,140
+Go to the one that generated me.
+
+154
+00:09:28,890 --> 00:09:30,210
+Now, if this is a case.
+
+155
+00:09:31,620 --> 00:09:39,120
+Then the vista right here will be true if and only if we come back to a quote that we visited before,
+
+156
+00:09:39,120 --> 00:09:41,760
+and this would happen only and cycle of for already.
+
+157
+00:09:41,760 --> 00:09:44,670
+So we do need to verify anything about the rest of the second.
+
+158
+00:09:44,940 --> 00:09:46,290
+So let's see an example here.
+
+159
+00:09:49,510 --> 00:09:55,120
+Let's say we have a a a a a a and there is a B in the middle.
+
+160
+00:09:55,990 --> 00:09:56,500
+This one?
+
+161
+00:09:56,720 --> 00:09:57,280
+Go here.
+
+162
+00:09:57,550 --> 00:10:01,690
+This one cannot go to work to the bitter end, but can go here, which you can go here.
+
+163
+00:10:02,020 --> 00:10:03,170
+This one cannot go back here.
+
+164
+00:10:03,190 --> 00:10:04,990
+This one can go here, can go here.
+
+165
+00:10:05,200 --> 00:10:06,610
+Cannot go back and go here.
+
+166
+00:10:06,610 --> 00:10:09,130
+Can go here, can go here vested.
+
+167
+00:10:09,730 --> 00:10:10,720
+This means a cycle.
+
+168
+00:10:11,730 --> 00:10:13,140
+I hope you now got it.
+
+169
+00:10:13,410 --> 00:10:20,370
+This dirty trick is very common and very important and and you should see it in many times, it seems
+
+170
+00:10:20,370 --> 00:10:21,690
+like after the good, don't fix it.
+
+171
+00:10:22,410 --> 00:10:27,720
+So the moral of that is that this thing is happening from two things.
+
+172
+00:10:28,080 --> 00:10:34,020
+It happened from coming about going back to my beer, the one who generated me or actually visiting
+
+173
+00:10:34,020 --> 00:10:35,220
+something new, different.
+
+174
+00:10:35,760 --> 00:10:39,420
+Now in this good, the new trick is we split the two cases.
+
+175
+00:10:39,720 --> 00:10:41,010
+So this is case number one.
+
+176
+00:10:41,010 --> 00:10:45,870
+We prevent it here fundamentally from the beginning, and this is case number two at any point of time
+
+177
+00:10:45,870 --> 00:10:47,220
+who vested in this condition.
+
+178
+00:10:47,340 --> 00:10:49,290
+We definitely have a second.

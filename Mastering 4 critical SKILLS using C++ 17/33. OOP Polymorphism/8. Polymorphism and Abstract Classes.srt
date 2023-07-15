@@ -1,0 +1,794 @@
+0
+1
+00:00:01,470 --> 00:00:06,800
+Starting from this video, we're going to elaborate more on some details relevant to polymorphism.
+1
+
+2
+00:00:07,140 --> 00:00:15,480
+However, the core idea of polymorphism is done in terms of understanding and even in terms of practice.
+2
+
+3
+00:00:15,780 --> 00:00:20,280
+So the more we go is highlighting more different angles about polymorphism.
+3
+
+4
+00:00:20,790 --> 00:00:23,520
+So here is one of them relevant to the abstraction.
+4
+
+5
+00:00:23,880 --> 00:00:30,040
+But remember, the abstraction was more of hiding details and showing essential details in the context.
+5
+
+6
+00:00:30,360 --> 00:00:35,370
+So when we have this kind of class, we have several implementations for these methods that we have separated
+6
+
+7
+00:00:35,370 --> 00:00:38,100
+them in a different file.
+7
+
+8
+00:00:38,490 --> 00:00:43,710
+An interesting question is what if for some function we aren't unsure of the implementation of it at the
+8
+
+9
+00:00:43,710 --> 00:00:44,170
+moment?
+9
+
+10
+00:00:44,460 --> 00:00:46,260
+So this is, again, a case of abstraction.
+10
+
+11
+00:00:46,740 --> 00:00:49,050
+Specifically, remember the shape class.
+11
+
+12
+00:00:49,320 --> 00:00:50,820
+We have this area function.
+12
+
+13
+00:00:50,830 --> 00:00:55,840
+If I asked you what exactly the area function? What is the value of the area function?
+13
+
+14
+00:00:56,040 --> 00:00:58,710
+We have no idea. In the past,
+14
+
+15
+00:00:58,710 --> 00:01:01,800
+we just were trying to through some exception or return -1,
+15
+
+16
+00:01:02,070 --> 00:01:04,560
+but this didn't make sense. In C++,
+16
+
+17
+00:01:04,740 --> 00:01:09,750
+if you don't know how to implement the function you just write equals zero.
+17
+
+18
+00:01:09,960 --> 00:01:13,930
+So the equals zero is named pure virtual function.
+18
+
+19
+00:01:14,250 --> 00:01:18,810
+Now, this class is saying, hey guys, I don't know how this function was implemented.
+19
+
+20
+00:01:19,050 --> 00:01:24,580
+If you are a rectangle, please implement it as a rectangle. If you are a circle, please implement it as a circle.
+20
+
+21
+00:01:25,080 --> 00:01:30,860
+Now the class that has at least one pure virtual function is a class that we named abstract
+21
+
+22
+00:01:30,870 --> 00:01:31,410
+class.
+22
+
+23
+00:01:31,590 --> 00:01:34,160
+So the shape here is an abstract class.
+23
+
+24
+00:01:34,170 --> 00:01:40,890
+It has something that's very high level, and we do know how to implement it.  As a result, given
+24
+
+25
+00:01:40,920 --> 00:01:47,520
+this class is an incomplete class. Incomplete means you cannot have an object from it, because if this
+25
+
+26
+00:01:47,520 --> 00:01:53,040
+object is trying to call the area function, it can't find an answer for that. In a similar way,
+26
+
+27
+00:01:53,220 --> 00:01:59,040
+if some class inherited from this class, he has to provide implementation to this function or is going
+27
+
+28
+00:01:59,040 --> 00:02:01,650
+also to be an abstract class.
+28
+
+29
+00:02:01,920 --> 00:02:05,300
+That's it. This is a new syntax only that you know in this section.
+29
+
+30
+00:02:06,570 --> 00:02:13,100
+So the abstract class, or ABC, describes the behavior of an incomplete class. Future derived
+30
+
+31
+00:02:13,110 --> 00:02:15,840
+classes have to implement the missing functions.
+31
+
+32
+00:02:16,140 --> 00:02:21,870
+If the class has more than one pure virtual function, then it's called ABC.
+32
+
+33
+00:02:22,170 --> 00:02:28,770
+Now, there is a question here, which is better, is it to provide the virtual pure function or just a virtual function
+33
+
+34
+00:02:28,770 --> 00:02:30,150
+or pure virtual function?
+34
+
+35
+00:02:30,930 --> 00:02:37,040
+The point here is if you provided the default implementation for a virtual function, then you saved
+35
+
+36
+00:02:37,050 --> 00:02:42,810
+everyone else time like it just available for everyone else,
+36
+
+37
+00:02:42,810 --> 00:02:43,170
+right?
+37
+
+38
+00:02:43,200 --> 00:02:52,020
+So all the subclasses see my implementation, but if the function isn't implemented, then everyone
+38
+
+39
+00:02:52,020 --> 00:02:53,950
+has to implement it. in the area
+39
+
+40
+00:02:53,970 --> 00:02:55,580
+case here, definitely,
+40
+
+41
+00:02:55,590 --> 00:02:56,580
+we don't have any answer
+41
+
+42
+00:02:56,580 --> 00:03:00,450
+even so we just let others (the children) to implement it,
+42
+
+43
+00:03:00,780 --> 00:03:05,790
+but sometimes we can provide some implementation. In practice,
+43
+
+44
+00:03:05,940 --> 00:03:09,510
+still multiple inheritance with even abstract classes may cause problems.
+44
+
+45
+00:03:09,600 --> 00:03:16,090
+So what we said about the problems of inheritance is still valid with the pure virtual function, it is still
+45
+
+46
+00:03:16,260 --> 00:03:17,430
+can cause problems,
+46
+
+47
+00:03:18,090 --> 00:03:24,740
+and this takes us to the concept of interfaces, which is very common in a language like Java and
+47
+
+48
+00:03:24,840 --> 00:03:27,440
+C#. In Java,
+48
+
+49
+00:03:27,600 --> 00:03:33,770
+there is no inheritance and multiple-inheritance, there is what we call interfaces like the
+49
+
+50
+00:03:33,780 --> 00:03:35,890
+class has no implementation at all,
+50
+
+51
+00:03:36,300 --> 00:03:40,600
+so this means that all functions in a class are pure.
+51
+
+52
+00:03:41,160 --> 00:03:47,070
+So if all the functions in the class are pure, we call it interface. Here the word interface like say you
+52
+
+53
+00:03:47,070 --> 00:03:52,110
+are going to a building, you see how a building looks like. or using an ATM machine,
+53
+
+54
+00:03:52,110 --> 00:03:56,400
+you just see what is a building, what is an ATM machine.
+54
+
+55
+00:03:56,400 --> 00:03:57,830
+You know nothing about the details.
+55
+
+56
+00:03:58,200 --> 00:04:02,040
+So interface is like you are telling people this is what you have to provide,
+56
+
+57
+00:04:02,160 --> 00:04:05,560
+but I'm not going to tell you anything about the interfaces.
+57
+
+58
+00:04:05,820 --> 00:04:08,580
+There is still a chance that you fill in the diamond
+58
+
+59
+00:04:08,580 --> 00:04:14,640
+problem with interfaces, if you started to do like some different angles, like interfaces with
+59
+
+60
+00:04:14,640 --> 00:04:21,630
+different angles that have something that now common. The good about the interface idea, it gives
+60
+
+61
+00:04:21,630 --> 00:04:25,170
+you a sense of view like this class is printable, comparable runnable.
+61
+
+62
+00:04:25,230 --> 00:04:28,080
+We will see an example of that in the end of the lecture.
+62
+
+63
+00:04:28,860 --> 00:04:34,280
+If all the inheritances in your system are from interfaces, this now will be very similar to Java,
+63
+
+64
+00:04:34,650 --> 00:04:38,060
+now you are avoiding a lot of multiple inheritance ambiguities.
+64
+
+65
+00:04:38,430 --> 00:04:43,320
+So remember, we discussed several cases about multiple inheritance and how it is very problematic.
+65
+
+66
+00:04:43,710 --> 00:04:50,100
+If all of the inheritance is in your class, in your system, are from just interfaces, then probably
+66
+
+67
+00:04:50,100 --> 00:04:52,710
+would be avoiding many of these problems.
+67
+
+68
+00:04:53,310 --> 00:05:00,590
+In terms of terminology, if you are just inheriting from an interface, we better call it like 1A interface
+68
+
+69
+00:05:00,600 --> 00:05:00,720
+implementation.
+69
+
+70
+00:05:02,130 --> 00:05:09,810
+Now, I would like you to think of the interface idea as a contract you are providing to others
+70
+
+71
+00:05:09,810 --> 00:05:10,440
+to use it
+71
+
+72
+00:05:10,440 --> 00:05:16,230
+like let's say when you try to use, for example, a database, you will be provided with some interface
+72
+
+73
+00:05:16,230 --> 00:05:16,950
+to use it.
+73
+
+74
+00:05:17,340 --> 00:05:21,510
+So interfaces where others are depending on us,
+74
+
+75
+00:05:22,050 --> 00:05:27,540
+we need really to be designed and tested in a very careful way.
+75
+
+76
+00:05:30,000 --> 00:05:36,960
+So in terms of the interfaces compared to abstract classes, as we said, the interfaces have all
+76
+
+77
+00:05:36,960 --> 00:05:44,850
+of them a pure function. In abstract classes, some are pure functions, and some others are implemented.
+77
+
+78
+00:05:45,490 --> 00:05:51,780
+The problem here is the abstract classes has a high chance still like failing in the same issues with
+78
+
+79
+00:05:51,780 --> 00:05:52,620
+multiple inheritance,
+79
+
+80
+00:05:52,890 --> 00:05:57,420
+but if everything is more like interfaces, then you are in a more safer way.
+80
+
+81
+00:05:58,140 --> 00:05:59,880
+A little more about the interfaces
+81
+
+82
+00:05:59,880 --> 00:06:04,870
+guidelines like you are doing an interface and providing it for others, like the chip class or whatever.
+82
+
+83
+00:06:05,220 --> 00:06:11,160
+So think of it as a contract because everyone is going to implement his own version from your code and
+83
+
+84
+00:06:11,160 --> 00:06:17,640
+is going to like just follow what you said. When we started to change something that we are providing
+84
+
+85
+00:06:17,640 --> 00:06:19,050
+to the public to use it
+85
+
+86
+00:06:19,560 --> 00:06:23,130
+other teams, then breaking it, will fail everything.
+86
+
+87
+00:06:23,580 --> 00:06:28,910
+To understand a more context of that, let's say that you are in Amazon, OK?
+87
+
+88
+00:06:29,160 --> 00:06:35,580
+And we are building a logger component, for example, and we are providing people
+88
+
+89
+00:06:35,760 --> 00:06:37,430
+with the interface for this logger.
+89
+
+90
+00:06:37,780 --> 00:06:43,140
+Now, there are like 1000 teams who are using our interface for our logger class.
+90
+
+91
+00:06:43,470 --> 00:06:49,980
+Once you made a change in the class in a way that breaks the compatibility with others, then there are
+91
+
+92
+00:06:49,980 --> 00:06:53,160
+hundreds of projects that are going to fail because of such change.
+92
+
+93
+00:06:54,690 --> 00:07:01,350
+You should provide only the minimal public functionalities. In interfaces you don't put
+93
+
+94
+00:07:01,350 --> 00:07:02,580
+private functions, you don't include
+94
+
+95
+00:07:03,050 --> 00:07:08,100
+your like some common functionalities. Remember, just more of your public section,
+95
+
+96
+00:07:08,100 --> 00:07:12,920
+just you are telling people that you know what, if there's a shape, you can compete and compete
+96
+
+97
+00:07:12,930 --> 00:07:13,370
+perimeter.
+97
+
+98
+00:07:13,800 --> 00:07:14,350
+That's it.
+98
+
+99
+00:07:14,410 --> 00:07:17,690
+You don't put anything that's an irrelevant or potentially private function.
+99
+
+100
+00:07:18,240 --> 00:07:20,820
+There is what we call the principle of least surprise.
+100
+
+101
+00:07:21,240 --> 00:07:26,730
+When people are using your interface, the most cases, it will depend on the function name and
+101
+
+102
+00:07:26,730 --> 00:07:28,140
+they will not read documentation.
+102
+
+103
+00:07:28,410 --> 00:07:34,860
+So make sure that when people like just do such a behavior, everything will be OK, that no surprises
+103
+
+104
+00:07:34,860 --> 00:07:39,150
+in your code. Try to think from the client and user perspective.
+104
+
+105
+00:07:39,330 --> 00:07:41,070
+What are their needs? like
+105
+
+106
+00:07:41,520 --> 00:07:44,610
+make the usage of your interface very intuitive,
+106
+
+107
+00:07:44,910 --> 00:07:51,510
+and so on. I would like to go back to the idea of interfaces as properties.
+107
+
+108
+00:07:51,580 --> 00:07:57,510
+This is something that we see a lot in something like Java. In a typical inheritance thinking way,
+108
+
+109
+00:07:57,510 --> 00:07:59,690
+you think like, oh, an employee is a person,
+109
+
+110
+00:07:59,700 --> 00:08:01,560
+so we have a class person and we have a class employee.
+110
+
+111
+00:08:01,560 --> 00:08:04,380
+This is the inheritance idea. With interface,
+111
+
+112
+00:08:04,380 --> 00:08:12,050
+you might think of properties like, let's say this class is printable so and also, comparable, cloneable,
+112
+
+113
+00:08:12,060 --> 00:08:12,580
+and so on.
+113
+
+114
+00:08:12,870 --> 00:08:14,860
+So what does this mean to be printable class?
+114
+
+115
+00:08:15,030 --> 00:08:20,040
+It means that probably this is an interface here that has a print function.
+115
+
+116
+00:08:20,400 --> 00:08:22,680
+Cloneable is an interface that allow cloning.
+116
+
+117
+00:08:23,040 --> 00:08:27,510
+So now the person class is inheriting from printable and cloneable.
+117
+
+118
+00:08:27,690 --> 00:08:33,110
+So now we see the person is printable and cloneable. It means that it support this print function and this clone
+118
+
+119
+00:08:33,120 --> 00:08:33,570
+function.
+119
+
+120
+00:08:33,840 --> 00:08:38,150
+Now, the employee is inheriting from a person who is printable and cloneable.
+120
+
+121
+00:08:38,310 --> 00:08:40,220
+So this is the idea of the properties.
+121
+
+122
+00:08:40,230 --> 00:08:45,420
+When you think about it, about this kind of inheritance, this isn't like a circle is a shape.
+122
+
+123
+00:08:45,630 --> 00:08:48,030
+It has a different sense, a sense of properties.
+123
+
+124
+00:08:48,180 --> 00:08:51,630
+So this is something interesting about the idea of interfaces.
+124
+
+125
+00:08:51,870 --> 00:08:56,340
+You can have an interface that refers to some properties, then you can inherit from multiple
+125
+
+126
+00:08:56,340 --> 00:08:56,920
+properties.
+126
+
+127
+00:08:57,240 --> 00:09:01,080
+So now this is a bit different sense than the normal inheritance.
+127
+
+128
+00:09:01,410 --> 00:09:05,640
+We don't need to think here like in mammals and mammals types and so on.
+128
+
+129
+00:09:05,790 --> 00:09:07,560
+It doesn't need to do that.
+129
+
+130
+00:09:08,940 --> 00:09:14,470
+As you see, all the inheritance here is going to just interfaces. This is what we mean when we provide interfaces
+130
+
+131
+00:09:14,470 --> 00:09:15,850
+that make sense for the people.
+131
+
+132
+00:09:16,140 --> 00:09:20,670
+Be careful about what's really the function here and just inheriting from interfaces.
+132
+
+133
+00:09:22,770 --> 00:09:30,120
+Remember, if some class is visible from serval paths like, let's say printable class is visible
+133
+
+134
+00:09:30,120 --> 00:09:33,120
+in the employee, and then you are inheriting from something else
+134
+
+135
+00:09:33,150 --> 00:09:35,330
+that sees also the printable class.
+135
+
+136
+00:09:35,610 --> 00:09:38,570
+So the printable class is visible from two different paths,
+136
+
+137
+00:09:38,910 --> 00:09:43,080
+then the compiler will say, oh, this is ambiguity. How to solve it?
+137
+
+138
+00:09:43,080 --> 00:09:49,180
+We add the word virtual, for example, instead of a public person here, we use a virtual public person.
+138
+
+139
+00:09:49,410 --> 00:09:53,670
+We mentioned that in the homework answer for the diamond problem.
+139
+
+140
+00:09:55,590 --> 00:10:02,760
+One of the topics of concern is virtual function versus templates. When to use each one of them?
+140
+
+141
+00:10:06,240 --> 00:10:08,580
+Here is a template use case.
+141
+
+142
+00:10:08,760 --> 00:10:10,440
+This is a function, let's say process.
+142
+
+143
+00:10:10,440 --> 00:10:15,270
+It takes a vector of data type and going to sum the values of this vector.
+143
+
+144
+00:10:15,540 --> 00:10:18,420
+In a normal case, you have a vector of double and returning double.
+144
+
+145
+00:10:18,720 --> 00:10:24,270
+If you would like to make it a generic function, you can use templates and say vector of type returning
+145
+
+146
+00:10:24,270 --> 00:10:26,010
+type and use here type type type.
+146
+
+147
+00:10:26,460 --> 00:10:33,090
+So in runtime, if we have a vector of integer, it returns a sum integer, vector of double, it returns a sum double, vector
+147
+
+148
+00:10:33,090 --> 00:10:35,490
+of long-long, returns a sum of long-long, and so on.
+148
+
+149
+00:10:36,000 --> 00:10:41,190
+But does the behavior of a vector here iterating and summing is different?
+149
+
+150
+00:10:41,490 --> 00:10:42,450
+The answer is no.
+150
+
+151
+00:10:42,690 --> 00:10:50,280
+So the rule is if the data type doesn't affect the behavior, then this is actually not a
+151
+
+152
+00:10:50,290 --> 00:10:50,600
+polymorphism,
+152
+
+153
+00:10:51,240 --> 00:10:53,160
+this is just a template style.
+153
+
+154
+00:10:54,030 --> 00:10:57,350
+So when we get a sense of that this is polymorphism.
+154
+
+155
+00:10:57,840 --> 00:11:04,740
+If the behavior itself changes based on the data type, like the behavior here of shape based on a rectangle
+155
+
+156
+00:11:04,890 --> 00:11:06,580
+is different from a circle.
+156
+
+157
+00:11:06,870 --> 00:11:12,930
+So with a change in the data type itself, we have a change in the behavior. This implies
+157
+
+158
+00:11:12,930 --> 00:11:14,040
+that we have to make
+158
+
+159
+00:11:15,820 --> 00:11:19,720
+..., we have to make a visual function. That's it.

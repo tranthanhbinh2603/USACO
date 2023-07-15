@@ -1,0 +1,371 @@
+1
+00:00:00,750 --> 00:00:05,630
+Let's solve the homework, the first problem about the sub islands.
+
+2
+00:00:06,450 --> 00:00:13,710
+So let's see in this problem, we can definitely implement the problems in many different ways.
+
+3
+00:00:14,100 --> 00:00:18,120
+So here is the most efficient and even simplest one among all of them.
+
+4
+00:00:18,780 --> 00:00:22,950
+They do this following, and you will notice during the four problems.
+
+5
+00:00:23,190 --> 00:00:27,240
+I'm trying to reduce the problem to use the defense in a very standard and very simple way.
+
+6
+00:00:27,870 --> 00:00:35,490
+So here is the idea we will perform the standard connected component code on the grid to in a very straightforward
+
+7
+00:00:35,490 --> 00:00:35,790
+way.
+
+8
+00:00:36,420 --> 00:00:43,260
+Now we would like to mark for every phone component if it is inside the grid one or not.
+
+9
+00:00:43,260 --> 00:00:48,660
+So this is a minor modification we will do during tracing grid two.
+
+10
+00:00:48,960 --> 00:00:52,290
+We will notice if it's still in grid one or not, it isn't.
+
+11
+00:00:52,500 --> 00:00:54,450
+We just will discard it here.
+
+12
+00:00:55,230 --> 00:00:56,580
+Uh, yeah, that's it.
+
+13
+00:00:56,940 --> 00:00:59,730
+Um, by the way, I use this for educational purposes.
+
+14
+00:00:59,730 --> 00:01:04,650
+Mainly, I use the the grid itself to be a visited array instead of writing one.
+
+15
+00:01:04,770 --> 00:01:05,700
+So let's see here.
+
+16
+00:01:06,680 --> 00:01:09,410
+This is a normal directional race.
+
+17
+00:01:09,800 --> 00:01:11,490
+This is a normal is invalid, right?
+
+18
+00:01:11,720 --> 00:01:17,840
+I did hear a Boolean which would reset in every call to know if this is the status of Ireland or not.
+
+19
+00:01:18,470 --> 00:01:19,370
+Now let's go to them.
+
+20
+00:01:19,370 --> 00:01:19,880
+Ian Burt.
+
+21
+00:01:21,820 --> 00:01:29,230
+In the main board, I have here the count that we need, like a normal connected components, we would
+
+22
+00:01:29,230 --> 00:01:34,480
+iterate on all of the rules and all of the columns every time which is invested or not.
+
+23
+00:01:34,510 --> 00:01:37,420
+I use it the grid itself to market vested interest.
+
+24
+00:01:37,690 --> 00:01:44,620
+So if it is, if the grid get it to an RC, is it still would this mean it is a new connected components?
+
+25
+00:01:45,070 --> 00:01:45,620
+So are you?
+
+26
+00:01:45,670 --> 00:01:47,590
+Are you to set the Boolean value to be true?
+
+27
+00:01:47,920 --> 00:01:49,390
+I do the normal defense.
+
+28
+00:01:49,390 --> 00:01:51,100
+After I back, I would add one.
+
+29
+00:01:51,100 --> 00:01:55,150
+If so, Ireland zero, if not, so let's see the recursion here.
+
+30
+00:01:56,120 --> 00:02:00,830
+The RNC was great to too will perform a very normal defense.
+
+31
+00:02:00,860 --> 00:02:03,080
+We check if we are integrity or not.
+
+32
+00:02:03,410 --> 00:02:06,140
+We check if we are visited before or not.
+
+33
+00:02:06,410 --> 00:02:08,450
+We said it as visited as usual.
+
+34
+00:02:08,600 --> 00:02:14,120
+We treat on the forbearance and call it so this is standard defense calls.
+
+35
+00:02:14,510 --> 00:02:20,960
+Now, the extrovert is here in every location where there is a grid for two, an RNC.
+
+36
+00:02:21,680 --> 00:02:23,200
+There must be also grid around.
+
+37
+00:02:23,270 --> 00:02:24,230
+Get it to.
+
+38
+00:02:24,230 --> 00:02:29,120
+And obviously, if the case isn't, then we know that this isn't a sub island.
+
+39
+00:02:29,330 --> 00:02:32,300
+So we just return and we don't need to continue anymore.
+
+40
+00:02:32,930 --> 00:02:40,460
+So again, the idea was as following we would do this first in a very normal way on grid to why we are
+
+41
+00:02:40,460 --> 00:02:41,600
+tracing grid to.
+
+42
+00:02:41,810 --> 00:02:46,370
+We will make sure that we are still even but off grid one.
+
+43
+00:02:46,790 --> 00:02:50,120
+If it isn't, we just make ourself as if some island was false.
+
+44
+00:02:50,120 --> 00:02:50,780
+And that's it.
+
+45
+00:02:51,650 --> 00:02:52,970
+Uh, yes.
+
+46
+00:02:52,970 --> 00:02:54,560
+So this is the moral of that.
+
+47
+00:02:55,530 --> 00:02:58,400
+I hope the idea is in the thought.
+
+48
+00:02:59,910 --> 00:03:05,880
+Let's see the second, the problem, the second, the problem is about coloring the border itself.
+
+49
+00:03:07,120 --> 00:03:08,020
+Now, let's see here.
+
+50
+00:03:12,020 --> 00:03:18,260
+This time, I would like to to to take instead of the smartest approach, I will take the safest approach,
+
+51
+00:03:18,260 --> 00:03:23,090
+and the reason behind that is a good impression that there could be different ways that create several
+
+52
+00:03:23,090 --> 00:03:23,620
+bugs.
+
+53
+00:03:23,660 --> 00:03:28,370
+And I want to be as like as simple and as clear as possible.
+
+54
+00:03:28,760 --> 00:03:30,170
+So I'm going to do the following.
+
+55
+00:03:30,530 --> 00:03:37,010
+First of all, I would run a defense in the grid to market the reachability in the standard way.
+
+56
+00:03:37,340 --> 00:03:43,610
+We would only market the array as usual, would not touch the metrics as usual once we are done with
+
+57
+00:03:43,610 --> 00:03:44,330
+the defense.
+
+58
+00:03:45,080 --> 00:03:51,050
+I will do an iterative procedure that will check for me which nodes are the boundary?
+
+59
+00:03:51,530 --> 00:03:53,590
+We can do both of them together in the defense.
+
+60
+00:03:53,870 --> 00:03:58,250
+But as I said, I try to keep the defense good as a standard as possible.
+
+61
+00:03:58,670 --> 00:03:59,540
+So let's see here.
+
+62
+00:04:01,990 --> 00:04:05,350
+The direction there is valid and everything here.
+
+63
+00:04:06,120 --> 00:04:09,850
+Now this is a defense, it is a very standard defense.
+
+64
+00:04:10,180 --> 00:04:16,330
+We have the like, the flood code, the twisted array, the color to match, if it is vested, if it
+
+65
+00:04:16,330 --> 00:04:18,850
+doesn't match color return mark existed.
+
+66
+00:04:19,030 --> 00:04:21,190
+Do the four calls very standard one?
+
+67
+00:04:22,300 --> 00:04:24,820
+No, here I create the Vista array.
+
+68
+00:04:25,240 --> 00:04:27,310
+I do this first and a standard way.
+
+69
+00:04:27,550 --> 00:04:29,860
+And this is the nutritive function.
+
+70
+00:04:30,100 --> 00:04:33,490
+It the grid, the vista array and you cut it.
+
+71
+00:04:33,970 --> 00:04:35,650
+So let's see what happened in this function.
+
+72
+00:04:35,680 --> 00:04:37,080
+This function is very simple.
+
+73
+00:04:37,090 --> 00:04:39,460
+It just applied the two rules in the problem.
+
+74
+00:04:39,820 --> 00:04:45,520
+So we iterate in every cell and then iterate on that for directions.
+
+75
+00:04:45,550 --> 00:04:48,910
+This condition should be above you, but know it doesn't matter.
+
+76
+00:04:49,420 --> 00:04:54,370
+Now, if this cell is invested, it is in part in a way if my connected component, so I should just
+
+77
+00:04:54,370 --> 00:04:54,940
+ignore it.
+
+78
+00:04:55,750 --> 00:04:57,910
+Otherwise, I will give the neighbor.
+
+79
+00:04:58,450 --> 00:05:00,610
+There are two cases that makes me a boundary.
+
+80
+00:05:00,850 --> 00:05:05,200
+The first case is I am outside the grid has been said.
+
+81
+00:05:05,860 --> 00:05:10,810
+The second case is I have a neighbor that doesn't belong to my connected component.
+
+82
+00:05:11,080 --> 00:05:16,600
+So these two conditions are the implementation of the two conditions in the problem statement.
+
+83
+00:05:17,290 --> 00:05:24,580
+So again, the way that I took a safe approach is do normal defense, then find the boundary.
+
+84
+00:05:26,080 --> 00:05:27,550
+Can we do both of them together?
+
+85
+00:05:27,580 --> 00:05:28,150
+Yes.
+
+86
+00:05:28,510 --> 00:05:34,340
+But you need to be careful and maybe even bothering for you here when you think about it is very straightforward.
+
+87
+00:05:34,360 --> 00:05:35,380
+We separate thing.
+
+88
+00:05:35,380 --> 00:05:37,420
+The code is it's very easy.
+
+89
+00:05:37,520 --> 00:05:39,990
+I don't need to prove it or verify it or anything.
+
+90
+00:05:40,000 --> 00:05:42,700
+It's very clear that the defense is right.
+
+91
+00:05:42,910 --> 00:05:45,190
+We applied the boundary conditions correctly.
+
+92
+00:05:45,370 --> 00:05:46,480
+We are on the safe side.
+
+93
+00:05:46,960 --> 00:05:47,470
+That's all.

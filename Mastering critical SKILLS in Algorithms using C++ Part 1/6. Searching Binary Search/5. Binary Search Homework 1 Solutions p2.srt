@@ -1,0 +1,449 @@
+0
+1
+00:00:00,990 --> 00:00:04,830
+Let's solve problem number two, which is about finding the right interval.
+1
+
+2
+00:00:05,160 --> 00:00:10,280
+I hope you notice that this problem is very similar to the problem that we were writing here.
+2
+
+3
+00:00:10,290 --> 00:00:15,990
+It's all about also finding the first interval, no more magic in the problem than
+3
+
+4
+00:00:15,990 --> 00:00:16,290
+that.
+4
+
+5
+00:00:16,890 --> 00:00:23,670
+So we mainly know that the right interval,
+5
+
+6
+00:00:23,970 --> 00:00:26,670
+its start must be after my end.
+6
+
+7
+00:00:26,880 --> 00:00:29,010
+Its start must be after my end.
+7
+
+8
+00:00:29,400 --> 00:00:35,220
+And within all of the intervals that are after me, I would like the one that starts
+8
+
+9
+00:00:35,220 --> 00:00:36,030
+very earlier.
+9
+
+10
+00:00:36,720 --> 00:00:44,850
+So thinking about that, I'm going to create here the starting of all of the current intervals,
+10
+
+11
+00:00:44,850 --> 00:00:47,430
+the starting of all of the current intervals.
+11
+
+12
+00:00:47,700 --> 00:00:53,900
+So I iterate on the intervals, and right here at the start, and also mark what is its index.
+12
+
+13
+00:00:54,720 --> 00:00:56,250
+And remember the starts are unique.
+13
+
+14
+00:00:56,250 --> 00:00:58,110
+So now we are going to sort them.
+14
+
+15
+00:00:58,560 --> 00:00:59,580
+What do we have now?
+15
+
+16
+00:00:59,940 --> 00:01:05,010
+We have all of the intervals sorted by the starting element.
+16
+
+17
+00:01:05,980 --> 00:01:08,880
+Now, I would like to search as following.
+17
+
+18
+00:01:09,260 --> 00:01:15,450
+I'm going to search for the first element that is greater than or equal to me.
+18
+
+19
+00:01:15,820 --> 00:01:20,560
+I would like to find, given my end, given my end.
+19
+
+20
+00:01:20,980 --> 00:01:25,360
+I would like to find the first interval greater than or equal to this value.
+20
+
+21
+00:01:25,600 --> 00:01:28,330
+So this is now like a very normal search for us.
+21
+
+22
+00:01:28,340 --> 00:01:29,740
+This code is very binary search.
+22
+
+23
+00:01:30,190 --> 00:01:32,650
+So let's say the logic one more time.
+23
+
+24
+00:01:32,920 --> 00:01:36,550
+Let's say we have one interval that is maybe (2, 7).
+24
+
+25
+00:01:37,390 --> 00:01:44,970
+Another interval that is (5, 8), and then an interval that is (8, 10).
+25
+
+26
+00:01:45,310 --> 00:01:47,800
+And another one that is (9, 12).
+26
+
+27
+00:01:48,460 --> 00:01:55,930
+Now I will create an array of startings, which will involve the two and the five and the eight and the
+27
+
+28
+00:01:55,930 --> 00:01:56,290
+nine.
+28
+
+29
+00:01:57,550 --> 00:01:59,740
+Now let's take the two and seven one here.
+29
+
+30
+00:02:00,250 --> 00:02:06,040
+I need the first interval that its starting element is greater than or equal to me.
+30
+
+31
+00:02:07,040 --> 00:02:12,710
+That's why I want to search based on the start, mainly, I would like to use my end, which
+31
+
+32
+00:02:12,710 --> 00:02:14,840
+is seven to search based on the start.
+32
+
+33
+00:02:15,260 --> 00:02:18,950
+So that's why we created an array of startings and sorted it.
+33
+
+34
+00:02:18,960 --> 00:02:21,080
+We must sort it, so that binary search is valid.
+34
+
+35
+00:02:21,620 --> 00:02:26,960
+So now we take seven, and binary search here for the first value greater than or equal me, which
+35
+
+36
+00:02:26,960 --> 00:02:28,100
+is eight.
+36
+
+37
+00:02:28,700 --> 00:02:32,510
+So when we take this one, we know that this is the interval.
+37
+
+38
+00:02:32,510 --> 00:02:34,730
+So we take here the index of it.
+38
+
+39
+00:02:35,030 --> 00:02:40,660
+Then the second value represents the index itself.
+39
+
+40
+00:02:40,670 --> 00:02:41,490
+So
+40
+
+41
+00:02:41,510 --> 00:02:45,110
+we take it back from this index here. Now for the recursion
+41
+
+42
+00:02:45,110 --> 00:02:45,440
+code.
+42
+
+43
+00:02:45,590 --> 00:02:46,490
+This is very normal
+43
+
+44
+00:02:46,490 --> 00:02:49,340
+code. Again, we have a normal binary search.
+44
+
+45
+00:02:49,670 --> 00:02:53,660
+We are searching for the first occurrence, so we need the position trick here,
+45
+
+46
+00:02:53,670 --> 00:02:58,370
+the extra variable, the equal is as it is, the middle as it is, the first condition
+46
+
+47
+00:02:58,370 --> 00:02:59,570
+is less than, that's normal.
+47
+
+48
+00:02:59,960 --> 00:03:04,130
+But now in our case, we don't find the first equal value.
+48
+
+49
+00:03:04,400 --> 00:03:07,040
+We find the first greater than or equal value.
+49
+
+50
+00:03:07,220 --> 00:03:11,630
+So this means the condition for the greater and the condition for the equal are now merged.
+50
+
+51
+00:03:11,900 --> 00:03:17,600
+So one change here, in this code here, this step is now merging the greater than and merging
+51
+
+52
+00:03:17,600 --> 00:03:19,040
+the equal.
+52
+
+53
+00:03:19,070 --> 00:03:24,080
+Why? We are finding the first element greater than or equal to me.
+53
+
+54
+00:03:24,380 --> 00:03:26,510
+So I hope the logic here is very clear.
+54
+
+55
+00:03:26,810 --> 00:03:32,480
+We just wanted to find the first starting that is greater than or equal to me.
+55
+
+56
+00:03:32,660 --> 00:03:36,200
+So I created an array of all of the possible startings, sorted
+56
+
+57
+00:03:36,200 --> 00:03:38,120
+it, started to use it to search.
+57
+
+58
+00:03:38,390 --> 00:03:44,240
+I use my end here to search this array. If it is valid,
+58
+
+59
+00:03:44,480 --> 00:03:46,770
+we take the one which is the index of the interval.
+59
+
+60
+00:03:48,690 --> 00:03:52,170
+So this is mainly about this problem.
+60
+
+61
+00:03:52,410 --> 00:03:58,120
+Let's see what other implementations we have here. In the second implementation,
+61
+
+62
+00:03:58,140 --> 00:04:02,930
+I'm going to use the internal lower bound search.
+62
+
+63
+00:04:02,940 --> 00:04:05,130
+So the logic here is exactly the same.
+63
+
+64
+00:04:05,130 --> 00:04:07,890
+The logic here is exactly the same.
+64
+
+65
+00:04:08,250 --> 00:04:18,120
+I'm going to add the startings, sort them, and then I'm going to lower bound because lower bound is greater
+65
+
+66
+00:04:18,120 --> 00:04:18,720
+than or equal.
+66
+
+67
+00:04:18,720 --> 00:04:20,820
+So this is actually what I'm going to look for.
+67
+
+68
+00:04:21,210 --> 00:04:27,180
+So I'm going to use it to find the exact position, and just use it here.
+68
+
+69
+00:04:27,570 --> 00:04:34,350
+So the moral of that is instead of writing our own binary search, we just used the
+69
+
+70
+00:04:34,740 --> 00:04:35,580
+available one.
+70
+
+71
+00:04:38,260 --> 00:04:38,710
+Now.
+71
+
+72
+00:04:40,730 --> 00:04:41,240
+.
+72
+
+73
+00:04:47,740 --> 00:04:53,830
+Yeah, the last implementation I would like to show you that we can use actually the map of
+73
+
+74
+00:04:53,830 --> 00:04:57,190
+C++ so that we can also find lower bound in log(n).
+74
+
+75
+00:04:57,340 --> 00:05:02,440
+So the moral of that is instead of putting the values in a vector and sorting them, we can put them
+75
+
+76
+00:05:02,440 --> 00:05:02,920
+in a map.
+76
+
+77
+00:05:03,220 --> 00:05:04,450
+So the map is key
+77
+
+78
+00:05:05,710 --> 00:05:12,430
+and value, but the map is ordering the keys already, so we just add them here, say
+78
+
+79
+00:05:12,610 --> 00:05:16,810
+the key is a starting and the value is the index, and this is the answer vector as usual.
+79
+
+80
+00:05:17,110 --> 00:05:18,220
+Then I will iterate.
+80
+
+81
+00:05:18,610 --> 00:05:23,170
+I will have my ending lower bound on the map by it, it will return an iterator.
+81
+
+82
+00:05:23,350 --> 00:05:28,840
+Then we use the second one, which is directly the value here, which represents this index.
+82
+
+83
+00:05:28,870 --> 00:05:31,180
+So this is how we can use the map to solve this problem.
+83
+
+84
+00:05:31,420 --> 00:05:36,640
+And overall, the code is more elegant because the map is the intuitive key and value, which is here.
+84
+
+85
+00:05:36,640 --> 00:05:41,290
+We are mapping the starting for something to the value of it.
+85
+
+86
+00:05:41,920 --> 00:05:48,160
+Remember, this code is possible because the starting points in the input are unique.
+86
+
+87
+00:05:48,760 --> 00:05:56,710
+Otherwise, if I told map[2] = 7, then said map[2] = 5, then we are overwriting
+87
+
+88
+00:05:56,710 --> 00:05:58,270
+our implementation.
+88
+
+89
+00:05:58,330 --> 00:06:03,280
+So this code is valid and mainly built on the given input from the problem itself.
+89
+
+90
+00:06:03,610 --> 00:06:04,060
+That's all.

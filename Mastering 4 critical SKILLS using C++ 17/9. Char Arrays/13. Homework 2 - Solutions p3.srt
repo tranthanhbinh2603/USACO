@@ -1,0 +1,144 @@
+0
+1
+00:00:00,870 --> 00:00:06,810
+This problem is just the stress on the addition of two numbers, having a carry, moving it from a number
+1
+
+2
+00:00:06,810 --> 00:00:07,920
+to another and so on.
+2
+
+3
+00:00:08,000 --> 00:00:09,330
+This is mainly the purpose of it.
+3
+
+4
+00:00:09,960 --> 00:00:16,530
+To solve the problem, I started by reading the string, and to add the number to a second number, you
+4
+
+5
+00:00:16,530 --> 00:00:18,530
+have to add from the right side of it.
+5
+
+6
+00:00:18,930 --> 00:00:20,930
+That's why we will start to iterate.
+6
+
+7
+00:00:21,180 --> 00:00:26,910
+But every time we get the digit from the end of it, "sz-1-i" is mainly the digit.
+7
+
+8
+00:00:26,910 --> 00:00:29,010
+Removing minus zero is getting the actual data.
+8
+
+9
+00:00:29,910 --> 00:00:35,220
+In the first of four iterations we can add the five because we have number that's five five five five.
+9
+
+10
+00:00:35,250 --> 00:00:37,180
+So in the first four times we add the five.
+10
+
+11
+00:00:37,830 --> 00:00:41,260
+So we think the digit let's say it is two and then we have the digit.
+11
+
+12
+00:00:41,280 --> 00:00:42,550
+We add five to the digit.
+12
+
+13
+00:00:42,720 --> 00:00:43,500
+Now it's seven.
+13
+
+14
+00:00:44,070 --> 00:00:49,560
+But what if it was, for example, nine and you have a digit, for example, that's another eight?
+14
+
+15
+00:00:49,560 --> 00:00:52,520
+For example, this is now 17.
+15
+
+16
+00:00:53,340 --> 00:00:56,660
+So in math, we have to write seven and have a carry of one.
+16
+
+17
+00:00:56,670 --> 00:00:59,510
+That's why we have here the carry initially zero.
+17
+
+18
+00:01:00,060 --> 00:01:06,120
+But if the digit is greater than or equal 10 in math, we remove a ten and make it like a one carry.
+18
+
+19
+00:01:07,010 --> 00:01:12,810
+To be added with us, otherwise, the carry is zero. At this moment, the is again, value from zero to nine.
+19
+
+20
+00:01:12,830 --> 00:01:16,630
+So we get it back here to the array again and we keep going.
+20
+
+21
+00:01:16,640 --> 00:01:20,840
+So the idea is get the next digit, add for over it five.
+21
+
+22
+00:01:20,960 --> 00:01:26,930
+If there is a carry from the previous time, just add it and then we have here handling for the
+22
+
+23
+00:01:26,930 --> 00:01:33,000
+new carry for us. The carry after every time we either would be one or would be just zero.
+23
+
+24
+00:01:33,830 --> 00:01:37,870
+That's all mainly implementation and some math from the elementary school.
+24
+
+25
+00:01:38,570 --> 00:01:39,830
+This code isn't very efficient
+25
+
+26
+00:01:39,830 --> 00:01:47,330
+if the string is very huge like you can expect, for example, that you don't need to go maybe 
+26
+
+27
+00:01:47,330 --> 00:01:53,150
+more than maybe five or six iterations because at some point of time there are no more carry any more
+27
+
+28
+00:01:53,150 --> 00:01:55,930
+and there is no more iterations anymore.
+28
+
+29
+00:01:56,120 --> 00:01:58,130
+But I like to keep it simple to this point.

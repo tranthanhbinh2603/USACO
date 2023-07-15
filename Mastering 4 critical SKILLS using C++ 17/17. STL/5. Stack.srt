@@ -1,0 +1,114 @@
+0
+1
+00:00:00,990 --> 00:00:08,100
+Another interesting data structure is named stack, stack is completely the reverse of a queue, you can
+1
+
+2
+00:00:08,100 --> 00:00:10,830
+think of a stack like a box of that have some books,
+2
+
+3
+00:00:10,830 --> 00:00:15,000
+you put book number one, book number two, book number three, till book number 10.
+3
+
+4
+00:00:15,390 --> 00:00:20,520
+If you would like to get a book now from the stack, you have to get from the top of the box.
+4
+
+5
+00:00:20,790 --> 00:00:26,350
+So this means that the last one is the first one to get out, on the other side,
+5
+
+6
+00:00:26,550 --> 00:00:29,600
+the queue was the first one is the first one to get out,
+6
+
+7
+00:00:29,790 --> 00:00:32,130
+so queue here was first in, first out,
+7
+
+8
+00:00:32,430 --> 00:00:35,980
+but here in the stack, it is last in, first out.
+8
+
+9
+00:00:36,000 --> 00:00:38,550
+So when you enter a stack, it is more like a box,
+9
+
+10
+00:00:38,820 --> 00:00:41,910
+The one get first just got trapped down there,
+10
+
+11
+00:00:42,120 --> 00:00:43,170
+but in 
+11
+
+12
+00:00:43,170 --> 00:00:47,460
+in a queue, the one who gets first just get outside of the queue,
+12
+
+13
+00:00:47,640 --> 00:00:52,500
+so looking to this stack, we enter the number one, two, three, four, five, if you would like to
+13
+
+14
+00:00:52,500 --> 00:00:52,830
+pop
+14
+
+15
+00:00:53,100 --> 00:00:55,010
+the five is the one to get outside,
+15
+
+16
+00:00:55,110 --> 00:01:00,230
+think of it always like a stack of books. In terms of code and a very similar way,
+16
+
+17
+00:01:00,250 --> 00:01:01,950
+let's define a stack of string,
+17
+
+18
+00:01:02,100 --> 00:01:06,900
+you start to push Ibrahim, Saad, Mostafa, and then you print in a very similar way.
+18
+
+19
+00:01:07,500 --> 00:01:09,060
+But what is the output here?
+19
+
+20
+00:01:09,060 --> 00:01:10,750
+Would it be Ibrahim Saad Mostafa?
+20
+
+21
+00:01:10,770 --> 00:01:14,160
+No, it would be the reverse would be Mostafa Saad Ibrahim.
+21
+
+22
+00:01:14,190 --> 00:01:20,970
+OK, so the queue would print them Ibrahim Saad Mostafa, but stack would print them Mostafa Saad Ibrahim.
+22
+
+23
+00:01:21,810 --> 00:01:22,220
+That's it.

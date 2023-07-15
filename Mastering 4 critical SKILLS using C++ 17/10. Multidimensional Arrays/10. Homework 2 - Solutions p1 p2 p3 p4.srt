@@ -1,0 +1,474 @@
+0
+1
+00:00:00,810 --> 00:00:07,580
+Let's solve the second homework set. The first one is  about the prime numbers in a specific region, and
+1
+
+2
+00:00:07,590 --> 00:00:14,210
+we'd like each query to be answered with only nested loops maximum per query.
+2
+
+3
+00:00:14,430 --> 00:00:16,320
+So how can we handle that?
+3
+
+4
+00:00:17,320 --> 00:00:24,720
+We're going to read the is..., we will create an array, but instead of an array of numbers, we are going
+4
+
+5
+00:00:24,720 --> 00:00:26,880
+to read the number and judge directly
+5
+
+6
+00:00:26,880 --> 00:00:27,890
+if it's a prime or not.
+6
+
+7
+00:00:28,230 --> 00:00:31,860
+There is no need to keep computing every single query
+7
+
+8
+00:00:32,070 --> 00:00:36,190
+who are the prime numbers. We can pre-process the input data directly.
+8
+
+9
+00:00:36,540 --> 00:00:42,630
+So while we are reading that n & m  raws here, we will read the value and then we will decide if the
+9
+
+10
+00:00:42,630 --> 00:00:44,070
+value is prime or not.
+10
+
+11
+00:00:44,280 --> 00:00:50,250
+Once we are done with these two loops, every single value in this read n*m matrix is
+11
+
+12
+00:00:50,250 --> 00:00:52,500
+either zero or one. The remaining
+12
+
+13
+00:00:52,510 --> 00:00:54,780
+part for us now is with every query.
+13
+
+14
+00:00:55,020 --> 00:01:01,220
+Just iterate on the target positions here and count all of the zeros and ones in this guys.
+14
+
+15
+00:01:01,220 --> 00:01:04,110
+So all of those will come to the total number of primes here.
+15
+
+16
+00:01:04,410 --> 00:01:09,420
+So the trick was to make sure that you are doing this pre-processing early.
+16
+
+17
+00:01:10,110 --> 00:01:14,250
+Other than that, you just need to learn how to be careful with your start index
+17
+
+18
+00:01:14,250 --> 00:01:17,250
+and your end index, that's all.
+18
+
+19
+00:01:17,250 --> 00:01:18,210
+Nothing more than that.
+19
+
+20
+00:01:19,990 --> 00:01:27,250
+In the second problem, we would like to compute the mountains if you are good so far with the directional
+20
+
+21
+00:01:27,250 --> 00:01:27,610
+array.
+21
+
+22
+00:01:27,850 --> 00:01:29,500
+This one should be fair at the moment.
+22
+
+23
+00:01:30,070 --> 00:01:38,380
+We will define the directional array, but for the eight directions that we have and then we need to find all
+23
+
+24
+00:01:38,380 --> 00:01:38,920
+the mountains.
+24
+
+25
+00:01:38,930 --> 00:01:43,650
+So mainly we need to find all of my 8 neighbors for every position but the valid ones.
+25
+
+26
+00:01:44,050 --> 00:01:51,010
+So we will iterate on every single value and then we will decide the boolean if all of them are good
+26
+
+27
+00:01:51,010 --> 00:01:57,520
+or not, for every one of them would iterate on all of the 8 directions, compute the next row and
+27
+
+28
+00:01:57,520 --> 00:02:00,840
+next column for my neighbor, make sure it is a valid one.
+28
+
+29
+00:02:01,480 --> 00:02:07,430
+If this valid one is less than this guy, then we know that that mountain is false.
+29
+
+30
+00:02:07,750 --> 00:02:14,500
+So the moral of that is iterate over every position, iterate on my 8 neighbors if they exist, make
+30
+
+31
+00:02:14,500 --> 00:02:15,850
+sure you are inside the grid.
+31
+
+32
+00:02:16,060 --> 00:02:18,130
+Make sure that you are higher than all of them.
+32
+
+33
+00:02:18,310 --> 00:02:20,680
+That's all. So mainly the direction array trick that
+33
+
+34
+00:02:20,680 --> 00:02:22,140
+I hope that you are good at it.
+34
+
+35
+00:02:23,510 --> 00:02:30,590
+In the third problem, I would like to implement this active robot problem and may be it might be challenging
+35
+
+36
+00:02:30,590 --> 00:02:32,960
+for you that you have to move all of that one.
+36
+
+37
+00:02:33,080 --> 00:02:38,810
+But if you thought about using the %  it should be an easy one. Again, this active robot is moving
+37
+
+38
+00:02:38,810 --> 00:02:43,730
+in a grid in four directions so this guy can move in the four directions.
+38
+
+39
+00:02:44,000 --> 00:02:47,990
+Again, this should trigger the directional ray. To implement that,
+39
+
+40
+00:02:47,990 --> 00:02:50,770
+We will start with defining our directional array.
+40
+
+41
+00:02:51,240 --> 00:02:57,200
+I used the order of the input to follow the order of my directional array to make it easy.
+41
+
+42
+00:02:57,800 --> 00:03:05,240
+And we start with being at position zero & zero. With every query, we take the direction, convert it to zero
+42
+
+43
+00:03:05,240 --> 00:03:05,510
+based.
+43
+
+44
+00:03:05,840 --> 00:03:13,330
+Now we know if I am at position r and I have to move to, say, right side, for example.
+44
+
+45
+00:03:13,820 --> 00:03:17,890
+So the right is one in the row, so it means one.
+45
+
+46
+00:03:18,290 --> 00:03:20,120
+But what if I have to move five steps?
+46
+
+47
+00:03:20,390 --> 00:03:23,320
+It move, it means to multiply five times this one.
+47
+
+48
+00:03:23,720 --> 00:03:29,630
+So by multiplying the number of steps in the direction, you are actually jumping too many
+48
+
+49
+00:03:29,630 --> 00:03:33,130
+steps in this direction and so on.
+49
+
+50
+00:03:33,640 --> 00:03:37,730
+Again, let's say that you are position zero zero and you would like to move down.
+50
+
+51
+00:03:37,940 --> 00:03:48,020
+Down means the number of columns should be the number of...., if you like to
+51
+
+52
+00:03:48,020 --> 00:03:50,420
+go down, then the column is as it is.
+52
+
+53
+00:03:50,540 --> 00:03:57,780
+But the number of the current row is going to be incremented. 
+53
+
+54
+00:03:57,950 --> 00:04:02,900
+That's why here we have the one here for the down incremented. Again,
+54
+
+55
+00:04:03,230 --> 00:04:04,790
+let's say we'd like to move five steps.
+55
+
+56
+00:04:04,970 --> 00:04:06,440
+So five times one is five.
+56
+
+57
+00:04:06,440 --> 00:04:08,120
+Then this is the next  where you move.
+57
+
+58
+00:04:08,900 --> 00:04:11,180
+The cycle is very easy to handle.
+58
+
+59
+00:04:11,180 --> 00:04:16,190
+Like let's say you are moving one million step, but if you just applied %n , it is going to
+59
+
+60
+00:04:16,190 --> 00:04:16,700
+cycle.
+60
+
+61
+00:04:16,970 --> 00:04:20,150
+So always remember that %n can help you to cycle.
+61
+
+62
+00:04:20,150 --> 00:04:26,660
+Remember, always the clock after every 12 hours it is useless so %n can help you get rid of
+62
+
+63
+00:04:26,660 --> 00:04:27,290
+cycles.
+63
+
+64
+00:04:27,500 --> 00:04:28,730
+We know cycles in clock.
+64
+
+65
+00:04:28,850 --> 00:04:32,900
+We can also see cycles when it comes to the metrics.
+65
+
+66
+00:04:34,340 --> 00:04:37,790
+The last problem which might be a bit overwhelming for you, but it is very good
+66
+
+67
+00:04:37,790 --> 00:04:46,020
+one to know how to generalize the flattening idea so that you can see the big pattern is as follows.
+67
+
+68
+00:04:46,040 --> 00:04:47,420
+I hope you manage to do some of it.
+68
+
+69
+00:04:49,670 --> 00:04:55,130
+Let's first of all, construct the conversion from the multi-dimensional to the one dimensional, because
+69
+
+70
+00:04:55,130 --> 00:04:56,330
+it is the easy one.
+70
+
+71
+00:04:56,780 --> 00:04:59,780
+Remember, in the 2D case, we mainly had something like that.
+71
+
+72
+00:05:00,140 --> 00:05:04,390
+We were multiplying the current row with the total items per column,
+72
+
+73
+00:05:04,730 --> 00:05:06,880
+and then we are adding the current column.
+73
+
+74
+00:05:07,340 --> 00:05:13,190
+The logic of multiplying the current row with the total number of columns is we know if we are 2D
+74
+
+75
+00:05:13,190 --> 00:05:18,620
+it means that there are two complete rows that are done and every raw has total number of columns
+75
+
+76
+00:05:18,620 --> 00:05:18,890
+here.
+76
+
+77
+00:05:20,180 --> 00:05:22,070
+Now if we would like to extend it to 3D,
+77
+
+78
+00:05:22,910 --> 00:05:30,740
+Now, if we are at the d, r & c, if we are at d, it means there are two complete grid rows and
+78
+
+79
+00:05:30,740 --> 00:05:31,900
+columns are done.
+79
+
+80
+00:05:32,510 --> 00:05:37,500
+So to handle that we need also to multiply the d of the depth with a total grid.
+80
+
+81
+00:05:37,820 --> 00:05:40,370
+I'm defining here Db and Rb.
+81
+
+82
+00:05:41,600 --> 00:05:48,490
+So the Db is the total number of rows times columns and the Rb for the total number of columns.
+82
+
+83
+00:05:48,680 --> 00:05:51,200
+So by this way it is very, very symmetric for you.
+83
+
+84
+00:05:51,860 --> 00:05:56,480
+We are multiplying here, but one, we are multiplying by  the total number of columns, but here multiplying
+84
+
+85
+00:05:56,660 --> 00:05:58,750
+by the total number of rows and columns.
+85
+
+86
+00:05:58,970 --> 00:06:01,670
+So I hope now you can realize it with depth three;
+86
+
+87
+00:06:01,880 --> 00:06:04,160
+it means there are three grids.
+87
+
+88
+00:06:04,160 --> 00:06:07,060
+Each one is R times C are already done.
+88
+
+89
+00:06:07,610 --> 00:06:12,140
+Once you are done with this equation, getting the opposite of it is a matter of math.
+89
+
+90
+00:06:12,660 --> 00:06:16,160
+Let's say you have some index and you would like to extract that guy.
+90
+
+91
+00:06:16,520 --> 00:06:20,900
+If you would divide it by Db, then we know all of that is less than Db.
+91
+
+92
+00:06:20,900 --> 00:06:24,530
+So all of them would be out of the competition.
+92
+
+93
+00:06:24,860 --> 00:06:29,300
+And if you take a %Db, we know that this part will be gone.
+93
+
+94
+00:06:29,660 --> 00:06:34,000
+Now, for this part, it is exactly the very similar way to the 2D part. You divide here,
+94
+
+95
+00:06:34,190 --> 00:06:35,930
+then you take a %. That's all.

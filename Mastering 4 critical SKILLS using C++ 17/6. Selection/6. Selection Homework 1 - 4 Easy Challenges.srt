@@ -1,0 +1,159 @@
+0
+1
+00:00:00,900 --> 00:00:09,720
+homework set number 1, the first problem you will read two integers A and B and based on being odd or even, we have
+1
+
+2
+00:00:09,720 --> 00:00:16,840
+four cases, if both are odd, print the multiplication, if both are even print the division.
+2
+
+3
+00:00:16,860 --> 00:00:20,010
+Feel free to assume that B will be able equal zero.
+3
+
+4
+00:00:21,540 --> 00:00:27,690
+And if the first is odd and the second is even print the summation and if  the first is
+4
+
+5
+00:00:27,690 --> 00:00:31,230
+is even and the second is odd, just print the subtraction of them.
+5
+
+6
+00:00:32,220 --> 00:00:34,560
+And this is a case, for example, here, five and seven,
+6
+
+7
+00:00:34,890 --> 00:00:37,830
+Both of them are odd so the multiplication is thirty five,
+7
+
+8
+00:00:39,680 --> 00:00:46,930
+In the second program, you have to read three integers and sort them, sorting means order them, sort
+8
+
+9
+00:00:46,940 --> 00:00:48,650
+them from small to large.
+9
+
+10
+00:00:48,680 --> 00:00:50,450
+This is what we mean by ascending order.
+10
+
+11
+00:00:50,960 --> 00:00:52,670
+The descending order is decreasing.
+11
+
+12
+00:00:52,670 --> 00:00:54,380
+The ascending is from small to large.
+12
+
+13
+00:00:54,800 --> 00:00:59,990
+For example, if the input is two, three, one, we will order them to one, two, three, observe
+13
+
+14
+00:00:59,990 --> 00:01:02,070
+four given three integers here.
+14
+
+15
+00:01:02,300 --> 00:01:04,370
+There are only three cases.
+15
+
+16
+00:01:04,370 --> 00:01:08,350
+If they are of different values, if they are equal values, it will be less than that.
+16
+
+17
+00:01:10,860 --> 00:01:17,520
+Then in this problem, you will read three integers and you have to find the biggest one of them, which
+17
+
+18
+00:01:17,520 --> 00:01:26,760
+is less than one hundred, if there is no such a number, print minus one, for example, 22, 90, 115
+18
+
+19
+00:01:27,150 --> 00:01:27,960
+observed here
+19
+
+20
+00:01:27,960 --> 00:01:30,170
+one hundred and fifteen is bigger than hundred.
+20
+
+21
+00:01:30,600 --> 00:01:35,670
+So we will discarded we have here 20 and 90 and both are less than one hundred.
+21
+
+22
+00:01:35,790 --> 00:01:38,250
+The maximum among them is 90.
+22
+
+23
+00:01:38,970 --> 00:01:41,760
+In this case, all of the numbers are greater than 100.
+23
+
+24
+00:01:41,820 --> 00:01:43,470
+So the answer is minus one.
+24
+
+25
+00:01:44,160 --> 00:01:46,890
+In this case, only 50 is less than 100,
+25
+
+26
+00:01:46,890 --> 00:01:48,450
+so it's only the answer and so on.
+26
+
+27
+00:01:50,190 --> 00:01:56,820
+In this program, you will read five numbers you will read- sorry,  you will read six numbers.
+27
+
+28
+00:01:56,820 --> 00:02:01,640
+The first number is X, then you read other five numbers and printed the following.
+28
+
+29
+00:02:01,980 --> 00:02:06,990
+How many numbers are less than or equal X and how many numbers are greater than X?
+29
+
+30
+00:02:07,440 --> 00:02:09,560
+Is there some relationship between these two outputs?
+30
+
+31
+00:02:10,020 --> 00:02:16,980
+For example, we return then we read these five numbers, we have two numbers, less than ten or equals
+31
+
+32
+00:02:16,980 --> 00:02:25,020
+ten, which are the one and five and then 100, 200, 300 are greater than ten. That's all.

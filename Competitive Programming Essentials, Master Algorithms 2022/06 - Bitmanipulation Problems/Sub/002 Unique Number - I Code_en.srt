@@ -1,0 +1,104 @@
+1
+00:00:01,460 --> 00:00:04,760
+So let's see the code for the problem unique number one.
+
+2
+00:00:05,110 --> 00:00:10,880
+OK, so what we're going to do? we are going to make a method int unique number.
+
+3
+00:00:12,030 --> 00:00:20,370
+And we can either pass a array or vector to this method and will return the unique number.
+
+4
+00:00:20,370 --> 00:00:24,840
+Okay. so n is going to be array.size() .
+
+5
+00:00:25,350 --> 00:00:30,060
+And here let's create a array, So vector of integers array.
+
+6
+00:00:31,650 --> 00:00:35,250
+And I give the numbers let's say one, three, five or
+
+7
+00:00:36,280 --> 00:00:41,380
+Three, five, three one five ok. the unique number is four
+
+8
+00:00:41,410 --> 00:00:43,120
+That's what we want to figure it out.
+
+9
+00:00:43,780 --> 00:00:48,550
+I will say, ok. cout unique number and I give the array.
+
+10
+00:00:49,270 --> 00:00:56,590
+So we discussed the concept is very simple so I can say, OK, I'll find out the cumulative XOR of
+
+11
+00:00:56,590 --> 00:00:57,340
+all the numbers.
+
+12
+00:00:57,940 --> 00:01:01,110
+Let's say the XOR is zero, for int i equal to zero.
+
+13
+00:01:01,120 --> 00:01:02,230
+I less then n.
+
+14
+00:01:03,800 --> 00:01:04,849
+I + +.
+
+15
+00:01:06,440 --> 00:01:14,500
+I can see cumulative XOR plus equals. sorry... equals cumulative XOR with the current numbers the
+
+16
+00:01:14,510 --> 00:01:15,840
+the current number is array of i.
+
+17
+00:01:16,160 --> 00:01:16,700
+That's it.
+
+18
+00:01:17,980 --> 00:01:22,000
+And once we're done with this, we can return the cumulative XOR.
+
+19
+00:01:23,220 --> 00:01:25,590
+And this XOR will store the unique number.
+
+20
+00:01:25,680 --> 00:01:27,000
+So let's build the code.
+
+21
+00:01:33,080 --> 00:01:35,780
+And we should include vector as well.
+
+22
+00:01:37,870 --> 00:01:40,150
+And you can see the code is built.
+
+23
+00:01:41,400 --> 00:01:47,220
+And if you now run this dot slash unique one, we're getting the unique number as four.
+
+24
+00:01:47,820 --> 00:01:50,910
+That means our code is working perfectly fine.
+
+25
+00:01:51,330 --> 00:01:52,950
+So that's all for this video.
+
+26
+00:01:53,010 --> 00:01:54,090
+See you in the next lecture.
+

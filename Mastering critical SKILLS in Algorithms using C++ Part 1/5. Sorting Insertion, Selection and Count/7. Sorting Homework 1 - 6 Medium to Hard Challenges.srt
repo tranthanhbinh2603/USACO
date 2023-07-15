@@ -1,0 +1,269 @@
+0
+1
+00:00:01,360 --> 00:00:02,770
+Sorting homework number one.
+1
+
+2
+00:00:03,760 --> 00:00:09,190
+First of all, I would like you to rewrite the insertion sort algorithm as following, I would like
+2
+
+3
+00:00:09,190 --> 00:00:13,540
+you to do things. First, make it to be sorting descending order from large to small.
+3
+
+4
+00:00:13,570 --> 00:00:14,710
+This is a trivial change.
+4
+
+5
+00:00:15,220 --> 00:00:21,040
+Second, I would like you to utilize the swap function to implement the insertion sort. You can write
+5
+
+6
+00:00:21,040 --> 00:00:24,010
+the whole code in just three lines of code using the swap function.
+6
+
+7
+00:00:24,280 --> 00:00:29,680
+So write it, then compare which one has the total number of fewer operations here.
+7
+
+8
+00:00:29,860 --> 00:00:31,330
+This version or the lecture one?
+8
+
+9
+00:00:32,810 --> 00:00:38,090
+The second algorithm, actually most of the comings are count sort algorithms.
+9
+
+10
+00:00:38,630 --> 00:00:45,770
+This one is count sort, but the values now are negative, specifically from -50000 to 50000 values.
+10
+
+11
+00:00:46,580 --> 00:00:50,150
+So, how can we use count sort given that we have negative values?
+11
+
+12
+00:00:50,990 --> 00:00:53,450
+This problem on LeetCode is used for sorting.
+12
+
+13
+00:00:53,450 --> 00:00:55,220
+You can use it to test your algorithm.
+13
+
+14
+00:00:55,640 --> 00:00:57,290
+It uses an online judge from LeetCode.
+14
+
+15
+00:00:57,290 --> 00:00:59,290
+What is an online judge and how to use it?
+15
+
+16
+00:00:59,300 --> 00:01:01,430
+Please refer to the online judge section.
+16
+
+17
+00:01:02,960 --> 00:01:09,830
+In this version, we have very huge value from -10^9 up to 10^9
+17
+
+18
+00:01:09,830 --> 00:01:10,070
+.
+18
+
+19
+00:01:10,370 --> 00:01:12,350
+Clearly, count sort doesn't work.
+19
+
+20
+00:01:12,770 --> 00:01:14,630
+However, there is an extra information.
+20
+
+21
+00:01:15,170 --> 00:01:18,960
+The difference between the maximum value and minimum value is less than or equal
+21
+
+22
+00:01:18,980 --> 00:01:19,790
+500.
+22
+
+23
+00:01:20,300 --> 00:01:23,340
+How can we solve this problem? Again.
+23
+
+24
+00:01:23,360 --> 00:01:23,630
+try it
+24
+
+25
+00:01:23,630 --> 00:01:24,470
+with count sort.
+25
+
+26
+00:01:25,880 --> 00:01:31,640
+Let's move to count sort on strings. You would like to sort an array of strings based on the first character.
+26
+
+27
+00:01:31,820 --> 00:01:38,390
+Here are the constraints, every string is of length one at least, and only consists of lower letters
+27
+
+28
+00:01:38,390 --> 00:01:39,170
+from a to z.
+28
+
+29
+00:01:39,800 --> 00:01:42,020
+The sorting is only based on the first character.
+29
+
+30
+00:01:42,260 --> 00:01:46,370
+So if two strings have the same first character, they are equal strings.
+30
+
+31
+00:01:47,030 --> 00:01:53,180
+The algorithm must be stable, which means if two strings are equal based on this definition, they
+31
+
+32
+00:01:53,180 --> 00:01:57,080
+should be sorted and the relative order should be respected.
+32
+
+33
+00:01:57,530 --> 00:02:01,160
+For example, let's say the vector has ziad, belal,
+33
+
+34
+00:02:01,160 --> 00:02:07,190
+adam, baheir, and ali. Now, we would like to sort them, the output should be as following, clearly adam and
+34
+
+35
+00:02:07,190 --> 00:02:11,820
+ali before belal and baheir, but notice here belal is before baheir.
+35
+
+36
+00:02:11,840 --> 00:02:12,500
+Why?
+36
+
+37
+00:02:13,440 --> 00:02:17,160
+Because belal is starting with b and baheir with b.
+37
+
+38
+00:02:18,140 --> 00:02:20,960
+So from this condition perspective, they are equal.
+38
+
+39
+00:02:21,350 --> 00:02:25,630
+So, belal came first in the input, it came first in the output because we want
+39
+
+40
+00:02:25,650 --> 00:02:28,910
+the algorithm to be stable. Observe here,
+40
+
+41
+00:02:29,120 --> 00:02:31,520
+there is e here before a, but we don't care here.
+41
+
+42
+00:02:32,780 --> 00:02:34,580
+Let's make it a little more complex.
+42
+
+43
+00:02:34,580 --> 00:02:40,460
+Instead of comparing based on the first character, we will compare based on the first two characters.
+43
+
+44
+00:02:40,820 --> 00:02:42,200
+And here is another example.
+44
+
+45
+00:02:43,750 --> 00:02:49,300
+Finally, there is a very popular count sort algorithm that people usually start with it, I believe it
+45
+
+46
+00:02:49,300 --> 00:02:51,010
+is less educative to do that.
+46
+
+47
+00:02:51,280 --> 00:02:59,140
+So here is the new algorithm for count sort, it takes a vector of integers and tries to sort it.
+47
+
+48
+00:02:59,140 --> 00:03:00,750
+It returns a vector of integers,
+48
+
+49
+00:03:00,760 --> 00:03:04,180
+the input is constant, and doing the sorting algorithm.
+49
+
+50
+00:03:04,720 --> 00:03:08,920
+I would like you to study this version of count sort and try to understand it by yourself.
+50
+
+51
+00:03:09,310 --> 00:03:12,520
+Observe, the first two blocks are exactly the same.
+51
+
+52
+00:03:13,150 --> 00:03:16,450
+The real difference is how to represent and build the output.
+52
+
+53
+00:03:16,750 --> 00:03:20,800
+So this is where actually you need to put effort of tracing to understand this code.
+53
+
+54
+00:03:21,840 --> 00:03:22,150
+That's all.

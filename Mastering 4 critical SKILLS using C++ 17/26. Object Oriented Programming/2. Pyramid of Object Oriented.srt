@@ -1,0 +1,839 @@
+0
+1
+00:00:01,140 --> 00:00:06,840
+In this video, we'll discuss more about the big picture of object-oriented programming. 
+1
+
+2
+00:00:06,840 --> 00:00:11,250
+There is a nice diagram that we might call it the OO diagram.
+2
+
+3
+00:00:12,060 --> 00:00:16,920
+It consists of, as you see, four levels, something called the OO paradigm,
+3
+
+4
+00:00:17,070 --> 00:00:19,890
+and this is explaining what OO is about,
+4
+
+5
+00:00:20,400 --> 00:00:25,620
+and then OO concepts, and this is typically the core of any OO programming concepts.
+5
+
+6
+00:00:25,630 --> 00:00:31,260
+There are six fundamental concepts in programming. There are also the object-oriented principles,
+6
+
+7
+00:00:31,260 --> 00:00:36,250
+some principles that are very important to make your code much better.
+7
+
+8
+00:00:36,510 --> 00:00:41,520
+They are typically not explained in OO courses, but I'm going to highlight them in a specific way.
+8
+
+9
+00:00:41,820 --> 00:00:47,520
+There are also design patterns that also like part of the big OO picture.
+9
+
+10
+00:00:49,770 --> 00:00:59,430
+So the whole OOP paradigm is about making the objects as a very centralized concept in the whole project.
+10
+
+11
+00:01:00,240 --> 00:01:05,100
+Suppose at this moment of time with the projects that we did them using the struct, you already created
+11
+
+12
+00:01:05,100 --> 00:01:12,420
+a lot of objects, object of a hospital, object for a library, object for a user, object for a question,
+12
+
+13
+00:01:12,420 --> 00:01:13,770
+and answer, and so on.
+13
+
+14
+00:01:14,160 --> 00:01:22,040
+OOP is all about making these objects in a very centralized way to the projects,
+14
+
+15
+00:01:22,200 --> 00:01:28,440
+but OOP involves a lot of things that would make the design mush fit with the
+15
+
+16
+00:01:28,710 --> 00:01:31,650
+real life needs. OOP is a paradigm,
+16
+
+17
+00:01:31,830 --> 00:01:37,980
+The word paradigm or programming paradigm means a way of thinking, view and structuring your software.
+17
+
+18
+00:01:38,220 --> 00:01:40,140
+So it is like a philosophy of something.
+18
+
+19
+00:01:40,530 --> 00:01:42,330
+OOP is just one of them.
+19
+
+20
+00:01:42,630 --> 00:01:46,070
+Before that, there are many other paradigms like declarative, functional.
+20
+
+21
+00:01:46,410 --> 00:01:49,800
+One of the very popular ways is the procedural programming.
+21
+
+22
+00:01:49,860 --> 00:01:54,930
+This is what we actually were doing early in C++, introducing functions and so on.
+22
+
+23
+00:01:56,040 --> 00:01:58,110
+So this is one of the old paradigms.
+23
+
+24
+00:01:59,490 --> 00:02:07,560
+So why OOP? why is it important? if you tried to talk about the classes that we were doing (structs specifically),
+24
+
+25
+00:02:07,830 --> 00:02:12,930
+we noticed some correspondence between real-world objects and OOP classes.
+25
+
+26
+00:02:13,080 --> 00:02:18,720
+So the way that you interpret your own project, like, say, I'm doing a project to implement an ATM
+26
+
+27
+00:02:18,720 --> 00:02:24,330
+machine, you notice there are some correspondence between what we have in reality and what we have
+27
+
+28
+00:02:24,330 --> 00:02:26,870
+in our classes or our structs.
+28
+
+29
+00:02:27,520 --> 00:02:29,580
+Every time I mentioned class, I just mean struct
+29
+
+30
+00:02:30,240 --> 00:02:36,990
+if the word class is still not familiar for you. OOP helps us a lot to handle the complexity of software
+30
+
+31
+00:02:36,990 --> 00:02:37,500
+products.
+31
+
+32
+00:02:38,280 --> 00:02:40,220
+There is what we call software crisis.
+32
+
+33
+00:02:40,530 --> 00:02:43,080
+A lot of softwares might be over
+33
+
+34
+00:02:43,080 --> 00:02:48,960
+budget, might be overtime, delivered with a lot of buggy functionalities, or even functionality that doesn't
+34
+
+35
+00:02:48,960 --> 00:02:51,370
+meet requirements, or even never delivered.
+35
+
+36
+00:02:51,690 --> 00:02:53,670
+So this is what we call software crisis,
+36
+
+37
+00:02:53,850 --> 00:02:57,960
+and OOP helps us to some extent to handle these issues.
+37
+
+38
+00:02:59,400 --> 00:03:01,070
+OOP is just one paradigm.
+38
+
+39
+00:03:01,080 --> 00:03:07,920
+..., OOP is the mandatory way of programming so far in the
+39
+
+40
+00:03:07,920 --> 00:03:08,370
+market,
+40
+
+41
+00:03:08,520 --> 00:03:10,790
+but still some people hate it and criticize it a lot.
+41
+
+42
+00:03:11,070 --> 00:03:17,160
+Some people think that the current designs are a bit relative  like doesn't match with the old intention
+42
+
+43
+00:03:17,160 --> 00:03:17,690
+OOP,
+43
+
+44
+00:03:17,910 --> 00:03:20,310
+and so on.  This is a future link to to read it.
+44
+
+45
+00:03:21,540 --> 00:03:23,510
+OK, so why did we stop the procedure?
+45
+
+46
+00:03:23,670 --> 00:03:25,020
+Because of these advantages of
+46
+
+47
+00:03:25,020 --> 00:03:32,280
+OOP, and because procedural lack a lot of issues, like, for example, no owner of data, a lot
+47
+
+48
+00:03:32,280 --> 00:03:34,320
+of issues about comes to integrity of data.
+48
+
+49
+00:03:34,860 --> 00:03:39,630
+If there is a bug, it might be very hard to identify where is the bug and to debug your code.
+49
+
+50
+00:03:41,070 --> 00:03:46,800
+So I mentioned before the OOP concepts, we already know what is an object, what is a class, and we highlighted
+50
+
+51
+00:03:46,800 --> 00:03:48,240
+what is encapsulation.
+51
+
+52
+00:03:48,750 --> 00:03:52,470
+In the next videos, we will first dig more,
+52
+
+53
+00:03:52,710 --> 00:03:54,720
+we will know about what is abstraction,
+53
+
+54
+00:03:54,960 --> 00:04:00,870
+then we will go into one background to know what is a class like more of the class features in C++, for
+54
+
+55
+00:04:00,870 --> 00:04:01,280
+example.
+55
+
+56
+00:04:01,590 --> 00:04:04,830
+Then we will know what is this inheritance and what is this polymorphism?
+56
+
+57
+00:04:05,090 --> 00:04:09,090
+This is what typically an OOP course will do, we will explain these
+57
+
+58
+00:04:09,510 --> 00:04:10,590
+Programming concepts.
+58
+
+59
+00:04:11,130 --> 00:04:15,990
+The principles, which is something that typically not taught in OOP concepts, is actually the
+59
+
+60
+00:04:15,990 --> 00:04:24,330
+most important thing in designing good software. These principles make your code like a much better
+60
+
+61
+00:04:24,330 --> 00:04:24,630
+one.
+61
+
+62
+00:04:25,170 --> 00:04:30,120
+An example of the principles like solid principles, a single responsibility principle,
+62
+
+63
+00:04:30,120 --> 00:04:35,880
+for example, tip you something like your class should have one single reason for a change,
+63
+
+64
+00:04:35,880 --> 00:04:39,380
+It should be responsible for only one reason, one concern.
+64
+
+65
+00:04:39,780 --> 00:04:46,830
+This makes us when we are developing classes, we do not make like a mega class containing every functionality
+65
+
+66
+00:04:46,830 --> 00:04:47,820
+and every variable.
+66
+
+67
+00:04:48,060 --> 00:04:53,940
+No, it will be very specific like this class for a user, this class for a question, and so on.
+67
+
+68
+00:04:55,740 --> 00:04:57,360
+The open-closed principal:
+68
+
+69
+00:04:57,360 --> 00:05:02,400
+Your classes shouldn't be modifiable but should allow people to extend them to add more
+69
+
+70
+00:05:02,400 --> 00:05:04,140
+functionality and so on.
+70
+
+71
+00:05:04,440 --> 00:05:06,600
+There are further concepts like dry,
+71
+
+72
+00:05:06,600 --> 00:05:07,650
+don't repeat yourself.
+72
+
+73
+00:05:07,950 --> 00:05:10,700
+Some people will do a lot of copy-paste in sizer code.
+73
+
+74
+00:05:10,770 --> 00:05:12,390
+This is wrong. Kiss,
+74
+
+75
+00:05:12,390 --> 00:05:13,200
+Keep it simple.
+75
+
+76
+00:05:13,480 --> 00:05:16,770
+A lot of people will complicate things, how to make things easier.
+76
+
+77
+00:05:17,640 --> 00:05:23,310
+YAGNI, sometimes people will add a lot of functionalities, and they claim that in the far future we
+77
+
+78
+00:05:23,310 --> 00:05:25,350
+are going to use them, but they never used them.
+78
+
+79
+00:05:25,570 --> 00:05:30,270
+OK, so one of the unique features of this course is the following:
+79
+
+80
+00:05:30,720 --> 00:05:34,830
+In a lot of homework, I embed in an implicit way
+80
+
+81
+00:05:34,980 --> 00:05:40,290
+these principles. So I actually solving homework that is actually a practice on one of these principles,
+81
+
+82
+00:05:40,440 --> 00:05:44,970
+and this is how I am going in an implicit way, teaches you some of these principles.
+82
+
+83
+00:05:45,780 --> 00:05:51,090
+Design patterns are also one of the important things in software engineering.
+83
+
+84
+00:05:52,230 --> 00:05:57,910
+The idea, as simple as there are a lot of repetitive design sub-tasks that we all face in reality.
+84
+
+85
+00:05:57,930 --> 00:06:01,410
+Remember the queue, the queue is something that we all meet,
+85
+
+86
+00:06:01,410 --> 00:06:05,400
+It doesn't make sense that we ask people to implement it all the time. In a similar way,
+86
+
+87
+00:06:05,700 --> 00:06:09,110
+the design of some functionality might be repetitive task.
+87
+
+88
+00:06:09,390 --> 00:06:15,090
+So some people will gather together and tell us, you know what, this is one of the best ways to solve
+88
+
+89
+00:06:15,090 --> 00:06:15,890
+this problem.
+89
+
+90
+00:06:15,900 --> 00:06:23,130
+OK, I would like you to warn here from something. In a lot of CS curriculum, they
+90
+
+91
+00:06:23,130 --> 00:06:28,680
+might be stressing design patterns in a way that students think that it's a way of life.
+91
+
+92
+00:06:29,130 --> 00:06:34,080
+It is a skill to know when to use design patterns and how to use them.
+92
+
+93
+00:06:34,740 --> 00:06:41,020
+It isn't about, let's suppose looks like let's create like tons of design patterns in a project.
+93
+
+94
+00:06:41,020 --> 00:06:43,830
+It's actually the project decides what it needs.
+94
+
+95
+00:06:44,070 --> 00:06:50,670
+Sometimes some of the patterns are very common, like single and factory design patterns,
+95
+
+96
+00:06:50,670 --> 00:06:53,190
+also other are less important. From domain to another,
+96
+
+97
+00:06:53,310 --> 00:06:55,480
+some patterns might be used much more than others.
+97
+
+98
+00:06:55,980 --> 00:07:02,820
+Also, again, one of the unique things in this course, I embed some of these design patterns in the homework.
+98
+
+99
+00:07:03,000 --> 00:07:05,490
+The homework of the OOP is very critical
+99
+
+100
+00:07:05,490 --> 00:07:06,930
+so don't skip any of it.
+100
+
+101
+00:07:06,990 --> 00:07:13,110
+OK, after that, when it comes to studying design principles and design patterns, you will find them
+101
+
+102
+00:07:13,110 --> 00:07:14,870
+very intuitive because you already
+102
+
+103
+00:07:14,900 --> 00:07:16,660
+know about them and non-contiguous.
+103
+
+104
+00:07:17,920 --> 00:07:23,890
+There are three relevant terms, object-oriented analysis, object-oriented design, object-oriented
+104
+
+105
+00:07:23,890 --> 00:07:29,560
+programming. Object-oriented analysis is a step that happened in industry when we would like to analyze
+105
+
+106
+00:07:29,560 --> 00:07:32,260
+some requirements that we take from the customers
+106
+
+107
+00:07:32,500 --> 00:07:35,710
+and then we start to think on things in terms of objects,
+107
+
+108
+00:07:36,010 --> 00:07:41,150
+and these typically involve a lot of things and they are usually technology independent, just more
+108
+
+109
+00:07:41,150 --> 00:07:42,060
+of thought levels.
+109
+
+110
+00:07:42,700 --> 00:07:47,680
+Then there is something called object-oriented design, and this is where in reality we started to take
+110
+
+111
+00:07:47,680 --> 00:07:52,180
+care of a lot of important issues, like what kind of hardware and software we have.
+111
+
+112
+00:07:52,570 --> 00:07:54,790
+There's something called the availability of the system.
+112
+
+113
+00:07:54,910 --> 00:07:58,780
+When you are using your Facebook, you find it available all the time, right ?.
+113
+
+114
+00:07:59,100 --> 00:08:04,060
+The scalability, Facebook, for example, and Google, handle millions or millions of users.
+114
+
+115
+00:08:04,240 --> 00:08:07,170
+How to what degree your software is going to be scalable?
+115
+
+116
+00:08:07,360 --> 00:08:09,220
+What kind of budget is our target?
+116
+
+117
+00:08:09,760 --> 00:08:17,950
+Designing a software design is an important skill that you take time to learn how to design good
+117
+
+118
+00:08:17,950 --> 00:08:18,520
+systems.
+118
+
+119
+00:08:18,730 --> 00:08:24,310
+One of the very important things in this course is design skills. Again, through the homework,
+119
+
+120
+00:08:24,310 --> 00:08:30,250
+a lot of homework will stress a lot of design notes in a very useful way for you.
+120
+
+121
+00:08:33,430 --> 00:08:39,190
+If we are done with the object-oriented analysis and the object-oriented design, the next step is the
+121
+
+122
+00:08:39,190 --> 00:08:40,360
+object-oriented programming.
+122
+
+123
+00:08:40,360 --> 00:08:45,550
+This is actually what you usually are taught in programming courses, the syntax of a specific language
+123
+
+124
+00:08:45,700 --> 00:08:49,060
+so that you convert a design to an implementation.
+124
+
+125
+00:08:49,520 --> 00:08:50,680
+We are going definitely to make,
+125
+
+126
+00:08:50,680 --> 00:08:53,320
+this is our focus here, the object oriented programming.
+126
+
+127
+00:08:53,560 --> 00:08:59,830
+We're also going to highlight enough design notes during the homework so that you know how to design
+127
+
+128
+00:08:59,830 --> 00:09:00,460
+your systems.
+128
+
+129
+00:09:00,590 --> 00:09:04,300
+Also, one of the good ways to enforce the design is actually the projects.
+129
+
+130
+00:09:04,450 --> 00:09:08,260
+So there are also a few projects to help you doing that.
+130
+
+131
+00:09:08,990 --> 00:09:16,750
+OK, so in reality, the company culture, the scale of the project, the team side decides how
+131
+
+132
+00:09:16,750 --> 00:09:18,130
+the three are applied.
+132
+
+133
+00:09:18,520 --> 00:09:21,460
+So let's say that you are working on a small project.
+133
+
+134
+00:09:22,030 --> 00:09:27,010
+To some extent, all of these concepts might be applied by a small team in a very unified way.
+134
+
+135
+00:09:27,400 --> 00:09:33,700
+So no one has this extension of, OK, these are the analysis step, this is a design step, this is a programming
+135
+
+136
+00:09:33,700 --> 00:09:33,920
+step.
+136
+
+137
+00:09:33,940 --> 00:09:34,840
+It doesn't go like that.
+137
+
+138
+00:09:35,290 --> 00:09:38,020
+And this actually happened in the market
+138
+
+139
+00:09:38,020 --> 00:09:41,770
+a lot like the same programmer is doing the design and programming by itself,
+139
+
+140
+00:09:41,920 --> 00:09:43,510
+and this is actually what happened in this course.
+140
+
+141
+00:09:43,750 --> 00:09:46,240
+The requirements are simple enough, which doesn't need analysis,
+141
+
+142
+00:09:46,540 --> 00:09:50,230
+then you do design and you do programming. In large projects,
+142
+
+143
+00:09:50,230 --> 00:09:52,480
+actually things might get more complicated,
+143
+
+144
+00:09:52,510 --> 00:09:54,370
+you will notice more hires in the team.
+144
+
+145
+00:09:54,550 --> 00:09:55,330
+Someone is named
+145
+
+146
+00:09:55,330 --> 00:09:58,680
+business analyst is involved in the analysis here.
+146
+
+147
+00:09:58,960 --> 00:10:05,080
+Another guy, sorry, this is a business guy like working with the business guys, system analyst doing
+147
+
+148
+00:10:05,080 --> 00:10:05,860
+the analysis here,
+148
+
+149
+00:10:06,070 --> 00:10:10,600
+and architects are also working on the high-level designs and tech leads at devs.
+149
+
+150
+00:10:10,840 --> 00:10:18,460
+So big projects would require a lot of people to be doing these different steps, that's all.
+150
+
+151
+00:10:19,090 --> 00:10:21,850
+In case you would like to read, I found the book C++,
+151
+
+152
+00:10:21,850 --> 00:10:23,740
+how to Program is a very nice book.
+152
+
+153
+00:10:24,040 --> 00:10:28,270
+However, I'm doing a very intensive coverage for the topic.
+153
+
+154
+00:10:28,270 --> 00:10:30,640
+You will almost will not find something extra in the book.
+154
+
+155
+00:10:30,640 --> 00:10:33,520
+So reading is more optional if you get lost.
+155
+
+156
+00:10:33,820 --> 00:10:39,670
+One of the interesting things in books that they have typically some true-false questions after their
+156
+
+157
+00:10:40,120 --> 00:10:40,690
+chapters.
+157
+
+158
+00:10:40,870 --> 00:10:42,580
+I would say they are nice to try.
+158
+
+159
+00:10:43,450 --> 00:10:44,320
+There is a nice book
+159
+
+160
+00:10:44,320 --> 00:10:50,260
+called head first object-oriented design, I would suggest, for you to give a read for this book after
+160
+
+161
+00:10:50,260 --> 00:10:50,710
+the course.
+161
+
+162
+00:10:51,430 --> 00:10:54,010
+After the course, you would find the reading of the book much easier for you.
+162
+
+163
+00:10:55,030 --> 00:11:00,490
+A good software engineer reads a lot of very deep books in software engineering. In future,
+163
+
+164
+00:11:00,490 --> 00:11:05,680
+I would like you to explore this link and also this nice book and started to learn,
+164
+
+165
+00:11:05,680 --> 00:11:09,550
+It takes time to educate yourself. Coding guidelines,
+165
+
+166
+00:11:10,720 --> 00:11:17,620
+these are some coding guidelines like one from Google and another guy. In industry,
+166
+
+167
+00:11:17,770 --> 00:11:21,550
+we write following some guidelines so that our code has good names and so on.
+167
+
+168
+00:11:21,760 --> 00:11:26,470
+So also you feel free to familiarize yourself with that. That's it

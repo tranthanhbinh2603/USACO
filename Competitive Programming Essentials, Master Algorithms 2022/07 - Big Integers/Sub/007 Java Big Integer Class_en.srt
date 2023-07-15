@@ -1,0 +1,824 @@
+1
+00:00:00,790 --> 00:00:06,150
+Hi Everyone, In this lecture, we're going to talk about the Java big integer class and this is a
+
+2
+00:00:06,150 --> 00:00:13,080
+good thing about Java that it provides us in build class that works on very large integers. OK?
+
+3
+00:00:13,530 --> 00:00:14,100
+So.
+
+4
+00:00:15,230 --> 00:00:21,260
+We will see how to use this class and how if you are programming using Java, how you can solve problems
+
+5
+00:00:21,260 --> 00:00:23,060
+involving big integers very easily.
+
+6
+00:00:23,960 --> 00:00:27,920
+So this class provides various actions to be performed on big integers.
+
+7
+00:00:28,340 --> 00:00:34,390
+Some of these actions are like more automatic like addition, multiplication, modules, base conversion.
+
+8
+00:00:34,390 --> 00:00:40,640
+ok you want to convert a number from base 10 to base two or from base two to be a 16 or 
+
+9
+00:00:40,640 --> 00:00:41,680
+16 to base eight.
+
+10
+00:00:42,080 --> 00:00:45,500
+So you can convert any large number from one base to another base.
+
+11
+00:00:46,250 --> 00:00:49,580
+Third is power a calculation. you want to do a big integer A raise to the power B.
+
+12
+00:00:49,580 --> 00:00:51,200
+You can do it easily.
+
+13
+00:00:51,650 --> 00:00:54,080
+It also supports bitwise operators on
+
+14
+00:00:55,220 --> 00:01:01,250
+large numbers and there are also methods to find out whether a number is prime or what is an ex prime
+
+15
+00:01:01,250 --> 00:01:01,940
+and so on.
+
+16
+00:01:02,480 --> 00:01:07,790
+What I would recommend do, so in this one tutorial we won't be feasible to cover all of these methods
+
+17
+00:01:08,390 --> 00:01:09,020
+if needed
+
+18
+00:01:09,020 --> 00:01:17,340
+you can go and look at the Oracle documentation of this class and you will see there are lot of methods.
+
+19
+00:01:17,390 --> 00:01:20,150
+For example, one of the methods next probably prime.
+
+20
+00:01:20,180 --> 00:01:25,670
+OK. so it returns the first integer that is greater than this big integer and that is probably
+
+21
+00:01:25,670 --> 00:01:25,970
+prime.
+
+22
+00:01:27,420 --> 00:01:33,900
+And you can see there are a lot, lot of lot of functions. so there is a method to strings which convert
+
+23
+00:01:33,900 --> 00:01:41,880
+this big integer into a string representation of that. there is a method value of which returns
+
+24
+00:01:41,880 --> 00:01:46,160
+big integers whose value is equal to the specified long.
+
+25
+00:01:46,170 --> 00:01:49,080
+So you can also convert an integer into a big integer.
+
+26
+00:01:49,080 --> 00:01:52,350
+So we will see how to use some of these methods.
+
+27
+00:01:52,950 --> 00:01:55,770
+And there is a constructer which
+
+28
+00:01:57,670 --> 00:02:03,130
+provides a way to construct a big integer object. okay. so when we're dealing with Java.
+
+29
+00:02:03,220 --> 00:02:06,370
+OK, so the data that we store in variables.
+
+30
+00:02:08,509 --> 00:02:10,870
+This these variables can be of two types.
+
+31
+00:02:10,880 --> 00:02:17,960
+One is primitives. for example, a variable like int. or  another thing you can have is objects.
+
+32
+00:02:19,010 --> 00:02:22,190
+Or you have object references. ok. when you're using
+
+33
+00:02:25,220 --> 00:02:29,900
+when you're creating objects to store... store your data and the syntax that you need to remember is
+
+34
+00:02:29,900 --> 00:02:35,120
+for primitives you you do it simply like int x equals to 10.  for objects
+
+35
+00:02:35,340 --> 00:02:36,300
+What do we do?
+
+36
+00:02:36,320 --> 00:02:41,450
+For example, you want to create a paintbrush object. so you will look paintbrush B.
+
+37
+00:02:42,470 --> 00:02:44,450
+This is equal to new paint brush.
+
+38
+00:02:44,990 --> 00:02:51,770
+The paintbrush is a class that is predefined or that is user defined as well.
+
+39
+00:02:52,160 --> 00:02:57,140
+In our case, we would, we would be creating a big integer, so we would be writing big integer
+
+40
+00:02:58,820 --> 00:03:02,160
+My integer or whatever we want. this is equal to new big integer.
+
+41
+00:03:02,380 --> 00:03:09,250
+Now, what is the advantage of creating this object is that
+
+42
+00:03:10,280 --> 00:03:16,070
+So here we are creating a big integer object and this is the object reference that is storing
+
+43
+00:03:16,070 --> 00:03:19,820
+the address of that is referring to that object. ok.
+
+44
+00:03:19,820 --> 00:03:25,490
+So whenever you create object like the big integer object. so this all comes with certain methods.
+
+45
+00:03:26,300 --> 00:03:32,450
+If I give you an example from the documentation, one of the method we just saw is next probable prime.
+
+46
+00:03:32,520 --> 00:03:32,790
+OK.
+
+47
+00:03:34,260 --> 00:03:40,790
+What we would be doing? we would be using these methods on the big integer objects to do our work
+
+48
+00:03:41,760 --> 00:03:42,300
+and so on.
+
+49
+00:03:42,750 --> 00:03:47,250
+Let us jump into the code and look at the exact demo.
+
+50
+00:03:47,760 --> 00:03:48,830
+How to you use this?
+
+51
+00:03:48,840 --> 00:03:52,770
+And in order to use this class, you have to import this statement.
+
+52
+00:03:53,250 --> 00:03:55,020
+java.math.BigInteger.
+
+53
+00:03:55,860 --> 00:03:59,730
+So let's jump into the code and then we'll see.
+
+54
+00:04:00,390 --> 00:04:03,780
+The firstly will make an import. Import
+
+55
+00:04:06,590 --> 00:04:10,260
+Java.math.BigInteger. ok.
+
+56
+00:04:11,180 --> 00:04:14,480
+Now let us try to create some big integer object.
+
+57
+00:04:15,080 --> 00:04:16,310
+There are multiple ways.
+
+58
+00:04:16,519 --> 00:04:21,529
+OK. so one ways to contract this big integer from a string representation. OK?
+
+59
+00:04:21,920 --> 00:04:25,010
+So for example, if I say a big integer B1.
+
+60
+00:04:26,360 --> 00:04:32,510
+This is equal to new big integer. and I give let's say five as a string.
+
+61
+00:04:33,350 --> 00:04:43,100
+And I can say ok. it as system.out.println and I print this B1. So print, print method already
+
+62
+00:04:43,100 --> 00:04:47,000
+knows how to print big integer and it would print the number five.
+
+63
+00:04:47,420 --> 00:04:49,010
+So we get the output five.
+
+64
+00:04:49,400 --> 00:04:54,380
+OK, or what we can do, we can also say I want to convert.
+
+65
+00:04:55,890 --> 00:05:00,030
+I want to read another string but as a different base.
+
+66
+00:05:00,660 --> 00:05:06,300
+For example, I'm defining the number one zero one one and I specify the base.
+
+67
+00:05:06,330 --> 00:05:07,740
+OK, so
+
+68
+00:05:09,180 --> 00:05:13,810
+this redix is the base, so we defined one value as a string, another is the base.
+
+69
+00:05:14,290 --> 00:05:20,320
+It translates the string representation of big integer  in the specified radix into
+
+70
+00:05:21,840 --> 00:05:24,710
+big integer. so I say ok. read this number as a base two number.
+
+71
+00:05:24,720 --> 00:05:26,400
+So what would be the value of this number?
+
+72
+00:05:26,520 --> 00:05:27,150
+Let us see.
+
+73
+00:05:29,340 --> 00:05:31,020
+So let's see the output.
+
+74
+00:05:34,430 --> 00:05:40,340
+Clearly, we know that this number is nothing but if this number is written in base two then this it
+
+75
+00:05:40,340 --> 00:05:43,730
+presents to power zero, two Power one, two Square and two cube.
+
+76
+00:05:44,270 --> 00:05:49,790
+So you add eight plus zero plus two plus one, this number is nothing but 11.
+
+77
+00:05:49,940 --> 00:05:50,960
+And that is what we get.
+
+78
+00:05:51,380 --> 00:05:51,950
+Exactly here.
+
+79
+00:05:52,950 --> 00:05:56,720
+SO that means this is another way of creating the big integer object.
+
+80
+00:05:57,770 --> 00:06:02,150
+Similarly, you can try out other ways as well.
+
+81
+00:06:02,600 --> 00:06:09,170
+but now I will jump into how do you take input. ok. So in java in order to take input
+
+82
+00:06:09,200 --> 00:06:14,150
+First, we need a scanner object, so we will create a scanner and we'll say.ok.
+
+83
+00:06:14,450 --> 00:06:20,480
+We have new scanners and this is capable of reading from the standard keyboard input.
+
+84
+00:06:21,240 --> 00:06:24,350
+And now this scan object has various methods.
+
+85
+00:06:24,890 --> 00:06:25,160
+OK.
+
+86
+00:06:25,400 --> 00:06:30,170
+So one thing you can do is, you can read it as a string and then you can convert it into a big integer.
+
+87
+00:06:30,350 --> 00:06:35,230
+Or you can directly say that, OK I want to read the next big integer. 
+
+88
+00:06:36,140 --> 00:06:42,620
+So I can say ok big integer B3 equals sc.next
+
+89
+00:06:47,860 --> 00:06:49,180
+next big integer. ok.
+
+90
+00:06:50,110 --> 00:06:55,600
+We call this method and maybe I want to specify some value, which is a very large value. let's say
+
+91
+00:06:55,630 --> 00:07:01,420
+one two three one two three one two three four five six four five six four five six four five six four
+
+92
+00:07:01,420 --> 00:07:04,010
+five six seven eight nine. let's say.
+
+93
+00:07:04,190 --> 00:07:09,160
+So clearly it has having more than 18 digits which is beyond the range of long as well.
+
+94
+00:07:09,850 --> 00:07:16,990
+I can say OK. we will read this as an input from the user and maybe I want to print this value. so
+
+95
+00:07:16,990 --> 00:07:23,140
+I can the sytem.out.println and  I can say ok. print this big integer.
+
+96
+00:07:27,560 --> 00:07:34,700
+So I get the same output. OK. Now I suppose I want to do an addition. OK. maybe I want to do an addition.
+
+97
+00:07:35,300 --> 00:07:37,310
+So let's look at the method.
+
+98
+00:07:37,340 --> 00:07:39,260
+What is the method available to add?
+
+99
+00:07:39,290 --> 00:07:39,620
+OK.
+
+100
+00:07:40,310 --> 00:07:41,000
+There is a method add.
+
+101
+00:07:41,420 --> 00:07:42,440
+So what happens
+
+102
+00:07:43,160 --> 00:07:50,780
+you call this method add on a big integer object and you supply a value that needs to be added and
+
+103
+00:07:50,780 --> 00:07:55,890
+it returns a big integer whose value is the current object value plus the value that you supply.
+
+104
+00:07:55,910 --> 00:07:59,990
+ok, for example I say OK. I want to add something to the B3.
+
+105
+00:08:00,940 --> 00:08:05,650
+So I can say B3.add and I need to give another big integer that is B1.
+
+106
+00:08:06,070 --> 00:08:11,440
+And this is now going to return a new big integer. Either you update it into a new object.
+
+107
+00:08:12,010 --> 00:08:13,930
+let's say B4.
+
+108
+00:08:13,930 --> 00:08:15,670
+You can do it in the same object like 
+
+109
+00:08:15,670 --> 00:08:17,240
+B3 equals B3.add(B1).
+
+110
+00:08:17,260 --> 00:08:17,980
+.
+
+111
+00:08:18,790 --> 00:08:24,430
+In this case, the result would be returned and it would be stored in a new big integer object B4.
+
+112
+00:08:24,880 --> 00:08:27,850
+And may be I can say system.out.printl
+
+113
+00:08:27,850 --> 00:08:30,990
+and I print the result B4.
+
+114
+00:08:33,220 --> 00:08:35,230
+So you can see
+
+115
+00:08:36,409 --> 00:08:41,600
+You can see  eighty nine plus five is 94 and hence we are getting this result. similarly you
+
+116
+00:08:41,600 --> 00:08:49,640
+can do it for multiplication and all. may be let us look at one of the methods for working with bit.
+
+117
+00:08:50,240 --> 00:08:51,500
+there is a method bit count.
+
+118
+00:08:51,680 --> 00:08:51,930
+OK.
+
+119
+00:08:52,400 --> 00:08:53,900
+It returns the number of bits.
+
+120
+00:08:55,360 --> 00:09:01,750
+that differ from its sign bit. so maybe let us look at this method.
+
+121
+00:09:03,620 --> 00:09:06,560
+So a bit different from sign bit.
+
+122
+00:09:09,600 --> 00:09:10,800
+So let me
+
+123
+00:09:12,480 --> 00:09:18,030
+take this number let say B2. OK. let me take this number B2. so B2 is a positive number
+
+124
+00:09:18,630 --> 00:09:23,070
+so the number of bits, positive number would have zero as a sign bit
+
+125
+00:09:23,790 --> 00:09:27,210
+and that means how many Brits are there which are  different from zero.
+
+126
+00:09:27,210 --> 00:09:31,560
+So they're actually three bits. I can say okay
+
+127
+00:09:31,560 --> 00:09:33,980
+system.out.println.
+
+128
+00:09:34,770 --> 00:09:38,160
+And I can say B2.bitcount.
+
+129
+00:09:39,980 --> 00:09:41,240
+B2.countBit().
+
+130
+00:09:45,150 --> 00:09:48,840
+It is count bits. yes it is bit count actually.
+
+131
+00:09:50,250 --> 00:09:52,080
+It is B2.bitcount.
+
+132
+00:09:54,250 --> 00:09:57,400
+So if you use intelligence, you would automatically get suggestion
+
+133
+00:09:57,490 --> 00:09:59,020
+what methods are available.
+
+134
+00:10:00,140 --> 00:10:02,450
+So we have three bits which are different from the sign bit.
+
+135
+00:10:02,690 --> 00:10:02,920
+OK.
+
+136
+00:10:04,330 --> 00:10:07,720
+And you can also convert an integer into a big integer.
+
+137
+00:10:08,170 --> 00:10:10,540
+For example, let's say I have a number.
+
+138
+00:10:11,930 --> 00:10:18,800
+Int to BigInt. let's say I want to maybe calculate factorial and I want to initialize my initial number
+
+139
+00:10:18,830 --> 00:10:19,530
+as one.
+
+140
+00:10:19,600 --> 00:10:27,590
+Let's say. but I want this one to be converted into a big integer so I can say ok. big integer one
+
+141
+00:10:27,830 --> 00:10:32,360
+this is equal to big integer dot value of.
+
+142
+00:10:33,320 --> 00:10:34,700
+And here I give the number. OK.
+
+143
+00:10:34,700 --> 00:10:39,800
+So whatever is the number that is int or long that would be converted into a big integer.
+
+144
+00:10:44,280 --> 00:10:45,230
+And I can say one.
+
+145
+00:10:45,480 --> 00:10:49,680
+This will give me the big integer object corresponding to the value one.
+
+146
+00:10:50,160 --> 00:10:55,050
+There are also a few other ways to initialize some common constant. for example.
+
+147
+00:10:58,050 --> 00:10:58,740
+If you look.
+
+148
+00:10:59,990 --> 00:11:01,310
+This. ok. so there are...
+
+149
+00:11:03,660 --> 00:11:08,520
+there is bigInteger.zero. there is bigInteger.one. there is BigInteger.ten.
+
+150
+00:11:09,180 --> 00:11:11,610
+So you can also create this one.
+
+151
+00:11:14,650 --> 00:11:20,530
+By using this statement. So big integer with value one. So you can say ok big integer
+
+152
+00:11:21,880 --> 00:11:22,450
+One.
+
+153
+00:11:25,680 --> 00:11:28,440
+Or maybe one one like this.
+
+154
+00:11:28,830 --> 00:11:31,950
+This is equal to big integer.one. 
+
+155
+00:11:32,550 --> 00:11:37,740
+So it also creates a big integer one object OK. So  this number can be any number, this could
+
+156
+00:11:37,740 --> 00:11:38,460
+be 56.
+
+157
+00:11:39,150 --> 00:11:45,960
+And you can say ok. a Num and this could be num and this could be one.
+
+158
+00:11:46,290 --> 00:11:46,770
+And.
+
+159
+00:11:47,940 --> 00:11:54,990
+You can say ok. system.out.println and one.
+
+160
+00:11:55,020 --> 00:11:55,320
+OK.
+
+161
+00:11:55,950 --> 00:12:02,100
+In this case, you're converting this number 56 into a bit integer  object on which you can do a
+
+162
+00:12:02,100 --> 00:12:03,300
+lot of operations.
+
+163
+00:12:03,810 --> 00:12:07,850
+And here is another way of creating big integer one objects.
+
+164
+00:12:07,850 --> 00:12:14,530
+So this is applicable for one zero and ten. you can use this syntax as well. right?
+
+165
+00:12:15,810 --> 00:12:19,770
+Let us look at some other mathematical operation like you want to do.
+
+166
+00:12:19,800 --> 00:12:22,770
+Let's the power of two big numbers. OK?
+
+167
+00:12:23,700 --> 00:12:25,740
+So maybe we have
+
+168
+00:12:26,710 --> 00:12:27,790
+Some number. let's say
+
+169
+00:12:30,290 --> 00:12:34,820
+big integer A that is Bit integer dot value of
+
+170
+00:12:36,060 --> 00:12:41,600
+let's say I  want to do five raise to the power. let's say.
+
+171
+00:12:42,420 --> 00:12:46,640
+Six. big integer B that is big integer 6.
+
+172
+00:12:46,710 --> 00:12:50,040
+and I want to do A raise to the power B.
+
+173
+00:12:50,640 --> 00:12:59,100
+So now one thing to note is, if you look at the power method. So it accept integer as exponent. Okay. so
+
+174
+00:12:59,130 --> 00:13:00,540
+we should we do not need a B.
+
+175
+00:13:01,110 --> 00:13:08,210
+So you can do big integer raise to the power some integer. So you can say ok system.out.println.
+
+176
+00:13:08,250 --> 00:13:08,640
+.
+
+177
+00:13:09,890 --> 00:13:12,390
+And here you can say ok. 
+
+178
+00:13:12,770 --> 00:13:14,840
+A.powerof(6).
+
+179
+00:13:16,310 --> 00:13:22,760
+This will give me a new big integer. which is five raise to the power six. which is one five six
+
+180
+00:13:22,760 --> 00:13:23,420
+two five.
+
+181
+00:13:23,660 --> 00:13:25,850
+OK, what is five power five?
+
+182
+00:13:31,220 --> 00:13:33,320
+It is three one two five. OK. which is fine.
+
+183
+00:13:33,650 --> 00:13:35,750
+That means it is working perfectly fine.
+
+184
+00:13:36,230 --> 00:13:39,770
+There are also the mathematical methods like gcd.ok.
+
+185
+00:13:40,850 --> 00:13:44,730
+so suppose you want to system.out.println 
+
+186
+00:13:45,290 --> 00:13:48,080
+And maybe you want to find gcd of
+
+187
+00:13:50,900 --> 00:13:51,410
+the number A
+
+188
+00:13:52,780 --> 00:13:54,880
+which is the number numb. you can say 
+
+189
+00:13:54,910 --> 00:13:56,370
+num.gcd
+
+190
+00:13:57,160 --> 00:13:59,800
+And maybe you want to do the if gcd with
+
+191
+00:13:59,930 --> 00:14:00,280
+Let's say
+
+192
+00:14:02,330 --> 00:14:03,380
+Number 11. right?
+
+193
+00:14:03,540 --> 00:14:07,070
+So that number 11 is what? that is B2.
+
+194
+00:14:09,020 --> 00:14:11,930
+So you can say ok. with the number B2.
+
+195
+00:14:12,090 --> 00:14:17,540
+So 56 and gcd of 11 and 56. So that should be one.
+
+196
+00:14:19,890 --> 00:14:21,680
+Yes, we are getting the gcd as one.
+
+197
+00:14:22,490 --> 00:14:32,210
+Similarly, you can explore all other methods that available by yourself and use this class as per the requirement.
+
+198
+00:14:33,230 --> 00:14:38,600
+Now why we discussed this big integer? even the people who are coding in C++, if you are getting a
+
+199
+00:14:38,600 --> 00:14:46,400
+problem which clearly involves the use of big integers. either use Python or Java because the inbuilt
+
+200
+00:14:46,400 --> 00:14:49,300
+libraries are going to save a lot of time of yours. OK?
+
+201
+00:14:49,430 --> 00:14:55,460
+If you want to save time, especially for the big integer problems. you should be using either Python
+
+202
+00:14:55,460 --> 00:14:55,880
+or Java.
+
+203
+00:14:55,880 --> 00:15:02,300
+Because if you start coding this functionality from the very ground up, you will end up wasting a lot
+
+204
+00:15:02,300 --> 00:15:05,980
+of hours and your time might get over. ok.
+
+205
+00:15:06,780 --> 00:15:08,570
+So that's all for this video.
+
+206
+00:15:08,600 --> 00:15:09,050
+Thank you.
+

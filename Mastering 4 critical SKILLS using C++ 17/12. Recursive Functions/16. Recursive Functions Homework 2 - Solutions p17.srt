@@ -1,0 +1,904 @@
+0
+1
+00:00:01,580 --> 00:00:03,750
+Let's move to the next problem.
+1
+
+2
+00:00:04,700 --> 00:00:09,200
+We would like to compute the Fibonacci sequence, which is a very popular mathematical sequence.
+2
+
+3
+00:00:09,200 --> 00:00:13,220
+As you see, every term is just the submission of the two previous terms. 
+3
+
+4
+00:00:13,520 --> 00:00:16,010
+For example, five here is a submission of two and three.
+4
+
+5
+00:00:16,430 --> 00:00:18,140
+Eight is a submission of three and five.
+5
+
+6
+00:00:18,620 --> 00:00:25,920
+That's why the recurrence here is like Fibonacci of N is for fibonacci of n-1 and plus fibonacci of 
+6
+
+7
+00:00:25,970 --> 00:00:26,600
+n-2.
+7
+
+8
+00:00:26,960 --> 00:00:31,030
+So Fibonacci of six here is coming from Fibonacci five and four, which is 30.
+8
+
+9
+00:00:31,040 --> 00:00:32,870
+These three values here.
+9
+
+10
+00:00:34,070 --> 00:00:39,920
+Now there is something very special in this problem compared to all of the homework and all of the practice
+10
+
+11
+00:00:39,920 --> 00:00:40,520
+that we met.
+11
+
+12
+00:00:41,000 --> 00:00:47,780
+This one depends on two recursive calls or two sub calls, not just a single one.
+12
+
+13
+00:00:49,140 --> 00:00:55,170
+So this one depends on 2 calls. All of the previous problems that we solve are called tail 
+13
+
+14
+00:00:55,170 --> 00:01:03,270
+recursion, which means that every recursive function is only coding a specific and one other recursive
+14
+
+15
+00:01:03,270 --> 00:01:03,720
+function.
+15
+
+16
+00:01:04,050 --> 00:01:08,630
+For example, factorial n is only calling factorial n-1. Factorial n-1 
+16
+
+17
+00:01:08,640 --> 00:01:10,650
+is only calling factorial n-2.
+17
+
+18
+00:01:10,650 --> 00:01:15,710
+So that's why all of what we learned can be replaced with a trivial loop; only a single 
+18
+
+19
+00:01:15,720 --> 00:01:20,780
+loop can do all of them because in a way, we have only one new state. Now in this problem,
+19
+
+20
+00:01:20,790 --> 00:01:26,100
+we have two states, which is very different from all what we learned before.
+20
+
+21
+00:01:28,360 --> 00:01:31,860
+When it comes to implementing that, it still should be straightforward.
+21
+
+22
+00:01:31,890 --> 00:01:33,510
+Like, not that a big challenge here.
+22
+
+23
+00:01:33,900 --> 00:01:34,650
+So let's see.
+23
+
+24
+00:01:35,130 --> 00:01:37,620
+The function is as following.
+24
+
+25
+00:01:39,140 --> 00:01:45,770
+We start with the base case here and say if n equal less than or equal one, then this base case is done.
+25
+
+26
+00:01:46,460 --> 00:01:51,080
+Otherwise we return for fibonacci of n-1 and fibonacci of n-2. 
+26
+
+27
+00:01:51,920 --> 00:01:55,910
+Now the first thing I would like to emphasize here is the
+27
+
+28
+00:01:57,160 --> 00:01:58,960
+How to trace it properly, remember?
+28
+
+29
+00:01:59,140 --> 00:02:00,130
+What is the sequence?
+29
+
+30
+00:02:00,400 --> 00:02:06,340
+It is one one two three five eight 13.
+30
+
+31
+00:02:07,060 --> 00:02:09,310
+So mathematically, F(1) is one.
+31
+
+32
+00:02:09,640 --> 00:02:20,420
+F(1) is one,  F(2) is one, F(3) is two,  F(4)
+32
+
+33
+00:02:20,420 --> 00:02:23,950
+is three, F(5) 
+33
+
+34
+00:02:25,280 --> 00:02:28,910
+is five,  F(6) 
+34
+
+35
+00:02:29,570 --> 00:02:30,080
+is 8. 
+35
+
+36
+00:02:30,380 --> 00:02:32,180
+This is the mathematical view.
+36
+
+37
+00:02:33,230 --> 00:02:39,830
+Now if I would like to make sure that at least the tracing skills, let's say I'm asking here
+37
+
+38
+00:02:39,830 --> 00:02:43,100
+for f of six, the base case doesn't work.
+38
+
+39
+00:02:43,340 --> 00:02:45,680
+It asks for F(n-1).
+39
+
+40
+00:02:45,950 --> 00:02:50,840
+So F(n-1) is F(5), which is five.
+40
+
+41
+00:02:51,730 --> 00:03:00,400
+And it asks for F(4) which is three; for total eight. Now, go back to your sequence, does it F(6)
+41
+
+42
+00:03:00,400 --> 00:03:02,110
+is eight? yes, we are done.
+42
+
+43
+00:03:02,800 --> 00:03:04,720
+Do not keep tracing forever.
+43
+
+44
+00:03:05,230 --> 00:03:06,020
+This is wrong.
+44
+
+45
+00:03:06,040 --> 00:03:07,160
+This is time waste.
+45
+
+46
+00:03:07,180 --> 00:03:11,680
+Don't do that. When you would like to trace recursion, all what you have to do:
+46
+
+47
+00:03:11,860 --> 00:03:14,830
+Make sure every recursive call has been used once.
+47
+
+48
+00:03:15,130 --> 00:03:21,040
+If every recursive call has been used once and every line of the code has been passed once, the
+48
+
+49
+00:03:21,040 --> 00:03:23,260
+code must be completely correct.
+49
+
+50
+00:03:24,190 --> 00:03:28,030
+Meanwhile, tracing this one is pretty useful.
+50
+
+51
+00:03:29,090 --> 00:03:33,470
+I asked you for a challenge if we can run Fibonacci  40, or Fibonacci 50.
+51
+
+52
+00:03:34,450 --> 00:03:39,640
+If you try to run something, like Fibonacci 50, you will notice the code is taking forever or something
+52
+
+53
+00:03:39,640 --> 00:03:43,200
+like Fibonacci of maybe 60, a lot of runtime.
+53
+
+54
+00:03:43,210 --> 00:03:43,900
+Why?
+54
+
+55
+00:03:45,080 --> 00:03:47,540
+Remember, this isn't a trivial recursion anymore.
+55
+
+56
+00:03:47,570 --> 00:03:49,880
+It has a branches, it has two cases here.
+56
+
+57
+00:03:50,480 --> 00:03:56,450
+This is through a simple tree to realize the problem. Assume for while I asked you for Fibonacci of 
+57
+
+58
+00:03:56,450 --> 00:03:59,390
+50, Fibonacci of 50.
+58
+
+59
+00:04:00,590 --> 00:04:01,820
+Now what is happening here?
+59
+
+60
+00:04:03,000 --> 00:04:05,850
+This function will call for Fibonacci of.
+60
+
+61
+00:04:07,080 --> 00:04:07,800
+49.
+61
+
+62
+00:04:09,510 --> 00:04:11,490
+And Fibonacci of 49 is done,
+62
+
+63
+00:04:11,760 --> 00:04:15,270
+it will also ask for Fibonacci of 48.
+63
+
+64
+00:04:16,920 --> 00:04:21,150
+Let's go in details. Fibonacci 49 will compute Fibonacci of
+64
+
+65
+00:04:22,490 --> 00:04:26,840
+48 and Fibonacci of 47.
+65
+
+66
+00:04:28,230 --> 00:04:34,500
+Fibonacci 48 will call for Fibonacci 47 and Fibonacci of 46.
+66
+
+67
+00:04:37,670 --> 00:04:47,960
+Fibonacci 48 will call for Fibonacci 47 and Fibonacci of 46. Fibonacci 47 will call for
+67
+
+68
+00:04:47,960 --> 00:04:51,710
+Fibonacci 46, and for Fibonacci 45.
+68
+
+69
+00:04:52,950 --> 00:04:53,880
+45.
+69
+
+70
+00:04:54,650 --> 00:04:58,190
+And here again, Fibonacci 47 will call for Fibonacci 46.
+70
+
+71
+00:04:59,120 --> 00:04:59,670
+46.
+71
+
+72
+00:04:59,990 --> 00:05:01,310
+And also for Fibonacci 45.
+72
+
+73
+00:05:02,450 --> 00:05:09,500
+There is a very critical observation that we can find at the moment without drawing all of the possible
+73
+
+74
+00:05:09,500 --> 00:05:10,550
+branches that would happen.
+74
+
+75
+00:05:10,850 --> 00:05:11,690
+Can you spot it?
+75
+
+76
+00:05:14,040 --> 00:05:21,300
+The problem is as following, do you notice that this is F(48) is exactly as this F(48).?
+76
+
+77
+00:05:22,490 --> 00:05:25,790
+This F(48) would build a very huge tree.
+77
+
+78
+00:05:26,490 --> 00:05:33,680
+Now the question here is when this function keep repeating the same one, F(48), it's going to take
+78
+
+79
+00:05:33,830 --> 00:05:35,180
+the same time of that guy.
+79
+
+80
+00:05:35,720 --> 00:05:42,530
+And this one F(47), which is the same as F(47) here and this F(47), it is as simple as F(47) here.
+80
+
+81
+00:05:43,040 --> 00:05:44,210
+Do you notice the problem?
+81
+
+82
+00:05:45,620 --> 00:05:52,460
+We are duplicating the competitions a lot, how much? this three will keep branching.
+82
+
+83
+00:05:53,960 --> 00:05:57,650
+You will learn that pretty good when you learn about trees.
+83
+
+84
+00:05:58,040 --> 00:05:59,390
+But what's clear here, 
+84
+
+85
+00:05:59,990 --> 00:06:05,780
+This one will create a tree of two to the power n nodes, something like that.
+85
+
+86
+00:06:06,050 --> 00:06:09,290
+So it goes as following: like it would be here.
+86
+
+87
+00:06:09,560 --> 00:06:10,460
+It will go this way.
+87
+
+88
+00:06:10,730 --> 00:06:15,410
+Then this one will go this way, then this one will go this way and this one will go this way.
+88
+
+89
+00:06:15,830 --> 00:06:17,090
+And this one will go this way.
+89
+
+90
+00:06:17,540 --> 00:06:20,080
+And this one will go this way and this one will go this way.
+90
+
+91
+00:06:21,400 --> 00:06:25,660
+Now we have one call here, we have two calls here, now four codes here, we have 8 codes here.
+91
+
+92
+00:06:25,990 --> 00:06:28,330
+Everyone would open two.
+92
+
+93
+00:06:29,410 --> 00:06:30,580
+This one would be 16.
+93
+
+94
+00:06:31,000 --> 00:06:34,840
+Now we will keep going up to n levels.
+94
+
+95
+00:06:35,890 --> 00:06:45,520
+This means the total number of recursive calls are one plus two plus four plus 16 plus 32 plus
+95
+
+96
+00:06:46,810 --> 00:06:47,740
+64.
+96
+
+97
+00:06:47,980 --> 00:06:48,640
+Blah blah blah.
+97
+
+98
+00:06:48,670 --> 00:06:49,360
+Up to
+98
+
+99
+00:06:50,740 --> 00:06:55,300
+to the power n; for a total mathematically to the power n+1. 
+99
+
+100
+00:06:55,750 --> 00:07:01,150
+This means if you call this function with F(50), we need 
+100
+
+101
+00:07:02,370 --> 00:07:06,240
+F(50+1) recursive calls, do you see how you did that?
+101
+
+102
+00:07:06,870 --> 00:07:10,950
+That's why the Fibonacci call will take forever.
+102
+
+103
+00:07:11,900 --> 00:07:12,920
+Almost forever.
+103
+
+104
+00:07:14,160 --> 00:07:15,690
+That's why it doesn't work well.
+104
+
+105
+00:07:16,750 --> 00:07:22,300
+And you never met this problem in all of the previous homework, because it doesn't have this kind of
+105
+
+106
+00:07:22,300 --> 00:07:24,610
+branching idea, it doesn't have this problem.
+106
+
+107
+00:07:25,030 --> 00:07:26,770
+It doesn't have this problem.
+107
+
+108
+00:07:27,340 --> 00:07:32,710
+Now, if you understood this problem, there is a trivial trick that can solve this issue.
+108
+
+109
+00:07:34,430 --> 00:07:35,090
+What is it?
+109
+
+110
+00:07:35,270 --> 00:07:36,230
+Still recursively. 
+110
+
+111
+00:07:37,350 --> 00:07:46,980
+The idea is following, we know that the core of the issue is F(50) called F(49) and F(48).
+111
+
+112
+00:07:48,250 --> 00:07:55,450
+F(49) called F(48) and F(47), now, the point here is
+112
+
+113
+00:07:56,830 --> 00:08:03,130
+How can we make use of this previously computed value, for example, if this value is computed before
+113
+
+114
+00:08:03,490 --> 00:08:06,160
+we just use the value here?
+114
+
+115
+00:08:07,870 --> 00:08:11,230
+The idea is very simple, and I will not go into the details of that now.
+115
+
+116
+00:08:11,950 --> 00:08:14,080
+You define an array outside here.
+116
+
+117
+00:08:14,110 --> 00:08:15,370
+Let's call it answers.
+117
+
+118
+00:08:15,940 --> 00:08:21,790
+Every time you compute the answer of the array, you put the answer inside the array and the code will
+118
+
+119
+00:08:21,790 --> 00:08:26,080
+do the following before it starts to compute the answer for n, it will check
+119
+
+120
+00:08:26,440 --> 00:08:28,330
+does the array have my answers or not?
+120
+
+121
+00:08:28,630 --> 00:08:30,280
+So 48 will finish the answer.
+121
+
+122
+00:08:30,280 --> 00:08:32,890
+Let's say the answer is 173, for example.
+122
+
+123
+00:08:33,430 --> 00:08:41,260
+Then it will say here answers of 48 equals 173.
+123
+
+124
+00:08:42,130 --> 00:08:45,780
+When this function would like to get the answer 48, it would check the array first.
+124
+
+125
+00:08:45,790 --> 00:08:46,780
+Do you have the answer?
+125
+
+126
+00:08:47,140 --> 00:08:47,830
+Yes.
+126
+
+127
+00:08:48,190 --> 00:08:49,060
+What will happen?
+127
+
+128
+00:08:49,600 --> 00:08:54,880
+It will just use it so it will not do all of this branching, branching ,branching.
+128
+
+129
+00:08:56,440 --> 00:09:02,860
+Now we realize that the core of the problem we are repeating the competitions to 2 to the power n+1 times.
+129
+
+130
+00:09:04,040 --> 00:09:10,310
+Now, the key is array of 50 values that say if you target a fifth, let's say array of 1000 values
+130
+
+131
+00:09:10,820 --> 00:09:15,380
+is enough to keep computing and saving the answers before doing the recursive calls, 
+131
+
+132
+00:09:15,740 --> 00:09:18,020
+you check if the answer exists or not.
+132
+
+133
+00:09:18,440 --> 00:09:20,510
+And if it exist, you just use it.
+133
+
+134
+00:09:21,710 --> 00:09:26,270
+Now think about it how many nodes, how many values should be in this tree?
+134
+
+135
+00:09:26,750 --> 00:09:29,070
+The values are only from one to 50.
+135
+
+136
+00:09:29,750 --> 00:09:37,040
+So this means instead of having two to the power n+1 calls, we would only have n calls 
+136
+
+137
+00:09:37,310 --> 00:09:39,950
+because there is no need for more than that.
+137
+
+138
+00:09:40,160 --> 00:09:41,360
+So let's make it simpler.
+138
+
+139
+00:09:41,510 --> 00:09:46,550
+Let's say you want to compute F(7),  F(7) will go and compute F(6), F(6) goes and
+139
+
+140
+00:09:46,550 --> 00:09:48,860
+computes five, which goes and competes four.
+140
+
+141
+00:09:49,010 --> 00:09:52,370
+which compute three, which compute two, which compute one.
+141
+
+142
+00:09:53,040 --> 00:09:56,970
+Now memorize two in the memory.
+142
+
+143
+00:09:56,990 --> 00:09:59,050
+This second circle means saved in answers.
+143
+
+144
+00:09:59,480 --> 00:09:59,860
+save in
+144
+
+145
+00:09:59,870 --> 00:10:00,950
+answer, now 2 needs
+145
+
+146
+00:10:00,950 --> 00:10:02,450
+one and one which is OK.
+146
+
+147
+00:10:02,810 --> 00:10:04,330
+Three needs to.
+147
+
+148
+00:10:04,340 --> 00:10:05,960
+Three needs two and need one.
+148
+
+149
+00:10:06,320 --> 00:10:07,490
+OK, good.
+149
+
+150
+00:10:08,210 --> 00:10:11,810
+Now 4 needs three, which is done and need also 2, wait.
+150
+
+151
+00:10:11,810 --> 00:10:13,100
+Two is computed already.
+151
+
+152
+00:10:13,400 --> 00:10:14,330
+So just use it.
+152
+
+153
+00:10:14,660 --> 00:10:17,000
+So do nothing here four. Now,
+153
+
+154
+00:10:17,000 --> 00:10:23,210
+five need 4  and need 3. 4 is already there and three is already there because let's use both
+154
+
+155
+00:10:23,210 --> 00:10:24,140
+of them directly.
+155
+
+156
+00:10:24,140 --> 00:10:25,070
+Sum them directly.
+156
+
+157
+00:10:25,250 --> 00:10:27,680
+Now we have five. Six needs five and four.
+157
+
+158
+00:10:27,860 --> 00:10:31,490
+Both of them are stored then get them directly six needs five and four.
+158
+
+159
+00:10:31,820 --> 00:10:35,450
+Just add them here. Seven needs six and five already exist.
+159
+
+160
+00:10:35,660 --> 00:10:36,770
+Add them here. Now,
+160
+
+161
+00:10:36,770 --> 00:10:37,390
+seven needs here
+161
+
+162
+00:10:37,430 --> 00:10:38,690
+five already exist.
+162
+
+163
+00:10:39,290 --> 00:10:39,950
+We are done.
+163
+
+164
+00:10:40,460 --> 00:10:43,250
+So the tree now has only n nodes
+164
+
+165
+00:10:43,250 --> 00:10:48,410
+Sorry if the word nodes, the word the tree are a bit new for you.
+165
+
+166
+00:10:48,530 --> 00:10:53,360
+We call this circle node and we call this shape atree in algorithms field.
+166
+
+167
+00:10:53,920 --> 00:10:59,510
+Uh, as you see, we change the performance from 2+n to only n.
+167
+
+168
+00:11:00,260 --> 00:11:01,220
+What does what, what?
+168
+
+169
+00:11:01,430 --> 00:11:04,550
+What I was just describing is called dynamic
+169
+
+170
+00:11:06,580 --> 00:11:13,600
+programming; a very important technique to reduce the time complexity of recursive functions.
+170
+
+171
+00:11:14,710 --> 00:11:18,670
+You don't need to implement what I was just saying or even if you get lost, just drop it for now.
+171
+
+172
+00:11:18,880 --> 00:11:20,560
+We will visit it in the algorithm
+172
+
+173
+00:11:20,560 --> 00:11:23,740
+course will learn more about dynamic programming and how to implement it.
+173
+
+174
+00:11:24,070 --> 00:11:25,900
+Meanwhile, the idea is very simple.
+174
+
+175
+00:11:26,350 --> 00:11:29,590
+What I implemented is specifically called memorization.
+175
+
+176
+00:11:30,010 --> 00:11:32,830
+Um, so feel free to try to implement it.
+176
+
+177
+00:11:33,070 --> 00:11:34,360
+Feel free to skip it for now.
+177
+
+178
+00:11:34,480 --> 00:11:37,900
+But I wanted you to understand this very critical example.
+178
+
+179
+00:11:38,080 --> 00:11:41,010
+Don't skip it if you don't understand why you have 2n+1 nodes.
+179
+
+180
+00:11:41,710 --> 00:11:46,000
+This is very critical to understand why this F(90) didn't work.
+180
+
+181
+00:11:46,000 --> 00:11:47,230
+Well, that's all.

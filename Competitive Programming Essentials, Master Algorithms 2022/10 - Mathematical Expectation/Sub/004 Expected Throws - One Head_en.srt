@@ -1,0 +1,204 @@
+1
+00:00:00,990 --> 00:00:07,050
+Hi Everyone, in this lecture we will discuss how we can approach some more problems involving the expectation.
+
+2
+00:00:07,590 --> 00:00:09,360
+So let's go to through our first question.
+
+3
+00:00:09,360 --> 00:00:12,960
+So it says what is the expected number of coin flips to get a head?
+
+4
+00:00:13,540 --> 00:00:19,860
+So let's discuss the approach that we will follow to solve all problems of this kind.
+
+5
+00:00:20,400 --> 00:00:25,260
+So will assume that this expected number is x .OK and we want to calculate the x.
+
+6
+00:00:25,800 --> 00:00:29,720
+So we have discussed that the expectation x.
+
+7
+00:00:29,940 --> 00:00:30,240
+OK.
+
+8
+00:00:30,330 --> 00:00:32,790
+So or you can say  E(x), whatever it is?
+
+9
+00:00:33,840 --> 00:00:35,340
+So we want to calculate this value.
+
+10
+00:00:36,000 --> 00:00:44,520
+So what we are going to say? This is equal to summation of xi into P(xi), this is what we have
+
+11
+00:00:44,520 --> 00:00:44,800
+learned.
+
+12
+00:00:44,820 --> 00:00:45,120
+OK.
+
+13
+00:00:45,480 --> 00:00:48,240
+So what is p(xi)?
+
+14
+00:00:48,540 --> 00:00:52,330
+It is the probability of getting an outcome xi.
+
+15
+00:00:52,500 --> 00:00:54,690
+OK, so what can be an outcome in this case?
+
+16
+00:00:55,200 --> 00:00:57,780
+If you throw a coin, you can get a head.
+
+17
+00:00:58,860 --> 00:00:59,550
+You can get a tail.
+
+18
+00:01:00,450 --> 00:01:07,500
+So suppose if you get ahead. Ok. that means you got the success in the first throw itself.
+
+19
+00:01:08,130 --> 00:01:12,990
+So how many throws you needed, you actually needed only one throw.
+
+20
+00:01:13,020 --> 00:01:14,790
+So you needed only one throw.
+
+21
+00:01:14,790 --> 00:01:15,080
+.
+
+22
+00:01:15,150 --> 00:01:15,450
+OK.
+
+23
+00:01:16,080 --> 00:01:19,980
+And what is the probability of getting the head in the first throw?
+
+24
+00:01:20,040 --> 00:01:21,180
+That is nothing but half.
+
+25
+00:01:22,200 --> 00:01:28,560
+Ok. but what if if you don't get a head in the first throw, suppose you get a tail. Ok. let say you get
+
+26
+00:01:28,560 --> 00:01:29,910
+a tail. now
+
+27
+00:01:30,060 --> 00:01:33,360
+How many throws you would need to get a head?
+
+28
+00:01:34,050 --> 00:01:34,320
+OK.
+
+29
+00:01:35,310 --> 00:01:38,400
+So effectively you have already wasted one throw.
+
+30
+00:01:38,970 --> 00:01:43,200
+And you're saying the expected number of throw to get a head is X.
+
+31
+00:01:43,960 --> 00:01:47,820
+So effectively you would be needing X+1 number of throws.
+
+32
+00:01:48,480 --> 00:01:49,890
+ok. this is an important thing
+
+33
+00:01:49,980 --> 00:01:56,340
+you need to understand that you have already wasted one throw. ok. and you did not get a head. suppose 
+
+34
+00:01:56,340 --> 00:01:57,720
+you got a tail in the first throw.
+
+35
+00:01:57,760 --> 00:02:04,080
+OK, that means you got a tail and you're expecting you will require X number of more throw to get a head.
+
+36
+00:02:04,230 --> 00:02:07,110
+So the total number of throw would be 1+x.
+
+37
+00:02:07,560 --> 00:02:08,850
+It would be 1+X.
+
+38
+00:02:09,870 --> 00:02:15,810
+Into the probability of getting a failure in the first  throw  that means the probability of getting a
+
+39
+00:02:15,810 --> 00:02:18,450
+tail in the first throw that is again half.
+
+40
+00:02:18,670 --> 00:02:27,270
+ok. So this is equal to X. let us solve this equations so it becomes 2x+1+1+
+
+41
+00:02:27,270 --> 00:02:27,690
+x.
+
+42
+00:02:28,440 --> 00:02:31,230
+This becomes the 2X-X.
+
+43
+00:02:31,620 --> 00:02:32,790
+This is equal to two.
+
+44
+00:02:33,360 --> 00:02:36,720
+And this gives us the final value of X that is equal to 2.
+
+45
+00:02:39,030 --> 00:02:45,270
+So yes, we can say we would required two number of throws to expect a head.
+
+46
+00:02:45,390 --> 00:02:46,670
+And that makes sense.
+
+47
+00:02:46,770 --> 00:02:49,890
+OK, that makes sense as well. ok.
+
+48
+00:02:50,310 --> 00:02:54,270
+So this is how you will frame kind of recursive relation.
+
+49
+00:02:54,750 --> 00:03:00,180
+And you will try to solve this equation to get the number of coin flips together.
+
+50
+00:03:00,390 --> 00:03:00,660
+OK.
+
+51
+00:03:00,930 --> 00:03:03,840
+So let us see one more example in the next lecture.
+

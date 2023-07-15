@@ -1,0 +1,471 @@
+1
+00:00:01,170 --> 00:00:08,160
+The illusion is an important compiler optimization track, let's say, let's read this code we have
+
+2
+00:00:08,160 --> 00:00:12,310
+here across my beer, which supported a copy of semantics.
+
+3
+00:00:12,360 --> 00:00:18,330
+We have a manager that have an object from Type B and we have three function get get one is returning
+
+4
+00:00:18,330 --> 00:00:19,610
+a temporary object here.
+
+5
+00:00:19,800 --> 00:00:22,260
+So it would be must be copied in the return.
+
+6
+00:00:22,770 --> 00:00:25,950
+Get to also is returning by value here.
+
+7
+00:00:25,990 --> 00:00:26,350
+Copy.
+
+8
+00:00:26,550 --> 00:00:32,550
+But from a local variable here that has a name and get three is returning a copy value, but from a
+
+9
+00:00:32,550 --> 00:00:35,180
+variable that is accessible from somewhere else.
+
+10
+00:00:35,490 --> 00:00:42,780
+If you try to function like get to that is a good chance that you don't see a copy of constructor.
+
+11
+00:00:42,790 --> 00:00:49,850
+And this would be very surprising thinking about that here and get to we have a variable that we must
+
+12
+00:00:49,860 --> 00:00:51,590
+copy to get it here.
+
+13
+00:00:51,930 --> 00:00:58,620
+But what happens is something called the Cobie Illusion, which means that the compiler can directly
+
+14
+00:00:58,620 --> 00:01:07,940
+construct this B1 here from this from this guy directly squibbing the copy or move to what is the logic?
+
+15
+00:01:08,190 --> 00:01:10,070
+This guy is going to be destroyed in a way.
+
+16
+00:01:10,260 --> 00:01:14,080
+So if we can just get it here directly, we can escape and copy.
+
+17
+00:01:14,430 --> 00:01:20,460
+So this way, we learned about two ways to skip Cubby's, one of them by ourselves using the semantics
+
+18
+00:01:20,460 --> 00:01:27,270
+and the are very reference and another one is out of our control is mainly using is by the compiler
+
+19
+00:01:27,270 --> 00:01:27,790
+itself.
+
+20
+00:01:27,810 --> 00:01:33,090
+So this is an optimization that the compiler does in C++ 17.
+
+21
+00:01:33,300 --> 00:01:39,400
+If you are returning something that doesn't have a name at all, the copy illusion is a master to happen
+
+22
+00:01:39,420 --> 00:01:40,280
+is a must.
+
+23
+00:01:40,920 --> 00:01:46,590
+However, if you return it a copy value from a local variable that has a name here accessible only from
+
+24
+00:01:46,590 --> 00:01:48,690
+here, it may be hubbins.
+
+25
+00:01:48,690 --> 00:01:50,280
+And this depends on the compiler.
+
+26
+00:01:50,550 --> 00:01:54,770
+This means that some compiler support it and some compilers don't.
+
+27
+00:01:55,590 --> 00:02:00,180
+If you are returning a local variable, if you are telling by value here for something that is accessible
+
+28
+00:02:00,180 --> 00:02:05,930
+from somewhere else, then the competition would never happen because this will corrupted this B value.
+
+29
+00:02:06,090 --> 00:02:10,420
+So we actually must return a copy or move constructor from this guy.
+
+30
+00:02:10,620 --> 00:02:13,620
+So this is a good story of the illusion.
+
+31
+00:02:14,340 --> 00:02:15,750
+It's a compiler trick in a way.
+
+32
+00:02:17,580 --> 00:02:23,760
+If you noticed, if the compiler can skip the move constructor with the copy constructor, then you
+
+33
+00:02:23,760 --> 00:02:29,700
+shouldn't have any side effects on your movable constructor, like very specific logic that effectively
+
+34
+00:02:29,700 --> 00:02:30,380
+ruled class.
+
+35
+00:02:30,660 --> 00:02:35,550
+In other words, you shouldn't assume that the copy constructor must be good for this heaven.
+
+36
+00:02:35,550 --> 00:02:41,640
+If you even if you anyway have to do something that has side side effects in your constructor that affect
+
+37
+00:02:41,650 --> 00:02:46,890
+the overall state of the object beyond just the moving or copying, then something is wrong in your
+
+38
+00:02:46,890 --> 00:02:47,220
+code.
+
+39
+00:02:48,000 --> 00:02:53,640
+The most technique for for the illusion implementation, which is good, return a value optimization.
+
+40
+00:02:53,640 --> 00:02:57,040
+And as I said, it constructed correctly the object in its destination.
+
+41
+00:02:58,590 --> 00:03:01,520
+There are two types of the return value optimization.
+
+42
+00:03:01,710 --> 00:03:04,800
+One of them is this guy tamburri here without any.
+
+43
+00:03:05,010 --> 00:03:08,010
+And the other guy has a name, the one without any.
+
+44
+00:03:08,010 --> 00:03:13,270
+We say it definitely reaffirmed the Cobbett allusion, but the one with name it may be.
+
+45
+00:03:13,270 --> 00:03:14,220
+Yes, maybe not.
+
+46
+00:03:15,520 --> 00:03:21,580
+Another case very similar is best by value, let's say that we have here a function that is receiving
+
+47
+00:03:21,880 --> 00:03:22,530
+the difference.
+
+48
+00:03:22,930 --> 00:03:29,110
+If I am calling this function with an object, there will be no Kobie constructor here because this
+
+49
+00:03:29,110 --> 00:03:33,330
+guy is referenced by this guy and this team also can be reflected by this guy.
+
+50
+00:03:33,430 --> 00:03:35,020
+So no call constructor here.
+
+51
+00:03:35,020 --> 00:03:42,760
+By definition, if we are passing an object to be here that we have a copy of, like a local reference
+
+52
+00:03:42,760 --> 00:03:48,490
+for it here and berthing the copy constructor must be good if we are quoting here the receive to function,
+
+53
+00:03:48,490 --> 00:03:51,220
+which is best argument by value.
+
+54
+00:03:51,760 --> 00:03:53,100
+Now, here is the tricky case.
+
+55
+00:03:53,410 --> 00:04:00,160
+If you are basing something that is very temporary from here to here now, the compiler know that this
+
+56
+00:04:00,160 --> 00:04:04,510
+guy would be destroyed anyway in normal cases, as we learned before you can.
+
+57
+00:04:04,510 --> 00:04:09,810
+But here are value reference to receive it efficiently.
+
+58
+00:04:09,940 --> 00:04:15,850
+However, it turned out that the compiler also will not call the copy constructor for this case and
+
+59
+00:04:15,850 --> 00:04:19,510
+most of the compilers and just construct it here directly.
+
+60
+00:04:21,780 --> 00:04:30,510
+So even with yeah, we'll know we'll know soon about that here, so I would say you better depend on
+
+61
+00:04:30,510 --> 00:04:35,970
+the move, move semantic to make an efficient come here like you can depend on the compiler, but remember
+
+62
+00:04:36,180 --> 00:04:38,360
+that every compiler supported this trick.
+
+63
+00:04:38,580 --> 00:04:40,140
+So it's better to depend on yourself.
+
+64
+00:04:40,140 --> 00:04:45,480
+But also, if you don't see the kokabee constructor code or the constructor, you should understand
+
+65
+00:04:45,480 --> 00:04:46,310
+what happened here.
+
+66
+00:04:47,910 --> 00:04:56,400
+There is one critical difference to know about this, this is style and this is style about this style
+
+67
+00:04:56,400 --> 00:04:58,380
+and this style, the.
+
+68
+00:04:59,620 --> 00:05:07,690
+The the when you call the function from here with this guy, this guy here, look, look to this function
+
+69
+00:05:07,690 --> 00:05:12,430
+here, receive one, receive one received the beebee, but it needed a local copy from it.
+
+70
+00:05:12,670 --> 00:05:16,250
+So it had to call the copy constructor, then assign it here.
+
+71
+00:05:16,930 --> 00:05:21,780
+Now when you call this guy, you don't have any copy constructor here.
+
+72
+00:05:21,940 --> 00:05:23,680
+So there is no more memory creation.
+
+73
+00:05:23,800 --> 00:05:27,760
+So a big difference between receive one and receive to that receive one.
+
+74
+00:05:27,790 --> 00:05:31,100
+Didn't call a copy constructor here, but have to call it here.
+
+75
+00:05:31,270 --> 00:05:32,890
+So there is an extra cabbing here.
+
+76
+00:05:33,160 --> 00:05:38,420
+But this guy here, he didn't have any extra copies inside the inside the function.
+
+77
+00:05:38,440 --> 00:05:39,190
+It's more efficient.
+
+78
+00:05:39,490 --> 00:05:45,030
+But what I would like to emphasize here is the exception bought this function is creating an object
+
+79
+00:05:45,040 --> 00:05:47,080
+it has to create if it needs a copy from it.
+
+80
+00:05:47,380 --> 00:05:52,480
+And this means this memory, for example, may give you some memory education problems.
+
+81
+00:05:52,630 --> 00:05:55,030
+But this guy doesn't have any memory education.
+
+82
+00:05:55,030 --> 00:05:56,910
+And this is a big difference between both of them.
+
+83
+00:05:57,460 --> 00:06:00,370
+This guy, anyway, is going to receive his object.
+
+84
+00:06:00,550 --> 00:06:04,710
+If there is an exception for any reason, it will have been outside this function.
+
+85
+00:06:04,720 --> 00:06:10,930
+It is it isn't the responsibility of received to 200 memory creation here, but this guy will have to
+
+86
+00:06:10,930 --> 00:06:12,420
+handle memory creation here.
+
+87
+00:06:12,580 --> 00:06:15,000
+So this is one big difference also between the two sides.
+
+88
+00:06:16,840 --> 00:06:18,940
+OK, here is one very interesting case.
+
+89
+00:06:19,300 --> 00:06:25,000
+If you have even your class without the move, constructor and copy constructor and the Ardlethan also
+
+90
+00:06:25,000 --> 00:06:31,390
+the compiler would do a copy elision Agaba illusion because this one is in a way is going to be destroyed.
+
+91
+00:06:31,690 --> 00:06:34,150
+So why to have a copy from it here.
+
+92
+00:06:34,660 --> 00:06:41,890
+Even if you don't have these guys, it will be copied in a blessed way, like it would be Sebti specifically.
+
+93
+00:06:42,370 --> 00:06:47,050
+And you will see later when you said the new computer, the unique pointer in response to pointers that
+
+94
+00:06:47,050 --> 00:06:52,120
+we can return a unique pointer, although it doesn't have a copy constructor a similar way.
+
+95
+00:06:52,120 --> 00:06:54,850
+So it should be for the OSTREM objects, for example.
+
+96
+00:06:56,140 --> 00:06:57,610
+OK, here's one more interesting thing.
+
+97
+00:06:57,610 --> 00:07:03,580
+In some compilers, you can stop the illusion for like if for whatever reason you would like to do that.
+
+98
+00:07:04,330 --> 00:07:08,980
+To do that, you just need to add an extra flag for that, which is this for that you either added to
+
+99
+00:07:08,980 --> 00:07:14,140
+the jobless plus comment here or maybe on your own, your idea in eclipse.
+
+100
+00:07:14,180 --> 00:07:21,340
+You need to go to settings in optimization and maybe you just write it here in in code blocks.
+
+101
+00:07:21,520 --> 00:07:27,940
+You go to the compiler settings to toolchain executables and you then you add the flag here.
+
+102
+00:07:28,420 --> 00:07:34,500
+I'm using C++ mine here to support the C++ 17 final notes.
+
+103
+00:07:34,510 --> 00:07:37,280
+Don't return amove object from a function.
+
+104
+00:07:37,300 --> 00:07:38,970
+This is going to prevent RVO.
+
+105
+00:07:39,370 --> 00:07:43,330
+Some guys think that if I am returning an object as a move, it's helping.
+
+106
+00:07:43,330 --> 00:07:45,520
+It's just causing harm.
+
+107
+00:07:46,090 --> 00:07:52,690
+Remember that all compiler supported the illusion and it's only created during the creation only.
+
+108
+00:07:52,690 --> 00:07:57,090
+So it's also very limited compiler like compiler optimization.
+
+109
+00:07:58,330 --> 00:07:59,750
+One more one more concern.
+
+110
+00:07:59,990 --> 00:08:05,140
+One might say, OK, well, we learned that we should parameter TARBY current reference as a good practice,
+
+111
+00:08:05,380 --> 00:08:10,780
+but we notice now if we pass by value, there is a chance that the compiler will do some good work for
+
+112
+00:08:10,780 --> 00:08:11,130
+us.
+
+113
+00:08:11,590 --> 00:08:18,010
+I would say still the best const reference is a Seiver technique and it doesn't depend on the compiler.
+
+114
+00:08:18,220 --> 00:08:19,970
+So it's better in passing by.
+
+115
+00:08:20,620 --> 00:08:25,900
+Differentiate by cross reference is a good choice and communicate clearly your intention.
+
+116
+00:08:25,960 --> 00:08:30,700
+So I would say I would guess that was the difference, but it's good to understand what's happening
+
+117
+00:08:30,700 --> 00:08:33,640
+in the compiler behind the some readings.
+
+118
+00:08:33,970 --> 00:08:34,510
+That's it.

@@ -1,0 +1,491 @@
+1
+00:00:00,990 --> 00:00:08,520
+And decision will discuss the perfect for wording, this is actually a topic, but it is very dependent
+
+2
+00:00:08,520 --> 00:00:10,080
+on the Arkadia references.
+
+3
+00:00:10,560 --> 00:00:17,900
+Let's try to initiate motivation for that which would which what we call the forward thinker problem.
+
+4
+00:00:18,460 --> 00:00:23,010
+You have a student which has three parameters, name and name and address.
+
+5
+00:00:23,040 --> 00:00:24,390
+They are all of a string types.
+
+6
+00:00:24,990 --> 00:00:30,300
+Now, we would like to provide the constructor, but to make your code very efficient, you would like
+
+7
+00:00:30,300 --> 00:00:37,320
+to consider the case that the caller is using some other value reference or just a value reference.
+
+8
+00:00:37,620 --> 00:00:43,020
+You would like to do that because you would like to consider all the cases such that if there is a case
+
+9
+00:00:43,020 --> 00:00:48,970
+to add or value difference, you make sure you make use of the the temporary value that you have.
+
+10
+00:00:49,530 --> 00:00:54,900
+But now thinking about how many constructors you have to support, if are a barometer, you would like
+
+11
+00:00:54,900 --> 00:01:01,470
+to provide the two choices you end up with two times, two times to eight different constructors.
+
+12
+00:01:01,830 --> 00:01:08,670
+So it's something like, ah, four here are very reference are L, R and R, blah blah blah.
+
+13
+00:01:08,670 --> 00:01:13,980
+Total l l l three l refresh constructors and this is a lot
+
+14
+00:01:16,680 --> 00:01:19,020
+what we what we wanted ish.
+
+15
+00:01:19,080 --> 00:01:21,300
+And from here the word forwarding came.
+
+16
+00:01:21,630 --> 00:01:28,230
+You would like if if something if best to you as an R value you can use it as an R value and Burset
+
+17
+00:01:28,260 --> 00:01:29,070
+as an R value.
+
+18
+00:01:29,400 --> 00:01:33,960
+If something back to you as an L value you need to base it as an L value reference.
+
+19
+00:01:34,200 --> 00:01:39,000
+Remember here you would like to initialize the full name with the full name.
+
+20
+00:01:39,300 --> 00:01:42,620
+So you'd like actually to give this guy to this to this guy.
+
+21
+00:01:42,990 --> 00:01:47,430
+So this is like a forwarding or forwarding to another function and so on.
+
+22
+00:01:49,330 --> 00:01:55,780
+Let's yeah, so we want to be able to receive parameters of different types and be able to forward them
+
+23
+00:01:55,780 --> 00:02:01,630
+as they are, and by the way, that the community used to have a lot of different solutions and all
+
+24
+00:02:01,630 --> 00:02:02,640
+of them has a problems.
+
+25
+00:02:02,650 --> 00:02:07,300
+Before the forwarding references, let's focus on a single parameter for now.
+
+26
+00:02:08,020 --> 00:02:15,940
+The forwarding reference style is a modern C++ style was as following you define the parameter with
+
+27
+00:02:15,940 --> 00:02:16,570
+a template.
+
+28
+00:02:16,750 --> 00:02:20,100
+So there is a template here it must be and reference the reference.
+
+29
+00:02:20,500 --> 00:02:28,990
+When the compiler see this style template plus reference reference, it performs a special kind of generation
+
+30
+00:02:29,260 --> 00:02:31,450
+for the for this parameter.
+
+31
+00:02:31,630 --> 00:02:36,880
+So instead of we are generating by ourselves, the constructor will generate for us all what we need.
+
+32
+00:02:37,690 --> 00:02:39,040
+And that's why it's a topic.
+
+33
+00:02:39,880 --> 00:02:48,280
+When the compiler see this function here, it start to investigate the usage cases that have to generate
+
+34
+00:02:48,280 --> 00:02:49,360
+the corresponding data.
+
+35
+00:02:49,630 --> 00:02:55,000
+So what do we have here in the usage for the function f we are using it with C.C.C., which is a const,
+
+36
+00:02:55,270 --> 00:02:59,710
+we are using it with the bad, which is an L value and we are using it with a hundred.
+
+37
+00:02:59,720 --> 00:03:05,410
+OK, the whole purpose of the forwarding references is following.
+
+38
+00:03:05,740 --> 00:03:11,320
+If you bear something that is an L value, we would like it to be matched with an L value reference.
+
+39
+00:03:11,320 --> 00:03:14,280
+So some individuals have division rated or not.
+
+40
+00:03:15,130 --> 00:03:20,230
+And if you buy something with an R value, it should be matched with an R value difference.
+
+41
+00:03:20,500 --> 00:03:25,570
+So better parameter the compiler is going to make the generation to help you.
+
+42
+00:03:25,690 --> 00:03:32,190
+So we have three cases, a value added value and are value and B are value.
+
+43
+00:03:32,350 --> 00:03:35,440
+So the compiler will generate from this F three cases.
+
+44
+00:03:35,680 --> 00:03:41,590
+It will generate across the entire reference A and for this case it will generate integer reference
+
+45
+00:03:41,590 --> 00:03:46,630
+A for this case and will generate integer reference reference A for this case.
+
+46
+00:03:47,140 --> 00:03:48,660
+Lutece, that's a bit confusing.
+
+47
+00:03:48,670 --> 00:03:52,210
+You see that this reference reference ended only with a reference one.
+
+48
+00:03:52,420 --> 00:03:58,480
+This is a specific deduction rules that the compiler and the generation time do it.
+
+49
+00:03:59,050 --> 00:04:05,740
+Observe all the older generation involved some reference differences with just reference, reference,
+
+50
+00:04:05,740 --> 00:04:07,750
+reference or the reference.
+
+51
+00:04:07,960 --> 00:04:08,620
+So all of that.
+
+52
+00:04:08,980 --> 00:04:15,790
+So this is what eventually having the compiler see template plus reference, reference it, consider
+
+53
+00:04:15,800 --> 00:04:22,090
+the cases and generate the cases and the model and the result of the generation is we would like to
+
+54
+00:04:22,090 --> 00:04:28,520
+be able to bind an 11 eternal value reference and our value to our value reference.
+
+55
+00:04:28,570 --> 00:04:30,240
+This is the moral of this story.
+
+56
+00:04:31,610 --> 00:04:38,560
+So what did we gain so far, we gained through this forwarding reference technique that there is a one
+
+57
+00:04:38,570 --> 00:04:43,880
+function that generate for us all what we need so we don't have to write the eight constructor cases,
+
+58
+00:04:43,880 --> 00:04:44,350
+for example.
+
+59
+00:04:44,450 --> 00:04:51,110
+Yes, but what is missing if inside of any of this function we have a call to another function, let's
+
+60
+00:04:51,110 --> 00:04:51,870
+say hello eight.
+
+61
+00:04:52,280 --> 00:04:56,790
+This is going to take an E again by an L value because it has a name.
+
+62
+00:04:57,230 --> 00:05:01,220
+So what is missing is we want to be able to base it as it is.
+
+63
+00:05:01,400 --> 00:05:06,800
+For example, if we received it as an R value reference, we want to be able to base it as an arbitrary
+
+64
+00:05:06,800 --> 00:05:07,280
+difference.
+
+65
+00:05:07,730 --> 00:05:12,980
+And if we received it as an 11 year difference when I burset as a delivery reference, this is how we
+
+66
+00:05:12,980 --> 00:05:14,990
+keep making use of the function.
+
+67
+00:05:15,170 --> 00:05:17,350
+OK, one might say, OK, let's use the function.
+
+68
+00:05:17,660 --> 00:05:18,360
+This is wrong.
+
+69
+00:05:18,680 --> 00:05:22,330
+Remember that the move is converting everything to an R value.
+
+70
+00:05:22,970 --> 00:05:30,650
+The solution from the C++ is the forward function and another function that bears the value to another
+
+71
+00:05:30,650 --> 00:05:33,830
+function as an L value and better value as an R value.
+
+72
+00:05:34,130 --> 00:05:35,190
+The syntax is as follows.
+
+73
+00:05:35,230 --> 00:05:42,260
+You call forward function and you provide it with the template t a new collaborator and inside it it's
+
+74
+00:05:42,260 --> 00:05:44,060
+going to handle that for us.
+
+75
+00:05:46,130 --> 00:05:52,190
+So let's see a simple administration for that, we have here three function that we wrote by ourselves.
+
+76
+00:05:52,220 --> 00:05:58,580
+I was going to say reference was reference and she was already referenced and noted here.
+
+77
+00:05:58,580 --> 00:06:02,200
+These two guys are changing the value X, but this guy doesn't.
+
+78
+00:06:02,690 --> 00:06:08,630
+If we had received the function F of A and we called ways forward of of eight, it's going to matter.
+
+79
+00:06:08,630 --> 00:06:12,200
+The right function forward internally is another static cost.
+
+80
+00:06:12,380 --> 00:06:14,180
+But for the dereference the difference.
+
+81
+00:06:15,510 --> 00:06:22,110
+Now, let's try to go deeper and see what's going to happen when we use a lot of different types going
+
+82
+00:06:22,110 --> 00:06:25,140
+back to the function, which is calling the function.
+
+83
+00:06:26,630 --> 00:06:32,340
+We have three cases very I'm using here that will reference CESI are one or two.
+
+84
+00:06:32,340 --> 00:06:33,630
+And this is a lavaliere difference.
+
+85
+00:06:33,630 --> 00:06:36,150
+And this is a reference to our value difference.
+
+86
+00:06:36,810 --> 00:06:39,960
+And then we are trying to call them both function by variable name.
+
+87
+00:06:40,500 --> 00:06:46,560
+All of these cases are value cases of something else, very reference value for a contest, whatever.
+
+88
+00:06:46,710 --> 00:06:48,030
+But yes, it has a name.
+
+89
+00:06:48,030 --> 00:06:50,310
+All of that is going to be an added value difference.
+
+90
+00:06:50,730 --> 00:06:58,710
+And we have here three cases where using 17, which is a we are value, we are using move of some name,
+
+91
+00:06:58,710 --> 00:06:59,910
+which is a real value move.
+
+92
+00:06:59,910 --> 00:07:04,140
+Something without stating a final name for it is an X value.
+
+93
+00:07:04,710 --> 00:07:09,700
+So this all cases are real value and these cases are value.
+
+94
+00:07:09,990 --> 00:07:16,710
+So all of these cases will bind to the value references and these guys will buy into the value references.
+
+95
+00:07:17,070 --> 00:07:25,290
+So the T here will be generated as a reference to you for this guy will generate into reference for
+
+96
+00:07:25,290 --> 00:07:27,700
+these guys would be generated as a reference reference.
+
+97
+00:07:27,990 --> 00:07:34,470
+So when you make a call to F., it's going to match either here into your reference or all of these
+
+98
+00:07:34,470 --> 00:07:34,830
+guys.
+
+99
+00:07:35,160 --> 00:07:41,540
+And here all of them will match with integer reference, reference and notice that we have here, Val,
+
+100
+00:07:41,670 --> 00:07:42,810
+and reference to it.
+
+101
+00:07:42,810 --> 00:07:49,530
+And we have here are one, which is then all of them would be changed to value 10 after we call.
+
+102
+00:07:50,130 --> 00:07:55,110
+And here when we call these guys the value of our one.
+
+103
+00:07:55,110 --> 00:08:01,850
+And Val will be changed to or to remember that all of the generation from F has a reference eventually.
+
+104
+00:08:02,190 --> 00:08:08,130
+So the model of that is all the other value cases match in value and all the R values match our values
+
+105
+00:08:08,370 --> 00:08:11,560
+because the generation generate for us all of the possible cases.
+
+106
+00:08:11,910 --> 00:08:18,450
+And this is how the forwarding with the integral reference help us to bind to the write function and
+
+107
+00:08:18,450 --> 00:08:19,620
+forward to the write function.
+
+108
+00:08:20,920 --> 00:08:29,200
+Let's say that you decided to only use two cases here that we generally value and 17 from the generation
+
+109
+00:08:29,200 --> 00:08:31,080
+perspective, it's going to generate two things for you.
+
+110
+00:08:31,090 --> 00:08:33,910
+Only one was a difference and another with different types.
+
+111
+00:08:34,450 --> 00:08:40,030
+Now, let's say the G function is only one was only just enough to get no difference at all.
+
+112
+00:08:40,540 --> 00:08:43,810
+Now, this one is the one that would be cold all the time.
+
+113
+00:08:44,020 --> 00:08:48,460
+You lost the here the the the power of the forwarding.
+
+114
+00:08:48,790 --> 00:08:52,930
+But in a way that generation for you happens normally to about now what you are called into it.
+
+115
+00:08:53,770 --> 00:08:55,320
+Sometimes it's problematic.
+
+116
+00:08:55,630 --> 00:08:58,900
+Let's say that you are using only F of seventeen.
+
+117
+00:08:59,260 --> 00:09:02,020
+So the combined originary for you into your reference difference.
+
+118
+00:09:02,830 --> 00:09:12,330
+Now we would like to say G forward A but this is a R value difference because you are correct, 17.
+
+119
+00:09:12,610 --> 00:09:15,820
+So what's actually quoting here is integrative consistency.
+
+120
+00:09:16,150 --> 00:09:21,580
+You are trying to call something like G of move a listener value difference and you are only providing
+
+121
+00:09:21,580 --> 00:09:26,490
+interior reference as this guy need a label, need that, need an L value here.
+
+122
+00:09:26,650 --> 00:09:29,200
+So this is going to end up with a combination.
+
+123
+00:09:30,430 --> 00:09:30,970
+That's it.

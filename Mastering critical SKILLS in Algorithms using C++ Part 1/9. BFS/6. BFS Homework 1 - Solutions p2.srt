@@ -1,0 +1,263 @@
+1
+00:00:00,940 --> 00:00:05,260
+Let's solve the problem, number two, about about validating the tree itself.
+
+2
+00:00:06,100 --> 00:00:10,540
+Now this problem is very similar to something we did already when their defense.
+
+3
+00:00:11,620 --> 00:00:16,890
+Remember, we we already mentioned that, um.
+
+4
+00:00:18,830 --> 00:00:21,590
+The three and there are two -- and put it in a tree.
+
+5
+00:00:22,190 --> 00:00:27,560
+First of all, the tree must be must have exactly in the minus one edges.
+
+6
+00:00:29,210 --> 00:00:31,790
+The second thing is that we cannot have a cycle.
+
+7
+00:00:32,760 --> 00:00:37,350
+Also, the three must have one bath from any note to another.
+
+8
+00:00:38,460 --> 00:00:43,170
+Now, if you try to verify that the there is a bathroom any new to another.
+
+9
+00:00:43,830 --> 00:00:52,260
+This is this might be hard, but the good thing is verifying only these two condition is enough as a
+
+10
+00:00:52,260 --> 00:00:52,590
+three.
+
+11
+00:00:52,980 --> 00:00:59,370
+So if you verified that there are in the minus one edges, you verify that there are no cycles you provide.
+
+12
+00:00:59,370 --> 00:01:00,300
+They are all connected.
+
+13
+00:01:00,480 --> 00:01:01,250
+Then this is a three.
+
+14
+00:01:02,010 --> 00:01:05,010
+Now this is exactly when you think about it in the lake.
+
+15
+00:01:05,460 --> 00:01:09,090
+Give it undirected graph check if it has a cycle or not.
+
+16
+00:01:09,270 --> 00:01:13,920
+But instead of doing it with defense, as we did before, we just want to know it was before us.
+
+17
+00:01:14,610 --> 00:01:16,520
+So that's all about this problem.
+
+18
+00:01:16,530 --> 00:01:20,160
+It ends up like justifying the graph.
+
+19
+00:01:21,090 --> 00:01:27,630
+So first of all, we start here with with a simple check if the number is not equal minus one.
+
+20
+00:01:27,810 --> 00:01:28,820
+This cannot be a three.
+
+21
+00:01:29,430 --> 00:01:33,660
+So now the remaining number of idiots is exactly in the minus one, which you mean anyway will have
+
+22
+00:01:33,660 --> 00:01:35,940
+and will be clearly solution here.
+
+23
+00:01:36,780 --> 00:01:40,980
+The second thing is we check if we have cycle or not to do that.
+
+24
+00:01:40,980 --> 00:01:50,730
+We have here the length array and uh, we have here the Bear A. will see its usage.
+
+25
+00:01:51,090 --> 00:01:55,440
+So now I'm trying to handle this the separate connected components.
+
+26
+00:01:56,280 --> 00:01:58,290
+You can even uh.
+
+27
+00:01:58,810 --> 00:01:59,150
+Yeah.
+
+28
+00:01:59,170 --> 00:02:04,410
+Like practically speaking, we can we can write something better than that, like shorter.
+
+29
+00:02:04,410 --> 00:02:05,370
+But you know, it doesn't matter.
+
+30
+00:02:05,760 --> 00:02:11,230
+So in a way, I'm going to start from any uncultured and visited node and just do one b first.
+
+31
+00:02:11,250 --> 00:02:16,380
+Practically speaking, if I could one and we found that there another connected component, then actually
+
+32
+00:02:16,380 --> 00:02:17,390
+they are separated.
+
+33
+00:02:17,400 --> 00:02:23,280
+But anyway, uh, so it end up like we need to verify the B if it's like it from here.
+
+34
+00:02:25,080 --> 00:02:26,910
+So it's actually all about the assignment.
+
+35
+00:02:27,180 --> 00:02:29,160
+How can you verify the site code using BÉNÉFICE?
+
+36
+00:02:29,580 --> 00:02:31,080
+This is the real purpose of this homework.
+
+37
+00:02:31,770 --> 00:02:33,150
+So here is how it goes.
+
+38
+00:02:33,840 --> 00:02:37,050
+We know in an undirected graph.
+
+39
+00:02:38,210 --> 00:02:38,810
+Like that?
+
+40
+00:02:40,270 --> 00:02:41,620
+We have a cycle, right?
+
+41
+00:02:42,220 --> 00:02:45,280
+The second coming from going from zero back to zero.
+
+42
+00:02:46,030 --> 00:02:51,520
+Now the only problem is the fixed Typekit coming from it's like going zero one thing, going back one
+
+43
+00:02:51,520 --> 00:02:52,060
+zero again.
+
+44
+00:02:52,420 --> 00:02:57,410
+So we need to know our Birand so that we can and don't go at it.
+
+45
+00:02:57,430 --> 00:02:57,790
+We can.
+
+46
+00:02:57,820 --> 00:03:04,480
+We can detect that in the device we used to base recursively the parent ID so that we can know if we
+
+47
+00:03:05,020 --> 00:03:06,130
+best with it or not.
+
+48
+00:03:06,580 --> 00:03:07,840
+But it's not the case.
+
+49
+00:03:07,840 --> 00:03:09,580
+We get something from the Q and we don't know.
+
+50
+00:03:10,150 --> 00:03:12,850
+So to solve this idea, that's why we need to give the appearance.
+
+51
+00:03:13,270 --> 00:03:19,780
+So the idea is I would the parent here if at any point of time my neighbor is actually my B-roads,
+
+52
+00:03:20,140 --> 00:03:22,000
+then we know that this is a fake psychic.
+
+53
+00:03:23,550 --> 00:03:25,230
+Otherwise, we just go ahead.
+
+54
+00:03:25,500 --> 00:03:32,670
+If the edge never visited, we added in the normal way, otherwise we actually must have, we must have
+
+55
+00:03:32,670 --> 00:03:33,420
+a psychic.
+
+56
+00:03:33,690 --> 00:03:38,130
+So actually we ended up like zero one one try to go to zero, which is its appearance.
+
+57
+00:03:38,130 --> 00:03:44,120
+So we don't go one go to two two two three one three, try to go to zero, which is vested, which means
+
+58
+00:03:44,120 --> 00:03:49,770
+that that, uh, this is actually it's like if it's having that, say there is like a connected component
+
+59
+00:03:49,770 --> 00:03:50,430
+like that one.
+
+60
+00:03:50,910 --> 00:03:52,770
+And then also we have four and five here.
+
+61
+00:03:54,590 --> 00:04:01,310
+And, uh, let's uh, let's move this issue, for example, maybe and maybe add edgy this way or recycle
+
+62
+00:04:01,310 --> 00:04:01,730
+this way.
+
+63
+00:04:02,270 --> 00:04:07,430
+So in a way, if there are multiple components, we can even early, uh, discover them because all
+
+64
+00:04:07,430 --> 00:04:10,070
+of them must be reachable from then would zero.
+
+65
+00:04:10,550 --> 00:04:18,260
+So this is mainly, uh, the uh, the problem here about validating the three, which in the very beginning
+
+66
+00:04:18,260 --> 00:04:20,990
+of the cycle and want to see how to do that in BFS?

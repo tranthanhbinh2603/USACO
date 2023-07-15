@@ -1,0 +1,279 @@
+0
+1
+00:00:01,290 --> 00:00:08,280
+So far, we have been learning about the programming basics and learning about structs and how structs
+1
+
+2
+00:00:08,280 --> 00:00:13,410
+helped us a lot to refine things, and we hear already before the word object.
+2
+
+3
+00:00:13,800 --> 00:00:19,950
+From now, we are going to talk about one of the most important paradigms in programming, the object
+3
+
+4
+00:00:19,950 --> 00:00:21,120
+oriented programming.
+4
+
+5
+00:00:21,540 --> 00:00:28,440
+Let's remember something, at some point in the course, we really need to represent an employee
+5
+
+6
+00:00:28,470 --> 00:00:28,950
+system,
+6
+
+7
+00:00:29,220 --> 00:00:35,310
+and we had to create like a bunch of arrays to employee, reading function here, printing function
+7
+
+8
+00:00:35,310 --> 00:00:39,450
+here and start thinking about adding one more feature for employee,
+8
+
+9
+00:00:39,750 --> 00:00:45,240
+then you are changing, adding one more row here, changing a lot of variables here and there. That
+9
+
+10
+00:00:45,270 --> 00:00:46,490
+was is very impractical,
+10
+
+11
+00:00:46,980 --> 00:00:48,750
+and then we introduced the struct,
+11
+
+12
+00:00:49,090 --> 00:00:54,570
+and remember, we created the struct of an employee, which is a struct of a struct of type a full name,
+12
+
+13
+00:00:54,750 --> 00:00:59,380
+and then this guy has his own function, and this guy has his own function.
+13
+
+14
+00:00:59,700 --> 00:01:07,200
+What happened here is that the struct helped us to group all relevant attributes in one unit.
+14
+
+15
+00:01:07,590 --> 00:01:10,680
+In addition to that, we allowed composition.
+15
+
+16
+00:01:10,800 --> 00:01:17,880
+We allowed the employee to be composed of full name objects, and also we attached internal operations
+16
+
+17
+00:01:18,120 --> 00:01:20,010
+of this data together.
+17
+
+18
+00:01:20,310 --> 00:01:25,860
+Now, you would have definitely less parameters if we would like to read or print as all parameters
+18
+
+19
+00:01:25,860 --> 00:01:27,150
+are defined inside struct.
+19
+
+20
+00:01:27,270 --> 00:01:31,530
+You even don't have all of these parameters that you see in the previous code.
+20
+
+21
+00:01:31,890 --> 00:01:38,430
+What happened here is struct did binding for us, for the variables, and for the operations.
+21
+
+22
+00:01:38,580 --> 00:01:45,120
+We can now create objects of the class employee, create an array of objects of class employee or rechange later to vector.
+22
+
+23
+00:01:45,510 --> 00:01:50,820
+The number of changes that happen is much less than the normal case.
+23
+
+24
+00:01:51,450 --> 00:01:57,870
+This takes us to the concept of encapsulation, which is one of the first mandatory concepts
+24
+
+25
+00:01:57,870 --> 00:02:04,740
+in OOP. Encapsulation just means to encapsulate together the data members and the member functions.
+25
+
+26
+00:02:05,070 --> 00:02:05,790
+From now,
+26
+
+27
+00:02:05,940 --> 00:02:12,900
+we are going to refer to the variables inside a struct or a class as data members, and refer to
+27
+
+28
+00:02:12,900 --> 00:02:15,750
+the functions inside it as a member function.
+28
+
+29
+00:02:15,870 --> 00:02:20,180
+So note the word member is relevant to a struct or a class.
+29
+
+30
+00:02:20,430 --> 00:02:27,570
+OK, so the encapsulation at this nice view here, it has methods or variable. The word method is coming
+30
+
+31
+00:02:27,570 --> 00:02:29,370
+from something like Java. In Java,
+31
+
+32
+00:02:29,510 --> 00:02:30,690
+we call it method, here
+32
+
+33
+00:02:30,690 --> 00:02:31,890
+we call it member function.
+33
+
+34
+00:02:34,500 --> 00:02:40,590
+The whole object-oriented programming, as a name reveals, is all about objects and supposed
+34
+
+35
+00:02:40,930 --> 00:02:42,810
+due to the project that we did so far,
+35
+
+36
+00:02:42,930 --> 00:02:46,230
+you can get a very good sense of the object and object perspective.
+36
+
+37
+00:02:46,530 --> 00:02:48,810
+Looking at this very tall building.
+37
+
+38
+00:02:48,940 --> 00:02:50,340
+You have 40 floors here.
+38
+
+39
+00:02:50,550 --> 00:02:52,290
+You can describe it as an object.
+39
+
+40
+00:02:52,590 --> 00:02:59,490
+You can think of what are other objects it contains and what these other objects contain and contain.
+40
+
+41
+00:02:59,490 --> 00:03:03,180
+We can build a great hierarchy of compositions.
+41
+
+42
+00:03:03,360 --> 00:03:06,390
+The word compose means something includes another thing.
+42
+
+43
+00:03:06,690 --> 00:03:08,400
+We have elevators, we have floors,
+43
+
+44
+00:03:08,670 --> 00:03:12,330
+we have an apartment, apartment consist of rooms and washrooms.
+44
+
+45
+00:03:12,600 --> 00:03:17,040
+Each room has some details, there are electrical outlets in the home,
+45
+
+46
+00:03:17,040 --> 00:03:20,850
+there are locations, there are garage details and parking information.
+46
+
+47
+00:03:21,030 --> 00:03:28,110
+So you can think of the building as elevators and floors, floor as apartments, apartment as rooms
+47
+
+48
+00:03:28,110 --> 00:03:28,860
+and washrooms.
+48
+
+49
+00:03:29,160 --> 00:03:34,670
+You can think of this hierarchy of objects and hierarchy of relationships. In a similar way,
+49
+
+50
+00:03:34,800 --> 00:03:36,570
+let's say that we have a Google calendar.
+50
+
+51
+00:03:36,690 --> 00:03:42,990
+You can start to describe it in terms of years, and each year has months and each month has weeks and
+51
+
+52
+00:03:42,990 --> 00:03:43,410
+days,
+52
+
+53
+00:03:43,620 --> 00:03:45,800
+and there are events which has date and time,
+53
+
+54
+00:03:46,080 --> 00:03:47,890
+guests to attend and so on.
+54
+
+55
+00:03:48,390 --> 00:03:54,270
+So thinking about these member functions, a member variable is what encapsulation
+55
+
+56
+00:03:54,510 --> 00:03:56,280
+gives us. That's it for today.

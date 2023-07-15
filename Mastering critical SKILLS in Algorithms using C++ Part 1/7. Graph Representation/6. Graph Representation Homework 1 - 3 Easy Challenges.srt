@@ -1,0 +1,439 @@
+1
+00:00:01,770 --> 00:00:08,310
+Um, yeah, let's start with the homework representations, and the purpose of that board is sometimes
+
+2
+00:00:08,310 --> 00:00:11,580
+the students complain that they don't feel comfortable with the graph theory.
+
+3
+00:00:12,030 --> 00:00:16,650
+I thought maybe if we made them more comfortable with their graphic representation first, it would
+
+4
+00:00:16,650 --> 00:00:17,550
+make that life easy.
+
+5
+00:00:17,970 --> 00:00:23,400
+Overall, I would like you to be patient when it comes to graph theory, but I promise you, over time
+
+6
+00:00:23,400 --> 00:00:26,070
+you will get used to it faster and faster.
+
+7
+00:00:26,280 --> 00:00:29,490
+So just calm down and give it an opportunity to learn it.
+
+8
+00:00:30,870 --> 00:00:35,370
+Some tips are to consider during the graph sections, if I'm giving you the graph like I usually will
+
+9
+00:00:35,370 --> 00:00:40,110
+try to specify valid graphs like zero in the minus one range, for example for the vertices.
+
+10
+00:00:41,120 --> 00:00:48,440
+Um, unless I'm so you are solving a problem or lead could, for example, then it's up to them the
+
+11
+00:00:48,450 --> 00:00:49,320
+spec..
+
+12
+00:00:50,190 --> 00:00:52,720
+Sometimes I miss some of the specific issue.
+
+13
+00:00:52,740 --> 00:00:58,350
+It happens if this is the case, usually to a directed graph, usually unweighted multiple edges and
+
+14
+00:00:58,350 --> 00:00:59,310
+loops are possible.
+
+15
+00:00:59,610 --> 00:01:02,100
+And usually we use the edges is the representation.
+
+16
+00:01:02,670 --> 00:01:05,310
+If the graph is weighted, usually I mean integers.
+
+17
+00:01:05,970 --> 00:01:11,220
+Interesting bit is consider always the following Remember, you have to think about special cases and
+
+18
+00:01:11,220 --> 00:01:13,710
+you have to think in a systematic way.
+
+19
+00:01:14,280 --> 00:01:18,630
+So please consider a graph of only a single node, even a single node that has a silver loop.
+
+20
+00:01:19,200 --> 00:01:21,750
+Consider a graph in an order that doesn't have any edges.
+
+21
+00:01:22,110 --> 00:01:25,380
+Consider a bunch of different is the cases that are a bit special cases.
+
+22
+00:01:26,340 --> 00:01:29,880
+The key is to twist your code in a good way, in a systematic way.
+
+23
+00:01:31,790 --> 00:01:32,680
+So let's proceed.
+
+24
+00:01:33,230 --> 00:01:39,200
+The first homework about the larger idealist, the representation, we there are usually three standard
+
+25
+00:01:39,440 --> 00:01:46,640
+sibling representation the adjacency matrix additions, the list and the indigenous ID you list is the
+
+26
+00:01:46,640 --> 00:01:48,020
+simplest among all of them.
+
+27
+00:01:48,350 --> 00:01:51,000
+It is as simple as just that a collection of inches.
+
+28
+00:01:51,020 --> 00:01:51,560
+That's it.
+
+29
+00:01:52,280 --> 00:01:55,910
+If the graph has 10 edges, you have a vector of 10 inches that symbol.
+
+30
+00:01:56,360 --> 00:02:02,840
+So please define something that is graph that is vector of age and implement to the edge to contain
+
+31
+00:02:02,840 --> 00:02:04,010
+the relevant information.
+
+32
+00:02:04,790 --> 00:02:06,980
+Um, I would like you to add something here.
+
+33
+00:02:07,220 --> 00:02:08,930
+I would like the edges to be comparable.
+
+34
+00:02:08,940 --> 00:02:13,100
+Let's say we would like to sort to the edges based on the edge weight, for example.
+
+35
+00:02:13,490 --> 00:02:13,820
+OK.
+
+36
+00:02:13,970 --> 00:02:15,110
+So this is a weighted graph.
+
+37
+00:02:15,140 --> 00:02:16,810
+This is a weighted graph.
+
+38
+00:02:19,140 --> 00:02:22,860
+Now you should implement that function as we did before.
+
+39
+00:02:22,890 --> 00:02:29,250
+Add the adjacency function after you read the edges, I would like you to order them based on the cost
+
+40
+00:02:29,250 --> 00:02:35,340
+or the weight, and then you bring to them be resisted the state space and time complexity for you.
+
+41
+00:02:36,300 --> 00:02:41,340
+So this is Mindy, your first task reading the graph is just as we did before.
+
+42
+00:02:42,270 --> 00:02:45,750
+Now let's try some of the fancy representations here.
+
+43
+00:02:46,110 --> 00:02:50,520
+One of the representation people call it additions adjacency, adjacency set.
+
+44
+00:02:50,730 --> 00:02:53,250
+What adjacency has set the idea?
+
+45
+00:02:53,260 --> 00:02:56,290
+Is this following we would like.
+
+46
+00:02:56,720 --> 00:03:05,280
+We know that in the in the adjusted symmetric, the advantage was merely again, no even exist or not
+
+47
+00:03:05,280 --> 00:03:05,850
+in 01.
+
+48
+00:03:06,510 --> 00:03:11,520
+But there was a result here that we, if we would like to know the neighbors of me, I have to iterate
+
+49
+00:03:11,520 --> 00:03:16,530
+linearly on the number of nodes when we move to that addition, Celeste.
+
+50
+00:03:16,860 --> 00:03:24,330
+We note that we now can iterate early on the addition to a list with all degree, but we now cannot
+
+51
+00:03:24,330 --> 00:03:26,760
+know if an edge exist or not an old one.
+
+52
+00:03:27,210 --> 00:03:33,490
+So this creates a trade off and trade offs is something that is very common in the industry, in engineering,
+
+53
+00:03:33,490 --> 00:03:35,250
+in designing algorithms.
+
+54
+00:03:36,090 --> 00:03:38,400
+So sometimes we have to choose between that and that.
+
+55
+00:03:38,820 --> 00:03:46,170
+The good news is with the hash table based implementation, we can get the best of the tools we can
+
+56
+00:03:46,170 --> 00:03:46,320
+get.
+
+57
+00:03:46,320 --> 00:03:54,570
+Something that is from one side is all the to iterate on the neighbors, but still you'll want to check
+
+58
+00:03:54,570 --> 00:03:55,650
+if I don't exist or not.
+
+59
+00:03:55,980 --> 00:04:01,980
+So the graph representation will be based on the hash sit in C++ as following it will be vector of hash
+
+60
+00:04:01,980 --> 00:04:03,660
+set of type integers.
+
+61
+00:04:05,440 --> 00:04:06,610
+Uh.
+
+62
+00:04:08,920 --> 00:04:11,060
+This is wrong, I'm sorry for that.
+
+63
+00:04:11,080 --> 00:04:12,700
+Let me think this is wrong.
+
+64
+00:04:13,150 --> 00:04:15,560
+It should be vectors.
+
+65
+00:04:16,600 --> 00:04:19,570
+Uh, this is correct.
+
+66
+00:04:19,570 --> 00:04:19,930
+I'm sorry.
+
+67
+00:04:21,100 --> 00:04:22,300
+Yes, it's like that.
+
+68
+00:04:22,540 --> 00:04:22,930
+So.
+
+69
+00:04:23,970 --> 00:04:24,750
+Yeah, mainly.
+
+70
+00:04:26,650 --> 00:04:32,800
+Previously, every element was a list right now, every element is a hash that every element is the
+
+71
+00:04:32,800 --> 00:04:33,010
+hash.
+
+72
+00:04:33,780 --> 00:04:39,130
+But you can assume that their representation is that we did implement this version of our code that
+
+73
+00:04:39,130 --> 00:04:42,250
+added edge of the printed state, the time and space complexity.
+
+74
+00:04:42,400 --> 00:04:49,180
+But more importantly, I would like to think that this advantages of this representation, this definitely
+
+75
+00:04:49,180 --> 00:04:51,010
+assume that you know what is a hash table.
+
+76
+00:04:52,370 --> 00:04:56,690
+If you don't, you can skip the segment, but I just feel free to to to be aware of that.
+
+77
+00:04:58,530 --> 00:05:01,260
+The second thing is the multiple ages.
+
+78
+00:05:01,770 --> 00:05:08,790
+We had the discussion during the lecture about the multiple ages and women gender strategy if we would
+
+79
+00:05:08,790 --> 00:05:11,160
+like to pick only one edge among all of the ages.
+
+80
+00:05:11,520 --> 00:05:13,600
+But what if we have to keep out of them?
+
+81
+00:05:13,620 --> 00:05:15,330
+This also might be the case.
+
+82
+00:05:16,140 --> 00:05:21,780
+So now I would like you to bring to the graph such that for each Inuit.
+
+83
+00:05:25,860 --> 00:05:32,960
+Uh, we would like to anyway, we would like to maintain an implementation that that is following here.
+
+84
+00:05:34,680 --> 00:05:40,860
+Here is five nodes, then edges and then we will have multiple edges like zero one, 10, zero one seven
+
+85
+00:05:40,860 --> 00:05:41,570
+and so on.
+
+86
+00:05:42,150 --> 00:05:47,850
+No imprinting them, not by nodes like the edges of the node zero edges of not one, two, three and
+
+87
+00:05:47,850 --> 00:05:48,210
+so on.
+
+88
+00:05:48,870 --> 00:05:50,280
+I do not care about that.
+
+89
+00:05:50,430 --> 00:05:56,370
+So here are some nodes I would like you to bring to the graph such that the edges of each node are represented
+
+90
+00:05:56,790 --> 00:05:57,300
+first.
+
+91
+00:05:58,400 --> 00:06:03,200
+But the order of the printed edges themselves doesn't matter.
+
+92
+00:06:03,440 --> 00:06:09,170
+So here I need you to print for me four lines for net zero, which order?
+
+93
+00:06:09,320 --> 00:06:13,160
+I don't care, but I need you to be ordering them this way.
+
+94
+00:06:13,790 --> 00:06:16,430
+Now there is one thing here.
+
+95
+00:06:18,440 --> 00:06:24,950
+Uh, yeah, the graph here is directed there, the graph, which are integer values.
+
+96
+00:06:25,040 --> 00:06:27,440
+I think that's all I don't want to complicated at the moment.
+
+97
+00:06:27,770 --> 00:06:29,210
+So the moral of that is.
+
+98
+00:06:30,570 --> 00:06:32,370
+Brent Them Group, Dubai.
+
+99
+00:06:33,360 --> 00:06:39,430
+The source said if you could confuse them, good, divide the system with what is the exact order here?
+
+100
+00:06:39,450 --> 00:06:41,670
+We don't care what is the exact order here.
+
+101
+00:06:41,880 --> 00:06:43,020
+We don't care.
+
+102
+00:06:43,260 --> 00:06:48,000
+But every source in food would bring its own stuff together.
+
+103
+00:06:48,060 --> 00:06:49,170
+Look why printing?
+
+104
+00:06:49,500 --> 00:06:55,300
+So this is mainly an implementation that will force you to keep the multiple edges.
+
+105
+00:06:55,320 --> 00:06:55,650
+OK.
+
+106
+00:06:56,550 --> 00:06:59,640
+Uh, and this is should be an addition to metrics.
+
+107
+00:07:00,000 --> 00:07:01,570
+So you should implement it.
+
+108
+00:07:01,590 --> 00:07:08,250
+You should merely to change their adjacency matrix itself to include the multiple edges for us.
+
+109
+00:07:08,700 --> 00:07:09,390
+Yeah, that's awful.
+
+110
+00:07:09,390 --> 00:07:09,870
+First of all.

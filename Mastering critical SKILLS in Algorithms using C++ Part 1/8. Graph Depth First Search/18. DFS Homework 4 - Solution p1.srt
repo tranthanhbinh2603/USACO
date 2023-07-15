@@ -1,0 +1,551 @@
+1
+00:00:00,770 --> 00:00:07,670
+Let's solve the defense homework here in the first one, we would like to do the, uh, graph paper
+
+2
+00:00:07,670 --> 00:00:08,210
+Titus.
+
+3
+00:00:09,850 --> 00:00:15,460
+Surprisingly, the code is easy, as I mentioned there before, state is actually a very well known
+
+4
+00:00:15,970 --> 00:00:19,060
+graph type and there are several algorithms related to it.
+
+5
+00:00:20,530 --> 00:00:22,450
+There is what we call the graph coloring.
+
+6
+00:00:22,450 --> 00:00:28,450
+The graph containing is a bigger umbrella where we would like to color the graph according to specific
+
+7
+00:00:28,450 --> 00:00:29,100
+criteria.
+
+8
+00:00:29,140 --> 00:00:32,670
+So the general topic part of it is what we call two color.
+
+9
+00:00:33,430 --> 00:00:37,990
+So we see a graph what is bipartite if and only if it is two color graph.
+
+10
+00:00:38,320 --> 00:00:45,010
+So when we say to color black, it means that you can find a way to color the graph such that you are
+
+11
+00:00:45,010 --> 00:00:51,490
+using only two colors for example, black and red or black and white, and there are no two nodes who
+
+12
+00:00:51,490 --> 00:00:52,450
+have the same color.
+
+13
+00:00:52,810 --> 00:00:54,790
+So for example, let's say we have the chin here.
+
+14
+00:00:54,790 --> 00:00:55,720
+Like this one here?
+
+15
+00:00:57,310 --> 00:01:01,720
+If I colored this one was black, this white, this black, this white.
+
+16
+00:01:01,990 --> 00:01:07,570
+Then there are no two nodes adjacent and have the same color, which means we can take this one and
+
+17
+00:01:07,570 --> 00:01:10,300
+want to be group one and this one and want to be Group two.
+
+18
+00:01:10,720 --> 00:01:14,710
+Anyway, you don't need this information to solve the problem, but I just want to give you more context.
+
+19
+00:01:15,880 --> 00:01:21,760
+So the problem actually would end up like the very normal defense, strongly connected component to
+
+20
+00:01:21,760 --> 00:01:22,120
+search.
+
+21
+00:01:22,510 --> 00:01:24,010
+So, so here is the idea.
+
+22
+00:01:25,780 --> 00:01:31,240
+Assume we have the chin zero one, two, three four, for example, and we would like to color it or
+
+23
+00:01:31,240 --> 00:01:32,410
+split it to two groups.
+
+24
+00:01:32,710 --> 00:01:39,310
+So let's say we'd like to Brussels number zero and let's say it is, it is the first group node number
+
+25
+00:01:39,310 --> 00:01:41,020
+zero and we would be in one of the two groups.
+
+26
+00:01:41,020 --> 00:01:45,370
+So let's fix this with number zero to be in the first two, which is the, for example, color zero
+
+27
+00:01:45,760 --> 00:01:47,920
+or let's let's see color one, for example.
+
+28
+00:01:47,920 --> 00:01:50,020
+What is it now?
+
+29
+00:01:50,740 --> 00:01:55,720
+If not number zero connected with good number one, I cannot put node number one here.
+
+30
+00:01:56,440 --> 00:02:00,690
+If we put number one here, it will be in the same color or in the same group, so it will fail.
+
+31
+00:02:00,700 --> 00:02:01,510
+So I cannot do that.
+
+32
+00:02:01,930 --> 00:02:05,560
+So look, number one must be in the second group.
+
+33
+00:02:07,690 --> 00:02:14,660
+No, no, no, no, no one is no Canada to regroup to mood, no one has been to.
+
+34
+00:02:14,990 --> 00:02:18,860
+I cannot, but no no to hear otherwise it will be the same group.
+
+35
+00:02:19,100 --> 00:02:19,590
+So I must.
+
+36
+00:02:19,590 --> 00:02:22,880
+The good brought it back here at mood number one.
+
+37
+00:02:23,690 --> 00:02:28,680
+In a similar way, no two has edged two to three.
+
+38
+00:02:28,700 --> 00:02:29,840
+So three must be here.
+
+39
+00:02:30,590 --> 00:02:33,380
+Three has enabled for so foremost to be here.
+
+40
+00:02:35,020 --> 00:02:41,800
+Now, imagine that for Britain, that four hasn't aged to zero, for example.
+
+41
+00:02:43,280 --> 00:02:44,870
+No food has an aged to zero.
+
+42
+00:02:45,470 --> 00:02:48,050
+I have to put zero here, but zero is already here.
+
+43
+00:02:48,740 --> 00:02:50,360
+It can, we cannot colour it.
+
+44
+00:02:50,900 --> 00:02:55,530
+So the moral of that is if the graph is colourful, we can take A..
+
+45
+00:02:55,880 --> 00:03:01,490
+But all of its neighbors in the second group and take every node and put its neighbors here in this
+
+46
+00:03:01,530 --> 00:03:07,190
+first group and take every node and put its neighbor in the second group and think it should here and
+
+47
+00:03:07,340 --> 00:03:12,650
+its neighbors here in the first group, if we managed and ended up that, we really split them.
+
+48
+00:03:12,680 --> 00:03:13,430
+This is perfect.
+
+49
+00:03:13,880 --> 00:03:20,450
+The moment that we we have here, let, let's say, a zero one two.
+
+50
+00:03:20,570 --> 00:03:23,350
+This is an audience like right zero one to take.
+
+51
+00:03:23,720 --> 00:03:27,380
+I put zero in there and then I must put two here.
+
+52
+00:03:27,650 --> 00:03:28,820
+But zero one two.
+
+53
+00:03:29,890 --> 00:03:35,170
+Two zero cannot be here, so you see this symbol like it, it's very clear that we cannot group them
+
+54
+00:03:35,170 --> 00:03:35,770
+in any way.
+
+55
+00:03:36,550 --> 00:03:40,420
+That's why we say that I'd like you will see this move later.
+
+56
+00:03:41,680 --> 00:03:43,030
+So this is a model of that.
+
+57
+00:03:43,060 --> 00:03:44,620
+Now, how can we implement that?
+
+58
+00:03:45,010 --> 00:03:52,030
+We can do that in a different way to implement it in a adukwei start with the device at not zero, then
+
+59
+00:03:52,030 --> 00:03:58,580
+device at the neighbors to be, let's say, such a device was going what the deficit neighbors to be
+
+60
+00:03:58,580 --> 00:04:04,630
+kinder to then take their neighbors and efforts on their neighbors to be colored one and so on.
+
+61
+00:04:04,840 --> 00:04:06,310
+So this is all what we need to do.
+
+62
+00:04:06,640 --> 00:04:09,190
+Just assemble the fence that just coloring the nodes.
+
+63
+00:04:10,000 --> 00:04:10,930
+So let's see here.
+
+64
+00:04:11,620 --> 00:04:13,200
+Here is the defense.
+
+65
+00:04:13,210 --> 00:04:13,870
+The defense.
+
+66
+00:04:13,870 --> 00:04:14,860
+Dig the graph.
+
+67
+00:04:16,090 --> 00:04:23,020
+Dig the current route to its colour, which is initially one, and this is a victor to know the colors.
+
+68
+00:04:24,010 --> 00:04:26,440
+Now he does a few kisses.
+
+69
+00:04:26,890 --> 00:04:30,910
+If this note is never visited before, we will assign it the current color.
+
+70
+00:04:31,860 --> 00:04:37,560
+What if this note has already a color, if this color doesn't match the assigned color, then this is
+
+71
+00:04:37,560 --> 00:04:40,830
+a conflict that let's say here again, the graph zero, one and two.
+
+72
+00:04:42,360 --> 00:04:44,730
+We started with zero and give it color one.
+
+73
+00:04:47,200 --> 00:04:47,800
+Qatar were.
+
+74
+00:04:48,900 --> 00:04:52,330
+And here we iterate on the neighbors and give it the opposite color.
+
+75
+00:04:52,360 --> 00:04:53,820
+I will come back to this equation.
+
+76
+00:04:54,900 --> 00:04:56,550
+So zero, both here and with no one.
+
+77
+00:04:58,910 --> 00:04:59,390
+I color.
+
+78
+00:05:00,230 --> 00:05:03,830
+No one is calling it neighbor, which is to.
+
+79
+00:05:05,270 --> 00:05:06,300
+And give it color one.
+
+80
+00:05:06,320 --> 00:05:06,980
+That's OK.
+
+81
+00:05:07,340 --> 00:05:13,250
+Number two is the cursing or no one to be was color too, but it is already ridiculous.
+
+82
+00:05:13,520 --> 00:05:14,540
+And different color.
+
+83
+00:05:15,080 --> 00:05:16,130
+So what's happening here?
+
+84
+00:05:16,130 --> 00:05:16,880
+Is this following.
+
+85
+00:05:17,240 --> 00:05:26,110
+We see if if it has a color and it isn't my color, then we conflict it together and we cannot be in
+
+86
+00:05:26,150 --> 00:05:28,330
+different groups and in same group in the Sun.
+
+87
+00:05:28,340 --> 00:05:34,160
+So it feels so we mark here this variable that is colored conflict with the rule, which means we cannot
+
+88
+00:05:34,160 --> 00:05:35,390
+divide them to two groups.
+
+89
+00:05:36,020 --> 00:05:41,180
+Otherwise, we iterate here on each neighbor and recurso in the neighbor with the opposite color.
+
+90
+00:05:41,690 --> 00:05:43,100
+So what does this nice equation?
+
+91
+00:05:43,400 --> 00:05:45,800
+Let's say that the colors are one and two.
+
+92
+00:05:46,130 --> 00:05:50,240
+So if my color is one, three minus one is to my opposite color.
+
+93
+00:05:50,690 --> 00:05:53,390
+If my color is two three, minus two is one.
+
+94
+00:05:53,390 --> 00:05:54,170
+So my color.
+
+95
+00:05:54,200 --> 00:05:59,190
+So three minus color is a simple trick to switch things exactly like the Boolean like.
+
+96
+00:05:59,210 --> 00:06:04,580
+If the number is Boolean one, minus zero is one, one minus one is zero.
+
+97
+00:06:04,910 --> 00:06:08,180
+So it is a symmetric but just on one and two instead of zero on one.
+
+98
+00:06:09,800 --> 00:06:15,560
+I hope now you understand the good now, and that is the case is that I provide for you the grief can
+
+99
+00:06:15,560 --> 00:06:18,380
+be multiple components, so you iterate on the graph.
+
+100
+00:06:18,620 --> 00:06:23,900
+If it is never colored before, if it's never visited, then we have a more defensive role here.
+
+101
+00:06:24,140 --> 00:06:28,580
+So they face from here, if there is a color conflict, then it cannot work anymore.
+
+102
+00:06:29,270 --> 00:06:33,140
+So this is merely the the algorithm and this is its informal proof.
+
+103
+00:06:33,410 --> 00:06:35,270
+Please dig a bunch of examples.
+
+104
+00:06:35,510 --> 00:06:39,860
+Make tracing on them, make sure that you understand the flow of that.
+
+105
+00:06:40,100 --> 00:06:43,850
+Eventually it is defense, but you just want to make sure that you really get it.
+
+106
+00:06:44,810 --> 00:06:45,650
+A few tips a year.
+
+107
+00:06:45,650 --> 00:06:53,330
+Any change must be bipartite like if you have mood number one two three four five in a chain must be
+
+108
+00:06:53,330 --> 00:06:54,950
+a bipartite graph.
+
+109
+00:06:54,950 --> 00:07:00,770
+So we just like mark them like, for example, here through a white, black, white, black, white,
+
+110
+00:07:00,770 --> 00:07:01,040
+black.
+
+111
+00:07:01,040 --> 00:07:04,130
+And so even if it's a tree, you can also market.
+
+112
+00:07:04,130 --> 00:07:05,990
+You look, let's say we have a tree here.
+
+113
+00:07:06,350 --> 00:07:13,550
+So this would be white, black, white, black, white, white and black white.
+
+114
+00:07:13,550 --> 00:07:17,600
+So any tree is actually not just a chin in a tree is a label tiger.
+
+115
+00:07:18,830 --> 00:07:22,240
+And this is a question that they mentioned, um.
+
+116
+00:07:22,790 --> 00:07:25,430
+Don't assume the graphs are just single connected components.
+
+117
+00:07:25,820 --> 00:07:27,920
+The graph is disconnected from bullets.
+
+118
+00:07:28,710 --> 00:07:31,490
+The last thing to know this is what we call the Connex theorem.
+
+119
+00:07:31,640 --> 00:07:33,530
+The theorem say something very interesting.
+
+120
+00:07:33,920 --> 00:07:37,370
+If the graph is bipartite, it has no takers.
+
+121
+00:07:37,700 --> 00:07:39,920
+Remember the example that they give zero, one and two?
+
+122
+00:07:43,250 --> 00:07:48,170
+The cycle, like what's the difference between zero one two and then one, two, three year?
+
+123
+00:07:49,990 --> 00:07:56,020
+In the even cycle, I can take this to to be in a group and these two to be in a group that's fit.
+
+124
+00:07:56,590 --> 00:08:00,760
+But when it looks like it, if I took zero one in the group worked to two, it is conflicting in both
+
+125
+00:08:00,760 --> 00:08:03,910
+of them in a similar way, if you zero zero one two three four.
+
+126
+00:08:05,650 --> 00:08:14,380
+If you try to put this like black, white, black, white, black, white, so you see, we want it
+
+127
+00:08:14,380 --> 00:08:18,010
+from one perspective, zero to be black and wanted it from another perspective to be white.
+
+128
+00:08:18,220 --> 00:08:22,090
+You cannot have an auto cycle in a in a in a in a.
+
+129
+00:08:23,840 --> 00:08:24,390
+In a graph.
+
+130
+00:08:24,590 --> 00:08:30,200
+So someone might say, OK, if you would like to distill the graph has cycles, is by about it or not.
+
+131
+00:08:30,380 --> 00:08:32,270
+Let's check if it does, it has Ortega.
+
+132
+00:08:32,300 --> 00:08:35,180
+This is true, but implementation wise is very tough.
+
+133
+00:08:35,570 --> 00:08:40,850
+So the trick here is we can follow another similar logic, like what we did today to know if the graph
+
+134
+00:08:40,850 --> 00:08:41,810
+is by birthright or not.
+
+135
+00:08:42,050 --> 00:08:45,200
+And this is a great to check if the graph has old cycles or not.
+
+136
+00:08:46,010 --> 00:08:48,710
+So a graph was even cycles can be bipartite.
+
+137
+00:08:48,710 --> 00:08:54,320
+A graph without cycles can be a very uptight graph with odd cycles cannot be bipartite.
+
+138
+00:08:54,830 --> 00:08:55,280
+That's all.

@@ -1,0 +1,604 @@
+0
+1
+00:00:00,930 --> 00:00:07,920
+Let's solve the second homework here about the logical, let's first start with the tracing one.
+1
+
+2
+00:00:09,970 --> 00:00:14,620
+I committed the first few ones they are direct ones, just direct comparison of the same thing
+2
+
+3
+00:00:14,980 --> 00:00:18,400
+of one item, but here things might get a bit more complicated.
+3
+
+4
+00:00:18,740 --> 00:00:25,330
+Remember the and operator what we call the && or whatever you say it, has a higher
+4
+
+5
+00:00:25,330 --> 00:00:25,900
+priority.
+5
+
+6
+00:00:26,320 --> 00:00:34,090
+So here the expression is a greater than five and d is less than 30 or C minus b equal 10.
+6
+
+7
+00:00:34,840 --> 00:00:37,760
+Now we need to verify, we need to finish the and
+7
+
+8
+00:00:37,800 --> 00:00:38,440
+part first.
+8
+
+9
+00:00:38,980 --> 00:00:42,010
+So is a greater than five.
+9
+
+10
+00:00:42,010 --> 00:00:42,750
+Greater than five.
+10
+
+11
+00:00:42,760 --> 00:00:43,270
+Yes.
+11
+
+12
+00:00:43,270 --> 00:00:45,300
+And d less than 30.
+12
+
+13
+00:00:45,490 --> 00:00:47,830
+d less than 30? 40 less than 30? False.
+13
+
+14
+00:00:47,850 --> 00:00:49,690
+So the first part here is false.
+14
+
+15
+00:00:50,350 --> 00:00:56,980
+And as this is OR expression, we have to keep going, C minus b equal, equal 10, 20 minus 10 is
+15
+
+16
+00:00:56,980 --> 00:00:57,240
+ten.
+16
+
+17
+00:00:57,250 --> 00:00:57,610
+Yes.
+17
+
+18
+00:00:57,630 --> 00:01:00,010
+So the first expression will be true here.
+18
+
+19
+00:01:00,910 --> 00:01:06,480
+The second one, is A less B and B less than or equal c and c less than or equal c? In python  
+19
+
+20
+00:01:06,490 --> 00:01:11,010
+this expression can be written in a nicer way, but it's anyway just a chain of comparison.
+20
+
+21
+00:01:11,290 --> 00:01:16,150
+So 10 <= 20? Yes. 2o <= 30? Yes. 30 <= 40? Yes.
+21
+
+22
+00:01:16,210 --> 00:01:17,020
+So this is true.
+22
+
+23
+00:01:20,330 --> 00:01:27,890
+After that this expression, a > 5? True. d < 30? we know that this is false. c > d? 
+23
+
+24
+00:01:27,890 --> 00:01:37,400
+30 > 40? False, or d % 2 == 0? 40 % 2 == 0? True.
+24
+
+25
+00:01:37,400 --> 00:01:40,540
+Finally found something that makes all of this expression true.
+25
+
+26
+00:01:41,660 --> 00:01:43,780
+So we have three old terms.
+26
+
+27
+00:01:43,800 --> 00:01:45,100
+The last one of them is true.
+27
+
+28
+00:01:45,350 --> 00:01:46,250
+We will have true.
+28
+
+29
+00:01:47,330 --> 00:01:52,960
+In the expression after it, we changed this OR to AND, and we know that this is false and this is false.
+29
+
+30
+00:01:53,450 --> 00:01:56,330
+And now c > d is false.
+30
+
+31
+00:01:56,750 --> 00:02:00,170
+And this is && so we don't need to continue here.
+31
+
+32
+00:02:00,170 --> 00:02:01,630
+This expression also is false.
+32
+
+33
+00:02:01,940 --> 00:02:05,540
+So we have false or false overall is false.
+33
+
+34
+00:02:06,550 --> 00:02:11,910
+The last two expressions, we have a == 10, this is true or something, do we care?
+34
+
+35
+00:02:11,950 --> 00:02:12,700
+We shouldn't care.
+35
+
+36
+00:02:12,970 --> 00:02:14,140
+So the answer must be true anyway.
+36
+
+37
+00:02:14,140 --> 00:02:17,950
+this is a shortcut or short-circuit evaluation.
+37
+
+38
+00:02:19,160 --> 00:02:24,470
+Observer here, if we are going to continue that, this expression here have to be done first, like
+38
+
+39
+00:02:24,470 --> 00:02:31,270
+the b != 20 and c != 30, it have to be done together. In the next one,
+39
+
+40
+00:02:31,280 --> 00:02:35,040
+We have parentheses for this first two items together.
+40
+
+41
+00:02:35,600 --> 00:02:37,460
+This now is going to give them priority.
+41
+
+42
+00:02:37,460 --> 00:02:41,840
+We have to finish this expression first, then take it ANDed with this expression.
+42
+
+43
+00:02:42,350 --> 00:02:44,620
+a == 10? this is true.
+43
+
+44
+00:02:44,960 --> 00:02:46,970
+We don't need to evaluate this part now.
+44
+
+45
+00:02:47,210 --> 00:02:48,560
+So this is all is true.
+45
+
+46
+00:02:49,500 --> 00:02:52,590
+True and the C != 30, this is false.
+46
+
+47
+00:02:52,620 --> 00:02:54,490
+So now this all expression is false.
+47
+
+48
+00:02:54,510 --> 00:02:55,520
+We have to keep going.
+48
+
+49
+00:02:56,310 --> 00:03:00,930
+d != 40, this is false too, so this whole expression have to be false.
+49
+
+50
+00:03:03,190 --> 00:03:11,320
+In the second homework, we have to create some functions matching the requested logic, the importance
+50
+
+51
+00:03:11,320 --> 00:03:18,970
+of this assignment is, in industry customer doesn't tell us codes, the customer give us
+51
+
+52
+00:03:18,970 --> 00:03:19,480
+a statement.
+52
+
+53
+00:03:20,020 --> 00:03:27,280
+You might hear something like we need the number of boys to verify more than 10 students
+53
+
+54
+00:03:27,280 --> 00:03:27,820
+and so on.
+54
+
+55
+00:03:28,090 --> 00:03:30,100
+Customers give us expressions like that.
+55
+
+56
+00:03:30,100 --> 00:03:36,340
+They give us a problem statement, a requirement, so we should be able to transfer requirements
+56
+
+57
+00:03:36,340 --> 00:03:37,840
+to a written document.
+57
+
+58
+00:03:39,100 --> 00:03:40,590
+The first expressions are easy.
+58
+
+59
+00:03:40,600 --> 00:03:43,410
+We need to verify the number of boys greater than twenty five.
+59
+
+60
+00:03:43,420 --> 00:03:45,240
+So this is can be done here.
+60
+
+61
+00:03:45,610 --> 00:03:47,560
+Number of girls is less than 30.
+61
+
+62
+00:03:47,590 --> 00:03:49,480
+Number of girls is less than or equal 30.
+62
+
+63
+00:03:50,090 --> 00:03:58,240
+We have here OR condition, number of boys greater than twenty and the total is
+63
+
+64
+00:03:58,240 --> 00:03:58,540
+greater.
+64
+
+65
+00:03:58,540 --> 00:04:04,390
+I forgot what is empty. number of teachers, number of teachers is greater than two.
+65
+
+66
+00:04:04,570 --> 00:04:05,980
+So this is OK so far.
+66
+
+67
+00:04:06,430 --> 00:04:11,260
+And we just translate it here, as you see, very direct, just the AND is AND and the OR is OR.
+67
+
+68
+00:04:11,260 --> 00:04:21,250
+Now, either nb < 60 OR something, so either OR is  just an OR expression.
+68
+
+69
+00:04:21,250 --> 00:04:25,660
+This one might be a little more tricky.
+69
+
+70
+00:04:27,410 --> 00:04:34,680
+You would like to verify that this condition isn't satisfied and that this condition isn't satisfied.
+70
+
+71
+00:04:34,720 --> 00:04:36,400
+So this is how we think about it.
+71
+
+72
+00:04:36,700 --> 00:04:41,980
+We would like to get this expression and not satisfy it with not here and this one here.
+72
+
+73
+00:04:41,980 --> 00:04:43,330
+We can write it in a different way.
+73
+
+74
+00:04:43,390 --> 00:04:48,640
+Maybe someone would write it like this expression is the same as nb > 60. 
+74
+
+75
+00:04:48,970 --> 00:04:54,820
+And this expression is as same as ng < 70.
+75
+
+76
+00:04:54,820 --> 00:05:01,600
+So, sometimes even we can write them as requested or even make 
+76
+
+77
+00:05:01,720 --> 00:05:08,080
+Some simplification. The number of boys is ten more students, than number of girls.
+77
+
+78
+00:05:08,080 --> 00:05:11,950
+So we need to compare here with equal equal.
+78
+
+79
+00:05:13,470 --> 00:05:19,740
+The difference between these two guys, so we need to translate it as the difference, it's 10 or just this guy
+79
+
+80
+00:05:19,740 --> 00:05:20,060
+here.
+80
+
+81
+00:05:21,000 --> 00:05:29,370
+And finally, either nb is ten more than ng, so again, similar concept, OR that we did before
+81
+
+82
+00:05:29,370 --> 00:05:33,160
+here, number no girls is 15 more than that guy.
+82
+
+83
+00:05:33,480 --> 00:05:35,940
+So I hope it wasn't hard exercise for you.
+83
+
+84
+00:05:37,050 --> 00:05:40,200
+The last exercise is about the simplification exercise.
+84
+
+85
+00:05:40,560 --> 00:05:46,590
+And again, it's one more practice to make sure that you understand the priorities, to understand the
+85
+
+86
+00:05:46,590 --> 00:05:47,980
+order of simplifications.
+86
+
+87
+00:05:48,270 --> 00:05:51,630
+Let's take a couple of examples from them.
+87
+
+88
+00:05:52,120 --> 00:05:54,140
+Let's say we have this big example here.
+88
+
+89
+00:05:54,660 --> 00:05:57,660
+We know that parentheses has higher priority.
+89
+
+90
+00:05:57,780 --> 00:06:02,660
+So let's see, searching for something that is very deep and there are no parentheses inside it anymore.
+90
+
+91
+00:06:02,670 --> 00:06:03,550
+We can find this one.
+91
+
+92
+00:06:03,720 --> 00:06:05,570
+This sub-expression here.
+92
+
+93
+00:06:06,030 --> 00:06:07,650
+True or false? it is true.
+93
+
+94
+00:06:07,770 --> 00:06:08,700
+So we switch.
+94
+
+95
+00:06:08,850 --> 00:06:10,020
+We replaced it with true.
+95
+
+96
+00:06:10,710 --> 00:06:15,140
+Then the another deep expression is true and the true, which is true.
+96
+
+97
+00:06:15,930 --> 00:06:17,880
+Now we are done with all parentheses.
+97
+
+98
+00:06:17,910 --> 00:06:20,240
+The next is a expression that involves AND.
+98
+
+99
+00:06:20,880 --> 00:06:22,530
+So we have here true and true.
+99
+
+100
+00:06:22,590 --> 00:06:23,730
+Let's move it to true.
+100
+
+101
+00:06:24,270 --> 00:06:26,220
+So we now at this expression.
+101
+
+102
+00:06:26,820 --> 00:06:32,210
+The second expression is true && false && true, this one has to be false.
+102
+
+103
+00:06:32,790 --> 00:06:34,410
+So we replace it with false.
+103
+
+104
+00:06:35,350 --> 00:06:39,880
+Now, the third expedition is true && true && false, this again is reduced
+104
+
+105
+00:06:39,880 --> 00:06:43,690
+to false, so we replaced it with false.
+105
+
+106
+00:06:47,350 --> 00:06:50,410
+So we have here this expression, the final
+106
+
+107
+00:06:53,530 --> 00:07:00,100
+I feel I duplicated this line maybe, anyway, if we replace this guy with false we will have 
+107
+
+108
+00:07:00,100 --> 00:07:00,900
+this false here.
+108
+
+109
+00:07:01,240 --> 00:07:04,000
+Now, we are done with all of the AND simplifications.
+109
+
+110
+00:07:04,210 --> 00:07:10,960
+We end up with a single true because we have true or something, probably as you observe, we can
+110
+
+111
+00:07:10,960 --> 00:07:14,410
+stop all of that very early from here, true || something.
+111
+
+112
+00:07:14,440 --> 00:07:17,670
+We know all of that, regardless of the result, is going to be true anyway.
+112
+
+113
+00:07:17,980 --> 00:07:19,480
+And this is like a smart reduction.
+113
+
+114
+00:07:19,480 --> 00:07:23,860
+You get all of it suddenly and this is what we are going to do here.
+114
+
+115
+00:07:24,160 --> 00:07:31,390
+Like we will simplify this expression to true, then this expression to true then we will simplify this
+115
+
+116
+00:07:31,410 --> 00:07:34,780
+expression here to true.
+116
+
+117
+00:07:35,170 --> 00:07:37,710
+And we have other parentheses?
+117
+
+118
+00:07:37,870 --> 00:07:42,280
+Yeah, we would simplify this guy here to true.
+118
+
+119
+00:07:42,520 --> 00:07:48,700
+Now, true or whatever something is just true, this shortcut is very important.
+119
+
+120
+00:07:48,700 --> 00:07:54,400
+It makes your life simpler and also it get you used to how the compiler is actually implementing things
+120
+
+121
+00:07:54,400 --> 00:07:56,170
+behind the scene. That's all.

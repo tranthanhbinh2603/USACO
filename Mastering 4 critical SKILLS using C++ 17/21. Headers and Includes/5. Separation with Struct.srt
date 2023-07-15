@@ -1,0 +1,404 @@
+0
+1
+00:00:01,190 --> 00:00:07,570
+So far, we learned how to make separation when it comes to a function, how to declare and define, and today we will learn about the struct.
+1
+
+2
+00:00:08,010 --> 00:00:14,310
+So let's say we have a simple employee class here that have some name and two things, a constructor
+2
+
+3
+00:00:14,580 --> 00:00:15,600
+and a function.
+3
+
+4
+00:00:15,750 --> 00:00:18,000
+So the current style is the old style
+4
+
+5
+00:00:18,000 --> 00:00:21,250
+where you declare and define in one single file.
+5
+
+6
+00:00:21,630 --> 00:00:23,670
+So all of that in a single main dot cpp file.
+6
+
+7
+00:00:24,020 --> 00:00:29,730
+Now, I would like to see how that could be separated in a different way.
+7
+
+8
+00:00:30,060 --> 00:00:31,800
+Let's do it in two steps.
+8
+
+9
+00:00:31,830 --> 00:00:38,030
+The first thing is let's ( per our single main file) see how we can separate the interface from the implementation.
+9
+
+10
+00:00:38,490 --> 00:00:44,100
+we have here the struct employee and for every function inside it, for every member function,
+10
+
+11
+00:00:44,370 --> 00:00:49,890
+you just add here a semicolon instead of the braces to define the function.
+11
+
+12
+00:00:50,250 --> 00:00:53,040
+This is now what we call an interface of an employee class.
+12
+
+13
+00:00:53,070 --> 00:00:53,830
+What does this mean?
+13
+
+14
+00:00:54,150 --> 00:00:58,190
+It means that there is something that is named as an employee class.
+14
+
+15
+00:00:58,410 --> 00:01:04,110
+It has a constructor of string name and it has a print function.
+15
+
+16
+00:01:04,410 --> 00:01:05,670
+How was it implemented?
+16
+
+17
+00:01:05,700 --> 00:01:06,480
+No one care.
+17
+
+18
+00:01:06,480 --> 00:01:12,360
+So the declaration here is focusing on the what not the how. Now, here we have two functions that are defining
+18
+
+19
+00:01:12,360 --> 00:01:12,820
+the how.
+19
+
+20
+00:01:13,380 --> 00:01:14,730
+Now, look to the following:
+20
+
+21
+00:01:15,720 --> 00:01:21,960
+here is the function name of the constructor and the body of it, and here is
+21
+
+22
+00:01:21,960 --> 00:01:24,120
+the print function with the body of it.
+22
+
+23
+00:01:24,480 --> 00:01:27,450
+The extra way to relate in C++
+23
+
+24
+00:01:27,780 --> 00:01:32,120
+the definition to the declaration of a struct is using the following:
+24
+
+25
+00:01:32,130 --> 00:01:35,070
+You use the same class name with colon colon.
+25
+
+26
+00:01:35,220 --> 00:01:37,330
+It's called a scope resolution operator, I guess,
+26
+
+27
+00:01:38,730 --> 00:01:41,840
+then you put whatever you have.
+27
+
+28
+00:01:42,150 --> 00:01:46,500
+So for every function or every variable, if you would like to access it from outside,
+28
+
+29
+00:01:46,770 --> 00:01:50,460
+all what you have to is to use here employee colon-colon and anything.
+29
+
+30
+00:01:50,880 --> 00:01:52,150
+So here is a void function print,
+30
+
+31
+00:01:52,150 --> 00:01:54,810
+you come here before the function name and use it.
+31
+
+32
+00:01:55,290 --> 00:01:59,850
+If you would like to refer to the variable name here outside, you can say employee colon-colon name and
+32
+
+33
+00:01:59,850 --> 00:02:00,230
+so on.
+33
+
+34
+00:02:00,660 --> 00:02:06,780
+So the way that we separate the class is mainly you declare it, which means you replace the body with
+34
+
+35
+00:02:06,780 --> 00:02:07,650
+just a semicolon.
+35
+
+36
+00:02:07,980 --> 00:02:15,660
+You start to define it outside it, but you use the employee colon-colon or the class name colon-colon to refer to the
+36
+
+37
+00:02:15,660 --> 00:02:18,560
+implementation of a specific function for a class.
+37
+
+38
+00:02:18,960 --> 00:02:21,210
+So far, again, we are one dot cpp file.
+38
+
+39
+00:02:21,210 --> 00:02:22,560
+So let's go one more step.
+39
+
+40
+00:02:24,160 --> 00:02:29,470
+Here is how you split them into three files. let's define a header file, we will name it employee
+40
+
+41
+00:02:29,470 --> 00:02:34,810
+dot h. Notice here in lines one and two and the last line 18, we have the include guard,
+41
+
+42
+00:02:35,320 --> 00:02:39,030
+and then we have here the declaration, as we saw in the past.
+42
+
+43
+00:02:39,040 --> 00:02:41,230
+We don't need to the hash include IO stream here, by the way.
+43
+
+44
+00:02:41,560 --> 00:02:42,230
+You don't need them.
+44
+
+45
+00:02:42,940 --> 00:02:47,380
+Now, let's go to the employee dot cpp.
+45
+
+46
+00:02:47,650 --> 00:02:56,290
+It will start with hash including employee dot h, and then it's going to copy-paste here the two
+46
+
+47
+00:02:57,370 --> 00:02:58,840
+functions as we did before.
+47
+
+48
+00:02:59,290 --> 00:03:01,070
+I would like you to notice two things here.
+48
+
+49
+00:03:01,390 --> 00:03:07,690
+The first is this function is doing cout so this class doesn't know what is cout. Remember,
+49
+
+50
+00:03:07,690 --> 00:03:09,710
+the purpose of hash includes is to add something.
+50
+
+51
+00:03:10,120 --> 00:03:16,270
+So here, if you noticed, I put the hash include in the header file, and this guy is doing hash include dot h,
+51
+
+52
+00:03:16,600 --> 00:03:22,160
+and remember when the compiler sees hash include dot h, it just goes and copy-pastes this code here.
+52
+
+53
+00:03:22,540 --> 00:03:27,400
+So what happened in reality actually it's one step before the compiler
+53
+
+54
+00:03:27,400 --> 00:03:32,980
+as we will know. Once we see the hash include, then it just removes this line number two and just go-ahead
+54
+
+55
+00:03:32,980 --> 00:03:38,320
+and copy the content from line 4 to line 17 and just copy and paste it here.
+55
+
+56
+00:03:38,860 --> 00:03:44,930
+So thinking about that, what happened is as following: this file here has hash include IO stream
+56
+
+57
+00:03:44,950 --> 00:03:46,000
+in std.
+57
+
+58
+00:03:46,240 --> 00:03:53,320
+So all of that is being copy-pasted and be put here, then this cout is actually seeing this hash include IO stream.
+58
+
+59
+00:03:53,320 --> 00:03:53,590
+...
+59
+
+60
+00:03:54,010 --> 00:03:59,710
+If you tried to remove line 4 and line 5 from the header, this code is going to compile an error.
+60
+
+61
+00:03:59,980 --> 00:04:06,010
+OK, then because it doesn't see cout anymore. To have it in a more proper way,
+61
+
+62
+00:04:06,280 --> 00:04:11,710
+the right way isn't to have the hash included in the header here because this class doesn't need
+62
+
+63
+00:04:11,710 --> 00:04:12,010
+them.
+63
+
+64
+00:04:12,160 --> 00:04:14,130
+So doesn't create this hash include IO stream.
+64
+
+65
+00:04:14,500 --> 00:04:17,140
+You don't need to put it here,
+65
+
+66
+00:04:17,140 --> 00:04:19,960
+you better move it to here,
+66
+
+67
+00:04:20,140 --> 00:04:23,950
+but there would be another compilation error in the header.
+67
+
+68
+00:04:24,160 --> 00:04:25,780
+It will not know what is a string.
+68
+
+69
+00:04:26,080 --> 00:04:27,100
+...
+69
+
+70
+00:04:27,100 --> 00:04:30,800
+The string is visible still from the IO stream specifically from the std.
+70
+
+71
+00:04:32,170 --> 00:04:33,580
+Anyway, this is just for now.
+71
+
+72
+00:04:33,790 --> 00:04:35,500
+We'll talk about the namespace later.
+72
+
+73
+00:04:37,000 --> 00:04:42,520
+One extra thing that I would like to show you is I defined an extern variable also here.
+73
+
+74
+00:04:42,850 --> 00:04:45,810
+This is just for sake of showing you the global variable again.
+74
+
+75
+00:04:46,120 --> 00:04:47,170
+...
+75
+
+76
+00:04:47,320 --> 00:04:48,730
+I'm defining it as a pointer.
+76
+
+77
+00:04:48,910 --> 00:04:51,460
+I'm saying extern employee pointer employee,
+77
+
+78
+00:04:51,820 --> 00:04:57,240
+and here I'm starting to define the extern varilabe.
+78
+
+79
+00:04:57,250 --> 00:05:00,760
+I'm just showing you here to see how I can define extern from a class,
+79
+
+80
+00:05:00,760 --> 00:05:05,950
+and even with the pointer. Just simple as you declare it here and then you define it here.
+80
+
+81
+00:05:07,430 --> 00:05:08,000
+That's it.

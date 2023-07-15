@@ -1,0 +1,619 @@
+1
+00:00:01,110 --> 00:00:07,140
+Another interesting type of pointers is this should the pointer remember in the unique pointer, we
+
+2
+00:00:07,140 --> 00:00:12,900
+have only one object, that manager and the control the object and never, ever provided to others in
+
+3
+00:00:12,900 --> 00:00:19,680
+a straightforward way in the short pointers, we can now have actually multiple references pointing
+
+4
+00:00:19,680 --> 00:00:23,030
+to the same object and implementation wise.
+
+5
+00:00:23,220 --> 00:00:27,360
+This means that the copy constructor, seven operators are going to be enabled.
+
+6
+00:00:28,540 --> 00:00:36,750
+Now, how is that is is managed in the memory with with with every reference that is pointing to the
+
+7
+00:00:36,750 --> 00:00:40,150
+object is going out of the school, the pointer is going to be deleted.
+
+8
+00:00:40,380 --> 00:00:43,720
+This is something that's happening behind the scene, but still good to know about it.
+
+9
+00:00:44,040 --> 00:00:47,860
+The mechanism in the C++ is named as reference accounting.
+
+10
+00:00:48,090 --> 00:00:49,310
+The idea is very simple.
+
+11
+00:00:49,650 --> 00:00:52,500
+You're sure the pointer has an internal counter?
+
+12
+00:00:52,710 --> 00:00:59,670
+Initially with zero when you create an object is no one with every object that Tica could be using to
+
+13
+00:00:59,670 --> 00:01:04,380
+reconstruct assignment operator, the counter is going to be incremented plus plus.
+
+14
+00:01:04,950 --> 00:01:11,340
+And with every object go out of the school or deleted, the counter goes minus minus behind the scene.
+
+15
+00:01:11,550 --> 00:01:17,880
+Once the compiler runtime figured out that the object, the counter becomes zero, this means that there
+
+16
+00:01:17,880 --> 00:01:20,530
+is no object at all pointing to this object.
+
+17
+00:01:20,700 --> 00:01:27,660
+So now we can simply automatically remove the object over all the functionality of the pointer is very
+
+18
+00:01:27,660 --> 00:01:30,970
+close to the facilities of the unique pointer.
+
+19
+00:01:31,110 --> 00:01:32,620
+So what we learned would be valid.
+
+20
+00:01:32,640 --> 00:01:34,560
+I'm not going to duplicate all what we learned.
+
+21
+00:01:34,710 --> 00:01:38,160
+I just would like to highlight the differences here about the Jefferson County.
+
+22
+00:01:38,640 --> 00:01:40,890
+So terms of creation, it is very similar.
+
+23
+00:01:41,040 --> 00:01:42,720
+You have the original short pointer.
+
+24
+00:01:42,900 --> 00:01:50,160
+You again cannot use the equal here like the assignment or so, but you can use now here the copy constructor,
+
+25
+00:01:50,160 --> 00:01:53,430
+which would be OK if you have a pointer, you can use a seminal now.
+
+26
+00:01:53,880 --> 00:01:56,460
+So now looking to here we have one B to be three.
+
+27
+00:01:56,700 --> 00:01:59,810
+They are all share the pointers, share the pointer.
+
+28
+00:02:00,000 --> 00:02:06,630
+So if we try to assign the value one to five and we bring to the value of the three ones of here, then
+
+29
+00:02:06,630 --> 00:02:08,380
+all of them would have the value of five.
+
+30
+00:02:08,550 --> 00:02:09,840
+That's why they are all shared.
+
+31
+00:02:10,050 --> 00:02:16,650
+They are all looking to the same memory, similar to the unique make unique function that is also make
+
+32
+00:02:16,650 --> 00:02:19,830
+sure the function is used to make sure the function as much as possible.
+
+33
+00:02:20,200 --> 00:02:26,400
+This is, let's see, the should the count to be more familiar of this reference count idea.
+
+34
+00:02:26,820 --> 00:02:28,440
+Let's create here a pointer B one.
+
+35
+00:02:29,100 --> 00:02:33,400
+Now, if we try to say beyond don't just count, this would give you the total count.
+
+36
+00:02:33,420 --> 00:02:34,360
+So far that we have.
+
+37
+00:02:34,560 --> 00:02:35,640
+So this is going to be one.
+
+38
+00:02:36,450 --> 00:02:41,550
+Now I'm going to use a create another object B2 with constructor from B one.
+
+39
+00:02:42,030 --> 00:02:46,620
+This is going to if we try to to bring to the use count of both of them, it would be the same.
+
+40
+00:02:46,830 --> 00:02:52,230
+And both of them now two, because there are two objects who are looking to the object.
+
+41
+00:02:52,740 --> 00:02:57,900
+Let's get in the school year and create a third object, B three a.m. B, three to be two.
+
+42
+00:02:58,350 --> 00:03:05,280
+If we try to bring to the use count number to be three because B one and B to be three are all using
+
+43
+00:03:05,520 --> 00:03:06,270
+the object.
+
+44
+00:03:06,840 --> 00:03:13,060
+Now the could function one checking the function, given it is a function that is passing by value.
+
+45
+00:03:13,470 --> 00:03:19,500
+This means that the B one is going to be constructed using a copy constructor from B two, if we try
+
+46
+00:03:19,500 --> 00:03:25,020
+to bring it here as a use count, is going to be four because now there are three objects here and fourth
+
+47
+00:03:25,020 --> 00:03:26,940
+one here that has an object.
+
+48
+00:03:27,570 --> 00:03:34,380
+Once we return it from the function and we try to bring to the count is going to be three because this
+
+49
+00:03:34,380 --> 00:03:37,630
+object now is as went out of its school.
+
+50
+00:03:37,920 --> 00:03:39,420
+So this one doesn't exist.
+
+51
+00:03:39,660 --> 00:03:42,630
+That is the function again is three.
+
+52
+00:03:43,020 --> 00:03:47,150
+What about calling go to go to it function by reference.
+
+53
+00:03:48,270 --> 00:03:49,620
+So there is no copy here.
+
+54
+00:03:49,800 --> 00:03:54,500
+If you try to print it, it would be again three because we didn't create a new object here.
+
+55
+00:03:55,230 --> 00:03:59,390
+Once we go out of the scope here, B three is going to be destroyed.
+
+56
+00:03:59,760 --> 00:04:02,190
+So the counter is going to be reduced to two and two.
+
+57
+00:04:02,850 --> 00:04:04,820
+This would be one with null pointer.
+
+58
+00:04:05,220 --> 00:04:06,150
+Now we will be lost.
+
+59
+00:04:06,150 --> 00:04:06,900
+One more pointer.
+
+60
+00:04:06,900 --> 00:04:09,120
+So now the counter would be two is going to be one.
+
+61
+00:04:09,540 --> 00:04:12,660
+There's only one here wants to be to go out of the school.
+
+62
+00:04:12,990 --> 00:04:16,770
+Then the the the counter would be minus minus zero.
+
+63
+00:04:16,980 --> 00:04:21,120
+So overall it can be the allocated automatically from the memory.
+
+64
+00:04:22,710 --> 00:04:29,220
+The usage of the pointers was Vector's is very straightforward, not like the unique pointers we have
+
+65
+00:04:29,220 --> 00:04:29,550
+here.
+
+66
+00:04:30,150 --> 00:04:32,230
+OK, let's try to do a nice thing here.
+
+67
+00:04:32,500 --> 00:04:37,770
+There's something in C++ could type if you can bring any type that you would like, maybe like a big
+
+68
+00:04:37,770 --> 00:04:44,340
+statement and you say typedef this type to this name, it means every time you see this word, consider
+
+69
+00:04:44,340 --> 00:04:44,820
+it like that.
+
+70
+00:04:45,090 --> 00:04:50,260
+So I can say here are going to be one when you are just doing it for fun, like for you to just tell
+
+71
+00:04:50,340 --> 00:04:51,050
+you something else.
+
+72
+00:04:52,110 --> 00:04:58,140
+Here, the U.S. is one, if you push the three copies of that in vector, they use count is going to
+
+73
+00:04:58,140 --> 00:05:01,200
+be four, three and said the vector and one outside it.
+
+74
+00:05:01,530 --> 00:05:04,550
+If we clear to the victor, the count is going to back to one.
+
+75
+00:05:04,740 --> 00:05:07,440
+So the use of the victor with winter is very straightforward.
+
+76
+00:05:07,680 --> 00:05:13,230
+You can follow over it using the reference or you can look for it without the reference as you like.
+
+77
+00:05:14,910 --> 00:05:22,150
+Now, there's an interesting thing here to the casting as we started in the of inheritance polymorphism,
+
+78
+00:05:22,470 --> 00:05:30,260
+you might sometimes have to do that one casting from the from the base close to the beer and the glass.
+
+79
+00:05:30,420 --> 00:05:37,020
+So let's say we created here an object of type, Embley, but we put it in a shared object of type person.
+
+80
+00:05:37,140 --> 00:05:39,480
+So a person here has been in class with virtual function.
+
+81
+00:05:40,050 --> 00:05:45,370
+If you would like to do the down casting, you have to use something good dynamic pointer cost.
+
+82
+00:05:45,630 --> 00:05:49,800
+If you did this casting, you are going to take a child one of type embley here.
+
+83
+00:05:50,310 --> 00:05:57,360
+And if you try to to to bring to the count of both of them is going to show you two and two in a similar
+
+84
+00:05:57,360 --> 00:05:57,530
+way.
+
+85
+00:05:57,540 --> 00:06:02,040
+You can also use a static with cast, but in unique you cannot do that.
+
+86
+00:06:02,040 --> 00:06:08,460
+You cannot do the dynamic intercourse y because this means there will be two who have an object of your
+
+87
+00:06:09,120 --> 00:06:09,780
+of your class.
+
+88
+00:06:09,960 --> 00:06:11,550
+And the unique pointer doesn't allow that.
+
+89
+00:06:11,820 --> 00:06:17,010
+The only way to do around that is just look around like you bring the pointer from inside it with the
+
+90
+00:06:17,010 --> 00:06:20,870
+get and do the normal dynamic, just as we did in the past.
+
+91
+00:06:21,750 --> 00:06:27,620
+So this is definitely like you should avoid that is like that, but sometimes this isn't avoidable.
+
+92
+00:06:28,300 --> 00:06:33,120
+Notice that if you try to do the dynamic first with the shield, the pointer, the reference account
+
+93
+00:06:33,120 --> 00:06:37,500
+will be will not be incremented because you are now playing with your provider's.
+
+94
+00:06:38,920 --> 00:06:46,180
+Also, you shouldn't try to delete any of these guys because because they are eventually handled internally.
+
+95
+00:06:46,530 --> 00:06:49,200
+Remember, we only use the delete once when we have to do.
+
+96
+00:06:49,270 --> 00:06:51,100
+Is that the release function?
+
+97
+00:06:51,970 --> 00:06:55,390
+I would like to highlight something about the concurrency.
+
+98
+00:06:55,690 --> 00:07:00,790
+We didn't study concurrency and it's an advanced topic, but I want it in this place to.
+
+99
+00:07:00,790 --> 00:07:06,400
+But for the sake of completeness, something about it, if you didn't get it, this is totally, completely
+
+100
+00:07:06,400 --> 00:07:06,820
+OK.
+
+101
+00:07:07,840 --> 00:07:14,470
+The moral of the concurrency is that the same code is is in a, in a, in a in the same time was more
+
+102
+00:07:14,470 --> 00:07:16,060
+than one thing in the same program.
+
+103
+00:07:16,090 --> 00:07:19,330
+OK, this is a bit puzzling for you, so please escape if you couldn't get me.
+
+104
+00:07:19,870 --> 00:07:25,960
+Generally speaking, shearwaters are safe as long as you're using the value could be a move.
+
+105
+00:07:26,320 --> 00:07:31,350
+But once you started to use the reference is going to make problems and unsafe.
+
+106
+00:07:31,660 --> 00:07:33,700
+So you have to be very careful about Bessin.
+
+107
+00:07:33,700 --> 00:07:35,720
+You're sure the pointer would reference Y.
+
+108
+00:07:36,480 --> 00:07:41,520
+Remember when users shared the pointer with reference, the count is increased.
+
+109
+00:07:41,770 --> 00:07:42,790
+So imagine the following.
+
+110
+00:07:43,030 --> 00:07:46,420
+We have some function that the pointer and it's doing something with it.
+
+111
+00:07:46,990 --> 00:07:53,720
+In parallel, someone is playing with your code in the same runtime and then the object has been freed.
+
+112
+00:07:54,370 --> 00:08:01,000
+Now the difference becomes zero and the object is removed from the, from the, from the like the processing.
+
+113
+00:08:01,210 --> 00:08:02,410
+And you don't see it anymore.
+
+114
+00:08:02,560 --> 00:08:04,940
+But this function is still playing with your pointer.
+
+115
+00:08:05,110 --> 00:08:07,300
+I know that you couldn't get that because you don't know concurrency.
+
+116
+00:08:07,300 --> 00:08:11,160
+But just in the future, when you learn concurrency, please come back to this slide.
+
+117
+00:08:12,100 --> 00:08:13,420
+A few things to keep in mind.
+
+118
+00:08:13,570 --> 00:08:18,330
+Please keep using the makeshift and make unique functions behind the scene.
+
+119
+00:08:18,640 --> 00:08:23,800
+These two functions are doing one thing in memory allocation to where is the tool?
+
+120
+00:08:24,130 --> 00:08:32,680
+When I say like I make a short pointer of new integer of twenty, then you end is a pointer created
+
+121
+00:08:32,680 --> 00:08:35,470
+memory and the victory and the object itself.
+
+122
+00:08:35,510 --> 00:08:37,150
+This is another creation.
+
+123
+00:08:37,420 --> 00:08:45,940
+So the classical way to create a shared or unique pointer is due to memory creation using the make unique
+
+124
+00:08:45,940 --> 00:08:53,440
+and make sure there is a new placement, a strategy internally that is creating only a single one memory.
+
+125
+00:08:53,650 --> 00:08:57,490
+If you couldn't get that, that's OK for having to go ahead of it.
+
+126
+00:08:58,150 --> 00:09:04,630
+Also, in some some cases they make sure that Mikuni can help you avoid some of the memory leaks that
+
+127
+00:09:04,630 --> 00:09:07,570
+might happen, do some of the exceptions to read here.
+
+128
+00:09:07,900 --> 00:09:14,110
+But the moral of that using make sure that Mikuni is very important and interesting question here now,
+
+129
+00:09:14,410 --> 00:09:15,820
+which one should they use?
+
+130
+00:09:15,820 --> 00:09:16,720
+Children unique.
+
+131
+00:09:16,990 --> 00:09:22,840
+It mainly depends on the context as much as you could try to make use of the unique ones, because if
+
+132
+00:09:22,840 --> 00:09:29,950
+you remember what I said here, the the there are issues about the shared point that it can really cause
+
+133
+00:09:29,950 --> 00:09:30,520
+problems.
+
+134
+00:09:31,570 --> 00:09:36,430
+Also, should the point is a bit slower, there is a chance that others will correct your data issues
+
+135
+00:09:36,430 --> 00:09:37,090
+with threading.
+
+136
+00:09:37,660 --> 00:09:40,720
+So sometimes guys just might use a pointer.
+
+137
+00:09:40,900 --> 00:09:46,560
+And if it happens that they need some some relaxation, they just get the pointer and just use it this
+
+138
+00:09:46,570 --> 00:09:50,050
+one way in the in the market to avoid the should the pointers.
+
+139
+00:09:50,530 --> 00:09:54,550
+So the overall should be I am avoiding the should the pointers as much as I need.
+
+140
+00:09:54,700 --> 00:09:56,530
+And if I use them, I have to be careful.
+
+141
+00:09:57,390 --> 00:09:59,610
+What about smart operators versus rule breakers?
+
+142
+00:09:59,970 --> 00:10:03,390
+As we know, reporters really are very problematic.
+
+143
+00:10:04,680 --> 00:10:11,460
+The bad part is they are a bit verbose, but they also less prone when it comes to the good over.
+
+144
+00:10:11,820 --> 00:10:15,020
+We use like the smart pointers.
+
+145
+00:10:15,390 --> 00:10:16,830
+You will start to get used to them.
+
+146
+00:10:16,840 --> 00:10:19,390
+So it will not be a problem if it is in.
+
+147
+00:10:19,440 --> 00:10:19,950
+Very good.
+
+148
+00:10:21,020 --> 00:10:27,500
+The rule is you have to be smart when you are using smart pointers, remember, more than once we highlighted
+
+149
+00:10:27,500 --> 00:10:32,370
+a situation where the smart waiters can cause a problem and this is one of them.
+
+150
+00:10:32,720 --> 00:10:33,480
+This is your turn.
+
+151
+00:10:33,680 --> 00:10:35,380
+I would like to read you this, will.
+
+152
+00:10:35,450 --> 00:10:35,770
+Good.
+
+153
+00:10:35,990 --> 00:10:43,310
+I would like to trace it then and comment line in 24 36 again, run my good combatted and think about
+
+154
+00:10:43,310 --> 00:10:45,860
+the reason behind the performance and then which of the next picture.
+
+155
+00:10:46,460 --> 00:10:46,970
+That's it.

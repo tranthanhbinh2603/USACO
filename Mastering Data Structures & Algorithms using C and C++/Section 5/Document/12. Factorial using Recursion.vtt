@@ -1,0 +1,181 @@
+WEBVTT
+
+00:00.300 --> 00:05.580
+Now, let us discuss the problem, finding factorial of a given number, so for this also we can define
+
+00:05.580 --> 00:10.610
+a recursive function and even using iteration that is using Leupp, also reconverted.
+
+00:11.190 --> 00:15.840
+Let us, first of all, devise a recursive function for this one.
+
+00:16.200 --> 00:23.310
+So first, I will define what does it mean by a factor of a number C factorial is representative of
+
+00:23.310 --> 00:23.940
+the symbol.
+
+00:24.240 --> 00:27.900
+So this means factor the love and the means.
+
+00:28.230 --> 00:39.190
+One in Bhuto into three in two goes on two and so it means factorial of five is one and two, two and
+
+00:39.190 --> 00:43.360
+two, three in the four and multiplied by five.
+
+00:43.920 --> 00:45.770
+So this will be 120.
+
+00:46.140 --> 00:49.420
+If I want to play all these things, I'll get down to 120.
+
+00:50.040 --> 00:57.160
+So for n I have to continue to n so for five continue till five or ten, I should continue until ten.
+
+00:57.690 --> 01:03.060
+So just like some of the national numbers, this is multiplication of first unnatural numbers.
+
+01:03.570 --> 01:04.860
+That is called as factorial.
+
+01:05.730 --> 01:07.380
+And even I'll tell you one more thing.
+
+01:07.620 --> 01:11.710
+That zero factorial is also possible and its answer is one.
+
+01:12.090 --> 01:17.060
+So even one factorial is also one and zero factorial is also one.
+
+01:17.460 --> 01:19.120
+So both the results are one.
+
+01:19.890 --> 01:22.610
+Now, let us define this recursively.
+
+01:23.160 --> 01:33.240
+If I say fact of a number, N is one in two, two and two, three goes on up one more time.
+
+01:33.240 --> 01:37.300
+I will include that this one more number and minus one in the end.
+
+01:38.310 --> 01:47.130
+So in this, if I observe factor of a number from one to end this portion, if I take this is factorial
+
+01:47.130 --> 01:48.630
+off and the minus one.
+
+01:49.200 --> 01:51.390
+Yes, this can be the math factor.
+
+01:51.390 --> 01:52.430
+Eleven minus one.
+
+01:52.710 --> 02:00.330
+So factorial off and as a factorial of and the minus one multiplied by any.
+
+02:00.390 --> 02:04.380
+If I multiply that with and then I get that factor in.
+
+02:06.050 --> 02:17.660
+So this can be defined recursively factorial of any number and as factorial of and the minus one multiplied
+
+02:17.660 --> 02:26.120
+by and one end is greater than zero when anything close to zero four zero also answer is one.
+
+02:26.450 --> 02:27.920
+So return one.
+
+02:30.110 --> 02:30.670
+That's it.
+
+02:31.520 --> 02:38.150
+So this is the recursive definition, and once you have a recursive relation or mathematical formula,
+
+02:38.520 --> 02:43.460
+then you can convert that recursive formula into C C++ function.
+
+02:43.490 --> 02:45.470
+So let me write on a function for this one.
+
+02:46.070 --> 02:50.450
+Integer factorial of M.
+
+02:53.190 --> 02:57.720
+If and is equal to zero right on.
+
+02:59.480 --> 03:06.360
+When it is zero, return one, return one and return this one.
+
+03:06.620 --> 03:14.860
+So I return factorial off and the minus one in the end.
+
+03:15.470 --> 03:22.190
+So the function of writing a recursive function is so easy you can directly convert a formula into recursive
+
+03:22.190 --> 03:24.380
+function, not same function.
+
+03:24.380 --> 03:26.770
+Even we can write using iteration.
+
+03:26.780 --> 03:27.770
+That is a loop.
+
+03:28.680 --> 03:30.960
+Right, and this is using recursion.
+
+03:31.670 --> 03:36.830
+Now, it is more similar to some of us to a natural number, if you remember in the previous example,
+
+03:36.830 --> 03:38.090
+we saw a similar function.
+
+03:38.450 --> 03:42.080
+Only the difference was here it was plus and one more difference.
+
+03:42.080 --> 03:45.850
+Rigdon Zero was dead instead of one because the multiplication is there.
+
+03:46.130 --> 03:47.060
+So it should be one.
+
+03:48.200 --> 03:49.550
+So the function is similar.
+
+03:49.580 --> 03:52.490
+Now, if you do analysis, that analysis will be the same.
+
+03:52.940 --> 03:57.140
+The size of the memory required depends on the value that are passing.
+
+03:57.140 --> 04:03.800
+If you find functional of five that is factorial of five, then it will be making six calls.
+
+04:03.920 --> 04:05.680
+So the height of the stack will be six.
+
+04:06.110 --> 04:12.800
+So the amount of memory consumed as part of N and the time number of calls depends on the value that
+
+04:12.800 --> 04:15.440
+you're passing like four or five, which will making six calls.
+
+04:15.740 --> 04:20.960
+So again, it is out of ends just in the previous video for finding some of us to national and what
+
+04:20.960 --> 04:22.580
+we have done, similar analysis.
+
+04:22.590 --> 04:27.260
+So I want to avoid analysis here because all that we have done analysis for this one.
+
+04:27.560 --> 04:33.230
+So announcers are seen now writing a function for this one is a student exercise.
+
+04:33.240 --> 04:35.620
+So you can write on the function by yourself.
+
+04:36.530 --> 04:39.860
+So that's all about factorial of a given number.

@@ -1,0 +1,154 @@
+0
+1
+00:00:00,840 --> 00:00:06,540
+Another interesting thing about the class is the friend class. A friend class is a class that
+1
+
+2
+00:00:06,540 --> 00:00:09,730
+we define it as our friend and we mean by that
+2
+
+3
+00:00:09,900 --> 00:00:13,700
+this class has the permission to access our private data.
+3
+
+4
+00:00:14,040 --> 00:00:20,340
+Looking here, we have Class A defined with its own private and public, there is also class B here that has
+4
+
+5
+00:00:20,340 --> 00:00:28,110
+functionality with Class A, so class B here is declaring that friend class B, it means that there
+5
+
+6
+00:00:28,110 --> 00:00:31,740
+will be some class named B, and this class is a friend to us.
+6
+
+7
+00:00:31,890 --> 00:00:36,780
+It means it can access our own private data and private functions.
+7
+
+8
+00:00:37,020 --> 00:00:39,790
+So here the class B have an object of Type A,
+8
+
+9
+00:00:39,960 --> 00:00:44,580
+so it now accessing its private functions and also accessing its private data.
+9
+
+10
+00:00:45,030 --> 00:00:52,440
+So this is what is a private class. By the way, class A when I refer to Class B, but class B when I
+10
+
+11
+00:00:52,440 --> 00:00:53,310
+refer to class A.
+11
+
+12
+00:00:53,370 --> 00:00:54,290
+This is a cycle.
+12
+
+13
+00:00:54,570 --> 00:00:57,270
+Sometimes our classes are cycling this way.
+13
+
+14
+00:00:57,480 --> 00:01:01,960
+If you looked here, we just are declaring the class without defining it.
+14
+
+15
+00:01:01,980 --> 00:01:03,300
+This is how we break the cycle.
+15
+
+16
+00:01:03,450 --> 00:01:08,440
+So now A knows that if something is B but no details and B knows A and has no problems.
+16
+
+17
+00:01:09,360 --> 00:01:11,810
+In addition, there is a friend member function.
+17
+
+18
+00:01:12,060 --> 00:01:17,910
+What if you would like to give access to a specific member function in another class, only
+18
+
+19
+00:01:17,910 --> 00:01:20,790
+a single function, then you can only make only this function
+19
+
+20
+00:01:21,000 --> 00:01:22,650
+a friend, for example,
+20
+
+21
+00:01:22,830 --> 00:01:29,700
+let's say that B has function access1 and access2, but you would like to only declare function accessA1
+21
+
+22
+00:01:29,910 --> 00:01:33,900
+to be a private function so that it can access our data and our member functions.
+22
+
+23
+00:01:34,080 --> 00:01:38,700
+You say here, you write the function, but you use the colon operator of the B class,
+23
+
+24
+00:01:38,850 --> 00:01:42,900
+so now this is a friend member function.
+24
+
+25
+00:01:43,770 --> 00:01:48,490
+In a more global case, you can define any function in the system as a friend function.
+25
+
+26
+00:01:48,600 --> 00:01:53,370
+So if there is some function named printA, you can declare it here as... 
+26
+
+27
+00:01:53,370 --> 00:01:58,820
+as a friend function, then this function can also access our private data.
+27
+
+28
+00:01:59,100 --> 00:02:01,980
+That's all about the friend function. In C++,
+28
+
+29
+00:02:02,280 --> 00:02:04,070
+It isn't healthy to use it a lot.
+29
+
+30
+00:02:04,080 --> 00:02:06,120
+We will see in the homework what example for that.
+30
+
+31
+00:02:06,300 --> 00:02:07,650
+But be careful.

@@ -1,0 +1,248 @@
+1
+00:00:01,970 --> 00:00:08,690
+Hi Everyone, in this lecture we're going to discuss how we can convert a decimal number into its binary
+
+2
+00:00:08,690 --> 00:00:13,490
+representation using the Bitwise operators, OK?
+
+3
+00:00:13,730 --> 00:00:19,310
+So what I'm going to do? I'm going to write a method int convert to
+
+4
+00:00:20,550 --> 00:00:22,790
+Binary and I'm going to get a integer.
+
+5
+00:00:23,220 --> 00:00:29,430
+And let's say the integer is nine. I will return a number which looks like one zero zero one.
+
+6
+00:00:29,520 --> 00:00:29,880
+OK.
+
+7
+00:00:29,910 --> 00:00:31,530
+So I am also going to store in a form of integer?
+
+8
+00:00:31,530 --> 00:00:31,970
+.
+
+9
+00:00:32,610 --> 00:00:33,120
+Now
+
+10
+00:00:34,410 --> 00:00:38,280
+let's see how we can solve this problem. so it's easy.
+
+11
+00:00:38,610 --> 00:00:41,190
+What we need to do is? let's say this is a number
+
+12
+00:00:42,180 --> 00:00:47,850
+And we know how to extract the last bit every time. we will extract this bit and we'll create the
+
+13
+00:00:47,850 --> 00:00:48,690
+answer variable.
+
+14
+00:00:48,780 --> 00:00:52,730
+OK, the answer is initially zero we will add one to it.
+
+15
+00:00:52,740 --> 00:00:53,700
+It will become one.
+
+16
+00:00:53,880 --> 00:00:59,910
+OK, and next time we're going to discard this bit by doing the right shift and equal to n right shift
+
+17
+00:00:59,910 --> 00:01:00,240
+one.
+
+18
+00:01:01,350 --> 00:01:07,380
+And we are also going to maintain a power, so power is initially one so  will multiply one with one and add to
+
+19
+00:01:07,380 --> 00:01:09,330
+the answer so this is actually one into one.
+
+20
+00:01:09,770 --> 00:01:12,750
+now next time this is actually 10 raise to the power zero.
+
+21
+00:01:12,810 --> 00:01:14,550
+This is ten raise to the power one.
+
+22
+00:01:14,570 --> 00:01:17,940
+This is ten square and this is 10 cube. what we're going to do?
+
+23
+00:01:17,940 --> 00:01:21,240
+We're going to generate the powers of tes in the next iteration.
+
+24
+00:01:21,240 --> 00:01:25,620
+This power would become 10 and we see this bit is zero.
+
+25
+00:01:25,770 --> 00:01:28,530
+OK. so this is zero, what we will do? will do zero
+
+26
+00:01:28,530 --> 00:01:35,610
+into 10. the answer is not going to change but we are going to discard this and we are going to go
+
+27
+00:01:35,610 --> 00:01:37,710
+here and the power would become 10's square.
+
+28
+00:01:37,740 --> 00:01:42,070
+So next time we get this bit  this is zero and multiply 10 square.
+
+29
+00:01:42,090 --> 00:01:44,340
+This is zero so the answer is not going to change.
+
+30
+00:01:45,620 --> 00:01:47,410
+It is still still one.
+
+31
+00:01:48,140 --> 00:01:53,990
+But next time what is going to happen we discard this the power is going to become 10 cube and we see this
+
+32
+00:01:54,000 --> 00:01:54,650
+bit is one.
+
+33
+00:01:54,770 --> 00:02:00,860
+OK, so this bit is one. basically ,we can see for this bit we want to add one thousand to over answer.
+
+34
+00:02:00,950 --> 00:02:04,640
+So we will add one into ten raise to the power three.
+
+35
+00:02:05,030 --> 00:02:09,770
+If you see what would be your final answer, it would be one plus and 10 raise to the power three.
+
+36
+00:02:10,220 --> 00:02:12,290
+That is, it's going to be one thousand one.
+
+37
+00:02:12,650 --> 00:02:17,580
+And this is how the binary representation of nine would look like.
+
+38
+00:02:17,600 --> 00:02:17,900
+OK.
+
+39
+00:02:18,290 --> 00:02:22,220
+So I hope you understood the logic now and try to code it yourself.
+
+40
+00:02:22,670 --> 00:02:26,090
+And if you are stuck, then take the help from this tutorial.
+
+41
+00:02:26,210 --> 00:02:33,290
+So what I'm going to do? I am going to you take input n and I'm going to convert it into binary, OK?
+
+42
+00:02:33,770 --> 00:02:37,940
+And what I can do, I can say initially, the answer is zero.
+
+43
+00:02:38,180 --> 00:02:39,560
+The power is one.
+
+44
+00:02:40,130 --> 00:02:47,450
+And while this n is greater than zero I'm going to extract the last bit that is n and one.
+
+45
+00:02:48,350 --> 00:02:50,810
+And I'm going to add something to my answer.
+
+46
+00:02:50,930 --> 00:02:58,250
+So answer would be incremented by a value of power into  last bit.
+
+47
+00:02:59,270 --> 00:03:03,560
+And for the next iteration power will be multiplied with the 10.
+
+48
+00:03:04,540 --> 00:03:09,570
+Initially, it is one then ten, then ten sqaure and then 10 cube and n would be update as
+
+49
+00:03:09,580 --> 00:03:11,610
+a n right shift one.
+
+50
+00:03:11,710 --> 00:03:12,280
+That's it.
+
+51
+00:03:12,550 --> 00:03:13,480
+And we are done.
+
+52
+00:03:13,900 --> 00:03:17,110
+And from here, we can return the answer.
+
+53
+00:03:17,770 --> 00:03:24,070
+Let's build the code, so we can say cout, convert to binary and we give the input n here.
+
+54
+00:03:25,340 --> 00:03:29,630
+And now let us test over code weather it works fine or not.
+
+55
+00:03:31,070 --> 00:03:36,320
+So what we need to do is go to the terminal and I can say convert
+
+56
+00:03:38,550 --> 00:03:39,390
+Decimal to binary.
+
+57
+00:03:39,570 --> 00:03:39,930
+OK.
+
+58
+00:03:41,560 --> 00:03:42,400
+number is 10.
+
+59
+00:03:57,360 --> 00:04:04,200
+OK, so if I give ten as the input i get one zero one zero as the output  which is fine, if I give
+
+60
+00:04:04,410 --> 00:04:11,120
+15 then I get one one one which is the binary representation of this particular number.
+
+61
+00:04:11,820 --> 00:04:12,450
+That's all.
+
+62
+00:04:12,570 --> 00:04:13,070
+Thank you.
+

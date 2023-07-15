@@ -1,0 +1,355 @@
+1
+00:00:01,570 --> 00:00:07,510
+Defense, homework, number one, let's try to play with the good little bit so that we get more experience
+
+2
+00:00:08,680 --> 00:00:12,250
+in the first task we would like.
+
+3
+00:00:13,210 --> 00:00:14,530
+Here's a simple description.
+
+4
+00:00:14,920 --> 00:00:19,420
+You will have a rooted tree and you will have a specific node in the tree.
+
+5
+00:00:19,810 --> 00:00:25,180
+You would like to return all the nodes that are below this tree node, including itself.
+
+6
+00:00:25,450 --> 00:00:25,810
+OK.
+
+7
+00:00:26,320 --> 00:00:32,110
+So I would like to tell you now about the context that lead could problem itself for described so that
+
+8
+00:00:32,110 --> 00:00:33,740
+it could say that there are bruises.
+
+9
+00:00:33,760 --> 00:00:38,470
+So we have a process here and there is some process behind it.
+
+10
+00:00:38,480 --> 00:00:40,390
+So this is a slow process here.
+
+11
+00:00:40,780 --> 00:00:42,540
+Let's say this is not number 100.
+
+12
+00:00:42,940 --> 00:00:43,990
+This is not number two.
+
+13
+00:00:44,020 --> 00:00:45,970
+Maybe this is not number seven, seven seven.
+
+14
+00:00:46,390 --> 00:00:47,680
+This is node number five.
+
+15
+00:00:48,370 --> 00:00:49,810
+This is node number 60.
+
+16
+00:00:50,380 --> 00:00:52,750
+So this is only a graph of five nodes.
+
+17
+00:00:52,750 --> 00:00:54,370
+But observe the values are very big.
+
+18
+00:00:54,910 --> 00:00:57,340
+So this is something that could happen in some operating systems.
+
+19
+00:00:57,640 --> 00:01:02,650
+You have several processes and every process has a Birand another process.
+
+20
+00:01:03,250 --> 00:01:10,000
+Now, if node number 100 as a user, you ask it to destroy node number 100, the node number 100, which
+
+21
+00:01:10,000 --> 00:01:17,860
+is a process, would be destroyed and all of their nodes under it to two and 760 and five would be destroyed.
+
+22
+00:01:18,220 --> 00:01:23,110
+So as you see, uh, the problem is 10, but that is just one catch here.
+
+23
+00:01:23,380 --> 00:01:25,150
+The ideas itself are pretty big.
+
+24
+00:01:25,330 --> 00:01:30,940
+The ideas are up to five thousand in terms of the graph representation.
+
+25
+00:01:31,480 --> 00:01:33,370
+They will give you the edges as following.
+
+26
+00:01:33,610 --> 00:01:40,360
+They would give you two arrays ID, which is a process ID and B idea, which is the beer and to process
+
+27
+00:01:40,360 --> 00:01:40,740
+idea.
+
+28
+00:01:41,590 --> 00:01:49,720
+In other words, this is a directed graph and b idea of AI, and the idea of AI is actually an inch.
+
+29
+00:01:50,080 --> 00:01:52,900
+I'm just trying to write for you the description in a simpler way.
+
+30
+00:01:52,900 --> 00:01:56,710
+Then I could forces but refer to their homepage.
+
+31
+00:01:57,220 --> 00:01:59,290
+Read the problem if you are confused.
+
+32
+00:01:59,710 --> 00:02:02,200
+So in this problem, here is a graph a given for you.
+
+33
+00:02:02,210 --> 00:02:03,350
+This is actually one example.
+
+34
+00:02:03,350 --> 00:02:09,550
+Also, I'm trying to make your life easier and you will notice, for example, that B-BBEE idea of two
+
+35
+00:02:09,550 --> 00:02:15,130
+equals five, which means that there is an edge from five to to be ideal for equal one, which means
+
+36
+00:02:15,130 --> 00:02:18,760
+that the parent of the parent of four is one.
+
+37
+00:02:19,180 --> 00:02:24,580
+So this image, if I ask you to kill five, you should return all of these ages, all of this.
+
+38
+00:02:25,270 --> 00:02:28,570
+If I asked you to kill two, then you need to return it to three six.
+
+39
+00:02:28,930 --> 00:02:31,210
+If I ask you to kill for it, then you just kill four.
+
+40
+00:02:31,420 --> 00:02:33,790
+So this is mainly the first task, which is an easy task.
+
+41
+00:02:35,100 --> 00:02:43,650
+The second task, uh, we have, uh, we have a company and employees, has structured every employee,
+
+42
+00:02:43,650 --> 00:02:48,630
+has an importance of value and we have some people that he is managing.
+
+43
+00:02:48,930 --> 00:02:53,550
+So you see here this graph Embree with idea number one, has importance.
+
+44
+00:02:53,550 --> 00:02:53,970
+Five.
+
+45
+00:02:54,000 --> 00:02:57,720
+This is a manager, probably, and he has two in Belize under his management.
+
+46
+00:02:57,930 --> 00:03:00,780
+One of them has already two and one of the papers idea three.
+
+47
+00:03:01,170 --> 00:03:02,880
+With this one has an idea of three.
+
+48
+00:03:03,110 --> 00:03:05,070
+And this one has an idea importance of three.
+
+49
+00:03:05,760 --> 00:03:08,370
+Now you will get a query here.
+
+50
+00:03:08,880 --> 00:03:15,660
+Two With the ID equal one, you should return to the submission of the importance of this note and all
+
+51
+00:03:15,660 --> 00:03:17,400
+of their notes behind it.
+
+52
+00:03:17,580 --> 00:03:22,890
+If there are more notes here, you also, some here and some here, if you had really some here.
+
+53
+00:03:23,160 --> 00:03:24,900
+So very similar to the previous problem.
+
+54
+00:03:25,170 --> 00:03:29,940
+This is a rowdy three and you would be given specific mood.
+
+55
+00:03:30,210 --> 00:03:33,120
+You would return its value and all of the note values.
+
+56
+00:03:33,360 --> 00:03:36,470
+So this is mainly the description of the note.
+
+57
+00:03:36,490 --> 00:03:38,250
+So this is a rotary.
+
+58
+00:03:38,670 --> 00:03:47,490
+Now how is the graph given the graph given as a vector of employees, vector of employees here and everybody
+
+59
+00:03:47,490 --> 00:03:53,700
+has I.D., has importance and has a list of ideas that he is managing.
+
+60
+00:03:54,340 --> 00:04:01,680
+Uh, this is your graph, but is write a code that is using this graph does not convert it to another
+
+61
+00:04:01,680 --> 00:04:02,130
+graph.
+
+62
+00:04:02,640 --> 00:04:05,850
+I would like you to trade on the graph itself as it is given for you.
+
+63
+00:04:07,430 --> 00:04:10,220
+OK, so this is mainly the second, the problem.
+
+64
+00:04:12,170 --> 00:04:17,840
+In the third problem, we would like to solve a very common problem in graph theory, could the connected
+
+65
+00:04:17,840 --> 00:04:18,470
+components.
+
+66
+00:04:18,890 --> 00:04:19,910
+We have a graph.
+
+67
+00:04:20,240 --> 00:04:21,260
+It's undirected.
+
+68
+00:04:21,260 --> 00:04:24,230
+It's unweighted, would like to count the number of connected components.
+
+69
+00:04:24,230 --> 00:04:29,750
+We explained before that the connected component is like a subgraph undirected where every node in the
+
+70
+00:04:29,760 --> 00:04:33,350
+subgraph can reach all of the other nodes in the same subgraph.
+
+71
+00:04:33,800 --> 00:04:37,280
+So you will take a graph and the total number neighborhoods.
+
+72
+00:04:37,520 --> 00:04:40,520
+The graph is following every vector of integer.
+
+73
+00:04:40,520 --> 00:04:46,700
+Here is just two numbers which represent to the from and to, and there are no multiple edges or silver
+
+74
+00:04:46,700 --> 00:04:47,690
+loops in this problem.
+
+75
+00:04:47,810 --> 00:04:51,920
+So here is an example if the given graphic is given this way.
+
+76
+00:04:51,920 --> 00:04:54,960
+As you see, this is two connected components here.
+
+77
+00:04:55,040 --> 00:04:57,440
+This is connected component and this is a correct component.
+
+78
+00:04:57,530 --> 00:04:59,030
+Visually, you can definitely use it.
+
+79
+00:04:59,300 --> 00:05:02,090
+Notice it like if I say that we have something like that.
+
+80
+00:05:05,360 --> 00:05:06,830
+How many connected components here?
+
+81
+00:05:07,010 --> 00:05:07,730
+We have five.
+
+82
+00:05:08,030 --> 00:05:11,000
+This is one component to three or four.
+
+83
+00:05:11,270 --> 00:05:17,150
+So every something that is connected with his neighbors end up in a undirected graph to be completely
+
+84
+00:05:17,150 --> 00:05:19,490
+connected because you can go to anything here.
+
+85
+00:05:19,490 --> 00:05:21,530
+Here, zero can go to one and two and three and four.
+
+86
+00:05:21,830 --> 00:05:24,920
+Four can go to one, one can go to three out of them can go to each other.
+
+87
+00:05:25,160 --> 00:05:27,230
+So this is one connected component.
+
+88
+00:05:27,290 --> 00:05:29,200
+This is merely the third homework.
+
+89
+00:05:29,420 --> 00:05:29,870
+That's all.

@@ -1,0 +1,639 @@
+1
+00:00:01,080 --> 00:00:02,070
+Homework number two.
+
+2
+00:00:04,150 --> 00:00:10,390
+We still continue the some of the homework about the representations itself, so in this one, I would
+
+3
+00:00:10,390 --> 00:00:14,230
+like to teach you about domains in real life.
+
+4
+00:00:14,590 --> 00:00:16,390
+The problems are about domains.
+
+5
+00:00:16,750 --> 00:00:22,110
+So now we are in, we have airports and we have a lot of flights.
+
+6
+00:00:22,120 --> 00:00:24,060
+Every flight is from and to and coast.
+
+7
+00:00:24,550 --> 00:00:30,370
+But instead of giving you the front two in range, zero in the minus one, we you will have strings.
+
+8
+00:00:30,670 --> 00:00:31,900
+Strings to those pieces.
+
+9
+00:00:32,140 --> 00:00:33,910
+And the cost is just an integral value.
+
+10
+00:00:34,720 --> 00:00:41,590
+Now you should build a directed graph based on one of the adjacency style and also consider that there
+
+11
+00:00:41,590 --> 00:00:42,970
+could be multiple edges.
+
+12
+00:00:43,000 --> 00:00:47,230
+This means that there could be multiple flights between the same source and same destination.
+
+13
+00:00:47,860 --> 00:00:51,370
+Your branding function should be very sorted as following.
+
+14
+00:00:52,000 --> 00:00:53,350
+So let's see here the input.
+
+15
+00:00:53,740 --> 00:00:57,520
+We have five airports and we have nine flights.
+
+16
+00:00:57,930 --> 00:01:02,260
+California, Texas with thirty thousand dollars.
+
+17
+00:01:02,500 --> 00:01:04,330
+California, Texas, $10000.
+
+18
+00:01:04,330 --> 00:01:04,990
+And so on.
+
+19
+00:01:05,650 --> 00:01:09,050
+Now you should Brent exactly in the following July.
+
+20
+00:01:09,100 --> 00:01:10,570
+It is a two level sorting.
+
+21
+00:01:10,930 --> 00:01:16,660
+First of all, the source itself, like the from California, should come first before Florida, before
+
+22
+00:01:16,660 --> 00:01:18,280
+New York, before Pennsylvania.
+
+23
+00:01:18,280 --> 00:01:27,280
+And so it now inside every same source like from California to these cities also, or these states also
+
+24
+00:01:27,280 --> 00:01:28,930
+should be sorted based on him.
+
+25
+00:01:29,680 --> 00:01:33,550
+What if we have multiple states with the same name?
+
+26
+00:01:33,910 --> 00:01:36,970
+Then you should sorted them by coast from small to large.
+
+27
+00:01:37,570 --> 00:01:41,710
+So again, you have three conditions for sorting one of them based on the from.
+
+28
+00:01:42,130 --> 00:01:45,520
+Another one based on the two and a third one based on the cost.
+
+29
+00:01:45,520 --> 00:01:47,200
+If the two is the same one.
+
+30
+00:01:47,530 --> 00:01:49,570
+So please refer to the description here.
+
+31
+00:01:49,840 --> 00:01:50,740
+If you are confused.
+
+32
+00:01:52,330 --> 00:01:57,850
+After you are done with the previous homework, we will move to Division two, please relation to that
+
+33
+00:01:57,850 --> 00:02:00,160
+after you are done with the previous one.
+
+34
+00:02:00,550 --> 00:02:03,760
+So now the exhibit that we have is a domain example.
+
+35
+00:02:03,760 --> 00:02:09,400
+So remember, we mentioned that we have several domains like here, we have airport domain, for example.
+
+36
+00:02:11,050 --> 00:02:16,560
+And we see that the urban domain can be converted, as we learned in the obstruction in the introduction.
+
+37
+00:02:16,570 --> 00:02:19,990
+We learned that we can represent that to the standard, the graph theory.
+
+38
+00:02:20,770 --> 00:02:22,280
+Now there is a problem here.
+
+39
+00:02:22,300 --> 00:02:22,660
+Let's see.
+
+40
+00:02:22,660 --> 00:02:24,840
+The graph theory has 100 algorithms.
+
+41
+00:02:26,180 --> 00:02:31,580
+If you would like to model everything in terms of Airbus, you will have to rewrite all of these hundred
+
+42
+00:02:31,580 --> 00:02:36,530
+algorithms to have a airport from Airbus through urban flight course and all of that.
+
+43
+00:02:37,190 --> 00:02:42,340
+Now if you have another domain, let's say for a computer vision, you would have to rewrite the hundred
+
+44
+00:02:42,350 --> 00:02:43,620
+algorithms for computer vision.
+
+45
+00:02:43,640 --> 00:02:44,870
+This doesn't work.
+
+46
+00:02:44,870 --> 00:02:45,890
+This isn't scalable.
+
+47
+00:02:46,580 --> 00:02:52,010
+So the way that we actually do is we reduce the domain to the standard.
+
+48
+00:02:52,010 --> 00:02:52,520
+The problem?
+
+49
+00:02:53,120 --> 00:02:55,450
+This means as much as we can.
+
+50
+00:02:55,460 --> 00:03:02,630
+We converted a domain such that it can use the standard algorithms in this, uh, homework here.
+
+51
+00:03:03,210 --> 00:03:09,020
+Well, I would like you to use this as a code that we used in the lecture for for the adjacency list
+
+52
+00:03:09,020 --> 00:03:11,600
+as it is the room two and wait for the edge.
+
+53
+00:03:11,870 --> 00:03:15,140
+The ad directed edge exactly as we did in the lecture.
+
+54
+00:03:15,140 --> 00:03:15,830
+The same could.
+
+55
+00:03:16,550 --> 00:03:22,730
+So now you have to take all of this strings and find your way to reduce it to.
+
+56
+00:03:23,710 --> 00:03:25,750
+Standard graph, I hope you got the idea.
+
+57
+00:03:26,290 --> 00:03:31,600
+We cannot keep representing every graph problem in its original domain.
+
+58
+00:03:31,810 --> 00:03:35,560
+We will have to rewrite all of the algorithms again from scratch.
+
+59
+00:03:35,620 --> 00:03:36,640
+This doesn't make sense.
+
+60
+00:03:37,000 --> 00:03:45,400
+So the idea is we reduce the domain to the standard graph and then we use it for simplicity to keep
+
+61
+00:03:45,400 --> 00:03:46,420
+things easier.
+
+62
+00:03:46,600 --> 00:03:48,490
+You don't have to care about the order anymore.
+
+63
+00:03:48,500 --> 00:03:52,660
+You just printed them like a city by city or like state by state.
+
+64
+00:03:52,660 --> 00:03:53,230
+And that's it.
+
+65
+00:03:56,420 --> 00:04:02,120
+In the thick of the problem, we would like to move to another domain, which is images like in fields
+
+66
+00:04:02,120 --> 00:04:05,450
+like image processing and computer vision, they are all about images.
+
+67
+00:04:05,990 --> 00:04:11,480
+The interesting thing here and image is eventually just the rectangle that is our time.
+
+68
+00:04:11,480 --> 00:04:14,180
+See now.
+
+69
+00:04:15,890 --> 00:04:20,540
+The rectangle, Eddie, any any 2D array can be represented as a graph.
+
+70
+00:04:20,960 --> 00:04:21,560
+How?
+
+71
+00:04:22,710 --> 00:04:29,130
+If you have an image that is our times, you see, we have our time see nudes.
+
+72
+00:04:29,280 --> 00:04:32,310
+For example, if I have a 2D array that is 10 times the 20.
+
+73
+00:04:34,040 --> 00:04:36,380
+This represent, for us, 200 nodes.
+
+74
+00:04:36,950 --> 00:04:38,240
+So this is about the nodes.
+
+75
+00:04:38,690 --> 00:04:39,230
+OK.
+
+76
+00:04:39,260 --> 00:04:40,490
+What about the edges?
+
+77
+00:04:41,460 --> 00:04:43,940
+The it just comes in from the surrounding cells.
+
+78
+00:04:44,210 --> 00:04:47,180
+Use surrounding cells are your neighbors where you build your edges.
+
+79
+00:04:47,450 --> 00:04:50,690
+There are a lot of ways to build different levers for simplicity.
+
+80
+00:04:51,020 --> 00:04:57,110
+If this is a set of AI and then the up and right and down and left are your neighbors.
+
+81
+00:04:57,560 --> 00:05:03,050
+This means every edge will have a maximum of four neighbors.
+
+82
+00:05:05,290 --> 00:05:11,410
+I would like you to create a graph with an image, so you think you mainly read to an integers the rows
+
+83
+00:05:11,410 --> 00:05:16,840
+and columns of two the metrics and create a graph based on that in the next section?
+
+84
+00:05:17,080 --> 00:05:22,750
+We will go deeper about representing grids in the Diffa section, so we'll get to more details about
+
+85
+00:05:22,750 --> 00:05:22,970
+that.
+
+86
+00:05:22,990 --> 00:05:25,180
+But for now, we would like you to be familiar with that.
+
+87
+00:05:25,750 --> 00:05:26,920
+So here is the program.
+
+88
+00:05:27,250 --> 00:05:33,310
+You will read something like three and four and you will write for every note.
+
+89
+00:05:33,580 --> 00:05:34,240
+The neighbors.
+
+90
+00:05:34,600 --> 00:05:36,400
+Now how would you represent to the neighbors?
+
+91
+00:05:36,820 --> 00:05:46,300
+Remember, if you have a metric study or time C, we can flatten it two zero one two three blah blah
+
+92
+00:05:46,300 --> 00:05:46,630
+blah.
+
+93
+00:05:46,870 --> 00:05:52,120
+Up to our C minus one center, the C and we have a metrics three times for this mean we have varies
+
+94
+00:05:52,120 --> 00:05:53,110
+from zero to 11.
+
+95
+00:05:53,470 --> 00:05:55,060
+So I'm here writing zero to 11.
+
+96
+00:05:55,810 --> 00:05:57,250
+Now here is node number six.
+
+97
+00:05:57,740 --> 00:06:00,840
+Who are its neighbors hub, right?
+
+98
+00:06:00,860 --> 00:06:01,150
+Live.
+
+99
+00:06:01,150 --> 00:06:02,590
+Don't bring to them in any order.
+
+100
+00:06:02,590 --> 00:06:02,980
+But what?
+
+101
+00:06:02,980 --> 00:06:07,060
+I care that to find their exact four neighbors.
+
+102
+00:06:07,450 --> 00:06:09,320
+What about something like node number three?
+
+103
+00:06:09,730 --> 00:06:12,670
+It only have one neighbor from here and another neighbor from here.
+
+104
+00:06:13,210 --> 00:06:17,190
+So please taken andbut and Brent for us, something like that.
+
+105
+00:06:17,230 --> 00:06:23,230
+It's OK if you bring to them like two, five, seven, 10 or whatever, order here, but you have to
+
+106
+00:06:23,230 --> 00:06:24,370
+follow this format overall.
+
+107
+00:06:26,690 --> 00:06:30,180
+OK, we are done with the graphic representations.
+
+108
+00:06:30,200 --> 00:06:32,210
+Let's have a few functionalities on them.
+
+109
+00:06:32,990 --> 00:06:37,850
+The first program, I would like you to read undirected unweighted graph.
+
+110
+00:06:38,630 --> 00:06:43,760
+So as we did before you start to read the and nodes, the images, you start to read the from until
+
+111
+00:06:44,510 --> 00:06:45,830
+we did that several times.
+
+112
+00:06:46,490 --> 00:06:49,910
+I would like to introduce for you a new graphic concept, which is a chin.
+
+113
+00:06:50,510 --> 00:06:52,370
+The chin is something like a linked list.
+
+114
+00:06:52,640 --> 00:06:55,760
+Remember the link in this just sequence of nodes?
+
+115
+00:06:55,940 --> 00:06:57,080
+This is only the graph.
+
+116
+00:06:57,650 --> 00:07:02,510
+It is the simplest to ever graph a state like any graph that involve the buses.
+
+117
+00:07:02,660 --> 00:07:03,800
+This is a symbol among them.
+
+118
+00:07:04,130 --> 00:07:04,990
+So this is a sequence.
+
+119
+00:07:05,000 --> 00:07:06,740
+It cannot have an extra edge here.
+
+120
+00:07:07,370 --> 00:07:08,390
+It just something like that.
+
+121
+00:07:08,390 --> 00:07:10,070
+One sequence of edges.
+
+122
+00:07:10,430 --> 00:07:13,430
+So zero five five three three four one one two.
+
+123
+00:07:13,910 --> 00:07:15,830
+So this is merely the end would achieve.
+
+124
+00:07:15,860 --> 00:07:16,460
+That's it.
+
+125
+00:07:17,180 --> 00:07:19,010
+Now I would like you.
+
+126
+00:07:19,010 --> 00:07:22,670
+After you read the graph, you will read an integer key for queries.
+
+127
+00:07:23,270 --> 00:07:30,440
+Every query will be a single number, a single node, and you should list the birth starting from this
+
+128
+00:07:30,440 --> 00:07:32,420
+node until the end.
+
+129
+00:07:32,930 --> 00:07:33,830
+So this is a function.
+
+130
+00:07:33,830 --> 00:07:35,250
+Merely bring the chain it.
+
+131
+00:07:35,250 --> 00:07:35,900
+Take a graph.
+
+132
+00:07:36,050 --> 00:07:38,600
+It took a starting node and bring to the chain.
+
+133
+00:07:38,870 --> 00:07:44,090
+This function should be implemented as a simple, recursive function symbol, recursive folks, so we
+
+134
+00:07:44,090 --> 00:07:46,970
+can definitely make it an iterative function.
+
+135
+00:07:47,150 --> 00:07:48,470
+So let's see here an example.
+
+136
+00:07:50,100 --> 00:07:53,620
+I told you we have six loads and five edges and then zero five.
+
+137
+00:07:54,270 --> 00:07:55,830
+So what we have here are for one.
+
+138
+00:07:56,040 --> 00:08:01,710
+Then after that, they told you about the one two, then the five three, then the zero five, then
+
+139
+00:08:01,710 --> 00:08:02,240
+the three four.
+
+140
+00:08:02,250 --> 00:08:03,240
+So have this achieved?
+
+141
+00:08:03,840 --> 00:08:06,990
+Now we have four queries, the first the first equity at zero.
+
+142
+00:08:07,260 --> 00:08:14,910
+So you print from zero up to the end, which is zero five three four one two, then query number engine
+
+143
+00:08:15,240 --> 00:08:20,430
+number three three four one two one one one two two just two two.
+
+144
+00:08:21,610 --> 00:08:26,920
+As usual, all of my values for the rules would be always from zero in the minus one range, so you
+
+145
+00:08:26,920 --> 00:08:29,260
+don't have to worry about verifying that.
+
+146
+00:08:30,870 --> 00:08:33,120
+So this is a first function we deliver on a graph.
+
+147
+00:08:33,210 --> 00:08:34,230
+Let's see another one.
+
+148
+00:08:35,100 --> 00:08:40,050
+You read a directed graph in a very standard where you read the number of nodes, the number of edges,
+
+149
+00:08:40,050 --> 00:08:46,950
+then you read the nine edges and then you will print all the births of Linfa to.
+
+150
+00:08:48,070 --> 00:08:49,960
+All the Baathists of Lindsay, too.
+
+151
+00:08:50,680 --> 00:08:54,090
+So, for example, this is a group of six nodes and edges.
+
+152
+00:08:54,310 --> 00:09:00,520
+You will notice we have all of these two edges, for example, we have an edge from zero to five here
+
+153
+00:09:00,910 --> 00:09:02,290
+and each from five to four.
+
+154
+00:09:02,560 --> 00:09:05,260
+So we can see that zero five.
+
+155
+00:09:06,180 --> 00:09:15,360
+Four is a birth of two inches, so in the given graph, find all of the birth is that consists of two
+
+156
+00:09:15,360 --> 00:09:16,920
+edges and the bent to them.
+
+157
+00:09:18,800 --> 00:09:22,850
+The don't keep thinking about narrow things like what about multiple ages, what about for loops?
+
+158
+00:09:23,360 --> 00:09:26,060
+Assume a very simple graph without multiple edges or silver loops?
+
+159
+00:09:27,110 --> 00:09:32,600
+Um yeah, this should be a simple, iterative function, so don't overcomplicate things.
+
+160
+00:09:33,630 --> 00:09:34,360
+Yeah, that's not here.

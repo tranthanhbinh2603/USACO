@@ -1,0 +1,324 @@
+0
+1
+00:00:00,960 --> 00:00:08,250
+Let's do practice1 on the multidimensional arrays, you are to read a matrix, so whenever I read a matrix,
+1
+
+2
+00:00:08,250 --> 00:00:15,000
+you are reading the row and column and then you are reading the whole matrix and then find the position
+2
+
+3
+00:00:15,780 --> 00:00:18,560
+of the maximum value in the array.
+3
+
+4
+00:00:19,180 --> 00:00:24,030
+If there are several ones you are to find the last occurence, the last position where it exists.
+4
+
+5
+00:00:24,270 --> 00:00:30,900
+So if this is the input, we have several 10s and this 10 is the max value and it is at position 2x2.
+5
+
+6
+00:00:32,690 --> 00:00:40,940
+So I would like you first of all to always give a trail, good trail by yourself and then keep going.
+6
+
+7
+00:00:43,240 --> 00:00:51,530
+Here we have created The matrix and then we are going to extend our effort to get the maximum in
+7
+
+8
+00:00:51,530 --> 00:00:54,260
+1D array, and just where is the maximum in 2D array.
+8
+
+9
+00:00:54,650 --> 00:01:01,290
+So iterate on every row, then iterate on every column and then let's maintain here two positions for where
+9
+
+10
+00:01:01,310 --> 00:01:02,710
+is the maximum so far.
+10
+
+11
+00:01:03,200 --> 00:01:11,630
+If the current array index is >= to the maximum, then we just save this
+11
+
+12
+00:01:11,630 --> 00:01:13,130
+new position here
+12
+
+13
+00:01:13,130 --> 00:01:18,280
+is it. this way we are done with where it is exactly the maximum.
+13
+
+14
+00:01:18,290 --> 00:01:22,690
+So this will keep be updated with the new position and so on.
+14
+
+15
+00:01:23,000 --> 00:01:25,330
+So notice here, the ">=" here
+15
+
+16
+00:01:25,580 --> 00:01:29,610
+Is that the one that helped us to find the occurrence.
+16
+
+17
+00:01:30,020 --> 00:01:35,870
+What if you would like to find the first occurrence, then you just make it ">", this way,
+17
+
+18
+00:01:35,870 --> 00:01:41,720
+Once you found a greater than value, you only replace, so greater than equal made it the last occurrence.
+18
+
+19
+00:01:43,390 --> 00:01:49,720
+OK, another practice we are to read a matrix, then we would to like print four different
+19
+
+20
+00:01:49,720 --> 00:01:50,190
+values.
+20
+
+21
+00:01:50,440 --> 00:01:52,720
+We would like to print the sum of the left diagonal.
+21
+
+22
+00:01:53,200 --> 00:01:54,910
+This is named the left diagonal.
+22
+
+23
+00:01:55,680 --> 00:01:58,080
+And this is named to the right diagonal.
+23
+
+24
+00:01:58,330 --> 00:02:04,510
+So diagonal goes like you start from [0][0] and increment row and column with one increment, increment row and column
+24
+
+25
+00:02:04,960 --> 00:02:07,240
+with one. The right diagonal,
+25
+
+26
+00:02:07,240 --> 00:02:15,220
+you start form the first row last column and go one step this direction and one step this direction
+26
+
+27
+00:02:15,220 --> 00:02:21,640
+you also would like to print the sum of the last row and the sum of the last column.
+27
+
+28
+00:02:22,060 --> 00:02:26,530
+So these are the four values that we would like to print.
+28
+
+29
+00:02:28,060 --> 00:02:36,040
+For example, here you notice that 8 + 15 + 2 is the 25 value and so
+29
+
+30
+00:02:36,040 --> 00:02:36,200
+on.
+30
+
+31
+00:02:36,400 --> 00:02:41,100
+So this is basic exercise to just learn iterating on the matrix.
+31
+
+32
+00:02:42,220 --> 00:02:46,900
+OK, so let's read the array and let's start with the diagonal
+32
+
+33
+00:02:46,910 --> 00:02:53,920
+part. if you would like to go with the diagonal part, start at zero and zero and let's say
+33
+
+34
+00:02:53,950 --> 00:02:55,390
+left_diagonal will be the summation,
+34
+
+35
+00:02:55,750 --> 00:03:05,620
+We keep going as long as i is < rows and j < columns, every time we  add the value
+35
+
+36
+00:03:05,620 --> 00:03:10,970
+at the position i and j, and we have here ++ and ++, to jump to the next position.
+36
+
+37
+00:03:11,290 --> 00:03:18,010
+This is a fair equation in terms of the ++, like nothing risky here because i exists once only
+37
+
+38
+00:03:18,010 --> 00:03:20,470
+in the equation and j exists only once in the equation.
+38
+
+39
+00:03:22,150 --> 00:03:27,880
+So this is how we started from 0 0, 1 1, 2 2, 3 3 and so on. To get the right
+39
+
+40
+00:03:27,880 --> 00:03:28,410
+diagonal,
+40
+
+41
+00:03:28,420 --> 00:03:33,700
+We also start at position row zero, but we start at the right column, the very end column, which
+41
+
+42
+00:03:33,700 --> 00:03:41,170
+is as columns - 1, and then, the equation should move to the next row, which i++, but it
+42
+
+43
+00:03:41,170 --> 00:03:42,470
+should decrease the column,
+43
+
+44
+00:03:42,490 --> 00:03:43,520
+So --.
+44
+
+45
+00:03:43,540 --> 00:03:49,180
+Now we would like to verify it, we would like the i to not exceed the rows and would like the j to stay
+45
+
+46
+00:03:49,630 --> 00:03:54,670
+greater than or equal to the zero. To find the sum of the last row,
+46
+
+47
+00:03:54,920 --> 00:04:01,960
+You just start with the last row equals zero and  j starts with zero.
+47
+
+48
+00:04:05,470 --> 00:04:07,150
+I think ...
+48
+
+49
+00:04:10,150 --> 00:04:16,690
+last row here is where we are accumulating the result, j = 0 is where we start and
+49
+
+50
+00:04:16,690 --> 00:04:19,140
+we are fixing here rows - 1,
+50
+
+51
+00:04:19,150 --> 00:04:21,070
+So this is actually our last row.
+51
+
+52
+00:04:21,280 --> 00:04:29,710
+So we are fixing the row value and the j is just moving from zero to column - 1. in a very similar
+52
+
+53
+00:04:29,710 --> 00:04:30,120
+way,
+53
+
+54
+00:04:30,210 --> 00:04:36,040
+We would like to get to the last column then we are fixing the last column and starting with the row and
+54
+
+55
+00:04:36,040 --> 00:04:39,640
+just incrementing it. so it's more or less iterating on the array itself.
+55
+
+56
+00:04:40,870 --> 00:04:46,290
+OK, let's read a matrix and then we will read indices of two columns.
+56
+
+57
+00:04:46,510 --> 00:04:49,390
+We would like to make a complete swapping for a matrix.
+57
+
+58
+00:04:49,570 --> 00:04:53,530
+For example, here is our matrix and we would like to swap column 0
+58
+
+59
+00:04:54,640 --> 00:05:01,450
+With the column number 4, so after the result, you see here, 52, 6, 10, they come in here in this way, ok.
+59
+
+60
+00:05:02,140 --> 00:05:06,340
+again, more of iterating on a matrix, and just doing some swapping.
+60
+
+61
+00:05:06,670 --> 00:05:08,380
+So to do that, we read the matrix,
+61
+
+62
+00:05:08,650 --> 00:05:14,720
+Then we iterate on every row and then we start to swap the value in position, row, c1,
+62
+
+63
+00:05:14,920 --> 00:05:18,370
+with the position of row and c2.
+63
+
+64
+00:05:18,610 --> 00:05:22,550
+Once we are done, we can print the new swapped columns.
+64
+
+65
+00:05:23,380 --> 00:05:24,100
+That's it for now.

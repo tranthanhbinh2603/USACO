@@ -1,0 +1,608 @@
+1
+00:00:01,760 --> 00:00:06,560
+So we will solve of this another problem. this time there is a slight change in the question, so instead
+
+2
+00:00:06,560 --> 00:00:11,060
+of having 2N plus one numbers, we are given actually 2N+2 number.
+
+3
+00:00:11,060 --> 00:00:15,950
+OK, so that means there are two numbers which are unique and rest
+
+4
+00:00:15,950 --> 00:00:21,720
+every number is coming twice except two numbers and we need to find out those two numbers.
+
+5
+00:00:21,740 --> 00:00:25,310
+Okay, so this is what the question is saying.
+
+6
+00:00:25,760 --> 00:00:32,479
+So let us take an example of an array. Ok and we need to see what how do we figure it out?
+
+7
+00:00:32,810 --> 00:00:33,860
+What are those two numbers?
+
+8
+00:00:33,860 --> 00:00:34,100
+OK?
+
+9
+00:00:34,750 --> 00:00:37,010
+Maybe let me repeat some numbers.
+
+10
+00:00:37,130 --> 00:00:40,640
+So three is coming later two times four is coming let say
+
+11
+00:00:40,640 --> 00:00:41,390
+Two times.
+
+12
+00:00:41,930 --> 00:00:47,090
+let say a five is coming one times, and let say six is coming one times and let say two 
+
+13
+00:00:47,090 --> 00:00:48,140
+is coming two time.
+
+14
+00:00:48,230 --> 00:00:51,710
+OK, so water to unique numbers that we have.
+
+15
+00:00:51,740 --> 00:00:55,190
+We have five and we also have six.
+
+16
+00:00:55,220 --> 00:00:55,520
+OK.
+
+17
+00:00:56,480 --> 00:00:58,430
+So how do we find out?
+
+18
+00:00:58,430 --> 00:01:00,530
+What are those two unique numbers?
+
+19
+00:01:00,560 --> 00:01:00,860
+OK.
+
+20
+00:01:01,550 --> 00:01:06,680
+And let me just say, instead of six we have a number seven that would also be fine.
+
+21
+00:01:08,480 --> 00:01:08,750
+OK.
+
+22
+00:01:10,080 --> 00:01:17,520
+So that you don't think I'm taking the consecutive numbers,.so we have five and seven, which are unique
+
+23
+00:01:17,520 --> 00:01:20,490
+numbers. now as a very first step
+
+24
+00:01:20,700 --> 00:01:28,110
+What we can observe from the previous problem is if you simply do XOR of all these numbers, this repeating
+
+25
+00:01:28,110 --> 00:01:30,000
+numbers will cancel out each other.
+
+26
+00:01:30,030 --> 00:01:38,520
+So two XOR  three XOR four XOR five XOR four XOR three XOR seven and XOR two.
+
+27
+00:01:38,820 --> 00:01:40,260
+OK, so what?
+
+28
+00:01:40,260 --> 00:01:45,240
+What is going to happen that two is going to cancel its bits. three is going to cancel it
+
+29
+00:01:45,240 --> 00:01:47,910
+bits. four is gong to cancel its bits.
+
+30
+00:01:48,330 --> 00:01:52,080
+And finally, the result would be nothing but five XOR seven, OK?
+
+31
+00:01:53,370 --> 00:01:59,640
+If you do this bitwise XOR, five is like one zero one. seven is like one one one.
+
+32
+00:02:00,120 --> 00:02:02,160
+If you do a XOR, this is zero.
+
+33
+00:02:02,280 --> 00:02:03,950
+This is what ? this is one.
+
+34
+00:02:03,960 --> 00:02:05,850
+And this is also zero.
+
+35
+00:02:06,770 --> 00:02:08,759
+Now how do we figure it out
+
+36
+00:02:09,150 --> 00:02:11,310
+What are the two numbers that we have?
+
+37
+00:02:11,310 --> 00:02:17,250
+OK, so obviously we can use the frequency array based approach and then figure out what numbers have
+
+38
+00:02:17,250 --> 00:02:18,300
+a single frequency.
+
+39
+00:02:18,750 --> 00:02:23,700
+So we discussed that frequency table based approach takes the order(n) space.
+
+40
+00:02:24,300 --> 00:02:29,310
+But here we are, going to do it using the bit masking based approach.
+
+41
+00:02:29,710 --> 00:02:30,000
+OK.
+
+42
+00:02:31,800 --> 00:02:36,210
+And we will try to avoid any extra space that we're going to use. OK?
+
+43
+00:02:36,570 --> 00:02:39,360
+And maintaining the linear time complexity as well.
+
+44
+00:02:39,930 --> 00:02:48,240
+So now if you look carefully at this result. Ok if you give a careful look with this result, what
+
+45
+00:02:48,240 --> 00:02:50,010
+you will observe is that
+
+46
+00:02:52,140 --> 00:02:57,990
+If the two numbers are different. OK, if the two numbers are different, which are going to be then
+
+47
+00:02:57,990 --> 00:02:59,670
+this XOR will never be zero.
+
+48
+00:02:59,750 --> 00:03:04,110
+OK, so I am writing one observation XOR
+
+49
+00:03:05,380 --> 00:03:07,600
+2 unique numbers, OK?
+
+50
+00:03:09,340 --> 00:03:10,520
+Will be greater than zero.
+
+51
+00:03:10,540 --> 00:03:12,820
+That means there would be at least
+
+52
+00:03:14,590 --> 00:03:18,400
+One set bit, there would be at least one set
+
+53
+00:03:18,580 --> 00:03:24,200
+bit inside the XOR. OK. now, what are you can do base upon this set bits?
+
+54
+00:03:24,580 --> 00:03:28,990
+OK, so a bit when...when a bit is set? a bit is set
+
+55
+00:03:32,010 --> 00:03:39,300
+when it is present in exactly one of the two numbers when it is present
+
+56
+00:03:40,800 --> 00:03:42,210
+in exactly.
+
+57
+00:03:44,580 --> 00:03:48,330
+One of the two numbers. OK?
+
+58
+00:03:51,060 --> 00:03:56,550
+So in this XOR which bit is set that we can easily figure it out. which bit is set, it is
+
+59
+00:03:56,550 --> 00:04:03,080
+easy to figure it out, this bit is set that means it is present in exactly one of the two numbers
+
+60
+00:04:03,090 --> 00:04:04,770
+it is not present in both.
+
+61
+00:04:04,830 --> 00:04:05,160
+OK.
+
+62
+00:04:05,670 --> 00:04:09,480
+Basically, I'm saying it's not present in both.so what is the bit that is set ?
+
+63
+00:04:10,080 --> 00:04:11,220
+This is the bit. OK.
+
+64
+00:04:11,220 --> 00:04:16,140
+This we can figure it out at what position the bit is set.  what I can do ?
+
+65
+00:04:16,140 --> 00:04:16,800
+I can say ok.
+
+66
+00:04:16,800 --> 00:04:19,000
+This is a position zero.
+
+67
+00:04:19,720 --> 00:04:20,459
+What is this set bit?
+
+68
+00:04:20,760 --> 00:04:21,360
+It is zero.
+
+69
+00:04:22,050 --> 00:04:23,180
+This is position one.
+
+70
+00:04:23,190 --> 00:04:23,790
+What is the setbit ?
+
+71
+00:04:23,790 --> 00:04:24,030
+.
+
+72
+00:04:25,540 --> 00:04:29,860
+It is one. OK, what we will...we  will start from the right and we will find out
+
+73
+00:04:30,960 --> 00:04:37,760
+the first position or any position will work, any position where the bit is set that will tell ok.
+
+74
+00:04:37,770 --> 00:04:41,470
+this is set in only one of the numbers. ok. So this bit is set..
+
+75
+00:04:41,700 --> 00:04:46,320
+It is not set in 5 .it is set in seven. Ok. what we will do?
+
+76
+00:04:47,160 --> 00:04:52,530
+We will iterate through this entire input ok. so in the third step
+
+77
+00:04:52,680 --> 00:05:00,450
+we will say Ok, let's say we know the position of set bit. position of anyone set bit you can
+
+78
+00:05:00,450 --> 00:05:04,110
+figure it out just to make the algorithm more clear.
+
+79
+00:05:04,170 --> 00:05:07,920
+We will start from the right and we'll find out the first set
+
+80
+00:05:07,920 --> 00:05:13,650
+bit from the right OK. first set bit from the right. ok.
+
+81
+00:05:13,650 --> 00:05:14,570
+once you know the position.
+
+82
+00:05:14,580 --> 00:05:16,200
+OK, what you can do?
+
+83
+00:05:16,230 --> 00:05:23,220
+You can separate your array into two parts in which part in which there is a set
+
+84
+00:05:23,220 --> 00:05:32,430
+bit Ok. so if you talk about the numbers two, three, four, five, four, three, seven and two, OK?
+
+85
+00:05:33,130 --> 00:05:42,630
+One of, if you write the binary of this OK. so a binary of two is zero one zero, zero one one, one zero
+
+86
+00:05:42,630 --> 00:05:46,530
+zero, one zero one, zero... one zero zero.
+
+87
+00:05:47,100 --> 00:05:47,430
+OK.
+
+88
+00:05:49,130 --> 00:05:51,140
+Zero one one, one one one.
+
+89
+00:05:51,320 --> 00:05:53,590
+And what about two? zero one zero.
+
+90
+00:05:53,830 --> 00:05:54,130
+OK.
+
+91
+00:05:56,030 --> 00:06:02,390
+So what I'm saying is let us have we also have some more numbers like maybe six and six.
+
+92
+00:06:02,870 --> 00:06:08,810
+That that can also be there OK. let's say we have six and six if you have six and six.
+
+93
+00:06:10,260 --> 00:06:13,500
+Then it is like what? it is like.
+
+94
+00:06:16,610 --> 00:06:17,420
+One one
+
+95
+00:06:18,710 --> 00:06:19,190
+Zero.
+
+96
+00:06:19,280 --> 00:06:19,640
+OK.
+
+97
+00:06:20,300 --> 00:06:21,620
+And one one zero, OK.
+
+98
+00:06:22,670 --> 00:06:29,180
+So what I'm saying is if you try to separate these numbers based on the position of set bit.
+
+99
+00:06:30,050 --> 00:06:31,400
+So where is the setbits?
+
+100
+00:06:31,710 --> 00:06:33,890
+The set bits is there on the second position.
+
+101
+00:06:34,640 --> 00:06:43,100
+So all the numbers in which they have one set bit at position p. Ok. P equal to one
+
+102
+00:06:43,100 --> 00:06:46,910
+in this case. we will separate them out in a different set.
+
+103
+00:06:47,150 --> 00:06:52,040
+Ok, so this as a set bit Ok. we take it. this as a set bit,we take it.
+
+104
+00:06:52,610 --> 00:06:55,040
+This does not have a set bit, we ignore it.
+
+105
+00:06:55,550 --> 00:06:57,380
+This does not have a set bit, we ignore it.
+
+106
+00:06:57,980 --> 00:07:00,080
+This does not have a set bit, we ignore it.
+
+107
+00:07:00,890 --> 00:07:02,630
+This has a set bit.ok.
+
+108
+00:07:02,780 --> 00:07:03,980
+We are checking for set
+
+109
+00:07:03,990 --> 00:07:06,230
+bit at this p equal to one. Ok.
+
+110
+00:07:07,220 --> 00:07:08,690
+This has a set bit. OK.
+
+111
+00:07:09,170 --> 00:07:09,950
+This has a set bit.
+
+112
+00:07:09,950 --> 00:07:10,250
+.
+
+113
+00:07:10,430 --> 00:07:10,850
+OK.
+
+114
+00:07:11,330 --> 00:07:13,790
+This has a set bit. ok. This has a set bit.
+
+115
+00:07:13,790 --> 00:07:14,270
+ok.
+
+116
+00:07:14,780 --> 00:07:21,830
+So what I can say if I combine all these numbers in one particular set Ok, let's say that set is
+
+117
+00:07:21,830 --> 00:07:23,680
+A. OK, I'll just write it here.
+
+118
+00:07:24,910 --> 00:07:27,850
+So the set A is nothing but two
+
+119
+00:07:29,060 --> 00:07:30,470
+Now, what do you know is
+
+120
+00:07:32,880 --> 00:07:38,240
+In set you will have some numbers which are repeating twice so  A will be up to 2N+1.
+
+121
+00:07:38,700 --> 00:07:45,270
+And it will have one of the unique numbers because we are separating on this bit and this bit is only
+
+122
+00:07:45,270 --> 00:07:47,000
+coming in one of the unique members.
+
+123
+00:07:47,210 --> 00:07:49,230
+So A will be of the form 2N+1.
+
+124
+00:07:49,860 --> 00:07:59,100
+So if you just XOR all the elements of it so it would be two XOR three XOR three XOR seven XOR
+
+125
+00:07:59,100 --> 00:08:01,410
+two XOR six XOR six.
+
+126
+00:08:02,040 --> 00:08:03,390
+So what is going to happen?
+
+127
+00:08:03,990 --> 00:08:07,770
+6 goes off, 2 goes off, 3 goes off.
+
+128
+00:08:07,950 --> 00:08:10,350
+And what is A ? A is nothing but seven.
+
+129
+00:08:10,380 --> 00:08:10,680
+OK.
+
+130
+00:08:11,040 --> 00:08:11,610
+Now... now 
+
+131
+00:08:11,610 --> 00:08:13,410
+You know what is the first number.
+
+132
+00:08:14,160 --> 00:08:15,570
+How do you get the second number?
+
+133
+00:08:15,720 --> 00:08:16,020
+OK.
+
+134
+00:08:16,260 --> 00:08:17,160
+There are two ways.
+
+135
+00:08:17,490 --> 00:08:23,310
+One is you pick all the numbers which are set B, which are not in set A.
+
+136
+00:08:23,640 --> 00:08:25,230
+So you call them as set B.
+
+137
+00:08:25,530 --> 00:08:29,410
+set B is nothing but four XOR five XOR four.
+
+138
+00:08:29,410 --> 00:08:30,760
+And It is nothing but five.
+
+139
+00:08:30,780 --> 00:08:30,990
+OK.
+
+140
+00:08:31,290 --> 00:08:37,830
+So you get the second number B equal to five or what are you can do is you can say I know the
+
+141
+00:08:37,830 --> 00:08:39,990
+XOR. XOR is nothing but five XOR seven.
+
+142
+00:08:40,380 --> 00:08:42,539
+And once you figure it out, figured it out.
+
+143
+00:08:42,539 --> 00:08:43,940
+What is the number A?
+
+144
+00:08:44,520 --> 00:08:49,920
+So you can do XOR of this result with A, that is seven.
+
+145
+00:08:50,560 --> 00:08:53,250
+So from here also you can get the second number, which is five.
+
+146
+00:08:53,280 --> 00:08:53,580
+OK.
+
+147
+00:08:54,240 --> 00:09:02,730
+Hence, we are able to extract the two numbers five and the number seven using bitwise operators.
+
+148
+00:09:02,730 --> 00:09:03,000
+OK?
+
+149
+00:09:03,960 --> 00:09:06,150
+So I hope you really understood this approach.
+
+150
+00:09:06,630 --> 00:09:14,100
+And in the next lecture, we will saw the code and this approach is taking O(n) time and
+
+151
+00:09:14,100 --> 00:09:19,530
+it is taking O(1) one space. Ok. Hence it is quite an efficient approach.
+
+152
+00:09:20,070 --> 00:09:21,960
+And that's all for this lecture.
+

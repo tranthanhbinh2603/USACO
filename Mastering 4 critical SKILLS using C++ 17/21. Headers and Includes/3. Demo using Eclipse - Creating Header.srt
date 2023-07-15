@@ -1,0 +1,64 @@
+0
+1
+00:00:01,140 --> 00:00:07,590
+Let's see how eclipse can help us to create a header file. You can come here, right-click new, and then
+1
+
+2
+00:00:07,590 --> 00:00:13,380
+you see header file and let's give it a name, for example, calculator
+2
+
+3
+00:00:16,020 --> 00:00:23,430
+dot h. In the future, you can learn how to configure the style of the header file, but
+3
+
+4
+00:00:23,430 --> 00:00:27,050
+for now, let's go the default and we say finish. You notice here
+4
+
+5
+00:00:27,060 --> 00:00:29,720
+it created directly for you the file that you want.
+5
+
+6
+00:00:29,940 --> 00:00:30,900
+If you would like to create
+6
+
+7
+00:00:30,900 --> 00:00:32,010
+It's cpp version,
+7
+
+8
+00:00:32,010 --> 00:00:37,250
+you just come here and say new source file, and give it a name, let's say calculator
+8
+
+9
+00:00:38,050 --> 00:00:41,250
+dot cpp,
+9
+
+10
+00:00:44,100 --> 00:00:48,630
+and then it is going to create for you a cpp. If you'd like to remove them, in C++
+10
+
+11
+00:00:48,640 --> 00:00:49,440
+this is very easy.
+11
+
+12
+00:00:49,440 --> 00:00:50,220
+Just right here
+12
+
+13
+00:00:50,220 --> 00:00:53,610
+come on and delete and that's it.

@@ -1,0 +1,367 @@
+1
+00:00:00,750 --> 00:00:03,960
+It's sort of the lobster problem about what getting the message.
+
+2
+00:00:04,850 --> 00:00:09,600
+Um, so again, let's think about the brain research about the here.
+
+3
+00:00:10,350 --> 00:00:17,070
+If I told you that using ten seconds, we managed to deliver the message, then definitely using ten
+
+4
+00:00:17,070 --> 00:00:18,330
+point five we can deliver.
+
+5
+00:00:18,330 --> 00:00:20,500
+It was ten pointed.
+
+6
+00:00:20,740 --> 00:00:22,710
+Like 12 seconds, we can deliver it.
+
+7
+00:00:23,610 --> 00:00:28,830
+If I told you that six seconds are enough to deliver it, five seconds are enough to deliver it for
+
+8
+00:00:28,830 --> 00:00:30,360
+two seconds aren't enough to deliver it.
+
+9
+00:00:30,690 --> 00:00:32,580
+So this is a one trick function here.
+
+10
+00:00:32,760 --> 00:00:34,890
+So the possible function is to function.
+
+11
+00:00:35,220 --> 00:00:41,550
+So this is the first step, which is a stronger signal that we can bind the research at the time.
+
+12
+00:00:42,180 --> 00:00:48,210
+So we will start here with binary searching on the time the function had the position and the message
+
+13
+00:00:48,210 --> 00:00:48,720
+distance.
+
+14
+00:00:48,960 --> 00:00:52,050
+We bring the researcher at the time the limits are based on the problem fixed.
+
+15
+00:00:52,470 --> 00:00:55,200
+We can build the middle and we have a possible function.
+
+16
+00:00:55,620 --> 00:00:58,710
+If it is possible with this middle time, we are happy.
+
+17
+00:00:58,980 --> 00:01:03,030
+But let's shift to two and equal metal to try to find the minimum time.
+
+18
+00:01:03,690 --> 00:01:10,710
+If the current time isn't enough or the current distance, time, year, equal distance, if the time
+
+19
+00:01:10,710 --> 00:01:14,280
+or the distance isn't enough, then we need to search for a bigger party.
+
+20
+00:01:14,670 --> 00:01:18,690
+The challenge in this problem is in writing the book about function itself.
+
+21
+00:01:20,120 --> 00:01:23,810
+So here is the logic, which involves some good amount of thinking.
+
+22
+00:01:25,100 --> 00:01:31,460
+Now, let's say we have D units of time, which mean we can move distance of D, so the function here
+
+23
+00:01:31,460 --> 00:01:37,790
+take positions, the message distance and how the selected time were the selected distance.
+
+24
+00:01:38,600 --> 00:01:45,860
+Now let's say it is the busier person, the first person, the first person has the most distance.
+
+25
+00:01:46,310 --> 00:01:51,200
+So logically, he will use all of them, so he will use this more distance.
+
+26
+00:01:51,530 --> 00:01:54,770
+So now he and b zero plus move distance.
+
+27
+00:01:55,950 --> 00:02:03,240
+Once he reached this position, he will show the message which can go up to messaging distance, so
+
+28
+00:02:03,240 --> 00:02:09,630
+the shouting will go to a new distance, which is b zero plus maximum distance of plus the message of
+
+29
+00:02:09,630 --> 00:02:10,290
+distance here.
+
+30
+00:02:12,660 --> 00:02:14,130
+So this is the last.
+
+31
+00:02:15,210 --> 00:02:20,010
+So this is my last opposition and this is the last position for the message to reach it.
+
+32
+00:02:20,790 --> 00:02:23,940
+OK, so this are our first two values.
+
+33
+00:02:24,330 --> 00:02:28,180
+So the B zero can move to here show two here.
+
+34
+00:02:28,230 --> 00:02:31,140
+This is what happened in the first tier.
+
+35
+00:02:31,140 --> 00:02:31,620
+It's time.
+
+36
+00:02:32,940 --> 00:02:34,980
+Now we are done with the first person.
+
+37
+00:02:37,240 --> 00:02:41,010
+Now, at times for the second debate, so it is bizarro.
+
+38
+00:02:41,500 --> 00:02:43,930
+It is a move busy to move.
+
+39
+00:02:44,260 --> 00:02:45,370
+It is the shooting.
+
+40
+00:02:45,730 --> 00:02:47,470
+So here is the message.
+
+41
+00:02:47,710 --> 00:02:48,850
+The message can be here.
+
+42
+00:02:49,810 --> 00:02:51,780
+The second person at B.1.
+
+43
+00:02:52,900 --> 00:02:57,370
+First of all, we would like to know if this person can ever listen to this message or not.
+
+44
+00:02:58,460 --> 00:03:05,960
+As simple as I can move back to them using them of distance, so I will start to like logically, will
+
+45
+00:03:05,960 --> 00:03:12,200
+move back if I found myself, we can move back at least before or equal to the last position for the
+
+46
+00:03:12,200 --> 00:03:13,790
+message, then I can hear it.
+
+47
+00:03:14,420 --> 00:03:16,940
+What if my best is just to go back here?
+
+48
+00:03:17,570 --> 00:03:19,010
+Then I cannot hear the message.
+
+49
+00:03:19,250 --> 00:03:19,940
+So no way.
+
+50
+00:03:20,930 --> 00:03:24,860
+So the first thing is we need to make sure I can hear the message.
+
+51
+00:03:25,130 --> 00:03:31,910
+To do that, we need to compare my this my position minus the distance compared to the last position
+
+52
+00:03:31,910 --> 00:03:32,690
+for the message.
+
+53
+00:03:33,230 --> 00:03:37,220
+If I am greater than it, then I cannot hear the message.
+
+54
+00:03:38,180 --> 00:03:41,600
+OK, let's say I can hear the message.
+
+55
+00:03:41,930 --> 00:03:45,290
+So here is to be zero and it is location.
+
+56
+00:03:45,530 --> 00:03:49,910
+And here is the message of distance at, let's say, messages this year.
+
+57
+00:03:50,540 --> 00:03:51,340
+And this is me.
+
+58
+00:03:53,940 --> 00:04:01,200
+Now we went logically this person to take the message and go as far as possible to the right.
+
+59
+00:04:01,560 --> 00:04:02,520
+So here is the point.
+
+60
+00:04:03,150 --> 00:04:10,020
+The person himself can go in the maximum keys to this direction with that move distance.
+
+61
+00:04:10,260 --> 00:04:17,400
+But let's say I'm here a position to a and the distance is five so I can go maximum at was five.
+
+62
+00:04:17,400 --> 00:04:18,570
+I can go seven here.
+
+63
+00:04:19,470 --> 00:04:21,540
+So this is my maximum to go to this site.
+
+64
+00:04:21,930 --> 00:04:24,960
+But wait, I am limited with where is this message?
+
+65
+00:04:25,290 --> 00:04:27,570
+Let's say that this message here is at six.
+
+66
+00:04:28,470 --> 00:04:32,400
+Then I, although I can go one unit farther than it, I have to stop here.
+
+67
+00:04:33,930 --> 00:04:42,390
+So I am trapped between my best is to be between the minimum of where the message ends and what is my
+
+68
+00:04:42,390 --> 00:04:43,350
+maximum limit.
+
+69
+00:04:44,040 --> 00:04:47,720
+So the logic is followed, which isn't easy and all involved with a good deal of thinking.
+
+70
+00:04:47,730 --> 00:04:53,610
+The logic is as follows We start with the first person and move the distance.
+
+71
+00:04:53,940 --> 00:04:55,800
+Let's call that my last opposition.
+
+72
+00:04:57,010 --> 00:05:02,980
+Now, for every person at last position, his message can be heard from last message of distance.
+
+73
+00:05:03,310 --> 00:05:05,680
+This is the last position with the message you can be heard.
+
+74
+00:05:07,610 --> 00:05:11,030
+For the current person, I this is for this person.
+
+75
+00:05:11,310 --> 00:05:17,750
+Well, the current the person I the kind of person would a chick if I return it minus distance, am
+
+76
+00:05:17,750 --> 00:05:18,860
+I after their loss?
+
+77
+00:05:18,860 --> 00:05:19,850
+The message opposition?
+
+78
+00:05:20,060 --> 00:05:25,520
+If yes, then the message end here, but I can go back only to here.
+
+79
+00:05:25,640 --> 00:05:27,560
+So there is a gap, then no way.
+
+80
+00:05:28,410 --> 00:05:31,040
+OK, let's assume you can listen to the message.
+
+81
+00:05:31,400 --> 00:05:35,090
+What would be your logically last position that you can do?
+
+82
+00:05:35,090 --> 00:05:38,960
+You'd like to go to the right as much as possible because you would like to deliver to the next person.
+
+83
+00:05:39,500 --> 00:05:40,850
+So there's two limitation.
+
+84
+00:05:41,240 --> 00:05:46,040
+I can go to the right up to this distance, but I'm also limited with this distance.
+
+85
+00:05:46,250 --> 00:05:49,760
+The minimum of them would represent my optimal position.
+
+86
+00:05:50,670 --> 00:05:55,080
+Uh, if we managed to do that, then we can do it.
+
+87
+00:05:55,140 --> 00:06:01,950
+So the cure of this problem is not in the binary search, but it is in the bush people function.
+
+88
+00:06:01,950 --> 00:06:07,110
+But um, this question is harder than the previous two.
+
+89
+00:06:07,710 --> 00:06:09,780
+It's OK that some questions would hurt.
+
+90
+00:06:09,850 --> 00:06:11,160
+It's totally completely OK.
+
+91
+00:06:11,310 --> 00:06:12,060
+Take it easy.
+
+92
+00:06:12,240 --> 00:06:15,690
+Visit back to do list and all of the tips that we provided before.

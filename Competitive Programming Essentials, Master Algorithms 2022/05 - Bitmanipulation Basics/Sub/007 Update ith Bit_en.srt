@@ -1,0 +1,272 @@
+1
+00:00:01,670 --> 00:00:07,610
+Hi Everyone, So now we're going to discuss one more method that we need to complete a update i th bit.
+
+2
+00:00:07,630 --> 00:00:13,550
+OK, so what we will get, we will get n, the position and the value that we want to put in a particular
+
+3
+00:00:13,820 --> 00:00:14,270
+position.
+
+4
+00:00:14,270 --> 00:00:22,070
+So let's say we have a number like this and I say. OK. this is the i th index and I want to update
+
+5
+00:00:22,130 --> 00:00:25,130
+this index as zero.
+
+6
+00:00:25,250 --> 00:00:29,660
+OK, so what I need to do? I need to put this as a zero.
+
+7
+00:00:30,320 --> 00:00:33,200
+Or it may happen that, OK. No, this is the i th index.
+
+8
+00:00:33,200 --> 00:00:35,450
+I want to put this index as one.
+
+9
+00:00:36,980 --> 00:00:46,280
+So we need to write a code such that it handles both the cases. OK. one way of doing this is what we can
+
+10
+00:00:46,280 --> 00:00:46,530
+do?
+
+11
+00:00:46,670 --> 00:00:48,110
+We can create a mask.
+
+12
+00:00:48,260 --> 00:00:51,470
+OK, we can create a mask and we can...
+
+13
+00:00:52,340 --> 00:00:54,290
+We know how to set this particular bit to one.
+
+14
+00:00:54,470 --> 00:00:55,880
+That is something we have already seen.
+
+15
+00:00:56,360 --> 00:01:00,140
+But suppose if this bit is one I want to set it to zero.
+
+16
+00:01:00,310 --> 00:01:02,870
+OK that we have also seen.
+
+17
+00:01:02,900 --> 00:01:09,320
+So basically, we need to combine the functionality of set bit plus clear bit
+
+18
+00:01:09,320 --> 00:01:12,100
+in this particular case.ok. what...
+
+19
+00:01:12,140 --> 00:01:18,310
+What we can do is, let's say we're talking about a particular position one one one zero zero one zero
+
+20
+00:01:18,320 --> 00:01:19,070
+something like this.
+
+21
+00:01:19,550 --> 00:01:20,810
+I want to do some work here.
+
+22
+00:01:21,230 --> 00:01:24,170
+The first, what I can do? I can just clear this bit.
+
+23
+00:01:24,350 --> 00:01:25,430
+I can make it zero.
+
+24
+00:01:25,640 --> 00:01:27,090
+OK. I can destroy this bit.
+
+25
+00:01:28,220 --> 00:01:29,480
+That means I'll make it zero.
+
+26
+00:01:29,840 --> 00:01:34,940
+And once this is zero, we can actually do OR operation with the mask.
+
+27
+00:01:35,280 --> 00:01:38,850
+and the mask would look something like this if I want to...
+
+28
+00:01:38,900 --> 00:01:46,580
+If the value of  bit that we want to say should be one or the mask would look something like this all zeros.
+
+29
+00:01:49,470 --> 00:01:53,910
+If the value that we want set is going to be zero so if you do the OR you will have the right
+
+30
+00:01:53,910 --> 00:01:58,020
+bit here. OK.  you will have the updated bit and rest
+
+31
+00:01:58,020 --> 00:01:59,860
+all the bits will remain same.
+
+32
+00:02:00,150 --> 00:02:01,860
+OK. rest everything will remain same.
+
+33
+00:02:02,520 --> 00:02:03,990
+So here you will get the right value.
+
+34
+00:02:04,530 --> 00:02:10,500
+So basically, if the value zero we just need to do the clearing part and if the values one we first
+
+35
+00:02:10,500 --> 00:02:16,380
+need to clear that bit so that it handles both the cases whether the old was one or zero it 
+
+36
+00:02:16,380 --> 00:02:17,130
+will work for both.
+
+37
+00:02:18,200 --> 00:02:23,320
+So what I can do? I can simply call clear i th bit. I can give n and i.
+
+38
+00:02:23,780 --> 00:02:26,030
+And once it is done we... what we can do?
+
+39
+00:02:26,030 --> 00:02:32,770
+We can create a mask which is like this. I can say OK int mask that is equal to one left shift i.
+
+40
+00:02:33,380 --> 00:02:34,580
+And we can return...
+
+41
+00:02:35,570 --> 00:02:37,520
+OK, it's update method.
+
+42
+00:02:37,520 --> 00:02:39,490
+So we can pass it by reference..
+
+43
+00:02:40,070 --> 00:02:41,480
+we can say n equals to
+
+44
+00:02:42,790 --> 00:02:44,980
+n  OR mask. that's it.
+
+45
+00:02:45,880 --> 00:02:49,090
+This actually sets the right value.
+
+46
+00:02:49,450 --> 00:02:49,750
+OK.
+
+47
+00:02:52,440 --> 00:02:59,130
+And Sorry, this not... this... this should not be one left shift i, this should be value
+
+48
+00:02:59,130 --> 00:03:02,060
+left shift i, OK, so that as v left shift i.
+
+49
+00:03:02,550 --> 00:03:10,020
+So if the V is zero. if the v is zero, this will be entirely zero and doing OR with zero will not do anything OK.
+
+50
+00:03:10,410 --> 00:03:16,350
+And if we is one, then this number would be something like this and this will create the right mask
+
+51
+00:03:16,350 --> 00:03:16,740
+for us.
+
+52
+00:03:17,220 --> 00:03:22,920
+And the i th bit would be set in the value of n. so let us try to do some work.
+
+53
+00:03:23,280 --> 00:03:28,780
+Maybe I can call this method update i th bit and endl.
+
+54
+00:03:29,010 --> 00:03:34,830
+So let's say the original number was 13 and I can say n, i and  value.
+
+55
+00:03:35,250 --> 00:03:38,130
+let's say I want to set some bit in 13 to one.
+
+56
+00:03:38,730 --> 00:03:40,800
+So let me show it to you.
+
+57
+00:03:46,430 --> 00:03:51,530
+OK, so I want to set... so 13 is one one zero one. I wante to set the first bit as one.
+
+58
+00:03:54,220 --> 00:03:54,660
+Mm.
+
+59
+00:03:55,910 --> 00:03:57,020
+Let me build a code.
+
+60
+00:04:06,990 --> 00:04:15,900
+OK, so 13 was like this one one zero one. if I set the first bit, then this number becomes one one
+
+61
+00:04:15,900 --> 00:04:22,920
+one one, which is 15 that is fine. if I want to update the second bit and I want to make the value
+
+62
+00:04:22,920 --> 00:04:23,560
+as zero.
+
+63
+00:04:23,580 --> 00:04:24,720
+So let's see what happens.
+
+64
+00:04:25,230 --> 00:04:31,380
+I want to say, OK, said this bit as zero and take I as input from the use it.
+
+65
+00:04:32,070 --> 00:04:37,470
+The second, which would be zero, then the number would become if this is a two zero, it would become
+
+66
+00:04:37,470 --> 00:04:40,650
+one zero zero one and this number is nothing but nine.
+
+67
+00:04:41,310 --> 00:04:46,710
+So I hope I'm dead, but it's clear to you and this is how we can implement update.
+
+68
+00:04:46,710 --> 00:04:47,310
+I had to wait.
+

@@ -1,0 +1,387 @@
+1
+00:00:00,780 --> 00:00:06,390
+Let's all the the, uh, the psychic detection problem, it looks at tricky, but actually it isn't
+
+2
+00:00:07,080 --> 00:00:08,850
+so for solving it.
+
+3
+00:00:08,850 --> 00:00:10,410
+We need to remember a few facts.
+
+4
+00:00:11,160 --> 00:00:17,130
+Again at three is undirected graph within nodes and in the minus one edges.
+
+5
+00:00:17,250 --> 00:00:17,640
+Right?
+
+6
+00:00:18,210 --> 00:00:21,360
+And remember, there is only one bathroom any note to another.
+
+7
+00:00:21,570 --> 00:00:25,020
+And also, as we mentioned before, there are no cycles in a tree.
+
+8
+00:00:25,470 --> 00:00:30,420
+And also, if you added a single edge, it must to create the fake ID like we have here.
+
+9
+00:00:30,990 --> 00:00:34,770
+Assemble three zero one two three.
+
+10
+00:00:35,550 --> 00:00:38,330
+This is a three or eight nodes three edges.
+
+11
+00:00:38,340 --> 00:00:41,250
+If you added any edge, it's going to create the cycle.
+
+12
+00:00:41,910 --> 00:00:48,630
+Now the idea is this following our normal defense is actually, Oh, we photograph.
+
+13
+00:00:48,660 --> 00:00:49,560
+This looks weird.
+
+14
+00:00:49,940 --> 00:00:50,710
+Here's the idea.
+
+15
+00:00:50,730 --> 00:00:55,840
+Remember, we already discussed about the cycles in the in the in the matrix.
+
+16
+00:00:55,840 --> 00:00:56,430
+The problem.
+
+17
+00:00:56,760 --> 00:01:01,770
+We mentioned that when you have a cycle, it comes from two sources in undirected graph.
+
+18
+00:01:02,070 --> 00:01:06,570
+You are at node number two, for example, and you move to node number three, node number two.
+
+19
+00:01:06,630 --> 00:01:09,310
+My number three might try to go back to its appearance.
+
+20
+00:01:09,510 --> 00:01:10,050
+Number two?
+
+21
+00:01:10,970 --> 00:01:12,560
+And this is kind of a useless cycle.
+
+22
+00:01:13,490 --> 00:01:17,210
+The second one is no number three is going back to number one, which is vested.
+
+23
+00:01:17,510 --> 00:01:22,090
+So now we have two cases, two reasons why we create cycles in undirected graph.
+
+24
+00:01:22,100 --> 00:01:26,690
+Why do we think that there is a cycle the berrent one which is fixated, there's actually no second
+
+25
+00:01:26,990 --> 00:01:29,120
+and there is a cycle from here.
+
+26
+00:01:30,700 --> 00:01:32,470
+So now let's see the good first.
+
+27
+00:01:35,160 --> 00:01:40,590
+The could this is following, we will write our like, very normal defense, OK?
+
+28
+00:01:40,680 --> 00:01:45,330
+We will have here an extra variable, which is a beer and over the beer end of the road.
+
+29
+00:01:45,990 --> 00:01:53,520
+And then if if the while we are iterating with the children or the neighbors, we will not go to our
+
+30
+00:01:53,520 --> 00:01:54,120
+parents.
+
+31
+00:01:54,570 --> 00:01:56,100
+So you are at number two.
+
+32
+00:01:56,280 --> 00:01:57,600
+Don't go back to number one.
+
+33
+00:01:58,230 --> 00:01:59,340
+You are not number three.
+
+34
+00:01:59,340 --> 00:02:01,590
+Doing good will go back to number two.
+
+35
+00:02:01,600 --> 00:02:07,260
+We are assuming here there are no multiple ages because there are like a multiple ages between one and
+
+36
+00:02:07,260 --> 00:02:09,420
+two, then it is actually a cycle.
+
+37
+00:02:09,450 --> 00:02:11,880
+Well, the two is its parents, but actually there is a cycle.
+
+38
+00:02:12,240 --> 00:02:16,380
+That's why in the problem, I told you, there are no multiple cycles, multiple ages.
+
+39
+00:02:16,640 --> 00:02:21,810
+So in fact, if there are multiple ages or what you need is to spot if there are multiple ages or if
+
+40
+00:02:21,810 --> 00:02:24,450
+there's any multiple ages, then we have a cycle here.
+
+41
+00:02:25,260 --> 00:02:31,350
+So you iterate on your neighbors and you don't go back to your parent because it's actually peak cycle.
+
+42
+00:02:32,340 --> 00:02:33,990
+In a graph without multiple edges.
+
+43
+00:02:34,680 --> 00:02:40,230
+Now, if it happened that you are actually visiting a node that isn't your parent and it is marked as
+
+44
+00:02:40,230 --> 00:02:44,700
+visited like node number one here, this is actually a cycle, so we stop it again.
+
+45
+00:02:44,700 --> 00:02:47,090
+I implemented the defense here to be like a Boolean one.
+
+46
+00:02:47,100 --> 00:02:49,500
+It's going to return true if it found this like.
+
+47
+00:02:50,330 --> 00:02:57,990
+Now here, I say, if DFS from here, from this node and with this parent is the could return through
+
+48
+00:02:58,010 --> 00:03:01,700
+this if condition is very important because it would stop the processing.
+
+49
+00:03:01,910 --> 00:03:04,550
+Once we find a site that you cannot forget it, you cannot.
+
+50
+00:03:05,870 --> 00:03:10,340
+OK, so now the remaining thing is to handle separate connected computers.
+
+51
+00:03:10,970 --> 00:03:11,940
+Now let's go back.
+
+52
+00:03:11,960 --> 00:03:15,630
+This is a device and it looks like the very normal good why this is over.
+
+53
+00:03:15,650 --> 00:03:17,140
+This should be it was V..
+
+54
+00:03:17,690 --> 00:03:18,650
+So here is the point.
+
+55
+00:03:19,010 --> 00:03:19,640
+Remember it.
+
+56
+00:03:20,240 --> 00:03:22,970
+We have one of two cases.
+
+57
+00:03:23,180 --> 00:03:24,350
+The first the case.
+
+58
+00:03:24,350 --> 00:03:28,160
+The graph is like a forest and forest is just a bunch of connected trees.
+
+59
+00:03:28,490 --> 00:03:30,650
+So this is a forest here.
+
+60
+00:03:33,920 --> 00:03:37,670
+This is a first of one two three four five connected components.
+
+61
+00:03:38,060 --> 00:03:40,100
+It has risen in the minus one aegis.
+
+62
+00:03:40,520 --> 00:03:42,200
+OK, but still like a first.
+
+63
+00:03:42,680 --> 00:03:49,370
+Now if we are if if the graph is just the first of the three, then anyway, the number of edges are
+
+64
+00:03:49,370 --> 00:03:50,690
+as simple as number of nodes.
+
+65
+00:03:50,810 --> 00:03:56,840
+So actually, it's E but o v because the E is just in a minus one.
+
+66
+00:03:57,710 --> 00:04:03,050
+So in this case, clearly the plus V is actually will be in the second case.
+
+67
+00:04:04,160 --> 00:04:07,190
+If we once found the cycle, we return it.
+
+68
+00:04:07,640 --> 00:04:14,420
+The idea is, in the worst case, you would need exactly energies to find the cycle.
+
+69
+00:04:14,810 --> 00:04:20,630
+So let's say we have five nodes you, in the worst case, moved from zero to one two three four.
+
+70
+00:04:20,990 --> 00:04:23,240
+Now we've listed all of the nodes in the graph.
+
+71
+00:04:23,570 --> 00:04:27,440
+If there is any extra energy from food, it must go back to.
+
+72
+00:04:27,440 --> 00:04:30,470
+One of them was it must go back because we already visited all of them.
+
+73
+00:04:31,040 --> 00:04:39,980
+And this means after India minus one, it just we would visit in the inner nodes with an extra edge.
+
+74
+00:04:40,100 --> 00:04:42,200
+We must visit back one of the nodes.
+
+75
+00:04:42,500 --> 00:04:51,200
+So this means even if the graph has a lot of edges only after energies, we will find the cycle, so
+
+76
+00:04:51,200 --> 00:04:51,680
+we stop.
+
+77
+00:04:52,160 --> 00:04:57,950
+So the moral of that is although the algorithm, the difference in the normal case is Ebola's V.
+
+78
+00:04:58,930 --> 00:05:05,560
+In the case of detecting cycles, if we didn't find the cycle, we will take exactly v v v v minus one
+
+79
+00:05:05,560 --> 00:05:07,750
+steps through that and the terms of edges.
+
+80
+00:05:08,200 --> 00:05:13,960
+And if there is our cycle, we will do that exactly in these steps as we are still being as early as
+
+81
+00:05:13,960 --> 00:05:14,500
+possible.
+
+82
+00:05:14,800 --> 00:05:17,380
+We will never exceed the edges.
+
+83
+00:05:17,620 --> 00:05:19,300
+So overall, still over.
+
+84
+00:05:20,320 --> 00:05:26,140
+So the moral of this problem wasn't actually in finding a new algorithm of 0V.
+
+85
+00:05:26,560 --> 00:05:35,020
+It was a noticing that the ablest V algorithm would end as well the algorithm if you stop as early as
+
+86
+00:05:35,020 --> 00:05:35,530
+possible.
+
+87
+00:05:35,830 --> 00:05:41,820
+And that's why this condition here is important not just for correctness, because without it, the
+
+88
+00:05:42,140 --> 00:05:44,050
+defense will explore the whole tree.
+
+89
+00:05:44,680 --> 00:05:46,360
+So you have to stop as early as possible.
+
+90
+00:05:46,360 --> 00:05:49,630
+Once there is a cycle again, you don't have to implement.
+
+91
+00:05:49,630 --> 00:05:50,230
+It was brilliant.
+
+92
+00:05:50,230 --> 00:05:52,930
+You can define an external variable is cycle.
+
+93
+00:05:53,140 --> 00:05:58,540
+And here in the early in the function, if if they could just return, then again and just edges, we
+
+94
+00:05:58,540 --> 00:05:58,980
+adjust.
+
+95
+00:05:59,020 --> 00:06:00,910
+You will figure out the cycle.
+
+96
+00:06:01,720 --> 00:06:02,890
+Uh, yeah.
+
+97
+00:06:03,160 --> 00:06:04,210
+Uh, that's all.

@@ -1,0 +1,287 @@
+1
+00:00:01,080 --> 00:00:04,900
+Let's continue our talk about the about the estate move.
+
+2
+00:00:05,640 --> 00:00:14,340
+I would like you to start reading this quote, which has some default constructor and Akabi and move
+
+3
+00:00:15,150 --> 00:00:15,960
+constructor.
+
+4
+00:00:16,470 --> 00:00:21,450
+And we have here a department E department cluster that has an E object.
+
+5
+00:00:21,690 --> 00:00:29,010
+And then in the constructor, we has also two types of constructor that receive an employee and calling
+
+6
+00:00:29,010 --> 00:00:34,830
+here the Buranda class with so like initializing the E with the parameter here.
+
+7
+00:00:35,220 --> 00:00:41,490
+I would like you to trace this good and figure out a bug in this could give you like five minutes to
+
+8
+00:00:41,490 --> 00:00:41,970
+do that.
+
+9
+00:00:46,450 --> 00:00:54,220
+The Depok is in the line 15 you are receiving here on our value difference, and then we know that this
+
+10
+00:00:54,220 --> 00:00:55,560
+guy will be destroyed soon.
+
+11
+00:00:55,930 --> 00:01:01,600
+When you when you try to initialize the with item, you initialize it with item itself.
+
+12
+00:01:01,960 --> 00:01:04,510
+But item here is an L value.
+
+13
+00:01:04,510 --> 00:01:05,160
+It's Zanin.
+
+14
+00:01:05,470 --> 00:01:08,180
+So the right way is like very similar to this.
+
+15
+00:01:08,200 --> 00:01:14,770
+Did you move this guy need to be marketed with an extreme move so that the construct to deal with it
+
+16
+00:01:14,770 --> 00:01:15,990
+as an R very different.
+
+17
+00:01:16,300 --> 00:01:21,580
+So the major difference here we need to do that is to remove function here in a very similar way.
+
+18
+00:01:21,730 --> 00:01:29,410
+If you have a copy constructor and move constructor to the class here and this this is this like constructor
+
+19
+00:01:29,410 --> 00:01:35,400
+related to initialize it's the proper way is you move the inability to the move function here.
+
+20
+00:01:36,160 --> 00:01:43,720
+Now, generally speaking, you need to when it comes to your good, you need to identify all of the
+
+21
+00:01:43,720 --> 00:01:49,570
+places that are using your R value reference and think if you would like to bust them, would move around.
+
+22
+00:01:49,960 --> 00:01:53,860
+This typically would involve some composition's in areas like care or inheritance.
+
+23
+00:01:54,190 --> 00:02:00,100
+You need to think about basing your object still in or value reference so that they can make use of
+
+24
+00:02:00,100 --> 00:02:04,390
+the fact that this is actually a temporary object that would be destroyed to.
+
+25
+00:02:07,230 --> 00:02:16,170
+Let's see one implication on the move function, let's say you have here, BE1, if you did a move for
+
+26
+00:02:16,170 --> 00:02:19,870
+BE1 and you received it to be R, this is this is tricky.
+
+27
+00:02:20,190 --> 00:02:25,450
+We are here to state and our values are very different, but the type is an L value added value.
+
+28
+00:02:26,130 --> 00:02:29,370
+Let's do something else if we try to push back here.
+
+29
+00:02:29,390 --> 00:02:29,920
+There we are.
+
+30
+00:02:29,940 --> 00:02:35,170
+This is a real value that OK, let's push back in a vector the move of B1.
+
+31
+00:02:36,050 --> 00:02:42,870
+Now, when this push back received b one market was move, which is a static cost, eventually it's
+
+32
+00:02:42,870 --> 00:02:44,330
+taking it very different.
+
+33
+00:02:44,850 --> 00:02:50,550
+So it's going to steal its memory using a move constructor or.
+
+34
+00:02:50,550 --> 00:02:52,110
+Yeah, using a move constructor.
+
+35
+00:02:53,420 --> 00:02:59,720
+Now, where is the problem if you if you if you try to do with it back back is a function of the return
+
+36
+00:02:59,720 --> 00:03:01,900
+of the last element reference and print.
+
+37
+00:03:01,910 --> 00:03:02,510
+It will print.
+
+38
+00:03:03,020 --> 00:03:07,600
+If you tried to print B1 to print, it's going to be a runtime error.
+
+39
+00:03:07,940 --> 00:03:14,190
+Remember that B1 was best to be stolen and its internal data is now has been taken.
+
+40
+00:03:14,450 --> 00:03:18,940
+So if you try to do beyond the print, this will give you a runtime error.
+
+41
+00:03:19,790 --> 00:03:25,580
+The only way is to maybe you reduce your pointer if you would like, like you say, set for a second
+
+42
+00:03:25,580 --> 00:03:25,840
+here.
+
+43
+00:03:26,150 --> 00:03:30,760
+Remember that our set sits second, for example, is able to create a new memory if needed.
+
+44
+00:03:31,130 --> 00:03:39,050
+But other than that, it's the it's just a and we want to say that the return of move we want here is
+
+45
+00:03:39,050 --> 00:03:40,360
+an X value.
+
+46
+00:03:41,330 --> 00:03:46,030
+And and the reason here is this B one is marked as movable.
+
+47
+00:03:46,040 --> 00:03:47,770
+So it's a date that has been taken.
+
+48
+00:03:48,080 --> 00:03:53,170
+But as we still has this identity of this address, we want we can take problems with it.
+
+49
+00:03:53,510 --> 00:03:59,290
+This why it is important to differentiate between what is an X value and what is a better value.
+
+50
+00:03:59,300 --> 00:04:02,560
+We having an address here is problematic.
+
+51
+00:04:02,570 --> 00:04:06,980
+So you need to be careful about that when we come back later to take some value in an explicit way.
+
+52
+00:04:09,470 --> 00:04:17,630
+It's also worth to to remember about the return, the Arborio reference is eventually just just the
+
+53
+00:04:17,630 --> 00:04:18,610
+difference here.
+
+54
+00:04:18,650 --> 00:04:24,740
+We have some global variable dysfunction is returning our value difference over a global variable using
+
+55
+00:04:24,740 --> 00:04:25,120
+the move.
+
+56
+00:04:25,130 --> 00:04:25,740
+That's OK.
+
+57
+00:04:25,760 --> 00:04:27,210
+There will be no runtime error here.
+
+58
+00:04:28,040 --> 00:04:29,120
+This is another case.
+
+59
+00:04:30,200 --> 00:04:36,140
+This only for educational purposes like let's say we are basing M.B to get the minimum of them and you
+
+60
+00:04:36,140 --> 00:04:40,640
+are returning either move away or move B to return as a strange reference reference.
+
+61
+00:04:41,570 --> 00:04:45,770
+But but this is a reference is reference to arguments, so, again, it will not cause a problem.
+
+62
+00:04:46,790 --> 00:04:47,910
+Let's do something else.
+
+63
+00:04:47,930 --> 00:04:54,110
+If you try to do something, you have A and B and then you are trying to return reference to them.
+
+64
+00:04:54,770 --> 00:04:57,880
+But this is wrong and we are now looking at variables.
+
+65
+00:04:58,370 --> 00:05:00,110
+They would be destroyed very soon.
+
+66
+00:05:00,590 --> 00:05:01,790
+As a general rule.
+
+67
+00:05:01,940 --> 00:05:05,480
+Do not use this to move on the return of functions.
+
+68
+00:05:05,510 --> 00:05:06,260
+Avoid that.
+
+69
+00:05:06,270 --> 00:05:11,720
+This is just very problematic, typically, unless you are sure that there would be no problems happening
+
+70
+00:05:11,720 --> 00:05:12,000
+from the.
+
+71
+00:05:13,700 --> 00:05:18,170
+This is some readings, if you'd like to do some readings, but I prefer to delay them after the world
+
+72
+00:05:18,170 --> 00:05:18,620
+section.

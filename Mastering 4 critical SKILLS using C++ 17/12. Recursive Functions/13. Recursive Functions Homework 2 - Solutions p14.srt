@@ -1,0 +1,299 @@
+0
+1
+00:00:01,930 --> 00:00:07,660
+In the next problem, we would like to trace what is the output of these two functions.
+1
+
+2
+00:00:09,910 --> 00:00:11,830
+This is very close to the triangle example.
+2
+
+3
+00:00:11,830 --> 00:00:17,260
+I hope you notice the following: tracing the first one is easier than tracing the second one.
+3
+
+4
+00:00:17,560 --> 00:00:20,500
+So let's see what's happening here. In the first one,
+4
+
+5
+00:00:20,800 --> 00:00:28,750
+let's give it something like let's use something like 'n' equal one two three four five.
+5
+
+6
+00:00:29,290 --> 00:00:30,580
+So let's see what's happening here.
+6
+
+7
+00:00:31,420 --> 00:00:34,690
+We remember what's our goal with the recursion?
+7
+
+8
+00:00:34,690 --> 00:00:40,300
+If we would like to understand it simply, we would like to know what is the function definition, what
+8
+
+9
+00:00:40,300 --> 00:00:41,260
+is the goal of the function?
+9
+
+10
+00:00:41,270 --> 00:00:42,220
+So this is the goal now.
+10
+
+11
+00:00:42,910 --> 00:00:46,000
+We start by printing n%10 
+11
+
+12
+00:00:46,030 --> 00:00:46,450
+10.
+12
+
+13
+00:00:46,960 --> 00:00:48,040
+So what is n%10
+13
+
+14
+00:00:48,040 --> 00:00:49,330
+here? It is
+14
+
+15
+00:00:49,330 --> 00:00:49,780
+five.
+15
+
+16
+00:00:50,260 --> 00:00:51,280
+So we print five.
+16
+
+17
+00:00:52,320 --> 00:00:56,580
+And then we recurs on what? n over 10, which is one, two, three four.
+17
+
+18
+00:00:57,550 --> 00:01:00,910
+So when you think about it, what happens so far is the function
+18
+
+19
+00:01:01,330 --> 00:01:03,100
+printed for me the last digit.
+19
+
+20
+00:01:03,490 --> 00:01:06,550
+And then it recursed on the remaining of the numbers.
+20
+
+21
+00:01:08,510 --> 00:01:14,420
+By definition, the function will keep doing the same, it would print the last thing and go to recurs
+21
+
+22
+00:01:14,420 --> 00:01:15,200
+on the remaining.
+22
+
+23
+00:01:16,400 --> 00:01:20,750
+Then it would print the last, which is three and recurs on the remaining.
+23
+
+24
+00:01:21,320 --> 00:01:22,550
+What does this function do?
+24
+
+25
+00:01:22,880 --> 00:01:29,870
+This function is printing the number digit by digit in a reverse order, so we can say that this function
+25
+
+26
+00:01:29,870 --> 00:01:30,980
+is actually print-
+26
+
+27
+00:01:31,640 --> 00:01:32,360
+Reverse it.
+27
+
+28
+00:01:33,780 --> 00:01:35,250
+This is actually what's happening here.
+28
+
+29
+00:01:36,550 --> 00:01:43,840
+I hope you notice how I'll try to....,  I don't have to keep digging with the recursion forever.
+29
+
+30
+00:01:44,380 --> 00:01:50,650
+You have to..,  like from the first steps you can guess what does this function really
+30
+
+31
+00:01:50,650 --> 00:01:50,890
+do?
+31
+
+32
+00:01:51,620 --> 00:01:56,980
+Now, the second one is harder because the action is happening in a very late time.
+32
+
+33
+00:01:57,250 --> 00:01:58,480
+So let's see what's happening here.
+33
+
+34
+00:02:00,600 --> 00:02:03,690
+Uh, let's view the code.
+34
+
+35
+00:02:04,320 --> 00:02:11,580
+Here is the second function here, the function now is going to recurs first, then do the printing.
+35
+
+36
+00:02:13,140 --> 00:02:19,110
+So let's again pretend to trace something like one, two, three, four, five and six.
+36
+
+37
+00:02:19,920 --> 00:02:21,420
+So the function is doing the following.
+37
+
+38
+00:02:22,230 --> 00:02:24,810
+First of all, it recuses to do something.
+38
+
+39
+00:02:24,810 --> 00:02:26,360
+So there is something happening here.
+39
+
+40
+00:02:28,870 --> 00:02:35,080
+But happening on what? it happening only on, again, the first five digits.
+40
+
+41
+00:02:36,160 --> 00:02:40,540
+What's it doing after returning? it's printing the last number.
+41
+
+42
+00:02:41,380 --> 00:02:41,860
+OK.
+42
+
+43
+00:02:42,040 --> 00:02:44,200
+But there is something happening before here.
+43
+
+44
+00:02:44,710 --> 00:02:48,640
+So the last number that would be printed would be printed after what happened here.
+44
+
+45
+00:02:48,940 --> 00:02:54,460
+So this printing would come in the end because something from here will come first.
+45
+
+46
+00:02:55,480 --> 00:02:59,770
+And we see that it actually decreasing removing one digit.
+46
+
+47
+00:03:00,430 --> 00:03:00,880
+OK.
+47
+
+48
+00:03:00,910 --> 00:03:03,700
+Let's make one more step for tracing to make it easier for us here.
+48
+
+49
+00:03:04,600 --> 00:03:06,370
+When we recurs again with this number,
+49
+
+50
+00:03:06,850 --> 00:03:09,850
+it will again go to do something with one two three four.
+50
+
+51
+00:03:11,010 --> 00:03:16,260
+And then, print for me the last number, which is digit, but I hope at this moment that you can
+51
+
+52
+00:03:16,260 --> 00:03:19,740
+see that this is actually is going to end up with one two three four five.
+52
+
+53
+00:03:20,010 --> 00:03:24,690
+So something like printing the digits of this number.
+53
+
+54
+00:03:25,530 --> 00:03:29,190
+Uh, probably tracing the second one is a harder.
+54
+
+55
+00:03:29,490 --> 00:03:34,420
+But you have to think in this way, you have to think something is happening after it,
+55
+
+56
+00:03:34,420 --> 00:03:37,410
+I would make use of its output and build over it.
+56
+
+57
+00:03:37,800 --> 00:03:40,980
+And so on. I hope overall that isn't annoying for you.
+57
+
+58
+00:03:40,980 --> 00:03:43,950
+This is very similar to printing triangle like that.
+58
+
+59
+00:03:44,520 --> 00:03:47,160
+We did it before or printed like that.
+59
+
+60
+00:03:48,450 --> 00:03:50,970
+It's exactly the same idea.

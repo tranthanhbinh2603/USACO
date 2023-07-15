@@ -1,0 +1,856 @@
+1
+00:00:01,740 --> 00:00:02,190
+Hi Everyone.
+
+2
+00:00:02,430 --> 00:00:08,990
+So let us talk about Arrays that are present in C++ STL so for that.
+
+3
+00:00:09,000 --> 00:00:15,750
+you need to include the header file called # include array the way to create this object is you
+
+4
+00:00:15,750 --> 00:00:22,290
+have the Array class, which is part of this header file and you have to define what kind of object this
+
+5
+00:00:22,290 --> 00:00:25,320
+array will hold, maybe area of a dog or maybe an array of a integer.
+
+6
+00:00:26,520 --> 00:00:32,159
+And second thing is you have to give the size of the array, OK, so let's say the size is 6 and you
+
+7
+00:00:32,159 --> 00:00:32,820
+create this array.
+
+8
+00:00:32,890 --> 00:00:34,300
+OK, now what you can do?
+
+9
+00:00:34,320 --> 00:00:41,310
+Either you can take input and stored it in this array, or you can simply give it initialization list.
+
+10
+00:00:41,610 --> 00:00:48,510
+Just for a simple example, I've created an array of six elements and I have initialized what all elements
+
+11
+00:00:48,510 --> 00:00:50,370
+are in this particular array.
+
+12
+00:00:50,910 --> 00:00:52,960
+Now let's see how we can work with this array.
+
+13
+00:00:52,980 --> 00:00:58,470
+Suppose I want to update a particular element so I can say ok the array of zero.
+
+14
+00:00:58,860 --> 00:01:01,410
+This is equal to 10, so it will work in a similar manner.
+
+15
+00:01:01,890 --> 00:01:09,020
+And suppose I want to print the number of element so I can say for int i=0 i less than n 
+
+16
+00:01:09,300 --> 00:01:09,660
+now.
+
+17
+00:01:10,080 --> 00:01:12,450
+And how do we get the value of n?
+
+18
+00:01:12,630 --> 00:01:13,560
+This is an object.
+
+19
+00:01:13,570 --> 00:01:19,200
+OK, so this is an object of the Array class and array class has a method called size.
+
+20
+00:01:20,170 --> 00:01:24,890
+So array.size will give us how many elements are there in this particular array.
+
+21
+00:01:24,900 --> 00:01:28,110
+So I can say, OK, cout the value of Array of i
+
+22
+00:01:29,310 --> 00:01:33,660
+OK, let's try to build this code, and let's also try to run this one.
+
+23
+00:01:33,660 --> 00:01:38,800
+So I can say dot  slash array
+
+24
+00:01:39,390 --> 00:01:43,980
+I get all the values of this array.
+
+25
+00:01:44,480 --> 00:01:47,480
+Array of 0 is updated as 10
+
+26
+00:01:48,510 --> 00:01:52,320
+And we are getting 10 two three six seven eight 10 two three six seven.
+
+27
+00:01:52,420 --> 00:01:52,740
+Yes.
+
+28
+00:01:53,400 --> 00:01:57,720
+Now one thing is how this object is passed to a function.
+
+29
+00:01:57,720 --> 00:02:05,130
+For example, I want to create a function to update an array so I can say void  update array and I will
+
+30
+00:02:05,130 --> 00:02:06,270
+pass in this object.
+
+31
+00:02:06,690 --> 00:02:07,650
+So this object
+
+32
+00:02:09,060 --> 00:02:11,930
+Is of this type and i can say array off.
+
+33
+00:02:13,110 --> 00:02:16,890
+Let me take an index and let me take the updated value.
+
+34
+00:02:16,890 --> 00:02:20,460
+So I can say Array of i this should be equal to value.
+
+35
+00:02:20,880 --> 00:02:26,040
+So what I'm going to do instead of doing this operation here, I'm calling the method.
+
+36
+00:02:27,240 --> 00:02:35,100
+Update array, and I'm saying, take this array take this index and take the value.
+
+37
+00:02:37,970 --> 00:02:41,030
+The I should be zero and let's say the value is now 100.
+
+38
+00:02:43,260 --> 00:02:50,850
+If I run this code, what I can say is the array is not updated, the array is not updated.
+
+39
+00:02:51,170 --> 00:02:57,420
+Why it is happening is, in this case, this array is an object.
+
+40
+00:02:57,570 --> 00:02:57,900
+OK?
+
+41
+00:02:58,770 --> 00:03:00,630
+This array is also an object.
+
+42
+00:03:01,730 --> 00:03:05,470
+And this object is nothing, it is STL container.
+
+43
+00:03:05,540 --> 00:03:11,660
+And one thing we should remember is all STL containers, all STL containers.
+
+44
+00:03:12,350 --> 00:03:13,610
+They are passed by value.
+
+45
+00:03:14,700 --> 00:03:17,510
+are passed by value.
+
+46
+00:03:17,970 --> 00:03:24,900
+So what is happening in these case is you have created around me and you are saying, look, I'm passing
+
+47
+00:03:24,900 --> 00:03:29,340
+an array to the updated function, which is a copy of this array.
+
+48
+00:03:29,790 --> 00:03:32,190
+So you're actually creating a copy of the original array.
+
+49
+00:03:32,370 --> 00:03:36,330
+So it is like to one two three four five one two three four five.
+
+50
+00:03:37,020 --> 00:03:38,880
+So this is the array in main.
+
+51
+00:03:39,450 --> 00:03:41,670
+And this is the array object inside.
+
+52
+00:03:42,090 --> 00:03:42,570
+Update.
+
+53
+00:03:43,780 --> 00:03:51,310
+Now, if you make a change inside this updated array this value becomes 100 and the actual array in the main it
+
+54
+00:03:51,310 --> 00:03:54,190
+does not changed, the actual array is not changed.
+
+55
+00:03:54,700 --> 00:04:02,770
+So what you need to do if you want to make the changes in the actual array, you have to use pass by reference.
+
+56
+00:04:02,770 --> 00:04:05,270
+Okay, you have to pass by reference.
+
+57
+00:04:05,770 --> 00:04:08,350
+So how the container that pass by reference.
+
+58
+00:04:08,380 --> 00:04:09,040
+Let us see.
+
+59
+00:04:09,430 --> 00:04:15,880
+So in order to pass any STL container by the reference, you have to create a reference variable here.
+
+60
+00:04:16,070 --> 00:04:25,960
+OK, so now what happens is we have one array, which is like this and we have an array object in main
+
+61
+00:04:26,620 --> 00:04:34,060
+and this array is a reference variable for this object because you're saying array int and arr, this
+
+62
+00:04:34,060 --> 00:04:35,560
+is equal to arr, OK?
+
+63
+00:04:35,980 --> 00:04:37,270
+And you can give it any name.
+
+64
+00:04:37,270 --> 00:04:41,590
+You can give it a name like some x array.
+
+65
+00:04:41,740 --> 00:04:42,040
+OK?
+
+66
+00:04:42,610 --> 00:04:45,640
+And even this x array, it would be same.
+
+67
+00:04:45,640 --> 00:04:52,510
+So if you run this code, you can see the actual array is changed to get the actual array is changed
+
+68
+00:04:52,510 --> 00:04:59,140
+so both x array  and this array are pointing to the same object in memory.
+
+69
+00:04:59,410 --> 00:05:02,830
+OK, so there they refer to the same object in memory.
+
+70
+00:05:02,830 --> 00:05:08,060
+So there is an object in the memory, which now has two names.
+
+71
+00:05:08,080 --> 00:05:09,190
+One name is arr.
+
+72
+00:05:09,580 --> 00:05:11,680
+Then then this function is called.
+
+73
+00:05:12,220 --> 00:05:14,530
+It gets a new name that is x arr.
+
+74
+00:05:14,860 --> 00:05:15,130
+OK.
+
+75
+00:05:15,580 --> 00:05:18,820
+So this object can be accessed using two names.
+
+76
+00:05:19,600 --> 00:05:21,160
+We call this as an alias.
+
+77
+00:05:21,910 --> 00:05:23,740
+That means you have a nickname.
+
+78
+00:05:23,740 --> 00:05:25,000
+You also have a nickname.
+
+79
+00:05:25,660 --> 00:05:30,490
+Now this x array and this arr they are the same object.
+
+80
+00:05:30,910 --> 00:05:37,120
+And once this function call is over, this name is gone because the scope is only,present inside this function
+
+81
+00:05:37,120 --> 00:05:37,780
+this function.
+
+82
+00:05:37,810 --> 00:05:44,380
+This name will not exist, and hence when you're coming back in the main, you're printing the array, and
+
+83
+00:05:44,380 --> 00:05:46,150
+that is how it is working.
+
+84
+00:05:46,810 --> 00:05:48,100
+Now there is one more thing.
+
+85
+00:05:48,460 --> 00:05:50,200
+Let's say you want to create a print method.
+
+86
+00:05:50,680 --> 00:05:54,790
+So in the classical array, we saw that we have to pass the value of n as well.
+
+87
+00:05:55,180 --> 00:06:00,760
+But in this case, since we are passing the entire object, we are not passing the base address we
+
+88
+00:06:00,760 --> 00:06:02,170
+are passing there and that object.
+
+89
+00:06:02,830 --> 00:06:10,570
+So in that case, if you want to write a print function for this kind of array, what you can do is you
+
+90
+00:06:10,570 --> 00:06:11,000
+you can say
+
+91
+00:06:11,020 --> 00:06:16,480
+I will pass this array to this function and I will take it for int  I=  zero I less than n.
+
+92
+00:06:16,990 --> 00:06:22,510
+And what is now n and is nothing but a array dot size 
+
+93
+00:06:23,260 --> 00:06:34,090
+So this thing and you can say cout array of i and now you can call this function print array so you can say print
+
+94
+00:06:34,090 --> 00:06:38,500
+going to print array and that makes the work easy for you.
+
+95
+00:06:39,690 --> 00:06:45,570
+And let me show you the code again, you get the same output, and maybe we should, print some space
+
+96
+00:06:45,570 --> 00:06:46,080
+as well.
+
+97
+00:06:51,280 --> 00:06:54,040
+So this is printed by the print function.
+
+98
+00:06:54,340 --> 00:06:57,130
+Know how you're passing this array again, you're passing it by.
+
+99
+00:06:59,910 --> 00:07:04,750
+that means you're creating a copy of the array So if you don't want to create and copy, you're
+
+100
+00:07:04,750 --> 00:07:06,670
+say ok i will pass it by reference
+
+101
+00:07:07,210 --> 00:07:12,250
+And if you want to make sure your object is not changed, you can make it as a const also.
+
+102
+00:07:12,250 --> 00:07:15,010
+Also, you can make it as a const also.
+
+103
+00:07:15,530 --> 00:07:21,730
+Now what this const is going to do, it is going to make sure that this is print function.
+
+104
+00:07:21,760 --> 00:07:23,470
+This should be a read-only function.
+
+105
+00:07:23,680 --> 00:07:27,310
+That means it should not be modifying the values of the array.
+
+106
+00:07:27,320 --> 00:07:36,310
+So if you say area of zero and you make it as 100, then you're going to get an error because this is
+
+107
+00:07:36,310 --> 00:07:37,570
+a constant parameter.
+
+108
+00:07:37,670 --> 00:07:37,910
+OK.
+
+109
+00:07:37,930 --> 00:07:40,250
+This is a consent parameter.
+
+110
+00:07:40,270 --> 00:07:42,440
+It should be used in a read only mode.
+
+111
+00:07:42,460 --> 00:07:44,290
+It should not be modified.
+
+112
+00:07:44,800 --> 00:07:55,930
+So if you want to adopt good coding practices, then use in const with Read-Only data members is what
+
+113
+00:07:55,930 --> 00:07:56,660
+you should be doing.
+
+114
+00:07:56,680 --> 00:08:00,030
+So this is this is how it should be passed.
+
+115
+00:08:00,520 --> 00:08:05,710
+But yeah, so this is the correct way of writing the code, OK?
+
+116
+00:08:06,040 --> 00:08:08,470
+So we want to use this in a read only mode.
+
+117
+00:08:08,620 --> 00:08:13,330
+So that's why we're using this as a constant parameter.
+
+118
+00:08:13,340 --> 00:08:17,080
+It does not change inside the function, OK, but you can change it here.
+
+119
+00:08:17,260 --> 00:08:18,460
+You can change it in main.
+
+120
+00:08:18,550 --> 00:08:18,880
+OK.
+
+121
+00:08:19,370 --> 00:08:24,280
+So you can to array of zero, this is equal to 100, and this will now work fine.
+
+122
+00:08:25,090 --> 00:08:30,240
+The only for that function, the arrays read only OK, but in main you can change it.
+
+123
+00:08:30,250 --> 00:08:33,640
+But if you put the const here, then again, a similar thing will happen.
+
+124
+00:08:33,760 --> 00:08:35,190
+You will get the same error.
+
+125
+00:08:35,210 --> 00:08:35,500
+OK?
+
+126
+00:08:36,220 --> 00:08:38,590
+So that is what we generally use const.
+
+127
+00:08:38,710 --> 00:08:43,570
+And this is how the array objects are passed.
+
+128
+00:08:44,230 --> 00:08:49,050
+Now we can also talk about some more methods to work with this array.
+
+129
+00:08:49,060 --> 00:08:51,180
+So maybe I can say I want to sort the array.
+
+130
+00:08:51,220 --> 00:08:51,520
+OK.
+
+131
+00:08:52,630 --> 00:08:58,270
+So in STL containers, we also have one more concept that is a concept of a iterator.
+
+132
+00:08:58,450 --> 00:08:58,750
+OK.
+
+133
+00:08:59,710 --> 00:09:01,990
+So what we can do is we can sort this array.
+
+134
+00:09:01,990 --> 00:09:08,860
+I want to sort this array starting from this point till the last   give me this address.
+
+135
+00:09:09,100 --> 00:09:13,150
+So this is this would be given by a array dot beginning.
+
+136
+00:09:16,800 --> 00:09:19,610
+The address, which is after the last element.
+
+137
+00:09:19,650 --> 00:09:19,950
+OK.
+
+138
+00:09:20,220 --> 00:09:24,570
+The location, which is just after the last element, it will be given by a array dot end.
+
+139
+00:09:25,140 --> 00:09:31,590
+If you want to sort the entire array, let's say array of zero is 100, this is 16.
+
+140
+00:09:32,160 --> 00:09:36,180
+This is eight and this is lets say 17.
+
+141
+00:09:36,990 --> 00:09:40,350
+So if you want to sort this array, you will just sort it out.
+
+142
+00:09:40,360 --> 00:09:43,350
+array dot begin till array dot end.
+
+143
+00:09:44,770 --> 00:09:50,410
+So now we will have to import another file that is known known as algorithm.
+
+144
+00:09:50,890 --> 00:09:56,950
+This file contains some common functions like sorting, searching.
+
+145
+00:09:56,980 --> 00:09:59,570
+OK, so it is a inbuilt sort function.
+
+146
+00:09:59,590 --> 00:10:05,560
+And now if you print the array, this array should appear in a sorted manner so you can see we are able
+
+147
+00:10:05,560 --> 00:10:09,970
+to get a sorted array, so  the same thing if you have to do it with the classical array.
+
+148
+00:10:10,030 --> 00:10:11,650
+So this is our classical array.
+
+149
+00:10:12,250 --> 00:10:13,780
+So again, you have to import.
+
+150
+00:10:14,200 --> 00:10:16,450
+#include algorithm.
+
+151
+00:10:17,140 --> 00:10:21,460
+And what do you have to do is you have to define the starting and ending point of the array.
+
+152
+00:10:21,460 --> 00:10:27,800
+So you have to say OK in order to sort it, you have to say sort, array.begin.
+
+153
+00:10:27,860 --> 00:10:29,740
+So Begin will not work with the classical.
+
+154
+00:10:30,490 --> 00:10:35,080
+So we have to give the starting address that is array plus zero or even write it as array.
+
+155
+00:10:35,890 --> 00:10:42,670
+And you have to give the address of the last location, which is after the last element that is arr+n
+
+156
+00:10:42,670 --> 00:10:45,400
+and the last element is at n minus one.
+
+157
+00:10:45,880 --> 00:10:47,880
+So the next location would be to array+n.
+
+158
+00:10:47,890 --> 00:10:54,800
+And this is how you can do the sorting with the with the classical array as well.
+
+159
+00:10:54,820 --> 00:10:55,120
+OK.
+
+160
+00:10:55,270 --> 00:10:58,570
+So maybe there's a dot slash array classical.
+
+161
+00:11:00,670 --> 00:11:03,740
+You can see this is this is the sorted array
+
+162
+00:11:03,760 --> 00:11:05,650
+Yes, we made five as 13 and.
+
+163
+00:11:06,820 --> 00:11:08,410
+Then we did sorting so we get 1 
+
+164
+00:11:09,010 --> 00:11:10,900
+One, two, three, four and 13.
+
+165
+00:11:11,620 --> 00:11:13,780
+So this is what the classical array.
+
+166
+00:11:14,260 --> 00:11:20,740
+So I hope you have understood some basic methods and these are the some of the commonly used things
+
+167
+00:11:20,770 --> 00:11:22,860
+that I have and only do.
+
+168
+00:11:23,240 --> 00:11:24,880
+And there is one more thing.
+
+169
+00:11:24,910 --> 00:11:26,430
+There is one more common operations.
+
+170
+00:11:26,440 --> 00:11:33,280
+In some cases, you might be required to initialize an area with all zeros or you might be doing array
+
+171
+00:11:33,280 --> 00:11:34,120
+with all once.
+
+172
+00:11:34,630 --> 00:11:37,330
+So in that case, we can use a method called fill.
+
+173
+00:11:37,480 --> 00:11:39,220
+So let me create the array of zeros.
+
+174
+00:11:39,520 --> 00:11:45,010
+Let me call as array of five so I can see array of integers with 10 elements.
+
+175
+00:11:45,400 --> 00:11:46,870
+And let me call it as fives.
+
+176
+00:11:47,050 --> 00:11:50,990
+So again, to fives that fill every value as five.
+
+177
+00:11:51,010 --> 00:11:55,750
+OK, I want to fill every value in this array is five, so I can say OK.
+
+178
+00:11:56,920 --> 00:12:01,420
+for int i equal to zero I less than five dot size.
+
+179
+00:12:02,080 --> 00:12:07,470
+I want to print each element so I can say cout fives of i.
+
+180
+00:12:08,230 --> 00:12:08,930
+So let me show you.
+
+181
+00:12:09,070 --> 00:12:10,390
+So this array will contain.
+
+182
+00:12:11,830 --> 00:12:12,550
+All fives.
+
+183
+00:12:15,080 --> 00:12:26,280
+dot slash array, so you have all fives in that, you have 10 number of fives in the array and let cout endl
+
+184
+00:12:26,400 --> 00:12:28,550
+let me just commend this thing out.
+
+185
+00:12:29,750 --> 00:12:34,540
+There is one more method that we can use for each loop.
+
+186
+00:12:34,550 --> 00:12:39,980
+OK, so we can use this look also to easily iterate over any array.
+
+187
+00:12:39,980 --> 00:12:44,300
+So maybe I can for some auto or some numbered.
+
+188
+00:12:44,630 --> 00:12:50,120
+int x that there inside your original array or in the fives array.
+
+189
+00:12:50,600 --> 00:12:53,920
+you can say cout X.
+
+190
+00:12:55,550 --> 00:12:58,160
+So let me show you how this will loop will work.
+
+191
+00:13:00,130 --> 00:13:03,220
+This is this is done using the normal for loop.
+
+192
+00:13:04,540 --> 00:13:09,850
+And this we have printed using a for each loop, OK, this we have done using a for each look.
+
+193
+00:13:10,390 --> 00:13:12,010
+So let's see how this loop works.
+
+194
+00:13:12,100 --> 00:13:17,530
+Let's say instead of iterating over the fives array, lets iterate over the original array.
+
+195
+00:13:21,480 --> 00:13:26,400
+So now what we're getting, we're getting the elements of the original array, so let's see how this
+
+196
+00:13:26,400 --> 00:13:26,790
+works.
+
+197
+00:13:27,270 --> 00:13:36,030
+You have elements like two, three, eight, 16, 17 and they say, OK, X is going to assume each and
+
+198
+00:13:36,030 --> 00:13:38,910
+every value in this array, in each iteration.
+
+199
+00:13:38,910 --> 00:13:41,430
+So we have X, which is initially to be printed.
+
+200
+00:13:41,820 --> 00:13:48,720
+Then we get X, which is three x gets the value, three we printed then x gets the value 8 ,16 and so on
+
+201
+00:13:48,720 --> 00:13:49,140
+so on.
+
+202
+00:13:49,440 --> 00:13:56,280
+So what we have seen for int x which is there inside the original.
+
+203
+00:13:56,640 --> 00:14:01,940
+OK, so here we are not iterating over the indices, but we are iterating over the values inside there.
+
+204
+00:14:02,730 --> 00:14:05,470
+This kind of a loop is known as a for each loop.
+
+205
+00:14:05,490 --> 00:14:06,930
+We have similar loop in java.
+
+206
+00:14:06,930 --> 00:14:08,700
+We have a similar loop in Python as well.
+
+207
+00:14:09,300 --> 00:14:13,230
+So this is called an colon ok, this is what this is a an colon operator.
+
+208
+00:14:13,740 --> 00:14:22,350
+So it simplifies the syntax of iterating over the array so you can use this for each loop with the array
+
+209
+00:14:22,350 --> 00:14:23,370
+container as well.
+
+210
+00:14:24,150 --> 00:14:31,650
+So I hope you are now clear with the how to use array containers, and we have discussed the commonly
+
+211
+00:14:31,650 --> 00:14:34,060
+used functions with arrays containers.
+
+212
+00:14:34,080 --> 00:14:34,350
+OK.
+
+213
+00:14:34,800 --> 00:14:36,390
+So that's all for this video.
+
+214
+00:14:36,420 --> 00:14:36,930
+Thank you.
+

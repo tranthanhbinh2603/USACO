@@ -1,0 +1,678 @@
+WEBVTT
+
+0
+00:00.280 --> 00:04.700
+Now the next thing that we should also know that, if there are sequence of function calls,
+
+1
+00:04.860 --> 00:06.120
+Then how are the memory is
+
+2
+00:06.120 --> 00:11.940
+allocated inside stack? So, I'll down a piece of code, a small sample code, then I'll show you how the
+
+3
+00:11.940 --> 00:17.500
+memory is allocated inside the stack for the sequence of function calls.
+
+4
+00:17.550 --> 00:20.020
+Here I have a sample piece of code.
+
+5
+00:20.130 --> 00:26.230
+This is the main function, main function is having 2 variables and then it is calling function fun1( ), and
+
+6
+00:26.310 --> 00:34.230
+fun1( ) is having its local variable x, then, it is calling fun2( ) and passing parameter x. This fun2( )
+
+7
+00:34.230 --> 00:41.210
+is taking parameter as i, then also it's having its own variable a. If following function calls are
+
+8
+00:41.240 --> 00:46.800
+made, then how the memory is allocated for all these functions,
+
+9
+00:46.800 --> 00:48.160
+Let us look at it.
+
+10
+00:48.360 --> 00:50.450
+First of all, when I want to run this program,
+
+11
+00:50.460 --> 00:57.800
+The machine code of this program will be copied in code section. So, I will write it like this, fun2(  )
+
+12
+00:57.810 --> 01:00.650
+this is the machine code of fun2( ),
+
+13
+01:00.830 --> 01:08.700
+And assume that this is for fun1( ), and then, this is the main function.
+
+14
+01:08.730 --> 01:11.510
+This is the machine code for this entire program.
+
+15
+01:11.520 --> 01:16.840
+Now, let us start executing. When the program starts executing, it will start from the main function.
+
+16
+01:16.860 --> 01:23.610
+The moment it enters inside main function, it requires variable. So the memory for a and b will be allocated
+
+17
+01:23.910 --> 01:25.690
+inside this area, or
+
+18
+01:25.740 --> 01:29.100
+this section, and that is a and b.
+
+19
+01:29.310 --> 01:31.780
+So I making it as a single block.
+
+20
+01:32.580 --> 01:34.380
+These are the two variables.
+
+21
+01:34.380 --> 01:38.110
+Now next, main function calls function fun1( ).
+
+22
+01:38.110 --> 01:42.530
+Now, the control goes to function fun1( ). The moment control goes here,
+
+23
+01:42.840 --> 01:47.860
+inside this, the first thing is, variable is the required. Variable declarations is there.
+
+24
+01:47.910 --> 01:51.170
+So the variable is created inside the stack
+
+25
+01:51.180 --> 01:55.550
+for this function fun1( ), that is x.
+
+26
+01:55.680 --> 01:58.410
+So this piece of memory belongs to main function,
+
+27
+01:58.410 --> 02:05.190
+And above that, this belongs to fun1( ), right. Now, which function is executing?
+
+28
+02:05.190 --> 02:09.610
+Currently fun1( ) is executing, because we have called from here.
+
+29
+02:09.690 --> 02:15.320
+So this topmost activation record belongs to which function? Currently executing function,
+
+30
+02:15.330 --> 02:19.280
+That is fun1( ). Then, fun1( ) will call fun2( ).
+
+31
+02:19.420 --> 02:25.770
+So, again the control goes to fun2( ). Then, that is having 2 variables, 1 is its parameter, and
+
+32
+02:25.770 --> 02:27.600
+the other 1 is its local variable.
+
+33
+02:27.900 --> 02:31.890
+So memory is allocated for those variables, i,
+
+34
+02:32.260 --> 02:41.170
+and a, and this is for fun2( ). Now, presently fun2( ) is running and the topmost activation record
+
+35
+02:41.310 --> 02:44.610
+inside this area is fun2( ).
+
+36
+02:44.640 --> 02:48.830
+So currently executing function with access is the topmost activation record.
+
+37
+02:49.240 --> 02:54.000
+Now, one thing you can observe that, we started from main function.
+
+38
+02:54.380 --> 02:58.030
+It has not yet finished, but it has called fun1( ).
+
+39
+02:58.470 --> 03:02.960
+So main function activation record is as it is inside the stack.
+
+40
+03:03.150 --> 03:09.990
+Then activation record for fun1( ) is created, means, memory for fun1( ) is allocated. Then it is still
+
+41
+03:09.990 --> 03:15.920
+running, but it has called fun2( ). So, the activation record for fun2( ) is created, and activation
+
+42
+03:15.920 --> 03:19.370
+record of fun1( ) is still there in the memory.
+
+43
+03:19.980 --> 03:26.160
+Now let us continue our execution. fun2( ) is the current executing function. Now, when fun2( )
+
+44
+03:26.160 --> 03:29.850
+fun2( ) has finished, terminated, then,
+
+45
+03:30.020 --> 03:35.700
+control goes back to fun1( ). It will come back, after this point, it will come back to fun1( ),
+
+46
+03:36.150 --> 03:40.790
+fun1( ), inside this fun1( ), that is, after this line it will come to this line.
+
+47
+03:42.090 --> 03:47.610
+Suppose there is a statement here, so it will come to this statement. What happens for the activation
+
+48
+03:47.610 --> 03:50.580
+record of that fun2( )? This will be deleted.
+
+49
+03:53.390 --> 03:58.440
+Then, after this fun1( ) has finished executing this statement,
+
+50
+03:58.520 --> 04:02.960
+It will come back to the main function, after this fun1( ),
+
+51
+04:02.960 --> 04:05.580
+let us say there is some statement, it will come to that statement.
+
+52
+04:06.080 --> 04:11.990
+And once the fun1( ) ends, its activation record is also removed from the main memory, that
+
+53
+04:11.990 --> 04:13.510
+is from the stack.
+
+54
+04:13.960 --> 04:16.450
+Then, main function also ends.
+
+55
+04:16.520 --> 04:19.890
+So, it's Activation record is also deleted from main memory.
+
+56
+04:19.910 --> 04:25.410
+So, now you can see that, how the activation records for sequence of function calls were created.
+
+57
+04:25.730 --> 04:30.980
+First, main function, then above that fun1( ), above that fun2( ). Right now, fun2( )
+
+58
+04:30.980 --> 04:34.850
+fun2( ) is running, these are already there in the memory. When fun2( ) ends,
+
+59
+04:34.910 --> 04:40.550
+it will delete, and come back here. When it ends, delete and come back here, when it ends, delete and the
+
+60
+04:40.550 --> 04:41.330
+program ends.
+
+61
+04:42.140 --> 04:46.400
+So the way, activation records are created like this, and then deleted like this.
+
+62
+04:46.400 --> 04:53.200
+So this mechanism is stack, right? Top and top and top, then, delete, delete, delete.
+
+63
+04:53.210 --> 04:54.880
+So this mechanism is stack,
+
+64
+04:54.890 --> 05:01.400
+So that's why, this section of memory behaves like a stack, during the function call,
+
+65
+05:01.400 --> 05:03.910
+So that's why it is named as stack.
+
+66
+05:04.670 --> 05:10.070
+So that's all, this is how the main memory is used, or stack memory is used for function calls.
+
+67
+05:10.160 --> 05:16.010
+Now, one important thing to observe; How much memory is required by a function?
+
+68
+05:16.010 --> 05:19.840
+Depends on the number of variables and their sizes.
+
+69
+05:20.010 --> 05:22.030
+And this is decided by compiler only.
+
+70
+05:22.730 --> 05:29.000
+So this memory is automatically created, and automatically destroyed, the programmer doesn't have to do
+
+71
+05:29.000 --> 05:33.800
+anything for its allocation and destruction, just programmer has to declare the variable.
+
+72
+05:34.850 --> 05:39.170
+So the conclusion is, whatever the variables you declare in the program, or whatever the parameters
+
+73
+05:39.230 --> 05:42.380
+your functions are taking, for all of them, memory is
+
+74
+05:42.380 --> 05:47.780
+allocated inside the stack, and it is automatically created, and automatically destroyed when the
+
+75
+05:47.780 --> 05:49.850
+function ends.
+
+76
+05:49.900 --> 05:55.130
+Next, we'll talk about heap, and see how memory is dynamically allocated from heap.
+
+77
+05:55.160 --> 05:59.360
+Now, Let us learn how heap memory is utilized by a program.
+
+78
+05:59.360 --> 06:04.870
+So I have taken a main function, this is mean function, so I'm showing the code here. And this memory, already
+
+79
+06:04.880 --> 06:05.760
+we have seen,
+
+80
+06:05.810 --> 06:07.790
+Now we have to see heap.
+
+81
+06:07.880 --> 06:13.410
+First, let us understand the term Heap. Heap means what? Just piling up.
+
+82
+06:13.490 --> 06:20.480
+If the things are kept one above another, or just randomly, we use the term Heap. So, heap is used
+
+83
+06:20.480 --> 06:27.200
+in 2 cases. One, if the things are properly organised like a tower-like thing, then also it is a
+
+84
+06:27.200 --> 06:34.310
+Heap, and if it is not organised and also it's looking like a tower, then also we call it as Heap.
+
+85
+06:34.340 --> 06:41.900
+So, the important point is, Heap word, or term Heap can be used for organised things, as well as
+
+86
+06:41.900 --> 06:42.770
+unorganized things.
+
+87
+06:43.430 --> 06:48.810
+So here, Heap is the term used for unorganized memory.
+
+88
+06:48.940 --> 06:53.110
+It's not organized, stack memory is organized, right?
+
+89
+06:53.120 --> 06:57.200
+We already saw, how the activation records are created and deleted.
+
+90
+06:57.470 --> 06:59.650
+But, that is not organized.
+
+91
+06:59.900 --> 07:05.630
+This is the first point. And, the second point about Heap is that, heap memory should be treated like
+
+92
+07:05.630 --> 07:08.080
+a resource.
+
+93
+07:08.210 --> 07:13.540
+So, I'll tell you something about the resource, in applications. See, suppose
+
+94
+07:13.600 --> 07:16.500
+a printer is a resource for your program.
+
+95
+07:16.670 --> 07:20.470
+If your program wants to use a printer, then it can request for a printer.
+
+96
+07:20.600 --> 07:27.140
+Use the printer, once it has finished using it, it should release the printer so that the other applications
+
+97
+07:27.140 --> 07:29.600
+can use it. Same way, Heap memory
+
+98
+07:29.630 --> 07:32.990
+Heap memory should be used like a resource, when required.
+
+99
+07:33.000 --> 07:37.740
+You take the memory, when you don't require, you release the memory.
+
+100
+07:37.790 --> 07:42.230
+This is a practice that we must do while dealing with heap memory.
+
+101
+07:42.230 --> 07:43.480
+So I told you two points.
+
+102
+07:43.490 --> 07:44.570
+What is heap,
+
+103
+07:44.570 --> 07:47.860
+Second thing, it should be treated as a resource.
+
+104
+07:47.870 --> 07:54.070
+The third important point, program can't directly access heap memory.
+
+105
+07:54.230 --> 07:56.590
+It can directly access anything inside
+
+106
+07:56.660 --> 08:02.450
+code section, anything inside stack. But, it will not access heap memory.
+
+107
+08:02.630 --> 08:05.840
+That is like a policy of a program, but it will not access heap memory.
+
+108
+08:05.870 --> 08:09.190
+It can if it want to, but it will not access memory.
+
+109
+08:09.230 --> 08:13.560
+So programs cannot access heap memory directly.
+
+110
+08:13.670 --> 08:16.790
+Then how do they access memory? Using pointer.
+
+111
+08:17.570 --> 08:23.090
+So, let me show you, how we can get some memory inside the heap, with the help of a pointer.
+
+112
+08:23.180 --> 08:27.530
+Let us check it. First of all for taking some memory,
+
+113
+08:27.560 --> 08:30.600
+I have to take a pointer.
+
+114
+08:31.700 --> 08:39.220
+The first question, how many bytes does a take? In my discussion, for making it simple,
+
+115
+08:39.320 --> 08:43.100
+I say that point it takes 2 bytes.
+
+116
+08:44.000 --> 08:50.440
+Actually, the amount of memory taken by pointer depends on size of integer, usually. If integer
+
+117
+08:50.450 --> 08:53.760
+is 2 bytes, pointer is 2 bytes.. Integer is 4 bytes, pointer is 4 bytes.
+
+118
+08:53.810 --> 08:57.610
+So, let us assume that it is taking 2 bytes.
+
+119
+08:57.680 --> 09:04.190
+So let us just assume that pointer is taking 2 bytes. So, this needs 2 bytes. Now, next point.
+
+120
+09:04.420 --> 09:08.930
+Where the memory for the pointer will be allocated? See, just now, in the static memory allocation, I told
+
+121
+09:08.930 --> 09:12.260
+you that what all the variables are declare in your functions,
+
+122
+09:12.260 --> 09:16.690
+they will occupy the memory inside the stack, in their Activation record.
+
+123
+09:16.970 --> 09:20.430
+So yes, for this pointer, memory is allocated here.
+
+124
+09:20.450 --> 09:26.330
+So this is a pointer. So, it takes 2 bytes, 2 bytes of memory, and this is activation record for
+
+125
+09:26.330 --> 09:28.350
+main function.
+
+126
+09:28.360 --> 09:32.630
+Now, I want to allocate memory in heap. So, how much memory I want to allocate?
+
+127
+09:32.870 --> 09:43.190
+I want to create an array of integer of size 5. So, this new statement will allocate memory in heap, of size 5.
+
+128
+09:43.190 --> 09:44.110
+.
+
+129
+09:44.180 --> 09:50.280
+So array of size 5, and this pointer will point on this one.
+
+130
+09:50.280 --> 09:56.970
+Suppose, the address of this location, the beginning of this is 500. So, 500 is stored here.
+
+131
+09:57.110 --> 10:03.020
+This is the method of allocating memory in heap. So wherever you see 'new', it means memory is allocated
+
+132
+10:03.020 --> 10:05.730
+allocated in heap. Simple variable declaration,
+
+133
+10:05.730 --> 10:09.880
+memory is allocated inside stack. In C++, it is 'new'.
+
+134
+10:10.160 --> 10:17.090
+But if I write same thing in C language, then I have to use 
+malloc( ), and I want
+
+135
+10:17.090 --> 10:21.260
+5 integers, so 5 integers, assume integer takes 2 bytes,
+
+136
+10:21.260 --> 10:23.760
+So this is 2, and I have to typecast
+
+137
+10:23.810 --> 10:25.610
+It as integer type.
+
+138
+10:26.660 --> 10:34.940
+So this happens in C++, and this happens in C language. So, this is the code for C++, this is the code for
+
+139
+10:34.940 --> 10:38.360
+C language. Most of the time, I would be using this one, right.
+
+140
+10:38.390 --> 10:41.630
+This is little lengthy. So I will be writing this one.
+
+141
+10:41.630 --> 10:47.760
+So that's all. 'new' is used for allocating memory in the heap. Now, program cannot directly access that,
+
+142
+10:47.810 --> 10:52.640
+it has to access pointer, pointer will give the address of that memory, then the program can reach
+
+143
+10:52.640 --> 11:00.980
+that location and access these integers. Now, one thing I told you that, Heap memory should be treated
+
+144
+11:00.980 --> 11:09.170
+like a resource. After some time, in your program, if you don't need that array, and you want to make p
+
+145
+11:09.230 --> 11:16.580
+as null, means you don't want this pointer p to point there, you don't need that memory anymore and you don't
+
+146
+11:16.580 --> 11:21.950
+want the pointer to point there, so you can make the pointer null. So, nothing will be pointing onto this
+
+147
+11:21.950 --> 11:24.980
+one. Then what about that memory? Is it lost?
+
+148
+11:24.980 --> 11:25.620
+Is it gone?
+
+149
+11:25.980 --> 11:26.500
+No.
+
+150
+11:26.500 --> 11:32.710
+It will not be de-allocated. So, it's a good practice that, when you don't need the memory, you should
+
+151
+11:32.740 --> 11:39.500
+de-allocate it, as you have requested for that location, same way you should request de-allocation of the
+
+152
+11:39.500 --> 11:49.040
+memory. So, say delete p. You must say delete, as it is an array, so you have to say this one. So, when you say
+
+153
+11:49.040 --> 11:53.210
+delete, this memory will be deleted, and then you can make the pointer as
+
+154
+11:53.230 --> 12:01.070
+null. So, this will become 0, this is not pointing on this location. So, that's all. Heap memory should be
+
+155
+12:01.130 --> 12:08.990
+explicitly requested, and explicitly released, or disposed. Otherwise, if you are not releasing it, then the
+
+156
+12:08.990 --> 12:16.040
+memory will be still belonging to your program, and that memory cannot be used again, so it causes loss
+
+157
+12:16.040 --> 12:23.240
+of memory, and the loss of memory is called as memory leak. And if you continue the same thing in the
+
+158
+12:23.240 --> 12:30.020
+program for many times, then at one stage, the heap memory may be full. There will be no free space in heap memory.
+
+159
+12:30.050 --> 12:30.910
+heap memory.
+
+160
+12:31.370 --> 12:36.950
+So whenever you allocate the memory, heap memory, and if you don't need it, release the memory.
+
+161
+12:36.950 --> 12:41.660
+So, let us conclude. We have seen static memory allocation, that was done inside the stack for all the
+
+162
+12:41.660 --> 12:47.810
+variables. Then, we have seen heap memory allocation, it is done with the help of pointers, and when not
+
+163
+12:47.810 --> 12:49.250
+in use, it must be released.
+
+164
+12:49.520 --> 12:51.120
+So finally, we conclude here.
+
+165
+12:51.140 --> 12:57.470
+We have seen how the static memory allocation is done, from the stack and how dynamic memory allocation
+
+166
+12:57.470 --> 12:59.730
+is done from the heap.
+
+167
+12:59.810 --> 13:03.740
+So this is the difference between stack and heap.
+
+168
+13:04.190 --> 13:07.880
+So then, in next video, I'll give you introduction to various data structures.

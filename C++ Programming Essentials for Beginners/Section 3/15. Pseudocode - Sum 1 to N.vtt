@@ -1,0 +1,127 @@
+WEBVTT
+
+00:01.290 --> 00:06.490
+I would want in this lecture and find out the sum of numbers from one twin, I will write to Pseudocode.
+
+00:06.600 --> 00:06.900
+OK.
+
+00:07.470 --> 00:14.610
+So in the flowchart, the first step was to read and then we discussed what we need to maintain.
+
+00:15.660 --> 00:18.150
+What is the no, OK, so what is the current number?
+
+00:18.150 --> 00:23.550
+So we'll start from Michael to one, then we will make it do, we'll make it three will make it forward
+
+00:24.240 --> 00:24.990
+and we will go.
+
+00:25.590 --> 00:25.890
+OK.
+
+00:26.400 --> 00:28.860
+And during this, we will also update our son.
+
+00:29.280 --> 00:31.920
+So what we will initially, two things will be OK.
+
+00:32.610 --> 00:36.870
+I S1 the initial value of the number and the sum is zero.
+
+00:37.830 --> 00:41.280
+So in order to do this, think we need a look, right?
+
+00:41.820 --> 00:47.940
+And for that, we discussed that we can use available to we had while followed by certain condition.
+
+00:48.360 --> 00:49.800
+We'll see what that condition is.
+
+00:50.580 --> 00:52.800
+That condition would be nothing but while.
+
+00:54.370 --> 00:55.690
+This value of I.
+
+00:56.330 --> 01:04.420
+OK, this value of AI is less than equal to N, if this is less than equal doing, we can keep on updating
+
+01:04.420 --> 01:07.330
+overtime so we can get some equal to someplace.
+
+01:07.540 --> 01:15.670
+So this is the work that we will do in every step, and we will also go to the next value of life that
+
+01:15.670 --> 01:16.240
+is like gold.
+
+01:16.240 --> 01:24.250
+Like this one, after we are out of the loop, we can print the value of some and then begin to exit.
+
+01:24.460 --> 01:24.970
+That's it.
+
+01:25.240 --> 01:27.790
+That is how we can write the pseudocode.
+
+01:27.970 --> 01:28.210
+OK.
+
+01:28.480 --> 01:31.570
+So if you want to go to a dry run this one so we can talk.
+
+01:31.720 --> 01:38.210
+The sum is zero is one that equals I'm blessed because one is less than equal to four.
+
+01:38.610 --> 01:42.700
+It's endless for so some becomes zero plus one.
+
+01:42.700 --> 01:43.330
+That is one.
+
+01:44.140 --> 01:46.180
+I becomes what I becomes two.
+
+01:47.250 --> 01:47.550
+OK.
+
+01:48.330 --> 01:54.340
+And it was less than equal to for Sam, equal to someplace, plus some becomes one plus two.
+
+01:54.420 --> 01:55.170
+That is three.
+
+01:56.550 --> 01:58.710
+I becomes three.
+
+01:59.770 --> 02:06.790
+Now I becomes three three is less than equal to Ford and some blasé, so some becomes plus 3.6.
+
+02:07.720 --> 02:08.080
+OK.
+
+02:08.770 --> 02:12.220
+And I comes forward to it takes up this value.
+
+02:13.480 --> 02:18.070
+And again, for low as any, the before Suzanne becomes six plus four, that has been.
+
+02:19.110 --> 02:26.640
+And I Begum's faith, so as we see the veil of I becomes five and it is not listening to this look will
+
+02:26.640 --> 02:30.430
+stop and we will come to the line number 16.
+
+02:30.870 --> 02:32.220
+That does bring some.
+
+02:33.030 --> 02:36.620
+And here we will print Ben and we will exit.
+
+02:36.630 --> 02:40.350
+OK, that means this pseudocode is working perfectly fine.
+
+02:40.860 --> 02:42.240
+And that's all for this video.

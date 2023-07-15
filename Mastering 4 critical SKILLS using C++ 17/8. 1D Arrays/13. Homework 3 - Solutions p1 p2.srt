@@ -1,0 +1,1054 @@
+0
+1
+00:00:00,840 --> 00:00:08,490
+Let's solve the third problem set, the first problem is about this sequence, observe here the max
+1
+
+2
+00:00:08,550 --> 00:00:11,870
+value as an input for zero- based is two hundred.
+2
+
+3
+00:00:12,210 --> 00:00:20,160
+So one thing that we need to consider while coding is that what using up to two hundred and one (201), because
+3
+
+4
+00:00:20,160 --> 00:00:21,520
+the last value is 200.
+4
+
+5
+00:00:21,540 --> 00:00:22,620
+So be careful about that.
+5
+
+6
+00:00:24,780 --> 00:00:30,480
+To know if a value appeared or not, we need to mark that in an array. one puzzling question is what
+6
+
+7
+00:00:30,480 --> 00:00:32,340
+might be the max value here?
+7
+
+8
+00:00:32,340 --> 00:00:33,960
+Because the jumps jump a lot.
+8
+
+9
+00:00:34,320 --> 00:00:37,010
+I use an experimental value like "N*10" .
+9
+
+10
+00:00:37,080 --> 00:00:42,520
+And during developing the code and checking within the given limits and "N*10" was a valid one.
+10
+
+11
+00:00:42,840 --> 00:00:50,190
+This isn't a mathematical way, but still like a good experimental one, given the the value range of
+11
+
+12
+00:00:50,190 --> 00:00:51,980
+your target problem.
+12
+
+13
+00:00:53,370 --> 00:00:58,830
+Far from that, I think the problem is straightforward you're going to initialize a sequence with
+13
+
+14
+00:00:58,830 --> 00:01:04,770
+the first two values, like the sequence of zero is zero and occurrence of zero is one, which means
+14
+
+15
+00:01:04,770 --> 00:01:09,180
+that we are marking this value here and then we keep iterating.
+15
+
+16
+00:01:09,360 --> 00:01:16,540
+We compute the expression as we requested and then we verify the two things if it is less than
+16
+
+17
+00:01:16,560 --> 00:01:16,950
+zero.
+17
+
+18
+00:01:17,280 --> 00:01:22,730
+And also it didn't appear before, we just use it as a current value.
+18
+
+19
+00:01:23,070 --> 00:01:29,940
+Otherwise, sorry, if it is this is zero or visited before then we move to the plus version of the
+19
+
+20
+00:01:29,940 --> 00:01:30,390
+equation.
+20
+
+21
+00:01:30,700 --> 00:01:37,520
+After that, we mark that this is the current value, and its index here is marked as visited before.
+21
+
+22
+00:01:37,860 --> 00:01:44,280
+So again, marking values in an array or computing the frequency is coming back in more problems to
+22
+
+23
+00:01:44,280 --> 00:01:46,680
+show how can we develop efficient solutions.
+23
+
+24
+00:01:48,470 --> 00:01:56,240
+And the second problem we would like to do this sliding window problem here; which is a sliding window,
+24
+
+25
+00:01:56,240 --> 00:01:58,040
+is something that's very common in industry.
+25
+
+26
+00:01:58,040 --> 00:01:59,440
+I'm doing it right now with my work.
+26
+
+27
+00:01:59,690 --> 00:02:03,430
+So something that you should know about. In the first,
+27
+
+28
+00:02:03,430 --> 00:02:07,080
+the solution here, I'm trying to code it for every window.
+28
+
+29
+00:02:07,100 --> 00:02:08,840
+So this is what we call brute force.
+29
+
+30
+00:02:08,870 --> 00:02:14,120
+Remember, the word brute force means to try everything that there is no thinking of it.
+30
+
+31
+00:02:14,600 --> 00:02:16,310
+You can code it in two different ways.
+31
+
+32
+00:02:17,210 --> 00:02:22,460
+The way that I use is to consider the "i" here as iterating over every window.
+32
+
+33
+00:02:22,760 --> 00:02:26,600
+And then the "j" is just counting to the "k" times.
+33
+
+34
+00:02:26,600 --> 00:02:32,720
+And then from "i" and "i+j" for "j" from zero to "k" is the current array.
+34
+
+35
+00:02:32,720 --> 00:02:35,840
+You can do it in with two loops, but in different times.
+35
+
+36
+00:02:36,440 --> 00:02:45,170
+Observer here to avoid accessing the index outside the window, I'm writing "n-k+1"  
+36
+
+37
+00:02:45,470 --> 00:02:46,040
+"n-k+1"  
+37
+
+38
+00:02:46,160 --> 00:02:50,070
+So this is guaranteeing that we don't get outside the current window.
+38
+
+39
+00:02:50,510 --> 00:02:56,450
+I would like to learn you a trick that will help you a lot when you are puzzled about should we add
+39
+
+40
+00:02:56,690 --> 00:02:57,350
+plus one or not.
+40
+
+41
+00:02:57,920 --> 00:03:05,570
+The trick is as following:  "n" is one-based value, "k" is one-based value when you subtract 
+41
+
+42
+00:03:05,580 --> 00:03:11,120
+one-based value from one-based value, the result is zero-based value. And we know that when
+42
+
+43
+00:03:11,120 --> 00:03:14,420
+we write "i" less something, we need something that is one-based value.
+43
+
+44
+00:03:14,630 --> 00:03:19,200
+So adding plus one here convert it from zero-based value to one-based value.
+44
+
+45
+00:03:19,520 --> 00:03:24,620
+So all we think about is what you are adding or subtracting, if you are subtracting to a zero-based value, 
+45
+
+46
+00:03:24,620 --> 00:03:25,610
+the result is
+46
+
+47
+00:03:25,610 --> 00:03:26,750
+zero-based value.
+47
+
+48
+00:03:26,990 --> 00:03:31,090
+If you are subtracting 2 one-based values, the result is zero-based value.
+48
+
+49
+00:03:31,370 --> 00:03:36,080
+If you are subtracting one-based value from zero-based value, then the result would be one-based value.
+49
+
+50
+00:03:36,080 --> 00:03:40,910
+If you are subtracting zero-based value from one-based value, you are doing
+50
+
+51
+00:03:40,910 --> 00:03:43,640
+something wrong because the result could be negative value.
+51
+
+52
+00:03:43,970 --> 00:03:53,150
+So this is how I, generally speaking, handle the plus one or plus zero for the for the zero-based
+52
+
+53
+00:03:53,150 --> 00:03:53,840
+or one-based.
+53
+
+54
+00:03:54,260 --> 00:03:58,780
+The second trick is about verification, like is it really the correct one here?
+54
+
+55
+00:03:59,130 --> 00:04:03,860
+One easy way to do that is to to think about the very, very, very minimal values.
+55
+
+56
+00:04:04,100 --> 00:04:08,320
+So I would like to verify the correctness here, go to what we call the lower bound.
+56
+
+57
+00:04:08,600 --> 00:04:10,490
+What is the lowest value for "k"? one.
+57
+
+58
+00:04:10,970 --> 00:04:14,230
+Then one means that we are actually testing every value.
+58
+
+59
+00:04:14,240 --> 00:04:16,850
+So we are now making it like a maximum sample array.
+59
+
+60
+00:04:17,180 --> 00:04:19,280
+So "n-1+1"  is "n".
+60
+
+61
+00:04:19,280 --> 00:04:23,330
+And so it's like iterating over every element in there.
+61
+
+62
+00:04:23,930 --> 00:04:24,230
+Perfect? Yes.
+62
+
+63
+00:04:24,240 --> 00:04:24,630
+Perfect.
+63
+
+64
+00:04:24,890 --> 00:04:30,410
+Let's verify the internal one for "j" less than zero and "j" than "k" which is one.
+64
+
+65
+00:04:30,740 --> 00:04:36,560
+So "j" will be zero. Array plus zero, which is some zero, which is just an array for "i".
+65
+
+66
+00:04:36,800 --> 00:04:37,310
+Correct?
+66
+
+67
+00:04:37,310 --> 00:04:37,780
+Correct.
+67
+
+68
+00:04:38,120 --> 00:04:41,240
+So these are the two tricks that I would like you to keep in mind.
+68
+
+69
+00:04:41,810 --> 00:04:48,500
+The subtraction: one-based&one-based, zero-based& zero-based, one & zero-based tricks to know that are you zero based or one
+69
+
+70
+00:04:48,500 --> 00:04:49,580
+based; based on the need.
+70
+
+71
+00:04:49,790 --> 00:04:55,580
+And the second is going to the lower bound to verify if are you doing it correctly or not. Inmany times 
+71
+
+72
+00:04:55,580 --> 00:04:57,740
+the guys would go with the actual example,
+72
+
+73
+00:04:57,890 --> 00:05:01,740
+but the lower bounds are always the best way to make sure that you are correct.
+73
+
+74
+00:05:02,060 --> 00:05:04,460
+So anyway, this is a brute force solution.
+74
+
+75
+00:05:05,060 --> 00:05:12,860
+Now let's go one step higher to something that is more efficient because the bigger solution is
+75
+
+76
+00:05:12,860 --> 00:05:13,880
+just two nested loops.
+76
+
+77
+00:05:14,420 --> 00:05:20,120
+And the idea here depends on what we see in the slides of removing an element and entering an element
+77
+
+78
+00:05:20,120 --> 00:05:21,350
+here in the visualization.
+78
+
+79
+00:05:21,350 --> 00:05:27,550
+I told you the next window is removing the first element and entering the next element and so on.
+79
+
+80
+00:05:27,920 --> 00:05:34,190
+So the idea is let's build the first window and after that, from every next step, we remove the
+80
+
+81
+00:05:34,190 --> 00:05:36,080
+first one, add the next one.
+81
+
+82
+00:05:36,260 --> 00:05:41,750
+So if one efficient code is just to follow this idea.
+82
+
+83
+00:05:41,750 --> 00:05:42,080
+Sorry.
+83
+
+84
+00:05:45,430 --> 00:05:51,940
+Here we start with, first of all, summing the first "k" values in the array, and after that starting
+84
+
+85
+00:05:51,940 --> 00:06:00,580
+from "k" indicating where are we starting the current window sorry, where are we ending
+85
+
+86
+00:06:00,730 --> 00:06:01,480
+the current window?
+86
+
+87
+00:06:01,630 --> 00:06:03,130
+So "k" is now the next end.
+87
+
+88
+00:06:03,130 --> 00:06:09,430
+And that's why here I didn't need to change "i < n" end because "k" is actually representing the end of
+88
+
+89
+00:06:09,430 --> 00:06:09,870
+the window.
+89
+
+90
+00:06:10,330 --> 00:06:16,480
+In every time we are going to update the sum is as following, removing the first element which will
+90
+
+91
+00:06:16,480 --> 00:06:25,060
+now be "i-k", and adding the current element, which would be an array of "i". Observe here again, "i" is
+91
+
+92
+00:06:25,090 --> 00:06:25,750
+zero!
+92
+
+93
+00:06:26,260 --> 00:06:29,830
+I is like like.... we are now
+93
+
+94
+00:06:29,830 --> 00:06:31,840
+puzzling is "i-k" , correct or not?
+94
+
+95
+00:06:32,410 --> 00:06:37,030
+OK, let's, let's go with the lower bound idea.
+95
+
+96
+00:06:37,300 --> 00:06:38,620
+What is the lower bound here?
+96
+
+97
+00:06:38,800 --> 00:06:39,820
+Put in "k" with one.
+97
+
+98
+00:06:40,030 --> 00:06:44,500
+OK so when you put "k" is one here, then "i" equal one.
+98
+
+99
+00:06:45,040 --> 00:06:49,370
+The "i-k" would be one minus one which is zero.
+99
+
+100
+00:06:49,600 --> 00:06:54,580
+So now we are actually accessing the first element in the array that we would like really
+100
+
+101
+00:06:54,940 --> 00:06:55,600
+to remove it.
+101
+
+102
+00:06:55,750 --> 00:06:57,520
+And here we are going to add it again.
+102
+
+103
+00:06:57,820 --> 00:07:03,610
+If you'd like to go one step higher, let's say "k" equal 2 and then this one would be representing the
+103
+
+104
+00:07:03,610 --> 00:07:04,600
+first two elements.
+104
+
+105
+00:07:04,900 --> 00:07:05,770
+So "k" now
+105
+
+106
+00:07:08,560 --> 00:07:12,880
+"k" now equal 2. Again, two minus two is zero.
+106
+
+107
+00:07:13,120 --> 00:07:13,750
+Perfect?
+107
+
+108
+00:07:13,750 --> 00:07:14,510
+Yes, perfect.
+108
+
+109
+00:07:14,740 --> 00:07:18,190
+And now we are adding an array of two which is a next turn.
+109
+
+110
+00:07:18,190 --> 00:07:18,460
+Yes.
+110
+
+111
+00:07:18,460 --> 00:07:18,900
+Perfect.
+111
+
+112
+00:07:19,120 --> 00:07:20,860
+And we are definitely less than the boundary.
+112
+
+113
+00:07:20,890 --> 00:07:21,860
+So we are correct.
+113
+
+114
+00:07:22,090 --> 00:07:28,210
+So here with the indices and the lower boundary check, we can make sure that yes.
+114
+
+115
+00:07:28,210 --> 00:07:29,260
+These are valid ones.
+115
+
+116
+00:07:29,440 --> 00:07:34,690
+I'm telling you these tricks because I know that probably you waste a lot of time getting run time errors and
+116
+
+117
+00:07:34,690 --> 00:07:36,820
+going out of the array and all of that.
+117
+
+118
+00:07:39,550 --> 00:07:49,240
+To mark the....,  observer here, the "min_index", we need to go one window of "i-(k-1)" to mark
+118
+
+119
+00:07:49,240 --> 00:07:53,800
+the start of the current window again with some basic verification.
+119
+
+120
+00:07:53,800 --> 00:07:56,550
+You can know that all this is really the correct starting one.
+120
+
+121
+00:07:56,800 --> 00:08:01,420
+So use the lower bound idea to make sure that you are correct.
+121
+
+122
+00:08:01,690 --> 00:08:04,060
+Observe here, "k" is one-based value.
+122
+
+123
+00:08:04,060 --> 00:08:09,450
+When you remove "k-1", "k-1" is a zero-based value. When you subtract zero-based value
+123
+
+124
+00:08:09,460 --> 00:08:10,330
+from zero-based value,
+124
+
+125
+00:08:10,330 --> 00:08:12,180
+it is zero-based value.
+125
+
+126
+00:08:12,340 --> 00:08:15,790
+That's why you are more sure that this is really an index.
+126
+
+127
+00:08:16,830 --> 00:08:22,740
+The last approach, which is a bit harder for you to guess, is the accumulation array, an accumulation 
+127
+
+128
+00:08:22,740 --> 00:08:30,120
+is very common in computer science and the idea is as following, let's say the input is one,
+128
+
+129
+00:08:30,900 --> 00:08:34,180
+five, seven, six, two, five.
+129
+
+130
+00:08:34,200 --> 00:08:35,310
+I would like to show you something.
+130
+
+131
+00:08:35,310 --> 00:08:36,660
+Let's say accumulate this array.
+131
+
+132
+00:08:36,790 --> 00:08:39,180
+Let's accumulate this array
+132
+
+133
+00:08:39,450 --> 00:08:44,730
+If we accumulated it, we will have here one. Accumulation means the submission from the first element
+133
+
+134
+00:08:44,730 --> 00:08:45,670
+to the current element.
+134
+
+135
+00:08:45,900 --> 00:08:48,660
+So what is the submission from one to five here?
+135
+
+136
+00:08:48,660 --> 00:08:50,000
+The submission from one to five.
+136
+
+137
+00:08:50,370 --> 00:08:51,900
+The first two elements, sorry would be six.
+137
+
+138
+00:08:52,230 --> 00:08:55,760
+The submission of the first three elements would be thirteen.
+138
+
+139
+00:08:56,040 --> 00:09:00,230
+The submission of the first four elements would be nineteen.
+139
+
+140
+00:09:00,510 --> 00:09:06,570
+The submission of the first five elements would be twenty one, and then the submission of all of the
+140
+
+141
+00:09:06,570 --> 00:09:08,010
+elements would be twenty six.
+141
+
+142
+00:09:08,710 --> 00:09:09,990
+OK, so far so good.
+142
+
+143
+00:09:10,110 --> 00:09:16,860
+But observe if we try to do this accumulation, regardless how we would make use of it, we are going
+143
+
+144
+00:09:16,860 --> 00:09:19,710
+to waste like two nested loops also to build that here.
+144
+
+145
+00:09:19,720 --> 00:09:20,580
+So what's the point.
+145
+
+146
+00:09:20,580 --> 00:09:26,220
+Still nested loops! here is the trick in building the accumulation array in an efficient way. Observe 
+146
+
+147
+00:09:26,220 --> 00:09:28,090
+that this is six.
+147
+
+148
+00:09:28,140 --> 00:09:32,130
+For example, you tried to compute and get the nineteen.
+148
+
+149
+00:09:32,430 --> 00:09:35,880
+We computed the sum from one to four, all of the first four elements.
+149
+
+150
+00:09:36,180 --> 00:09:41,490
+But the observation is if we added six to the accumulation of the previous step, we get that value.
+150
+
+151
+00:09:41,820 --> 00:09:46,230
+If we added this value to the current two, we give this value for the current accommodation to the
+151
+
+152
+00:09:46,230 --> 00:09:46,740
+current value.
+152
+
+153
+00:09:46,740 --> 00:09:47,520
+We give this value.
+153
+
+154
+00:09:47,880 --> 00:09:53,130
+It means all that you need is to add yourself over the accumulation of the previous elements.
+154
+
+155
+00:09:53,340 --> 00:09:54,780
+And this is what's happening here.
+155
+
+156
+00:09:56,310 --> 00:10:07,380
+I am accumulating the array by starting from...,  this one needs to be two hundred because I am building
+156
+
+157
+00:10:07,380 --> 00:10:12,070
+this one using one-based.
+157
+
+158
+00:10:12,510 --> 00:10:17,930
+So one way to make your life easier with accumulation is to make it one-based indexing, not zero-based.
+158
+
+159
+00:10:18,120 --> 00:10:19,780
+That's why you have less than or equal in here.
+159
+
+160
+00:10:20,280 --> 00:10:25,950
+So now we are reading the current value and I'm accumulating the current value plus the accumulation
+160
+
+161
+00:10:25,950 --> 00:10:26,920
+of the last step.
+161
+
+162
+00:10:27,240 --> 00:10:28,510
+This is what is building here.
+162
+
+163
+00:10:28,710 --> 00:10:35,850
+So first add one, five plus one is six, then seven plus six is thirteen, six plus thirteen is
+163
+
+164
+00:10:35,850 --> 00:10:36,670
+nineteen and so on.
+164
+
+165
+00:10:36,810 --> 00:10:38,100
+So this is accumulation rate.
+165
+
+166
+00:10:38,460 --> 00:10:43,170
+Now the question here is, what is the relationship between this accumulation and our problem?
+166
+
+167
+00:10:43,530 --> 00:10:44,760
+Here is an observation.
+167
+
+168
+00:10:45,540 --> 00:10:46,680
+What is twenty six?
+168
+
+169
+00:10:47,100 --> 00:10:50,640
+Twenty six is a submission from the first element to the current element.
+169
+
+170
+00:10:51,030 --> 00:10:55,400
+What is nineteen? nineteen is a submission from the first element to the current element.
+170
+
+171
+00:10:55,710 --> 00:11:02,960
+So it seems like it getting us a window some, but it is actually a window starting from position zero.
+171
+
+172
+00:11:03,450 --> 00:11:08,430
+What if I would like to get a window of something specific?
+172
+
+173
+00:11:08,700 --> 00:11:14,750
+Let's say I would like only to give the window of six, two, and five which should be six and two is eight, and
+173
+
+174
+00:11:14,760 --> 00:11:15,840
+plus five thirteen.
+174
+
+175
+00:11:16,170 --> 00:11:22,860
+The idea is to subtract twenty six from one element before the start, which is thirteen.
+175
+
+176
+00:11:23,130 --> 00:11:26,900
+If you subtract a twenty six from thirteen it would be thirteen.
+176
+
+177
+00:11:27,150 --> 00:11:32,310
+Another example, let's say you would like to give the submission from seven to two, subtract twenty
+177
+
+178
+00:11:32,310 --> 00:11:41,970
+one from six to get the answer, which is seven and six would be thirteen and two it would be fifteen,
+178
+
+179
+00:11:41,970 --> 00:11:44,050
+which is really the subtraction of that.
+179
+
+180
+00:11:44,520 --> 00:11:48,870
+So the moral of that is the advantage of accumulation array is
+180
+
+181
+00:11:49,050 --> 00:11:56,340
+you can get in a single step the submission of any window by subtracting the big window from the small
+181
+
+182
+00:11:56,340 --> 00:11:56,760
+window.
+182
+
+183
+00:11:57,150 --> 00:12:05,520
+So that's why here we have this subtraction. By subtracting array of 'i"  minus array of "i-k", 
+183
+
+184
+00:12:05,530 --> 00:12:06,690
+got a window.
+184
+
+185
+00:12:06,690 --> 00:12:13,740
+Some of "k" elements starting from "i" to "k" elements after it, including it.
+185
+
+186
+00:12:15,210 --> 00:12:16,410
+I hope you got the idea.
+186
+
+187
+00:12:16,590 --> 00:12:22,110
+I would like you to try to put some time to verify why when we would like to get, for example, this
+187
+
+188
+00:12:22,110 --> 00:12:26,880
+window submission by subtracting this number minus this number would get for me the middle?
+188
+
+189
+00:12:27,270 --> 00:12:31,560
+It's more about like....,  let's do it here for sake of completeness.
+189
+
+190
+00:12:31,770 --> 00:12:32,670
+What is twenty one?
+190
+
+191
+00:12:33,210 --> 00:12:40,560
+Twenty one is the sum of a one plus five plus seven plus six plus two.
+191
+
+192
+00:12:41,310 --> 00:12:44,730
+And what is thirteen?
+192
+
+193
+00:12:46,680 --> 00:12:51,180
+Thirteen is one plus.
+193
+
+194
+00:12:53,180 --> 00:13:03,010
+One plus five plus seven, OK, that's why when you subtract the 21 from the 13, you're actually cancelling
+194
+
+195
+00:13:03,020 --> 00:13:07,810
+these three values with these three values, and remain for you the six plus two.
+195
+
+196
+00:13:07,970 --> 00:13:12,550
+That's why when you subtract this guy from this guy, you get the submission window of this one.
+196
+
+197
+00:13:12,770 --> 00:13:16,700
+So the message is, I hope you didn't get lost. The message is
+197
+
+198
+00:13:17,090 --> 00:13:23,690
+First one, you can build accumulation with a single loop by adding the current element to the previous
+198
+
+199
+00:13:23,690 --> 00:13:25,340
+accumulation. 
+199
+
+200
+00:13:25,370 --> 00:13:30,740
+Message number two, that accumulation array directly can get you the submission of every window starting from
+200
+
+201
+00:13:30,740 --> 00:13:34,540
+zero to the current index by just axing array of "i".
+201
+
+202
+00:13:35,270 --> 00:13:41,540
+The third message is that the accumulation array can help you get a sub-window by subtracting the current
+202
+
+203
+00:13:41,540 --> 00:13:46,310
+accumulation minus the target index, but minus extra one.
+203
+
+204
+00:13:48,230 --> 00:13:49,850
+This is all the dual messages.
+204
+
+205
+00:13:50,090 --> 00:13:57,140
+Now, going back to the code, we iterate over all of the array, mixing it up to "n" and every time
+205
+
+206
+00:13:57,290 --> 00:14:06,800
+we get the window sum ending at the current position and after that we maximizing over all of them.
+206
+
+207
+00:14:07,410 --> 00:14:08,750
+This solution isn't easy.
+207
+
+208
+00:14:08,990 --> 00:14:12,230
+And also you do learn this solution in algorithms courses.
+208
+
+209
+00:14:12,350 --> 00:14:13,690
+But I wanted to share it with you.
+209
+
+210
+00:14:13,850 --> 00:14:18,190
+It's a bit hard, but if you try to like paper and pencil, you should master it more.
+210
+
+211
+00:14:18,770 --> 00:14:18,950
+That's all.

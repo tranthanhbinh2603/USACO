@@ -1,0 +1,54 @@
+0
+1
+00:00:00,870 --> 00:00:04,350
+In this video, we will learn how to create a class using codeblocks.
+1
+
+2
+00:00:04,710 --> 00:00:10,530
+You come here new, and you select the word class, give it a name, let's say calculator.
+2
+
+3
+00:00:12,630 --> 00:00:17,700
+You will notice there is a dot_h file that will be created for you, and CPP file which is looking at this header
+3
+
+4
+00:00:18,120 --> 00:00:19,810
+file. There is also here
+4
+
+5
+00:00:19,810 --> 00:00:23,550
+a bunch of other options like has a constructor, virtual destructor.
+5
+
+6
+00:00:23,550 --> 00:00:28,860
+You will learn more about it during the class, you also learn about inheriting if there another the class.
+6
+
+7
+00:00:29,010 --> 00:00:30,840
+You can create default member variables,
+7
+
+8
+00:00:31,050 --> 00:00:35,210
+but personally I usually just created the default thing, added it,
+8
+
+9
+00:00:35,730 --> 00:00:42,060
+OK, so now you notice we have now a class with the constructor and virtual destructor, we have here
+9
+
+10
+00:00:42,840 --> 00:00:47,640
+the dot_h corresponding for it, and then you start to fill the missing here.
+10
+
+11
+00:00:47,940 --> 00:00:48,510
+That's it.

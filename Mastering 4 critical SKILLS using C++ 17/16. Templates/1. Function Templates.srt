@@ -1,0 +1,1029 @@
+0
+1
+00:00:00,810 --> 00:00:08,220
+In this section, we will introduce the template, which is one of the functionalities in C++, it has
+1
+
+2
+00:00:08,220 --> 00:00:10,430
+two types function templates and class templates .
+2
+
+3
+00:00:10,800 --> 00:00:15,150
+So let's introduce the problem that encouraged the idea of the templates,
+3
+
+4
+00:00:15,540 --> 00:00:21,570
+if you are looking to this function here, Max of A and B, it's just normal function that is .... A
+4
+
+5
+00:00:21,570 --> 00:00:22,920
+and B, now
+5
+
+6
+00:00:23,100 --> 00:00:28,440
+if I tried to call this function with only double values, I'm going to load the precision so the
+6
+
+7
+00:00:28,440 --> 00:00:33,570
+standard way to handle this way is to duplicate this code as it is here and  just replace the two types 
+7
+
+8
+00:00:33,570 --> 00:00:34,570
+with Max and use it.
+8
+
+9
+00:00:35,160 --> 00:00:38,820
+Now, let's say you would like to use more data types, let's say would like to get the max between
+9
+
+10
+00:00:38,820 --> 00:00:40,080
+two characters and so on.
+10
+
+11
+00:00:40,440 --> 00:00:43,710
+You have to keep making duplicates and duplicates duplicates of code,
+11
+
+12
+00:00:44,250 --> 00:00:50,940
+but observe that they are exactly the same logic, regard data type here, regardless of its
+12
+
+13
+00:00:50,940 --> 00:00:55,210
+double or integer or character or whatever, it is just exactly the same logic,
+13
+
+14
+00:00:55,680 --> 00:01:01,140
+imagine for a while that we discovered a bug in this function, or that we found that there is a faster
+14
+
+15
+00:01:01,140 --> 00:01:08,700
+implementation than it, we have to go for every one of our duplicate functions and just take it and
+15
+
+16
+00:01:08,820 --> 00:01:09,990
+make a modification for it.
+16
+
+17
+00:01:10,800 --> 00:01:16,050
+When it comes to duplication in the code, in the software engineering, we .... a lot that something
+17
+
+18
+00:01:16,050 --> 00:01:16,400
+is wrong.
+18
+
+19
+00:01:16,830 --> 00:01:23,910
+Now templates come to help us to solve this problem as following, the compiler would read
+19
+
+20
+00:01:24,240 --> 00:01:25,350
+something like that,
+20
+
+21
+00:01:25,530 --> 00:01:28,320
+I'm defining here some function that I'm naming here "MyMax",
+21
+
+22
+00:01:28,620 --> 00:01:33,750
+imagine for a while that we have some structure that of name "Type" and we have type A and type B,
+22
+
+23
+00:01:34,500 --> 00:01:40,830
+now when the C++ see this word "template type name type" it means that this function will be
+23
+
+24
+00:01:40,830 --> 00:01:42,530
+called with some types
+24
+
+25
+00:01:42,540 --> 00:01:45,300
+it could be integer, it could be double, it could be whatever,
+25
+
+26
+00:01:45,780 --> 00:01:49,970
+and they all actually share the same logic, they share the same logic,
+26
+
+27
+00:01:50,310 --> 00:01:56,700
+So instead of the user making the copy-paste by himself, the compiler will do the copy-paste by 
+27
+
+28
+00:01:56,700 --> 00:01:57,180
+himself.
+28
+
+29
+00:01:57,600 --> 00:02:01,560
+For example, let's see here, MayMax of two and five,
+29
+
+30
+00:02:01,920 --> 00:02:09,330
+so Memex is a function that is expect a generic data type from the word template,
+30
+
+31
+00:02:09,870 --> 00:02:12,720
+you can you can think of it like a general guidelining,
+31
+
+32
+00:02:12,720 --> 00:02:14,070
+it isn't something specific,
+32
+
+33
+00:02:14,070 --> 00:02:15,870
+it will not exist in our final code,
+33
+
+34
+00:02:16,170 --> 00:02:17,860
+it's just a way to help a generic code,
+34
+
+35
+00:02:17,880 --> 00:02:25,350
+when we say a generic code, we mean it is it's a good that works like in general, regardless
+35
+
+36
+00:02:25,350 --> 00:02:27,240
+of the of the internal details.
+36
+
+37
+00:02:28,700 --> 00:02:35,000
+So here the combiner see my max of two and five and know that this is template function, so now I'm
+37
+
+38
+00:02:35,000 --> 00:02:39,250
+telling here, hey, you know what we can call this function with two and five.
+38
+
+39
+00:02:39,680 --> 00:02:46,460
+So now we type in reality in runtime would be resolved to integer and integer,
+39
+
+40
+00:02:46,760 --> 00:02:51,740
+now, you can imagine this function exactly in runtime like this function with two integrate and returning
+40
+
+41
+00:02:51,740 --> 00:02:52,370
+for an integer.
+41
+
+42
+00:02:55,340 --> 00:03:02,030
+OK, so what if I would like to force other kind of cases?
+42
+
+43
+00:03:02,450 --> 00:03:05,750
+The C++ allow you to use this notation,
+43
+
+44
+00:03:05,750 --> 00:03:13,670
+if you did here < the word int, >, you are telling the compiler, hey, I want you
+44
+
+45
+00:03:14,150 --> 00:03:16,870
+prepare for me this function, but using int,
+45
+
+46
+00:03:17,210 --> 00:03:21,470
+so it's going to replace this type with int and this type with int and this type with int and this type with int,
+46
+
+47
+00:03:21,860 --> 00:03:24,030
+now we are sending the max between two and five,
+47
+
+48
+00:03:24,320 --> 00:03:25,680
+here it is again, five.
+48
+
+49
+00:03:25,940 --> 00:03:31,500
+So what was the difference between line nine 15 and line 16? in line 15 you are using two integers,
+49
+
+50
+00:03:31,760 --> 00:03:34,670
+so the compiler guess that you probably won't....
+50
+
+51
+00:03:34,820 --> 00:03:40,810
+a copy of this function with type is integral in line 17,
+51
+
+52
+00:03:40,820 --> 00:03:44,300
+we say, hey, I wanna this function to be with type double,
+52
+
+53
+00:03:44,870 --> 00:03:50,660
+so when we hit, the compiler is going to generate a copy for you with the word,
+53
+
+54
+00:03:50,660 --> 00:03:53,630
+type is replaced with a double, double and double,
+54
+
+55
+00:03:54,140 --> 00:03:56,480
+so the moral of that is as following,
+55
+
+56
+00:03:56,930 --> 00:04:03,260
+instead of you are doing the copy-paste by yourself and keeping integer, integer, integer, double
+56
+
+57
+00:04:03,260 --> 00:04:08,160
+double, double, character, character, character, the compiler will do the copy-paste for you,
+57
+
+58
+00:04:08,540 --> 00:04:10,550
+so it's actually in the competition time,
+58
+
+59
+00:04:10,730 --> 00:04:18,170
+this is happening for you here in line 18 who are defining Memex or between character E and character
+59
+
+60
+00:04:18,170 --> 00:04:18,560
+X..
+60
+
+61
+00:04:18,890 --> 00:04:24,530
+So in reality, character type would be replaced with a character, character and character.
+61
+
+62
+00:04:26,210 --> 00:04:27,510
+OK, let's keep going more.
+62
+
+63
+00:04:28,070 --> 00:04:35,080
+What if I say here and to any memex of two and five point four, this would give a compilation error
+63
+
+64
+00:04:35,270 --> 00:04:41,000
+y because the compiler now see an integer here and double it would be confused should they generate
+64
+
+65
+00:04:41,000 --> 00:04:44,090
+for you function with type as integer or type as double.
+65
+
+66
+00:04:44,150 --> 00:04:50,660
+This is confusing so it will not work when the other side I can generate function with integer.
+66
+
+67
+00:04:50,660 --> 00:04:52,030
+I'm here more specific.
+67
+
+68
+00:04:52,580 --> 00:04:53,890
+Now think about that.
+68
+
+69
+00:04:54,470 --> 00:04:59,420
+Imagine that we have a function with integer integrity or if you are sending two to eight, it will
+69
+
+70
+00:04:59,420 --> 00:05:00,140
+be two.
+70
+
+71
+00:05:00,260 --> 00:05:04,510
+If you are sending five point four to B, which is no integer, it would be five.
+71
+
+72
+00:05:04,760 --> 00:05:08,210
+So the Mexia between two and five point four would be five.
+72
+
+73
+00:05:08,210 --> 00:05:11,020
+That's five point four on the other side.
+73
+
+74
+00:05:11,180 --> 00:05:17,360
+If I tell him, hey, you generate a copy for me was the word, the type is replaced with that I double
+74
+
+75
+00:05:17,780 --> 00:05:23,260
+it would be two point five, four is going to be five for one more trickier.
+75
+
+76
+00:05:23,510 --> 00:05:30,620
+What if I have a structure that's named E and B and I said my maxcy between A and B of type Embley,
+76
+
+77
+00:05:30,950 --> 00:05:32,510
+this would generate a composition error.
+77
+
+78
+00:05:32,870 --> 00:05:37,010
+We don't know how to compare to Embley is using the greater that.
+78
+
+79
+00:05:37,250 --> 00:05:41,870
+So it will tell you, hey, I don't know how to do this operation if I try to make a copy of this function.
+79
+
+80
+00:05:42,260 --> 00:05:46,460
+So to understand it, imagine that we took this function could be built and replaced every time with
+80
+
+81
+00:05:46,460 --> 00:05:47,480
+the word complete.
+81
+
+82
+00:05:47,840 --> 00:05:49,820
+Can the compiler combine this could.
+82
+
+83
+00:05:50,060 --> 00:05:50,810
+No, it cannot.
+83
+
+84
+00:05:53,360 --> 00:05:59,080
+So the generation different types of the function memex are going to be generated by time.
+84
+
+85
+00:05:59,420 --> 00:06:07,370
+OK, so on the use cases that the used, for example, if you could use the in our previous case we
+85
+
+86
+00:06:07,370 --> 00:06:09,400
+have an integer and we have a double and we have a character.
+86
+
+87
+00:06:09,590 --> 00:06:11,210
+So there were three use cases here.
+87
+
+88
+00:06:11,390 --> 00:06:14,720
+This function was going to be replaced with three functions.
+88
+
+89
+00:06:14,900 --> 00:06:20,180
+One that is intent n maximum, double, double, double my character, character, character.
+89
+
+90
+00:06:20,900 --> 00:06:22,400
+Another another observation here.
+90
+
+91
+00:06:22,400 --> 00:06:24,260
+I didn't use the function name as Max.
+91
+
+92
+00:06:24,260 --> 00:06:25,310
+I use it as my Max.
+92
+
+93
+00:06:25,310 --> 00:06:25,670
+Why?
+93
+
+94
+00:06:25,910 --> 00:06:29,210
+Because the C++ already defined the max function as a template.
+94
+
+95
+00:06:29,390 --> 00:06:31,670
+So I'm now defining something exactly as it's doing.
+95
+
+96
+00:06:31,670 --> 00:06:33,770
+So this is what is going to give a competition.
+96
+
+97
+00:06:34,370 --> 00:06:39,800
+Please try to replace the function with Max and see what's going to happen in practice.
+97
+
+98
+00:06:41,030 --> 00:06:47,990
+It sometimes is really very hard and really complicated, but the worst is the error.
+98
+
+99
+00:06:47,990 --> 00:06:52,070
+Messages of of templates are typically very hard and ugly to understand.
+99
+
+100
+00:06:52,430 --> 00:06:55,490
+Try to generate mistakes and see some of these messages.
+100
+
+101
+00:06:56,960 --> 00:06:58,520
+Let's go one more step.
+101
+
+102
+00:06:59,510 --> 00:07:06,650
+We have the function so that we expect for the first parameter to be of a type and of the second parameter
+102
+
+103
+00:07:06,650 --> 00:07:12,770
+to be of another type and is going to return to something of the type of the first function, for example,
+103
+
+104
+00:07:12,920 --> 00:07:13,800
+of this function.
+104
+
+105
+00:07:13,800 --> 00:07:18,770
+Take an integer here and double here is going to do so mission and return as a result in R, which will
+105
+
+106
+00:07:18,770 --> 00:07:19,640
+be type of integer.
+106
+
+107
+00:07:19,910 --> 00:07:21,290
+Let's see the examples here.
+107
+
+108
+00:07:22,190 --> 00:07:23,390
+The model of this example.
+108
+
+109
+00:07:23,390 --> 00:07:25,940
+You can define more than a variable.
+109
+
+110
+00:07:26,120 --> 00:07:27,620
+We say here template that.
+110
+
+111
+00:07:27,730 --> 00:07:33,060
+One came across that two with the second with the finitude as type name and now as a class, what is
+111
+
+112
+00:07:33,070 --> 00:07:33,430
+different?
+112
+
+113
+00:07:33,460 --> 00:07:33,790
+Nothing.
+113
+
+114
+00:07:33,790 --> 00:07:35,330
+I'm just showing you more Sirtex.
+114
+
+115
+00:07:35,530 --> 00:07:37,990
+You can use the the class and you can use the word to type name.
+115
+
+116
+00:07:38,450 --> 00:07:43,400
+I'm here saying that this template function might well receive two different types.
+116
+
+117
+00:07:43,720 --> 00:07:45,780
+So here I'm saying some one in 10.
+117
+
+118
+00:07:46,300 --> 00:07:52,270
+And this is going to be guess that the compiler will know that type one is integer and type 10 a type
+118
+
+119
+00:07:52,270 --> 00:07:54,520
+two is just what some of them to 11.
+119
+
+120
+00:07:55,390 --> 00:07:59,290
+On the other side, I'm sending here one and then Tenebrae five.
+120
+
+121
+00:07:59,590 --> 00:08:03,320
+So type one would be integer, type two will build will be double.
+121
+
+122
+00:08:03,850 --> 00:08:08,130
+Now, when you add one last ten point five, it's going to be eleven point five.
+122
+
+123
+00:08:08,440 --> 00:08:12,480
+But wait, the return here is of type one, which is integer.
+123
+
+124
+00:08:12,730 --> 00:08:15,610
+So we are returning eleven point five as an integer.
+124
+
+125
+00:08:15,790 --> 00:08:18,490
+The result would be integer on the other side.
+125
+
+126
+00:08:18,490 --> 00:08:21,610
+If I book both of them as double, they would be some return as.
+126
+
+127
+00:08:22,780 --> 00:08:27,490
+Now here if I, I said that the first one as double and the second as integer.
+127
+
+128
+00:08:27,970 --> 00:08:31,720
+So now the submission would be eleven point two and we return as double.
+128
+
+129
+00:08:31,730 --> 00:08:37,690
+So to return it as a different way to it for the same function call I said, hey, you know what, I
+129
+
+130
+00:08:37,690 --> 00:08:39,060
+will know you for the first time.
+130
+
+131
+00:08:39,160 --> 00:08:41,690
+First, the type to be integer and the second one to be integer.
+131
+
+132
+00:08:42,100 --> 00:08:43,690
+Now one point to do is costly.
+132
+
+133
+00:08:43,690 --> 00:08:44,510
+To integrate.
+133
+
+134
+00:08:44,530 --> 00:08:46,570
+To be one one blastin is 11.
+134
+
+135
+00:08:46,570 --> 00:08:48,790
+Aldy It is more fun.
+135
+
+136
+00:08:48,790 --> 00:08:57,220
+Syntex If you say if you send a and the one eight is going to be type one character and B will be one.
+136
+
+137
+00:08:57,430 --> 00:08:59,470
+So the submission of them is sixty six.
+137
+
+138
+00:08:59,830 --> 00:09:03,360
+If you are returning here from this one it would be costly to character.
+138
+
+139
+00:09:03,790 --> 00:09:10,450
+So it would return to the variable, the character B but if you did one and eight then that one would
+139
+
+140
+00:09:10,450 --> 00:09:15,310
+be integer and E will be, you will be a character.
+140
+
+141
+00:09:15,490 --> 00:09:20,100
+You sum them, it would be sixty six but you return as integer so it's going to be sixty six.
+141
+
+142
+00:09:21,370 --> 00:09:27,820
+OK, this function is Bloss and remember that the string giclas we can concatenate strings if I have
+142
+
+143
+00:09:27,820 --> 00:09:32,740
+string Mustafa and strings out and I can connect them, I can concatenate them so it doesn't have to
+143
+
+144
+00:09:32,740 --> 00:09:33,730
+work on all integers.
+144
+
+145
+00:09:33,940 --> 00:09:35,050
+So aligned to any.
+145
+
+146
+00:09:35,290 --> 00:09:39,560
+I'm seeing some string of ayam space with the string stuff.
+146
+
+147
+00:09:39,970 --> 00:09:45,430
+The question here, can the function, can the compiler take a copy of this function and create it of
+147
+
+148
+00:09:45,430 --> 00:09:46,060
+two strings.
+148
+
+149
+00:09:46,310 --> 00:09:47,380
+The answer is yes.
+149
+
+150
+00:09:47,530 --> 00:09:48,930
+So it's going to add them in print.
+150
+
+151
+00:09:48,940 --> 00:09:49,700
+I am spaceball.
+151
+
+152
+00:09:49,720 --> 00:09:52,550
+Stuff like 19 is going to come by there.
+152
+
+153
+00:09:52,900 --> 00:09:57,940
+The difference between line nineteen aligned to any line nineteen here is used is using a character
+153
+
+154
+00:09:57,940 --> 00:10:00,180
+pointer, but this one is using a clause.
+154
+
+155
+00:10:00,220 --> 00:10:04,110
+The question here is it a plus defined character array?
+155
+
+156
+00:10:04,480 --> 00:10:07,260
+The answer is no is defined only on a string the clause.
+156
+
+157
+00:10:07,270 --> 00:10:08,890
+We'll know more about that in the future.
+157
+
+158
+00:10:10,900 --> 00:10:12,520
+The the static variable.
+158
+
+159
+00:10:12,770 --> 00:10:18,760
+One interesting thing here, if you define a static variable inside the template function, every Turnblad
+159
+
+160
+00:10:18,800 --> 00:10:28,570
+function is going to be have it's a static variable y because it if we have your increment to me was
+160
+
+161
+00:10:28,570 --> 00:10:33,550
+integer and incremental, we was to for I would like you to understand in reality the compiler would
+161
+
+162
+00:10:33,550 --> 00:10:39,570
+take this function, make two copies out of it, one of them for integer, one of them for a double.
+162
+
+163
+00:10:39,760 --> 00:10:45,790
+So in reality there is one I would integrate religion and another set integral I with the double version.
+163
+
+164
+00:10:46,120 --> 00:10:51,580
+So if you tried here to make a static goals and this is a global variable, the static ones would be
+164
+
+165
+00:10:51,580 --> 00:10:53,170
+one, two, three and again, one, two, three.
+165
+
+166
+00:10:53,380 --> 00:10:55,480
+But the global is going to be incremented.
+166
+
+167
+00:10:57,100 --> 00:10:59,020
+OK, one more thing.
+167
+
+168
+00:10:59,170 --> 00:11:02,410
+What we call function Turnblad specialisation.
+168
+
+169
+00:11:03,100 --> 00:11:09,850
+The question here is what if I would like the function to be working the same for every type except
+169
+
+170
+00:11:09,850 --> 00:11:10,890
+the specific data type?
+170
+
+171
+00:11:11,230 --> 00:11:13,120
+Let's let's let's take an example here.
+171
+
+172
+00:11:13,420 --> 00:11:15,130
+Let's think about the ADD function.
+172
+
+173
+00:11:15,130 --> 00:11:18,400
+If I'm adding here, it must be like the sum that we just were doing.
+173
+
+174
+00:11:18,760 --> 00:11:20,260
+It works well for integers.
+174
+
+175
+00:11:20,260 --> 00:11:21,320
+It works well for some.
+175
+
+176
+00:11:21,340 --> 00:11:22,180
+Everyone is happy.
+176
+
+177
+00:11:22,630 --> 00:11:27,880
+Now let's think about multiply function I have here multiply function that multiply.
+177
+
+178
+00:11:28,960 --> 00:11:30,970
+The first one was an integer.
+178
+
+179
+00:11:30,970 --> 00:11:35,800
+So we are sending where we want one type only class D and we have a factor.
+179
+
+180
+00:11:36,190 --> 00:11:40,030
+This is going to equal was integer is going to was double was collected everything.
+180
+
+181
+00:11:40,300 --> 00:11:43,200
+But it will fail four characters for Estrich.
+181
+
+182
+00:11:43,540 --> 00:11:48,790
+Let's say I have interest to apply for Estrich in a specific way and we know that this good will combine
+182
+
+183
+00:11:48,790 --> 00:11:50,260
+if it just is a string.
+183
+
+184
+00:11:50,680 --> 00:11:55,620
+So the way to that is to say, hey, you know what, I would like this multiply to be for every little
+184
+
+185
+00:11:55,630 --> 00:11:58,120
+type except specifically to type.
+185
+
+186
+00:11:58,600 --> 00:12:01,510
+So the syntax to specify something is as follows.
+186
+
+187
+00:12:01,930 --> 00:12:07,210
+You write the word the template, but you do write at a time here and then you write your will function
+187
+
+188
+00:12:07,210 --> 00:12:11,480
+as you would write it in the normal case, which is a function that would multiply a string.
+188
+
+189
+00:12:11,480 --> 00:12:13,630
+Yes, there was some factor and return to string.
+189
+
+190
+00:12:14,050 --> 00:12:15,070
+This is the same as that.
+190
+
+191
+00:12:15,070 --> 00:12:16,840
+But we just thought everything was a string.
+191
+
+192
+00:12:17,110 --> 00:12:21,400
+I'm sitting here, you know what, for the case of string, I'm going to handle it in a different way,
+192
+
+193
+00:12:21,970 --> 00:12:23,110
+which is urologic.
+193
+
+194
+00:12:23,470 --> 00:12:27,570
+And my guess here, I iterated the number of factors and concatenated there is so.
+194
+
+195
+00:12:28,040 --> 00:12:32,990
+Give the word Mustafa three, it will concubinage Mustafa three times, this is my version logic, one
+195
+
+196
+00:12:32,990 --> 00:12:33,350
+might say.
+196
+
+197
+00:12:33,350 --> 00:12:33,860
+You know what?
+197
+
+198
+00:12:33,860 --> 00:12:35,870
+I want a specific logic for David also.
+198
+
+199
+00:12:36,110 --> 00:12:39,980
+Then he was going to double multiply, double something and factor.
+199
+
+200
+00:12:40,460 --> 00:12:46,370
+So the moral of that is if in case you would like to have a specific handballing for a specific data
+200
+
+201
+00:12:46,370 --> 00:12:52,220
+type, you are going to use the template specialization in mean we can hear.
+201
+
+202
+00:12:52,220 --> 00:12:57,950
+Normally you just keep calling the add and multiply in a normal way here in the add, in the interior
+202
+
+203
+00:12:57,950 --> 00:12:58,550
+and the string.
+203
+
+204
+00:12:58,610 --> 00:13:02,150
+This one would be good here in the interior, this one would be cool.
+204
+
+205
+00:13:02,300 --> 00:13:04,910
+But this one here in string, this one would be good.
+205
+
+206
+00:13:05,690 --> 00:13:06,230
+That's it.

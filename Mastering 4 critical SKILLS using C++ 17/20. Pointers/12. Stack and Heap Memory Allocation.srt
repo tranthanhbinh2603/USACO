@@ -1,0 +1,734 @@
+0
+1
+00:00:01,200 --> 00:00:06,810
+In this lecture, we will learn about an interesting and critical topic to understand what is
+1
+
+2
+00:00:06,810 --> 00:00:08,760
+happening behind the scene in the memory.
+2
+
+3
+00:00:09,360 --> 00:00:13,080
+First of all, I would like you to recall what was the stack data structure.
+3
+
+4
+00:00:13,490 --> 00:00:18,240
+Remember, if we have a bunch of books in this way, we put them in order and we wanted to take the
+4
+
+5
+00:00:18,240 --> 00:00:20,520
+top book from the stack,
+5
+
+6
+00:00:20,520 --> 00:00:22,710
+we only can take a book.
+6
+
+7
+00:00:23,040 --> 00:00:25,630
+We can only take the top guy.
+7
+
+8
+00:00:26,040 --> 00:00:30,180
+So if we push something, if we push a lot of things, I would like to pop something,
+8
+
+9
+00:00:30,330 --> 00:00:35,550
+we can only accept the last thing that we put in the stack. It's kind of the stack is closed.
+9
+
+10
+00:00:35,580 --> 00:00:39,930
+So you cannot reach this guy unless you took all of the items that are here.
+10
+
+11
+00:00:40,860 --> 00:00:48,630
+Now, going to our topic, the memory of your computer is divided into a bunch of regions or segments,
+11
+
+12
+00:00:49,020 --> 00:00:52,520
+and today we are going to know some about that.
+12
+
+13
+00:00:52,530 --> 00:01:00,360
+One segment in your memory is for what we call the local variables, and another one has a free memory
+13
+
+14
+00:01:00,360 --> 00:01:06,000
+style and then another section that involves the global variables or static variables and even your
+14
+
+15
+00:01:06,000 --> 00:01:07,130
+programming instructions.
+15
+
+16
+00:01:08,160 --> 00:01:16,230
+So the stack here is a special region where the temporary local variables of your function exist.
+16
+
+17
+00:01:17,680 --> 00:01:21,550
+Remember, local variables always attached to like functions.
+17
+
+18
+00:01:22,720 --> 00:01:29,380
+On the other side, the heap is for the memory that is free that you typically
+18
+
+19
+00:01:29,380 --> 00:01:30,550
+create like using
+19
+
+20
+00:01:30,550 --> 00:01:37,360
+(sorry, this should be new) using the new and the delete commands. The local variables
+20
+
+21
+00:01:37,360 --> 00:01:40,050
+as you know, they are automatically managed for you.
+21
+
+22
+00:01:40,090 --> 00:01:41,490
+You don't create the local variable.
+22
+
+23
+00:01:41,500 --> 00:01:44,970
+When you say integer X, you don't create it in the memory, you do not delete it.
+23
+
+24
+00:01:45,250 --> 00:01:47,860
+This is going to be handled by the computer itself,
+24
+
+25
+00:01:48,340 --> 00:01:51,700
+but the heap is where you create and delete by yourself.
+25
+
+26
+00:01:52,330 --> 00:01:57,610
+You notice that the local variables here have a local scope.
+26
+
+27
+00:01:57,850 --> 00:02:05,020
+Remember, we always say that you shouldn't try to reference a variable outside of your function, but
+27
+
+28
+00:02:05,020 --> 00:02:09,650
+you can create an integer pointer and return it for others to use it.
+28
+
+29
+00:02:10,470 --> 00:02:19,570
+Let's go into details, the runtime stack, or what we call the call stack is a stack of function calls. We learned
+29
+
+30
+00:02:19,570 --> 00:02:22,690
+to make a stack of integer, stack of strings.
+30
+
+31
+00:02:22,930 --> 00:02:24,670
+This is a stack of function calls.
+31
+
+32
+00:02:25,090 --> 00:02:33,310
+When a function is called, it enters the stack and once it's finished, it goes out of the stack. What
+32
+
+33
+00:02:33,310 --> 00:02:36,100
+happens for every active function in your stack?
+33
+
+34
+00:02:36,400 --> 00:02:38,110
+It will have the following details:
+34
+
+35
+00:02:38,440 --> 00:02:45,400
+It will have information about the return value, the parameters, the return address and the
+35
+
+36
+00:02:45,400 --> 00:02:49,240
+information of the local variables. As you see, all of the information that it needs.
+36
+
+37
+00:02:49,990 --> 00:02:51,610
+So now here is an interesting question.
+37
+
+38
+00:02:51,850 --> 00:03:00,100
+Why we cannot reference something as a local variable in our function and return it back to the caller?
+38
+
+39
+00:03:00,550 --> 00:03:07,840
+because once you are returning from a function, all of these active variables are going to be deleted
+39
+
+40
+00:03:07,840 --> 00:03:08,950
+from your stack.
+40
+
+41
+00:03:10,480 --> 00:03:15,910
+So if you try to call a function here like function p1, p2, p3, A.B.C., you will notice in
+41
+
+42
+00:03:15,910 --> 00:03:18,910
+the stack we are going to put all of this information here.
+42
+
+43
+00:03:19,420 --> 00:03:23,020
+Once the function is done, all of that is going to be destroyed.
+43
+
+44
+00:03:23,500 --> 00:03:26,410
+Let's see a simple example of that. We have here
+44
+
+45
+00:03:26,410 --> 00:03:27,550
+three functions,
+45
+
+46
+00:03:27,790 --> 00:03:34,630
+The main, the fun1 and fun2. Function main has variables X, Y, Z, and is calling function 2
+46
+
+47
+00:03:34,930 --> 00:03:36,130
+which has local variable
+47
+
+48
+00:03:36,130 --> 00:03:38,660
+i and receiving two parameters and returning an integer.
+48
+
+49
+00:03:39,100 --> 00:03:41,590
+Here is what happens in the execution:
+49
+
+50
+00:03:43,050 --> 00:03:49,270
+The first thing that happened is the CPU is going to run your program, which you start with the
+50
+
+51
+00:03:49,270 --> 00:03:54,070
+main function here at line 17. Function 17 is calling function1.
+51
+
+52
+00:03:54,070 --> 00:03:58,150
+Let's say it's in some address 0x2b.
+52
+
+53
+00:03:58,420 --> 00:04:04,330
+It is still in fun1 that you should return your result to my address as 0x2b to continue
+53
+
+54
+00:04:04,330 --> 00:04:05,350
+my instructions.
+54
+
+55
+00:04:06,130 --> 00:04:10,480
+In the next step, the function fun1 is called. In the stack,
+55
+
+56
+00:04:10,690 --> 00:04:13,330
+there will be different variables that will be added.
+56
+
+57
+00:04:13,510 --> 00:04:18,430
+It will be the variable a, the variable x, the variable y, and the variable z.
+57
+
+58
+00:04:18,850 --> 00:04:23,790
+Also in the stack, there will be a mark for what is the address of the function that we should return
+58
+
+59
+00:04:23,800 --> 00:04:24,940
+to it after we finish,
+59
+
+60
+00:04:25,360 --> 00:04:31,510
+and also it's going to return a value, int temp value, for the return result here.
+60
+
+61
+00:04:32,530 --> 00:04:40,720
+The function fun1 is going to call fun 2 and is going to go here from the address 0xff. The function
+61
+
+62
+00:04:40,720 --> 00:04:47,740
+fun2 is going to say I have m, n, and r, all of them are on my stack function's active
+62
+
+63
+00:04:48,160 --> 00:04:54,700
+parameters and I'm going to return the result 0xff and then return the results, execute and return
+63
+
+64
+00:04:54,820 --> 00:04:55,450
+them to 0xff.
+64
+
+65
+00:04:55,540 --> 00:05:01,660
+Once we are done with that, the fun2 is going to be removed from the function calls stack,
+65
+
+66
+00:05:02,050 --> 00:05:05,740
+all of its local variables will be destroyed. In a similar way to
+66
+
+67
+00:05:05,740 --> 00:05:09,110
+the fun2, fun1 now is going to return the result here.
+67
+
+68
+00:05:09,520 --> 00:05:12,580
+So also all of its parameters would be destroyed.
+68
+
+69
+00:05:12,850 --> 00:05:16,810
+If you tried to reference some local variables inside the stack, it will be destroyed.
+69
+
+70
+00:05:17,320 --> 00:05:20,080
+Finally, the main also is going to be destroyed,
+70
+
+71
+00:05:20,080 --> 00:05:22,180
+and once we reached this state,
+71
+
+72
+00:05:22,650 --> 00:05:25,200
+The whole program is going to be terminated.
+72
+
+73
+00:05:26,640 --> 00:05:33,390
+Now, let's learn some of the issues that you cannot understand without understanding that note about
+73
+
+74
+00:05:33,390 --> 00:05:37,680
+the stack. Take a minute to think about what might be the problem in this array.
+74
+
+75
+00:05:39,020 --> 00:05:40,880
+It is unused definitely, but what else?
+75
+
+76
+00:05:41,980 --> 00:05:48,820
+The problem here is as follows: this is what you call a stack overflow problem. When we create such
+76
+
+77
+00:05:48,820 --> 00:05:51,390
+a very huge size, There is a problem.
+77
+
+78
+00:05:51,610 --> 00:05:54,180
+The stack typically is small in size.
+78
+
+79
+00:05:54,640 --> 00:05:58,200
+So such a very big array is bigger than the stack size,
+79
+
+80
+00:05:58,480 --> 00:06:00,810
+and this would make a problem in your code.
+80
+
+81
+00:06:00,820 --> 00:06:02,680
+Your program will terminate wrongly.
+81
+
+82
+00:06:03,160 --> 00:06:09,760
+The stack size in windows is typically like 1 megabyte and in some Linux machines are like 8
+82
+
+83
+00:06:09,760 --> 00:06:10,490
+megabytes.
+83
+
+84
+00:06:10,690 --> 00:06:13,240
+This is a bit configurable, but also still has limitations.
+84
+
+85
+00:06:13,900 --> 00:06:19,600
+So the problem here is you are going to consume all of the possible memory for your stack.
+85
+
+86
+00:06:20,110 --> 00:06:23,460
+Now, one question is what I would like to redefine such big data?
+86
+
+87
+00:06:23,830 --> 00:06:31,060
+This is what the rule of the heap would come to that. Here are another two examples of potential
+87
+
+88
+00:06:31,060 --> 00:06:33,400
+problems. Take a minute and try to guess what's happening.
+88
+
+89
+00:06:33,910 --> 00:06:35,440
+Why would that be a problem?
+89
+
+90
+00:06:37,320 --> 00:06:41,970
+In the first case, function1-recursive, it's going to call itself infinity.
+90
+
+91
+00:06:42,210 --> 00:06:44,580
+So this is definitely a problem that's going for infinity.
+91
+
+92
+00:06:44,820 --> 00:06:49,790
+But another problem is the stack would be exhausted by this function.
+92
+
+93
+00:06:50,210 --> 00:06:51,510
+Here is a more clear example.
+93
+
+94
+00:06:51,780 --> 00:06:53,810
+Function2 is another recursive function.
+94
+
+95
+00:06:53,850 --> 00:06:55,380
+It's a proper function.
+95
+
+96
+00:06:55,410 --> 00:06:56,250
+Nothing wrong with it.
+96
+
+97
+00:06:56,460 --> 00:06:58,680
+It takes a variable N and keep reducing it.
+97
+
+98
+00:06:58,680 --> 00:06:58,980
+...
+98
+
+99
+00:06:59,010 --> 00:07:02,760
+If I call the function recursive with 10, it would be called ten times,
+99
+
+100
+00:07:03,180 --> 00:07:09,810
+but what if I call it with a variable like one million, there will be one million function entry in
+100
+
+101
+00:07:09,810 --> 00:07:10,410
+the stack.
+101
+
+102
+00:07:10,650 --> 00:07:13,120
+Every one of them has 100 integers from here
+102
+
+103
+00:07:13,140 --> 00:07:17,140
+local variable and has the integer here and the returned integer from here.
+103
+
+104
+00:07:17,460 --> 00:07:22,380
+This is a lot and more than the one mega limit of the stack.
+104
+
+105
+00:07:22,650 --> 00:07:26,530
+So eventually this will give you another stack overflow problem.
+105
+
+106
+00:07:26,850 --> 00:07:34,640
+That's why in practice we avoid recursion because it simply can fall in this stack overflow limitation.
+106
+
+107
+00:07:35,490 --> 00:07:41,260
+Now, going back to how can we solve our problems if we would like really a very huge data.
+107
+
+108
+00:07:41,580 --> 00:07:46,260
+This is where the new int and delete comes to the scene.
+108
+
+109
+00:07:46,950 --> 00:07:52,470
+When you define a pointer 1 and pointer 2 in this way, the amount of data here like the N or 7
+109
+
+110
+00:07:52,710 --> 00:07:56,130
+are going to be reserved on something else called the heap.
+110
+
+111
+00:07:56,460 --> 00:07:58,320
+The heap is a free memory,
+111
+
+112
+00:07:58,560 --> 00:08:02,300
+It is a very big one, up to the limit of your machine.
+112
+
+113
+00:08:02,580 --> 00:08:05,640
+That's why there is no problem with using it.
+113
+
+114
+00:08:05,910 --> 00:08:11,070
+More interestingly, who has created this data? You. You created it and you deleted it.
+114
+
+115
+00:08:11,430 --> 00:08:12,090
+That's why
+115
+
+116
+00:08:12,270 --> 00:08:18,390
+I can come here and say integer pointer, pointer 1, pointer  2, I can delete pointer 2, but I can
+116
+
+117
+00:08:18,390 --> 00:08:19,440
+return pointer 1.
+117
+
+118
+00:08:19,930 --> 00:08:24,780
+Now, this guy can use it and can delete it. Comparing to the local variables,
+118
+
+119
+00:08:25,050 --> 00:08:28,560
+this guy will not be deleted by the end of the function.
+119
+
+120
+00:08:29,010 --> 00:08:32,220
+It is going to be deleted by me whenever I decide that.
+120
+
+121
+00:08:32,700 --> 00:08:41,040
+So in the stack case, the local variables are created by the CPU and destroyed by the CPU in a local fashion,
+121
+
+122
+00:08:41,550 --> 00:08:46,590
+but when it comes to the heap and the new operator, they will be created on the heap, which is much
+122
+
+123
+00:08:46,590 --> 00:08:49,200
+bigger in space and you have to decide to delete it.
+123
+
+124
+00:08:49,440 --> 00:08:51,210
+What if I forgot to delete it?
+124
+
+125
+00:08:51,580 --> 00:08:52,740
+This is going to be a memory
+125
+
+126
+00:08:52,740 --> 00:08:59,310
+leak. A more interesting thing to notice is as follows: the variable ptr1 and ptr2
+126
+
+127
+00:08:59,310 --> 00:09:01,980
+themselves are actually local variables,
+127
+
+128
+00:09:02,010 --> 00:09:03,110
+they are on the stack,
+128
+
+129
+00:09:03,150 --> 00:09:07,800
+this is very interesting, but the data itself here is created on the heap.
+129
+
+130
+00:09:07,800 --> 00:09:10,490
+Remember, the pointer is just like a pointer to something.
+130
+
+131
+00:09:10,770 --> 00:09:12,990
+So this is something is on the heap
+131
+
+132
+00:09:13,230 --> 00:09:16,170
+but pointer one and pointer two themselves are only stack.
+132
+
+133
+00:09:17,250 --> 00:09:22,230
+So when this function, the pointer 1 and pointer 2 themselves will be destroyed, but the active memory
+133
+
+134
+00:09:22,230 --> 00:09:23,940
+will be still here.
+134
+
+135
+00:09:24,120 --> 00:09:31,260
+Then you create another local variable p to return...
+135
+
+136
+00:09:31,260 --> 00:09:32,020
+array from here.
+136
+
+137
+00:09:32,970 --> 00:09:38,790
+So one more time going back to here, we said that the local variables exist on the stack.
+137
+
+138
+00:09:38,820 --> 00:09:44,880
+These are all your variables in the function and the heap is huge, it is free memory.
+138
+
+139
+00:09:45,360 --> 00:09:47,870
+You have control over it.
+139
+
+140
+00:09:48,330 --> 00:09:51,000
+What about the global variables and static variables?
+140
+
+141
+00:09:51,180 --> 00:09:52,700
+These are permanent storage.
+141
+
+142
+00:09:52,950 --> 00:09:56,340
+Once they are declared, they are there forever.
+142
+
+143
+00:09:57,180 --> 00:10:00,920
+So they have some of these similarities with the heap that they exist
+143
+
+144
+00:10:00,960 --> 00:10:01,860
+till they be removed
+144
+
+145
+00:10:02,220 --> 00:10:06,770
+but they are also similar to the local variable in that you are not the one who created them in the memory by yourself.
+145
+
+146
+00:10:07,110 --> 00:10:11,160
+So that's why they have a separate handling for them here.
+146
+
+147
+00:10:12,330 --> 00:10:15,540
+That's it about this kind of memory information.

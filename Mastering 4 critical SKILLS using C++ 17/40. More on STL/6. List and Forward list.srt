@@ -1,0 +1,267 @@
+1
+00:00:01,620 --> 00:00:09,960
+Two of the interesting data structures in the C++ is list and the modern one for the the list and the
+
+2
+00:00:09,960 --> 00:00:14,650
+list are designed to be very efficient, to insert and remove.
+
+3
+00:00:15,030 --> 00:00:21,420
+So I hope you get the sense that every data structure have a specific Bouar, for example, the vector
+
+4
+00:00:21,420 --> 00:00:25,290
+is internally generated so you can randomly access any position very fast.
+
+5
+00:00:25,890 --> 00:00:31,320
+Now what if you think about the vector, if you try to remove anything in the middle, it's going to
+
+6
+00:00:31,320 --> 00:00:32,300
+be a lot of work.
+
+7
+00:00:32,760 --> 00:00:37,500
+The purpose of set list and forward the list is to be very efficient.
+
+8
+00:00:37,500 --> 00:00:42,360
+If you would like to insert and remove in the method, if you have something, if you have an iterator
+
+9
+00:00:43,230 --> 00:00:48,570
+position, when you study the data structure closely so that something could link that list, which
+
+10
+00:00:48,570 --> 00:00:51,020
+is how these things are implemented internally.
+
+11
+00:00:51,570 --> 00:00:55,350
+So we we started with the list and we give it the values eight to one.
+
+12
+00:00:55,990 --> 00:01:00,900
+I can also say something like assign four and six, which will assign four values.
+
+13
+00:01:00,900 --> 00:01:06,720
+Each one of the six, I can assign them again to another, maybe the list of numbers.
+
+14
+00:01:07,380 --> 00:01:11,310
+Now you can push in the front and in the front and center back.
+
+15
+00:01:11,310 --> 00:01:13,860
+So if you watched in the front is going to be thirty here.
+
+16
+00:01:14,370 --> 00:01:19,080
+If you move the front, if you remove the front here, if you push the back, it would be here.
+
+17
+00:01:19,590 --> 00:01:22,170
+But if you try to x like an array, it will fail.
+
+18
+00:01:23,010 --> 00:01:26,030
+Now we can insert a list of numbers.
+
+19
+00:01:26,040 --> 00:01:31,500
+For example, if I here at the beginning and inserted five, six, eight, then it will take five,
+
+20
+00:01:31,500 --> 00:01:38,160
+six to eight and instead to them here in the beginning for the iterator notice that you cannot say iterator
+
+21
+00:01:38,160 --> 00:01:44,100
+plus equal to you have to move one step forward or one step backward and you can erase something.
+
+22
+00:01:44,580 --> 00:01:50,370
+So the moral of that is, as I said, is very efficient in inserting and removing if you have the iterator
+
+23
+00:01:50,370 --> 00:01:52,070
+that you would like to apply and operational.
+
+24
+00:01:52,080 --> 00:01:58,740
+But now the forward list is a bit limited then that it doesn't move backward.
+
+25
+00:01:58,740 --> 00:02:00,450
+It only moved forward this way.
+
+26
+00:02:00,510 --> 00:02:02,280
+Code for this in a very similar way.
+
+27
+00:02:02,280 --> 00:02:04,280
+We can push items here.
+
+28
+00:02:05,280 --> 00:02:09,750
+There is a function that say insert after you give it an iterator and insert something.
+
+29
+00:02:09,750 --> 00:02:12,330
+So our list now is one, two, three.
+
+30
+00:02:12,510 --> 00:02:15,940
+And I say insert after the beginning, five, six, eight.
+
+31
+00:02:15,960 --> 00:02:18,240
+So that's what's happening here is the beginning.
+
+32
+00:02:18,510 --> 00:02:20,500
+It is the after it with thirty five six.
+
+33
+00:02:20,750 --> 00:02:23,350
+So notice that it is in the very beginning.
+
+34
+00:02:23,370 --> 00:02:25,080
+It is in this position.
+
+35
+00:02:26,580 --> 00:02:37,290
+You can also like, let's say here, the return iterator from here is going to be the last element inserted.
+
+36
+00:02:37,650 --> 00:02:39,620
+So we inserted five, six to eight.
+
+37
+00:02:39,630 --> 00:02:41,880
+Here is the eight eight return and iterator to it.
+
+38
+00:02:42,450 --> 00:02:48,720
+If I am BLIS after and I give it to any is going to insert the twenty of three and return alliterative.
+
+39
+00:02:49,350 --> 00:02:50,820
+You can Iblis after it again.
+
+40
+00:02:50,820 --> 00:02:51,360
+Forty.
+
+41
+00:02:51,480 --> 00:02:54,300
+So it's going to insert the forty here and use it.
+
+42
+00:02:54,690 --> 00:03:00,090
+Or you can still use the insert after notice that the forward list doesn't go backward.
+
+43
+00:03:00,120 --> 00:03:01,280
+It must go forward.
+
+44
+00:03:03,480 --> 00:03:09,870
+You can also go the is after which is going to erase after something if the iterator as a position to
+
+45
+00:03:09,870 --> 00:03:20,160
+here and you say it is after that just there is the element element after it.
+
+46
+00:03:24,770 --> 00:03:34,310
+Yes, one moment we insert the the vote is returning this to we are doing it later, which is three,
+
+47
+00:03:34,760 --> 00:03:43,880
+I guess that this is I guess this is this is an accurate you might double check with some running again.
+
+48
+00:03:43,880 --> 00:03:44,930
+We can go back.
+
+49
+00:03:44,930 --> 00:03:47,450
+We can we can give it.
+
+50
+00:03:49,120 --> 00:03:53,210
+It is after and some some it returned here.
+
+51
+00:03:55,110 --> 00:04:02,010
+You cannot again, you cannot access with random with random balls, I'm not sure if my final words
+
+52
+00:04:02,010 --> 00:04:03,600
+here are very accurate or not.
+
+53
+00:04:06,410 --> 00:04:13,940
+Here we give it we move to the beginning, so we are here at the one with the plus bus, so we are in
+
+54
+00:04:13,940 --> 00:04:17,900
+the five, we say it is after this.
+
+55
+00:04:17,900 --> 00:04:21,400
+OK, there is after here is taking two pointers, the starter.
+
+56
+00:04:21,400 --> 00:04:24,560
+And so it is after it later it returns fired.
+
+57
+00:04:24,890 --> 00:04:26,020
+What is after five?
+
+58
+00:04:26,030 --> 00:04:26,690
+It is six.
+
+59
+00:04:26,900 --> 00:04:29,810
+So after three it is from the sixth to the end.
+
+60
+00:04:29,960 --> 00:04:31,710
+That's why is going to remove all of these guys.
+
+61
+00:04:31,710 --> 00:04:41,240
+So one five, the only one that I'm suspecting here is this, this line of code because the forty should
+
+62
+00:04:41,240 --> 00:04:44,120
+be the forty should be here.
+
+63
+00:04:44,390 --> 00:04:47,600
+So Étretat plus plus is going to be a two.
+
+64
+00:04:47,610 --> 00:04:53,930
+This is correct, but it is after eight it should remove.
+
+65
+00:04:55,200 --> 00:04:58,560
+The three, so I expect that these three should be removed.
+
+66
+00:04:59,280 --> 00:04:59,740
+That's it.
+
+67
+00:05:00,390 --> 00:05:00,840
+Thank you.

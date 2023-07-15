@@ -1,0 +1,174 @@
+0
+1
+00:00:01,140 --> 00:00:06,680
+Homework set number two, in the first problem you will print this time a diamond, this way.
+1
+
+2
+00:00:06,690 --> 00:00:11,040
+So given five, you are to print five rows this way than five rows.
+2
+
+3
+00:00:11,040 --> 00:00:16,350
+This way, probably you need to focus first on the above-part and then the next part is very similar
+3
+
+4
+00:00:16,350 --> 00:00:17,150
+to the above-part.
+4
+
+5
+00:00:17,490 --> 00:00:21,780
+You need to think about the relationship between the number of spaces and the number of stars per a
+5
+
+6
+00:00:21,780 --> 00:00:22,680
+line and so on.
+6
+
+7
+00:00:24,260 --> 00:00:31,790
+In the second program, you read an integer N: print, all numbers or integers that satisfy the following
+7
+
+8
+00:00:31,800 --> 00:00:37,910
+property, each number is divisible by eight or divisible by both four and three.
+8
+
+9
+00:00:38,210 --> 00:00:44,150
+For example, if I entered input hundred, then we have to find all numbers that were equal to 100
+9
+
+10
+00:00:44,300 --> 00:00:47,000
+that satisfies due to properties, for example,
+10
+
+11
+00:00:47,000 --> 00:00:48,330
+You can observe here that eight.
+11
+
+12
+00:00:48,350 --> 00:00:52,260
+satisfy the first guy and 12 is divisible by both three and four, And so on.
+12
+
+13
+00:00:52,280 --> 00:01:01,400
+In this one, we will read an integer N and print the first N integers that are multiple of 3
+13
+
+14
+00:01:01,400 --> 00:01:02,930
+but not multiple of 4.
+14
+
+15
+00:01:03,870 --> 00:01:09,050
+Observe here you are targeting the number of the first N numbers.
+15
+
+16
+00:01:09,350 --> 00:01:10,140
+So this is different.
+16
+
+17
+00:01:10,160 --> 00:01:12,250
+Here you are reading from one to end, for example.
+17
+
+18
+00:01:12,470 --> 00:01:14,750
+But here you would like to get the first N numbers.
+18
+
+19
+00:01:15,710 --> 00:01:21,530
+So this is output for input like 11 observe something like 12, 12 is divisible by both 3 and
+19
+
+20
+00:01:21,530 --> 00:01:21,840
+4.
+20
+
+21
+00:01:21,860 --> 00:01:23,550
+That's why it is excluded.
+21
+
+22
+00:01:23,870 --> 00:01:27,980
+We need the number that is divisible by 3, but not multiple of 4.
+22
+
+23
+00:01:28,040 --> 00:01:29,750
+So how can we do that in a smart way?
+23
+
+24
+00:01:32,300 --> 00:01:38,450
+The minimum of values, you would read an integer T for a number of test cases, and for each test case
+24
+
+25
+00:01:38,450 --> 00:01:43,850
+you read integer N followed by reading N integers and for each test case.
+25
+
+26
+00:01:43,850 --> 00:01:49,610
+Print the minimum of them, for example, reading here two, two is for T, the number of test cases.
+26
+
+27
+00:01:49,640 --> 00:01:50,730
+So we have to test cases.
+27
+
+28
+00:01:50,750 --> 00:01:55,690
+This is the first test case and this is the second test case, each test case start with,
+28
+
+29
+00:01:55,690 --> 00:01:57,090
+the number of integers here, 6.
+29
+
+30
+00:01:57,100 --> 00:01:58,430
+So we read 6 numbers.
+30
+
+31
+00:01:58,730 --> 00:02:02,870
+And then we print the minimum among them, the minimum among all of these numbers is 4.
+31
+
+32
+00:02:03,350 --> 00:02:06,050
+And in the second case, we need 3 integers.
+32
+
+33
+00:02:06,050 --> 00:02:08,510
+Here are the three integers and the minimum is 5.
+33
+
+34
+00:02:08,720 --> 00:02:12,790
+So the output is 4 for the first test case and the second one is 5.
+34
+
+35
+00:02:14,270 --> 00:02:14,780
+That's all.

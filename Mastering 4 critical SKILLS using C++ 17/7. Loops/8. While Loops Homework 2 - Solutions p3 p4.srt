@@ -1,0 +1,189 @@
+0
+1
+00:00:01,470 --> 00:00:08,940
+Let's solve the third problem, there are two ways to do it at least, in the first one, we're
+1
+
+2
+00:00:08,940 --> 00:00:15,390
+going to just follow what we are asking to do it similar to the previous time we will iterate from one
+2
+
+3
+00:00:15,390 --> 00:00:21,420
+to N. Sorry, we are going to iterate up to our counter, achieve the N, because we need to print
+3
+
+4
+00:00:21,540 --> 00:00:23,460
+the first N item.
+4
+
+5
+00:00:23,460 --> 00:00:26,360
+So this is like the first thing to consider.
+5
+
+6
+00:00:26,640 --> 00:00:27,690
+We have a current number.
+6
+
+7
+00:00:27,690 --> 00:00:30,330
+We keep increasing it with every match.
+7
+
+8
+00:00:30,330 --> 00:00:35,730
+We increment the  ++ and we keep going till we get all of the N numbers. to make a check.
+8
+
+9
+00:00:35,880 --> 00:00:40,360
+We first of all, check if the current number mod 3 == 0 or not.
+9
+
+10
+00:00:40,410 --> 00:00:41,490
+This is a first condition.
+10
+
+11
+00:00:41,880 --> 00:00:46,290
+And the second one we check, if mod 4 != 0 or not.
+11
+
+12
+00:00:46,620 --> 00:00:48,400
+This is mainly the code and the logic assemble.
+12
+
+13
+00:00:48,660 --> 00:00:54,720
+We can optimize this one little bit as following, Let's from the beginning
+13
+
+14
+00:00:54,720 --> 00:00:57,900
+Iterate on all the numbers that are divisible by three.
+14
+
+15
+00:00:57,900 --> 00:01:02,040
+How to do that? start by three and keep incrementing by three.
+15
+
+16
+00:01:02,760 --> 00:01:07,980
+Then every number that you are iterating over it from the beginning is divisible by three then.
+16
+
+17
+00:01:07,980 --> 00:01:12,150
+Now there is only one condition that you need to handle that if it is divisible by four or not.
+17
+
+18
+00:01:12,180 --> 00:01:13,050
+So here we check.
+18
+
+19
+00:01:13,050 --> 00:01:21,030
+If it not divisible, then we can print it and increment, that is all. Let's observe here
+19
+
+20
+00:01:21,210 --> 00:01:23,790
+I didn't use the counter here.
+20
+
+21
+00:01:23,940 --> 00:01:24,960
+I depended on it.
+21
+
+22
+00:01:25,230 --> 00:01:31,470
+Like, we don't need to consider another variable, just use N here and keep decreasing it, 
+22
+
+23
+00:01:31,470 --> 00:01:31,710
+that's all.
+23
+
+24
+00:01:31,770 --> 00:01:34,140
+This should be enough so we don't need one extra variable.
+24
+
+25
+00:01:34,350 --> 00:01:39,960
+So this overall good is using less variable and also shorter because you are already iterating on divisible
+25
+
+26
+00:01:39,960 --> 00:01:46,440
+by 3 variables and only checking for mod 4, this solution was suggested by this guy.
+26
+
+27
+00:01:49,390 --> 00:01:54,850
+The fourth problem is about the minimum of a bunch of numbers, we already know how to get the minimum
+27
+
+28
+00:01:54,850 --> 00:01:58,840
+if the numbers are a bit few, but now we are expanding it to be more generic.
+28
+
+29
+00:01:59,860 --> 00:02:00,580
+To do that.
+29
+
+30
+00:02:00,850 --> 00:02:05,730
+We mainly need here to, we have different test cases.
+30
+
+31
+00:02:05,740 --> 00:02:10,870
+So let's iterate on the test cases, for every test case, will iterate and read the N numbers
+31
+
+32
+00:02:11,260 --> 00:02:17,950
+if it's the first number considered the first the value for us otherwise minimizing on the new value and
+32
+
+33
+00:02:17,950 --> 00:02:18,510
+keep going.
+33
+
+34
+00:02:18,520 --> 00:02:23,570
+Once you are done, the result will be ready for you to be the target number.
+34
+
+35
+00:02:24,530 --> 00:02:30,070
+Yeah, this is mainly the solution for this problem, which is just how to make it more iterative,
+35
+
+36
+00:02:30,070 --> 00:02:30,790
+per test case.
+36
+
+37
+00:02:30,970 --> 00:02:35,650
+So this while loop here is reading N numbers and getting the minimum among them.
+37
+
+38
+00:02:36,280 --> 00:02:36,730
+That's all.

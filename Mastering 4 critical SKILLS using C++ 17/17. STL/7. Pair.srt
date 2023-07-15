@@ -1,0 +1,234 @@
+0
+1
+00:00:01,170 --> 00:00:08,100
+One of the useful classes from STL is the pair class, the pair - is its name say - it means two 
+1
+
+2
+00:00:08,100 --> 00:00:08,520
+things,
+2
+
+3
+00:00:08,850 --> 00:00:12,620
+the interesting in the pair, it can be pair of any two types,
+3
+
+4
+00:00:13,020 --> 00:00:14,910
+so, for example, you define it this way,
+4
+
+5
+00:00:14,910 --> 00:00:21,630
+you say pair, you then you open this < and > here, and you put say integer, string 
+5
+
+6
+00:00:21,630 --> 00:00:27,180
+it means I would like a pair of items that have only the first item as an integer and the second as a
+6
+
+7
+00:00:27,180 --> 00:00:27,600
+string.
+7
+
+8
+00:00:28,020 --> 00:00:29,370
+You for simplicity,
+8
+
+9
+00:00:29,370 --> 00:00:33,960
+you can think of it like you are defining your own structure that has int and has string,
+9
+
+10
+00:00:35,490 --> 00:00:42,360
+So the p.first it would be here the integer, and p.second would be the string here.
+10
+
+11
+00:00:42,630 --> 00:00:46,640
+the way that we create pairs, it really like using the function make pair
+11
+
+12
+00:00:46,650 --> 00:00:53,170
+You call make pair and give it value that matches this value and its value here, that matches the datatype 
+12
+
+13
+00:00:53,190 --> 00:00:58,680
+you would like to print the content, you say p.first, p.second you can make things like,
+13
+
+14
+00:00:59,130 --> 00:01:03,090
+say, I would like to define a stack of pair of int and string,
+14
+
+15
+00:01:03,420 --> 00:01:05,640
+then you started to push these items of pair
+15
+
+16
+00:01:06,060 --> 00:01:10,290
+so this way it helps you to create items of different types,
+16
+
+17
+00:01:10,560 --> 00:01:12,210
+you can go more complex,
+17
+
+18
+00:01:12,210 --> 00:01:14,130
+like, let's say I would like to defined three variables,
+18
+
+19
+00:01:14,340 --> 00:01:18,810
+I can say pair of integer, pair, integer and string,
+19
+
+20
+00:01:19,170 --> 00:01:25,980
+so this means that p.first would be the integer, p.second would be this pair, which is
+20
+
+21
+00:01:25,980 --> 00:01:26,700
+pair by itself.
+21
+
+22
+00:01:26,700 --> 00:01:28,920
+So I can say p.second.
+22
+
+23
+00:01:28,920 --> 00:01:30,300
+.first it would get this value
+23
+
+24
+00:01:30,690 --> 00:01:35,930
+p.second, it would get this value, to create it again.
+24
+
+25
+00:01:35,940 --> 00:01:36,750
+think in the same way,
+25
+
+26
+00:01:36,750 --> 00:01:43,410
+I would like to make pair of a value and its second thing is a pair of two things like 20 and
+26
+
+27
+00:01:43,770 --> 00:01:49,860
+"ali" here, or an easier way, you can make it like this way,
+27
+
+28
+00:01:50,160 --> 00:01:53,430
+no here a value of ten and here a value of p.
+28
+
+29
+00:01:54,150 --> 00:02:01,770
+nicely, since  C++ 11, there is a new thing that's named tuple so that the tuple
+29
+
+30
+00:02:01,770 --> 00:02:03,750
+can allow us for a lot of more values
+30
+
+31
+00:02:03,750 --> 00:02:09,500
+so you can think of pair as a special version of this tuple that allow a lot of more values.
+31
+
+32
+00:02:10,800 --> 00:02:16,770
+The interesting thing about the pair is that it's supports the comparisons like  ==, or greater than
+32
+
+33
+00:02:16,770 --> 00:02:17,910
+or equal and so on,
+33
+
+34
+00:02:17,910 --> 00:02:22,080
+so let's say you have a set of pairs like that, OK?
+34
+
+35
+00:02:22,170 --> 00:02:24,980
+This is values, pair of integers and pair of string in it,
+35
+
+36
+00:02:25,590 --> 00:02:31,620
+and let's say that you would like to order them or like thinking about their order, for example, typically
+36
+
+37
+00:02:31,890 --> 00:02:35,720
+the default comparison would be on the first element if they are equal,
+37
+
+38
+00:02:35,730 --> 00:02:37,260
+the second element, if they are equal,
+38
+
+39
+00:02:37,260 --> 00:02:42,840
+the third element, for example, if you are comparing P1 with P2 then P2 is the smaller because 
+39
+
+40
+00:02:42,840 --> 00:02:44,160
+seven is smaller than ten.
+40
+
+41
+00:02:44,700 --> 00:02:49,000
+If you are comparing B three with before B three before you start to extend.
+41
+
+42
+00:02:49,050 --> 00:02:49,770
+This cannot help.
+42
+
+43
+00:02:49,770 --> 00:02:51,630
+In comparison, we move to the second element,
+43
+
+44
+00:02:51,630 --> 00:02:53,640
+Ziad - Mustafa Z is bigger,
+44
+
+45
+00:02:53,940 --> 00:02:54,870
+Mustafa is this smaller,
+45
+
+46
+00:02:54,870 --> 00:02:58,080
+So P4 is less then P3 and so on,
+46
+
+47
+00:02:58,080 --> 00:03:04,650
+So it keeps going element by element to do the comparison. pairs very useful class in many cases.

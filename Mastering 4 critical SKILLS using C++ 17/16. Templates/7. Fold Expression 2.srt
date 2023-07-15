@@ -1,0 +1,419 @@
+0
+1
+00:00:01,170 --> 00:00:06,950
+Let's continue the fold expression. So here is the division that I asked you to develop it.
+1
+
+2
+00:00:06,960 --> 00:00:11,760
+It could wise let's develop just here the right case and the left the case.
+2
+
+3
+00:00:12,150 --> 00:00:17,210
+If you tried to print the output of that, You will notice the answer isn't in the same way.
+3
+
+4
+00:00:17,640 --> 00:00:25,170
+And the reason behind that is the order of the operation in the division would matter a lot comparing
+4
+
+5
+00:00:25,170 --> 00:00:28,980
+in contrast to the multiplication and addition.
+5
+
+6
+00:00:29,340 --> 00:00:33,930
+So if we send here 1, 2, 3, 4, The expression is going to be generated with
+6
+
+7
+00:00:34,260 --> 00:00:38,380
+parameters in this order, Which mathematically is like 1 over 2 over 3 or 4.
+7
+
+8
+00:00:38,400 --> 00:00:39,240
+So this the value.
+8
+
+9
+00:00:40,160 --> 00:00:45,860
+Now, If you are doing the right expansion, The expression is like 1 over all of that term and to over
+9
+
+10
+00:00:45,860 --> 00:00:47,090
+all of that term and so on.
+10
+
+11
+00:00:47,810 --> 00:00:51,470
+So this is going to be this value.
+11
+
+12
+00:00:51,950 --> 00:00:55,370
+And now here is the risk of using integer operators.
+12
+
+13
+00:00:55,640 --> 00:01:03,170
+If you used the integer operator with the division left, It is going to end up with zero because the 3
+13
+
+14
+00:01:03,170 --> 00:01:04,580
+over 4 is going to be ...
+14
+
+15
+00:01:07,280 --> 00:01:11,590
+The left expansion is going to be starting with 1 over 2, which is zero
+15
+
+16
+00:01:11,750 --> 00:01:14,830
+So the whole term would end up with zero
+16
+
+17
+00:01:15,260 --> 00:01:21,520
+but if you did the right expression, It eventually would divide over 3 by 4, Which is zero
+17
+
+18
+00:01:21,530 --> 00:01:23,470
+So you would end up with a runtime error.
+18
+
+19
+00:01:23,690 --> 00:01:28,870
+So you have to be careful about the left and right and you have to think about the semantics of your
+19
+
+20
+00:01:30,050 --> 00:01:31,310
+operator.
+20
+
+21
+00:01:33,050 --> 00:01:39,220
+Another interesting thing is you can so far we're using the args in a very direct way
+21
+
+22
+00:01:39,410 --> 00:01:42,450
+and we always say think of on args as the first element.
+22
+
+23
+00:01:42,890 --> 00:01:47,990
+So given that is just practically speaking will be generated as the first element, We can even pass
+23
+
+24
+00:01:47,990 --> 00:01:55,340
+some function here or functor or even later lambda function and just apply it so you
+24
+
+25
+00:01:55,340 --> 00:01:57,020
+don't need even to use just args,
+25
+
+26
+00:01:57,020 --> 00:01:58,670
+You can use some functions over args.
+26
+
+27
+00:01:58,670 --> 00:02:05,420
+You can use some more complicated sometimes expression over args but put some parameters around it.
+27
+
+28
+00:02:05,420 --> 00:02:09,250
+So here I have some functions to square and I am passing the square function,
+28
+
+29
+00:02:09,470 --> 00:02:14,120
+So the square function is going to be the first element here and then it's going to be applied to the
+29
+
+30
+00:02:14,120 --> 00:02:17,140
+first element and then the second element then the third element and so on.
+30
+
+31
+00:02:17,390 --> 00:02:19,170
+So we can also pass a function to use it.
+31
+
+32
+00:02:19,370 --> 00:02:26,030
+And this is typically how we can make complicated things with the fold expression.
+32
+
+33
+00:02:27,730 --> 00:02:36,490
+There is one remaining concern is we said that there is a need for the binary folding to allow to handle
+33
+
+34
+00:02:36,490 --> 00:02:41,650
+the case of the one of empty list, Right?
+34
+
+35
+00:02:42,280 --> 00:02:45,100
+There are three operators that doesn't need the asterisk.
+35
+
+36
+00:02:45,250 --> 00:02:50,820
+As a result, there is no binary folding for them, Which are the AND-AND, and OR-OR, and the comma.
+36
+
+37
+00:02:51,000 --> 00:02:57,260
+OK!. So you can use the AND-AND this way and you can even send an empty list for all of them.
+37
+
+38
+00:02:57,760 --> 00:03:03,560
+Remember, For an expression to be all of it true, You need everything to be true.
+38
+
+39
+00:03:03,580 --> 00:03:06,220
+That's why by default it will be ended with a one.
+39
+
+40
+00:03:06,430 --> 00:03:12,970
+So the default value for an empty expression would be one. On the other side, The OR's the default expression
+40
+
+41
+00:03:12,970 --> 00:03:14,450
+is going to be zero.
+41
+
+42
+00:03:14,590 --> 00:03:16,270
+Otherwise, it's just ANDING
+42
+
+43
+00:03:16,270 --> 00:03:21,810
+or ORING for what exists and you'd need to care about the initial value.
+43
+
+44
+00:03:22,180 --> 00:03:25,570
+The remaining one, Which is more tricker is the comma. Recall
+44
+
+45
+00:03:25,570 --> 00:03:31,690
+the comma operator evaluates from left to right and also as you know it returns the value...
+45
+
+46
+00:03:31,690 --> 00:03:32,560
+of the last expression.
+46
+
+47
+00:03:32,560 --> 00:03:33,710
+We don't care about that for now.
+47
+
+48
+00:03:34,330 --> 00:03:41,800
+So generally speaking, If you have to do a bunch of things to be evaluated from left to right or in
+48
+
+49
+00:03:41,800 --> 00:03:44,230
+a sequential way, You need then the comma operator.
+49
+
+50
+00:03:44,960 --> 00:03:46,840
+Let's here refresh
+50
+
+51
+00:03:46,840 --> 00:03:53,280
+the comma operator with a vector here. I have a vector of integer V, I normally push 1 and push 2.
+51
+
+52
+00:03:53,290 --> 00:03:53,890
+That's OK.
+52
+
+53
+00:03:54,080 --> 00:03:57,880
+I can also push 3, 4, 5 with 3 comma.
+53
+
+54
+00:03:57,910 --> 00:03:58,780
+This is totally OK.
+54
+
+55
+00:03:59,350 --> 00:04:03,730
+Now, We know with the fold expression, There are a lot of parameters around things.
+55
+
+56
+00:04:04,030 --> 00:04:06,160
+So what about parameters here?
+56
+
+57
+00:04:06,430 --> 00:04:13,360
+Very normally, Simply going from left to right, These parameters don't affect our overall expression in a left
+57
+
+58
+00:04:13,360 --> 00:04:15,170
+to right
+58
+
+59
+00:04:15,210 --> 00:04:15,430
+ordering
+59
+
+60
+00:04:15,430 --> 00:04:17,350
+for going to do it this way for example.
+60
+
+61
+00:04:20,470 --> 00:04:26,860
+Now, I would like you to think about how can we develop a fold expression that allows pushing numbers
+61
+
+62
+00:04:26,860 --> 00:04:32,080
+in a variable way like I'm doing here, So think about how to use the comma operator to do that.
+62
+
+63
+00:04:32,230 --> 00:04:33,730
+Give yourself like a five minutes.
+63
+
+64
+00:04:36,170 --> 00:04:42,310
+It is how we can do that. As simple as we are going to use the co mma operator, not the plus, not the
+64
+
+65
+00:04:42,350 --> 00:04:43,400
+minus, not multiplication.
+65
+
+66
+00:04:43,430 --> 00:04:48,640
+We're going to use the comma, Which is going to evaluate the first element, then the second element.
+66
+
+67
+00:04:48,950 --> 00:04:53,210
+And here: In the first element, We can use args, We can use a function of args.
+67
+
+68
+00:04:53,360 --> 00:04:59,000
+We can use an expression like V-dot-push-back-args. Remember, In the generation time args is actually
+68
+
+69
+00:04:59,180 --> 00:05:00,240
+just the first number.
+69
+
+70
+00:05:00,650 --> 00:05:04,160
+So practically speaking, How is that generated in the first number?
+70
+
+71
+00:05:04,160 --> 00:05:06,770
+It would be like V-dot-push-back 10, then comma,
+71
+
+72
+00:05:07,160 --> 00:05:13,130
+three dots. Three dots would be expanded again to open brace, V-dot-push-back 20, comma, three dots
+72
+
+73
+00:05:13,430 --> 00:05:17,890
+close the braces and three dots would be expanded again to V-dot-push-back 30.
+73
+
+74
+00:05:18,140 --> 00:05:21,560
+So eventually this is like V-dot-push-back 10, 20, 30, That's all.
+74
+
+75
+00:05:22,560 --> 00:05:31,500
+I would like also to take the chance and tell you that you can pass the arguments that got the
+75
+
+76
+00:05:31,500 --> 00:05:32,120
+parameter pack.
+76
+
+77
+00:05:32,310 --> 00:05:38,940
+So I'm here having a function that says pass-pack, It is taking the vector and the parameter pack, I'm passing
+77
+
+78
+00:05:38,940 --> 00:05:43,920
+it to another function so you can take the args and pass it to another function.
+78
+
+79
+00:05:44,190 --> 00:05:46,020
+but notice the syntax here is a bit weird.
+79
+
+80
+00:05:46,050 --> 00:05:50,070
+The three dots are after the args parameter, OK?
+80
+
+81
+00:05:50,400 --> 00:05:57,330
+And in a similar way, You can say you would like to print a bunch of numbers using the fold
+81
+
+82
+00:05:57,330 --> 00:05:57,780
+expression.
+82
+
+83
+00:05:57,780 --> 00:06:01,250
+You can print them in a very similar logic using the comma operator.
+83
+
+84
+00:06:02,460 --> 00:06:02,970
+That's it.

@@ -1,0 +1,411 @@
+1
+00:00:02,600 --> 00:00:09,800
+Mingus's billion is still in the bottom approach where you are explaining what is there or are there
+
+2
+00:00:09,800 --> 00:00:12,500
+different types of things inside it and then go in details.
+
+3
+00:00:12,860 --> 00:00:15,840
+But I used to believe that this is just confusing for students.
+
+4
+00:00:16,280 --> 00:00:21,200
+My approach was more of a bottom up approach where I'm teaching you what is and Victor, what is in
+
+5
+00:00:21,200 --> 00:00:26,570
+it to what is a set and so on a step by step so that you see all of the components.
+
+6
+00:00:26,780 --> 00:00:30,020
+And then we eventually go back to the big picture and learn about it.
+
+7
+00:00:30,350 --> 00:00:36,290
+So today we will finally see the big picture of a state which you are already now very aware of their
+
+8
+00:00:36,290 --> 00:00:36,920
+computers.
+
+9
+00:00:37,430 --> 00:00:39,500
+The major three things in in the.
+
+10
+00:00:39,940 --> 00:00:43,390
+Those are the containers that readers and the algorithms.
+
+11
+00:00:43,730 --> 00:00:46,900
+And you also now should be aware of the different types of the containers.
+
+12
+00:00:47,150 --> 00:00:52,430
+We have sequence in containers which are just like sequential, like the array and a vector.
+
+13
+00:00:52,730 --> 00:00:57,770
+We have the associative containers which which really doesn't care about the order, but care about
+
+14
+00:00:57,770 --> 00:00:59,350
+associating something with something.
+
+15
+00:00:59,360 --> 00:01:02,640
+For example, in the lab you are associating key with the value.
+
+16
+00:01:03,200 --> 00:01:10,640
+We also know about the container adapters, which are adapters rehabbing and interfacing to the kind
+
+17
+00:01:10,640 --> 00:01:17,570
+of interfaces and the unordered associative containers, which similarly doesn't care about the order
+
+18
+00:01:17,570 --> 00:01:24,290
+at all, but provide you in return the very first association between, say, some items or some key
+
+19
+00:01:24,290 --> 00:01:24,860
+and value.
+
+20
+00:01:26,000 --> 00:01:31,640
+We learned about The Iterator, specifically the beginning and the previous and all of this arithmetic
+
+21
+00:01:31,640 --> 00:01:32,220
+that we see.
+
+22
+00:01:32,540 --> 00:01:39,810
+We also saw a huge number of algorithms in sorting and searching operation over the over.
+
+23
+00:01:39,860 --> 00:01:41,270
+They sell this.
+
+24
+00:01:41,810 --> 00:01:45,950
+Three components are all about what is a standard in library.
+
+25
+00:01:45,950 --> 00:01:53,570
+And even when you move to a language like Java language like Suchart, eventually you have to provide
+
+26
+00:01:53,570 --> 00:01:54,680
+you something close to that.
+
+27
+00:01:54,950 --> 00:01:58,400
+You need containers or data structures and you need algorithms.
+
+28
+00:01:58,400 --> 00:02:03,680
+And these are two courses that you should take later after programming to really go in the details and
+
+29
+00:02:03,680 --> 00:02:06,770
+understand difficult algorithms like searching, for example.
+
+30
+00:02:08,430 --> 00:02:15,570
+The containers, as you see, they are like mainly four types and we studied at the moment and every
+
+31
+00:02:15,570 --> 00:02:17,240
+one of them is different.
+
+32
+00:02:17,250 --> 00:02:21,720
+A number of of containers, for example, in the Associated.
+
+33
+00:02:21,960 --> 00:02:24,510
+We learned about the sediment, the sediment and multimember.
+
+34
+00:02:24,630 --> 00:02:28,650
+It is for no duplicates, what it is for duplicates and so on.
+
+35
+00:02:29,900 --> 00:02:38,570
+And we learned about the this five or four types, data structures that are sort of structures that
+
+36
+00:02:38,570 --> 00:02:47,140
+the key are ultimately sorted, and this allow us for merely a quick search for the item, the analysis
+
+37
+00:02:47,300 --> 00:02:49,860
+of the bed or something called hashing.
+
+38
+00:02:49,890 --> 00:02:59,060
+You should study the structure in the structure cause the containers are merely adapters are interface
+
+39
+00:02:59,070 --> 00:02:59,630
+to others.
+
+40
+00:02:59,930 --> 00:03:05,060
+The sequence container are very focused on the first access so you can access an item.
+
+41
+00:03:05,300 --> 00:03:12,120
+But in return, inserting and removing an item in the middle of the destruction might be very slow every
+
+42
+00:03:12,140 --> 00:03:12,210
+day.
+
+43
+00:03:12,230 --> 00:03:14,060
+The structure, as you see, has pros and cons.
+
+44
+00:03:15,140 --> 00:03:20,600
+The traitor's, as we learned to have like a different five types with different flexibilities between
+
+45
+00:03:20,600 --> 00:03:20,840
+them.
+
+46
+00:03:22,610 --> 00:03:31,510
+The design was mainly how to separate the data itself from the operations, and the idea was like the
+
+47
+00:03:31,510 --> 00:03:39,460
+data should be managed by the containers and the operation itself should be like defined by configurable
+
+48
+00:03:39,460 --> 00:03:43,870
+algorithms and iterators are the way that we link both of them together.
+
+49
+00:03:44,530 --> 00:03:47,470
+So you see here The Iterator.
+
+50
+00:03:48,590 --> 00:03:55,370
+Is hexing containers, the algorithms, the algorithms are applied to and continues, and they are using
+
+51
+00:03:55,370 --> 00:03:58,580
+it to think about all of the algorithms that we're using.
+
+52
+00:03:58,610 --> 00:04:04,130
+If I give you an algorithm to check for equality, for example, that the algorithm or what it does,
+
+53
+00:04:04,130 --> 00:04:07,610
+it just using the iterator to do some comparison.
+
+54
+00:04:07,880 --> 00:04:13,550
+It doesn't care if it is a container coming from a stacked container container coming from a vector
+
+55
+00:04:13,550 --> 00:04:16,520
+container coming from maybe less.
+
+56
+00:04:16,580 --> 00:04:17,460
+It doesn't care.
+
+57
+00:04:17,690 --> 00:04:22,130
+So this way, the genetic algorithm and the templates also played a role in that.
+
+58
+00:04:22,820 --> 00:04:25,390
+We have a couple of types of independence's here.
+
+59
+00:04:25,610 --> 00:04:31,850
+We have the templates which made our algorithms independent from the data type itself, and we have
+
+60
+00:04:31,850 --> 00:04:35,940
+iterators which made the algorithms independent of the containers themselves.
+
+61
+00:04:36,140 --> 00:04:38,770
+And this is very smart design, in my opinion.
+
+62
+00:04:40,700 --> 00:04:47,660
+Finally, this is a nice flowchart from this guy's, a flowchart is something like your could, but
+
+63
+00:04:47,660 --> 00:04:51,910
+just drawn this diamond is an FSA condition.
+
+64
+00:04:52,670 --> 00:04:55,290
+So this is an X condition is order bullet.
+
+65
+00:04:55,310 --> 00:04:56,570
+And you care about the order.
+
+66
+00:04:56,820 --> 00:05:03,560
+If the answer is yes, then you care only about this, guys, that is dequeue, or is it just first
+
+67
+00:05:04,130 --> 00:05:04,420
+step?
+
+68
+00:05:04,700 --> 00:05:06,710
+Is it first our skewed?
+
+69
+00:05:06,950 --> 00:05:09,640
+Otherwise probably you'd need something like Brittanica.
+
+70
+00:05:10,310 --> 00:05:12,140
+What if I don't care about the order?
+
+71
+00:05:12,630 --> 00:05:18,590
+You care about the duplication unit and if yes, then you would have to use multimember multisite.
+
+72
+00:05:18,830 --> 00:05:20,990
+If not, you would have to use an order.
+
+73
+00:05:21,370 --> 00:05:26,060
+Order said there is another bigger flaw here for the sequence.
+
+74
+00:05:26,060 --> 00:05:27,530
+Contain or alter the container.
+
+75
+00:05:27,560 --> 00:05:28,760
+Feel free to read it.
+
+76
+00:05:28,760 --> 00:05:34,220
+Just give you a sense about which you is the structure and which is an area which I believe at the moment
+
+77
+00:05:34,220 --> 00:05:38,690
+you have a very good sense of it from all of the practice and usage that we did during the course.
+
+78
+00:05:41,700 --> 00:05:47,250
+Another interesting thing is the complexity during algorithm's courses, you should study the time,
+
+79
+00:05:47,250 --> 00:05:53,040
+complexity and the complexity, all of these different data structures and all of these different algorithms
+
+80
+00:05:53,040 --> 00:05:54,510
+has different complexities.
+
+81
+00:05:56,010 --> 00:06:01,950
+I know we read this statement as 01 and we read this guy as well.
+
+82
+00:06:01,950 --> 00:06:05,040
+And and we read this as Orlock in overorder.
+
+83
+00:06:05,400 --> 00:06:07,820
+I'm not going to explain that at the moment.
+
+84
+00:06:07,830 --> 00:06:14,710
+Just a very informal treatment or one means that the algorithm do a few steps to get the operation that
+
+85
+00:06:14,850 --> 00:06:16,630
+let's say three, four, five steps or so.
+
+86
+00:06:17,160 --> 00:06:23,100
+Well, it means a do say five times in steps to get the algorithm that, for example, if your vector
+
+87
+00:06:23,100 --> 00:06:30,750
+is of length and is going to go around five, five thousand iterations to get it done, log in is going
+
+88
+00:06:30,750 --> 00:06:33,450
+to do around five times look in operation to be done.
+
+89
+00:06:33,750 --> 00:06:39,140
+For example, if the end is million, log in would be like 10, five times it would be 50.
+
+90
+00:06:39,150 --> 00:06:42,420
+So it's going to get 50 operation to get it done.
+
+91
+00:06:42,630 --> 00:06:44,660
+So this is a very informal treatment for it.
+
+92
+00:06:45,170 --> 00:06:53,980
+So looking to it, for example, the set and we have insertion and erase and defined in only looking.
+
+93
+00:06:54,270 --> 00:07:00,280
+So if you have around a million elements, they can find the answer in around 50 number of steps already
+
+94
+00:07:00,880 --> 00:07:07,080
+in contrast to the vector in the general case would need to take like say, if you'd like to search
+
+95
+00:07:07,080 --> 00:07:13,020
+for something, it's going to take one million or five million a step to find the to find the answer,
+
+96
+00:07:13,860 --> 00:07:19,560
+which is a lot, unless you are, for example, let's say, inserting in the back, then this can be
+
+97
+00:07:19,560 --> 00:07:21,120
+done in all or in only.
+
+98
+00:07:21,540 --> 00:07:29,150
+So this is a flowchart here or a table for how fast every operation over this can do the structures.
+
+99
+00:07:29,460 --> 00:07:33,390
+And this is important in real life projects.
+
+100
+00:07:33,570 --> 00:07:40,220
+You should be aware of how fast your your data structures are.
+
+101
+00:07:40,240 --> 00:07:42,480
+Good software engineer should be aware of that.
+
+102
+00:07:42,480 --> 00:07:42,990
+Very good.
+
+103
+00:07:44,940 --> 00:07:45,390
+That's all.

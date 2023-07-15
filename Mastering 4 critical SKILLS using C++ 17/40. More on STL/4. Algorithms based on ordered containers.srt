@@ -1,0 +1,311 @@
+1
+00:00:01,110 --> 00:00:08,100
+There are some algorithms in the e-mail that be utilized that you are giving the containers that are
+
+2
+00:00:08,250 --> 00:00:08,880
+ordered.
+
+3
+00:00:10,960 --> 00:00:18,400
+Let's say that you have a big array like that and you would like to do a search for 17, then the normal
+
+4
+00:00:18,400 --> 00:00:21,600
+search function will step by step to find it.
+
+5
+00:00:21,940 --> 00:00:26,290
+Let's say there is one million integer then is the function.
+
+6
+00:00:26,290 --> 00:00:32,170
+WHITECHURCH Up to one million ISTEP to find the number so far.
+
+7
+00:00:32,500 --> 00:00:35,100
+Now, let's say that the numbers are sorted.
+
+8
+00:00:35,410 --> 00:00:40,390
+If the number are sorted, there is a very, very fast algorithm named as binary search.
+
+9
+00:00:40,870 --> 00:00:45,490
+The brain research will take longer number of steps to reach the answer.
+
+10
+00:00:46,120 --> 00:00:47,410
+The log is a math function.
+
+11
+00:00:47,440 --> 00:00:53,490
+So, for example, if the array is one million number, the log the million to be to be around ten.
+
+12
+00:00:54,070 --> 00:01:00,650
+This means that the binary search function can check if the values of in the array in only ten steps.
+
+13
+00:01:01,030 --> 00:01:06,160
+So the normal search is one million step, but the binary search would be only ten steps, which is
+
+14
+00:01:06,160 --> 00:01:07,210
+extremely fast.
+
+15
+00:01:07,930 --> 00:01:11,760
+But remember that this must be applied on all of data structures.
+
+16
+00:01:11,980 --> 00:01:16,180
+If you applied it on something that isn't sorted, it would give you wrong results.
+
+17
+00:01:17,140 --> 00:01:22,300
+There are other two interesting function that urban and suburban, which are internally based on a binary
+
+18
+00:01:22,300 --> 00:01:30,190
+search, also the lower bound to start and end and is going to find the first value, which is greater
+
+19
+00:01:30,190 --> 00:01:32,720
+than or equal to the provided value.
+
+20
+00:01:33,160 --> 00:01:41,080
+So for example, you say here 17 and in this array, then the first value greater than or equal to 17
+
+21
+00:01:41,080 --> 00:01:46,420
+would be 17 if it's right to give it 16.
+
+22
+00:01:46,690 --> 00:01:53,170
+The first value greater than or equal 16 would be all 17 if you provided the first value greater than
+
+23
+00:01:53,170 --> 00:01:53,630
+or equal.
+
+24
+00:01:53,650 --> 00:01:54,790
+Seventeen is fifty.
+
+25
+00:01:55,540 --> 00:01:58,940
+The upper bound is finding the first element greater than a value.
+
+26
+00:01:59,350 --> 00:02:04,120
+So if you give it seventeen, the first value greater than it is 50.
+
+27
+00:02:05,770 --> 00:02:11,100
+If you give it 50, the first, the value greater than 50 is nothing.
+
+28
+00:02:11,150 --> 00:02:12,890
+So just to be the end.
+
+29
+00:02:13,090 --> 00:02:16,230
+So this is a little lower than other functions.
+
+30
+00:02:18,130 --> 00:02:20,380
+There is also a function named as unique.
+
+31
+00:02:20,740 --> 00:02:29,440
+The function unique can take an array and get all of the sorted array, get all of the unique elements
+
+32
+00:02:29,440 --> 00:02:35,710
+in the in the in the beginning of the array of the vector and the other ones after it in some order.
+
+33
+00:02:35,950 --> 00:02:41,290
+So for example, if you give it, this array of sorting is going to return for your arrays following
+
+34
+00:02:41,590 --> 00:02:48,190
+the first group of numbers are the unique numbers in this vector and then some of the other duplicate
+
+35
+00:02:48,190 --> 00:02:50,480
+number in the end, in some order or another, we don't care.
+
+36
+00:02:50,500 --> 00:02:51,990
+The promise is this.
+
+37
+00:02:52,020 --> 00:02:56,200
+First the baddies will be will be sorted and unique.
+
+38
+00:02:56,230 --> 00:02:57,280
+They are already sorted.
+
+39
+00:02:57,280 --> 00:03:00,950
+They will be unique and return and iterator to the end.
+
+40
+00:03:01,270 --> 00:03:07,930
+So if you try to subtract the iterator from the beginning, it would be seven, four, seven elements.
+
+41
+00:03:08,410 --> 00:03:10,090
+Now, there's an interesting function here.
+
+42
+00:03:10,390 --> 00:03:16,540
+If you try to use the vector, the Tresize and you give it this size is going to get rid of this three
+
+43
+00:03:16,750 --> 00:03:17,350
+items.
+
+44
+00:03:17,860 --> 00:03:26,440
+The moral of that is if you would like to update this vector to the unique number of elements only given
+
+45
+00:03:26,440 --> 00:03:32,140
+that it was sorted, you can do that with a single line calling the resize function over the return,
+
+46
+00:03:32,620 --> 00:03:34,900
+over the list, over the unique results.
+
+47
+00:03:35,470 --> 00:03:40,890
+So this way, the unique return for you part and the size is going to remove this extra port.
+
+48
+00:03:42,430 --> 00:03:45,240
+Let's also see the set intersection and set union.
+
+49
+00:03:45,250 --> 00:03:47,900
+And this is a more of a mathematical definition.
+
+50
+00:03:47,920 --> 00:03:54,460
+Also, let's say we have two vectors and let's sort them first and let's create a vector result and
+
+51
+00:03:54,460 --> 00:03:56,750
+we will create a back and forth over this result.
+
+52
+00:03:57,340 --> 00:04:02,170
+If you give me the beginning end of the first vector and begin an end of the second victim, it will
+
+53
+00:04:02,170 --> 00:04:04,810
+find all of the intersections between the two vectors.
+
+54
+00:04:05,020 --> 00:04:07,030
+So thinking here, what are the intersections?
+
+55
+00:04:07,360 --> 00:04:09,600
+Two is coming between these two guys.
+
+56
+00:04:09,910 --> 00:04:12,810
+Seven is coming here, 50 is coming.
+
+57
+00:04:13,030 --> 00:04:17,210
+But for example, ten is here but not here, 17 here, but not here.
+
+58
+00:04:17,410 --> 00:04:20,320
+So this is the intersection in a similar way.
+
+59
+00:04:20,350 --> 00:04:23,710
+Let's hear the result and create another answer to it.
+
+60
+00:04:24,040 --> 00:04:29,740
+If you try to make a union, it's going to get all of the values here, which include giving the public
+
+61
+00:04:29,740 --> 00:04:30,220
+advice.
+
+62
+00:04:31,750 --> 00:04:37,930
+There is also the difference which is going to find elements that exist in the first one, but not in
+
+63
+00:04:37,930 --> 00:04:38,650
+the second one.
+
+64
+00:04:39,010 --> 00:04:44,440
+So, for example, 17 here, you find 17 in the first, but you don't find it here in the second one.
+
+65
+00:04:45,830 --> 00:04:53,390
+There is also what we call the the systematic difference, let's for simplicity, get rid of all of
+
+66
+00:04:53,390 --> 00:05:00,290
+the duplicate value, some resizing on the unique and resizing business on the systematic difference
+
+67
+00:05:00,530 --> 00:05:05,640
+when found elements that exist in one of them, but not in both of them.
+
+68
+00:05:06,020 --> 00:05:11,870
+For example, let's see the one sorry, the one existed in the first, but not in the second.
+
+69
+00:05:12,290 --> 00:05:14,030
+The five exists in the second.
+
+70
+00:05:14,030 --> 00:05:15,260
+The first, but then the second.
+
+71
+00:05:15,260 --> 00:05:16,040
+Then we use it.
+
+72
+00:05:16,520 --> 00:05:19,580
+The forty exists in the second, but not in the first.
+
+73
+00:05:19,580 --> 00:05:20,660
+All of them would be included.
+
+74
+00:05:20,940 --> 00:05:27,020
+Anything that is common, like the result of the intersection two seven fifty, it would be just would
+
+75
+00:05:27,020 --> 00:05:27,920
+be just removed.
+
+76
+00:05:29,030 --> 00:05:32,180
+You can check the documentation for what happened.
+
+77
+00:05:32,180 --> 00:05:37,480
+If there are duplicate in the vector, I just get rid of here to make it more simpler for you.
+
+78
+00:05:38,180 --> 00:05:38,720
+That's it.

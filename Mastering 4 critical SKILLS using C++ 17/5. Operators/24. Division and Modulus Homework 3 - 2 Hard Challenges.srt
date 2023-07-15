@@ -1,0 +1,94 @@
+0
+1
+00:00:01,110 --> 00:00:06,960
+The third homework set for the division and modulus, first one, and it is very similar to an old program
+1
+
+2
+00:00:06,960 --> 00:00:13,110
+that we did, write a program that read an integer and the print either hundred, if the number
+2
+
+3
+00:00:13,110 --> 00:00:15,060
+is even or seven if the number is odd.
+3
+
+4
+00:00:15,540 --> 00:00:20,670
+So, for example, if I entered it, it would guarantee a 100 because it is even if the input is one
+4
+
+5
+00:00:20,670 --> 00:00:25,230
+hundred thirty-three, the output will be seven because is odd, this is very similar to something we
+5
+
+6
+00:00:25,230 --> 00:00:25,740
+did before.
+6
+
+7
+00:00:26,910 --> 00:00:32,970
+The second one is about the years, assume a year is 12 a month and each month is just 30 days,
+7
+
+8
+00:00:33,210 --> 00:00:36,720
+So the each year is just fixed it for three hundred and sixty days.
+8
+
+9
+00:00:37,500 --> 00:00:43,680
+You will read an integer representing the total number of days of someone and you have to print 
+9
+
+10
+00:00:43,680 --> 00:00:48,120
+three values, the total years, the total month and the remaining days.
+10
+
+11
+00:00:48,580 --> 00:00:56,310
+For example, if someone is 360 days, then this means a single year, one year, zero month, zero days.
+11
+
+12
+00:00:57,210 --> 00:00:59,190
+30 days mean one month.
+12
+
+13
+00:00:59,640 --> 00:01:01,440
+10 days only been just 10 days here
+13
+
+14
+00:01:01,470 --> 00:01:02,190
+0 years, 
+14
+
+15
+00:01:02,190 --> 00:01:02,700
+Zero month.
+15
+
+16
+00:01:03,480 --> 00:01:12,210
+If someone is 391 days, it means he is three hundred and sixty days for a year, 30 days for a
+16
+
+17
+00:01:12,210 --> 00:01:14,890
+month, and then a single day and so on.
+17
+
+18
+00:01:14,910 --> 00:01:19,710
+Please read the more examples if you are still confused about it.
+18
+
+19
+00:01:20,730 --> 00:01:21,060
+That's all.

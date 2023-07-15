@@ -1,0 +1,519 @@
+1
+00:00:01,590 --> 00:00:06,050
+In this video, you will learn how to generalize the body in the research.
+
+2
+00:00:07,440 --> 00:00:12,270
+So far, we will learned how to apply by the research on a certain array.
+
+3
+00:00:13,140 --> 00:00:23,400
+We learned three things to find the number in general or find the first index or find their lust index.
+
+4
+00:00:23,820 --> 00:00:24,360
+This is wrong.
+
+5
+00:00:24,750 --> 00:00:29,900
+The last index for it now, binary search can actually work on functions.
+
+6
+00:00:29,910 --> 00:00:32,430
+Specific categories can function with its code.
+
+7
+00:00:32,430 --> 00:00:34,980
+Monotonic functions will come back to this definition.
+
+8
+00:00:35,940 --> 00:00:38,730
+The binary search youcould will be still very systematic.
+
+9
+00:00:38,740 --> 00:00:41,670
+We use almost the same code from a problem to another.
+
+10
+00:00:41,940 --> 00:00:44,040
+But the key is to figure out how to do that.
+
+11
+00:00:44,820 --> 00:00:48,520
+Let's go back to the range of problem.
+
+12
+00:00:49,170 --> 00:00:57,210
+Usually, when we are trying to work on functions, we need to define a function and we need to define
+
+13
+00:00:57,210 --> 00:00:59,010
+a Boolean function based on it.
+
+14
+00:00:59,340 --> 00:01:01,260
+Sometimes they are just written as a one function.
+
+15
+00:01:01,270 --> 00:01:03,300
+Sometimes they are written as two separate functions.
+
+16
+00:01:03,900 --> 00:01:06,310
+So let me introduce a simple function for you here.
+
+17
+00:01:06,990 --> 00:01:16,320
+Counter is a function that are for rules and return the total number of coins that if we try to fill
+
+18
+00:01:16,650 --> 00:01:18,000
+the rows from one to end.
+
+19
+00:01:18,810 --> 00:01:26,610
+For example, if are equal three, then I would like to serve three rows, which needs one +2 +3 coins.
+
+20
+00:01:26,820 --> 00:01:28,590
+So this function should return at six.
+
+21
+00:01:28,950 --> 00:01:31,140
+So count of three is six.
+
+22
+00:01:32,400 --> 00:01:36,330
+As you see, this is a very trivial function, which is our actually our times of virtue.
+
+23
+00:01:36,340 --> 00:01:36,840
+That's it.
+
+24
+00:01:37,800 --> 00:01:40,170
+So this is the accounting function that I defined here.
+
+25
+00:01:40,710 --> 00:01:42,930
+No, the Boolean function, which is very important here.
+
+26
+00:01:43,560 --> 00:01:50,090
+The function visible of our in what are is the rules and in is the current.
+
+27
+00:01:50,100 --> 00:01:56,940
+The coins would return it true if and only if any coins are enough to cover.
+
+28
+00:01:57,720 --> 00:02:00,720
+There are rules, for example, here.
+
+29
+00:02:03,210 --> 00:02:08,490
+Yeah, but yeah, for simplicity, the function is just returning if greater than or equal to counteract.
+
+30
+00:02:09,000 --> 00:02:15,060
+So let's see here it is a table, but all by rule, we have the count of AH, which is just submission
+
+31
+00:02:15,060 --> 00:02:16,350
+from one, two or so.
+
+32
+00:02:16,350 --> 00:02:20,580
+For example, count to five is 15, which is one two three four five.
+
+33
+00:02:21,280 --> 00:02:26,130
+No, the visible function is digging and again, it cleans cover one rule.
+
+34
+00:02:26,430 --> 00:02:27,210
+Definitely, yes.
+
+35
+00:02:27,780 --> 00:02:29,680
+Can it go into cover two rows?
+
+36
+00:02:29,760 --> 00:02:30,270
+Definitely.
+
+37
+00:02:30,270 --> 00:02:31,740
+Yes, because we just need three.
+
+38
+00:02:32,250 --> 00:02:34,420
+Can eight coins to cover three rows?
+
+39
+00:02:34,440 --> 00:02:37,020
+Yes, because we just need six coins and we have eight.
+
+40
+00:02:37,800 --> 00:02:39,810
+Can it coins the cover tin?
+
+41
+00:02:40,350 --> 00:02:42,090
+Can it coins the cover for rows?
+
+42
+00:02:42,130 --> 00:02:47,280
+No, because then we need 10 coins, but we only have eight.
+
+43
+00:02:47,280 --> 00:02:48,630
+So that is missing here too.
+
+44
+00:02:49,020 --> 00:02:49,680
+So false.
+
+45
+00:02:50,970 --> 00:02:53,100
+Can five rules be covert, false?
+
+46
+00:02:53,310 --> 00:02:54,570
+There's a question for you here.
+
+47
+00:02:54,990 --> 00:02:57,900
+Do you expect an answer for any role greater than five?
+
+48
+00:02:59,060 --> 00:03:00,200
+The answer is false.
+
+49
+00:03:00,470 --> 00:03:06,200
+Starting from four, we cannot do it, and we definitely, if we cannot cover for rules, we definitely
+
+50
+00:03:06,200 --> 00:03:09,450
+cannot cover anything else, anything more than that.
+
+51
+00:03:09,470 --> 00:03:11,300
+This is something very important to keep in mind.
+
+52
+00:03:12,470 --> 00:03:16,040
+Now I would like you to look to the Boolean function.
+
+53
+00:03:17,140 --> 00:03:20,410
+The binary search, is it still working and actually win a race?
+
+54
+00:03:20,770 --> 00:03:24,910
+But now with the array is a virtual array the array is following.
+
+55
+00:03:25,030 --> 00:03:26,980
+The race has a bunch of truths.
+
+56
+00:03:27,340 --> 00:03:28,420
+It's a virtual array.
+
+57
+00:03:29,490 --> 00:03:31,560
+So let's let's make it here.
+
+58
+00:03:33,160 --> 00:03:35,230
+We have an array, a virtual array.
+
+59
+00:03:41,850 --> 00:03:47,550
+At index, one answer is to index it, to answer it's through index or straight through from index of
+
+60
+00:03:47,550 --> 00:03:47,940
+four.
+
+61
+00:03:48,270 --> 00:03:51,300
+The answer is false, false, false and so on.
+
+62
+00:03:51,510 --> 00:03:52,640
+So a bunch of truths.
+
+63
+00:03:52,650 --> 00:03:56,070
+There are many forces now when you think about it.
+
+64
+00:03:56,580 --> 00:04:01,620
+I actually knew need the lust or cadence of true in the array.
+
+65
+00:04:01,800 --> 00:04:02,910
+We need this one.
+
+66
+00:04:03,420 --> 00:04:09,330
+Now we can write a good for binary search using exactly the same logic on binary circular arrays.
+
+67
+00:04:09,600 --> 00:04:12,900
+But this time we would imagine the array.
+
+68
+00:04:13,410 --> 00:04:15,810
+OK, what are the values of the array?
+
+69
+00:04:16,080 --> 00:04:18,330
+The values of the three are Boolean values.
+
+70
+00:04:18,600 --> 00:04:23,070
+They are coming from the possible function, which we based here on the counting thing.
+
+71
+00:04:23,610 --> 00:04:25,890
+I would like you to try to code it in binary search.
+
+72
+00:04:26,280 --> 00:04:27,770
+Be careful when submitting on it.
+
+73
+00:04:27,780 --> 00:04:32,490
+Good because the limit is two to the bar 31 minus one, so it might overflow with you.
+
+74
+00:04:34,270 --> 00:04:35,650
+OK, let's see, liquid.
+
+75
+00:04:36,490 --> 00:04:39,070
+First of all, let's develop the possible function.
+
+76
+00:04:40,370 --> 00:04:46,700
+The Blues will function when tick and and tick the rules, it compute the total number of coins we need
+
+77
+00:04:46,700 --> 00:04:53,420
+for the rules, which is the rules times rules plus one over two, then the bullion is based on the
+
+78
+00:04:53,420 --> 00:04:58,750
+following is greater than or equal the total number of coins that we need or not.
+
+79
+00:04:58,760 --> 00:05:05,180
+If yes, then true or false observer heroes are long long because rules can be up to two to the hour
+
+80
+00:05:05,180 --> 00:05:09,470
+31 minus one, and we would like to multiply that in itself.
+
+81
+00:05:09,890 --> 00:05:14,060
+So this could overflow overflow in this plus overflow in the multiplication.
+
+82
+00:05:14,210 --> 00:05:16,100
+That's why I consider those here to belong.
+
+83
+00:05:16,100 --> 00:05:17,190
+Long notice.
+
+84
+00:05:17,190 --> 00:05:19,490
+Let's go back to the search itself.
+
+85
+00:05:19,910 --> 00:05:22,070
+We know the way in the research you need to start and end.
+
+86
+00:05:22,490 --> 00:05:27,320
+Once you are working on functions, you have to decide what is your start and what is your end?
+
+87
+00:05:27,710 --> 00:05:33,500
+We can see here clearly, maybe we cannot even cover a single rule, so we need from you.
+
+88
+00:05:34,460 --> 00:05:37,700
+What is the maximum rule that you can have virtually like?
+
+89
+00:05:37,700 --> 00:05:42,190
+We can use something like and this is a very high about, but then only we can use it.
+
+90
+00:05:42,200 --> 00:05:46,250
+Maybe you can develop something based on the squirrel in, but we don't care about that.
+
+91
+00:05:46,640 --> 00:05:50,930
+Or what we need to get is we have a good lower boat and a good boat.
+
+92
+00:05:52,590 --> 00:05:59,580
+Now we need, as I told you, we have a series of truths then series of forces, and they need to find
+
+93
+00:05:59,580 --> 00:06:01,020
+the last to get us through.
+
+94
+00:06:01,440 --> 00:06:04,950
+So this is like finding the last occurrence of her internal.
+
+95
+00:06:05,610 --> 00:06:08,580
+Here is the left and right like usually not change.
+
+96
+00:06:08,850 --> 00:06:13,440
+It is the middle like usual no change and are the elephant also conditions?
+
+97
+00:06:14,070 --> 00:06:17,490
+Now, if it is possible to cover?
+
+98
+00:06:19,210 --> 00:06:27,280
+Mid-Year representa that represented that arose if it is possible to cover mid rules using the current
+
+99
+00:06:27,280 --> 00:06:33,070
+in the Queen's, then mid isn't uncertain because we managed to cover that they made.
+
+100
+00:06:33,500 --> 00:06:34,930
+So answer here is a.
+
+101
+00:06:37,670 --> 00:06:42,950
+And we are seeking a bigger and bigger answer, so we move to the left side as we did before.
+
+102
+00:06:43,700 --> 00:06:51,770
+What if we cannot cover like, let's say, we tried, uh, possible function of eight and four rules?
+
+103
+00:06:51,920 --> 00:06:52,940
+We cannot do that.
+
+104
+00:06:53,270 --> 00:06:58,490
+So there is no answer so far, and we need tools to change our search to be searching only in the range
+
+105
+00:06:58,490 --> 00:06:59,510
+of zero and the three.
+
+106
+00:07:01,220 --> 00:07:03,110
+Please take time to read this.
+
+107
+00:07:03,110 --> 00:07:08,510
+Good to match it with finding the last the threw in an array is exactly the same logic.
+
+108
+00:07:08,660 --> 00:07:10,340
+Here are two examples to trace them.
+
+109
+00:07:10,610 --> 00:07:13,190
+For example, if I give you an equal nine.
+
+110
+00:07:14,360 --> 00:07:15,770
+Uh.
+
+111
+00:07:19,390 --> 00:07:22,600
+In equal, 29, sorry, in equal tonight.
+
+112
+00:07:22,960 --> 00:07:25,900
+So we start by zero and 29, the median is at 14.
+
+113
+00:07:26,200 --> 00:07:32,430
+The sum would be 100 and the five, as you see, we have only 100.
+
+114
+00:07:32,800 --> 00:07:36,870
+The submission here is very high and we have only 29 going.
+
+115
+00:07:36,880 --> 00:07:38,890
+So we have to shrink now.
+
+116
+00:07:38,890 --> 00:07:45,370
+Go to the middle, which is now 13, zero and 13, is generating for us to anyone.
+
+117
+00:07:46,780 --> 00:07:49,270
+We need 21 coins, but we have to win in nine coins.
+
+118
+00:07:49,570 --> 00:07:53,140
+So this means that we can at least recover six rules.
+
+119
+00:07:53,680 --> 00:07:57,670
+But let's see if we can do better, so we jump to the right interval from seven to 13.
+
+120
+00:07:58,240 --> 00:08:02,020
+Now the method is 10 10 rules need 55 coins.
+
+121
+00:08:02,020 --> 00:08:03,010
+We cannot do that.
+
+122
+00:08:03,280 --> 00:08:07,000
+So let's jump to the list to reduce from seven to nine.
+
+123
+00:08:07,030 --> 00:08:08,050
+The method is eight.
+
+124
+00:08:08,410 --> 00:08:10,560
+It rules need 36 of coins.
+
+125
+00:08:10,570 --> 00:08:11,530
+We cannot do that.
+
+126
+00:08:11,740 --> 00:08:17,080
+So let's reduce seven and seven is twenty eight coins, which is enough.
+
+127
+00:08:17,500 --> 00:08:20,380
+So this way we keep updating their answer here.
+
+128
+00:08:20,620 --> 00:08:27,580
+I hope the idea of this part is true, but now I would like to take you one more step further.
+
+129
+00:08:27,940 --> 00:08:29,140
+How can we prove that?
+
+130
+00:08:29,140 --> 00:08:33,730
+How can we recognize the general functions for brain research?

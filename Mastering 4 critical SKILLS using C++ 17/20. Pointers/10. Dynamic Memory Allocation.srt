@@ -1,0 +1,584 @@
+0
+1
+00:00:01,630 --> 00:00:08,650
+So far, when we were discussing the pointers, we were just using pointers to refer to an existing memory,
+1
+
+2
+00:00:08,980 --> 00:00:15,010
+but actually, the real power of pointers comes when you have to create dynamic memory by yourself.
+2
+
+3
+00:00:15,340 --> 00:00:16,720
+Let's motivate that little more.
+3
+
+4
+00:00:17,080 --> 00:00:18,640
+Remember the array's definition,
+4
+
+5
+00:00:18,910 --> 00:00:24,010
+You define an array of constant integer size 100, then just an array of 100.
+5
+
+6
+00:00:24,730 --> 00:00:26,060
+OK, here is a problem.
+6
+
+7
+00:00:26,080 --> 00:00:28,120
+This is a fixed allocated memory.
+7
+
+8
+00:00:28,280 --> 00:00:32,100
+If you have 100 employees and you have just 100 values, that is it.
+8
+
+9
+00:00:32,380 --> 00:00:36,110
+But in reality, you might need more than a specific size.
+9
+
+10
+00:00:36,530 --> 00:00:40,810
+OK, here's one way. Let's define an array of the maximum possible size,
+10
+
+11
+00:00:41,080 --> 00:00:42,700
+but this is very impractical.
+11
+
+12
+00:00:42,970 --> 00:00:49,700
+C++ allows us to create dynamic memory using the new operator and pointers.
+12
+
+13
+00:00:49,900 --> 00:00:50,740
+So here is the logic.
+13
+
+14
+00:00:50,920 --> 00:00:52,740
+Let's create a single element.
+14
+
+15
+00:00:53,050 --> 00:00:55,390
+Here is a normal logic.
+15
+
+16
+00:00:55,490 --> 00:01:00,550
+In the past, we define variable X, then p0 is looking to the reference of x.
+16
+
+17
+00:01:00,700 --> 00:01:04,050
+This is referencing something that already exists.
+17
+
+18
+00:01:04,180 --> 00:01:06,190
+p1 here referring to the null pointer.
+18
+
+19
+00:01:06,340 --> 00:01:07,280
+So far so good.
+19
+
+20
+00:01:07,750 --> 00:01:12,100
+Now the new syntax is integer asterisk p2 equals new
+20
+
+21
+00:01:12,100 --> 00:01:20,170
+int then when we do this line of code here, we are defining a new variable in the memory and
+21
+
+22
+00:01:20,170 --> 00:01:21,760
+then we put here the value of 20.
+22
+
+23
+00:01:21,910 --> 00:01:23,130
+Let's see the diagram here.
+23
+
+24
+00:01:23,440 --> 00:01:29,380
+When you define here, the new int, new is an operator to create a memory is going to create some place
+24
+
+25
+00:01:29,380 --> 00:01:31,560
+in the memory that has some location.
+25
+
+26
+00:01:32,080 --> 00:01:34,300
+So it's going to return to the address here.
+26
+
+27
+00:01:34,300 --> 00:01:37,530
+New int is going to return 0x18c here.
+27
+
+28
+00:01:37,780 --> 00:01:44,860
+So now pointer p2, which is another variable, is going to be a pointer that's pointing to the new
+28
+
+29
+00:01:44,860 --> 00:01:45,490
+location.
+29
+
+30
+00:01:45,790 --> 00:01:51,580
+So remember, this is very similar to when p0 looks at X. We have two boxes, we have an address of
+30
+
+31
+00:01:51,580 --> 00:01:53,620
+X and we have an address of the pointer.
+31
+
+32
+00:01:53,830 --> 00:01:55,540
+Now, the address of the pointer as it is,
+32
+
+33
+00:01:55,930 --> 00:02:00,700
+but when we say new int, there is some temporary location in the memory with some specific address
+33
+
+34
+00:02:00,700 --> 00:02:05,640
+is created and the pointer now looks at it. After this line of creation,
+34
+
+35
+00:02:05,650 --> 00:02:08,060
+I can come here and say asterisk p2 equals 20.
+35
+
+36
+00:02:08,260 --> 00:02:10,090
+So the pointer go here, here, here,
+36
+
+37
+00:02:10,090 --> 00:02:14,810
+and put the value 20 here. We can initialize it in different ways.
+37
+
+38
+00:02:14,830 --> 00:02:17,370
+Also I can say integer pointer p3 equals new
+38
+
+39
+00:02:17,380 --> 00:02:20,350
+int, open the C++ brace initialization style,
+39
+
+40
+00:02:20,350 --> 00:02:21,420
+I'm put 30
+40
+
+41
+00:02:21,760 --> 00:02:29,200
+This one did the declaration and definition in a single line like creation and initialization
+41
+
+42
+00:02:29,200 --> 00:02:29,790
+in a single line.
+42
+
+43
+00:02:30,190 --> 00:02:34,860
+You can also use it in a similar way to the class and the struct style.
+43
+
+44
+00:02:34,880 --> 00:02:39,670
+So instead of braces, you can put parameters.
+44
+
+45
+00:02:40,120 --> 00:02:44,970
+So this is a standard way to create and initialize value in a single line of code.
+45
+
+46
+00:02:46,300 --> 00:02:52,510
+Now, let's delete what we have created, which one we're going to create, which one we're going to
+46
+
+47
+00:02:52,510 --> 00:02:54,640
+delete, two things only p2 and p3,
+47
+
+48
+00:02:54,670 --> 00:02:55,120
+Why?
+48
+
+49
+00:02:55,360 --> 00:03:01,150
+Ok, what is delete actually first? Delete is as you create something in the memory,
+49
+
+50
+00:03:01,360 --> 00:03:02,740
+you are going to delete it.
+50
+
+51
+00:03:03,630 --> 00:03:09,640
+OK, why don't remove p0 and p1? p0 is already a normal variable.
+51
+
+52
+00:03:09,940 --> 00:03:11,460
+p1 is just a null pointer.
+52
+
+53
+00:03:11,470 --> 00:03:12,310
+We don't remove them.
+53
+
+54
+00:03:12,560 --> 00:03:18,370
+The compiler is going to handle the creation and removal of X as we used it through the whole course.
+54
+
+55
+00:03:18,760 --> 00:03:22,560
+But if you redefine a memory by yourself, you have to remove them.
+55
+
+56
+00:03:22,750 --> 00:03:27,190
+So the new is an operator that creates, delete is an operator that can delete in memory.
+56
+
+57
+00:03:28,180 --> 00:03:30,030
+Let's create more than an element,
+57
+
+58
+00:03:30,040 --> 00:03:32,020
+and this is what we motivated originally.
+58
+
+59
+00:03:32,020 --> 00:03:33,040
+This is a normal array,
+59
+
+60
+00:03:33,040 --> 00:03:35,720
+we defined it of 10 elements and fixed size.
+60
+
+61
+00:03:37,030 --> 00:03:41,110
+Now when it comes to the pointer we do the following: Instead of just new int,
+61
+
+62
+00:03:41,380 --> 00:03:46,300
+we open the brackets and put the variable N here, N here can be any integer,
+62
+
+63
+00:03:46,300 --> 00:03:47,480
+It doesn't need to be const.
+63
+
+64
+00:03:47,500 --> 00:03:49,840
+We can read it from the user and create array with it.
+64
+
+65
+00:03:50,350 --> 00:03:54,010
+Once, we created the array, we can normally just use it as an array.
+65
+
+66
+00:03:54,730 --> 00:03:55,600
+Let's delete it.
+66
+
+67
+00:03:55,810 --> 00:03:59,920
+If you'd like to delete the array, you have to delete it with these two braces.
+67
+
+68
+00:04:00,950 --> 00:04:02,520
+OK, so two brackets here.
+68
+
+69
+00:04:02,930 --> 00:04:09,350
+So back to this one, if you are creating a single element, you just use the normal word delete.
+69
+
+70
+00:04:09,620 --> 00:04:14,270
+If you are creating an array and this is a big source of mistakes, you delete it as an array.
+70
+
+71
+00:04:18,190 --> 00:04:25,480
+If you just tried to say delete pArr, this is wrong, and it will compile sadly. That's why it is a very common mistake.
+71
+
+72
+00:04:26,410 --> 00:04:29,590
+There's a question here, why do we have to delete?
+72
+
+73
+00:04:30,610 --> 00:04:33,820
+I would like you to understand something about what is happening behind the scene.
+73
+
+74
+00:04:34,150 --> 00:04:41,830
+When you use the operator new, there is some specific part of the ram that will be reserved
+74
+
+75
+00:04:41,830 --> 00:04:47,460
+for you to use it. If you didn't delete it, the computer never gets a request to release this memory.
+75
+
+76
+00:04:47,680 --> 00:04:53,740
+So, for example, if you asked for 100 mega for your array and you didn't delete it, the hundred
+76
+
+77
+00:04:53,740 --> 00:04:59,460
+mega will be used and reserved from your machine even after your program closes,
+77
+
+78
+00:04:59,680 --> 00:05:01,750
+and this is what we call a memory leak.
+78
+
+79
+00:05:02,050 --> 00:05:08,050
+A memory leak means that there is some memory created by this program, but no one released it.
+79
+
+80
+00:05:08,400 --> 00:05:13,120
+Only you have to restart the whole machine to solve this problem.
+80
+
+81
+00:05:14,020 --> 00:05:16,810
+Here is one more interesting thing that happens a lot in practice.
+81
+
+82
+00:05:17,170 --> 00:05:24,280
+If you have a function that reserves really huge array, but it is wrongly releasing it or forgot to
+82
+
+83
+00:05:24,280 --> 00:05:30,340
+release it. With every call to the function that does this big array, much of your ram is going to be consumed,
+83
+
+84
+00:05:30,610 --> 00:05:35,470
+let's say that with every single call, 300 mega are consumed from your ram.
+84
+
+85
+00:05:36,070 --> 00:05:41,910
+The second call there is another 300, the third call there is another 300 and so on, then
+85
+
+86
+00:05:41,960 --> 00:05:46,360
+your whole machine memory is going to be consumed. At this moment,
+86
+
+87
+00:05:46,360 --> 00:05:48,010
+your whole machine is going to hang,
+87
+
+88
+00:05:48,280 --> 00:05:57,010
+and this means that just your own memory got consumed. Side notes for guys who work on this kind of pointer
+88
+
+89
+00:05:57,100 --> 00:06:01,050
+things. In practice, they have a lot of tools that can help them discover this one.
+89
+
+90
+00:06:01,090 --> 00:06:01,890
+This is very advanced.
+90
+
+91
+00:06:01,930 --> 00:06:04,390
+You don't have to go to learn that.
+91
+
+92
+00:06:04,810 --> 00:06:10,000
+As a funny note, given what we just said, you can check your task manager.
+92
+
+93
+00:06:10,210 --> 00:06:15,490
+If there is some process running and you look into it, let's say it's now five hundred mega
+93
+
+94
+00:06:15,700 --> 00:06:20,170
+and with every few seconds is going to take more and more memory.
+94
+
+95
+00:06:20,420 --> 00:06:26,200
+You can figure out from the task manager that this task, this process, this code actually
+95
+
+96
+00:06:26,200 --> 00:06:27,100
+have some memory leak.
+96
+
+97
+00:06:27,490 --> 00:06:28,560
+So this is a bit funny.
+97
+
+98
+00:06:28,660 --> 00:06:33,880
+If you look at the task manager, you can figure out sometimes that your code has a memory leak, but this
+98
+
+99
+00:06:33,880 --> 00:06:35,170
+isn't a standard way to do that.
+99
+
+100
+00:06:36,620 --> 00:06:41,200
+Here are a few common mistakes that people do when using pointers.
+100
+
+101
+00:06:41,870 --> 00:06:44,740
+The first thing is to use delete instead of delete array.
+101
+
+102
+00:06:45,260 --> 00:06:47,630
+The second one is to use delete array instead of delete,
+102
+
+103
+00:06:47,630 --> 00:06:53,540
+but the first one is much more common. A much worse problem if you tried to delete a pointer twice.
+103
+
+104
+00:06:53,600 --> 00:06:55,070
+This happens a lot in industry.
+104
+
+105
+00:06:55,220 --> 00:06:57,500
+It creates something, what you call dangling pointer.
+105
+
+106
+00:06:57,770 --> 00:06:59,950
+The first one would be removed safely,
+106
+
+107
+00:07:00,050 --> 00:07:02,170
+the second one would cause a crash in your system.
+107
+
+108
+00:07:03,380 --> 00:07:06,080
+One of the common mistakes is to access a deleted memory.
+108
+
+109
+00:07:06,080 --> 00:07:08,860
+You created something, you deleted, then you access it.
+109
+
+110
+00:07:08,900 --> 00:07:12,980
+This program is going to crash. Or accessing an initialized variable.
+110
+
+111
+00:07:12,990 --> 00:07:14,610
+No one knows what's going to happen.
+111
+
+112
+00:07:15,170 --> 00:07:15,920
+A few tips.
+112
+
+113
+00:07:16,160 --> 00:07:17,270
+Never leave a pointer
+113
+
+114
+00:07:17,270 --> 00:07:19,730
+uninitialized, always put it to a null pointer.
+114
+
+115
+00:07:20,030 --> 00:07:24,650
+If you delete the pointer, assign it to a null pointer. Before deleting a pointer,
+115
+
+116
+00:07:24,920 --> 00:07:27,280
+think twice about these notes here.
+116
+
+117
+00:07:28,100 --> 00:07:28,640
+That's it.

@@ -1,0 +1,219 @@
+0
+1
+00:00:01,230 --> 00:00:03,690
+One more practice on recursive functions.
+1
+
+2
+00:00:04,080 --> 00:00:10,650
+There is an interesting thing that is named 3n+1 sequence, this 3n+1 is as
+2
+
+3
+00:00:10,650 --> 00:00:12,690
+following, you start from some number n,
+3
+
+4
+00:00:12,690 --> 00:00:18,090
+if this number is even, the next number in the sequence, is n divided by two.
+4
+
+5
+00:00:18,570 --> 00:00:23,730
+If this number is odd, the next number in the sequence is 3 * n + 1.
+5
+
+6
+00:00:24,150 --> 00:00:30,330
+If this number is 1, the end of the sequence. For example, if we started by 5, then five is
+6
+
+7
+00:00:30,330 --> 00:00:30,660
+odd,
+7
+
+8
+00:00:30,840 --> 00:00:32,550
+So we multiply by 3 and add 1,
+8
+
+9
+00:00:32,550 --> 00:00:39,420
+it's now 16, 16 is even; divide by 2, even divide by 2, even divide by 2, even divided by 2.
+9
+
+10
+00:00:39,630 --> 00:00:46,530
+Now 1, the end of the sequence. Another case, let's start with 6 is even, divide by 2
+10
+
+11
+00:00:46,530 --> 00:00:53,420
+is 3, odd, 3  * 3 + 1, is 10 divide by 2, 5 * 3 + 1 is 16,
+11
+
+12
+00:00:53,430 --> 00:00:55,850
+Then we are going to do the same sequence here.
+12
+
+13
+00:00:56,460 --> 00:01:01,350
+So we would like to print this sequence, starting from a specific number in a recursive way.
+13
+
+14
+00:01:01,740 --> 00:01:02,820
+But why recursion?
+14
+
+15
+00:01:03,120 --> 00:01:05,670
+If you looked here, the logic is the same.
+15
+
+16
+00:01:05,910 --> 00:01:12,570
+You would like to print a sequence and every step is doing the same logic; n divided by
+16
+
+17
+00:01:12,570 --> 00:01:16,530
+2 or 3n+1.
+17
+
+18
+00:01:16,800 --> 00:01:20,170
+Definitely, we can do this using a single loop, but let's do it for recursion
+18
+
+19
+00:01:20,190 --> 00:01:25,340
+For the sake of practice. We are going to call a function with the number 6,
+19
+
+20
+00:01:25,800 --> 00:01:29,490
+So the function logic should be as following: it is going to print the number,
+20
+
+21
+00:01:29,970 --> 00:01:33,090
+If we are done like n = 1, we just return.
+21
+
+22
+00:01:33,630 --> 00:01:38,430
+If the number is even, we call the same function divided by 2.
+22
+
+23
+00:01:38,910 --> 00:01:42,270
+If the number is odd,
+23
+
+24
+00:01:42,270 --> 00:01:44,060
+We are calling 3n + 1.
+24
+
+25
+00:01:44,220 --> 00:01:45,990
+So let's trace. Here,
+25
+
+26
+00:01:46,770 --> 00:01:53,280
+the first call to 6 is going to print 6, and then call recursively  with 6/2, which is 3. print
+26
+
+27
+00:01:53,280 --> 00:01:57,460
+3, then call recursively 3 * 3 + 1 which is 10.
+27
+
+28
+00:01:57,750 --> 00:02:03,450
+Print 10 and call with 10/2, which is 5 multiplied by 3 + 1 which
+28
+
+29
+00:02:03,450 --> 00:02:04,830
+is 16.
+29
+
+30
+00:02:05,100 --> 00:02:11,640
+Divide by 2, divide by 2, divide by 2, and 1 just end it. In a similar way,
+30
+
+31
+00:02:11,790 --> 00:02:16,460
+as I said more than once, the way that we think of it is much simpler,
+31
+
+32
+00:02:16,680 --> 00:02:19,050
+You tell yourself what does the function do?
+32
+
+33
+00:02:19,230 --> 00:02:21,960
+It's supposed to print the 3n+1 sequence.
+33
+
+34
+00:02:22,140 --> 00:02:24,360
+Then you just verify, you are done with it.
+34
+
+35
+00:02:24,570 --> 00:02:30,900
+I would say here, I'm going to trace one case for the even and trace one case for the odd and then
+35
+
+36
+00:02:30,900 --> 00:02:31,800
+stop from here.
+36
+
+37
+00:02:32,040 --> 00:02:33,840
+If I did these two cases correctly
+37
+
+38
+00:02:33,840 --> 00:02:37,050
+in tracing, I'm sure that I covered the even and odd cases.
+38
+
+39
+00:02:37,050 --> 00:02:38,870
+I don't need to trace it anymore.
+39
+
+40
+00:02:39,120 --> 00:02:42,800
+But anyway, for a beginner, it still makes sense to do more tracing.
+40
+
+41
+00:02:42,810 --> 00:02:44,600
+'till your mind be a recursive mind.
+41
+
+42
+00:02:45,090 --> 00:02:47,340
+It takes time to be good in recursion.
+42
+
+43
+00:02:47,670 --> 00:02:52,860
+And all of the recursion that I'm offering in this section is basic recursion.
+43
+
+44
+00:02:54,480 --> 00:02:57,480
+In future, we might discuss more. That's it.

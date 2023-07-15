@@ -1,0 +1,651 @@
+1
+00:00:01,320 --> 00:00:05,550
+In the last time we learned how to do the custom, the letter for the shirt, the printer, sadly,
+
+2
+00:00:05,550 --> 00:00:09,010
+when it comes to the unique printer, the syntax is a bit different.
+
+3
+00:00:09,810 --> 00:00:15,270
+I would like also to take the chance while teaching you the custom editor for a unique printer to introduce
+
+4
+00:00:15,300 --> 00:00:20,610
+you to a bunch of modern features, just about everything of them, like function, declension, time
+
+5
+00:00:20,610 --> 00:00:24,690
+and using the syntax of today will look like weird.
+
+6
+00:00:25,200 --> 00:00:26,160
+This is very normal.
+
+7
+00:00:26,820 --> 00:00:30,360
+The way to be very familiar with it is mainly to write it many, many times.
+
+8
+00:00:31,020 --> 00:00:33,810
+So let's first know about function.
+
+9
+00:00:35,790 --> 00:00:37,410
+This is a bit introduced in C++.
+
+10
+00:00:37,590 --> 00:00:39,680
+Then let's say you have some some function here.
+
+11
+00:00:39,680 --> 00:00:40,170
+Here Square.
+
+12
+00:00:40,470 --> 00:00:42,720
+We can describe this function as its function.
+
+13
+00:00:42,720 --> 00:00:48,900
+The ticker parameter written, the the competition itself is just multiplying the number itself in C++
+
+14
+00:00:48,980 --> 00:00:51,390
+lipin you can define a function as following.
+
+15
+00:00:51,740 --> 00:00:53,480
+Remember we say integrate X equals 10.
+
+16
+00:00:53,490 --> 00:00:54,950
+I'm not defining a function.
+
+17
+00:00:55,230 --> 00:01:01,260
+So I'm going to say here we have a function temblors function and it's a type is a function that is
+
+18
+00:01:01,260 --> 00:01:04,110
+returning an integer and it's taking an integer.
+
+19
+00:01:04,320 --> 00:01:07,400
+If you define something like that you can say here equals square.
+
+20
+00:01:07,620 --> 00:01:14,850
+So one of the interesting things of of of the modern C++ syntax, your flexibility, investing function
+
+21
+00:01:14,850 --> 00:01:17,490
+and defining function this way, this is very strong.
+
+22
+00:01:17,510 --> 00:01:21,980
+It's merely existing in other in other programming language like Python and so on.
+
+23
+00:01:22,590 --> 00:01:27,290
+So you can call F or five to twenty five exactly like Askwith.
+
+24
+00:01:27,570 --> 00:01:33,120
+So this is how we are defining some function in the function is very, very strong and can be used in
+
+25
+00:01:33,130 --> 00:01:34,170
+very complicated scenario.
+
+26
+00:01:34,190 --> 00:01:36,420
+But for now I'd like to make it simpler like that.
+
+27
+00:01:37,680 --> 00:01:44,430
+So let's learn about the custom that Easter, the custom, the letter is following with the with the,
+
+28
+00:01:44,430 --> 00:01:46,330
+with the short pointer, with a unique pointer.
+
+29
+00:01:46,440 --> 00:01:49,260
+So here is our dilator, very normal.
+
+30
+00:01:49,740 --> 00:01:52,240
+And here is also our parameter polynomial.
+
+31
+00:01:52,590 --> 00:01:55,290
+The extra thing is a unique pointer.
+
+32
+00:01:55,440 --> 00:02:00,480
+You have to best for him also another parameter which corresponds to the reader.
+
+33
+00:02:00,600 --> 00:02:04,060
+So are giving him details exactly about your letter.
+
+34
+00:02:04,230 --> 00:02:10,470
+So you are telling him, hey, you have a function that this Deeter function is a function, that its
+
+35
+00:02:10,480 --> 00:02:13,790
+return is void and it's apparently an integral point.
+
+36
+00:02:14,100 --> 00:02:17,160
+So this is a letter, if you think about it, it is a returning void.
+
+37
+00:02:17,160 --> 00:02:21,230
+So you would the void here and it's sticking into your pointer, so you would integrate with The View.
+
+38
+00:02:21,510 --> 00:02:29,270
+So the extra the extra about the should, about the custom, the letter you have to provide a second,
+
+39
+00:02:29,270 --> 00:02:33,150
+the template parameter that is describing your delete the function.
+
+40
+00:02:33,420 --> 00:02:36,630
+At that moment, the custom director for the new player is done.
+
+41
+00:02:37,080 --> 00:02:39,000
+The remaining of of decision.
+
+42
+00:02:39,000 --> 00:02:41,910
+I'm just teaching you more modern syntax, C++ to do that.
+
+43
+00:02:43,890 --> 00:02:50,220
+OK, so the first one is a declaration type, so let's let's learn something about it, let's say that
+
+44
+00:02:50,220 --> 00:02:52,860
+we have a function F and I say all to be equal.
+
+45
+00:02:52,860 --> 00:02:57,790
+One point five, C++ is going to resolve this all to two double because this value is double.
+
+46
+00:02:58,200 --> 00:03:01,680
+So when you are returning B, we know the B is is double parameter.
+
+47
+00:03:01,830 --> 00:03:03,030
+OK, this is very good.
+
+48
+00:03:03,030 --> 00:03:12,240
+One of the good C++ features because it might help us to make our code more readable or more generic
+
+49
+00:03:12,240 --> 00:03:12,630
+and so on.
+
+50
+00:03:14,040 --> 00:03:14,960
+Now let's see the function.
+
+51
+00:03:14,990 --> 00:03:18,930
+This one here I'm declaring a parameter I, which is ten point two.
+
+52
+00:03:19,190 --> 00:03:22,350
+It's double another double digit one.
+
+53
+00:03:22,350 --> 00:03:23,610
+It's three times two.
+
+54
+00:03:24,090 --> 00:03:26,640
+So items to is twenty point four and so on.
+
+55
+00:03:27,030 --> 00:03:29,520
+There is another way to define the double variable here.
+
+56
+00:03:30,090 --> 00:03:31,230
+Let's let's let's see.
+
+57
+00:03:31,230 --> 00:03:31,740
+I'm doing here.
+
+58
+00:03:31,740 --> 00:03:37,860
+I'm saying here what instead of the position of the double Arabised, it was declaration type based
+
+59
+00:03:37,860 --> 00:03:44,560
+on I am quoting here that the type that we are going to put here is exactly the type of guy.
+
+60
+00:03:44,610 --> 00:03:45,200
+So what is it?
+
+61
+00:03:45,290 --> 00:03:46,470
+I just double.
+
+62
+00:03:46,800 --> 00:03:53,160
+So practically speaking, this line is like double G two times two, which is twenty four.
+
+63
+00:03:53,550 --> 00:03:59,880
+So the moral of that is the declaration over here allowed us to remove the declaration time exactly.
+
+64
+00:03:59,880 --> 00:04:02,570
+Two and and link it based on something.
+
+65
+00:04:03,390 --> 00:04:05,790
+So please familiarize yourself with line 15.
+
+66
+00:04:06,600 --> 00:04:13,100
+There is another way that we are also using the declaration time you are seeing here declaration type
+
+67
+00:04:13,260 --> 00:04:18,720
+and you are giving it F with that function call operators.
+
+68
+00:04:19,260 --> 00:04:22,830
+So F is a function and this is a code for the function.
+
+69
+00:04:22,840 --> 00:04:24,660
+So we really care about its return type.
+
+70
+00:04:24,960 --> 00:04:28,050
+What is the return type of double if it is double?
+
+71
+00:04:28,320 --> 00:04:32,110
+So again, this this part is going to be resolved to double.
+
+72
+00:04:32,340 --> 00:04:36,480
+So this is another way to make use of the declaration time.
+
+73
+00:04:37,080 --> 00:04:42,600
+So again, it could look more generic, like we are saying, hey, you know what, J3 type is the same
+
+74
+00:04:42,600 --> 00:04:47,910
+as the return of F, but remember, we're using here the parenthesis here is a third way.
+
+75
+00:04:49,300 --> 00:04:54,220
+You know, we can define a function, as you said, like that, we can say that we would like to define
+
+76
+00:04:54,220 --> 00:05:01,210
+some function which of type global and doesn't take parameters like we did in the a few slides ago.
+
+77
+00:05:02,080 --> 00:05:03,810
+Now, I can do that in a different way.
+
+78
+00:05:04,120 --> 00:05:13,270
+I can say here that the F2 is the type of it is is the reference F reference, if it is referring to
+
+79
+00:05:13,270 --> 00:05:16,600
+the will function as a return type and as parameters.
+
+80
+00:05:16,840 --> 00:05:21,430
+So again, this one is going to be resolved as a function of double with our parameters.
+
+81
+00:05:21,790 --> 00:05:24,530
+Now I can call F2 normally and get some value here.
+
+82
+00:05:24,910 --> 00:05:30,340
+So as you see the declaration, Tyvon, all two are very, very, very, very well connected.
+
+83
+00:05:30,670 --> 00:05:34,870
+They are tools that can help us make our good little more generic.
+
+84
+00:05:35,440 --> 00:05:39,190
+Now, let's see, how can we help with that in the function pointers, remember?
+
+85
+00:05:39,340 --> 00:05:43,060
+And a few slides ago, we we here have a will.
+
+86
+00:05:43,270 --> 00:05:49,590
+We say here is a director and we say this is a function of void of integral pointer.
+
+87
+00:05:49,930 --> 00:05:52,120
+But what if we know that we care about that?
+
+88
+00:05:52,420 --> 00:05:54,830
+What would that the nature of this function?
+
+89
+00:05:55,030 --> 00:06:00,220
+We can just use here a declaration type to say, hey, you know, this Drita function that we're giving
+
+90
+00:06:00,220 --> 00:06:02,320
+it, but consider it to type here.
+
+91
+00:06:02,770 --> 00:06:08,470
+This way, you don't have it now to think about what are the parameters that are here.
+
+92
+00:06:08,480 --> 00:06:10,020
+You don't even have to think about that.
+
+93
+00:06:10,270 --> 00:06:14,680
+So again, C++ made it a bit simpler for you when you did such a good.
+
+94
+00:06:14,950 --> 00:06:19,980
+You understand that this is going to be replaced by function of void integral pointer.
+
+95
+00:06:19,990 --> 00:06:21,220
+So this is a model of that.
+
+96
+00:06:23,080 --> 00:06:24,360
+Let's use something else.
+
+97
+00:06:24,580 --> 00:06:30,340
+If you if you if you look to the syntax, the idea that you are using here, something like that with
+
+98
+00:06:30,340 --> 00:06:36,400
+two parameters here, looks like ugly like let's say in your code, you have to use a lot of a lot of
+
+99
+00:06:36,550 --> 00:06:37,260
+unique pointers.
+
+100
+00:06:37,270 --> 00:06:38,470
+The code would be very ugly.
+
+101
+00:06:38,470 --> 00:06:41,640
+So something like TYPEDEF can help us to simplify the code.
+
+102
+00:06:41,920 --> 00:06:45,230
+I'm not going to back to the old syntax or even the declaration as you like.
+
+103
+00:06:45,520 --> 00:06:48,570
+And I'm saying typedef all of this type to this name.
+
+104
+00:06:49,270 --> 00:06:54,520
+Remember we said before when typedef you can define it with something and then you give it any.
+
+105
+00:06:55,780 --> 00:06:56,570
+So far so good.
+
+106
+00:06:56,590 --> 00:07:01,600
+So now in the old way I can make a unique pointer of these two things, but now I can replace all of
+
+107
+00:07:01,600 --> 00:07:05,250
+these big name with, with this, just the name that they just used.
+
+108
+00:07:05,590 --> 00:07:11,200
+So the model that we made the code like looks smaller and now it looks like you like a little type.
+
+109
+00:07:11,200 --> 00:07:12,460
+So you don't think of it here.
+
+110
+00:07:12,460 --> 00:07:16,930
+It was very inconvenient to have to pass another parameter, but now just one name.
+
+111
+00:07:17,780 --> 00:07:19,460
+OK, but this is a problem here in the school.
+
+112
+00:07:19,670 --> 00:07:25,160
+What if I would like to make this go generic, like I'm not defining this, this time for an integrated
+
+113
+00:07:25,160 --> 00:07:26,540
+after time, maybe for double.
+
+114
+00:07:26,810 --> 00:07:27,830
+This doesn't make sense.
+
+115
+00:07:28,460 --> 00:07:31,060
+So let's make it more generic.
+
+116
+00:07:31,310 --> 00:07:37,640
+We cannot in C++ introduce something good that they're using.
+
+117
+00:07:38,000 --> 00:07:41,900
+They using is just a generalization of typedef that allow using templates.
+
+118
+00:07:42,200 --> 00:07:43,730
+So how would you use it?
+
+119
+00:07:43,790 --> 00:07:45,050
+This is a new syntax for you.
+
+120
+00:07:45,060 --> 00:07:50,360
+You define it as following, you define your template and so you get you say using, you give the name
+
+121
+00:07:50,360 --> 00:07:53,240
+that you would like to use equal and then define the type.
+
+122
+00:07:53,990 --> 00:08:01,130
+So now here you see it is a symbol like syntax, but we have here this time T and the T. So now we we
+
+123
+00:08:01,190 --> 00:08:03,380
+are now defining this time in a unique way.
+
+124
+00:08:03,650 --> 00:08:08,420
+Now, if it would like to and also define here my little function in the template way, if I would like
+
+125
+00:08:08,420 --> 00:08:15,140
+now to define a unique point of integration, give it here the template and delete the little one was
+
+126
+00:08:15,350 --> 00:08:15,740
+integer.
+
+127
+00:08:15,740 --> 00:08:20,030
+So it's OK, let's say here a unique double or unique pointer of double.
+
+128
+00:08:20,270 --> 00:08:24,380
+You give a double pointer and you say delete or two of by double.
+
+129
+00:08:24,800 --> 00:08:29,090
+So now the model of that is you, you give it my name here.
+
+130
+00:08:29,240 --> 00:08:30,230
+You made it more generic.
+
+131
+00:08:30,380 --> 00:08:31,850
+This with the purpose of that.
+
+132
+00:08:34,230 --> 00:08:40,180
+There is concern that I would like to discuss a bit interesting is there are many ways to define the
+
+133
+00:08:40,180 --> 00:08:40,710
+dilator.
+
+134
+00:08:40,980 --> 00:08:46,230
+Remember, it's expecting a function so we can use a function or a functor or a pointer to function
+
+135
+00:08:46,230 --> 00:08:52,100
+or or this function in the C++ or the declaration that there are a bunch of different ways.
+
+136
+00:08:52,110 --> 00:08:52,470
+Right.
+
+137
+00:08:52,830 --> 00:08:58,850
+Surprisingly, the memory size of the unique pointer in every one of them is different in memory.
+
+138
+00:08:59,010 --> 00:09:01,050
+So it is what you are defining.
+
+139
+00:09:01,050 --> 00:09:07,140
+Some Londa function, put it aside and we have to define a normal function at a function of a function.
+
+140
+00:09:07,800 --> 00:09:11,580
+So here this is a default default, a unique pointer.
+
+141
+00:09:11,760 --> 00:09:18,420
+If you try to tap into the size of that guys in the memory, it would be eight bytes if you decided
+
+142
+00:09:18,420 --> 00:09:20,880
+to use Functor.
+
+143
+00:09:21,100 --> 00:09:21,810
+It's also eight.
+
+144
+00:09:22,140 --> 00:09:27,140
+But if you decided to this declaration type of function, it's 16 by double.
+
+145
+00:09:27,240 --> 00:09:33,630
+Now, if you say the declaration type over anonymous function eight again, if it decided to use something
+
+146
+00:09:33,630 --> 00:09:38,550
+called function that we didn't take it so far, it's six years more for more of a time.
+
+147
+00:09:38,910 --> 00:09:42,660
+If you decided to use the function one, it could be from 40 to 60.
+
+148
+00:09:42,960 --> 00:09:45,750
+It depends like on your machine, something like that.
+
+149
+00:09:45,750 --> 00:09:46,550
+Maybe even bigger.
+
+150
+00:09:46,580 --> 00:09:50,060
+Depends if you if you noticed the here there are two things.
+
+151
+00:09:50,070 --> 00:09:53,890
+The first is the memory, different sizes, whatever approach is different.
+
+152
+00:09:54,120 --> 00:09:59,400
+The second is using using the function style is the most expensive one among them.
+
+153
+00:10:00,000 --> 00:10:06,060
+If you have interest to know why there are different sizes and memory, the end of this article has
+
+154
+00:10:06,060 --> 00:10:12,710
+a good has a good information about how the function is, how the pointer to the director is.
+
+155
+00:10:12,720 --> 00:10:14,820
+It is it is it is sieved internally.
+
+156
+00:10:16,740 --> 00:10:17,850
+The model of some of them.
+
+157
+00:10:17,850 --> 00:10:25,110
+For example, there are some mechanism in C++ model with MBT optimization that could allow us to not
+
+158
+00:10:25,110 --> 00:10:27,630
+put an extra size for some of these pointers.
+
+159
+00:10:30,790 --> 00:10:37,240
+So the moral of this is right, if it happened that you have a heavy and extensive usage of a unique
+
+160
+00:10:37,240 --> 00:10:40,750
+pointer with a editor, you have to avoid this function site.
+
+161
+00:10:41,140 --> 00:10:47,470
+And the best for you probably would be to just go with something like maybe the type a functor or maybe
+
+162
+00:10:47,470 --> 00:10:53,590
+a declaration type over over an anonymous function.
+
+163
+00:10:53,830 --> 00:10:58,420
+So this is a model that so that you could doesn't take a lot of memory that it.

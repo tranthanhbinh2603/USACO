@@ -1,0 +1,1 @@
+ffmpeg -protocol_whitelist file,tls,tcp,https,crypto -allowed_extensions ALL -i "index-v1-a1.m3u8" -c:v libx264 "aaa.mp4"

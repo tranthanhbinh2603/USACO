@@ -1,0 +1,274 @@
+0
+1
+00:00:01,680 --> 00:00:03,420
+Let's continue about the inheritance.
+1
+
+2
+00:00:03,600 --> 00:00:12,920
+One critical issue that happened in the last section is that we made the data in the person class public.
+2
+
+3
+00:00:13,350 --> 00:00:17,370
+The problem that happened is we actually are broking the data hiding this way.
+3
+
+4
+00:00:18,300 --> 00:00:20,260
+OK, so let's make them private.
+4
+
+5
+00:00:20,610 --> 00:00:25,320
+If you made them private, you only see whatever in public section it's still OK.
+5
+
+6
+00:00:25,320 --> 00:00:29,130
+But you don't see all of your variables in this way.
+6
+
+7
+00:00:29,340 --> 00:00:33,650
+And you might even want to make more functions in private.
+7
+
+8
+00:00:33,660 --> 00:00:35,180
+But we don't see them now.
+8
+
+9
+00:00:35,700 --> 00:00:37,080
+So this is a bit tricky.
+9
+
+10
+00:00:37,320 --> 00:00:43,680
+And this is why language is started to introduce a new access modifier the protected access modifier 
+10
+
+11
+00:00:44,280 --> 00:00:45,150
+The protected access modifier 
+11
+
+12
+00:00:45,150 --> 00:00:47,040
+is a special modifier.
+12
+
+13
+00:00:47,040 --> 00:00:47,490
+where
+13
+
+14
+00:00:49,100 --> 00:00:53,900
+If you are a parent and provided something private, no one see it as usual, if you provided something
+14
+
+15
+00:00:53,900 --> 00:00:59,530
+public, anyone see it, if you provided something as protected, only your child can see it,
+15
+
+16
+00:00:59,690 --> 00:01:01,350
+But outsiders doesn't.
+16
+
+17
+00:01:01,860 --> 00:01:04,540
+OK, does this solve the OOP completely?
+17
+
+18
+00:01:04,670 --> 00:01:05,480
+The answer is no.
+18
+
+19
+00:01:05,490 --> 00:01:10,640
+It's still breaking the OOP, but it is somewhere meets a middle solution.
+19
+
+20
+00:01:11,180 --> 00:01:13,150
+So let's see some diagram for that.
+20
+
+21
+00:01:13,550 --> 00:01:16,520
+Here is some base class and here is some derived class
+21
+
+22
+00:01:17,240 --> 00:01:21,950
+And this is an object using this class and this an object using this class and this class seeing this
+22
+
+23
+00:01:21,950 --> 00:01:22,270
+class.
+23
+
+24
+00:01:22,880 --> 00:01:27,410
+So as usual, the public can be seen by anyone, the private
+24
+
+25
+00:01:27,410 --> 00:01:28,550
+No one is seeing it.
+25
+
+26
+00:01:29,090 --> 00:01:30,620
+The protected is a bit tricky.
+26
+
+27
+00:01:31,010 --> 00:01:38,810
+The protected of this class is invisible by outsiders, but only visible by your child class.
+27
+
+28
+00:01:39,080 --> 00:01:41,390
+So this is how the access modifiers work.
+28
+
+29
+00:01:43,080 --> 00:01:49,200
+So back to the student teacher class who started to create the person class and define the variables
+29
+
+30
+00:01:49,200 --> 00:01:50,320
+here as protected.
+30
+
+31
+00:01:50,700 --> 00:01:55,350
+So now I can see them, but outsiders cannot. In a similar way,
+31
+
+32
+00:01:55,350 --> 00:01:59,730
+The teacher have his own private variables and can see the protected class here.
+32
+
+33
+00:02:00,120 --> 00:02:04,740
+So if we had created a student class, we can set name, set GPA and print the grades.
+33
+
+34
+00:02:05,100 --> 00:02:10,740
+So which are some of them from here and some of them are from the protected area here.
+34
+
+35
+00:02:12,870 --> 00:02:14,800
+OK, can I say student "dot" name?
+35
+
+36
+00:02:15,240 --> 00:02:16,230
+The answer is no.
+36
+
+37
+00:02:16,410 --> 00:02:16,970
+Why?
+37
+
+38
+00:02:17,490 --> 00:02:19,830
+Because the "dot" name is protected.
+38
+
+39
+00:02:20,160 --> 00:02:26,190
+If it is protected, it means it is visible from inside the class, but it isn't visible for an outsider.
+39
+
+40
+00:02:26,610 --> 00:02:31,560
+In a similar way we can define a teacher, we can call is valid email, which is a function here.
+40
+
+41
+00:02:31,770 --> 00:02:40,110
+We can set the current salary, but we cannot access any protected data member or member function
+41
+
+42
+00:02:40,110 --> 00:02:46,290
+here in the protected area from outside. we can only access from the inside of the class.
+42
+
+43
+00:02:47,790 --> 00:02:50,900
+There is also what we call a multiple inheritance.
+43
+
+44
+00:02:50,910 --> 00:02:56,910
+Let's say we have a teaching assistant and this teaching assistant is also is an employee in the university,
+44
+
+45
+00:02:56,910 --> 00:02:59,730
+but also he is still a student like most master students in the universities.
+45
+
+46
+00:03:00,180 --> 00:03:04,090
+So the way to do that is public student "comma"  public employee.
+46
+
+47
+00:03:04,600 --> 00:03:05,670
+Now, what does this mean?
+47
+
+48
+00:03:06,000 --> 00:03:12,270
+It means that the teaching assistant is seeing the protected section here and here and also in addition,
+48
+
+49
+00:03:12,270 --> 00:03:13,570
+definitely the public section.
+49
+
+50
+00:03:13,920 --> 00:03:19,290
+So now he is taking more features from here and more also features from here in addition to what he
+50
+
+51
+00:03:19,290 --> 00:03:19,810
+already has.
+51
+
+52
+00:03:20,490 --> 00:03:22,850
+So there is what we call a multilevel inheritance.
+52
+
+53
+00:03:22,980 --> 00:03:31,560
+This is nothing more than just a class graduate is extending the public student class, and the student class
+53
+
+54
+00:03:31,560 --> 00:03:32,630
+is extending the person class.
+54
+
+55
+00:03:32,640 --> 00:03:37,200
+And so we are building like a chain of classes. That's it.

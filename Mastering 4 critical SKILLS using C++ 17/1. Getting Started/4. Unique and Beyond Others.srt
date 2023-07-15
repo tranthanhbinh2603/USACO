@@ -1,0 +1,319 @@
+0
+1
+00:00:01,320 --> 00:00:07,680
+I have a belief that this course is way beyond many other courses that exist here or even on other platforms.
+1
+
+2
+00:00:08,010 --> 00:00:12,650
+And I would like to go a little more about that. So that, the overall picture is clear.
+2
+
+3
+00:00:13,230 --> 00:00:17,460
+There are mainly four skills that I claim to be the goal of this course.
+3
+
+4
+00:00:17,820 --> 00:00:19,950
+The first one is: (1-The Programming Skills Course).
+4
+
+5
+00:00:19,950 --> 00:00:23,520
+And this means that you will be familiar with the (C++) syntax.
+5
+
+6
+00:00:23,520 --> 00:00:24,930
+You can read it, you can write it,
+6
+
+7
+00:00:24,930 --> 00:00:30,410
+and so on. Fairly, in any course, you will find this skill, like typically you see a lot of code during a big course.
+7
+
+8
+00:00:30,420 --> 00:00:32,240
+So this is fair enough in every course.
+8
+
+9
+00:00:33,520 --> 00:00:39,120
+The second skill here is: (2-Problem Solving Skill), and the problem-solving is more about computational
+9
+
+10
+00:00:39,120 --> 00:00:39,750
+problems.
+10
+
+11
+00:00:40,650 --> 00:00:45,810
+I know that this is vague at the moment, but when you start with exercising in the course, you will
+11
+
+12
+00:00:45,810 --> 00:00:50,360
+understand more what is computational problems and why it is important.
+12
+
+13
+00:00:50,970 --> 00:00:56,580
+The programming questions in the coming in the problem-solving part are mainly coming from my long experience
+13
+
+14
+00:00:56,580 --> 00:00:58,770
+in competitive programming as a coach.
+14
+
+15
+00:00:59,430 --> 00:01:00,630
+This skill I would say,
+15
+
+16
+00:01:00,630 --> 00:01:06,830
+I'm not aware of any course here on the platform that is administrating it at all.
+16
+
+17
+00:01:07,350 --> 00:01:09,150
+That skill is very important.
+17
+
+18
+00:01:09,180 --> 00:01:14,850
+There are two courses that are named "The Data structures" and "Algorithms", and you will typically find
+18
+
+19
+00:01:14,940 --> 00:01:18,120
+students when they are moving to these courses, especially "Algorithms",
+19
+
+20
+00:01:18,360 --> 00:01:21,960
+they find a lot of difficulties in understanding and tackling the content.
+20
+
+21
+00:01:22,500 --> 00:01:28,490
+And the reason behind that is they lack the problem solving or what we call "Algorithmic Solving Skills".
+21
+
+22
+00:01:28,890 --> 00:01:29,750
+In this course,
+22
+
+23
+00:01:29,760 --> 00:01:35,490
+I am trying to set up a good base for you to be qualified for the next courses.
+23
+
+24
+00:01:35,850 --> 00:01:43,890
+Notice that, when we say mastering a skill, it might be a bit like maybe confusing or the
+24
+
+25
+00:01:43,890 --> 00:01:44,660
+guys got it wrong.
+25
+
+26
+00:01:45,030 --> 00:01:47,720
+There is no claim here that you are going to be a superhero,
+26
+
+27
+00:01:47,820 --> 00:01:49,620
+OK. Let's be honest about that.
+27
+
+28
+00:01:50,590 --> 00:01:57,300
+By that we mean you would be qualified due to the amount of problems that you saw to go to the next courses
+28
+
+29
+00:01:57,300 --> 00:01:58,440
+and 
+29
+
+30
+00:01:59,920 --> 00:02:05,680
+like finding them very smooth courses for you. If you are aware of something like "codeforces" community,
+30
+
+31
+00:02:05,860 --> 00:02:10,180
+you will find that codeforces division(2)-(A)-problems are smooth for you.
+31
+
+32
+00:02:10,420 --> 00:02:18,280
+But this course doesn't teach you algorithms, but it teaches you some of the fundamentals of the thinking
+32
+
+33
+00:02:18,400 --> 00:02:19,690
+in computational problems.
+33
+
+34
+00:02:19,870 --> 00:02:22,880
+And this is mainly by focusing on very ad-hoc problems.
+34
+
+35
+00:02:23,530 --> 00:02:26,620
+So this is mainly what we mean by problem solving skills here.
+35
+
+36
+00:02:27,460 --> 00:02:33,970
+The third skill is: (3-Project building skill), and you will find in most of the courses,
+36
+
+37
+00:02:34,030 --> 00:02:39,880
+the projects that are provided are very small and typically maybe one, sometimes two.
+37
+
+38
+00:02:40,150 --> 00:02:44,390
+Sometimes there is a claim of many projects, but they are all very close, very small and so on.
+38
+
+39
+00:02:44,770 --> 00:02:51,220
+So students complain that they cannot even tackle something like three-hundred lines of code. In this
+39
+
+40
+00:02:51,240 --> 00:02:51,700
+course,
+40
+
+41
+00:02:51,730 --> 00:02:59,440
+there are at least six projects (two small ones), (two medium ones), and (two large ones) so far
+41
+
+42
+00:02:59,440 --> 00:03:00,100
+at this moment.
+42
+
+43
+00:03:00,340 --> 00:03:06,430
+And when I say large one, I am referring to something like I wrote in like one thousand three hundred
+43
+
+44
+00:03:06,430 --> 00:03:06,700
+lines of code.
+44
+
+45
+00:03:06,710 --> 00:03:09,730
+You typically would write it at least double of that.
+45
+
+46
+00:03:10,120 --> 00:03:18,010
+So I hope that by doing these projects and comparing your code with my code, then you are improving a lot
+46
+
+47
+00:03:18,010 --> 00:03:18,230
+your skill.
+47
+
+48
+00:03:18,910 --> 00:03:20,680
+So this skill is highly enhanced
+48
+
+49
+00:03:20,680 --> 00:03:27,100
+in this course. while it is partially administrated by others. The fourth skill is: (4-The Object-Oriented design skill)
+49
+
+50
+00:03:27,100 --> 00:03:32,350
+In most, if not all, of the object-oriented programming courses,
+50
+
+51
+00:03:32,530 --> 00:03:37,000
+people focus a lot on the syntax of the (OOP) and how to apply it.
+51
+
+52
+00:03:37,390 --> 00:03:41,710
+But however, the reality about projects is about the design skill.
+52
+
+53
+00:03:42,610 --> 00:03:47,470
+So for me to try to make this course more about design not just about the programming syntax,
+53
+
+54
+00:03:48,750 --> 00:03:56,790
+I created and invented a lot of homework that tries to help you to really deeply understand
+54
+
+55
+00:03:56,790 --> 00:04:03,780
+the concepts and try to apply different design principles and patterns that are embedded in the homework
+55
+
+56
+00:04:03,780 --> 00:04:04,690
+and in the projects.
+56
+
+57
+00:04:05,820 --> 00:04:08,980
+This skill is also rarely administrated by others.
+57
+
+58
+00:04:11,610 --> 00:04:16,550
+Let's all remember when I say that we are going to administrate this skill,
+58
+
+59
+00:04:17,170 --> 00:04:24,810
+I am mainly referring to practice and homework because this is how we really build the skills. With a four
+59
+
+60
+00:04:24,810 --> 00:04:25,430
+administrated
+60
+
+61
+00:04:25,440 --> 00:04:32,040
+skills, we have like a promise that courses such as (Data structures, Algorithms, Software Engineering,
+61
+
+62
+00:04:32,250 --> 00:04:33,090
+Design Patterns),
+62
+
+63
+00:04:33,210 --> 00:04:40,200
+you will have a very smooth start in them because you build a very fair background and very fair
+63
+
+64
+00:04:40,310 --> 00:04:43,740
+skills to proceed with them. That is all. :)

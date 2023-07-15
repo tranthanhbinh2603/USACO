@@ -1,0 +1,614 @@
+0
+1
+00:00:01,230 --> 00:00:07,500
+In this video, we would like to discuss two processes that happened behind the scenes. If you didn't
+1
+
+2
+00:00:07,500 --> 00:00:09,720
+get some of the details of this video,
+2
+
+3
+00:00:09,840 --> 00:00:10,620
+This is totally OK.
+3
+
+4
+00:00:10,800 --> 00:00:12,750
+There is nothing about code today.
+4
+
+5
+00:00:13,830 --> 00:00:18,120
+So the first thing is what we call a preprocessor.
+5
+
+6
+00:00:18,250 --> 00:00:20,640
+You need to think, here my code.
+6
+
+7
+00:00:20,670 --> 00:00:27,500
+We compile it, we got executable to use. This is OK, but there are actually more steps in between.
+7
+
+8
+00:00:27,990 --> 00:00:34,530
+The first thing is your code, first of all, is going to be changed to a new code through something
+8
+
+9
+00:00:34,630 --> 00:00:38,760
+called a preprocessor. The preprocessor reads your program,
+9
+
+10
+00:00:38,760 --> 00:00:39,790
+and find anything
+10
+
+11
+00:00:39,810 --> 00:00:40,860
+start with the hash.
+11
+
+12
+00:00:40,860 --> 00:00:45,630
+If there is something like that, there is some preprocessing that happened first, and your code
+12
+
+13
+00:00:45,630 --> 00:00:48,540
+is going to be changed, and then sent to the compiler.
+13
+
+14
+00:00:48,870 --> 00:00:54,030
+If your code doesn't have anything that starts with hash, your code is going as it is to the compiler.
+14
+
+15
+00:00:54,750 --> 00:00:58,920
+Once you compile your code, you generate something called object code (the dot-O file).
+15
+
+16
+00:00:59,670 --> 00:01:03,380
+The linker is going to take all of the dot-O file to generate an executable.
+16
+
+17
+00:01:03,660 --> 00:01:04,380
+So let's highlight
+17
+
+18
+00:01:04,390 --> 00:01:05,190
+this little more.
+18
+
+19
+00:01:05,980 --> 00:01:12,700
+When the compile find any line of code that starts with the hash, it needs to process it.
+19
+
+20
+00:01:12,720 --> 00:01:12,930
+...
+20
+
+21
+00:01:13,320 --> 00:01:15,330
+We call them preprocessor directives,
+21
+
+22
+00:01:15,630 --> 00:01:21,750
+for example, the hash-include IO stream, the hash-include sum dot-h. Remember, we once said when the
+22
+
+23
+00:01:21,750 --> 00:01:28,680
+compiler see the hash include sum dot-h, it is going to remove this line and copy all of the content of
+23
+
+24
+00:01:28,680 --> 00:01:30,330
+this file in my file.
+24
+
+25
+00:01:30,420 --> 00:01:35,950
+For example, if my main dot CPP file is a hundred lines of code and I'm copying sum dot-h 
+25
+
+26
+00:01:36,090 --> 00:01:41,850
+which is 5 lines of code, then your code would be 105 lines of code.
+26
+
+27
+00:01:42,090 --> 00:01:45,870
+So the content of all of the IO stream is actually copied inside your code.
+27
+
+28
+00:01:46,170 --> 00:01:52,230
+The content of all hash-include is going to be copied in your code. So this is what happens mainly when the compiler
+28
+
+29
+00:01:52,230 --> 00:01:53,150
+see the hash.
+29
+
+30
+00:01:53,640 --> 00:01:59,640
+Another one is the hash-tag defines, (remember here the include guard) the compiler when is doing the
+30
+
+31
+00:01:59,640 --> 00:02:04,620
+copy-paste, it is going to decide to make a real copy if the content is never seen before.
+31
+
+32
+00:02:04,620 --> 00:02:08,430
+If it's seen before, it will not be copied based on this hash defines.
+32
+
+33
+00:02:09,740 --> 00:02:13,080
+In a third case, for example, you say hash-defined here table size.
+33
+
+34
+00:02:14,870 --> 00:02:19,040
+We didn't see this case, it's a macro, let's delay for now.
+34
+
+35
+00:02:19,520 --> 00:02:21,350
+Let's show you an example here.
+35
+
+36
+00:02:21,830 --> 00:02:30,080
+I have a program dot-CPP, which is hash-include IO stream and also hash-include program-dot-h. The preprocessor will
+36
+
+37
+00:02:30,080 --> 00:02:33,970
+take the three files and merge all of them in a single file.
+37
+
+38
+00:02:34,190 --> 00:02:38,090
+So you see here the IO stream part here, the program-dot-h part is here,
+38
+
+39
+00:02:38,300 --> 00:02:39,590
+and then here is your dot-CPP file.
+39
+
+40
+00:02:39,680 --> 00:02:42,460
+Once your whole new file ready,
+40
+
+41
+00:02:42,470 --> 00:02:45,470
+we send it to the compiler. Going little more in details,
+41
+
+42
+00:02:45,620 --> 00:02:50,750
+your program, see here the program-dot h, is going to be removed from here, and its content would
+42
+
+43
+00:02:50,750 --> 00:02:51,560
+be copied to here.
+43
+
+44
+00:02:51,980 --> 00:02:57,020
+Now, interestingly, here there is another hash here in the program-dot-h, say hash-defined name
+44
+
+45
+00:02:57,290 --> 00:02:58,340
+size 25.
+45
+
+46
+00:02:58,880 --> 00:03:03,950
+This is a command for the preprocessor to replace every name size with the value
+46
+
+47
+00:03:03,960 --> 00:03:04,500
+25.
+47
+
+48
+00:03:05,030 --> 00:03:10,130
+So you see here we say cout name size, the compiler would replace every name size with 25.
+48
+
+49
+00:03:10,520 --> 00:03:14,150
+So now this is your final code to be sent to the compiler.
+49
+
+50
+00:03:14,240 --> 00:03:16,840
+This is a preprocessor.
+50
+
+51
+00:03:17,710 --> 00:03:23,070
+Let me also highlight here something. If you tried to open your IO stream file,
+51
+
+52
+00:03:23,240 --> 00:03:24,850
+OK, just open it,
+52
+
+53
+00:03:25,130 --> 00:03:26,360
+You will notice the following:
+53
+
+54
+00:03:26,600 --> 00:03:29,350
+The IO stream file has an interesting thing.
+54
+
+55
+00:03:29,600 --> 00:03:34,650
+It has an object named cin of type  I_stream, an object of type O_stream cout.
+55
+
+56
+00:03:34,940 --> 00:03:40,730
+The second thing is they are extern. Extern, as we learned, means that it is visible
+56
+
+57
+00:03:40,730 --> 00:03:43,950
+in every file that is using this hash-include.
+57
+
+58
+00:03:44,330 --> 00:03:51,830
+So it is one thing that answers your question why we never define this cin and cout and we still can use
+58
+
+59
+00:03:51,830 --> 00:03:56,320
+them? because they are defined and declared in the IO stream,
+59
+
+60
+00:03:56,810 --> 00:04:02,330
+and this means when you hash-include this file, these two lines would be copied in your code. This
+60
+
+61
+00:04:02,330 --> 00:04:05,840
+way, they actually can be used because they are copied inside your code.
+61
+
+62
+00:04:06,830 --> 00:04:10,540
+The second thing to discuss is the linker. Let's say that you have something
+62
+
+63
+00:04:10,550 --> 00:04:14,090
+that's called main-dot-cpp and another file called add-dot-cpp.
+63
+
+64
+00:04:14,420 --> 00:04:18,310
+Every file of them is going to be processed by the compiler independently.
+64
+
+65
+00:04:18,650 --> 00:04:23,740
+So the main dot-cpp has to hash includes here, it would be reprocessed and compiled to give main-dot-O.
+65
+
+66
+00:04:23,810 --> 00:04:30,380
+This add-dot-CPP will be compiled and give add-dot-O. The linker is a thing that is going to
+66
+
+67
+00:04:30,830 --> 00:04:36,530
+mix all of them, link all of them, and gather all of them together to give you the executable.
+67
+
+68
+00:04:36,680 --> 00:04:37,850
+The final executable
+68
+
+69
+00:04:37,880 --> 00:04:39,410
+needs all of these guys together,
+69
+
+70
+00:04:39,710 --> 00:04:44,510
+and the linker, as it's name say, is the one that's going to do all of this magic for you.
+70
+
+71
+00:04:46,570 --> 00:04:52,180
+Now, there's an interesting thing here to discuss about real projects. Let's say you have two projects,
+71
+
+72
+00:04:52,390 --> 00:04:55,600
+other two projects that have some files that you would like to include.
+72
+
+73
+00:04:56,650 --> 00:04:57,820
+There is something interesting here.
+73
+
+74
+00:04:57,880 --> 00:05:03,250
+When you do something like hash-include sum-dot-h, the compiler understands the following: that
+74
+
+75
+00:05:03,250 --> 00:05:08,680
+there is a file named the sum-dot-h directly beside your file named main-dot-cpp.
+75
+
+76
+00:05:09,250 --> 00:05:15,960
+Let's say that there is another file in the dot-dot, slash, more header, slash, my other header dot-h.
+76
+
+77
+00:05:16,260 --> 00:05:17,920
+OK, this is a relative path.
+77
+
+78
+00:05:18,100 --> 00:05:19,380
+It's confusing for you.
+78
+
+79
+00:05:19,390 --> 00:05:22,210
+Just think of a complete path in your code.
+79
+
+80
+00:05:22,600 --> 00:05:27,550
+Now, if you would like to include this header which is in a different path, there are two ways to
+80
+
+81
+00:05:27,550 --> 00:05:28,090
+include it.
+81
+
+82
+00:05:28,510 --> 00:05:32,920
+The first one is to use the path in your code, either relative like that or full.
+82
+
+83
+00:05:33,550 --> 00:05:38,680
+So you say something like hash-include dot, dot, slash, more headers, slash, my other header dot_h in your
+83
+
+84
+00:05:38,680 --> 00:05:46,090
+code. So the compiler understands that using this path he can find it starting from the main dot_cpp.
+84
+
+85
+00:05:46,510 --> 00:05:56,380
+Or if you have something like mostafa, slash, header, bla, bla bla, or in Window, C, colon, same path. This is bad,
+85
+
+86
+00:05:56,380 --> 00:05:56,830
+Why?
+86
+
+87
+00:05:57,100 --> 00:05:58,780
+Because it's hard coding
+87
+
+88
+00:05:59,020 --> 00:06:00,640
+the path in your file.
+88
+
+89
+00:06:00,970 --> 00:06:05,790
+If we changed the location of this file, your code now doesn't compile.
+89
+
+90
+00:06:06,550 --> 00:06:09,850
+the proper way is through adding your path something
+90
+
+91
+00:06:09,850 --> 00:06:15,820
+we call include paths. Later when we learn compilation commands, it is done using something called dash_i.
+91
+
+92
+00:06:16,330 --> 00:06:22,470
+For now, every IDE should support a way to add the path to your program.
+92
+
+93
+00:06:22,690 --> 00:06:23,620
+Here is how we can do it
+93
+
+94
+00:06:23,620 --> 00:06:31,690
+in Eclipse. You go to C++, building, settings, go to the g++ compiler, includes, and here you
+94
+
+95
+00:06:31,690 --> 00:06:36,910
+find a section where you can add the path, as you see here, adding a couple of paths. In the future, you
+95
+
+96
+00:06:36,910 --> 00:06:39,280
+would need also this menu linker to add libraries.
+96
+
+97
+00:06:39,280 --> 00:06:45,810
+When we depend on libraries externally, we add them here in the library. For the guys in code
+97
+
+98
+00:06:45,830 --> 00:06:46,300
+blocks.
+98
+
+99
+00:06:47,200 --> 00:06:47,500
+...
+99
+
+100
+00:06:47,500 --> 00:06:49,480
+Right-click on the project, select build options,
+100
+
+101
+00:06:49,750 --> 00:06:52,060
+then you find here something called search directories,
+101
+
+102
+00:06:52,270 --> 00:06:54,730
+and then you can add here the couple of lines here.
+102
+
+103
+00:06:55,210 --> 00:06:57,940
+What does this two lines mean, here in code block?
+103
+
+104
+00:06:57,940 --> 00:07:06,220
+It means please consider these paths, these directories, to find the extra header file that we are referring to it.
+104
+
+105
+00:07:06,220 --> 00:07:06,420
+...
+105
+
+106
+00:07:06,970 --> 00:07:14,140
+What will happen if you refer to a file that is invisible within the directory? It just going to give you a compiler error.
+106
+
+107
+00:07:14,620 --> 00:07:15,850
+Here are some final notes.
+107
+
+108
+00:07:16,600 --> 00:07:19,450
+In practice, projects just grew up.
+108
+
+109
+00:07:19,450 --> 00:07:22,210
+So using headers with separation is a standard.
+109
+
+110
+00:07:22,390 --> 00:07:28,090
+In practice, no one is just boating every single line of code in a single file.
+110
+
+111
+00:07:28,090 --> 00:07:32,440
+We don't do that. If I'm doing that sometimes in the course, this is just for educational purposes,
+111
+
+112
+00:07:32,560 --> 00:07:34,660
+but this isn't how we do it in practice.
+112
+
+113
+00:07:35,920 --> 00:07:41,740
+Don't try to declare variables in the header, just only declare the extern for global values.
+113
+
+114
+00:07:42,040 --> 00:07:48,820
+If you would like a file scope, as we discussed, use the static, ( static not stat )in a dot_cpp file.
+114
+
+115
+00:07:50,330 --> 00:07:57,080
+One good thing also for the header files, use something like sum dot_h and sum dot_cpp, use the same name for
+115
+
+116
+00:07:57,080 --> 00:07:57,760
+the two files.
+116
+
+117
+00:07:58,250 --> 00:08:00,670
+There is one more extra information I would like to know.
+117
+
+118
+00:08:00,680 --> 00:08:08,660
+We learned templates before. In templates, you cannot define and declare in two separate files.
+118
+
+119
+00:08:08,900 --> 00:08:11,280
+You sadly have to make all of them in a header file.
+119
+
+120
+00:08:11,540 --> 00:08:12,850
+This is a bit complicated.
+120
+
+121
+00:08:13,250 --> 00:08:15,470
+You might start to read about it if you have interest.
+121
+
+122
+00:08:16,250 --> 00:08:20,220
+Historically, you might ask why the file is named IO stream, hash-include IO stream not IO stream dot_h.
+122
+
+123
+00:08:21,740 --> 00:08:25,460
+If you have interest, you might find here some reading about that. That's it.

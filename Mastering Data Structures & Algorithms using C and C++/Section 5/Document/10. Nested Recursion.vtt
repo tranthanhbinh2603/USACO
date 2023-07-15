@@ -1,0 +1,310 @@
+WEBVTT
+
+00:00.210 --> 00:09.030
+Let us look at Mr. Discussion in an introduction, a recursive function will pass parameter as a recursive
+
+00:09.030 --> 00:09.510
+call.
+
+00:10.830 --> 00:14.760
+Here is a recursive function and it is calling itself so.
+
+00:14.760 --> 00:17.240
+It is recursive, it is calling itself here.
+
+00:17.700 --> 00:24.990
+But what the parameters parameter itself is a recursive call means unless the result of this recursive
+
+00:24.990 --> 00:28.290
+call is up in, this call cannot be made.
+
+00:29.380 --> 00:33.780
+So a recursive call is taking a recursive call as a barometer.
+
+00:33.850 --> 00:39.700
+So this is recursion inside recursion, so it is called as nested recursion.
+
+00:40.120 --> 00:43.200
+So far as an example, I have one function here.
+
+00:43.210 --> 00:45.220
+I will trace that function and show you.
+
+00:46.240 --> 00:48.950
+Here is an Mr. Recursive function example.
+
+00:49.300 --> 00:55.750
+Let me read it out first, a function which is taking parameter end and if anything greater than 100,
+
+00:55.750 --> 00:58.440
+then directly it is returning some value.
+
+00:58.990 --> 01:03.280
+If not, then it is making a nested recursive call.
+
+01:03.280 --> 01:09.670
+So function call is again taking a parameter as a function call, but some increase the value of and
+
+01:10.510 --> 01:10.940
+so forth.
+
+01:10.960 --> 01:16.720
+Tracing this one, I will take the value that is ninety five and let us try this ninety five on this
+
+01:16.720 --> 01:16.970
+one.
+
+01:17.380 --> 01:19.460
+So I will place this function for this value.
+
+01:19.990 --> 01:24.550
+So let us start first function gonne one of nine defines.
+
+01:26.910 --> 01:33.810
+Ninety five is greater than Hendrickx, no, then it will enter into El Spok, so else it will call
+
+01:33.810 --> 01:39.030
+itself again by passing fun and again fun of.
+
+01:40.290 --> 01:42.450
+Ninety five plus 11.
+
+01:43.340 --> 01:44.800
+That is one, not six.
+
+01:45.630 --> 01:52.830
+So first of all, I should know the result of this one, then I can use that value as a parameter for
+
+01:52.830 --> 01:53.910
+this function called.
+
+01:54.670 --> 01:56.530
+Let me evaluate this one first.
+
+01:56.860 --> 02:02.770
+See, some of this is one, not six, so full of one, not six.
+
+02:05.090 --> 02:10.460
+Let us take this call for one or six one, not six, is greater than Hendershott, so it returns one,
+
+02:10.460 --> 02:11.680
+not six minus 10.
+
+02:11.690 --> 02:13.400
+That is 96.
+
+02:13.610 --> 02:16.300
+So the result of this function is 96.
+
+02:16.710 --> 02:19.360
+So this 96 is the result of this function call.
+
+02:19.610 --> 02:25.670
+So this has to be placed here so it becomes functional 96.
+
+02:26.390 --> 02:28.670
+So actually we started with ninety five.
+
+02:28.860 --> 02:34.910
+Then the next call is nothing but 96 a for 96 96.
+
+02:34.940 --> 02:36.000
+Let's not get rid of that.
+
+02:36.040 --> 02:43.190
+Hendershott enters into this spot then it will make a function call that again nested function call.
+
+02:43.490 --> 02:46.760
+But what is the value of end plus level Sirtis.
+
+02:46.770 --> 02:50.720
+So 96 96 plus eleven as one not seven.
+
+02:51.410 --> 02:55.680
+So Buttiglione making the rack so I should know what is the result of this one.
+
+02:55.700 --> 02:57.760
+All for one, not seven.
+
+02:57.920 --> 03:00.290
+So let us find out for Northbourne or seven here.
+
+03:00.740 --> 03:03.350
+Fun of one, not seven.
+
+03:04.310 --> 03:08.180
+This is fast and this will not seven for one, not seven is better than 100.
+
+03:08.180 --> 03:11.420
+So it returns one, not seven minus 10.
+
+03:11.420 --> 03:13.300
+So this becomes 97.
+
+03:13.700 --> 03:16.640
+So this is the result of this function call.
+
+03:17.630 --> 03:22.240
+So actually this function becomes no fun of ninety seven.
+
+03:22.970 --> 03:25.110
+Now let us solve this one off ninety seven.
+
+03:25.700 --> 03:31.070
+Ninety seven is not greater than a hundred so it will enter into the L spot and it will make the function
+
+03:31.070 --> 03:31.700
+calls.
+
+03:31.730 --> 03:33.080
+That is fun of.
+
+03:33.650 --> 03:34.760
+Fun of.
+
+03:36.530 --> 03:42.430
+And plus, Levin, that is ninety seven plus 11, so this becomes one, not eight.
+
+03:44.060 --> 03:48.650
+Now as we have already seen these two girls say this was one, not six.
+
+03:48.650 --> 03:52.070
+So it becomes 96, but not seven became seven.
+
+03:52.070 --> 03:54.860
+So one day it will become 98 and stop it.
+
+03:55.130 --> 03:56.390
+I will get a good grade on this.
+
+03:56.990 --> 03:58.880
+So this is 98.
+
+03:59.120 --> 04:03.440
+So fun of one, not eight is 98.
+
+04:05.090 --> 04:11.990
+So this function call becomes actually fun of ninety eight now full of ninety, ninety eight is not
+
+04:11.990 --> 04:12.790
+greater than hundreds.
+
+04:12.790 --> 04:14.330
+So it enters into the L spot.
+
+04:14.570 --> 04:20.780
+Then it become full of fun of 98 plus 11.
+
+04:22.220 --> 04:24.110
+So this becomes Bhanot nine.
+
+04:25.900 --> 04:34.360
+And dysfunction, one of nine, this becomes one of one, not nine becomes ninety nine, so this is
+
+04:34.360 --> 04:36.100
+one of ninety nine.
+
+04:38.700 --> 04:46.800
+Four ninety nine is not greater than a hundred, so it will go into the El Paso Fund of fund of.
+
+04:49.700 --> 04:54.140
+Ninety nine 11, so this becomes one 110.
+
+04:55.930 --> 04:57.760
+Now, what is the result of 110?
+
+05:05.290 --> 05:08.890
+Full of 110 will be 100.
+
+05:10.010 --> 05:14.520
+Here, doesn't the if block and returns minus 10, so there's a 100.
+
+05:14.900 --> 05:17.420
+So this call becomes fun of.
+
+05:20.000 --> 05:20.600
+Hendrik.
+
+05:23.510 --> 05:28.120
+Now, full of 100 hundred is not greater than that, so it will enter into this spot.
+
+05:28.370 --> 05:31.150
+So I have to continue here and continue here.
+
+05:31.520 --> 05:33.560
+So this becomes fun of.
+
+05:34.520 --> 05:35.480
+Fund of.
+
+05:36.310 --> 05:39.940
+One hundred plus eleven, so this is one 111.
+
+05:41.050 --> 05:42.340
+The four of 111.
+
+05:43.510 --> 05:50.610
+This is greater than and so this is 111 minus 10, so this becomes one, not one.
+
+05:51.160 --> 05:57.330
+So this function call, finally it becomes fun of one, not one, final four, not one.
+
+05:57.340 --> 05:58.760
+Again, it is greater than 100.
+
+05:58.790 --> 06:00.760
+So this will be one, not one minus 10.
+
+06:00.760 --> 06:04.640
+So this becomes 91 now.
+
+06:04.750 --> 06:09.240
+This time it will not enter into the elsberg and it will return 91.
+
+06:09.430 --> 06:12.520
+It goes back to this call and goes back to this one.
+
+06:12.520 --> 06:13.000
+And this one.
+
+06:13.000 --> 06:13.450
+And this one.
+
+06:13.450 --> 06:13.930
+And this one.
+
+06:14.230 --> 06:17.110
+Finally, the result of this one is 91.
+
+06:19.250 --> 06:24.860
+So that's all I have taken one simple example to show misattribution, usually Néstor percussion, if
+
+06:24.860 --> 06:28.880
+you want them to expand like anything, it will become a bigger tree.
+
+06:29.750 --> 06:33.260
+So here you have observed that for every nested call.
+
+06:33.260 --> 06:38.060
+First of all, we should note the result of this one and that result is less of a dysfunction like here
+
+06:38.060 --> 06:39.490
+I have written off 96.
+
+06:40.040 --> 06:45.500
+Then again, doesn't this that call then I should know the result of this one that is 97 and I use that
+
+06:45.500 --> 06:47.820
+ninety seven here in front of ninety seven.
+
+06:48.650 --> 06:55.420
+So every time you have to find out the result of nested or Interpol, then you can make an altar call,
+
+06:55.430 --> 06:57.350
+you can find Otakon.
+
+06:58.130 --> 06:59.250
+So that's all that.
+
+06:59.270 --> 07:05.420
+Mr. Recursion, we will see more examples on recursions in coming menials.

@@ -1,0 +1,399 @@
+1
+00:00:01,160 --> 00:00:02,180
+Phonebook number three.
+
+2
+00:00:03,140 --> 00:00:09,690
+Um, in this type of homework, we move to another kind of experiences that I would like you to gain
+
+3
+00:00:10,190 --> 00:00:12,260
+with the business.
+
+4
+00:00:12,950 --> 00:00:15,200
+So here is the problem we have.
+
+5
+00:00:15,950 --> 00:00:19,580
+We have a grid like that and we would like the following.
+
+6
+00:00:19,590 --> 00:00:22,970
+So we have here, we have three valleys in this grid.
+
+7
+00:00:22,970 --> 00:00:24,530
+We have minus one for an obstacle.
+
+8
+00:00:24,530 --> 00:00:27,790
+We have a gate, which is zero and we has a very huge value.
+
+9
+00:00:27,860 --> 00:00:36,890
+Specifically, this big value to fill an empty room and we would like to from from every meeting room
+
+10
+00:00:36,950 --> 00:00:42,200
+to know where is the nearest the gate for it or if it's impossible to reach a gate, we just should
+
+11
+00:00:42,200 --> 00:00:43,580
+fill it with the infinity.
+
+12
+00:00:43,940 --> 00:00:49,130
+So we take this to this structure and fill it with their.
+
+13
+00:00:50,510 --> 00:00:59,720
+Either the distance or that this infinity value, so here is the here is the gate and there are there
+
+14
+00:00:59,720 --> 00:01:01,940
+are mainly in this one.
+
+15
+00:01:02,090 --> 00:01:05,900
+There are two two rooms here, two gates hitters get what?
+
+16
+00:01:06,170 --> 00:01:09,080
+And he does get the gate two and for every MBT.
+
+17
+00:01:09,100 --> 00:01:13,490
+So we would like to record their distance to the shortest gate.
+
+18
+00:01:13,790 --> 00:01:20,150
+For example, I can go from here in three steps to here or one two three four two here.
+
+19
+00:01:20,160 --> 00:01:22,040
+So this is the shortest one for me.
+
+20
+00:01:22,580 --> 00:01:25,450
+For this one, I can go one two three four.
+
+21
+00:01:25,460 --> 00:01:31,110
+So four steps of four here or one two three four five six seven seven steps for you.
+
+22
+00:01:31,130 --> 00:01:32,300
+So the smallest is four.
+
+23
+00:01:32,780 --> 00:01:37,340
+So you return for every position, the distance to the nearest the gate.
+
+24
+00:01:38,310 --> 00:01:43,050
+Um, now here are more examples, basic examples.
+
+25
+00:01:43,620 --> 00:01:48,360
+Um, I would like you to try to process that in an efficient way.
+
+26
+00:01:48,390 --> 00:01:51,210
+You might be thinking in a very brute force way.
+
+27
+00:01:51,540 --> 00:01:55,170
+I would like you to do something that has a complex you of all rules.
+
+28
+00:01:55,770 --> 00:01:56,790
+Time columns.
+
+29
+00:01:57,000 --> 00:01:58,530
+So try to do something like that.
+
+30
+00:02:01,700 --> 00:02:02,300
+Let's move.
+
+31
+00:02:03,140 --> 00:02:12,290
+Um, we have here a matrix and there is a massive coalition, which is mainly can be represented by
+
+32
+00:02:12,290 --> 00:02:15,830
+the top above the top rule and the first to call them here.
+
+33
+00:02:16,040 --> 00:02:24,200
+I don't have the Atlantic Ocean, which is after the last, uh, column and after the last true now.
+
+34
+00:02:24,290 --> 00:02:25,340
+And here is the request.
+
+35
+00:02:29,230 --> 00:02:32,320
+Yeah, let me try to make sure that I didn't forget it.
+
+36
+00:02:32,350 --> 00:02:34,630
+It says that it's raining a lot.
+
+37
+00:02:35,050 --> 00:02:40,330
+And when there is a water, the water can flow to neighbors in the four possible direction that we used
+
+38
+00:02:40,330 --> 00:02:43,510
+to them, but it to flow from a cell to another.
+
+39
+00:02:43,840 --> 00:02:46,930
+It must be less than or equal to it in the current the height.
+
+40
+00:02:47,230 --> 00:02:50,050
+So this values here represent some heights.
+
+41
+00:02:50,620 --> 00:02:53,800
+And if there is water, come to this one here.
+
+42
+00:02:54,040 --> 00:02:56,470
+The water can float here and float the here.
+
+43
+00:02:56,470 --> 00:02:56,770
+Why?
+
+44
+00:02:56,770 --> 00:02:58,720
+Because they are less than or equal to it.
+
+45
+00:02:59,410 --> 00:03:04,930
+But for example, if the water at three, the three can float to one, but it cannot float to four,
+
+46
+00:03:04,930 --> 00:03:06,150
+it cannot float to five.
+
+47
+00:03:06,160 --> 00:03:07,270
+And this is very logical.
+
+48
+00:03:07,510 --> 00:03:10,210
+So imagine this everyone is like a height of this cell.
+
+49
+00:03:10,630 --> 00:03:14,500
+The water can float only to something that is equal value and less value.
+
+50
+00:03:15,190 --> 00:03:16,510
+Now what is the request?
+
+51
+00:03:17,230 --> 00:03:18,370
+The request is as follows.
+
+52
+00:03:19,930 --> 00:03:29,410
+You will return a list of the positions such that the water can flow from the position to both of the
+
+53
+00:03:29,410 --> 00:03:31,750
+oceans can flood to both of the oceans.
+
+54
+00:03:31,750 --> 00:03:40,450
+So let's see here if we are given this input here, this one now we can see that the value five can
+
+55
+00:03:40,450 --> 00:03:44,020
+float to the massive cushion and also can.
+
+56
+00:03:45,440 --> 00:03:49,290
+You can float to the Atlantic now for this one.
+
+57
+00:03:49,320 --> 00:03:51,120
+It also can float to the Atlantic.
+
+58
+00:03:51,360 --> 00:03:54,870
+And also it can float to the Pacific.
+
+59
+00:03:56,070 --> 00:03:59,910
+Now let's see what about the value at five?
+
+60
+00:04:00,940 --> 00:04:09,670
+The value at five here, it can flood to three, then one, so it can go and get flood to four and two
+
+61
+00:04:09,910 --> 00:04:10,420
+and go.
+
+62
+00:04:10,690 --> 00:04:17,170
+So as you see, so overall, you would like to return this positions that can flood to both of them.
+
+63
+00:04:17,680 --> 00:04:22,090
+So for a cell to float to the Atlantic, it has to reach either this one or this one here.
+
+64
+00:04:22,540 --> 00:04:27,790
+And for a cell to reach the massive ocean, it has to float here or here in the upper tier here.
+
+65
+00:04:28,210 --> 00:04:34,420
+So as you see the common between this problem and the previous problem, you have bunch of things like
+
+66
+00:04:34,600 --> 00:04:37,060
+it doesn't look like something want to go to something.
+
+67
+00:04:37,270 --> 00:04:40,790
+It seems like multiple of things would like to go to multiple things.
+
+68
+00:04:40,810 --> 00:04:41,650
+You know, we had another.
+
+69
+00:04:42,070 --> 00:04:46,030
+So how can we change our code to again be very efficient?
+
+70
+00:04:46,780 --> 00:04:47,740
+All those.
+
+71
+00:04:48,810 --> 00:04:51,960
+Times economies, for example, think about that.
+
+72
+00:04:56,130 --> 00:05:02,550
+And the third problem, it has some some mix between the idea of the previous two problems and also
+
+73
+00:05:02,550 --> 00:05:05,880
+something about the idea from the previous homework.
+
+74
+00:05:06,750 --> 00:05:10,560
+Uh, OK, so here is a problem.
+
+75
+00:05:10,560 --> 00:05:18,540
+The problem say a staggering number is an integer such that all its adjacent digits have an absolute
+
+76
+00:05:18,540 --> 00:05:20,040
+difference of exactly one.
+
+77
+00:05:20,520 --> 00:05:22,170
+So let's say we have three to one.
+
+78
+00:05:22,530 --> 00:05:23,580
+If you look to it.
+
+79
+00:05:24,000 --> 00:05:24,930
+This is the being number.
+
+80
+00:05:24,930 --> 00:05:30,470
+Why we have three and two and one between three and two is one between two and one is one.
+
+81
+00:05:30,480 --> 00:05:36,300
+The difference is exactly one four, two and one is in this tipping number because from 42, there are
+
+82
+00:05:36,540 --> 00:05:38,250
+two digits more examples.
+
+83
+00:05:38,490 --> 00:05:44,820
+If I say something like seven after seven, there can be only six or they can be only five because the
+
+84
+00:05:44,820 --> 00:05:47,690
+difference between them is two steps for the six.
+
+85
+00:05:47,700 --> 00:05:49,590
+After that can be five or four.
+
+86
+00:05:49,830 --> 00:05:53,880
+So the either will be seven, six, five or seven, six or four and so on.
+
+87
+00:05:54,540 --> 00:06:01,800
+The problem is asking for the following you will be given low and integer they are in the earlier in
+
+88
+00:06:01,800 --> 00:06:02,070
+the year.
+
+89
+00:06:02,070 --> 00:06:03,150
+Forget about this long ruling.
+
+90
+00:06:03,150 --> 00:06:04,410
+Here they are.
+
+91
+00:06:04,410 --> 00:06:05,030
+Integer law.
+
+92
+00:06:05,080 --> 00:06:05,730
+Integrate.
+
+93
+00:06:05,940 --> 00:06:06,260
+OK?
+
+94
+00:06:06,900 --> 00:06:16,950
+And you are to return list of numbers that has all of the stabbing numbers between the low and the high
+
+95
+00:06:17,160 --> 00:06:24,140
+and but is sorted them observe that the value is up to 10 to the bow nine.
+
+96
+00:06:24,150 --> 00:06:25,860
+So be careful from overflows.
+
+97
+00:06:26,640 --> 00:06:28,990
+So here is an example between zero and twenty one.
+
+98
+00:06:29,010 --> 00:06:32,210
+This is a list of the numbers between 10, 10 and 15.
+
+99
+00:06:32,220 --> 00:06:35,100
+That is only these two numbers who are stimming numbers.
+
+100
+00:06:36,160 --> 00:06:36,640
+That's all.

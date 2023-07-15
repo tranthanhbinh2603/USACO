@@ -1,0 +1,1009 @@
+0
+1
+00:00:01,530 --> 00:00:07,710
+The next function is the power function, which like a value of power, and we just would like to repeat something
+1
+
+2
+00:00:07,740 --> 00:00:12,330
+many times, we definitely can do that in a trivial way with a single loop.
+2
+
+3
+00:00:12,630 --> 00:00:12,930
+But
+3
+
+4
+00:00:14,020 --> 00:00:17,230
+for educative purposes, we would like to implement this function.
+4
+
+5
+00:00:17,860 --> 00:00:19,060
+What is the base case here?
+5
+
+6
+00:00:19,340 --> 00:00:22,240
+The base case comes from the power.
+6
+
+7
+00:00:22,240 --> 00:00:25,720
+If the power equals zero, then  the answer is one.
+7
+
+8
+00:00:25,990 --> 00:00:27,430
+So this is mainly your base case.
+8
+
+9
+00:00:27,820 --> 00:00:29,320
+Let's see how to implement that.
+9
+
+10
+00:00:29,920 --> 00:00:31,870
+The function is very trivial as following.
+10
+
+11
+00:00:31,870 --> 00:00:34,590
+You tell yourself if the base equals zero, return one.
+11
+
+12
+00:00:34,600 --> 00:00:35,740
+So we are done with the base.
+12
+
+13
+00:00:36,310 --> 00:00:41,020
+Then you say I am value times my power of the value and 'p-1'.
+13
+
+14
+00:00:41,680 --> 00:00:42,230
+It's trace.
+14
+
+15
+00:00:43,270 --> 00:00:46,150
+Let's trace my power of seven and three.
+15
+
+16
+00:00:47,680 --> 00:00:49,230
+Uh.
+16
+
+17
+00:00:52,450 --> 00:00:53,050
+Let's go.
+17
+
+18
+00:00:53,830 --> 00:00:55,240
+Is power equal equal zero?
+18
+
+19
+00:00:55,240 --> 00:00:59,950
+No, the power is one, then it says seven times my power of
+19
+
+20
+00:01:01,480 --> 00:01:02,590
+seven and two.
+20
+
+21
+00:01:03,190 --> 00:01:05,860
+So now we will not trace this function.
+21
+
+22
+00:01:06,130 --> 00:01:08,620
+What is power seven times or to power two?
+22
+
+23
+00:01:08,920 --> 00:01:11,050
+It is not seven times seven, which is 49.
+23
+
+24
+00:01:11,410 --> 00:01:15,670
+So it is the result now is 7 times 49, which is correct.
+24
+
+25
+00:01:16,030 --> 00:01:18,400
+We are done with tracing the function.
+25
+
+26
+00:01:18,580 --> 00:01:20,080
+Nothing more than that.
+26
+
+27
+00:01:20,950 --> 00:01:28,240
+If we access every return statement and we trace the every recursive call, then the function by induction
+27
+
+28
+00:01:28,240 --> 00:01:29,230
+must be correct.
+28
+
+29
+00:01:30,340 --> 00:01:35,830
+Let's see what is the third function. Array maximum; we have here a bunch of examples that were all very
+29
+
+30
+00:01:35,830 --> 00:01:36,280
+similar.
+30
+
+31
+00:01:36,880 --> 00:01:42,010
+So the  array maximum is you are given an array and the length and you would like to compute the maximum.
+31
+
+32
+00:01:42,430 --> 00:01:43,120
+So let's see.
+32
+
+33
+00:01:46,420 --> 00:01:48,010
+The function is doing the following.
+33
+
+34
+00:01:48,460 --> 00:01:52,420
+First, let's first investigate the function, we have one return statement here
+34
+
+35
+00:01:52,420 --> 00:01:53,200
+we need to trace it.
+35
+
+36
+00:01:53,350 --> 00:01:55,060
+We have another one return statement here.
+36
+
+37
+00:01:55,060 --> 00:01:55,780
+We trace it.
+37
+
+38
+00:01:55,990 --> 00:01:57,610
+We have a recursive call here
+38
+
+39
+00:01:57,610 --> 00:02:01,570
+We must trace it. If it happened that we trace every single line of code in the code,
+39
+
+40
+00:02:01,750 --> 00:02:02,350
+we are done.
+40
+
+41
+00:02:02,440 --> 00:02:02,830
+OK.
+41
+
+42
+00:02:03,010 --> 00:02:06,700
+If it had been that we traced every single line of code in the function, we are done.
+42
+
+43
+00:02:07,750 --> 00:02:11,050
+Now let's say let's trace array of 5.
+43
+
+44
+00:02:11,380 --> 00:02:12,580
+I say its length ==1?
+44
+
+45
+00:02:13,010 --> 00:02:15,100
+No, just a single 5.
+45
+
+46
+00:02:15,220 --> 00:02:16,300
+Is this a good base case?
+46
+
+47
+00:02:16,300 --> 00:02:16,600
+Yes.
+47
+
+48
+00:02:16,720 --> 00:02:18,940
+So the base case is done. Now,
+48
+
+49
+00:02:19,150 --> 00:02:26,590
+the second thi ng it says as following: compute the array maximum of array and the first of four elements.
+49
+
+50
+00:02:26,920 --> 00:02:27,850
+Should I trace it?
+50
+
+51
+00:02:28,000 --> 00:02:28,690
+No.
+51
+
+52
+00:02:28,690 --> 00:02:30,670
+Don't get inside that recursively.
+52
+
+53
+00:02:31,030 --> 00:02:34,810
+Ask yourself what is array maximum of array and 
+53
+
+54
+00:02:34,900 --> 00:02:35,920
+first four elements?
+54
+
+55
+00:02:36,880 --> 00:02:40,240
+The logic of the function should to compute the maximum of all of them.
+55
+
+56
+00:02:40,570 --> 00:02:46,840
+So what we should do is we compute the maximum of all of them, which is 10 by our eyes, by our logic.
+56
+
+57
+00:02:47,080 --> 00:02:48,910
+So sub_result will be 10.
+57
+
+58
+00:02:49,570 --> 00:02:52,750
+And then it will compute the maximum of 10
+58
+
+59
+00:02:53,050 --> 00:02:55,630
+and 3, which is still 10.
+59
+
+60
+00:02:55,930 --> 00:02:58,480
+So the logic of this function was as following.
+60
+
+61
+00:02:58,960 --> 00:03:04,900
+If we computed the maximum of the early elements, then I take the result of this maximum and maximize
+61
+
+62
+00:03:04,900 --> 00:03:07,150
+with myself, we are done with the function.
+62
+
+63
+00:03:07,840 --> 00:03:08,240
+OK.
+63
+
+64
+00:03:08,260 --> 00:03:09,550
+I hope it's now clear for you.
+64
+
+65
+00:03:10,120 --> 00:03:10,500
+Let's see.
+65
+
+66
+00:03:10,500 --> 00:03:11,590
+You use another example.
+66
+
+67
+00:03:12,280 --> 00:03:15,340
+Let's say that it was like that five and four here.
+67
+
+68
+00:03:16,930 --> 00:03:19,690
+Now let's trace. Length equal one?
+68
+
+69
+00:03:19,720 --> 00:03:20,330
+Yes.
+69
+
+70
+00:03:20,350 --> 00:03:20,710
+No.
+70
+
+71
+00:03:21,250 --> 00:03:24,340
+Now compute the maximum of the first three elements.
+71
+
+72
+00:03:24,910 --> 00:03:25,540
+You don't trace that.
+72
+
+73
+00:03:25,540 --> 00:03:28,130
+What is the maximum of the first three elements?
+73
+
+74
+00:03:28,150 --> 00:03:28,570
+Eight.
+74
+
+75
+00:03:28,990 --> 00:03:30,940
+Then it says maximum of eight
+75
+
+76
+00:03:30,940 --> 00:03:34,900
+and the ten, which is the last element in the array, which is 10
+76
+
+77
+00:03:34,900 --> 00:03:35,890
+and the return it.
+77
+
+78
+00:03:36,250 --> 00:03:39,130
+We are done with tracing the recursive function.
+78
+
+79
+00:03:39,160 --> 00:03:40,750
+You do nothing more than that.
+79
+
+80
+00:03:41,710 --> 00:03:47,140
+So all of it is about what does this function do? the following and then apply it here on the recursive
+80
+
+81
+00:03:47,140 --> 00:03:49,900
+call without recursively tracing your code.
+81
+
+82
+00:03:50,290 --> 00:03:52,180
+This is the second function.
+82
+
+83
+00:03:54,010 --> 00:03:57,250
+Now would like to get the "Array sum", if you understand this one,
+83
+
+84
+00:03:57,310 --> 00:03:59,350
+the logic is going to be exactly the same.
+84
+
+85
+00:03:59,830 --> 00:04:03,850
+We will get that sum of the first n minus one elements.
+85
+
+86
+00:04:04,210 --> 00:04:06,330
+Then we would like to add the current sum.
+86
+
+87
+00:04:06,760 --> 00:04:09,040
+And the base case is just to return to the first element.
+87
+
+88
+00:04:09,070 --> 00:04:10,870
+This is exactly the same code structure.
+88
+
+89
+00:04:12,650 --> 00:04:16,460
+Then the average, the average is very similar to the sum.
+89
+
+90
+00:04:16,640 --> 00:04:18,440
+But it has one little math trick.
+90
+
+91
+00:04:19,390 --> 00:04:19,960
+Let's see.
+91
+
+92
+00:04:23,290 --> 00:04:27,430
+Now, I would like to get the average of these five numbers.
+92
+
+93
+00:04:28,120 --> 00:04:32,050
+I will tell here, please find the average of the first four numbers.
+93
+
+94
+00:04:32,320 --> 00:04:34,510
+What is the average of the first four numbers?
+94
+
+95
+00:04:34,960 --> 00:04:35,680
+It is 1+
+95
+
+96
+00:04:35,680 --> 00:04:38,470
+8 +2+10 over 4.
+96
+
+97
+00:04:39,490 --> 00:04:42,610
+Now, I would like to get the average of the five numbers.
+97
+
+98
+00:04:43,120 --> 00:04:48,160
+So the first thing is I will multiply it by length minus one, which is four.
+98
+
+99
+00:04:48,610 --> 00:04:50,080
+When I multiplied by four,
+99
+
+100
+00:04:50,110 --> 00:04:53,830
+the sub result would be only 1, 8, 2, 10.
+100
+
+101
+00:04:55,570 --> 00:04:59,080
+Then I add the current number, which is three.
+101
+
+102
+00:04:59,560 --> 00:05:00,790
+Then I divide by five.
+102
+
+103
+00:05:01,360 --> 00:05:07,840
+So the moral of this multiplication is to convert the average to sum, OK.
+103
+
+104
+00:05:07,960 --> 00:05:11,360
+So the function returns for us sum over length minus one.
+104
+
+105
+00:05:11,380 --> 00:05:17,710
+By definition, when I multiply by minus one, I get back the sum, the sum of the previous array.
+105
+
+106
+00:05:18,070 --> 00:05:19,510
+Then I add the current element.
+106
+
+107
+00:05:19,510 --> 00:05:22,420
+I get the current sum, then I divide by length.
+107
+
+108
+00:05:22,840 --> 00:05:29,620
+So as you see, what makes the function easy is the logic, the logic that we try to trace something
+108
+
+109
+00:05:29,950 --> 00:05:31,960
+without going deeper in its meaning.
+109
+
+110
+00:05:31,960 --> 00:05:32,830
+I didn't say
+110
+
+111
+00:05:33,070 --> 00:05:34,440
+and what is that average
+111
+
+112
+00:05:34,450 --> 00:05:38,650
+and keep the tracking of length minus one, and length minus two and all of this waste of time.
+112
+
+113
+00:05:39,910 --> 00:05:42,160
+I thought to myself, what is the return from here?
+113
+
+114
+00:05:42,550 --> 00:05:43,570
+It is the average.
+114
+
+115
+00:05:43,840 --> 00:05:47,050
+OK, but I need now a different average.
+115
+
+116
+00:05:47,300 --> 00:05:49,600
+OK, get rid of that denominator.
+116
+
+117
+00:05:50,140 --> 00:05:51,160
+Add your value.
+117
+
+118
+00:05:51,550 --> 00:05:52,960
+Compute your new denominator.
+118
+
+119
+00:05:53,410 --> 00:05:54,940
+We are done.
+119
+
+120
+00:05:57,270 --> 00:06:00,050
+"Array Increment", a very similar logic.
+120
+
+121
+00:06:00,410 --> 00:06:01,760
+So what do we have here?
+121
+
+122
+00:06:02,660 --> 00:06:05,740
+I have a function that say if length equals zero, do nothing.
+122
+
+123
+00:06:05,750 --> 00:06:06,260
+Why?
+123
+
+124
+00:06:06,290 --> 00:06:08,270
+Because we will not increment.
+124
+
+125
+00:06:08,540 --> 00:06:09,260
+So we are done.
+125
+
+126
+00:06:10,040 --> 00:06:13,760
+I would first tell it to increment the array of length minus one.
+126
+
+127
+00:06:14,780 --> 00:06:18,410
+And then add the current length minus one, length minus one.
+127
+
+128
+00:06:18,530 --> 00:06:19,430
+What does it mean?
+128
+
+129
+00:06:19,970 --> 00:06:20,510
+Let's see.
+129
+
+130
+00:06:21,080 --> 00:06:26,360
+First of all, we know that the array increment is incrementing the I th position of
+130
+
+131
+00:06:26,360 --> 00:06:26,810
+every one.
+131
+
+132
+00:06:26,810 --> 00:06:29,540
+So I am incrementing here, zero one, two, three, four.
+132
+
+133
+00:06:30,380 --> 00:06:33,020
+Let's call this array with this five.
+133
+
+134
+00:06:36,440 --> 00:06:41,930
+It will come here and say, hey, increment for me this array with length four. When I call this function
+134
+
+135
+00:06:41,930 --> 00:06:44,540
+with length four what is the output of this statement?
+135
+
+136
+00:06:44,840 --> 00:06:45,520
+I do not trace
+136
+
+137
+00:06:45,530 --> 00:06:47,940
+again, the output will be adding zero here
+137
+
+138
+00:06:47,960 --> 00:06:49,010
+one, two, three.
+138
+
+139
+00:06:49,490 --> 00:06:56,440
+So the return array will be, or the updated array will be   one, nine, four,
+139
+
+140
+00:06:57,440 --> 00:06:59,810
+I think how..., it would 13 may be.
+140
+
+141
+00:07:01,180 --> 00:07:01,900
+Yeah, 13.
+141
+
+142
+00:07:04,420 --> 00:07:09,310
+Now the array is handed for the first  length minus one number.
+142
+
+143
+00:07:09,520 --> 00:07:15,760
+What I need to add now? I need to add for the current index the length minus one value, which
+143
+
+144
+00:07:15,760 --> 00:07:19,810
+is length of five; length minus one is four, three and four is seven.
+144
+
+145
+00:07:20,380 --> 00:07:24,070
+So again, as you see, exactly the same logic.
+145
+
+146
+00:07:26,890 --> 00:07:34,660
+After that, we have the accumulated array, which is as following. You will add the current
+146
+
+147
+00:07:34,660 --> 00:07:36,700
+value to the previous accumulation.
+147
+
+148
+00:07:36,730 --> 00:07:40,570
+This is very similar to the power function we implemented before.
+148
+
+149
+00:07:40,780 --> 00:07:41,830
+So the idea is as follows.
+149
+
+150
+00:07:42,220 --> 00:07:45,220
+Let's say you would like to get the sum here.
+150
+
+151
+00:07:46,700 --> 00:07:50,330
+And instead of trying to competed by yourself for this way, the idea is simple.
+151
+
+152
+00:07:50,570 --> 00:07:53,360
+What if I accumulated the older array?
+152
+
+153
+00:07:53,390 --> 00:07:55,250
+What I will have? I would have 1, 3, 6, 
+153
+
+154
+00:07:55,250 --> 00:07:58,820
+and 10. If I added the 5to the 10, I get the 15.
+154
+
+155
+00:07:59,390 --> 00:08:01,790
+If I added the 6 to the 15, I get 21.
+155
+
+156
+00:08:02,030 --> 00:08:04,030
+So we don't have to go and do it this way.
+156
+
+157
+00:08:04,040 --> 00:08:06,920
+I can just utilize the previous submission.
+157
+
+158
+00:08:07,400 --> 00:08:10,730
+So here in the example I do the following.
+158
+
+159
+00:08:11,150 --> 00:08:17,720
+I, first of all, tell it, hey, accumulate for me the first length  minus one numbers, OK, which will
+159
+
+160
+00:08:17,720 --> 00:08:26,930
+take that 1, 8, 2, and 10 and compute the accumulation, which is going to be one and eight is nine
+160
+
+161
+00:08:27,260 --> 00:08:31,340
+and two will be 11 and the 10 will be twenty one.
+161
+
+162
+00:08:32,030 --> 00:08:37,370
+Now, I would like to add my current step, and I would like to get my accumulation without making
+162
+
+163
+00:08:37,370 --> 00:08:38,030
+any for loops.
+163
+
+164
+00:08:38,450 --> 00:08:44,660
+All what I need is to get the previous element, which is 21, and add my current value to it, which
+164
+
+165
+00:08:44,660 --> 00:08:45,200
+is three.
+165
+
+166
+00:08:45,350 --> 00:08:48,050
+So 21 and three is twenty four.
+166
+
+167
+00:08:49,940 --> 00:08:56,210
+You see, the implementation is trivial when you start to think in a recursive way, you tell yourself,
+167
+
+168
+00:08:56,210 --> 00:08:58,100
+hey, go ahead and do this step.
+168
+
+169
+00:08:59,150 --> 00:09:00,680
+Then we accumulated this array.
+169
+
+170
+00:09:01,340 --> 00:09:05,510
+Then all what we need now is handling this one, utilizing what we did before.
+170
+
+171
+00:09:06,020 --> 00:09:06,440
+So,
+171
+
+172
+00:09:08,170 --> 00:09:10,000
+that simple, nothing more than that.
+172
+
+173
+00:09:10,540 --> 00:09:13,510
+I know when I say that simple, it looks like trivial for me.
+173
+
+174
+00:09:13,750 --> 00:09:16,090
+I know it takes a lot of amount of thinking from you.
+174
+
+175
+00:09:16,390 --> 00:09:21,790
+But I'm trying to show you that you shouldn't overthink during the tracing of recursion.
+175
+
+176
+00:09:21,790 --> 00:09:22,420
+You shouldn't.
+176
+
+177
+00:09:22,420 --> 00:09:24,010
+And this will make your life much easier.
+177
+
+178
+00:09:24,880 --> 00:09:27,940
+The last function here is the Left-Max function.
+178
+
+179
+00:09:29,230 --> 00:09:34,510
+So we would like to compute the left max function of what we are doing in a very similar way.
+179
+
+180
+00:09:34,750 --> 00:09:38,140
+You ask yourself, hey, go and do left-max of my left side.
+180
+
+181
+00:09:38,650 --> 00:09:40,320
+Now, what is my current left-max?
+181
+
+182
+00:09:40,420 --> 00:09:44,140
+It is the left side of me; maximum between my left side and the current side   .
+182
+
+183
+00:09:44,650 --> 00:09:49,210
+So here in the left-max, you ask the left max of the early numbers.
+183
+
+184
+00:09:49,900 --> 00:09:56,020
+Then your position would be the maximum between the current value and array of length minus two, which
+184
+
+185
+00:09:56,020 --> 00:09:58,480
+is the left-max from the previous one.
+185
+
+186
+00:09:58,750 --> 00:09:59,620
+Let's trace here.
+186
+
+187
+00:10:01,420 --> 00:10:05,590
+Let's say that we computed .., asked left- max of the first four numbers.
+187
+
+188
+00:10:05,990 --> 00:10:11,500
+OK, we will now compute it by hand, not by the code, which is going to be one then eight then eight
+188
+
+189
+00:10:11,500 --> 00:10:11,980
+then 10.
+189
+
+190
+00:10:12,670 --> 00:10:14,890
+Now, this is a result of the first four numbers.
+190
+
+191
+00:10:14,900 --> 00:10:18,010
+We don't know how it was calculated is it is just done for us.
+191
+
+192
+00:10:18,460 --> 00:10:24,220
+All what we need now for the current position is maximum between three and the 10, which is maximum
+192
+
+193
+00:10:24,220 --> 00:10:27,880
+between the current position and the previous element.
+193
+
+194
+00:10:28,060 --> 00:10:28,570
+That's all.
+194
+
+195
+00:10:29,110 --> 00:10:31,150
+As you see, tracing the recursion
+195
+
+196
+00:10:31,510 --> 00:10:33,730
+isn't that hard. If you understand that,
+196
+
+197
+00:10:33,730 --> 00:10:34,850
+it's all about induction.
+197
+
+198
+00:10:34,870 --> 00:10:39,640
+It is all about having a correct base case and having a correct recurrence.
+198
+
+199
+00:10:40,000 --> 00:10:42,430
+How to make sure that we have over all a recurrence?
+199
+
+200
+00:10:42,640 --> 00:10:47,020
+Make sure that you trace every line of code only a single time.
+200
+
+201
+00:10:47,140 --> 00:10:48,130
+Nothing more than that.
+201
+
+202
+00:10:49,840 --> 00:10:50,320
+That's all.

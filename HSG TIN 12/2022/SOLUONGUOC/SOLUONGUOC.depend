@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1672569955 source:c:\users\binh\documents\project\usaco\hsg tin 12\2022\soluonguoc\soluonguoc.cpp
+
+1672569983 source:c:\users\binh\documents\project\usaco\hsg tin 12\2022\soluonguoc\main.cpp
+	<iostream>
+	<cstdio>
+

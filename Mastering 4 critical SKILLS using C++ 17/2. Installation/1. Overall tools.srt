@@ -1,0 +1,229 @@
+0
+1
+00:00:01,350 --> 00:00:04,920
+In this session, we will highlight the tools we use in compiling.
+1
+
+2
+00:00:07,710 --> 00:00:15,420
+There are mainly three ways to do compilation. The first way is you write some code in your notepad file, you
+2
+
+3
+00:00:15,420 --> 00:00:18,570
+write the commands to compile the file and that's it.
+3
+
+4
+00:00:18,990 --> 00:00:21,420
+This is not easy in the beginning,
+4
+
+5
+00:00:21,480 --> 00:00:23,060
+so we will discuss it a bit later.
+5
+
+6
+00:00:24,000 --> 00:00:31,430
+The second way is using an online site that compiles for you. This is the easiest way, but not so convenient.
+6
+
+7
+00:00:31,680 --> 00:00:38,000
+So one site we are going to talk about is "ideone". You create an account for yourself.
+7
+
+8
+00:00:38,010 --> 00:00:39,390
+It is going to save your codes.
+8
+
+9
+00:00:39,480 --> 00:00:41,840
+You can compile and run, you can edit
+9
+
+10
+00:00:42,120 --> 00:00:47,190
+and so on. The last way is using "IDEs". "IDEs" are tools
+10
+
+11
+00:00:47,190 --> 00:00:51,090
+that makes your life much easier, much more professional, have a lot of shortcuts.
+11
+
+12
+00:00:52,560 --> 00:00:57,660
+Sometimes it might be a bit problematic in the beginning to install it, but eventually, you can install it.
+12
+
+13
+00:00:57,930 --> 00:01:00,420
+We are going to discuss two popular choices,
+13
+
+14
+00:01:00,570 --> 00:01:05,000
+"CodeBlocks" and "Eclipse". "CodeBlocks" is much simpler and easier to set up.
+14
+
+15
+00:01:05,190 --> 00:01:10,560
+"Eclipse" has a bit more support, more popular between people, but it might be a bit problematic to
+15
+
+16
+00:01:10,560 --> 00:01:11,010
+install.
+16
+
+17
+00:01:11,280 --> 00:01:14,610
+There are more other popular choices like "Visual Studio Code",
+17
+
+18
+00:01:14,860 --> 00:01:17,640
+"CodeLite", "Sublime Text" and so on.
+18
+
+19
+00:01:19,890 --> 00:01:26,110
+If you would like to try the "ideone.com" which I suggest for you to do at the beginning, go to "ideone"
+19
+
+20
+00:01:26,120 --> 00:01:31,320
+which is just a website. Create your own account. Select the language like (C++ 14).
+20
+
+21
+00:01:31,620 --> 00:01:32,040
+Write
+21
+
+22
+00:01:32,040 --> 00:01:35,130
+and paste your code, just compile and run to get the results.
+22
+
+23
+00:01:35,340 --> 00:01:38,730
+When you compile and run, you get a link to your code like this link.
+23
+
+24
+00:01:39,810 --> 00:01:45,930
+This is how the website looks like. You would select from here C++ 14. You write here your own code.
+24
+
+25
+00:01:46,110 --> 00:01:50,930
+If you have some input like we will see in next sessions, you click on "stdin" and just write your input.
+25
+
+26
+00:01:50,940 --> 00:01:52,140
+After that,
+26
+
+27
+00:01:52,140 --> 00:01:58,110
+you click this button like "Run" or so, then it is going to show you your code again and show you 
+27
+
+28
+00:01:58,560 --> 00:02:00,580
+the output, like "My First Program. 
+28
+
+29
+00:02:00,600 --> 00:02:00,860
+Helllllllo.".
+29
+
+30
+00:02:01,170 --> 00:02:06,960
+You can edit the code again and you can just edit it, recompile it, you can download it
+30
+
+31
+00:02:06,960 --> 00:02:12,690
+and so on. For the "IDEs", this is how an "Eclipse IDE" looks like.
+31
+
+32
+00:02:12,690 --> 00:02:15,630
+if you notice, there are many menus here.
+32
+
+33
+00:02:15,630 --> 00:02:19,770
+The code is here, projects are here, the console is here, it is a bit white one.
+33
+
+34
+00:02:20,400 --> 00:02:22,470
+And this is the "CodeBlocks" one, look you can see 
+34
+
+35
+00:02:22,800 --> 00:02:25,110
+it is also like it has a very similar structure,
+35
+
+36
+00:02:25,230 --> 00:02:34,040
+but the console this time is black. Installing "IDEs", as I said, might be a bit problematic, but
+36
+
+37
+00:02:34,060 --> 00:02:36,750
+is eventually doable. On online,
+37
+
+38
+00:02:36,750 --> 00:02:42,210
+If you search the Internet, you will find typically a lot of materials like articles and videos about
+38
+
+39
+00:02:42,210 --> 00:02:45,810
+how to install a specific "Codeblocks" or "Eclipse" or whatever.
+39
+
+40
+00:02:46,140 --> 00:02:51,930
+Just Google your "IDE" and the operating system like, let's say, "fedora installing Codeblocks", "Eclipse on
+40
+
+41
+00:02:51,950 --> 00:02:53,040
+Mac" and so on.
+41
+
+42
+00:02:53,040 --> 00:02:56,310
+If you just google any of that and here are some links, you can just use them.
+42
+
+43
+00:02:58,410 --> 00:03:04,680
+On Linux, I guess and Mac, typically installations are easy most of the time. In Windows, it might be a bit
+43
+
+44
+00:03:04,680 --> 00:03:10,860
+problematic for some "IDEs" like "Eclipse". In the next videos, we will show some also of these installations
+44
+
+45
+00:03:10,860 --> 00:03:12,090
+to make your life easier.
+45
+
+46
+00:03:12,630 --> 00:03:13,530
+That is it for today. :)

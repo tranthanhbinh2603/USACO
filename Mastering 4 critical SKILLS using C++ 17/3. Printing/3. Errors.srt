@@ -1,0 +1,394 @@
+0
+1
+00:00:00,960 --> 00:00:07,170
+In this video, we will highlight a lot of different errors that typically new programmers are doing in
+1
+
+2
+00:00:07,170 --> 00:00:10,720
+their codes and it costs them a lot of pain and takes a lot of their time.
+2
+
+3
+00:00:12,030 --> 00:00:14,430
+The first and very popular error here,
+3
+
+4
+00:00:14,460 --> 00:00:18,870
+I would like you as a useful exercise,
+4
+
+5
+00:00:18,910 --> 00:00:21,850
+try to stop the video with every screen and think for a while.
+5
+
+6
+00:00:21,870 --> 00:00:22,490
+What's wrong here?
+6
+
+7
+00:00:22,680 --> 00:00:27,660
+For example, if you thought about it, there is a missing semicolon here in the end of the message,
+7
+
+8
+00:00:27,990 --> 00:00:30,840
+if you didn't figure out that by yourself, double check here.
+8
+
+9
+00:00:30,840 --> 00:00:31,440
+The message.
+9
+
+10
+00:00:31,740 --> 00:00:37,040
+It says here at this line, "there is an expected semicolon  ';' before return".
+10
+
+11
+00:00:37,050 --> 00:00:38,500
+So here, a missing semicolon.
+11
+
+12
+00:00:38,820 --> 00:00:40,170
+This is a very popular mistake.
+12
+
+13
+00:00:41,060 --> 00:00:46,490
+Again, stop the video and try to figure it out by yourself, what's wrong. Here, if you notice, the user
+13
+
+14
+00:00:46,730 --> 00:00:51,580
+did four '<<', which are wrong, and he did two, 
+14
+
+15
+00:00:51,590 --> 00:00:52,160
+This is good.
+15
+
+16
+00:00:52,160 --> 00:00:54,010
+But there is a space here in between.
+16
+
+17
+00:00:54,020 --> 00:00:54,710
+This is wrong.
+17
+
+18
+00:00:54,710 --> 00:00:56,660
+Violating the C++ syntax.
+18
+
+19
+00:00:56,870 --> 00:01:00,320
+It should be exactly the extraction operator '<<'.
+19
+
+20
+00:01:02,200 --> 00:01:07,660
+Here we want to print a message, we say double quote, "I am Mostafa", and then we forgot another quote.
+20
+
+21
+00:01:07,660 --> 00:01:10,800
+So it's saying, "missing terminating double quote character".
+21
+
+22
+00:01:11,170 --> 00:01:17,440
+One of the very useful thing to do is to get used to the type of the error messages from the C++ compiler.
+22
+
+23
+00:01:17,770 --> 00:01:18,530
+Over time,
+23
+
+24
+00:01:18,670 --> 00:01:20,440
+Once you see the message, you know
+24
+
+25
+00:01:20,440 --> 00:01:21,120
+what is wrong.
+25
+
+26
+00:01:23,320 --> 00:01:30,280
+Here we wrote our normal, very C++ code, but we forgot the two braces '{ }', remember, the braces are
+26
+
+27
+00:01:30,280 --> 00:01:31,900
+where we write the body of the code.
+27
+
+28
+00:01:33,410 --> 00:01:40,520
+Another mistake here is that we forgot to (#include iostream), iostream is one that gives us the
+28
+
+29
+00:01:40,520 --> 00:01:44,750
+capability to write using 'cout', and later to read using 'cin'
+29
+
+30
+00:01:47,030 --> 00:01:50,420
+Here we use a word 'MAIN' with capital letters.
+30
+
+31
+00:01:50,690 --> 00:01:57,950
+So now here it says, "undefined reference to main". when we run our C++ program, the compiler
+31
+
+32
+00:01:57,950 --> 00:02:02,210
+goes and searches for a function named 'main' with a lowercase letters.
+32
+
+33
+00:02:02,360 --> 00:02:03,950
+It must be that way ('main').
+33
+
+34
+00:02:03,950 --> 00:02:06,650
+C++ is a case-sensitive language.
+34
+
+35
+00:02:09,000 --> 00:02:15,180
+Everything is good here, but we put our 'cout' statement outside the 'main' function, outside these braces
+35
+
+36
+00:02:15,180 --> 00:02:16,650
+and this is wrong.
+36
+
+37
+00:02:16,680 --> 00:02:20,490
+There are a few things that we can put here outside the braces.
+37
+
+38
+00:02:22,590 --> 00:02:26,680
+There is nothing wrong in this code. This code doesn't have a compiler error,
+38
+
+39
+00:02:26,700 --> 00:02:28,980
+It has what we call a compiler warning.
+39
+
+40
+00:02:29,220 --> 00:02:36,630
+This code is missing a 'return' statement. A 'return' statement that tells the compiler that we are done and the
+40
+
+41
+00:02:36,630 --> 00:02:38,960
+status of ending the program, here, we are missing it.
+41
+
+42
+00:02:38,970 --> 00:02:41,790
+We still can run this program. As an advice,
+42
+
+43
+00:02:42,000 --> 00:02:45,570
+If there is a compiler warning, double check it and solve it.
+43
+
+44
+00:02:47,490 --> 00:02:54,780
+Another mistake here, we highlighted that before in our first program, if we multiply all of these numbers,
+44
+
+45
+00:02:54,780 --> 00:02:56,470
+it is going to work well.
+45
+
+46
+00:02:56,760 --> 00:03:02,050
+But if we added one extra 10 here, it says that there is an integer overflow.
+46
+
+47
+00:03:02,250 --> 00:03:04,920
+So, a new concept here to learn, is the "overflow".
+47
+
+48
+00:03:05,580 --> 00:03:10,170
+Imagine that you have a cup of water and you keep filling it with water.
+48
+
+49
+00:03:10,180 --> 00:03:13,050
+It's eventually going to be dropped outside, right?
+49
+
+50
+00:03:13,740 --> 00:03:18,000
+So an integer, every data type is like a cup,
+50
+
+51
+00:03:18,000 --> 00:03:18,830
+It has a limit,
+51
+
+52
+00:03:18,840 --> 00:03:19,640
+It has a maximum,
+52
+
+53
+00:03:19,650 --> 00:03:20,760
+It has also minimum.
+53
+
+54
+00:03:21,330 --> 00:03:24,240
+The maximum value for an integer is this number.
+54
+
+55
+00:03:25,110 --> 00:03:31,200
+In future, you should know why, it's 2 powered to something. If you try to add more than
+55
+
+56
+00:03:31,200 --> 00:03:33,030
+this number, it will be like this water.
+56
+
+57
+00:03:33,030 --> 00:03:38,310
+It will just fail. Similar to the the overflow,
+57
+
+58
+00:03:38,310 --> 00:03:43,290
+there is another concept called "underflow", where you cannot put below a specific minimum value, but you will
+58
+
+59
+00:03:43,290 --> 00:03:43,960
+see this later.
+59
+
+60
+00:03:45,150 --> 00:03:48,480
+So far we saw the compiler errors and compiler warnings.
+60
+
+61
+00:03:48,630 --> 00:03:54,600
+Remember, the compiler error and warnings are something that happens on the code level before running.
+61
+
+62
+00:03:54,600 --> 00:03:54,870
+it.
+62
+
+63
+00:03:55,260 --> 00:03:57,600
+If everything is OK, we just run the code.
+63
+
+64
+00:03:57,960 --> 00:04:01,690
+But there might be what we call a "runtime error".
+64
+
+65
+00:04:01,920 --> 00:04:04,850
+This is due to something wrong with your logic. Here,
+65
+
+66
+00:04:04,860 --> 00:04:11,310
+If you see in the line number seven, we are dividing by zero, dividing by zero will cause the
+66
+
+67
+00:04:11,310 --> 00:04:12,650
+program to crash. here,
+67
+
+68
+00:04:12,660 --> 00:04:17,430
+The program is going to print the first line, crash in the second line and nothing will be here.
+68
+
+69
+00:04:17,430 --> 00:04:19,870
+And even 'return 0' will not be reached.
+69
+
+70
+00:04:20,370 --> 00:04:21,810
+OK, this is a nice reading.
+70
+
+71
+00:04:21,810 --> 00:04:22,650
+Just give it a try.
+71
+
+72
+00:04:24,630 --> 00:04:25,170
+That's it!
+72
+
+73
+00:04:25,350 --> 00:04:31,680
+I hope by informing you about a lot of the potential mistakes that new guys do, then you can save a
+73
+
+74
+00:04:31,680 --> 00:04:32,430
+lot of your time.
+74
+
+75
+00:04:33,690 --> 00:04:34,980
+You have two tasks today.
+75
+
+76
+00:04:35,130 --> 00:04:41,550
+First, try to create all of the errors we did today by yourself, try to introduce more errors by yourself,
+76
+
+77
+00:04:41,940 --> 00:04:45,780
+and then look to the messages, read them, learn them.
+77
+
+78
+00:04:45,780 --> 00:04:48,510
+If you couldn't figure out, just Google it and so on.
+78
+
+79
+00:04:49,050 --> 00:04:49,650
+That's it! :)

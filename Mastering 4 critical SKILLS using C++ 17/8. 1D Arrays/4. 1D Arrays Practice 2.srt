@@ -1,0 +1,409 @@
+0
+1
+00:00:00,840 --> 00:00:08,130
+Let's do more practice on the 1D arrays. The first program is you would like to read N numbers
+1
+
+2
+00:00:08,460 --> 00:00:14,510
+and then (you are going to read them definitely in an array) and you are to do a reverse in-place.
+2
+
+3
+00:00:14,520 --> 00:00:15,810
+What does it mean "In-place"?
+3
+
+4
+00:00:16,200 --> 00:00:18,600
+In place means that you don't take more memory.
+4
+
+5
+00:00:18,630 --> 00:00:22,320
+That means that you don't, for example, create a second array to do the reverse.
+5
+
+6
+00:00:23,060 --> 00:00:29,370
+I would like you to to try to think for a minute, how can we do that in an array without creating another
+6
+
+7
+00:00:29,370 --> 00:00:30,960
+array to help with the reverse.
+7
+
+8
+00:00:32,130 --> 00:00:38,330
+So the idea is, as simple as, we can start from the beginning and the end and look to the half of the array,
+8
+
+9
+00:00:38,640 --> 00:00:43,500
+swab the first number with the last number, then swab the second number with the last second number
+9
+
+10
+00:00:43,500 --> 00:00:43,950
+from here.
+10
+
+11
+00:00:44,160 --> 00:00:51,840
+And so on, step by step till the middle, we can this way swab the whole array. Please iterate on this computation
+11
+
+12
+00:00:51,840 --> 00:00:54,750
+and make sure that you understand the reverse through the swab idea.
+12
+
+13
+00:00:55,530 --> 00:01:01,170
+In terms of code, we just read the array of, say, up to 200 numbers, then we walked to the middle
+13
+
+14
+00:01:01,170 --> 00:01:07,200
+of the array and then for position 'i', will get the corresponding one for it, which is (n-i).
+14
+
+15
+00:01:07,200 --> 00:01:07,890
+which is (n-i).
+15
+
+16
+00:01:08,190 --> 00:01:13,620
+This is very important to be like very intuitive for you to compute the last number in this way
+16
+
+17
+00:01:13,620 --> 00:01:15,350
+or be like symmetric number.
+17
+
+18
+00:01:15,720 --> 00:01:18,900
+After that, you do normally swabbing like we did before in an assignment.
+18
+
+19
+00:01:20,010 --> 00:01:21,450
+You just create a temporary variable.
+19
+
+20
+00:01:21,450 --> 00:01:23,160
+Take a copy from here, assign it here
+20
+
+21
+00:01:23,160 --> 00:01:24,230
+assign that back here.
+21
+
+22
+00:01:24,870 --> 00:01:25,920
+After that you are done,
+22
+
+23
+00:01:26,850 --> 00:01:28,790
+you just double think with yourself,
+23
+
+24
+00:01:28,800 --> 00:01:32,580
+What happens if 'n' is even and if 'n' is odd and this computation.
+24
+
+25
+00:01:33,950 --> 00:01:40,610
+Another exercise, we would like to read N numbers and find the most frequent number, the most frequent number is
+25
+
+26
+00:01:40,610 --> 00:01:47,420
+is the number that was like used the most, ok! Each integer in this 200 numbers will be between
+26
+
+27
+00:01:47,420 --> 00:01:49,450
+zero and one hundred and fifty.
+27
+
+28
+00:01:49,760 --> 00:01:53,630
+So we have two hundred numbers and the value of each number is maximum,
+28
+
+29
+00:01:53,630 --> 00:01:54,950
+one hundred and fifty.
+29
+
+30
+00:01:55,280 --> 00:02:00,210
+As an example, this is an array of one, two, three, four, five, six, seven.
+30
+
+31
+00:02:00,230 --> 00:02:06,170
+So given seven numbers and then seven numbers, you find that, for example, that the (1) was
+31
+
+32
+00:02:06,170 --> 00:02:07,400
+repeated three times.
+32
+
+33
+00:02:07,640 --> 00:02:13,200
+This is the largest frequency, then (2) is repeated once and (5) is repeated twice.
+33
+
+34
+00:02:13,340 --> 00:02:18,260
+So the answer here is,  ... one, One was repeated three times.
+34
+
+35
+00:02:19,670 --> 00:02:27,260
+OK, an easy way to do that is, as simple as, you just iterate on the array and then in another nested array,
+35
+
+36
+00:02:27,260 --> 00:02:31,460
+you use it to compute how many times this value was used.
+36
+
+37
+00:02:31,730 --> 00:02:39,430
+For example, you take the value 'a[i]' and check how many numbers 'a[i]', then take 'a[1]',
+37
+
+38
+00:02:39,440 --> 00:02:41,360
+how many numbers of 'a[1]', and so on.
+38
+
+39
+00:02:41,660 --> 00:02:49,850
+So we need a second loop that iterates on the array again and then double check how many ones were created.
+39
+
+40
+00:02:50,030 --> 00:02:52,310
+So repeating now, will have how many times?
+40
+
+41
+00:02:52,520 --> 00:02:53,840
+number[i] exist.
+41
+
+42
+00:02:54,260 --> 00:02:59,000
+After that, we are going to update our max-repeated value with the maximum value.
+42
+
+43
+00:02:59,210 --> 00:03:04,810
+So the 'max_value' and 'max_repeat' are just coming from the max frequent value,
+43
+
+44
+00:03:04,820 --> 00:03:11,900
+then we say 'max_value' repeated 'max_repeat' times. Checking line 18,
+44
+
+45
+00:03:12,080 --> 00:03:18,290
+I said 'repeat += numbers[i] == numbers[j]', in practice, I would like you to put parentheses. 
+45
+
+46
+00:03:18,290 --> 00:03:23,630
+Meanwhile, this is still a valid expression because the '==' has higher priorities and the '+='.
+46
+
+47
+00:03:23,630 --> 00:03:23,980
+'+='.
+47
+
+48
+00:03:24,080 --> 00:03:27,780
+So this expression is evaluated first, then the repeat is added here.
+48
+
+49
+00:03:27,820 --> 00:03:29,510
+Either this would be true or false.
+49
+
+50
+00:03:29,510 --> 00:03:30,740
+If true, it adds one.
+50
+
+51
+00:03:30,740 --> 00:03:31,970
+If false, it adds zero.
+51
+
+52
+00:03:32,330 --> 00:03:35,090
+OK, and so on. And here in line twenty,
+52
+
+53
+00:03:35,120 --> 00:03:39,350
+we say if 'max_repeat == -1', it means that we didn't find any...
+53
+
+54
+00:03:39,590 --> 00:03:40,630
+We didn't start yet.
+54
+
+55
+00:03:40,970 --> 00:03:48,890
+Once we started we double check the 'max_repeat' is less than the current repeat or not. This code needed 2 nested loops.
+55
+
+56
+00:03:48,890 --> 00:03:49,940
+2 nested loops.
+56
+
+57
+00:03:50,240 --> 00:03:56,240
+If you have an array of (1000000 numbers), this code will do (10^12) operation!
+57
+
+58
+00:03:56,240 --> 00:03:57,530
+It would be extremely slow.
+58
+
+59
+00:03:57,740 --> 00:03:58,960
+So one question here.
+59
+
+60
+00:03:58,970 --> 00:04:06,950
+Can you do it using a single looping only, think seriously about it, as a hint for you think in using another array.
+60
+
+61
+00:04:06,950 --> 00:04:07,310
+array.
+61
+
+62
+00:04:08,780 --> 00:04:09,610
+Here is a trick.
+62
+
+63
+00:04:09,860 --> 00:04:12,830
+There is something that we call frequency array.
+63
+
+64
+00:04:13,010 --> 00:04:16,190
+It is as simple as we compute the frequency in this array.
+64
+
+65
+00:04:16,220 --> 00:04:17,000
+How to do that?
+65
+
+66
+00:04:17,390 --> 00:04:19,870
+Define a new array, name it frequency.
+66
+
+67
+00:04:20,090 --> 00:04:23,780
+We know that the numbers range from (zero to 150).
+67
+
+68
+00:04:23,990 --> 00:04:25,910
+So 150 is our maximum number.
+68
+
+69
+00:04:25,910 --> 00:04:29,150
+So we need [150+1] in the frequency array.
+69
+
+70
+00:04:29,600 --> 00:04:31,340
+When we do these braces,
+70
+
+71
+00:04:31,530 --> 00:04:35,270
+it means that we are sitting all of it to zero, all of it to zero.
+71
+
+72
+00:04:35,840 --> 00:04:42,300
+Now we iterate on the input, read it and say here 'frequency[numbers[i]]++'.
+72
+
+73
+00:04:42,350 --> 00:04:43,210
+What does this do?
+73
+
+74
+00:04:43,430 --> 00:04:44,950
+Let's say that we reached number ten.
+74
+
+75
+00:04:45,170 --> 00:04:49,820
+So we say frequency of [10++] now frequency of ten, is one.
+75
+
+76
+00:04:50,180 --> 00:04:56,360
+Let's say that we read again ten, then frequency of [10++] now of ten is two and so on.
+76
+
+77
+00:04:56,360 --> 00:04:56,620
+on.
+77
+
+78
+00:04:56,900 --> 00:05:03,530
+So this frequency array now, will have the frequency of every number appeared in the input.
+78
+
+79
+00:05:03,530 --> 00:05:08,270
+But now you just iterate and get the maximum of this array as we did before.
+79
+
+80
+00:05:08,480 --> 00:05:15,730
+This way, we we broke a program of two nested loops to two separate loops.
+80
+
+81
+00:05:16,250 --> 00:05:19,220
+This one just like almost one million operation or so!
+81
+
+82
+00:05:20,810 --> 00:05:21,320
+That's it! :)

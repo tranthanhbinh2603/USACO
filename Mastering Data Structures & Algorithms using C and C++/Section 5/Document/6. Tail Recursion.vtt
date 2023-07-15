@@ -1,0 +1,298 @@
+WEBVTT
+
+00:00.370 --> 00:07.170
+I will start the next topic that is types of regulations, so here are the list of types of regulations.
+
+00:07.170 --> 00:11.010
+I'll be discussing each of them one by one by taking some examples.
+
+00:11.790 --> 00:19.290
+See, the delegations is the first one then had to cushion to recursion in direct regulation and nested
+
+00:19.410 --> 00:20.160
+recursion.
+
+00:20.280 --> 00:22.050
+So we look at them one by one.
+
+00:22.290 --> 00:25.080
+Let us start with a recursion.
+
+00:25.770 --> 00:27.360
+Yeah, here is the first recursion.
+
+00:27.360 --> 00:28.470
+That is still the question.
+
+00:28.710 --> 00:34.300
+We have already seen this type of recursion, this functionality I have explained in the previous video.
+
+00:34.620 --> 00:36.120
+Now it is a daily question.
+
+00:36.360 --> 00:44.160
+So what does it mean by recursion if a recursive function is calling itself, calling itself and that
+
+00:44.160 --> 00:51.900
+recursive call, this is called recursive call and that call is the last statement in a function.
+
+00:52.840 --> 00:59.740
+Then it is called delegation after that call, there is nothing it is not performing anything.
+
+01:00.700 --> 01:08.560
+So it is called tell the question, for example, this is fun and taking some parameter M and if N is
+
+01:08.560 --> 01:15.460
+greater than zero, the similar one I'm writing and there are some statements inside, then the last
+
+01:15.520 --> 01:20.170
+thing, as it is calling itself by a reduced value of an.
+
+01:21.210 --> 01:28.200
+See what all it has to do with us performing first, then it is calling itself so in this example,
+
+01:28.410 --> 01:33.690
+I have just returned from death, but there may be a lot of things afunction may be doing all those
+
+01:33.690 --> 01:36.830
+things it has to finish, then it is making a call to itself.
+
+01:37.050 --> 01:41.650
+So if a loss a statement, then it is called as dale recursion.
+
+01:42.000 --> 01:49.050
+So this means that all these operations will be performed at calling time only and the function will
+
+01:49.050 --> 01:52.860
+not be performing any operation at a returning time.
+
+01:53.310 --> 01:55.990
+Everything is performed at calling time only.
+
+01:56.430 --> 01:58.860
+So that's why it is still recursion.
+
+01:59.460 --> 02:05.700
+Now suppose there is something written here plus and means along with the function called some operation
+
+02:05.700 --> 02:06.170
+is done.
+
+02:06.780 --> 02:12.990
+Then if this is the case, then when this operation will perform, this will be performed at return
+
+02:12.990 --> 02:18.490
+time because unless the result of this function is known, it cannot be done.
+
+02:19.110 --> 02:21.200
+The value of the function is added it.
+
+02:21.210 --> 02:25.470
+And so this operation can be performed only at written in time.
+
+02:25.620 --> 02:31.110
+So in this function, there is something remaining that has to be performed at lightning time.
+
+02:31.350 --> 02:36.910
+So it cannot be a tail recursion tail recursion means at returning time.
+
+02:36.930 --> 02:39.120
+It doesn't have to perform anything at all.
+
+02:39.390 --> 02:46.750
+So this is a perfect example of recursion or else if I remove any processing here, then it is the tail
+
+02:46.820 --> 02:49.080
+recursion now.
+
+02:49.110 --> 02:56.750
+Next I will compare tail recursion with loops now combination of recursion with the loop.
+
+02:56.760 --> 03:03.430
+So first and foremost, I have to tell you that every cost function can be done as a loop or vice versa.
+
+03:03.460 --> 03:07.190
+Every loop can also be converted in the form of a recursion.
+
+03:07.890 --> 03:14.190
+But now let us compare delegation with loop see the A calculation already know the answer in the previous
+
+03:14.190 --> 03:14.530
+video.
+
+03:14.550 --> 03:17.070
+I'll let you have a trace this one and shown the output.
+
+03:17.310 --> 03:23.820
+If we call this function by passing three, so it will print three, two, one and it will stop and
+
+03:23.820 --> 03:25.370
+the value of becomes a zero.
+
+03:25.650 --> 03:32.370
+So it will print the values three to one and it will print in calling phase now same function.
+
+03:32.370 --> 03:35.660
+I want to write it using loop instead of recursion.
+
+03:35.970 --> 03:44.490
+So I relied on the function here wide fund which it takes parameter NT and.
+
+03:45.520 --> 03:52.480
+And the first thing is and greater than zero, I was right and greater than zero, but instead of if
+
+03:52.480 --> 03:58.270
+I will write it as whine that inside this sprinter's statement, this is sprinter's.
+
+03:59.710 --> 04:08.860
+But some Tildy and some space and then calling function again itself, but it is a value offense, so
+
+04:08.860 --> 04:12.710
+let us do and minus minus that.
+
+04:14.140 --> 04:21.460
+So if we call this function by passing value three, then three will be passed here, then it for Spain
+
+04:21.460 --> 04:29.200
+three, then it will make two and again repeat so predictable, then repeat one and then repeat it is
+
+04:29.200 --> 04:29.730
+zero.
+
+04:29.860 --> 04:30.560
+It will stop.
+
+04:30.850 --> 04:31.960
+So this will work.
+
+04:31.970 --> 04:35.110
+Same as that recursion as it is.
+
+04:35.110 --> 04:38.110
+I have converted just instead of conditional statement.
+
+04:38.440 --> 04:44.530
+I made it as a loop instead of conditional statement, I made it as a loop and it's a function call
+
+04:44.530 --> 04:48.670
+with reduce the value of decrease decreased value of I have just written and minus slyness.
+
+04:49.090 --> 04:55.090
+So the function is the same as that one output the same and the structure also if you see it looks more
+
+04:55.090 --> 04:55.680
+similar.
+
+04:56.570 --> 04:57.320
+That's what.
+
+04:57.340 --> 05:03.010
+So the point that I have to tell here is that Dave recursions can be easily converted in the form of
+
+05:03.010 --> 05:03.380
+a loop.
+
+05:04.090 --> 05:08.350
+Now let us decide who is efficient in terms of time.
+
+05:08.350 --> 05:12.690
+If you analyze this is building three values and this will also bring three values.
+
+05:12.910 --> 05:18.370
+So the amount of time spent is same, whatever the value of N is given, if it is three, then it is
+
+05:18.370 --> 05:18.810
+three four.
+
+05:18.820 --> 05:20.140
+This five then is five.
+
+05:20.350 --> 05:23.170
+So it means the time taken by both of them is outdraw.
+
+05:23.180 --> 05:25.960
+And so time is seen.
+
+05:26.590 --> 05:28.840
+So the time taken by both of them is same.
+
+05:28.840 --> 05:35.150
+So the time is order of N but let us analyze the space.
+
+05:35.710 --> 05:37.900
+This is a recursive function.
+
+05:37.900 --> 05:43.470
+It internally utilizes a stack so far the value of a tree.
+
+05:43.480 --> 05:47.080
+It will create total for activation records in the stack.
+
+05:47.110 --> 05:52.960
+This already we have done the analysis so far n the space taken by this one is.
+
+05:54.940 --> 05:55.780
+Order of.
+
+05:56.980 --> 05:58.070
+But what about this one?
+
+05:58.260 --> 06:01.680
+There's a loop function, so how many activation records will be created?
+
+06:01.930 --> 06:02.650
+Only one.
+
+06:02.810 --> 06:08.730
+It is not calling itself again, so that space complexity for this one is order of one.
+
+06:09.550 --> 06:12.490
+So it will just create only one activation record.
+
+06:12.730 --> 06:13.930
+So that is constant.
+
+06:13.990 --> 06:17.870
+So we say it is one order of one that is constant.
+
+06:18.160 --> 06:19.120
+So there it is.
+
+06:19.800 --> 06:21.300
+And here this order of one.
+
+06:21.880 --> 06:28.560
+So the conclusion is if you have to write a detailed recursion, then better you convert it into a loop
+
+06:28.570 --> 06:32.300
+that is more efficient in terms of space.
+
+06:33.280 --> 06:40.360
+But this will not be true for every type of recursion or loop in case of recursion loops.
+
+06:40.360 --> 06:41.080
+Efficient.
+
+06:41.860 --> 06:50.020
+And even I have to tell one more point that some compilers under code optimization inside the compiler,
+
+06:50.410 --> 06:51.250
+they will check.
+
+06:51.370 --> 06:57.160
+If you have written any function, which is a detailed recursion, then they will try to convert it
+
+06:57.160 --> 06:58.380
+in the form of a loop.
+
+06:58.990 --> 07:06.090
+It means they will try to reduce the space consumption and they will utilize only order of one space.
+
+07:06.640 --> 07:14.530
+So your function will be converted into object code, just like a loop where the space is reduced.
+
+07:15.490 --> 07:18.980
+So that's all about the recursion now.
+
+07:19.000 --> 07:21.550
+Next, we will see how the recursion.

@@ -1,0 +1,419 @@
+0
+1
+00:00:02,580 --> 00:00:10,410
+There are two ways of casting like we can do up costing, and we can do down costing. When I have a
+1
+
+2
+00:00:10,410 --> 00:00:18,870
+hierarchy like for example, an employee who is extending from a person, if I am costing the object
+2
+
+3
+00:00:18,870 --> 00:00:24,720
+of an employee to the object of person, which is very safe and very normal, and for the inheritance we
+3
+
+4
+00:00:24,720 --> 00:00:31,160
+call it up costing like we are going from bottom to top,
+4
+
+5
+00:00:31,710 --> 00:00:37,770
+but on the other side, if you have to cast the parent class to the child class, we call this
+5
+
+6
+00:00:37,770 --> 00:00:38,450
+down casting.
+6
+
+7
+00:00:38,850 --> 00:00:40,130
+Now, there's a problem here.
+7
+
+8
+00:00:40,450 --> 00:00:42,960
+Suppose polymorphism is about generic code.
+8
+
+9
+00:00:43,260 --> 00:00:48,930
+If I have a class that's working on a shape pointer, for example, I shouldn't have at some point
+9
+
+10
+00:00:48,930 --> 00:00:55,140
+of time to start to cast the shape to circle to check something with a circle and cast it to a rectangle
+10
+
+11
+00:00:55,140 --> 00:00:56,350
+to check something with the rectangle.
+11
+
+12
+00:00:56,580 --> 00:01:00,930
+If I started to do that inside the function, then it depends on the current shapes,
+12
+
+13
+00:01:01,290 --> 00:01:04,530
+and at the moment that I have to add one more shape,
+13
+
+14
+00:01:04,530 --> 00:01:11,340
+I have to go to this place where I have to do If-Else's. Is it a circle, is it a shape, is it a triangle to
+14
+
+15
+00:01:11,340 --> 00:01:13,530
+add one more for is it polygon or not.
+15
+
+16
+00:01:14,010 --> 00:01:21,780
+So the moment that you have to do downcasting from your parent to your child, something is wrong in
+16
+
+17
+00:01:21,780 --> 00:01:23,700
+your design most of the cases.
+17
+
+18
+00:01:24,060 --> 00:01:29,970
+Why did this happen? Typically because our designs are imperfect, or we are facing very difficult requirements
+18
+
+19
+00:01:29,970 --> 00:01:31,220
+and this is our best to do it.
+19
+
+20
+00:01:31,650 --> 00:01:36,170
+There are a bit few rare cases when such downcasting is a proper way.
+20
+
+21
+00:01:36,510 --> 00:01:42,630
+For example, if your class like let's say an employee class, you are receiving
+21
+
+22
+00:01:42,630 --> 00:01:49,630
+a generic object and you are just casting it to one specific  child class which is now the
+22
+
+23
+00:01:49,630 --> 00:01:50,550
+employee, for example.
+23
+
+24
+00:01:50,670 --> 00:01:52,110
+So nothing is wrong about that.
+24
+
+25
+00:01:52,620 --> 00:01:58,250
+But when you have to do a lot of If-else's, is it a rectangle, is it a triangle, is it a circle?
+25
+
+26
+00:01:58,410 --> 00:01:59,220
+Something is wrong.
+26
+
+27
+00:01:59,640 --> 00:02:01,090
+So anyway, let's say this again.
+27
+
+28
+00:02:01,090 --> 00:02:07,350
+Downcasting is about casting the parent class to child class. There are two casting styles in C++.
+28
+
+29
+00:02:07,350 --> 00:02:08,070
+...
+29
+
+30
+00:02:08,070 --> 00:02:13,470
+One of them is named static and the other is named dynamic. The static happened in the compile time,
+30
+
+31
+00:02:13,470 --> 00:02:16,860
+and it is fast but not save. The dynamic one
+31
+
+32
+00:02:16,860 --> 00:02:17,940
+happened in the runtime,
+32
+
+33
+00:02:17,940 --> 00:02:19,290
+It's a bit slow, but save.
+33
+
+34
+00:02:19,740 --> 00:02:21,750
+So what does this mean?
+34
+
+35
+00:02:23,370 --> 00:02:25,070
+The static type isn't safe.
+35
+
+36
+00:02:25,080 --> 00:02:32,310
+It means if there is some wrong conversion, then you might face a problem in the runtime or even
+36
+
+37
+00:02:32,310 --> 00:02:35,250
+get an earlier compile error. In the runtime,
+37
+
+38
+00:02:35,250 --> 00:02:38,660
+If you tried to make a wrong conversion, you will get always a null pointer.
+38
+
+39
+00:02:39,030 --> 00:02:40,470
+Let's see some code for that.
+39
+
+40
+00:02:41,040 --> 00:02:47,070
+So this is a class A and then B is inheriting from A, C is inheriting from A, D is inheriting from
+40
+
+41
+00:02:47,070 --> 00:02:47,370
+...
+41
+
+42
+00:02:48,120 --> 00:02:54,120
+You have here a Class B, which is a child class that is now saved in a pointer for a parent class.
+42
+
+43
+00:02:54,480 --> 00:03:00,870
+Now, I would like to cast this A pointer back to B pointer.
+43
+
+44
+00:03:01,020 --> 00:03:02,790
+So this is a syntax of casting.
+44
+
+45
+00:03:02,970 --> 00:03:03,420
+You write
+45
+
+46
+00:03:03,420 --> 00:03:04,350
+static cast.
+46
+
+47
+00:03:04,620 --> 00:03:05,340
+You write here
+47
+
+48
+00:03:05,340 --> 00:03:09,660
+the destination, which is the B pointer, and you give it to the pointer itself.
+48
+
+49
+00:03:10,230 --> 00:03:13,650
+Now, thinking about this conversion, is this a proper conversion?
+49
+
+50
+00:03:14,010 --> 00:03:18,630
+The answer is yes because B is a child of A, and we are sure of that.
+50
+
+51
+00:03:18,630 --> 00:03:21,540
+If we did this static casting, everything will be OK.
+51
+
+52
+00:03:22,440 --> 00:03:29,490
+Now, on the other side, let's say I would like to cast this B pointer originally to C pointer.
+52
+
+53
+00:03:29,490 --> 00:03:30,300
+...
+53
+
+54
+00:03:30,660 --> 00:03:31,260
+This is wrong
+54
+
+55
+00:03:31,260 --> 00:03:33,810
+conversion, C and B aren't related.
+55
+
+56
+00:03:33,810 --> 00:03:34,830
+You shouldn't cast them.
+56
+
+57
+00:03:35,160 --> 00:03:40,650
+However, the compiler is going to let you go thinking that this is a proper conversion, but it will
+57
+
+58
+00:03:40,650 --> 00:03:45,690
+not be, and this C object will not be a null pointer, and you are going to use it, and your program is going
+58
+
+59
+00:03:45,690 --> 00:03:46,320
+to crash.
+59
+
+60
+00:03:46,530 --> 00:03:50,370
+So this is what's wrong about static cast if you aren't sure of what you're doing.
+60
+
+61
+00:03:51,050 --> 00:03:56,580
+The last case is if you tried to cast B pointer to D, the compiler will be smart in this case and
+61
+
+62
+00:03:56,580 --> 00:04:02,220
+notice that there is really no relationship between D and B, so it's going to give you anyway a compiler error.
+62
+
+63
+00:04:02,640 --> 00:04:08,340
+So in static casting, if the compiler can figure out that this is wrong, it will tell you.
+63
+
+64
+00:04:08,760 --> 00:04:13,350
+If it cannot figure, it is going to give you the wrong pointer, and your program is going to crash.
+64
+
+65
+00:04:13,650 --> 00:04:15,250
+So When to do exactly static
+65
+
+66
+00:04:15,270 --> 00:04:17,470
+cast? do casting using static casting
+66
+
+67
+00:04:17,490 --> 00:04:22,770
+if you are really sure that this is a proper conversion, otherwise you are risking with your 
+67
+
+68
+00:04:22,770 --> 00:04:28,200
+program, and this is where the dynamic has to come to the scene, you just replace it with dynamic cast
+68
+
+69
+00:04:28,200 --> 00:04:29,880
+here and start to use the same syntax.
+69
+
+70
+00:04:30,270 --> 00:04:34,980
+If it is a valid conversion, the compiler is giving you a valid pointer.
+70
+
+71
+00:04:35,400 --> 00:04:40,920
+If it is an invalid one, there would be no compiler errors because the answer to this one happens in
+71
+
+72
+00:04:40,920 --> 00:04:41,550
+the runtime.
+72
+
+73
+00:04:41,850 --> 00:04:45,240
+There is something that called runtime information.
+73
+
+74
+00:04:45,450 --> 00:04:51,060
+So in runtime, we go to this and make sure of the original pointer.
+74
+
+75
+00:04:51,330 --> 00:04:53,550
+If it is correct one, we're going to cast it.
+75
+
+76
+00:04:53,760 --> 00:04:55,710
+If not, we're going to give you a null pointer.
+76
+
+77
+00:04:55,950 --> 00:04:59,600
+So if you double-check, if this is a null point or not, then you are in
+77
+
+78
+00:04:59,720 --> 00:05:04,810
+the safe side. If you are unsure about the conversions that are happening, then you should go with
+78
+
+79
+00:05:04,850 --> 00:05:11,350
+dynamic casting. Remember, using both the static cast and dynamic cast isn't healthy most of the time.
+79
+
+80
+00:05:11,630 --> 00:05:16,490
+If you have to do it, probably something wrong with your design, you may better take time to think
+80
+
+81
+00:05:16,490 --> 00:05:20,730
+how to make your design more propper than just doing dynamic casting or static casting.
+81
+
+82
+00:05:21,140 --> 00:05:27,410
+Do not use the static casting unless you are sure that this is a propper casting, otherwise, go with just dynamic
+82
+
+83
+00:05:27,410 --> 00:05:28,070
+casting,
+83
+
+84
+00:05:28,070 --> 00:05:31,940
+and double check is it a null pointer or not. That's it.

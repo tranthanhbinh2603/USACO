@@ -1,0 +1,216 @@
+1
+00:00:01,500 --> 00:00:06,240
+Hi Everyone, now we are going to look at very small example of a bitwise operator.
+
+2
+00:00:06,840 --> 00:00:13,170
+So we need to write a function to check whether a number is odd or even. OK, so not even a function.
+
+3
+00:00:13,170 --> 00:00:19,350
+even we can write a small expression to check whether a number is odd or even. OK.
+
+4
+00:00:19,770 --> 00:00:22,050
+So one thing you might know is we can simply do
+
+5
+00:00:23,160 --> 00:00:31,620
+n%2 if this gives us zero, then we can say the number is even if it gives us one the number
+
+6
+00:00:31,620 --> 00:00:32,240
+is odd. OK.
+
+7
+00:00:32,430 --> 00:00:37,950
+But since we are learning about Bitwise operators, we want to solve this problem using the Bitwise
+
+8
+00:00:37,950 --> 00:00:38,400
+operator.
+
+9
+00:00:38,730 --> 00:00:45,510
+The one thing you will observe is all the odd numbers will have the last bit as one and all the even
+
+10
+00:00:45,510 --> 00:00:48,840
+numbers will have last bit as zero.
+
+11
+00:00:48,870 --> 00:00:51,240
+OK, so I'm writing for
+
+12
+00:00:53,300 --> 00:00:54,520
+So this number is one.
+
+13
+00:00:54,700 --> 00:00:56,980
+This number is two, this number is three.
+
+14
+00:00:57,340 --> 00:00:58,420
+This number is four.
+
+15
+00:00:58,900 --> 00:01:00,010
+This number is five.
+
+16
+00:01:00,500 --> 00:01:05,090
+One thing you can clearly observe is for Odd the number... four four odd numbers,
+
+17
+00:01:05,110 --> 00:01:06,070
+The last bit is one.
+
+18
+00:01:06,610 --> 00:01:08,920
+And it contributes 2 raise to the power zero.
+
+19
+00:01:08,950 --> 00:01:10,510
+That is one to the answer.
+
+20
+00:01:10,540 --> 00:01:13,400
+And that is what it makes the number odd.ok.
+
+21
+00:01:13,450 --> 00:01:16,550
+So everything else is a even number. OK.
+
+22
+00:01:16,570 --> 00:01:18,130
+Everything else is a evennumber.
+
+23
+00:01:18,550 --> 00:01:24,610
+That means the last bits decide whether the number would be odd or it would be even.
+
+24
+00:01:25,060 --> 00:01:25,950
+What we need to do.
+
+25
+00:01:25,960 --> 00:01:29,530
+We need to check if last bit as one.
+
+26
+00:01:31,000 --> 00:01:38,410
+Or it is not. OK, what we can do is let's say we have some numbered zero zero zero one zero one zero
+
+27
+00:01:38,410 --> 00:01:39,040
+one one.
+
+28
+00:01:39,490 --> 00:01:41,050
+What we can do we can do
+
+29
+00:01:41,440 --> 00:01:43,080
+And with this one?
+
+30
+00:01:43,190 --> 00:01:44,740
+OK, what is this one?
+
+31
+00:01:44,750 --> 00:01:53,160
+This one is nothing but zero zero zero zero zero zero zero zero and one. if you do an AND and what
+
+32
+00:01:53,170 --> 00:01:54,790
+could be a possibility doing in 
+
+33
+00:01:54,790 --> 00:01:57,010
+AND. so we have lots of zeros here,
+
+34
+00:01:57,010 --> 00:01:59,680
+the only thing we will get is at the last positions.
+
+35
+00:01:59,680 --> 00:02:05,020
+If the last position is one that means this position was one, OK?
+
+36
+00:02:05,380 --> 00:02:07,000
+And that means, this number is odd.
+
+37
+00:02:07,780 --> 00:02:11,960
+But suppose the last position if it is zero, then we will get a zero here.
+
+38
+00:02:12,440 --> 00:02:16,540
+That means this number is actually even. OK.
+
+39
+00:02:16,870 --> 00:02:23,140
+So I hope you understood how we can check whether the numbers is odd or even.  let me show you a quick
+
+40
+00:02:23,260 --> 00:02:24,530
+demo in the code as well.
+
+41
+00:02:25,090 --> 00:02:27,730
+So if I have... let's say.
+
+42
+00:02:30,210 --> 00:02:30,990
+this code
+
+43
+00:02:32,730 --> 00:02:42,450
+I can simply put a if...else... so int x, cin c. I can check if x AND one, I can cout odd else I can cout
+
+44
+00:02:42,450 --> 00:02:43,050
+.
+
+45
+00:02:47,670 --> 00:02:55,290
+So. ./odd, if I give five So file is odd. if I give 8, 8 is even. if I give 32
+
+46
+00:02:55,320 --> 00:02:56,040
+It's odd.
+
+47
+00:02:56,430 --> 00:02:58,410
+It's even, if I give 33.
+
+48
+00:02:59,130 --> 00:03:01,880
+It's odd, OK, 32 is even 33 is old.
+
+49
+00:03:02,310 --> 00:03:08,270
+So I hope now you understood how we can use this AND one to find out the last bit.
+
+50
+00:03:09,030 --> 00:03:09,390
+OK.
+
+51
+00:03:09,930 --> 00:03:11,910
+And that's it.
+
+52
+00:03:12,000 --> 00:03:13,740
+That's it for this lecture.
+
+53
+00:03:14,460 --> 00:03:15,900
+So thank you for watching.
+
+54
+00:03:16,030 --> 00:03:16,440
+Bye Bye
+

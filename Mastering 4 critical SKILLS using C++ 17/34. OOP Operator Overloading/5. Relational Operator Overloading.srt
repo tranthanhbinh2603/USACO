@@ -1,0 +1,127 @@
+1
+00:00:01,020 --> 00:00:06,810
+Let's define the regional operators, which might help us to sort the objects in a class in a very intuitive
+
+2
+00:00:06,810 --> 00:00:12,620
+way if we have an employee class here and we would like to make a certain let's say we'd like to it
+
+3
+00:00:12,670 --> 00:00:18,860
+sorted based on ID salary and not see it over here less than we'd need another object.
+
+4
+00:00:19,080 --> 00:00:22,130
+So we're comparing our variables with the other object.
+
+5
+00:00:22,140 --> 00:00:26,450
+Variables used to make a simple comparison to yourself with logic.
+
+6
+00:00:26,730 --> 00:00:28,250
+Order them in the way that you would like.
+
+7
+00:00:28,260 --> 00:00:32,720
+So we would like to compare first and then on Saturday the so on.
+
+8
+00:00:33,090 --> 00:00:37,110
+Once we define that, we now can actually compare every number.
+
+9
+00:00:37,110 --> 00:00:39,340
+One is this then and number two.
+
+10
+00:00:39,690 --> 00:00:44,940
+What's interesting here is if you have if you have a set of employees and would like to sort of them
+
+11
+00:00:45,240 --> 00:00:48,220
+the operator overloading would be working directly over them.
+
+12
+00:00:48,540 --> 00:00:53,040
+Remember before the operator overloading list, then you cannot do that.
+
+13
+00:00:53,040 --> 00:00:56,930
+You have to give some function here to be able to compare two things together.
+
+14
+00:00:57,120 --> 00:01:02,430
+But if you overloaded this operator, they are now like numbers, they can be compared together.
+
+15
+00:01:03,280 --> 00:01:04,160
+So far, so good.
+
+16
+00:01:04,170 --> 00:01:06,110
+But there is one one one issue here.
+
+17
+00:01:06,390 --> 00:01:12,060
+What if I would like to be more flexible on overloading, let's say, once on Saturday?
+
+18
+00:01:12,060 --> 00:01:15,960
+Once again, I'd want to know in different ways because no, I have only one default way.
+
+19
+00:01:16,560 --> 00:01:17,480
+There are two ways.
+
+20
+00:01:17,490 --> 00:01:21,830
+One way we did before you just defined some function that can compare two things together.
+
+21
+00:01:22,260 --> 00:01:23,900
+The other way is very similar to it.
+
+22
+00:01:23,910 --> 00:01:26,330
+You defined something we call the function collaborator.
+
+23
+00:01:26,760 --> 00:01:34,590
+So it is a clause that's going to compare by salary and it takes this operator like a function function
+
+24
+00:01:34,590 --> 00:01:37,200
+call and it takes this first quarter of this second.
+
+25
+00:01:37,710 --> 00:01:43,080
+When you are competing in whatever way and in practice you create one of these comparators.
+
+26
+00:01:43,080 --> 00:01:46,650
+One of these we call it conductor class and we give it the competitor.
+
+27
+00:01:46,980 --> 00:01:52,620
+The sort of function is going to use a competitor by sending it to different objects together with the
+
+28
+00:01:52,620 --> 00:01:54,660
+function call and make the comparison.
+
+29
+00:01:55,210 --> 00:02:00,490
+Remember, also, as we said, you can just do the function like we will compare and give it Embley.
+
+30
+00:02:00,510 --> 00:02:04,110
+Warren Beatty, this is just another way based on this function.
+
+31
+00:02:04,110 --> 00:02:04,770
+Corroborators.
+
+32
+00:02:06,620 --> 00:02:07,120
+That's it.

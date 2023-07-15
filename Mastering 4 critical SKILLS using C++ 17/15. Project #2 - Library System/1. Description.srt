@@ -1,0 +1,564 @@
+0
+1
+00:00:00,870 --> 00:00:03,310
+In this project we will implement a library system.
+1
+
+2
+00:00:03,330 --> 00:00:10,400
+The project would be a bit bigger comparing to the previous project. Any library, like
+2
+
+3
+00:00:10,410 --> 00:00:11,320
+when you go to the library
+3
+
+4
+00:00:11,370 --> 00:00:13,470
+you notice there are a lot of books,
+4
+
+5
+00:00:13,470 --> 00:00:18,000
+There are some computers, there's a program where you can search for some books.
+5
+
+6
+00:00:19,020 --> 00:00:23,610
+Probably the admin can see some maintained information about the books, like, for example, who borrowed
+6
+
+7
+00:00:23,970 --> 00:00:25,790
+a specific book in the system.
+7
+
+8
+00:00:26,190 --> 00:00:29,990
+We're going to create a very simple version of this classical system.
+8
+
+9
+00:00:31,020 --> 00:00:33,080
+There is a mainly one user for the system.
+9
+
+10
+00:00:33,090 --> 00:00:34,130
+It is just the admin,
+10
+
+11
+00:00:34,140 --> 00:00:35,310
+There are no more users.
+11
+
+12
+00:00:35,340 --> 00:00:38,550
+So we are building the system from the admin perspective.
+12
+
+13
+00:00:38,970 --> 00:00:45,660
+And over all, the admin can add a book, maybe add a user or perform some relevant operation for the book
+13
+
+14
+00:00:45,660 --> 00:00:47,730
+or for the user or for both of them together.
+14
+
+15
+00:00:48,700 --> 00:00:53,550
+You don't need to provide any login/logout functionalities, just very simple console system.
+15
+
+16
+00:00:54,570 --> 00:00:59,250
+When the system begins, there is a typically like a menu of a bunch of choices.
+16
+
+17
+00:00:59,250 --> 00:01:04,680
+The user here, the admin selects the choice, applies the operation and then the menu is going to be
+17
+
+18
+00:01:04,680 --> 00:01:05,150
+displayed
+18
+
+19
+00:01:05,160 --> 00:01:09,120
+again. this is the menu of 10 choices.
+19
+
+20
+00:01:09,120 --> 00:01:13,640
+Please read the choices and think for a minute what might be behind them.
+20
+
+21
+00:01:15,140 --> 00:01:17,920
+Let's try to list the details of these operations.
+21
+
+22
+00:01:18,410 --> 00:01:21,220
+The first book operation is just adding a book.
+22
+
+23
+00:01:21,590 --> 00:01:23,920
+As you know, every system needs some data.
+23
+
+24
+00:01:23,940 --> 00:01:26,870
+The core data here in the system is actually the books and the users.
+24
+
+25
+00:01:27,470 --> 00:01:30,710
+The admin needs to be able to add the books and each book is as following:
+25
+
+26
+00:01:31,160 --> 00:01:32,780
+there is some ID for the book,
+26
+
+27
+00:01:32,810 --> 00:01:34,730
+there is some name and there is some quantity.
+27
+
+28
+00:01:35,120 --> 00:01:40,820
+An example for that would be the ID is like 101 and the name, something like "CppHowToPorgram"
+28
+
+29
+00:01:40,820 --> 00:01:43,180
+no spaces here and the quantity is 7.
+29
+
+30
+00:01:43,190 --> 00:01:47,180
+So we have 7 books named CppHowToProgram.
+30
+
+31
+00:01:48,430 --> 00:01:51,020
+I'm using no spaces here just to make things simpler.
+31
+
+32
+00:01:51,520 --> 00:01:54,590
+The book ID is 101, in real projects
+32
+
+33
+00:01:54,640 --> 00:02:00,090
+There is always some ID attached to an object that we have like here, the book, for example.
+33
+
+34
+00:02:00,940 --> 00:02:05,590
+But to make it simpler, we are assuming that the user is going to provide the ID.
+34
+
+35
+00:02:06,010 --> 00:02:08,740
+But in practice, you probably will generate the ID by yourself.
+35
+
+36
+00:02:10,090 --> 00:02:12,280
+The second task is searching for a book.
+36
+
+37
+00:02:12,580 --> 00:02:17,320
+Someone came to the admin and asked him, I would like to know if there is a book named "CppHow
+37
+
+38
+00:02:17,320 --> 00:02:20,580
+ToProgram", for example, then he needs to search for that.
+38
+
+39
+00:02:21,290 --> 00:02:24,690
+You might think, OK, let's write the whole book name and just search for it.
+39
+
+40
+00:02:25,060 --> 00:02:28,720
+But there is a more efficient searching strategy, what we call a prefix,
+40
+
+41
+00:02:29,050 --> 00:02:33,400
+The prefix is an indicator to the first letters of a word.
+41
+
+42
+00:02:35,770 --> 00:02:41,320
+Specifically, let's say that we have these 4 books in the system "CppHowToProgram", "CppFor
+42
+
+43
+00:02:41,320 --> 00:02:43,650
+Dummies", "CppForAdvancedLevels" and "CoreJava".
+43
+
+44
+00:02:44,350 --> 00:02:46,540
+Then the query gives us "Cpp" only,
+44
+
+45
+00:02:46,750 --> 00:02:51,100
+So "Cpp" are the first three letters of three books.
+45
+
+46
+00:02:51,100 --> 00:02:52,690
+This book and this book and this book.
+46
+
+47
+00:02:53,110 --> 00:02:54,670
+So this is a prefix query.
+47
+
+48
+00:02:54,670 --> 00:03:00,550
+You give a small prefix which is just the initial letters and then he is finding every book
+48
+
+49
+00:03:00,550 --> 00:03:01,650
+starting with "Cpp".
+49
+
+50
+00:03:02,380 --> 00:03:09,660
+So if the query was "CppFo" then we have two books, starting with this prefix "CppForDummies", "Cpp
+50
+
+51
+00:03:09,670 --> 00:03:10,810
+ForAdvancedLevels".
+51
+
+52
+00:03:11,440 --> 00:03:15,880
+If the user entered "core", then "CoreJava" will be the book.
+52
+
+53
+00:03:15,910 --> 00:03:18,900
+If we entered "Java", nothing will be printed.
+53
+
+54
+00:03:18,910 --> 00:03:19,450
+Why?
+54
+
+55
+00:03:19,810 --> 00:03:23,710
+Because we are searching for "Java" as a prefix, any word start with "Java"? No
+55
+
+56
+00:03:23,980 --> 00:03:24,310
+"Java"
+56
+
+57
+00:03:24,320 --> 00:03:26,020
+Here is a part of the word.
+57
+
+58
+00:03:26,320 --> 00:03:28,060
+You might extend the program by yourself,
+58
+
+59
+00:03:28,070 --> 00:03:32,140
+If you would like to search for the keyword exist anywhere in the name,
+59
+
+60
+00:03:32,140 --> 00:03:32,710
+It's up to you.
+60
+
+61
+00:03:32,950 --> 00:03:36,760
+But here we are only maintaining the prefix of the search query.
+61
+
+62
+00:03:39,920 --> 00:03:45,460
+Another general operation might be that we would like to list all the books in the system. 
+62
+
+63
+00:03:45,950 --> 00:03:54,050
+if your system is listing the data, there is typically several columns in this data like here,
+63
+
+64
+00:03:54,290 --> 00:03:59,360
+You can imagine the admin is seeing a column for the ID and another column for the name and
+64
+
+65
+00:03:59,360 --> 00:04:01,330
+maybe third column for the quantities.
+65
+
+66
+00:04:01,730 --> 00:04:07,760
+So typically, one interesting question is what kind of ordering or sorting for the data should be provided?
+66
+
+67
+00:04:08,060 --> 00:04:13,400
+I'm here asking for 2 ordering also an order based on the IDs and order based on the names.
+67
+
+68
+00:04:13,680 --> 00:04:20,210
+So let's say that we have the following books, 1111, "Math1", 5041, "ArabicLiterature",
+68
+
+69
+00:04:20,210 --> 00:04:21,610
+one one blah, blah, blah.
+69
+
+70
+00:04:21,620 --> 00:04:27,650
+"Math2", if you would like to list the three books in the system, but we want them sorted by name,
+70
+
+71
+00:04:27,950 --> 00:04:32,270
+then "ArabicLiterature" should be the first letter A, then "Math1" and "Math2".
+71
+
+72
+00:04:32,810 --> 00:04:38,090
+But if you would like them to be listed by ID, then it should be 
+72
+
+73
+00:04:38,300 --> 00:04:44,420
+This guy is the smallest ID, so it should be "Math2" first, then this guy should be listed "Math1" second,
+73
+
+74
+00:04:44,600 --> 00:04:47,680
+And then this guy here is the third because it is the biggest ID.
+74
+
+75
+00:04:47,930 --> 00:04:50,000
+And I remember we said that the IDs are integer,
+75
+
+76
+00:04:50,010 --> 00:04:52,420
+So we are sorting here by integer.
+76
+
+77
+00:04:53,150 --> 00:04:54,380
+So this is the listing.
+77
+
+78
+00:04:54,380 --> 00:04:59,930
+And remember, always there are some criteria, which kind of column has a priority in ordering
+78
+
+79
+00:04:59,930 --> 00:05:00,440
+the data.
+79
+
+80
+00:05:03,250 --> 00:05:07,510
+There is also another functionality, and here it's more relevant about the users
+80
+
+81
+00:05:07,540 --> 00:05:12,090
+also, we would like to list which users borrowed a specific book.
+81
+
+82
+00:05:12,520 --> 00:05:17,620
+So given that we have several books, the admin want to know who borrowed something.
+82
+
+83
+00:05:18,070 --> 00:05:22,660
+The input would be something like a book name, let's say "Math1" as an input and the output would be
+83
+
+84
+00:05:22,660 --> 00:05:25,620
+the list of user names who borrowed a specific book.
+84
+
+85
+00:05:26,880 --> 00:05:32,550
+Moving to the other side, the user operations, also the admin might want to add a new user to the library because
+85
+
+86
+00:05:32,550 --> 00:05:38,550
+he would like to borrow some books from us, every book will have an integer ID and will have a name, feel free to add
+86
+
+87
+00:05:38,550 --> 00:05:39,520
+more features here.
+87
+
+88
+00:05:39,900 --> 00:05:46,410
+We are only requesting two features, the ability to borrow a book and to return a book, feel free to
+88
+
+89
+00:05:46,410 --> 00:05:46,620
+go more.
+89
+
+90
+00:05:46,830 --> 00:05:48,930
+You can think of a lot of extra features.
+90
+
+91
+00:05:52,120 --> 00:05:56,470
+As you know, borrowing a book is a very repetitive scenario in libraries, so each book has a specific
+91
+
+92
+00:05:56,470 --> 00:05:59,110
+number of copies, like remember the "CppHowToProgram",
+92
+
+93
+00:05:59,110 --> 00:06:03,360
+There were 7 copies of the book. to be able to borrow a book,
+93
+
+94
+00:06:03,370 --> 00:06:06,500
+The quantity recorded in the system must be greater than 0.
+94
+
+95
+00:06:06,970 --> 00:06:12,550
+So if there is a request to borrow a book that has a zero quantity, you should give an error message
+95
+
+96
+00:06:12,550 --> 00:06:15,880
+that there are no more copies in the system for that.
+96
+
+97
+00:06:16,930 --> 00:06:22,750
+If a user managed to borrow a specific book, then the computer quantity, about this book should be decreased.
+97
+
+98
+00:06:23,800 --> 00:06:25,150
+The scenario goes as following:
+98
+
+99
+00:06:25,240 --> 00:06:28,720
+The admin enters two things the username and the book name.
+99
+
+100
+00:06:29,290 --> 00:06:33,510
+And then if there is enough quantity of a book,
+100
+
+101
+00:06:33,910 --> 00:06:36,820
+The system will do two things,
+101
+
+102
+00:06:37,270 --> 00:06:44,160
+First is going to mark that the this user borrowed a specific copy and also decrease the available quantity
+102
+
+103
+00:06:44,180 --> 00:06:46,770
+with 1, if there is no available copies,
+103
+
+104
+00:06:46,780 --> 00:06:50,680
+If there are no available copies, the system notifies the admin about that.
+104
+
+105
+00:06:52,690 --> 00:06:58,750
+Returning a book is just the reverse of the last operation, so you mark that this user returned a copy,
+105
+
+106
+00:06:58,930 --> 00:07:01,590
+so he don't have the copy anymore,
+106
+
+107
+00:07:01,720 --> 00:07:04,420
+And also, you are going to increment the current quantity.
+107
+
+108
+00:07:04,420 --> 00:07:07,420
+If we have five copies at the moment, they will be six copies.
+108
+
+109
+00:07:10,420 --> 00:07:10,930
+Yeah.
+109
+
+110
+00:07:11,260 --> 00:07:14,050
+Generally speaking, your whole system should be integral.
+110
+
+111
+00:07:14,380 --> 00:07:20,020
+This means that your data should be correct, like really go and remove the user information and so
+111
+
+112
+00:07:20,020 --> 00:07:20,260
+on.
+112
+
+113
+00:07:23,080 --> 00:07:23,640
+That's all.

@@ -1,0 +1,331 @@
+1
+00:00:01,080 --> 00:00:05,870
+One of the nice topics to learn about is a pointer to pointer, although we practically don't use it
+
+2
+00:00:05,880 --> 00:00:14,010
+and we should avoid a little refresh if you have some variable bar and you have a pointer referring
+
+3
+00:00:14,010 --> 00:00:14,340
+to this.
+
+4
+00:00:14,340 --> 00:00:15,990
+But we know the following.
+
+5
+00:00:15,990 --> 00:00:19,110
+The VA has an address and has a value here in the memory.
+
+6
+00:00:19,560 --> 00:00:27,090
+And we know that this pointer, it's its value is an address pointing to the VA itself and its it itself
+
+7
+00:00:27,090 --> 00:00:28,110
+has an address here.
+
+8
+00:00:28,440 --> 00:00:36,270
+So now we have here the reference of this guy, the the pointer with it looking and the valuated looking
+
+9
+00:00:36,270 --> 00:00:36,930
+here eventually.
+
+10
+00:00:37,560 --> 00:00:41,430
+Now let's go one more step with that and learn about pointer to pointer.
+
+11
+00:00:41,640 --> 00:00:48,340
+A pointer to pointer can help us to create a chain of pointers where we are pointer is pointing to not
+
+12
+00:00:48,360 --> 00:00:53,660
+a normal variable is actually pointing to a pointer to to the value itself.
+
+13
+00:00:53,850 --> 00:00:56,100
+So it's actually pointing to another pointer.
+
+14
+00:00:56,370 --> 00:01:03,840
+So now here we have the pointer one and what the new pointer is has a value of another pointer.
+
+15
+00:01:04,140 --> 00:01:09,680
+So address looking to an address which is looking to an address to a value here.
+
+16
+00:01:10,200 --> 00:01:12,570
+Let's see more about that here.
+
+17
+00:01:12,570 --> 00:01:18,810
+If we try to define it as following, this is how you define a pointer to which you say pointer to pointer
+
+18
+00:01:19,080 --> 00:01:25,790
+or two, and it should now reference a pointer, something that is a three pointer.
+
+19
+00:01:26,160 --> 00:01:28,410
+So it's now referencing reference pointer one.
+
+20
+00:01:29,040 --> 00:01:34,770
+If you would like to go Werris Pointer to Pointer to pointer, it should reference something of type
+
+21
+00:01:34,770 --> 00:01:36,840
+pointer pointer like this.
+
+22
+00:01:36,840 --> 00:01:43,980
+Let's call it as the symbol here as as the pointer is reference something that should be Astrachan three
+
+23
+00:01:43,980 --> 00:01:44,440
+pointer.
+
+24
+00:01:45,060 --> 00:01:48,630
+Now let's see the memory of the guys here.
+
+25
+00:01:48,960 --> 00:01:55,260
+We have here the original reference of Devar and it's a value which is this guy and the value of ten.
+
+26
+00:01:55,950 --> 00:02:00,930
+And we have this normal guy also, which has its own address and looking to an address.
+
+27
+00:02:00,930 --> 00:02:01,740
+And there is a value.
+
+28
+00:02:01,740 --> 00:02:07,240
+So we have its own address and value and looking to our address here of the bar and the value.
+
+29
+00:02:07,710 --> 00:02:14,210
+Now let's see the pointer to it has its own new address and it is looking to an address which is looking
+
+30
+00:02:14,220 --> 00:02:19,710
+to an address which is looking to add value, have a value going to pointer three.
+
+31
+00:02:19,980 --> 00:02:25,620
+We have its own address, which is looking to pointer, which is looking to Pointer Pointer and another
+
+32
+00:02:25,620 --> 00:02:25,820
+value.
+
+33
+00:02:26,070 --> 00:02:30,210
+As you see, we have a chain of pointers in each point that has an address.
+
+34
+00:02:30,210 --> 00:02:34,890
+It could be an address of eventually a variable here or a pointer to another.
+
+35
+00:02:35,250 --> 00:02:36,490
+Another pointer blue.
+
+36
+00:02:36,610 --> 00:02:41,820
+Please make sure you understand how this printing's corresponding to this table.
+
+37
+00:02:44,030 --> 00:02:51,140
+Let's see how this can help us to create a 2D dynamic array in the memory I have here, a function that's
+
+38
+00:02:51,140 --> 00:02:53,580
+going to create for us as requested.
+
+39
+00:02:53,640 --> 00:02:57,020
+In the previous video, we learned how to create an array of pointers.
+
+40
+00:02:57,260 --> 00:02:59,800
+So the array itself was static.
+
+41
+00:03:00,170 --> 00:03:03,470
+And every every pointer, every pointer was dynamic.
+
+42
+00:03:03,680 --> 00:03:05,960
+Now making all of it dynamic.
+
+43
+00:03:06,260 --> 00:03:12,440
+So first of all, I'm saying that we have a pointer pointer B, which is something that's going to be
+
+44
+00:03:12,440 --> 00:03:12,950
+2D.
+
+45
+00:03:13,840 --> 00:03:23,980
+And then it's going to be rogue elements, let's say five, for example, every one of them is intriguer
+
+46
+00:03:23,980 --> 00:03:25,110
+pointer by itself.
+
+47
+00:03:25,420 --> 00:03:33,580
+So an point-to-point, they're looking to something that would be eventually five intriguer pointer
+
+48
+00:03:33,580 --> 00:03:33,900
+itself.
+
+49
+00:03:34,780 --> 00:03:40,330
+Now, once you define that, it's now more like the array of pointers that you had you iterate through
+
+50
+00:03:40,330 --> 00:03:44,620
+Birute and defining each one of them to be another array of type.
+
+51
+00:03:44,620 --> 00:03:47,080
+Entier of, of course.
+
+52
+00:03:48,070 --> 00:03:50,630
+Now you can deal with it as a normal array.
+
+53
+00:03:50,710 --> 00:03:54,500
+I would like you to check is this visualization to make it a bit easier.
+
+54
+00:03:54,520 --> 00:03:57,360
+I know that this isn't easy to to get from the beginning.
+
+55
+00:03:58,420 --> 00:04:01,420
+We have here the integral pointer pointer B.
+
+56
+00:04:03,520 --> 00:04:12,070
+And this guy is going to create here in line six and an rate of densify, one, two, three, four,
+
+57
+00:04:12,070 --> 00:04:15,250
+five, which is itself of type integral pointer.
+
+58
+00:04:15,250 --> 00:04:17,560
+So every element here will be another pointer.
+
+59
+00:04:18,100 --> 00:04:22,720
+And then we iterate over every rule of this five and create for every one of them.
+
+60
+00:04:22,720 --> 00:04:28,610
+That is going to be a new integer of of columns, which here nine.
+
+61
+00:04:28,640 --> 00:04:30,610
+So we are going to create nine elements.
+
+62
+00:04:31,030 --> 00:04:36,460
+So now we're looking about I would like you to make sure that you can see how these values are printing.
+
+63
+00:04:36,470 --> 00:04:45,160
+Here we have address of this integral pointer pointer B, which is referred to be and I am looking to
+
+64
+00:04:45,820 --> 00:04:48,100
+the first array here.
+
+65
+00:04:50,060 --> 00:04:55,790
+So it has the address of Pete and every one of them is looking, every cell of them is looking into
+
+66
+00:04:55,790 --> 00:05:00,020
+another array, which has an extra bepaid here.
+
+67
+00:05:01,190 --> 00:05:03,990
+If you would like to delete, you have to do to delete to avoid a.
+
+68
+00:05:04,580 --> 00:05:10,130
+You have to iterate over it, delete every rule from this guy's everyday Remgro, then delete the whole
+
+69
+00:05:10,400 --> 00:05:10,830
+array.
+
+70
+00:05:12,230 --> 00:05:13,030
+Take your time.
+
+71
+00:05:13,340 --> 00:05:14,870
+It's always bustling.
+
+72
+00:05:14,930 --> 00:05:17,830
+The best way to deal with it is drawing and thinking about drawing.
+
+73
+00:05:18,050 --> 00:05:20,020
+And yeah, that's it.
+
+74
+00:05:21,350 --> 00:05:26,870
+In practice, pointer to pointer is very style, so we really need it unless we are dealing, say,
+
+75
+00:05:26,870 --> 00:05:31,970
+with some CBIS or we are unlucky guys to work with some legacy code legacy mean very old.
+
+76
+00:05:31,970 --> 00:05:32,330
+Good.
+
+77
+00:05:34,090 --> 00:05:42,250
+Remember when we started the the best arguments to the program, we see something like character Point-to-point
+
+78
+00:05:42,310 --> 00:05:45,550
+Aragvi or character pointer and most of them are OK.
+
+79
+00:05:45,650 --> 00:05:48,500
+So this is where where you have to see Pointer Pointer.
+
+80
+00:05:48,500 --> 00:05:54,710
+Also when you study some some scenarios and what we call Lincolnesque in a structured course, it might
+
+81
+00:05:54,710 --> 00:05:55,960
+involve extra gastrique.
+
+82
+00:05:56,750 --> 00:05:59,480
+It's good to know about it, but we don't use in practice.
+
+83
+00:05:59,480 --> 00:06:02,330
+And this is some future reading that said.

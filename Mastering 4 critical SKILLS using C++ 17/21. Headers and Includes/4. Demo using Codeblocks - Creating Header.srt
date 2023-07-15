@@ -1,0 +1,134 @@
+0
+1
+00:00:00,960 --> 00:00:09,540
+In this video, you will learn how to create header files in cookbooks. So we go file, new,
+1
+
+2
+00:00:10,020 --> 00:00:12,900
+and select file. It gives you choices,
+2
+
+3
+00:00:12,900 --> 00:00:15,590
+do you want create a header file or a source file.
+3
+
+4
+00:00:15,720 --> 00:00:17,270
+So let's start with the header file.
+4
+
+5
+00:00:17,610 --> 00:00:19,620
+We say go. Next,
+5
+
+6
+00:00:19,650 --> 00:00:22,310
+It asks you what is the full path. Open,
+6
+
+7
+00:00:22,320 --> 00:00:23,220
+It would be the project.
+7
+
+8
+00:00:23,730 --> 00:00:33,990
+Let's call it calculator dot h, enter. You see here
+8
+
+9
+00:00:34,020 --> 00:00:35,340
+this will be the guard name.
+9
+
+10
+00:00:35,340 --> 00:00:39,930
+It asks you would to add it. add it in both of them and then finish.
+10
+
+11
+00:00:39,930 --> 00:00:46,730
+You will notice a header file created for you with some initial guard and you will notice it exists
+11
+
+12
+00:00:46,740 --> 00:00:47,110
+here.
+12
+
+13
+00:00:47,580 --> 00:00:51,870
+You can also come here and again create some source file for it.
+13
+
+14
+00:00:51,870 --> 00:00:59,270
+So you see files, go with source, go next, and C++.
+14
+
+15
+00:00:59,310 --> 00:01:00,420
+Let's give it a name.
+15
+
+16
+00:01:00,930 --> 00:01:11,730
+Let's say calculator dot cpp, save, add for both of them, finish, and then it appeared here.
+16
+
+17
+00:01:12,030 --> 00:01:15,210
+If you're right click to go to the project itself.
+17
+
+18
+00:01:18,200 --> 00:01:19,430
+Yeah, open project in the file browser.
+18
+
+19
+00:01:20,030 --> 00:01:24,350
+This is now what is in the browser itself.
+19
+
+20
+00:01:24,620 --> 00:01:28,610
+Remember, if you would like to remove them, remove them first from here, it will remove them completely
+20
+
+21
+00:01:28,610 --> 00:01:32,570
+from the hard disk, then, yes remove from the active project.
+21
+
+22
+00:01:33,320 --> 00:01:35,490
+Sorry, yeah, we need to close them also.
+22
+
+23
+00:01:36,440 --> 00:01:37,310
+No.
+23
+
+24
+00:01:37,380 --> 00:01:40,380
+It doesn't exist anymore and come back to the project.
+24
+
+25
+00:01:40,380 --> 00:01:46,040
+You come here and here and say remove. Now you also removed them from the project.
+25
+
+26
+00:01:47,990 --> 00:01:48,640
+Remove.
+26
+
+27
+00:01:49,370 --> 00:01:49,870
+That's it.

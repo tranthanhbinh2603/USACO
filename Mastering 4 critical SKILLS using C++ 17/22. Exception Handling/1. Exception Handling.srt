@@ -1,0 +1,819 @@
+0
+1
+00:00:01,440 --> 00:00:08,460
+One of the advanced topics in C++ is exception handling, and this is a mandatory topic in practice.
+1
+
+2
+00:00:09,810 --> 00:00:12,290
+Sometimes when we develop our applications,
+2
+
+3
+00:00:12,390 --> 00:00:16,370
+We may face conditions where we cannot complete the functions like a blocking issue.
+3
+
+4
+00:00:16,620 --> 00:00:17,630
+You can think of a lot.
+4
+
+5
+00:00:17,970 --> 00:00:22,620
+Let's say you are creating an array, but the system rejects creating the array and telling you that
+5
+
+6
+00:00:22,620 --> 00:00:24,000
+there is no enough memory.
+6
+
+7
+00:00:24,420 --> 00:00:29,880
+You are opening a file, and the system tells you that you cannot open this file due to some permissions issues.
+7
+
+8
+00:00:30,360 --> 00:00:35,480
+Let's say you are making some remote call.
+8
+
+9
+00:00:35,700 --> 00:00:41,310
+Let's say you are in a bank and making a remote call to some payment service or whatever service,
+9
+
+10
+00:00:41,670 --> 00:00:45,640
+and then there is a network disconnection that happened during the call,
+10
+
+11
+00:00:45,660 --> 00:00:49,830
+so the system suddenly cannot proceed anymore.
+11
+
+12
+00:00:50,460 --> 00:00:56,010
+Sometimes thinks about more logic. Let's say you are in a payment system, so you are paying a bill for someone,
+12
+
+13
+00:00:56,010 --> 00:00:56,430
+...
+13
+
+14
+00:00:56,790 --> 00:00:58,560
+but the money value is negative,
+14
+
+15
+00:00:58,560 --> 00:01:00,210
+It isn't just a low value,
+15
+
+16
+00:01:00,210 --> 00:01:01,000
+It's negative value,
+16
+
+17
+00:01:01,060 --> 00:01:05,670
+something is wrong with such a value, or you would like to compute the square root of X, but X is a negative value.
+17
+
+18
+00:01:05,700 --> 00:01:12,510
+Sometimes you are making coding mistakes like let's say we accessing the array out of the boundary, or let's say we are
+18
+
+19
+00:01:12,510 --> 00:01:14,880
+receiving a pointer to process, but the pointer is null.
+19
+
+20
+00:01:15,180 --> 00:01:21,150
+So there are a lot of things that can stop us from continuing processing, and this happens a lot in practice
+20
+
+21
+00:01:21,390 --> 00:01:27,180
+and we would like to communicate the problem, and we would like to handle it. In the industry,
+21
+
+22
+00:01:27,360 --> 00:01:30,000
+there are two major approaches to solve this problem.
+22
+
+23
+00:01:30,330 --> 00:01:32,460
+The first one is the error code approach,
+23
+
+24
+00:01:32,670 --> 00:01:38,880
+and the idea here is to return something to the caller to tell him that there is a problem here.
+24
+
+25
+00:01:39,090 --> 00:01:43,020
+One might say, OK, let's return a boolean success for true fail for false.
+25
+
+26
+00:01:43,290 --> 00:01:44,730
+This is good, but very limited.
+26
+
+27
+00:01:44,970 --> 00:01:47,970
+You need sometimes to communicate a reason.
+27
+
+28
+00:01:48,180 --> 00:01:50,700
+A more flexible approach is to return an integer,
+28
+
+29
+00:01:50,700 --> 00:01:51,900
+we call it an error code.
+29
+
+30
+00:01:52,170 --> 00:01:53,940
+If it is zero, it means success,
+30
+
+31
+00:01:54,090 --> 00:02:00,450
+Otherwise, like I was working in a company, for example, and we had a huge list of error codes for
+31
+
+32
+00:02:00,450 --> 00:02:02,520
+all of the scenarios that we figured in the system.
+32
+
+33
+00:02:02,730 --> 00:02:08,880
+So, when you return say error code 17, then we open our document and say, what is error 17?
+33
+
+34
+00:02:08,880 --> 00:02:12,830
+error 17, oh, error 17 is permission issue with opening a file.
+34
+
+35
+00:02:13,530 --> 00:02:17,220
+If you even noticed the function main is returning a zero.
+35
+
+36
+00:02:17,520 --> 00:02:20,250
+The point behind that is an error code.
+36
+
+37
+00:02:20,400 --> 00:02:26,180
+When you return a zero, it means that we are successful in return, and there are a few other returning values.
+37
+
+38
+00:02:26,200 --> 00:02:26,640
+...
+38
+
+39
+00:02:28,340 --> 00:02:34,010
+This is one approach and we are not going to use this approach, it is as simple as I said, the other
+39
+
+40
+00:02:34,010 --> 00:02:38,870
+approach is throwing an exception, which is now a programming mechanism.
+40
+
+41
+00:02:39,080 --> 00:02:44,660
+So the error code here is all about you and your team and what you define as error code and error scenarios.
+41
+
+42
+00:02:45,020 --> 00:02:51,820
+Throwing an exception is a mechanism that you can terminate the current function completely. In the future,
+42
+
+43
+00:02:51,830 --> 00:02:58,760
+I would like for you to try to read about the error code versus exceptions mechanism. So let's see
+43
+
+44
+00:03:00,260 --> 00:03:02,240
+how to throw an exception in C++.
+44
+
+45
+00:03:03,320 --> 00:03:10,430
+I have here a class bank account that has a value of 1000. Forget lines 7 and 8 for now.
+45
+
+46
+00:03:10,430 --> 00:03:10,720
+...
+46
+
+47
+00:03:11,060 --> 00:03:16,760
+So you have in your bank account 1000 money and would like to pay a bill of some value.
+47
+
+48
+00:03:17,090 --> 00:03:22,700
+So the logic here is if the money is greater than the bill value, let's say you have in your bank
+48
+
+49
+00:03:22,700 --> 00:03:27,110
+account 1000, but you would like to pay only something that is 100 values (100 dollars).
+49
+
+50
+00:03:27,110 --> 00:03:32,350
+So you can just subtract it and return through which you mean we succeeded to do the task,
+50
+
+51
+00:03:32,360 --> 00:03:36,140
+that we succeeded to pay the bill. On the other side,
+51
+
+52
+00:03:36,440 --> 00:03:42,800
+Let's say that you don't have enough money in your bank account, then return false. Notice here,
+52
+
+53
+00:03:42,980 --> 00:03:47,810
+returning false doesn't indicate there is an error or a blocking error.
+53
+
+54
+00:03:48,060 --> 00:03:49,310
+This isn't the case here.
+54
+
+55
+00:03:49,610 --> 00:03:53,710
+It just the logic of our code that we either can pay or can't.
+55
+
+56
+00:03:55,430 --> 00:03:58,880
+So if we sent to pay 100, it's going to work well,
+56
+
+57
+00:03:59,030 --> 00:04:03,000
+but if you want to pay 5000, it's going to not work well.
+57
+
+58
+00:04:03,410 --> 00:04:11,180
+Now, let's sent a negative value here. If the bill's value is less than zero, a developer here would think that it
+58
+
+59
+00:04:11,180 --> 00:04:12,120
+is very wrong
+59
+
+60
+00:04:12,230 --> 00:04:20,120
+if someone is calling my function with a negative value and this worse like to
+60
+
+61
+00:04:20,120 --> 00:04:23,540
+communicate to the caller that, hey, you shouldn't send such a value.
+61
+
+62
+00:04:23,660 --> 00:04:25,690
+Something definitely is wrong on your site.
+62
+
+63
+00:04:25,940 --> 00:04:30,110
+In other logic, someone would say, I just would like to return false for that, but I would like
+63
+
+64
+00:04:30,110 --> 00:04:35,780
+to say this is an invalid situation and would like to terminate the processing to see what is wrong
+64
+
+65
+00:04:35,780 --> 00:04:36,440
+in the system.
+65
+
+66
+00:04:37,100 --> 00:04:38,120
+So here is what happened.
+66
+
+67
+00:04:38,390 --> 00:04:45,470
+I'm calling word called throw, it is a reserved keyword to throw exceptions, and I'm throwing
+67
+
+68
+00:04:45,470 --> 00:04:47,230
+something called invalid argument.
+68
+
+69
+00:04:47,390 --> 00:04:55,700
+This is one of the structs in the system that is defined for you,
+69
+
+70
+00:04:55,850 --> 00:04:57,670
+and I'm giving an initial message here.
+70
+
+71
+00:04:57,890 --> 00:04:59,570
+So let's see what's going to happen here.
+71
+
+72
+00:05:01,110 --> 00:05:06,200
+If you look to the terminal (the console here), you will notice here the word terminate throwing
+72
+
+73
+00:05:06,270 --> 00:05:08,360
+an instance of invalid argument,
+73
+
+74
+00:05:08,570 --> 00:05:11,330
+and there is a message forward the word
+74
+
+75
+00:05:11,330 --> 00:05:12,950
+what, bill value can't be negative.
+75
+
+76
+00:05:12,950 --> 00:05:13,360
+...
+76
+
+77
+00:05:13,700 --> 00:05:18,470
+What happened is the program has been terminated completely. In line 8,
+77
+
+78
+00:05:18,470 --> 00:05:22,580
+It is going to go back to line 20 and then terminate the program.
+78
+
+79
+00:05:22,880 --> 00:05:26,210
+This line in line 21 will not be processed.
+79
+
+80
+00:05:26,240 --> 00:05:28,150
+The program will terminate completely.
+80
+
+81
+00:05:28,400 --> 00:05:33,440
+So as you see now, the throw statement helped us to terminate the whole program.
+81
+
+82
+00:05:33,890 --> 00:05:41,100
+C++ defined a bunch of structs or classes for you that you can use and will come back later to their
+82
+
+83
+00:05:41,180 --> 00:05:41,930
+different types.
+83
+
+84
+00:05:44,210 --> 00:05:45,850
+Let me show you something interesting.
+84
+
+85
+00:05:46,130 --> 00:05:50,960
+If you tried to use a vector of integer V, there are two ways to get the value of an index.
+85
+
+86
+00:05:50,960 --> 00:05:55,260
+You can see V of 25, and you can see V dot at 25.
+86
+
+87
+00:05:55,730 --> 00:06:02,600
+Now, what is the difference? this vector of length 10 only so these two are actually accessing out of
+87
+
+88
+00:06:02,600 --> 00:06:03,230
+the boundary.
+88
+
+89
+00:06:03,560 --> 00:06:06,320
+The V with the subscript operator,
+89
+
+90
+00:06:06,500 --> 00:06:11,150
+it doesn't do any index verification, it just returns it.
+90
+
+91
+00:06:11,480 --> 00:06:13,550
+So probably something like 25,
+91
+
+92
+00:06:13,850 --> 00:06:16,430
+It may not crush the application because it is very small value.
+92
+
+93
+00:06:16,430 --> 00:06:19,590
+So you just reading or writing so you will not corrupt a memory.
+93
+
+94
+00:06:19,760 --> 00:06:23,180
+So this T would actually print something maybe zero, some garbage value.
+94
+
+95
+00:06:23,810 --> 00:06:30,800
+But now, when you come to line 13, the dot_at function is going to validate and is going to throw an exception
+95
+
+96
+00:06:30,980 --> 00:06:32,810
+if you are in the wrong position.
+96
+
+97
+00:06:32,930 --> 00:06:34,070
+So you see here what happened.
+97
+
+98
+00:06:34,070 --> 00:06:39,650
+The program terminated with a function called range check, which is telling you that N, which is
+98
+
+99
+00:06:39,650 --> 00:06:42,830
+25 here, is greater than size, which is 10.
+99
+
+100
+00:06:43,280 --> 00:06:49,490
+So the difference between them that this one will throw an error that can terminate your whole application.
+100
+
+101
+00:06:49,670 --> 00:06:52,280
+The error name is out of range exception.
+101
+
+102
+00:06:53,000 --> 00:06:57,060
+Let's say get inside the member function of at. Open the STL function itself.
+102
+
+103
+00:06:57,230 --> 00:07:02,530
+You will notice the at function in the following: first column is some function called range
+103
+
+104
+00:07:02,540 --> 00:07:06,820
+check and then returning asterisk this,
+104
+
+105
+00:07:06,870 --> 00:07:11,420
+which is a class, the vector here is returning the position
+105
+
+106
+00:07:11,420 --> 00:07:12,740
+underscore, underscore n.
+106
+
+107
+00:07:15,460 --> 00:07:21,910
+Here is the range check function, they say if the underscore, underscore n, which is 25, greater
+107
+
+108
+00:07:21,910 --> 00:07:27,100
+than or equals 10, throw this exception and tell him that this is wrong.
+108
+
+109
+00:07:27,700 --> 00:07:29,290
+Now, you see what happened
+109
+
+110
+00:07:29,290 --> 00:07:34,690
+actually inside the function is: there is a call that might throw an exception,
+110
+
+111
+00:07:34,810 --> 00:07:37,060
+and then the normal access of the array.
+111
+
+112
+00:07:37,390 --> 00:07:41,470
+If this function throws an exception, then this line will not be processed.
+112
+
+113
+00:07:41,590 --> 00:07:44,200
+The whole stack would be terminated.
+113
+
+114
+00:07:44,830 --> 00:07:49,900
+Now, it's a good time to know about what we call exceptional propagation...
+114
+
+115
+00:07:49,900 --> 00:07:54,510
+...
+115
+
+116
+00:07:56,940 --> 00:07:58,140
+Yes, sorry.
+116
+
+117
+00:07:58,600 --> 00:08:02,830
+So, starting from the range check, the range check is going to throw an exception.
+117
+
+118
+00:08:02,980 --> 00:08:08,320
+It's going to stop the range check and jump back to the AT function, which is going to jump back to the
+118
+
+119
+00:08:08,710 --> 00:08:14,510
+main function, which is going to jump it back to the process OS (the one that called all of us).
+119
+
+120
+00:08:14,650 --> 00:08:19,090
+So you see here: there is propagation to the error terminating every function.
+120
+
+121
+00:08:19,780 --> 00:08:25,090
+The same case in the pay bill function, the pay bill is going to throw an exception, go back to the
+121
+
+122
+00:08:25,090 --> 00:08:30,010
+main, go back to the OS, terminate everything. We will come back later to this topic,
+122
+
+123
+00:08:30,010 --> 00:08:31,540
+It's called stack unwinding.
+123
+
+124
+00:08:33,340 --> 00:08:38,040
+Let's now introduce what we call catching the exception...
+124
+
+125
+00:08:38,350 --> 00:08:41,620
+Normally, we don't want to really just terminate our whole program,
+125
+
+126
+00:08:41,620 --> 00:08:43,780
+we would like actually to know there is a problem.
+126
+
+127
+00:08:44,090 --> 00:08:47,320
+So the C++ introduced what we call the try catch.
+127
+
+128
+00:08:47,320 --> 00:08:48,970
+It's very common in programming languages.
+128
+
+129
+00:08:49,180 --> 00:08:50,680
+So you do try here,
+129
+
+130
+00:08:50,710 --> 00:08:56,080
+Open a brace and close it, and you put here a scope of a bunch of statements,
+130
+
+131
+00:08:56,410 --> 00:09:04,330
+and there is a catch statement that has an object type reference of e of some object that's going
+131
+
+132
+00:09:04,330 --> 00:09:06,250
+to capture. What's going to happen
+132
+
+133
+00:09:06,250 --> 00:09:09,520
+is as following: this code is going to be processed.
+133
+
+134
+00:09:09,520 --> 00:09:12,180
+Does it through an exception? no. Does it through an exception? no.
+134
+
+135
+00:09:12,580 --> 00:09:14,050
+This is an exception? yes.
+135
+
+136
+00:09:14,260 --> 00:09:16,610
+Once it has happened, it jumps to the line 23.
+136
+
+137
+00:09:16,630 --> 00:09:21,640
+Before that, it used to terminate the whole function and jump back to the caller.
+137
+
+138
+00:09:21,940 --> 00:09:27,190
+But now, it is jumping to the catch, and checking is the exception of time invalid argument?
+138
+
+139
+00:09:27,370 --> 00:09:29,000
+If yes, get inside here.
+139
+
+140
+00:09:29,360 --> 00:09:33,440
+Now, notice that the program now didn't terminate.
+140
+
+141
+00:09:33,440 --> 00:09:35,580
+This cout Bye would be actually printed.
+141
+
+142
+00:09:35,860 --> 00:09:42,010
+So the purpose of try-catch is to catch the throwing errors and try to do something with it, which
+142
+
+143
+00:09:42,010 --> 00:09:44,160
+even you might try to throw something here again.
+143
+
+144
+00:09:44,320 --> 00:09:45,190
+Let's see this here.
+144
+
+145
+00:09:46,030 --> 00:09:48,730
+Now here the same logic,
+145
+
+146
+00:09:48,970 --> 00:09:55,990
+but I also after I looked it, I decided that maybe we should throw it again to the caller, and we
+146
+
+147
+00:09:55,990 --> 00:09:56,690
+throw it again.
+147
+
+148
+00:09:57,220 --> 00:10:02,340
+Now, you see the program again come back to be terminated, and this cout Bye would not be printed.
+148
+
+149
+00:10:02,710 --> 00:10:09,430
+So the logic is as following: if you found something that's really broken, you
+149
+
+150
+00:10:09,700 --> 00:10:14,260
+call a throw to stop every processing and propagates up to the caller one by one.
+150
+
+151
+00:10:14,950 --> 00:10:19,000
+...
+151
+
+152
+00:10:19,000 --> 00:10:19,480
+...
+152
+
+153
+00:10:20,470 --> 00:10:25,050
+The Try is going to try to catch something here and send it to the catch operator.
+153
+
+154
+00:10:25,210 --> 00:10:31,390
+You can think like if our system database cannot be reached, probably would like to try and stop this
+154
+
+155
+00:10:31,390 --> 00:10:35,240
+error and send some SMS messages to maybe the administrator.
+155
+
+156
+00:10:35,740 --> 00:10:40,450
+The catch is going to probably try to stop the error.
+156
+
+157
+00:10:40,930 --> 00:10:47,410
+Practically speaking, if you have a big system say low layers like function calling function,
+157
+
+158
+00:10:47,410 --> 00:10:52,210
+calling function, calling function, probably the low function will keep just throwing the error as it is,
+158
+
+159
+00:10:52,540 --> 00:11:00,190
+but the high functions probably have more logic to try to stop the error and make some judgment
+159
+
+160
+00:11:00,190 --> 00:11:00,530
+over it.
+160
+
+161
+00:11:00,860 --> 00:11:02,170
+These are the three components.
+161
+
+162
+00:11:02,350 --> 00:11:05,350
+Please, play with the code before moving to the next sessions.
+162
+
+163
+00:11:05,500 --> 00:11:11,740
+This is useful and future reading after you finish the exception handling topic.
+163
+
+164
+00:11:12,220 --> 00:11:12,720
+That's it.

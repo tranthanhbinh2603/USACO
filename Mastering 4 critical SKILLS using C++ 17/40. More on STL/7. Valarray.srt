@@ -1,0 +1,231 @@
+1
+00:00:01,260 --> 00:00:09,110
+The array is a container with a very focus on meth operation, sequential, linear, on some data structure,
+
+2
+00:00:10,290 --> 00:00:16,440
+some people doesn't like it, like the design of it is a bit not the best, but still nice to know about
+
+3
+00:00:16,440 --> 00:00:16,580
+it.
+
+4
+00:00:16,860 --> 00:00:19,590
+So let's say that we have here an array of numbers.
+
+5
+00:00:20,220 --> 00:00:24,030
+You can create a wide array of this array by saying that.
+
+6
+00:00:24,030 --> 00:00:26,610
+And five, it is the first track noticed.
+
+7
+00:00:26,610 --> 00:00:27,570
+It isn't like vectors.
+
+8
+00:00:27,570 --> 00:00:28,290
+You see that and.
+
+9
+00:00:29,000 --> 00:00:29,940
+And this is a bad thing.
+
+10
+00:00:30,210 --> 00:00:31,170
+So it is.
+
+11
+00:00:31,170 --> 00:00:34,130
+It is one and five which is taking five numbers.
+
+12
+00:00:34,530 --> 00:00:39,900
+So it is the first interesting thing you can call the absolute value over, over, over, over.
+
+13
+00:00:39,900 --> 00:00:45,600
+The vast array is going to apply absolute value over every element which is going to make every element
+
+14
+00:00:45,600 --> 00:00:51,330
+you're just supposed to that you can see just the summit, which is going to sum all of the values.
+
+15
+00:00:51,840 --> 00:00:59,070
+Now, if you try to say something like two times, V1 plus two is going element by element, some them
+
+16
+00:00:59,070 --> 00:01:03,820
+and multiply over all of them by two and return a new vector.
+
+17
+00:01:03,840 --> 00:01:08,990
+So this is an element twice abberation rootsier V two is just a street value.
+
+18
+00:01:09,010 --> 00:01:12,480
+So we want to be two is going to do what is going to
+
+19
+00:01:15,120 --> 00:01:20,070
+plus one and one is two and two minus two is zero.
+
+20
+00:01:20,400 --> 00:01:23,670
+Three plus three is six times to be six.
+
+21
+00:01:24,390 --> 00:01:30,150
+Four minus four is going to be zero, five is going to be zero.
+
+22
+00:01:31,560 --> 00:01:34,530
+Now you have here a new vector element.
+
+23
+00:01:34,530 --> 00:01:37,950
+Twice you can say something like we want equal equal V two.
+
+24
+00:01:38,160 --> 00:01:41,760
+So the result would be one zero one zero zero.
+
+25
+00:01:44,050 --> 00:01:45,280
+Uh.
+
+26
+00:01:49,110 --> 00:01:55,260
+If we say the year one and one plus one.
+
+27
+00:01:58,000 --> 00:02:00,520
+I doubt that this is one zero one zero zero.
+
+28
+00:02:06,720 --> 00:02:10,040
+Oh, sorry, this is about the three, so what do you want to be able to say?
+
+29
+00:02:10,060 --> 00:02:10,640
+It is correct.
+
+30
+00:02:10,830 --> 00:02:18,810
+So if we try to compare V1 and V2 with equality, one is one to minus two equal to Foldes three, three,
+
+31
+00:02:18,810 --> 00:02:22,800
+two, minus three, minus four by four is false.
+
+32
+00:02:22,830 --> 00:02:24,180
+Minus five and five is false.
+
+33
+00:02:24,330 --> 00:02:27,670
+So you see, you get a very low rate here of every element.
+
+34
+00:02:28,140 --> 00:02:32,640
+Now you can say the men and max, which is going to give you the minimum, is zero and the maximum will
+
+35
+00:02:32,640 --> 00:02:33,540
+be one.
+
+36
+00:02:34,710 --> 00:02:37,460
+Let's define a new Valory of four.
+
+37
+00:02:37,480 --> 00:02:38,340
+That is this way.
+
+38
+00:02:38,370 --> 00:02:39,410
+Zero one, two, three, four.
+
+39
+00:02:39,600 --> 00:02:44,850
+You can do something like two times V five plus one, which is going to multiply every single element
+
+40
+00:02:44,850 --> 00:02:47,830
+with two and then add one for them to two times.
+
+41
+00:02:47,830 --> 00:02:55,020
+The plus one is one two times one plus one is three times two plus one is five times the three plus
+
+42
+00:02:55,020 --> 00:03:03,450
+one is seven as you see is more of a very math operation, like a whole sequence of numbers.
+
+43
+00:03:03,900 --> 00:03:06,660
+Let's see some nice functions about the lower function.
+
+44
+00:03:06,900 --> 00:03:11,880
+You can do something like about two and five and then even you can call the good sum.
+
+45
+00:03:12,090 --> 00:03:17,790
+So it is what's going to happen the way that every element in V five would be to talk about it.
+
+46
+00:03:18,030 --> 00:03:19,400
+So V five is zero.
+
+47
+00:03:19,410 --> 00:03:19,950
+One, two, three.
+
+48
+00:03:19,950 --> 00:03:25,290
+It would be two to the zero to the one to the two to the three and all of that, some 250.
+
+49
+00:03:25,650 --> 00:03:27,740
+Now you can reverse it V five and two.
+
+50
+00:03:28,140 --> 00:03:34,350
+So now every element of the five will be squared zero to the to one or two to the war, two, three
+
+51
+00:03:34,350 --> 00:03:35,460
+to the two and so on.
+
+52
+00:03:36,300 --> 00:03:40,140
+You can also do something like on the fly two times to be five and six.
+
+53
+00:03:40,140 --> 00:03:42,840
+Again, the same logic, but it is a catch.
+
+54
+00:03:43,200 --> 00:03:45,750
+You cannot here have something temporary like that.
+
+55
+00:03:45,930 --> 00:03:49,560
+You can have it for the first argument, but you can't have it to the second enemy.
+
+56
+00:03:49,890 --> 00:03:53,160
+You need to take this in a battery first and then apply it.
+
+57
+00:03:53,550 --> 00:03:58,290
+As you see, it is very math operation for the guys who are doing some math application.
+
+58
+00:03:58,920 --> 00:03:59,460
+That's it.

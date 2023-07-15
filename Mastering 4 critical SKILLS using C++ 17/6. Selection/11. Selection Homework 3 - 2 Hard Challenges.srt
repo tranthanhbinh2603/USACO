@@ -1,0 +1,119 @@
+0
+1
+00:00:01,740 --> 00:00:11,850
+The third homework set. we will read a number X, then 6 numbers representing three Interval
+1
+
+2
+00:00:11,850 --> 00:00:15,920
+an interval is something that has a start and end, both of them inclusive.
+2
+
+3
+00:00:16,380 --> 00:00:22,500
+For example, here in this image, I am showing you three intervals, Interval from one to ten here
+3
+
+4
+00:00:22,590 --> 00:00:29,820
+starting at one, ending at ten and interval from five to six, starting at five, ending at six and
+4
+
+5
+00:00:29,820 --> 00:00:31,430
+interval from four to forty,
+5
+
+6
+00:00:31,470 --> 00:00:33,980
+Starting at four, ending at 40.
+6
+
+7
+00:00:34,320 --> 00:00:40,350
+You will read the number X which is seven here and we would like how many intervals X is part of.
+7
+
+8
+00:00:40,500 --> 00:00:45,140
+For example X here is a seven, seven is part of this interval and this interval.
+8
+
+9
+00:00:45,150 --> 00:00:48,540
+So it's part of two intervals in this case.
+9
+
+10
+00:00:48,540 --> 00:00:52,980
+Here we are reading number 10, and number 10 exists in these three intervals.
+10
+
+11
+00:00:53,760 --> 00:00:59,760
+And also the last test case; we have a number 10, which doesn't exist in any interval.
+11
+
+12
+00:01:00,630 --> 00:01:03,430
+All of the intervals would be given such that the start is less
+12
+
+13
+00:01:03,430 --> 00:01:04,350
+than or equal the end.
+13
+
+14
+00:01:04,650 --> 00:01:08,760
+So s1 will be less than or equal to e1, s2 will be less than or equal to e2, and so on.
+14
+
+15
+00:01:10,370 --> 00:01:16,880
+In the second assignment, you will read 2 intervals and you have to print their intersections
+15
+
+16
+00:01:16,880 --> 00:01:22,420
+if they don't intersect, print -1, for example, for the interval [1,6] and [3,8],
+16
+
+17
+00:01:22,670 --> 00:01:27,800
+the intersection is the interval [3,6] because the interval [1,6] is the numbers
+17
+
+18
+00:01:27,800 --> 00:01:32,240
+1, 2, 3, 4, 5, 6 and the interval [3,8] is the interval 3, 4, 5,
+18
+
+19
+00:01:32,240 --> 00:01:33,000
+6, 7, 8,
+19
+
+20
+00:01:33,290 --> 00:01:40,010
+So the intersection is 3, 4, 5, 6, which is [3,6]. For these four numbers,
+20
+
+21
+00:01:40,010 --> 00:01:41,690
+[1, 15] and [20, 30],
+21
+
+22
+00:01:41,700 --> 00:01:43,720
+These two intervals doesn't intersect,
+22
+
+23
+00:01:43,910 --> 00:01:44,690
+So we print
+23
+
+24
+00:01:44,960 --> 00:01:46,850
+-1, that's all.

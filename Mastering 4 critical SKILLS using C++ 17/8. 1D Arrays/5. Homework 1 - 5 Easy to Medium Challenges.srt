@@ -1,0 +1,304 @@
+0
+1
+00:00:01,020 --> 00:00:07,100
+Homework set number one. In the first problem would like to check if an array is an increasing or not,
+1
+
+2
+00:00:07,230 --> 00:00:12,900
+you will read an integer N  followed by reading N integers like here, reading four then four numbers,
+2
+
+3
+00:00:12,900 --> 00:00:14,120
+five then five numbers.
+3
+
+4
+00:00:14,700 --> 00:00:21,960
+We label an array as an increasing if every element is greater than or equal to the previous element.
+4
+
+5
+00:00:22,350 --> 00:00:25,710
+For example, consider here one, two, two five.
+5
+
+6
+00:00:26,100 --> 00:00:27,510
+The two is greater than one.
+6
+
+7
+00:00:27,750 --> 00:00:31,440
+Two is greater than or equal two, five is greater than equal two.
+7
+
+8
+00:00:31,620 --> 00:00:32,640
+So this is yes.
+8
+
+9
+00:00:32,640 --> 00:00:33,930
+This is an increasing array.
+9
+
+10
+00:00:34,530 --> 00:00:37,350
+On the other side, zero is less than one five.
+10
+
+11
+00:00:37,350 --> 00:00:39,300
+So this zero is less than one.
+11
+
+12
+00:00:39,300 --> 00:00:41,910
+So this breaks it, here -10 and ten,
+12
+
+13
+00:00:41,910 --> 00:00:43,950
+Ten is greater than or equal -10
+13
+
+14
+00:00:43,950 --> 00:00:45,450
+so yes, overall.
+14
+
+15
+00:00:45,810 --> 00:00:50,190
+So check for every element of it's greater than or equal to the previous element.
+15
+
+16
+00:00:51,210 --> 00:00:58,590
+And the second problem will read an integer, you will read an array and then we will have to do the following.
+16
+
+17
+00:00:58,590 --> 00:01:06,180
+We should find the minimum number and then find the maximum integer, replace each minimum with a maximum.
+17
+
+18
+00:01:06,510 --> 00:01:14,250
+For example, here is an array of seven numbers and then the minimum is one, and the maximum
+18
+
+19
+00:01:14,250 --> 00:01:14,700
+is ten.
+19
+
+20
+00:01:14,970 --> 00:01:16,260
+we would make a swap
+20
+
+21
+00:01:16,260 --> 00:01:21,170
+the minimum would be maximum, so the one would be ten and the maximum values would be the minimum values.
+21
+
+22
+00:01:23,060 --> 00:01:31,550
+in the third problem, we would be given an array of up to 1000 values, less than 1000 values and
+22
+
+23
+00:01:31,550 --> 00:01:34,510
+the values, all of them are between zero and 500.
+23
+
+24
+00:01:34,670 --> 00:01:38,020
+So every element in the array would be between zero and 500.
+24
+
+25
+00:01:39,320 --> 00:01:42,620
+The N numbers are ordered from small to large.
+25
+
+26
+00:01:43,220 --> 00:01:47,380
+So they are one, two, two, five, six, as you see they are sorted numbers.
+26
+
+27
+00:01:48,110 --> 00:01:50,920
+We would like to find only the unique list of them.
+27
+
+28
+00:01:51,380 --> 00:01:54,260
+For example, one is repeated twice,
+28
+
+29
+00:01:54,260 --> 00:01:55,250
+we need only one of them,
+29
+
+30
+00:01:55,250 --> 00:02:00,090
+The two we need one of them, the five one six twice when only one of them and so on.
+30
+
+31
+00:02:00,440 --> 00:02:02,130
+So these are the unique list.
+31
+
+32
+00:02:02,150 --> 00:02:08,600
+In other words, we are getting rid of the duplicate numbers.
+32
+
+33
+00:02:09,110 --> 00:02:11,330
+We need to preserve the order, which would be the case here.
+33
+
+34
+00:02:11,330 --> 00:02:15,530
+preserving the given order means, seven here is given before nine 
+34
+
+35
+00:02:15,860 --> 00:02:19,920
+then you should have a seven before nine, given that the list is ordered.
+35
+
+36
+00:02:19,930 --> 00:02:24,650
+this doesn't make a lot of sense here, but if the list is unordered, as we will see in another assignment,
+36
+
+37
+00:02:24,920 --> 00:02:26,090
+then it would make sense for you.
+37
+
+38
+00:02:26,150 --> 00:02:29,090
+So for now, you can focus on making them unique numbers.
+38
+
+39
+00:02:29,570 --> 00:02:31,200
+So observe they are ordered here.
+39
+
+40
+00:02:31,250 --> 00:02:32,660
+This also will be sorted.
+40
+
+41
+00:02:33,270 --> 00:02:36,860
+I would like you to consider the following constraints, first
+41
+
+42
+00:02:36,860 --> 00:02:38,420
+don't use nested loops.
+42
+
+43
+00:02:38,900 --> 00:02:45,120
+Second, you either use only one single array or even do it without using arrays at all.
+43
+
+44
+00:02:45,500 --> 00:02:49,130
+So feel free to go as hard as you can.
+44
+
+45
+00:02:50,150 --> 00:02:52,190
+In this constraints.
+45
+
+46
+00:02:53,160 --> 00:02:59,610
+In the fourth number, we would like to check if something, if an array given, would be palindrome or not, a string
+46
+
+47
+00:02:59,610 --> 00:03:03,960
+or an array is palindrome if we can read it from the backward seem as forward.
+47
+
+48
+00:03:03,960 --> 00:03:05,990
+For example, here, the array,
+48
+
+49
+00:03:06,000 --> 00:03:07,560
+one, two, three, two, one
+49
+
+50
+00:03:07,960 --> 00:03:11,180
+this is palindrome because regardless if you read it form forward or backward 
+50
+
+51
+00:03:11,190 --> 00:03:13,520
+it's same and so on.
+51
+
+52
+00:03:13,530 --> 00:03:15,580
+So you will read an array and judge it with
+52
+
+53
+00:03:15,600 --> 00:03:16,950
+yes, if it's palindrome with.
+53
+
+54
+00:03:16,950 --> 00:03:18,600
+no it isn't palindrome array.
+54
+
+55
+00:03:20,410 --> 00:03:26,860
+in the fifth problem, you would like to read an array of N numbers, find the smallest possible result
+55
+
+56
+00:03:26,860 --> 00:03:34,870
+of the following expression: A[i] + A[j] + j -1, try when you sketch the solution to
+56
+
+57
+00:03:34,870 --> 00:03:41,770
+this problem, to think about kind of evidence or proof or like a good intuition why your approach should
+57
+
+58
+00:03:41,770 --> 00:03:42,790
+be correct.
+58
+
+59
+00:03:43,000 --> 00:03:50,620
+I found some guys doing some solutions that they lack the ability to justify the correctness of their
+59
+
+60
+00:03:51,280 --> 00:03:52,260
+proposed solution.
+60
+
+61
+00:03:52,910 --> 00:03:53,160
+That's all.

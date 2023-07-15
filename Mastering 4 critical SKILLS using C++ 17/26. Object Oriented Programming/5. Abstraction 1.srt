@@ -1,0 +1,364 @@
+0
+1
+00:00:01,140 --> 00:00:07,060
+One of the fundamental concepts in OOP is the abstraction concept.
+1
+
+2
+00:00:07,260 --> 00:00:09,320
+So let's introduce one feature of it.
+2
+
+3
+00:00:09,870 --> 00:00:17,670
+So here is the rectangle class, and these are the potential members and potential functionalities
+3
+
+4
+00:00:17,670 --> 00:00:18,000
+for it.
+4
+
+5
+00:00:18,000 --> 00:00:21,780
+If we are thinking, say, a struct, we need to define the double width and height.
+5
+
+6
+00:00:21,960 --> 00:00:28,020
+We might provide some useful constructors, and we would like to have a compute area functionality and
+6
+
+7
+00:00:28,020 --> 00:00:29,580
+compute parameter functionalities.
+7
+
+8
+00:00:29,910 --> 00:00:34,830
+If you would like to create an object, you create R1 and R2. You
+8
+
+9
+00:00:34,830 --> 00:00:40,020
+access the width and height, you can compute area or use the constructor for the values, you compute the area and
+9
+
+10
+00:00:40,020 --> 00:00:41,150
+set area, and so on.
+10
+
+11
+00:00:41,490 --> 00:00:45,420
+Now, there is no here access modifier.
+11
+
+12
+00:00:45,450 --> 00:00:51,180
+There is nothing that tells you you can access the variable or the function. Moving
+12
+
+13
+00:00:51,180 --> 00:00:53,250
+to a rectangle as a class.
+13
+
+14
+00:00:53,520 --> 00:01:01,620
+You will typically notice we write most, if not all, the data members as a private section so that we
+14
+
+15
+00:01:01,620 --> 00:01:07,370
+prevent others from accessing our member data directly. On the other side,
+15
+
+16
+00:01:07,410 --> 00:01:13,790
+we are going to put all the functionalities that are needed for the user like compute area and compute
+16
+
+17
+00:01:13,800 --> 00:01:15,480
+perimeter in public section.
+17
+
+18
+00:01:16,140 --> 00:01:21,870
+If we put the width and height as a private section, the external user now has no way to access them,
+18
+
+19
+00:01:21,870 --> 00:01:23,650
+but what if you would like to access them?
+19
+
+20
+00:01:24,120 --> 00:01:30,000
+This introduces the concept of setters and getters, and this is one fundamental thing of the abstraction
+20
+
+21
+00:01:30,000 --> 00:01:30,470
+concept.
+21
+
+22
+00:01:30,900 --> 00:01:37,980
+The user here is enjoying the ability to change the height and width of the functionality, but through
+22
+
+23
+00:01:37,980 --> 00:01:38,580
+functions.
+23
+
+24
+00:01:38,760 --> 00:01:42,060
+Given that he is calling functions, we can have a lot of control here.
+24
+
+25
+00:01:42,240 --> 00:01:44,370
+We call them setters and getters.
+25
+
+26
+00:01:44,580 --> 00:01:48,710
+The center functionality like set height is setting a value.
+26
+
+27
+00:01:48,870 --> 00:01:49,790
+So it set height,
+27
+
+28
+00:01:49,800 --> 00:01:52,780
+we change the height. The getter is returning the height.
+28
+
+29
+00:01:53,130 --> 00:01:59,730
+Now, in terms of the class, we now can access using dot set width and set height, and we have our public
+29
+
+30
+00:01:59,910 --> 00:02:00,750
+functionalities.
+30
+
+31
+00:02:02,280 --> 00:02:09,960
+So the setters and getters also are known as getters as accessors and mutators as setters as I said,
+31
+
+32
+00:02:09,960 --> 00:02:15,210
+the accessor can do the get to read and change the accessed value,
+32
+
+33
+00:02:15,390 --> 00:02:21,840
+but the mutator can do the set to mutate or change the value. Based on your IDE, you might be able
+33
+
+34
+00:02:21,840 --> 00:02:25,240
+to generate the setters and getters in an automatic way.
+34
+
+35
+00:02:25,530 --> 00:02:31,860
+So what happens typically is you define say width and height, then in eclipse
+35
+
+36
+00:02:31,890 --> 00:02:37,290
+for example, if you press the alt-shift-S inside the class, you will have a menu that has something
+36
+
+37
+00:02:37,290 --> 00:02:40,350
+named getters, setters, generate getters and setters.
+37
+
+38
+00:02:40,650 --> 00:02:46,800
+You can go and mark the get and set that you would like to get. There is also here an option to separate
+38
+
+39
+00:02:46,800 --> 00:02:52,080
+the definition from the declaration (important to try), and then you click, OK, once you did that, it
+39
+
+40
+00:02:52,080 --> 00:02:56,730
+is going to generate for you the getters and the setters for your data variables.
+40
+
+41
+00:02:57,030 --> 00:03:01,500
+If you would like to change the style of the getters and setters, for example, you will notice I'm
+41
+
+42
+00:03:01,500 --> 00:03:02,750
+using all with capital letters.
+42
+
+43
+00:03:03,000 --> 00:03:08,490
+You can go to Eclipse, window, preferences, here, here, and then say here I would like get with G
+43
+
+44
+00:03:08,790 --> 00:03:12,140
+capital and the boolean to start with is, and so on.
+44
+
+45
+00:03:13,680 --> 00:03:16,050
+Let's go back to the accessor and mutator.
+45
+
+46
+00:03:16,260 --> 00:03:19,020
+So for a while it looks like an easy issue.
+46
+
+47
+00:03:19,020 --> 00:03:22,010
+We have variables, and we provide setters and getters.
+47
+
+48
+00:03:22,260 --> 00:03:23,040
+Here is a point.
+48
+
+49
+00:03:23,340 --> 00:03:30,030
+There is a debate between software engineers about setters and getters, and this is typically is an informal
+49
+
+50
+00:03:30,030 --> 00:03:31,370
+in OOP classes sadly.
+50
+
+51
+00:03:31,770 --> 00:03:40,140
+So there is a debate if they are evil or not, should we avoid them as possible or not, to what degree
+51
+
+52
+00:03:40,140 --> 00:03:42,260
+they eventually break encapsulation?
+52
+
+53
+00:03:42,540 --> 00:03:50,340
+If I provided people with getters and setters, eventually they are typically playing and changing
+53
+
+54
+00:03:50,340 --> 00:03:54,270
+our data variables so they might cause problems, for example, in integrity.
+54
+
+55
+00:03:54,720 --> 00:04:00,060
+So here are fundamental tips so that I would like you to use during this course and after the course
+55
+
+56
+00:04:00,060 --> 00:04:02,910
+feel free to go and read these links and educate yourself more.
+56
+
+57
+00:04:03,420 --> 00:04:09,510
+First of all, don't be the guy who just goes and generate setters and getters for every field without
+57
+
+58
+00:04:09,510 --> 00:04:14,310
+thinking. The setters can allow people to inject wrong data causing problems.
+58
+
+59
+00:04:14,610 --> 00:04:18,330
+The getters can return critical details out of your codes.
+59
+
+60
+00:04:18,540 --> 00:04:23,700
+So you should think twice about what are you really giving setters and getters for it.
+60
+
+61
+00:04:24,090 --> 00:04:27,930
+There is one of the very nice rules that you can apply.
+61
+
+62
+00:04:29,070 --> 00:04:36,450
+Don't let users ask your class for getters and setters to do some task for you, do the work
+62
+
+63
+00:04:36,450 --> 00:04:37,020
+by yourself.
+63
+
+64
+00:04:37,020 --> 00:04:37,860
+What does this mean?
+64
+
+65
+00:04:37,950 --> 00:04:44,400
+You have a class provide whatever needed functionalities using this class and minimize the dependency
+65
+
+66
+00:04:44,400 --> 00:04:45,630
+on your getters and setters.
+66
+
+67
+00:04:45,840 --> 00:04:48,840
+Some guys would make a class and just felt it with getters and setters,
+67
+
+68
+00:04:49,080 --> 00:04:53,880
+and then you are calling the getters and setters doing a lot of logic by yourself as an external user to the
+68
+
+69
+00:04:53,880 --> 00:04:54,270
+class.
+69
+
+70
+00:04:54,630 --> 00:05:01,200
+The right way is you provide the functionality so that people really rarely need to interact a lot with
+70
+
+71
+00:05:01,200 --> 00:05:04,140
+your getters and setters, and change a lot of things in your class.
+71
+
+72
+00:05:04,350 --> 00:05:07,710
+This is the proper way to handle the getters and setters.
+72
+
+73
+00:05:08,010 --> 00:05:08,850
+That's it for today.

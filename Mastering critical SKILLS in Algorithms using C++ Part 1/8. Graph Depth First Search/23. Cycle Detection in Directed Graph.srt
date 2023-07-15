@@ -1,0 +1,967 @@
+1
+00:00:00,930 --> 00:00:09,180
+Um, to finish this section about the device, we learned how to use this first to verify undirected
+
+2
+00:00:09,180 --> 00:00:11,880
+graphs to verify if there's a cycle in undirected graph.
+
+3
+00:00:12,360 --> 00:00:18,720
+We enter this section by learning about the EJU classification, which helps us to learn how to effectively
+
+4
+00:00:19,110 --> 00:00:22,650
+learn if there is a cycle in a directed graph or not using the office.
+
+5
+00:00:23,070 --> 00:00:27,870
+In the next section, we'll learn about the topology concert and we will learn an easy way to figure
+
+6
+00:00:27,870 --> 00:00:28,230
+it out.
+
+7
+00:00:28,530 --> 00:00:30,240
+Also cycles in directed graphs.
+
+8
+00:00:30,690 --> 00:00:31,380
+So let's see.
+
+9
+00:00:32,760 --> 00:00:37,980
+So far, we learned about this cycle detections using undirected graphs.
+
+10
+00:00:39,180 --> 00:00:44,820
+But when we try to implement and think about that for that directed graphs, we notice that the Vista
+
+11
+00:00:44,820 --> 00:00:50,190
+array isn't enough and we give an example in the homework for that and the homework solution.
+
+12
+00:00:51,600 --> 00:00:57,660
+Notice see here in the in in in, uh, in in.
+
+13
+00:00:58,650 --> 00:01:01,590
+It is a problem, we have a vested note.
+
+14
+00:01:02,160 --> 00:01:04,390
+But the key problem is we do know.
+
+15
+00:01:04,410 --> 00:01:07,470
+We do not know if this new is part of a cycle or not.
+
+16
+00:01:07,830 --> 00:01:11,310
+That's why we were confused the visit information wouldn't do enough.
+
+17
+00:01:12,000 --> 00:01:18,100
+When you look to their lifting graph here, you will notice that not zero one two two one one two two
+
+18
+00:01:18,230 --> 00:01:24,730
+two zero one two harvested two now is trying to go back to zero zero is a cycle now here.
+
+19
+00:01:24,750 --> 00:01:32,310
+This is creating a cycle and we can see that zero is actually an ancestor of two because there is a
+
+20
+00:01:32,310 --> 00:01:36,150
+bus from here to here, but there is actually bus from two to zero.
+
+21
+00:01:36,570 --> 00:01:39,360
+So I am and sister for you and your ancestor.
+
+22
+00:01:39,360 --> 00:01:41,040
+For me, this is cycle.
+
+23
+00:01:43,070 --> 00:01:47,050
+In the second case, zero winter, two, one winter to two.
+
+24
+00:01:47,300 --> 00:01:50,930
+And all of them harvested now zero is an ancestor of two.
+
+25
+00:01:52,210 --> 00:01:58,210
+Then now we are trying to start again to two from zero to two two is again vested.
+
+26
+00:01:58,420 --> 00:02:00,700
+But this time the information is is as it is.
+
+27
+00:02:00,970 --> 00:02:06,370
+Zillow is still insisted for two zero still and still for two and two is descendant of zero.
+
+28
+00:02:06,970 --> 00:02:09,400
+So this is in a cycle.
+
+29
+00:02:10,330 --> 00:02:13,270
+This is a problem that happened with the device in directed graph.
+
+30
+00:02:13,720 --> 00:02:15,580
+Both of cases are vested.
+
+31
+00:02:16,000 --> 00:02:17,770
+This time, zero has a cycle.
+
+32
+00:02:17,770 --> 00:02:23,980
+Really, this time two doesn't have a cycle, so we know that the Vista array wasn't enough.
+
+33
+00:02:24,880 --> 00:02:31,270
+This means the note could be vested and can belong to more than one case in the recorded graphs.
+
+34
+00:02:31,630 --> 00:02:36,970
+And this takes us to a very new topic, which is age classification.
+
+35
+00:02:37,840 --> 00:02:44,620
+Now remember, this is a defense first three if you have a tree, if they face an undirected graph,
+
+36
+00:02:44,980 --> 00:02:49,390
+you end up with this deficit tree, which also exist in a directed graph.
+
+37
+00:02:51,140 --> 00:02:54,110
+We call this kind of this bolded it here.
+
+38
+00:02:54,140 --> 00:03:00,770
+We call them tree edges, and the tree edges are the edges that our.
+
+39
+00:03:02,790 --> 00:03:11,640
+The school used it, used it to navigate this ones that are dotted here, we ignored them because they
+
+40
+00:03:11,640 --> 00:03:13,950
+were four nodes that were visited already.
+
+41
+00:03:15,230 --> 00:03:17,750
+OK, now let's proceed more.
+
+42
+00:03:21,900 --> 00:03:23,130
+Let's do this first, this three.
+
+43
+00:03:23,490 --> 00:03:24,660
+We start at zero.
+
+44
+00:03:24,780 --> 00:03:26,880
+We go to one, go to two.
+
+45
+00:03:28,790 --> 00:03:34,340
+Good one, good, the two good to three to six so far, so good.
+
+46
+00:03:35,300 --> 00:03:41,110
+While doing this sort of kitchen, we will ignore the two zero edge because this vested will ignore
+
+47
+00:03:41,110 --> 00:03:47,530
+three one, because it is vested will ignore one two six because there's vested.
+
+48
+00:03:50,150 --> 00:03:53,790
+So these are the three edges that we have this one here, this one here.
+
+49
+00:03:54,170 --> 00:03:55,010
+This one here.
+
+50
+00:03:55,730 --> 00:03:56,540
+This one here.
+
+51
+00:04:00,440 --> 00:04:03,740
+All the other will be cancelled, then we will start from four.
+
+52
+00:04:04,010 --> 00:04:07,430
+And also this will be cancelled, this will be cancelled and this one would be used.
+
+53
+00:04:07,730 --> 00:04:09,800
+This bolded one are there.
+
+54
+00:04:10,780 --> 00:04:11,650
+Three edges.
+
+55
+00:04:12,670 --> 00:04:14,920
+And we have a lot of cancelled the edges.
+
+56
+00:04:15,760 --> 00:04:21,630
+There are, in fact, when you study them, there are three cases for this see.
+
+57
+00:04:21,670 --> 00:04:23,020
+Cancel the aegis.
+
+58
+00:04:24,400 --> 00:04:28,510
+OK, now I want you to remember the following we have two separate defense.
+
+59
+00:04:29,290 --> 00:04:34,600
+The first, the first of zero, ended up with zero one two three six and the second the effects of war
+
+60
+00:04:34,840 --> 00:04:36,730
+ended up between four and five.
+
+61
+00:04:37,510 --> 00:04:41,800
+Also, observe this three edges here that we will cancel them.
+
+62
+00:04:42,250 --> 00:04:45,460
+They actually went between the nodes of the single defense.
+
+63
+00:04:46,090 --> 00:04:52,500
+This edge that were cancel the year would actually, from our defense nodes to alter their first nodes
+
+64
+00:04:52,510 --> 00:04:56,620
+like four to two, for example, would clarify that a little more now.
+
+65
+00:04:59,550 --> 00:05:05,130
+In graph theory, we can classify the edge of a directed graph to four types.
+
+66
+00:05:05,730 --> 00:05:07,840
+The first case is a three edge.
+
+67
+00:05:07,860 --> 00:05:09,600
+This is the one that we learned before.
+
+68
+00:05:09,810 --> 00:05:13,380
+This is the one that built the first three four four four subgraph.
+
+69
+00:05:13,920 --> 00:05:19,560
+Specifically, when we check the Node V. we noticed that V is unvisited.
+
+70
+00:05:19,890 --> 00:05:25,620
+So we use its edge and we call it a diff is it's the we call it a three h.
+
+71
+00:05:26,970 --> 00:05:33,990
+Now, if if it happens that the vista of V is true, we have three cases for that.
+
+72
+00:05:35,080 --> 00:05:37,960
+Gives no one is what we call a forward edge.
+
+73
+00:05:38,530 --> 00:05:42,130
+And in this case, you is an ancestor of the.
+
+74
+00:05:43,170 --> 00:05:44,640
+In that year versus three.
+
+75
+00:05:45,450 --> 00:05:47,580
+Don't forget, this segment will be confused.
+
+76
+00:05:47,970 --> 00:05:52,470
+You is an ancestor of V in the current DFAC tree.
+
+77
+00:05:53,370 --> 00:05:54,300
+We will see an example.
+
+78
+00:05:55,140 --> 00:05:57,630
+And this happened within the same single day for.
+
+79
+00:05:59,250 --> 00:06:01,920
+The second case, which actually creates cycles.
+
+80
+00:06:02,460 --> 00:06:09,450
+We discover that V is an ancestor of you in the deficit tree and you is also an ancestor of V.
+
+81
+00:06:09,480 --> 00:06:12,150
+So zero to one, for example, and one go to zero.
+
+82
+00:06:12,630 --> 00:06:16,290
+This is like we call them back ages the third.
+
+83
+00:06:16,290 --> 00:06:22,420
+The case, which we call the cross age you is neither any sister nor descendant of V.
+
+84
+00:06:22,740 --> 00:06:29,790
+They do not have a relationship and this happen in two cases, either within a single day physical.
+
+85
+00:06:30,730 --> 00:06:37,900
+Or in between multiple different schools, remember, previously we have the zero one, two, three
+
+86
+00:06:37,900 --> 00:06:43,390
+six in a diverse school and then we have the four or five in a call and we observed that Ford wanted
+
+87
+00:06:43,390 --> 00:06:46,030
+to go to two two is in the previous day for school.
+
+88
+00:06:46,360 --> 00:06:47,310
+So this is a cross.
+
+89
+00:06:47,320 --> 00:06:49,000
+It is crossing things.
+
+90
+00:06:50,260 --> 00:06:52,210
+Let's see a visualization for that.
+
+91
+00:06:53,110 --> 00:06:55,570
+It is a graph that we just, uh, drawn.
+
+92
+00:06:56,740 --> 00:06:59,980
+Remember, the difference is zero cover only zero one two three six.
+
+93
+00:07:00,850 --> 00:07:01,270
+Now.
+
+94
+00:07:02,690 --> 00:07:06,560
+This black edges are the three edges.
+
+95
+00:07:08,120 --> 00:07:15,260
+This I have coloured problems, this let me call it orange, this orange edge is back.
+
+96
+00:07:15,650 --> 00:07:18,650
+It will carry cycle zero one two zero one two zero one two.
+
+97
+00:07:19,040 --> 00:07:22,340
+This is creating Cycle one two three one two three one two three.
+
+98
+00:07:24,010 --> 00:07:27,240
+Zero, six and one six, we call them forward the edge.
+
+99
+00:07:27,700 --> 00:07:34,270
+Look, in the first three one is an ancestor of six in there, the first the three.
+
+100
+00:07:34,990 --> 00:07:36,910
+What is the relationship between one and six?
+
+101
+00:07:37,390 --> 00:07:38,940
+One is ancestor of six.
+
+102
+00:07:39,010 --> 00:07:39,550
+Here I am.
+
+103
+00:07:39,550 --> 00:07:41,410
+Your parent, your big bird.
+
+104
+00:07:42,220 --> 00:07:44,980
+What is the relationship between zero and six in the deficit?
+
+105
+00:07:44,980 --> 00:07:45,340
+Three.
+
+106
+00:07:45,850 --> 00:07:47,200
+I am your ancestor.
+
+107
+00:07:49,090 --> 00:07:50,530
+Now look to.
+
+108
+00:07:52,450 --> 00:07:55,450
+These two edges here and to.
+
+109
+00:07:56,480 --> 00:08:03,290
+In the deficit three, there is no relationship between four and two, so it is neither ancestor nor
+
+110
+00:08:03,290 --> 00:08:04,190
+descendant for it.
+
+111
+00:08:04,340 --> 00:08:05,450
+This is across age.
+
+112
+00:08:05,960 --> 00:08:12,220
+This is across age and I like it more when it comes from civil defense codes because this is a separate
+
+113
+00:08:12,240 --> 00:08:17,810
+the fiscal and it's going to cross to the second if history making like a connection to it.
+
+114
+00:08:18,710 --> 00:08:23,180
+If you don't remember the point of the deficit three, you will keep thinking.
+
+115
+00:08:23,180 --> 00:08:27,440
+But food is built to two, but food is built into two to know we have to face up to.
+
+116
+00:08:27,980 --> 00:08:32,650
+We have zero one two three six is a defense, three we have four and five is a deficit.
+
+117
+00:08:32,660 --> 00:08:32,990
+Three.
+
+118
+00:08:33,380 --> 00:08:38,700
+You build the relationship of who is the ancestor of whom in their defense.
+
+119
+00:08:38,790 --> 00:08:39,110
+Three.
+
+120
+00:08:39,820 --> 00:08:44,420
+Please don't move beyond this slide before understanding these four types.
+
+121
+00:08:47,670 --> 00:08:50,160
+Look, how can we determine the ages?
+
+122
+00:08:50,910 --> 00:08:58,080
+This is take us to the second think relevant to the um relevant to the age classification, which is
+
+123
+00:08:58,080 --> 00:08:59,910
+timing the timing.
+
+124
+00:08:59,910 --> 00:09:05,550
+The note is simply giving the time for the new data to started processing and time when we finish the
+
+125
+00:09:05,550 --> 00:09:11,910
+processing as simple as we could here to erase, one of them is started and another is finished initialized
+
+126
+00:09:11,910 --> 00:09:12,600
+to minus one.
+
+127
+00:09:13,170 --> 00:09:14,730
+And this is our defense good.
+
+128
+00:09:15,360 --> 00:09:17,670
+When we start, we give it time here.
+
+129
+00:09:18,420 --> 00:09:23,790
+Then we commit to the time, then do our recursion once our recursion finished.
+
+130
+00:09:24,030 --> 00:09:29,610
+We assign the current to finish time and then we increment to the time here.
+
+131
+00:09:30,510 --> 00:09:39,480
+Not that this time is incrementing through the other notes with simple comparisons, we can know their
+
+132
+00:09:39,750 --> 00:09:42,720
+age type of the three cases, the easiest.
+
+133
+00:09:42,720 --> 00:09:48,480
+The case is coming for the forward, the age, which are mainly if the sort of started of a who is this,
+
+134
+00:09:48,480 --> 00:09:49,620
+then it started off enable.
+
+135
+00:09:49,630 --> 00:09:50,760
+This must be forwarded.
+
+136
+00:09:51,960 --> 00:09:57,270
+The challenging one the second two cases is it across age or back age?
+
+137
+00:09:58,560 --> 00:10:02,820
+If you open the sailors book, you will find some comparison between the rules that can answer it.
+
+138
+00:10:03,180 --> 00:10:05,100
+But I will show you an easier way here.
+
+139
+00:10:06,250 --> 00:10:07,060
+Let's proceed.
+
+140
+00:10:08,530 --> 00:10:11,950
+I am auditing now the graph with the finish and the starting time.
+
+141
+00:10:12,280 --> 00:10:13,870
+So we started by not zero.
+
+142
+00:10:13,900 --> 00:10:16,510
+So starting is one, then moved here.
+
+143
+00:10:16,510 --> 00:10:21,370
+Start to move here, start the three moved here, start to four, moved here.
+
+144
+00:10:21,370 --> 00:10:22,200
+Start to five.
+
+145
+00:10:22,670 --> 00:10:24,700
+Then this would finish to finish is six.
+
+146
+00:10:24,970 --> 00:10:26,500
+This not finished vision seven.
+
+147
+00:10:26,860 --> 00:10:28,750
+Finish eight finish nine.
+
+148
+00:10:28,990 --> 00:10:29,680
+Finished 10.
+
+149
+00:10:30,370 --> 00:10:33,850
+Then we start the Note 11 for here at 11.
+
+150
+00:10:34,240 --> 00:10:35,950
+Then we started this at 12th.
+
+151
+00:10:36,280 --> 00:10:37,360
+Finish at 13.
+
+152
+00:10:37,720 --> 00:10:38,740
+Finish at 14.
+
+153
+00:10:40,530 --> 00:10:47,580
+Now, let's compare the starting times of things compare, for example, the Note zero with the Note
+
+154
+00:10:47,580 --> 00:10:48,030
+six.
+
+155
+00:10:48,540 --> 00:10:52,680
+You will notice that the start of zero is this, then it started off six.
+
+156
+00:10:53,340 --> 00:10:59,910
+This means while we are and say the difference recursion, this means that this must be for the edge
+
+157
+00:10:59,910 --> 00:11:04,180
+because I started before you am now reaching you.
+
+158
+00:11:05,070 --> 00:11:06,960
+And now reaching you zero.
+
+159
+00:11:06,960 --> 00:11:08,280
+Go this cycle to six.
+
+160
+00:11:08,310 --> 00:11:09,410
+First, then.
+
+161
+00:11:09,420 --> 00:11:14,790
+Now it tries to go from here within the defense called within the defense call.
+
+162
+00:11:14,820 --> 00:11:16,590
+Within the defense call.
+
+163
+00:11:17,310 --> 00:11:22,380
+So the rule is this morning as a starting time, which is a smaller than you.
+
+164
+00:11:22,620 --> 00:11:24,780
+It means I am forward for you.
+
+165
+00:11:26,480 --> 00:11:26,960
+OK.
+
+166
+00:11:27,290 --> 00:11:32,950
+What about if you if you if you thought about this note, it is starting after the finish of the last
+
+167
+00:11:33,230 --> 00:11:36,530
+year, so it's a start time in a way it isn't.
+
+168
+00:11:36,530 --> 00:11:38,480
+Before that, let's do some comparison.
+
+169
+00:11:39,230 --> 00:11:40,100
+Let's see the problem.
+
+170
+00:11:40,100 --> 00:11:40,790
+What is the problem?
+
+171
+00:11:41,060 --> 00:11:42,180
+It's two zero.
+
+172
+00:11:42,200 --> 00:11:45,080
+It's two and the zero here.
+
+173
+00:11:45,740 --> 00:11:49,220
+When you compare the start of two and zero, it would be greater than.
+
+174
+00:11:49,640 --> 00:11:50,600
+And this is cycle.
+
+175
+00:11:51,720 --> 00:11:56,430
+And if you compare it to Darfur and the two, it would be greater then, but this is a motorcycle.
+
+176
+00:11:57,030 --> 00:12:01,410
+So we can summarize that is following from comparison of the sorting.
+
+177
+00:12:02,220 --> 00:12:10,440
+If a start of a is less than a start of gee, this means this must be forward to each and I hope you
+
+178
+00:12:10,440 --> 00:12:12,840
+can see the logic I am coming to you.
+
+179
+00:12:13,530 --> 00:12:17,520
+I started earlier and now coming back for you again.
+
+180
+00:12:17,640 --> 00:12:19,020
+You must be my child.
+
+181
+00:12:19,260 --> 00:12:20,400
+Migrant, the child.
+
+182
+00:12:21,690 --> 00:12:28,770
+But we can see that the started relationship doesn't help with the cycle or not cycle cycle for baggage
+
+183
+00:12:29,100 --> 00:12:30,670
+and not cycle for the cross edge.
+
+184
+00:12:31,050 --> 00:12:33,420
+So now we need a smarter way to handle this.
+
+185
+00:12:33,990 --> 00:12:35,010
+Two things now here.
+
+186
+00:12:35,950 --> 00:12:37,210
+Let's see, how can we do that?
+
+187
+00:12:38,650 --> 00:12:39,640
+This is a question here.
+
+188
+00:12:40,030 --> 00:12:42,790
+What what really makes a big edge?
+
+189
+00:12:42,790 --> 00:12:44,320
+What really create the cycle?
+
+190
+00:12:45,310 --> 00:12:53,920
+Think here if we started from the physical move to the fist one two and then trying to go to zero?
+
+191
+00:12:54,760 --> 00:12:56,620
+What makes really zero is a cycle.
+
+192
+00:12:58,320 --> 00:13:04,800
+The answer is as following four zero to cause a cycle, it must be my ancestor.
+
+193
+00:13:05,280 --> 00:13:08,480
+This means it is active in this that cools.
+
+194
+00:13:08,490 --> 00:13:10,050
+It is active in the state.
+
+195
+00:13:10,680 --> 00:13:12,930
+So this means zero in the stack is squatting.
+
+196
+00:13:12,930 --> 00:13:20,280
+One one in the stack is going to do in the stack is calling zero zero is active in the stack codes.
+
+197
+00:13:20,670 --> 00:13:22,290
+That's why it is causing a problem.
+
+198
+00:13:23,350 --> 00:13:30,600
+Remember the second the case, the early graph, we drew zero going to one going into two and zero going
+
+199
+00:13:30,600 --> 00:13:34,020
+to zero one two would be active in the stack.
+
+200
+00:13:34,530 --> 00:13:38,040
+Then two will go down one, it will go down now.
+
+201
+00:13:38,040 --> 00:13:40,310
+Zero will try to now to access two again.
+
+202
+00:13:40,320 --> 00:13:48,210
+Two isn't in the stack cool, so the active roster could refer to who are all of my current ancestor.
+
+203
+00:13:48,750 --> 00:13:56,430
+So if religion is going zero one two three six zero one two three, our ancestors of four six because
+
+204
+00:13:56,430 --> 00:13:58,620
+they are active in this, their codes.
+
+205
+00:13:59,760 --> 00:14:03,510
+So all what remains to figure out if this visited node?
+
+206
+00:14:03,900 --> 00:14:06,450
+Is it part of the stack calls or not?
+
+207
+00:14:06,900 --> 00:14:09,360
+We can trivially know that from the finished.
+
+208
+00:14:10,590 --> 00:14:15,120
+Of the nude in the nude, is it still finished equal minus one?
+
+209
+00:14:15,330 --> 00:14:18,780
+It means that we never finished it and is still active in the state court.
+
+210
+00:14:19,140 --> 00:14:22,260
+And with this way, we can figure it out in a trivial way.
+
+211
+00:14:22,560 --> 00:14:28,610
+If the nude is actually gross or not, I hope you got it, OK?
+
+212
+00:14:29,580 --> 00:14:35,790
+Thus, think I showed you before the cross edge between toes to couple of defense?
+
+213
+00:14:36,060 --> 00:14:38,660
+I want to show you the cross edge within a single device.
+
+214
+00:14:39,000 --> 00:14:44,670
+First of all, look to this simple example here zero one to the wreckage and glass following zero.
+
+215
+00:14:44,700 --> 00:14:45,630
+Go to the next EJU.
+
+216
+00:14:45,630 --> 00:14:49,740
+It's one one go to two, which is to then return the kid.
+
+217
+00:14:50,110 --> 00:14:50,460
+Zero.
+
+218
+00:14:50,460 --> 00:14:57,570
+Find itself going to two, but the start of zero is less than the start of two, which means zero started
+
+219
+00:14:57,570 --> 00:15:02,010
+before me, which confirms I'm still your ancestor, so everyone is happy.
+
+220
+00:15:02,040 --> 00:15:03,780
+This is a case of forward age.
+
+221
+00:15:05,600 --> 00:15:08,150
+The second case is zero to one.
+
+222
+00:15:09,080 --> 00:15:09,800
+Then come back.
+
+223
+00:15:11,480 --> 00:15:14,960
+Zero good two, two two tries to go to one.
+
+224
+00:15:15,320 --> 00:15:16,540
+One is vested.
+
+225
+00:15:17,390 --> 00:15:18,740
+Now this is across age.
+
+226
+00:15:19,310 --> 00:15:21,320
+This is across age.
+
+227
+00:15:21,530 --> 00:15:27,350
+So as you see, this is an example of across age within the single DFS could.
+
+228
+00:15:30,820 --> 00:15:31,450
+Yeah, your.
+
+229
+00:15:31,840 --> 00:15:37,090
+I would like you to modify the school to find the cycles I would like to leave this implementation for
+
+230
+00:15:37,090 --> 00:15:42,730
+you used to arrays started and finished, your code should help with the class of each age.
+
+231
+00:15:43,210 --> 00:15:45,780
+You will just add three symbol condition.
+
+232
+00:15:45,790 --> 00:15:46,760
+Don't go beyond that.
+
+233
+00:15:47,530 --> 00:15:52,090
+I would like you to try as a sample of the lecture, the lecture segments.
+
+234
+00:15:52,420 --> 00:15:53,590
+Please compare your code.
+
+235
+00:15:53,590 --> 00:15:54,580
+I'm attaching my good.
+
+236
+00:15:54,580 --> 00:15:56,590
+Don't worry, you will know the right answer.
+
+237
+00:15:56,950 --> 00:16:01,720
+The first thing I would like to tell you in that if the graph we don't have for the ages and we don't
+
+238
+00:16:01,720 --> 00:16:05,530
+have Chris Hedges, we only have a three edge or back edge.
+
+239
+00:16:05,920 --> 00:16:10,180
+That's why if you find the note visited, you know that it is a cycle.
+
+240
+00:16:10,540 --> 00:16:15,760
+If you if you have entries to see formal proof, you can find it in the syllabus book.
+
+241
+00:16:16,510 --> 00:16:18,220
+This lecture was a bit heavy.
+
+242
+00:16:19,090 --> 00:16:21,280
+You need to view maybe two or three times.

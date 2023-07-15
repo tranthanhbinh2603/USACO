@@ -1,0 +1,554 @@
+0
+1
+00:00:01,040 --> 00:00:12,990
+Let's practice structures, we are going to define our own queue, it should internally have an array and support
+1
+
+2
+00:00:12,990 --> 00:00:16,670
+the following operations. the word "class" means "struct".
+2
+
+3
+00:00:17,220 --> 00:00:20,340
+So these are the operations that are in mind.
+3
+
+4
+00:00:20,700 --> 00:00:29,160
+We would like to add_end(int value), which means we are adding 'end' to the current
+4
+
+5
+00:00:29,790 --> 00:00:37,350
+array, and "add_front" of a value will add a value to the front of this array and function
+5
+
+6
+00:00:37,350 --> 00:00:41,280
+"remove_front" will remove the front value from the array and return this value.
+6
+
+7
+00:00:41,280 --> 00:00:44,450
+And the function "print" is printing the array.
+7
+
+8
+00:00:44,910 --> 00:00:54,410
+So you can think of our struct or our class queue, as a way to add more logical relative functionalities
+8
+
+9
+00:00:54,420 --> 00:00:56,360
+to the array that we would like to do.
+9
+
+10
+00:00:56,760 --> 00:01:03,180
+So, for example, here is our final usage for the struct that we are calling queue, its named queue because
+10
+
+11
+00:01:03,270 --> 00:01:04,290
+it's like real life.
+11
+
+12
+00:01:04,290 --> 00:01:13,290
+You can think of it like the hospital when we have for example, a few people who
+12
+
+13
+00:01:13,290 --> 00:01:14,150
+are in a queue.
+13
+
+14
+00:01:14,160 --> 00:01:16,410
+So we are adding one by one in a queue.
+14
+
+15
+00:01:18,420 --> 00:01:23,820
+We are seeing here add_end(10), add_end (20), add_end(30), and printing.
+15
+
+16
+00:01:24,060 --> 00:01:27,120
+If we did, we notice the numbers are 10, 20, 30.
+16
+
+17
+00:01:27,360 --> 00:01:32,790
+So internally there is an array inside the queue that have values 10, 20, 30.
+17
+
+18
+00:01:33,300 --> 00:01:37,640
+And then we say add_front(1), add_front(4), and then we print it.
+18
+
+19
+00:01:37,950 --> 00:01:43,400
+Now you notice here add_front(1) added 1 here then add_front(4) added 4 over here.
+19
+
+20
+00:01:43,680 --> 00:01:49,750
+So it's now 4, 1, 10, 20, 30. then we said remove the front and print it and return it,
+20
+
+21
+00:01:50,070 --> 00:01:56,340
+So this call to the function will return for us number 4, which here is the top and we remove
+21
+
+22
+00:01:56,340 --> 00:02:00,570
+it. going in the implementation of the queue itself,
+22
+
+23
+00:02:00,900 --> 00:02:03,540
+We see here that we implemented a struct queue,
+23
+
+24
+00:02:03,930 --> 00:02:08,700
+We define inside it an array of 100 integers and we define the length.
+24
+
+25
+00:02:09,140 --> 00:02:13,970
+We also provided an initial constructor to put this length with 0 to initialize it.
+25
+
+26
+00:02:14,130 --> 00:02:20,040
+So one way you can think of the constructor always as a way to initialize objects. if we decided to add
+26
+
+27
+00:02:20,040 --> 00:02:20,190
+at
+27
+
+28
+00:02:20,190 --> 00:02:24,780
+end, this is as simple as what is the current length of the array length.
+28
+
+29
+00:02:24,810 --> 00:02:27,510
+By the way, initially 0 means that there are no elements in the queue.
+29
+
+30
+00:02:27,840 --> 00:02:33,150
+If you try to add a value, it is going to add it in [0] and then going to increment the length "len" now with
+30
+
+31
+00:02:33,150 --> 00:02:34,740
+1, added another value,
+31
+
+32
+00:02:34,740 --> 00:02:37,710
+It will be 1, so add it here and go to 2.
+32
+
+33
+00:02:38,040 --> 00:02:39,880
+length now with 2, add another one,
+33
+
+34
+00:02:39,930 --> 00:02:44,680
+it will be added in 2, and so on. If you would like to add in the front,
+34
+
+35
+00:02:44,730 --> 00:02:48,630
+This is a bit tricky because the array already has three numbers for example
+35
+
+36
+00:02:48,660 --> 00:02:51,410
+now. the nice idea is a shifting idea.
+36
+
+37
+00:02:51,690 --> 00:02:55,740
+We can take all the elements of the array and shift them one step to the right.
+37
+
+38
+00:02:55,920 --> 00:02:58,950
+OK, so this is a nice logic that I need you to trace it.
+38
+
+39
+00:02:59,280 --> 00:03:01,560
+Let's say the array has for now three elements.
+39
+
+40
+00:03:01,920 --> 00:03:11,190
+We start at position 2 and then we come to position three and put the value in 2 inside it, and then
+40
+
+41
+00:03:11,190 --> 00:03:17,040
+go to position one and put it in 2, and then we go to position 0 and put it in 1.
+41
+
+42
+00:03:17,340 --> 00:03:20,080
+So this way we shifted every value to the right.
+42
+
+43
+00:03:20,430 --> 00:03:22,320
+But notice how carefully we did it.
+43
+
+44
+00:03:22,560 --> 00:03:25,040
+We did it from the back to the to the beginning.
+44
+
+45
+00:03:25,230 --> 00:03:29,760
+If you did it from the beginning to the end, you would override values in a wrong way.
+45
+
+46
+00:03:30,030 --> 00:03:35,340
+So if we have in the array 1, 2, 3, we move the 3 to the right, then 2 to the right,
+46
+
+47
+00:03:35,340 --> 00:03:36,680
+then 1 to the right.
+47
+
+48
+00:03:36,900 --> 00:03:39,240
+Now the first cell in the array is empty.
+48
+
+49
+00:03:39,420 --> 00:03:41,190
+So we put the value here.
+49
+
+50
+00:03:41,970 --> 00:03:45,420
+If you would like to remove the front, we can use a very similar logic.
+50
+
+51
+00:03:45,510 --> 00:03:50,940
+We first take the value of the front because we would like to return it here, and then we are going to
+51
+
+52
+00:03:50,940 --> 00:03:51,630
+shift to left,
+52
+
+53
+00:03:51,870 --> 00:03:55,050
+It means every value we take it and move to the left.
+53
+
+54
+00:03:55,320 --> 00:03:56,630
+We now start from one.
+54
+
+55
+00:03:57,020 --> 00:04:02,820
+OK, notice it is something that opposite to this logic, do some tracing please, you start from 1 and
+55
+
+56
+00:04:02,820 --> 00:04:05,790
+then you put what in 1 in 0, and what in 2
+56
+
+57
+00:04:05,790 --> 00:04:07,350
+In 1, and what in
+57
+
+58
+00:04:07,350 --> 00:04:10,290
+3 in 2, and what in 4 in 3 and so on.
+58
+
+59
+00:04:10,560 --> 00:04:14,730
+This way you made a shift to the left array and then you decrease the size here,
+59
+
+60
+00:04:14,740 --> 00:04:19,110
+So it's ready for you. and this is just a printing function.
+60
+
+61
+00:04:20,720 --> 00:04:28,700
+So, what we define now is a simple queue to handle for us logic very similar to the queue that
+61
+
+62
+00:04:29,060 --> 00:04:32,330
+already we did in the hospital system already.
+62
+
+63
+00:04:32,810 --> 00:04:40,520
+Let's now try to rewrite the hospital system, but let's make use of the new way of thinking and this
+63
+
+64
+00:04:40,520 --> 00:04:41,250
+queue struct.
+64
+
+65
+00:04:41,990 --> 00:04:43,060
+So here is the idea,
+65
+
+66
+00:04:43,340 --> 00:04:48,050
+We're going to create some class or a struct,
+66
+
+67
+00:04:48,050 --> 00:04:49,040
+we will name it hospital
+67
+
+68
+00:04:49,050 --> 00:04:54,680
+queue, the hospital queue will be very similar to the previous queue, but it will have names,
+68
+
+69
+00:04:54,860 --> 00:05:02,060
+statuses, length, specialization, and some relevant functionality, we create the hospital system of
+69
+
+70
+00:05:02,180 --> 00:05:07,490
+5 queues, and also will add methods.
+70
+
+71
+00:05:07,700 --> 00:05:11,780
+so the class  hospital_queue for us
+71
+
+72
+00:05:11,990 --> 00:05:19,250
+now is representing for us the queue of patients that we have, and the system has 5 of these queues.
+72
+
+73
+00:05:19,280 --> 00:05:23,710
+OK, so now you see here how the struct is merging things for us.
+73
+
+74
+00:05:24,440 --> 00:05:27,680
+So we define here some global variables.
+74
+
+75
+00:05:27,870 --> 00:05:31,940
+OK, like here the "max_specialization" 20 and the "max_queue" 5.
+75
+
+76
+00:05:32,840 --> 00:05:36,620
+These are some global variables. and this is our struct hospital
+76
+
+77
+00:05:36,620 --> 00:05:43,700
+queue, It has the two arrays and two variables, then in a very similar way we have here some initial
+77
+
+78
+00:05:43,700 --> 00:05:45,280
+constructor to initialize them.
+78
+
+79
+00:05:45,650 --> 00:05:47,270
+We have another constructor,
+79
+
+80
+00:05:47,270 --> 00:05:53,270
+That specific specialization, function to add in the end, add in the front, remove from the front.
+80
+
+81
+00:05:53,480 --> 00:05:55,880
+And they just have the relevant data.
+81
+
+82
+00:05:56,390 --> 00:06:01,310
+For example, if you would like to add, you need a name and you need some status.
+82
+
+83
+00:06:01,670 --> 00:06:05,540
+The hospital system will have 5 queues of the type "hospital_
+83
+
+84
+00:06:05,540 --> 00:06:10,240
+queue" and it will have its own methods to add a patient, print patient and so on.
+84
+
+85
+00:06:10,670 --> 00:06:16,580
+So you create a system, forget about line 3 now, and you just run it, which is a function that
+85
+
+86
+00:06:16,580 --> 00:06:22,850
+start the system and it has this menu function. Going to the details, the hospital
+86
+
+87
+00:06:22,870 --> 00:06:28,820
+queue has here two kinds of constructors, one to initialize to something very empty for now,
+87
+
+88
+00:06:28,940 --> 00:06:35,480
+And one that takes specific specialization, in both cases, the length is defined to 0. The add function
+88
+
+89
+00:06:36,860 --> 00:06:44,540
+just adds in the end, as we did before, we put it in the end and increment, going to the remove front,
+89
+
+90
+00:06:44,720 --> 00:06:47,450
+we double check if there are patients already or not.
+90
+
+91
+00:06:47,450 --> 00:06:48,950
+If there are no, we return.
+91
+
+92
+00:06:49,190 --> 00:06:52,730
+Otherwise, we make the shift left track. The printing function
+92
+
+93
+00:06:52,730 --> 00:06:58,250
+just iterates on the whole specialization and start to print the name and the status if urgent or regular.
+93
+
+94
+00:07:00,560 --> 00:07:03,650
+the hospital system will have here a run function,
+94
+
+95
+00:07:03,680 --> 00:07:04,790
+that has while true.
+95
+
+96
+00:07:04,970 --> 00:07:09,820
+And also we have a function for the menu that we call it inside the hospital system.
+96
+
+97
+00:07:10,640 --> 00:07:12,110
+Yeah, this is the menu function,
+97
+
+98
+00:07:12,110 --> 00:07:18,890
+Just gives the user a choice by choice and asks him to make a choice out of the current system.
+98
+
+99
+00:07:19,850 --> 00:07:27,170
+The adding patient, is again, is now like more logic in the hospital system, it will read the
+99
+
+100
+00:07:27,170 --> 00:07:28,430
+patient details and then checking
+100
+
+101
+00:07:29,120 --> 00:07:35,570
+Is this urgent or regular? if it is regular add it in the end, if it is urgent add it in the front.
+101
+
+102
+00:07:35,610 --> 00:07:38,630
+OK, if we couldn't add it, this is false.
+102
+
+103
+00:07:38,780 --> 00:07:44,000
+We say that we couldn't add this new patient. After that,
+103
+
+104
+00:07:44,000 --> 00:07:51,170
+the printing we just iterate on the every queue of the five queues of specialization and say ".print".
+104
+
+105
+00:07:51,720 --> 00:07:58,920
+the "get_next_patient" just finds the specialization and then accesses the queue of the right order and say
+105
+
+106
+00:07:58,940 --> 00:08:00,230
+".remove_front".
+106
+
+107
+00:08:01,010 --> 00:08:02,030
+I hope you saw
+107
+
+108
+00:08:02,030 --> 00:08:04,120
+now how the hospital system
+108
+
+109
+00:08:04,130 --> 00:08:12,230
+We took it one step forward with the structures to collect variables and member functions, functions
+109
+
+110
+00:08:12,230 --> 00:08:18,380
+that are very relevant together, please check out the whole code to make a bigger sense of it.
+110
+
+111
+00:08:19,310 --> 00:08:19,520
+That's It.

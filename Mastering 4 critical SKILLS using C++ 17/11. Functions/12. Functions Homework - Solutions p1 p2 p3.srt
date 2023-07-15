@@ -1,0 +1,629 @@
+0
+1
+00:00:01,320 --> 00:00:03,180
+Let's see the homework of the functions.
+1
+
+2
+00:00:03,270 --> 00:00:10,080
+The major goal of the functions homework is mainly the functions partto learn how to pass parameters, 
+2
+
+3
+00:00:10,080 --> 00:00:11,520
+how to get the output and so on. 
+3
+
+4
+00:00:12,270 --> 00:00:19,020
+So in the first task, we would like to get the maximum of six numbers, and we would like to provide
+4
+
+5
+00:00:19,290 --> 00:00:21,870
+all of these variations of the max functions.
+5
+
+6
+00:00:22,470 --> 00:00:24,120
+Now, there is a question here.
+6
+
+7
+00:00:24,360 --> 00:00:30,090
+How can function like the max of all, like a one, two, three, four parameters, use the
+7
+
+8
+00:00:30,090 --> 00:00:32,130
+function of the max of the three parameters.
+8
+
+9
+00:00:32,670 --> 00:00:35,040
+The goal of that is to learn to utilize things.
+9
+
+10
+00:00:35,040 --> 00:00:37,720
+You shouldn't start to build everything of that from scratch.
+10
+
+11
+00:00:37,740 --> 00:00:40,470
+We can actually build it in a trivial way.
+11
+
+12
+00:00:40,740 --> 00:00:42,600
+So here is how we can do that.
+12
+
+13
+00:00:43,170 --> 00:00:49,140
+First of all, we know that the standard C++ provides us with a maximum between two variables like
+13
+
+14
+00:00:49,140 --> 00:00:49,740
+a & b. 
+14
+
+15
+00:00:50,250 --> 00:00:54,030
+Now, I would like to implement function between maximum of three numbers.
+15
+
+16
+00:00:54,190 --> 00:00:55,200
+But is an easy way.
+16
+
+17
+00:00:55,740 --> 00:01:00,870
+First, we will compute the maximum between the two of them, like, let's say the b &c. 
+17
+
+18
+00:01:01,680 --> 00:01:04,830
+Now, this code will return for us, the maximum between them.
+18
+
+19
+00:01:05,730 --> 00:01:12,210
+Now, compute the maximum between the first number and the result of the maximum of these two numbers.
+19
+
+20
+00:01:12,630 --> 00:01:13,590
+Let's give an example.
+20
+
+21
+00:01:13,920 --> 00:01:18,240
+Let's say the numbers were five, two and seven.
+21
+
+22
+00:01:18,720 --> 00:01:22,230
+So first, we compute the maximum between two and seven, which is seven.
+22
+
+23
+00:01:22,800 --> 00:01:27,150
+Then we compute the maximum between five and seven, which is five, which is seven.
+23
+
+24
+00:01:27,630 --> 00:01:35,040
+As you see this way, the maximum function of the three variables didn't introduce any logic to compute
+24
+
+25
+00:01:35,040 --> 00:01:36,450
+the maximum of three numbers.
+25
+
+26
+00:01:36,540 --> 00:01:42,630
+All what it did is utilizing that we can use the previous max function.
+26
+
+27
+00:01:43,380 --> 00:01:46,740
+And as you know, in C++, we can have a maximum function with the same name.
+27
+
+28
+00:01:46,980 --> 00:01:49,770
+But the parameters should be, for example, different.
+28
+
+29
+00:01:51,420 --> 00:01:56,880
+Now, moving to a maximum of four numbers, we will follow now the same logic exactly.
+29
+
+30
+00:01:57,270 --> 00:02:00,660
+We will first compute the maximum of the last three numbers.
+30
+
+31
+00:02:01,290 --> 00:02:08,370
+For example, if we have like a 10, 5, 2, 7 then we ask here for the maximum of 5, 2, 7.
+31
+
+32
+00:02:08,880 --> 00:02:14,250
+After that, we compute the maximum of 10 and the remaining of the number. In a very similar way,
+32
+
+33
+00:02:14,250 --> 00:02:17,100
+we can do that. In a very similar way we can do that.
+33
+
+34
+00:02:17,610 --> 00:02:22,350
+As you see, we can utilize the previous functions in an incremental way.
+34
+
+35
+00:02:22,740 --> 00:02:26,360
+We can also have like a different styles of implementation.
+35
+
+36
+00:02:26,370 --> 00:02:30,330
+Like, for example, you can compute the maximum of the first three numbers,
+36
+
+37
+00:02:30,570 --> 00:02:34,140
+the maximum of the last three numbers, the maximum among all of them.
+37
+
+38
+00:02:34,560 --> 00:02:36,690
+or you just follow this nice structure. 
+38
+
+39
+00:02:37,230 --> 00:02:40,740
+I hope you found that this is like an educated problem.
+39
+
+40
+00:02:42,900 --> 00:02:45,510
+In the second task, we would like to reverse a string.
+40
+
+41
+00:02:46,200 --> 00:02:52,260
+The string is passed with const and with reference. Const means it will be fixed & reference means
+41
+
+42
+00:02:52,260 --> 00:02:59,190
+we are passing it to look to the original caller, which is very efficient. In C++ APIs,
+42
+
+43
+00:02:59,490 --> 00:03:03,630
+you will notice this structure a lot. Now let's see how to implement that.
+43
+
+44
+00:03:07,270 --> 00:03:13,690
+In the reverse function all what we need is, first of all, I take a copy of the current string and
+44
+
+45
+00:03:13,690 --> 00:03:16,570
+then I have two indices.
+45
+
+46
+00:03:16,780 --> 00:03:18,030
+We call them in algorithms pointers also by the way,
+46
+
+47
+00:03:18,300 --> 00:03:20,920
+but not the pointer stopping.
+47
+
+48
+00:03:21,220 --> 00:03:24,310
+But anyway, so we have here,a  start equals zero
+48
+
+49
+00:03:24,550 --> 00:03:27,730
+and in the looking to that last index in that string.
+49
+
+50
+00:03:28,180 --> 00:03:36,670
+So, for example, if we pass a string to like abcd, we will have 'a' start at zero and it ends
+50
+
+51
+00:03:36,670 --> 00:03:37,360
+at three.
+51
+
+52
+00:03:38,080 --> 00:03:43,570
+Then we will go like halfway as long as the start is less than end.
+52
+
+53
+00:03:43,570 --> 00:03:45,010
+We will do the following.
+53
+
+54
+00:03:45,460 --> 00:03:49,810
+This is swapping for the initial start and end positions.
+54
+
+55
+00:03:50,320 --> 00:03:51,850
+So, for example, let's see here.
+55
+
+56
+00:03:52,180 --> 00:03:59,350
+If we have the abcd here in the first step, we will swap the a and d.
+56
+
+57
+00:03:59,500 --> 00:04:00,400
+So it's now d and end is 'a'.
+57
+
+58
+00:04:00,790 --> 00:04:06,190
+After that start to move one step and go backward one step,
+58
+
+59
+00:04:06,430 --> 00:04:07,570
+so start at 'b'
+59
+
+60
+00:04:07,600 --> 00:04:10,540
+and end at 'c', now we do one more swap, 
+60
+
+61
+00:04:10,540 --> 00:04:11,920
+so now this will be 'c'
+61
+
+62
+00:04:12,220 --> 00:04:13,900
+and this would be 'b'.
+62
+
+63
+00:04:14,980 --> 00:04:18,100
+Then start to go to the right and end go to the left.
+63
+
+64
+00:04:18,310 --> 00:04:21,520
+Now, the start will be at position 2,
+64
+
+65
+00:04:21,700 --> 00:04:28,020
+but end at position 1;  this means we are done with processing. The logic here of 
+65
+
+66
+00:04:28,030 --> 00:04:29,380
+start less than end is as following.
+66
+
+67
+00:04:29,890 --> 00:04:30,680
+I have a string.
+67
+
+68
+00:04:30,700 --> 00:04:31,810
+I would like to reverse it.
+68
+
+69
+00:04:32,110 --> 00:04:36,040
+So I have reversed it; the first to last and the second to the second to last
+69
+
+70
+00:04:36,340 --> 00:04:37,180
+and so on.
+70
+
+71
+00:04:37,720 --> 00:04:42,300
+When I reach to the middle of the string, I am done with reversing.
+71
+
+72
+00:04:42,940 --> 00:04:45,130
+What if we have odd number of characters?
+72
+
+73
+00:04:45,550 --> 00:04:49,540
+'a' will be swept with 'e', ' b' will be swapped with 'd'.
+73
+
+74
+00:04:49,930 --> 00:04:54,040
+And then start and end would be looking at 'c'.
+74
+
+75
+00:04:54,220 --> 00:04:56,830
+So this is again a good time to stop.
+75
+
+76
+00:04:57,190 --> 00:05:02,660
+So this function actually does the hub of the string of processing only. In every step,
+76
+
+77
+00:05:02,680 --> 00:05:08,080
+it's swapping the two characters and stopping at this stage.
+77
+
+78
+00:05:09,370 --> 00:05:09,940
+That's all.
+78
+
+79
+00:05:11,620 --> 00:05:21,580
+Let's proceed to the third homework, which is more like a calculator, we would like to develop a bunch
+79
+
+80
+00:05:21,580 --> 00:05:27,190
+of functions adding numbers, multiplying numbers, reading numbers, and there are some requirements
+80
+
+81
+00:05:27,190 --> 00:05:34,390
+here, like you read two numbers, but by reference, you will develop four functions for each operation,
+81
+
+82
+00:05:34,390 --> 00:05:35,470
+but don't divide by zero.
+82
+
+83
+00:05:35,770 --> 00:05:38,200
+So this is a more or less an implementation task.
+83
+
+84
+00:05:38,860 --> 00:05:43,390
+The first one here is a menu function, which you will see it a lot in the projects.
+84
+
+85
+00:05:43,870 --> 00:05:47,710
+I have a menu which will return an integer, which is a valid choice.
+85
+
+86
+00:05:48,370 --> 00:05:52,750
+And now I start with choice -1, because we are waiting for the user to choose.
+86
+
+87
+00:05:53,440 --> 00:05:57,760
+And as long as the user didn't provide a valid choice, we will do the following.
+87
+
+88
+00:05:58,030 --> 00:05:59,140
+You can skip this
+88
+
+89
+00:05:59,140 --> 00:06:06,760
+if it doesn't have value here. You will print the five options and then you will read a choice.
+89
+
+90
+00:06:07,210 --> 00:06:09,820
+If the choice is not between one and five,
+90
+
+91
+00:06:10,210 --> 00:06:12,490
+we will say this is invalid.
+91
+
+92
+00:06:13,210 --> 00:06:18,070
+Assign the choice again to -1 and then wait again for the input.
+92
+
+93
+00:06:18,820 --> 00:06:23,230
+We definitely the user can make the corruption to the program, for example, by entering the string,
+93
+
+94
+00:06:23,500 --> 00:06:26,860
+but we don't care at the moment about this kind of validation. For this
+94
+
+95
+00:06:26,860 --> 00:06:30,880
+if condition, if it's confusing for you like this part, what does it say?
+95
+
+96
+00:06:31,090 --> 00:06:32,380
+It say the choice is valid.
+96
+
+97
+00:06:32,680 --> 00:06:35,190
+Choice is greater than or equal one and less than or equal five.
+97
+
+98
+00:06:35,200 --> 00:06:36,550
+And notice how I'm writing it
+98
+
+99
+00:06:36,940 --> 00:06:45,640
+like mathematically, this is as same as you want to write something like one less than or equal choice
+99
+
+100
+00:06:45,910 --> 00:06:48,490
+less than or equal 5. 
+100
+
+101
+00:06:48,730 --> 00:06:50,480
+So you see how I code it in a nice way.
+101
+
+102
+00:06:50,500 --> 00:06:51,520
+So keep it this way.
+102
+
+103
+00:06:52,300 --> 00:06:54,820
+Now, what does this condition mean?
+103
+
+104
+00:06:55,000 --> 00:06:56,920
+It means if choice is valid.
+104
+
+105
+00:06:57,190 --> 00:07:00,190
+So you can read it like if not a valid choice.
+105
+
+106
+00:07:00,250 --> 00:07:02,870
+This is how we can understand this line of code.
+106
+
+107
+00:07:03,790 --> 00:07:09,870
+Once we are done here, if the choice is valid, then the condition will be broken and we can return
+107
+
+108
+00:07:09,880 --> 00:07:15,490
+to the current choice. The 'read_2_num' read 2 numbers by reference and read them.
+108
+
+109
+00:07:15,580 --> 00:07:21,970
+Then after the return of this function, the 'a' & 'b' will be initialized correctly with the values that
+109
+
+110
+00:07:21,970 --> 00:07:22,330
+will read.
+110
+
+111
+00:07:22,990 --> 00:07:24,970
+Then we have very straightforward 
+111
+
+112
+00:07:25,230 --> 00:07:27,730
+add, subtract, multiply and divide.
+112
+
+113
+00:07:28,150 --> 00:07:32,380
+The only thing in the division is it checks if 'b' equals zero or not.
+113
+
+114
+00:07:34,120 --> 00:07:39,610
+In general, we shouldn't compare doubles with a number in this way.
+114
+
+115
+00:07:39,880 --> 00:07:42,340
+But let's keep it simple for now.
+115
+
+116
+00:07:43,000 --> 00:07:46,480
+Finally, we have here the main program, which go as following.
+116
+
+117
+00:07:46,480 --> 00:07:48,340
+while true, we will keep going.
+117
+
+118
+00:07:48,820 --> 00:07:55,090
+Then it asks for the menu to give us a choice, which is number from one to five, if the number is
+118
+
+119
+00:07:55,090 --> 00:07:56,120
+five that we 
+119
+
+120
+00:07:56,140 --> 00:07:57,530
+know that we need to break.
+120
+
+121
+00:07:57,550 --> 00:07:58,840
+So we break the function.
+121
+
+122
+00:07:59,290 --> 00:08:05,380
+We increment the total operations and read two numbers based on the choice, we decide which function
+122
+
+123
+00:08:05,380 --> 00:08:05,830
+to call.
+123
+
+124
+00:08:06,100 --> 00:08:12,130
+Once the program is ended, we inform about the total number of operations that we are done by this
+124
+
+125
+00:08:12,130 --> 00:08:12,550
+program.
+125
+
+126
+00:08:13,250 --> 00:08:13,750
+That's all.

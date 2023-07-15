@@ -1,0 +1,69 @@
+0
+1
+00:00:00,540 --> 00:00:01,680
+Homework set number two,
+1
+
+2
+00:00:02,850 --> 00:00:08,700
+In the first problem, you will read 10 integers and you have to find the maximum among all of
+2
+
+3
+00:00:08,700 --> 00:00:13,760
+them, but I would like you to try to do all of the code using only two integer values.
+3
+
+4
+00:00:13,920 --> 00:00:16,800
+If this is hard for you, ignore it and just do it whatever way,
+4
+
+5
+00:00:17,160 --> 00:00:18,810
+but try to stick to two integer
+5
+
+6
+00:00:18,810 --> 00:00:26,310
+only, in the second program, you will read first an integer N, which will be from two to ten, and then
+6
+
+7
+00:00:26,310 --> 00:00:28,100
+you have to find the maximum among them.
+7
+
+8
+00:00:28,470 --> 00:00:31,620
+For example, here, you read,five for five numbers.
+8
+
+9
+00:00:31,620 --> 00:00:32,640
+Then you read all of them.
+9
+
+10
+00:00:32,640 --> 00:00:34,150
+The maximum would be four.
+10
+
+11
+00:00:34,800 --> 00:00:39,570
+Here we have ten numbers and then we read numbers and the maximum is one hundred twenty-nine.
+11
+
+12
+00:00:40,230 --> 00:00:43,770
+This is like same the last example here.
+12
+
+13
+00:00:43,770 --> 00:00:46,710
+But just when the N is fixed to ten
+13
+
+14
+00:00:47,790 --> 00:00:48,090
+That's all.

@@ -1,0 +1,49 @@
+0
+1
+00:00:00,990 --> 00:00:08,160
+In this video, we will learn how to create a class using eclipse. You come here file, new class, and then
+1
+
+2
+00:00:08,160 --> 00:00:15,540
+give the class name, let's say calculator, you notice it's going to create for us a header dot_h and dot_cpp.
+2
+
+3
+00:00:15,570 --> 00:00:16,050
+...
+3
+
+4
+00:00:17,490 --> 00:00:22,010
+When you learn about the inheritance, you can add here something that you are inheriting from it.
+4
+
+5
+00:00:22,410 --> 00:00:26,280
+You can add a namespace, but I typically just go with the default
+5
+
+6
+00:00:26,280 --> 00:00:30,810
+generation for me. If you clicked finish, two files would be created for you. A class ready for
+6
+
+7
+00:00:30,810 --> 00:00:34,710
+you with construct and destructor, and the open implementation of that,
+7
+
+8
+00:00:34,710 --> 00:00:37,110
+and then you keep going with them in the project.
+8
+
+9
+00:00:37,410 --> 00:00:41,600
+If you would like to remove them, you just come here and delete them in a very normal way.
+9
+
+10
+00:00:43,230 --> 00:00:43,800
+That's it.

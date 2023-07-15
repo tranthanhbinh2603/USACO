@@ -1,0 +1,1711 @@
+WEBVTT
+
+00:00.510 --> 00:04.830
+In this video, I will show you the solutions for the questions given in.
+
+00:06.000 --> 00:09.870
+So I have some questions and the question of open records.
+
+00:10.500 --> 00:11.730
+So let us solve them.
+
+00:11.980 --> 00:12.220
+Right.
+
+00:12.300 --> 00:13.620
+I will try and solve them.
+
+00:13.630 --> 00:15.360
+So I hope you have done it already.
+
+00:15.750 --> 00:22.290
+But just to confirm your results or if you have missed anything so you can understand me, you have
+
+00:22.290 --> 00:24.010
+gone wrong, so let us do it.
+
+00:24.360 --> 00:25.740
+I have first question here.
+
+00:26.010 --> 00:32.060
+This is the first question, this recursive function, and this is called for a fourth one.
+
+00:32.190 --> 00:37.020
+So we want the result of what the function of the written what is the result of a function if it is
+
+00:37.020 --> 00:37.650
+called for.
+
+00:38.310 --> 00:43.740
+So there is a function like recursive function Harborplace already have shown you.
+
+00:43.740 --> 00:45.660
+So the tracing tree will be prepared.
+
+00:45.660 --> 00:45.960
+Right.
+
+00:45.990 --> 00:49.710
+So let us start preparing, tracing three F one.
+
+00:49.890 --> 00:56.630
+So fossickers F of one then inside the function if you see there is a static variable.
+
+00:56.940 --> 01:02.640
+So already in the video I have discussed about the static variables and recursive function they will
+
+01:02.640 --> 01:04.250
+maintain on this single copy.
+
+01:04.530 --> 01:07.100
+So this i.e. only one copy will be maintained.
+
+01:07.380 --> 01:10.340
+So don't put it in the tracing separately.
+
+01:10.350 --> 01:11.490
+Keep eye here.
+
+01:11.500 --> 01:14.460
+So it is treated just like a global variable.
+
+01:14.460 --> 01:23.640
+So it's values, one that said now stock if and this is greater than equal to 500 done in NSW, now
+
+01:23.640 --> 01:25.110
+one and this one.
+
+01:25.410 --> 01:32.010
+And there does not appear to court to fight the next step and assign and plus I so I will change it.
+
+01:32.190 --> 01:33.350
+And this one.
+
+01:33.780 --> 01:36.330
+So one plus I, I use one which one.
+
+01:36.540 --> 01:42.930
+So N becomes homage to this is two and is two right now that eight plus plus.
+
+01:43.050 --> 01:46.950
+So the it is static so here should become two.
+
+01:47.070 --> 01:47.990
+I'm writing it here.
+
+01:48.360 --> 01:52.340
+So I became two then written, written more often.
+
+01:52.530 --> 01:55.450
+So again the function is called for the value of N.
+
+01:55.710 --> 01:56.970
+So there's a recursive call.
+
+01:57.240 --> 01:58.740
+So I plus there.
+
+01:58.740 --> 02:01.970
+So I have not shown it to you if you want to it.
+
+02:02.160 --> 02:02.460
+Right.
+
+02:02.790 --> 02:04.170
+So I am taking all the steps now.
+
+02:04.180 --> 02:04.980
+This one and this one.
+
+02:04.980 --> 02:14.580
+And this one next is call for two and it's two function is call again for two then this is a declaration.
+
+02:14.580 --> 02:17.430
+This is all because it is static, it is done only once.
+
+02:17.430 --> 02:17.880
+Right.
+
+02:17.910 --> 02:18.990
+So it is not done again.
+
+02:19.200 --> 02:21.120
+Again, don't think that it becomes one.
+
+02:21.120 --> 02:23.160
+If you're doing it then you get wrong answer.
+
+02:23.790 --> 02:24.600
+That is static.
+
+02:24.600 --> 02:27.210
+It is done only once, not right now.
+
+02:27.210 --> 02:28.970
+The value of is to.
+
+02:30.000 --> 02:33.000
+We are not in the first call, we are in the second column.
+
+02:33.180 --> 02:34.680
+Yes, that is a static.
+
+02:34.680 --> 02:36.870
+It remains as it is in the second column.
+
+02:36.870 --> 02:42.360
+So yes then it is it doesn't equal the five as it an equal to five.
+
+02:42.360 --> 02:42.780
+No.
+
+02:43.110 --> 02:44.310
+Then these three steps.
+
+02:44.490 --> 02:52.260
+So first step is work and assign and the plus I say what is n to what is I do.
+
+02:52.350 --> 02:53.910
+So how much is enough.
+
+02:54.240 --> 03:00.780
+Edness for the next step is a plus plus eight plus plus and minus three.
+
+03:01.770 --> 03:06.930
+The next call again it's for fun of n what is in right now.
+
+03:07.390 --> 03:11.510
+Four for now.
+
+03:11.520 --> 03:12.990
+Let us do this step quickly.
+
+03:14.070 --> 03:16.650
+This is what all the need is right now.
+
+03:16.650 --> 03:19.050
+Three and is equal to five.
+
+03:19.050 --> 03:20.880
+No it is not greater than or equal to five.
+
+03:20.890 --> 03:22.230
+Done then then fine plus eight.
+
+03:22.560 --> 03:26.430
+And is how much right now for so four plus I is how much.
+
+03:26.580 --> 03:27.000
+Three.
+
+03:27.000 --> 03:28.050
+So this is how much.
+
+03:28.050 --> 03:29.700
+Seven then eight plus.
+
+03:29.700 --> 03:31.670
+Plus so plus plus mix this.
+
+03:31.680 --> 03:38.610
+As for then call function F off and what is then seven.
+
+03:40.720 --> 03:46.180
+No, it comes here at seven seven greater than or equal to five, so this is great.
+
+03:46.570 --> 03:54.760
+So do what Raytown and what does that seven written and so seven is written here then.
+
+03:54.850 --> 03:57.580
+And this is a statement if you see this for that statement.
+
+03:57.580 --> 03:57.760
+Right.
+
+03:57.970 --> 03:59.940
+So what is written here written.
+
+04:00.220 --> 04:02.410
+So whatever the result is that is written.
+
+04:02.650 --> 04:04.670
+So seven is written from here also.
+
+04:04.960 --> 04:06.510
+So it is seven here.
+
+04:06.790 --> 04:09.820
+Then again it is the same statement, same statement from here only.
+
+04:09.820 --> 04:12.200
+We have got so written from here also.
+
+04:12.400 --> 04:13.470
+So this is written.
+
+04:13.480 --> 04:14.440
+So this is seven.
+
+04:14.620 --> 04:17.570
+So finally the answer for this one is seven.
+
+04:18.640 --> 04:20.740
+So the result of this function is seven.
+
+04:20.770 --> 04:25.770
+So if you have not maintained a single copy of A, then you might have got wrong results.
+
+04:25.910 --> 04:26.210
+Right?
+
+04:27.070 --> 04:28.750
+So this is the result that is valid.
+
+04:28.750 --> 04:29.250
+Seven.
+
+04:29.260 --> 04:31.420
+So answer for this is seven.
+
+04:32.470 --> 04:34.570
+Let us look at second question.
+
+04:34.900 --> 04:38.350
+So here is a program that is second question.
+
+04:38.350 --> 04:42.370
+Of course it is a little and the let us trace this Froggatt.
+
+04:42.760 --> 04:47.980
+See here, the main function and also a function for so main function is calling for.
+
+04:48.250 --> 04:52.150
+So let us look at the data with most of the variables of main function.
+
+04:52.180 --> 04:59.860
+So what are the variables of main function e which is having value to zero for eight then some, which
+
+04:59.860 --> 05:02.010
+is having value zero.
+
+05:02.770 --> 05:04.460
+And this belongs to me.
+
+05:04.640 --> 05:05.510
+I like them here.
+
+05:06.580 --> 05:07.380
+This belongs to me.
+
+05:07.390 --> 05:15.850
+And the main function called for by passing A and some A and some so it goes into N and some goes into
+
+05:15.850 --> 05:21.010
+that some first and foremost thing is it called a value called bitter.
+
+05:21.010 --> 05:23.170
+Friends are called but address what it is.
+
+05:23.650 --> 05:25.870
+This is called by value here.
+
+05:25.870 --> 05:30.330
+Stars are not written, so it's not called Bertus and bosons are not there.
+
+05:30.340 --> 05:31.770
+So this is not called by reference.
+
+05:31.810 --> 05:32.880
+This is called a value.
+
+05:33.280 --> 05:36.280
+So let us appraise this function for now.
+
+05:36.700 --> 05:39.110
+So here, full escort.
+
+05:39.640 --> 05:43.520
+So first value as to zero for it and some is zero.
+
+05:43.870 --> 05:50.290
+So two variables and will have two zero four eight and some will be zero.
+
+05:51.520 --> 05:55.640
+Then if any is equal to zero return, it's going to stop.
+
+05:55.710 --> 05:56.730
+Redundant stop.
+
+05:56.740 --> 06:02.080
+And this is why the time is not going to return any value redundance just to stop.
+
+06:02.710 --> 06:03.860
+Then how many steps are there.
+
+06:03.880 --> 06:06.260
+One, two, three, four, five steps are there.
+
+06:06.970 --> 06:09.340
+So let us perform this a step further.
+
+06:09.340 --> 06:11.870
+Step aside and the more the tenth.
+
+06:12.160 --> 06:15.480
+So what will be the value of K more written.
+
+06:15.580 --> 06:23.020
+How much it this if you divide into this number by then then the remainder will be eight smartarse eight.
+
+06:23.920 --> 06:27.100
+The next step GFI and then divide by ten.
+
+06:27.160 --> 06:29.740
+So G assign and divided by ten.
+
+06:30.010 --> 06:31.420
+So that is to zero for eight.
+
+06:31.480 --> 06:32.770
+So you divided by ten.
+
+06:32.770 --> 06:33.690
+Eight will be gone.
+
+06:33.700 --> 06:34.990
+It will be two hundred and four.
+
+06:35.260 --> 06:37.060
+So we will not fall.
+
+06:39.310 --> 06:41.200
+Some are saying some people are scared.
+
+06:41.230 --> 06:44.940
+So what is the value of some zero sum plus a K?
+
+06:45.070 --> 06:48.610
+So Zablocki So some will be Zablocki is how much?
+
+06:48.620 --> 06:49.060
+Eight.
+
+06:49.420 --> 06:51.420
+So some will be eight.
+
+06:52.870 --> 06:55.430
+The next step, call it some for.
+
+06:55.890 --> 06:58.750
+And some call it some form.
+
+06:59.060 --> 07:01.650
+Gee, that is two zero 04.
+
+07:02.050 --> 07:03.790
+And the sum is how much.
+
+07:03.790 --> 07:08.190
+Eight then one more step in the game.
+
+07:08.590 --> 07:14.320
+So this is a step that a lot of people are known because it has called itself so this will perform at
+
+07:14.320 --> 07:15.340
+returning time.
+
+07:15.640 --> 07:17.290
+So we will do it at same time.
+
+07:17.290 --> 07:19.280
+So I'll just leave a line here.
+
+07:19.600 --> 07:21.090
+Here we have the key.
+
+07:21.310 --> 07:25.720
+So whatever the value of that, it will not not aggregate in time.
+
+07:26.020 --> 07:32.530
+So let us continue with this call now, this call and this call, also same steps, same steps, so
+
+07:32.530 --> 07:35.160
+kerosine, more tangible sign, divide written.
+
+07:35.200 --> 07:38.540
+And in some case, I did so key.
+
+07:38.560 --> 07:49.390
+A sign written for four G assign divided by 10 for 20 some assign some plus a K eight is a sum plus
+
+07:49.390 --> 07:49.850
+four.
+
+07:49.870 --> 07:54.450
+So this is 12 that call itself for mixed values.
+
+07:54.460 --> 08:02.710
+That is G and some sort of 20 and 12 and also print that printing will be done afterwards.
+
+08:02.860 --> 08:09.220
+So all the steps I have the one, two, three, four, five, one, two, three, four fifty one will
+
+08:09.220 --> 08:12.430
+be done that time continuum.
+
+08:12.850 --> 08:16.360
+And this one, this call it will make this call again.
+
+08:16.360 --> 08:24.000
+These are steps so kesi in the mod so they demanded then is how much zettl and 20 divided.
+
+08:24.020 --> 08:24.990
+But that is how much.
+
+08:25.930 --> 08:27.640
+So that's two times divided.
+
+08:27.910 --> 08:30.280
+Then someone signed some plus key.
+
+08:30.490 --> 08:40.630
+Some is two plus two is it will only then call itself four G and some so to command twelve and also
+
+08:40.630 --> 08:41.370
+it has to print.
+
+08:41.380 --> 08:45.040
+I'll just remove this, it has to print but it will not be done now.
+
+08:45.040 --> 08:46.360
+It will be done afterwards.
+
+08:46.510 --> 08:47.540
+Now one more call.
+
+08:47.890 --> 08:54.790
+So this one again, those are steps can be assigned and the mountain to mountain is how much to only
+
+08:55.510 --> 08:57.250
+gasline and divided by ten.
+
+08:57.460 --> 08:58.300
+Divided by ten.
+
+08:58.300 --> 08:59.800
+So Gevalia will be how much.
+
+09:00.010 --> 09:00.580
+Zero.
+
+09:01.480 --> 09:03.850
+Then someone assign some BlueSky.
+
+09:04.120 --> 09:05.800
+So some is right now twelve.
+
+09:06.010 --> 09:07.700
+So in that two is that it.
+
+09:07.720 --> 09:11.210
+So this becomes fourteen then one more call with the foo.
+
+09:11.230 --> 09:14.350
+So I have to remove this also to just makerspace.
+
+09:14.350 --> 09:15.580
+You know very well about this.
+
+09:16.300 --> 09:18.360
+Then for one more call.
+
+09:18.370 --> 09:21.880
+What is that G and some Zetterlund 14.
+
+09:22.090 --> 09:25.040
+And also it has to print this will be done afterwards.
+
+09:25.720 --> 09:31.750
+Now Discon miscall when it comes here and is equal to zero written.
+
+09:32.940 --> 09:33.850
+This has to stop.
+
+09:34.260 --> 09:35.470
+It will not go further.
+
+09:35.880 --> 09:38.840
+This will stop, this call will not go further.
+
+09:39.180 --> 09:43.550
+So it will come back to this call for what it has to do, remaining predicate.
+
+09:43.590 --> 09:53.180
+So what is key to do is print and then this finishes this then is then then go back to the previous
+
+09:53.190 --> 09:55.180
+column and perform this a step.
+
+09:55.440 --> 09:56.930
+So what is the next step, Frank?
+
+09:57.090 --> 09:57.510
+How much?
+
+09:57.510 --> 09:58.350
+It is zero.
+
+09:58.620 --> 09:59.580
+So this is zero.
+
+10:00.030 --> 10:03.970
+Then this finishes go back to the previous call in this one.
+
+10:04.080 --> 10:05.570
+So this is the remaining print game.
+
+10:05.610 --> 10:08.070
+What is escape for print for?
+
+10:09.000 --> 10:10.610
+Then go back to the previous call.
+
+10:10.830 --> 10:16.250
+This is remaining so gave what is eight eight two zero four eight.
+
+10:16.590 --> 10:25.790
+And this function ends its function ends so distressing as or it returns back to the main function is
+
+10:25.800 --> 10:27.020
+the main function from here.
+
+10:27.030 --> 10:33.150
+It was can't fool from here Toscana now next step.
+
+10:33.600 --> 10:40.500
+But in some which some main functions, some how much it is zettl.
+
+10:40.800 --> 10:41.910
+This is not change.
+
+10:42.720 --> 10:43.740
+It became 14.
+
+10:43.980 --> 10:46.410
+This was belonging to full function.
+
+10:46.410 --> 10:52.920
+It doesn't belong to main function, main function some as Z only it is called what value.
+
+10:53.040 --> 10:57.710
+It is not modified so friends some as Zettl.
+
+10:58.650 --> 10:59.290
+Yes.
+
+10:59.340 --> 11:04.290
+Does the answer to zero four eight and zero is a that.
+
+11:04.740 --> 11:06.960
+If you got the answer then it is perfect.
+
+11:07.350 --> 11:11.460
+If you can't answer that is to zero for eight and 14.
+
+11:11.460 --> 11:15.600
+When you have mistaken, you thought that this is so much more defined.
+
+11:15.840 --> 11:19.520
+We are adding this one note that is belonging to full function.
+
+11:19.530 --> 11:20.910
+It's not related to this.
+
+11:21.240 --> 11:22.470
+So this is not modified.
+
+11:23.490 --> 11:24.240
+So that's all.
+
+11:24.480 --> 11:25.550
+This is the tracing.
+
+11:25.560 --> 11:31.080
+This is a little bit lendee because so many operations are there in the function and the result is two
+
+11:31.080 --> 11:33.100
+zero four eight zero.
+
+11:34.170 --> 11:36.300
+Now, let us look at third question.
+
+11:39.570 --> 11:41.800
+Let us look at the third example.
+
+11:41.940 --> 11:47.030
+Third question from quiz one, this is the program given the example.
+
+11:47.490 --> 11:49.080
+So let us study this one.
+
+11:49.620 --> 11:54.600
+Since the information I have not given in the question, but for explanation, I have written it here.
+
+11:56.280 --> 12:04.170
+In description 17 is there, so it says that if he's having five and it is past one value by reference,
+
+12:04.170 --> 12:08.900
+another value by value, so yes, he's there, this belonged to main function.
+
+12:08.910 --> 12:10.470
+So let us draw it, OK?
+
+12:10.860 --> 12:19.320
+B is having value five, then function F, it's scarred by passing P two times, but the first time
+
+12:19.320 --> 12:20.640
+is by reference.
+
+12:21.060 --> 12:22.890
+You remember this reference, right.
+
+12:23.250 --> 12:27.470
+C++ reference then this is by volume one is by reference.
+
+12:27.480 --> 12:28.640
+I don't know what it's about value.
+
+12:29.160 --> 12:32.630
+So those two walk past so it is nothing but a P only pos.
+
+12:32.760 --> 12:35.670
+No these are the statements so let us trace this one.
+
+12:35.680 --> 12:44.510
+So right on that function f ok first one is X and the second one is called the value C in the tracing
+
+12:44.530 --> 12:45.120
+function.
+
+12:45.120 --> 12:47.820
+If it is by value, I have directly written the value.
+
+12:48.150 --> 12:53.260
+So what is the value of a P five so that C will have the value five solid five year.
+
+12:53.650 --> 12:57.120
+OK, I don't have great C but that X is a reference.
+
+12:57.120 --> 12:58.620
+Don't try to fight there.
+
+12:59.340 --> 13:02.370
+If it is reference, don't write it so that X is nothing.
+
+13:02.370 --> 13:07.290
+But could this be only this would be only that P actually belongs to me in function.
+
+13:08.340 --> 13:11.040
+This is the important thing in this function.
+
+13:11.370 --> 13:14.370
+If you have understood this then you can trace it perfectly.
+
+13:15.180 --> 13:19.550
+None of the first step C assign C minus one.
+
+13:19.560 --> 13:22.740
+So what C become C was a five nine minus one.
+
+13:22.760 --> 13:26.600
+When C becomes four, if a C is equal to zero, no.
+
+13:26.610 --> 13:28.050
+Otherwise it should return one.
+
+13:28.230 --> 13:31.350
+It's not zero then exercised X plus one.
+
+13:31.350 --> 13:34.730
+So exercising X plus one means X will increment.
+
+13:34.980 --> 13:36.260
+So what is this one.
+
+13:36.510 --> 13:39.090
+So this should increment and it should become six.
+
+13:40.170 --> 13:50.040
+I made it six then call functions one by F of X commerce C call again itself by passing F of X comma
+
+13:50.040 --> 13:52.740
+c c is what for then.
+
+13:52.740 --> 13:57.750
+Why I'm writing X because that X is nothing with reference to this B as a reference for this.
+
+13:57.750 --> 14:00.390
+B every time when I say X I will come here.
+
+14:01.260 --> 14:03.600
+OK then into X is there.
+
+14:03.600 --> 14:04.890
+So I keep it as it is.
+
+14:04.890 --> 14:09.330
+I will not take the value and multiply because it will not be multiplied right now.
+
+14:09.630 --> 14:12.510
+Then the multiplication will be done at returning time.
+
+14:12.510 --> 14:13.200
+It will be done.
+
+14:13.410 --> 14:19.560
+So because this is done after getting the value then you can multiply the if you want to multiply now
+
+14:19.620 --> 14:23.410
+right now X is almost six six in the what what will multiply.
+
+14:23.820 --> 14:26.520
+So first of all, this value should be there, then it can be multiplied.
+
+14:26.790 --> 14:27.830
+So don't wait six.
+
+14:27.840 --> 14:29.970
+Let it be X only that time only we will see.
+
+14:32.360 --> 14:35.710
+Well, it has to multiply that time, it will go to be the value.
+
+14:36.230 --> 14:39.340
+OK, so leave it as it is, not discord.
+
+14:39.350 --> 14:40.730
+We have to continue for that.
+
+14:41.240 --> 14:46.670
+So this was the first call I have explained in detail, not meaning I'll just repeat them.
+
+14:47.750 --> 14:51.380
+XCOM, for example, for C assigned C minus one.
+
+14:51.380 --> 14:52.530
+So C becomes how much?
+
+14:52.550 --> 14:55.300
+A three then C zero.
+
+14:55.520 --> 14:55.940
+No.
+
+14:56.180 --> 15:04.010
+So exercise plus one for exercising X plus one will make it as seven because this X is nothing but this
+
+15:04.010 --> 15:04.280
+one.
+
+15:05.040 --> 15:14.180
+Then call it self again by passing X comma C value is a three and then two x one more call.
+
+15:15.350 --> 15:22.340
+Then in Discon, again, CSI on C minus one, subsea becomes how much it is three, so it becomes two,
+
+15:22.730 --> 15:25.270
+then Nexxus exercise next plus one.
+
+15:25.520 --> 15:26.930
+So this becomes eight.
+
+15:27.200 --> 15:32.720
+Then again, it will call itself X Gamma C is it to two and two X.
+
+15:32.990 --> 15:34.270
+We will see it afterwards.
+
+15:34.730 --> 15:36.230
+Then again, call.
+
+15:36.440 --> 15:39.920
+So it's common to be assigned to minus one.
+
+15:39.920 --> 15:41.420
+So C becomes a much one.
+
+15:42.110 --> 15:43.560
+C is it equal to zero.
+
+15:43.580 --> 15:44.750
+No, not zero.
+
+15:44.990 --> 15:47.060
+Then enter inside same X plus one.
+
+15:47.090 --> 15:49.420
+So X becomes how much exercise.
+
+15:49.460 --> 15:50.090
+X plus one.
+
+15:50.360 --> 15:53.590
+So this is nothing but B only remember nine.
+
+15:53.980 --> 15:58.850
+Then again call itself by passing F and that is X.
+
+15:58.850 --> 16:05.540
+Gomaa sees how much one then into X and keeping it X only at every time.
+
+16:05.630 --> 16:05.880
+Right.
+
+16:06.320 --> 16:14.360
+I'm not taking the value that this one X Common-Law X on my one C assigned C minus one.
+
+16:14.630 --> 16:16.220
+So C becomes how much.
+
+16:16.970 --> 16:19.940
+Zero is a C equal to zero.
+
+16:19.940 --> 16:21.470
+Yes C became zero.
+
+16:21.680 --> 16:22.800
+A written one.
+
+16:23.000 --> 16:25.320
+So this function returns one.
+
+16:25.790 --> 16:28.820
+So now from here it will return back.
+
+16:29.060 --> 16:34.490
+So this returns the same function that it becomes one one into X.
+
+16:34.490 --> 16:35.420
+What is X now.
+
+16:35.450 --> 16:37.090
+Nine nine.
+
+16:37.570 --> 16:38.510
+This is nine.
+
+16:39.170 --> 16:40.570
+This nine is written.
+
+16:40.580 --> 16:41.510
+So this is the result.
+
+16:41.540 --> 16:43.880
+This is nine in the X.
+
+16:43.970 --> 16:44.960
+Now you go to X.
+
+16:44.960 --> 16:46.320
+What is X nine only.
+
+16:46.790 --> 16:48.220
+So this is into nine.
+
+16:48.230 --> 16:49.430
+So this is nine squared.
+
+16:49.730 --> 16:51.680
+So this is return to this one.
+
+16:51.690 --> 16:53.930
+So this is nine squared into X.
+
+16:53.930 --> 16:56.250
+What is nine X nine only.
+
+16:56.540 --> 16:59.550
+So this is nine Q and this is written.
+
+16:59.570 --> 17:01.820
+So this is nine two and two X.
+
+17:01.820 --> 17:03.230
+What is X nine only.
+
+17:03.560 --> 17:05.180
+So does this nine four.
+
+17:05.420 --> 17:06.670
+And this is written.
+
+17:06.680 --> 17:07.760
+So this is nine.
+
+17:07.760 --> 17:08.450
+Bouwer four.
+
+17:10.160 --> 17:11.670
+Yes, this is the answer.
+
+17:11.690 --> 17:16.400
+So the answer is done by four nine point forty six five six one.
+
+17:16.400 --> 17:18.940
+So yes, disdain for this question.
+
+17:20.280 --> 17:26.130
+Now, if you've got the wrong answer means you have not done it properly, you have not referred to
+
+17:26.130 --> 17:27.080
+this one every time.
+
+17:28.140 --> 17:31.680
+And one more reason of getting a wrong answer is you are writing the values here.
+
+17:31.680 --> 17:34.680
+First time it was six, then you wrote seven underneath the night.
+
+17:35.100 --> 17:36.620
+So six, seven, eight, nine.
+
+17:36.930 --> 17:39.030
+So you are multiplying this one in such form.
+
+17:39.900 --> 17:41.910
+And one more mistake that we're were doing it.
+
+17:42.540 --> 17:44.400
+You are increasing up to ten here.
+
+17:44.400 --> 17:46.620
+Also, you are doing it up to ten.
+
+17:46.860 --> 17:51.510
+So commonly this type of mistakes are possible if you're not solving it properly.
+
+17:53.410 --> 17:55.610
+So this is the answer for this quiz question.
+
+17:56.660 --> 17:58.500
+Next, we will go to the next question.
+
+17:59.530 --> 18:01.750
+And our next question is this one.
+
+18:03.290 --> 18:08.510
+A function is given and we have to find out what is the result of dysfunction, if it is called for
+
+18:08.870 --> 18:11.090
+five value, five percent in five.
+
+18:11.810 --> 18:13.220
+So we have to trace this one.
+
+18:14.710 --> 18:22.170
+Let us do it first time I'm sending five so far, five fun of five.
+
+18:23.630 --> 18:24.040
+Then.
+
+18:25.210 --> 18:26.450
+These are local variables.
+
+18:26.470 --> 18:30.340
+Yes, these are not static, so in every call, Exel become one.
+
+18:30.640 --> 18:33.940
+Remember, this is also newly created in every call.
+
+18:34.140 --> 18:43.510
+OK, we will use them and is equal to one --'s noid is not one that Forcier sign one to less than
+
+18:43.630 --> 18:45.010
+one to less than in this.
+
+18:45.340 --> 18:47.220
+One, two, three, four.
+
+18:47.230 --> 18:49.580
+So Forcier, find one, two, three, four.
+
+18:50.020 --> 18:51.790
+This is statements are repeated.
+
+18:52.000 --> 18:53.410
+So one, two, three, four.
+
+18:53.920 --> 18:55.230
+So many times they are repeated.
+
+18:55.240 --> 18:56.270
+So let us do it.
+
+18:56.770 --> 18:59.940
+This is a sign X plus what.
+
+19:00.760 --> 19:01.450
+First one.
+
+19:01.900 --> 19:04.930
+First one is what for North Carolina values.
+
+19:04.930 --> 19:07.010
+What came out of this one.
+
+19:07.030 --> 19:10.640
+So this is a one off, one comma and the minus one.
+
+19:10.660 --> 19:11.420
+So what is then.
+
+19:11.440 --> 19:14.620
+Fine fun of one in two phonons.
+
+19:14.860 --> 19:20.210
+Four then plus because this is going to be added in two X every time.
+
+19:20.500 --> 19:22.120
+So again, one more time.
+
+19:22.360 --> 19:25.950
+So that time is how much you do right now is a two.
+
+19:25.990 --> 19:33.430
+So this is the final four to end the fun of five minus two.
+
+19:33.760 --> 19:37.690
+That is three then plus this isn't for loop.
+
+19:37.690 --> 19:39.280
+Repeat one more time.
+
+19:39.760 --> 19:40.560
+One more time.
+
+19:40.840 --> 19:42.430
+So this is a continuum.
+
+19:42.700 --> 19:46.560
+There is more space so fond of will be the three.
+
+19:46.570 --> 19:56.750
+So this is a three in front of five, minus three as a two then plus one more time.
+
+19:56.920 --> 20:07.420
+Now this time cavel before so far off for indoor fun of and the minus one that is in the minus kid that
+
+20:07.420 --> 20:10.020
+is five minus for this one.
+
+20:10.570 --> 20:14.590
+So so many calls for just four, not five.
+
+20:15.190 --> 20:16.360
+Solenni calls are there.
+
+20:16.630 --> 20:17.650
+This is complex.
+
+20:18.040 --> 20:21.080
+You cannot solve it easily by using pen and paper.
+
+20:21.880 --> 20:24.820
+So in this we should finish this one than this one.
+
+20:24.820 --> 20:27.370
+So I don't know how much expansion this will take.
+
+20:27.610 --> 20:28.990
+And this one and this one.
+
+20:28.990 --> 20:31.480
+All these you should know, then multiply and get the result.
+
+20:31.810 --> 20:32.830
+So this is not easy.
+
+20:33.160 --> 20:35.080
+It's not easy then how to solve it.
+
+20:36.160 --> 20:39.330
+So for solving this one will take another approach.
+
+20:39.730 --> 20:40.860
+Let us see this one.
+
+20:41.230 --> 20:47.590
+So here I will take the values of fun of M and for the values of.
+
+20:47.590 --> 20:49.650
+And so I'll make it as a table.
+
+20:50.980 --> 20:54.010
+Let us do it then I'll tell you why I'm taking table.
+
+20:54.430 --> 21:00.760
+So first C what is the minimum value and is equal to one if any equals to one.
+
+21:00.970 --> 21:04.420
+If I call this function bypassing one, not five.
+
+21:04.510 --> 21:07.680
+If I call it by passing one, then what happens.
+
+21:07.840 --> 21:09.250
+Let us get to that value.
+
+21:10.060 --> 21:15.730
+OK, so first we will find small little value, then slowly will increase and get the value for five
+
+21:15.730 --> 21:16.010
+years.
+
+21:16.010 --> 21:17.130
+So that is the idea.
+
+21:17.500 --> 21:19.000
+So then end this one.
+
+21:19.120 --> 21:20.020
+What is the result.
+
+21:20.500 --> 21:21.580
+Right on X.
+
+21:21.610 --> 21:22.550
+What is X one.
+
+21:22.720 --> 21:24.760
+So does one answer this one.
+
+21:25.660 --> 21:29.800
+So now we know for of one as one fan of one is one.
+
+21:29.800 --> 21:30.110
+Right.
+
+21:30.660 --> 21:33.120
+The next one of two we need this also.
+
+21:33.130 --> 21:33.400
+Right.
+
+21:33.610 --> 21:36.160
+So I'm not making a tree and making a table.
+
+21:36.310 --> 21:40.690
+So let us find an offer to solve one of two men swap.
+
+21:41.060 --> 21:45.400
+So two months and it's not one it will enter here.
+
+21:45.640 --> 21:53.140
+So how many times the slope will repeat K as one, K as one up to less than two.
+
+21:53.500 --> 21:55.660
+So it will only for one time.
+
+21:55.930 --> 21:56.950
+So let us do it.
+
+21:57.100 --> 22:06.280
+So for final four to four two it will be X plus make fun of KS.
+
+22:06.340 --> 22:14.680
+What one gives one in fun of doing minus one gives one night.
+
+22:14.860 --> 22:16.230
+Only one time it will repeat.
+
+22:16.660 --> 22:19.330
+Just observed that there's nothing to explain.
+
+22:19.330 --> 22:21.270
+You have to read and understand.
+
+22:21.610 --> 22:25.360
+So this for loop will repeat for only one time that statement.
+
+22:25.360 --> 22:25.930
+I don't care.
+
+22:26.650 --> 22:27.670
+So what are the values.
+
+22:27.940 --> 22:28.930
+It's only this much.
+
+22:28.930 --> 22:30.160
+That's only one time.
+
+22:30.490 --> 22:31.600
+So how much is this.
+
+22:31.810 --> 22:33.790
+This is X is how much.
+
+22:33.790 --> 22:37.350
+One final one here.
+
+22:37.360 --> 22:39.090
+We already know for off on this one.
+
+22:39.100 --> 22:45.040
+OK, Digitas one in the form of two minus one to minus one is what one.
+
+22:45.250 --> 22:45.850
+This is one.
+
+22:46.240 --> 22:47.620
+Oh this like in front of one.
+
+22:47.830 --> 22:50.110
+Already know how much it is one.
+
+22:50.440 --> 22:53.500
+So this is one plus one in the one.
+
+22:53.650 --> 22:55.300
+So one plus one and one is how much.
+
+22:55.630 --> 22:56.530
+One plus one.
+
+22:56.590 --> 22:57.460
+That is two.
+
+22:57.880 --> 22:58.480
+Yes.
+
+22:58.720 --> 23:02.480
+One of two is two three.
+
+23:02.680 --> 23:03.200
+That it.
+
+23:04.000 --> 23:11.710
+So we have another one also one of two also let us find one of three, let us find one of three three.
+
+23:12.010 --> 23:14.650
+So one of three then.
+
+23:14.650 --> 23:18.010
+It is a three X plus it is not the one.
+
+23:18.010 --> 23:19.150
+So it will enter inside.
+
+23:19.450 --> 23:22.660
+So this kid takes values from one to three.
+
+23:23.170 --> 23:24.420
+So how does.
+
+23:24.890 --> 23:30.230
+Repeat one and kill less than three months, one and two, two times it will repeat, so it will take
+
+23:30.230 --> 23:34.940
+two this one time, one second to let us put it here.
+
+23:35.150 --> 23:43.250
+So X plus fun off is one and one off and the minus.
+
+23:43.540 --> 23:50.720
+So what is entry rate three three minus one plus one more time, which will repeat four plus it will
+
+23:50.720 --> 23:52.780
+be accumulated in this one on added in this one.
+
+23:53.450 --> 23:55.910
+So this time fun on four days.
+
+23:55.910 --> 23:57.740
+How much do you think it has to.
+
+23:58.010 --> 24:07.130
+So this is three minus two so far enough to enable fun of three minus two.
+
+24:07.640 --> 24:09.340
+OK, I'll remove this.
+
+24:09.560 --> 24:11.770
+So now let us solve it.
+
+24:12.230 --> 24:15.640
+This is one OK, one plus four.
+
+24:15.650 --> 24:19.540
+Last one we already know and this one in two.
+
+24:20.030 --> 24:21.830
+What is this fun of.
+
+24:21.830 --> 24:24.590
+Three minus one three minus one is too far off to.
+
+24:24.590 --> 24:27.950
+What is the value of one of two we know it said is the benefit.
+
+24:27.950 --> 24:29.390
+We already know small little value.
+
+24:29.690 --> 24:33.860
+So this is one to two plus four of two.
+
+24:34.130 --> 24:40.640
+It is to just rerouted two in the into four three minus two, three minus two is how much.
+
+24:40.640 --> 24:45.050
+One last one is what one then total.
+
+24:45.050 --> 24:51.230
+How this is one plus one two two two plus two in the one is two so this is five.
+
+24:52.070 --> 24:57.080
+So if you got down to five so this is five now.
+
+24:57.080 --> 25:02.090
+Next is four four and then of five.
+
+25:03.330 --> 25:07.960
+That's all you can get it now for fun or for I will not read all these things directly.
+
+25:08.240 --> 25:09.130
+I don't answer.
+
+25:09.160 --> 25:11.630
+OK, then also four or five.
+
+25:11.890 --> 25:20.410
+So I'll remove this and I will use the place for for formants KTXA values from one to less than four.
+
+25:20.620 --> 25:24.750
+So Gay is going to take the values one, two and three.
+
+25:25.360 --> 25:30.790
+So let us start exis one first time Fanaroff one will do four minus one.
+
+25:30.790 --> 25:33.910
+So F off one and two four minus one.
+
+25:34.240 --> 25:38.980
+So four minus one is what, a three plus F for four keys are two now.
+
+25:39.220 --> 25:46.270
+So into four minus two as a two plus F of three games, three right now.
+
+25:46.270 --> 25:50.860
+So treatments for fall minus three is one so holiness's.
+
+25:50.980 --> 25:54.100
+So let us is this, this is one for one is how much.
+
+25:54.100 --> 25:55.140
+One incoll.
+
+25:55.150 --> 25:56.380
+One of three is how much.
+
+25:56.380 --> 25:56.620
+What.
+
+25:56.620 --> 25:59.500
+Five plus four of two is a two.
+
+25:59.500 --> 26:00.940
+So this is twenty two.
+
+26:01.630 --> 26:03.610
+That's one of three is a five in front.
+
+26:03.610 --> 26:04.510
+Off one is one.
+
+26:04.510 --> 26:07.840
+So hemolysis five plus five.
+
+26:07.840 --> 26:10.150
+Ten ten plus four.
+
+26:10.510 --> 26:13.230
+Fourteen plus one fifteen.
+
+26:13.990 --> 26:17.350
+So this is fifteen then.
+
+26:17.770 --> 26:18.880
+Final five.
+
+26:19.060 --> 26:20.290
+Final five is how much.
+
+26:20.620 --> 26:21.550
+One plus.
+
+26:22.390 --> 26:24.160
+Now can we take the values.
+
+26:24.160 --> 26:26.770
+One, two, three and four.
+
+26:27.130 --> 26:30.190
+So Air Force One is one four for this.
+
+26:30.400 --> 26:32.770
+Seems like this one is multiplied with four.
+
+26:33.040 --> 26:33.700
+So four for this.
+
+26:33.700 --> 26:37.030
+Fifteen plus two with the three.
+
+26:37.030 --> 26:44.290
+So two with the three months, twenty five point five then plus then three in the boom.
+
+26:44.290 --> 26:46.420
+So five in the two, five and the two.
+
+26:46.420 --> 26:50.680
+If you have observed this then you can directly like this then forward into one.
+
+26:50.980 --> 26:52.210
+So fifteen into one.
+
+26:52.330 --> 26:53.470
+Fifteen to one.
+
+26:54.250 --> 26:55.210
+How much distance.
+
+26:55.660 --> 27:02.140
+One plus fifteen plus five to ten and five to 10 and 15.
+
+27:02.800 --> 27:03.610
+Fifteen fifteen.
+
+27:03.610 --> 27:06.000
+Thirty, forty, fifty, fifty one.
+
+27:06.460 --> 27:08.290
+So the answer is fifty one.
+
+27:08.290 --> 27:10.150
+So this is fifty one.
+
+27:11.450 --> 27:13.010
+That said, there's dance.
+
+27:13.950 --> 27:19.360
+So the main idea here is that we cannot find it by expanding it.
+
+27:19.650 --> 27:25.660
+We cannot do that, then we have to start finding the smaller values, then we can get this done.
+
+27:26.130 --> 27:28.420
+So that's all in discussion now.
+
+27:28.620 --> 27:29.890
+One more question is there.
+
+27:30.000 --> 27:32.850
+So let us look at the next question and which one.
+
+27:34.030 --> 27:40.120
+Now, let us look at next question, Chris, one, since is the program given there's a function and
+
+27:40.120 --> 27:48.740
+it is called for value voluntary, if you read this, the variables are and and there'd be only two
+
+27:48.760 --> 27:51.130
+variables are there, but these are static.
+
+27:51.400 --> 27:55.140
+So you remember when you have any static variable, you should take it separately.
+
+27:55.150 --> 27:56.420
+So let us put it as one.
+
+27:58.030 --> 27:59.050
+Now, what is difference?
+
+27:59.050 --> 28:00.210
+Say, just decided.
+
+28:00.290 --> 28:01.380
+OK, it's easy.
+
+28:01.510 --> 28:02.310
+Let us do it.
+
+28:02.500 --> 28:07.370
+So let us make a first call, C of three instead of down time saying just to see.
+
+28:07.450 --> 28:12.390
+OK, so C of the count of three stack this one.
+
+28:12.400 --> 28:12.760
+Yes.
+
+28:12.760 --> 28:14.490
+This over this initial right.
+
+28:14.590 --> 28:16.050
+We don't have to repeat it every time.
+
+28:17.500 --> 28:19.630
+And so what is N three.
+
+28:19.990 --> 28:21.260
+So print three.
+
+28:21.440 --> 28:23.870
+OK, here I will write on the output, what we get.
+
+28:24.430 --> 28:28.840
+So first time 3D printing then printed.
+
+28:28.840 --> 28:30.470
+B, what is the deal.
+
+28:30.520 --> 28:32.970
+It is printed now so devalue.
+
+28:33.010 --> 28:34.010
+What is that one.
+
+28:34.360 --> 28:35.460
+So one is printed.
+
+28:35.470 --> 28:43.600
+So one is printed then B plus plus plus plus B becomes two.
+
+28:45.010 --> 28:49.620
+If anything greater than one that count then minus one C A certificate.
+
+28:49.630 --> 28:50.590
+That one it is three.
+
+28:50.950 --> 28:57.240
+So count is call again for and the minus one sort of four to the next print.
+
+28:57.460 --> 29:01.070
+But first of all colors that finished that column then print.
+
+29:01.250 --> 29:09.370
+OK, printing will be done but not now afterwards then call for to continue from here again.
+
+29:09.370 --> 29:12.260
+Calls itself so again printing is that.
+
+29:12.640 --> 29:24.220
+So first print and and is how much to do next d d how much to do then the D plus plus plus plus D becomes
+
+29:24.220 --> 29:26.970
+three and this is greater than one.
+
+29:27.010 --> 29:27.520
+Yes.
+
+29:27.870 --> 29:29.700
+Call itself then minus one.
+
+29:30.040 --> 29:33.460
+So CS called four and the minus one to minus one one.
+
+29:33.820 --> 29:37.020
+Then after that building is there but not now, it will be done afterwards.
+
+29:37.030 --> 29:40.060
+See here also we left and we have to do it afterwards.
+
+29:40.750 --> 29:44.720
+This time sees one come again like print and.
+
+29:44.910 --> 29:53.360
+And this is what one print one then printed D how three so printed three then the plus plus.
+
+29:53.620 --> 30:01.600
+So this is ok one is printed and 3d printer then D plus plus so deeply becomes how much forward then.
+
+30:01.610 --> 30:02.720
+And this is greater than one.
+
+30:02.950 --> 30:04.630
+No it's not greater than one.
+
+30:04.990 --> 30:05.950
+So it doesn't cost.
+
+30:06.130 --> 30:11.680
+So boarding is not a done but after that printing is there some printing is done.
+
+30:11.710 --> 30:13.450
+So what is it for.
+
+30:13.660 --> 30:16.840
+So now this is the end point is going to print now.
+
+30:16.850 --> 30:19.870
+So this for for this printing.
+
+30:21.760 --> 30:26.260
+There is no call for to go back, so it goes back to the previous.
+
+30:26.920 --> 30:33.040
+So for this call, this is completed next year, their remaining print, this is print would be what
+
+30:33.040 --> 30:33.990
+is the Ford?
+
+30:34.270 --> 30:35.790
+So Ford is printed now.
+
+30:37.060 --> 30:38.640
+Then this call finishes.
+
+30:38.650 --> 30:42.130
+It goes back in this line like this one for this one.
+
+30:42.490 --> 30:43.350
+It is in this call.
+
+30:43.410 --> 30:45.550
+Now, this is a one Nixon's remaining.
+
+30:45.550 --> 30:46.470
+What is that print.
+
+30:46.480 --> 30:47.690
+But it won't be this.
+
+30:47.710 --> 30:49.310
+How much for support is printed.
+
+30:49.720 --> 30:50.740
+So this is Ford.
+
+30:51.250 --> 30:53.350
+So the answer is three.
+
+30:53.350 --> 30:57.910
+One, two, one three four four four instance.
+
+30:58.950 --> 31:02.810
+So that's all it is the tracing and explanation of all questions.
+
+31:03.380 --> 31:03.600
+Right.
+
+31:03.700 --> 31:05.650
+So you can write this program and test them.
+
+31:05.650 --> 31:07.250
+Also, you get the same result.
+
+31:07.660 --> 31:09.050
+So that's all with the quiz.
+
+31:09.070 --> 31:09.980
+One problems.

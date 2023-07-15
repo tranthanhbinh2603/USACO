@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1673881291 source:e:\document\project\usaco\hoc lap trinh cmn thang 5\a\cf339-d2-a\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+

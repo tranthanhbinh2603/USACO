@@ -1,0 +1,324 @@
+0
+1
+00:00:01,260 --> 00:00:04,980
+In this video, I would like to show a simulation for the usage of the system.
+1
+
+2
+00:00:05,880 --> 00:00:10,470
+The user is faced with 10 choices here and then a menu request from 1 to 10.
+2
+
+3
+00:00:10,710 --> 00:00:13,390
+I started to get the choice of 1, 1 1, 1, 1.
+3
+
+4
+00:00:13,390 --> 00:00:14,970
+I'm feeding information.
+4
+
+5
+00:00:15,330 --> 00:00:17,550
+So with every 1, I'm adding a book,
+5
+
+6
+00:00:17,760 --> 00:00:20,670
+The book has a name, has an ID, has a total quantity.
+6
+
+7
+00:00:20,910 --> 00:00:22,740
+There are three inputs from the user.
+7
+
+8
+00:00:23,070 --> 00:00:28,430
+So the user here entered the input ID: 100,  name: "Math4" and there is 3.
+8
+
+9
+00:00:28,470 --> 00:00:31,540
+The one who is entering this data is the admin. So entered
+9
+
+10
+00:00:31,560 --> 00:00:33,800
+1, 2, 3, 4, 5, 6 books.
+10
+
+11
+00:00:34,200 --> 00:00:36,570
+And then we give a choice of 4, 4
+11
+
+12
+00:00:36,570 --> 00:00:38,880
+Here is printing the whole library but by ID.
+12
+
+13
+00:00:39,360 --> 00:00:45,960
+So now the whole library will be printed in this order and notice here it's by ID, name, then quantity.
+13
+
+14
+00:00:46,260 --> 00:00:54,510
+But the IDs here are sorted in inputs and these are the current quantity and there is no borrowing
+14
+
+15
+00:00:54,510 --> 00:00:55,640
+for this book at the moment.
+15
+
+16
+00:00:56,400 --> 00:00:59,320
+I can also enter 5, to order them by name.
+16
+
+17
+00:00:59,640 --> 00:01:01,230
+So now you see what is ordered
+17
+
+18
+00:01:01,240 --> 00:01:02,560
+now here is name, "Math1"
+18
+
+19
+00:01:02,580 --> 00:01:05,340
+"Math2", "Math3", "Math4", "Programming1", "Programming2".
+19
+
+20
+00:01:05,640 --> 00:01:07,970
+Now we have a different ordering at the moment.
+20
+
+21
+00:01:09,850 --> 00:01:16,290
+Proceeding more, I entered input 6, input 6 is for adding a user, to add a user, you need to add
+21
+
+22
+00:01:16,300 --> 00:01:18,250
+a name for him and I new ID.
+22
+
+23
+00:01:18,460 --> 00:01:23,420
+So again, we entered 1 user, 2, 3, 4. 4 names only.
+23
+
+24
+00:01:24,010 --> 00:01:25,180
+Now we entered 7,
+24
+
+25
+00:01:25,180 --> 00:01:28,270
+7 is user want to borrow a specific book.
+25
+
+26
+00:01:28,630 --> 00:01:30,270
+So I would like to enter two things,
+26
+
+27
+00:01:30,520 --> 00:01:33,400
+What is the user name and what is the book name?
+27
+
+28
+00:01:33,430 --> 00:01:35,530
+It seems that Mostafa borrowed that one.
+28
+
+29
+00:01:35,530 --> 00:01:42,780
+And "Math2", and "Math3". "Ali", "Math1" and "Math2". "Noha" "Math1" and "Math2". now enter again choice
+29
+
+30
+00:01:42,790 --> 00:01:44,590
+number 4 to print the whole library.
+30
+
+31
+00:01:44,770 --> 00:01:48,700
+You will start to notice that "Math2" is borrowed three times.
+31
+
+32
+00:01:49,300 --> 00:01:49,870
+By whom?
+32
+
+33
+00:01:49,870 --> 00:01:50,970
+If you try to investigate,
+33
+
+34
+00:01:50,980 --> 00:01:55,630
+here is "Math2" by "Ali", here is "Math2" by "Noha", here is "Math2" by "Mostafa".
+34
+
+35
+00:01:55,810 --> 00:02:01,810
+So yes, this book has been borrowed three times. from another data perspective you might print
+35
+
+36
+00:02:01,810 --> 00:02:02,560
+the users,
+36
+
+37
+00:02:02,830 --> 00:02:05,230
+So here we start to see the user
+37
+
+38
+00:02:05,230 --> 00:02:09,910
+"Mostafa" has this ID and borrowed books 101, 102, 103.
+38
+
+39
+00:02:10,330 --> 00:02:15,250
+So now you see here our information has been reflected in different other operations.
+39
+
+40
+00:02:15,520 --> 00:02:19,210
+It seems that this user, "Ashraf", has has no borrowing so far.
+40
+
+41
+00:02:21,150 --> 00:02:26,250
+If we enter the choice 2, we are going to search by a book prefix, so now we would like to find
+41
+
+42
+00:02:26,400 --> 00:02:29,570
+all the books that start with two letters, "ma".
+42
+
+43
+00:02:29,760 --> 00:02:36,090
+So we have "Math4", 2, 1, 3. Another search with the word "pro" , show "programming1", "programming2".
+43
+
+44
+00:02:36,090 --> 00:02:39,740
+If I entered something like "machine" for machine learning books,
+44
+
+45
+00:02:39,750 --> 00:02:44,130
+There are no books with such a prefix. Choice
+45
+
+46
+00:02:44,160 --> 00:02:47,760
+number 3 is who borrowed a specific book.
+46
+
+47
+00:02:48,390 --> 00:02:51,330
+We entered "math1" we want to know which users borrowed
+47
+
+48
+00:02:51,330 --> 00:02:56,280
+this book, it is going to print that "Mostafa", "Ali", "Noha" borrowed this book. in a similar way,
+48
+
+49
+00:02:56,280 --> 00:02:57,720
+Who borrowed "Math2"? "Mostafa", "Ali" and "Noha".
+49
+
+50
+00:02:57,720 --> 00:02:59,850
+Who borrowed "machine"?
+50
+
+51
+00:02:59,850 --> 00:03:01,440
+There are no books with this name,
+51
+
+52
+00:03:01,450 --> 00:03:06,570
+This is an invalid name. 4, let's print now the system.
+52
+
+53
+00:03:06,570 --> 00:03:09,510
+The system is, as we showed before, in this way.
+53
+
+54
+00:03:10,170 --> 00:03:16,500
+Let's now print the users we already saw that. we would like now to test the feature number 8.
+54
+
+55
+00:03:17,160 --> 00:03:18,840
+Feature number 8 is returning a book.
+55
+
+56
+00:03:18,840 --> 00:03:22,200
+So we saying that "Mostafa" is returning "Math1".
+56
+
+57
+00:03:22,860 --> 00:03:31,680
+And you see here that "Math1" is borrowed three times and "Mustafa" really borrowed "Math1" here,
+57
+
+58
+00:03:31,680 --> 00:03:34,290
+102, after this operation,
+58
+
+59
+00:03:34,290 --> 00:03:43,920
+if we tried to print again the library, we will notice that the  "Math1" quantity decreased
+59
+
+60
+00:03:44,460 --> 00:03:46,010
+here, the borrowed one.
+60
+
+61
+00:03:46,530 --> 00:03:49,680
+So you notice here 2, but you notice here 3.
+61
+
+62
+00:03:50,040 --> 00:03:51,330
+So the book is returned.
+62
+
+63
+00:03:51,480 --> 00:03:56,610
+If we printed, the users will notice that "Mostafa" doesn't have "Math1" anymore.
+63
+
+64
+00:03:56,880 --> 00:04:01,470
+So you see how the system is integral over all, the data is correct.
+64
+
+65
+00:04:02,070 --> 00:04:02,640
+That's all.

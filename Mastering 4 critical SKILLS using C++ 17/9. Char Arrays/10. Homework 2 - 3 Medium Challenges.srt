@@ -1,0 +1,99 @@
+0
+1
+00:00:01,230 --> 00:00:07,500
+Homework set number two, in the first one very relevant to the previous problem, you will read a string
+1
+
+2
+00:00:07,500 --> 00:00:14,220
+and compress it as following, you will compress each group to something like, let's say you have four "C"s,
+2
+
+3
+00:00:14,220 --> 00:00:15,750
+then you compress to "c4".
+3
+
+4
+00:00:16,320 --> 00:00:22,830
+And between different groups use underscore, for example, here we have four "C"s so write C4, three "D"s,
+4
+
+5
+00:00:22,830 --> 00:00:23,490
+so write D3.
+5
+
+6
+00:00:23,490 --> 00:00:27,690
+a lot of "X"s, X8, and one E, e1.
+6
+
+7
+00:00:27,690 --> 00:00:28,620
+And we put exit,
+7
+
+8
+00:00:28,740 --> 00:00:35,700
+we would underscore in the middle, here we have a lot of "X"s, so it's x8. In the second problem you
+8
+
+9
+00:00:35,700 --> 00:00:41,670
+would like to read and compare two strings and you should develop that by yourself.
+9
+
+10
+00:00:41,680 --> 00:00:44,820
+you will not use a < operator between two strings,
+10
+
+11
+00:00:44,820 --> 00:00:50,240
+so you will read two strings, but you will do the comparison by yourself and follow
+11
+
+12
+00:00:50,250 --> 00:00:53,460
+follow the way that we learned about how to compare two strings.
+12
+
+13
+00:00:55,430 --> 00:01:01,340
+In this problem, you will read a very long string, but it would be at least of six digits and you would
+13
+
+14
+00:01:01,340 --> 00:01:04,410
+like to add the number five five five to it.
+14
+
+15
+00:01:04,880 --> 00:01:06,170
+You shouldn't try to convert it,
+15
+
+16
+00:01:06,170 --> 00:01:11,580
+it is very, very, very long string to integer because it will exceed the maximum limit.
+16
+
+17
+00:01:12,080 --> 00:01:17,780
+For example, if the input is like this number and you added the four fives, it should be like that
+17
+
+18
+00:01:17,780 --> 00:01:18,040
+one.
+18
+
+19
+00:01:18,620 --> 00:01:22,850
+So try to develop an algorithm that correctly handled this problem.
+19
+
+20
+00:01:23,920 --> 00:01:24,250
+That's all.

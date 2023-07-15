@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1673176112 source:c:\users\binh\documents\project\usaco\mastering critical skills in algorithms using c++ part 1\6. searching binary search\homework\12 - medium\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<climits>
+	<cmath>
+	<iomanip>
+

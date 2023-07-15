@@ -1,0 +1,464 @@
+0
+1
+00:00:00,900 --> 00:00:06,720
+In the previous videos, we learned about the functions, but there is also built-in functions.
+1
+
+2
+00:00:06,720 --> 00:00:11,920
+A built-in function is a function that is ready and implemented for you to use.
+2
+
+3
+00:00:12,060 --> 00:00:13,420
+So that saves your time.
+3
+
+4
+00:00:13,770 --> 00:00:17,550
+So the C++ provides us with these built-in functions, to save our time.
+4
+
+5
+00:00:17,790 --> 00:00:22,200
+And we in the teams, build the functions to save our team members' time.
+5
+
+6
+00:00:22,500 --> 00:00:24,030
+So the "abs" function,
+6
+
+7
+00:00:24,060 --> 00:00:25,440
+Remember, we did it by ourselves.
+7
+
+8
+00:00:25,740 --> 00:00:26,550
+The "abs" function
+8
+
+9
+00:00:26,550 --> 00:00:29,880
+takes a number and returns a positive value for it.
+9
+
+10
+00:00:30,360 --> 00:00:36,120
+The "fabs" is the same, but you can provide it with a float absolute number so we can do it with a double.
+10
+
+11
+00:00:36,750 --> 00:00:37,190
+the
+11
+
+12
+00:00:37,420 --> 00:00:45,060
+The "ceil" is something that takes it to the highest positive integer and the "floor" takes it to the lowest
+12
+
+13
+00:00:45,060 --> 00:00:46,620
+integer. The "round"
+13
+
+14
+00:00:46,620 --> 00:00:52,840
+function is function that's going to round it up or down based on which one is closest.
+14
+
+15
+00:00:53,130 --> 00:01:02,070
+So we see here, 2.4 is closer to 2, 2.5 is closer to 3, 2.6 to
+15
+
+16
+00:01:02,070 --> 00:01:02,490
+the 3.
+16
+
+17
+00:01:03,090 --> 00:01:12,030
+Now what about -2.6, -2.6 is always closer to -3, -2.4
+17
+
+18
+00:01:12,120 --> 00:01:14,100
+is also closer to -2.
+18
+
+19
+00:01:14,670 --> 00:01:18,300
+Notice here, "ceil" and "floor" are very tricky functions,
+19
+
+20
+00:01:18,310 --> 00:01:19,380
+They are tricky in math,
+20
+
+21
+00:01:19,380 --> 00:01:20,580
+So you should be careful about that.
+21
+
+22
+00:01:20,970 --> 00:01:25,800
+Remember, the "ceil" of 2.4 was 3, which is the closest to it.
+22
+
+23
+00:01:26,010 --> 00:01:32,460
+But what about the "ceil" of -2.4, the "ceil" of -2.4 is closer to -2,
+23
+
+24
+00:01:32,760 --> 00:01:34,530
+not 2, 3 as here.
+24
+
+25
+00:01:34,800 --> 00:01:41,070
+In a similar way, the "floor" of -2.4 is closer to the -3, not to 
+25
+
+26
+00:01:41,070 --> 00:01:41,350
+-2.
+26
+
+27
+00:01:41,400 --> 00:01:43,320
+OK, so try to think about it.
+27
+
+28
+00:01:43,590 --> 00:01:48,570
+When we have a -2.4, we know that we are in the negative,
+28
+
+29
+00:01:48,780 --> 00:01:54,480
+So after -2 is -3, -2.4 here is closer to -3,
+29
+
+30
+00:01:54,660 --> 00:02:03,870
+not to -2, OK, because -2 is going up and "floor" is about going down.
+30
+
+31
+00:02:04,560 --> 00:02:08,460
+But here in 2.4, what is after 2.4 is 3.
+31
+
+32
+00:02:09,300 --> 00:02:09,540
+Sorry.
+32
+
+33
+00:02:09,570 --> 00:02:10,470
+What is before.
+33
+
+34
+00:02:11,100 --> 00:02:12,060
+What is before
+34
+
+35
+00:02:12,060 --> 00:02:17,820
+2.4, is 2 what is before -2.4, in scale is -3.
+35
+
+36
+00:02:17,820 --> 00:02:20,750
+OK, square root 16 is definitely 4.
+36
+
+37
+00:02:21,030 --> 00:02:23,070
+So where are these kind of functions.
+37
+
+38
+00:02:23,550 --> 00:02:24,390
+You notice here
+38
+
+39
+00:02:24,390 --> 00:02:31,860
+we started to make "#include<cmath>", "#include<cstdlib>" and this is a good time to know about
+39
+
+40
+00:02:31,860 --> 00:02:32,580
+the #include.
+40
+
+41
+00:02:32,580 --> 00:02:36,420
+We used to use "#include<iostream>" but "include" means what ?
+41
+
+42
+00:02:36,420 --> 00:02:37,550
+"include"
+42
+
+43
+00:02:37,560 --> 00:02:45,210
+means include for me the built-in functions already, for example, the "#include<cmath>" is going to
+43
+
+44
+00:02:45,210 --> 00:02:51,720
+include for you these nice cmath functions that we have, when we "#include<iostream>", it includes for
+44
+
+45
+00:02:51,720 --> 00:02:55,650
+us the "cout" and the "cin", that allow us to read and write.
+45
+
+46
+00:02:55,830 --> 00:03:00,210
+I would like you to go and explore this "cmath" function header.
+46
+
+47
+00:03:00,390 --> 00:03:05,280
+It has a lot of C++11 and C++17 new functionalities.
+47
+
+48
+00:03:05,490 --> 00:03:08,040
+Also "stdlib", go ahead and explore it.
+48
+
+49
+00:03:09,270 --> 00:03:11,190
+You don't need to memorize this function.
+49
+
+50
+00:03:11,340 --> 00:03:15,180
+They will be helpful over time just to use them from time to time.
+50
+
+51
+00:03:15,930 --> 00:03:16,310
+Let's see
+51
+
+52
+00:03:16,320 --> 00:03:23,400
+Other interesting kind of functions, the "is_alpha", "is_digit", "is_upper", "is_lower" cases, so you can double
+52
+
+53
+00:03:23,400 --> 00:03:25,170
+check using these functions.
+53
+
+54
+00:03:25,170 --> 00:03:29,100
+You don't need to say oh is this letter between 'a' small and 'A' capital.
+54
+
+55
+00:03:29,370 --> 00:03:35,670
+There is an "is_alpha" function or "is_upper" , there are also "to_lower" and "to_upper" functions.
+55
+
+56
+00:03:35,850 --> 00:03:40,620
+So you can use them. Notice here, the "is_upper" and "is_lower" functions,
+56
+
+57
+00:03:40,860 --> 00:03:43,020
+They don't return necessarily true or false.
+57
+
+58
+00:03:43,290 --> 00:03:47,490
+They actually return 0 for false and return some integer for true.
+58
+
+59
+00:03:47,730 --> 00:03:50,400
+OK, so be careful,
+59
+
+60
+00:03:50,700 --> 00:03:51,930
+This is more of an integer value.
+60
+
+61
+00:03:52,200 --> 00:03:54,240
+It typically will not cause a problem for you.
+61
+
+62
+00:03:55,230 --> 00:04:00,840
+You can also call "max" function and "power" function and "log" function and "log10". the difference between "log2"
+62
+
+63
+00:04:00,840 --> 00:04:02,540
+and "log10",
+63
+
+64
+00:04:02,550 --> 00:04:04,260
+"log2" is about binary log,
+64
+
+65
+00:04:04,620 --> 00:04:06,660
+and "log10" is just about 10th log.
+65
+
+66
+00:04:07,500 --> 00:04:09,960
+If you aren't familiar with the log function, no problem.
+66
+
+67
+00:04:10,260 --> 00:04:15,840
+There is also you can create some random number, for example, the "rand" function, the "rand" function
+67
+
+68
+00:04:15,840 --> 00:04:20,190
+returns some number between 0 and something called "RAND_MAX".
+68
+
+69
+00:04:20,580 --> 00:04:26,060
+So if you divided these two by itself, it's going to give you some number between 0 and 1.
+69
+
+70
+00:04:26,100 --> 00:04:29,670
+This isn't the best way to do a random function, but just good to know at the moment.
+70
+
+71
+00:04:31,260 --> 00:04:33,270
+Let's go back to the "is_lower" function,
+71
+
+72
+00:04:33,270 --> 00:04:39,960
+Remember when we said "is_lower" and we said we better send "const" here, string &str.
+72
+
+73
+00:04:40,320 --> 00:04:46,110
+Now if we would like to know if the whole string is lower or not, we can iterate on it character
+73
+
+74
+00:04:46,110 --> 00:04:52,850
+by character and then calling the stdlib "if (!islower(str[i]))" you return false.
+74
+
+75
+00:04:53,010 --> 00:04:53,610
+So now what
+75
+
+76
+00:04:53,610 --> 00:04:56,100
+happened, you simplified on yourself.
+76
+
+77
+00:04:57,300 --> 00:04:59,440
+So what is "const"? "const"
+77
+
+78
+00:04:59,640 --> 00:05:06,440
+means a variable once initialized, it will not be changed, if you thought about the logic of "islower",
+78
+
+79
+00:05:06,840 --> 00:05:09,630
+we aren't supposed to make a change to the "str".
+79
+
+80
+00:05:10,050 --> 00:05:13,470
+We are just supposed to use it to judge if it's lower or not.
+80
+
+81
+00:05:13,950 --> 00:05:19,890
+Now we know if we sent "str" without a reference "&",
+81
+
+82
+00:05:19,950 --> 00:05:25,700
+It's going to just take more memory and more time to make a new copy in the memory.
+82
+
+83
+00:05:26,130 --> 00:05:28,980
+So we need to send it with reference "&" here,
+83
+
+84
+00:05:29,250 --> 00:05:34,680
+OK. so what does "const" mean? "const" means that this function will not change
+84
+
+85
+00:05:34,710 --> 00:05:40,380
+the "str". Think of it like I am a caller for this function and I'm sure it will not corrupt my data.
+85
+
+86
+00:05:40,890 --> 00:05:48,390
+But why I must put "const" here!, the reason behind that, that this is
+86
+
+87
+00:05:48,600 --> 00:05:55,380
+a variable that doesn't have a name and there is a rule in C++, if you would like to assign some variable
+87
+
+88
+00:05:55,380 --> 00:05:59,800
+-temporary variable- to a variable with reference "&", it must be "const".
+88
+
+89
+00:06:00,000 --> 00:06:08,820
+So this is a rule in C++. your turn, we can really make a lot of mistakes using functions, try to create
+89
+
+90
+00:06:08,820 --> 00:06:13,740
+as much functions as you can, for example, make mistakes in function names,
+90
+
+91
+00:06:13,980 --> 00:06:19,260
+Forget to return, try to call with the wrong data types, try to call function that doesn't exist,
+91
+
+92
+00:06:19,470 --> 00:06:20,880
+and red the compilation error.
+92
+
+93
+00:06:21,060 --> 00:06:22,530
+This would be very useful for you.

@@ -1,0 +1,1035 @@
+1
+00:00:00,900 --> 00:00:03,060
+Let's all do the find universal.
+
+2
+00:00:03,720 --> 00:00:12,810
+I think a problem is are attached should be BGF that explain already the the solution in a formal way,
+
+3
+00:00:13,500 --> 00:00:18,090
+which I would like you to read it, but let me give a try to simplify things here as much as you can.
+
+4
+00:00:18,750 --> 00:00:21,690
+So first of all, it is good to understand the following.
+
+5
+00:00:23,780 --> 00:00:31,880
+Uh, let me yeah, I can confirm this, this idea here in the problem, when it comes to her, the problems,
+
+6
+00:00:32,270 --> 00:00:39,830
+the the usage of formal brews like administrate, its importance like you start to think from the very
+
+7
+00:00:39,830 --> 00:00:45,590
+different angles to make sure that the proof is really solid enough in easy problems.
+
+8
+00:00:45,600 --> 00:00:50,990
+It could be matter of one or two minutes to have like a proof, a sketch or an informal proof for the
+
+9
+00:00:50,990 --> 00:00:51,470
+problem.
+
+10
+00:00:51,860 --> 00:00:54,890
+But sometimes with hard things, this doesn't work well enough.
+
+11
+00:00:56,090 --> 00:00:58,160
+Anyway, let's go back to the problem.
+
+12
+00:00:58,670 --> 00:01:04,610
+One of the questions I ask it is Can we have a lake more than a universal thing?
+
+13
+00:01:04,820 --> 00:01:06,770
+Can we have two three university?
+
+14
+00:01:07,280 --> 00:01:10,130
+So this is easy to be proved by contradiction.
+
+15
+00:01:10,310 --> 00:01:15,360
+The idea is is following Let's claim that Vertex's zero is a inverse sink.
+
+16
+00:01:15,530 --> 00:01:18,890
+So here is the easiest way to draw an inverse.
+
+17
+00:01:18,890 --> 00:01:19,670
+I think a graph.
+
+18
+00:01:21,380 --> 00:01:25,100
+Let's let's say we have one to three this way.
+
+19
+00:01:26,580 --> 00:01:27,060
+Three.
+
+20
+00:01:28,620 --> 00:01:32,610
+But so let's say we have four or five moods in a graph and zero is a thing.
+
+21
+00:01:33,420 --> 00:01:38,290
+Now let's pretend that there is another note that is sync, but remember what is sync sync?
+
+22
+00:01:38,290 --> 00:01:41,550
+It doesn't go to any note and all of the other news, go to it.
+
+23
+00:01:42,000 --> 00:01:45,120
+Now, let's pretend that there is another note that is can be sync.
+
+24
+00:01:45,510 --> 00:01:47,520
+So let's say no, no, no one.
+
+25
+00:01:49,290 --> 00:01:53,820
+But for no no one to be sync, it cannot go to any other node.
+
+26
+00:01:54,000 --> 00:01:56,390
+But we already said that zero is sync.
+
+27
+00:01:56,400 --> 00:01:57,750
+So the universe and sync.
+
+28
+00:01:57,960 --> 00:01:59,310
+So one must go to it.
+
+29
+00:01:59,760 --> 00:02:06,720
+But now one one, I want to be another sync, but they go to another node already, which is invalid
+
+30
+00:02:06,720 --> 00:02:09,810
+and contradiction and also zero is a sync.
+
+31
+00:02:09,960 --> 00:02:12,300
+This means it doesn't go to anyone else.
+
+32
+00:02:12,660 --> 00:02:17,640
+So if it doesn't go to anyone else, this means no one else of the other notes can be a sync.
+
+33
+00:02:18,060 --> 00:02:20,640
+So by contradiction, we cannot have another synchronous.
+
+34
+00:02:21,960 --> 00:02:24,780
+So, yeah, that's the first part in the problem.
+
+35
+00:02:25,440 --> 00:02:28,530
+Now let's go to the problem and let's keep our life easy.
+
+36
+00:02:28,620 --> 00:02:34,630
+So we start with writing a very simple function that we call it is universal.
+
+37
+00:02:34,650 --> 00:02:38,040
+Think this universal thing is a brute force of function?
+
+38
+00:02:38,040 --> 00:02:46,560
+It take a good and verify, if not lie is a thing or not, which just applying the the logic, how the
+
+39
+00:02:46,560 --> 00:02:51,120
+function is saying it doesn't go to any other route, any other route comes to it.
+
+40
+00:02:51,150 --> 00:02:54,810
+So in a brute force, we can rat dysfunction and so to see the code here.
+
+41
+00:02:57,150 --> 00:03:06,840
+Is Universal think taking would I iterate on all of the graph graph nodes and if Graph I and G exist,
+
+42
+00:03:06,880 --> 00:03:13,080
+this means not I go to New G, which is invalid, then I is in sync return false.
+
+43
+00:03:13,890 --> 00:03:19,230
+The second thing is we found that no g doesn't go to Node I.
+
+44
+00:03:20,100 --> 00:03:23,190
+So also this invalid because we need all of them to go to me.
+
+45
+00:03:23,550 --> 00:03:24,300
+Just be careful.
+
+46
+00:03:24,300 --> 00:03:27,750
+You need to be like, Don't don't check against yourself.
+
+47
+00:03:28,640 --> 00:03:34,460
+So that's all, if we did these two things, we've verified that and would is think now this is a brute
+
+48
+00:03:34,460 --> 00:03:35,780
+force, nothing hard about that.
+
+49
+00:03:36,050 --> 00:03:40,070
+The second way is to write a slow version from the sink function.
+
+50
+00:03:40,580 --> 00:03:43,850
+How can we find the sink function in a brute force way?
+
+51
+00:03:44,330 --> 00:03:46,250
+Iterate on every note in the graph.
+
+52
+00:03:46,580 --> 00:03:47,570
+If it is sink or not.
+
+53
+00:03:47,960 --> 00:03:51,650
+If you found any of them, Sink returned to the other one returned minus work.
+
+54
+00:03:51,980 --> 00:03:54,500
+And remember, we cannot have more than a sink in the graph.
+
+55
+00:03:55,730 --> 00:03:59,180
+No, the challenge is how can we find that in all the only?
+
+56
+00:04:02,710 --> 00:04:05,230
+OK, so let's go back and think about it here.
+
+57
+00:04:08,530 --> 00:04:09,610
+We need to analyze more.
+
+58
+00:04:10,900 --> 00:04:15,610
+First of all, let's start with something assuming we have a graph of any notes and let's say we have
+
+59
+00:04:15,610 --> 00:04:19,030
+to do only I and G among the Indians.
+
+60
+00:04:19,660 --> 00:04:27,160
+Now we know that in terms of graph at IAG, we have four cases like either graph of IAG is true.
+
+61
+00:04:28,150 --> 00:04:33,430
+Let's use this or the graph of Asia is false and graph of China is false, which means none of them
+
+62
+00:04:33,430 --> 00:04:37,570
+go to each other or graph IAG is false.
+
+63
+00:04:37,810 --> 00:04:40,360
+But graph of IE is true.
+
+64
+00:04:40,810 --> 00:04:41,530
+And so on.
+
+65
+00:04:41,650 --> 00:04:42,940
+So we have four cases here.
+
+66
+00:04:43,420 --> 00:04:46,450
+So first one, I engine one of them go to each other.
+
+67
+00:04:46,900 --> 00:04:48,550
+Case two IAG.
+
+68
+00:04:48,550 --> 00:04:50,080
+Both of them go to each other.
+
+69
+00:04:50,490 --> 00:04:52,540
+Case three, I go to G.
+
+70
+00:04:53,490 --> 00:04:54,240
+Case for.
+
+71
+00:04:55,400 --> 00:04:59,840
+G, go to OK, now, what do you think about the first case?
+
+72
+00:04:59,900 --> 00:05:01,600
+I, Angie, can this be think?
+
+73
+00:05:01,610 --> 00:05:02,120
+No.
+
+74
+00:05:03,740 --> 00:05:04,880
+Because they are isolated.
+
+75
+00:05:05,270 --> 00:05:06,710
+Can this case be sink?
+
+76
+00:05:06,860 --> 00:05:08,510
+No, they go to each other.
+
+77
+00:05:09,320 --> 00:05:10,610
+Here I, Angie.
+
+78
+00:05:11,240 --> 00:05:13,130
+So who could be, I think, who may be?
+
+79
+00:05:13,130 --> 00:05:19,310
+I think Jim may be asking because it doesn't go to me and it I go to me.
+
+80
+00:05:19,400 --> 00:05:22,240
+And here I could be a cynic.
+
+81
+00:05:22,250 --> 00:05:27,050
+Because if he comes to I, so only these two cases, there is no sink.
+
+82
+00:05:27,170 --> 00:05:34,370
+I cannot be saying because you cannot be saying these two cases, Jim, maybe think I may be sick,
+
+83
+00:05:34,680 --> 00:05:35,030
+callous.
+
+84
+00:05:35,300 --> 00:05:36,350
+Maybe why?
+
+85
+00:05:36,360 --> 00:05:40,730
+Maybe because there are still others in the mine asteroids that we need to check them.
+
+86
+00:05:42,620 --> 00:05:50,150
+Now the major key here is to avoid duplicate processing, to be good and to develop an efficient algorithm.
+
+87
+00:05:51,440 --> 00:05:55,910
+Remember, when we were doing the sorting board we we met more than a problem.
+
+88
+00:05:55,910 --> 00:06:01,640
+We're making the algorithm more efficient is all about detecting what is doubly good, what is unnecessary
+
+89
+00:06:01,640 --> 00:06:02,030
+to do.
+
+90
+00:06:02,600 --> 00:06:03,740
+So let's simulate here.
+
+91
+00:06:03,980 --> 00:06:06,260
+Let's let's try to work.
+
+92
+00:06:06,260 --> 00:06:10,790
+Let's say that we started with Newton, but I am claiming that maybe it is a sink.
+
+93
+00:06:11,690 --> 00:06:15,200
+And then let's say we start to compare.
+
+94
+00:06:15,200 --> 00:06:23,840
+Note II equals zero, and let's say we have the other nodes Z like a one two, three four, for example,
+
+95
+00:06:23,840 --> 00:06:24,410
+and five.
+
+96
+00:06:25,340 --> 00:06:28,130
+So let's say we can build the I was equal one.
+
+97
+00:06:28,610 --> 00:06:33,320
+And so far, I may be a sink, which means node number one, go to zero.
+
+98
+00:06:34,490 --> 00:06:38,870
+And then we move to two and found also to go to zero.
+
+99
+00:06:38,880 --> 00:06:39,740
+So far, so good.
+
+100
+00:06:40,280 --> 00:06:47,060
+What does it mean if also three goes to zero six zero four two zero?
+
+101
+00:06:48,380 --> 00:06:49,670
+Five go to zero.
+
+102
+00:06:50,390 --> 00:06:54,260
+Now there is a very fundamental observation here.
+
+103
+00:06:55,070 --> 00:07:02,420
+If zero is so far, maybe a sink one to five cannot be a sink because they already come to me.
+
+104
+00:07:03,110 --> 00:07:10,070
+So if at any point of time zero failed to be a sink, you shouldn't try to check one two three four
+
+105
+00:07:10,070 --> 00:07:10,550
+five.
+
+106
+00:07:10,880 --> 00:07:14,390
+None of them can be a sink because they already go to zero.
+
+107
+00:07:14,710 --> 00:07:17,420
+And this is a great observation that would save your time.
+
+108
+00:07:18,290 --> 00:07:26,360
+So now let's say that when we comes to rule number six, we observed that node number six doesn't go
+
+109
+00:07:26,360 --> 00:07:26,960
+to zero.
+
+110
+00:07:27,960 --> 00:07:30,150
+And also zero doesn't go to six.
+
+111
+00:07:31,110 --> 00:07:32,280
+Now, what does this mean?
+
+112
+00:07:34,240 --> 00:07:42,700
+This means if, if if six, it doesn't go to zero zero, cannot anymore be a thing because one of the
+
+113
+00:07:42,700 --> 00:07:46,570
+nodes doesn't got it now for six itself.
+
+114
+00:07:47,690 --> 00:07:55,970
+If if if zero doesn't go to six, then even six itself, it cannot be sink if zero goes to six.
+
+115
+00:07:56,210 --> 00:07:57,140
+There may be six.
+
+116
+00:07:57,150 --> 00:07:58,010
+Now is a sink.
+
+117
+00:07:59,670 --> 00:08:00,960
+Did you get the idea?
+
+118
+00:08:01,800 --> 00:08:07,470
+So, so let's pretend does that zero actually go to node number six?
+
+119
+00:08:12,720 --> 00:08:21,060
+And yeah, and by the way, if the route already has a is a just since the format of the game, OK,
+
+120
+00:08:21,060 --> 00:08:23,470
+I think this was adjacency matrix in input, right?
+
+121
+00:08:23,490 --> 00:08:24,810
+Yeah, this was additions of ethics.
+
+122
+00:08:24,990 --> 00:08:27,960
+So we cannot know in 01 if zero has adjacency or not.
+
+123
+00:08:28,440 --> 00:08:31,380
+Let's pretend that six, it doesn't go to sick to zero.
+
+124
+00:08:31,740 --> 00:08:33,810
+So this means zero cannot be sync anymore.
+
+125
+00:08:34,710 --> 00:08:37,480
+If zero goes to six six two may be a sync.
+
+126
+00:08:38,100 --> 00:08:41,520
+So let's pretend for now that six is a good note.
+
+127
+00:08:41,940 --> 00:08:44,040
+Now let's try it with number seven.
+
+128
+00:08:44,520 --> 00:08:45,450
+We'll find that seven.
+
+129
+00:08:45,450 --> 00:08:46,200
+Go to six.
+
+130
+00:08:46,770 --> 00:08:49,800
+Let's define new number eight eight good two six.
+
+131
+00:08:50,070 --> 00:08:53,130
+This means that seven cannot be, I think, a good thing.
+
+132
+00:08:53,820 --> 00:09:01,140
+Now let's say we have node number nine and we found that node number nine doesn't go to six.
+
+133
+00:09:01,560 --> 00:09:02,240
+This means six.
+
+134
+00:09:02,250 --> 00:09:03,540
+It cannot be sync anymore.
+
+135
+00:09:04,720 --> 00:09:06,400
+Now, let's a check of six to go tonight.
+
+136
+00:09:07,860 --> 00:09:09,420
+Six also doesn't go tonight.
+
+137
+00:09:09,960 --> 00:09:12,740
+This means that even nine is interesting.
+
+138
+00:09:13,170 --> 00:09:16,860
+So try the next idea, which is still and let's try the next one.
+
+139
+00:09:17,220 --> 00:09:18,170
+Let's say we have not No.
+
+140
+00:09:18,210 --> 00:09:21,900
+10 and now we had Newt number 11 and 11 go to 10.
+
+141
+00:09:21,930 --> 00:09:26,160
+So 10 may be a sink and then Newt 12 and 10 go to 12.
+
+142
+00:09:29,680 --> 00:09:34,510
+It is the point, and here is the critical mass of stronger proofs.
+
+143
+00:09:35,230 --> 00:09:39,310
+Now we know that zero one two three up to nine were enticing.
+
+144
+00:09:39,790 --> 00:09:42,130
+We also showed that 11 is in sync.
+
+145
+00:09:42,520 --> 00:09:44,860
+And also, you are sure that 12 isn't the sync.
+
+146
+00:09:46,030 --> 00:09:50,920
+And we know that Dean was good, was clever and good was 10 12.
+
+147
+00:09:51,100 --> 00:09:51,980
+Question for you.
+
+148
+00:09:52,020 --> 00:09:54,400
+Stop the video and think for five to 10 minutes.
+
+149
+00:09:54,880 --> 00:09:56,620
+Is really it in a sink or not?
+
+150
+00:09:59,860 --> 00:10:03,460
+The answer is we don't know why.
+
+151
+00:10:04,300 --> 00:10:12,520
+We don't know the status of dead with all of these previous problems may maybe not number two doesn't
+
+152
+00:10:12,520 --> 00:10:21,130
+go to two to 10 for 10 to be think we need every other note to go to 10 all what we are assured from
+
+153
+00:10:21,130 --> 00:10:21,280
+it.
+
+154
+00:10:21,280 --> 00:10:24,820
+So far that 11 go to 10 and 12 will go to 10.
+
+155
+00:10:25,210 --> 00:10:27,490
+We do not know about the previous problems.
+
+156
+00:10:27,850 --> 00:10:31,150
+So even the program ended now didn't.
+
+157
+00:10:32,550 --> 00:10:33,660
+Maybe a sink.
+
+158
+00:10:33,810 --> 00:10:40,290
+Not sure, I think the only thing that we are sure from it, every other note, except it then isn't
+
+159
+00:10:40,290 --> 00:10:40,740
+the sink.
+
+160
+00:10:41,160 --> 00:10:46,830
+So the only question that is remaining is sink A. C is a sink or not.
+
+161
+00:10:47,640 --> 00:10:52,650
+So to solve this problem in a trivial way, you just all what you need is to call it sink A..
+
+162
+00:10:52,920 --> 00:10:53,850
+One more time.
+
+163
+00:10:54,690 --> 00:11:00,060
+So the moral of that is you make all of this round and you will have one of two cases.
+
+164
+00:11:00,300 --> 00:11:02,700
+You end up there is no sink at all.
+
+165
+00:11:03,060 --> 00:11:07,950
+Well, you end up with a note that may be a sink which can be checked in movie.
+
+166
+00:11:08,610 --> 00:11:09,420
+If you observe it.
+
+167
+00:11:09,420 --> 00:11:15,240
+This processing it was, then your processing was started from zero move to one two three four five.
+
+168
+00:11:15,660 --> 00:11:18,300
+And then we discovered that six doesn't go to zero.
+
+169
+00:11:18,540 --> 00:11:21,360
+So six years or more and we started from six to directly.
+
+170
+00:11:21,600 --> 00:11:23,100
+Then we moved six, seven eight.
+
+171
+00:11:23,280 --> 00:11:25,330
+We have a linear cycle iterating with the.
+
+172
+00:11:26,400 --> 00:11:30,870
+The real thread and the importance of sketching the proof in a proper way.
+
+173
+00:11:31,110 --> 00:11:34,500
+So one might end the and think that 10 is a sink.
+
+174
+00:11:34,830 --> 00:11:40,410
+But it isn't because we don't know if ten is good with the previous nodes or not.
+
+175
+00:11:40,740 --> 00:11:48,120
+And if you try to to process this linear way, there is no way to be able to check in with the history.
+
+176
+00:11:48,300 --> 00:11:51,420
+Otherwise, you have to iterate linearly to do the check.
+
+177
+00:11:51,960 --> 00:11:55,620
+As you see, I hope, I hope the explanation is clear for you.
+
+178
+00:11:56,220 --> 00:12:01,830
+The algorithm is trying to find a node that may be a sink, and after the end of the processing, it
+
+179
+00:12:01,830 --> 00:12:03,030
+double check one more time.
+
+180
+00:12:04,550 --> 00:12:08,090
+Let me show you the could here that I wrote initially for this task.
+
+181
+00:12:10,290 --> 00:12:13,710
+So we start with I equals U g equals zero.
+
+182
+00:12:14,710 --> 00:12:23,490
+And now, as long as I resent you, says I, first of all, have here a case where I equally colleague,
+
+183
+00:12:23,890 --> 00:12:28,690
+so I'm doing some checks, so I would like always to jump with Angie to the property.
+
+184
+00:12:28,780 --> 00:12:29,920
+Let's leave that for now here.
+
+185
+00:12:30,670 --> 00:12:36,640
+So now we have four cases, as I mentioned zero zero zero one one zero one one and we would like to
+
+186
+00:12:36,640 --> 00:12:38,140
+check in every one of them.
+
+187
+00:12:38,590 --> 00:12:45,430
+So in the first one so far would like to check if I like develop I as a thing or not, if there is no
+
+188
+00:12:45,430 --> 00:12:46,570
+edge from IAG.
+
+189
+00:12:46,600 --> 00:12:47,500
+This is very good.
+
+190
+00:12:48,130 --> 00:12:52,210
+Now, if there is a zinc link from G2, I then we can get him into the G.
+
+191
+00:12:52,230 --> 00:12:55,810
+So we started with not zero and which would one go to zero?
+
+192
+00:12:55,840 --> 00:12:58,620
+Yes, zipless plus want to go to zero?
+
+193
+00:12:58,630 --> 00:12:59,020
+Yes.
+
+194
+00:12:59,020 --> 00:13:00,820
+Gymnast plus three go to zero.
+
+195
+00:13:00,820 --> 00:13:01,330
+Yes.
+
+196
+00:13:01,330 --> 00:13:02,140
+Gymnast Plus.
+
+197
+00:13:03,510 --> 00:13:07,230
+Now, let's say we we found no food.
+
+198
+00:13:08,770 --> 00:13:16,780
+Now I, which is zero, doesn't go to for good, but also doesn't go to food, which means we are in
+
+199
+00:13:16,780 --> 00:13:17,650
+the zero zero case.
+
+200
+00:13:17,920 --> 00:13:20,320
+None of them is a sink.
+
+201
+00:13:20,680 --> 00:13:26,970
+So resemble was I and both of them to the next index, which is five to tried as I think maybe a sink.
+
+202
+00:13:28,300 --> 00:13:29,080
+Let's continue.
+
+203
+00:13:29,710 --> 00:13:33,660
+Assume we check the five with the six and found that six to go to five.
+
+204
+00:13:33,670 --> 00:13:36,820
+So so far, five is good when it comes to seven.
+
+205
+00:13:37,300 --> 00:13:40,540
+We found that five go to seven.
+
+206
+00:13:41,440 --> 00:13:43,830
+This means I cannot be a sink.
+
+207
+00:13:44,410 --> 00:13:45,820
+No, there are two cases for seven.
+
+208
+00:13:45,820 --> 00:13:46,120
+No.
+
+209
+00:13:46,540 --> 00:13:51,790
+First of all, does Jill go to I mean, the six one one.
+
+210
+00:13:52,060 --> 00:13:55,030
+If this is the case, both of them cannot be a thing.
+
+211
+00:13:55,240 --> 00:13:59,290
+So we start from jobless one legend after seven, which is eight.
+
+212
+00:14:00,190 --> 00:14:00,610
+OK.
+
+213
+00:14:00,790 --> 00:14:04,800
+What if she doesn't go to G?
+
+214
+00:14:04,810 --> 00:14:08,730
+But she doesn't then see if it could be a thing?
+
+215
+00:14:08,980 --> 00:14:14,920
+So we just put the I equals g, which mean that started from seven anything.
+
+216
+00:14:15,520 --> 00:14:19,270
+Once you're done with pursuing these four cases, you have one of two cases.
+
+217
+00:14:19,690 --> 00:14:25,480
+The first case is I ended because of such increments without finding anything.
+
+218
+00:14:26,020 --> 00:14:30,790
+The second case you entered was only a single variable, which may be a sink.
+
+219
+00:14:31,480 --> 00:14:35,860
+I hope the algorithm is clear for you, but before ending, I would like to show you that we can write
+
+220
+00:14:35,860 --> 00:14:39,910
+that in a way similar to that, that it's a bit slower, but still also nice.
+
+221
+00:14:40,300 --> 00:14:46,090
+They did this for of video, but this is just like a lake grabbing the implementation.
+
+222
+00:14:47,080 --> 00:14:52,690
+I needed to check different cases to make it like really solid one, but I will show you that we can
+
+223
+00:14:52,690 --> 00:14:54,040
+actually write that in a simpler way.
+
+224
+00:14:54,310 --> 00:14:55,900
+We start with equals zero.
+
+225
+00:14:56,590 --> 00:15:00,190
+And the only trick that we do is mainly about the graph AMG.
+
+226
+00:15:00,340 --> 00:15:07,240
+So instead of chicken zero one zero zero zero one one zero one one one, the chick about the zero and
+
+227
+00:15:07,240 --> 00:15:08,170
+one of the first one.
+
+228
+00:15:08,560 --> 00:15:13,180
+So now I see here if graph on I and G is correct.
+
+229
+00:15:13,480 --> 00:15:18,070
+Just if there is an image from A to Z, then this is invalid.
+
+230
+00:15:18,070 --> 00:15:19,240
+Otherwise, G is good.
+
+231
+00:15:19,540 --> 00:15:20,410
+So here is the case.
+
+232
+00:15:20,410 --> 00:15:22,240
+Let's say we have zero on one Allison.
+
+233
+00:15:22,240 --> 00:15:23,140
+One go to zero.
+
+234
+00:15:23,440 --> 00:15:24,280
+So zero is good.
+
+235
+00:15:24,430 --> 00:15:27,200
+So C++ now let's two go to zero.
+
+236
+00:15:27,550 --> 00:15:29,050
+That's good job numbers.
+
+237
+00:15:29,650 --> 00:15:32,980
+Let's say three go to zero, then you have less.
+
+238
+00:15:32,980 --> 00:15:37,450
+Plus, let's say that food doesn't go to zero.
+
+239
+00:15:38,430 --> 00:15:41,350
+Now in the previous good, we have a lot of cases now.
+
+240
+00:15:41,370 --> 00:15:42,540
+What if you just started?
+
+241
+00:15:42,540 --> 00:15:45,330
+I was able to swat, so you started to check from food.
+
+242
+00:15:45,750 --> 00:15:52,200
+If this is a Syncrude or not and then look forward, do the cycle normally in a very normal way.
+
+243
+00:15:52,200 --> 00:15:55,470
+So it would be chicken for was four four, was five and so on.
+
+244
+00:15:56,040 --> 00:15:56,990
+Why is that valid?
+
+245
+00:15:57,000 --> 00:15:59,130
+Why can we avoid all of this, this two cases?
+
+246
+00:15:59,490 --> 00:16:07,620
+The point is, in all cases, you will have any way to check is it valid or not to check is valid or
+
+247
+00:16:07,620 --> 00:16:11,670
+not because you do know the history of food with the previous ones.
+
+248
+00:16:11,970 --> 00:16:17,850
+So let's say four ended five two four six two four seven two four and the program ended.
+
+249
+00:16:18,120 --> 00:16:19,170
+You were just run one more.
+
+250
+00:16:19,170 --> 00:16:21,150
+Check on four to read that.
+
+251
+00:16:21,570 --> 00:16:26,400
+I hope you did pretty well in explaining it in a in a nicer way.
+
+252
+00:16:26,760 --> 00:16:35,030
+You will find in the IDF and implementation and the like a solid proof for the correctness believes.
+
+253
+00:16:35,050 --> 00:16:35,460
+Read it.
+
+254
+00:16:35,640 --> 00:16:41,160
+Keep in mind that the ideas that I mentioned um by the way, free open.
+
+255
+00:16:42,670 --> 00:16:50,230
+Is away in C++ to read from text, from the file without changing the scene and see out it.
+
+256
+00:16:50,440 --> 00:16:51,130
+You do need that.
+
+257
+00:16:51,430 --> 00:16:57,040
+So when I use Free Open, I have testified that I just would like to read it if any time I forgot to
+
+258
+00:16:57,280 --> 00:17:01,450
+mark the free open and you would like to read from counsel, just mark them here.
+
+259
+00:17:01,810 --> 00:17:03,490
+It was something that's off.

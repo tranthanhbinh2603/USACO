@@ -1,0 +1,203 @@
+1
+00:00:00,660 --> 00:00:06,370
+Let's see homework number three, which is a bit harder than the previous ones in the first task.
+
+2
+00:00:06,390 --> 00:00:11,280
+We would like to find the first, the missing and not the missing, not the first.
+
+3
+00:00:11,520 --> 00:00:16,800
+The Keith missing element in a binary search right now.
+
+4
+00:00:18,210 --> 00:00:20,040
+Let me first extend learned little more here.
+
+5
+00:00:21,280 --> 00:00:24,550
+We have an array for seven, nine, 10, starting from four.
+
+6
+00:00:24,850 --> 00:00:26,170
+What are the missing elements?
+
+7
+00:00:26,170 --> 00:00:32,290
+We have four, then five is missing, six is missing, we have seven, then eight is missing, we have
+
+8
+00:00:32,290 --> 00:00:33,760
+nine and we have 10.
+
+9
+00:00:34,300 --> 00:00:37,300
+So five is the first missing number six is the second.
+
+10
+00:00:37,300 --> 00:00:41,620
+Missing number eight is a third, the missing number considering only the beginning here.
+
+11
+00:00:42,190 --> 00:00:48,310
+Now the function will give you the array and give you equal one and ask you to find the fifth missing
+
+12
+00:00:48,310 --> 00:00:50,950
+element, which you hear is clearly number five.
+
+13
+00:00:51,640 --> 00:00:52,630
+OK, what about here?
+
+14
+00:00:52,630 --> 00:00:53,440
+Take one three.
+
+15
+00:00:53,770 --> 00:00:57,670
+The third the missing element is key equal eight here.
+
+16
+00:00:57,670 --> 00:00:58,570
+What about this one?
+
+17
+00:00:58,580 --> 00:00:59,410
+We have one.
+
+18
+00:00:59,770 --> 00:01:00,790
+Then we have two.
+
+19
+00:01:00,940 --> 00:01:01,990
+Three is missing.
+
+20
+00:01:02,230 --> 00:01:03,340
+Four we have four.
+
+21
+00:01:03,820 --> 00:01:06,450
+Five is missing, six is missing, seven is missing.
+
+22
+00:01:06,460 --> 00:01:12,490
+And so now it asks us for the third, the missing element, which is six here.
+
+23
+00:01:12,730 --> 00:01:14,500
+So this is mainly the problem.
+
+24
+00:01:15,490 --> 00:01:18,820
+This problem can be solved with the number two, by the way, is are sorted.
+
+25
+00:01:19,240 --> 00:01:22,420
+This problem can be solved with an end could in a normal way.
+
+26
+00:01:22,660 --> 00:01:28,480
+I would suggest for you to try to write it, but I would like you to develop an all look in brain research
+
+27
+00:01:28,480 --> 00:01:29,680
+approach for this problem.
+
+28
+00:01:32,620 --> 00:01:35,680
+The next the problem is following, and it's a very interesting problem.
+
+29
+00:01:36,340 --> 00:01:38,190
+This is a multiplication table, right?
+
+30
+00:01:38,200 --> 00:01:45,340
+Like let's you know, when the normal multiplication table is usually midterms and when we were kids.
+
+31
+00:01:45,910 --> 00:01:52,030
+So now this is a multiplication table for M equals three and inequality, which means you try you start
+
+32
+00:01:52,070 --> 00:02:01,330
+to say one times, one one times, two one times or three two times one two times to two times or three
+
+33
+00:02:01,720 --> 00:02:05,380
+three times one three times, two, three times or three.
+
+34
+00:02:05,620 --> 00:02:08,380
+This is a normal multiplication table of three times the three.
+
+35
+00:02:09,100 --> 00:02:17,560
+So the problem will give you two numbers M and N, which are there the dimension of the table.
+
+36
+00:02:17,570 --> 00:02:19,330
+It could be, for example, two and five.
+
+37
+00:02:19,570 --> 00:02:23,320
+So you say two times one, two times two, blah blah blah up to 2005 and so on.
+
+38
+00:02:24,040 --> 00:02:31,840
+Now, let's say, after we built this table, we put it in one diary and sorted all of them.
+
+39
+00:02:33,360 --> 00:02:35,100
+Now, the function would give you a key.
+
+40
+00:02:35,440 --> 00:02:39,530
+No, you're turning the key element in this one array.
+
+41
+00:02:40,020 --> 00:02:45,960
+So here is the problem again, the problem fixed itself like you will be given Mandan, which are a
+
+42
+00:02:45,960 --> 00:02:53,250
+bit big and key, which it would be in times in the range and you would like to find the key, the smallest
+
+43
+00:02:53,250 --> 00:03:00,090
+element in there, MS terms in the multiplication key, the smallest element in the multiplication.
+
+44
+00:03:00,240 --> 00:03:05,850
+In other words, if you flatten the array, the to the array and one the and all of them, we need the
+
+45
+00:03:05,850 --> 00:03:08,040
+key value from here.
+
+46
+00:03:08,670 --> 00:03:09,840
+Here is another example.
+
+47
+00:03:10,390 --> 00:03:15,060
+Um, we have two times the three metrics we wrote, the values we wrote them here.
+
+48
+00:03:15,090 --> 00:03:17,250
+We thought to them, we need number six.
+
+49
+00:03:17,370 --> 00:03:19,710
+So here is the sixth element in this list.
+
+50
+00:03:20,160 --> 00:03:24,450
+So as you see, the two problems are both the key element, but from two different perspectives.
+
+51
+00:03:24,750 --> 00:03:27,870
+These are merely the two problems for we have the challenges.

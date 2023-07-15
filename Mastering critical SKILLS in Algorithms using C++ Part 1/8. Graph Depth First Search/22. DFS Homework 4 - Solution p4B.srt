@@ -1,0 +1,151 @@
+1
+00:00:00,890 --> 00:00:02,300
+Let me comment on the.
+
+2
+00:00:04,990 --> 00:00:10,880
+Let me comment on the direct case, I asked, could you in the problem to think about the graph of the
+
+3
+00:00:10,880 --> 00:00:11,440
+charity case?
+
+4
+00:00:11,710 --> 00:00:13,570
+So let's say you have this very simple graph.
+
+5
+00:00:17,270 --> 00:00:19,640
+Three nodes of three edges, British symbol.
+
+6
+00:00:20,960 --> 00:00:28,640
+Uh, if let's say that occasion started and go from zero to one, so now zero is marked as visited,
+
+7
+00:00:28,880 --> 00:00:33,950
+one is marked as visited, one go to do two market has visited occasion, go back on occasion, go back.
+
+8
+00:00:34,220 --> 00:00:36,830
+Then zero goes to to find it visited.
+
+9
+00:00:36,830 --> 00:00:39,050
+You think, Oh, this is a cycle, but there is no cycle.
+
+10
+00:00:39,500 --> 00:00:44,990
+This is the great difference between directed and the director graph in the undirected graph.
+
+11
+00:00:45,860 --> 00:00:53,570
+Zero one two zero zero two one one go to two to go to the zero by itself, so find it visited.
+
+12
+00:00:53,570 --> 00:00:59,900
+Then there's a cycle in the directed graph when the recursion go back and zero, go try the two and
+
+13
+00:00:59,900 --> 00:01:02,420
+find it that you cannot consider it as a cycle.
+
+14
+00:01:03,050 --> 00:01:05,750
+That's the big difference between the two cases here.
+
+15
+00:01:06,860 --> 00:01:11,990
+So the cycle detection in undirected graph is pretty straightforward, but in the directed graph it's
+
+16
+00:01:12,010 --> 00:01:13,550
+a bit more complex than that.
+
+17
+00:01:13,670 --> 00:01:15,530
+And I didn't like we didn't talk yet.
+
+18
+00:01:15,800 --> 00:01:16,880
+How can we handle that?
+
+19
+00:01:17,540 --> 00:01:25,910
+And if you would like to really recognize the condition to figure out the cycle in that in the cycle,
+
+20
+00:01:26,240 --> 00:01:30,530
+in the deleted graph, it isn't just about being visited or not.
+
+21
+00:01:30,860 --> 00:01:32,630
+It is about the activist tech.
+
+22
+00:01:32,900 --> 00:01:38,120
+Like, let's say we are not zero, then let's say here, let's say that this is directed graph, but
+
+23
+00:01:38,120 --> 00:01:39,350
+they actually the edges this way.
+
+24
+00:01:40,070 --> 00:01:43,880
+Zero one two Recursion So the stack now has zero and one or two.
+
+25
+00:01:45,160 --> 00:01:48,880
+And to try to go to zero zero is in the stack and the act, of course.
+
+26
+00:01:48,910 --> 00:01:50,650
+So this zero must be in a cycle.
+
+27
+00:01:51,340 --> 00:01:53,470
+Now let's say here the the opposite case.
+
+28
+00:01:55,040 --> 00:02:03,320
+Let's say we are at zero one two and here now the decision to start at zero one and two, so the stack
+
+29
+00:02:03,320 --> 00:02:04,670
+is zero one or two.
+
+30
+00:02:05,660 --> 00:02:11,750
+And then the decision go back to to go to back to one, so the decision one and two go out of the stack
+
+31
+00:02:12,260 --> 00:02:17,540
+now zero tries to go to two, which is vested, which means you do not have to make again the decision,
+
+32
+00:02:17,780 --> 00:02:20,470
+but it is in the stack only if it is in the stack.
+
+33
+00:02:20,480 --> 00:02:25,040
+You can figure out it's this, like it or not, which a bit like it looks like more complicated for
+
+34
+00:02:25,040 --> 00:02:25,450
+you, you know?
+
+35
+00:02:25,790 --> 00:02:28,760
+But in a way, I just wanted you to figure out the difference between them.
+
+36
+00:02:29,270 --> 00:02:33,110
+So one way to know about the cycles is what we call the topological sort.
+
+37
+00:02:33,440 --> 00:02:39,170
+Topological sort is one way to know there are cycles or not in directed graph.
+
+38
+00:02:39,890 --> 00:02:40,520
+Yeah, that's a.

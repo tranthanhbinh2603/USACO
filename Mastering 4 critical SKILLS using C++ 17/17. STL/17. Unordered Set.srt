@@ -1,0 +1,349 @@
+0
+1
+00:00:01,230 --> 00:00:08,880
+Similar to the C++ set, there is also a recent data structure, the unordered set. The unordered set from
+1
+
+2
+00:00:08,880 --> 00:00:16,260
+its name is very similar to the set, but it doesn't order the elements for us, so...
+2
+
+3
+00:00:16,260 --> 00:00:17,470
+they aren't sorted for us.
+3
+
+4
+00:00:17,850 --> 00:00:25,300
+So he redefined the unordered set and we started an initial set of an unordered set with these bunch of numbers,
+4
+
+5
+00:00:25,320 --> 00:00:27,350
+then we also inserted 2 numbers.
+5
+
+6
+00:00:27,720 --> 00:00:32,490
+Then, let's use the auto range-based for loops to iterate and print it.
+6
+
+7
+00:00:33,270 --> 00:00:35,040
+There are 2 observations.
+7
+
+8
+00:00:35,360 --> 00:00:40,300
+First, they are unsorted. Second, if there are duplicate numbers, they are removed.
+8
+
+9
+00:00:40,770 --> 00:00:41,280
+That's it.
+9
+
+10
+00:00:41,730 --> 00:00:49,060
+So let's search for a number in the unordered set.
+10
+
+11
+00:00:49,410 --> 00:00:55,850
+So here is s1, dot-find. When you give it any value, It is going to give you the iterator value. You can
+11
+
+12
+00:00:55,860 --> 00:00:56,260
+print it also.
+12
+
+13
+00:00:57,090 --> 00:01:01,080
+Now, let's try to change the value, C++ compiler will complain.
+13
+
+14
+00:01:01,410 --> 00:01:09,310
+So this is one more feature about the unordered. You cannot change the values once they are inserted.
+14
+
+15
+00:01:09,600 --> 00:01:14,140
+The only way that you can do it, you can insert or erase it.
+15
+
+16
+00:01:14,460 --> 00:01:19,290
+So if I would like to change the value, the right way is you find it, remove it and insert a new one.
+16
+
+17
+00:01:20,130 --> 00:01:27,270
+Now, I would like to tell you a track with a note that most people don't realize. If I would
+17
+
+18
+00:01:27,270 --> 00:01:31,370
+like to find an element here in an unordered set or even in many other things,
+18
+
+19
+00:01:31,400 --> 00:01:32,430
+there are 2 ways.
+19
+
+20
+00:01:32,580 --> 00:01:35,780
+The first is to call dot-find in the data structure.
+20
+
+21
+00:01:36,360 --> 00:01:41,910
+The second way, as in the algorithms videos, you know, there is also find a generic one that you
+21
+
+22
+00:01:41,910 --> 00:01:45,040
+can give it begin and end and value and you find it.
+22
+
+23
+00:01:45,540 --> 00:01:51,660
+Now, some people do notice that the performance of this find function is very different than the performance
+23
+
+24
+00:01:51,660 --> 00:01:52,800
+of this fine function.
+24
+
+25
+00:01:53,460 --> 00:02:00,060
+Specifically, this find-function considers how an unordered set is implemented internally.
+25
+
+26
+00:02:00,420 --> 00:02:02,010
+So it's typically very fast.
+26
+
+27
+00:02:02,460 --> 00:02:04,530
+But this find function is generic,
+27
+
+28
+00:02:04,530 --> 00:02:07,940
+It uses a generic iterator to iterate item by item,
+28
+
+29
+00:02:08,220 --> 00:02:13,620
+and this is one of the key differences for people who understand how really STL is working from
+29
+
+30
+00:02:13,620 --> 00:02:14,170
+the inside.
+30
+
+31
+00:02:14,790 --> 00:02:17,410
+So the more of the advice is as following:
+31
+
+32
+00:02:18,570 --> 00:02:24,490
+If your data structure is supporting a function by itself, then you have to use it directly,
+32
+
+33
+00:02:24,510 --> 00:02:25,610
+Just go ahead and use it.
+33
+
+34
+00:02:25,800 --> 00:02:30,840
+It would be very efficient, only if the function isn't available in your data structure.
+34
+
+35
+00:02:30,990 --> 00:02:34,920
+You can try to use the generic function then the generic function
+35
+
+36
+00:02:35,130 --> 00:02:39,450
+Know nothing about the internals of your data structure,
+36
+
+37
+00:02:39,600 --> 00:02:42,150
+and this is key property in STL, It is very generic.
+37
+
+38
+00:02:42,480 --> 00:02:48,600
+This generic once with the iterators and a general way for iterating items, and generic once from data types
+38
+
+39
+00:02:48,600 --> 00:02:49,340
+of prospectives.
+39
+
+40
+00:02:49,560 --> 00:02:50,550
+So this is intended.
+40
+
+41
+00:02:50,820 --> 00:02:56,940
+So something like finds here, the general one is generic, so it doesn't know what's happening inside
+41
+
+42
+00:02:56,940 --> 00:02:57,960
+this data structure.
+42
+
+43
+00:02:58,350 --> 00:03:03,690
+Finally, you can also get the size, and you can erase also an element from the set.
+43
+
+44
+00:03:04,950 --> 00:03:11,700
+I would like also to tell you about another thing which are actually more common with other data structures.
+44
+
+45
+00:03:11,880 --> 00:03:13,290
+Let's say you have an array here.
+45
+
+46
+00:03:13,560 --> 00:03:18,750
+You can initialize your unordered set using this array, like you defined here, and you give it an array
+46
+
+47
+00:03:18,750 --> 00:03:19,700
+and array plus 3.
+47
+
+48
+00:03:19,710 --> 00:03:24,390
+So it's very similar logic to the iterators arithmetic.
+48
+
+49
+00:03:24,870 --> 00:03:29,190
+When we learn pointers, you should have more sense of why this is a valid syntax.
+49
+
+50
+00:03:29,610 --> 00:03:32,080
+You can also do some swapping operations.
+50
+
+51
+00:03:32,150 --> 00:03:35,780
+Let's say you have s1 and s2. To an unordered set, you can swap their content.
+51
+
+52
+00:03:36,060 --> 00:03:38,160
+This is same for many other data structures also.
+52
+
+53
+00:03:38,700 --> 00:03:43,350
+You can also initialize another data structure from a data structure like, let's say you have a sorted
+53
+
+54
+00:03:43,350 --> 00:03:43,650
+set,
+54
+
+55
+00:03:43,980 --> 00:03:48,150
+and I would like it to be initialized from this array or from this unordered set.
+55
+
+56
+00:03:48,390 --> 00:03:51,810
+You can just give it the beginning and end. Some final notes,
+56
+
+57
+00:03:52,020 --> 00:03:53,850
+There is no reverse iterator
+57
+
+58
+00:03:53,850 --> 00:03:59,990
+in the unordered set, because it doesn't make sense, the items in a way don't order.
+58
+
+59
+00:04:01,560 --> 00:04:05,900
+There is also an unordered multi-set, very similar to the set and multi-set relationship.
+59
+
+60
+00:04:05,930 --> 00:04:09,600
+The multi-set just allows you to have duplicate operations.
+60
+
+61
+00:04:10,080 --> 00:04:14,580
+Here is a very interesting thing to know about an unordered set is that unordered
+61
+
+62
+00:04:14,610 --> 00:04:23,610
+is very fast compared to the set, to the map, and to compare to the erase and find in the
+62
+
+63
+00:04:24,450 --> 00:04:27,680
+vector and all of these things.  unordered set
+63
+
+64
+00:04:27,690 --> 00:04:29,010
+is really very fast.
+64
+
+65
+00:04:29,280 --> 00:04:36,840
+Why? It is internally built based on something named hash table. Hash table isn't a straightforward structure.
+65
+
+66
+00:04:36,840 --> 00:04:41,550
+When you study a data structure course, you have to learn it because we use it very efficiently,
+66
+
+67
+00:04:42,150 --> 00:04:48,050
+and you will know why this one is working fast and also will know how to use it in a more
+67
+
+68
+00:04:48,060 --> 00:04:48,750
+stronger way,
+68
+
+69
+00:04:48,750 --> 00:04:54,570
+like you have to know hash tables very well to know how to use effectively something like an unordered
+69
+
+70
+00:04:54,570 --> 00:04:56,280
+set. That's it.

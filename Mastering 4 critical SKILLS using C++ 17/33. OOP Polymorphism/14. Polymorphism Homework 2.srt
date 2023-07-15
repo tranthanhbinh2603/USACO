@@ -1,0 +1,463 @@
+1
+00:00:01,170 --> 00:00:06,690
+For the second set of homework in the Baltimore office, which might be a little hard for you, the
+
+2
+00:00:06,690 --> 00:00:09,530
+first one is an extended company payroll.
+
+3
+00:00:09,540 --> 00:00:12,390
+Remember, we had a previous assignment about the company.
+
+4
+00:00:13,110 --> 00:00:14,900
+Now we'd like to add validation rules.
+
+5
+00:00:16,320 --> 00:00:21,630
+I understand that your background may not help you in that in practice we may need to verify invoices
+
+6
+00:00:21,870 --> 00:00:27,030
+like let's say there's an invoice that is right now is now out of date with some of our views, like
+
+7
+00:00:27,030 --> 00:00:28,470
+we have some deals with suppliers.
+
+8
+00:00:28,680 --> 00:00:32,490
+And when it come to the time of the invoice, it's actually turned out to be invalid.
+
+9
+00:00:32,490 --> 00:00:38,430
+Invoice board, for example, the Texas computer for the invoice is wrong because there are some advantages
+
+10
+00:00:38,430 --> 00:00:42,290
+in this country that the invoice didn't take and why.
+
+11
+00:00:42,630 --> 00:00:48,180
+So you can think there are several validation rules and in future there could be even more and more
+
+12
+00:00:48,180 --> 00:00:48,960
+validation rules.
+
+13
+00:00:49,320 --> 00:00:52,980
+So we need to verify the invoice using a set of rules.
+
+14
+00:00:53,220 --> 00:00:57,390
+And we need generic handling because the future will be more and more religion groups.
+
+15
+00:00:58,020 --> 00:01:03,020
+Let's say also there is something we call it very little group, which is a subset of the available
+
+16
+00:01:03,030 --> 00:01:04,200
+available validation rules.
+
+17
+00:01:04,500 --> 00:01:07,840
+For example, let's say we could add 20 different variations.
+
+18
+00:01:07,880 --> 00:01:08,200
+Good.
+
+19
+00:01:08,670 --> 00:01:12,420
+There might be like a mandatory validator that is just running the three of them.
+
+20
+00:01:12,780 --> 00:01:17,870
+There might be another one like, let's say the complete 180 or just run all of them and so on.
+
+21
+00:01:18,300 --> 00:01:23,130
+So there could be different subsets and invoice must pass all the validation rules.
+
+22
+00:01:23,130 --> 00:01:24,500
+And one of the little group.
+
+23
+00:01:24,720 --> 00:01:29,310
+So let's say the current system is configurable to use the for example, the mandatory creditor, which
+
+24
+00:01:29,310 --> 00:01:34,590
+is three rules or so, then the invoice will have to pass this three validation rules.
+
+25
+00:01:34,890 --> 00:01:40,980
+I would like you to try to develop those that involve the additional rules that might grow over time.
+
+26
+00:01:41,280 --> 00:01:45,810
+Let's say every one of them has some very good function that return true or false, something like that.
+
+27
+00:01:47,130 --> 00:01:50,950
+If you feel something is missing, just try to guess there is nothing, nothing.
+
+28
+00:01:50,970 --> 00:01:53,250
+Just I'm trying to help you to like.
+
+29
+00:01:53,250 --> 00:01:54,390
+I don't feel that this.
+
+30
+00:01:56,200 --> 00:02:05,020
+Expedia websites, so Expedia, a user, can create several itineraries and each eternity, it consists
+
+31
+00:02:05,020 --> 00:02:06,440
+of several reservations.
+
+32
+00:02:06,700 --> 00:02:10,960
+For example, you might have zero or more flights, hotels, cars and so on.
+
+33
+00:02:11,260 --> 00:02:16,320
+An example of that would be like I have four flights and my two uncles and two cousins.
+
+34
+00:02:16,370 --> 00:02:18,880
+Reservations for now for simplicity.
+
+35
+00:02:18,880 --> 00:02:19,990
+Consider all the flights.
+
+36
+00:02:20,020 --> 00:02:22,050
+That's just one way without transit.
+
+37
+00:02:22,390 --> 00:02:24,190
+And consider also hotels.
+
+38
+00:02:24,340 --> 00:02:27,010
+There are no cars cruising all of that at the moment.
+
+39
+00:02:27,580 --> 00:02:32,590
+So any sugary item which I have, for example, a flight would have some relevant information, like
+
+40
+00:02:32,590 --> 00:02:33,510
+it's a total cost.
+
+41
+00:02:33,520 --> 00:02:39,070
+For example, if it is a hotel, then we have looked, for example, the total night times, the price
+
+42
+00:02:39,070 --> 00:02:39,400
+per right.
+
+43
+00:02:39,400 --> 00:02:43,660
+Or so the cost of an itinerary is the cost of every item.
+
+44
+00:02:44,290 --> 00:02:46,240
+So here we have this itinerary.
+
+45
+00:02:46,240 --> 00:02:48,460
+We have here four items, two items.
+
+46
+00:02:48,460 --> 00:02:50,880
+It would have like eight items in total.
+
+47
+00:02:51,130 --> 00:02:55,110
+The total cost of the volatility is the cost of every reservation that we have here.
+
+48
+00:02:55,690 --> 00:02:59,050
+I would like you to design the set of classes for this system.
+
+49
+00:02:59,350 --> 00:03:04,630
+You only need to think about the reservation, but you are going to implement the video side if you
+
+50
+00:03:04,630 --> 00:03:09,700
+are unfamiliar with Expedia or what might be, I would suggest to you to go and to do some like bling
+
+51
+00:03:09,700 --> 00:03:10,060
+with it.
+
+52
+00:03:10,390 --> 00:03:15,930
+So try to develop the reservation classes that would give us eventually missionary and we can get its
+
+53
+00:03:15,940 --> 00:03:16,600
+total cost.
+
+54
+00:03:18,470 --> 00:03:25,690
+They miss service, so these guys are supporting classify classified ads as very popular Web site,
+
+55
+00:03:26,050 --> 00:03:32,100
+and as you know, there are many popular alibis for implementation, for for payments, for example.
+
+56
+00:03:32,110 --> 00:03:36,100
+That could be like one of them is one dollar per twenty five payments.
+
+57
+00:03:36,340 --> 00:03:37,720
+And these rules might change you.
+
+58
+00:03:37,720 --> 00:03:41,680
+And we might would like to switch to a different Ebeye systems.
+
+59
+00:03:41,860 --> 00:03:48,620
+As we said at the moment, the developers wanted to support daybed and Strib ice.
+
+60
+00:03:49,270 --> 00:03:53,860
+In future there could be more cyber, so we might want to switch the site.
+
+61
+00:03:53,860 --> 00:03:57,040
+Could the code good, should independent specifically by the kitchen.
+
+62
+00:03:57,280 --> 00:03:57,940
+What is bad.
+
+63
+00:03:57,940 --> 00:03:59,530
+What's right as we discussed before.
+
+64
+00:04:00,370 --> 00:04:05,880
+So when we go to the big bad website to see their eyes, we found the photo.
+
+65
+00:04:05,900 --> 00:04:11,320
+We find a class that's named the credit card B bad credit card with the following information and they
+
+66
+00:04:11,320 --> 00:04:16,630
+have an API function that takes the point across the card.
+
+67
+00:04:16,850 --> 00:04:22,150
+OK, so we would like now to use this, if I would like to call them.
+
+68
+00:04:22,390 --> 00:04:28,300
+I need to prepare an object of this type and call it what this is tied to get back the payments.
+
+69
+00:04:28,310 --> 00:04:31,780
+I need to set card information first, then call, I make payment.
+
+70
+00:04:31,990 --> 00:04:34,080
+This is the interface with bad.
+
+71
+00:04:34,390 --> 00:04:35,440
+This isn't our code.
+
+72
+00:04:35,440 --> 00:04:36,460
+We cannot change it.
+
+73
+00:04:36,460 --> 00:04:38,830
+We only can call it on line remotely.
+
+74
+00:04:39,760 --> 00:04:41,950
+Also, the guys has information.
+
+75
+00:04:41,980 --> 00:04:45,610
+They have an object that named user information, another one card information.
+
+76
+00:04:45,760 --> 00:04:48,660
+And this is why they are using a static function.
+
+77
+00:04:48,970 --> 00:04:56,350
+So and then you said that you call one function with the Strib user info card info and the money notes
+
+78
+00:04:56,350 --> 00:05:01,750
+that the structure of this API is different than the structure of the different.
+
+79
+00:05:02,050 --> 00:05:07,060
+The previous code, however, they are eventually very similar information because eventually we have
+
+80
+00:05:07,060 --> 00:05:08,500
+to take some payment information.
+
+81
+00:05:11,080 --> 00:05:15,010
+This is our website and is have some function to be.
+
+82
+00:05:15,040 --> 00:05:17,500
+It takes some transaction information.
+
+83
+00:05:17,830 --> 00:05:22,240
+And this is mainly the transaction information, which is very similar to what the eyes need.
+
+84
+00:05:22,630 --> 00:05:30,770
+You have to follow the code here so that you allow the payments, but without being dependent on a specific
+
+85
+00:05:30,770 --> 00:05:31,270
+API.
+
+86
+00:05:34,060 --> 00:05:38,110
+Once you are done with the previous homework, if you could only check out my code, we are going to
+
+87
+00:05:38,110 --> 00:05:39,460
+extend it with one more.
+
+88
+00:05:40,360 --> 00:05:44,160
+The guys from the squid, I have the following structure.
+
+89
+00:05:44,410 --> 00:05:47,760
+They have a static function also with a string and query.
+
+90
+00:05:48,070 --> 00:05:51,640
+So instead of sending a lot of parameters, you're going to send just a query.
+
+91
+00:05:52,000 --> 00:05:57,260
+And this is how are using query format is I asked you before to learn how to use JSON.
+
+92
+00:05:57,430 --> 00:06:03,640
+So now it's time to support this API with this JSON processing.
+
+93
+00:06:04,940 --> 00:06:10,950
+OK, so one more company role, but think of it as a bit separate from the previous company, Berel.
+
+94
+00:06:10,960 --> 00:06:18,010
+To make it simple, recall that we went into the Embley and invoice payable because we are paying them
+
+95
+00:06:18,970 --> 00:06:19,860
+for simplicity.
+
+96
+00:06:20,560 --> 00:06:24,310
+Consider that we have just one class employee and has an incentive, nothing more.
+
+97
+00:06:24,820 --> 00:06:31,040
+We would like to stress the idea of the pervert's interfaces, so Bable class should be cleanable,
+
+98
+00:06:31,120 --> 00:06:32,530
+printable and compatible.
+
+99
+00:06:33,310 --> 00:06:39,310
+And also the company Berel, which is eventually collection of payables, should be printable and sortable.
+
+100
+00:06:39,610 --> 00:06:45,280
+Sortable means we can call some function to order all the items in this collection to sort the collection.
+
+101
+00:06:45,580 --> 00:06:47,530
+Each type should be grouped together.
+
+102
+00:06:48,370 --> 00:06:55,410
+For example, if you have employees and you have invoices as a collection of Babits, you are to sort
+
+103
+00:06:55,420 --> 00:07:01,510
+them like, let's say embrace a bit first, then invoices by the end and immobilise by self-assertive
+
+104
+00:07:01,510 --> 00:07:03,330
+and invoices are outsourced.
+
+105
+00:07:03,370 --> 00:07:06,370
+It is what you expect in the main function.
+
+106
+00:07:06,640 --> 00:07:07,870
+You have a company B roll.
+
+107
+00:07:07,870 --> 00:07:09,700
+It's adding a table for the family.
+
+108
+00:07:09,730 --> 00:07:14,410
+So it's I think Embley here, which is a label adding another invoice and be able and so on.
+
+109
+00:07:14,920 --> 00:07:21,700
+Then as it is sortable, you can call, say, Adut order item in some some interface named sortable
+
+110
+00:07:21,700 --> 00:07:25,690
+for example, and has function order items and then you can print to them.
+
+111
+00:07:26,290 --> 00:07:31,210
+If you looked here to the printer you notice the employees come first, the invoice come in at the end
+
+112
+00:07:31,540 --> 00:07:39,220
+and police are sorted by salary first and then by name, and the invoices are sorted by the total cost.
+
+113
+00:07:39,400 --> 00:07:41,350
+And here I am printing the total Baid.
+
+114
+00:07:41,350 --> 00:07:42,910
+Here is this submission.
+
+115
+00:07:43,060 --> 00:07:46,840
+So you have to develop something that allows such overhead.
+
+116
+00:07:47,620 --> 00:07:48,130
+That's it.

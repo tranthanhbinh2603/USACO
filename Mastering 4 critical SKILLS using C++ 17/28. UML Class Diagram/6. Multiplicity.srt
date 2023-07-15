@@ -1,0 +1,189 @@
+0
+1
+00:00:01,820 --> 00:00:07,050
+Another important thing about class diagrams is multiplicity, which is all about numbers.
+1
+
+2
+00:00:07,550 --> 00:00:12,740
+Let's say that we have a visitor center, then this visitor center would have a lobby and would have
+2
+
+3
+00:00:12,740 --> 00:00:13,340
+a bathroom.
+3
+
+4
+00:00:13,610 --> 00:00:19,900
+The relationship is clearly a composition, so the lobby would belong to a specific visitor center,
+4
+
+5
+00:00:20,060 --> 00:00:24,220
+the bathroom belongs to a specific visitor center or a specific building,
+5
+
+6
+00:00:24,590 --> 00:00:30,060
+but the question here is how many lobbies exist in the visitor center?
+6
+
+7
+00:00:30,320 --> 00:00:33,290
+How many bathrooms exist in visitor center?
+7
+
+8
+00:00:33,530 --> 00:00:34,730
+This is the multiplicity.
+8
+
+9
+00:00:34,910 --> 00:00:37,010
+It specify what we call in databases
+9
+
+10
+00:00:37,010 --> 00:00:40,280
+cardinality. In general, it is just number of elements.
+10
+
+11
+00:00:40,760 --> 00:00:46,310
+We would think, let's say we're designing based on the requirements and each center will have only
+11
+
+12
+00:00:46,310 --> 00:00:49,010
+one lobby, but it will have at least one bathroom.
+12
+
+13
+00:00:49,080 --> 00:00:52,250
+OK, so multiplicity come to express that as following:
+13
+
+14
+00:00:52,430 --> 00:00:58,850
+you see here this one, you will read it as following: visitor center is composed of only one lobby.
+14
+
+15
+00:00:59,240 --> 00:01:03,050
+However, you see here the one asterisk. One asterisk means one or more.
+15
+
+16
+00:01:03,320 --> 00:01:08,420
+So this is like a visitor center is composed of one or more bathrooms.
+16
+
+17
+00:01:08,630 --> 00:01:12,620
+If you know the exact number, say four bathrooms, you can say four bathrooms.
+17
+
+18
+00:01:12,770 --> 00:01:17,620
+If it is a range like 2 to 4 bathrooms, you write here two, dash, 4 bathrooms.
+18
+
+19
+00:01:17,870 --> 00:01:23,150
+So multiplicity starts to communicate this counting over the relationships.
+19
+
+20
+00:01:23,750 --> 00:01:26,210
+There are different ways to write multiplicities.
+20
+
+21
+00:01:26,210 --> 00:01:27,950
+I would like you to read them very well.
+21
+
+22
+00:01:28,220 --> 00:01:33,920
+So if we wrote, for example, five colon-colon five or just five, it means that there are exactly
+22
+
+23
+00:01:33,920 --> 00:01:38,480
+five instances. M-N or some specific numbers mean there is some range here
+23
+
+24
+00:01:38,720 --> 00:01:41,570
+like say 5 to 10 within 5 to 10.
+24
+
+25
+00:01:42,260 --> 00:01:47,560
+Zero asterisk means zero or more, zero-one means no instances or one instance.
+25
+
+26
+00:01:48,410 --> 00:01:50,720
+Let's go back to the associations.
+26
+
+27
+00:01:50,900 --> 00:01:52,700
+There is also one interesting meaning here.
+27
+
+28
+00:01:53,540 --> 00:01:55,310
+There are three types of associations.
+28
+
+29
+00:01:55,340 --> 00:01:59,900
+One to one, one to many, many to one. In a one-to-one relationship,
+29
+
+30
+00:02:00,110 --> 00:02:04,280
+there is only one type of this class with this one type of this class.
+30
+
+31
+00:02:04,280 --> 00:02:07,610
+Let's say that you have a class for a citizen and a class for a national ID.
+31
+
+32
+00:02:07,880 --> 00:02:11,630
+Each citizen has only a single one ID. On the other side,
+32
+
+33
+00:02:11,870 --> 00:02:14,630
+let's say there is a car and wheels. We know that car
+33
+
+34
+00:02:14,630 --> 00:02:18,200
+one car has 4 wheels, so it is one to many relationship.
+34
+
+35
+00:02:18,860 --> 00:02:26,450
+A customer has, say, three bank accounts. Many to many, it could be like the student has courses and
+35
+
+36
+00:02:26,450 --> 00:02:27,860
+each course has students.
+36
+
+37
+00:02:27,890 --> 00:02:34,010
+When we come to code it, you will notice that there is a vector here for courses, a vector here for students, and
+37
+
+38
+00:02:34,010 --> 00:02:39,470
+there is some common usage between the courses, for example, here and here. That's it.

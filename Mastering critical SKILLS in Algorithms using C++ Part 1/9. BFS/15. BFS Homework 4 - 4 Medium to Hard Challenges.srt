@@ -1,0 +1,851 @@
+1
+00:00:00,990 --> 00:00:02,050
+Homework, no food.
+
+2
+00:00:02,070 --> 00:00:08,880
+And in this subset, we would like to address also a new, different type of graphs and before a problem,
+
+3
+00:00:08,890 --> 00:00:10,840
+so let's see the first one.
+
+4
+00:00:10,860 --> 00:00:15,960
+Hopefully the easiest among them as following, we have a directed graph.
+
+5
+00:00:17,350 --> 00:00:22,000
+Now, every edge has a color, either red or blue.
+
+6
+00:00:23,350 --> 00:00:26,800
+And there could be even salvages or or better it just here.
+
+7
+00:00:27,460 --> 00:00:33,940
+No, the point is the following we would like to move from nude to another.
+
+8
+00:00:34,210 --> 00:00:37,930
+However, the bath must be alternating.
+
+9
+00:00:37,930 --> 00:00:40,840
+The bath must be alternating.
+
+10
+00:00:42,100 --> 00:00:43,480
+The request is following.
+
+11
+00:00:43,750 --> 00:00:47,320
+You would like to return like a list or a vector of integers.
+
+12
+00:00:47,650 --> 00:00:56,140
+Such a that answer of exit, but isn't the shortest to Bess from node zero to Node X, such that the
+
+13
+00:00:56,140 --> 00:00:58,500
+edges must alternate in colors.
+
+14
+00:00:59,020 --> 00:01:00,550
+For example, let's see here.
+
+15
+00:01:02,440 --> 00:01:03,440
+This is a graph here.
+
+16
+00:01:03,460 --> 00:01:06,280
+It gives you a list of images and lists of blue edges.
+
+17
+00:01:06,580 --> 00:01:08,350
+The list of blue edges here is empty.
+
+18
+00:01:08,560 --> 00:01:11,560
+The red one or zero two were at one two in a directed graph.
+
+19
+00:01:12,250 --> 00:01:14,320
+Now here is the answer of a.
+
+20
+00:01:15,540 --> 00:01:18,010
+Answer of zero is the best from zero to zero.
+
+21
+00:01:18,100 --> 00:01:19,320
+This one would be always zero.
+
+22
+00:01:20,240 --> 00:01:24,980
+Answer often is the best from zero to one in alternating way, there is only one edge.
+
+23
+00:01:25,130 --> 00:01:26,900
+And this is a shortest to dancers one.
+
+24
+00:01:28,180 --> 00:01:31,090
+Answer from zero to two is minus one, why?
+
+25
+00:01:31,300 --> 00:01:35,890
+Because there is no birth of alternating energies we see here from zero to one in red.
+
+26
+00:01:36,190 --> 00:01:40,120
+We needed one to two, but but blue one, not red one.
+
+27
+00:01:40,330 --> 00:01:41,260
+But it doesn't exist.
+
+28
+00:01:41,500 --> 00:01:43,240
+So that's why you have mice that wouldn't swim here.
+
+29
+00:01:43,720 --> 00:01:46,690
+So it isn't about just finding the shortest bath.
+
+30
+00:01:47,260 --> 00:01:49,990
+The Bath must be alternating in colors.
+
+31
+00:01:50,530 --> 00:01:58,360
+Another problem here 01 is red, but two one is blue, so zero two zero would be zero zero to one one,
+
+32
+00:01:58,360 --> 00:01:59,320
+as we did before.
+
+33
+00:01:59,590 --> 00:02:01,300
+Zero two even doesn't exist.
+
+34
+00:02:02,450 --> 00:02:04,610
+Now, let's flip the problem.
+
+35
+00:02:04,880 --> 00:02:06,410
+What about 012?
+
+36
+00:02:06,680 --> 00:02:10,150
+But this way, this one exists, this one is minus one.
+
+37
+00:02:10,160 --> 00:02:11,060
+This one is minus one.
+
+38
+00:02:11,450 --> 00:02:14,540
+I hope the overall idea is clear.
+
+39
+00:02:14,570 --> 00:02:21,380
+Let's see more example zero, one and two from zero two zero zero from zero to one one in red from zero
+
+40
+00:02:21,380 --> 00:02:23,930
+to two two edges, but red and blue.
+
+41
+00:02:23,930 --> 00:02:24,950
+So it's an eternity.
+
+42
+00:02:24,980 --> 00:02:30,500
+It has to be like red, blue, red, blue, red, blue or blue or red, the blue red or blue red.
+
+43
+00:02:31,430 --> 00:02:32,690
+The final example here.
+
+44
+00:02:33,230 --> 00:02:34,940
+From zero two zero is zero.
+
+45
+00:02:36,080 --> 00:02:41,240
+From zero to one, there is one edge which is red good from zero to two.
+
+46
+00:02:41,270 --> 00:02:41,690
+There is.
+
+47
+00:02:42,920 --> 00:02:46,520
+One age that is also red, which is also good.
+
+48
+00:02:48,230 --> 00:02:49,580
+I hope the overall is clear.
+
+49
+00:02:49,610 --> 00:02:53,120
+It is shortest to both, but consider the coloring that we have.
+
+50
+00:02:54,770 --> 00:02:56,670
+Let's move something that's more generic.
+
+51
+00:02:57,410 --> 00:03:01,940
+There is what we call the water and drug problem, and this is a very popular problem and it has different
+
+52
+00:03:01,940 --> 00:03:02,450
+variants.
+
+53
+00:03:02,660 --> 00:03:04,670
+So here is a very, very good website.
+
+54
+00:03:05,030 --> 00:03:10,070
+So this is a jug of water and this is a jug of water that is a very popular problem that each one of
+
+55
+00:03:10,070 --> 00:03:14,390
+them has a capacity to say six liters of water, and this one is eight liters of water.
+
+56
+00:03:15,840 --> 00:03:22,320
+And you can do any of the following six operations, and you can do them as many as you want.
+
+57
+00:03:22,360 --> 00:03:24,750
+You have infinitely infinite number of water, by the way.
+
+58
+00:03:25,110 --> 00:03:29,220
+This is my description for the problem because the elite could judge a description is very bad.
+
+59
+00:03:30,650 --> 00:03:32,090
+You can do the following operation.
+
+60
+00:03:32,360 --> 00:03:38,720
+You can fill any of their jugs with water, so this one has a capacity of six and this one has come
+
+61
+00:03:38,770 --> 00:03:39,290
+too often.
+
+62
+00:03:39,560 --> 00:03:43,250
+I can fill this one up to six or I can fill this for up to 10.
+
+63
+00:03:43,940 --> 00:03:45,440
+And definitely can fill both of them.
+
+64
+00:03:46,040 --> 00:03:48,410
+The second operation you can imagine and one of them.
+
+65
+00:03:48,530 --> 00:03:50,180
+So this one has six liters of water.
+
+66
+00:03:50,180 --> 00:03:52,760
+Now I can empty all of it or can do that.
+
+67
+00:03:53,210 --> 00:03:58,040
+So as you see, you can empty both of them or can make all of them the full.
+
+68
+00:03:58,610 --> 00:04:01,510
+Now, the second third operation is this following.
+
+69
+00:04:03,130 --> 00:04:05,470
+It is a brutal operation.
+
+70
+00:04:05,860 --> 00:04:09,760
+Um, but let me give you an example.
+
+71
+00:04:10,210 --> 00:04:11,950
+Let's say that this is judge number one.
+
+72
+00:04:12,730 --> 00:04:13,150
+Let's see.
+
+73
+00:04:13,150 --> 00:04:14,440
+The capacity is six.
+
+74
+00:04:14,990 --> 00:04:18,490
+And let's say it has at the moment, four liters of water only.
+
+75
+00:04:19,410 --> 00:04:28,890
+And let's say that this is another jag of civil leaders, and at the moment it has five liters of food.
+
+76
+00:04:29,910 --> 00:04:35,370
+If you decided to fill from the first one to the second one, notice that the second one only needs
+
+77
+00:04:35,370 --> 00:04:36,930
+to your, it's safe.
+
+78
+00:04:36,930 --> 00:04:38,490
+We bought the from one to two.
+
+79
+00:04:38,790 --> 00:04:41,370
+We will take two units a year, so it will be felt to seven.
+
+80
+00:04:41,580 --> 00:04:45,420
+And this one would be reduced up to two units here.
+
+81
+00:04:45,420 --> 00:04:46,350
+So it would be only.
+
+82
+00:04:47,640 --> 00:04:48,450
+Two years here.
+
+83
+00:04:49,230 --> 00:04:52,890
+So the brutal operation is just following your boat from one to another.
+
+84
+00:04:53,040 --> 00:04:59,490
+Tell the the other judge is completely full or the first one is completely empty.
+
+85
+00:04:59,910 --> 00:05:06,600
+For example, if we assume that this one is true and this one here is just zero.
+
+86
+00:05:07,520 --> 00:05:11,900
+So what you can do is build that tool to the zero here, so this one would be two and this one would
+
+87
+00:05:11,900 --> 00:05:12,710
+be zero.
+
+88
+00:05:13,010 --> 00:05:18,680
+The operation is very loose contract to understand that from this perspective, now what is the request?
+
+89
+00:05:19,100 --> 00:05:26,030
+You will be given a target committee and you would like to play this operation as much as you can,
+
+90
+00:05:26,030 --> 00:05:28,610
+such as that at some point of time.
+
+91
+00:05:28,970 --> 00:05:33,830
+The water in the first one blows the water, and the second one equally equals the target capacity.
+
+92
+00:05:34,880 --> 00:05:39,500
+By the way, in some of other online judges, you would like one of them only to be equal to you.
+
+93
+00:05:40,040 --> 00:05:43,310
+But in this variant, and it could, you need the plus, OK?
+
+94
+00:05:44,580 --> 00:05:50,400
+So this is merely the request you keep believing and return it through if you can reach a stage where
+
+95
+00:05:50,640 --> 00:05:54,360
+that the sum of the two of them is exactly the tiger Kristie.
+
+96
+00:05:54,630 --> 00:05:58,050
+One of the problem here, the values are extremely huge.
+
+97
+00:05:59,130 --> 00:06:00,960
+So this is really there the problem?
+
+98
+00:06:01,980 --> 00:06:04,650
+So let me give you my examples of some examples.
+
+99
+00:06:04,680 --> 00:06:05,820
+The first one has one.
+
+100
+00:06:06,030 --> 00:06:07,230
+And the second one has to.
+
+101
+00:06:07,530 --> 00:06:12,860
+If you filled this one to one and this one to two, then the submission is three, which is the request.
+
+102
+00:06:13,740 --> 00:06:19,380
+If the first haston and the second has 20, then even when they are both failed, the submission is
+
+103
+00:06:19,380 --> 00:06:22,890
+just a throw when we need 100, so we no way to reach that.
+
+104
+00:06:24,120 --> 00:06:24,490
+OK.
+
+105
+00:06:24,510 --> 00:06:27,740
+If you would like to reach a three with three and five to six.
+
+106
+00:06:27,780 --> 00:06:29,280
+So here's what what we can do.
+
+107
+00:06:30,030 --> 00:06:31,620
+So let's say let's try to draw.
+
+108
+00:06:33,080 --> 00:06:34,010
+We have here.
+
+109
+00:06:36,430 --> 00:06:40,200
+Three units of water and we have here five units of water.
+
+110
+00:06:41,500 --> 00:06:49,210
+So here is this tips, first of all, I will start by filling the the first one, I will fill the second
+
+111
+00:06:49,210 --> 00:06:49,480
+one.
+
+112
+00:06:49,690 --> 00:06:52,540
+So the second one has five, so I will fill all of it.
+
+113
+00:06:52,540 --> 00:06:54,040
+So now we have five units here.
+
+114
+00:06:55,210 --> 00:06:57,790
+Then I will boot from two to one.
+
+115
+00:06:57,970 --> 00:07:01,210
+So now this one has five units Ubu two here.
+
+116
+00:07:01,480 --> 00:07:02,550
+So this one has three.
+
+117
+00:07:02,560 --> 00:07:08,950
+Also, it will be folded two three units and what remaining is just two then.
+
+118
+00:07:10,570 --> 00:07:16,210
+You, well, empathy, their second one, so we empty this one here.
+
+119
+00:07:18,870 --> 00:07:20,760
+Then brewed from one to two.
+
+120
+00:07:20,790 --> 00:07:24,970
+So take this three Yorkshire and Muslims thought now this one would be three.
+
+121
+00:07:25,770 --> 00:07:28,080
+Now, Phil, the first one, again it will be three.
+
+122
+00:07:28,080 --> 00:07:31,080
+Again, No three and three are six.
+
+123
+00:07:31,830 --> 00:07:33,390
+An important observation here.
+
+124
+00:07:33,690 --> 00:07:36,090
+The answer of three, five and six is true.
+
+125
+00:07:36,690 --> 00:07:40,470
+So the answer, also five and three, is also true.
+
+126
+00:07:41,100 --> 00:07:44,820
+OK, so this is mainly the problem as an extra thing.
+
+127
+00:07:44,970 --> 00:07:50,610
+If you would like to do that, you might even try to change your could to bring to the shortest operations
+
+128
+00:07:50,610 --> 00:07:54,330
+a sequence which is as simple as a bath that we printed before.
+
+129
+00:07:56,400 --> 00:08:01,080
+Look, one thing here that it could limits are very tight limit.
+
+130
+00:08:01,200 --> 00:08:04,020
+It's more or less like competitive programming.
+
+131
+00:08:04,020 --> 00:08:10,170
+It's like 90 percent your school goodwill Tilley mine were not really, but you will still almost most.
+
+132
+00:08:11,520 --> 00:08:14,370
+This problem has an all one solution.
+
+133
+00:08:14,820 --> 00:08:18,210
+It's wisdom, mathematics, and it's out of our scope completely.
+
+134
+00:08:18,810 --> 00:08:22,410
+Now, I don't want you to get in this puzzle of a lot of time.
+
+135
+00:08:22,410 --> 00:08:24,510
+Limit exceeds and waste a lot of your time in that.
+
+136
+00:08:24,840 --> 00:08:28,320
+So here is what I'm doing and providing you with my own training.
+
+137
+00:08:28,320 --> 00:08:30,360
+File my own book fight.
+
+138
+00:08:30,630 --> 00:08:31,830
+So it is an example of them.
+
+139
+00:08:31,830 --> 00:08:36,690
+But while it is stuck to the number of cases, then it lines each other and has no to cases.
+
+140
+00:08:36,960 --> 00:08:39,300
+So read and compare with your own one.
+
+141
+00:08:39,600 --> 00:08:42,240
+Maybe you can write some script to convert two files together.
+
+142
+00:08:42,900 --> 00:08:46,890
+So this is mainly what you can do for free to try to optimize your code to best the tiddly.
+
+143
+00:08:47,220 --> 00:08:50,190
+You have to avoid any slow competitors.
+
+144
+00:08:50,190 --> 00:08:54,060
+You have to make some optimizations so that it can best simply.
+
+145
+00:08:55,950 --> 00:09:00,400
+OK, so the next one, the sliding bottle.
+
+146
+00:09:02,380 --> 00:09:03,820
+Uh, a nice problem.
+
+147
+00:09:04,420 --> 00:09:05,810
+OK, it is what you have.
+
+148
+00:09:06,430 --> 00:09:12,370
+You will be given a two or three sliding buzzer like that, for example, then, but there is one two
+
+149
+00:09:12,370 --> 00:09:15,370
+three four and then zero and then five.
+
+150
+00:09:17,260 --> 00:09:24,280
+The request is we would like the grade to end up as following.
+
+151
+00:09:24,880 --> 00:09:29,560
+We would like the grade to be one, two, three, four, five and zero.
+
+152
+00:09:29,770 --> 00:09:32,410
+So this is the issue state and this is the final state.
+
+153
+00:09:33,280 --> 00:09:34,480
+Now what is operation?
+
+154
+00:09:34,720 --> 00:09:40,570
+You search for the zero and you can swab it with any one of their neighbors of the four neighbors of
+
+155
+00:09:40,570 --> 00:09:40,810
+it.
+
+156
+00:09:42,150 --> 00:09:45,420
+And would like to return, I think the shortest number of steps.
+
+157
+00:09:46,050 --> 00:09:47,310
+The lowest number of steps.
+
+158
+00:09:47,700 --> 00:09:50,360
+So this is so you would be given an initial goal.
+
+159
+00:09:50,760 --> 00:09:52,260
+And this is the target goal.
+
+160
+00:09:52,590 --> 00:09:59,130
+And you can swab with any of the adjacent to value the zero only and return the total number of steps
+
+161
+00:09:59,130 --> 00:10:00,000
+or minus one.
+
+162
+00:10:00,300 --> 00:10:01,860
+If no way to do that.
+
+163
+00:10:03,840 --> 00:10:07,440
+It is an example, please read it and try to see how can we move it?
+
+164
+00:10:07,620 --> 00:10:15,660
+The zero is here, so we can, for example, and the first one it will slide what, uh, four one two
+
+165
+00:10:15,900 --> 00:10:16,920
+five zero three.
+
+166
+00:10:16,920 --> 00:10:17,850
+This is the initial one.
+
+167
+00:10:18,090 --> 00:10:24,900
+It when it's light five years or bring five years or it is a zero, and then it will do what it will,
+
+168
+00:10:24,900 --> 00:10:26,960
+uh, zero one two.
+
+169
+00:10:26,970 --> 00:10:30,060
+So it slides zero above and Brentford here and so on.
+
+170
+00:10:31,170 --> 00:10:32,100
+Another example.
+
+171
+00:10:35,120 --> 00:10:36,050
+Then fix the problem.
+
+172
+00:10:39,080 --> 00:10:43,850
+Make sure to fully understand this problem, who is quoting so that you don't get puzzled about what
+
+173
+00:10:43,850 --> 00:10:46,940
+is what and read it after I explain it.
+
+174
+00:10:47,390 --> 00:10:48,950
+You have in the boxes.
+
+175
+00:10:49,930 --> 00:10:52,360
+Each books has the following information.
+
+176
+00:10:52,690 --> 00:10:54,580
+It has a status for its A.
+
+177
+00:10:55,270 --> 00:10:58,300
+So if the status is one, it means it is an up in the books.
+
+178
+00:10:58,540 --> 00:11:03,820
+If the zero is the close, the books, there are some candies that are inside the books.
+
+179
+00:11:04,150 --> 00:11:05,830
+Seven Candies, it candies.
+
+180
+00:11:06,460 --> 00:11:08,740
+There are some keys inside the books.
+
+181
+00:11:09,070 --> 00:11:13,990
+I can take these keys and open in another book, so with it that need this key.
+
+182
+00:11:14,560 --> 00:11:18,220
+And inside the books, there are more boxes.
+
+183
+00:11:18,340 --> 00:11:19,960
+OK, so be careful about that.
+
+184
+00:11:20,620 --> 00:11:25,480
+But there are almost one books inside e-books, so when you open a box?
+
+185
+00:11:26,910 --> 00:11:29,310
+You'll find that it might be open or closed.
+
+186
+00:11:29,970 --> 00:11:33,090
+You'll find some sweet candies inside it.
+
+187
+00:11:33,540 --> 00:11:36,030
+You'll find some keys inside it.
+
+188
+00:11:36,300 --> 00:11:38,820
+You'll find even some books inside it.
+
+189
+00:11:39,540 --> 00:11:42,610
+But but this box is my because that might be open to you, the know.
+
+190
+00:11:43,380 --> 00:11:46,660
+Now here is the point you would like to you.
+
+191
+00:11:46,680 --> 00:11:50,230
+Initially, you would be initially given.
+
+192
+00:11:50,250 --> 00:11:54,690
+You would be initially given some boxes that are you can start with them.
+
+193
+00:11:55,350 --> 00:11:55,680
+OK.
+
+194
+00:11:55,860 --> 00:11:57,840
+So you can take all of the candies.
+
+195
+00:11:57,840 --> 00:12:01,950
+And so this initial boxes consider them, they are opened in a way.
+
+196
+00:12:02,830 --> 00:12:10,540
+And now what you would like to do is you will keep taking Candice from the books and all of the keys
+
+197
+00:12:10,540 --> 00:12:12,950
+in the books and keep searching for other books.
+
+198
+00:12:13,390 --> 00:12:18,970
+Any books so that you can it, you open it, then take the candies inside it, then take the keys inside
+
+199
+00:12:18,970 --> 00:12:19,120
+it.
+
+200
+00:12:19,330 --> 00:12:25,210
+Open more books as long as your current keys allow you to open a new box up in the box.
+
+201
+00:12:25,360 --> 00:12:26,260
+Take the candies.
+
+202
+00:12:26,620 --> 00:12:28,780
+Get the keys of in boxes inside it.
+
+203
+00:12:28,960 --> 00:12:33,880
+Keep doing that until reaching the status where you cannot open any more boxes.
+
+204
+00:12:34,210 --> 00:12:38,500
+Now, return to the total number of candies that you can collect this way.
+
+205
+00:12:39,250 --> 00:12:41,200
+Overall, it could be confusing a problem.
+
+206
+00:12:41,500 --> 00:12:41,920
+I will.
+
+207
+00:12:42,340 --> 00:12:45,820
+I will leave it for you to try to simulate the examples and understand them.
+
+208
+00:12:46,680 --> 00:12:47,920
+Uh, yeah.
+
+209
+00:12:48,850 --> 00:12:52,860
+Also read this description in is it could be helpful for you while coding.
+
+210
+00:12:53,330 --> 00:12:54,620
+Uh, don't be scared.
+
+211
+00:12:54,640 --> 00:12:55,260
+Not that hard.
+
+212
+00:12:55,270 --> 00:12:58,450
+Just make sure you understand the details of the problem.
+
+213
+00:12:59,270 --> 00:12:59,770
+That's off.

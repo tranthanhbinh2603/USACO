@@ -1,0 +1,192 @@
+1
+00:00:01,589 --> 00:00:08,250
+Hi Everyone, in this lecture I will teach you an interesting property how you can check whether a number
+
+2
+00:00:08,250 --> 00:00:11,440
+is a power of two or not.
+
+3
+00:00:11,460 --> 00:00:11,790
+OK.
+
+4
+00:00:12,210 --> 00:00:15,480
+And we will use Bitwise operators to do this check.
+
+5
+00:00:16,110 --> 00:00:21,710
+So let us talk about the power of two. let's say 16 is a number which is a power of two or 8 is
+
+6
+00:00:21,720 --> 00:00:27,030
+a number which is a power of two. so what is 16 ? 16 in binary
+
+7
+00:00:27,030 --> 00:00:27,930
+Looks like this.
+
+8
+00:00:30,250 --> 00:00:30,640
+Yes.
+
+9
+00:00:31,300 --> 00:00:34,180
+And what I can do is?  this... let's say this number is n.
+
+10
+00:00:34,900 --> 00:00:37,370
+Can you tell me what would be n minus one ?
+
+11
+00:00:37,390 --> 00:00:40,030
+Clearly, we know the n minus one would be.
+
+12
+00:00:41,210 --> 00:00:45,410
+Something like this, if and if n is power of 2.
+
+13
+00:00:45,620 --> 00:00:51,080
+OK, so we know n is a power of two then the previous number would look something like this.
+
+14
+00:00:51,140 --> 00:00:52,240
+So this number is actually 15.
+
+15
+00:00:52,250 --> 00:00:59,660
+And an interesting property is if n is a power of two then doing a AND of these two will
+
+16
+00:00:59,660 --> 00:01:01,430
+always give me a zero.
+
+17
+00:01:01,760 --> 00:01:02,060
+OK.
+
+18
+00:01:03,530 --> 00:01:05,090
+And you can see this number is zero.
+
+19
+00:01:05,519 --> 00:01:09,110
+similarly It is true for eight and seven as well. if 8 is like this
+
+20
+00:01:09,380 --> 00:01:10,490
+And seven is like this.
+
+21
+00:01:10,850 --> 00:01:15,440
+And if you do a  AND here of eight and seven then you will get the number zero.
+
+22
+00:01:15,450 --> 00:01:17,330
+But this will not be true for any other number.
+
+23
+00:01:17,330 --> 00:01:20,060
+For example, five. five is one zero one.
+
+24
+00:01:20,390 --> 00:01:21,110
+What is four?
+
+25
+00:01:21,260 --> 00:01:25,190
+So four is one double zero.
+
+26
+00:01:25,520 --> 00:01:28,370
+And if you do a AND  here you will not get a zero.
+
+27
+00:01:28,550 --> 00:01:28,850
+OK.
+
+28
+00:01:29,240 --> 00:01:38,110
+So basically, the check is if... if you get something like this if n AND n minus one, if they produce
+
+29
+00:01:38,120 --> 00:01:44,240
+a result that is equal to zero then that means n is a power of 2.
+
+30
+00:01:45,110 --> 00:01:45,440
+OK.
+
+31
+00:01:45,890 --> 00:01:53,210
+So simply what we can do in the code, we can take input end and I can check if n and n minus
+
+32
+00:01:53,210 --> 00:01:53,540
+one.
+
+33
+00:01:54,290 --> 00:01:56,420
+And I may be put a bracket here.
+
+34
+00:01:56,420 --> 00:02:01,100
+If this is equal to zero then you can cout Yes.
+
+35
+00:02:01,100 --> 00:02:04,370
+power of two.
+
+36
+00:02:05,150 --> 00:02:09,690
+else you can say, not a power of two.
+
+37
+00:02:10,580 --> 00:02:12,390
+OK, so let's build it.
+
+38
+00:02:12,390 --> 00:02:14,720
+Ran it and check it quickly.
+
+39
+00:02:21,580 --> 00:02:23,020
+So 128.
+
+40
+00:02:23,440 --> 00:02:27,790
+Yes, it is a power of two. one twe... 144.
+
+41
+00:02:28,360 --> 00:02:29,610
+It's not the power of two.
+
+42
+00:02:29,830 --> 00:02:33,490
+OK, and 1024 is a power of two.
+
+43
+00:02:34,240 --> 00:02:36,520
+And 12 it's not power of 2.
+
+44
+00:02:37,150 --> 00:02:38,950
+So yes it's working fine.
+
+45
+00:02:38,950 --> 00:02:46,090
+So it's a order one check without doing anything with just this AND operation with n minus one, we can
+
+46
+00:02:46,090 --> 00:02:49,210
+tell whether a number is power of two or not.
+
+47
+00:02:49,750 --> 00:02:51,120
+That's it for this lecture.
+
+48
+00:02:51,130 --> 00:02:51,670
+Thank you !
+

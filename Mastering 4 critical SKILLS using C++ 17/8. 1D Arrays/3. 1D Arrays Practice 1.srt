@@ -1,0 +1,444 @@
+0
+1
+00:00:01,410 --> 00:00:09,390
+That's a practice on arrays. The first problem is you are given N numbers and they are distinct,
+1
+
+2
+00:00:09,390 --> 00:00:11,610
+distinct means, they are different numbers.
+2
+
+3
+00:00:11,940 --> 00:00:17,030
+You are to find the maximum and the first maximum and the second maximum variable in the array. 
+3
+
+4
+00:00:17,400 --> 00:00:20,730
+For example, here, (10, 20,   3, 30, 7).
+4
+
+5
+00:00:21,060 --> 00:00:24,710
+The two maximum values here are (30 and 20).
+5
+
+6
+00:00:24,750 --> 00:00:25,060
+OK.
+6
+
+7
+00:00:27,830 --> 00:00:33,650
+So the logic is that you can think if I remove 30, who is the next maximum, it's just 20. I would like you to
+7
+
+8
+00:00:33,650 --> 00:00:35,660
+stop the video and think how to code it.
+8
+
+9
+00:00:37,570 --> 00:00:44,470
+So here's one way to code it, the idea is as following, you find the first maximum value index,
+9
+
+10
+00:00:44,770 --> 00:00:51,320
+then you mark it with a very small value, then you find again the first maximum value,
+10
+
+11
+00:00:51,730 --> 00:00:53,150
+and this is now your second max.
+11
+
+12
+00:00:53,950 --> 00:00:55,750
+So here is the code.
+12
+
+13
+00:00:55,960 --> 00:01:04,060
+We read the N numbers that we have and we do a normal (for loop) to find the index
+13
+
+14
+00:01:04,060 --> 00:01:05,110
+of the maximum value.
+14
+
+15
+00:01:05,710 --> 00:01:15,400
+Now I'm taking the max value outside and I'm marking the array, this index with a very,
+15
+
+16
+00:01:15,400 --> 00:01:16,390
+very small value.
+16
+
+17
+00:01:16,820 --> 00:01:20,850
+Then I'm getting the same code again to find the next maximum value.
+17
+
+18
+00:01:22,000 --> 00:01:28,710
+One disadvantage in this code, that we needed to loop here once and here once, so we twice loop.
+18
+
+19
+00:01:29,260 --> 00:01:34,690
+The second is we need to mark this cell with a very, very negative value.
+19
+
+20
+00:01:35,170 --> 00:01:39,130
+But we aren't sure like we need to find some variable that definitely doesn't exist in the array.
+20
+
+21
+00:01:39,130 --> 00:01:45,630
+And if someone put here, minus two million, for example, is going to fail. Our work is around this second
+21
+
+22
+00:01:45,630 --> 00:01:51,320
+problem is just to double check that we aren't using the same index one before.
+22
+
+23
+00:01:51,340 --> 00:01:51,650
+That's it.
+23
+
+24
+00:01:53,340 --> 00:01:54,770
+Let's make it in a different way.
+24
+
+25
+00:01:57,060 --> 00:02:04,950
+In this case, I am trying to maintain the two values for (max1 and max2), for example, I initially
+25
+
+26
+00:02:04,950 --> 00:02:10,680
+started the program with taking the first two values in the array.
+26
+
+27
+00:02:11,520 --> 00:02:13,670
+According to which one, is the maximum one.
+27
+
+28
+00:02:13,680 --> 00:02:14,970
+For example, I'm seeing here,
+28
+
+29
+00:02:15,360 --> 00:02:21,510
+if number zero is greater than number of one, then we know that 'max1' is number zero and 'max2' is number one.
+29
+
+30
+00:02:21,510 --> 00:02:22,010
+'max2' is number one.
+30
+
+31
+00:02:22,470 --> 00:02:29,070
+Otherwise, we know that 'max1' is number one and 'max2' is number zero. At this stage, at line 17,
+31
+
+32
+00:02:29,340 --> 00:02:35,730
+we know that 'max1' and 'max2' has the first two values in the array. We start from two and keep going in that array.
+32
+
+33
+00:02:35,730 --> 00:02:36,180
+in that array.
+33
+
+34
+00:02:36,420 --> 00:02:37,490
+And it goes as following.
+34
+
+35
+00:02:38,100 --> 00:02:43,760
+If 'max1' is the same number of 'i', then we definitely need number of 'i' for us.
+35
+
+36
+00:02:44,100 --> 00:02:48,780
+So first, 'max1' we move it to 'max2' and then we take in the 'max1' the 'numbers[i]'
+36
+
+37
+00:02:48,780 --> 00:02:51,030
+the 'numbers[i]'
+37
+
+38
+00:02:51,030 --> 00:02:52,920
+This way,
+38
+
+39
+00:02:53,100 --> 00:02:57,930
+We updated ourself with taking the value of the new maximum that we have.
+39
+
+40
+00:02:58,740 --> 00:03:05,970
+OK, what if 'max1' is greater than actual numbers of 'i', then we don't need it but could still better than
+40
+
+41
+00:03:05,970 --> 00:03:06,780
+'max2'.
+41
+
+42
+00:03:07,020 --> 00:03:13,590
+So we double check here if 'max2' is less than numbers of 'i' or not, if it's the case we take it.
+42
+
+43
+00:03:13,950 --> 00:03:19,350
+Using this logic, we treat it only once on the array to keep the two max values.
+43
+
+44
+00:03:21,480 --> 00:03:27,630
+Here is another program I would like to read N integers, which are again distinct, find the pair
+44
+
+45
+00:03:27,750 --> 00:03:32,800
+of different indices numbers whose time is maximum.
+45
+
+46
+00:03:33,180 --> 00:03:41,130
+So, for example, if you read five numbers this way, the two numbers, 50 and 15, their submission
+46
+
+47
+00:03:41,130 --> 00:03:41,830
+is the maximum.
+47
+
+48
+00:03:42,030 --> 00:03:48,300
+So you are finding pair of numbers whose sum is maximum, but they should be of two different indices.
+48
+
+49
+00:03:48,300 --> 00:03:50,100
+Don't say 50 and 50.
+49
+
+50
+00:03:50,130 --> 00:03:51,690
+This is the same number.
+50
+
+51
+00:03:52,680 --> 00:03:54,660
+OK, here is one way to code it.
+51
+
+52
+00:03:54,990 --> 00:04:00,340
+We are going to iterate on the loop twice because we need the pair of numbers.
+52
+
+53
+00:04:00,570 --> 00:04:02,610
+So one loop is from 'i' to zero.
+53
+
+54
+00:04:02,850 --> 00:04:05,160
+Another loop from 'j' to zero and so on.
+54
+
+55
+00:04:05,670 --> 00:04:08,020
+And we have here two indices for the answer.
+55
+
+56
+00:04:08,460 --> 00:04:10,180
+Initially, they are all -1.
+56
+
+57
+00:04:10,380 --> 00:04:13,920
+So first, I'm saying if it's a negative one, then we never initialize them.
+57
+
+58
+00:04:14,220 --> 00:04:16,670
+That index would be 'i' and index2 would be 'j'.
+58
+
+59
+00:04:17,250 --> 00:04:19,410
+Otherwise we already have two indices.
+59
+
+60
+00:04:19,710 --> 00:04:27,180
+So now I would like to compare, Is the current two 'i', 'j' numbers are better than my best two numbers
+60
+
+61
+00:04:27,180 --> 00:04:28,180
+numbers so far or not?
+61
+
+62
+00:04:28,410 --> 00:04:36,090
+So I'm saying if the number of index1 plus number of index2 are better than numbers of 'i' and 'j' or not,
+62
+
+63
+00:04:36,090 --> 00:04:42,090
+if they should be replaced, then we say index1 is 'i' and index2 is 'j'.
+63
+
+64
+00:04:42,570 --> 00:04:48,630
+So the moral of that is, try every bit of numbers and keep the two ones that have the maximum sum.
+64
+
+65
+00:04:48,660 --> 00:04:50,940
+There is a bug in this code.
+65
+
+66
+00:04:51,390 --> 00:04:58,560
+And also from an efficiency perspective, half of the operations are useless. I would like to figure out
+66
+
+67
+00:04:58,560 --> 00:05:02,250
+what is the bug and also how to make it more efficient.
+67
+
+68
+00:05:04,560 --> 00:05:10,590
+The first bug the that we have here, is that we started 'j' with zero, this actually means that there's
+68
+
+69
+00:05:10,610 --> 00:05:18,960
+a chance that, for example, we take a position 'i' was zero and zero twice or 'j' was one
+69
+
+70
+00:05:18,960 --> 00:05:19,890
+and one.
+70
+
+71
+00:05:19,950 --> 00:05:25,380
+But the program asked us for different indices, so to set with different indices, we needed
+71
+
+72
+00:05:25,380 --> 00:05:29,910
+to make it a bit different, to make sure that 'i' not equal 'j'.
+72
+
+73
+00:05:31,020 --> 00:05:37,260
+The second issue is, that we were actually trying, for example, let's say 'i' was (2), and 'j' was (4)
+73
+
+74
+00:05:37,470 --> 00:05:38,550
+and after some time.
+74
+
+75
+00:05:38,550 --> 00:05:40,020
+'i' was (4), and 'j' was (2).
+75
+
+76
+00:05:40,290 --> 00:05:42,810
+We are actually doing every step twice.
+76
+
+77
+00:05:42,870 --> 00:05:52,890
+OK, so one step that we could use to do that, is starting with 'j' starting from (i+1),
+77
+
+78
+00:05:53,070 --> 00:06:00,270
+this actually solves the bug and also,
+78
+
+79
+00:06:00,600 --> 00:06:06,600
+also it avoids us this duplicate of operation.
+79
+
+80
+00:06:07,770 --> 00:06:08,790
+So far, so good.
+80
+
+81
+00:06:09,090 --> 00:06:10,650
+But there's an interesting question here.
+81
+
+82
+00:06:10,950 --> 00:06:13,820
+Can you do this problem with only a single loop?
+82
+
+83
+00:06:14,400 --> 00:06:17,010
+Can we find pair of numbers with a single loop?
+83
+
+84
+00:06:17,310 --> 00:06:18,090
+Think about it.
+84
+
+85
+00:06:20,890 --> 00:06:29,590
+The answer is very intuitive and very simple, if you would like to find two numbers whose
+85
+
+86
+00:06:29,590 --> 00:06:34,680
+sum is maximum, why don't you just find the maximum value and the second maximum value and that's it.
+86
+
+87
+00:06:35,050 --> 00:06:35,590
+that's it.
+87
+
+88
+00:06:35,860 --> 00:06:38,390
+So with a snigle loop, we actually can solve this problem.
+88
+
+89
+00:06:39,250 --> 00:06:39,810
+That's it! :)

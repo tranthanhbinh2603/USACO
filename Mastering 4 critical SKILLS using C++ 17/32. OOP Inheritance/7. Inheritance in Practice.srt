@@ -1,0 +1,147 @@
+1
+00:00:01,200 --> 00:00:06,720
+In this video, I would like to share with you some notes from a practical perspective about inheritance
+
+2
+00:00:06,720 --> 00:00:08,980
+in the software engineering industry.
+
+3
+00:00:09,750 --> 00:00:15,600
+Sadly, many courses when the excellent inheritance they give the students and the impression that inheritance
+
+4
+00:00:15,600 --> 00:00:18,240
+is very deeply used in the industry.
+
+5
+00:00:18,630 --> 00:00:20,020
+But this isn't the case.
+
+6
+00:00:20,040 --> 00:00:25,050
+Going back to the past, inheritance was a major technique for reusability and extension's.
+
+7
+00:00:25,470 --> 00:00:32,670
+But after some time, a lot of projects would exploded because of the use of the inheritance, the unwise
+
+8
+00:00:32,670 --> 00:00:33,510
+use of inheritance.
+
+9
+00:00:33,960 --> 00:00:40,980
+So now there is a lot of careful since before using it in industry.
+
+10
+00:00:41,400 --> 00:00:48,680
+I suppose in from the homeworks you get a very strong message why inheritance could be problematic.
+
+11
+00:00:49,170 --> 00:00:55,430
+So an industry that is now a very common say, they tell you the prefer composition over inheritance.
+
+12
+00:00:55,740 --> 00:01:02,070
+So the idea is whenever you can do something with composition in a fair way, just go with composition
+
+13
+00:01:02,070 --> 00:01:04,030
+and avoid inheritance hierarchy.
+
+14
+00:01:04,450 --> 00:01:10,050
+So in industry, we actually avoid the inheritance as much as we could.
+
+15
+00:01:10,420 --> 00:01:12,450
+OK, what I would like to use inheritance.
+
+16
+00:01:12,450 --> 00:01:16,470
+It is still in use, but you have to provide strong justifications.
+
+17
+00:01:16,770 --> 00:01:22,770
+For example, it has to be really has a relationship as strong as a relationship.
+
+18
+00:01:23,430 --> 00:01:27,090
+The Berlanti class should be super close for all classes.
+
+19
+00:01:27,390 --> 00:01:28,800
+Remember the mammal case.
+
+20
+00:01:29,070 --> 00:01:33,900
+You should make sure that even in future the subclauses would still make sense for the superclass.
+
+21
+00:01:34,410 --> 00:01:39,120
+You should never, ever try to use inheritance only because you are trying to make a good use.
+
+22
+00:01:39,360 --> 00:01:41,550
+This would just corrupt the case.
+
+23
+00:01:42,030 --> 00:01:47,400
+Multiple inheritance is very problematic, so we avoid it as much, much as possible.
+
+24
+00:01:47,610 --> 00:01:48,810
+Like we see the diamond.
+
+25
+00:01:48,810 --> 00:01:50,910
+The problem it makes makes troubles.
+
+26
+00:01:51,150 --> 00:01:55,110
+So we prefer inheritance tree structure, like just the tree.
+
+27
+00:01:57,210 --> 00:02:03,630
+When you are trying to extend the class, you have to think twice if this class was designed for being
+
+28
+00:02:03,630 --> 00:02:04,590
+extended or not.
+
+29
+00:02:04,830 --> 00:02:08,040
+Like, for example, the Victor class isn't designed for extension.
+
+30
+00:02:08,340 --> 00:02:12,680
+Some language even doesn't support inheritance at all, like Java and shirt.
+
+31
+00:02:12,690 --> 00:02:15,150
+But they have something else named interfaces.
+
+32
+00:02:15,450 --> 00:02:22,320
+So the moral of that is inheritance is something that can be very helpful.
+
+33
+00:02:22,560 --> 00:02:29,780
+But also sometimes, or even in many cases, it can be very problematic in the polymorphism.
+
+34
+00:02:30,270 --> 00:02:37,860
+Listen, we would know exactly how inheritance can be used to allow behavior in a very strong way and
+
+35
+00:02:37,860 --> 00:02:43,350
+allow very strong compositional types, not this type of very deep multiple inheritance.
+
+36
+00:02:43,350 --> 00:02:45,330
+And then when chips, that makes a lot of troubles.
+
+37
+00:02:45,960 --> 00:02:46,470
+That's it.

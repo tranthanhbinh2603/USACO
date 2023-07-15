@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1681483972 source:e:\document\project\usaco\dynamic programming algorithms master course (2022)\chap 6 - 1 d\02 - ipw\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<set>
+	<iostream>
+	<iomanip>
+	<map>
+	<math.h>
+

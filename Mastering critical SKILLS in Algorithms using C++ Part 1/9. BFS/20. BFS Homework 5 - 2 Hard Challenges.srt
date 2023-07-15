@@ -1,0 +1,231 @@
+1
+00:00:01,160 --> 00:00:04,040
+And there was a problem, a bit of challenging problems.
+
+2
+00:00:05,780 --> 00:00:10,760
+And the first one, the shots, the bridge problem as a swallowing.
+
+3
+00:00:11,700 --> 00:00:20,760
+You will have a matrix binary values which represent exactly two islands and the island is connected
+
+4
+00:00:20,760 --> 00:00:22,740
+in the four possible directions.
+
+5
+00:00:22,980 --> 00:00:34,140
+So when you have here a cell as usual, right down underfoot now, we would like to connect the two
+
+6
+00:00:35,010 --> 00:00:35,910
+grids together.
+
+7
+00:00:36,360 --> 00:00:42,660
+So you would like to take the minimum number of zeros, convert them to one so that they are connected.
+
+8
+00:00:43,230 --> 00:00:48,660
+So for example, here when you see the first one, if you converted this one to one, now the two grids
+
+9
+00:00:48,660 --> 00:00:50,400
+are connected here.
+
+10
+00:00:50,910 --> 00:00:53,070
+If you market this one as one and this one has one.
+
+11
+00:00:53,490 --> 00:00:58,950
+Now we are connected and this one, if you connected this one from here, it's now connected.
+
+12
+00:00:58,980 --> 00:01:00,360
+This is exactly the problem.
+
+13
+00:01:01,770 --> 00:01:06,720
+Now you can brute force this problem, but I would like you to challenge yourself and implement it in
+
+14
+00:01:06,720 --> 00:01:08,010
+all rules time columns.
+
+15
+00:01:10,100 --> 00:01:11,090
+The next the problem.
+
+16
+00:01:12,980 --> 00:01:17,660
+That extra problem is very popular computer science a problem, it's good, the three diameter.
+
+17
+00:01:17,960 --> 00:01:21,900
+The problem exists the only good, but it is premium discrete bulimia.
+
+18
+00:01:21,930 --> 00:01:24,950
+So if you don't have an account, you will not be able to obtain it.
+
+19
+00:01:25,490 --> 00:01:29,420
+I am going to use the virgin coming from sponge or mine judge.
+
+20
+00:01:29,900 --> 00:01:34,100
+So the problem is is following you will have unweighted, undirected, valid three.
+
+21
+00:01:34,670 --> 00:01:40,220
+You would like to return it the length of the longest to bath in the three, which is the length of
+
+22
+00:01:40,220 --> 00:01:42,200
+the longest between two nodes here.
+
+23
+00:01:42,710 --> 00:01:48,210
+Now in in in in graph theory, we called the longest to bath in a tree.
+
+24
+00:01:48,230 --> 00:01:49,340
+We call it the diameter.
+
+25
+00:01:49,550 --> 00:01:51,110
+So we call it the three day method.
+
+26
+00:01:51,680 --> 00:01:58,160
+So this is a description of liquid you will start to by reading one integer.
+
+27
+00:01:58,160 --> 00:02:00,560
+Each file is just consisting of a single graph.
+
+28
+00:02:00,950 --> 00:02:07,120
+You will read the number of nodes, which are three, then read the edges one two to three so that the
+
+29
+00:02:07,130 --> 00:02:13,250
+graph for you is like one to two to three, which is just to observe here the end.
+
+30
+00:02:13,250 --> 00:02:17,390
+But in the first bush is one be, so you have to convert that to zero based.
+
+31
+00:02:18,070 --> 00:02:20,420
+Am also providing you with a similar split symbol.
+
+32
+00:02:20,420 --> 00:02:24,460
+It would all you have to implement is just the three diameter function.
+
+33
+00:02:24,470 --> 00:02:24,970
+That's it.
+
+34
+00:02:27,480 --> 00:02:28,720
+Let's see some examples.
+
+35
+00:02:28,750 --> 00:02:34,020
+This examples from Whittaker's Likud website, which are just more examples for you here.
+
+36
+00:02:35,010 --> 00:02:38,080
+This is again two steps now in this one here.
+
+37
+00:02:38,100 --> 00:02:40,350
+If you look there, this here, here, here, here.
+
+38
+00:02:40,380 --> 00:02:41,570
+This is the longest Sabbath.
+
+39
+00:02:41,580 --> 00:02:43,800
+This is a three diameter.
+
+40
+00:02:44,760 --> 00:02:45,810
+Now it is a point.
+
+41
+00:02:47,300 --> 00:02:52,460
+We can implement this problem with two different solution, the first one is very, very popular on
+
+42
+00:02:52,460 --> 00:02:53,150
+the internet.
+
+43
+00:02:53,540 --> 00:02:59,840
+The second one is rarely mentioned and is mentioned more than a data structure, a context rather than
+
+44
+00:03:00,530 --> 00:03:01,850
+this problem context here.
+
+45
+00:03:02,630 --> 00:03:09,950
+Now, the first solution, which is very popular people do it, is using only to be a fiscals.
+
+46
+00:03:10,310 --> 00:03:12,770
+So you might think, how can you do it with two before schools?
+
+47
+00:03:13,100 --> 00:03:17,810
+Or you can think in a slow version, which can do multiple calls to find the answer?
+
+48
+00:03:19,000 --> 00:03:21,370
+The proof of this one is an easy one.
+
+49
+00:03:21,850 --> 00:03:26,200
+Now the interesting thing is, and this is what people most of the people do mention, we can't solve
+
+50
+00:03:26,200 --> 00:03:31,750
+this problem with only a single day for school, not just to give one one single.
+
+51
+00:03:32,680 --> 00:03:36,440
+I would like to give you a hint try to think in a rooted binary tree.
+
+52
+00:03:36,460 --> 00:03:39,550
+You remember the way military it has usually two children only.
+
+53
+00:03:41,170 --> 00:03:45,400
+So how can we compute the diameter of around crowded, routed by military?
+
+54
+00:03:46,030 --> 00:03:49,390
+Think of a symbol be a first, a simple defense that can do it?
+
+55
+00:03:50,020 --> 00:03:53,320
+Uh, don't waste too much time here thinking forever.
+
+56
+00:03:53,320 --> 00:03:56,650
+Maybe have an hour or so and then proceed.
+
+57
+00:03:56,680 --> 00:03:59,440
+Try this one too, and then see my solutions.
+
+58
+00:04:00,700 --> 00:04:01,210
+That's all.

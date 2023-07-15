@@ -1,0 +1,169 @@
+0
+1
+00:00:01,440 --> 00:00:05,130
+In this video, we will learn how to install "CodeBlocks" on Windows.
+1
+
+2
+00:00:07,840 --> 00:00:13,900
+Installing "CodeBlocks" is an easy experience most of the time, however, it is very impractical
+2
+
+3
+00:00:13,900 --> 00:00:17,340
+for me to support all 'OSs' and their different versions.
+3
+
+4
+00:00:17,680 --> 00:00:18,880
+Check out the approach here.
+4
+
+5
+00:00:19,150 --> 00:00:22,090
+If it isn't your version or doesn't work, just google your version.
+5
+
+6
+00:00:23,660 --> 00:00:28,130
+Sadly, from OS to another, and even within the same OS setup, you may face different 
+6
+
+7
+00:00:28,130 --> 00:00:28,520
+errors.
+7
+
+8
+00:00:28,670 --> 00:00:34,360
+The good news, typically googling for the problems will end up with a solution, especially on a "StackOverFlow"
+8
+
+9
+00:00:34,560 --> 00:00:34,970
+website.
+9
+
+10
+00:00:37,150 --> 00:00:44,440
+The first step is to just google with word "codeblocks", it typically should show you some page, looks
+10
+
+11
+00:00:44,440 --> 00:00:46,450
+like this one, click on "Downloads",
+11
+
+12
+00:00:46,600 --> 00:00:53,020
+then you will find "Download the binary release", just click it. In the download binary release,
+12
+
+13
+00:00:53,380 --> 00:00:58,930
+you should find different Windows versions, the one that you should select is the one with that "mingw.exe",
+13
+
+14
+00:00:58,930 --> 00:01:03,820
+this one has all that you need. If you are 64bit,
+14
+
+15
+00:01:03,820 --> 00:01:10,810
+you just select "mingw" here. If you are 32bit, you just select "mingw-32bit" here. Download and just proceed normally.
+15
+
+16
+00:01:11,230 --> 00:01:16,870
+There are more links here for Linux and Mac, but you don't need to interact with them.
+16
+
+17
+00:01:18,910 --> 00:01:25,540
+One critical step is we need to add the path of the "MinGW" to the system environment.
+17
+
+18
+00:01:25,930 --> 00:01:30,760
+So the way to do that, this is a bit standard step.
+18
+
+19
+00:01:31,630 --> 00:01:33,640
+Just go to your environment here and click "env".
+19
+
+20
+00:01:33,970 --> 00:01:38,470
+If you are into Windows 10, then there are more links here.
+20
+
+21
+00:01:39,010 --> 00:01:43,230
+The path that we are interested to add to the environment path is the path of the "MinGW\bin",
+21
+
+22
+00:01:43,240 --> 00:01:46,090
+so it should be like this path.
+22
+
+23
+00:01:46,090 --> 00:01:48,570
+But if it isn't, validate where is the path exactly
+23
+
+24
+00:01:48,580 --> 00:01:58,300
+First. If you click on the edit, you go and search for "env" and then it shows you such a "System
+24
+
+25
+00:01:58,310 --> 00:02:01,090
+Properties", click "Advanced" then "Environment Variables",
+25
+
+26
+00:02:01,600 --> 00:02:04,180
+proceed more, you should find a variable named "Path".
+26
+
+27
+00:02:04,570 --> 00:02:07,000
+Edit this path and keep going.
+27
+
+28
+00:02:07,000 --> 00:02:08,680
+You should find a lot of paths here.
+28
+
+29
+00:02:08,950 --> 00:02:18,550
+Just click "New" and add a new one, the one as we said the "MinGW Path" and click "OK" and "Save". If it happens
+29
+
+30
+00:02:18,550 --> 00:02:19,570
+that you have problems,
+30
+
+31
+00:02:19,780 --> 00:02:22,660
+first, double check that the path you added is really here.
+31
+
+32
+00:02:22,660 --> 00:02:27,310
+You didn't do any mistakes like canceling or so, the second is just restart your whole machine.
+32
+
+33
+00:02:27,310 --> 00:02:30,430
+Probably nothing more is needed for such step.
+33
+
+34
+00:02:30,970 --> 00:02:31,540
+That is it. :)

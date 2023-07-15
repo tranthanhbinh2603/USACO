@@ -1,0 +1,364 @@
+WEBVTT
+
+00:00.660 --> 00:03.780
+Let us look at static variables and recursion.
+
+00:04.120 --> 00:06.100
+We have seen how to trace recursion.
+
+00:06.120 --> 00:10.230
+We have also seen how a recursive function utilizes a stack.
+
+00:10.720 --> 00:17.160
+Then what if there are any static variables, how to treat them inside recursive function?
+
+00:17.640 --> 00:23.310
+So here I have an example function recursive function, though there are no static variables right now
+
+00:23.730 --> 00:29.370
+without static this function, I will trace it and show you that if the static is introduced, then
+
+00:29.370 --> 00:30.820
+I'll show you what should be the difference.
+
+00:31.320 --> 00:33.520
+First, let us see what the function is doing.
+
+00:33.540 --> 00:34.550
+I will read it out.
+
+00:34.710 --> 00:37.390
+I'll explain what these things are said.
+
+00:37.550 --> 00:41.850
+It is a function fund which takes parameter and if any value is greater than zero, then it will call
+
+00:41.850 --> 00:45.230
+itself the decrease value of N and also add.
+
+00:45.260 --> 00:49.860
+And so then this plus end will be done in time or done in time.
+
+00:50.220 --> 00:57.480
+I have done that or in time that if the value of any zeroed in on returns, the zero and four main function
+
+00:57.480 --> 01:04.080
+dysfunction is caused by passing a that is five not to show how they will work inside the memory.
+
+01:04.330 --> 01:10.050
+I have already taken a diagram for the memory that I am showing code section for the functions are there
+
+01:10.440 --> 01:13.030
+then how the stack is used, I'll explain.
+
+01:13.920 --> 01:19.020
+First of all, I will treat this function for value five and through the tracing tree first.
+
+01:19.020 --> 01:21.200
+The function is called for the value five.
+
+01:21.600 --> 01:27.300
+So this is one of five and five is greater than zero.
+
+01:27.300 --> 01:27.770
+Yes.
+
+01:27.780 --> 01:29.040
+So it will call this one.
+
+01:29.340 --> 01:38.760
+So it will call itself for one of four plus this n oh let it be blank here.
+
+01:38.910 --> 01:42.010
+That will be filled with the value of and what is the value of in here.
+
+01:42.030 --> 01:42.480
+Five.
+
+01:42.810 --> 01:49.020
+I'll use it afterwards, then it will call itself for three plus four should be added.
+
+01:49.020 --> 01:53.660
+I leave it as a blank then one of two three should be added.
+
+01:53.670 --> 02:04.440
+I will leave it as a blank, then one of one two should be added, then one of zero one should be added
+
+02:04.590 --> 02:06.720
+and one of zero is zero.
+
+02:07.480 --> 02:10.920
+This is you know, it goes back.
+
+02:11.070 --> 02:12.660
+This is zero plus one.
+
+02:13.110 --> 02:13.830
+This is one.
+
+02:14.250 --> 02:15.390
+So this will be one.
+
+02:15.840 --> 02:19.200
+And result of this one is one plus this is two.
+
+02:19.380 --> 02:20.670
+So this will be three.
+
+02:21.240 --> 02:24.810
+Then the result of this is three and this is three.
+
+02:24.990 --> 02:26.340
+So this will be six.
+
+02:26.760 --> 02:29.970
+So the result of this one is six plus four.
+
+02:30.360 --> 02:31.200
+This will be return.
+
+02:32.340 --> 02:34.740
+The result of this one is ten and five.
+
+02:34.740 --> 02:35.940
+So this will be fifteen.
+
+02:36.330 --> 02:37.850
+So the result of this is fifteen.
+
+02:38.640 --> 02:43.880
+So this is the tracing of a function then it is called upon value five.
+
+02:44.820 --> 02:47.790
+No, let us see the activation records are created.
+
+02:48.330 --> 02:51.210
+Then the activation records for fun will be created.
+
+02:51.210 --> 02:59.460
+Value of N will be five, then the value of N will be for value of and will be three.
+
+03:01.320 --> 03:08.400
+So this is all stock is created every time for each new variable will be created inside the memory and
+
+03:08.400 --> 03:10.080
+it will have its value.
+
+03:10.080 --> 03:12.180
+That is five, then four, then three, then good.
+
+03:12.180 --> 03:13.070
+And one and zero.
+
+03:13.440 --> 03:18.960
+So all these values are newly created every time, whenever the function is called this.
+
+03:18.960 --> 03:22.120
+We are aware of local variables of a function.
+
+03:23.130 --> 03:25.050
+I am going to make changes in this function.
+
+03:25.050 --> 03:27.570
+Then we will see how to handle static variables.
+
+03:27.900 --> 03:29.250
+So I'm making modification.
+
+03:29.790 --> 03:42.330
+Static variable integer x whose values zero initially and before calling, I'll be incrementing it and
+
+03:42.660 --> 03:45.410
+while returning I'll be adding X.
+
+03:46.470 --> 03:52.100
+So this is not adding N, adding X and X's increment and it is static.
+
+03:53.190 --> 03:58.830
+So first of all, where this is static, variables are created, they are created inside the code section
+
+03:59.460 --> 04:05.430
+or there is a subsection of code section called section for global variables and static variables.
+
+04:05.760 --> 04:09.810
+But I'm shooting directly inside code section and the value of that one is zero.
+
+04:11.040 --> 04:15.180
+Will is a static variable be created every time whenever the function is called?
+
+04:15.330 --> 04:17.120
+No, it will not be created every time.
+
+04:17.120 --> 04:22.760
+When the function is called, it is created only one time that is at the loading time of a programming.
+
+04:23.550 --> 04:29.400
+So this X will not have multiple copies, just like N it will have a single copy.
+
+04:30.000 --> 04:37.920
+So all these calls of this function, they will use the same copy of X, so I cannot have a separate
+
+04:37.920 --> 04:45.290
+copy each time like N four and every time a new copy created one for X there is a single copy.
+
+04:46.350 --> 04:48.900
+Now what will be the result of this function?
+
+04:48.900 --> 04:51.060
+For that I will press it again.
+
+04:51.420 --> 04:54.840
+So for that I will remove these things and I will try it again.
+
+04:55.540 --> 04:59.880
+Let us look at the tracing and see how static variable should be handled for.
+
+04:59.950 --> 05:08.200
+The static variable, it is X, so I should have a single copy of static variable separately, don't
+
+05:08.200 --> 05:11.320
+show it and they're pressing three none, not this time.
+
+05:11.500 --> 05:14.150
+First time the function is called by passing that define.
+
+05:14.190 --> 05:15.400
+So values five.
+
+05:15.700 --> 05:19.320
+First time one of five.
+
+05:20.560 --> 05:28.180
+Then if N is greater than zero, yes it is greater than zero explicitness this X becomes one then call
+
+05:28.180 --> 05:35.700
+itself one of four plus this X will be added at returning time.
+
+05:35.710 --> 05:37.450
+So use it at returning time.
+
+05:37.450 --> 05:38.460
+Don't use it now.
+
+05:40.180 --> 05:45.400
+Continue for this call again for four is greater than zero X plus plus.
+
+05:45.410 --> 05:54.580
+So this X becomes two call function of three plus X should be added at returning time, then call greater
+
+05:54.580 --> 05:56.490
+than zero X plus plus call itself.
+
+05:56.740 --> 06:10.060
+So three call for two X plus plus then plus this X should be added then for this call again this is
+
+06:10.060 --> 06:17.020
+four and call for one plus X should be added before this call.
+
+06:17.230 --> 06:23.200
+This becomes five and call for zero plus X should be added.
+
+06:23.710 --> 06:25.560
+Call for zero, return to zero.
+
+06:25.570 --> 06:30.540
+So the result of this function as a zero note will start returning back from here.
+
+06:30.820 --> 06:33.650
+So this is zero plus X has to be added.
+
+06:33.850 --> 06:35.890
+So what is X number five?
+
+06:36.110 --> 06:39.010
+So this is fine and a third of this is fine.
+
+06:39.250 --> 06:40.630
+Then X should be added.
+
+06:40.630 --> 06:42.130
+What is X non five.
+
+06:42.400 --> 06:43.510
+So the system.
+
+06:43.930 --> 06:48.450
+So the result of this function is ten then plus X should be added here.
+
+06:48.670 --> 06:49.840
+So what is X now.
+
+06:49.960 --> 06:50.560
+Five.
+
+06:50.890 --> 06:59.260
+So this is fifteen C in the previous example we were adding N, so end was having its own value in each
+
+06:59.260 --> 06:59.650
+call.
+
+06:59.830 --> 07:01.360
+So those values were used.
+
+07:01.630 --> 07:06.760
+But now there is only one single copy of X, so each call will use that same copy.
+
+07:06.910 --> 07:11.200
+And right now it is having value five so that same five is utilized by all.
+
+07:11.560 --> 07:14.320
+So this result is fifteen plus a five.
+
+07:14.530 --> 07:18.850
+So this is twenty then twenty plus five is thirty five.
+
+07:19.090 --> 07:21.220
+So the result of this function is twenty five.
+
+07:23.280 --> 07:23.970
+So that's it.
+
+07:24.270 --> 07:29.130
+This is how you should handle static variables, if there are any static variables inside recursive
+
+07:29.130 --> 07:36.960
+function, don't show them in each step of placing three right them just like global or outside variable
+
+07:37.140 --> 07:38.890
+and maintain a single copy of it.
+
+07:39.120 --> 07:42.410
+So sometimes we need to use a static variable also in recursion.
+
+07:42.660 --> 07:45.010
+So I have shown you how they work.
+
+07:45.360 --> 07:53.070
+Now, if it is not static, if I take out this variable and if I declare it outside like a global variable,
+
+07:53.400 --> 07:55.830
+then also the result will be same.
+
+07:56.160 --> 08:00.980
+So static variable will have a single copy and even global variable.
+
+08:00.990 --> 08:04.200
+It will have a single copy used by all the function calls.
+
+08:04.440 --> 08:08.220
+And those global variables are also created inside code section.
+
+08:08.730 --> 08:14.920
+And every call will use the same copy and the result of the program or the function will be sync.
+
+08:15.270 --> 08:18.960
+So in the previous example it was 15, but now four five.
+
+08:18.960 --> 08:20.160
+The result is 35.
+
+08:20.370 --> 08:23.410
+So here in print the result will be thirty five.
+
+08:23.670 --> 08:29.250
+So in the coming examples, we will use this recursive function that static variables.

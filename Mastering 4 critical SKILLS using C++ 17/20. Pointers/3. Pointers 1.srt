@@ -1,0 +1,614 @@
+0
+1
+00:00:00,990 --> 00:00:07,260
+One of the fundamental topics in C++ is the pointers topic, and this is one of the unique features in
+1
+
+2
+00:00:07,260 --> 00:00:13,260
+C++ compared to many other programming languages that give you a very good space to play with the
+2
+
+3
+00:00:13,260 --> 00:00:16,180
+memory and to understand a lot about the memory layout.
+3
+
+4
+00:00:16,320 --> 00:00:19,320
+So it's actually a great advantage in the programming language.
+4
+
+5
+00:00:19,890 --> 00:00:25,980
+So starting with that, remember, when we define a variable like 15 and we can also take a reference
+5
+
+6
+00:00:25,980 --> 00:00:31,080
+for this value. If we try to play the value and its address in the memory, it will be the same
+6
+
+7
+00:00:31,080 --> 00:00:33,980
+as the reference here and it's address in the memory.
+7
+
+8
+00:00:34,350 --> 00:00:35,100
+So far, so good,
+8
+
+9
+00:00:35,100 --> 00:00:36,130
+We learned that before.
+9
+
+10
+00:00:36,450 --> 00:00:39,900
+Now, here is one more thing that we are going to introduce,
+10
+
+11
+00:00:40,140 --> 00:00:45,020
+and for a large extent, it will share similarities with the reference that we already studied,
+11
+
+12
+00:00:45,330 --> 00:00:46,210
+It is the pointers.
+12
+
+13
+00:00:46,350 --> 00:00:48,030
+So here is how we define the pointer.
+13
+
+14
+00:00:48,220 --> 00:00:51,650
+We define integer asterisk, we read it integer pointer.
+14
+
+15
+00:00:51,840 --> 00:00:57,960
+So the asterisk before playing the role in multiplication (I can say 2 times 3) but now it's playing a unary
+15
+
+16
+00:00:57,960 --> 00:01:00,770
+role as a pointer.
+16
+
+17
+00:01:00,990 --> 00:01:03,120
+So we define it as integer pointer
+17
+
+18
+00:01:03,120 --> 00:01:04,560
+ptr, we can have asterisk here,
+18
+
+19
+00:01:04,560 --> 00:01:05,130
+No problem,
+19
+
+20
+00:01:05,400 --> 00:01:07,050
+equal reference val.
+20
+
+21
+00:01:07,360 --> 00:01:12,930
+Now, we saw before the reference here on the left side, when we are defining a variable and say this
+21
+
+22
+00:01:12,930 --> 00:01:16,980
+is a reference variable and then we mean it will have the same address as its value.
+22
+
+23
+00:01:17,490 --> 00:01:23,250
+Now, when we on the right side, we take a reference. Reference value here when we printed it,
+23
+
+24
+00:01:23,250 --> 00:01:24,130
+It prints an address.
+24
+
+25
+00:01:24,540 --> 00:01:28,630
+So this means the value of the pointer is an address.
+25
+
+26
+00:01:28,680 --> 00:01:30,130
+This is very unique thing.
+26
+
+27
+00:01:30,420 --> 00:01:36,030
+So here is what happens in the memory when we define the val and the reference. In the memory, in 
+27
+
+28
+00:01:36,030 --> 00:01:36,600
+the position
+28
+
+29
+00:01:36,600 --> 00:01:43,650
+0x7f1, there was like a box for you with a variable named val  equals 15, it also has an alias name
+29
+
+30
+00:01:43,660 --> 00:01:44,180
+reference.
+30
+
+31
+00:01:44,340 --> 00:01:47,730
+So both a val and ref are playing in the same memory location.
+31
+
+32
+00:01:48,360 --> 00:01:55,560
+Now, here we define the pointer and we put its value the address of ref, OK, what is the address of ref? It is
+32
+
+33
+00:01:55,720 --> 00:01:56,170
+0x7f1.
+33
+
+34
+00:01:56,640 --> 00:02:00,870
+So when we go to the variable pointer, its value would be an address.
+34
+
+35
+00:02:00,900 --> 00:02:06,280
+This is a unique and fundamental difference. But wait a second, pointer itself is a variable,
+35
+
+36
+00:02:06,300 --> 00:02:08,190
+so it also has an address.
+36
+
+37
+00:02:08,550 --> 00:02:13,350
+Now, there are three fundamental things when to come to print the pointer. Here,
+37
+
+38
+00:02:13,350 --> 00:02:19,560
+the middle one, if you try to print ptr, it will give you 0x7f1.  This is the value
+38
+
+39
+00:02:19,560 --> 00:02:23,010
+with the pointer, which is another address that is pointing to.
+39
+
+40
+00:02:23,700 --> 00:02:28,410
+The second thing is if we try to print the address of the pointer itself, which is the address of the
+40
+
+41
+00:02:28,410 --> 00:02:33,990
+box here regardless of where is he is pointing which is 0x9f2. So far so good,
+41
+
+42
+00:02:33,990 --> 00:02:35,190
+,very very logical.
+42
+
+43
+00:02:35,340 --> 00:02:41,670
+We put in the box a pointer to another variable, and we have an address of us. Now, here an extra thing
+43
+
+44
+00:02:41,690 --> 00:02:46,260
+in C++, when we say print asterisk pointer, this is
+44
+
+45
+00:02:47,590 --> 00:02:48,530
+doing the following:
+45
+
+46
+00:02:48,790 --> 00:02:52,150
+It says, hey pointer, you are looking to another variable, right?
+46
+
+47
+00:02:52,180 --> 00:02:56,740
+Yes, go to this pointer and go to this address and get the value of it.
+47
+
+48
+00:02:56,860 --> 00:02:57,940
+So it prints 15.
+48
+
+49
+00:02:58,570 --> 00:03:07,420
+So, again, the value of a pointer is an address, but the pointer itself has its own address. When
+49
+
+50
+00:03:07,420 --> 00:03:08,800
+we use asterisk pointer,
+50
+
+51
+00:03:08,950 --> 00:03:13,620
+It means to go to where we are pointing at and print the value of it.
+51
+
+52
+00:03:14,320 --> 00:03:18,580
+This is the fundamental thing that we are going to see all the time through the pointers
+52
+
+53
+00:03:18,600 --> 00:03:24,220
+topic. Please, make sure you are very comfortable with these three items.
+53
+
+54
+00:03:25,120 --> 00:03:30,070
+So a pointer is a variable that store the address of another variable.
+54
+
+55
+00:03:30,370 --> 00:03:35,230
+So given that it is a variable, it has an address and it's pointing to another variable, so there
+55
+
+56
+00:03:35,230 --> 00:03:36,110
+is another address.
+56
+
+57
+00:03:36,310 --> 00:03:41,490
+So when we say pointer, there are two different addresses that we have: The address
+57
+
+58
+00:03:41,710 --> 00:03:48,760
+it points toward it, which is the content of the pointer is the value of ptr itself. It is own address
+58
+
+59
+00:03:48,760 --> 00:03:55,180
+can be, as usual, brought by the reference ptr. How to get the value where I am pointing out to?
+59
+
+60
+00:03:55,330 --> 00:03:57,150
+using asterisk ptr.
+60
+
+61
+00:03:57,490 --> 00:04:05,590
+So asterisk ptr is a unary operator, we call it a dereference operator and the role is indirect addressing.
+61
+
+62
+00:04:05,770 --> 00:04:09,390
+By that we mean it is looking to the address in somewhere else.
+62
+
+63
+00:04:09,940 --> 00:04:15,550
+So we read it as follows: when we say a pointer, we read it like you can read it as a value
+63
+
+64
+00:04:15,550 --> 00:04:17,400
+pointed to by this pointer.
+64
+
+65
+00:04:18,010 --> 00:04:19,290
+Let's yeah.
+65
+
+66
+00:04:19,300 --> 00:04:21,420
+This is an example that we already saw.
+66
+
+67
+00:04:22,080 --> 00:04:24,540
+So let's continue playing with the code.
+67
+
+68
+00:04:25,180 --> 00:04:28,870
+If I started to say asterisk ptr equal 20.
+68
+
+69
+00:04:29,530 --> 00:04:34,780
+Now remember asterisk ptr means to go to the pointer that
+69
+
+70
+00:04:34,780 --> 00:04:36,770
+I am looking to it, get its value.
+70
+
+71
+00:04:37,000 --> 00:04:38,860
+Now, I'm putting its value with 20.
+71
+
+72
+00:04:39,370 --> 00:04:47,740
+If I try to print the value or the reference or asterisk ptr, all of them now will be 20, why? Because
+72
+
+73
+00:04:47,740 --> 00:04:52,150
+the value of the pointer here is now a third reference to the same location.
+73
+
+74
+00:04:52,390 --> 00:04:58,960
+So now the value, reference, and asterisk ptr are all playing with the
+74
+
+75
+00:04:58,960 --> 00:04:59,410
+same thing.
+75
+
+76
+00:05:00,220 --> 00:05:01,880
+Now let's define a new variable.
+76
+
+77
+00:05:01,900 --> 00:05:05,170
+Let's say we call it another and it is value is 30.
+77
+
+78
+00:05:05,170 --> 00:05:08,800
+If we try to print in the memory, we have another with value 30,
+78
+
+79
+00:05:08,980 --> 00:05:11,290
+and we have this address for it. Now,
+79
+
+80
+00:05:11,290 --> 00:05:17,120
+I'm going to change the value of the pointer to be the address of another variable.
+80
+
+81
+00:05:17,260 --> 00:05:20,200
+So I'm saying here, pointer equals reference of another.
+81
+
+82
+00:05:20,920 --> 00:05:24,370
+Now, if I tried to print pointer, it would be the value of it,
+82
+
+83
+00:05:24,400 --> 00:05:26,080
+the value where it points is 30.
+83
+
+84
+00:05:26,440 --> 00:05:36,730
+Its address is the same as another address, and its own address didn't change. So the ptr is a variable
+84
+
+85
+00:05:36,730 --> 00:05:37,360
+by itself.
+85
+
+86
+00:05:37,630 --> 00:05:43,540
+Its address in the memory is the same, but where it points to and the value of where it points,
+86
+
+87
+00:05:43,540 --> 00:05:44,360
+is changing.
+87
+
+88
+00:05:44,860 --> 00:05:50,530
+Now, if you tried to put the pointer value where it points to, sorry, is 50, you will notice the following:
+88
+
+89
+00:05:50,830 --> 00:05:56,770
+The val, which is the old variable, didn't change from 20, but the value of another and
+89
+
+90
+00:05:56,770 --> 00:05:58,510
+the value of pointer changed.
+90
+
+91
+00:05:59,110 --> 00:05:59,620
+That's it.
+91
+
+92
+00:06:00,280 --> 00:06:01,690
+OK, here is one more thing.
+92
+
+93
+00:06:01,990 --> 00:06:07,600
+If you want a pointer that points to nothing, you can say pointer equals nullptr.
+93
+
+94
+00:06:07,600 --> 00:06:08,770
+It means a null pointer.
+94
+
+95
+00:06:08,980 --> 00:06:09,280
+The word
+95
+
+96
+00:06:09,280 --> 00:06:09,640
+null,
+96
+
+97
+00:06:09,650 --> 00:06:13,240
+We met it before when we learned the character array,
+97
+
+98
+00:06:13,510 --> 00:06:16,660
+It has a null character. So the same thing, null means nothing.
+98
+
+99
+00:06:16,900 --> 00:06:19,350
+So null pointer means I am pointing to nowhere.
+99
+
+100
+00:06:19,510 --> 00:06:24,400
+You cannot do that in an explicit way to the reference, Ok!. The reference has to go into something.
+100
+
+101
+00:06:25,510 --> 00:06:30,100
+OK. If you would like to check if a pointer is pointing to something or not, you can say something
+101
+
+102
+00:06:30,100 --> 00:06:31,700
+like if not pointer, cout null.
+102
+
+103
+00:06:31,720 --> 00:06:32,860
+So it's going to put a null.
+103
+
+104
+00:06:33,190 --> 00:06:40,090
+Notice that if you tried to make an asterisk pointer or pointer that points to null, It is going to make
+104
+
+105
+00:06:40,090 --> 00:06:44,530
+a runtime error because it points to nothing. When it says an asterisk pointer, it means to go where I
+105
+
+106
+00:06:44,530 --> 00:06:47,240
+am looking and get the value, but I'm looking nowhere.
+106
+
+107
+00:06:47,620 --> 00:06:52,300
+So this is wrong. In terms of pointer initialization,
+107
+
+108
+00:06:52,450 --> 00:06:53,410
+here are a few tips.
+108
+
+109
+00:06:55,090 --> 00:06:59,200
+When we here define a variable X, we can make a pointer looking direct to X.
+109
+
+110
+00:06:59,440 --> 00:07:06,190
+This is good. If you would like the pointer to look to nothing, in c style, we say asterisk equals null with capital letters
+110
+
+111
+00:07:06,340 --> 00:07:07,390
+and this is still OK.
+111
+
+112
+00:07:07,660 --> 00:07:14,460
+But the more C++ and the one I prefer is to use the word nullptr. In C++, it also allows you to use the
+112
+
+113
+00:07:14,460 --> 00:07:15,210
+value zero.
+113
+
+114
+00:07:15,430 --> 00:07:19,150
+So the value zero is also means that it points to nothing.
+114
+
+115
+00:07:19,780 --> 00:07:21,430
+But notice that this the only case.
+115
+
+116
+00:07:21,430 --> 00:07:23,110
+You cannot, for example, put the value of one.
+116
+
+117
+00:07:23,230 --> 00:07:25,910
+So this is a special handling for the zero as a null pointer.
+117
+
+118
+00:07:26,560 --> 00:07:28,720
+OK, here is the worst thing ever that you can do.
+118
+
+119
+00:07:28,990 --> 00:07:32,550
+You are defining a pointer and you are giving nothing here.
+119
+
+120
+00:07:32,890 --> 00:07:36,850
+In this way, the pointer is going to be just garbage.
+120
+
+121
+00:07:36,850 --> 00:07:38,590
+So be very careful about that.
+121
+
+122
+00:07:39,670 --> 00:07:40,590
+That's it for today.
+122
+
+123
+00:07:40,660 --> 00:07:44,500
+I would like you to be very familiar with what we said before moving to the next topic.

@@ -1,0 +1,327 @@
+1
+00:00:00,750 --> 00:00:03,810
+Let's continue the summary in C++.
+
+2
+00:00:03,840 --> 00:00:11,520
+There are different types of polymorphism, the compiler and the runtime polymorphism where we started
+
+3
+00:00:11,520 --> 00:00:16,280
+learning programming, we knew about the function of loading, which is a combined time polymorphism.
+
+4
+00:00:16,500 --> 00:00:18,660
+So remember the word polymorphism.
+
+5
+00:00:18,660 --> 00:00:19,980
+I mean, there are many forms.
+
+6
+00:00:19,980 --> 00:00:25,170
+If you are overloading 10 functions, then the functions, they add Hastin different forms.
+
+7
+00:00:25,320 --> 00:00:26,430
+So this is polymorphism.
+
+8
+00:00:26,430 --> 00:00:27,270
+What's cambio time?
+
+9
+00:00:27,270 --> 00:00:28,560
+Because everything is well known.
+
+10
+00:00:29,040 --> 00:00:34,470
+Later in the course we took two types of polymorphism, the operator overloading, which again another
+
+11
+00:00:34,470 --> 00:00:35,740
+combined time polymorphism.
+
+12
+00:00:35,970 --> 00:00:41,250
+But we also take the virtual function, which is allowing the runtime polymorphism where things are
+
+13
+00:00:41,250 --> 00:00:42,270
+more deterministic.
+
+14
+00:00:42,450 --> 00:00:45,510
+During the run, it would be the system itself.
+
+15
+00:00:47,370 --> 00:00:52,710
+We discussed that if you have a reference and pointer drives the object, there are two cases.
+
+16
+00:00:53,160 --> 00:00:58,590
+If there is a virtual function, then the code is going to be to the actual derived objects, what we
+
+17
+00:00:58,590 --> 00:01:05,220
+call dynamic binding, which means that the actual binding to this object would be determined in the
+
+18
+00:01:05,220 --> 00:01:06,470
+in the real time itself.
+
+19
+00:01:07,050 --> 00:01:10,350
+Like remember the process chip function, it's taking shape.
+
+20
+00:01:10,350 --> 00:01:11,480
+It's branding its area.
+
+21
+00:01:11,490 --> 00:01:13,800
+It has no idea what what is this shape?
+
+22
+00:01:14,460 --> 00:01:20,790
+If a function is declared, which one any any function of it overwriting it will be virtual, even if
+
+23
+00:01:20,790 --> 00:01:25,680
+you didn't put the key word virtual on the other side, if you boost your function as an inversion,
+
+24
+00:01:25,700 --> 00:01:31,260
+you wouldn't put the visual key where the call will have been based on that use the pointer type, which
+
+25
+00:01:31,260 --> 00:01:33,660
+is a combined fire and a static binding case.
+
+26
+00:01:34,170 --> 00:01:40,890
+And this is to be very careful from it in the pure visual function we are actually we have in complete
+
+27
+00:01:40,890 --> 00:01:43,890
+case so the class isn't completed.
+
+28
+00:01:44,100 --> 00:01:45,420
+There are some basic functions.
+
+29
+00:01:45,720 --> 00:01:50,730
+We cannot create object of this class and of any object that doesn't have a complete definition and
+
+30
+00:01:50,730 --> 00:01:52,620
+declaration for all of its use.
+
+31
+00:01:52,620 --> 00:02:00,060
+The function, you cannot base a parameter to a function of time object that has your visual function
+
+32
+00:02:00,060 --> 00:02:01,200
+unless it's a pointer.
+
+33
+00:02:01,530 --> 00:02:02,610
+So pointer is OK.
+
+34
+00:02:02,610 --> 00:02:06,090
+Reference is OK, pointer is OK references.
+
+35
+00:02:06,090 --> 00:02:13,080
+OK, I think reference is OK to but you cannot just object to have a class that is abstract.
+
+36
+00:02:13,080 --> 00:02:15,990
+You have to at least one plus very pure visual function.
+
+37
+00:02:18,120 --> 00:02:22,710
+Logically, you shouldn't call your visual function from it's a constructor because it isn't.
+
+38
+00:02:22,830 --> 00:02:23,330
+It isn't.
+
+39
+00:02:23,640 --> 00:02:24,480
+This is undefined.
+
+40
+00:02:24,480 --> 00:02:24,630
+The.
+
+41
+00:02:27,070 --> 00:02:33,190
+Go to the bottom of myself, remember, polymorphism goal is to allow genetic code, so this is actually
+
+42
+00:02:33,190 --> 00:02:38,770
+the core of it, like the ED case when it comes to the ships, for example, in the future, you can
+
+43
+00:02:38,770 --> 00:02:43,380
+add more objects and classes, more classes with with really minimal code changes.
+
+44
+00:02:43,930 --> 00:02:50,770
+So we're here to help us to build what we call loosely coupled systems with systems where we have much
+
+45
+00:02:50,770 --> 00:02:52,570
+less dependency between classes.
+
+46
+00:02:53,080 --> 00:02:56,550
+Sometimes we have to do the casting, but double check for us.
+
+47
+00:02:56,860 --> 00:02:58,090
+Did you have a good design?
+
+48
+00:02:58,480 --> 00:03:01,750
+Is it OK to have this if they are typically healthy?
+
+49
+00:03:01,960 --> 00:03:04,120
+So maybe you can do it in a better way.
+
+50
+00:03:04,840 --> 00:03:08,950
+If you are confident about their own casting, you can go that course, which is cost.
+
+51
+00:03:09,280 --> 00:03:14,220
+But if you aren't sure and this is a case typically, then you better go with the remix and double check
+
+52
+00:03:14,230 --> 00:03:15,520
+the returning pointer, is it?
+
+53
+00:03:15,530 --> 00:03:15,790
+No.
+
+54
+00:03:16,420 --> 00:03:18,440
+Try to work much more with interfaces.
+
+55
+00:03:18,490 --> 00:03:25,210
+This is a Carracher in the Java programming language and it is very healthy Majelis with abstract classes
+
+56
+00:03:25,360 --> 00:03:27,700
+and much, much less with the multiple inheritance.
+
+57
+00:03:27,970 --> 00:03:30,550
+Remember that inheritance by itself is very problematic.
+
+58
+00:03:30,880 --> 00:03:37,180
+The more you go toward interfaces and much of the strawberries you are going to face sometimes will
+
+59
+00:03:37,180 --> 00:03:39,160
+provide interface for others to use.
+
+60
+00:03:39,340 --> 00:03:44,870
+Think of some infrastructure component that we are giving some interface for others to use.
+
+61
+00:03:45,220 --> 00:03:47,710
+So there are hundreds of projects.
+
+62
+00:03:47,710 --> 00:03:50,860
+We are using our interface and you just decided to break it.
+
+63
+00:03:51,010 --> 00:03:53,830
+You are causing a severe issue to others.
+
+64
+00:03:54,010 --> 00:03:56,230
+Think all over backward compatibility.
+
+65
+00:03:56,500 --> 00:03:59,170
+You need your class or interface after updating.
+
+66
+00:03:59,440 --> 00:04:05,680
+Still allow the previous functionalities, try to provide the minimal public interface.
+
+67
+00:04:05,920 --> 00:04:08,590
+The less you provide, the better for the consumers.
+
+68
+00:04:08,620 --> 00:04:14,000
+Remember that this is more and do not provide some of your common functionality.
+
+69
+00:04:14,000 --> 00:04:17,110
+Your brain functions interface is all about the common things.
+
+70
+00:04:17,110 --> 00:04:19,930
+Avoid anything that is irrelevant or hard to get.
+
+71
+00:04:20,320 --> 00:04:23,950
+Make sure that the functions are very expressive.
+
+72
+00:04:24,070 --> 00:04:28,840
+So the behavior expected from a function is as expected.
+
+73
+00:04:28,840 --> 00:04:30,640
+If you have a function of its name, add it.
+
+74
+00:04:30,640 --> 00:04:31,930
+You can do some subtraction.
+
+75
+00:04:32,590 --> 00:04:34,960
+Try to think from the client perspective.
+
+76
+00:04:34,960 --> 00:04:36,160
+What does he really need?
+
+77
+00:04:37,650 --> 00:04:44,060
+We also discussed about interfaces as interfaces, as probabilities, like I can have interface that,
+
+78
+00:04:44,070 --> 00:04:48,870
+for example, is despicable and I mean by that you can see this to the disk and load it to the disk.
+
+79
+00:04:49,080 --> 00:04:54,750
+This provide us with very powerful view to create powerful interfaces and relationships.
+
+80
+00:04:55,140 --> 00:05:00,360
+Remember, if you if some cross is visible from a different direction, more than a direction, then
+
+81
+00:05:00,360 --> 00:05:01,170
+add the keyboard.
+
+82
+00:05:01,530 --> 00:05:03,080
+Vishwa that's it.

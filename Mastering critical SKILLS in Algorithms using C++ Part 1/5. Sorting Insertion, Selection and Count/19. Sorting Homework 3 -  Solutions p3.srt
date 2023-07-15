@@ -1,0 +1,369 @@
+0
+1
+00:00:01,340 --> 00:00:04,460
+The next hard problem is about the reduction operation.
+1
+
+2
+00:00:06,450 --> 00:00:13,800
+One easy way to solve this problem is through what we call simulation. Simulation just means to simulate
+2
+
+3
+00:00:13,800 --> 00:00:15,090
+the target operation.
+3
+
+4
+00:00:15,630 --> 00:00:18,060
+Just make a while loop and keep updating the operation.
+4
+
+5
+00:00:18,090 --> 00:00:21,330
+This is very slow, but it's a well-known idea, simulation algorithm.
+5
+
+6
+00:00:22,080 --> 00:00:24,210
+Now we want to do something better than that.
+6
+
+7
+00:00:24,210 --> 00:00:25,920
+So let's analyze the problem.
+7
+
+8
+00:00:26,460 --> 00:00:27,600
+When you think about it,
+8
+
+9
+00:00:28,380 --> 00:00:34,260
+every number will anyway have to be reduced in a series of steps to the next minimum and the next
+9
+
+10
+00:00:34,260 --> 00:00:34,680
+minimum.
+10
+
+11
+00:00:35,010 --> 00:00:38,550
+So 50, anyway, will have to be reduced to 40, 30, 25.
+11
+
+12
+00:00:39,000 --> 00:00:42,660
+The other 50 will have to be reduced to 40, 30, 10, 5.
+12
+
+13
+00:00:43,110 --> 00:00:45,450
+The 40 will be reduced to 30, 10, 5.
+13
+
+14
+00:00:45,690 --> 00:00:51,240
+The 30 will be reduced to 10, 5, and the ten to the five, ending up with all of these fives.
+14
+
+15
+00:00:52,110 --> 00:00:59,810
+Now, in other words, every number will be reduced based on how many unique numbers less than it.
+15
+
+16
+00:01:00,330 --> 00:01:03,300
+For example, the 50 has four values less than it.
+16
+
+17
+00:01:03,510 --> 00:01:05,310
+This 50 has four values less than it.
+17
+
+18
+00:01:05,580 --> 00:01:08,750
+This 40 has three less than it. This 30 has two less than it.
+18
+
+19
+00:01:09,000 --> 00:01:10,740
+This 10 has one less than it.
+19
+
+20
+00:01:12,320 --> 00:01:18,650
+So if we can find, for every number in an efficient way, how many numbers are less than it, we can do that
+20
+
+21
+00:01:18,650 --> 00:01:19,730
+in different ways
+21
+
+22
+00:01:19,730 --> 00:01:25,070
+O(nlogn). In the next section, we will learn about the binary search technique, the lower bound and upper
+22
+
+23
+00:01:25,070 --> 00:01:27,600
+bound, and you will know
+23
+
+24
+00:01:27,620 --> 00:01:30,200
+how can we implement this idea of unique numbers.
+24
+
+25
+00:01:31,250 --> 00:01:33,770
+And this idea anyway can be implemented in different ways.
+25
+
+26
+00:01:33,860 --> 00:01:40,970
+I would like to share with you one smart idea to implement this task, and please keep the following
+26
+
+27
+00:01:40,970 --> 00:01:41,570
+in mind.
+27
+
+28
+00:01:42,310 --> 00:01:45,150
+When I share with you some smarter code or very short
+28
+
+29
+00:01:45,170 --> 00:01:49,430
+code, I do that because I would like to teach you how to write smarter codes,
+29
+
+30
+00:01:49,550 --> 00:01:54,320
+how to write fewer codes. If you found my code is harder, not convenient,
+30
+
+31
+00:01:54,650 --> 00:01:58,250
+in the Discussion tab in LeetCode, there are too many other solutions.
+31
+
+32
+00:01:58,250 --> 00:02:03,770
+Just go and learn anyone of them as long as you satisfy the complexity, but take a chance to understand
+32
+
+33
+00:02:03,770 --> 00:02:07,190
+these other codes.
+33
+
+34
+00:02:07,720 --> 00:02:14,510
+So there is another observation that is good here to keep in mind. When you think about this array here,
+34
+
+35
+00:02:14,810 --> 00:02:15,800
+the sorted array,
+35
+
+36
+00:02:17,450 --> 00:02:22,160
+we have four nines, every one of them will be reduced to seven, five, three, one.
+36
+
+37
+00:02:22,610 --> 00:02:27,650
+Why keep doing all of them together if we can do them all at once?
+37
+
+38
+00:02:28,130 --> 00:02:34,010
+We call that batch processing. In batch processing, we are doing a group of processing
+38
+
+39
+00:02:34,010 --> 00:02:34,490
+together.
+39
+
+40
+00:02:34,970 --> 00:02:40,640
+So the moral of that is you can't take the four nines, and
+40
+
+41
+00:02:41,820 --> 00:02:44,370
+reduce them to seven in one step.
+41
+
+42
+00:02:44,420 --> 00:02:48,180
+So like computationally one step, but we needed four steps for that.
+42
+
+43
+00:02:49,230 --> 00:02:54,540
+Once you're done with that, you have now five sevens, reduce all of them at once to five.
+43
+
+44
+00:02:55,920 --> 00:02:59,550
+Now you have six fives, reduce all of them to three.
+44
+
+45
+00:03:00,600 --> 00:03:02,730
+Now you have seven threes,
+45
+
+46
+00:03:02,760 --> 00:03:04,020
+reduce all them to one.
+46
+
+47
+00:03:04,170 --> 00:03:05,790
+You see, how easy is that?
+47
+
+48
+00:03:06,150 --> 00:03:12,660
+So you don't have here to keep updating the array itself, you just iterate from large to small.
+48
+
+49
+00:03:13,590 --> 00:03:23,160
+And keep updating every time you find this less value, we know
+49
+
+50
+00:03:23,160 --> 00:03:24,990
+we need to reduce all of them together.
+50
+
+51
+00:03:25,230 --> 00:03:26,730
+So let's see the implementation here.
+51
+
+52
+00:03:28,040 --> 00:03:29,080
+This is the implementation.
+52
+
+53
+00:03:29,300 --> 00:03:36,830
+I'm sorting from large to small, iterating on the numbers, and whenever I find that the current number
+53
+
+54
+00:03:36,830 --> 00:03:38,780
+is different than the previous numbers.
+54
+
+55
+00:03:39,080 --> 00:03:44,990
+So let's say we found the seven, and we are now at an index of zero, one, two, three, four.
+55
+
+56
+00:03:45,170 --> 00:03:47,480
+So it means there are four values before me.
+56
+
+57
+00:03:47,600 --> 00:03:49,220
+All of them will be reduced to seven.
+57
+
+58
+00:03:49,400 --> 00:03:51,380
+So we reduced them to seven. That's why
+58
+
+59
+00:03:51,380 --> 00:03:59,730
+I'm adding here +i because i here represents how many numbers with value of a number of
+59
+
+60
+00:03:59,750 --> 00:04:01,650
+i.....
+60
+
+61
+00:04:02,510 --> 00:04:06,700
+There are minor mistakes here, numbers with a value of nums[i - 1],
+61
+
+62
+00:04:06,710 --> 00:04:07,370
+this is correct.
+62
+
+63
+00:04:07,760 --> 00:04:13,850
+And there are i numbers with value nums[i - 1], this isn't correct.
+63
+
+64
+00:04:14,060 --> 00:04:20,330
+I meant to say there are i numbers with values of nums[i - 1],
+64
+
+65
+00:04:20,570 --> 00:04:24,050
+and we will reduce them to nums[ i ].
+65
+
+66
+00:04:26,170 --> 00:04:28,060
+So we have here at i = 4,
+66
+
+67
+00:04:28,180 --> 00:04:32,140
+we have four nines, and we will reduce them to seven.
+67
+
+68
+00:04:32,530 --> 00:04:35,140
+One step after that, we find in the array five.
+68
+
+69
+00:04:35,590 --> 00:04:38,140
+So five doesn't equal to the previous one.
+69
+
+70
+00:04:38,470 --> 00:04:42,880
+It means all of the previous elements, which are now five elements, will be reduced to five.
+70
+
+71
+00:04:43,180 --> 00:04:47,090
+This is a very smart, and very interesting processing way.
+71
+
+72
+00:04:47,110 --> 00:04:50,650
+I found someone is coding it this way, so it's a very lovely one.
+72
+
+73
+00:04:51,730 --> 00:04:54,540
+The code is usually like better than you, take it easy.
+73
+
+74
+00:04:54,550 --> 00:04:55,510
+Just learn from it.

@@ -1,0 +1,306 @@
+﻿WEBVTT
+
+00:00:01.080 --> 00:00:07.080
+Trong C++, khi chúng ta truyền một đối số cho một hàm, nó có thể được truyền theo giá trị hoặc theo tham chiếu.
+
+00:00:07.080 --> 00:00:11.910
+Chúng ta hãy biết chi tiết về điều đó, nhưng tôi muốn
+phân biệt rõ ràng giữa cái mà chúng ta gọi là tham số và
+
+00:00:11.910 --> 00:00:17.610
+cái mà chúng ta gọi là đối số, bởi vì đôi khi nhiều lập
+trình viên chỉ thích sử dụng chúng theo cùng một cách.
+
+00:00:17.790 --> 00:00:19.760
+Và tôi thậm chí trong suốt khóa học, đôi khi tôi làm điều đó.
+
+00:00:19.770 --> 00:00:20.900
+Nhưng đây không phải là một chính xác.
+
+00:00:21.180 --> 00:00:23.250
+Vì vậy, tôi muốn làm cho nó rất rõ ràng phân biệt ở đây.
+
+00:00:23.760 --> 00:00:28.090
+Tham số chỉ được khai báo trong phần khai báo.
+
+00:00:28.110 --> 00:00:34.370
+Vậy ở đây trong hàm ta khai báo nó với biến “a” và “b”, “a” và “b” được gọi là tham số của hàm “print”.
+
+00:00:34.980 --> 00:00:37.400
+Vì vậy, tham số là về khai báo chính nó.
+
+00:00:37.860 --> 00:00:43.240
+Bây giờ khi chúng ta đang gọi hàm, những gì chúng ta đang gọi là các đối số.
+
+00:00:43.530 --> 00:00:50.550
+Vì vậy, nếu chúng ta xác định ở đây x =
+2 và gọi nó bằng x và 5, x là đối số tương
+
+00:00:50.550 --> 00:00:54.550
+ứng với "a", 5 là đối số tương ứng với "b",
+"3*2+1" là đối số tương ứng với "  một".
+
+00:00:54.930 --> 00:01:00.960
+Vì vậy, các tham số là về khai báo ở đây, các đối số về việc truyền, truyền ở đây.
+
+00:01:01.680 --> 00:01:03.320
+Bây giờ chúng ta hãy quay lại chủ đề của chúng ta.
+
+00:01:03.570 --> 00:01:07.610
+Chúng tôi đang chuyển các giá trị thông qua những gì chúng tôi đã học được cho đến nay theo giá trị.
+
+00:01:07.920 --> 00:01:10.840
+Ngoài ra còn có một cách khác để vượt qua chúng bằng cách tham khảo.
+
+00:01:11.460 --> 00:01:16.000
+Hãy xem chi tiết về điều đó.  Ở đây chúng ta có một hàm "change" có số nguyên "a",
+
+00:01:16.050 --> 00:01:17.090
+Điều này là bình thường.
+
+00:01:17.370 --> 00:01:23.790
+Ở đây chúng ta có một thứ gọi là tham chiếu số nguyên b "int &amp;b" và tham chiếu luôn liên quan đến địa chỉ bộ nhớ.
+
+00:01:24.870 --> 00:01:31.770
+Đây được gọi là toán tử dấu và
+"&amp;", chúng tôi đọc nó là tham chiếu số
+
+00:01:31.770 --> 00:01:33.870
+nguyên b và chúng tôi muốn xem
+ảnh hưởng của tham chiếu này.  Nơi đây,
+
+00:01:33.870 --> 00:01:41.220
+chúng ta có một hàm "change"
+nhận hai đối số "a" và "b",
+
+00:01:41.220 --> 00:01:44.090
+vì vậy "a" này sẽ được
+gán cho "a" này theo giá trị.
+
+00:01:44.550 --> 00:01:51.090
+Điều này có nghĩa là trình
+biên dịch trong thời gian chạy sẽ
+
+00:01:51.090 --> 00:01:51.360
+lấy một bản sao, bản sao bộ
+nhớ của biến này để gán nó ở đây.
+
+00:01:51.600 --> 00:01:58.920
+Vì vậy, khi bạn chuyển ở đây 1 đến int này "a" sẽ ở đây là "a", bây giờ nếu bạn tăng a++ này lên,
+
+00:01:59.130 --> 00:01:59.490
+Đó là thay đổi cục bộ.
+
+00:01:59.490 --> 00:02:00.600
+
+
+00:02:00.870 --> 00:02:07.500
+Vì vậy, khi bạn quay lại đây và in a, nó sẽ là 1, bởi vì chữ "a" này rất khác với chữ này
+
+00:02:07.500 --> 00:02:09.030
+"một".  bộ nhớ khôn ngoan,
+
+00:02:09.180 --> 00:02:14.820
+Chúng tôi có hai hộp, một từ chúng
+cho chức năng cục bộ này ở đây
+
+00:02:14.820 --> 00:02:15.510
+trong hộp chính và một hộp khác
+từ chúng cho chức năng này ở đây.
+
+00:02:15.660 --> 00:02:16.680
+Vì vậy, chúng tôi có hai bản sao.
+
+00:02:16.870 --> 00:02:20.670
+Vì vậy, nếu chúng tôi bắt đầu thay đổi cái này, điều này không ảnh hưởng đến cái này.
+
+00:02:21.840 --> 00:02:29.220
+Mặt khác, chuyển qua
+tham chiếu có nghĩa là biến
+
+00:02:29.220 --> 00:02:30.570
+này sẽ chia sẻ cùng một
+vị trí bộ nhớ với biến này.
+
+00:02:31.170 --> 00:02:36.530
+Vì vậy, bây giờ cả chức năng "thay đổi" và chức năng "chính" đang tìm kiếm cùng một vị trí bộ nhớ.
+
+00:02:36.870 --> 00:02:42.780
+Vì vậy, chúng tôi đang chuyển ở đây giá trị "b1", với địa chỉ của nó tới "b" này và sau đó khi bạn tăng b++
+
+00:02:42.780 --> 00:02:47.180
+và bạn quay lại đây, bạn sẽ nhận thấy chữ "b" này bây giờ là 2.
+
+00:02:47.640 --> 00:02:52.590
+Vì vậy, sự khác biệt cốt lõi giữa
+chuyển theo giá trị và chuyển
+
+00:02:52.590 --> 00:02:53.280
+theo tham chiếu;  chuyển
+theo giá trị tạo ra một bộ nhớ mới
+
+00:02:53.280 --> 00:02:57.270
+copy, nhưng chuyển qua tham chiếu là cùng một vị trí bộ nhớ.
+
+00:02:58.320 --> 00:03:04.320
+Và như bạn có thể đoán, điều này có thể đóng vai trò quan trọng từ một phía để đơn giản hóa mã,
+
+00:03:04.560 --> 00:03:08.420
+mặt khác để giảm thiểu số lượng bản sao bộ nhớ mà chúng tôi đang thực hiện.
+
+00:03:08.730 --> 00:03:12.030
+Ví dụ: bạn càng sao chép nhiều thì bạn càng chiếm nhiều bộ nhớ.
+
+00:03:12.510 --> 00:03:17.730
+Nó có thể giống như cơ bản khi bạn đang sử
+dụng các số nguyên thủy như Số nguyên, nhưng
+
+00:03:17.760 --> 00:03:20.250
+như chúng ta sẽ biết ở phần cuối của phiên,
+nó có thể nhạy cảm trong các tình huống khác.
+
+00:03:20.490 --> 00:03:22.290
+Đây là một trường hợp khác cho một cuộc biểu tình,
+
+00:03:22.620 --> 00:03:27.830
+Ở đây chúng ta có một tên chuỗi và chúng ta có một hàm sẽ đọc cho chúng ta "a", "b" và "name".
+
+00:03:28.290 --> 00:03:34.950
+Vì vậy, "a" tương ứng với x, nhưng bằng cách
+sao chép.  "b" sẽ được tham chiếu cho "y".
+
+00:03:34.950 --> 00:03:40.260
+"tên" sẽ được tham chiếu cho "str".  Bây giờ
+khi chức năng này đọc "x" và "y" và "str",
+
+00:03:40.890 --> 00:03:46.650
+Chúng tôi sẽ nhận thấy rằng giá trị của "a"
+sẽ không bị thay đổi, nó sẽ vẫn là 1, nhưng
+
+00:03:46.650 --> 00:03:50.130
+giá trị của "b" và giá trị của "tên" sẽ bị
+thay đổi vì chúng được truyền theo tham chiếu.
+
+00:03:50.760 --> 00:03:54.000
+Vì vậy, đây chủ yếu là những gì đang chuyển theo giá trị và chuyển theo tham chiếu.
+
+00:03:55.630 --> 00:04:00.600
+Điều thú vị về việc truyền mảng, chúng luôn
+được truyền theo tham chiếu, vì vậy nếu bạn có ở
+
+00:04:00.610 --> 00:04:06.100
+đây, một số mảng gồm 6 phần tử và bạn đã gọi hàm
+tính tổng mảng và bạn cho nó ở đây độ dài là 3
+
+00:04:06.100 --> 00:04:10.540
+các phần tử, sau đó chúng
+ta lặp lại ba phần tử đầu
+
+00:04:10.540 --> 00:04:11.470
+tiên để lặp lại mảng và tính
+tổng chúng rồi trả về tổng.
+
+00:04:11.740 --> 00:04:13.750
+Mảng này ở đây cũng giống như ở đây.
+
+00:04:13.930 --> 00:04:18.040
+Vì vậy, bạn có thể đọc nó và bạn có thể viết nó và bạn có thể thay đổi nó và nó sẽ ảnh hưởng đến chính.
+
+00:04:18.460 --> 00:04:21.370
+Vì vậy, mảng được truyền theo tham chiếu.
+
+00:04:21.620 --> 00:04:28.720
+Vì vậy, như bạn thấy, chúng
+tôi không phải đặt "&amp;" ở đây vì
+
+00:04:28.720 --> 00:04:29.530
+nó đã được chuyển qua tham
+chiếu.  Như một quan sát khác,
+
+00:04:29.560 --> 00:04:32.000
+Chúng tôi không cần đặt kích thước thực của mảng ở đây.
+
+00:04:32.020 --> 00:04:34.900
+Chúng tôi chỉ có thể thả nó cho mảng 1D.
+
+00:04:36.910 --> 00:04:40.820
+Một điều nữa, hãy phát triển một hàm để tính toán xem một chuỗi có thấp hơn hay không.
+
+00:04:40.930 --> 00:04:46.680
+Vì vậy, chúng tôi có một kiểu trả về hàm bool, nó xử lý chuỗi và lặp lại trên chuỗi và chỉ cần kiểm tra
+
+00:04:46.930 --> 00:04:53.350
+nếu ký tự nằm giữa 'a' hoặc 'z'
+hay không, nếu có, nó sẽ trả về true
+
+00:04:53.350 --> 00:04:54.490
+cho tất cả chúng, nếu bất kỳ ký
+tự nào vi phạm, nó sẽ trả về false.
+
+00:04:54.820 --> 00:04:57.960
+Bây giờ, đây là chuyển theo giá trị hay chuyển theo tham chiếu?
+
+00:04:58.270 --> 00:05:00.580
+Điều này được chuyển theo giá trị.
+
+00:05:00.890 --> 00:05:04.350
+OK, theo mặc định, việc chuyển qua tham chiếu chỉ dành cho mảng.
+
+00:05:04.360 --> 00:05:08.500
+Bất cứ điều gì khác theo mặc định sẽ là giá trị.
+
+00:05:08.980 --> 00:05:10.030
+Vì vậy, bây giờ điều này là tốt.
+
+00:05:10.360 --> 00:05:17.350
+Nhưng hãy nhớ rằng, nếu str này, giả sử là một
+tệp lớn gồm một triệu ký tự, thì trong thời gian
+
+00:05:17.350 --> 00:05:22.130
+chạy, trình biên dịch phải tạo một bản sao khác gồm
+một triệu ký tự cho hàm dưới dạng "str" ​​ở đây.
+
+00:05:22.270 --> 00:05:24.550
+Vì vậy, đây là một sự lãng phí lớn về bộ nhớ.
+
+00:05:24.760 --> 00:05:27.910
+Cách tốt nhất trong trường hợp này là chuyển nó bằng tham chiếu.
+
+00:05:28.300 --> 00:05:33.740
+Nhưng hãy nhớ rằng, khi bạn chuyển một thứ gì đó theo tham chiếu, điều đó có nghĩa là chúng đang chia sẻ cùng một bộ nhớ.
+
+00:05:34.000 --> 00:05:37.090
+Vì vậy, chức năng này có thể làm hỏng "str" ​​của bạn.
+
+00:05:37.450 --> 00:05:38.710
+Vì vậy, đây là một rủi ro của điều đó.
+
+00:05:38.980 --> 00:05:46.930
+Có một cách để giải quyết vấn đề này,
+sử dụng "const";  nếu bạn sử dụng "const
+
+00:05:46.930 --> 00:05:50.880
+string &amp;str", thì từ một phía bạn đã
+đảm bảo rằng "str" ​​là do tham chiếu,
+
+00:05:50.890 --> 00:05:53.590
+Vì vậy, không cần sao chép bộ nhớ nữa và nó cũng là const,
+
+00:05:53.630 --> 00:05:55.390
+Vì vậy, anh chàng này không cần phải thay đổi nó.
+
+00:05:55.390 --> 00:05:56.230
+một người đang mã hóa chức năng
+
+00:05:56.230 --> 00:06:00.030
+is_lower có phải thay
+đổi nội dung không?
+
+00:06:00.250 --> 00:06:00.550
+Không.
+
+00:06:00.850 --> 00:06:04.960
+Vì vậy, chữ ký thích hợp cho hàm này là "const string &amp;str".
+
+00:06:06.280 --> 00:06:06.850
+Đó là nó.

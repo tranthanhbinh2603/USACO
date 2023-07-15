@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1674814624 source:e:\document\project\usaco\competitive programming essentials, master algorithms 2022\09 - pigeonhole principle\code\01 - divsub\main.cpp
+	<iostream>
+	<vector>
+	<map>
+

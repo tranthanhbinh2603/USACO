@@ -1,0 +1,704 @@
+1
+00:00:02,060 --> 00:00:05,560
+Hi everyone, in this section we will talk about traveling salesman problem.
+
+2
+00:00:06,140 --> 00:00:10,430
+So it is a problem that helps us to find the shortest round trip cost.
+
+3
+00:00:10,550 --> 00:00:13,580
+Let's see what is the meaning of shortest round trip cost.
+
+4
+00:00:13,970 --> 00:00:18,920
+And it also has applications in last mile delivery systems, vehicle routing problem.
+
+5
+00:00:19,670 --> 00:00:20,840
+I will give you one example.
+
+6
+00:00:21,140 --> 00:00:26,300
+Let us think of an example of let's say, a delivery van
+
+7
+00:00:26,420 --> 00:00:37,370
+OK. so the delivery van has let say a certain number of orders that it wants to deliver and it starts
+
+8
+00:00:37,370 --> 00:00:38,180
+from a warehouse.
+
+9
+00:00:38,210 --> 00:00:45,080
+OK. so let's say there is a warehouse from where this van starts and let's say it wants to deliver
+
+10
+00:00:45,080 --> 00:00:50,060
+orders to certain customers which are located at let's say   different locations.
+
+11
+00:00:50,930 --> 00:00:53,760
+What it wants is? it wants to design a route.
+
+12
+00:00:55,290 --> 00:01:01,560
+Maybe it wants to figure out in what order it should cover the cities and come back to its original
+
+13
+00:01:01,560 --> 00:01:05,080
+location so that the minimum cost is optimized.
+
+14
+00:01:05,250 --> 00:01:09,630
+So this van is going to start from this location and it's going to..
+
+15
+00:01:11,020 --> 00:01:14,690
+go to different locations. maybe in the first step.
+
+16
+00:01:14,710 --> 00:01:22,450
+Maybe it goes to this location, maybe from here it goes to this location and maybe then goes here
+
+17
+00:01:22,660 --> 00:01:27,760
+then goes here, then goes here, then goes here and then maybe comes back.
+
+18
+00:01:27,820 --> 00:01:31,180
+ok. what we're doing is we are actually.
+
+19
+00:01:32,430 --> 00:01:41,880
+Traversing the entire set of nodes by forming a cycle. ok. so it's not a path from one location to
+
+20
+00:01:41,880 --> 00:01:43,470
+another, it's actually a cycle.ok.
+
+21
+00:01:43,470 --> 00:01:47,250
+So we are coming back to the same node from where we started. ok?
+
+22
+00:01:47,670 --> 00:01:51,790
+And what we want is we want to find such a route that minimizes the cost.
+
+23
+00:01:51,820 --> 00:01:57,810
+ok. so there could be multiple possible options maybe from A you could have gone to this location.
+
+24
+00:01:58,140 --> 00:02:01,350
+Maybe from here you could have gone to this location.
+
+25
+00:02:01,500 --> 00:02:08,259
+Then like this, maybe then like this, then like this, then like this and then came back. ok. so
+
+26
+00:02:08,310 --> 00:02:09,509
+this could be another route.
+
+27
+00:02:09,520 --> 00:02:16,710
+So there can be a lot of possible routes and we want to find out a cycle that has the minimum cost.
+
+28
+00:02:16,800 --> 00:02:17,130
+OK.
+
+29
+00:02:18,150 --> 00:02:23,100
+So it is given we know the distances between every pair of nodes it does given. OK.
+
+30
+00:02:23,490 --> 00:02:27,930
+We know what is the distance between any two nodes.
+
+31
+00:02:29,740 --> 00:02:35,230
+That is given. so you can assume that the input is a kind of adjacency matrix.
+
+32
+00:02:35,620 --> 00:02:44,860
+It's a V X V matrix and we know what is the distance of each node to other node. ok. So from every
+
+33
+00:02:44,860 --> 00:02:50,280
+We know what is their distance and we want to find out what is the minimum cost of this particular tour.
+
+34
+00:02:50,590 --> 00:02:50,890
+OK.
+
+35
+00:02:51,550 --> 00:02:59,440
+This is also known as Hamiltonian cycle so their goal is to find out the minimum weight Hamiltonian
+
+36
+00:02:59,440 --> 00:03:03,340
+cycle and this is what this traveling salesman problem solves.
+
+37
+00:03:03,400 --> 00:03:10,510
+So that's why it has applications in vehicle rooting, supply chain management because if you come up
+
+38
+00:03:10,510 --> 00:03:14,940
+with a route that is taking longer time that means it will take more fuel.
+
+39
+00:03:14,980 --> 00:03:17,320
+So people want to reduce their shipment costs.
+
+40
+00:03:18,520 --> 00:03:21,550
+And one more thing about this problem is it's a NP hard problem.
+
+41
+00:03:22,630 --> 00:03:30,010
+There is no quick solution and adding every node increases the complexity of the problem so we will
+
+42
+00:03:30,010 --> 00:03:33,370
+see when we will discuss the bruteforce based solution.
+
+43
+00:03:33,760 --> 00:03:35,710
+It actually has an exponential solution.
+
+44
+00:03:35,710 --> 00:03:43,630
+We don't know in what order we should cover these nodes so that the total cost is minimized. ok.
+
+45
+00:03:43,660 --> 00:03:45,880
+so it's a NP hard problem.
+
+46
+00:03:45,880 --> 00:03:46,150
+OK?
+
+47
+00:03:47,170 --> 00:03:48,670
+So what is a brute force approach?
+
+48
+00:03:49,120 --> 00:03:52,420
+Later on, we will also add DP to this approach.
+
+49
+00:03:52,930 --> 00:03:53,290
+OK.
+
+50
+00:03:53,660 --> 00:03:56,220
+The first let's try to explore recursive solution.
+
+51
+00:03:56,230 --> 00:03:58,120
+So I will start with a small example.
+
+52
+00:03:58,900 --> 00:04:00,400
+Let me draw a small graph.
+
+53
+00:04:00,490 --> 00:04:05,680
+Let's say I have A, B, C and D. as I said
+
+54
+00:04:05,680 --> 00:04:08,530
+We know the distance between every two pair of nodes.
+
+55
+00:04:08,530 --> 00:04:18,250
+let say, this is 20, this is 30, this is 10, this is 25 and this is 34 and this is 42.
+
+56
+00:04:18,399 --> 00:04:21,190
+Ok. now from every node you can go to every other node.
+
+57
+00:04:21,339 --> 00:04:21,610
+OK?
+
+58
+00:04:22,060 --> 00:04:25,060
+And you can start from any node the answer will not matter.
+
+59
+00:04:25,060 --> 00:04:31,360
+For example, you come up with a tour in which from where from A you to B, from B you to C,
+
+60
+00:04:31,370 --> 00:04:33,760
+from C you to D, from D you come back to A.
+
+61
+00:04:34,060 --> 00:04:34,360
+OK.
+
+62
+00:04:34,570 --> 00:04:36,640
+So I'm talking about this particular cycle.
+
+63
+00:04:37,360 --> 00:04:44,010
+You can also start from B and you may get the similar too so B, C, D, A and B.
+
+64
+00:04:44,020 --> 00:04:46,630
+Ok. so these two are exactly same.
+
+65
+00:04:46,660 --> 00:04:47,480
+Ok. it doesn't matter.
+
+66
+00:04:47,500 --> 00:04:53,500
+We start from A or from B because these two are these two represent the same cycle.
+
+67
+00:04:54,610 --> 00:04:54,940
+OK.
+
+68
+00:04:55,330 --> 00:04:57,430
+But there could be different tours as well.
+
+69
+00:04:57,430 --> 00:05:02,380
+From A you can go to C, then you can go to D, then you can go to B, then you can go to A. maybe
+
+70
+00:05:02,380 --> 00:05:09,460
+from A you can go to C, from C you can go to D, from D you can go to B and from B, you can again
+
+71
+00:05:09,460 --> 00:05:10,370
+come back to A.
+
+72
+00:05:10,420 --> 00:05:14,720
+So this is effectively the source from where we started.
+
+73
+00:05:14,740 --> 00:05:15,040
+OK.
+
+74
+00:05:15,310 --> 00:05:22,540
+So we start from source we end up our source and all these edges we need to add. so effectively speaking
+
+75
+00:05:22,720 --> 00:05:25,810
+if we talk about all possible permutations.
+
+76
+00:05:25,990 --> 00:05:31,980
+Ok. so we can have given N nodes, we can have N factorial permutations.
+
+77
+00:05:31,990 --> 00:05:34,690
+Ok. but we are saying we are fixing the starting node.
+
+78
+00:05:34,700 --> 00:05:37,690
+We say we will always start from the zeroth node. let say
+
+79
+00:05:37,690 --> 00:05:38,200
+That is A.
+
+80
+00:05:38,830 --> 00:05:45,070
+Because even if we start from any  other node, we can get the same answer. so effectively by considering
+
+81
+00:05:45,070 --> 00:05:49,990
+this fact that we will always start from A, we have a little bit reduce this complexity to
+
+82
+00:05:49,990 --> 00:05:52,990
+N-1 factorial. but it is still OK.
+
+83
+00:05:52,990 --> 00:05:54,580
+It is still bad.
+
+84
+00:05:55,850 --> 00:06:03,320
+And as I said this problem is actually takes a lot of complexity to solve and it is a NP hard problem.
+
+85
+00:06:03,830 --> 00:06:04,790
+Let us discuss.
+
+86
+00:06:07,410 --> 00:06:09,650
+We can solve this problem in a brute force method.
+
+87
+00:06:12,060 --> 00:06:12,420
+OK.
+
+88
+00:06:12,630 --> 00:06:14,850
+So let us discuss brute force.
+
+89
+00:06:14,940 --> 00:06:20,820
+So what we will do? we will start from A and from A we know, we can go to three different nodes.
+
+90
+00:06:20,820 --> 00:06:23,050
+We can go to B, we can go to C, we can go to D.
+
+91
+00:06:23,050 --> 00:06:24,630
+So we will make three recursive calls.
+
+92
+00:06:25,140 --> 00:06:25,920
+One for B.
+
+93
+00:06:26,460 --> 00:06:27,360
+One for C.
+
+94
+00:06:27,900 --> 00:06:28,770
+And one for D.
+
+95
+00:06:29,070 --> 00:06:29,370
+OK.
+
+96
+00:06:30,090 --> 00:06:35,190
+And from B, we will try to go to the neighbors that are not yet visited because we're talking about
+
+97
+00:06:35,190 --> 00:06:35,370
+this.
+
+98
+00:06:35,370 --> 00:06:41,610
+But we know from B, we can go to C and we can go to D because they are not visited.
+
+99
+00:06:42,030 --> 00:06:42,330
+OK?
+
+100
+00:06:42,720 --> 00:06:44,220
+Talking about C, we can..
+
+101
+00:06:44,230 --> 00:06:51,750
+We know that we can only go to D because in this path the ABC has already visited D is not visited,
+
+102
+00:06:51,750 --> 00:06:57,020
+so we will make only one call at the D. Talking about D we know we can only go to C.
+
+103
+00:06:57,390 --> 00:07:00,150
+OK, so this is how the recursion tree would look like.
+
+104
+00:07:00,510 --> 00:07:03,480
+But let us figure out what would happen in the base case.
+
+105
+00:07:03,760 --> 00:07:04,020
+OK.
+
+106
+00:07:05,040 --> 00:07:09,150
+In the base case, we know that we have visited all the cities that are there.
+
+107
+00:07:09,570 --> 00:07:18,030
+What we will do? We will return the cost of reaching the source node back from D to A.let's say you're
+
+108
+00:07:18,030 --> 00:07:26,280
+standing at the D, Now what you should return at D? you should because at D we want to do is when we are created
+
+109
+00:07:26,280 --> 00:07:32,130
+this path, we said ok. from A we got to B, from B we go to C, from C we go to D and from D we go
+
+110
+00:07:32,130 --> 00:07:32,400
+to A.
+
+111
+00:07:32,880 --> 00:07:37,300
+D should actually return the cost of moving from D to A.
+
+112
+00:07:37,710 --> 00:07:39,780
+OK, what is the cost of moving from D to A?
+
+113
+00:07:40,260 --> 00:07:40,830
+.
+
+114
+00:07:41,100 --> 00:07:45,810
+So this cost you can see 25. so D is going to return 25 to C.
+
+115
+00:07:46,200 --> 00:07:46,530
+OK.
+
+116
+00:07:47,340 --> 00:07:48,380
+What is C going to do?
+
+117
+00:07:48,390 --> 00:07:50,280
+C is going say ok. from C to D
+
+118
+00:07:50,310 --> 00:07:54,150
+the cost is 10. it is going to return 10 + 25.
+
+119
+00:07:55,250 --> 00:08:00,470
+So it is going to return 35 to B. what is B going to return? B going to return 
+
+120
+00:08:01,010 --> 00:08:01,850
+from B to C
+
+121
+00:08:01,850 --> 00:08:04,670
+The cost is 30 so it is going to add 30 to this cost.
+
+122
+00:08:04,730 --> 00:08:06,680
+So 10 plus 25 plus 30.
+
+123
+00:08:07,150 --> 00:08:15,140
+Ok. and what is A going to return? A is going to actually... each node will also check what is the answer
+
+124
+00:08:15,140 --> 00:08:18,500
+I'm getting from this branch and it will actually take the minimum.
+
+125
+00:08:18,510 --> 00:08:20,510
+So let us assume that this answer is minimum.
+
+126
+00:08:20,510 --> 00:08:21,590
+So it is, let's say.
+
+127
+00:08:23,810 --> 00:08:24,770
+75. ok.
+
+128
+00:08:26,200 --> 00:08:34,150
+Sorry... this is 55+10. yes, this is 65 and from A to B. A to B. ok.
+
+129
+00:08:34,419 --> 00:08:35,409
+So what is the cost?
+
+130
+00:08:36,039 --> 00:08:37,990
+The A to B  the cost is like
+
+131
+00:08:40,590 --> 00:08:47,580
+this cost is 20, so A going to add 20 to this cost, so A has one option in which the cost is
+
+132
+00:08:47,580 --> 00:08:52,230
+actually 85. 10 plus 25 plus 30 plus
+
+133
+00:08:53,480 --> 00:08:53,900
+20.
+
+134
+00:08:54,270 --> 00:09:00,200
+So this cost is 85 Ok. and similarly we will also compute what is the cost from this branch?
+
+135
+00:09:00,230 --> 00:09:01,880
+What is the cost from this branch?
+
+136
+00:09:02,390 --> 00:09:04,640
+So let let me just draw all the branches.
+
+137
+00:09:04,820 --> 00:09:06,470
+Let me just draw all the branches.
+
+138
+00:09:06,980 --> 00:09:12,350
+When we go from A to C and from C we can go to the nodes which are not visited.
+
+139
+00:09:12,350 --> 00:09:18,560
+So they are B and they are D. ok. from B we can go to only one node that is not visited.
+
+140
+00:09:18,650 --> 00:09:19,370
+That is D.
+
+141
+00:09:19,760 --> 00:09:25,300
+And from D we can go to only one note that is B. OK. and at D, similar thing is going to happen.
+
+142
+00:09:25,340 --> 00:09:29,780
+We can make a call on C and B and we can make a call on
+
+143
+00:09:32,430 --> 00:09:33,600
+B and C.
+
+144
+00:09:35,150 --> 00:09:38,270
+Now, this is how the recursion tree would look like.
+
+145
+00:09:38,510 --> 00:09:45,490
+So your idea is to compute the cost of every route to leaf node and take minimum of all these costs.
+
+146
+00:09:45,500 --> 00:09:45,770
+OK?
+
+147
+00:09:46,040 --> 00:09:47,030
+So what A will get?
+
+148
+00:09:47,450 --> 00:09:49,610
+A will get option one from here.
+
+149
+00:09:50,720 --> 00:09:54,830
+A will get option two from here and A will get option three from here.
+
+150
+00:09:54,860 --> 00:09:56,540
+Ok. plus.. .what...
+
+151
+00:09:57,920 --> 00:09:58,940
+What would be the cost?
+
+152
+00:09:59,770 --> 00:10:04,820
+So this would be your first option would be the cost of going from B
+
+153
+00:10:06,220 --> 00:10:11,110
+Completing the round trip and coming back to A plus the cost of the edge A comma B. OK?
+
+154
+00:10:11,950 --> 00:10:19,440
+Option two would be the cost of going from C, then coming back to A plus the cost of the edge AC.
+
+155
+00:10:19,810 --> 00:10:25,480
+A to C. And an option three would be the cost of completing the tour, starting from D the coming back A.
+
+156
+00:10:25,480 --> 00:10:28,270
+plus the cost of the edge A to D.
+
+157
+00:10:28,380 --> 00:10:33,160
+Ok. so this is.... this is the recursive breakdown of this particular problem.
+
+158
+00:10:33,670 --> 00:10:39,280
+Now you may ask how we can implement this brute force solution.
+
+159
+00:10:39,910 --> 00:10:49,630
+So in the base case, we can check if all the cities are visited ok, we can simply say return the cost of
+
+160
+00:10:50,920 --> 00:10:52,240
+Going back to source
+
+161
+00:10:55,410 --> 00:11:01,950
+from the current city. OK from the current city, whatever is the current city. let's say in this
+
+162
+00:11:01,950 --> 00:11:08,820
+case, the current city is D. current city is C D B B C. we will return the cost to the source that is A from
+
+163
+00:11:08,820 --> 00:11:09,510
+the current city.
+
+164
+00:11:09,930 --> 00:11:15,000
+Otherwise what we will do we will find out the minimum cost.
+
+165
+00:11:15,780 --> 00:11:16,110
+OK.
+
+166
+00:11:16,770 --> 00:11:21,800
+By taking the minimum of over all the options that are available.
+
+167
+00:11:21,810 --> 00:11:22,050
+OK?
+
+168
+00:11:22,800 --> 00:11:24,000
+So maybe
+
+169
+00:11:25,860 --> 00:11:34,380
+We can say cost of going to some node, let's say we are going to some node I from the current Node
+
+170
+00:11:34,530 --> 00:11:36,030
+C plus
+
+171
+00:11:38,130 --> 00:11:43,380
+the recursively we can say we will call the same function that will compute the cost of coming back to
+
+172
+00:11:43,380 --> 00:11:45,360
+the source node starting from the ith node.
+
+173
+00:11:45,570 --> 00:11:48,570
+OK, so something like this we will need to do.
+
+174
+00:11:49,860 --> 00:11:53,040
+So this is the brute force solution of this problem.
+
+175
+00:11:53,920 --> 00:11:55,620
+So that's all for this lecture.
+
+176
+00:11:55,620 --> 00:12:02,010
+In the next part, I will tell you how we can implement it and we will also optimize it using DP.
+

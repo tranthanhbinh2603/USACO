@@ -1,0 +1,508 @@
+WEBVTT
+
+00:00.330 --> 00:08.250
+Now, let us look at how recursion uses Stack, Folbigg, this first example, and explain to show you
+
+00:08.250 --> 00:10.860
+how the stack is utilized.
+
+00:11.700 --> 00:12.300
+Not already.
+
+00:12.300 --> 00:17.730
+We have seen this model of memory that the memory is used by dividing into three sections.
+
+00:17.730 --> 00:22.240
+One is called S. And here a short stack and this is heap.
+
+00:22.920 --> 00:26.490
+Now, in my program I have two functions that is fun one and mean.
+
+00:26.760 --> 00:30.630
+So the machine code of those two functions is already there in code section.
+
+00:31.470 --> 00:35.720
+Now let us run the program and see how the stock is created.
+
+00:36.320 --> 00:39.430
+See, the program starts executing some main functions.
+
+00:39.430 --> 00:45.120
+So the first function, this main function in that main function, this is the first statement that
+
+00:45.120 --> 00:46.650
+is X is created.
+
+00:46.950 --> 00:54.990
+So activation the code for main function is created and it will have its own variable that is X having
+
+00:54.990 --> 00:55.650
+value three.
+
+00:58.080 --> 01:02.140
+That the very next statement is fund one, a call to function one.
+
+01:02.520 --> 01:08.520
+So one of the functions, one is called it, is having just one variable that is n this is the only
+
+01:08.520 --> 01:09.060
+variable.
+
+01:09.270 --> 01:17.400
+So activation record for that function is created and it will have that variable N and this value X
+
+01:17.430 --> 01:19.010
+is passed on to that one.
+
+01:19.470 --> 01:21.010
+So it will be three.
+
+01:22.440 --> 01:26.670
+So this is four million and this is for fun one.
+
+01:29.390 --> 01:32.220
+I'm showing you line by line how it is working.
+
+01:32.240 --> 01:37.010
+Just let us look at it once more, see the program start executing from main function.
+
+01:37.010 --> 01:40.080
+The very first thing is X, so activation of the code for me.
+
+01:40.100 --> 01:46.400
+And then X has created the values and the function is scart and that function is having just one variable
+
+01:46.400 --> 01:48.530
+that is n so activation.
+
+01:48.530 --> 01:54.660
+The code is created for fun, one between N and having the military let us continue.
+
+01:55.070 --> 01:56.470
+If that is greater than zero.
+
+01:56.690 --> 01:59.090
+Yes, the threat is greater than zero.
+
+02:00.470 --> 02:06.850
+So as for the three, already we have seen that the 3D printed the next call function fun.
+
+02:06.860 --> 02:12.980
+One is called once again with the reduced value of and that is diclemente to value and minus one.
+
+02:13.250 --> 02:14.910
+So that function is called again.
+
+02:14.930 --> 02:21.530
+So once the function is called, we know that activation record will be created and in that again variable
+
+02:21.530 --> 02:24.680
+M and that will have the value to this time.
+
+02:25.160 --> 02:32.340
+This is also activation the code for fun one and the second call not in that second call.
+
+02:32.360 --> 02:34.640
+Again, it checks, if any, is better than zero.
+
+02:34.850 --> 02:36.600
+Yes, two is greater than zero.
+
+02:36.890 --> 02:38.800
+So pretty tough, so to speak.
+
+02:38.810 --> 02:42.870
+And the next line call again and the minus one.
+
+02:42.890 --> 02:44.310
+So right now and there's a two.
+
+02:44.570 --> 02:45.980
+So again, a new call.
+
+02:46.160 --> 02:50.980
+Again, an activation of the code is created and variable and it's created with value one.
+
+02:51.320 --> 02:54.290
+And this is again, a call for fun one.
+
+02:56.580 --> 03:03.900
+Now, again, if it's better than zero, yes, one is greater than zero, one one is Sprint.
+
+03:03.900 --> 03:10.830
+And then again call for one again, call one one with reduced value, decrement add value and minus
+
+03:10.830 --> 03:11.010
+one.
+
+03:11.310 --> 03:13.590
+So again, inactivation record for fun.
+
+03:13.590 --> 03:18.070
+One is created and it will have the variable end and that value zero.
+
+03:18.420 --> 03:21.120
+This is a call again for one.
+
+03:22.640 --> 03:29.730
+This time as a zero, when it calls again endoskeleton zero, so no, and it's not greater than zero,
+
+03:29.930 --> 03:34.910
+it will not enter inside, it will not print anything here, doesn't print anything.
+
+03:35.180 --> 03:38.130
+And it will come out of this conditional statement.
+
+03:38.390 --> 03:40.920
+So it doesn't enter into conditional statements.
+
+03:40.920 --> 03:42.250
+So it will come out of the function.
+
+03:42.620 --> 03:50.930
+And once that call ends, this activation record is deleted and the control goes back to the previous
+
+03:50.930 --> 03:51.380
+call.
+
+03:51.770 --> 03:55.780
+And in that previous call, what it has done, it has called this one.
+
+03:56.060 --> 04:00.890
+So the next is nothing so that Carl will be using this activation record.
+
+04:01.890 --> 04:09.870
+And that also ends so again, this is also deleted, it goes back to the previous caller and the previous
+
+04:09.870 --> 04:12.420
+call, this line is over, so there's nothing remaining.
+
+04:12.750 --> 04:16.250
+And that call uses this activation of the card, but there is nothing to do.
+
+04:16.500 --> 04:19.230
+So this also deleted and also deleted.
+
+04:19.450 --> 04:23.580
+Then it come back to me inside mean after one, there is nothing remaining.
+
+04:23.590 --> 04:24.810
+So this also ends.
+
+04:25.150 --> 04:27.760
+So all this activation and one by one.
+
+04:28.770 --> 04:33.300
+So this is how stock is created and utilized agriculture.
+
+04:33.600 --> 04:35.270
+Now, one more thing.
+
+04:35.760 --> 04:42.480
+What is the size of the stack leaving main function if you count the activation, the guards, one,
+
+04:42.480 --> 04:43.610
+two, three, four.
+
+04:43.860 --> 04:49.520
+So only for that function, for activation of the cards are created for site of the staggers forward
+
+04:50.490 --> 04:52.140
+and how much memory is consuming.
+
+04:52.350 --> 04:55.140
+Each activation of the card is having just one variable.
+
+04:55.140 --> 04:57.330
+And and and and so.
+
+04:57.480 --> 04:58.620
+And how many times.
+
+04:58.620 --> 04:59.490
+Four times.
+
+05:00.090 --> 05:01.320
+So you can see the calls here.
+
+05:01.320 --> 05:02.870
+One, two, three fours.
+
+05:02.940 --> 05:07.140
+Already we have done one, two, three, four, four.
+
+05:07.140 --> 05:11.560
+So already we have done tracing, we have generated a tracing through your recollection.
+
+05:12.120 --> 05:14.580
+So there are four calls for activation.
+
+05:14.580 --> 05:15.600
+The cards are created.
+
+05:16.530 --> 05:22.170
+And at the end of this, it will go back and go back, so activation records are deleted again, so
+
+05:22.170 --> 05:24.920
+sight of the memory consumed by this function.
+
+05:24.930 --> 05:33.330
+As for India, whatever the size of variable integer is for the value of X that is known as a three
+
+05:33.330 --> 05:33.900
+for value.
+
+05:33.900 --> 05:38.700
+Of the three, there are four calls for the value of an equal to five.
+
+05:38.710 --> 05:46.260
+There will be six calls so far n there will be N plus one Clontz so turtling plus one call.
+
+05:46.290 --> 05:50.300
+So how many activation cards and plus one activation records.
+
+05:50.580 --> 05:54.930
+So you can see that the activation of the card number of activation of the cards depends on the number
+
+05:54.930 --> 05:55.710
+of calls.
+
+05:56.070 --> 05:59.000
+So total calls are and plus one.
+
+06:00.390 --> 06:02.220
+And what is an actual variable.
+
+06:02.220 --> 06:04.350
+How much memory is consuming now.
+
+06:04.350 --> 06:08.810
+It is integer type taking to buy it for, for by depending on the compiler.
+
+06:09.690 --> 06:12.540
+So we can say just an endless phone call.
+
+06:12.560 --> 06:20.950
+So the total memory consumed by this is order off and we can mention it as outdraw and.
+
+06:22.740 --> 06:24.110
+Why not plus, one dead?
+
+06:24.540 --> 06:34.200
+See, this is a polynomial, a formula, and it one in that degree of the formula is one higher Satomi's
+
+06:34.380 --> 06:39.550
+and so we take and so we degree the order of our degree of.
+
+06:39.570 --> 06:45.950
+And so we mentioned the space house order of M, but actually if you see this and plus one activity,
+
+06:46.040 --> 06:47.190
+the records are created.
+
+06:47.910 --> 06:53.890
+So from this discussion we can understand that recursive functions utilize this stack.
+
+06:54.210 --> 06:59.110
+So here internally it takes some extra memory for the stack.
+
+06:59.460 --> 07:05.040
+So there are memory consuming functions, recursive functions are memory consuming.
+
+07:05.190 --> 07:06.600
+So that's all I have explained.
+
+07:06.600 --> 07:07.880
+This one not already.
+
+07:07.890 --> 07:14.030
+I have a stack then just I will show you how this function looks, how dysfunctional look.
+
+07:14.050 --> 07:17.840
+So I will use this program as well as a tree.
+
+07:18.170 --> 07:21.610
+Then also I will show inside the stack what happens.
+
+07:21.660 --> 07:22.890
+Let us look at it quickly.
+
+07:23.340 --> 07:24.350
+There are two functions.
+
+07:24.370 --> 07:28.700
+One, two, and mean both these functions are there inside main memory.
+
+07:29.470 --> 07:31.460
+Now let's start executing program.
+
+07:31.480 --> 07:36.810
+Start from the main functions for the first variable X, so activation the code for me was created and
+
+07:36.810 --> 07:40.770
+having the value tree in X and it will call function Fundo.
+
+07:41.100 --> 07:43.740
+One of the functions on two is called activation.
+
+07:43.740 --> 07:45.350
+The code for two is created.
+
+07:45.360 --> 07:47.720
+So it means all these are four two now.
+
+07:48.030 --> 07:49.200
+So I just change them.
+
+07:50.370 --> 07:56.790
+So the first call, an equal to three, this is created, that is this one, this is created now and
+
+07:56.790 --> 07:57.730
+is greater than zero.
+
+07:57.870 --> 07:58.530
+Yes.
+
+07:59.170 --> 08:00.410
+Then call again.
+
+08:00.420 --> 08:02.760
+So again, it will call with and minus one.
+
+08:03.030 --> 08:08.050
+So a new call will create this activation record with an equal to two.
+
+08:08.310 --> 08:09.510
+Then again, it will call.
+
+08:09.520 --> 08:14.640
+Then again, it will call C, because the first statement is called since calling itself every time
+
+08:15.030 --> 08:19.070
+when N is equal to zero zero is not greater than zero.
+
+08:19.260 --> 08:22.260
+So it will not end if block can come out of the function.
+
+08:22.500 --> 08:28.110
+Once it come out of the function, this activation record is deleted because the function with the value
+
+08:28.130 --> 08:30.380
+of an R zero has terminated.
+
+08:30.900 --> 08:33.960
+It goes back to the previous call in the same function.
+
+08:33.960 --> 08:37.700
+It will go back to the previous call where it has finished to this one.
+
+08:38.130 --> 08:39.750
+Now it has to perform this.
+
+08:40.210 --> 08:42.080
+That is this line in the entry.
+
+08:42.480 --> 08:48.030
+So what is the value of and it has to break the current topmost activation of the code is this one where
+
+08:48.040 --> 08:49.350
+the value of end is one.
+
+08:49.590 --> 08:50.910
+So it will print one.
+
+08:51.540 --> 08:57.660
+It will print one, because the value of this one here and once it has finished, it will come out and
+
+08:57.660 --> 08:59.430
+this activation record is deleted.
+
+08:59.670 --> 09:04.770
+It will go back to the previous column in the previous call again and has finished the first line.
+
+09:05.040 --> 09:05.880
+That is this line.
+
+09:05.880 --> 09:09.650
+Now it has to do this so print and so what is the value of.
+
+09:09.660 --> 09:14.460
+And now so the topmost activation occurred in the stack you can see now and value is two.
+
+09:14.700 --> 09:16.840
+So this is printing, so to speak.
+
+09:17.580 --> 09:20.910
+Likewise 3D printer and all this activation the code.
+
+09:20.920 --> 09:27.480
+And so you can see that these activation records are created when the function was calling itself again
+
+09:27.480 --> 09:27.990
+and again.
+
+09:28.170 --> 09:29.790
+So this is more like ascending.
+
+09:30.720 --> 09:34.790
+Now, once it has reached the last call, that is where is the Theodore?
+
+09:35.100 --> 09:37.560
+So it will start returning.
+
+09:37.830 --> 09:39.000
+So that is a descending.
+
+09:39.270 --> 09:41.780
+So why are they sending it valued like these values?
+
+09:42.450 --> 09:48.420
+So all the values of and are there in the stack and the different activation records.
+
+09:49.290 --> 09:52.760
+So these values are utilized at returning time.
+
+09:53.550 --> 09:54.450
+So that's all.
+
+09:54.720 --> 09:57.790
+This is how recursion uses stack.
+
+09:58.200 --> 10:01.920
+So both of these functions are almost the same.
+
+10:01.920 --> 10:07.410
+Only the difference is that this is first printing and then calling, this is first calling, then printing.
+
+10:07.560 --> 10:11.490
+So the activation that God created for these functions will be same only.
+
+10:11.490 --> 10:13.980
+So that is the reason to have taken two similar examples.
+
+10:14.250 --> 10:17.220
+And I have shown you how the stock is utilized.
+
+10:17.520 --> 10:19.440
+It will be the same in both the programs.
+
+10:19.770 --> 10:25.770
+The size of the stack and the space consumed by this function is also author of and that is total and
+
+10:25.770 --> 10:26.700
+plus one activation.
+
+10:26.700 --> 10:31.680
+The cards are created for the function Fundo leaving the site.
+
+10:31.680 --> 10:34.500
+I mean, this is all recursion uses a stack.
+
+10:34.800 --> 10:40.890
+Now, next thing that we have to study is how to find the time complexity of recursive functions.
+
+10:41.310 --> 10:47.340
+So I will take just one example, this example, and show you how to find the time complexity of recursive
+
+10:47.340 --> 10:47.730
+function.

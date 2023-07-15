@@ -1,0 +1,709 @@
+0
+1
+00:00:01,040 --> 00:00:06,080
+Let's solve the first homework we would like to reverse the queue.
+1
+
+2
+00:00:06,710 --> 00:00:10,770
+However, we would like to do that through a stack. Now,
+2
+
+3
+00:00:11,810 --> 00:00:14,300
+Um, okay.
+3
+
+4
+00:00:14,310 --> 00:00:21,170
+So if we have a queue here, as you know, like let's say the queue is one two three, one is front,
+4
+
+5
+00:00:21,170 --> 00:00:21,920
+three is back.
+5
+
+6
+00:00:22,020 --> 00:00:24,410
+Now when we reverse, it is going to be three two one.
+6
+
+7
+00:00:25,010 --> 00:00:26,720
+How can we use a stack to do that?
+7
+
+8
+00:00:26,750 --> 00:00:28,460
+This is a bit straightforward.
+8
+
+9
+00:00:34,620 --> 00:00:43,320
+The idea is stack like by design is actually about reversing data and in the data structure course,
+9
+
+10
+00:00:43,320 --> 00:00:45,890
+you would notice that a lot. The stack here,
+10
+
+11
+00:00:45,900 --> 00:00:51,600
+the idea is I would create an empty stack and let's say we have here the input one, two, three and
+11
+
+12
+00:00:51,600 --> 00:00:51,960
+four.
+12
+
+13
+00:00:52,950 --> 00:00:56,040
+I'm going to iterate on the queue element by element.
+13
+
+14
+00:00:56,310 --> 00:00:58,810
+Get its front, add it to the stack,
+14
+
+15
+00:00:58,830 --> 00:01:02,070
+remove it, so get the front, one, add it to the stack.
+15
+
+16
+00:01:02,070 --> 00:01:03,480
+It's going to be one in the stack.
+16
+
+17
+00:01:04,710 --> 00:01:13,440
+Then the next number would be two,  add it to stack, two, then three, then four. The major difference
+17
+
+18
+00:01:13,440 --> 00:01:16,920
+here is the front of the stack is no four not one.
+18
+
+19
+00:01:17,340 --> 00:01:19,050
+While the front of the queue was one.
+19
+
+20
+00:01:19,740 --> 00:01:24,360
+Now let's get back the data from the stack itself and push them back to the queue.
+20
+
+21
+00:01:24,960 --> 00:01:28,780
+What is the first element that we will get from the queue, from the stack? four, push it into the queue,
+21
+
+22
+00:01:28,780 --> 00:01:33,310
+we have four. Next one is three, next one is  two, next one is one.
+22
+
+23
+00:01:33,330 --> 00:01:34,770
+That simple.
+23
+
+24
+00:01:34,980 --> 00:01:40,620
+So the idea was to push the queue to the stack, Push the stack to the queue.
+24
+
+25
+00:01:40,920 --> 00:01:42,990
+But why that this process reversed the queue?
+25
+
+26
+00:01:43,200 --> 00:01:49,590
+Because the stack by definition is making the last thing our front thing so we can use it to
+26
+
+27
+00:01:49,590 --> 00:01:51,360
+do this trick.
+27
+
+28
+00:01:52,770 --> 00:01:55,410
+OK, let's move to the another problem.
+28
+
+29
+00:01:58,930 --> 00:02:01,570
+In this problem, we would like to do the following.
+29
+
+30
+00:02:02,410 --> 00:02:09,880
+We have a stack, we have a queue built-in STL.  We  would build our stack with push and pop
+30
+
+31
+00:02:09,880 --> 00:02:11,260
+top and empty functions.
+31
+
+32
+00:02:12,040 --> 00:02:15,730
+However, the inner of the data structure is using the queue.
+32
+
+33
+00:02:16,120 --> 00:02:19,540
+So how to build a stack based on a single queue like that?
+33
+
+34
+00:02:19,840 --> 00:02:23,260
+You cannot define any extra things like another queue or another stack.
+34
+
+35
+00:02:23,260 --> 00:02:26,500
+You cannot.  How to implement a data structure using another?
+35
+
+36
+00:02:26,830 --> 00:02:29,830
+This is the question behind this point here.
+36
+
+37
+00:02:30,610 --> 00:02:32,020
+So let's see how can we do that?
+37
+
+38
+00:02:32,800 --> 00:02:34,720
+It isn't trivial, but also not hard.
+38
+
+39
+00:02:35,080 --> 00:02:39,130
+So let's think about it and try to have an organized thinking mentality.
+39
+
+40
+00:02:41,450 --> 00:02:51,980
+We know if..., let's say, someone pushed for us values one, two and three in order, according
+40
+
+41
+00:02:51,980 --> 00:02:55,250
+to the stack, let's say the stack would be like the three, two and one.
+41
+
+42
+00:02:55,910 --> 00:02:57,240
+Where here is its front.
+42
+
+43
+00:02:57,530 --> 00:03:02,840
+OK, now the problem is if we pushed in the queue that queue would be like one and two and three.
+43
+
+44
+00:03:04,120 --> 00:03:05,680
+So it doesn't represent it, actually.
+44
+
+45
+00:03:06,370 --> 00:03:07,990
+OK, let's make an assumption.
+45
+
+46
+00:03:08,710 --> 00:03:14,740
+Let's assume that our queue would be exactly ordered as same as our stack.
+46
+
+47
+00:03:15,100 --> 00:03:20,980
+For example, we would always have the queue this way: three, two, one, such that if you asked me for the top,
+47
+
+48
+00:03:21,310 --> 00:03:23,320
+I would just get the queue front in 01.
+48
+
+49
+00:03:24,760 --> 00:03:29,410
+We are making an assumption. Now if we would like to make use of this assumption,
+49
+
+50
+00:03:29,620 --> 00:03:37,210
+the push and pop should be perfect enough for the assumption to remain holding. Let's say
+50
+
+51
+00:03:37,780 --> 00:03:42,040
+and remember, the cue is like that three, two, one, somehow.
+51
+
+52
+00:03:42,370 --> 00:03:43,540
+And three is its a front.
+52
+
+53
+00:03:44,780 --> 00:03:47,810
+Let's say I asked you to enter value seven.
+53
+
+54
+00:03:48,940 --> 00:03:55,300
+Now, this 7 should be the front of the stack, so the new queue should be as following: seven, three,
+54
+
+55
+00:03:55,300 --> 00:03:56,050
+two, one.
+55
+
+56
+00:03:58,230 --> 00:03:58,710
+OK.
+56
+
+57
+00:03:58,950 --> 00:04:02,640
+The problem is, this is our current
+57
+
+58
+00:04:03,720 --> 00:04:05,400
+queue and this is our target
+58
+
+59
+00:04:05,430 --> 00:04:07,740
+queue. The question is how can we get this one?
+59
+
+60
+00:04:08,310 --> 00:04:15,180
+The problem is if we have three, two, and one in the queue and we try to push 7, it will be here.
+60
+
+61
+00:04:15,930 --> 00:04:17,520
+But we wanted it to be in the front.
+61
+
+62
+00:04:17,910 --> 00:04:23,640
+So the question is how can we convert this 3, 2, 1, 7 sto 7, 3, 2, 1?
+62
+
+63
+00:04:24,060 --> 00:04:25,500
+Can you think in a way to do that?
+63
+
+64
+00:04:26,400 --> 00:04:27,390
+The idea is simple.
+64
+
+65
+00:04:27,750 --> 00:04:28,920
+How many elements here?
+65
+
+66
+00:04:29,430 --> 00:04:32,790
+Three elements get them one by one and push them into the queue.
+66
+
+67
+00:04:33,180 --> 00:04:33,900
+Get three.
+67
+
+68
+00:04:34,530 --> 00:04:38,010
+So here, get three, push it.
+68
+
+69
+00:04:38,340 --> 00:04:39,140
+Now it is here.
+69
+
+70
+00:04:39,750 --> 00:04:42,270
+Get two, push it here.
+70
+
+71
+00:04:42,600 --> 00:04:44,670
+Get one, push it. 
+71
+
+72
+00:04:45,300 --> 00:04:49,040
+Now we got 7, 3, 2, 1, our target array.
+72
+
+73
+00:04:49,380 --> 00:04:50,700
+So here is the implementation.
+73
+
+74
+00:04:51,210 --> 00:04:57,690
+First, you start and take the current size of the queue, then you push seven as a normal way.
+74
+
+75
+00:04:58,140 --> 00:05:00,600
+Then you keep getting three elements
+75
+
+76
+00:05:00,600 --> 00:05:05,940
+or s elements exactly from the queue. Each time you get it and you push it in the same time.
+76
+
+77
+00:05:06,120 --> 00:05:11,160
+So you get it from the front, push it to the back, get it from the front to push it to the back. In this way,
+77
+
+78
+00:05:11,340 --> 00:05:15,300
+we switch the 3, 7, 1  to 7, 3, 2, one idea.
+78
+
+79
+00:05:15,960 --> 00:05:18,780
+This solution looks like a scary for you to get by herself.
+79
+
+80
+00:05:19,110 --> 00:05:28,530
+However, by a very organized mentality, you can reach it like you can see, as I told you, Um, I
+80
+
+81
+00:05:28,530 --> 00:05:31,470
+have here that, uh, I have here the queue.
+81
+
+82
+00:05:31,830 --> 00:05:33,350
+The queue must represent the stack.
+82
+
+83
+00:05:33,360 --> 00:05:35,400
+So anyway, let's make it like a stack.
+83
+
+84
+00:05:35,910 --> 00:05:38,880
+Now the new push will not make it like a stack.
+84
+
+85
+00:05:38,890 --> 00:05:40,440
+How can how can I fix it?
+85
+
+86
+00:05:40,710 --> 00:05:42,720
+OK, get these items and put them here.
+86
+
+87
+00:05:43,380 --> 00:05:46,680
+And the more you solve, you will get this talent faster and faster.
+87
+
+88
+00:05:48,560 --> 00:05:49,380
+Okay.
+88
+
+89
+00:05:49,790 --> 00:05:53,300
+So what's next?
+89
+
+90
+00:05:58,710 --> 00:06:05,070
+The next task is to reverse a number using a stack, to reverse a number using a stack.
+90
+
+91
+00:06:05,280 --> 00:06:06,750
+So let's see, how can we do that?
+91
+
+92
+00:06:07,500 --> 00:06:08,190
+Uh.
+92
+
+93
+00:06:10,710 --> 00:06:17,100
+Remember in the in the recursion, when we take some number, like three, like six or five, like one
+93
+
+94
+00:06:17,100 --> 00:06:24,840
+two three four five six and we start to take a modulus, then divide by 10, take modulus, divide by
+94
+
+95
+00:06:24,840 --> 00:06:25,130
+10.
+95
+
+96
+00:06:25,380 --> 00:06:29,100
+We can do that recursively, such that the number is actually printed in recursive way.
+96
+
+97
+00:06:29,310 --> 00:06:31,050
+I hope you remember this exercise.
+97
+
+98
+00:06:31,470 --> 00:06:32,730
+There is some similarity here.
+98
+
+99
+00:06:33,240 --> 00:06:38,760
+The point is that the recursion itself has a stack inside it.
+99
+
+100
+00:06:39,000 --> 00:06:42,090
+So this is actually like more or less simulating to this process.
+100
+
+101
+00:06:42,450 --> 00:06:48,090
+We create a stack here and we take the last digit and push it to the stack.
+101
+
+102
+00:06:48,270 --> 00:06:51,660
+So here we take the last digit, which is six, so push six to the stack.
+102
+
+103
+00:06:52,140 --> 00:06:54,630
+Then the next number will be five.
+103
+
+104
+00:06:54,800 --> 00:06:55,710
+Push it to the stack.
+104
+
+105
+00:06:55,920 --> 00:06:59,250
+Then four, three, two, one.
+105
+
+106
+00:07:00,510 --> 00:07:03,930
+Now this is our stack and this is our front here.
+106
+
+107
+00:07:04,860 --> 00:07:08,100
+You will iterate back on the stack to get back the elements.
+107
+
+108
+00:07:08,610 --> 00:07:10,260
+So now, first we get one.
+108
+
+109
+00:07:10,260 --> 00:07:11,100
+We get one here.
+109
+
+110
+00:07:12,030 --> 00:07:17,490
+After that, we get two, multiply one by 10, which is ten, add two, it's 12 now.
+110
+
+111
+00:07:18,940 --> 00:07:27,850
+Get three, multiply this by 10, 120, add three is now 123, multiply by 10, add four, multiply by 10,
+111
+
+112
+00:07:28,720 --> 00:07:29,590
+Uh.
+112
+
+113
+00:07:37,230 --> 00:07:39,450
+No, wrong, this will occur corrupted..,
+113
+
+114
+00:07:39,630 --> 00:07:47,310
+This would give us back the current element as it is. Again, we have no like one, two, three, four, five.
+114
+
+115
+00:07:48,120 --> 00:07:49,260
+We push it to the stack.
+115
+
+116
+00:07:49,260 --> 00:07:52,440
+It would be five, four, three, two, one.
+116
+
+117
+00:07:52,800 --> 00:07:55,050
+I would like to build this number to be reversed.
+117
+
+118
+00:07:55,290 --> 00:08:00,960
+So the idea is I'm going to count to keep the counter of the number of 10s so far with me. 
+118
+
+119
+00:08:01,200 --> 00:08:07,620
+So here the number of 10s would be just one, then 10, then 100, then 1000, and 10000 and so
+119
+
+120
+00:08:07,620 --> 00:08:07,800
+on.
+120
+
+121
+00:08:08,220 --> 00:08:13,230
+So in the first step, we every time get that top multiplied by the current 10s.
+121
+
+122
+00:08:13,500 --> 00:08:18,040
+So here is what happened. In the first step, where number is initially a 
+122
+
+123
+00:08:20,050 --> 00:08:22,990
+the number that we get from the stack initially is one.
+123
+
+124
+00:08:24,240 --> 00:08:24,650
+OK.
+124
+
+125
+00:08:25,020 --> 00:08:26,370
+Um.
+125
+
+126
+00:08:30,880 --> 00:08:33,670
+There is an observation here after this loop, 'num' would be zero.
+126
+
+127
+00:08:34,180 --> 00:08:38,650
+Remember that so that you can didn't get confused in tracing. Now, num is zero.
+127
+
+128
+00:08:38,920 --> 00:08:43,030
+I'm going to get the top which is 10 multiplied by tens, which is one and just add zero.
+128
+
+129
+00:08:43,120 --> 00:08:44,680
+It's going to be one.
+129
+
+130
+00:08:45,730 --> 00:08:49,750
+And the next step I multiply 10s with 10 so one.
+130
+
+131
+00:08:49,960 --> 00:08:51,310
+So now 10s equal
+131
+
+132
+00:08:52,270 --> 00:08:59,500
+ten, I get the next number, which is two multiply it with two and add one it is now , uh, it's
+132
+
+133
+00:08:59,500 --> 00:09:00,280
+now twenty.
+133
+
+134
+00:09:00,820 --> 00:09:04,180
+It's now 20 and add one, it's now twenty one.
+134
+
+135
+00:09:05,350 --> 00:09:12,100
+Multiply 10s by 10, it's now 100, get the next number, which is three, multiply three by 100, it would
+135
+
+136
+00:09:12,100 --> 00:09:15,670
+be 300, add it to the current value, it's 321.
+136
+
+137
+00:09:16,150 --> 00:09:23,350
+Now multiply this by 10, get four, multiply 4 by 1000 is 4000, add it here, it would be 4000 and 5
+137
+
+138
+00:09:23,620 --> 00:09:24,250
+and so on.
+138
+
+139
+00:09:24,400 --> 00:09:27,820
+So the moral of that is we've maintained this counter.
+139
+
+140
+00:09:27,940 --> 00:09:30,010
+So that while we add values
+140
+
+141
+00:09:30,010 --> 00:09:32,950
+we keep adding them here one by one.
+141
+
+142
+00:09:33,160 --> 00:09:36,730
+I hope the idea is clear now for you and sorry for the confusion.

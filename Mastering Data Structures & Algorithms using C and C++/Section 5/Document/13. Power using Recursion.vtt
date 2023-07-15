@@ -1,0 +1,517 @@
+WEBVTT
+
+00:00.600 --> 00:09.090
+In this video, we'll talk about explain function that is empower and so raising and for and times that
+
+00:09.090 --> 00:11.610
+is multiplying M for and times.
+
+00:12.510 --> 00:16.620
+So for this problem, we will try to define the recursive function for that.
+
+00:16.620 --> 00:19.110
+First of all, I will explain what the problem is.
+
+00:19.620 --> 00:21.660
+She suppose I have to find out.
+
+00:22.840 --> 00:30.910
+Booba five, so this means two into two multiplied by two, and this is multiplied by itself four or
+
+00:30.910 --> 00:37.180
+five times, so it means embar and means and should be multiplied for.
+
+00:39.990 --> 00:43.620
+And The Times four and The Times.
+
+00:46.070 --> 00:54.350
+And should be multiplied four times now, this, if I write it as a power function that is par, I'm
+
+00:54.350 --> 00:55.430
+gonna end.
+
+00:55.730 --> 01:10.530
+Then it means I'm into, I'm into and that goes on to end the minus one times in two, one more time.
+
+01:11.600 --> 01:17.690
+This will continue for and minus one times and one more time, for example, 2.5.
+
+01:17.930 --> 01:19.720
+So this is four times.
+
+01:19.730 --> 01:23.300
+This is four times and one more time.
+
+01:23.540 --> 01:30.860
+So Simbi mPower and memes should be multiplied four and minus one times then again multiplied by one
+
+01:30.860 --> 01:31.310
+more time.
+
+01:31.310 --> 01:33.090
+So it becomes total end times.
+
+01:34.220 --> 01:36.090
+Now this I can define it recursively.
+
+01:36.110 --> 01:48.060
+I can say part of M m is part of Ankomah and minus one times into M.
+
+01:49.250 --> 01:53.510
+So yes, this can be defined as a recurrence relation.
+
+01:56.090 --> 02:07.130
+Part of Ankomah and minus one in two and then and as greater than zero one and has become zero, then
+
+02:07.150 --> 02:09.440
+one is equal to zero as it is a product.
+
+02:09.440 --> 02:10.690
+So it should have done one.
+
+02:10.700 --> 02:12.080
+So minimum value is one.
+
+02:12.680 --> 02:13.490
+So that's it.
+
+02:13.520 --> 02:19.930
+So for this mathematical definition, I can write a recursive function using C or C++.
+
+02:20.270 --> 02:21.860
+So let me write a function here.
+
+02:22.550 --> 02:29.780
+Integer bar in M come on in and.
+
+02:32.330 --> 02:47.630
+If and is equal to zero of it on one otherwise Ripton, part of Ankomah and minus one.
+
+02:47.650 --> 02:52.080
+So that's all it is, just a two three line functions, so simple function.
+
+02:52.120 --> 02:55.140
+So this is converted into a recursive function.
+
+02:56.180 --> 02:59.540
+I would take one example and show you how it works.
+
+02:59.960 --> 03:06.090
+Let us stress this one for part of two leads to two nine.
+
+03:07.040 --> 03:10.940
+So two days to nine, embeddedness two and introduce nine.
+
+03:11.150 --> 03:13.770
+So nine, that is not equal to zero.
+
+03:14.060 --> 03:18.230
+So it should perform this operation that is part of.
+
+03:20.020 --> 03:29.540
+Bukola is one that is nine minus one that is eight, so I will rewrite it as eight multiplied by M..
+
+03:29.640 --> 03:31.350
+So what is and this is true.
+
+03:32.910 --> 03:34.800
+So let's continue now.
+
+03:34.800 --> 03:38.020
+This call has to be finished and only multiplication will be done.
+
+03:38.250 --> 03:42.600
+So what the scholars bugger off two comma as this is eight.
+
+03:42.600 --> 03:43.560
+It is not zeros.
+
+03:43.590 --> 03:45.050
+Every time this has to be done.
+
+03:45.330 --> 03:47.870
+So this will become seven multiplied by two.
+
+03:48.150 --> 03:57.390
+Then again, part of two comma six multiplied by two and part of two comma five multiplied by two.
+
+03:59.480 --> 04:02.660
+Bottles to come out for multiplied by two.
+
+04:04.770 --> 04:11.480
+Unfinished business, so that's all I have made all the calls and the last call is to come on zero zero
+
+04:11.880 --> 04:13.880
+when necessary, three times one.
+
+04:14.130 --> 04:15.870
+So this will be one.
+
+04:17.590 --> 04:26.040
+Multiplied by two thousand two hundred here and multiplied by two again, it is too square to square
+
+04:26.060 --> 04:32.260
+returns here, so this is multiplied by two, so this becomes two cube and so on.
+
+04:32.830 --> 04:34.840
+So I don't have to work out on this one.
+
+04:35.110 --> 04:39.070
+So you can see that one, two, three, four, five, six, seven, eight, nine.
+
+04:39.490 --> 04:41.320
+So nine times two is multiplied.
+
+04:41.330 --> 04:51.010
+So the result is two point nine so far value and as nine it has made a total ten columns, nine two
+
+04:51.010 --> 04:52.470
+zero Lincoln.
+
+04:52.510 --> 04:54.020
+So unless one counts.
+
+04:54.760 --> 04:59.890
+So now you know how much time it is taking and how much memory space it is consuming, as there are
+
+04:59.890 --> 05:05.230
+nine plus one calls for it and plus one and is out of times.
+
+05:05.310 --> 05:05.840
+Out of often.
+
+05:06.130 --> 05:09.160
+And what is the size of the stack that is also out of ten.
+
+05:10.620 --> 05:16.230
+Because the number of activation records created inside the stack are dependent on the number of calls.
+
+05:16.260 --> 05:21.080
+That is, unless one counts, not one more thing we should analyze here.
+
+05:21.090 --> 05:25.350
+We should observe here total how many multiplications is performing.
+
+05:25.860 --> 05:29.370
+So one, two, three, four, five, six, seven, eight, nine.
+
+05:29.720 --> 05:31.890
+Sertraline multiplications outperform.
+
+05:32.340 --> 05:38.300
+So is it possible to compute this one with less number of multiplications?
+
+05:38.880 --> 05:39.660
+Let us check.
+
+05:39.780 --> 05:41.210
+Is it possible to do that?
+
+05:41.910 --> 05:51.210
+See here if suppose it is dupa eight so two eight can be done, has to power to and perform.
+
+05:51.480 --> 05:52.980
+So this is to enter.
+
+05:52.980 --> 05:56.120
+To perform.
+
+05:56.400 --> 06:04.610
+So it means if I perform one multiplication on the same value, then power will reduce by half over
+
+06:04.620 --> 06:05.830
+the learning by half.
+
+06:06.870 --> 06:13.290
+And suppose it is to perform nine point nine then this can return as to into.
+
+06:14.920 --> 06:16.400
+To square perform.
+
+06:16.690 --> 06:23.680
+So because it is, ah, we can't directly make it half so first one, to have taken it out and decide
+
+06:23.800 --> 06:30.490
+it has to power it again so I can make it tough so that the power is even then I can directly have it
+
+06:30.490 --> 06:30.810
+out.
+
+06:31.420 --> 06:33.460
+So if the power is even no.
+
+06:33.460 --> 06:35.860
+Then I can directly take half of the power.
+
+06:36.100 --> 06:41.450
+And if the numbers are done I can take one multiplication extra and then I can take half of the power.
+
+06:41.710 --> 06:47.390
+So if I multiply the number directly, then the power is getting reduced by half.
+
+06:48.040 --> 06:53.410
+So with this observation, we can write a power function faster than this one.
+
+06:53.680 --> 06:56.910
+So let us rewrite that power function here.
+
+06:56.920 --> 06:59.610
+I will write on power function integer.
+
+07:00.400 --> 07:03.640
+I'll give the same name power lured from New Numeration.
+
+07:04.360 --> 07:06.520
+And I am.
+
+07:08.740 --> 07:15.640
+First of all, if N is equal to zero, then return one next check.
+
+07:15.640 --> 07:24.910
+If it is even if one is more than two, if it is equal to zero if and the maldito is equal to zero means
+
+07:24.910 --> 07:31.560
+number is even if power is even then I can reduce the power by dividing it by two.
+
+07:31.900 --> 07:33.570
+So let us write that code here.
+
+07:33.790 --> 07:46.150
+So if it is even number then ripton called power function and multiply M into M, so one multiplication
+
+07:46.150 --> 07:53.520
+that is Emin's multiplied by itself for one time, then this will be invited to next group.
+
+07:53.950 --> 08:02.140
+So the number of multiplication will reduce further than Ellesmere's number is not even power is not
+
+08:02.140 --> 08:06.850
+even poverties ared if power is already one multiplication extra.
+
+08:07.060 --> 08:20.110
+So I will write on ripton mental power off into M. comma and minus one divided by two.
+
+08:21.220 --> 08:26.610
+If it is our number then one multiplication we are taking here directly and then and then minus one
+
+08:26.620 --> 08:27.100
+by two.
+
+08:27.370 --> 08:30.970
+So in minus one it will become even numbered and divided by two.
+
+08:31.960 --> 08:37.540
+So let us take an example and trace this function and seeing how many multiplication we can get done.
+
+08:37.540 --> 08:42.760
+So so I take the same example that is part of Boogerman nine.
+
+08:43.390 --> 08:48.130
+So we are looking at this function there, a new version of a function which is having less number of
+
+08:48.130 --> 08:49.000
+multiplications.
+
+08:49.510 --> 08:52.770
+So let us try this power of Bookham.
+
+08:52.790 --> 08:56.290
+One name, this is two and this is nine.
+
+08:56.290 --> 08:57.910
+So edness zero.
+
+08:57.910 --> 08:59.110
+No, and it's not zero.
+
+08:59.320 --> 09:00.500
+So N is even.
+
+09:00.500 --> 09:02.260
+No, it is not even so.
+
+09:02.260 --> 09:02.980
+It is odd.
+
+09:03.040 --> 09:11.320
+So the letter here so m and also and so I will write on those things directly here to in the power of.
+
+09:13.130 --> 09:21.170
+Two into to do so, I'll try to square citizens and to em, so two square comma and the minus one by
+
+09:21.170 --> 09:25.850
+two, so that is nine minus one by two, nine minus one by two.
+
+09:26.360 --> 09:27.440
+That is eight by two.
+
+09:27.450 --> 09:28.340
+So it will be four.
+
+09:28.370 --> 09:29.870
+So I really like it at for.
+
+09:31.280 --> 09:34.250
+So to square, that is for coming forward.
+
+09:34.970 --> 09:39.030
+So this is the call, not again, a call is made this time.
+
+09:39.050 --> 09:44.410
+This is for that is two squares, two square and this is four so far.
+
+09:44.410 --> 09:46.670
+It is not zero for evil.
+
+09:46.670 --> 09:48.170
+No evil.
+
+09:48.170 --> 09:54.340
+No, just there is a call that multiplying into and end by two.
+
+09:54.650 --> 09:56.810
+So let us take our next call.
+
+09:56.960 --> 09:58.760
+That is part of.
+
+10:00.130 --> 10:08.170
+I mean, m m is now to square, so it becomes too square into two square and this should be bitou for
+
+10:08.170 --> 10:11.940
+four by two, four by two, that's what we have to do.
+
+10:12.160 --> 10:13.480
+So you can see this line.
+
+10:14.170 --> 10:15.460
+So this I will rewrite.
+
+10:15.460 --> 10:20.890
+So to square and square, this becomes two part four and four by two.
+
+10:20.890 --> 10:22.090
+So this becomes two.
+
+10:23.700 --> 10:25.030
+The new call again.
+
+10:27.230 --> 10:37.310
+Then let us continue to pause for and this has to do is not zero and two is even so it will enter into
+
+10:37.310 --> 10:37.870
+the spot.
+
+10:38.330 --> 10:48.780
+So next column that is aiming to end the power of Super four into two powerful comma and the two.
+
+10:48.920 --> 10:50.890
+So this is too divided by two.
+
+10:51.470 --> 10:53.020
+So I will write this one.
+
+10:53.030 --> 10:55.580
+So this becomes topower eight.
+
+10:57.110 --> 10:59.270
+And this becomes two by two as one.
+
+11:03.120 --> 11:11.820
+Now, this discon, this is to our aid, and this is one this time, and it's not zero but even and
+
+11:13.260 --> 11:17.440
+this time and is not zero and and it's not even number.
+
+11:17.580 --> 11:20.790
+It is one third and I think arge or Depok.
+
+11:21.060 --> 11:24.970
+So in that I'm in the power of so-and-so.
+
+11:25.110 --> 11:31.740
+So Emmas, how much to eight into power of Emmental.
+
+11:31.740 --> 11:40.320
+And that is to put it into Dupere that is topower 16 Gunma and the minus one by two one minus one by
+
+11:40.800 --> 11:41.340
+zero.
+
+11:43.410 --> 11:47.370
+So that's the last call now enhanced became zero.
+
+11:47.460 --> 11:49.350
+So four zero it becomes one.
+
+11:49.860 --> 11:57.780
+So this four zero value the return result, this one, this is one known what it will become.
+
+11:58.650 --> 12:02.340
+Dupo read in Q1 to pour aid into one.
+
+12:02.850 --> 12:06.830
+So this is to support aid and support aid goes here.
+
+12:07.020 --> 12:12.090
+So this becomes what each and every year this becomes Tobor aid.
+
+12:12.300 --> 12:13.860
+There is nothing, no multiplication.
+
+12:13.860 --> 12:16.980
+Is there just a return and to power it goes here.
+
+12:17.310 --> 12:21.420
+So this is going to be borate to into.
+
+12:22.740 --> 12:26.130
+So this is 2009 and 2009 online here.
+
+12:28.030 --> 12:33.880
+So whenever the call was for our number, there is one multiplication even then, but there is no multiplication
+
+12:33.880 --> 12:35.110
+simply it returns the value.
+
+12:35.530 --> 12:36.730
+So finally we got Don.
+
+12:36.730 --> 12:44.330
+So that is Drupa nine and total how many multiplications we perform one multiplication.
+
+12:44.350 --> 12:47.810
+And here we have taken square this this was 202, actually.
+
+12:48.100 --> 12:53.670
+So one, two, then three, four and five here.
+
+12:53.740 --> 12:55.200
+So one multiplication six.
+
+12:55.750 --> 13:03.610
+So just in six multiplication, we got to power nine in the previous version for this one, it has taken
+
+13:04.120 --> 13:06.490
+through the line multiplication for getting done.
+
+13:06.520 --> 13:09.220
+So when the power was nine, but No.
+
+13:09.220 --> 13:15.210
+Four over nine, this has worked faster and we got the result than just a six multiplications.
+
+13:16.640 --> 13:22.820
+So that's all about this power function, so we have a faster version of Exponent, and that is power
+
+13:22.820 --> 13:29.520
+function, also the same function can also be done using iteration that is using loop.
+
+13:29.750 --> 13:31.930
+So that's, again, a student exercise.
+
+13:32.270 --> 13:33.320
+So you have to do it.
+
+13:34.950 --> 13:39.930
+So we will continue looking at more example of recursions, incoming videos.

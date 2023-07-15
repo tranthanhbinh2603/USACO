@@ -1,0 +1,864 @@
+1
+00:00:00,590 --> 00:00:07,120
+And everyone, welcome back to this Victoria Informatics six foot incision coding part in the last rural,
+
+2
+00:00:07,130 --> 00:00:10,550
+we went through matrixes Financiacion and now we want to code it out.
+
+3
+00:00:11,050 --> 00:00:12,590
+It's so basically we just have to.
+
+4
+00:00:12,800 --> 00:00:17,360
+The mean part of it is to have it devouring it and.
+
+5
+00:00:21,070 --> 00:00:21,210
+Yes.
+
+6
+00:00:21,310 --> 00:00:23,680
+So before that, let me tell you some good problems.
+
+7
+00:00:24,100 --> 00:00:26,140
+I think so it is CQ.
+
+8
+00:00:26,890 --> 00:00:28,780
+This is a problem called on board.
+
+9
+00:00:28,900 --> 00:00:34,120
+You can try this problem after this particular tutorial and there's another SBP.
+
+10
+00:00:34,450 --> 00:00:42,770
+You can also go to one spot to solve these two problems after this and get your hands on metrics exponentially.
+
+11
+00:00:43,540 --> 00:00:43,820
+Cool.
+
+12
+00:00:44,530 --> 00:00:46,780
+So firstly, yeah, so here we are.
+
+13
+00:00:48,020 --> 00:00:52,690
+Normal code, I've just taken it as wrong because we'll be using more again and again because guys,
+
+14
+00:00:52,700 --> 00:00:58,310
+very easy thing, you'll notice that if I want to find out Fibonacci number of that, bigger heights
+
+15
+00:00:58,760 --> 00:01:05,900
+of that, some effort about it rate, so its value will be huge.
+
+16
+00:01:06,820 --> 00:01:08,380
+I can't even imagine that huge.
+
+17
+00:01:10,460 --> 00:01:12,830
+What I'll do is I'll just take some more there.
+
+18
+00:01:13,370 --> 00:01:19,760
+Let's take a 07:29 pool and let's find out the Fibonacci numbers.
+
+19
+00:01:20,540 --> 00:01:20,780
+So.
+
+20
+00:01:22,230 --> 00:01:27,360
+Of art in the Indomie, let's say I have RN and let's call it in Italy, right?
+
+21
+00:01:27,860 --> 00:01:28,890
+It's I want to find out why.
+
+22
+00:01:29,070 --> 00:01:30,860
+What is the fifth Fibonacci number plate?
+
+23
+00:01:30,870 --> 00:01:38,430
+So I'll just be out and highlight a function or method which will give me the energy when I get eight
+
+24
+00:01:38,740 --> 00:01:40,440
+going, babe.
+
+25
+00:01:41,710 --> 00:01:45,630
+And and will come away and then through an economic hole.
+
+26
+00:01:46,390 --> 00:01:48,400
+So how do I quote this?
+
+27
+00:01:48,400 --> 00:01:49,450
+How do I make a matrix?
+
+28
+00:01:49,710 --> 00:01:55,270
+So as I said, guys, I'll be using a very special method, which is a structure in structures we don't
+
+29
+00:01:55,270 --> 00:01:55,600
+have to.
+
+30
+00:01:55,610 --> 00:01:58,300
+We won't be worried about passing on.
+
+31
+00:01:59,550 --> 00:02:04,320
+Different the eddies and other stuff you hate, what I do is.
+
+32
+00:02:05,680 --> 00:02:06,530
+A very simple.
+
+33
+00:02:06,890 --> 00:02:15,530
+Firstly, I just dig a matrix instead of all, let's take em and let's give it, let's give it a Constance's
+
+34
+00:02:16,340 --> 00:02:16,600
+rule.
+
+35
+00:02:16,760 --> 00:02:23,090
+So constant size is two initially incinerate because four, according this, but that is.
+
+36
+00:02:24,620 --> 00:02:29,320
+When I give our trade, we we need to cross remittances, and this is to cross-pollinate metrics.
+
+37
+00:02:29,800 --> 00:02:32,650
+Here you will realize one thing that we don't need even metrics.
+
+38
+00:02:32,980 --> 00:02:34,690
+We don't need f and plus one metrics.
+
+39
+00:02:34,990 --> 00:02:39,100
+We just need to use metrics and we'll find do the power and minus two.
+
+40
+00:02:39,430 --> 00:02:44,860
+And when I have to do the power and minus two after this, I just need to multiply that by one one.
+
+41
+00:02:45,850 --> 00:02:51,760
+What does this mean that if I take just first two terms and add them of thee, that will be equal to
+
+42
+00:02:51,760 --> 00:02:56,290
+if I multiplied the first two with one one and get F and some eight?
+
+43
+00:02:57,050 --> 00:03:01,600
+I'm not like going f in metrics and f and both metric because we don't need it.
+
+44
+00:03:01,600 --> 00:03:04,150
+We just want the metrics and it's about eight.
+
+45
+00:03:04,450 --> 00:03:06,130
+So here I just take a structure.
+
+46
+00:03:06,130 --> 00:03:08,500
+Metrics so lazy will easily see that.
+
+47
+00:03:08,500 --> 00:03:11,920
+Why is it being so useful to us by taking this?
+
+48
+00:03:14,440 --> 00:03:17,350
+That is being very useful to us right after this.
+
+49
+00:03:17,570 --> 00:03:23,770
+Alex Rider constructed metrics, and what it will do is it will just simply said this to zero.
+
+50
+00:03:24,060 --> 00:03:26,500
+It will set all the terms to zero.
+
+51
+00:03:27,750 --> 00:03:34,290
+Well, after this let's item method, which will return, which will convert the matrix to an identity
+
+52
+00:03:34,290 --> 00:03:36,600
+form, what is an identity matrix?
+
+53
+00:03:36,600 --> 00:03:42,000
+It is one one one under-diagnosed or let's write a function called identity.
+
+54
+00:03:44,120 --> 00:03:45,390
+We need this identity.
+
+55
+00:03:45,440 --> 00:03:46,880
+I've already explained this to you.
+
+56
+00:03:47,150 --> 00:03:48,320
+Why do we need identity?
+
+57
+00:03:48,320 --> 00:03:54,880
+Because instead of resultant resulting in multiplication was born in in addition to zero, it is an
+
+58
+00:03:54,890 --> 00:03:56,900
+identity element in metrics.
+
+59
+00:03:56,900 --> 00:03:58,340
+It should be noted in duty metrics.
+
+60
+00:03:58,760 --> 00:04:03,920
+So from I will go from zero to size and what I do it is I'm off base.
+
+61
+00:04:05,600 --> 00:04:07,070
+Race is equal to one.
+
+62
+00:04:07,520 --> 00:04:10,220
+I just in the diagonally, I will put all.
+
+63
+00:04:11,450 --> 00:04:12,800
+This is an identity matrix.
+
+64
+00:04:12,840 --> 00:04:13,100
+Eight.
+
+65
+00:04:13,460 --> 00:04:21,230
+And now let's go to the last word of this structure metrics and the most important part that is I want
+
+66
+00:04:21,230 --> 00:04:22,760
+to multiply two matrices.
+
+67
+00:04:23,150 --> 00:04:23,410
+Eight.
+
+68
+00:04:23,600 --> 00:04:25,660
+So how do I multiply two matrices if?
+
+69
+00:04:28,020 --> 00:04:31,230
+If you if not, if you have not heard about what are we going to do?
+
+70
+00:04:32,930 --> 00:04:36,000
+Operator overloading, just go and check it out.
+
+71
+00:04:36,020 --> 00:04:45,260
+It's a it's a very, very nice tone like out of OPA Overlord and operator eight I defining this that
+
+72
+00:04:45,260 --> 00:04:48,470
+if I use a multiplication anywhere, then this particular function will be called.
+
+73
+00:04:49,040 --> 00:04:51,080
+This is called an operator, overloading late.
+
+74
+00:04:51,440 --> 00:04:53,360
+I simply pass a matrix to it.
+
+75
+00:04:54,620 --> 00:04:59,420
+And what I do is I simply now nothing if I see Matrix.
+
+76
+00:05:00,020 --> 00:05:01,280
+OK, let me give you an example.
+
+77
+00:05:01,490 --> 00:05:03,740
+If I say metrics, are I just going to?
+
+78
+00:05:03,740 --> 00:05:10,340
+Metrics are and I see if is he to OD into, let's say, another matrix Q I didn't do Q.
+
+79
+00:05:10,350 --> 00:05:14,390
+That means all these metrics are this operator is defined.
+
+80
+00:05:14,390 --> 00:05:15,650
+There is a multiplication operator.
+
+81
+00:05:15,650 --> 00:05:20,660
+After this, this Q matrix will be parsed as an argument to the function of.
+
+82
+00:05:22,960 --> 00:05:29,720
+That means art method will be called where it will be, Bosasa metrics are different metrics as an argument.
+
+83
+00:05:29,740 --> 00:05:32,620
+Now what I need to do is I need to multiply.
+
+84
+00:05:33,860 --> 00:05:35,570
+These were these four mattresses.
+
+85
+00:05:35,870 --> 00:05:38,150
+That means it has been passed to the.
+
+86
+00:05:39,450 --> 00:05:43,260
+Argument to the method is an argument, and I have to just multiply them.
+
+87
+00:05:43,830 --> 00:05:46,170
+I don't have to do much part here now.
+
+88
+00:05:46,920 --> 00:05:49,920
+What I simply say, I just take a matrix.
+
+89
+00:05:51,030 --> 00:05:53,190
+Let's call it resilient.
+
+90
+00:05:54,950 --> 00:05:57,830
+So, guys, how do I multiply two mattresses into a third mattress?
+
+91
+00:06:00,710 --> 00:06:07,100
+If this is a matrix, a this is a matrix, be eager to see Matrix because both these metrics are off
+
+92
+00:06:07,100 --> 00:06:10,910
+to to who goes to do grows too will give me two grows to eight.
+
+93
+00:06:12,240 --> 00:06:13,840
+If I received the E!
+
+94
+00:06:14,910 --> 00:06:15,990
+F e.
+
+95
+00:06:17,070 --> 00:06:17,980
+What is this storm?
+
+96
+00:06:18,000 --> 00:06:22,770
+It is, he goes to the first row, multiplied by bicycle eight.
+
+97
+00:06:23,010 --> 00:06:29,190
+So matrix multiplication is actually and this will be actually size cube algorithm, right?
+
+98
+00:06:29,220 --> 00:06:35,460
+Because we'll be using triple for loops here by triple values, because you fill one location of this
+
+99
+00:06:35,460 --> 00:06:38,940
+matrix, you fill one location of this matrix.
+
+100
+00:06:38,940 --> 00:06:44,430
+I need to go for the rows and for all the columns of both The Matrix, it's into three eight.
+
+101
+00:06:44,610 --> 00:06:45,780
+So let's do this then.
+
+102
+00:06:47,550 --> 00:06:49,800
+So let's go from I0 to.
+
+103
+00:06:51,250 --> 00:06:57,460
+Size and then let's go from day zero to buddy.
+
+104
+00:07:00,540 --> 00:07:02,490
+So I'm not I'm just not doing anything here.
+
+105
+00:07:02,540 --> 00:07:03,540
+Not not a big deal.
+
+106
+00:07:03,610 --> 00:07:05,400
+No, I'm not doing a big deal of it at eight.
+
+107
+00:07:06,210 --> 00:07:08,490
+It's a very simple --, just multiplying two mattresses.
+
+108
+00:07:08,490 --> 00:07:15,300
+The first mattress is this that is my all metrics that this I've already been taking matrix of it and
+
+109
+00:07:15,300 --> 00:07:17,250
+passing to it as an argument.
+
+110
+00:07:17,490 --> 00:07:20,040
+And the third mattresses resulted in which I'm storing.
+
+111
+00:07:20,880 --> 00:07:23,220
+So this is a metric that I will return.
+
+112
+00:07:24,470 --> 00:07:30,370
+Before all these locations of IED, that means for all these resultant IED, what I need to do is I
+
+113
+00:07:30,370 --> 00:07:31,150
+need to simply.
+
+114
+00:07:32,410 --> 00:07:34,510
+Have one more variable called.
+
+115
+00:07:37,170 --> 00:07:37,460
+Right.
+
+116
+00:07:37,800 --> 00:07:40,140
+And what will Discovery will do in?
+
+117
+00:07:42,230 --> 00:07:45,140
+For 30 days, it will be blessed with two.
+
+118
+00:07:47,510 --> 00:07:47,830
+M.
+
+119
+00:07:49,280 --> 00:07:52,460
+I e that means chaos going on.
+
+120
+00:07:52,730 --> 00:07:54,110
+That means it's constant.
+
+121
+00:07:54,650 --> 00:08:00,710
+While the first matrix for this matrix are is constant and gays going one by one, I had for all the
+
+122
+00:08:00,710 --> 00:08:07,490
+columns and for the second matrix, what I do is simple it will be equal to a dot and that means is
+
+123
+00:08:07,490 --> 00:08:08,510
+matrix eight.
+
+124
+00:08:08,510 --> 00:08:10,340
+A., M. e.g..
+
+125
+00:08:11,170 --> 00:08:16,100
+Hey, on second Matrix column is constant and we are simply moving down the slope.
+
+126
+00:08:16,620 --> 00:08:19,200
+It's just a normal multiplication and addition.
+
+127
+00:08:19,200 --> 00:08:22,650
+And after this word, what we need to do is in this alternate using.
+
+128
+00:08:23,970 --> 00:08:28,390
+We'll just ignore it and do it by name just seven so that the value doesn't exceed that limit.
+
+129
+00:08:28,410 --> 00:08:33,260
+And finally, this certain metrics, which will be stored in a well.
+
+130
+00:08:33,750 --> 00:08:38,789
+This is a normal matrix multiplication gates, normal medical operations.
+
+131
+00:08:38,789 --> 00:08:45,720
+You can easily see it has become so easy right now if you would be writing different methods and providing
+
+132
+00:08:45,720 --> 00:08:46,230
+to the.
+
+133
+00:08:47,280 --> 00:08:51,480
+Arguments, Stuart, it in won't take those arguments because they cannot be passed.
+
+134
+00:08:52,700 --> 00:08:54,710
+So, Ernest, also a very easy matter.
+
+135
+00:08:54,980 --> 00:09:02,090
+Now you will easily see the similarity between the by an exponential and meticulous one ingestion rate.
+
+136
+00:09:02,120 --> 00:09:02,900
+Now you will see it.
+
+137
+00:09:03,440 --> 00:09:05,840
+So initially what I'll do is I'll just take the resultant.
+
+138
+00:09:07,480 --> 00:09:10,960
+Metrics and what should be resurgent metrics be, it should be.
+
+139
+00:09:12,870 --> 00:09:18,480
+Identity matrix case is written should be identity because I have to multiply the image to destroy it.
+
+140
+00:09:19,170 --> 00:09:23,910
+Now, guys, let's take the matrix goatee that we have defined over here.
+
+141
+00:09:24,570 --> 00:09:24,880
+Eight.
+
+142
+00:09:24,940 --> 00:09:25,900
+Where is Steve Maddox?
+
+143
+00:09:26,010 --> 00:09:33,270
+Yeah, I just have to in Italy, all all zeros or t dot m zero zero.
+
+144
+00:09:33,300 --> 00:09:37,320
+I have one e dot m at zero.
+
+145
+00:09:37,860 --> 00:09:38,150
+One.
+
+146
+00:09:38,160 --> 00:09:41,190
+I have one and dot em one zero.
+
+147
+00:09:43,090 --> 00:09:49,090
+I have one aid to add these three locations, I have one in this matrix who can easily see, well,
+
+148
+00:09:49,570 --> 00:09:52,240
+I just feel that the Matrix and now what is the need?
+
+149
+00:09:52,780 --> 00:09:54,660
+The need is very simple and.
+
+150
+00:09:55,760 --> 00:10:00,230
+If I want to find an interview when I can and what I have to find nobody to the and minus to it, we
+
+151
+00:10:00,230 --> 00:10:04,520
+have already discussed this part by in minister is needed because I have to multiply it by two.
+
+152
+00:10:05,360 --> 00:10:08,380
+Let's find out due to the power and minus eight.
+
+153
+00:10:08,390 --> 00:10:09,890
+So it's a breakdown.
+
+154
+00:10:10,220 --> 00:10:10,670
+And.
+
+155
+00:10:12,000 --> 00:10:18,180
+So before these guys, let's make a case, if an is less than equal to do, then what we do is we'll
+
+156
+00:10:18,180 --> 00:10:25,590
+simply run one pool and the way will simply subtract then by two and do the normal exponential you hate
+
+157
+00:10:25,590 --> 00:10:27,720
+by violin, if anyone.
+
+158
+00:10:28,140 --> 00:10:32,340
+It means it's an odd number is written as equals two, resulting in two.
+
+159
+00:10:34,530 --> 00:10:42,180
+Eighty eight and easy goes to be in duty there just to square the normal thing that we did.
+
+160
+00:10:42,390 --> 00:10:46,740
+And instead, she goes, You to look, you can easily see it has become so easy.
+
+161
+00:10:46,980 --> 00:10:53,040
+If I use the normal operator overloading, if I define a structure matrix is indeed very easy, guys.
+
+162
+00:10:53,970 --> 00:10:57,900
+If you have coded this out, if you're trying to score Gordon, just this.
+
+163
+00:10:57,930 --> 00:11:02,010
+Compare your code with Michael Wright and you will realize the differences.
+
+164
+00:11:02,820 --> 00:11:08,330
+After performing this value, what I'll have is I'll have a property that that I want.
+
+165
+00:11:09,090 --> 00:11:11,210
+I'll get to do the power and minus two in resultant.
+
+166
+00:11:11,890 --> 00:11:13,950
+Where in this progress to rate?
+
+167
+00:11:14,590 --> 00:11:21,570
+So I just have to add the first two terms in them to what else in Britain, resulting dot m zero zero
+
+168
+00:11:21,780 --> 00:11:25,360
+plus is rendered m zero one.
+
+169
+00:11:25,740 --> 00:11:28,160
+And also I have ignored you guys.
+
+170
+00:11:28,350 --> 00:11:29,340
+Never forget mod.
+
+171
+00:11:31,770 --> 00:11:33,210
+Oh, yeah.
+
+172
+00:11:33,480 --> 00:11:33,900
+OK.
+
+173
+00:11:37,220 --> 00:11:40,040
+But you not I it will be, I know, chases.
+
+174
+00:11:42,730 --> 00:11:44,750
+Yeah, just just let me check for some.
+
+175
+00:11:45,850 --> 00:11:51,880
+It is not the rate is returning, but M, my bet is it is a structured and integrated.
+
+176
+00:11:53,480 --> 00:11:59,570
+They took no idea, so what is he when I give five, it is five as in the output sick.
+
+177
+00:12:00,780 --> 00:12:02,070
+Yeah, the fifth time is fine.
+
+178
+00:12:02,190 --> 00:12:03,750
+So let's check for the system.
+
+179
+00:12:05,270 --> 00:12:09,480
+We will discuss the complexity it great, Bentham.
+
+180
+00:12:10,280 --> 00:12:13,670
+One two three four five six seven eight nineteen fifty five.
+
+181
+00:12:14,390 --> 00:12:15,560
+It's working perfectly.
+
+182
+00:12:16,420 --> 00:12:20,060
+Hey, this is the normal explanation, but we have discussed.
+
+183
+00:12:20,880 --> 00:12:21,780
+This is a matrix.
+
+184
+00:12:23,980 --> 00:12:24,280
+Right.
+
+185
+00:12:25,910 --> 00:12:26,480
+And.
+
+186
+00:12:28,220 --> 00:12:28,520
+Yeah.
+
+187
+00:12:28,610 --> 00:12:30,800
+So now it's their time to discuss the complexities.
+
+188
+00:12:31,470 --> 00:12:33,110
+So what is the complexity of this law?
+
+189
+00:12:33,140 --> 00:12:36,020
+It is not often and this is.
+
+190
+00:12:37,000 --> 00:12:44,180
+Log off and of log often, and in this world is happening, data matrix multiplication functions being
+
+191
+00:12:44,180 --> 00:12:44,790
+called place.
+
+192
+00:12:45,190 --> 00:12:48,430
+What is the time that the Matrix is taking to be multiplied?
+
+193
+00:12:48,670 --> 00:12:50,950
+It is size into size into that.
+
+194
+00:12:51,040 --> 00:12:54,190
+Is there this ice cube or do you say there two nature?
+
+195
+00:12:54,250 --> 00:12:59,290
+It is basically Tokyo, which is eight in do log off and eight so.
+
+196
+00:13:00,990 --> 00:13:02,220
+Isn't it so?
+
+197
+00:13:03,560 --> 00:13:10,350
+Any rate so that it is regulated at a size cube into or off lock and.
+
+198
+00:13:11,600 --> 00:13:16,250
+Hey, if any relating to the poverty, Dean, it becomes 64 in two it.
+
+199
+00:13:17,400 --> 00:13:21,570
+It's not a complex, it nothing, not even in 3-D, it's.
+
+200
+00:13:22,530 --> 00:13:27,150
+It so, yeah, so it's not even in four digits, it's just less than a thousand.
+
+201
+00:13:28,230 --> 00:13:30,720
+So that's the beauty of expert gates.
+
+202
+00:13:31,310 --> 00:13:31,480
+Well.
+
+203
+00:13:33,320 --> 00:13:38,600
+They've given you various examples of excellent intuition and by any explanation how they can be done,
+
+204
+00:13:38,600 --> 00:13:39,680
+how they can be coded out.
+
+205
+00:13:40,460 --> 00:13:42,800
+So this is a complexity here.
+
+206
+00:13:42,800 --> 00:13:50,600
+We cannot ignore says, because for this example, Earth values for so it will be for cube into law
+
+207
+00:13:50,600 --> 00:13:50,930
+of an.
+
+208
+00:13:52,010 --> 00:13:57,950
+It was at this size cannot be ignored and of course, goes after it, I just want this Borduin to go
+
+209
+00:13:57,980 --> 00:14:00,020
+to these problems as USP.
+
+210
+00:14:00,020 --> 00:14:05,640
+And there's another problem said it's called SB two because SB records the sequence something.
+
+211
+00:14:06,350 --> 00:14:10,280
+And then there's another thing it is people some unspoilt.
+
+212
+00:14:10,370 --> 00:14:12,620
+Try that, too, if you wish to.
+
+213
+00:14:13,960 --> 00:14:19,900
+Well, I hope this school is very clear to you guys, and the complexity of it is also very clear to
+
+214
+00:14:19,900 --> 00:14:20,350
+you guys.
+
+215
+00:14:20,810 --> 00:14:21,770
+So that's it.
+
+216
+00:14:22,060 --> 00:14:23,290
+In the next part, thank you.
+

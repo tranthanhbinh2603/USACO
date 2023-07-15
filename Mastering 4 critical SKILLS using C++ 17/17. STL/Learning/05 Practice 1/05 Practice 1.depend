@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1669986829 source:c:\users\binh\documents\project\usaco\mastering 4 critical skills using c++ 17\17. stl\learning\03 deque\05 practice 1\main.cpp
+	<iostream>
+	<queue>
+

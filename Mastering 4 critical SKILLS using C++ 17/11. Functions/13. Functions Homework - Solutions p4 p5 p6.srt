@@ -1,0 +1,709 @@
+0
+1
+00:00:01,260 --> 00:00:06,810
+In this one we would like to write Is Palindrome Array, but as a function, we already implemented this
+1
+
+2
+00:00:06,810 --> 00:00:07,610
+logic before.
+2
+
+3
+00:00:07,620 --> 00:00:10,170
+So it's more or less about writing the function itself.
+3
+
+4
+00:00:12,350 --> 00:00:15,200
+Here is the code.
+4
+
+5
+00:00:15,470 --> 00:00:17,690
+We have a function that we call 'read_array'.
+5
+
+6
+00:00:17,960 --> 00:00:24,200
+So it takes an array of some big length like we define an array of big length.
+6
+
+7
+00:00:24,590 --> 00:00:26,330
+And the function do the two things.
+7
+
+8
+00:00:26,780 --> 00:00:33,100
+First, it will read the array content and it will read also here to the array length and return the array length.
+8
+
+9
+00:00:33,450 --> 00:00:36,410
+Remember arrays are passed by reference anyway.
+9
+
+10
+00:00:36,740 --> 00:00:42,080
+So you didn't need to take care like a reference or so if you read an array here, that array here will
+10
+
+11
+00:00:42,080 --> 00:00:44,330
+be definitely updated.
+11
+
+12
+00:00:44,630 --> 00:00:44,960
+OK.
+12
+
+13
+00:00:45,230 --> 00:00:48,950
+This is different from the normal variables that you need to pass by a reference.
+13
+
+14
+00:00:49,520 --> 00:00:54,350
+The second thing is the 'is_palindrome' function, where you take an array and its length.
+14
+
+15
+00:00:54,590 --> 00:01:02,120
+You have to pass the length and in a very similar logic to the reversing function. You have start and
+15
+
+16
+00:01:02,120 --> 00:01:03,080
+end positions.
+16
+
+17
+00:01:03,350 --> 00:01:05,060
+You go half of the distance.
+17
+
+18
+00:01:05,330 --> 00:01:07,550
+Compare the first with the last.
+18
+
+19
+00:01:07,880 --> 00:01:10,390
+And if they are not equal, you break.
+19
+
+20
+00:01:10,700 --> 00:01:14,060
+Otherwise, you keep going one step to the right and one step to the left.
+20
+
+21
+00:01:14,390 --> 00:01:16,880
+If we are done, would have processing and everything is good.
+21
+
+22
+00:01:17,180 --> 00:01:19,960
+You just return true. An example of that:
+22
+
+23
+00:01:19,970 --> 00:01:26,000
+Let's say we have an aabaa for example.
+23
+
+24
+00:01:26,240 --> 00:01:29,300
+So first we have a pointer at 'a' and 'a'.
+24
+
+25
+00:01:29,510 --> 00:01:30,830
+Let's make it different.
+25
+
+26
+00:01:30,950 --> 00:01:33,100
+Let's go to the adbda.
+26
+
+27
+00:01:34,820 --> 00:01:37,480
+Now it first compare the 'a' with the 'a'.
+27
+
+28
+00:01:37,920 --> 00:01:38,270
+Good?
+28
+
+29
+00:01:38,270 --> 00:01:38,630
+Good.
+29
+
+30
+00:01:38,970 --> 00:01:43,850
+Then now start at one and end with 'd',  compare 'd' with 'd'. good?
+30
+
+31
+00:01:43,880 --> 00:01:44,300
+Yes.
+31
+
+32
+00:01:44,310 --> 00:01:44,690
+Go.
+32
+
+33
+00:01:45,020 --> 00:01:48,360
+Now at 'b' & 'b', they would be equal with no need to compare.
+33
+
+34
+00:01:48,380 --> 00:01:48,770
+Stop.
+34
+
+35
+00:01:49,100 --> 00:01:51,050
+So it means half of the distance.
+35
+
+36
+00:01:51,050 --> 00:01:52,190
+We were good to go.
+36
+
+37
+00:01:52,220 --> 00:01:54,320
+So this is a palindrome string.
+37
+
+38
+00:01:55,070 --> 00:01:57,500
+This is all about the is_palindrome function.
+38
+
+39
+00:02:00,520 --> 00:02:07,900
+Homework number five, Set-powers, we would like to take an array, and this is its length and m is the
+39
+
+40
+00:02:07,900 --> 00:02:09,010
+value, the base.
+40
+
+41
+00:02:09,280 --> 00:02:15,850
+And I would like to compute like all of the different bases, for example, 2 to 
+41
+
+42
+00:02:15,850 --> 00:02:20,950
+power 0, 2 to power 1, 2 to power 2, 2 to power 3, 2 to power 4, and so on.
+42
+
+43
+00:02:21,820 --> 00:02:23,470
+So how can we do that with an array?
+43
+
+44
+00:02:25,130 --> 00:02:30,420
+We would simply we can use the history, like let's say that you would like to do for
+44
+
+45
+00:02:30,420 --> 00:02:35,610
+the base m equals 3 ,this is three, then the next number here is just three times three, which
+45
+
+46
+00:02:35,610 --> 00:02:36,000
+is nine.
+46
+
+47
+00:02:36,540 --> 00:02:41,220
+Then for the 27? it is just the three times nine and so on.
+47
+
+48
+00:02:41,670 --> 00:02:47,160
+In a similar way here, if you have the eight multiplied by two, it's 16, multiplied by 2 it's 32.
+48
+
+49
+00:02:47,460 --> 00:02:49,380
+So you can utilize your history here.
+49
+
+50
+00:02:49,860 --> 00:02:51,390
+So let's see how to implement that.
+50
+
+51
+00:02:52,890 --> 00:02:58,320
+We first of all, we have an array, we read its length, we read the 'm', then we call 'set_powers'. 
+51
+
+52
+00:02:58,680 --> 00:03:06,150
+After that we print the given array. 'set_powers' said the first number was one because 'm' to the power
+52
+
+53
+00:03:06,170 --> 00:03:09,240
+zero is one. Then starting from one, it do the following:
+53
+
+54
+00:03:09,630 --> 00:03:15,690
+It says that array of 'i' equals array of 'i-1', which is the history times two.
+54
+
+55
+00:03:15,900 --> 00:03:16,930
+So let's see an example.
+55
+
+56
+00:03:16,950 --> 00:03:19,860
+Let's say we'd like to make it for m=3.
+56
+
+57
+00:03:19,860 --> 00:03:20,220
+Three.
+57
+
+58
+00:03:20,610 --> 00:03:22,590
+We first initialize with m=1.
+58
+
+59
+00:03:23,220 --> 00:03:26,420
+Then array of one would be array of zero times three.
+59
+
+60
+00:03:26,790 --> 00:03:27,450
+So it would be now 3.
+60
+
+61
+00:03:27,480 --> 00:03:34,710
+Then array of two will be array of one, which is three times three, which is nine.
+61
+
+62
+00:03:35,400 --> 00:03:39,220
+Then array of the next number will be the previous, which is nine times three.
+62
+
+63
+00:03:39,250 --> 00:03:42,060
+It would be twenty seven times three and so on.
+63
+
+64
+00:03:42,510 --> 00:03:47,560
+So this is style is very similar to the Factorial style.
+64
+
+65
+00:03:47,580 --> 00:03:51,810
+Remember a  factorial style that we were using the previous number.
+65
+
+66
+00:03:51,930 --> 00:03:53,220
+So it's the same exactly.
+66
+
+67
+00:03:53,220 --> 00:03:53,460
+Here.
+67
+
+68
+00:03:55,280 --> 00:03:57,320
+So this is mainly about setting the powers.
+68
+
+69
+00:03:58,040 --> 00:04:00,830
+What's next? Get the nth-prime.
+69
+
+70
+00:04:00,860 --> 00:04:02,570
+We would like to develop two functions.
+70
+
+71
+00:04:02,870 --> 00:04:07,580
+One of them is to compute the prime number and another one is to compute with the nth prime number.
+71
+
+72
+00:04:07,850 --> 00:04:10,700
+And the nth prime number should use the is_prime number.
+72
+
+73
+00:04:11,030 --> 00:04:12,620
+So let's see how can we develop that.
+73
+
+74
+00:04:15,620 --> 00:04:19,250
+Firstly, let's develop 'is_prime' number, the is_prime logic we wrote it before
+74
+
+75
+00:04:19,610 --> 00:04:22,010
+if I remember correctly. We take a number.
+75
+
+76
+00:04:22,460 --> 00:04:26,460
+So the function would turn bool if the number is less than or equal one, 
+76
+
+77
+00:04:26,480 --> 00:04:27,560
+This isn't a prime number.
+77
+
+78
+00:04:28,070 --> 00:04:32,760
+Otherwise, we can start from i=2 up to the number itself.
+78
+
+79
+00:04:32,780 --> 00:04:37,740
+But without equal then plus plus. Every time we check if the number is divisible or not.
+79
+
+80
+00:04:37,760 --> 00:04:39,850
+If it is, then we return false.
+80
+
+81
+00:04:39,860 --> 00:04:41,210
+Otherwise, we return to true.
+81
+
+82
+00:04:41,720 --> 00:04:46,370
+For example, if I give you a number like 11, then you start from 2 up to 10.
+82
+
+83
+00:04:46,730 --> 00:04:50,290
+Every time you check does 11 is divisible by two?
+83
+
+84
+00:04:50,330 --> 00:04:51,830
+No, divisible by three?
+84
+
+85
+00:04:52,270 --> 00:04:54,440
+No. Divisible by four? No. Once it ends
+85
+
+86
+00:04:54,440 --> 00:04:58,250
+and none of them were like divisible by i
+86
+
+87
+00:04:58,460 --> 00:05:00,200
+so we know we are good to go.
+87
+
+88
+00:05:00,230 --> 00:05:01,220
+This is a prime number.
+88
+
+89
+00:05:01,880 --> 00:05:06,410
+Now, the next challenge may be the real challenge and the problem is the nth prime number.
+89
+
+90
+00:05:06,830 --> 00:05:10,220
+This function will return us the nth prime number.
+90
+
+91
+00:05:10,250 --> 00:05:16,640
+For example, if I give it number six, it will give for me 13.
+91
+
+92
+00:05:17,300 --> 00:05:18,230
+So how to do that?
+92
+
+93
+00:05:18,740 --> 00:05:20,240
+The idea is simple.
+93
+
+94
+00:05:20,540 --> 00:05:22,820
+We will start from equal i=2.
+94
+
+95
+00:05:23,660 --> 00:05:29,550
+And we have a counter, let's say six will keep searching the numbers starting from two.
+95
+
+96
+00:05:29,570 --> 00:05:31,310
+Every number that  is a prime number,
+96
+
+97
+00:05:31,310 --> 00:05:32,630
+we reduce one with us.
+97
+
+98
+00:05:33,230 --> 00:05:35,420
+For example, we start with...,
+98
+
+99
+00:05:36,620 --> 00:05:42,210
+We know that n equals six, we start at n equal 2. Is 2 prime number?
+99
+
+100
+00:05:42,230 --> 00:05:42,530
+Yes.
+100
+
+101
+00:05:42,770 --> 00:05:44,500
+Then we are searching now for the fifth
+101
+
+102
+00:05:44,500 --> 00:05:48,860
+prime number. Is three prime number? Yes,  then searching for the fourth prime number
+102
+
+103
+00:05:48,860 --> 00:05:50,840
+starting from here. Is four prime number?
+103
+
+104
+00:05:51,090 --> 00:05:52,630
+No. Is five 
+104
+
+105
+00:05:52,640 --> 00:05:53,170
+prime number?
+105
+
+106
+00:05:53,180 --> 00:05:53,570
+Yes.
+106
+
+107
+00:05:53,600 --> 00:05:55,970
+Then we are searching for the third prime number
+107
+
+108
+00:05:55,970 --> 00:05:58,900
+but from here, there are like the other three prime .
+108
+
+109
+00:05:58,910 --> 00:05:59,930
+numbers.
+109
+
+110
+00:05:59,940 --> 00:06:01,400
+Is six prime number?
+110
+
+111
+00:06:01,400 --> 00:06:02,270
+No, no, ignore.
+111
+
+112
+00:06:02,270 --> 00:06:04,070
+Is seven prime number?
+112
+
+113
+00:06:04,100 --> 00:06:04,610
+Yes.
+113
+
+114
+00:06:04,910 --> 00:06:07,340
+And we need like other three numbers.
+114
+
+115
+00:06:07,580 --> 00:06:08,640
+Then now decrease it, 
+115
+
+116
+00:06:08,670 --> 00:06:10,460
+now we have two. 
+116
+
+117
+00:06:10,940 --> 00:06:11,810
+Is 8 prime number? No
+117
+
+118
+00:06:11,810 --> 00:06:13,640
+Is nine prime number?
+118
+
+119
+00:06:13,640 --> 00:06:14,750
+No, is 10 prime number?
+119
+
+120
+00:06:14,750 --> 00:06:15,560
+No.
+120
+
+121
+00:06:15,860 --> 00:06:17,120
+Is 11 prime number?
+121
+
+122
+00:06:17,150 --> 00:06:17,630
+Yes.
+122
+
+123
+00:06:17,750 --> 00:06:18,460
+Decrease it.
+123
+
+124
+00:06:18,500 --> 00:06:20,390
+Now we are searching for a single prime number.
+124
+
+125
+00:06:20,390 --> 00:06:21,040
+once we found it
+125
+
+126
+00:06:21,050 --> 00:06:22,880
+we know that prime number. Is 12
+126
+
+127
+00:06:23,210 --> 00:06:25,040
+prime number? No. Is 13
+127
+
+128
+00:06:25,040 --> 00:06:25,910
+prime number? yes.
+128
+
+129
+00:06:25,940 --> 00:06:30,080
+Now n equals zero, which means we found six prime numbers.
+129
+
+130
+00:06:30,470 --> 00:06:34,070
+If we found six prime numbers and n equals zero, it means we are done.
+130
+
+131
+00:06:34,070 --> 00:06:34,940
+We found it here.
+131
+
+132
+00:06:36,140 --> 00:06:37,310
+So this is the logic here.
+132
+
+133
+00:06:37,640 --> 00:06:40,730
+We start from 'i=2'.
+133
+
+134
+00:06:41,090 --> 00:06:46,670
+And every time if this is a prime number, then remove one prime number.
+134
+
+135
+00:06:46,680 --> 00:06:47,900
+We found one prime number.
+135
+
+136
+00:06:48,230 --> 00:06:52,280
+We will keep searching, searching, searching. Once n == zero,
+136
+
+137
+00:06:52,310 --> 00:06:55,010
+it means we found all of the numbers that we need.
+137
+
+138
+00:06:55,280 --> 00:06:58,520
+So I must to be the prime number of interest.
+138
+
+139
+00:06:58,760 --> 00:07:02,810
+So again, please use this example and try to trace it.
+139
+
+140
+00:07:03,530 --> 00:07:10,440
+And the final loop here is just printing all the prime numbers from like one to 19, just the printing
+140
+
+141
+00:07:10,440 --> 00:07:10,880
+of them here.
+141
+
+142
+00:07:11,240 --> 00:07:13,670
+I hope the logic of the function is clear.

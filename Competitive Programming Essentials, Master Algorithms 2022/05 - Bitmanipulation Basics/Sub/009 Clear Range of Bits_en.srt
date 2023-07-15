@@ -1,0 +1,360 @@
+1
+00:00:01,900 --> 00:00:07,600
+Hi Everyone, so now we are going to discuss one more function that is a bit tricky than what we have done
+
+2
+00:00:07,600 --> 00:00:08,109
+so far.
+
+3
+00:00:08,710 --> 00:00:13,460
+And so what we need to do? we need to clear bits in the range i 2 j.
+
+4
+00:00:14,050 --> 00:00:19,510
+So what we are given we are given a number, maybe something like this one one zero zero one zero
+
+5
+00:00:19,570 --> 00:00:25,930
+zero one one zero and let's say I'm given Index I and Index J.
+
+6
+00:00:27,310 --> 00:00:30,280
+I want to clear all the bits in this particular in range ok. 
+
+7
+00:00:30,280 --> 00:00:31,240
+let say this is i.
+
+8
+00:00:32,200 --> 00:00:35,140
+And this is j, and this is i.
+
+9
+00:00:39,700 --> 00:00:45,000
+So I want to remove all the bits starting from index...sorry I want to.
+
+10
+00:00:45,190 --> 00:00:48,120
+Yes, I want to remove all the bits starting from index I
+
+11
+00:00:48,130 --> 00:00:51,820
+till the index j. they need to be cleared out.
+
+12
+00:00:52,330 --> 00:00:53,920
+I want to set them as zero.
+
+13
+00:00:54,520 --> 00:00:59,620
+So we have seen if you need to clear a particular bit you need a mask in which we have zero at that
+
+14
+00:00:59,620 --> 00:01:00,430
+particular index.
+
+15
+00:01:00,970 --> 00:01:06,850
+So for this case, what we need is we need a mask in which we have
+
+16
+00:01:08,670 --> 00:01:16,920
+all the bits at this position as one and all the birds at this position as zero and all the bits at
+
+17
+00:01:16,920 --> 00:01:20,670
+the positions starting from I plus one till the zero as one.
+
+18
+00:01:20,910 --> 00:01:23,160
+OK, so we need something like this.
+
+19
+00:01:23,810 --> 00:01:26,160
+ok this index is I, this index is J.
+
+20
+00:01:26,550 --> 00:01:32,070
+These bits should be zero, so we need to see how we can create this particular kind of a mask.
+
+21
+00:01:32,800 --> 00:01:37,440
+The thing is very simple we can actually break this down into two components.
+
+22
+00:01:38,310 --> 00:01:43,290
+How to create this mask ? let say to this one part is A and A looks something like this.
+
+23
+00:01:43,500 --> 00:01:50,640
+we have lots of ones followed by all zeros and we can also have B in which we have lots of zeros
+
+24
+00:01:52,470 --> 00:01:56,580
+Followed by ones starting from the index I +1.
+
+25
+00:01:56,670 --> 00:02:03,060
+OK, this is something we can actually do and this is what we have....
+
+26
+00:02:06,380 --> 00:02:08,180
+We have J number of
+
+27
+00:02:09,979 --> 00:02:12,740
+We have J+1 one number of zeros here.
+
+28
+00:02:12,860 --> 00:02:17,780
+OK, so basically in order to create this mask we have already seen what we can do.
+
+29
+00:02:17,810 --> 00:02:19,670
+We can take
+
+30
+00:02:21,980 --> 00:02:25,930
+all ones and we can right shift it with J plus one.
+
+31
+00:02:26,000 --> 00:02:32,360
+OK, so if we have all number of ones that is nothing but that is NOT of zero or that is minus one.
+
+32
+00:02:32,960 --> 00:02:38,120
+So if we do a left shift with index J plus one we will get the number A.
+
+33
+00:02:38,570 --> 00:02:38,900
+OK.
+
+34
+00:02:39,380 --> 00:02:39,920
+That's it.
+
+35
+00:02:40,460 --> 00:02:43,550
+How do we get the number B? finding the number we is
+
+36
+00:02:44,420 --> 00:02:47,210
+You can find that this number is nothing
+
+37
+00:02:47,210 --> 00:02:49,380
+but if you look at the number 15.
+
+38
+00:02:49,400 --> 00:02:53,750
+So what is 15 ? 15 is lots of zeros followed by four ones.
+
+39
+00:02:54,140 --> 00:02:55,190
+What about 31?
+
+40
+00:02:55,820 --> 00:02:57,840
+This is lots of zeros followed by five
+
+41
+00:02:57,860 --> 00:02:59,540
+number of one. we need something like this.
+
+42
+00:03:00,170 --> 00:03:04,010
+So this number is of the form two raise to the power n minus one.
+
+43
+00:03:04,610 --> 00:03:06,120
+And what is two raise to the power n?
+
+44
+00:03:06,920 --> 00:03:09,440
+So for 15 we get 4 bits.
+
+45
+00:03:09,590 --> 00:03:09,920
+OK.
+
+46
+00:03:10,220 --> 00:03:13,980
+So if n is four we get last...last four
+
+47
+00:03:14,010 --> 00:03:21,170
+Bit as four. how many bits we need it? we actually need i number of bits here. Ok. we actually need
+
+48
+00:03:21,900 --> 00:03:24,440
+so this is from zero to i minus one.
+
+49
+00:03:25,190 --> 00:03:27,350
+We actually need I number of bits here.
+
+50
+00:03:27,470 --> 00:03:27,800
+OK.
+
+51
+00:03:28,100 --> 00:03:34,510
+So basically, it does nothing but this number is nothing but 2 raise to the power I minus one. 
+
+52
+00:03:34,580 --> 00:03:35,900
+And what is 2 raise to the power i?
+
+53
+00:03:36,710 --> 00:03:40,730
+So we can write this as one left shift I.
+
+54
+00:03:41,920 --> 00:03:44,020
+And subtract one out of it.
+
+55
+00:03:44,050 --> 00:03:49,450
+So B is nothing but one left shift I and subtract one out of it.
+
+56
+00:03:49,780 --> 00:03:50,770
+And what is mask?
+
+57
+00:03:51,340 --> 00:03:53,490
+mask is nothing but A or B.
+
+58
+00:03:54,100 --> 00:03:55,240
+Now we get this number.
+
+59
+00:03:55,720 --> 00:03:58,240
+And what is our final number?
+
+60
+00:03:58,390 --> 00:03:59,860
+So mask we now have.
+
+61
+00:04:00,400 --> 00:04:02,080
+And what is the value of N?
+
+62
+00:04:02,410 --> 00:04:09,240
+So if you do a AND of this mask with the number, it is going to clear these bits from I index to till J.
+
+63
+00:04:09,820 --> 00:04:13,420
+So n is going to be n and mask.
+
+64
+00:04:13,930 --> 00:04:14,500
+That's it.
+
+65
+00:04:15,310 --> 00:04:18,550
+And we are done OK and we are done for the
+
+66
+00:04:20,260 --> 00:04:20,790
+Method.
+
+67
+00:04:20,980 --> 00:04:25,570
+So let's try to implement the code and then we will see in the output.
+
+68
+00:04:28,650 --> 00:04:36,240
+So let us first find out A. so A is nothing but NOT of zero or minus one, you can take left shift 
+
+69
+00:04:38,130 --> 00:04:39,890
+j plus one. OK.
+
+70
+00:04:40,370 --> 00:04:42,020
+And what about B?
+
+71
+00:04:42,230 --> 00:04:45,300
+B is one left shift i minus .
+
+72
+00:04:45,920 --> 00:04:47,150
+And what is mask?
+
+73
+00:04:47,690 --> 00:04:50,840
+It is nothing but A or B and what is n?
+
+74
+00:04:51,020 --> 00:04:53,210
+N equals two n and mask.
+
+75
+00:04:54,020 --> 00:04:54,620
+That's it.
+
+76
+00:04:55,370 --> 00:05:00,860
+Let us see our N is 31 and I want to clear the bits in the range.
+
+77
+00:05:05,460 --> 00:05:07,470
+let's say one, I is one and
+
+78
+00:05:11,560 --> 00:05:13,860
+J is let's say three. OK.
+
+79
+00:05:16,600 --> 00:05:18,040
+So I can say a...
+
+80
+00:05:20,620 --> 00:05:22,690
+Clear bits in the range.
+
+81
+00:05:23,650 --> 00:05:27,490
+I give the number n, I give i and I give j.
+
+82
+00:05:28,090 --> 00:05:32,200
+And let us see what output it produces.
+
+83
+00:05:34,380 --> 00:05:38,160
+So it is giving us the number 17, so let's see what happens.
+
+84
+00:05:38,790 --> 00:05:44,650
+So 31 is five times one and zero one two three.
+
+85
+00:05:44,670 --> 00:05:45,720
+So I said ok. cleare
+
+86
+00:05:45,720 --> 00:05:49,530
+All these three bits, I get the number one zero zero one.
+
+87
+00:05:50,070 --> 00:05:54,750
+This is nothing but to raise to the power four and this is two raise to the power zero.
+
+88
+00:05:55,320 --> 00:06:00,470
+This is 16+1, 17 and we are getting this number 17.
+
+89
+00:06:01,380 --> 00:06:01,930
+That's it.
+
+90
+00:06:01,950 --> 00:06:08,700
+That means the code is working perfectly fine and I hope this is clear to you.
+

@@ -1,0 +1,395 @@
+1
+00:00:01,230 --> 00:00:08,220
+The concern about the winter is what we call accustomed to litter from it's a name we would like to
+
+2
+00:00:08,220 --> 00:00:11,890
+do some customization when it comes to deleting the should the pointer.
+
+3
+00:00:12,660 --> 00:00:20,100
+So when you have like something like a shirt winter and you would like to delete it, there is some
+
+4
+00:00:20,100 --> 00:00:22,410
+default mechanism to delete it.
+
+5
+00:00:22,920 --> 00:00:24,900
+In some very minor situations.
+
+6
+00:00:25,050 --> 00:00:28,800
+It might be like I have to delete the printer in a very specific way.
+
+7
+00:00:29,340 --> 00:00:33,970
+If this is the case, then you are providing something other than the default to the letter.
+
+8
+00:00:34,350 --> 00:00:37,290
+So the way that you define that letter is as following.
+
+9
+00:00:37,320 --> 00:00:43,500
+You define some function here like say let's say quote, a deleted typical, it's void and you are passing
+
+10
+00:00:43,540 --> 00:00:48,000
+for each parameter, which is typically the root pointer to it could be integral pointer B, double
+
+11
+00:00:48,000 --> 00:00:48,980
+pointer B and so on.
+
+12
+00:00:49,650 --> 00:00:54,450
+And here inside the function, you are just reviewing the default logic and deletion.
+
+13
+00:00:54,810 --> 00:00:59,130
+So you can think of this function very close to the normal function inside your distracter, something
+
+14
+00:00:59,130 --> 00:01:01,740
+that is just deleting your roll pointer.
+
+15
+00:01:02,400 --> 00:01:06,630
+After that, you are passing the function to the chair, the pointer.
+
+16
+00:01:06,930 --> 00:01:09,420
+So they should point really sticking to barometer's.
+
+17
+00:01:09,420 --> 00:01:15,540
+The first one is a pointer and the second is the function that's going to delete this pointer.
+
+18
+00:01:15,810 --> 00:01:17,820
+Please familiarize yourself with the syntax.
+
+19
+00:01:17,820 --> 00:01:18,120
+It is.
+
+20
+00:01:18,120 --> 00:01:18,430
+It is.
+
+21
+00:01:18,440 --> 00:01:18,930
+That's all.
+
+22
+00:01:19,880 --> 00:01:29,320
+So let's see, let's provide some some some some examples that might like justify the need for the if
+
+23
+00:01:29,690 --> 00:01:35,210
+the appointed in a specific way, let's say we have a legacy, the word legacy indicates some system
+
+24
+00:01:35,210 --> 00:01:40,190
+that's very old, probably written in an improper way or with very little direct knowledge or style.
+
+25
+00:01:40,760 --> 00:01:44,180
+So the legacy, the legacy that the guy designed was as following.
+
+26
+00:01:44,540 --> 00:01:46,460
+He has some function that's named ravis.
+
+27
+00:01:46,700 --> 00:01:54,490
+He has some structure and he has here he is creating an object to fit, but typically to destroy it.
+
+28
+00:01:54,500 --> 00:01:55,850
+He has to do two things.
+
+29
+00:01:56,120 --> 00:01:58,070
+He has to call that the B release.
+
+30
+00:01:58,430 --> 00:02:00,530
+Then he has to delete the object.
+
+31
+00:02:00,800 --> 00:02:06,980
+So if this guy put the release function code from the structural, wouldn't need the right number 17.
+
+32
+00:02:07,640 --> 00:02:10,580
+The model of this old style is 17 and 18.
+
+33
+00:02:10,580 --> 00:02:13,190
+You have to do these two steps to free it.
+
+34
+00:02:13,970 --> 00:02:19,910
+So now with a custom deleted, I cannot just make an I share the pointer over the object and that's
+
+35
+00:02:19,910 --> 00:02:22,930
+it, because no one is going to call the delete the release function.
+
+36
+00:02:23,510 --> 00:02:29,780
+So we define our delete function and we provided with the pointer for the object.
+
+37
+00:02:30,110 --> 00:02:34,100
+And then we are calling either a function and we are deleting the object.
+
+38
+00:02:34,520 --> 00:02:38,840
+After that we are defining the function here with this deleted.
+
+39
+00:02:38,930 --> 00:02:43,400
+That's all you can actually provide several times here.
+
+40
+00:02:43,400 --> 00:02:45,470
+And consider this as a habit.
+
+41
+00:02:45,470 --> 00:02:50,980
+You can provide it like function to function, pointer function, you can even provide the function.
+
+42
+00:02:51,170 --> 00:02:55,130
+So for example, if you would like to provide a function, then you are going to provide it with the
+
+43
+00:02:55,130 --> 00:03:01,490
+same style for the function like here, providing it with the above the local scope and providing the
+
+44
+00:03:01,490 --> 00:03:04,250
+object parameter and doing the logic.
+
+45
+00:03:04,280 --> 00:03:07,880
+So from here to here, this is as simple as this function.
+
+46
+00:03:07,880 --> 00:03:12,470
+Remember, the function is just a function that doesn't have a name, somethin's something.
+
+47
+00:03:12,470 --> 00:03:14,050
+And so that's all.
+
+48
+00:03:14,300 --> 00:03:16,640
+So you can provide it with this different.
+
+49
+00:03:19,890 --> 00:03:26,100
+To also provide more context about that, I would like to tell you something in here when you define
+
+50
+00:03:26,100 --> 00:03:29,220
+a unique pointer over B over an array.
+
+51
+00:03:29,240 --> 00:03:34,780
+So this is going to a very, very straightforward in C++ 14.
+
+52
+00:03:34,800 --> 00:03:36,880
+You couldn't do that for sure, the pointers.
+
+53
+00:03:36,960 --> 00:03:43,530
+So if you try to do something like the pointer and over between you and 16, this would will not compile
+
+54
+00:03:43,530 --> 00:03:44,710
+and C++ 14.
+
+55
+00:03:45,060 --> 00:03:47,310
+This is going to work well in C++ 17.
+
+56
+00:03:47,670 --> 00:03:53,360
+So I would like to take the chance and let you know how people used to handle that in C++ 14 and 11.
+
+57
+00:03:53,880 --> 00:03:56,430
+The way to handle that is a bit workaround.
+
+58
+00:03:56,790 --> 00:04:02,790
+You define it as an integer, not an integer, and then you define herehere integrate and then you are
+
+59
+00:04:02,790 --> 00:04:04,360
+providing your director function.
+
+60
+00:04:04,380 --> 00:04:06,470
+I'm here defining it as an anonymous function.
+
+61
+00:04:06,600 --> 00:04:10,190
+So I'm turning here into your entire array, then just delete the array.
+
+62
+00:04:10,200 --> 00:04:16,620
+So the model of that you are defining that if you didn't define the array, the default to the data
+
+63
+00:04:16,640 --> 00:04:22,140
+will just use the delete without the brackets, which is undefined behavior and typically a memory need
+
+64
+00:04:22,440 --> 00:04:24,450
+subclass before C++ 17.
+
+65
+00:04:24,450 --> 00:04:27,750
+We have to do a custom the to delete it.
+
+66
+00:04:29,710 --> 00:04:32,140
+Let's also take the chance and make things more generic.
+
+67
+00:04:32,180 --> 00:04:39,570
+How can I make my code more generic, like I don't need to delete for an entire need for a double whatever?
+
+68
+00:04:39,610 --> 00:04:41,260
+Way let's let's go with the normal function.
+
+69
+00:04:41,290 --> 00:04:46,590
+I'm going to define the little function and then use a template for it and use it and just delete it.
+
+70
+00:04:47,020 --> 00:04:52,180
+And now the woman overseeing the function, I say the little bit of typing, if you'd like to use a
+
+71
+00:04:52,180 --> 00:04:58,150
+functor then you can use a struct here, for example, across and provide the function call operator
+
+72
+00:04:58,150 --> 00:05:02,270
+here and then you do your duty or delete.
+
+73
+00:05:02,650 --> 00:05:05,860
+This is wrong, by the way, line 10, it needs a sort of RIVETTE.
+
+74
+00:05:06,640 --> 00:05:11,970
+So here you are going to call again, ready to integrate.
+
+75
+00:05:11,980 --> 00:05:13,840
+And don't forget to use the brackets.
+
+76
+00:05:13,930 --> 00:05:16,840
+The brand is here to activate the call.
+
+77
+00:05:18,730 --> 00:05:24,260
+I would like to the scenario and let you know about some examples that you might need a dilator.
+
+78
+00:05:24,280 --> 00:05:30,920
+Let's say that you have your system and you are going to like stream on magnifiers.
+
+79
+00:05:30,940 --> 00:05:32,260
+You're going to open many files.
+
+80
+00:05:32,760 --> 00:05:37,200
+I would like to have a calendar of how many files are in the system right now.
+
+81
+00:05:37,600 --> 00:05:43,990
+So with every creation, you are incrementing some global static counter and with every deletion you
+
+82
+00:05:43,990 --> 00:05:46,590
+would like to do minus mindset's a character.
+
+83
+00:05:46,840 --> 00:05:52,510
+So in your in your custom, the little function, now you are deleting the object, but you are also
+
+84
+00:05:54,220 --> 00:05:56,350
+minimizing your counter this way.
+
+85
+00:05:56,440 --> 00:06:01,730
+Your function is maintaining the overall number of open divides or some statistics in that you like.
+
+86
+00:06:01,870 --> 00:06:05,770
+Just one more example to make sure the function.
+
+87
+00:06:06,100 --> 00:06:11,630
+Remember we said that the make sure the function and the unique are the right way, which is more than
+
+88
+00:06:11,630 --> 00:06:12,380
+the reason for that.
+
+89
+00:06:12,400 --> 00:06:19,390
+For example, memory Weissert create one block, two blocks we refer to it before is also from an exhibition
+
+90
+00:06:19,390 --> 00:06:20,630
+perspective, it's a bit better.
+
+91
+00:06:21,130 --> 00:06:24,580
+So regardless of the reasons why, make sure it is better, we have to use it.
+
+92
+00:06:24,880 --> 00:06:31,450
+But with the was betting that the return, the mixture doesn't have an extra parameter to allow that.
+
+93
+00:06:32,020 --> 00:06:34,540
+So this is a bit bad news, but it is a good news.
+
+94
+00:06:34,810 --> 00:06:40,180
+There is another function, good education that allow us to do something very similar to the mixture.
+
+95
+00:06:40,540 --> 00:06:45,480
+However, you can think of it as a bit more advanced and complicated.
+
+96
+00:06:45,760 --> 00:06:47,740
+So for now we can skip it.
+
+97
+00:06:47,980 --> 00:06:49,870
+You do need to learn it at the moment.
+
+98
+00:06:50,500 --> 00:06:51,940
+I'm leaving that for the future.
+
+99
+00:06:52,150 --> 00:06:59,230
+But the model that we have to we better use something like that instead of make sure that it.

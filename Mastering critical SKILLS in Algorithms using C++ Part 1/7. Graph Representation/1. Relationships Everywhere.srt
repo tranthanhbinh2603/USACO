@@ -1,0 +1,543 @@
+1
+00:00:01,100 --> 00:00:08,090
+In this section, we start to move to one of the very interesting and very important algorithm's topics.
+
+2
+00:00:08,750 --> 00:00:15,230
+This topic is the graph theory and graph theory is one of the topics that you can actually use in many
+
+3
+00:00:15,230 --> 00:00:18,710
+different ways, like you must understand the basics of graph theory.
+
+4
+00:00:18,740 --> 00:00:24,740
+We use some of it in many different fields, and there are some interaction to some extent in the industry
+
+5
+00:00:24,740 --> 00:00:25,010
+too.
+
+6
+00:00:25,490 --> 00:00:28,610
+So let's, first of all, motive that we can't see.
+
+7
+00:00:28,610 --> 00:00:31,310
+There are too many relationships everywhere.
+
+8
+00:00:31,340 --> 00:00:32,780
+Let's give a lot of examples.
+
+9
+00:00:33,170 --> 00:00:36,170
+But let me first say in a in a nutshell, what is a graph theory?
+
+10
+00:00:36,770 --> 00:00:42,800
+The graph theory is all about the following We can see that there are many things that involve some,
+
+11
+00:00:42,800 --> 00:00:45,920
+be it wise, relationships between objects.
+
+12
+00:00:47,430 --> 00:00:48,690
+So what is an object?
+
+13
+00:00:49,050 --> 00:00:50,310
+Anything can be an object.
+
+14
+00:00:50,640 --> 00:00:53,670
+I don't hear and I don't hear, mean, an object oriented programming.
+
+15
+00:00:54,300 --> 00:01:01,590
+I mean, the English keyword, for example, let's say we have a city and this city has six internet
+
+16
+00:01:01,590 --> 00:01:02,220
+airports.
+
+17
+00:01:02,490 --> 00:01:04,200
+And there are flights between them.
+
+18
+00:01:04,800 --> 00:01:07,920
+Let's, for example, no the airports from one to six.
+
+19
+00:01:08,490 --> 00:01:15,060
+Now this here is there is there is a diagram that we can draw by hand and we can easily understand.
+
+20
+00:01:15,420 --> 00:01:17,310
+So let's say this is a New York airport.
+
+21
+00:01:17,370 --> 00:01:20,340
+This is maybe New York Seattle airport, whatever.
+
+22
+00:01:20,350 --> 00:01:22,710
+Some six, some six airports here.
+
+23
+00:01:23,550 --> 00:01:28,590
+Now, as you see, there's some flight from Airport one to Edgewood five.
+
+24
+00:01:29,220 --> 00:01:34,230
+There is some flight also from airport one to airport two and so on.
+
+25
+00:01:34,620 --> 00:01:37,860
+So the airport here is what we call an object.
+
+26
+00:01:38,490 --> 00:01:41,580
+The Bitwise relationship is the connection between them.
+
+27
+00:01:42,180 --> 00:01:44,490
+So this is, in theory, a graph theory.
+
+28
+00:01:44,760 --> 00:01:47,490
+Let's go in and actual examples and go back to that.
+
+29
+00:01:48,480 --> 00:01:50,400
+So here is Google Maps and Google Maps.
+
+30
+00:01:50,400 --> 00:01:52,710
+You would like to go from a place to another.
+
+31
+00:01:53,130 --> 00:01:59,100
+There are a lot of data here, a lot of details, and there are even constraints like what time to do
+
+32
+00:01:59,100 --> 00:02:02,220
+the trip, what did what, what, what kind of transportation?
+
+33
+00:02:02,580 --> 00:02:04,500
+A lot of things you see.
+
+34
+00:02:04,560 --> 00:02:05,670
+We have locations.
+
+35
+00:02:06,030 --> 00:02:09,360
+We have some birth is between them, the social media.
+
+36
+00:02:09,570 --> 00:02:13,590
+When you think about the social media, there are a lot of people on social media.
+
+37
+00:02:13,920 --> 00:02:16,380
+The person here is the object himself.
+
+38
+00:02:16,890 --> 00:02:21,090
+And if you are a friend with someone, then this is a relationship.
+
+39
+00:02:21,780 --> 00:02:26,330
+There could be also some bridges that you like, some videos that you watch.
+
+40
+00:02:26,580 --> 00:02:28,710
+And all of such relationships and the media.
+
+41
+00:02:28,920 --> 00:02:30,750
+So you see objects.
+
+42
+00:02:31,170 --> 00:02:32,040
+Connections.
+
+43
+00:02:33,380 --> 00:02:38,510
+Even sometimes things could be very weird from your perspective, like thinking about circuit connections
+
+44
+00:02:38,510 --> 00:02:38,840
+here.
+
+45
+00:02:39,380 --> 00:02:45,140
+There are here boons and connections between them, grammar in English.
+
+46
+00:02:45,260 --> 00:02:52,190
+Even such a statement can be split into such a tree where we are building the expression values level
+
+47
+00:02:52,190 --> 00:02:52,710
+by level.
+
+48
+00:02:52,970 --> 00:02:56,660
+So it seems like, again, points connections between them.
+
+49
+00:02:58,180 --> 00:03:04,420
+And biology, the molecular, you can see also, it's eventually bunch of boys and connections between
+
+50
+00:03:04,420 --> 00:03:09,640
+them computer networks, it is very clear we have a network in our university.
+
+51
+00:03:09,700 --> 00:03:10,920
+There are a lot of machines.
+
+52
+00:03:10,930 --> 00:03:12,310
+They are connected together.
+
+53
+00:03:12,670 --> 00:03:14,380
+There is some direct connections.
+
+54
+00:03:14,380 --> 00:03:20,470
+I can reach this machine by going through maybe two or two other machines, but we are connected.
+
+55
+00:03:20,710 --> 00:03:28,540
+So the object here is the computer network and that links the the wire links are the connections, the
+
+56
+00:03:28,540 --> 00:03:29,530
+search engines.
+
+57
+00:03:29,560 --> 00:03:34,270
+When you access a webpage, this would be you could have links to other webpages.
+
+58
+00:03:34,600 --> 00:03:40,030
+That bridge rank is a very important algorithm used by search engines like Google.
+
+59
+00:03:40,210 --> 00:03:43,000
+So bridges here are connected with each other.
+
+60
+00:03:44,350 --> 00:03:47,920
+Let's move to a computer vision field in the computer vision field.
+
+61
+00:03:47,950 --> 00:03:51,250
+There is a problem with Google, but the booze estimation estimation.
+
+62
+00:03:51,260 --> 00:03:58,060
+So this is a person, and we would like to identify specific say it in joints that represented a person
+
+63
+00:03:58,060 --> 00:04:02,620
+like the head, the neck, the shoulders left and right, head left and right, and so on.
+
+64
+00:04:03,190 --> 00:04:08,950
+So when you think about this joints and the relationships, they actually represent objects, which
+
+65
+00:04:08,950 --> 00:04:12,910
+is here adjoint and the edges between them, the connections between them.
+
+66
+00:04:14,570 --> 00:04:17,750
+An object to tracking, which is also part of the computer vision field.
+
+67
+00:04:17,930 --> 00:04:22,730
+We have a video and there are a bunch of people in the video, so the same person, we see him in a
+
+68
+00:04:22,730 --> 00:04:23,300
+frame.
+
+69
+00:04:23,630 --> 00:04:26,930
+Then after a few seconds, we see him in another frame.
+
+70
+00:04:27,260 --> 00:04:31,430
+So we'd like to know, is this a bit implicit implicit relationship?
+
+71
+00:04:31,760 --> 00:04:34,700
+This person would be connected with the same person.
+
+72
+00:04:35,030 --> 00:04:42,050
+After a few frames, robotics also this joins can be represented as points and as connections.
+
+73
+00:04:43,400 --> 00:04:48,950
+See, transition diagrams, transition, Graham, describe the behavior of a system like, for example,
+
+74
+00:04:49,550 --> 00:04:54,560
+we have a process and this process with an event can move to another process and so on.
+
+75
+00:04:55,310 --> 00:05:01,130
+And this is a diagram that represent the people like you start as a board, as a child at this age,
+
+76
+00:05:01,130 --> 00:05:04,130
+you move to adult age, you move to that and so on.
+
+77
+00:05:04,430 --> 00:05:09,660
+So we can represented a different state so that we as a humans here, as an object, as a states.
+
+78
+00:05:10,040 --> 00:05:12,890
+And then we connected them based on some connection.
+
+79
+00:05:14,950 --> 00:05:18,280
+It's totally OK if you don't get most of these examples, that's totally OK.
+
+80
+00:05:18,310 --> 00:05:21,580
+I just wanted to highlight how graphs are everywhere.
+
+81
+00:05:21,970 --> 00:05:28,780
+And if you thought about what is common between all of these things, the government is we have objects
+
+82
+00:05:29,050 --> 00:05:36,620
+and we have relationships and social media or Facebook people would be the objects or even images in
+
+83
+00:05:36,640 --> 00:05:37,210
+internet work.
+
+84
+00:05:37,210 --> 00:05:39,820
+The computer would be the objects in a body person.
+
+85
+00:05:39,820 --> 00:05:41,290
+The joints would be the objects.
+
+86
+00:05:41,650 --> 00:05:44,650
+And there are relationships between beer of objects here.
+
+87
+00:05:45,190 --> 00:05:48,220
+So as you see, the relationships and graphs are everywhere.
+
+88
+00:05:48,220 --> 00:05:55,300
+If you try to draw your family like you, your beer and his beer and your grandparents, your child
+
+89
+00:05:55,300 --> 00:05:55,930
+and so on.
+
+90
+00:05:56,200 --> 00:06:00,120
+This represent such kind of objects and relationships.
+
+91
+00:06:01,300 --> 00:06:08,980
+Now, if I asked you that this problem or many other problems, you start to think, OK, we have a
+
+92
+00:06:08,980 --> 00:06:13,840
+network of six computers, 10 links, and it would like to know, for example, if this machine can
+
+93
+00:06:13,840 --> 00:06:17,800
+see this machine or not lakes through some some intermediate machines.
+
+94
+00:06:19,300 --> 00:06:20,490
+In practice, it isn't.
+
+95
+00:06:20,590 --> 00:06:24,130
+It isn't practical to keep working on every problem by itself.
+
+96
+00:06:24,140 --> 00:06:25,840
+We do what we call abstraction.
+
+97
+00:06:26,380 --> 00:06:32,350
+We think the problem itself convert converted to a bunch of objects and relationships.
+
+98
+00:06:32,650 --> 00:06:34,180
+We call this shape a graph.
+
+99
+00:06:34,450 --> 00:06:37,390
+We call all of these circles nodes or vertices.
+
+100
+00:06:37,660 --> 00:06:39,880
+We call the connections between them edges.
+
+101
+00:06:40,180 --> 00:06:42,490
+A graph is set of nodes and set of edges.
+
+102
+00:06:43,000 --> 00:06:48,370
+So all of the problems I have been explaining can be eventually abstracted to a graph.
+
+103
+00:06:48,790 --> 00:06:55,150
+The good news is I can develop the specific algorithm on graph theory and just the standard that is
+
+104
+00:06:55,150 --> 00:06:59,170
+ready in my library and whatever domain I converted to graph and use it.
+
+105
+00:06:59,440 --> 00:07:01,480
+So this is a concrete, real life example.
+
+106
+00:07:01,780 --> 00:07:03,430
+This is an abstract concept.
+
+107
+00:07:05,300 --> 00:07:09,350
+Graphic representation, as I said, all about objects and their relationships.
+
+108
+00:07:09,650 --> 00:07:14,240
+So when we abstract a domain, we we would try to count the number of objects.
+
+109
+00:07:14,360 --> 00:07:20,450
+These are my notes like here six airports are six nodes and then the relationships are between.
+
+110
+00:07:20,450 --> 00:07:22,550
+The objects are directly edges here.
+
+111
+00:07:23,300 --> 00:07:26,060
+Now I can work and do many algorithms on the graph.
+
+112
+00:07:26,080 --> 00:07:31,100
+For example, one might ask in how many ways I can go from node one to three.
+
+113
+00:07:31,100 --> 00:07:34,100
+Assuming Node one, for example, is a computer is another computer.
+
+114
+00:07:34,580 --> 00:07:35,870
+I can go in many ways.
+
+115
+00:07:36,110 --> 00:07:45,020
+I can go from computer one to computer to to computer three or one two five four three or one five four
+
+116
+00:07:45,020 --> 00:07:47,840
+three or one five two three.
+
+117
+00:07:47,990 --> 00:07:48,800
+This is pretty good.
+
+118
+00:07:48,800 --> 00:07:52,490
+Like, let's say the computer five got shut down for a reason or another.
+
+119
+00:07:52,700 --> 00:07:55,110
+We still can go to three through another computer.
+
+120
+00:07:55,550 --> 00:08:00,500
+But in practice, we implemented this as a a separate utility.
+
+121
+00:08:00,950 --> 00:08:02,470
+So this is one one question.
+
+122
+00:08:02,480 --> 00:08:05,270
+Another question might be what is the shortest Abarth?
+
+123
+00:08:05,270 --> 00:08:09,500
+From Node one to three, the shortest Abarth has many definition.
+
+124
+00:08:09,650 --> 00:08:11,030
+It should be shortest Abarth.
+
+125
+00:08:11,520 --> 00:08:18,680
+A one of them here could be in the number of edges to reach it and would, for example, the best one
+
+126
+00:08:18,680 --> 00:08:22,370
+five four three takes the three edges.
+
+127
+00:08:22,760 --> 00:08:26,030
+The best one five two three takes three edges.
+
+128
+00:08:26,300 --> 00:08:28,820
+The best one two three takes only two edges.
+
+129
+00:08:29,990 --> 00:08:34,560
+So this way I introduce for you two to three problems in graph theory.
+
+130
+00:08:34,580 --> 00:08:36,500
+How many baths is between two nodes?
+
+131
+00:08:36,920 --> 00:08:39,190
+What is the shortest bath between and then another?
+
+132
+00:08:39,830 --> 00:08:46,700
+And as I mentioned, eventually we abstracted the domain to the graph and do our algorithms on the graph
+
+133
+00:08:46,700 --> 00:08:47,060
+itself.
+
+134
+00:08:47,450 --> 00:08:53,180
+During the course, we would mainly focus on the graph path itself, but in real life, we have a domain
+
+135
+00:08:53,180 --> 00:08:56,180
+that we convert first to a graph like in Google Maps example.
+
+136
+00:08:56,870 --> 00:08:57,380
+That's all.

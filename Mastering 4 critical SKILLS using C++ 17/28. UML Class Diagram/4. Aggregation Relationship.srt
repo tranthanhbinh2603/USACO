@@ -1,0 +1,79 @@
+0
+1
+00:00:01,790 --> 00:00:07,520
+Let's learn more about the aggregation relationship. So the aggregation relationship is a weak
+1
+
+2
+00:00:07,530 --> 00:00:11,100
+relationship, and there is no ownership in the relationship.
+2
+
+3
+00:00:11,480 --> 00:00:18,010
+This means that the whole doesn't own the part like in the composition the car owned the engine,
+3
+
+4
+00:00:18,020 --> 00:00:18,780
+...
+4
+
+5
+00:00:19,340 --> 00:00:20,740
+It's own one,
+5
+
+6
+00:00:20,750 --> 00:00:21,610
+here it doesn't exist.
+6
+
+7
+00:00:21,920 --> 00:00:24,440
+Let's say that the department has some professors.
+7
+
+8
+00:00:24,890 --> 00:00:29,710
+If the department is shut down, they are still professors, they still exist.
+8
+
+9
+00:00:30,200 --> 00:00:37,750
+So in this set o terms of code, the whole class or some other class can create the part
+9
+
+10
+00:00:37,750 --> 00:00:38,360
+object,
+10
+
+11
+00:00:38,870 --> 00:00:44,540
+and if the whole object is destroyed, the part may still be in use by others.
+11
+
+12
+00:00:44,690 --> 00:00:49,730
+This is a critical difference in semantics and in coding style.
+12
+
+13
+00:00:50,030 --> 00:00:56,150
+So you can think here, this empty diamond is how we express aggregation.
+13
+
+14
+00:00:57,110 --> 00:01:05,570
+This means a magazine is composed of articles, but the article can exist even without being at all
+14
+
+15
+00:01:05,690 --> 00:01:08,030
+like being specific to a specific magazine,
+15
+
+16
+00:01:08,900 --> 00:01:12,500
+and so on. So this is mainly what the aggregation relationship means.

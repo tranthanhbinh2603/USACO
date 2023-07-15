@@ -1,0 +1,559 @@
+WEBVTT
+
+00:01.240 --> 00:08.080
+Everyone's in this lecture, we're going to talk about the storage of negative numbers, OK, well now
+
+00:08.080 --> 00:13.840
+what we have discussed was how the positive numbers are stored.
+
+00:14.200 --> 00:21.730
+And we also discussed that integers by default, they are signed on signed integers.
+
+00:21.730 --> 00:24.910
+The first bit represent the sign of the number OK.
+
+00:25.330 --> 00:33.400
+If there is a 32 bit bucket that is divided into two parts, the first bit is used for the sign and
+
+00:33.400 --> 00:34.780
+the remaining 31 bits.
+
+00:35.200 --> 00:37.270
+They are used for the magnitude raid.
+
+00:37.900 --> 00:39.930
+This is what we have already discussed it.
+
+00:40.660 --> 00:46.090
+But if I talk about negative numbers, there is a special.
+
+00:48.860 --> 00:52.200
+Convention that is used to store the negative numbers, OK.
+
+00:52.670 --> 00:56.930
+And it is stored in the form, which is known as Dos Complement Foam.
+
+00:57.140 --> 00:58.940
+I'm going to tell you the reason for it.
+
+00:59.240 --> 00:59.540
+OK.
+
+00:59.960 --> 01:01.760
+Why they're not stored directly.
+
+01:02.000 --> 01:02.210
+OK.
+
+01:02.520 --> 01:07.640
+We've overridden a number like a lot of zeros and followed by one zero one.
+
+01:08.180 --> 01:10.460
+So undoubtedly this number is five.
+
+01:10.670 --> 01:16.010
+But when it is stored in dos complement foam, it is not exactly fake.
+
+01:16.080 --> 01:17.330
+It is something else, right?
+
+01:17.750 --> 01:22.440
+And we have the sign, but one note that this number is a negative number.
+
+01:22.460 --> 01:22.590
+OK.
+
+01:23.660 --> 01:25.730
+So you can interpret this number as minus five.
+
+01:26.240 --> 01:30.050
+But if it is stored in those compliment form, then it is not minus five.
+
+01:30.080 --> 01:30.860
+It is something.
+
+01:32.160 --> 01:38.010
+So let me tell you that, how do we interpret, but how do we convert a number introduced complement
+
+01:38.010 --> 01:40.120
+form and why this one is needed?
+
+01:40.320 --> 01:45.990
+OK, now let's talk about an operation on numbers like an addiction.
+
+01:45.990 --> 01:48.750
+For example, you are doing, let's say, five plus three.
+
+01:49.800 --> 01:56.520
+This will definitely reduce the output rate in order to simulate this operation.
+
+01:56.550 --> 01:58.220
+You need additional hardware, right?
+
+01:58.260 --> 02:01.740
+So there must be hardware for doing addition.
+
+02:01.920 --> 02:05.340
+And that's as good as known as the circle of elders.
+
+02:05.370 --> 02:07.560
+So this is built inside your processor.
+
+02:08.520 --> 02:11.640
+But now suppose I want to do five minus three.
+
+02:12.180 --> 02:13.920
+And this should produce two.
+
+02:14.580 --> 02:18.270
+That means doing the subtraction would also need additional half of it.
+
+02:18.480 --> 02:23.700
+That is special circuit that specializes in doing subtractions.
+
+02:25.320 --> 02:28.530
+Now, the people who designed this hardware, they.
+
+02:29.640 --> 02:32.400
+I saw some challenges with building this attracted.
+
+02:32.880 --> 02:35.790
+One is they will need additional hardware.
+
+02:35.820 --> 02:38.430
+Apart from the added to do the subtraction.
+
+02:38.460 --> 02:43.710
+So what that orders instead of doing this attraction will not do the subtraction.
+
+02:43.800 --> 02:50.220
+We will only the coalition will say, OK, we are adding minus three to five.
+
+02:51.120 --> 02:53.090
+And this should reduce the rhetoric to.
+
+02:54.440 --> 03:01.190
+This should produce the result, you may ask how this is possible, this is possible when there's no
+
+03:01.190 --> 03:01.940
+ministry.
+
+03:02.240 --> 03:04.190
+This is stored in those complement form.
+
+03:05.900 --> 03:11.240
+If you are storing something and don't complement foam, you will not need to do subtraction.
+
+03:11.780 --> 03:17.810
+You can just do addition and that will behave as a subtraction voter if you're adding you're adding
+
+03:17.810 --> 03:20.060
+a negative number to do some of that number.
+
+03:20.060 --> 03:23.780
+OK, so that is where this does complement farmers help.
+
+03:23.990 --> 03:30.410
+So that means inside the memory, the actual bits, they are going to represent those complement form.
+
+03:30.860 --> 03:37.970
+If the first bit S1, OK, and this is true for those assigned integers only OK, because there is no
+
+03:37.970 --> 03:43.840
+concept of negative numbers in case of an Iranian leaders refer to the integer or assigning digit the
+
+03:44.090 --> 03:47.720
+but one remaining which they are going to be stored in to compliment form.
+
+03:48.620 --> 03:52.070
+Now, how do we get that huge compliment form off of any number, OK?
+
+03:52.550 --> 03:54.170
+There are two steps you need to perform.
+
+03:54.350 --> 04:00.140
+The first is suppose you are given a number, let's say you want to generate minus five.
+
+04:00.270 --> 04:00.530
+OK.
+
+04:01.380 --> 04:06.650
+And let us assume that it is stored in our forward memory, though it would be attached to a good memory.
+
+04:07.130 --> 04:09.290
+And maybe you can take it as a bit memory.
+
+04:09.860 --> 04:13.400
+So how is the number five stored?
+
+04:13.400 --> 04:13.640
+OK?
+
+04:14.210 --> 04:16.820
+This is how the number plus five would be stored.
+
+04:17.630 --> 04:18.400
+What do you need to?
+
+04:18.470 --> 04:21.590
+You need to invert all the bits of any number.
+
+04:22.160 --> 04:27.870
+So if you want to suppose you have a number X and you want to generate the number minus X?
+
+04:28.190 --> 04:28.490
+OK.
+
+04:30.020 --> 04:35.840
+Do you want to generate the lowest compliment of minus X, so what it means you will invert?
+
+04:37.500 --> 04:38.670
+All the bits of X.
+
+04:40.240 --> 04:40.540
+OK.
+
+04:41.530 --> 04:43.570
+And you will add one to it.
+
+04:44.720 --> 04:45.890
+I won't do it.
+
+04:45.950 --> 04:48.480
+So this is going to be a binary edition.
+
+04:48.830 --> 04:53.220
+We have the number plus five and we want to generate the number minus five from last week.
+
+04:53.240 --> 04:58.790
+So we have written the binary representation of plus five, which for now it's eight, but indeed it
+
+04:59.300 --> 05:03.260
+just to simplify our additions, right?
+
+05:03.590 --> 05:07.880
+So we will flip all the bits so it becomes one one one one one.
+
+05:09.270 --> 05:12.240
+And zero one zero eight.
+
+05:12.900 --> 05:15.210
+And now we are saying we want to add a one to it.
+
+05:16.200 --> 05:17.370
+So let me add one here.
+
+05:18.240 --> 05:26.040
+What this number is, it is a zero plus one one one zero one one one one.
+
+05:26.670 --> 05:28.380
+We have five one zero and one.
+
+05:28.920 --> 05:29.880
+And this number?
+
+05:31.780 --> 05:37.600
+Is the way the minus five is being stored, so we have performed these two steps four step in all bits
+
+05:37.600 --> 05:43.300
+of X and add one to it, so we have inverted all bits of five and added one to it.
+
+05:43.300 --> 05:45.220
+So this gives me the number minus five.
+
+05:46.230 --> 05:47.080
+Now you may ask.
+
+05:49.140 --> 05:51.910
+Show me a demo of doing a subtraction.
+
+05:51.960 --> 05:59.610
+OK, so let us try to subtract five minus five, so we know that this should produce an output of zero.
+
+06:00.180 --> 06:03.060
+What we will add five with minus five.
+
+06:03.660 --> 06:03.960
+OK.
+
+06:05.040 --> 06:06.850
+And this should produce a zero.
+
+06:06.870 --> 06:07.380
+But let's see.
+
+06:07.380 --> 06:08.400
+What does it produce?
+
+06:09.000 --> 06:11.040
+So what is five survivors this number?
+
+06:11.230 --> 06:12.720
+So I'm going to write it here.
+
+06:13.320 --> 06:15.540
+We have lots of zeros.
+
+06:16.950 --> 06:19.860
+Followed by one zero one, what is minus five?
+
+06:20.070 --> 06:27.450
+We have one one one one one zero one and one, right?
+
+06:28.170 --> 06:29.490
+And now we are going to add it.
+
+06:30.210 --> 06:35.370
+So before doing the addition, let me also tell you about the rules of Binary Edition.
+
+06:35.370 --> 06:37.440
+OK, how the binary audition happens.
+
+06:38.620 --> 06:44.200
+OK, now, if I add zero plus one to that is one one plus zero.
+
+06:44.320 --> 06:45.280
+That is also one.
+
+06:46.420 --> 06:48.880
+If I have zero zero, that is zero.
+
+06:49.540 --> 06:52.780
+If I have one plus one, one plus one is two.
+
+06:52.810 --> 06:55.390
+And how do you rate two in binary united?
+
+06:55.390 --> 06:56.350
+Like this one?
+
+06:56.740 --> 06:57.070
+OK.
+
+06:57.610 --> 06:59.190
+That means here we are.
+
+06:59.200 --> 07:01.870
+When we're adding one plus one, it is going to produce two.
+
+07:02.530 --> 07:07.040
+We are going to put a zero hit and one would be over Kerry to one plus one.
+
+07:07.570 --> 07:09.850
+It does zero here and one would be over.
+
+07:09.850 --> 07:13.970
+Kerry one plus one zero hit one get one plus one.
+
+07:14.770 --> 07:22.780
+Then one Kerry won best one one one one one one one one plus one, then one get one with one 10.
+
+07:23.290 --> 07:27.670
+And one good note what you can do is you can see is that this one?
+
+07:27.680 --> 07:34.570
+Getty It is going outside the boundary of a big box in case of a 32 bit ball total.
+
+07:35.200 --> 07:36.220
+Similar thing will happen.
+
+07:36.220 --> 07:42.790
+It will go outside the boundary of the 32 bit box and hence this Kerry would be discarded.
+
+07:43.120 --> 07:47.590
+Again, this will not get stored because it is going outside the boundary of the bucket.
+
+07:48.060 --> 07:49.090
+And what is this number?
+
+07:49.180 --> 07:55.090
+This number is nothing but the number zero that means this will complement form actually works.
+
+07:55.960 --> 08:01.390
+And this is how the minus five is being stored inside the memory of computer.
+
+08:01.930 --> 08:03.910
+This number is not minus five.
+
+08:04.150 --> 08:06.880
+If it is stored in those complement form, this is something else.
+
+08:07.210 --> 08:07.450
+OK.
+
+08:08.470 --> 08:11.800
+So I hope this edition using does complement form is clear.
+
+08:12.310 --> 08:16.390
+I will also show you one thing the both of you want to figure out what?
+
+08:16.390 --> 08:17.590
+What does this number OK?
+
+08:18.520 --> 08:19.440
+What is this number?
+
+08:19.450 --> 08:23.920
+Let's say I have written this number and you want to figure out what is this number?
+
+08:23.920 --> 08:27.410
+I'm curious to know what number is being represented.
+
+08:27.490 --> 08:27.760
+OK.
+
+08:28.360 --> 08:29.570
+So let us say that, OK?
+
+08:29.570 --> 08:33.220
+And this number represents some negative number that is minus X.
+
+08:33.940 --> 08:34.240
+OK.
+
+08:34.720 --> 08:36.730
+And doing all those compliment.
+
+08:38.670 --> 08:40.290
+Means we are negotiating a no.
+
+08:40.590 --> 08:40.920
+OK.
+
+08:41.430 --> 08:44.490
+It was a compliment, means we are negotiating a no.
+
+08:45.060 --> 08:49.800
+OK, if I take a compliment one more time.
+
+08:50.990 --> 08:57.290
+So if I say, let me take those compliment of this, so minus of minus x this year produce plus x.
+
+08:58.370 --> 09:03.440
+So what I will do, I will flip all the bits in order to take those compliment.
+
+09:04.070 --> 09:04.400
+OK.
+
+09:06.970 --> 09:07.810
+And the.
+
+09:11.160 --> 09:14.940
+We have zero one zero rate, and I'm going to either one do it.
+
+09:16.940 --> 09:23.000
+So I have zero one one one one zero one one, right?
+
+09:23.870 --> 09:27.320
+This number now you can interpret it using powers of two.
+
+09:28.510 --> 09:35.200
+Because design zero, that means it as a positive number, and you interpret this number by combining
+
+09:35.200 --> 09:39.870
+the powers of two and whatever it is, this number, this number is just a negative of this number,
+
+09:39.880 --> 09:42.040
+OK, because we added a minus sign in the beginning.
+
+09:43.430 --> 09:49.540
+Let me give you another example, but if I have a number in which everything is just one, let's I have.
+
+09:51.330 --> 09:52.010
+One day, right?
+
+09:52.740 --> 09:56.310
+So first thing, I know it is a negative number, but I don't know what this number is.
+
+09:57.210 --> 10:00.720
+So if I say, let's say this number is minus X and I negated.
+
+10:02.690 --> 10:08.450
+That means I take a dose compliment of it, OK, so that means flip all the bits, make everything as
+
+10:08.480 --> 10:10.490
+idle and you add one here.
+
+10:11.180 --> 10:13.610
+This number is now zero zero zero one, right?
+
+10:14.510 --> 10:17.810
+Basically, magnitude wise, this number is one.
+
+10:18.260 --> 10:22.290
+And since the first bit was one, it was a negative number.
+
+10:22.310 --> 10:29.660
+So this gives us X two x is one and the number was minus X and hence the actual number.
+
+10:29.840 --> 10:34.280
+This number represents minus one in its twos complement form.
+
+10:34.640 --> 10:34.940
+OK.
+
+10:35.270 --> 10:39.610
+So this is how you interpret a negative number written in those compliment form.
+
+10:39.620 --> 10:46.710
+You negated to get the magnitude and you see the sign read was one and hence it was a positive number.
+
+10:46.730 --> 10:46.970
+OK.
+
+10:48.610 --> 10:50.860
+Now, given any number in the.
+
+10:52.040 --> 10:53.390
+In the 32bit format.
+
+10:53.660 --> 10:53.960
+OK.
+
+10:55.400 --> 11:00.410
+The way you're going to interpret that number, so firstly, you should know, is it stored in the signed
+
+11:00.410 --> 11:00.740
+form?
+
+11:01.130 --> 11:05.090
+OK, if it is stored in the signed form, then you look at the first bit.
+
+11:06.510 --> 11:12.660
+If the first bit is one, then you find that those complement of it to get the magnitude and sense of
+
+11:12.660 --> 11:14.490
+usbut was one, it was a negative number.
+
+11:15.000 --> 11:19.860
+But if the first bit of zero, you can simply interpret this number as double our zero plus two per
+
+11:19.860 --> 11:21.510
+one plus two squared plus two Q.
+
+11:22.140 --> 11:24.830
+And this number is nothing but eight plus one that is nine.
+
+11:24.930 --> 11:27.720
+So this number is nothing but nine of the first 10 zero.
+
+11:28.470 --> 11:34.950
+And if there is, if it does contain no look at that, then it becomes easy for us.
+
+11:35.010 --> 11:36.120
+It is a positive number.
+
+11:36.540 --> 11:39.510
+You simply combine the bubbles of two like we did here as well.
+
+11:40.050 --> 11:41.780
+You get what that number is, OK?
+
+11:42.270 --> 11:44.220
+I hope that clears out the confusion.
+
+11:44.250 --> 11:46.920
+The difference between signed and unsigned integers.
+
+11:47.400 --> 11:49.200
+And that's all for this video.

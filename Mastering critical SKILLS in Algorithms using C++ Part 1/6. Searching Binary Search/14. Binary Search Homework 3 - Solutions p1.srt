@@ -1,0 +1,463 @@
+1
+00:00:00,860 --> 00:00:03,530
+That's sort of the missing element in the array.
+
+2
+00:00:04,430 --> 00:00:06,890
+This problem is harder than what we used to.
+
+3
+00:00:06,920 --> 00:00:08,360
+Let's let's learn why.
+
+4
+00:00:08,960 --> 00:00:12,620
+So what is the classical way that we were solving problems so far?
+
+5
+00:00:13,340 --> 00:00:14,810
+The problem is asking for the kit.
+
+6
+00:00:14,820 --> 00:00:17,330
+No, let's obtain the research and the gift number.
+
+7
+00:00:17,720 --> 00:00:22,280
+Let's get the function of finding the gift number and let's have a weitzman tonic.
+
+8
+00:00:22,610 --> 00:00:25,640
+So we would like to find the gift number in the array.
+
+9
+00:00:26,660 --> 00:00:32,060
+OK, so maybe we say that maybe the storage equals zero, may be the end, may be equal, maybe any,
+
+10
+00:00:32,060 --> 00:00:33,560
+any big value, whatever.
+
+11
+00:00:34,070 --> 00:00:36,890
+And then the medal now represents our gift function.
+
+12
+00:00:37,490 --> 00:00:42,860
+Now we would like to develop a function, so if of if of the array and cake.
+
+13
+00:00:43,130 --> 00:00:47,030
+Well, what is that like it returning the current Typekit element?
+
+14
+00:00:47,060 --> 00:00:48,080
+This is our request.
+
+15
+00:00:48,650 --> 00:00:51,080
+It seems we cannot even develop a function.
+
+16
+00:00:51,950 --> 00:00:52,320
+OK.
+
+17
+00:00:52,340 --> 00:00:55,910
+It seems we cannot even develop a function based on that.
+
+18
+00:00:57,110 --> 00:01:05,360
+So at the moment, you should feel like this isn't going to be binary sociable and this is actually
+
+19
+00:01:05,360 --> 00:01:06,290
+the heart of the case.
+
+20
+00:01:06,710 --> 00:01:12,200
+The heart of the case and binary search when searching, when they're searching on the request is impossible.
+
+21
+00:01:12,650 --> 00:01:13,580
+So what should you do?
+
+22
+00:01:13,970 --> 00:01:15,750
+You should try to find.
+
+23
+00:01:16,010 --> 00:01:22,250
+You should try to find another relevant function that can help you in the request.
+
+24
+00:01:22,490 --> 00:01:24,680
+So let me give you an example of a wrong function.
+
+25
+00:01:25,160 --> 00:01:29,480
+So one might say, OK, I'm going to bind the research on values.
+
+26
+00:01:29,870 --> 00:01:38,270
+So maybe the smallest value is zero or the lowest, and the the largest value is maybe any anything
+
+27
+00:01:38,270 --> 00:01:39,080
+that's very big.
+
+28
+00:01:40,460 --> 00:01:42,560
+The end is something like 10 to the bone, right?
+
+29
+00:01:42,800 --> 00:01:44,420
+So now the this is a value.
+
+30
+00:01:45,170 --> 00:01:46,910
+OK, so now the middle.
+
+31
+00:01:47,980 --> 00:01:49,090
+Is a value.
+
+32
+00:01:51,650 --> 00:01:53,030
+These two things over two.
+
+33
+00:01:54,740 --> 00:02:01,600
+OK, so we need some if operate and meddle, the function may be returned for us if this is the kit
+
+34
+00:02:01,640 --> 00:02:02,360
+element or not.
+
+35
+00:02:02,690 --> 00:02:08,300
+So I'm giving it the ray and I'm giving it the suggested value and I'm telling it is a gift or not.
+
+36
+00:02:09,110 --> 00:02:09,570
+That's it.
+
+37
+00:02:09,590 --> 00:02:10,490
+The Boolean function.
+
+38
+00:02:10,970 --> 00:02:13,340
+Does this work when you think about it?
+
+39
+00:02:15,650 --> 00:02:18,130
+All of the entries will give you serious.
+
+40
+00:02:19,460 --> 00:02:20,510
+Mitt and Keith here.
+
+41
+00:02:21,940 --> 00:02:24,880
+And only one specific position would give one, which is the Keith.
+
+42
+00:02:25,120 --> 00:02:28,510
+And other thing is you assume somehow we can implement this one.
+
+43
+00:02:29,920 --> 00:02:32,530
+Again, this isn't a binary, searchable space.
+
+44
+00:02:33,760 --> 00:02:34,870
+It is the third the idea.
+
+45
+00:02:36,630 --> 00:02:37,810
+They did this following.
+
+46
+00:02:37,860 --> 00:02:44,340
+We will be doing the research on the arrays in this is itself so that small will be zero.
+
+47
+00:02:45,120 --> 00:02:50,490
+And the large will be, um, the length of the array minus one.
+
+48
+00:02:51,450 --> 00:02:52,170
+OK, what does that?
+
+49
+00:02:52,170 --> 00:02:53,190
+What is the idea here?
+
+50
+00:02:54,430 --> 00:02:58,450
+So the middle is now an index, the middle is some index.
+
+51
+00:02:59,170 --> 00:03:06,040
+OK, so some f based on the index and based on the array and maybe UK, what is a good?
+
+52
+00:03:10,110 --> 00:03:17,760
+Here is how we can develop a function, if that is useful, the function f will take the index and take
+
+53
+00:03:17,760 --> 00:03:23,520
+number and return how many numbers are missing until numbers of index.
+
+54
+00:03:23,940 --> 00:03:25,620
+How many numbers are missing?
+
+55
+00:03:25,830 --> 00:03:27,590
+And then numbers of ending.
+
+56
+00:03:28,080 --> 00:03:36,300
+OK, so let's say the array has a values like one, four, uh, nine and the ten.
+
+57
+00:03:37,530 --> 00:03:39,960
+So at one, how many missing elements are zero?
+
+58
+00:03:40,440 --> 00:03:41,010
+At four?
+
+59
+00:03:41,010 --> 00:03:42,120
+How many missing elements?
+
+60
+00:03:42,240 --> 00:03:43,050
+Two and three.
+
+61
+00:03:43,200 --> 00:03:45,480
+So there are two missing elements at nine.
+
+62
+00:03:45,510 --> 00:03:49,270
+How many missing elements so far to three and six seven eight.
+
+63
+00:03:49,290 --> 00:03:53,160
+So overall, five 11, six seven eight, let's say this is 12.
+
+64
+00:03:53,580 --> 00:03:55,800
+How many elements were we're missing?
+
+65
+00:03:55,800 --> 00:03:56,550
+10 and 11.
+
+66
+00:03:56,550 --> 00:03:58,480
+So the missing element now are seven.
+
+67
+00:03:59,010 --> 00:04:04,020
+As you see the good news about this function, it is an increasing function.
+
+68
+00:04:05,010 --> 00:04:11,400
+So the function which the how many missing elements, if the current index is the end of the array.
+
+69
+00:04:11,730 --> 00:04:17,160
+So we give it the index to return for five index the three, there are seven.
+
+70
+00:04:17,490 --> 00:04:18,840
+This is an increasing function.
+
+71
+00:04:19,860 --> 00:04:23,010
+Now the question is if we have this function.
+
+72
+00:04:23,430 --> 00:04:28,050
+Can you stop the vigil for a few minutes and think, how can you use it to guide the body in the research?
+
+73
+00:04:29,980 --> 00:04:37,090
+The idea now is very simple, by the way, if we found the first element where the number of missing
+
+74
+00:04:37,090 --> 00:04:39,700
+elements are greater than or equal K.
+
+75
+00:04:41,040 --> 00:04:49,020
+So let's go back to our case here, the one before, uh, nine and the 12, which was zero and two and
+
+76
+00:04:49,020 --> 00:04:50,670
+five and the seven.
+
+77
+00:04:51,300 --> 00:04:54,000
+Let's say I'm searching for their fifth.
+
+78
+00:04:54,870 --> 00:05:00,450
+Let's say I'm searching for their fifth fifth, missing the missing element.
+
+79
+00:05:00,540 --> 00:05:07,380
+OK, so I'm going to search for the first index where it's a SIM missing is greater than or five.
+
+80
+00:05:07,650 --> 00:05:09,030
+So this is the element, right?
+
+81
+00:05:09,900 --> 00:05:11,190
+These two are identical.
+
+82
+00:05:11,190 --> 00:05:11,450
+Five.
+
+83
+00:05:11,460 --> 00:05:12,450
+This is the first one.
+
+84
+00:05:13,020 --> 00:05:20,400
+So starting from nine, we can get the index to four, which is four, and count the key to find their
+
+85
+00:05:20,670 --> 00:05:26,850
+missing element, which would be, uh, four plus two, which is six here.
+
+86
+00:05:28,520 --> 00:05:34,190
+So again, we managed to find some relevant function that is binary, searchable.
+
+87
+00:05:34,670 --> 00:05:39,170
+And the idea was find the first index of that is greater than equal.
+
+88
+00:05:39,170 --> 00:05:44,690
+Keep the index before it directly can be used to solve the target problem.
+
+89
+00:05:46,880 --> 00:05:48,680
+OK, so how can we solve that?
+
+90
+00:05:48,680 --> 00:05:49,520
+Is missing function?
+
+91
+00:05:49,520 --> 00:05:54,380
+It's actually end up with a very simple equation here with the simple math you can find that is a let's
+
+92
+00:05:54,380 --> 00:06:01,640
+say we have an array that say, for example, three four five six 10, and let's say you are an index
+
+93
+00:06:01,640 --> 00:06:01,970
+here.
+
+94
+00:06:02,990 --> 00:06:11,750
+So now we know that from three to 10, there are eight values, but we are we are only were only at
+
+95
+00:06:11,750 --> 00:06:13,460
+index four here.
+
+96
+00:06:14,060 --> 00:06:15,770
+So what are these missing values?
+
+97
+00:06:16,070 --> 00:06:17,240
+They are simply missing.
+
+98
+00:06:17,450 --> 00:06:23,450
+So 10, which is the current the maximum value minus three, which is the original value as the current
+
+99
+00:06:23,450 --> 00:06:26,480
+index tell us how many missing elements in between.
+
+100
+00:06:27,590 --> 00:06:31,580
+So this function now can tell us how many missing elements.
+
+101
+00:06:31,910 --> 00:06:34,550
+Now we can develop the function in an easy way.
+
+102
+00:06:35,150 --> 00:06:41,540
+We are now binary searching on the right, and we are finding the first index that is greater than or
+
+103
+00:06:41,540 --> 00:06:42,710
+equal key.
+
+104
+00:06:43,040 --> 00:06:46,670
+So this time the condition for greater than an equal would be merged together.
+
+105
+00:06:47,060 --> 00:06:49,160
+Here we will keep binary searching.
+
+106
+00:06:49,280 --> 00:06:50,210
+This is an index.
+
+107
+00:06:50,420 --> 00:06:56,910
+We tell it, Hey, does this index has greater there or more than key?
+
+108
+00:06:56,930 --> 00:06:58,550
+It says no, it says this.
+
+109
+00:06:58,760 --> 00:07:01,970
+So we move to the right, but you have a chance in a bigger one.
+
+110
+00:07:02,750 --> 00:07:04,250
+Otherwise, we move to the left.
+
+111
+00:07:04,250 --> 00:07:05,960
+But I hope you good this problem.
+
+112
+00:07:05,960 --> 00:07:08,870
+You'll probably have to read that you review this several times.
+
+113
+00:07:09,110 --> 00:07:12,050
+There is also a techy editorial from the could read it.
+
+114
+00:07:12,830 --> 00:07:19,040
+The next problem depends a lot on the very similar idea, so please put an effort in before moving to
+
+115
+00:07:19,040 --> 00:07:19,820
+the next problem.
+
+116
+00:07:20,030 --> 00:07:24,440
+I understand that this is harder because now you can buy an assertion, the request as it is.

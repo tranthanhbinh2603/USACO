@@ -1,0 +1,578 @@
+﻿WEBVTT
+
+00:00:01.170 --> 00:00:07.890
+Mẫu variadic là một trong những tính năng rất hay của C++.  Hãy thúc đẩy điều đó.  Cho đến nay trong các chức năng của chúng tôi,
+
+00:00:07.890 --> 00:00:10.760
+Chúng tôi thường sử dụng một số tham số cố định.
+
+00:00:10.770 --> 00:00:16.050
+Ví dụ: Nếu bạn có một hàm như tổng,
+nó đang nhận, Nó có hai tham số A và B,
+
+00:00:16.050 --> 00:00:19.880
+Vì vậy, nó chỉ nhận tối đa hai đối số,
+Một giá trị cho A và một giá trị cho B.
+
+00:00:20.610 --> 00:00:25.950
+Bây giờ, điều gì sẽ xảy ra nếu tôi muốn đi một cái gì đó như 2, 5, 6, 7, 9, đang truyền năm đối số.
+
+00:00:26.310 --> 00:00:30.420
+Điều này sẽ không làm việc.  Trong C++ hiện đại,
+
+00:00:30.570 --> 00:00:38.790
+Chúng ta có thể sử dụng ít nhất hai
+cơ chế để cho phép số lượng đối số
+
+00:00:38.790 --> 00:00:39.870
+thay đổi và chúng ta có thể sử
+dụng danh sách bộ khởi tạo trong C++,
+
+00:00:39.870 --> 00:00:46.470
+nhưng hai trường hợp của chúng ta ngày nay nhiều
+hơn, Mẫu biến thể C++ 11, thường cần thực hiện một
+
+00:00:46.470 --> 00:00:53.820
+số chức năng.  Trong C++ 17, Có một cơ chế đơn
+giản hơn có tên biểu thức gấp, cái nào đơn giản hơn
+
+00:00:53.820 --> 00:01:00.360
+cho 32 toán tử nhị phân cụ thể như bạn sẽ biết trong các phần tiếp theo.  Hãy thúc đẩy điều này nhiều hơn nữa.
+
+00:01:00.840 --> 00:01:04.290
+Từ variadic phổ biến trong một số ngôn ngữ lập trình.
+
+00:01:04.530 --> 00:01:11.690
+Nó chủ yếu khi chúng ta nói tham số là một tham số biến thiên, Điều đó có nghĩa là nó chấp nhận 0 hoặc nhiều giá trị.
+
+00:01:12.210 --> 00:01:18.180
+Vì vậy, thông thường, nếu hàm có một
+trong các tham số này, thì hàm đó thường
+
+00:01:18.180 --> 00:01:21.570
+có nhiều nhất một trong các tham số
+biến thiên và thường là tham số đúng nhất.
+
+00:01:21.960 --> 00:01:28.500
+Bạn sẽ luôn lưu ý khi sử dụng ba dấu chấm này (...),
+Đó là cú pháp dấu chấm lửng để chỉ ra rằng đây là tham
+
+00:01:28.500 --> 00:01:35.850
+số biến thiên và một lần nữa, tham số biến thiên lần
+này đang mong đợi một giá trị duy nhất như với nó.
+
+00:01:35.850 --> 00:01:43.620
+Nó đang chấp nhận 0 hoặc
+nhiều giá trị.  Trước C++
+
+00:01:43.650 --> 00:01:44.190
+11, trong C++ cũng có cái
+được đặt tên là hàm variadic
+
+00:01:44.370 --> 00:01:47.490
+và chúng là các hàm có số lượng đối số thay đổi.
+
+00:01:47.820 --> 00:01:49.260
+Hàm printf,
+
+00:01:49.260 --> 00:01:52.620
+Nếu bạn cố mở cú pháp của nó, Bạn sẽ thấy ba dấu chấm này.
+
+00:01:52.980 --> 00:01:54.880
+Đó là một phong cách cũ và nó không an toàn.
+
+00:01:55.320 --> 00:02:00.860
+Giờ đây, mẫu variadic là một điều mới trong C++ 11, cách hiện đại và an toàn để thực hiện điều đó.
+
+00:02:02.340 --> 00:02:04.250
+Hãy tìm hiểu một chút về những điều cơ bản của nó.
+
+00:02:04.650 --> 00:02:08.850
+Vì vậy, ở đây chúng ta đang định nghĩa một hàm có tên là hello.
+
+00:02:09.300 --> 00:02:15.900
+Nó có ở đây một cái gì đó được
+gọi là một số đối số, một số tên cho
+
+00:02:15.900 --> 00:02:16.650
+chúng tôi và cũng có một cái tên ở
+đây là đối số và nó có ba dấu chấm.
+
+00:02:17.070 --> 00:02:23.790
+Nếu bạn thử kiểm tra một số đối số, Bạn sẽ
+nhận thấy nó là một loại mẫu nhưng nó cũng
+
+00:02:23.790 --> 00:02:28.590
+có tiền tố ba dấu chấm ở đây.  Một số lập
+luận này chúng tôi gọi nó là gói tham số mẫu.
+
+00:02:29.310 --> 00:02:35.460
+Tôi nghĩ về nó giống như một loạt các thứ cùng nhau
+và đây không phải là một kiểu dữ liệu, Nó là một gói
+
+00:02:35.460 --> 00:02:41.230
+tham số mẫu, Gói một loạt các giá trị, Và bản thân
+các đối số là cái mà chúng ta gọi là tham số chức năng
+
+00:02:41.280 --> 00:02:45.450
+đóng gói.  Bây giờ, khi bạn cố gắng gọi, chúng ta hãy chuyển đến phần chính.
+
+00:02:45.960 --> 00:02:53.970
+Nếu bạn đã thử gọi hàm xin chào với bốn
+đối số, 1, 2, 3, 4 giờ sáng, thì tôi ở đây
+
+00:02:53.970 --> 00:02:57.570
+sử dụng kích thước của toán tử kích thước
+cũng là dấu chấm, dấu chấm, dấu chấm.
+
+00:02:57.780 --> 00:03:01.040
+args, nó sẽ cho bạn thấy rằng kích thước là bốn.
+
+00:03:01.380 --> 00:03:06.480
+Điều đó có nghĩa là đối số biến đổi này nhận được bốn giá trị khác nhau.
+
+00:03:06.870 --> 00:03:12.690
+Nếu bạn vượt qua xin chào, Mustafa,
+5, 2.5, Đó là ba đối số và thuộc
+
+00:03:12.690 --> 00:03:16.260
+các loại dữ liệu khác nhau, Bạn sẽ
+nhận thấy rằng kích thước này là ba.
+
+00:03:16.560 --> 00:03:20.850
+Nếu bạn đã chuyển ký tự đơn c ký tự, Nó sẽ có kích thước bằng một ký tự.
+
+00:03:21.000 --> 00:03:24.120
+Nếu bạn đã vượt qua một cái gì đó rất trống, nó sẽ bằng không.
+
+00:03:24.570 --> 00:03:30.180
+Tôi đang sử dụng ở đây một cái gì đó được gọi là chức năng đẹp đang in một cái tên hay cho chức năng này.
+
+00:03:30.540 --> 00:03:31.980
+Tôi không nghĩ rằng điều này là dư thừa.
+
+00:03:31.980 --> 00:03:33.270
+Nó là nhiều hơn của GCC.
+
+00:03:33.300 --> 00:03:36.660
+Nếu bạn đang sử dụng trình biên dịch trực quan của Microsoft, nó có thể sẽ không hoạt động.
+
+00:03:36.870 --> 00:03:41.940
+Vì vậy, bạn thấy ở đây, Trong trường hợp này, Nó cho bạn thấy rằng các đối số mà chúng tôi nhận được là bốn số nguyên
+
+00:03:42.270 --> 00:03:42.560
+ở đây các đối số
+mà chúng tôi nhận
+
+00:03:42.570 --> 00:03:45.490
+được là con trỏ ký
+tự, một số nguyên
+
+00:03:45.510 --> 00:03:53.340
+và nhân đôi.  Vì vậy, một lần nữa quay trở lại kiểu cú pháp mới này mà chúng tôi gọi là gói tham số, Anh chàng này
+
+00:03:53.580 --> 00:04:02.220
+đang mong đợi số 0 như ở đây hoặc nhiều đối số hơn và tất cả chúng đều được lưu trữ trong đối số này và ném kích thước của nó
+
+00:04:02.220 --> 00:04:05.640
+Nếu bạn có thể biết về số lượng đối số mà chúng tôi nhận được.
+
+00:04:06.840 --> 00:04:13.050
+Hãy chắc chắn rằng mắt
+của bạn đã rất quen thuộc
+
+00:04:13.050 --> 00:04:13.380
+với cú pháp mới này và cách
+sử dụng dấu ba chấm này.
+
+00:04:13.620 --> 00:04:18.840
+Vì vậy, một lần nữa, Tổng args ở đây là
+một gói tham số mẫu, Nó là một chỉ báo cho
+
+00:04:18.840 --> 00:04:24.000
+thấy chúng ta sẽ nhận được một loạt các mục
+cùng nhau và theo một cách rất linh hoạt.
+
+00:04:25.850 --> 00:04:32.350
+Hãy tiến thêm một bước để chỉ
+ra điều gì đó, tôi ở đây có một hàm,
+
+00:04:32.360 --> 00:04:34.250
+Nó có hai tham số bình thường
+là số nguyên A và một tên chuỗi.
+
+00:04:34.550 --> 00:04:41.840
+Và bạn thấy nó có ở đây gói tham số mẫu trên tham số bên phải nhất.
+
+00:04:42.040 --> 00:04:43.950
+OK!, Sau đó khi bạn gọi đến đây,
+
+00:04:43.970 --> 00:04:44.870
+Xin chào, một và belal, giá trị
+
+00:04:44.870 --> 00:04:48.590
+một khớp với A nên A là một.
+
+00:04:49.010 --> 00:04:53.570
+Giá trị belal khớp với tên và sau đó không có gì để gửi nó đến args.
+
+00:04:53.570 --> 00:04:55.380
+Vì vậy, kích thước của args ở đây bằng không.
+
+00:04:55.850 --> 00:05:02.420
+Trong một trường hợp khác,
+nếu bạn đang gửi một, belal,
+
+00:05:02.420 --> 00:05:04.610
+2,5, 1 là với A, belal là với
+tên và các đối số chỉ là 2,5,
+
+00:05:04.610 --> 00:05:06.830
+Vậy kích thước là một, Ở đây kích thước sẽ là hai.
+
+00:05:07.130 --> 00:05:13.520
+Đó là lý do tại sao bạn
+thường có nhiều nhất một Gói
+
+00:05:13.520 --> 00:05:14.060
+thông số và bạn thường có
+nó ở thông số phù hợp nhất.
+
+00:05:16.190 --> 00:05:19.040
+Bây giờ, chúng ta hãy gửi cái này.
+
+00:05:19.250 --> 00:05:20.290
+Chúng ta có một hàm lấy một
+số nguyên duy nhất và phần
+
+00:05:20.300 --> 00:05:26.480
+còn lại của các đối số, Nếu
+bạn gửi từ 1 đến 5, A là 1 và
+
+00:05:26.480 --> 00:05:28.580
+còn lại của 2, 3, 4, 5 là với các đối số.
+
+00:05:29.000 --> 00:05:31.880
+Nếu bạn gửi 2, 3, 4, 5, A là 2,
+
+00:05:32.090 --> 00:05:37.010
+và 3, 4, 5 còn lại, nếu bạn gửi 3, 4, 5, A là 3 và các đối số là 4,
+
+00:05:37.010 --> 00:05:43.430
+5. Nếu bạn hiểu logic này, Bạn có
+thể suy nghĩ một lúc về cách chúng tôi
+
+00:05:43.430 --> 00:05:45.370
+thực sự có thể sử dụng đối số này
+vì chúng tôi không thể in nó trực tiếp.
+
+00:05:45.590 --> 00:05:47.030
+Làm thế nào chúng ta có thể sử dụng nó?
+
+00:05:47.480 --> 00:05:54.830
+Có vẻ như chúng ta cần sử dụng một số, một số kiểu đệ quy
+để có thể sử dụng các đối số, Điều này giống như chúng
+
+00:05:54.830 --> 00:06:01.010
+ta chuyển 1 đến đây và sau đó các đối số là từ 2 đến 5,
+Sau đó chúng ta chuyển lại các đối số cho hàm, sau đó là 2
+
+00:06:01.010 --> 00:06:01.880
+là A và vân vân.
+
+00:06:02.840 --> 00:06:07.460
+Chúng ta hãy cố gắng ôn lại điều gì đó về đệ quy trước khi tiếp tục.
+
+00:06:09.200 --> 00:06:11.150
+Chúng tôi đã làm bài tập này trước đây.
+
+00:06:11.150 --> 00:06:15.950
+Nếu bạn có một mảng gồm 5 số và bạn muốn tính tổng các giá trị của nó theo cách đệ quy.
+
+00:06:16.340 --> 00:06:21.800
+Vì vậy, một cách ở đây tôi đang gửi mảng tổng và gửi mảng và độ dài hiện tại, là 5.
+
+00:06:22.280 --> 00:06:25.520
+Tôi đang nói nếu độ dài bằng 0, Đó là trường hợp cơ bản, Chúng tôi sẽ trả về số không.
+
+00:06:25.940 --> 00:06:30.140
+Mặt khác, tôi đang lấy phần tử cuối
+cùng của mảng cộng với mảng nhưng
+
+00:06:30.140 --> 00:06:35.270
+với giá trị độ dài trừ đi 1. Nghĩ về
+điều đó, tôi hy vọng bạn hiểu nó.
+
+00:06:35.270 --> 00:06:41.570
+Tôi nhớ làm mới từ đệ quy.  Mảng ở đây có mối
+quan hệ rất chặt chẽ với các đối số, Nó rất năng
+
+00:06:41.570 --> 00:06:47.250
+động nhưng chúng ta có độ dài rõ ràng.  Chúng
+tôi muốn làm điều gì đó tương tự với biến thể
+
+00:06:47.250 --> 00:06:50.570
+mẫu để có thể sử dụng nó để thực hiện các hoạt động cho chúng tôi.
+
+00:06:51.110 --> 00:06:56.150
+Vì vậy, ở đây chúng tôi
+muốn định nghĩa một hàm tổng
+
+00:06:56.150 --> 00:06:56.690
+nhận vào một số lượng đối
+số khác nhau và trả về tổng.
+
+00:06:57.200 --> 00:06:59.150
+Vì vậy, tổng 1, 2, 3, 4 đang trở lại
+
+00:06:59.150 --> 00:07:01.570
+3, 4, 7, 9, 10.
+
+00:07:02.240 --> 00:07:03.500
+Vì vậy, ở đây những gì sẽ xảy ra.
+
+00:07:04.100 --> 00:07:06.200
+Chúng tôi đang gọi tổng từ 1 đến 4.
+
+00:07:06.350 --> 00:07:13.010
+Hàm sẽ nhận A với 1 và các đối số sẽ là phần còn lại, là 2,
+
+00:07:13.010 --> 00:07:13.540
+3, 4.
+
+00:07:14.030 --> 00:07:20.360
+Bây giờ, tôi muốn tính
+tổng lớn hơn, vì vậy tôi sẽ gọi
+
+00:07:20.360 --> 00:07:22.570
+đệ quy hàm sum với các
+đối số còn lại, hiện là 2, 3, 4.
+
+00:07:22.580 --> 00:07:28.490
+Vì vậy, chúng tôi đang gọi tổng 2, 3, 4. Một lần
+nữa, 2 sẽ được gán cho giá trị của A và các đối số sẽ
+
+00:07:28.490 --> 00:07:35.390
+có giá trị là 3 và 4. chúng tôi đang cộng giá trị
+của 2 cộng với lợi nhuận từ việc gửi các giá trị này
+
+00:07:35.390 --> 00:07:36.620
+hai giá trị chỉ 3, 4.
+
+00:07:36.920 --> 00:07:41.840
+Vì vậy, một lần nữa, 3 sẽ là A và câu trả lời sẽ là 4, Gọi đệ quy với 4.
+
+00:07:41.990 --> 00:07:45.740
+Vì vậy, 4 sẽ là A và args sẽ trống.
+
+00:07:46.190 --> 00:07:51.440
+Bây giờ, khi bạn gọi sum với giá trị rỗng, Hàm này đang mong đợi ít nhất một số nguyên duy nhất.
+
+00:07:51.650 --> 00:07:53.240
+Vì vậy, đây sẽ là một lỗi biên dịch.
+
+00:07:53.510 --> 00:07:55.670
+Đó là lý do tại sao chúng
+tôi có một chức năng
+
+00:07:55.670 --> 00:07:56.990
+trường hợp cơ sở cho
+chúng tôi mà không có gì.
+
+00:07:58.900 --> 00:08:04.270
+Nếu bạn cố gắng kiểm tra các giá trị, Nó được tạo ra như 1 cộng 2 cộng với lợi nhuận từ đây
+
+00:08:04.540 --> 00:08:10.070
+3, 4. Như thể chúng ta đang mở rộng từ bên phải sang bên phải.
+
+00:08:10.090 --> 00:08:13.900
+Đệ quy này ở đây nghiêng về bên trái nhiều hơn, nhưng ở đây chúng tôi đang mở rộng nhiều hơn theo hướng bên phải.
+
+00:08:14.590 --> 00:08:17.170
+Mẫu matrixdic thường là hai chức năng.
+
+00:08:17.440 --> 00:08:24.670
+Một trong số đó, Hàm của bạn
+có tham số args và hàm khác
+
+00:08:24.670 --> 00:08:26.070
+không có tham số args để có
+thể sử dụng nó theo cách đệ quy,
+
+00:08:26.200 --> 00:08:29.440
+và chúng tôi thường viết mã mẫu variadic theo cách đệ quy.
+
+00:08:31.600 --> 00:08:35.680
+Bây giờ, hãy cố gắng làm cho chức năng của chúng ta trở nên tổng quát hơn.
+
+00:08:35.680 --> 00:08:38.160
+Vì vậy, chúng tôi sẽ sử dụng một loại mẫu khác ở đây.
+
+00:08:38.440 --> 00:08:40.270
+Chúng ta sẽ tạo khuôn mẫu cho biến a.
+
+00:08:40.420 --> 00:08:48.230
+Vì vậy, A sẽ có kiểu T bây giờ và hàm này bây giờ cần gọi hàm tổng này ở đây nhưng chúng ta sẽ
+
+00:08:48.700 --> 00:08:52.290
+tại một thời điểm nào đó, chúng ta sẽ gọi lớp cơ sở ở đây,
+
+00:08:52.690 --> 00:08:59.320
+Vì vậy, chúng ta cần truyền hàm ở đây bằng
+cách sử dụng tham số mẫu, Chúng ta cần khởi tạo
+
+00:08:59.320 --> 00:09:02.830
+thứ gì đó bằng cách sử dụng dựa trên T đã sử
+dụng. Đó là lý do tại sao bạn thêm T ở đây.
+
+00:09:03.100 --> 00:09:08.890
+Vì vậy, tổng này đang lấy biến loại a
+và sau đó một số T đang gọi đệ quy
+
+00:09:08.890 --> 00:09:11.110
+anh chàng này, anh chàng này, Sau
+đó gọi trường hợp cơ sở với một số T.
+
+00:09:11.770 --> 00:09:12.850
+Bây giờ chúng ta hãy sử dụng nó ở đây.
+
+00:09:12.850 --> 00:09:13.810
+Nó là chung nhỏ bây giờ.
+
+00:09:13.990 --> 00:09:14.770
+1, 2, 3, 4, cho ta
+
+00:09:14.780 --> 00:09:17.020
+10, Chùm số kép
+
+00:09:17.020 --> 00:09:19.210
+cho 2.6.  Chú ý ở đây,
+
+00:09:19.900 --> 00:09:23.280
+Tôi đã xóa 0.2 này và chuyển nó ở đây thành 4.
+
+00:09:23.290 --> 00:09:27.280
+Vì vậy, đệ trình phải lại là 10,6 nhưng nó chỉ là 10.
+
+00:09:27.970 --> 00:09:29.650
+Dừng video trong một phút và suy nghĩ trong khi.
+
+00:09:31.420 --> 00:09:37.600
+Lý do là khi chúng ta gửi hàm sum với dãy số này, thì số đầu tiên là một số nguyên.
+
+00:09:37.930 --> 00:09:40.060
+Vậy mẫu T ở đây sẽ là một số nguyên.
+
+00:09:40.420 --> 00:09:43.210
+Các cuộc gọi liên tiếp ở đây sẽ là kiểu số nguyên.
+
+00:09:43.210 --> 00:09:44.620
+Đó là lý do tại sao nó sẽ là một số nguyên
+
+00:09:44.920 --> 00:09:49.510
+nhưng nếu chúng ta muốn buộc nó
+là tất cả gấp đôi, Chúng tôi chỉ khởi tạo
+
+00:09:49.510 --> 00:09:53.170
+từ đầu gấp đôi, Vì vậy, nó không
+phải suy ra loại của tham số đầu tiên.
+
+00:09:53.320 --> 00:09:54.820
+Đây là cách chúng tôi làm cho nó chung chung hơn.
+
+00:09:57.320 --> 00:10:04.280
+Hãy xem phép biến đổi có thể rất mạnh mẽ như thế nào khi bạn không chỉ có số lượng đối số thay đổi,
+
+00:10:04.400 --> 00:10:06.890
+Bạn thậm chí có thể có chúng thuộc các loại khác nhau.
+
+00:10:07.100 --> 00:10:12.950
+Vì vậy, ở đây tôi đang xác
+định một hàm để in 1, 2, 3,
+
+00:10:12.950 --> 00:10:13.730
+4, bốn số nguyên sẽ được in
+với dấu phẩy được phân tách.
+
+00:10:13.970 --> 00:10:18.970
+Ở đây tôi có một danh sách khác nhưng với một loạt các loại dữ liệu khác nhau.
+
+00:10:19.580 --> 00:10:22.610
+Vì vậy, ý tưởng ở đây, một lần nữa, tôi đang xác định hai chức năng.
+
+00:10:22.790 --> 00:10:30.920
+Một trong số chúng trống và cái
+thứ hai có ở đây phần tử đầu tiên
+
+00:10:30.930 --> 00:10:32.120
+của phần lớn phần tử đầu tiên và
+thêm vào phần lớn danh sách còn lại.
+
+00:10:32.210 --> 00:10:36.810
+Bây giờ muốn in nó, được phân tách bằng dấu phẩy nhưng chúng tôi không muốn in dấu phẩy sau
+
+00:10:36.840 --> 00:10:38.410
+số cuối cùng.
+
+00:10:38.690 --> 00:10:42.980
+Vì vậy, tôi đang lấy kích thước của danh sách hiện tại, Ban đầu sẽ là 3, sau đó là 2, rồi 1
+
+00:10:43.490 --> 00:10:51.410
+và nói nếu đây không phải là phần tử cuối cùng, hãy in dấu phẩy ở đây và sau đó in các giá trị một cách đệ quy.
+
+00:10:51.500 --> 00:10:56.210
+Vì vậy, chúng tôi đang in dòng điện và sau đó in phần còn lại ở bên phải.
+
+00:10:57.200 --> 00:11:02.780
+Như với bất kỳ chức năng in nào, việc cho phép thay đổi các tham số là không hợp lý.
+
+00:11:02.780 --> 00:11:06.490
+Vì vậy, tôi cũng đang
+thêm vào đây const
+
+00:11:06.510 --> 00:11:06.920
+và tôi cũng đang
+thêm vào đây cả const.
+
+00:11:07.160 --> 00:11:07.990
+Cho đến nay kết thúc tốt C++ 11.
+Giờ đây, C++ 14 thậm chí cho phép
+
+00:11:07.990 --> 00:11:18.170
+bạn loại bỏ gói tham số mẫu tại
+đây, dot, dot, dot args và bạn có thể
+
+00:11:18.170 --> 00:11:21.610
+làm cho nó giống hơn và chỉ sử dụng tham số tự động ở đây.
+
+00:11:22.910 --> 00:11:26.950
+Đó là tất cả về mẫu matrixdic, Mã hóa mẫu matrixdic
+
+00:11:27.530 --> 00:11:28.610
+là rất chuẩn khi bạn
+
+00:11:28.610 --> 00:11:30.380
+thấy một vài chức năng.
+
+00:11:30.800 --> 00:11:34.790
+Bạn thường lấy tham số
+đầu tiên, sau đó tham số
+
+00:11:34.790 --> 00:11:35.030
+còn lại với đệ quy, và
+đó là, Không có gì nữa.
+
+00:11:35.990 --> 00:11:42.230
+Giống như bất kỳ mẫu nào, Hãy nhớ rằng, Các mẫu được tạo trong thời gian hoàn thành, Vì vậy, mã
+
+00:11:42.230 --> 00:11:48.920
+có một số cơ chế đằng sau hiện trường để đọc mẫu của bạn và sau đó khởi tạo tất cả các ví dụ cần thiết
+
+00:11:49.430 --> 00:11:50.410
+trước cả khi bạn chạy.
+
+00:11:50.630 --> 00:11:53.750
+Và đáng buồn thay, Bạn sẽ phải đối mặt với một loạt các lỗi biên dịch xấu xí,
+
+00:11:53.750 --> 00:11:56.830
+Nếu bạn có một số sai lầm, đó là nó.

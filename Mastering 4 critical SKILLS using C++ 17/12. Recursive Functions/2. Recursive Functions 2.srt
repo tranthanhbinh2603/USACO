@@ -1,0 +1,389 @@
+0
+1
+00:00:00,900 --> 00:00:07,470
+In this video, we will see how the factorial function can be written in a recursive way. a recursive
+1
+
+2
+00:00:07,470 --> 00:00:13,440
+function, is a function that calls itself with a smaller input, which is a sub-problem
+2
+
+3
+00:00:13,690 --> 00:00:15,320
+'till reaches a baseline.
+3
+
+4
+00:00:15,630 --> 00:00:17,250
+So let's see the code here.
+4
+
+5
+00:00:17,460 --> 00:00:18,460
+The good is as following,
+5
+
+6
+00:00:18,520 --> 00:00:26,320
+Calling factorial(6), factorial is a function that takes an integer and returns an integer. For a while
+6
+
+7
+00:00:26,460 --> 00:00:31,710
+I would like to assume that this function is a magic that is working very well and I'm teaching you
+7
+
+8
+00:00:31,710 --> 00:00:34,800
+a very elegant way to learn how to trace recursive function.
+8
+
+9
+00:00:35,310 --> 00:00:41,110
+So now factorial is a function that does some magic and computes for us a result, if we give it 6
+9
+
+10
+00:00:41,130 --> 00:00:42,540
+it is going to compute factorial 6.
+10
+
+11
+00:00:42,690 --> 00:00:45,150
+If we give it 10, it's going to give us factorial 10.
+11
+
+12
+00:00:45,780 --> 00:00:51,510
+So the function start with printing "function call: factorial: n" which is initially 6.
+12
+
+13
+00:00:52,200 --> 00:00:55,230
+Now if n == 1, we are returning 1.
+13
+
+14
+00:00:55,380 --> 00:00:58,050
+This is the base case handling.
+14
+
+15
+00:00:58,530 --> 00:01:03,690
+Now, if this isn't the case, like let's say we are calling with 6, so the function is going to do
+15
+
+16
+00:01:03,690 --> 00:01:10,200
+the following, it is going to call itself factorial(n - 1), which is now 5 * 6.
+16
+
+17
+00:01:10,680 --> 00:01:12,310
+Now remember what I was saying?
+17
+
+18
+00:01:12,310 --> 00:01:17,820
+think in factorial(n-1) as some magic that is going to compute the answer somehow.
+18
+
+19
+00:01:18,030 --> 00:01:22,680
+So Factorial(5) is going to be computed, which is 120, and it will be multiplied
+19
+
+20
+00:01:22,680 --> 00:01:23,190
+with 6,
+20
+
+21
+00:01:23,340 --> 00:01:24,830
+And the result is returned,
+21
+
+22
+00:01:25,350 --> 00:01:28,320
+OK. this is how we trace recursive function.
+22
+
+23
+00:01:28,620 --> 00:01:30,450
+Now let's think more about it.
+23
+
+24
+00:01:30,660 --> 00:01:32,370
+If we call it with factorial(5).
+24
+
+25
+00:01:32,400 --> 00:01:33,680
+Let's let's go back again.
+25
+
+26
+00:01:33,900 --> 00:01:39,000
+6 here is going to print 6 and then it's going to call factorial(5).
+26
+
+27
+00:01:39,270 --> 00:01:41,880
+So Factorial(5) is going to print 5,
+27
+
+28
+00:01:42,360 --> 00:01:47,100
+Then going here again, it is going to compute factorial(4) * 5.
+28
+
+29
+00:01:47,460 --> 00:01:53,910
+Factorial(4) is going to come here, printing factorial(4) and then factorial(4) will call 3 and 3 will
+29
+
+30
+00:01:53,910 --> 00:01:56,060
+call 2 and 2 will call 1,
+30
+
+31
+00:01:56,370 --> 00:01:57,680
+1 is going to stop here.
+31
+
+32
+00:01:57,990 --> 00:02:04,340
+So it's going to come back to 1 * 2 * 3 * 4 * 5, and so on.
+32
+
+33
+00:02:05,370 --> 00:02:06,330
+This might be hard.
+33
+
+34
+00:02:06,360 --> 00:02:09,270
+So let's see two ways of visualizing it.
+34
+
+35
+00:02:09,720 --> 00:02:12,540
+Factorial 6 will ask is 6 = 1?
+35
+
+36
+00:02:12,540 --> 00:02:13,400
+It will say no.
+36
+
+37
+00:02:13,560 --> 00:02:15,210
+So it's calling factorial(5),
+37
+
+38
+00:02:15,450 --> 00:02:18,000
+And the result is going to be multiplied by 6.
+38
+
+39
+00:02:18,450 --> 00:02:24,300
+If you would like to trace the recursion in an elegant way, stop thinking at this moment and tell yourself
+39
+
+40
+00:02:24,450 --> 00:02:27,630
+what is the result of factorial(5)? it is 120.
+40
+
+41
+00:02:27,870 --> 00:02:31,560
+What happens if we multiplied it with 6, it is going to be 720.
+41
+
+42
+00:02:31,740 --> 00:02:33,180
+We are done, but let's go.
+42
+
+43
+00:02:33,180 --> 00:02:36,180
+More in tracing. Factorial(5), check if 
+43
+
+44
+00:02:36,180 --> 00:02:42,180
+It's one? no, it is going to compute factorial(4) and multiply with 5. 4 is 1?
+44
+
+45
+00:02:42,180 --> 00:02:44,550
+no, call factorial(3),
+45
+
+46
+00:02:44,550 --> 00:02:46,110
+call factorial(2), call factorial(1),
+46
+
+47
+00:02:46,110 --> 00:02:46,950
+is 1?
+47
+
+48
+00:02:46,950 --> 00:02:48,990
+true, it is going to return 1.
+48
+
+49
+00:02:49,500 --> 00:02:51,780
+The one is returned here multiplied by 2.
+49
+
+50
+00:02:52,140 --> 00:02:57,240
+Returned here as 2 multiplied by 3, returned here as 6 multiplied by 4.
+50
+
+51
+00:02:57,600 --> 00:03:03,000
+Returned here as 24 multiplied by 5, returned here as 120 multiplied
+51
+
+52
+00:03:03,000 --> 00:03:03,540
+by 6.
+52
+
+53
+00:03:03,690 --> 00:03:06,230
+Returned here as 720.
+53
+
+54
+00:03:06,840 --> 00:03:10,680
+Let's do another visualization, just to make sure that you really get it.
+54
+
+55
+00:03:11,250 --> 00:03:12,720
+This is the main calling factorial(6),
+55
+
+56
+00:03:12,880 --> 00:03:19,470
+factorial(6), calls factorial(5) * 6,  which calls factorial(5)
+56
+
+57
+00:03:19,470 --> 00:03:25,860
+again which is calling factorial(4) * 5, which is calling again factorial(3) * 4
+57
+
+58
+00:03:25,860 --> 00:03:31,950
+which is calling again factorial(2) * 3, which is calling again factorial(1) * 2,
+58
+
+59
+00:03:32,460 --> 00:03:38,420
+which is calling factorial(1), here we reach the base-case. Factorial(1) is returning 1 here.
+59
+
+60
+00:03:38,670 --> 00:03:40,080
+So now it is 1 * 2,
+60
+
+61
+00:03:40,650 --> 00:03:41,790
+Now this is done
+61
+
+62
+00:03:41,790 --> 00:03:44,250
+2, we return it to factorial(3).
+62
+
+63
+00:03:44,550 --> 00:03:49,850
+So factorial(3) has here now 2 * 3, which is 6, now 6 is returned here.
+63
+
+64
+00:03:49,980 --> 00:03:50,820
+So 6 * 4
+64
+
+65
+00:03:50,820 --> 00:03:51,450
+24.
+65
+
+66
+00:03:51,870 --> 00:03:52,320
+24
+66
+
+67
+00:03:52,320 --> 00:03:53,060
+returned here,
+67
+
+68
+00:03:53,220 --> 00:03:54,780
+So it's 120,
+68
+
+69
+00:03:54,990 --> 00:03:55,710
+returned here
+69
+
+70
+00:03:55,710 --> 00:03:56,670
+720.
+70
+
+71
+00:03:57,720 --> 00:03:58,350
+That's it.
+71
+
+72
+00:03:58,710 --> 00:04:03,960
+But remember this isn't how we as programmers trace recursion in reality.
+72
+
+73
+00:04:04,200 --> 00:04:10,590
+In reality, we trace a function call only once, and we ask ourself, let's say that this is magic,
+73
+
+74
+00:04:10,710 --> 00:04:13,020
+how the magic is working. in this way,
+74
+
+75
+00:04:13,050 --> 00:04:16,680
+That is it for example, factorial(6) calling factorial(5),
+75
+
+76
+00:04:16,830 --> 00:04:19,530
+What is the result of factorial(5)? 120
+76
+
+77
+00:04:19,710 --> 00:04:26,340
+We stop in practice tracing at this moment, but because we know really how recursion is working, that's
+77
+
+78
+00:04:26,340 --> 00:04:26,850
+it for today.

@@ -1,0 +1,775 @@
+0
+1
+00:00:01,230 --> 00:00:06,660
+I wanted to share with you something that you typically don't see in books and courses, but it's
+1
+
+2
+00:00:06,660 --> 00:00:13,560
+more of like coming from my industrial perspective. So we can see the polymorphism in some of scenarios
+2
+
+3
+00:00:13,560 --> 00:00:15,750
+for the APIs and frameworks.
+3
+
+4
+00:00:16,140 --> 00:00:18,330
+So the first thing is what is an API?
+4
+
+5
+00:00:18,360 --> 00:00:21,000
+The word API is application programming interface.
+5
+
+6
+00:00:21,420 --> 00:00:26,760
+The word interface here has the same context as when we were talking about the interfaces of our classes.
+6
+
+7
+00:00:28,710 --> 00:00:30,960
+Let's define it in a formal way.
+7
+
+8
+00:00:32,640 --> 00:00:35,630
+The API is something that intermediary.
+8
+
+9
+00:00:35,670 --> 00:00:40,050
+It's something in between two things, two applications that would like to communicate together.
+9
+
+10
+00:00:40,530 --> 00:00:42,080
+Let me give you an example of that.
+10
+
+11
+00:00:42,450 --> 00:00:48,480
+Let's say that there are facebook guys who have their back end and their backend has like, say, 200
+11
+
+12
+00:00:48,750 --> 00:00:49,620
+functionalities.
+12
+
+13
+00:00:50,340 --> 00:00:57,600
+The Facebook guys would like to provide your mobile application with capabilities of communicating with
+13
+
+14
+00:00:57,600 --> 00:01:00,570
+their systems.
+14
+
+15
+00:01:00,780 --> 00:01:03,060
+So here is what it is going. They are going to define
+15
+
+16
+00:01:03,060 --> 00:01:03,530
+two things.
+16
+
+17
+00:01:03,870 --> 00:01:07,850
+First, they are going to build what we call a messenger API, for example,
+17
+
+18
+00:01:08,130 --> 00:01:13,650
+and this would be, for example, let's say have 20 functions out of only the 200 functions in the
+18
+
+19
+00:01:13,650 --> 00:01:14,080
+backend.
+19
+
+20
+00:01:14,910 --> 00:01:17,980
+So now this api is an interface of only 20 functions.
+20
+
+21
+00:01:18,330 --> 00:01:24,960
+Now, they are also going to build a mobile application on Android and iOS, and Android is going to contact
+21
+
+22
+00:01:24,970 --> 00:01:32,090
+the API and the API is going to facilitate your queries or transfer your queries to the backend.
+22
+
+23
+00:01:32,520 --> 00:01:37,380
+So as you see here, the API is in the middle between two things,
+23
+
+24
+00:01:37,590 --> 00:01:40,790
+your application here, who is calling this guy.
+24
+
+25
+00:01:41,010 --> 00:01:41,970
+So this happens a lot
+25
+
+26
+00:01:42,000 --> 00:01:48,990
+in reality. Someone has a service, very big service, and then it provides you with some interface
+26
+
+27
+00:01:48,990 --> 00:01:55,830
+to contact to make a call like Google, for example, you might have an application API that allows you
+27
+
+28
+00:01:55,830 --> 00:02:00,510
+to contact Google to get some say, some research results, and so on.
+28
+
+29
+00:02:01,830 --> 00:02:05,460
+This typically with remote APIs, you have to make a communication,
+29
+
+30
+00:02:05,760 --> 00:02:09,160
+you have to send a request and you get a response saying JSON or so.
+30
+
+31
+00:02:09,420 --> 00:02:11,520
+So this is a simple figure to represent that.
+31
+
+32
+00:02:11,910 --> 00:02:16,410
+This is, let's say, the data sources server, server with some processing for Facebook.
+32
+
+33
+00:02:16,770 --> 00:02:17,930
+...
+33
+
+34
+00:02:18,300 --> 00:02:19,950
+This is a provided API.
+34
+
+35
+00:02:20,250 --> 00:02:26,250
+So the API is now like a gateway like an external world.
+35
+
+36
+00:02:26,610 --> 00:02:27,600
+This is your application
+36
+
+37
+00:02:27,600 --> 00:02:27,920
+code.
+37
+
+38
+00:02:28,140 --> 00:02:35,100
+You are contacting the messenger API, which is contacting the backend, and then we are returning back
+38
+
+39
+00:02:35,310 --> 00:02:36,620
+the response to the customer.
+39
+
+40
+00:02:36,900 --> 00:02:43,290
+So API is something in between two applications in the middle to facilitate communication.
+40
+
+41
+00:02:43,560 --> 00:02:46,760
+We don't let people access directly all of our functionalities.
+41
+
+42
+00:02:46,950 --> 00:02:51,000
+They use this API, which is providing a few specific functionalities.
+42
+
+43
+00:02:51,660 --> 00:02:54,090
+Now, let me highlight for you two popular cases
+43
+
+44
+00:02:54,090 --> 00:02:57,390
+when it comes to APIs. The first is a payment APIs.
+44
+
+45
+00:02:57,900 --> 00:03:08,870
+So let's say that you have maybe a website for shopping for some superstore or some supermarket online
+45
+
+46
+00:03:08,880 --> 00:03:11,450
+for some items to ship, something like Amazon or so.
+46
+
+47
+00:03:11,820 --> 00:03:13,680
+So the user eventually have to pay money.
+47
+
+48
+00:03:14,100 --> 00:03:17,270
+Now, there are a lot of banks, and you have your own credit card.
+48
+
+49
+00:03:17,640 --> 00:03:18,910
+So there are two paths here.
+49
+
+50
+00:03:19,350 --> 00:03:25,950
+The first one is I'm going to build my own code to contact bank HSBC and another code to contact the
+50
+
+51
+00:03:25,950 --> 00:03:29,910
+bank of TD blah, blah, blah, and so on, to do these payments by myself.
+51
+
+52
+00:03:30,360 --> 00:03:33,240
+So now the problem here is that this is very time-consuming.
+52
+
+53
+00:03:33,750 --> 00:03:35,040
+Now, there is another idea.
+53
+
+54
+00:03:35,310 --> 00:03:38,020
+There are companies who provide some payment APIs.
+54
+
+55
+00:03:38,370 --> 00:03:46,050
+So by that, they are providing you an interface that you can contact to say, please withdraw from this
+55
+
+56
+00:03:46,050 --> 00:03:48,060
+user information, credit card information or so,
+56
+
+57
+00:03:48,120 --> 00:03:54,660
+this kind of money. Behind the scene, they are implementing their own software to contact whatever
+57
+
+58
+00:03:54,660 --> 00:03:56,970
+to get money, or retrieve money, and so on.
+58
+
+59
+00:03:57,660 --> 00:04:03,240
+Now, the idea here, you as your code, don't need to worry about the hassle of payments.
+59
+
+60
+00:04:03,480 --> 00:04:09,180
+You just contacted the API of one of the payments, let's say Paypal or I think it's named Stripe,
+60
+
+61
+00:04:09,570 --> 00:04:11,760
+and just to use it.
+61
+
+62
+00:04:14,900 --> 00:04:20,330
+In terms of services, these APIs are going to charge your company something like, say, if you are
+62
+
+63
+00:04:20,330 --> 00:04:25,700
+using Paypal, it will tell you that with every transaction I am going to take zero point
+63
+
+64
+00:04:25,700 --> 00:04:26,980
+one dollars per transaction,
+64
+
+65
+00:04:26,990 --> 00:04:33,470
+for example. Thinking about the functionalities of these APIs, you will notice that all of these
+65
+
+66
+00:04:33,470 --> 00:04:35,770
+payment APIs will typically be very similar.
+66
+
+67
+00:04:36,020 --> 00:04:41,300
+They need, for example, your customer, user's information like a credit card, name, expiry, and so
+67
+
+68
+00:04:41,300 --> 00:04:41,540
+on,
+68
+
+69
+00:04:41,840 --> 00:04:47,030
+but they might have different API styles because every one of them is defining his own API style.
+69
+
+70
+00:04:47,360 --> 00:04:48,280
+So this is one example.
+70
+
+71
+00:04:48,530 --> 00:04:52,730
+If you go to here, you can see the top API services.
+71
+
+72
+00:04:53,150 --> 00:04:55,730
+Another popular example is airline APIs.
+72
+
+73
+00:04:56,150 --> 00:05:02,150
+If you go to something like Expedia.com, and you give it like I would like to go from Cairo to Vancouver,
+73
+
+74
+00:05:02,600 --> 00:05:11,870
+you will notice that Expedia is listing airlines trips from everywhere, like maybe from Canadian
+74
+
+75
+00:05:12,080 --> 00:05:14,690
+Airlines, Turkish Airline, Lufthansa Airlines.
+75
+
+76
+00:05:14,960 --> 00:05:18,530
+So how does Expedia retrieve back these results?
+76
+
+77
+00:05:18,960 --> 00:05:25,190
+Expedia behind the scene is conducting the API of the Turkish Airlines to get the information for your
+77
+
+78
+00:05:25,190 --> 00:05:32,510
+trip and contacting the Lufthansa API to get the information of Lufthansa. So I'm calling the website
+78
+
+79
+00:05:32,510 --> 00:05:40,430
+of Expedia and the Expedia is calling many websites and APIs getting results their server and then presenting
+79
+
+80
+00:05:40,430 --> 00:05:41,690
+them for you.
+80
+
+81
+00:05:43,220 --> 00:05:45,770
+Now, thinking about polymorphism and APIs.
+81
+
+82
+00:05:48,680 --> 00:05:54,170
+Now, let's say I'm going to save my own time, I'm going to depend on
+82
+
+83
+00:05:54,170 --> 00:05:58,010
+Paypal, for now, to allow paying money through my website.
+83
+
+84
+00:05:58,700 --> 00:06:06,830
+Now, if you decided to directly start to use the API of Paypal in your code, let's say that suddenly
+84
+
+85
+00:06:06,830 --> 00:06:10,970
+Paypal guys got crazy, and they made it like one dollar per transaction.
+85
+
+86
+00:06:11,300 --> 00:06:14,330
+So now they are really seriously very, very expensive.
+86
+
+87
+00:06:14,930 --> 00:06:22,160
+OK, so the guys from Square API are providing something with zero point two dollars per API, or even
+87
+
+88
+00:06:22,160 --> 00:06:23,750
+they are providing faster APIs.
+88
+
+89
+00:06:24,480 --> 00:06:29,720
+Now, I would like to switch from using Paypal to use Square or Stripe or whatever.
+89
+
+90
+00:06:30,170 --> 00:06:31,280
+Now here is the problem.
+90
+
+91
+00:06:31,640 --> 00:06:38,210
+If you coded your code to depend on the Paypal code, it is going to be very coupled with it.
+91
+
+92
+00:06:38,210 --> 00:06:38,480
+...
+92
+
+93
+00:06:38,900 --> 00:06:43,590
+So you have to do a lot of code changes to facilitate the payments.
+93
+
+94
+00:06:44,120 --> 00:06:45,130
+So here is the idea.
+94
+
+95
+00:06:45,680 --> 00:06:55,130
+You are going to define your own internal interface for payments like let's say we are our company and
+95
+
+96
+00:06:55,130 --> 00:07:01,970
+we are going to just provide some abstract interfaces for us, and let all of your code depends
+96
+
+97
+00:07:01,970 --> 00:07:02,360
+on these interfaces.
+97
+
+98
+00:07:02,360 --> 00:07:10,920
+Now, define internally some implementation that inherits your interfaces and just implement
+98
+
+99
+00:07:10,940 --> 00:07:17,960
+Paypal communication and other interfaces for Stripe that calls Stripe and a third one for Square
+99
+
+100
+00:07:17,960 --> 00:07:19,400
+API that calls square.
+100
+
+101
+00:07:19,880 --> 00:07:27,500
+Now, if you would like to switch from Paypal to Square APIs, all you have to do is to get now a
+101
+
+102
+00:07:27,500 --> 00:07:33,560
+new object of type Paypal, which is internally calling the Paypal operations or Square operations, and so on.
+102
+
+103
+00:07:33,560 --> 00:07:33,830
+...
+103
+
+104
+00:07:34,160 --> 00:07:39,250
+But the moral of that is your code depends on your internal interfaces,
+104
+
+105
+00:07:39,500 --> 00:07:43,300
+it doesn't depend on the API of the Paypal itself.
+105
+
+106
+00:07:43,520 --> 00:07:48,950
+So now you decoupled your code from the dependency on the Paypal API.
+106
+
+107
+00:07:49,370 --> 00:07:52,580
+Your code knows nothing about Paypal and knows nothing,
+107
+
+108
+00:07:52,850 --> 00:07:56,390
+I mean here by your code, your website, your part that needs the payments,
+108
+
+109
+00:07:56,690 --> 00:07:58,250
+It doesn't need to know about Paypal,
+109
+
+110
+00:07:58,430 --> 00:08:04,100
+It doesn't need to know about the future added payment service, it just knows about its owner interface,
+110
+
+111
+00:08:04,460 --> 00:08:09,020
+and you are providing different implementations for these interfaces.
+111
+
+112
+00:08:09,020 --> 00:08:11,840
+Think like you have a shape class, and now you have a rectangle,
+112
+
+113
+00:08:11,990 --> 00:08:14,390
+in the future you have a triangle, then you have polygon,
+113
+
+114
+00:08:14,600 --> 00:08:18,620
+but your process function knows the shape, it doesn't know about the rectangle, it doesn't know about
+114
+
+115
+00:08:18,620 --> 00:08:19,990
+the triangle,
+115
+
+116
+00:08:20,000 --> 00:08:21,140
+knows nothing about them.
+116
+
+117
+00:08:21,170 --> 00:08:27,470
+This is how we provide a generic code. In the homework and the project, there will be administrations for that.
+117
+
+118
+00:08:29,010 --> 00:08:35,300
+The last thing to inform also about: there are other terms that you might hear in the career like library.
+118
+
+119
+00:08:35,660 --> 00:08:40,400
+Think always in the library like in STL so in STL like you have data structures and you have functions
+119
+
+120
+00:08:40,400 --> 00:08:43,450
+that is ready for you, sort, vector, map, and so on.
+120
+
+121
+00:08:44,240 --> 00:08:47,570
+There is also what we call SDK. SDK is a collection of tools,
+121
+
+122
+00:08:47,570 --> 00:08:49,880
+all of them are gathered to you together in one unit.
+122
+
+123
+00:08:50,420 --> 00:08:52,580
+Now, what I want to highlight here is the framework.
+123
+
+124
+00:08:53,120 --> 00:08:59,120
+A framework is a group of libraries typically involving what we call inversion of control pattern.
+124
+
+125
+00:08:59,420 --> 00:09:01,940
+I once highlighted this inverse of control.
+125
+
+126
+00:09:02,300 --> 00:09:08,420
+Remember, in the shape class, there was a compute area function and the compute area function was calling
+126
+
+127
+00:09:08,630 --> 00:09:11,240
+the child class that it knows nothing about it.
+127
+
+128
+00:09:11,690 --> 00:09:13,850
+So here is what happens really in framework.
+128
+
+129
+00:09:14,150 --> 00:09:18,620
+The framework is typically a big pipeline of different steps of classes or operations.
+129
+
+130
+00:09:18,920 --> 00:09:26,960
+Let's name them A, B, abstractC, D, and E. The pipeline step of A and B, let's say they are classes
+130
+
+131
+00:09:27,080 --> 00:09:31,550
+are well defined, they are implemented for you.
+D and E are also implemented for you.
+131
+
+132
+00:09:31,850 --> 00:09:37,670
+The problem, they cannot know what is C now. what happened in the framework is you are going to implement only
+132
+
+133
+00:09:37,670 --> 00:09:38,730
+the C by yourself.
+133
+
+134
+00:09:39,410 --> 00:09:42,140
+Now notice here, who is going to call
+134
+
+135
+00:09:42,140 --> 00:09:44,070
+your C? the framework itself.
+135
+
+136
+00:09:44,270 --> 00:09:45,620
+So who has the control.
+136
+
+137
+00:09:45,950 --> 00:09:47,360
+The control is in the hand of
+137
+
+138
+00:09:47,360 --> 00:09:52,540
+the framework, it is going to call A, then B, then your code C, then D, then E.
+138
+
+139
+00:09:52,880 --> 00:09:58,000
+This is what we call an inverse of control, and the default code, your code is like the master.
+139
+
+140
+00:09:58,250 --> 00:10:00,650
+So typically, let's say your code is called a library
+140
+
+141
+00:10:00,650 --> 00:10:01,910
+so you are in control here,
+141
+
+142
+00:10:02,240 --> 00:10:05,200
+but on the other side, the framework is calling your code.
+142
+
+143
+00:10:05,210 --> 00:10:06,820
+This is the inverse of the flow.
+143
+
+144
+00:10:07,080 --> 00:10:09,350
+OK, so this is what is a framework.
+144
+
+145
+00:10:09,350 --> 00:10:14,930
+it's also a bunch of big libraries, but it has some flow, and you are somewhere in the middle.
+145
+
+146
+00:10:15,110 --> 00:10:18,430
+You only implement this middle step.
+146
+
+147
+00:10:18,680 --> 00:10:24,440
+So in practice, that's why the frameworks and web frameworks and backend frameworks are very strong and
+147
+
+148
+00:10:24,470 --> 00:10:30,680
+very popular because you write like 10 percent of the code, and all of the remaining pipline is common
+148
+
+149
+00:10:30,680 --> 00:10:32,060
+and shared and ready for you.
+149
+
+150
+00:10:33,050 --> 00:10:33,590
+That's it.
+150
+
+151
+00:10:33,980 --> 00:10:37,480
+A more relevant word for the word interfaces is the user interface.
+151
+
+152
+00:10:37,500 --> 00:10:42,200
+We also here see like there are four interfaces, web interface, mobile interface, desktop
+152
+
+153
+00:10:42,610 --> 00:10:48,760
+Interface, we call it GUI. This isn't our job in the market to do UI/UX,
+153
+
+154
+00:10:49,420 --> 00:10:51,910
+but also this also involves the word interface
+154
+
+155
+00:10:52,090 --> 00:10:55,330
+so you provide interfaces for the people. That's it.

@@ -1,0 +1,424 @@
+0
+1
+00:00:00,690 --> 00:00:02,010
+Let's a practice another example.
+1
+
+2
+00:00:05,500 --> 00:00:13,120
+You are to be given an expression of the following types of characters, the open brackets, the closer
+2
+
+3
+00:00:13,120 --> 00:00:19,240
+brackets and other open brackets, close brackets, and this process and its closing braces.
+3
+
+4
+00:00:20,170 --> 00:00:26,980
+A string input is valid if  every open bracket must be closed with the same type of bracket in a way that
+4
+
+5
+00:00:26,980 --> 00:00:30,700
+make the overall like in correct
+5
+
+6
+00:00:30,730 --> 00:00:35,320
+order. For example, here, This one is open then closed of the same type and proper order?
+6
+
+7
+00:00:35,350 --> 00:00:35,650
+Yes.
+7
+
+8
+00:00:36,010 --> 00:00:38,140
+This guy open-close, open-close.
+8
+
+9
+00:00:38,170 --> 00:00:38,710
+Perfect.
+9
+
+10
+00:00:39,160 --> 00:00:40,420
+This one is open here,
+10
+
+11
+00:00:40,960 --> 00:00:43,030
+and this is a closing one.
+11
+
+12
+00:00:43,360 --> 00:00:45,130
+Then here, open-close, open-close.
+12
+
+13
+00:00:45,130 --> 00:00:47,530
+You feel it like over all balanced one. Here
+13
+
+14
+00:00:47,530 --> 00:00:48,810
+Open, close, open, close.
+14
+
+15
+00:00:48,850 --> 00:00:49,540
+This is OK.
+15
+
+16
+00:00:50,080 --> 00:00:51,070
+Looking to this example,
+16
+
+17
+00:00:51,070 --> 00:00:52,810
+for example, this one is open,
+17
+
+18
+00:00:52,810 --> 00:00:53,140
+here
+18
+
+19
+00:00:53,140 --> 00:00:54,670
+it's closing in a proper way.
+19
+
+20
+00:00:55,090 --> 00:00:55,870
+Here is open
+20
+
+21
+00:00:55,870 --> 00:00:57,430
+one, here is closing in a proper way.
+21
+
+22
+00:00:57,940 --> 00:01:01,170
+This one here, open and it's closing and open and it's is closing and so on.
+22
+
+23
+00:01:01,450 --> 00:01:05,560
+So the brackets are closed in the correct order,
+23
+
+24
+00:01:05,830 --> 00:01:09,250
+and everyone when it comes to closing, it's correct all the same time.
+24
+
+25
+00:01:09,580 --> 00:01:12,580
+These are on the other side wrong examples.
+25
+
+26
+00:01:12,910 --> 00:01:17,320
+For example, here, this one is opened, but there is a closing one from a different type, 
+26
+
+27
+00:01:17,320 --> 00:01:19,060
+so this is now wrong. Here,
+27
+
+28
+00:01:19,180 --> 00:01:20,770
+open, closing from different type.
+28
+
+29
+00:01:21,100 --> 00:01:25,480
+This one has an extra closing, but there is no open here, and so on.
+29
+
+30
+00:01:26,350 --> 00:01:28,660
+So I would like you to think about how to code that.
+30
+
+31
+00:01:30,250 --> 00:01:36,400
+The idea is as following: For us to be able to do matching,
+31
+
+32
+00:01:36,760 --> 00:01:45,820
+we need to whenever we have a closing bracket, we need to verify that the closing bracket is matching
+32
+
+33
+00:01:45,820 --> 00:01:47,910
+something from the open bracket.
+33
+
+34
+00:01:48,160 --> 00:01:52,660
+The problem is we need the history of the brackets so far.
+34
+
+35
+00:01:52,960 --> 00:01:54,130
+So the idea is following:
+35
+
+36
+00:01:54,460 --> 00:02:02,380
+We are going to maintain a stack of characters representing the current open parenthesis.
+36
+
+37
+00:02:02,380 --> 00:02:07,300
+For example, whenever we have a closing one, we check with the top of the stack, if it is right
+37
+
+38
+00:02:07,300 --> 00:02:07,790
+one or not.
+38
+
+39
+00:02:08,080 --> 00:02:13,930
+Now thinking about why stack? because stack would give us the top of it whenever you have
+39
+
+40
+00:02:13,930 --> 00:02:19,240
+an open bracket and then you come to a closing bracket, the closing bracket should be matched with
+40
+
+41
+00:02:19,240 --> 00:02:20,920
+the latest open brackets,
+41
+
+42
+00:02:21,070 --> 00:02:26,580
+and if there is another closing bracket, we need another recent open bracket and so on.
+42
+
+43
+00:02:26,740 --> 00:02:28,180
+So the stack would help us for that.
+43
+
+44
+00:02:28,180 --> 00:02:30,280
+Let's make some tracing. You have here
+44
+
+45
+00:02:30,280 --> 00:02:36,220
+an open? put in a stack. You have here an open? put in a sack. You have here a closing? then find
+45
+
+46
+00:02:36,220 --> 00:02:36,970
+in the top of stack,
+46
+
+47
+00:02:36,970 --> 00:02:37,660
+What do we have?
+47
+
+48
+00:02:37,660 --> 00:02:39,820
+We have an open parenthesis of type bracket.
+48
+
+49
+00:02:40,150 --> 00:02:41,170
+Match it together,
+49
+
+50
+00:02:41,170 --> 00:02:42,430
+We are done. Now,
+50
+
+51
+00:02:42,460 --> 00:02:43,480
+move to the next one,
+51
+
+52
+00:02:43,480 --> 00:02:44,800
+We have a closing bracket,
+52
+
+53
+00:02:44,950 --> 00:02:46,390
+What is the top of the stack?
+53
+
+54
+00:02:46,660 --> 00:02:48,700
+This open bracket, match them together,
+54
+
+55
+00:02:48,700 --> 00:02:54,070
+and so on. So to implement this idea and I hope you get it right.
+55
+
+56
+00:02:54,720 --> 00:03:00,070
+First of all, I am developing a very simple map that takes closing bracket and give me the open bracket.
+56
+
+57
+00:03:00,160 --> 00:03:01,660
+This is just to make my life easier.
+57
+
+58
+00:03:01,660 --> 00:03:05,350
+You can do that with if-else, but I wanted to make it with a map to make my life easier.
+58
+
+59
+00:03:06,190 --> 00:03:10,210
+I am here defining the stack of characters and iterating with a string.
+59
+
+60
+00:03:10,480 --> 00:03:13,690
+If the map dot count the character is zero,
+60
+
+61
+00:03:13,960 --> 00:03:18,460
+It means it is an open bracket because it doesn't exist here in the Keys.
+61
+
+62
+00:03:18,610 --> 00:03:19,840
+So we just add it here.
+62
+
+63
+00:03:20,110 --> 00:03:28,780
+So if it's open, we just added. Open? added, open? added. Once it's closed one, now we first double check.
+63
+
+64
+00:03:29,020 --> 00:03:29,860
+Is it an empty stack?
+64
+
+65
+00:03:29,860 --> 00:03:31,540
+Is it an empty stack?
+65
+
+66
+00:03:31,840 --> 00:03:32,320
+Like first,
+66
+
+67
+00:03:33,250 --> 00:03:37,900
+If it hasn't, it means that there's a closing bracket for something that doesn't exist.
+67
+
+68
+00:03:38,140 --> 00:03:39,430
+There is no open to match it.
+68
+
+69
+00:03:39,430 --> 00:03:41,890
+So we know this is false, this is first condition to match.
+69
+
+70
+00:03:42,700 --> 00:03:46,990
+The second thing is there are some open brackets of some type already.
+70
+
+71
+00:03:47,320 --> 00:03:52,120
+We get the open of the current closing bracket.
+71
+
+72
+00:03:52,420 --> 00:03:57,880
+So let's say I'm facing these braces here, then it is giving me the corresponding open one.
+72
+
+73
+00:03:58,420 --> 00:04:03,460
+Now, this open one should match the top of the current stack so we get the top from the stack and
+73
+
+74
+00:04:03,460 --> 00:04:03,940
+compare.
+74
+
+75
+00:04:04,360 --> 00:04:10,810
+If they are not equal, then we are actually closing something that isn't the type of what we opened
+75
+
+76
+00:04:10,810 --> 00:04:11,080
+it.
+76
+
+77
+00:04:11,320 --> 00:04:12,490
+So again, this is false.
+77
+
+78
+00:04:12,730 --> 00:04:14,590
+Otherwise we pop it and keep going.
+78
+
+79
+00:04:15,310 --> 00:04:20,270
+There is a chance actually on the other side that when we are done with it, the stack isn't empty.
+79
+
+80
+00:04:20,470 --> 00:04:25,240
+Like, let's say we just entered a single open bracket,
+80
+
+81
+00:04:25,240 --> 00:04:27,700
+then eventually the stack will be not empty.
+81
+
+82
+00:04:27,700 --> 00:04:30,130
+So also we need here in the end to verify that
+82
+
+83
+00:04:30,460 --> 00:04:36,850
+the last line that the stack isn't an empty stack. This is overall. Trace a bigger example, and
+83
+
+84
+00:04:36,850 --> 00:04:39,760
+try to trace it step by step to make sure that you get it.
+84
+
+85
+00:04:40,990 --> 00:04:41,500
+That's it.

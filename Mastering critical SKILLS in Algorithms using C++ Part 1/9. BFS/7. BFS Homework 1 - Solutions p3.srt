@@ -1,0 +1,151 @@
+1
+00:00:01,370 --> 00:00:02,640
+What are the problem number three?
+
+2
+00:00:02,660 --> 00:00:08,800
+It's actually a very straightforward application for the beef's, but this time on there, uh, well,
+
+3
+00:00:09,000 --> 00:00:11,150
+with the undergrad, that's it.
+
+4
+00:00:11,150 --> 00:00:12,080
+Nothing more than that.
+
+5
+00:00:12,560 --> 00:00:15,100
+So this is our normal array.
+
+6
+00:00:15,110 --> 00:00:16,860
+This is our validation function.
+
+7
+00:00:16,880 --> 00:00:18,980
+We can comparison of that in a single line of goods.
+
+8
+00:00:19,550 --> 00:00:21,170
+And here is our business.
+
+9
+00:00:21,470 --> 00:00:29,060
+So I started by the following a couple of iterations here that will tell me where is the starting point?
+
+10
+00:00:29,070 --> 00:00:31,400
+So we keep searching until we find the first to start.
+
+11
+00:00:31,730 --> 00:00:36,740
+Then we put the here you can try to brick and break because anyway, there's research here, then with
+
+12
+00:00:36,740 --> 00:00:40,130
+daily BFS to start from this starting point.
+
+13
+00:00:41,200 --> 00:00:44,800
+Once we are done with that, we start to do our asset.
+
+14
+00:00:45,160 --> 00:00:48,100
+So we have a victory, which is to the metrics as usual.
+
+15
+00:00:48,400 --> 00:00:50,830
+And I have a queue of sell to make it easy for myself.
+
+16
+00:00:50,980 --> 00:00:55,300
+I can make it kill, bear or so, but just it's more lovely this way here.
+
+17
+00:00:56,200 --> 00:01:03,730
+Uh, you start, you add the queue, start to the queue and then you market position was through our
+
+18
+00:01:04,240 --> 00:01:05,710
+very classical port here.
+
+19
+00:01:06,010 --> 00:01:07,840
+And then we get the four neighbors.
+
+20
+00:01:08,230 --> 00:01:13,750
+If it has a hash, then we return at level plus one, which is the shortest to bath at the moment.
+
+21
+00:01:13,750 --> 00:01:15,250
+So this is the first the hash we have.
+
+22
+00:01:15,700 --> 00:01:18,220
+Otherwise, we added again and just keep going.
+
+23
+00:01:18,640 --> 00:01:22,900
+So as you see, we don't have anything more than what we needed.
+
+24
+00:01:23,770 --> 00:01:30,880
+So that's all I want to say to you that maybe some people will just not use visited array and use the
+
+25
+00:01:30,880 --> 00:01:34,180
+matrix itself to market by setting an X in the matrix.
+
+26
+00:01:34,420 --> 00:01:41,310
+So you might, if you want, you can ignore or you can ignore, ignore having this one and just keep
+
+27
+00:01:41,330 --> 00:01:41,770
+changing.
+
+28
+00:01:41,770 --> 00:01:46,900
+The metrics itself was X, because in a way we don't we don't go to, I said with an X value.
+
+29
+00:01:47,380 --> 00:01:48,660
+This is good for competition.
+
+30
+00:01:48,670 --> 00:01:49,900
+This is good for fun.
+
+31
+00:01:49,900 --> 00:01:52,750
+But actually in industry, we didn't do that in interviews and do that.
+
+32
+00:01:53,020 --> 00:01:56,580
+Sometimes I actually tried to use their centre parameters.
+
+33
+00:01:56,620 --> 00:02:02,290
+But just remember, this is like maybe create a shorter code, faster code, but in industry wouldn't
+
+34
+00:02:02,290 --> 00:02:02,650
+do that.
+
+35
+00:02:02,890 --> 00:02:07,230
+And one reason for that is sometimes our function are paralyzed.
+
+36
+00:02:07,240 --> 00:02:12,490
+So there are more than a thread that is using this the same object, and no one is expecting you to
+
+37
+00:02:12,490 --> 00:02:14,560
+change the object that is given to you.
+
+38
+00:02:15,370 --> 00:02:16,300
+Anyway, that's all.

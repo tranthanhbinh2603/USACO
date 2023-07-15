@@ -1,0 +1,272 @@
+1
+00:00:01,070 --> 00:00:06,560
+Hi Everyone, so in this lecture we will see how you can count bits.. count the number of setbits in a particular
+
+2
+00:00:06,560 --> 00:00:07,070
+number.
+
+3
+00:00:08,980 --> 00:00:13,660
+So what are setbits? setbits are those bits which are one, for example, if I give you the number
+
+4
+00:00:13,690 --> 00:00:20,080
+nine which is like one zero zero one then I can say it has two bits which are setbits.
+
+5
+00:00:21,100 --> 00:00:26,260
+I want to count the number of set bits in the binary representation of any number.
+
+6
+00:00:26,300 --> 00:00:27,850
+That's what we need to do.
+
+7
+00:00:29,290 --> 00:00:34,060
+So let us see how we can approach this particular problem of counting set bits.
+
+8
+00:00:34,720 --> 00:00:37,930
+So let us discuss the approach.
+
+9
+00:00:38,620 --> 00:00:40,380
+So it's pretty easy.
+
+10
+00:00:40,390 --> 00:00:46,330
+So we know the number is stored like this and we also know how we can find out the last bit so we can
+
+11
+00:00:46,330 --> 00:00:47,620
+do a AND with one.
+
+12
+00:00:48,190 --> 00:00:51,400
+And this will tell us what is the last bit we will get to know?
+
+13
+00:00:51,400 --> 00:00:52,270
+ok this bit is one.
+
+14
+00:00:53,080 --> 00:00:57,690
+And for the next iteration what we can do? we can remove this bit by doing the right shift.
+
+15
+00:00:57,710 --> 00:01:01,000
+Okay so we can see the last bit is n AND one.
+
+16
+00:01:01,540 --> 00:01:05,170
+And if this bit is one then I will increment the count of my setbits.
+
+17
+00:01:05,170 --> 00:01:11,250
+if it is zero I will not increment the count. Ok. Or I can simply write let's initial count zero,
+
+18
+00:01:11,260 --> 00:01:13,360
+then i can say  count plus equals to n ANDone.
+
+19
+00:01:14,170 --> 00:01:15,070
+If the last bit is one.
+
+20
+00:01:15,220 --> 00:01:17,890
+Then count will increment by one. if the last bit is zero
+
+21
+00:01:17,890 --> 00:01:19,330
+The count will increment by zero.
+
+22
+00:01:19,900 --> 00:01:24,640
+And I want to remove this so I can n equal to n right shift one.
+
+23
+00:01:25,660 --> 00:01:29,740
+The next time you will get one and zero it will be zero, count will change by zero.
+
+24
+00:01:30,280 --> 00:01:34,660
+Next time it would be you remove this one, zero and one, it would be still zero.
+
+25
+00:01:34,690 --> 00:01:35,920
+So count will change with zero.
+
+26
+00:01:36,310 --> 00:01:41,440
+Next time you remove this one and one it as one. so count will increment by one final count would be
+
+27
+00:01:41,440 --> 00:01:41,710
+two.
+
+28
+00:01:42,650 --> 00:01:44,530
+OK, so this is what we can do.
+
+29
+00:01:44,530 --> 00:01:51,700
+So I can write the function count bits I get the number n and here I can see while n is greater
+
+30
+00:01:51,700 --> 00:01:52,270
+than zero.
+
+31
+00:01:52,360 --> 00:01:59,110
+What I can do? every time find out the last bit. I can say int last bit.
+
+32
+00:01:59,740 --> 00:02:03,520
+I don't know or may be I can say int count that to zero.
+
+33
+00:02:03,850 --> 00:02:06,280
+And here I can find out the last bit.
+
+34
+00:02:06,700 --> 00:02:13,240
+So last bit is nothing but n and one and I can say count plus equals to last bit.
+
+35
+00:02:13,550 --> 00:02:15,100
+OK, if it is one count will change by one.
+
+36
+00:02:15,100 --> 00:02:17,230
+If it is zero count will not change.
+
+37
+00:02:18,010 --> 00:02:22,270
+And then we can do is n equal n right shift one.
+
+38
+00:02:22,420 --> 00:02:24,730
+And from here we can return the count.
+
+39
+00:02:26,030 --> 00:02:34,980
+so here we go. so what I can say int n, cin nand i can say cout count bits of n
+
+40
+00:02:35,060 --> 00:02:39,590
+And that's it and I hope this is now clear to you.
+
+41
+00:02:40,310 --> 00:02:46,760
+And what we're doing is we're doing a very simple operation. every time we are doing the right shift.
+
+42
+00:02:47,270 --> 00:02:48,620
+OK, so we do a AND
+
+43
+00:02:48,620 --> 00:02:50,520
+here this goes of
+
+44
+00:02:50,540 --> 00:02:52,970
+Next time these two bits are interact, OK?
+
+45
+00:02:53,600 --> 00:02:54,080
+And.
+
+46
+00:02:55,780 --> 00:03:00,130
+Finally, we will get to one here so this one is added to the count.
+
+47
+00:03:01,270 --> 00:03:08,410
+So this we will do for all the bits and for a number n the at most the number of setbits is going to be
+
+48
+00:03:08,410 --> 00:03:09,290
+long(n). OK.
+
+49
+00:03:09,950 --> 00:03:17,930
+The number of times this loop is going to run it is going to run at most log(n) for a number.
+
+50
+00:03:17,950 --> 00:03:24,580
+because a number n has log(n) bits that you can easily verify by taking some example also, let's
+
+51
+00:03:24,580 --> 00:03:26,860
+say 16. 16 is like this.
+
+52
+00:03:27,550 --> 00:03:29,590
+Those 16 has
+
+53
+00:03:30,250 --> 00:03:30,940
+It's like 2 raise to the power 4
+
+54
+00:03:31,010 --> 00:03:32,470
+it would have it
+
+55
+00:03:32,470 --> 00:03:36,190
+Most four plus one that is 5 bits. Ok. talk about seven
+
+56
+00:03:36,700 --> 00:03:39,940
+So it's going to be around two raise to the power three.
+
+57
+00:03:40,120 --> 00:03:41,170
+So seven is going to have 
+
+58
+00:03:41,170 --> 00:03:43,210
+at Most three bits. 
+
+59
+00:03:43,210 --> 00:03:44,590
+log of Seven is close to three.
+
+60
+00:03:44,590 --> 00:03:46,300
+Log of 16 is close to four.
+
+61
+00:03:46,780 --> 00:03:48,190
+That's what I'm trying to say.
+
+62
+00:03:49,240 --> 00:03:53,140
+So for any number n you have atmost log(n) bits and
+
+63
+00:03:55,770 --> 00:04:03,120
+OK, count... count is not declared so this should cnt and yes, we are done and now we can actually
+
+64
+00:04:03,120 --> 00:04:11,700
+run our code and see the ./countbit. if I give 16. 16 has only one bit. if I give 15.
+
+65
+00:04:11,700 --> 00:04:12,660
+15 has four setbits
+
+66
+00:04:12,660 --> 00:04:15,900
+But if I give 8, 8 has also one setbits.
+
+67
+00:04:16,620 --> 00:04:18,070
+So that's all for this lecture.
+
+68
+00:04:18,089 --> 00:04:18,450
+Thank you.
+

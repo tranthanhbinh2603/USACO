@@ -1,0 +1,739 @@
+0
+1
+00:00:01,430 --> 00:00:07,460
+In this section, we will move to a very popular topic, the binary search topic, but let's first
+1
+
+2
+00:00:07,460 --> 00:00:10,250
+refresh the linear search or the sequential search topic.
+2
+
+3
+00:00:10,670 --> 00:00:16,280
+If I told you we have an array of sorted numbers, return the index of a given number. For example,
+3
+
+4
+00:00:16,280 --> 00:00:21,830
+if you have all of these numbers and the target is 50, so you proceed in the list, till finding 50,
+4
+
+5
+00:00:21,830 --> 00:00:25,970
+which is at index four. What about 70? Seventy doesn't exist.
+5
+
+6
+00:00:26,090 --> 00:00:27,320
+So the index is -1.
+6
+
+7
+00:00:27,980 --> 00:00:29,510
+This is an O(n) algorithm.
+7
+
+8
+00:00:29,810 --> 00:00:31,820
+Linear search is very trivial to code.
+8
+
+9
+00:00:31,850 --> 00:00:34,210
+However, it is very inefficient,
+9
+
+10
+00:00:34,220 --> 00:00:38,870
+also. There is one thing here, the array is sorted. Remember this advice,
+10
+
+11
+00:00:39,170 --> 00:00:44,570
+whenever you have a special property, you should use them right. When we discussed the count sort
+11
+
+12
+00:00:45,020 --> 00:00:46,880
+and the range was from zero to 500.
+12
+
+13
+00:00:46,910 --> 00:00:49,310
+This is a special property, make use of it.
+13
+
+14
+00:00:49,850 --> 00:00:52,880
+Now the question is if the array is sorted.
+14
+
+15
+00:00:53,330 --> 00:00:57,110
+Can we find a way to make our search way faster than that?
+15
+
+16
+00:00:57,980 --> 00:00:59,900
+Let me give you a smart analogy.
+16
+
+17
+00:01:00,440 --> 00:01:04,460
+Imagine that you have a programming course.
+17
+
+18
+00:01:04,460 --> 00:01:07,850
+You went to the professor's office to get your marked assignments.
+18
+
+19
+00:01:08,150 --> 00:01:11,630
+You have all of these huge pile of papers here.
+19
+
+20
+00:01:12,320 --> 00:01:16,880
+The good thing is the assignments are ordered in alphabetical order.
+20
+
+21
+00:01:17,240 --> 00:01:18,590
+So let's say your name is June.
+21
+
+22
+00:01:19,070 --> 00:01:22,550
+And you don't know where is June in all of that, but you know that they are ordered.
+22
+
+23
+00:01:22,880 --> 00:01:25,730
+So how do you efficiently search for your stuff?
+23
+
+24
+00:01:26,780 --> 00:01:30,470
+Logically, you will not just go name by name, right?
+24
+
+25
+00:01:31,280 --> 00:01:32,630
+So here is a very efficient way.
+25
+
+26
+00:01:34,320 --> 00:01:35,850
+This should be not name by name.
+26
+
+27
+00:01:38,650 --> 00:01:46,330
+One way is as following. First, divide these piles of papers to two almost equal parts, and then get
+27
+
+28
+00:01:46,330 --> 00:01:47,350
+the paper in the middle.
+28
+
+29
+00:01:48,010 --> 00:01:50,620
+Let's say the name of the paper was Fiona.
+29
+
+30
+00:01:51,400 --> 00:01:59,200
+Now you know that June is after Fiona, and we know the names are ordered in an alphabetical way.
+30
+
+31
+00:01:59,710 --> 00:02:04,900
+So this definitely means my name is definitely not in the first half.
+31
+
+32
+00:02:05,560 --> 00:02:11,980
+Now I can go to the second pile, the second part here, and start to do the exact process again.
+32
+
+33
+00:02:12,280 --> 00:02:17,620
+Divide them into two parts and check the middle one and so on.
+33
+
+34
+00:02:17,890 --> 00:02:23,230
+You keep repeating the process, in every time, you get rid of half of the number of papers.
+34
+
+35
+00:02:23,530 --> 00:02:24,760
+This is very similar logic.
+35
+
+36
+00:02:24,760 --> 00:02:30,790
+If you have a very huge page like a book of 4000 pages, and you're searching for page number two thousand
+36
+
+37
+00:02:30,790 --> 00:02:37,600
+nine hundred, you know that the book page numbers are ordered from small to large, and you will
+37
+
+38
+00:02:37,600 --> 00:02:40,690
+definitely can start by going to the middle of the book.
+38
+
+39
+00:02:40,690 --> 00:02:42,610
+Or maybe after the middle of the book.
+39
+
+40
+00:02:43,150 --> 00:02:46,750
+If you discovered, for example, that you open page number
+40
+
+41
+00:02:46,750 --> 00:02:52,690
+1800, you definitely know you don't care about the first half of the book, you care
+41
+
+42
+00:02:52,690 --> 00:02:54,640
+about the second one, and so on.
+42
+
+43
+00:02:55,000 --> 00:02:56,780
+So this is actually what it is called a
+43
+
+44
+00:02:56,780 --> 00:03:02,620
+binary search. This process that smart people do is a binary search approach, and it depends
+44
+
+45
+00:03:02,620 --> 00:03:05,020
+on the fact that the items are sorted.
+45
+
+46
+00:03:05,560 --> 00:03:06,820
+So let's try
+46
+
+47
+00:03:06,970 --> 00:03:07,690
+simulate that here.
+47
+
+48
+00:03:08,020 --> 00:03:09,430
+We have an array of numbers.
+48
+
+49
+00:03:09,730 --> 00:03:11,860
+We are sure the numbers are sorted.
+49
+
+50
+00:03:12,340 --> 00:03:14,620
+I ask you to find the value 55.
+50
+
+51
+00:03:14,710 --> 00:03:15,250
+We don't know
+51
+
+52
+00:03:15,250 --> 00:03:16,930
+where is it. Now,
+52
+
+53
+00:03:17,050 --> 00:03:17,740
+.
+53
+
+54
+00:03:17,770 --> 00:03:19,720
+Let's divide the array to two halves.
+54
+
+55
+00:03:20,290 --> 00:03:23,500
+Assume for a while that the left pointer is at zero here,
+55
+
+56
+00:03:23,530 --> 00:03:25,660
+left index, and the right is at index
+56
+
+57
+00:03:25,660 --> 00:03:27,370
+ten. Where is the middle?
+57
+
+58
+00:03:27,730 --> 00:03:30,130
+The middle is (0+10)/2, which is five.
+58
+
+59
+00:03:30,640 --> 00:03:33,310
+Now we go to the value of five, which is 41.
+59
+
+60
+00:03:33,970 --> 00:03:35,500
+We search for 55.
+60
+
+61
+00:03:36,010 --> 00:03:43,210
+This means that definitely the value, if exists, will be after index number five.
+61
+
+62
+00:03:43,630 --> 00:03:46,360
+We can only do that because we know the values are sorted.
+62
+
+63
+00:03:46,900 --> 00:03:51,450
+So now we can safely ignore the values from index zero to index five.
+63
+
+64
+00:03:53,090 --> 00:03:59,210
+Now our start is at left here, index six, and our end at index ten.
+64
+
+65
+00:03:59,750 --> 00:04:00,980
+Let's do the same process.
+65
+
+66
+00:04:01,250 --> 00:04:02,690
+Get the middle, which is
+66
+
+67
+00:04:02,700 --> 00:04:08,510
+(6+10)/2, which is index eight, the value in index eight is 72.
+67
+
+68
+00:04:08,990 --> 00:04:10,640
+I am searching for 55.
+68
+
+69
+00:04:11,060 --> 00:04:11,660
+Definitely,
+69
+
+70
+00:04:12,080 --> 00:04:14,600
+55 is before 72.
+70
+
+71
+00:04:15,050 --> 00:04:21,320
+So this means we can safely ignore the array from index eight to index ten, and just focus on the range
+71
+
+72
+00:04:21,320 --> 00:04:22,190
+six to seven.
+72
+
+73
+00:04:23,030 --> 00:04:24,020
+In a similar way,
+73
+
+74
+00:04:25,000 --> 00:04:28,870
+divide and get the middle, (6+7)/2 is just still six.
+74
+
+75
+00:04:30,600 --> 00:04:33,060
+And now we just found it, so we are lucky about that.
+75
+
+76
+00:04:33,720 --> 00:04:35,280
+Let's change the request a little bit.
+76
+
+77
+00:04:35,280 --> 00:04:42,900
+What if I was asking you to find 60? Now, 55 versus 60 is smaller, so we know we need to go to
+77
+
+78
+00:04:42,900 --> 00:04:45,900
+the right part, which is just seven and seven, and so on.
+78
+
+79
+00:04:47,490 --> 00:04:52,330
+I would like you to try to think about how can we implement this approach.
+79
+
+80
+00:04:52,740 --> 00:04:56,730
+And there is here a problem, LeetCode 704.
+80
+
+81
+00:04:56,940 --> 00:04:59,580
+You can try the code over it.
+81
+
+82
+00:05:01,760 --> 00:05:02,240
+OK.
+82
+
+83
+00:05:02,720 --> 00:05:08,030
+Test cases, the test cases are as following, similar to the sorting ideas, you need to try
+83
+
+84
+00:05:08,030 --> 00:05:08,810
+different lengths.
+84
+
+85
+00:05:09,560 --> 00:05:15,170
+It's very clear also that considering unique or duplicate values is important, maybe also you try some positive
+85
+
+86
+00:05:15,170 --> 00:05:16,200
+and negative values in your array.
+86
+
+87
+00:05:16,260 --> 00:05:20,990
+That's it. Thinking about the search query itself.
+87
+
+88
+00:05:21,410 --> 00:05:22,790
+There is two scenarios.
+88
+
+89
+00:05:23,060 --> 00:05:26,450
+The element exists or doesn't exist. Now,
+89
+
+90
+00:05:26,780 --> 00:05:30,920
+One important position to check is the first position here, index zero.
+90
+
+91
+00:05:31,520 --> 00:05:33,260
+Another position is the last one.
+91
+
+92
+00:05:33,560 --> 00:05:37,670
+I call that boundary thinking, jump to the boundaries because they are important.
+92
+
+93
+00:05:38,120 --> 00:05:43,040
+You can also check some of the arbitraries values, maybe something in the first half, something in
+93
+
+94
+00:05:43,040 --> 00:05:44,900
+the second half, somewhere in the middle.
+94
+
+95
+00:05:46,130 --> 00:05:46,520
+OK.
+95
+
+96
+00:05:46,880 --> 00:05:52,940
+What about the element that doesn't exist? You need to check also, and you can see that maybe the element
+96
+
+97
+00:05:52,940 --> 00:05:55,460
+doesn't exist because it's before the first element.
+97
+
+98
+00:05:55,470 --> 00:06:01,370
+So test -10, for example, or after the last element, something like 100 or something in between,
+98
+
+99
+00:06:01,370 --> 00:06:03,470
+like 15 and 75.
+99
+
+100
+00:06:03,890 --> 00:06:07,400
+So this is the overall systematic way of thinking about
+100
+
+101
+00:06:07,400 --> 00:06:07,940
+test cases.
+101
+
+102
+00:06:09,430 --> 00:06:12,520
+Eventually, here is the code, I hope you try to implement it by yourself.
+102
+
+103
+00:06:12,820 --> 00:06:14,050
+The process is very easy.
+103
+
+104
+00:06:14,290 --> 00:06:16,690
+You have a vector of numbers and you have some value.
+104
+
+105
+00:06:17,170 --> 00:06:20,360
+Your start is at zero, your end is at the last index.
+105
+
+106
+00:06:20,980 --> 00:06:27,070
+And by the way, remember when you take .size(), cast it to integer before subtracting minus
+106
+
+107
+00:06:27,070 --> 00:06:27,370
+one.
+107
+
+108
+00:06:27,820 --> 00:06:34,510
+If this value is zero, it will be (0 - 1), and .size() in C++ returns unsigned variable.
+108
+
+109
+00:06:34,690 --> 00:06:36,460
+So it will end up a very huge number.
+109
+
+110
+00:06:36,460 --> 00:06:40,420
+It will like roll back in the integer representation, so be very careful.
+110
+
+111
+00:06:40,450 --> 00:06:44,820
+That's why I usually cast the size to an integer. Otherwise,
+111
+
+112
+00:06:44,830 --> 00:06:46,690
+Yeah, you have to be careful this way.
+112
+
+113
+00:06:47,590 --> 00:06:49,060
+Now the loop is as following.
+113
+
+114
+00:06:49,680 --> 00:06:55,420
+while ( start <= end ), as long as, we have a valid interval of at least a single element.
+114
+
+115
+00:06:55,930 --> 00:07:00,460
+I'm computing the middle value, which is ( start + end ) / 2, this is the index.
+115
+
+116
+00:07:00,940 --> 00:07:02,500
+Now there are three scenarios.
+116
+
+117
+00:07:03,040 --> 00:07:07,110
+If the index in the middle equals the number, then we found it.
+117
+
+118
+00:07:07,120 --> 00:07:07,700
+We are done.
+118
+
+119
+00:07:08,860 --> 00:07:15,550
+If the current value is actually bigger than the middle, then we know we can definitely ignore the
+119
+
+120
+00:07:15,550 --> 00:07:20,020
+first part of the vector, which means we can start from the (middle+1).
+120
+
+121
+00:07:21,040 --> 00:07:26,490
+If the middle is actually beyond the value, it means we have to ignore the second
+121
+
+122
+00:07:26,490 --> 00:07:26,890
+part.
+122
+
+123
+00:07:27,160 --> 00:07:29,440
+So the end should be adjusted to -1.
+123
+
+124
+00:07:30,460 --> 00:07:33,400
+Now, again, as you see, it's all about the middle.
+124
+
+125
+00:07:33,760 --> 00:07:38,140
+We have now three variables, we have the start, and we have the middle, and we have the end.
+125
+
+126
+00:07:38,680 --> 00:07:40,510
+If the middle is the right one, we return it.
+126
+
+127
+00:07:40,870 --> 00:07:48,540
+Otherwise, the middle is wrong, but which part focuses it? Is it start to middle + 1  or, 
+127
+
+128
+00:07:48,850 --> 00:07:53,590
+Sorry, Is it start to (middle - 1) or (middle +1) to end?
+128
+
+129
+00:07:54,340 --> 00:07:55,480
+This is what's happening here.
+129
+
+130
+00:07:55,840 --> 00:08:05,050
+Like, for example, if you have the value 55, and comparing with 41, so 41 is less than 55.
+130
+
+131
+00:08:05,080 --> 00:08:08,110
+Yes, we have to move to the second array part.
+131
+
+132
+00:08:08,410 --> 00:08:10,690
+So our start is after the middle.
+132
+
+133
+00:08:10,900 --> 00:08:12,340
+So start is middle +1.
+133
+
+134
+00:08:12,820 --> 00:08:16,100
+So as you see, it's all about either changing the start or the middle.
+134
+
+135
+00:08:16,360 --> 00:08:18,190
+The start is moving to the right side.
+135
+
+136
+00:08:18,370 --> 00:08:25,540
+The middle is moving to the left side. If this loop ended up with start is greater than the end.
+136
+
+137
+00:08:25,780 --> 00:08:28,360
+It means we never found the array.
+137
+
+138
+00:08:28,630 --> 00:08:29,680
+So here is -1.
+138
+
+139
+00:08:30,040 --> 00:08:32,050
+Please do two things.
+139
+
+140
+00:08:32,320 --> 00:08:38,470
+First of all, take the array that I give, and the test cases that I give, trace all of them one
+140
+
+141
+00:08:38,470 --> 00:08:42,850
+by one till you are 100 percent sure you understand what is happening here.
+141
+
+142
+00:08:43,180 --> 00:08:45,400
+Put here print statement, like put a print statement,
+142
+
+143
+00:08:45,400 --> 00:08:46,120
+What is the start?
+143
+
+144
+00:08:46,330 --> 00:08:47,140
+What is the middle?
+144
+
+145
+00:08:47,290 --> 00:08:48,400
+What is the end?
+145
+
+146
+00:08:48,580 --> 00:08:53,350
+What is the value of the middle? Print it, so that you can be sure from the performance.
+146
+
+147
+00:08:53,920 --> 00:08:56,860
+The last thing is, what is the time complexity of this code?
+147
+
+148
+00:08:58,300 --> 00:08:59,050
+That's all for now.

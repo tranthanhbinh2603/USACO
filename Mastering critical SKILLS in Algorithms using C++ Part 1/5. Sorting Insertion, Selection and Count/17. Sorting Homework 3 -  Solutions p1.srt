@@ -1,0 +1,649 @@
+0
+1
+00:00:00,970 --> 00:00:02,780
+Let's solve the hard challenges.
+1
+
+2
+00:00:02,800 --> 00:00:08,560
+There is something here that I would like to confirm, the course will have different hard challenges,
+2
+
+3
+00:00:09,010 --> 00:00:13,780
+and early in the course, you will not be skilled enough to tackle hard challenges.
+3
+
+4
+00:00:14,170 --> 00:00:23,020
+As I said during the getting started section, my advice is you can delay all the problems that you
+4
+
+5
+00:00:23,020 --> 00:00:26,440
+can find hard to the end of the course, just in your notes,
+5
+
+6
+00:00:26,740 --> 00:00:29,440
+mark where are the problems that you should solve.
+6
+
+7
+00:00:30,370 --> 00:00:34,960
+Or another way is to tackle the problem, if you found it really to be hard and you cannot understand the
+7
+
+8
+00:00:34,960 --> 00:00:35,560
+solution,
+8
+
+9
+00:00:35,650 --> 00:00:38,050
+just put it in your ToDo mark.
+9
+
+10
+00:00:38,530 --> 00:00:42,430
+Don't just try to insist on solving it early in the course.
+10
+
+11
+00:00:42,460 --> 00:00:47,200
+During the course, you will solve a lot of problems, and these problems will enhance your skills.
+11
+
+12
+00:00:47,560 --> 00:00:50,050
+So your weak skills will grow up over time.
+12
+
+13
+00:00:50,350 --> 00:00:55,270
+And what was very hard in the early of the course is going to be way smoother and easier in the end
+13
+
+14
+00:00:55,270 --> 00:00:55,750
+of the course.
+14
+
+15
+00:00:56,080 --> 00:00:58,180
+It's important to learn in the right way.
+15
+
+16
+00:00:58,510 --> 00:01:02,920
+Do not get disappointed, as we learned, the course anyway is going to be challenging for you.
+16
+
+17
+00:01:03,400 --> 00:01:04,930
+So let's solve this problem.
+17
+
+18
+00:01:04,930 --> 00:01:09,430
+I first asked you for an O(nlogn) solution and another O(n) one.
+18
+
+19
+00:01:09,430 --> 00:01:10,810
+It needs observation skills.
+19
+
+20
+00:01:12,130 --> 00:01:15,280
+It doesn't depend on sorting as a procedure.
+20
+
+21
+00:01:15,580 --> 00:01:17,860
+The O(nlogn) one is a pretty straightforward one.
+21
+
+22
+00:01:17,860 --> 00:01:19,510
+I hope you managed to figure it out.
+22
+
+23
+00:01:20,760 --> 00:01:26,880
+In the (nlogn) one, it's based on a very simple observation. If we sorted the array, we
+23
+
+24
+00:01:26,880 --> 00:01:32,460
+can compare the old array with the new array to figure out where are
+24
+
+25
+00:01:32,460 --> 00:01:33,360
+the unsorted range.
+25
+
+26
+00:01:33,630 --> 00:01:38,970
+So let's say we have the array here like that, and let's say we have one, two as valid, and let's
+26
+
+27
+00:01:38,970 --> 00:01:40,560
+say seven and eight as valid.
+27
+
+28
+00:01:40,890 --> 00:01:51,150
+And let's say we have here like five, six, four, three, four, if you compare the sorted
+28
+
+29
+00:01:51,150 --> 00:01:52,740
+with unsorted step by step.
+29
+
+30
+00:01:52,980 --> 00:01:57,840
+Once you figured out the first element that is unequal, this is the first element.
+30
+
+31
+00:01:58,110 --> 00:02:03,930
+And again, from the backward, once you figured out the first unequal elements, this is the end.
+31
+
+32
+00:02:04,080 --> 00:02:06,930
+So we just need to sort this interval, that's trivial.
+32
+
+33
+00:02:07,320 --> 00:02:13,020
+We can find the solution with simple, smart coding as following. You iterate,
+33
+
+34
+00:02:13,320 --> 00:02:16,470
+the first number that isn't equal must be the left one.
+34
+
+35
+00:02:17,310 --> 00:02:21,060
+OK, during the processing, this will be different,
+35
+
+36
+00:02:21,060 --> 00:02:22,350
+this different, this different.
+36
+
+37
+00:02:22,740 --> 00:02:24,000
+I need the last one in them.
+37
+
+38
+00:02:24,240 --> 00:02:29,130
+So the first difference is the left and the last difference is the right.
+38
+
+39
+00:02:29,370 --> 00:02:31,500
+So I will keep updating this right variable,
+39
+
+40
+00:02:31,500 --> 00:02:33,330
+as long as, there is difference, I will update it.
+40
+
+41
+00:02:33,570 --> 00:02:35,280
+The left is once only updated.
+41
+
+42
+00:02:35,520 --> 00:02:38,790
+The right will be updated with every difference here.
+42
+
+43
+00:02:39,270 --> 00:02:42,540
+Now, if (left == -1), then it means there are no problems.
+43
+
+44
+00:02:43,080 --> 00:02:48,240
+Otherwise, we need to sort this (right - left + 1) window.
+44
+
+45
+00:02:48,420 --> 00:02:50,340
+This is the easy solution.
+45
+
+46
+00:02:50,820 --> 00:02:53,460
+Now let's go back to the hard solution.
+46
+
+47
+00:02:53,700 --> 00:02:57,330
+There are different ways to implement an O(n) solution for this problem.
+47
+
+48
+00:02:57,720 --> 00:03:02,820
+First of all, just for clarity, this is the input and this is the sorted vision.
+48
+
+49
+00:03:03,120 --> 00:03:04,740
+Let's divide it to three parts.
+49
+
+50
+00:03:05,070 --> 00:03:13,080
+The sorted array, which let's call it here A, and the last sorted array, which we call C, and
+50
+
+51
+00:03:13,080 --> 00:03:14,400
+the unsorted in the middle B.
+51
+
+52
+00:03:14,400 --> 00:03:21,150
+We need to figure out this B. Remember from the programming course, the early numbers in an array
+52
+
+53
+00:03:21,150 --> 00:03:24,270
+we call them prefix, the last array we call them suffix.
+53
+
+54
+00:03:24,840 --> 00:03:30,840
+So we would like to find these A, C, and B. Logically, we would like to find the largest A, and
+54
+
+55
+00:03:30,840 --> 00:03:34,080
+largest C so that B be as short as possible.
+55
+
+56
+00:03:35,430 --> 00:03:42,820
+Now there is a simple observation about sorting, what makes 70 a valid number here in its valid
+56
+
+57
+00:03:42,840 --> 00:03:50,010
+location? Seventy must be greater than all of the previous elements, greater than or equal, and must be smaller than or
+57
+
+58
+00:03:50,130 --> 00:03:51,660
+equal to all of the next elements.
+58
+
+59
+00:03:51,960 --> 00:03:56,280
+This is what makes an element really in its right location in a sorting way.
+59
+
+60
+00:03:57,140 --> 00:04:07,970
+Now, if the values have this part that needs to be sorted, we need to figure
+60
+
+61
+00:04:07,970 --> 00:04:08,510
+out,
+61
+
+62
+00:04:08,600 --> 00:04:09,470
+let's focus on the C
+62
+
+63
+00:04:09,650 --> 00:04:18,070
+first. I want to find this hundred, the first value C[0] of the sorted postfix here.
+63
+
+64
+00:04:18,080 --> 00:04:19,100
+I need to find it.
+64
+
+65
+00:04:19,820 --> 00:04:24,740
+This position will be as following, it must be greater than or equal to all of the previous values,
+65
+
+66
+00:04:25,670 --> 00:04:30,020
+and its C must be an increasing sequence, must be increasing one.
+66
+
+67
+00:04:31,080 --> 00:04:31,550
+OK.
+67
+
+68
+00:04:31,950 --> 00:04:33,210
+I hope the idea is clear.
+68
+
+69
+00:04:33,480 --> 00:04:36,090
+The question is, how can we implement that in an efficient way?
+69
+
+70
+00:04:36,240 --> 00:04:38,310
+I will end up (n^2) this way to find them.
+70
+
+71
+00:04:38,670 --> 00:04:45,120
+Here is the simple idea. If you kept the maximum while iterating from the left to the right, kept the
+71
+
+72
+00:04:45,120 --> 00:04:48,450
+maximum while iterating from the left to the right.
+72
+
+73
+00:04:48,900 --> 00:04:54,930
+So the maximum here is 10, 20, 30, 40, 50, 60, sorry, the maximum here is 90.
+73
+
+74
+00:04:55,170 --> 00:05:00,780
+The maximum here is 80, being 80 and this one is maximum so far is 90
+74
+
+75
+00:05:00,780 --> 00:05:04,890
+means definitely this isn't in its correct position,
+75
+
+76
+00:05:05,220 --> 00:05:12,210
+and anyone before that. OK, again, seven and ninety are not in their right location.
+76
+
+77
+00:05:12,420 --> 00:05:14,490
+Sixty and ninety aren't in their right location.
+77
+
+78
+00:05:14,790 --> 00:05:19,710
+Now, the maximum here will be updated again, being updated means this variable
+78
+
+79
+00:05:19,980 --> 00:05:22,740
+there is a high chance now it be the valid choice.
+79
+
+80
+00:05:23,340 --> 00:05:30,090
+So the moral of that is to go from left to right while maintaining your maximum variable, the first
+80
+
+81
+00:05:30,090 --> 00:05:36,960
+variable, you don't have to update its maximum anymore means all of the values after it 
+81
+
+82
+00:05:36,960 --> 00:05:39,870
+are valid, all of the values after it are valid.
+82
+
+83
+00:05:40,110 --> 00:05:46,280
+So here, once the hundred became the maximum of all of this array, it will not be updated again.
+83
+
+84
+00:05:46,290 --> 00:05:51,330
+Imagine if there is here 200, 300, 400, the hundred
+84
+
+85
+00:05:52,710 --> 00:05:58,280
+sorry, we will keep updating it, right? Because there are new
+85
+
+86
+00:06:00,870 --> 00:06:01,310
+.
+86
+
+87
+00:06:01,890 --> 00:06:02,270
+OK.
+87
+
+88
+00:06:03,120 --> 00:06:05,430
+Let's specify it in this way.
+88
+
+89
+00:06:05,460 --> 00:06:10,470
+We need to make sure that values don't go below this value.
+89
+
+90
+00:06:10,550 --> 00:06:11,580
+Let's see the code easier.
+90
+
+91
+00:06:14,070 --> 00:06:16,020
+I here iterate from left to right.
+91
+
+92
+00:06:16,410 --> 00:06:18,480
+I will keep the maximum with me.
+92
+
+93
+00:06:18,960 --> 00:06:22,410
+I will keep it, so it will be maximum 200, 300, and 400.
+93
+
+94
+00:06:23,340 --> 00:06:32,610
+What really tells us that we have a new valid start is, am I greater than the maximum or not?
+94
+
+95
+00:06:33,060 --> 00:06:39,240
+If the maximum is greater than me, then definitely something wrong
+95
+
+96
+00:06:39,240 --> 00:06:39,780
+on my side.
+96
+
+97
+00:06:39,960 --> 00:06:40,950
+So let's see here again.
+97
+
+98
+00:06:41,250 --> 00:06:52,470
+I have values like 10, 20, 30, and suddenly 17, then 40, then suddenly 5, the maximum here
+98
+
+99
+00:06:52,590 --> 00:06:54,450
+is ten, the maximum here is twenty,
+99
+
+100
+00:06:54,720 --> 00:06:56,180
+the maximum here is thirty.
+100
+
+101
+00:06:56,790 --> 00:06:59,260
+OK, now comparing the maximum with the current
+101
+
+102
+00:06:59,280 --> 00:07:00,420
+number, it doesn't work.
+102
+
+103
+00:07:00,870 --> 00:07:05,460
+The maximum here is still 30, but I'm 17 smaller than you, then
+103
+
+104
+00:07:05,460 --> 00:07:09,480
+this means that this is the last invalid position we found.
+104
+
+105
+00:07:10,720 --> 00:07:11,760
+OK, go back here.
+105
+
+106
+00:07:11,760 --> 00:07:14,310
+Forty, the maximum here is 40 versus 40.
+106
+
+107
+00:07:14,490 --> 00:07:15,450
+It's OK.
+107
+
+108
+00:07:15,450 --> 00:07:16,470
+This is an OK value.
+108
+
+109
+00:07:16,920 --> 00:07:19,410
+No, the maximum here is forty again, and this is five.
+109
+
+110
+00:07:19,680 --> 00:07:24,960
+It means this one is again could be the end of the one.
+110
+
+111
+00:07:25,290 --> 00:07:28,890
+So now five, forty here is the valid right location.
+111
+
+112
+00:07:29,070 --> 00:07:35,220
+This is the end of the shortest path that we need to eventually sort it, that we need eventually
+112
+
+113
+00:07:35,490 --> 00:07:36,330
+to sort it.
+113
+
+114
+00:07:36,570 --> 00:07:42,810
+I hope you got the idea. If we iterated from left to right, kept the maximum with us, and kept
+114
+
+115
+00:07:42,810 --> 00:07:44,910
+comparing with the maximum, every time
+115
+
+116
+00:07:44,910 --> 00:07:47,640
+the maximum so far is greater than the current element.
+116
+
+117
+00:07:47,880 --> 00:07:52,710
+This element must be part of the array to be sorted, and we will keep updating it.
+117
+
+118
+00:07:53,280 --> 00:07:56,310
+Let's say here we ended up with 50, 60, 70.
+118
+
+119
+00:07:57,180 --> 00:08:00,420
+So this maximum 50, 50, 60, 60, 70, 70.
+119
+
+120
+00:08:00,600 --> 00:08:06,090
+There are no more updates here, which means these ones are valid ones.
+120
+
+121
+00:08:06,450 --> 00:08:07,290
+So I hope,
+121
+
+122
+00:08:07,470 --> 00:08:09,420
+You see now how we implemented it.
+122
+
+123
+00:08:09,690 --> 00:08:16,020
+We can do the same processing from back to forward to get the first element, which is going to
+123
+
+124
+00:08:16,020 --> 00:08:18,390
+be here 17, and 30.
+124
+
+125
+00:08:18,960 --> 00:08:25,500
+So we once go forward to go to the right, and we once go backward to go to the left.
+125
+
+126
+00:08:25,740 --> 00:08:31,830
+And the key idea, as I said, is mainly A[ i ] is valid if it's greater than all of the previous one, better
+126
+
+127
+00:08:31,830 --> 00:08:33,420
+than all of the next one.
+127
+
+128
+00:08:33,870 --> 00:08:40,830
+But the real challenge was how can we implement that in a smarter way, just maintain the maximum
+128
+
+129
+00:08:40,830 --> 00:08:47,160
+so far and compare it with the current element, with any element that is less than the current maximum,
+129
+
+130
+00:08:47,370 --> 00:08:50,670
+It's definitely part of the array to be sorted.

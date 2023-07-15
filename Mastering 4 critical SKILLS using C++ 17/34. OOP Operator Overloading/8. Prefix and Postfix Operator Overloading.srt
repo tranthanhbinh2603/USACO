@@ -1,0 +1,151 @@
+1
+00:00:01,140 --> 00:00:09,390
+Let's learn about overloading the prefix and postfix operators, remember, in the in the prefix operator,
+
+2
+00:00:09,390 --> 00:00:14,730
+we wanted to increment our ability, our our value, then return it.
+
+3
+00:00:14,730 --> 00:00:21,710
+If I say it's with X plus plus X. We need the exit to be incremented then to be presented.
+
+4
+00:00:21,990 --> 00:00:26,750
+So we'd like to present to some here the the the prefix operator.
+
+5
+00:00:27,030 --> 00:00:28,950
+We are going to do the similar logic.
+
+6
+00:00:28,950 --> 00:00:30,650
+We are providing the plus plus here.
+
+7
+00:00:30,930 --> 00:00:36,840
+So we are doing the plus plus for the first plus plus the second and then we are returning the this.
+
+8
+00:00:37,380 --> 00:00:42,950
+We are also returning it by reference so that someone can start to do further operation with it.
+
+9
+00:00:43,230 --> 00:00:44,090
+So far so good.
+
+10
+00:00:44,340 --> 00:00:48,140
+But what I would like now to provide the boost to fix it also should be plus plus.
+
+11
+00:00:48,540 --> 00:00:49,980
+So how to differentiate that.
+
+12
+00:00:50,430 --> 00:00:55,350
+C++ asks you to add for the boost to fix the Virgin attempt to integrate.
+
+13
+00:00:55,350 --> 00:01:00,900
+It will not be used just to differentiate the two syntax because as you know, we cannot have two functions
+
+14
+00:01:01,020 --> 00:01:01,970
+of the same name.
+
+15
+00:01:01,980 --> 00:01:05,100
+So this is just a temporary extra variable that we are going to use.
+
+16
+00:01:05,640 --> 00:01:09,040
+Now, the Mr. Fix is also more tricky when it comes to implementation.
+
+17
+00:01:09,330 --> 00:01:21,180
+Remember, we need to have the we need first to have the object to be returned, then increment it.
+
+18
+00:01:21,180 --> 00:01:27,870
+If I have S X plus plus we need to present the X, then we need to incremented to do that here in our
+
+19
+00:01:27,870 --> 00:01:28,340
+class.
+
+20
+00:01:28,650 --> 00:01:38,820
+We are going to take a copy first from the object, OK, and then we are going to return to this data
+
+21
+00:01:39,090 --> 00:01:41,180
+and in between we are going to increment it.
+
+22
+00:01:41,430 --> 00:01:47,010
+So this incrementing is having to the internal internal cost, but the return of that is going to be
+
+23
+00:01:47,010 --> 00:01:51,390
+presented is the one that is covid Noticia.
+
+24
+00:01:51,400 --> 00:01:52,200
+Do not return.
+
+25
+00:01:52,200 --> 00:01:56,350
+It is by reference because Cober here is a temporary variable, so this would be wrong.
+
+26
+00:01:56,850 --> 00:02:02,910
+So looking here to the query, we do find X1 with one or two and then we incremented it first, presenting
+
+27
+00:02:02,910 --> 00:02:03,450
+two and three.
+
+28
+00:02:03,960 --> 00:02:08,910
+But the other side here of x2 plus plus and we try to bring to it is going to bring to the original
+
+29
+00:02:08,910 --> 00:02:10,260
+values after it.
+
+30
+00:02:10,260 --> 00:02:13,260
+If we try to print X is going to be two and the three.
+
+31
+00:02:13,590 --> 00:02:19,110
+So the moral of that is the prefix operator need reference.
+
+32
+00:02:19,110 --> 00:02:21,240
+The was the fixed operator does a new reference.
+
+33
+00:02:21,540 --> 00:02:24,420
+That was the fix we need also to to create an extra parameter.
+
+34
+00:02:24,420 --> 00:02:28,860
+And the logic should be you make a copy, then you can amend, then you return.
+
+35
+00:02:29,010 --> 00:02:33,900
+The flow should be very similar to what we are doing here.
+
+36
+00:02:35,950 --> 00:02:45,010
+If you have probably a lot of logic defined in your plus, you might come here and just the original
+
+37
+00:02:45,010 --> 00:02:47,520
+vibrator so that you don't have to duplicate code here.
+
+38
+00:02:48,100 --> 00:02:48,640
+That's it.

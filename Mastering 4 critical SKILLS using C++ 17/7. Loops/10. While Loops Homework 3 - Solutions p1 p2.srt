@@ -1,0 +1,159 @@
+0
+1
+00:00:00,930 --> 00:00:05,490
+Let's solve the third homework, the first one is about the find NOs, it isn't a hard one.
+1
+
+2
+00:00:05,700 --> 00:00:10,830
+All what you need is to figure out that there are eight different ways to make two letters in both cases
+2
+
+3
+00:00:10,830 --> 00:00:13,020
+lower and upper. For example, it can be
+3
+
+4
+00:00:13,020 --> 00:00:15,150
+no, No, nO, NO.
+4
+
+5
+00:00:15,150 --> 00:00:21,180
+But we are considering the four cases for the "no" here and in the other side there is on, oN, On, ON in the
+5
+
+6
+00:00:21,180 --> 00:00:25,710
+four different cases. They are four, because mathematically you have only two choices and every choice
+6
+
+7
+00:00:25,710 --> 00:00:26,430
+has two cases.
+7
+
+8
+00:00:26,430 --> 00:00:33,300
+So overall, like four possible cases. In the future, you will learn much easier ways to that problem.
+8
+
+9
+00:00:33,460 --> 00:00:38,570
+For example, in the future, you can sort this string input and then make all of it lower then all
+9
+
+10
+00:00:38,580 --> 00:00:42,210
+what you need to do is just comparing, for example, with one of them only.
+10
+
+11
+00:00:42,600 --> 00:00:48,180
+But for now, given the current tools, you cannot do that. During the course, you will learn that the
+11
+
+12
+00:00:48,180 --> 00:00:53,190
+the more programming concepts that you learn, the more different ways that you can do
+12
+
+13
+00:00:53,190 --> 00:00:55,340
+your tasks in an easier way.
+13
+
+14
+00:00:57,080 --> 00:01:02,360
+In the second problem, we would like to reverse a number. At this moment, this task should be easy for
+14
+
+15
+00:01:02,360 --> 00:01:02,600
+you.
+15
+
+16
+00:01:02,630 --> 00:01:06,260
+We developed several ones in the previous sections.
+16
+
+17
+00:01:06,800 --> 00:01:10,790
+To do that, we need mainly the %10 and divide by 10 trick.
+17
+
+18
+00:01:11,420 --> 00:01:16,760
+Remember that %10 gets you the last digit and division by 10 removes for you the last digit.
+18
+
+19
+00:01:17,240 --> 00:01:22,580
+Now, the only remaining part here, if I have a number like let's say I have numbers like
+19
+
+20
+00:01:22,880 --> 00:01:29,000
+maybe five, six, seven, how to construct five, six, seven
+20
+
+21
+00:01:29,000 --> 00:01:35,930
+numbers from them. By doing multiplication and addition of ten, how? let's say we have five, multiply
+21
+
+22
+00:01:35,930 --> 00:01:36,710
+five by ten.
+22
+
+23
+00:01:36,710 --> 00:01:40,900
+It is now 50, add the next digit with six, it is now 56.
+23
+
+24
+00:01:40,910 --> 00:01:42,860
+and multiplied by ten.
+24
+
+25
+00:01:42,860 --> 00:01:47,650
+It's five hundred and sixty, add the next digit which is seven.
+25
+
+26
+00:01:48,140 --> 00:01:55,480
+So mathematically all what we need is a series of multiplication times N and addition of a single digit.
+26
+
+27
+00:01:55,700 --> 00:02:00,790
+That's how we can reverse a number to get a complete new number.
+27
+
+28
+00:02:01,640 --> 00:02:06,140
+We are reversing it because we are getting it digit by digit from the end of it.
+28
+
+29
+00:02:07,310 --> 00:02:11,180
+And this is how you construct a number from a group of digits.
+29
+
+30
+00:02:11,540 --> 00:02:15,260
+And this is finally the number, a number of three, the purpose of number of three is to make sure that
+30
+
+31
+00:02:15,260 --> 00:02:16,460
+you actually did it right.
+31
+
+32
+00:02:19,370 --> 00:02:20,570
+Yeah, let's stop here.

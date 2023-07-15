@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1673272479 source:e:\document\project\usaco\mastering critical skills in algorithms using c++ part 1\7. graph representation\learning\04 list node id weight\main.cpp
+	<iostream>
+	<vector>
+

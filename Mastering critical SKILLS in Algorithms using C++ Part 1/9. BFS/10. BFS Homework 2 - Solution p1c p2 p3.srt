@@ -1,0 +1,511 @@
+1
+00:00:01,050 --> 00:00:13,740
+Let's see their implementation here, first of all, we have uh, we have, uh, uh, the condition
+
+2
+00:00:13,740 --> 00:00:20,820
+here that I was referring to it, I'm early verifying if the if the current index already has zero or
+
+3
+00:00:20,820 --> 00:00:24,720
+not, if it has zero, we are done this something important here.
+
+4
+00:00:24,720 --> 00:00:29,280
+As you see in the while loop, I don't to verify the element that I get from the Q.
+
+5
+00:00:29,580 --> 00:00:31,470
+I only verify what I put in the Q.
+
+6
+00:00:32,700 --> 00:00:40,140
+OK, so the Goodyear goes as normal we have in nodes, so we have a vector of Boolean Q bush.
+
+7
+00:00:40,140 --> 00:00:46,140
+The Q, this is as we do this as what we used to do in the operation goods.
+
+8
+00:00:46,140 --> 00:00:49,140
+We usually have a lot of operations, so be careful to not duplicate the code.
+
+9
+00:00:49,440 --> 00:00:54,960
+So I am implementing here a process function that dig the Q, the visited array, the array and and
+
+10
+00:00:54,960 --> 00:00:55,890
+the current index.
+
+11
+00:00:56,310 --> 00:01:00,690
+And then I tell him to check index the blustery and index minus array.
+
+12
+00:01:01,230 --> 00:01:07,470
+The first thing is if indexing is in zero or it is actually a vista index, and then we turn a false.
+
+13
+00:01:08,250 --> 00:01:13,200
+If we find that the index is true, the index values zero, we return it through.
+
+14
+00:01:13,560 --> 00:01:15,720
+Otherwise we mark twisted bush in the Q.
+
+15
+00:01:15,720 --> 00:01:18,750
+A return for to be false mean we still keep going in the processing.
+
+16
+00:01:19,230 --> 00:01:23,370
+If any of these two calls return it true, it means we found the answer.
+
+17
+00:01:23,380 --> 00:01:24,480
+So we returned it to here.
+
+18
+00:01:25,170 --> 00:01:32,430
+If the Q finished the processing without anything that provide an answer, then we return false here.
+
+19
+00:01:32,880 --> 00:01:38,070
+I hope overall the the idea in this problem is clear.
+
+20
+00:01:38,460 --> 00:01:40,480
+Now let's see the second.
+
+21
+00:01:40,480 --> 00:01:44,910
+The problem, which is very similar to this problem here.
+
+22
+00:01:45,330 --> 00:01:47,550
+So this is again, another operation.
+
+23
+00:01:47,550 --> 00:01:50,040
+B is the problem and in this problem.
+
+24
+00:01:51,310 --> 00:01:54,400
+We would like to convert the number to another number.
+
+25
+00:01:54,640 --> 00:01:57,880
+But this time we have an array that we are going to use.
+
+26
+00:01:58,240 --> 00:02:00,910
+So here is the implementation, which is exactly very similar.
+
+27
+00:02:01,240 --> 00:02:05,290
+We have a starting number, so we put it in the queue market has visited.
+
+28
+00:02:05,560 --> 00:02:06,280
+We iterate.
+
+29
+00:02:06,640 --> 00:02:08,760
+Now where are their substrates?
+
+30
+00:02:08,770 --> 00:02:09,880
+We get them from the array.
+
+31
+00:02:09,880 --> 00:02:18,430
+So I iterate on the array and then try to move to this node plus and this mode minus and this node operator.
+
+32
+00:02:18,850 --> 00:02:24,760
+If any one of them is done, then we return riverboats one otherwise level minus one.
+
+33
+00:02:25,420 --> 00:02:30,550
+The process function is as simple as it to check if we are at the goal, we return it all.
+
+34
+00:02:31,000 --> 00:02:32,710
+If the number in this range.
+
+35
+00:02:33,250 --> 00:02:36,610
+And it is invested, then we added otherwise we ignored it.
+
+36
+00:02:36,610 --> 00:02:40,570
+And this is very important condition for correctness and also for the memory.
+
+37
+00:02:41,080 --> 00:02:47,110
+So as you see, the implementation is done now, then put into question how many states are here, given
+
+38
+00:02:47,110 --> 00:02:50,380
+that the function limit us to 1000 values.
+
+39
+00:02:50,680 --> 00:02:54,810
+This means you only maximum has in states and is just 1000.
+
+40
+00:02:56,170 --> 00:03:00,550
+So this is all what you this is all what you need for the memory.
+
+41
+00:03:00,730 --> 00:03:03,400
+What about the time complexity?
+
+42
+00:03:04,060 --> 00:03:09,220
+We have more nodes, but in in so total we have nodes.
+
+43
+00:03:10,750 --> 00:03:13,670
+And for every new world, we iterate on the wood array here.
+
+44
+00:03:13,690 --> 00:03:18,640
+So this is in the times, so total aim and implementation.
+
+45
+00:03:18,910 --> 00:03:20,530
+This is merely this problem.
+
+46
+00:03:20,530 --> 00:03:24,760
+As you see, the two of them is exactly very similar, including style.
+
+47
+00:03:25,700 --> 00:03:30,560
+So in the third, the problem, the one about the, uh, the one about the look.
+
+48
+00:03:31,560 --> 00:03:33,560
+So let's see here, is it different or not?
+
+49
+00:03:33,570 --> 00:03:35,910
+In fact, this is a very similar problem.
+
+50
+00:03:36,180 --> 00:03:40,770
+It's all about the it's it's all about that, the looking.
+
+51
+00:03:41,730 --> 00:03:48,660
+So again, you have a string as a starting point and you change it to an endpoint.
+
+52
+00:03:48,990 --> 00:03:49,620
+That's all.
+
+53
+00:03:49,860 --> 00:03:54,030
+So what we need is just iterate and do the bunch of things.
+
+54
+00:03:54,600 --> 00:03:56,280
+Now, a few things here.
+
+55
+00:03:56,610 --> 00:04:04,500
+First of all, um, we need to use set because to mark that, the strings, are they used or not?
+
+56
+00:04:05,340 --> 00:04:07,170
+Um, the verification.
+
+57
+00:04:07,680 --> 00:04:12,540
+Remember, I told you if you have to verify the initial state, but is verify them.
+
+58
+00:04:13,240 --> 00:04:16,260
+OK, what about the number of states?
+
+59
+00:04:16,560 --> 00:04:18,690
+We only have a string of four letters.
+
+60
+00:04:18,960 --> 00:04:20,760
+Every letter has four values.
+
+61
+00:04:20,970 --> 00:04:25,560
+This means we have 10 to the power for states only, which is very straightforward.
+
+62
+00:04:26,130 --> 00:04:30,340
+And in every step, we generate the children in all these steps.
+
+63
+00:04:30,390 --> 00:04:37,380
+OK, now, uh, this means that the total time complexity is the total number of states and the number
+
+64
+00:04:37,380 --> 00:04:40,530
+of children, but not which is the Times 10 to the poverty.
+
+65
+00:04:41,220 --> 00:04:42,390
+This constant in a way.
+
+66
+00:04:44,080 --> 00:04:50,230
+Uh, in C++, we can generate one child in all one, but in other languages, this isn't the case.
+
+67
+00:04:50,890 --> 00:04:52,480
+OK, let's see the implementation.
+
+68
+00:04:59,820 --> 00:05:03,450
+First of all, I have this to start, which is for two years.
+
+69
+00:05:03,750 --> 00:05:08,210
+We have that unordered, the set, which is a stable of nudes.
+
+70
+00:05:08,610 --> 00:05:10,740
+I'm initially using it with the ends.
+
+71
+00:05:10,750 --> 00:05:16,470
+Why that it ends look like just you can think of them like your vested notes that you shouldn't touch.
+
+72
+00:05:17,370 --> 00:05:22,140
+So some people will make two different sets to check if it is in the dead ends or the chicken.
+
+73
+00:05:22,140 --> 00:05:24,930
+The vested, why not just put them all of them individually at once?
+
+74
+00:05:25,200 --> 00:05:26,310
+Then we are done with that.
+
+75
+00:05:27,620 --> 00:05:33,200
+Now that you, uh, of this thing, because the truth now is a string, the nude is a string.
+
+76
+00:05:33,560 --> 00:05:35,900
+No, you need to make these two special cases early.
+
+77
+00:05:36,650 --> 00:05:43,880
+You need to check if if the visited, if the starting is already in the vested, the means that zero
+
+78
+00:05:43,880 --> 00:05:45,200
+zero zero is even locked.
+
+79
+00:05:45,860 --> 00:05:48,620
+The second case is if the start equal the goal.
+
+80
+00:05:48,860 --> 00:05:51,410
+So it means also you are ready, Richard.
+
+81
+00:05:52,040 --> 00:05:57,260
+Most of the problems of with this kind of tricks, I expect you to get maybe one or two wrong answers.
+
+82
+00:05:57,530 --> 00:06:02,780
+This is more or less like competitive programming, like will we try to trick people about that?
+
+83
+00:06:02,780 --> 00:06:08,540
+I honestly got a good answer for this submission here, missing that the starter could be in the ends
+
+84
+00:06:08,840 --> 00:06:10,070
+anyway, not our business.
+
+85
+00:06:10,880 --> 00:06:12,020
+Now let's keep going.
+
+86
+00:06:14,130 --> 00:06:20,970
+Uh, we again, Bush, the new market, visited ETRADE, get a child, they removed the child.
+
+87
+00:06:21,330 --> 00:06:22,770
+Now we need to generate the children.
+
+88
+00:06:23,040 --> 00:06:24,360
+We have four letters.
+
+89
+00:06:24,570 --> 00:06:31,740
+For example, maybe the current state is three one zero two, then for every one of them, we will try
+
+90
+00:06:31,740 --> 00:06:35,540
+to get it one step before or it is one step after.
+
+91
+00:06:35,820 --> 00:06:38,610
+Get it, one step before or one step after.
+
+92
+00:06:38,910 --> 00:06:39,270
+Right.
+
+93
+00:06:39,510 --> 00:06:44,490
+So this means the four four steps we actually have eight children, not just for sorry.
+
+94
+00:06:44,760 --> 00:06:46,500
+We have eight different children.
+
+95
+00:06:46,800 --> 00:06:47,370
+So four.
+
+96
+00:06:47,610 --> 00:06:52,200
+And everyone is trying to uh, some people are implementing that in a very lengthy way.
+
+97
+00:06:52,230 --> 00:06:53,100
+It is the right way.
+
+98
+00:06:53,340 --> 00:06:57,600
+I have next and previous functions in the next function will take a character to character.
+
+99
+00:06:57,900 --> 00:07:01,370
+So I said next of two, it would be three previous or have two.
+
+100
+00:07:01,380 --> 00:07:04,530
+It will be one next of nine would be zero.
+
+101
+00:07:04,950 --> 00:07:06,590
+Previews of zero would be nine.
+
+102
+00:07:06,900 --> 00:07:09,450
+These two utilities would be very helpful during coding.
+
+103
+00:07:09,960 --> 00:07:14,370
+So I thought, let's say we have three two zero seven in the first character.
+
+104
+00:07:14,370 --> 00:07:16,320
+I would say, what is the next character here?
+
+105
+00:07:16,620 --> 00:07:18,330
+So let's say three is going to be four.
+
+106
+00:07:18,780 --> 00:07:22,530
+So now the new string is four to zero seven and then I'm a checking.
+
+107
+00:07:23,640 --> 00:07:30,460
+In the in the in the CBS2 set, when you insert the element, it returned a beer where the second is
+
+108
+00:07:30,460 --> 00:07:33,640
+true, it's insisted already false if it's already existing.
+
+109
+00:07:34,090 --> 00:07:38,650
+So now when I say the second, it mean it's actually the first time to edit.
+
+110
+00:07:39,040 --> 00:07:43,720
+So I'm saying if it's if it's new state, but is -- here now.
+
+111
+00:07:43,720 --> 00:07:48,880
+After that, we would like to take three and reduce it, which is as simple as thinking four and reduce
+
+112
+00:07:48,880 --> 00:07:49,360
+it twice.
+
+113
+00:07:49,360 --> 00:07:52,990
+So previous of previous A4 is two to zero 07.
+
+114
+00:07:53,710 --> 00:07:59,620
+So here that's why I'm doing previous previous year if current equate equals target here or here.
+
+115
+00:07:59,980 --> 00:08:01,600
+Then we found it just to return.
+
+116
+00:08:01,900 --> 00:08:03,520
+Otherwise, we it here.
+
+117
+00:08:03,940 --> 00:08:05,320
+Now remember to undo that.
+
+118
+00:08:05,320 --> 00:08:11,170
+If you didn't make the undo, you would have to take a copy of the next string, which is, oh, a deliberate
+
+119
+00:08:11,170 --> 00:08:11,440
+step.
+
+120
+00:08:11,770 --> 00:08:14,980
+So when you, I'm keeping the next string as it is.
+
+121
+00:08:16,660 --> 00:08:21,900
+That's sort of the current district as it so that I don't have to copy the memory here, which is just
+
+122
+00:08:21,910 --> 00:08:22,540
+having a memory.
+
+123
+00:08:22,960 --> 00:08:25,810
+I hope you got the overall idea, the good, the little bit longer.
+
+124
+00:08:26,230 --> 00:08:27,940
+But the idea is exactly the same.
+
+125
+00:08:28,120 --> 00:08:28,990
+You have a string.
+
+126
+00:08:29,230 --> 00:08:33,190
+There are eight different operations that we can do to get eight different strings.
+
+127
+00:08:33,430 --> 00:08:34,720
+This this is A..
+
+128
+00:08:34,960 --> 00:08:39,100
+These are the nodes who are doing the conversion and that and that's it.

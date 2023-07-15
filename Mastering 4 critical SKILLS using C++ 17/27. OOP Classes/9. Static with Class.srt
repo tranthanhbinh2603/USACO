@@ -1,0 +1,349 @@
+0
+1
+00:00:01,080 --> 00:00:03,990
+One interesting feature is using a static with classes.
+1
+
+2
+00:00:04,290 --> 00:00:10,110
+Remember, when we define a static variable, it is declared once, it is in memory till the program ends.
+2
+
+3
+00:00:10,800 --> 00:00:13,190
+For example, this hello function has variables
+3
+
+4
+00:00:13,200 --> 00:00:17,370
+i1 and i2, but i2 is a static. When we call hello
+4
+
+5
+00:00:17,730 --> 00:00:21,810
+more than once, the variable i1 would be zero every time.
+5
+
+6
+00:00:21,990 --> 00:00:25,640
+So every time you print it, it would remain zero. On the other side,
+6
+
+7
+00:00:25,650 --> 00:00:27,750
+static int is a shared variable,
+7
+
+8
+00:00:27,780 --> 00:00:29,210
+it exists once in memory.
+8
+
+9
+00:00:29,490 --> 00:00:32,350
+So with every call when we come here, it will not be zero,
+9
+
+10
+00:00:32,370 --> 00:00:33,050
+It would be the last
+10
+
+11
+00:00:33,050 --> 00:00:35,880
+value. Initially was zero then 1, then 2.
+11
+
+12
+00:00:36,210 --> 00:00:40,320
+So the static variable is defined once in memory and still till the program ends.
+12
+
+13
+00:00:40,590 --> 00:00:41,580
+What about static
+13
+
+14
+00:00:41,580 --> 00:00:48,630
+as a data member? If you declared a static data member, it is going
+14
+
+15
+00:00:48,630 --> 00:00:54,060
+to be shared among all of the objects. Once created, it's there till the program ends.
+15
+
+16
+00:00:54,060 --> 00:01:00,120
+A more interesting thing is that there could be a static variable, although there are no objects
+16
+
+17
+00:01:00,300 --> 00:01:06,240
+so far. The initialization or definition of this variable is a bit weird.
+17
+
+18
+00:01:06,480 --> 00:01:12,120
+You declare it here inside that static integer X, then you have to define it outside using the colon
+18
+
+19
+00:01:12,150 --> 00:01:12,910
+colon operator.
+19
+
+20
+00:01:13,170 --> 00:01:16,890
+So how you do it? you get it copy-paste, remove the word static,
+20
+
+21
+00:01:16,890 --> 00:01:21,490
+put the class name, colon-colon before the variable name, then initialize it.
+21
+
+22
+00:01:21,780 --> 00:01:23,310
+So here we can access it,
+22
+
+23
+00:01:23,310 --> 00:01:29,310
+and although there are no objects so far, we are calling this function which is changing
+23
+
+24
+00:01:29,310 --> 00:01:30,510
+it and so on.
+24
+
+25
+00:01:31,230 --> 00:01:33,760
+Definitely we are accessing only because it just public variable.
+25
+
+26
+00:01:33,900 --> 00:01:40,550
+So the point of static is being shared among all of the objects and in there till the program ends.
+26
+
+27
+00:01:41,310 --> 00:01:47,490
+What about a static member function? A static member function is a shared function between all of the
+27
+
+28
+00:01:47,490 --> 00:01:48,300
+static variables.
+28
+
+29
+00:01:48,600 --> 00:01:53,400
+As a static variable, it cannot access the data members, Ok.
+29
+
+30
+00:01:54,000 --> 00:01:55,970
+It can only access static variables.
+30
+
+31
+00:01:56,250 --> 00:01:56,820
+That's it.
+31
+
+32
+00:01:58,260 --> 00:01:59,670
+Let's put all of them together.
+32
+
+33
+00:02:00,150 --> 00:02:06,330
+We would like to track how many employees have been created during this system.
+33
+
+34
+00:02:06,600 --> 00:02:11,130
+We have here a class employee which has a name and a static integer employees count.
+34
+
+35
+00:02:11,340 --> 00:02:14,820
+When you think about the count, it isn't about specific employee.
+35
+
+36
+00:02:15,060 --> 00:02:20,660
+Every time we would like to call the constructor of the employee, we would like to increment this counter.
+36
+
+37
+00:02:20,970 --> 00:02:25,650
+We also have a function that is of type static to return for us
+37
+
+38
+00:02:25,890 --> 00:02:28,590
+how many static employee we have here?
+38
+
+39
+00:02:28,980 --> 00:02:34,740
+We here created two objects now, so Mostafa will increment this variable then mona will increment
+39
+
+40
+00:02:34,740 --> 00:02:35,300
+this variable.
+40
+
+41
+00:02:35,670 --> 00:02:38,310
+We also here created a static object belal,
+41
+
+42
+00:02:38,730 --> 00:02:40,600
+but this is just one static variable,
+42
+
+43
+00:02:40,620 --> 00:02:41,100
+...
+43
+
+44
+00:02:41,160 --> 00:02:42,350
+nothing about classes here,
+44
+
+45
+00:02:42,360 --> 00:02:45,570
+It is just one variable that would be there till the program ends.
+45
+
+46
+00:02:45,720 --> 00:02:48,290
+If we tried to print the count, it would be 3.
+46
+
+47
+00:02:48,720 --> 00:02:54,690
+This is how you could have a static variable and a static function shared with all of the objects,
+47
+
+48
+00:02:54,690 --> 00:02:58,020
+and this is how you declare and this is how you define it.
+48
+
+49
+00:02:59,580 --> 00:03:02,480
+Let's highlight something special about C++ here.
+49
+
+50
+00:03:02,850 --> 00:03:08,400
+Let's say that you have Class A and Class B, which have some functionality and public variable F, Class C
+50
+
+51
+00:03:08,430 --> 00:03:10,230
+has several static variables.
+51
+
+52
+00:03:10,350 --> 00:03:15,900
+For example, it has a static vector, static array, and object from A and object from B.
+52
+
+53
+00:03:16,320 --> 00:03:20,370
+Now, as we define the static variable, as we declare them here, we have to define them outside.
+53
+
+54
+00:03:20,790 --> 00:03:27,930
+So we here declared the variable V as just vector of an integer 20, we are defining array to
+54
+
+55
+00:03:27,930 --> 00:03:36,720
+just be like global this way, and we are making an object of A and an object of B, A has a default constructor
+55
+
+56
+00:03:36,720 --> 00:03:37,320
+no problem,
+56
+
+57
+00:03:37,560 --> 00:03:39,810
+and B we are using the object B 1 and 2.
+57
+
+58
+00:03:40,500 --> 00:03:42,020
+Now, here is a concern.
+58
+
+59
+00:03:42,660 --> 00:03:47,400
+Let's go to line 27 here and comment it.
+59
+
+60
+00:03:47,820 --> 00:03:48,840
+What's going to happen?
+60
+
+61
+00:03:49,320 --> 00:03:56,100
+Look at line 30, the compiler is going to give an error because line 30 is trying to access B,
+61
+
+62
+00:03:56,100 --> 00:04:05,400
+and B is declared here, but it isn't defined, so the compiler doesn't see it. Now, comment also
+62
+
+63
+00:04:05,400 --> 00:04:06,090
+line 30.
+63
+
+64
+00:04:06,480 --> 00:04:12,840
+The compiler will not give an error, although the variable B isn't also defined.
+64
+
+65
+00:04:13,170 --> 00:04:20,880
+So the sad point is: In compilation, the variables that aren't initialized would
+65
+
+66
+00:04:20,880 --> 00:04:23,280
+not be called unless they are used.
+66
+
+67
+00:04:23,700 --> 00:04:27,960
+Only when you come to linking, you can figure out this kind of errors.
+67
+
+68
+00:04:28,320 --> 00:04:33,930
+So the moral of that is if you are declaring a static variable, please remember to initialize it
+68
+
+69
+00:04:33,930 --> 00:04:36,960
+to avoid problems. There are little more concerns here,
+69
+
+70
+00:04:36,960 --> 00:04:39,210
+you can check out in the future. That's it.

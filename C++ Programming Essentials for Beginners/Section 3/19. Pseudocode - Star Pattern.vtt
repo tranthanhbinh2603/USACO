@@ -1,0 +1,208 @@
+WEBVTT
+
+00:01.220 --> 00:06.560
+Everyone in this electoral cycle, the start button problem, so given away live and we want to bring
+
+00:06.560 --> 00:07.670
+the burden like this, OK?
+
+00:08.370 --> 00:13.640
+So first of all, we will try to break this burden to every time you, you get a pardon problem.
+
+00:14.210 --> 00:20.150
+You have to look at what is the work that you have to do in every row because the printing happens.
+
+00:20.670 --> 00:26.720
+Roberta, there are three rows for an equal to three civil write down some observations.
+
+00:26.990 --> 00:34.100
+The first observation is that there are Andrews OK, and the second observation is in each row.
+
+00:35.630 --> 00:36.290
+There are.
+
+00:37.990 --> 00:39.410
+Or in Iowa?
+
+00:39.490 --> 00:42.550
+Look, there are a number of stars.
+
+00:42.970 --> 00:47.230
+These are the two observations during these two observations we can call this up.
+
+00:47.770 --> 00:49.620
+So this is led to rule number one.
+
+00:49.630 --> 00:50.420
+So one.
+
+00:50.800 --> 00:51.310
+This is wrong.
+
+00:51.310 --> 00:51.850
+Number two.
+
+00:51.880 --> 00:52.790
+It has two stars.
+
+00:52.810 --> 00:53.830
+This is rule number three.
+
+00:53.860 --> 00:54.850
+It has three stars.
+
+00:55.180 --> 00:55.480
+OK.
+
+00:56.050 --> 00:59.270
+And how do you jump from one to another?
+
+00:59.950 --> 01:03.940
+You have to print a special character, which is known as a new line corrected.
+
+01:03.950 --> 01:08.400
+So all languages have this correct that it does not visible.
+
+01:08.410 --> 01:12.550
+It's not printed like this, but it takes your cursor to the next line.
+
+01:12.550 --> 01:16.270
+So whenever you print this correct, it takes the cursor to the new line.
+
+01:16.330 --> 01:16.630
+OK.
+
+01:16.900 --> 01:19.270
+That is the meaning of the new line, correct?
+
+01:20.020 --> 01:22.650
+So let's write those who pseudocode for this problem.
+
+01:22.660 --> 01:30.020
+So first of all, we'll read the value of an OK, and then we will need a loop to iterate over those.
+
+01:30.040 --> 01:33.810
+So there are two things we have to print arrows repeatedly.
+
+01:34.360 --> 01:36.220
+I can get laid equal to one.
+
+01:36.730 --> 01:41.590
+While I was less than equal, doing what we will do will do the work for every rule.
+
+01:41.890 --> 01:42.190
+OK?
+
+01:42.730 --> 01:44.440
+What is the work that we have to do?
+
+01:44.440 --> 01:46.330
+And I drew so in the ayato.
+
+01:46.810 --> 01:49.310
+We have to print a number of times.
+
+01:49.390 --> 01:54.520
+So that means printing high number of stars would again require a loop.
+
+01:55.120 --> 01:59.980
+This would again required a loop current number of times.
+
+02:00.130 --> 02:02.470
+So let's see how we can do it so we can look.
+
+02:03.130 --> 02:04.690
+Let's do dodge equal to one.
+
+02:05.500 --> 02:08.170
+While stars is less than equal to I.
+
+02:09.400 --> 02:14.740
+What we will do will talk, will we will print a start.
+
+02:15.130 --> 02:22.180
+We'll talk later, printers dot and let's increment the count of stars that we have printed the stars
+
+02:22.180 --> 02:28.300
+as a variable or it's a bucket that is striking how many stars we are printing in the Andrew.
+
+02:29.290 --> 02:30.010
+And that's it.
+
+02:30.460 --> 02:35.860
+And after every rule, as we discussed, then we are going to the new rule, we have to print a new
+
+02:35.860 --> 02:40.630
+line corrected that will take the good city to the next line for printing.
+
+02:40.780 --> 02:41.260
+That's it.
+
+02:41.680 --> 02:47.200
+And finally, we're going to exit the let us do a quick, dry run of this program.
+
+02:47.200 --> 02:48.180
+So as one?
+
+02:48.220 --> 02:54.190
+OK, what happened in the first through the stages one and we'll start less than equal to.
+
+02:54.250 --> 02:58.150
+So this loop is going to run one times and it is going to print us.
+
+02:58.160 --> 02:59.850
+Not after that.
+
+02:59.860 --> 03:04.420
+A new line will come to me, come here and I becomes a plus one.
+
+03:04.540 --> 03:06.760
+I becomes to again.
+
+03:06.760 --> 03:07.930
+Resist dodges one.
+
+03:08.560 --> 03:08.920
+OK.
+
+03:09.370 --> 03:14.050
+That means this loop is going to run two times, so we print one and two.
+
+03:14.650 --> 03:20.950
+OK, so the values of stars is changing from one to and either the stars that we are printing after
+
+03:20.950 --> 03:25.360
+this, the value of I would become three.
+
+03:26.290 --> 03:29.290
+And sides again start from one.
+
+03:29.740 --> 03:33.010
+And we will print less than equal to three stories.
+
+03:33.070 --> 03:34.750
+So that is one to three.
+
+03:35.170 --> 03:36.850
+It will print three stars in the store.
+
+03:37.690 --> 03:38.650
+So in each it'll.
+
+03:39.910 --> 03:45.130
+This is how the value of stars variable is changing in the first world is one in the secondary during
+
+03:45.340 --> 03:47.620
+the Third World is one to three and so on.
+
+03:47.920 --> 03:49.810
+After this, the value of I would become.
+
+03:50.680 --> 03:55.210
+And this is not less than equal to and hence we will stop and we will come out of the loop.
+
+03:55.630 --> 03:58.510
+And this is a pattern that you will observe on the screen.
+
+03:58.990 --> 04:02.890
+So I hope you have understood the start button, and that's all for this video.

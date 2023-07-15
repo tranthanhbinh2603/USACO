@@ -1,0 +1,179 @@
+0
+1
+00:00:01,080 --> 00:00:06,750
+So far, we have discussed a lot of data structures. A data structure is something that provides you
+1
+
+2
+00:00:06,750 --> 00:00:12,540
+with some member functions and member variables that would help you to achieve some task like queue,
+2
+
+3
+00:00:12,540 --> 00:00:14,070
+vector, stack, and so on.
+3
+
+4
+00:00:14,760 --> 00:00:17,940
+There is also a very interesting thing in stl named algorithms.
+4
+
+5
+00:00:18,300 --> 00:00:23,540
+Algorithms are something that we actually have did with it a lot in its basic format.
+5
+
+6
+00:00:23,970 --> 00:00:31,140
+When we ask you given an array, find the three numbers with a specific sum, and you
+6
+
+7
+00:00:31,140 --> 00:00:37,060
+start do three loops or optimize into loops and you notice it is very computational intensive task.
+7
+
+8
+00:00:37,380 --> 00:00:43,020
+So these are what we call algorithms. An algorithm is a step by step procedure to achieve a specific
+8
+
+9
+00:00:43,020 --> 00:00:43,320
+goal,
+9
+
+10
+00:00:43,740 --> 00:00:48,310
+and we usually use it in a context where we have really a computational problem.
+10
+
+11
+00:00:48,810 --> 00:00:51,860
+One of the very interesting computational problems is sorting.
+11
+
+12
+00:00:51,870 --> 00:00:56,850
+Let's say I'm giving you an array of 1000 numbers, how to sort it from small to large?
+12
+
+13
+00:00:57,150 --> 00:00:59,490
+There is actually a bunch of algorithms to do that.
+13
+
+14
+00:01:00,870 --> 00:01:03,840
+C++  STL in the hash include algorithm 
+14
+
+15
+00:01:04,110 --> 00:01:07,920
+already provide you with a sort function with
+15
+
+16
+00:01:07,990 --> 00:01:14,490
+one of the best sorting functions. If we have here a vector of 5 numbers that we entered here,
+16
+
+17
+00:01:14,490 --> 00:01:16,440
+say 10, 9, 8, 7, 6,
+17
+
+18
+00:01:16,770 --> 00:01:21,960
+and we would like to sort it using STL from small to large. We provide an iterator for the beginning
+18
+
+19
+00:01:22,200 --> 00:01:23,400
+and iterator for the end.
+19
+
+20
+00:01:23,700 --> 00:01:29,130
+For example, here I provided the v-dot-begin plus 1, which means that we are here at 9 and
+20
+
+21
+00:01:29,130 --> 00:01:31,320
+the v-dot-end, so it means we are after the 6.
+21
+
+22
+00:01:31,620 --> 00:01:36,180
+If we say sort to this range, It is going to sort of from here to here.
+22
+
+23
+00:01:36,210 --> 00:01:37,440
+So you see 10 as it is,
+23
+
+24
+00:01:37,800 --> 00:01:39,470
+but then we have 6, 7, 8, 9,
+24
+
+25
+00:01:40,260 --> 00:01:43,340
+and in a similar way, I can sort the whole array, the whole vector,
+25
+
+26
+00:01:43,350 --> 00:01:45,300
+so it's now 6, 7, 8, 9, 10.
+26
+
+27
+00:01:45,870 --> 00:01:49,560
+So this way we are sorting from the beginning to the end.
+27
+
+28
+00:01:49,590 --> 00:01:52,200
+We can also use the reverse iterator to reverse that.
+28
+
+29
+00:01:52,230 --> 00:01:55,380
+So now from the end to the beginning — like the last line here.
+29
+
+30
+00:01:56,910 --> 00:02:02,040
+In addition to that, there is a reverse function. The reverse allows us to just reverse the content
+30
+
+31
+00:02:02,040 --> 00:02:02,350
+of the array.
+31
+
+32
+00:02:02,670 --> 00:02:04,080
+If this is the input then
+32
+
+33
+00:02:04,080 --> 00:02:06,000
+this is now the output.
+33
+
+34
+00:02:06,840 --> 00:02:07,360
+That's it.
+34
+
+35
+00:02:07,560 --> 00:02:12,800
+There are many algorithms in C++, but I thought these are the two basic for now to learn about them.
+35
+
+36
+00:02:13,900 --> 00:02:14,110
+That's it.

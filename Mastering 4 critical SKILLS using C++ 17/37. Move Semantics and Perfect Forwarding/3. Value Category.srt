@@ -1,0 +1,395 @@
+1
+00:00:01,170 --> 00:00:07,270
+In this section, we'll learn about one of the modern features in C++, and it's a bit advanced.
+
+2
+00:00:08,160 --> 00:00:12,540
+We are going to introduce some concept related to what we call a value category.
+
+3
+00:00:13,450 --> 00:00:19,900
+Historically, when we say entire, your salary equal hundred back to the early days of C and C++,
+
+4
+00:00:20,260 --> 00:00:24,330
+we say that salary is a low value L for left and for right.
+
+5
+00:00:24,790 --> 00:00:25,960
+And we meant by that.
+
+6
+00:00:25,960 --> 00:00:32,950
+Left value is an identity that is on the left side of an assignment, and our value is a temporary,
+
+7
+00:00:33,130 --> 00:00:35,000
+typically on the right side of our assignment.
+
+8
+00:00:35,200 --> 00:00:37,600
+So you see here, here is the equal assignment.
+
+9
+00:00:37,600 --> 00:00:39,130
+Salary is on the left.
+
+10
+00:00:39,130 --> 00:00:40,060
+It's left to value.
+
+11
+00:00:40,200 --> 00:00:41,300
+Hundred is on the right.
+
+12
+00:00:41,590 --> 00:00:43,510
+Value salary has an identity.
+
+13
+00:00:43,690 --> 00:00:45,910
+So it has an address, for example, in the memory.
+
+14
+00:00:46,060 --> 00:00:47,720
+But it is something temporary.
+
+15
+00:00:47,770 --> 00:00:50,380
+We don't know how to get its address in the memory.
+
+16
+00:00:50,950 --> 00:00:54,580
+This guy can use the reference salary so that we can know its address.
+
+17
+00:00:55,450 --> 00:00:59,910
+So this is what historical was, what is left to value and what is right value.
+
+18
+00:01:01,030 --> 00:01:05,500
+We call them a value category, the kind of classification for an expression.
+
+19
+00:01:06,220 --> 00:01:12,420
+However, when the language is changed a lot, these definitions are no longer generally true.
+
+20
+00:01:12,430 --> 00:01:16,360
+It's still helpful to remember that l for left and out for right, but no more.
+
+21
+00:01:16,360 --> 00:01:18,640
+We don't say any more left of value.
+
+22
+00:01:18,640 --> 00:01:27,250
+We just say starting with the new C++, we have three primary new value categories.
+
+23
+00:01:27,250 --> 00:01:35,350
+L value X value for expired are value for pure or value and we have to be the categories here.
+
+24
+00:01:35,530 --> 00:01:38,470
+G.L. value for generalized value and our value.
+
+25
+00:01:38,920 --> 00:01:45,910
+Every expression in C++, which is eventually some abberation operators and Oberon's can be eventually
+
+26
+00:01:45,910 --> 00:01:48,340
+classified to one of these three primary classes.
+
+27
+00:01:48,790 --> 00:01:52,690
+And overall, as you see, we have now five different classes.
+
+28
+00:01:52,930 --> 00:01:57,820
+We are value now is is more complicated and involved.
+
+29
+00:01:57,820 --> 00:01:58,840
+More different.
+
+30
+00:02:00,310 --> 00:02:01,150
+More different in.
+
+31
+00:02:03,110 --> 00:02:09,630
+Two things to keep in mind, every expression has a tie and belongs to a value category.
+
+32
+00:02:09,920 --> 00:02:16,670
+So now when we say an expression like eight, for example, it has a tie and has a value category and
+
+33
+00:02:16,670 --> 00:02:20,480
+they are independent words, we will later elaborate more on that.
+
+34
+00:02:20,990 --> 00:02:23,210
+The value category is in a value.
+
+35
+00:02:23,240 --> 00:02:26,200
+The value category is a classification for the exhibition.
+
+36
+00:02:26,450 --> 00:02:32,180
+So it isn't a specific value like two or three for the classification classification to one of these
+
+37
+00:02:32,390 --> 00:02:33,030
+five types.
+
+38
+00:02:33,230 --> 00:02:38,690
+So when you have some expression, I say, what is the value category of this expression?
+
+39
+00:02:38,690 --> 00:02:43,090
+You say, oh, this expression is of our value, this expression of Xibalba.
+
+40
+00:02:43,220 --> 00:02:43,770
+And so.
+
+41
+00:02:46,580 --> 00:02:53,450
+Back to the value and our value, you actually learned a lot in C++ without knowing about the existence
+
+42
+00:02:53,450 --> 00:02:55,250
+of these kind of classifications.
+
+43
+00:02:57,080 --> 00:03:03,050
+However, when it comes to studying the topic of the semantic move or perfect for wording, we have
+
+44
+00:03:03,050 --> 00:03:05,870
+to do something about the value categories.
+
+45
+00:03:06,620 --> 00:03:07,330
+We will.
+
+46
+00:03:07,580 --> 00:03:15,050
+The whole story about value category is all about boosting the performance, so it specifically make
+
+47
+00:03:15,050 --> 00:03:16,250
+your code much faster.
+
+48
+00:03:16,550 --> 00:03:20,810
+That's also the whole story about semantic move is making your code much faster.
+
+49
+00:03:21,590 --> 00:03:23,840
+These are a minor bloss here.
+
+50
+00:03:23,840 --> 00:03:28,660
+You will you will understand some of the combined error messages when you know the value.
+
+51
+00:03:31,210 --> 00:03:38,530
+In the next session, we will highlight a lot of messages that, you know exactly which one will compile
+
+52
+00:03:38,530 --> 00:03:43,540
+and which one will not, but we will start to classify them to what is elevated and what is our value
+
+53
+00:03:44,440 --> 00:03:47,270
+when it comes to explaining what is our best value categories.
+
+54
+00:03:47,440 --> 00:03:49,990
+It would be very confusing for anyone.
+
+55
+00:03:50,710 --> 00:03:53,510
+I will try to provide some treatment for the topic.
+
+56
+00:03:53,860 --> 00:03:55,350
+I wouldn't say it's very formal.
+
+57
+00:03:55,570 --> 00:03:57,150
+It is still informal treatment.
+
+58
+00:03:57,310 --> 00:04:00,280
+We cannot provide a very complete treatment for this topic.
+
+59
+00:04:00,280 --> 00:04:01,680
+For beginners, impossible.
+
+60
+00:04:02,440 --> 00:04:03,520
+So take it easy.
+
+61
+00:04:03,760 --> 00:04:09,130
+Expect yourself to be confused in the beginning, maybe read the material, maybe read some article
+
+62
+00:04:09,140 --> 00:04:09,670
+and so on.
+
+63
+00:04:11,970 --> 00:04:15,540
+Let's introduce some terms that would be helpful for the next session.
+
+64
+00:04:16,470 --> 00:04:21,310
+The first one is the word identity, the word identity, like when we have an integral salary, equal
+
+65
+00:04:21,340 --> 00:04:23,100
+hundred salary has an identity.
+
+66
+00:04:23,340 --> 00:04:27,810
+You can think of that like, for example, the easiest way to think of it, it has some others may be
+
+67
+00:04:27,810 --> 00:04:34,680
+pointer maybe ability to determine if two copies of our variable, if two copies of a variable are identical,
+
+68
+00:04:34,710 --> 00:04:38,930
+or if you are confused, always remember that identity means an address.
+
+69
+00:04:38,970 --> 00:04:41,790
+This is a good simplification that would fit in all the time.
+
+70
+00:04:42,990 --> 00:04:46,410
+When we say something is a assignable, it means we can change it to value.
+
+71
+00:04:46,410 --> 00:04:47,820
+So Saturday equals 250.
+
+72
+00:04:47,820 --> 00:04:49,230
+We assign it to something now.
+
+73
+00:04:51,000 --> 00:04:56,070
+The second thing is the temporary 100 year is a temporary value.
+
+74
+00:04:56,400 --> 00:04:59,000
+It doesn't has a name, it doesn't have a name.
+
+75
+00:04:59,520 --> 00:05:06,420
+So when you you say your salary equals hundred somewhere in the registers, the hundred is going to
+
+76
+00:05:06,420 --> 00:05:13,320
+be created and then it's going to be copied to the salary, then the lifetime of it may end.
+
+77
+00:05:14,880 --> 00:05:16,440
+It is a reasonable thing.
+
+78
+00:05:16,440 --> 00:05:18,500
+Like we don't say a hundred equals salary.
+
+79
+00:05:18,510 --> 00:05:19,790
+This is comparison error.
+
+80
+00:05:20,070 --> 00:05:22,410
+Hundred is something that we don't have.
+
+81
+00:05:22,410 --> 00:05:26,280
+An X is a direct access to its memory address.
+
+82
+00:05:27,030 --> 00:05:30,290
+Salary isn't a temporary variable salary.
+
+83
+00:05:30,300 --> 00:05:32,280
+It is something that has an identity.
+
+84
+00:05:32,430 --> 00:05:35,280
+It has a lifetime that's just bigger than the equal here.
+
+85
+00:05:36,270 --> 00:05:42,780
+The word lifetime refer to the time duration where an object variable is in a valid estate.
+
+86
+00:05:43,380 --> 00:05:46,640
+While the school referred to the accessibility of it.
+
+87
+00:05:46,950 --> 00:05:50,430
+For example, let's say you defined a static local variable.
+
+88
+00:05:51,000 --> 00:05:55,620
+The lifetime of the variable is very big once you declared it till the end of the program.
+
+89
+00:05:55,890 --> 00:05:58,140
+However, you cannot exit from any function.
+
+90
+00:05:58,140 --> 00:06:01,020
+You have to exit from where it exists that the basis of it.
+
+91
+00:06:01,710 --> 00:06:07,810
+So the two key key words here that I would like you to keep in mind, identity like salary, temporary,
+
+92
+00:06:07,830 --> 00:06:11,070
+like a hundred to definition would help us in the next edition.
+
+93
+00:06:12,700 --> 00:06:18,460
+To make it easier for you in the next Titian's, I would like you to iterate on every line here and
+
+94
+00:06:18,460 --> 00:06:24,370
+think which one of them will compile and which won't if it doesn't come by, why they think it will
+
+95
+00:06:24,370 --> 00:06:25,610
+not come by then.
+
+96
+00:06:25,630 --> 00:06:31,300
+Then write the line in your computer and read the compilation message and double check.
+
+97
+00:06:31,300 --> 00:06:32,970
+If you really understand it or not.
+
+98
+00:06:33,940 --> 00:06:35,440
+This will make our life much easier.
+
+99
+00:06:36,130 --> 00:06:36,690
+That's all.

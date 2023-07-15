@@ -1,0 +1,614 @@
+0
+1
+00:00:01,650 --> 00:00:08,280
+So one of the most important data structures in stl is vector, and we could say that this is the one
+1
+
+2
+00:00:08,280 --> 00:00:10,440
+that you're going to use really very frequently.
+2
+
+3
+00:00:10,950 --> 00:00:13,660
+The idea of the vector is to act like an array.
+3
+
+4
+00:00:14,010 --> 00:00:17,610
+But the point is it's more dynamic, typically an array is fixed,
+4
+
+5
+00:00:17,610 --> 00:00:21,740
+Like if you define an array of hundred elements just 100 elements, it will not be expanded.
+5
+
+6
+00:00:22,230 --> 00:00:29,070
+But the idea behind the vector that it acts like an array but also can grow up in a very good way,
+6
+
+7
+00:00:29,550 --> 00:00:32,490
+so, here we do find an initial vector,
+7
+
+8
+00:00:32,700 --> 00:00:35,190
+this vector is now is an empty vector,
+8
+
+9
+00:00:35,200 --> 00:00:36,850
+it doesn't have any kind of numbers,
+9
+
+10
+00:00:37,200 --> 00:00:40,460
+so, one way is you can start to push back numbers.
+10
+
+11
+00:00:40,760 --> 00:00:45,300
+If you started to push back 30, 10, 20, it just go in the normal order.
+11
+
+12
+00:00:45,750 --> 00:00:51,770
+So one interesting thing about the vectors, you can print to them like an array,
+12
+
+13
+00:00:51,780 --> 00:00:55,350
+so if you asked v1.size, it returns three elements,
+13
+
+14
+00:00:55,500 --> 00:01:03,510
+now, 3, 10, 20, you can just iterate and print it, in the future we will go into details
+14
+
+15
+00:01:03,690 --> 00:01:13,170
+but whenever you are calling the size of one of the data structures, it's highly better to custom
+15
+
+16
+00:01:13,170 --> 00:01:19,480
+them to integrate or so, and be very careful about subtracting some number from here.
+16
+
+17
+00:01:21,270 --> 00:01:26,520
+This is good as long as your vector is really has like a very, very, very huge numbers, which is
+17
+
+18
+00:01:26,520 --> 00:01:27,340
+a very rare thing.
+18
+
+19
+00:01:27,720 --> 00:01:30,420
+So in a way, notice here the first wey of printing vectors,
+19
+
+20
+00:01:30,660 --> 00:01:34,320
+it goes as normal as the normal array printing.
+20
+
+21
+00:01:34,540 --> 00:01:36,540
+So so far, we have an array of three elements,
+21
+
+22
+00:01:36,900 --> 00:01:39,180
+there is another way that we can define
+22
+
+23
+00:01:40,480 --> 00:01:48,010
+we can build a vector, we define a vector of length 5 and initial value is 7,
+23
+
+24
+00:01:48,330 --> 00:01:50,910
+so so far that has five numbers
+24
+
+25
+00:01:50,910 --> 00:01:51,870
+each one of them is seven.
+25
+
+26
+00:01:52,380 --> 00:01:54,240
+Now we are adding a 6 element,
+26
+
+27
+00:01:54,270 --> 00:01:56,880
+so now it will be six numbers, 
+27
+
+28
+00:01:57,030 --> 00:02:02,310
+If we tried to print, it will be like five sevens then six.
+28
+
+29
+00:02:02,860 --> 00:02:05,800
+And here we are just printing in a different way,
+29
+
+30
+00:02:06,090 --> 00:02:13,860
+This is a recommended way to print or access the vector as long as you need maybe some index here.
+30
+
+31
+00:02:14,410 --> 00:02:20,370
+OK, so there is also like the queue, like the deque, there is a good add method which is support
+31
+
+32
+00:02:20,370 --> 00:02:21,840
+for you exception
+32
+
+33
+00:02:21,840 --> 00:02:27,610
+if it happened that you access something out of bounder, there is something that involves a lot of complications,
+33
+
+34
+00:02:28,440 --> 00:02:33,960
+the emplace back, it's something similar to the push back more of performance concerns,
+34
+
+35
+00:02:34,170 --> 00:02:35,880
+but we will discuss this a bit later,
+35
+
+36
+00:02:37,260 --> 00:02:43,140
+So for now, you can define an array, an empty, push_back, or you can even create with some size and start
+36
+
+37
+00:02:43,140 --> 00:02:44,010
+to push back.
+37
+
+38
+00:02:45,110 --> 00:02:52,370
+OK, so let's go more here is a simple exercise, we would like to, we have an initial array,
+38
+
+39
+00:02:52,460 --> 00:02:57,850
+initialized at list, I would like to remove all of the negative values from it,
+39
+
+40
+00:02:58,460 --> 00:03:09,080
+one of the things to be careful with them is to be careful from removing items from a data
+40
+
+41
+00:03:09,080 --> 00:03:11,990
+structure during iterating over it,
+41
+
+42
+00:03:12,110 --> 00:03:14,980
+If you want to do that, you just have to do it in a careful way,
+42
+
+43
+00:03:15,320 --> 00:03:18,410
+so I would like to show you an exercise on how to do that.
+43
+
+44
+00:03:19,910 --> 00:03:27,940
+I'm here iterating in a different way on the iterator with the v.begin - v.end and I put ++
+44
+
+45
+00:03:28,190 --> 00:03:31,760
+So we would a number, notice here, I didn't put the it++ here,
+45
+
+46
+00:03:32,210 --> 00:03:38,300
+so we go using the iterator and then we ask, we get the *it, so we get the actual value,
+46
+
+47
+00:03:38,570 --> 00:03:39,650
+Is it less than zero?
+47
+
+48
+00:03:39,680 --> 00:03:41,180
+If so, I would like to remove it,
+48
+
+49
+00:03:41,180 --> 00:03:44,640
+So we have the iterator so we say v.earse(it),
+49
+
+50
+00:03:44,870 --> 00:03:49,280
+OK, one of the important things to keep in mind is this
+50
+
+51
+00:03:49,280 --> 00:03:56,630
+it would be, the iterator, would be invalidated after the call, so a new iterator would be returned,
+51
+
+52
+00:03:57,050 --> 00:04:02,120
+so sometimes in some cases and some of data structures, you will notice that you didn't put the assignment,
+52
+
+53
+00:04:02,420 --> 00:04:03,400
+but this is very risky,
+53
+
+54
+00:04:03,410 --> 00:04:07,640
+It might depend on the implementation or whatever or be specific data structure 
+54
+
+55
+00:04:07,880 --> 00:04:13,640
+So the advice is if the erase function is returning an iterator, you have to use it
+55
+
+56
+00:04:13,840 --> 00:04:20,540
+OK, now the question is, if it has been used, what is its return and what is the value? here
+56
+
+57
+00:04:20,540 --> 00:04:22,820
+you will notice that it points to the next element,
+57
+
+58
+00:04:23,540 --> 00:04:29,150
+okay, so if the number wasn't negative, then we would back to the next element,
+58
+
+59
+00:04:29,480 --> 00:04:34,640
+but if we removed it, already, the returned value is looking to the next element,
+59
+
+60
+00:04:34,640 --> 00:04:36,170
+so we don't need to increment it,
+60
+
+61
+00:04:36,590 --> 00:04:39,880
+and then if we try to print it again, it is going to print in the normal way.
+61
+
+62
+00:04:40,160 --> 00:04:48,140
+So again, it's better to avoid removing something from a data structure like Vector during iterating,
+62
+
+63
+00:04:48,380 --> 00:04:51,590
+but if you'd like to do that, you have to be careful with it.
+63
+
+64
+00:04:54,100 --> 00:05:00,490
+here is a third way, there is an algorithm that name find, you will know what is an algorithm soon, but it
+64
+
+65
+00:05:00,490 --> 00:05:01,900
+helps us to search the vector.
+65
+
+66
+00:05:02,020 --> 00:05:05,350
+So here I am searching the vector for the value minus two.
+66
+
+67
+00:05:05,740 --> 00:05:12,870
+So I'm giving it the range to search in, it is the   v.begin to the v.end if iterator not equal v.end
+67
+
+68
+00:05:12,980 --> 00:05:15,310
+it means we found that such a vector.
+68
+
+69
+00:05:15,850 --> 00:05:20,100
+I would like now to insert a small vector inside this vector,
+69
+
+70
+00:05:20,710 --> 00:05:23,760
+so we found -2, which will be here,
+70
+
+71
+00:05:24,040 --> 00:05:29,310
+We are going to insert the small vector 8, 9, 10, add this position here.
+71
+
+72
+00:05:29,470 --> 00:05:35,930
+so then the new array will be 8, 9, 10 here and then -2 and so on.
+72
+
+73
+00:05:36,100 --> 00:05:36,910
+So how to do that?
+73
+
+74
+00:05:36,920 --> 00:05:38,950
+We do that through the insert method.
+74
+
+75
+00:05:39,250 --> 00:05:44,380
+We give it the iterator where we would like to insert in the v and then we give it the beginning and
+75
+
+76
+00:05:44,380 --> 00:05:48,700
+end of the vector to be inserted.
+76
+
+77
+00:05:49,030 --> 00:05:54,610
+A common mistake is to to make some switching to the beginning and end, maybe to use it from the
+77
+
+78
+00:05:54,610 --> 00:05:55,460
+old vector or so,
+78
+
+79
+00:05:55,480 --> 00:05:56,190
+so be careful.
+79
+
+80
+00:05:56,800 --> 00:05:59,110
+This is insert a director of the first vector.
+80
+
+81
+00:05:59,380 --> 00:06:01,400
+This is what we are going to insert.
+81
+
+82
+00:06:01,720 --> 00:06:07,010
+So so far we see how to insert and how to erase and how to push back.
+82
+
+83
+00:06:07,360 --> 00:06:12,740
+I would like to finish that with some notes about how a vector works because this very interesting data
+83
+
+84
+00:06:12,760 --> 00:06:17,410
+structure, inside the vector, there is actually an array of some initial size
+84
+
+85
+00:06:17,410 --> 00:06:18,720
+it depends on the implementation.
+85
+
+86
+00:06:18,730 --> 00:06:20,550
+sometimes 0, sometimes  bigger value,
+86
+
+87
+00:06:20,890 --> 00:06:22,680
+so let's call it its code capacity
+87
+
+88
+00:06:22,720 --> 00:06:27,230
+so let's say that there is an integer capacity as an initial value with 200,
+88
+
+89
+00:06:27,760 --> 00:06:30,130
+now, let's say that you push back 10 elements.
+89
+
+90
+00:06:30,660 --> 00:06:32,680
+Now, the size of the vector is 10
+90
+
+91
+00:06:33,280 --> 00:06:37,420
+but the number of elements that you pushed is ten,
+91
+
+92
+00:06:37,720 --> 00:06:41,750
+but the actual size of the vector in the array in the memory is 200,
+92
+
+93
+00:06:42,280 --> 00:06:45,580
+you usually deal with these ten, but behind the scenes there is
+93
+
+94
+00:06:45,580 --> 00:06:46,110
+200
+94
+
+95
+00:06:46,600 --> 00:06:49,500
+Now let's say you pushed another one 190 elements
+95
+
+96
+00:06:49,930 --> 00:06:55,590
+so now you consumed all of the current size which is 200
+96
+
+97
+00:06:55,810 --> 00:06:59,920
+so the size and capacity is 200, capacity usually greater than or equal to the size
+97
+
+98
+00:07:00,520 --> 00:07:03,850
+not the whole internal array in memory is complete.
+98
+
+99
+00:07:04,300 --> 00:07:09,680
+If you try to insert the new 20 elements, the vector has no extra memory space to do that,
+99
+
+100
+00:07:10,000 --> 00:07:10,900
+so here is the trick,
+100
+
+101
+00:07:11,230 --> 00:07:14,350
+the vector creates a new array, typically with double size.
+101
+
+102
+00:07:14,860 --> 00:07:17,140
+not necessarily typically,
+102
+
+103
+00:07:17,380 --> 00:07:24,850
+so let's say that it's going to define the new capacity with four hundred, it is going to create a new array
+103
+
+104
+00:07:24,850 --> 00:07:32,620
+with a 400 size then copy the old two hundred numbers, sorry not just 100, the 200 numbers
+104
+
+105
+00:07:32,890 --> 00:07:34,790
+then add the new 20 elements.
+105
+
+106
+00:07:34,990 --> 00:07:37,630
+So now what is the current size of the numbers that we had?
+106
+
+107
+00:07:37,870 --> 00:07:38,850
+220
+107
+
+108
+00:07:39,100 --> 00:07:42,750
+What is the chemistry of the vector is 400 the new memory size.
+108
+
+109
+00:07:43,210 --> 00:07:44,410
+So some performance steps,
+109
+
+110
+00:07:44,860 --> 00:07:51,670
+First of all, if you know the actual size of the vector, like you say, I know, I'm sure that I am
+110
+
+111
+00:07:51,670 --> 00:07:58,360
+going to need one million number then through from the beginning create this one million number vector
+111
+
+112
+00:07:58,510 --> 00:08:04,210
+why? because you will keep pushing back and then it's going to remove all the memory, create new memory,
+112
+
+113
+00:08:04,420 --> 00:08:07,750
+then pushing back, create, remove, pushing back, create, remove,
+113
+
+114
+00:08:07,990 --> 00:08:10,210
+So this is would be a big waste of time,
+114
+
+115
+00:08:10,390 --> 00:08:14,950
+So if you created an area this way is going to make the size from the beginning one million and typically
+115
+
+116
+00:08:14,950 --> 00:08:15,820
+the capacity too
+116
+
+117
+00:08:16,570 --> 00:08:20,710
+OK, what if I'm not sure about the number of elements that I would like but I know they are big?
+117
+
+118
+00:08:21,140 --> 00:08:23,380
+OK, then you can call the function reserve,
+118
+
+119
+00:08:23,770 --> 00:08:29,560
+the function reserve is going to create capacity with this number, but not the size.
+119
+
+120
+00:08:29,590 --> 00:08:35,020
+So the size of this vector is zero, but the capacity is five hundred thousand,
+120
+
+121
+00:08:35,260 --> 00:08:40,360
+again, the both tricks are about you are creating a big initial memory from the beginning
+121
+
+122
+00:08:40,630 --> 00:08:43,810
+you only need that if you really have like a hundred thousands of data.
+122
+
+123
+00:08:44,050 --> 00:08:47,050
+This is really where it makes sense. That's it.

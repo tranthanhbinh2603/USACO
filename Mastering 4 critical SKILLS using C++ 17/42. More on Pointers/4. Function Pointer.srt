@@ -1,0 +1,403 @@
+1
+00:00:01,380 --> 00:00:08,820
+One of the interesting topics in C++ is also the function Quinter specifically C, let's say that we
+
+2
+00:00:08,820 --> 00:00:12,590
+have to function like add year in print and C++.
+
+3
+00:00:12,720 --> 00:00:19,960
+We can declare and define something that is actually a pointer to function address.
+
+4
+00:00:20,250 --> 00:00:24,230
+So we define it as following the look to the syntax.
+
+5
+00:00:24,240 --> 00:00:29,880
+Let's say I would like to find a pointer to this function, which means I will be I would like to have
+
+6
+00:00:29,880 --> 00:00:32,490
+another function, but with a different name.
+
+7
+00:00:32,820 --> 00:00:34,190
+I would like to Bassat, for example.
+
+8
+00:00:34,380 --> 00:00:36,960
+So the syntax is following is a bit ugly syntax.
+
+9
+00:00:37,260 --> 00:00:42,720
+You would have the return type you'd normally and you would have the two parameters here normally.
+
+10
+00:00:43,080 --> 00:00:47,910
+But when it comes to the name, you would need to do two parenthesis, then put an asterisk and then
+
+11
+00:00:47,910 --> 00:00:48,990
+the new name that you would like.
+
+12
+00:00:49,530 --> 00:00:55,830
+So now here I'm defining a function pointer named it Be at One and it's looking to add you can also
+
+13
+00:00:55,830 --> 00:01:00,660
+use the reference at both of them are OK and now the bad one.
+
+14
+00:01:00,810 --> 00:01:03,830
+You can use it exactly as you are using that function.
+
+15
+00:01:03,840 --> 00:01:07,410
+So I can call B, add one, two, three, which will sum them and return five.
+
+16
+00:01:07,680 --> 00:01:08,220
+That's it.
+
+17
+00:01:08,820 --> 00:01:10,950
+Now let's create a pointer function to this guy.
+
+18
+00:01:11,200 --> 00:01:16,170
+We need the void here to be here, the string to be here of integrated branches.
+
+19
+00:01:16,170 --> 00:01:19,030
+But the S3 and the function name you can now call it.
+
+20
+00:01:19,230 --> 00:01:22,800
+So as you see, we managed to get the replacement to the another function here.
+
+21
+00:01:23,970 --> 00:01:28,670
+And this is a we should now the opportunity to passing a pointer function.
+
+22
+00:01:29,490 --> 00:01:35,610
+Remember, if we define some function here, comparators Seybold between A and B to compare them by
+
+23
+00:01:36,000 --> 00:01:38,940
+the greeter comes in first in C++.
+
+24
+00:01:39,000 --> 00:01:40,230
+We used to do the following.
+
+25
+00:01:40,380 --> 00:01:42,730
+We used to call the did begin, did it end?
+
+26
+00:01:42,780 --> 00:01:47,700
+And there is a function and that was interesting that we are we are not just passing integer, we are
+
+27
+00:01:47,700 --> 00:01:50,700
+actually basing a function which is very interesting, actually.
+
+28
+00:01:50,700 --> 00:01:51,580
+This is a function.
+
+29
+00:01:51,840 --> 00:01:54,430
+So what happened is let's do our own version here.
+
+30
+00:01:54,630 --> 00:01:58,230
+I'm having some function on my suit, which is taking a vector reference.
+
+31
+00:01:58,440 --> 00:01:59,610
+Look to the parameter here.
+
+32
+00:02:00,210 --> 00:02:07,620
+It is receiving a function, the function of return a table and to arguments X and Y, and it's the
+
+33
+00:02:07,620 --> 00:02:08,740
+name is CMB.
+
+34
+00:02:09,180 --> 00:02:13,260
+Now, this is some good, good selection, so you should study it later in the algorithm.
+
+35
+00:02:13,260 --> 00:02:21,210
+So that will do to iteration the comparison here using this function and sort which one is based on
+
+36
+00:02:21,210 --> 00:02:27,990
+that comparison function, the model that is we actually we're basing a function here, so we were using
+
+37
+00:02:27,990 --> 00:02:28,170
+it.
+
+38
+00:02:28,290 --> 00:02:30,500
+But as you see, the text is very ugly.
+
+39
+00:02:31,560 --> 00:02:35,130
+Look, let's make it less ugly with the with the modern C++.
+
+40
+00:02:35,310 --> 00:02:37,530
+We can do something like that using convertor.
+
+41
+00:02:37,530 --> 00:02:39,590
+Remember the using we talked about it before.
+
+42
+00:02:39,600 --> 00:02:46,140
+You can also use typedef using a competitor and we can give it the structure in this way.
+
+43
+00:02:46,660 --> 00:02:47,940
+Now you are giving it.
+
+44
+00:02:48,270 --> 00:02:52,520
+We can here drop the name and we give just the parameters in the return.
+
+45
+00:02:53,430 --> 00:02:58,830
+Now the important part here in the function itself, we can say convertor can be and the code as it
+
+46
+00:02:58,830 --> 00:02:59,040
+is.
+
+47
+00:02:59,250 --> 00:03:05,210
+So we just made it less ugly by taking the ugly name here and just here we are using normal name.
+
+48
+00:03:05,760 --> 00:03:11,640
+Now let's try to remember these things that are very relevant to the function.
+
+49
+00:03:11,850 --> 00:03:18,270
+The first is A function or B, remember, the function is a subclass or struct that has the function
+
+50
+00:03:18,270 --> 00:03:19,100
+code operator.
+
+51
+00:03:19,410 --> 00:03:21,660
+So it's now is defining our own function.
+
+52
+00:03:21,760 --> 00:03:22,280
+Corroborators.
+
+53
+00:03:22,530 --> 00:03:25,510
+So now we would never set up as a competitor with the warrantees.
+
+54
+00:03:25,530 --> 00:03:27,930
+This way you send it here, it's now the same.
+
+55
+00:03:28,170 --> 00:03:28,730
+Exactly.
+
+56
+00:03:29,370 --> 00:03:36,480
+So an interesting thing as a difference now between this comparator and the previous convertor.
+
+57
+00:03:36,630 --> 00:03:42,720
+This guy has a t you can define something here internally as an object or variable and use it so it
+
+58
+00:03:42,720 --> 00:03:47,570
+isn't just a function, it's actually like a class that can steve a state from a call to another.
+
+59
+00:03:48,600 --> 00:03:49,800
+Remember also the lambda.
+
+60
+00:03:50,190 --> 00:03:54,900
+So here is another way to play with the with this with this could.
+
+61
+00:03:59,260 --> 00:04:07,360
+I am defining here and Alamdar, that ticks two things, and I am missing it, but wait, what is the
+
+62
+00:04:07,360 --> 00:04:08,530
+receiving barometer?
+
+63
+00:04:08,800 --> 00:04:11,540
+The receiving barometer is of time bull pointer here.
+
+64
+00:04:11,560 --> 00:04:16,500
+So it is actually a function pointer, but I'm guessing no.
+
+65
+00:04:16,780 --> 00:04:23,500
+So here is a rule from C++ that the lambda can be converted to a function pointer, but there is only
+
+66
+00:04:23,500 --> 00:04:24,310
+one condition.
+
+67
+00:04:24,550 --> 00:04:28,610
+The computer here must be empty, the computer must be empty.
+
+68
+00:04:28,870 --> 00:04:34,600
+And this means we can use Lambda to be converted to function pointer interfaces, but we should be limited
+
+69
+00:04:34,600 --> 00:04:36,090
+to new capital.
+
+70
+00:04:36,310 --> 00:04:41,380
+So it is good to be more flexible with something old from Kosovo.
+
+71
+00:04:41,620 --> 00:04:43,840
+But also it is has a restriction.
+
+72
+00:04:45,670 --> 00:04:51,150
+On the other side, and we also learned about that one more thing to know about this dysfunction, which
+
+73
+00:04:51,150 --> 00:04:57,030
+is just to revert to anything that can be called so I can hear come again, the code didn't change and
+
+74
+00:04:57,150 --> 00:05:03,160
+that my competitor now is function that is returning bone and takes it to integrities here.
+
+75
+00:05:03,450 --> 00:05:10,860
+Now I can send lamda, I even can use here some counter as a local variable or let's say what it would
+
+76
+00:05:10,860 --> 00:05:14,820
+like to count how many times this function has been good.
+
+77
+00:05:14,820 --> 00:05:18,930
+So it has been good, 15 different number of times.
+
+78
+00:05:19,530 --> 00:05:21,620
+So this is very modern C++.
+
+79
+00:05:22,080 --> 00:05:24,680
+You are using function or you can use the comparator.
+
+80
+00:05:26,160 --> 00:05:31,320
+The the lambda function would be very nice to capitally for you, something very local.
+
+81
+00:05:31,450 --> 00:05:33,690
+So it's giving you very, very nice power here.
+
+82
+00:05:35,070 --> 00:05:41,100
+Overall, as I see, the function pointer is very dynamic, but something like, for example, the function
+
+83
+00:05:41,100 --> 00:05:42,650
+is very competitive.
+
+84
+00:05:43,110 --> 00:05:45,870
+The function is that we should avoid it.
+
+85
+00:05:46,890 --> 00:05:49,140
+There is a concern about the speed performance.
+
+86
+00:05:49,140 --> 00:05:54,750
+I guess some guys were saying that the functor are much faster.
+
+87
+00:05:56,880 --> 00:06:03,990
+I remember I told you about a scenario where the function better can reduce the memory more compared
+
+88
+00:06:03,990 --> 00:06:04,920
+to many other things.
+
+89
+00:06:06,150 --> 00:06:11,570
+The remember the function pointer has a drawback here is limited with lambda it doesn't like it doesn't
+
+90
+00:06:11,580 --> 00:06:13,740
+store state like the functor.
+
+91
+00:06:15,320 --> 00:06:22,790
+One more nice thing to know about this, he has some some function could at exit and you can best for
+
+92
+00:06:22,790 --> 00:06:27,470
+it to function that it would be registered, its function would be called when the whole program would
+
+93
+00:06:27,480 --> 00:06:28,640
+be terminated.
+
+94
+00:06:29,060 --> 00:06:33,950
+So here, if you bastida by message here, which say sex, we're using our program.
+
+95
+00:06:34,340 --> 00:06:37,570
+And then when your program first Sobrante that way.
+
+96
+00:06:37,910 --> 00:06:38,680
+Hey, hello.
+
+97
+00:06:38,930 --> 00:06:39,860
+And what's the program.
+
+98
+00:06:39,860 --> 00:06:43,520
+And it will, it will just call this function here.
+
+99
+00:06:43,910 --> 00:06:48,410
+If you try to get in the implementation, you will notice it is a state function.
+
+100
+00:06:48,410 --> 00:06:54,020
+So it's coming from see and also notice here, its structure is a function pointer.
+
+101
+00:06:55,040 --> 00:06:55,580
+That's all.

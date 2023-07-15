@@ -1,0 +1,503 @@
+﻿WEBVTT
+
+00:00:00.990 --> 00:00:07.200
+Hãy giải quyết vấn đề Josephus, trong khoa học máy tính là
+một vấn đề hay và thực sự có những giải pháp lớn hơn sẽ được
+
+00:00:07.200 --> 00:00:13.410
+thảo luận hôm nay.  Hôm nay chúng tôi sẽ cố gắng làm điều đó
+một cách rất;  cái mà chúng tôi gọi là thuật toán mô phỏng
+
+00:00:13.800 --> 00:00:14.400
+Mô phỏng có nghĩa là chỉ
+
+00:00:14.400 --> 00:00:16.680
+làm theo yêu cầu của bạn.
+
+00:00:17.050 --> 00:00:21.220
+Yêu cầu là tiếp tục lặp lại "k" lần, xóa người, tiếp tục lặp lại, xóa người đó.
+
+00:00:21.240 --> 00:00:25.770
+Vì vậy, đây chỉ là một mô phỏng để định hướng điều này, ý của chúng tôi là mô phỏng.
+
+00:00:26.530 --> 00:00:31.630
+Và chúng tôi cũng sẽ chỉ ra cách các mô-đun có thể xử lý cho chúng tôi một cách dễ dàng một chữ "k" rất lớn như thế.
+
+00:00:32.280 --> 00:00:34.080
+Vì vậy, hãy xem làm thế nào để viết mã nó.
+
+00:00:34.650 --> 00:00:38.730
+Tôi có một mảng ở đây "is_removed" ban đầu sẽ là các số không.
+
+00:00:39.090 --> 00:00:40.770
+Vì vậy, số không có nghĩa là nó không bị xóa.
+
+00:00:40.770 --> 00:00:41.910
+Một có nghĩa là nó được gỡ bỏ.
+
+00:00:42.300 --> 00:00:45.660
+Và lý do đằng sau đó là chúng ta không thể xóa khỏi mảng.
+
+00:00:45.670 --> 00:00:51.180
+Cho đến giờ chúng ta vẫn chưa học cách
+xóa một thứ gì đó khỏi một mảng, vì vậy
+
+00:00:51.180 --> 00:00:52.470
+chúng ta sẽ sử dụng mảng này để đánh
+dấu những gì bị xóa và những gì không.
+
+00:00:52.920 --> 00:00:59.190
+Và vị trí cuối cùng đề cập đến vị
+trí chúng ta đang đứng trong vòng
+
+00:00:59.190 --> 00:01:00.760
+tròn hiện tại so với mọi người và
+ban đầu chúng ta ở vị trí số không.
+
+00:01:00.780 --> 00:01:03.440
+Vì vậy, chúng tôi đang chuyển đổi mọi thứ thành dựa trên số không.
+
+00:01:04.200 --> 00:01:10.890
+Vì vậy, ý tưởng như sau, chúng tôi sẽ
+lặp lại vòng lặp for ở đây, bỏ qua khối
+
+00:01:10.890 --> 00:01:14.040
+hiện tại này ở đây và chúng tôi có
+"current_k" , chẳng hạn như "k" giống như năm.
+
+00:01:15.440 --> 00:01:21.350
+Và sau đó trong vòng lặp này, chúng tôi lặp
+lại năm lần, nhưng xem xét "is_removed", khi
+
+00:01:21.350 --> 00:01:25.250
+chúng tôi tìm thấy người mục tiêu, chúng tôi
+xóa anh ta và in anh ta vào vòng kết nối.
+
+00:01:25.970 --> 00:01:33.790
+Bây giờ, chúng ta hãy đi vào chi
+tiết.  Trong vòng lặp for, tôi lặp lại
+
+00:01:33.800 --> 00:01:34.570
+"n" lần để tiếp tục loại bỏ những
+người cuối cùng trong vòng kết nối.
+
+00:01:35.120 --> 00:01:39.800
+Và mỗi khi tôi bắt đầu từ..., tôi có một "bước" ngược lại bằng không.
+
+00:01:40.160 --> 00:01:42.010
+Và giả sử "current_k" là năm.
+
+00:01:42.260 --> 00:01:44.030
+Vì vậy, chúng tôi sẽ lặp lại năm lần.
+
+00:01:44.030 --> 00:01:49.010
+Nhưng vấn đề là đôi khi các mục bị xóa.
+
+00:01:49.280 --> 00:01:56.570
+Vì vậy, ý tưởng là theo vòng lặp ở đây trong mỗi
+bước, sẽ tăng bộ đếm từ đối lập cuối cùng đến vị
+
+00:01:56.570 --> 00:02:03.890
+trí cuối cùng cộng với một.  Vị trí cuối cùng đến
+vị trí cuối cùng cộng một và quan sát ở đây "%n"
+
+00:02:04.250 --> 00:02:06.720
+"%n" , mục đích là để quay vòng trong mảng.
+
+00:02:06.950 --> 00:02:12.620
+Giả sử chúng ta có một
+mảng gồm năm phần tử và vị trí
+
+00:02:12.620 --> 00:02:12.950
+cuối cùng là bốn và muốn
+chuyển sang phần tử tiếp theo.
+
+00:02:13.400 --> 00:02:16.040
+Bốn cộng một là năm, 5%5 bằng không.
+
+00:02:16.040 --> 00:02:18.110
+Túm lại, đây là thủ thuật rất phổ biến
+
+00:02:18.110 --> 00:02:25.130
+Khi bạn muốn quay
+vòng trở lại trong một
+
+00:02:25.130 --> 00:02:25.660
+mảng, bạn áp dụng mô
+đun n vì mảng từ 0 đến 4.
+
+00:02:26.000 --> 00:02:30.450
+Nếu bây giờ giá trị là năm, thì 5%5 sẽ bằng không và chúng tôi quay lại đây.
+
+00:02:30.620 --> 00:02:36.440
+Vì vậy, đây là lợi thế của "%n"
+này ở đây đang trả lại cho chúng
+
+00:02:36.440 --> 00:02:37.160
+tôi.  với vòng lặp này, chúng
+tôi sẽ lặp lại, giả sử năm lần.
+
+00:02:37.400 --> 00:02:38.630
+Và đây là vị trí cuối cùng
+
+00:02:38.630 --> 00:02:41.120
+Giữ nó tăng dần từng bước sang bước tiếp theo.
+
+00:02:41.780 --> 00:02:44.990
+Bây giờ, điều kiện if này chỉ xử lý
+xem người hiện tại có tồn tại hay
+
+00:02:44.990 --> 00:02:50.960
+không, nếu người này bị xóa, thì chúng
+ta biết rằng một bước nữa được tính.
+
+00:02:51.350 --> 00:02:52.850
+Và chúng tôi cũng đang cập nhật
+người cuối cùng mà chúng tôi đã gặp
+
+00:02:52.850 --> 00:02:59.540
+cho đến nay.  Nếu người này không
+bị xóa, các bước sẽ không tăng lên vì
+
+00:02:59.540 --> 00:03:01.510
+chúng tôi đã không tìm thấy anh ta cho đến nay.
+
+00:03:01.970 --> 00:03:06.560
+Vì vậy, yeah, tôi hy vọng điều này là rõ ràng.
+
+00:03:06.560 --> 00:03:08.240
+Có lẽ có lẽ chúng ta có thể.
+
+00:03:09.290 --> 00:03:10.160
+Một hai ba bốn.
+
+00:03:10.160 --> 00:03:16.130
+Ví dụ, bốn và hai, chẳng
+hạn, ở đây bốn và hai
+
+00:03:16.130 --> 00:03:16.540
+là một mô phỏng ở
+đây, có lẽ nó sẽ hữu ích.
+
+00:03:18.050 --> 00:03:23.480
+Vì vậy, ban đầu chúng ta có bốn giá trị nên mảng sẽ có ở vị trí không, một, hai, ba.
+
+00:03:23.810 --> 00:03:27.560
+Chúng ta sẽ có các giá trị ban đầu là 0, 0, 0 và 0.
+
+00:03:28.050 --> 00:03:34.040
+Và bước đầu tiên, chúng ta sẽ bắt đầu từ bước số không.
+
+00:03:34.250 --> 00:03:39.680
+Và vị trí cuối cùng ở đây là không xác định và sẽ lặp lại hai bước.
+
+00:03:39.950 --> 00:03:45.590
+Sau đó, chúng tôi kiểm tra xem người này có bị xóa không?
+
+00:03:45.890 --> 00:03:46.780
+Câu trả lời là không.
+
+00:03:47.000 --> 00:03:53.150
+Vì vậy, chúng tôi đếm một bước và chúng tôi đếm rằng người cuối cùng chúng tôi gặp là vị trí số 0 ở đây.
+
+00:03:53.630 --> 00:03:59.000
+Và sau đó chúng tôi di chuyển một bước thì người này bị loại bỏ?
+
+00:03:59.000 --> 00:03:59.960
+Không, đếm thêm một
+
+00:03:59.960 --> 00:04:01.580
+bước nữa và tiếp thị.
+
+00:04:01.580 --> 00:04:02.930
+Vì vậy, bây giờ chúng tôi đang ở vị trí một.
+
+00:04:03.500 --> 00:04:05.990
+Và sau đó chúng tôi đã thực hiện hai lần lặp lại.
+
+00:04:05.990 --> 00:04:07.100
+Vậy là vòng lặp ở đây đã xong.
+
+00:04:07.370 --> 00:04:14.330
+Bây giờ chúng tôi đang đánh dấu trong mảng "is_removed" của người đó, hiện tại mảng này sẽ được đánh dấu là
+
+00:04:14.540 --> 00:04:14.960
+một.
+
+00:04:14.990 --> 00:04:19.580
+Hãy làm cho nó ở đây với X. Bây
+giờ trong mỗi bước, như bạn chú
+
+00:04:19.580 --> 00:04:24.170
+ý ở đây, vị trí cuối cùng với
+gia số ban đầu là 0, sau đó là 1.
+
+00:04:24.170 --> 00:04:28.730
+Bây giờ vị trí hiện tại là ở đây, bắt đầu từ đây, chúng tôi bắt đầu đếm hai lần.
+
+00:04:29.030 --> 00:04:31.370
+Cái này có bị xóa không?  không di chuyển.
+
+00:04:31.370 --> 00:04:32.180
+Cái này có bị xóa không?
+
+00:04:32.420 --> 00:04:32.900
+Không.
+
+00:04:33.110 --> 00:04:36.890
+Sau đó, chúng tôi đã hoàn thành vòng lặp, sau đó chúng tôi đánh dấu nó là đã xóa.
+
+00:04:36.890 --> 00:04:39.650
+Vì vậy, chúng tôi quay lại đây và đánh dấu nó là đã xóa.
+
+00:04:39.920 --> 00:04:46.570
+Và như bạn thấy bây giờ,
+vị trí cuối cùng là ở vị trí thứ
+
+00:04:46.580 --> 00:04:46.970
+ba.  vị trí cuối cùng cộng
+với một là bốn, 4%4 là không.
+
+00:04:47.300 --> 00:04:53.870
+Vì vậy, chúng tôi trở lại đây một lần nữa.  Bây giờ trong bước tiếp theo,
+
+00:04:54.980 --> 00:04:57.110
+Cho đến nay chúng tôi đang in một cách chính xác để bốn?
+
+00:04:57.110 --> 00:04:57.470
+Đúng.
+
+00:04:57.770 --> 00:05:00.970
+Và bước tiếp theo, chúng ta đang ở vị trí số không.
+
+00:05:00.980 --> 00:05:01.790
+Hãy đếm hai.
+
+00:05:02.030 --> 00:05:03.280
+Là nó được gỡ bỏ?  Không.
+
+00:05:03.290 --> 00:05:05.840
+Vì vậy, đếm nó ở đây và đi đến bước tiếp theo.
+
+00:05:06.080 --> 00:05:07.040
+Là nó được gỡ bỏ?
+
+00:05:07.220 --> 00:05:08.990
+Vâng, nó được gỡ bỏ.
+
+00:05:09.200 --> 00:05:10.430
+Vì vậy, chúng tôi không làm gì cả.
+
+00:05:10.430 --> 00:05:11.150
+Bước sẽ vẫn là
+một, chúng tôi chỉ
+
+00:05:11.150 --> 00:05:13.700
+chuyển sang vị
+trí tiếp theo, ở đây.
+
+00:05:13.970 --> 00:05:14.780
+Là nó được gỡ bỏ?
+
+00:05:14.900 --> 00:05:21.170
+Không, đánh dấu nó ở đây là chúng ta đang ở đây và
+tăng nó lên hai bước, sau đó chúng ta hoàn thành
+
+00:05:21.170 --> 00:05:27.410
+và thoát khỏi vòng lặp và đánh dấu nó bằng X, v.v.
+Đây là đạo đức của điều kiện if "is_removed".
+
+00:05:27.410 --> 00:05:33.980
+Tôi hy vọng bây giờ bạn đã hiểu
+mô phỏng, điều mà bạn có thể làm
+
+00:05:33.980 --> 00:05:36.470
+được, nhưng có thể hơi khó khăn
+trong việc đánh dấu và tạo ra lỗi.
+
+00:05:36.890 --> 00:05:39.590
+Điều cuối cùng cần biết là điều kiện if ở đây.
+
+00:05:41.730 --> 00:05:48.420
+Quan sát rằng số người trong
+vòng tròn đang giảm dần, giả sử
+
+00:05:48.420 --> 00:05:51.240
+chúng ta có năm người trong
+vòng tròn, một, hai, ba, bốn, năm.
+
+00:05:51.940 --> 00:05:55.560
+Giả sử tôi đã nói với bạn rằng "k" là hai.
+
+00:05:55.980 --> 00:05:57.270
+Hai là ít hơn năm.
+
+00:05:57.280 --> 00:05:58.170
+Rất hoàn hảo.
+
+00:05:58.170 --> 00:06:00.830
+Có nghĩa là chúng ta di chuyển ở đây hai bước, sau đó di chuyển hai bước, v.v.
+
+00:06:01.410 --> 00:06:04.190
+Nhưng nếu tôi nói với bạn rằng "k" là bảy thì sao?
+
+00:06:04.800 --> 00:06:07.260
+Vì vậy, chúng tôi có năm người nhưng chúng tôi có "k" là bảy.
+
+00:06:07.620 --> 00:06:12.930
+"k" là bảy có nghĩa là bạn đi một, hai, ba, bốn, năm và bạn quay lại một, hai một lần nữa.
+
+00:06:13.440 --> 00:06:18.790
+Quan sát ở đây là chúng ta có một vòng hoàn chỉnh vô dụng.
+
+00:06:18.990 --> 00:06:22.830
+Hãy nhớ rằng, đồng hồ cứ 12 giờ một lần không đổi kim đồng hồ.
+
+00:06:23.010 --> 00:06:28.510
+Nếu bây giờ đồng hồ là ba giờ sau 12 giờ, thì nó lại là ba giờ, sau 12 giờ nữa, nó lại là ba giờ.
+
+00:06:28.860 --> 00:06:33.410
+Vì vậy, mỗi một chu kỳ hoàn chỉnh gồm năm giá trị thực sự vô dụng.
+
+00:06:33.930 --> 00:06:39.830
+Vì vậy, bằng cách loại bỏ năm từ bảy, năm từ bảy, chúng tôi nhận lại giá trị 2 .
+
+00:06:40.080 --> 00:06:46.130
+Nói cách khác, nếu "k" là hai hoặc bảy, thì cả hai đều có cùng giá trị.
+
+00:06:46.260 --> 00:06:52.600
+Cả hai đều có cùng giá trị và theo cách tương tự, "k" là hai, "k" là năm.
+
+00:06:52.830 --> 00:07:00.750
+Xin lỗi, "k" là 4, "k" là 7 hoặc "k" là 12 hoặc "k" là 17, v.v.
+
+00:07:01.050 --> 00:07:07.140
+Tất cả các cửa sổ này hoặc tất cả
+các chữ "k" này đều giống nhau bởi vì
+
+00:07:07.140 --> 00:07:08.760
+bạn cứ lặp đi lặp lại, lặp lại,
+lặp lại, lặp lại, rồi kết thúc ở đây.
+
+00:07:09.000 --> 00:07:10.590
+Đó là lý do tại sao chúng tôi có% ở đây.
+
+00:07:11.220 --> 00:07:12.390
+Điều này thực sự là vô lý.
+
+00:07:12.630 --> 00:07:13.950
+Bạn biết đấy, nếu tôi nói với bạn.
+
+00:07:14.190 --> 00:07:14.820
+Đồng hồ sau 700
+giờ là bao nhiêu,
+
+00:07:14.820 --> 00:07:17.790
+bạn cho tôi biết,
+bạn biết không?
+
+00:07:17.820 --> 00:07:19.820
+Điều này giống như 700%12.
+
+00:07:20.400 --> 00:07:27.810
+Vì vậy, chúng tôi sẽ thay
+vì thực hiện tất cả các lần
+
+00:07:27.810 --> 00:07:28.280
+lặp vô lý này, chúng tôi
+chỉ đặt% và loại bỏ chúng.
+
+00:07:28.770 --> 00:07:31.440
+Bây giờ, hai thủ thuật bổ sung ở đây.
+
+00:07:31.890 --> 00:07:36.830
+Đầu tiên là: quan sát rằng vòng tròn đang giảm dần theo từng bước.
+
+00:07:37.290 --> 00:07:41.160
+Đó là lý do tại sao ở đây chúng ta cần xem xét với % "remaining_alive".
+
+00:07:41.160 --> 00:07:43.110
+Bạn không thể làm điều đó bên ngoài vòng lặp for.
+
+00:07:43.800 --> 00:07:45.660
+Vòng tròn đang giảm nó từng bước.
+
+00:07:45.990 --> 00:07:51.150
+Điều này giống như một giờ
+bây giờ là mười hai giờ, nhưng
+
+00:07:51.150 --> 00:07:51.450
+một bước bây giờ là mười
+một giờ sau đó là mười giờ.
+
+00:07:51.750 --> 00:07:53.280
+Chu kỳ đang giảm dần.
+
+00:07:53.580 --> 00:07:55.290
+Vì vậy, bạn phải làm cho nó năng động ở đây.
+
+00:07:55.990 --> 00:07:57.570
+"k % còn sống".
+
+00:07:57.750 --> 00:07:59.970
+Đó là lý do tại sao chúng tôi cần phải làm cho nó năng động hơn.
+
+00:08:01.140 --> 00:08:07.620
+Thủ thuật cuối cùng giống như thủ thuật này có thể thất bại là điều gì sẽ xảy ra nếu "k % còn sống"
+
+00:08:07.620 --> 00:08:08.220
+là số không?
+
+00:08:08.610 --> 00:08:14.190
+Điều gì xảy ra nếu độ dài chu kỳ là "k" là 5 và "n" là năm? Bây giờ,
+
+00:08:14.190 --> 00:08:21.690
+5%5 là số không, số không có
+nghĩa là bạn không di chuyển trong
+
+00:08:21.690 --> 00:08:22.050
+mảng hoặc số không có nghĩa là
+bạn đang thực sự giết anh chàng này.
+
+00:08:22.050 --> 00:08:22.950
+Nhưng điều này là sai.
+
+00:08:23.400 --> 00:08:24.840
+Chúng ta thực sự nên giết anh chàng này.
+
+00:08:25.110 --> 00:08:31.740
+Vì vậy, để xử lý điều này
+như một thủ thuật, nếu "k% còn
+
+00:08:31.740 --> 00:08:33.720
+lại" bằng 0, chúng ta chỉ cần
+tự mình thực hiện năm bước.
+
+00:08:33.750 --> 00:08:35.040
+Đó là lý do tại sao tôi đặt ở đây "remaining_alive".
+
+00:08:35.580 --> 00:08:40.110
+Vì vậy, đây giống như một trường hợp xử lý đặc biệt cho "k % rest_alive" này.
+
+00:08:40.110 --> 00:08:40.890
+== không.
+
+00:08:41.850 --> 00:08:43.020
+Đây là tất cả về giải pháp.
+
+00:08:43.860 --> 00:08:48.750
+Sau này, khi bạn học cách
+loại bỏ các phần tử khỏi một
+
+00:08:48.750 --> 00:08:49.380
+mảng, trải nghiệm viết mã
+đó sẽ dễ dàng hơn một chút.
+
+00:08:49.380 --> 00:08:53.760
+Ví dụ: bạn sẽ không cần mảng "is_removed" này, nhưng nó cũng kém hiệu quả hơn một chút.
+
+00:08:53.760 --> 00:08:55.290
+Nhưng nó phụ thuộc, có thể, tôi không biết.
+
+00:08:56.130 --> 00:09:01.110
+Nhưng dù sao, bây giờ, tôi hy vọng rằng bạn hiểu cách truy tìm giải pháp này.

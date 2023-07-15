@@ -1,0 +1,274 @@
+0
+1
+00:00:01,650 --> 00:00:08,660
+Let's know about the STL queue, recall the structure that we already built in the hospital
+1
+
+2
+00:00:09,180 --> 00:00:14,490
+and remember that a queue is following what we call first in, first out strategy.
+2
+
+3
+00:00:14,670 --> 00:00:19,770
+If you went to a restaurant and you are the first one to come, then you are the first one to be served,
+3
+
+4
+00:00:20,070 --> 00:00:20,760
+and so on,
+4
+
+5
+00:00:20,760 --> 00:00:23,080
+the last one to come would be the last one to be served.
+5
+
+6
+00:00:23,700 --> 00:00:30,990
+An interesting question here is how many projects might need a queue property, like something like a structure queue
+6
+
+7
+00:00:31,210 --> 00:00:33,040
+to do something for it?
+7
+
+8
+00:00:33,330 --> 00:00:35,580
+It seems like a very repetitive task.
+8
+
+9
+00:00:35,910 --> 00:00:42,290
+So it STL comes here to save our time and give us a ready to use implementation for it.
+9
+
+10
+00:00:43,910 --> 00:00:50,580
+But in reality, I might need a queue over integrase, a queue over doubles, a queue over employees,
+10
+
+11
+00:00:50,870 --> 00:00:57,740
+this is where we use C++ templates, so it also provided us as a queue of int, queue of employee, ok?
+11
+
+12
+00:00:58,040 --> 00:01:00,280
+That's why we call it a standard template library.
+12
+
+13
+00:01:00,290 --> 00:01:07,610
+it provides us these implementations using the template property and like we expect in a queue, we can
+13
+
+14
+00:01:07,610 --> 00:01:12,640
+push to add element, we can front to get the top element, 
+14
+
+15
+00:01:12,860 --> 00:01:15,620
+we can check if it's empty or not,
+15
+
+16
+00:01:15,770 --> 00:01:18,330
+we can know the number of elements in the queue right now.
+16
+
+17
+00:01:18,830 --> 00:01:27,410
+So in summary, the queue is a first in, first out data structure that STL provided us with templates
+17
+
+18
+00:01:27,410 --> 00:01:27,970
+property.
+18
+
+19
+00:01:28,280 --> 00:01:29,510
+Let's check out some code.
+19
+
+20
+00:01:29,730 --> 00:01:33,530
+This is what we hash include here: #include queue, queue of integer
+20
+
+21
+00:01:33,530 --> 00:01:39,140
+then we started to dot push 10, dot push 20 dot push 30, so notice here that this is a
+21
+
+22
+00:01:39,140 --> 00:01:40,450
+template usage of the queue.
+22
+
+23
+00:01:40,640 --> 00:01:45,530
+We are saying we were in a queue of type integer and then here we started to do the pushing.
+23
+
+24
+00:01:45,710 --> 00:01:49,220
+You should expect that this is as simple as the
+24
+
+25
+00:01:49,790 --> 00:01:55,940
+The queue that we did before, for example, we expected that, in our array, for example, to have value
+25
+
+26
+00:01:55,940 --> 00:01:57,770
+10 then 20, then 30.
+26
+
+27
+00:01:59,150 --> 00:02:04,080
+If we tried to print to the last element in the queue, we can do that using q.back
+27
+
+28
+00:02:04,100 --> 00:02:07,880
+This is going to give you the last value, which is now 30.
+28
+
+29
+00:02:08,180 --> 00:02:14,480
+Now, let's print the queue, an interesting way to print the queue would depend on two functions,
+29
+
+30
+00:02:14,750 --> 00:02:20,390
+double-checking if the queue is empty right now or not, and getting the front of the queue and also removing
+30
+
+31
+00:02:20,390 --> 00:02:21,320
+the front of the queue.
+31
+
+32
+00:02:21,620 --> 00:02:23,480
+So the process goes as follows,
+32
+
+33
+00:02:23,490 --> 00:02:25,810
+remember that the queue has value 10, 20, 30.
+33
+
+34
+00:02:26,300 --> 00:02:28,350
+We first a check is the queue empty?
+34
+
+35
+00:02:28,730 --> 00:02:34,670
+If not, we get the top of the queue, which is now 10, and then we print it, then we remove it.
+35
+
+36
+00:02:34,670 --> 00:02:39,710
+So q.front get the top, q.pop remove it, now with a queue has 20 and 30.
+36
+
+37
+00:02:39,740 --> 00:02:40,530
+Is it empty?
+37
+
+38
+00:02:40,580 --> 00:02:40,970
+No.
+38
+
+39
+00:02:41,210 --> 00:02:42,890
+Get the front, 20 print it,
+39
+
+40
+00:02:43,160 --> 00:02:43,820
+remove it.
+40
+
+41
+00:02:43,850 --> 00:02:44,990
+Now the queue has 30,
+41
+
+42
+00:02:45,200 --> 00:02:46,040
+get the front.
+42
+
+43
+00:02:46,160 --> 00:02:46,900
+is it empty? No,
+43
+
+44
+00:02:46,920 --> 00:02:48,380
+get the front 30
+44
+
+45
+00:02:48,950 --> 00:02:50,060
+Remove it, now
+45
+
+46
+00:02:50,060 --> 00:02:50,870
+is a queue empty?
+46
+
+47
+00:02:50,870 --> 00:02:52,480
+Yes, the queue is empty.
+47
+
+48
+00:02:53,240 --> 00:02:56,360
+Remember that the queue here at this moment has no elements.
+48
+
+49
+00:02:56,510 --> 00:02:58,730
+We can also create queues of other things,
+49
+
+50
+00:02:58,730 --> 00:03:00,670
+for example, we can say a queue of a string,
+50
+
+51
+00:03:00,680 --> 00:03:01,710
+we can push Mustafa,
+51
+
+52
+00:03:01,760 --> 00:03:04,940
+we can get it back from the front and so on.
+52
+
+53
+00:03:06,110 --> 00:03:07,040
+That's it for the queue.
+53
+
+54
+00:03:07,040 --> 00:03:07,670
+Please go ahead.
+54
+
+55
+00:03:07,670 --> 00:03:08,270
+And practice it.

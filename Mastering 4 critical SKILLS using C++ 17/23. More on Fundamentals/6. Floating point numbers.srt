@@ -1,0 +1,451 @@
+1
+00:00:01,140 --> 00:00:06,300
+Similar to the integrated five, so there is also the types in floating point that we never introduced
+
+2
+00:00:06,300 --> 00:00:13,530
+so far, but there are two other data types in C++, one of them named a float and another one the named
+
+3
+00:00:13,530 --> 00:00:14,140
+Longido.
+
+4
+00:00:14,940 --> 00:00:22,960
+So the longer float, the minimum size is typically fold for the double is typically eat the along,
+
+5
+00:00:23,010 --> 00:00:28,980
+the double sometimes is eight, sometimes is 12 and sometimes is 16 times more of a platform dependent.
+
+6
+00:00:28,990 --> 00:00:31,530
+So there is no guarantee that Longyearbyen is better than double.
+
+7
+00:00:33,460 --> 00:00:39,910
+If you would like to define them, you define double X like we did or float Y and you put here F or
+
+8
+00:00:40,120 --> 00:00:42,420
+the double and you put here the El Capitan.
+
+9
+00:00:43,700 --> 00:00:51,660
+Generally speaking, as we'll know, we typically use in our in our applications of the X as double.
+
+10
+00:00:51,790 --> 00:00:54,340
+We never really use a fluid.
+
+11
+00:00:54,340 --> 00:01:01,690
+And also we are very careful about doing double as potentially might be more competitions or more memory.
+
+12
+00:01:03,470 --> 00:01:08,820
+The first question here is about the range of of of floating and floating buoys.
+
+13
+00:01:08,830 --> 00:01:11,580
+Look what we know, the maximum value of integral.
+
+14
+00:01:11,580 --> 00:01:15,020
+But what is the maximum value of Dubon when it comes to the double?
+
+15
+00:01:15,280 --> 00:01:20,420
+There are two components, not just one with just the range recoded, the range and the precision.
+
+16
+00:01:20,920 --> 00:01:27,160
+The idea here in double representations, we can't allow much, much, much bigger values.
+
+17
+00:01:27,550 --> 00:01:32,200
+But on the contrary, it would not be.
+
+18
+00:01:33,080 --> 00:01:35,130
+I would be very accurate.
+
+19
+00:01:35,510 --> 00:01:42,650
+So in this way, we have here this position one, so, for example, looking to the to the double,
+
+20
+00:01:42,650 --> 00:01:46,960
+for example, the doubles range is you see here up to ten to the power.
+
+21
+00:01:46,970 --> 00:01:48,870
+Three hundred eight.
+
+22
+00:01:49,220 --> 00:01:50,570
+This is a huge number.
+
+23
+00:01:50,580 --> 00:01:54,520
+You imagine up to three hundred zeros, for example.
+
+24
+00:01:55,100 --> 00:01:55,940
+This is very huge.
+
+25
+00:01:56,420 --> 00:02:05,150
+But the significant digits for us are around an average 16 for the float on average is typically seven
+
+26
+00:02:05,780 --> 00:02:07,160
+for the.
+
+27
+00:02:08,180 --> 00:02:12,920
+For the longest of all, it could be it depends on the implementation like here in some case it could
+
+28
+00:02:12,920 --> 00:02:16,490
+be like 33 digit up to thirty six digits.
+
+29
+00:02:16,760 --> 00:02:21,140
+Remember, once I highlighted the significant digits in an informal way, I just wanted you to know
+
+30
+00:02:21,140 --> 00:02:27,290
+that this, this, this, this just before the E let's let's make it that informant just we call them
+
+31
+00:02:27,290 --> 00:02:32,080
+significant digits, so up to only seven digits and flute, which is four bytes.
+
+32
+00:02:32,330 --> 00:02:36,560
+That's why they're using the fluid is a very, very bad idea.
+
+33
+00:02:37,040 --> 00:02:40,910
+Using the the double is up to 15 to 18 digits.
+
+34
+00:02:41,150 --> 00:02:44,750
+This is typically a lot in terms of real life practice.
+
+35
+00:02:44,900 --> 00:02:52,310
+That's why the dubbin is a standard, the type that we are typically using in in in our usage.
+
+36
+00:02:56,390 --> 00:03:05,240
+It's also important here, like it might be that the heartbeat fluting type has the same range as the
+
+37
+00:03:05,240 --> 00:03:06,110
+16 byte.
+
+38
+00:03:06,110 --> 00:03:07,220
+Like we're thinking about.
+
+39
+00:03:07,220 --> 00:03:11,580
+The estimate was 16, 16 is is different.
+
+40
+00:03:12,050 --> 00:03:18,560
+So why these two have exactly the same range, although they are different in sizes?
+
+41
+00:03:18,770 --> 00:03:23,060
+Because, again, remember that also there is also the significant digit.
+
+42
+00:03:23,060 --> 00:03:26,870
+But so it isn't only about the range, it's also about the significant.
+
+43
+00:03:27,260 --> 00:03:28,190
+Significant about.
+
+44
+00:03:31,450 --> 00:03:38,500
+In terms of Gooding, let's set a position for up to 19 and let's try to bring to flute and double and
+
+45
+00:03:38,500 --> 00:03:45,510
+longlong unit is the float here in a very early stage is starting to give very wrong representation.
+
+46
+00:03:46,150 --> 00:03:51,910
+You will notice the double is surviving much bigger range, but on the double is roaming much, much,
+
+47
+00:03:51,910 --> 00:03:52,420
+much more.
+
+48
+00:03:52,810 --> 00:03:55,780
+If you not if you have something very strong up to that.
+
+49
+00:03:55,780 --> 00:03:58,540
+That's why the double is usually a very good representation.
+
+50
+00:03:58,990 --> 00:04:04,360
+But the float is very is very dangerous because in a very early stage, let's count here, one, two,
+
+51
+00:04:04,360 --> 00:04:06,010
+three, four, five, six.
+
+52
+00:04:06,020 --> 00:04:09,100
+So you see it after like six or seven digits.
+
+53
+00:04:09,250 --> 00:04:14,320
+It started to to feel that this is very risky for real life applications.
+
+54
+00:04:16,090 --> 00:04:18,010
+Let's even see some problems.
+
+55
+00:04:18,190 --> 00:04:19,900
+Let's define a float value.
+
+56
+00:04:19,900 --> 00:04:23,230
+If one here with a maximum of the integer, that's good.
+
+57
+00:04:23,230 --> 00:04:29,770
+So far, surprisingly, if you try to use it something like a different value, you printed it wrongly.
+
+58
+00:04:29,770 --> 00:04:33,490
+Even it has less value because of the number of significant digits.
+
+59
+00:04:33,490 --> 00:04:39,130
+Anyway, way of of of of fluid is just seven.
+
+60
+00:04:39,400 --> 00:04:42,400
+So there is no guarantees in such numbers.
+
+61
+00:04:42,580 --> 00:04:43,570
+It's going to work.
+
+62
+00:04:43,570 --> 00:04:45,700
+Well, you see here, it's printed even strongly.
+
+63
+00:04:45,700 --> 00:04:47,890
+That's why we we typically don't use the float.
+
+64
+00:04:48,620 --> 00:04:57,870
+The the the double has like fifteen or so significant digits.
+
+65
+00:04:58,000 --> 00:05:02,740
+So this number is a small for it, it just has insignificant digits if you try to count them.
+
+66
+00:05:02,950 --> 00:05:04,400
+We have the numbers for one more night.
+
+67
+00:05:04,420 --> 00:05:06,460
+This is nine and the zero also counted here.
+
+68
+00:05:06,460 --> 00:05:08,410
+So we have like ten significant digits.
+
+69
+00:05:09,160 --> 00:05:13,480
+So overall, you see the double is surviving with something that is decent for our usage.
+
+70
+00:05:16,640 --> 00:05:21,950
+The internal representation of fluid and how it's supporting such a huge range and how it's approximating
+
+71
+00:05:21,950 --> 00:05:28,550
+it is a bit complicated at this stage, just like you know that internally say we have 32 bits, we
+
+72
+00:05:28,550 --> 00:05:29,240
+divide it to two.
+
+73
+00:05:29,240 --> 00:05:33,290
+But one part we call it the mixer and another what we call it the exponent.
+
+74
+00:05:33,290 --> 00:05:35,120
+And we use one point, one bit for that.
+
+75
+00:05:35,990 --> 00:05:41,680
+But using this representation allow us to have a bigger range, but is less accurate.
+
+76
+00:05:41,960 --> 00:05:44,360
+So this time it is about using two to the power.
+
+77
+00:05:44,360 --> 00:05:45,780
+Thirty two.
+
+78
+00:05:46,040 --> 00:05:47,270
+We are using it in a different way.
+
+79
+00:05:47,790 --> 00:05:55,250
+The double in general has sixty bits because it's 15 digits on average for the precision and it is double
+
+80
+00:05:55,490 --> 00:06:02,960
+what we call a double precision because we're using sixty four or sixty eight bits and could try to
+
+81
+00:06:02,960 --> 00:06:05,540
+hear the fluid is just 32.
+
+82
+00:06:06,530 --> 00:06:07,160
+I forget it.
+
+83
+00:06:07,190 --> 00:06:10,270
+No, it should be seven digits and we call it single precision.
+
+84
+00:06:10,280 --> 00:06:14,120
+If you notice, we call this double precision because it is double the float value.
+
+85
+00:06:15,560 --> 00:06:23,480
+One other concern to talk about is C++ define two variables specific to cases.
+
+86
+00:06:23,660 --> 00:06:26,270
+One, could we call it ñan, which is not a number.
+
+87
+00:06:26,360 --> 00:06:28,370
+And then over another value is infinity.
+
+88
+00:06:28,760 --> 00:06:33,680
+Remember, when we divide over zero like five, what, zero or negative five were zero.
+
+89
+00:06:33,700 --> 00:06:34,450
+This is infinity.
+
+90
+00:06:34,500 --> 00:06:40,160
+Could be positive infinity like in this case and negative infinity C++ we printed the word enf.
+
+91
+00:06:40,460 --> 00:06:44,260
+OK, on the other side, what if we divide it zero by zero?
+
+92
+00:06:44,510 --> 00:06:45,600
+This would bring to an end.
+
+93
+00:06:45,800 --> 00:06:49,910
+So this is another number, which means the mathematically invalid it is.
+
+94
+00:06:49,910 --> 00:06:50,950
+One more interesting thing.
+
+95
+00:06:51,200 --> 00:06:59,140
+What is the output of this condition and line it in that equation that this line will not be printed?
+
+96
+00:06:59,390 --> 00:07:04,940
+This is the only case when you compare something in C++ by itself and it doesn't bring in a very funny
+
+97
+00:07:04,940 --> 00:07:10,280
+case and has some usage in what we call dynamic programming, but out of scope for now.
+
+98
+00:07:12,130 --> 00:07:19,270
+Some tips, all of what I need from you at the moment is to just keep using double as we used it to
+
+99
+00:07:19,270 --> 00:07:23,590
+reduce the food, to reduce long double, as long as we don't have a good reason for that.
+
+100
+00:07:25,180 --> 00:07:33,130
+You might read this here for some for some for some minor cases for them in general.
+
+101
+00:07:33,130 --> 00:07:39,060
+And as long as you are far from the financial or currency applications, you are on the safe side.
+
+102
+00:07:39,310 --> 00:07:44,710
+But in some of these applications where the precision play a big factor and might affect the competitions,
+
+103
+00:07:44,920 --> 00:07:51,760
+you have really to understand how floating point numbers ebooks never could bear fruit directly as we
+
+104
+00:07:51,760 --> 00:07:52,640
+did in the last time.
+
+105
+00:07:52,660 --> 00:07:56,610
+But remember, also competing with difference is a bit problematic.
+
+106
+00:07:57,310 --> 00:08:03,980
+These articles here are very important articles, but it might be a bit advanced at the moment.
+
+107
+00:08:04,060 --> 00:08:10,360
+What I care here is before being a software engineer working in the market, it is very important to
+
+108
+00:08:10,360 --> 00:08:11,950
+read them and to understand them.
+
+109
+00:08:12,190 --> 00:08:20,430
+There are a bunch of advices here in this great article by myself, which is a key figure into the community.
+
+110
+00:08:21,550 --> 00:08:29,530
+He is writing a bunch of information about double's and in a very nice way about some of the mis wrongdoings
+
+111
+00:08:29,530 --> 00:08:32,320
+and misunderstanding of people about the real values.
+
+112
+00:08:33,310 --> 00:08:35,980
+So in a way at this are worth reading.
+
+113
+00:08:35,980 --> 00:08:37,600
+But but you can skip that for now.

@@ -1,0 +1,1088 @@
+1
+00:00:01,200 --> 00:00:07,330
+Hi Everyone so we have talking about the containers, and we have already seen, how do you work with Array.
+
+2
+00:00:07,360 --> 00:00:08,160
+based container
+
+3
+00:00:08,280 --> 00:00:08,610
+OK.
+
+4
+00:00:08,970 --> 00:00:12,340
+On the next container that we will talk about is a vector.
+
+5
+00:00:12,360 --> 00:00:13,410
+So what is the vector?
+
+6
+00:00:13,410 --> 00:00:14,820
+Vector is a dynamic array.
+
+7
+00:00:15,060 --> 00:00:17,310
+OK, so what is the meaning of a dynamic array?
+
+8
+00:00:17,910 --> 00:00:20,100
+So it is an array that can grow in size.
+
+9
+00:00:20,130 --> 00:00:21,990
+So we look at how this works.
+
+10
+00:00:22,380 --> 00:00:28,620
+So we have already discussed about Array Class and we have also discussed how they are different from
+
+11
+00:00:28,620 --> 00:00:30,720
+the classical Arrays.
+
+12
+00:00:31,170 --> 00:00:37,880
+And there are a lot of methods associated with each and every container that you do not need to remember.
+
+13
+00:00:37,920 --> 00:00:43,500
+OK, so I'm doing do not need to remember, but because you can always look up at the documentation
+
+14
+00:00:43,500 --> 00:00:48,450
+and if you want to look for a specific method, but there are some common operations that you must be
+
+15
+00:00:48,450 --> 00:00:49,460
+knowing, that.
+
+16
+00:00:49,500 --> 00:00:53,670
+How do you access the Ith element or how do you get the size of the array?
+
+17
+00:00:54,150 --> 00:00:56,950
+And there are two more methods which we have not discussed.
+
+18
+00:00:56,970 --> 00:01:03,120
+There is a method called Front that gives you the element at the front of the Array, and there is a
+
+19
+00:01:03,120 --> 00:01:06,420
+method back, which gives you the last element, OK?
+
+20
+00:01:06,720 --> 00:01:10,350
+So ideally, you can do it using it of zero or array of n minus one as well.
+
+21
+00:01:10,650 --> 00:01:13,050
+So this is the element at the back.
+
+22
+00:01:13,590 --> 00:01:18,990
+So there are a lot of other methods as well, which you do not need to remember, but you can always look
+
+23
+00:01:18,990 --> 00:01:19,950
+at the documentation.
+
+24
+00:01:19,950 --> 00:01:28,230
+But one thing you should be remembering is in an array in order to access any ith element like this,
+
+25
+00:01:28,350 --> 00:01:29,970
+or you can use the add function.
+
+26
+00:01:30,630 --> 00:01:33,520
+All of these operations are order(1) operation ok.
+
+27
+00:01:33,540 --> 00:01:39,660
+That means you can you have the random access to any element in constant time.
+
+28
+00:01:40,470 --> 00:01:46,830
+And now what we arre going to do, we are going to talk about vectors which are very similar to arrays, but they
+
+29
+00:01:46,830 --> 00:01:48,240
+have a special power as well.
+
+30
+00:01:48,870 --> 00:01:57,150
+So that special power is they had the ability to resize themself, when an element is inserted in the
+
+31
+00:01:57,150 --> 00:01:57,390
+array.
+
+32
+00:01:57,630 --> 00:02:02,820
+OK, for example, you have a vector which is currently off size.
+
+33
+00:02:02,820 --> 00:02:05,100
+Let's say 4 and.
+
+34
+00:02:07,500 --> 00:02:11,850
+You want to insert one more element in this vector, let's say the vector is of size 5
+
+35
+00:02:12,300 --> 00:02:15,420
+You want to insert one more element to the element is 20.
+
+36
+00:02:15,600 --> 00:02:16,500
+So you inserted it.
+
+37
+00:02:16,950 --> 00:02:20,440
+Now you say, OK, I want to insert one more element in this particular vector.
+
+38
+00:02:21,240 --> 00:02:24,300
+And but the vector is full, the vector is full.
+
+39
+00:02:24,720 --> 00:02:29,910
+So what what it is going to do, it is going to resize itself when an element is inserted.
+
+40
+00:02:30,170 --> 00:02:32,580
+OK, now how that resize happens.
+
+41
+00:02:32,580 --> 00:02:37,640
+I will give you a quick recap to the vector doubles itself.
+
+42
+00:02:37,650 --> 00:02:43,350
+OK, so if the original size is five, it is going to create a new array in a.
+
+43
+00:02:44,560 --> 00:02:47,890
+And this array is allocated dynamically on run time.
+
+44
+00:02:48,190 --> 00:02:48,460
+OK.
+
+45
+00:02:48,910 --> 00:02:54,160
+And it is going to copy all the elements of the previous array, so it is going to copy one, two, three
+
+46
+00:02:54,730 --> 00:02:55,570
+4 20.
+
+47
+00:02:56,020 --> 00:02:57,190
+And now you can see this.
+
+48
+00:02:57,760 --> 00:03:00,370
+This had a capacity of five.
+
+49
+00:03:01,300 --> 00:03:05,770
+And this vector has a capacity of 10.
+
+50
+00:03:05,920 --> 00:03:08,620
+That means it has doubled its capacity.
+
+51
+00:03:09,040 --> 00:03:10,720
+And you want to insert a new element.
+
+52
+00:03:10,720 --> 00:03:14,270
+Let's say you want to insert 21 so that 21 would be presented.
+
+53
+00:03:14,290 --> 00:03:14,560
+OK.
+
+54
+00:03:14,980 --> 00:03:22,690
+So this vector has a concept of relocation happens when the underlying array is full.
+
+55
+00:03:22,960 --> 00:03:26,230
+And second thing is, these locations are continuous.
+
+56
+00:03:26,470 --> 00:03:28,480
+OK, that means if this addresses 100.
+
+57
+00:03:28,780 --> 00:03:31,690
+The next would be 104 the next would be 108
+
+58
+00:03:31,720 --> 00:03:32,950
+Next would be one 112.
+
+59
+00:03:33,490 --> 00:03:35,080
+These are continuous addresses.
+
+60
+00:03:35,450 --> 00:03:35,800
+Now why?
+
+61
+00:03:35,800 --> 00:03:40,840
+This is a difference of 4 because each in the box takes four bytes, OK?
+
+62
+00:03:41,110 --> 00:03:43,630
+So the original array would be deleted.
+
+63
+00:03:44,560 --> 00:03:50,220
+The original array would be deleted, and you would have a new array at a new memory location.
+
+64
+00:03:50,230 --> 00:03:54,190
+Okay, so it's it uses dynamic memory allocation.
+
+65
+00:03:56,690 --> 00:04:01,370
+To create these underlying arrays, OK, so dynamic memory allocation.
+
+66
+00:04:01,400 --> 00:04:09,450
+So again, it is a sequence container, so, this all this thing, all the code that is responsible for
+
+67
+00:04:09,470 --> 00:04:10,670
+reallocating the memory.
+
+68
+00:04:11,090 --> 00:04:14,290
+It is already written by the people who made STL.
+
+69
+00:04:14,330 --> 00:04:19,459
+You just only need to call some of the functions to work with the vector.
+
+70
+00:04:19,459 --> 00:04:28,070
+OK, so you have the square brackets as an overloaded operator, then you have square brackets, either
+
+71
+00:04:28,070 --> 00:04:33,740
+overloaded operator and you you have this clear method as well.
+
+72
+00:04:33,800 --> 00:04:38,210
+If you want to remove everything from the vector, you have a method called popback.
+
+73
+00:04:38,210 --> 00:04:42,590
+If you want to remove the last element, you have a vector method called push back.
+
+74
+00:04:43,070 --> 00:04:49,670
+If you want to push something from the back now, it is very important to think, why don't we have
+
+75
+00:04:49,670 --> 00:04:54,410
+a method like push front that push back or push front in the vector?
+
+76
+00:04:54,410 --> 00:04:54,670
+OK?
+
+77
+00:04:56,060 --> 00:04:58,820
+Because you're working with array, so anything.
+
+78
+00:04:59,360 --> 00:05:02,270
+All the empty locations are on the back of vector.
+
+79
+00:05:02,270 --> 00:05:09,860
+If you want to push now 50, so you will call ok push back 50 and that will insert 50 inside the vector,
+
+80
+00:05:09,860 --> 00:05:11,510
+OK, that is going to insert 50.
+
+81
+00:05:11,900 --> 00:05:13,400
+And we want to say popback.
+
+82
+00:05:13,940 --> 00:05:16,460
+It is going to remove 50 from the vector.
+
+83
+00:05:16,460 --> 00:05:18,980
+OK, and this can be done in order one time.
+
+84
+00:05:19,370 --> 00:05:20,900
+This can be done in order one time.
+
+85
+00:05:21,360 --> 00:05:23,150
+There again, a lot of methods.
+
+86
+00:05:23,510 --> 00:05:27,920
+So I'm just highlighting the important ones like reserve you should be doing.
+
+87
+00:05:28,400 --> 00:05:34,880
+The reserve is used when you're sure that I need at least this much space to work with the vector.
+
+88
+00:05:35,310 --> 00:05:42,350
+In that case, your memory would be reserved for that many number of units, for that many number of
+
+89
+00:05:42,800 --> 00:05:43,280
+units.
+
+90
+00:05:44,090 --> 00:05:44,720
+So.
+
+91
+00:05:46,640 --> 00:05:51,860
+That's that's how you're going to use the reserve method at, for example, you're sure I will need
+
+92
+00:05:51,860 --> 00:05:57,350
+at least 1000 elements that will make sure in the beginning your array is of size 1000.
+
+93
+00:05:57,800 --> 00:06:03,070
+And then you if it exceeds 1000, then it will double itself.
+
+94
+00:06:03,080 --> 00:06:05,060
+It will make itself as two thousand, okay.
+
+95
+00:06:05,420 --> 00:06:07,910
+So we have pushback that inserts at the back.
+
+96
+00:06:07,910 --> 00:06:12,230
+We have pop, but that removes something from the back.
+
+97
+00:06:12,230 --> 00:06:18,050
+We don't have push front because there is no additional space to push something on the front of this
+
+98
+00:06:18,050 --> 00:06:18,350
+vector.
+
+99
+00:06:18,530 --> 00:06:22,460
+You cannot have anything at index minus one.
+
+100
+00:06:22,610 --> 00:06:27,710
+You cannot push directly at the front without doing any shifting so that that's where we don't have
+
+101
+00:06:27,870 --> 00:06:31,000
+push front or pop front methods.
+
+102
+00:06:31,010 --> 00:06:36,650
+OK, so no pushfront, no popfront inside the vector, and there is a method called clear that is
+
+103
+00:06:36,650 --> 00:06:39,650
+going to remove all the elements.
+
+104
+00:06:39,650 --> 00:06:41,930
+It is going to make the size of the vector zero.
+
+105
+00:06:42,410 --> 00:06:43,880
+The capacity may not change.
+
+106
+00:06:43,880 --> 00:06:45,860
+OK, the capacity may not change.
+
+107
+00:06:47,650 --> 00:06:49,240
+So let us look at a demo.
+
+108
+00:06:49,780 --> 00:06:50,860
+Let's look at a demo.
+
+109
+00:06:52,550 --> 00:06:54,350
+Of how do we work with Victor?
+
+110
+00:06:58,240 --> 00:07:05,350
+If you want to create an empty container, you just OK vector, followed by the datatype in angular brackets
+
+111
+00:07:05,350 --> 00:07:06,970
+followed by the name of the vector, OK.
+
+112
+00:07:07,390 --> 00:07:13,840
+And if you want to create a vector using a fill constructor, OK, that means you want to create a vector
+
+113
+00:07:13,840 --> 00:07:15,670
+in which every number is 20.
+
+114
+00:07:16,030 --> 00:07:19,480
+So for that, we can use something known as a fill constructor.
+
+115
+00:07:19,570 --> 00:07:23,170
+So we say OK, four boxes each of value 20.
+
+116
+00:07:23,440 --> 00:07:26,530
+So this is your vector and once it is full.
+
+117
+00:07:26,620 --> 00:07:27,940
+You want to insert something more.
+
+118
+00:07:28,140 --> 00:07:29,030
+It will double itself.
+
+119
+00:07:29,050 --> 00:07:30,250
+It will make itself as eight.
+
+120
+00:07:31,520 --> 00:07:39,300
+And there is also a range constructor that you can also construct a vector from an array, so this is nothing
+
+121
+00:07:39,320 --> 00:07:39,540
+but an array.
+
+122
+00:07:40,220 --> 00:07:45,920
+And you're saying, ok, I'm defining the range starting from this point till this point.
+
+123
+00:07:46,980 --> 00:07:48,630
+Put all these values inside of vector.
+
+124
+00:07:48,900 --> 00:07:51,250
+So this is how you use the range constructor.
+
+125
+00:07:51,810 --> 00:07:58,050
+There's also something which is called a copy constructor that will take in a director as object and
+
+126
+00:07:58,050 --> 00:07:59,190
+it will create a copy.
+
+127
+00:07:59,440 --> 00:08:00,570
+OK, it will create a copy.
+
+128
+00:08:00,570 --> 00:08:06,750
+So that means if you have a vector of any 20, 30, 40, this is third, then you will create another
+
+129
+00:08:06,750 --> 00:08:08,520
+vector that is copy of this one.
+
+130
+00:08:10,150 --> 00:08:10,480
+OK.
+
+131
+00:08:10,750 --> 00:08:18,880
+So for that, we can use the copy constructor to create an object, and most of these ways are common
+
+132
+00:08:18,880 --> 00:08:20,180
+for many STL containers.
+
+133
+00:08:20,200 --> 00:08:20,500
+OK.
+
+134
+00:08:21,010 --> 00:08:23,320
+And you do not need to remember each and every one.
+
+135
+00:08:23,350 --> 00:08:27,010
+You can also construct a vector using an initialization list.
+
+136
+00:08:27,040 --> 00:08:28,180
+OK, you can say ok
+
+137
+00:08:28,600 --> 00:08:33,640
+These are the numbers I want to use to create create this particular vector.
+
+138
+00:08:33,640 --> 00:08:33,880
+OK?
+
+139
+00:08:35,520 --> 00:08:41,669
+So let's talk about one more way, so you can also say, OK, I will take inputs and I will push back
+
+140
+00:08:41,669 --> 00:08:47,250
+those inputs in my vector where if you know that you already have a vector, which is of, say, 100,
+
+141
+00:08:47,370 --> 00:08:49,710
+then you can also say, OK,v[0]
+
+142
+00:08:49,740 --> 00:08:51,660
+This is one v of I.
+
+143
+00:08:51,780 --> 00:08:53,000
+This is equal to 20.
+
+144
+00:08:53,010 --> 00:08:59,940
+You can access the ith index, provided I is less than the capacity of the vector.
+
+145
+00:08:59,940 --> 00:09:05,760
+OK, so the capacity means how much storage has been allocated for that particular vector.
+
+146
+00:09:06,000 --> 00:09:11,910
+You cannot say I is this location, make it 100, so you will get a memory error.
+
+147
+00:09:11,940 --> 00:09:16,920
+If you if your i goes out of bounds of the capacity of director, OK?
+
+148
+00:09:19,690 --> 00:09:25,450
+So some of the common functions like you want to access the Ith element, you can either use at
+
+149
+00:09:25,450 --> 00:09:27,040
+or you can use square brackets.
+
+150
+00:09:27,770 --> 00:09:30,800
+You can get the current size by using the size function.
+
+151
+00:09:31,300 --> 00:09:33,490
+You can get the underlying capacity.
+
+152
+00:09:33,500 --> 00:09:40,630
+That means how much memory has been allocated using arr.capacity, and you can also get the maximum
+
+153
+00:09:40,630 --> 00:09:40,900
+size.
+
+154
+00:09:40,900 --> 00:09:46,630
+That means how much memory is available due to available RAM.
+
+155
+00:09:47,050 --> 00:09:50,530
+And for that, you can use a arr dot max underscore size.
+
+156
+00:09:50,690 --> 00:09:50,940
+OK.
+
+157
+00:09:52,650 --> 00:09:57,810
+So this is an example of using the pushback method if you want to push something in this vector,
+
+158
+00:09:57,840 --> 00:10:01,900
+arr dot push back 20, so this will add 20 to the vector
+
+159
+00:10:02,460 --> 00:10:07,140
+And if the capacity is full, then it will double itself OK.
+
+160
+00:10:07,770 --> 00:10:08,280
+And.
+
+161
+00:10:09,620 --> 00:10:14,640
+If you want to remove something from the back, you want to remove something, then you can call the
+
+162
+00:10:14,880 --> 00:10:18,020
+back method, and this is also an order one method, OK?
+
+163
+00:10:18,440 --> 00:10:25,900
+So array dot clear like you want to remove all the elements from the vector, so it reduces the size to zero.
+
+164
+00:10:26,540 --> 00:10:31,850
+The size is not the same as capacity, not same as capacity.
+
+165
+00:10:31,860 --> 00:10:34,560
+That means currently we have a empty vector.
+
+166
+00:10:35,570 --> 00:10:41,630
+And if the original capacity is C, the capacity is going to remain same but the elements are not going
+
+167
+00:10:41,630 --> 00:10:42,500
+to be there in the vector.
+
+168
+00:10:42,500 --> 00:10:48,290
+So when you start pushing back in the element again, they're going to push from zeroth index maybe
+
+169
+00:10:48,290 --> 00:10:50,240
+13, 14, 15.
+
+170
+00:10:50,720 --> 00:10:57,770
+They will get stored after clearing the original vectors, and there are some more methods like it
+
+171
+00:10:57,770 --> 00:10:58,850
+erase or insert.
+
+172
+00:10:59,240 --> 00:11:03,290
+So now we will look at a quick demo of how to work with vector.
+
+173
+00:11:04,990 --> 00:11:11,500
+So let us look at a demo of working with the vector, so first we need to include the header file.
+
+174
+00:11:11,780 --> 00:11:12,080
+OK.
+
+175
+00:11:12,650 --> 00:11:14,420
+And that's lets say vector.
+
+176
+00:11:14,810 --> 00:11:17,720
+And what I'm going to do, I'm going to simply create a vector.
+
+177
+00:11:18,020 --> 00:11:19,310
+Now there are multiple ways.
+
+178
+00:11:19,340 --> 00:11:25,070
+There is a fill contract that we can use or there is a range of iterations that we can do on an array
+
+179
+00:11:25,070 --> 00:11:26,320
+and then we can make a vector.
+
+180
+00:11:26,330 --> 00:11:27,890
+So let's create a very simple vector.
+
+181
+00:11:28,310 --> 00:11:36,290
+And I will take input a value of n and and I will begin with that and I will push an element in the vector
+
+182
+00:11:36,290 --> 00:11:42,110
+so for int i =0 i less than n i++, i can say ok, lets read those input
+
+183
+00:11:42,290 --> 00:11:49,430
+So int, some number will cin that number and we will say  be OK if we don't push back that particular
+
+184
+00:11:49,430 --> 00:11:49,820
+number.
+
+185
+00:11:51,600 --> 00:12:03,410
+Now, if I show you the code, we also have to let us also print the size of the vector after each insertion.
+
+186
+00:12:03,410 --> 00:12:03,730
+Or so what?
+
+187
+00:12:03,760 --> 00:12:06,950
+Maybe lets print the capacity.
+
+188
+00:12:07,910 --> 00:12:11,600
+And that is we dot capacity.
+
+189
+00:12:11,900 --> 00:12:12,170
+OK.
+
+190
+00:12:13,130 --> 00:12:17,330
+And let's also print the size after each insertion.
+
+191
+00:12:17,330 --> 00:12:19,990
+So that is v dot size.
+
+192
+00:12:20,720 --> 00:12:23,090
+So, no, let's see.
+
+193
+00:12:23,300 --> 00:12:27,140
+Let's I want to insert 10 integers in my vector.
+
+194
+00:12:29,060 --> 00:12:33,350
+So I can say, OK, that is 10 and followed by one.
+
+195
+00:12:33,860 --> 00:12:41,060
+So in the beginning, I inserted one number, so it created a vector of size one and that stores one.
+
+196
+00:12:41,480 --> 00:12:42,770
+Then maybe I store 10.
+
+197
+00:12:43,580 --> 00:12:49,040
+So the capacities to the vector itself and it is storing the number 10.
+
+198
+00:12:49,340 --> 00:12:51,080
+OK, maybe then I store 20.
+
+199
+00:12:51,650 --> 00:12:53,150
+The capacity becomes four.
+
+200
+00:12:54,570 --> 00:12:56,940
+And it is storing the number 20 here.
+
+201
+00:12:57,870 --> 00:13:04,110
+Then I again insert 30, the capacity remains four and we have 30 here, OK?
+
+202
+00:13:04,710 --> 00:13:11,350
+And now if I again insert something, let's say 40, the capacity will double itself.
+
+203
+00:13:11,370 --> 00:13:12,450
+It will become it.
+
+204
+00:13:13,050 --> 00:13:16,500
+The capacity will become eight and the size would be five.
+
+205
+00:13:16,530 --> 00:13:18,590
+Because we are storing five numbers.
+
+206
+00:13:18,600 --> 00:13:20,280
+OK, then let's say 50.
+
+207
+00:13:20,430 --> 00:13:21,540
+Same 60.
+
+208
+00:13:21,540 --> 00:13:24,460
+Same 70, same 80.
+
+209
+00:13:25,500 --> 00:13:26,790
+And now that's OK.
+
+210
+00:13:27,480 --> 00:13:30,570
+Now it is full because 50, 60 70.
+
+211
+00:13:31,650 --> 00:13:32,430
+And now it is full.
+
+212
+00:13:32,490 --> 00:13:38,700
+Now the size would become how much 8*2 16, the actual size would be now 16.
+
+213
+00:13:39,120 --> 00:13:40,710
+And this would be storing 10 numbers.
+
+214
+00:13:40,710 --> 00:13:46,950
+10 numbers lets say 90 and you're going to see what happens now.
+
+215
+00:13:46,980 --> 00:13:47,280
+OK.
+
+216
+00:13:47,580 --> 00:13:55,200
+So we size is 10, then the capacity is 16 and the vector is doing actually 10 numbers, OK, we're doing
+
+217
+00:13:55,200 --> 00:13:56,570
+10 numbers inside of it.
+
+218
+00:13:56,910 --> 00:14:03,570
+So what you're observing is there is a repeated doubling operation that is happening and this is an
+
+219
+00:14:03,570 --> 00:14:10,200
+expensive operation every time, every time the doubling of the memory happens.
+
+220
+00:14:10,650 --> 00:14:10,980
+OK.
+
+221
+00:14:12,450 --> 00:14:17,250
+You're spending linear time to double the array.
+
+222
+00:14:17,300 --> 00:14:20,400
+OK, you're spending linear time to double that particular.
+
+223
+00:14:20,970 --> 00:14:28,410
+And that makes your push back operation in some cases as a linear operation instead of a constant operation.
+
+224
+00:14:28,450 --> 00:14:28,680
+OK.
+
+225
+00:14:28,860 --> 00:14:30,690
+So on an average, it is constant.
+
+226
+00:14:30,990 --> 00:14:37,370
+But when the doubling happens, it becomes a expensive operation because in order to avoid that, what
+
+227
+00:14:37,460 --> 00:14:39,360
+you can do you can to get v dot reserve.
+
+228
+00:14:39,810 --> 00:14:45,600
+I know there would be at least 100 element in the vector, and why I should start from 10.
+
+229
+00:14:45,610 --> 00:14:54,030
+so now you can see, if I push one, let me build the code and let me stop this
+
+230
+00:14:54,030 --> 00:14:55,830
+OK, let me push one.
+
+231
+00:14:56,220 --> 00:15:00,540
+So the capacity is 100 from the beginning, let me push 2, the capacity is 100.
+
+232
+00:15:01,260 --> 00:15:02,280
+So there is no doubling.
+
+233
+00:15:02,280 --> 00:15:08,820
+That is happening until you have reached 100 element, OK, until you reach 100 elements or this is one
+
+234
+00:15:08,820 --> 00:15:11,430
+where you would have done another would have been yours.
+
+235
+00:15:11,430 --> 00:15:18,540
+OK, I want to create a vector of 1000 elements, each initialized with the value zero.
+
+236
+00:15:19,230 --> 00:15:24,450
+This is also going to make the capacity of the vector as one thousand.
+
+237
+00:15:24,450 --> 00:15:26,070
+In the beginning, it's a 10 element.
+
+238
+00:15:26,700 --> 00:15:27,630
+And store 100.
+
+239
+00:15:28,080 --> 00:15:28,470
+Sorry
+
+240
+00:15:30,190 --> 00:15:30,560
+So.
+
+241
+00:15:38,850 --> 00:15:46,420
+OK, so in this case, what happened is when you're using this fill constructor, you have already said,
+
+242
+00:15:46,440 --> 00:15:50,730
+OK, we have already filled 1000 element in the vector.
+
+243
+00:15:51,180 --> 00:15:51,510
+OK?
+
+244
+00:15:52,110 --> 00:15:59,190
+And now you start pushing from one thousand oneth position that is going to double this vector.
+
+245
+00:15:59,310 --> 00:15:59,640
+OK.
+
+246
+00:16:00,060 --> 00:16:02,130
+So you have to observe that there is a difference.
+
+247
+00:16:02,640 --> 00:16:07,530
+There is a difference between using a fill constructor and calling v dot reserve.
+
+248
+00:16:07,750 --> 00:16:08,040
+OK.
+
+249
+00:16:09,210 --> 00:16:14,100
+So you have to make sure that you do not confuse these two.
+
+250
+00:16:14,130 --> 00:16:18,600
+So right now, I would be just saying vector of int.
+
+251
+00:16:19,500 --> 00:16:25,680
+And let me call it as v then, I say, OK, reserve these  many elements inside the vector similar
+
+252
+00:16:25,680 --> 00:16:26,330
+to push back.
+
+253
+00:16:26,340 --> 00:16:27,360
+We have pop back.
+
+254
+00:16:27,810 --> 00:16:36,120
+We have we can also print the vector so we can look for every element and go to the vector and you say,
+
+255
+00:16:36,120 --> 00:16:39,900
+OK, but every element that is there inside your vector?
+
+256
+00:16:41,130 --> 00:16:42,090
+You go and it.
+
+257
+00:16:42,120 --> 00:16:42,990
+So you see out.
+
+258
+00:16:44,440 --> 00:16:45,710
+Uh, X.
+
+259
+00:16:47,020 --> 00:16:47,290
+OK.
+
+260
+00:16:47,560 --> 00:16:52,630
+So let me take input n element I will push them into the vector  and I will print those elements.
+
+261
+00:16:52,690 --> 00:17:00,400
+So let me say I want to give five elements and let elements are one two three 15 and four.
+
+262
+00:17:01,360 --> 00:17:04,329
+So now you can see it is reading all those elements.
+
+263
+00:17:05,260 --> 00:17:11,950
+The capacity does not change because we have used the method reserve and the size is increasing as we
+
+264
+00:17:11,950 --> 00:17:13,060
+are inserting those elements.
+
+265
+00:17:13,089 --> 00:17:16,510
+So this is the output and this is how you get all those elements.
+
+266
+00:17:16,839 --> 00:17:20,619
+You can also do sorting on the vectors like sort.
+
+267
+00:17:21,160 --> 00:17:24,900
+You can say v.begin till v.end.
+
+268
+00:17:25,599 --> 00:17:28,089
+OK, and that will give you the sorted output.
+
+269
+00:17:28,630 --> 00:17:30,540
+Right now, I'm just going to comment this thing out.
+
+270
+00:17:30,550 --> 00:17:39,010
+I don't want to see the capacity again and again, so I can say ok five elements five four one three two.
+
+271
+00:17:39,430 --> 00:17:41,860
+So you get one, two, three, four and five.
+
+272
+00:17:42,520 --> 00:17:47,020
+So this is how you work with a vector, and that's all for this video.
+

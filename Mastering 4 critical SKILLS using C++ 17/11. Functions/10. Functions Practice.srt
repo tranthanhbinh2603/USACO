@@ -1,0 +1,174 @@
+0
+1
+00:00:00,670 --> 00:00:07,090
+Let's do some practice on functions, remember, we already took the Employee program and we already saw
+1
+
+2
+00:00:07,090 --> 00:00:12,610
+these functionalities and these screenshots, now we are going to take our old code for the employees
+2
+
+3
+00:00:12,850 --> 00:00:15,430
+and we are going to make it using functions.
+3
+
+4
+00:00:15,580 --> 00:00:20,460
+I assume that you already practiced this program and you read my code and you thought about it.
+4
+
+5
+00:00:21,700 --> 00:00:25,050
+Now, the first thing that we can do is the system itself.
+5
+
+6
+00:00:25,060 --> 00:00:29,200
+We are going to create a function named "Employee_system", we call it here from the "main".
+6
+
+7
+00:00:29,410 --> 00:00:36,130
+So the "main" function is calling the "Employee_system", which has a while loop and it's calling another function
+7
+
+8
+00:00:36,130 --> 00:00:41,710
+called "menu", the "menu" will list the menu for the user and it is going to take a choice from him.
+8
+
+9
+00:00:42,040 --> 00:00:46,890
+And then based on the choice, if choice number one, we call "read_empolyee", choice number 2 "print_employee",
+9
+
+10
+00:00:46,900 --> 00:00:48,280
+choice number 3
+10
+
+11
+00:00:48,280 --> 00:00:50,350
+We "delete_by_age", choice number four
+11
+
+12
+00:00:50,350 --> 00:00:52,320
+We "update_the_salary_by_name".
+12
+
+13
+00:00:52,510 --> 00:00:57,910
+So if you noticed about the logic here, we are making our life much much easier.
+13
+
+14
+00:00:58,150 --> 00:01:01,040
+So now let's see what are these functions that we are calling.
+14
+
+15
+00:01:02,230 --> 00:01:04,900
+first, let's make our life easier,
+15
+
+16
+00:01:05,020 --> 00:01:06,850
+We are going to define something called
+16
+
+17
+00:01:07,180 --> 00:01:08,730
+Global variables.
+17
+
+18
+00:01:08,770 --> 00:01:16,240
+This is defined under the "#include<iostream>" and "using namespace std;", the local variable is something
+18
+
+19
+00:01:16,240 --> 00:01:18,990
+that is inside our function, such as "main" and yours.
+19
+
+20
+00:01:19,300 --> 00:01:22,080
+The global variable is defined outside the function.
+20
+
+21
+00:01:22,330 --> 00:01:27,610
+This makes it visible for all the functions that are exist in this cpp file.
+21
+
+22
+00:01:27,940 --> 00:01:31,050
+That's why we call them global, that everyone is calling them.
+22
+
+23
+00:01:31,300 --> 00:01:35,040
+We call these ones local because only their function is seeing them.
+23
+
+24
+00:01:35,350 --> 00:01:38,590
+So I'm defining here my variables as global variables,
+24
+
+25
+00:01:38,600 --> 00:01:40,000
+So everyone is just seeing them.
+25
+
+26
+00:01:41,810 --> 00:01:48,880
+This is a "menu" function, it gives a while-loop it list the choices, it asks for the choice, if the choice invalid, 
+26
+
+27
+00:01:48,900 --> 00:01:51,710
+it just keeps trying again.
+27
+
+28
+00:01:51,980 --> 00:01:55,040
+Once the user entered a valid choice, it returns it.
+28
+
+29
+00:01:56,070 --> 00:02:03,860
+the "read_empoyee" is just taking nothing, and we have this global variable "added" and we read it item by item.
+29
+
+30
+00:02:04,170 --> 00:02:10,500
+the "print_employee" is just iterating all the employees that are global and just printing them. 
+30
+
+31
+00:02:10,500 --> 00:02:16,790
+"delete_by_age", is reading the start and end and just iterating to delete it.
+31
+
+32
+00:02:16,800 --> 00:02:23,340
+"update_salary" is again iterating and updating the salary of the user. notice that these already are the code
+32
+
+33
+00:02:23,350 --> 00:02:24,630
+blocks that we did before,
+33
+
+34
+00:02:24,900 --> 00:02:29,310
+We just move them to a function to make our life much easier.
+34
+
+35
+00:02:29,700 --> 00:02:30,240
+That's it.

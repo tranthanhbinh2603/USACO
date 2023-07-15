@@ -1,0 +1,400 @@
+1
+00:00:01,220 --> 00:00:05,660
+Hi Everyone in this lecture will talk about the doubly ended queue, which is also known as deque.
+
+2
+00:00:06,020 --> 00:00:08,039
+So that is a very simple container.
+
+3
+00:00:08,060 --> 00:00:13,970
+It is a sequence container and with dynamic size that can expand and contract on both ends.
+
+4
+00:00:14,000 --> 00:00:17,910
+So this is a very special property that you should remember about Deque.
+
+5
+00:00:18,230 --> 00:00:20,580
+So as the name suggests, it's a doubly ended queue.
+
+6
+00:00:20,740 --> 00:00:26,100
+So it can expand and it can contract on both sides.
+
+7
+00:00:26,120 --> 00:00:26,340
+Okay.
+
+8
+00:00:26,720 --> 00:00:31,160
+So basically, you have a container like this.
+
+9
+00:00:31,670 --> 00:00:32,520
+And what are you going to do?
+
+10
+00:00:32,540 --> 00:00:36,620
+You can push data from the front, which is known as push front.
+
+11
+00:00:37,010 --> 00:00:39,950
+You can pop data from the front, which is known as pop Front.
+
+12
+00:00:40,370 --> 00:00:43,290
+You can push data from the back push back.
+
+13
+00:00:43,310 --> 00:00:45,530
+You can pop data on the back pop back.
+
+14
+00:00:45,530 --> 00:00:45,770
+OK?
+
+15
+00:00:46,070 --> 00:00:51,050
+So when you have something like a problem in which maybe you want to implement some sliding window kind
+
+16
+00:00:51,050 --> 00:00:56,360
+of an algorithm in which you are maybe adding data from here and you would be removing data from it?
+
+17
+00:00:56,930 --> 00:01:01,130
+Or maybe you are also adding data from here and you might really moving from here as well.
+
+18
+00:01:01,160 --> 00:01:05,870
+OK, so maybe a window which can expand and contract on both sides.
+
+19
+00:01:06,410 --> 00:01:10,370
+In that case, you might be using this kind of a data structure, which we call it as Deque.
+
+20
+00:01:10,940 --> 00:01:15,080
+So now let's also learn a few more points about Deque.
+
+21
+00:01:15,320 --> 00:01:23,030
+So one thing is that internally, the implementation of the container is quite complex, and it is not
+
+22
+00:01:23,030 --> 00:01:28,510
+guaranteed that you will be storing everything in a continuous memory location.
+
+23
+00:01:28,520 --> 00:01:30,990
+Okay, so the two addresses may be different as well.
+
+24
+00:01:31,060 --> 00:01:37,370
+OK, and elements of the Deque can be scattered across different chunks in the memory.
+
+25
+00:01:37,370 --> 00:01:44,030
+Also, because it is not guaranteed internally, it would be linear, but for you, it would behave like
+
+26
+00:01:44,030 --> 00:01:46,160
+all the elements are stored sequentially.
+
+27
+00:01:46,640 --> 00:01:52,370
+So let us talk about a few important methods of Deque so you can access any element you can.
+
+28
+00:01:52,400 --> 00:01:52,600
+OK.
+
+29
+00:01:52,800 --> 00:01:57,500
+So could you give me the ith element of the Deque using the Square Brackets, which is an overloaded operator?
+
+30
+00:01:57,950 --> 00:02:00,140
+Or you can use the at function both that same.
+
+31
+00:02:00,620 --> 00:02:05,150
+And if you want to see what does the last element, you can call the back method.
+
+32
+00:02:05,150 --> 00:02:08,270
+If you want to remove all the elements, you can call the clear method.
+
+33
+00:02:08,630 --> 00:02:12,280
+If you want to get the front element, you can call the front method again.
+
+34
+00:02:12,290 --> 00:02:18,980
+So these are four important operations that you should be knowing, push back ,pop back , push front, pop front
+
+35
+00:02:18,980 --> 00:02:20,990
+front OK, and there is size.
+
+36
+00:02:20,990 --> 00:02:26,000
+method also tells you how many elements are currently there in the Deque.
+
+37
+00:02:26,390 --> 00:02:34,130
+So let us look at a few ways to initialize this Deque so you can create a Deque like this, or you can
+
+38
+00:02:34,130 --> 00:02:39,680
+use a fill constructor like you can say, OK, I have empty Deque.
+
+39
+00:02:40,220 --> 00:02:46,190
+I have four integers with the value of hundreds, so this is going to create a Deque in which we have
+
+40
+00:02:46,190 --> 00:02:49,010
+4 numbers and everything is initialized as undertook it
+
+41
+00:02:49,460 --> 00:02:51,140
+Or we can use.
+
+42
+00:02:52,580 --> 00:02:56,600
+We can iterate over another Deque and we can create up a third Deque as well.
+
+43
+00:02:56,600 --> 00:03:00,650
+Or we can also use the copy constructor like we did in vector as well.
+
+44
+00:03:01,010 --> 00:03:04,510
+So these are a few ways in which you can create a Deque.
+
+45
+00:03:04,520 --> 00:03:12,110
+You can also use an array and you can iterate over the elements of the Deque, and you can give those
+
+46
+00:03:12,110 --> 00:03:14,210
+elements in the Deque of the device.
+
+47
+00:03:14,210 --> 00:03:19,070
+You can use the operations like push back to insert some integer into the Deque.
+
+48
+00:03:19,070 --> 00:03:24,650
+OK, or if you want a remove pop back, put something at the front was trying to remove something from
+
+49
+00:03:24,650 --> 00:03:25,720
+the front pop front.
+
+50
+00:03:25,730 --> 00:03:28,850
+OK, so you do not need to remember each and every method.
+
+51
+00:03:28,850 --> 00:03:33,980
+You can always look up at the documentation, but these are few things that make Deque special that
+
+52
+00:03:33,980 --> 00:03:36,560
+insertion and deletion at both ends.
+
+53
+00:03:36,590 --> 00:03:39,900
+You can do very easily and that do in constant time.
+
+54
+00:03:39,920 --> 00:03:40,190
+OK.
+
+55
+00:03:41,120 --> 00:03:44,720
+So let us also look at a quick demo in the code.
+
+56
+00:03:45,500 --> 00:03:47,990
+So let me create a Deque of size, Enzo.
+
+57
+00:03:47,990 --> 00:03:51,050
+I can see a deque of integers.
+
+58
+00:03:51,050 --> 00:03:53,000
+Create it stores 10 elements.
+
+59
+00:03:53,450 --> 00:04:00,110
+Now what I can do, I can say ok int i =0, i less than 10 i plus plus now the memory
+
+60
+00:04:00,110 --> 00:04:01,010
+is already created.
+
+61
+00:04:01,020 --> 00:04:03,560
+What I can do, I can say ok, deque of i
+
+62
+00:04:03,710 --> 00:04:06,590
+This should be storing the number I * i.
+
+63
+00:04:06,800 --> 00:04:07,720
+That is i square
+
+64
+00:04:07,730 --> 00:04:14,570
+I'm storing i square in the deque and let us try to print it for Auto X that is there in deque I can
+
+65
+00:04:14,660 --> 00:04:19,529
+see out X. So let's see what output does it produce?
+
+66
+00:04:19,550 --> 00:04:23,420
+So we have built the code and now we can run the code as well.
+
+67
+00:04:23,780 --> 00:04:26,510
+So I can say, OK, let's run deque.
+
+68
+00:04:26,780 --> 00:04:29,470
+So we are getting the numbers from zero to 81.
+
+69
+00:04:29,480 --> 00:04:32,810
+That means we are getting the squares of these numbers.
+
+70
+00:04:34,790 --> 00:04:40,790
+Now what we can do is we can also say instead of using a loop like this, maybe you might be doing four
+
+71
+00:04:40,790 --> 00:04:42,290
+for int i=0,i less than 10
+
+72
+00:04:42,300 --> 00:04:44,960
+10 I plus plus.
+
+73
+00:04:44,960 --> 00:04:49,720
+So you can also see out deque of i.
+
+74
+00:04:50,420 --> 00:04:52,370
+And this is also allowed.
+
+75
+00:04:52,370 --> 00:04:54,670
+Or you can say cout deque of at of i.
+
+76
+00:04:55,900 --> 00:04:57,050
+at of i
+
+77
+00:04:57,050 --> 00:04:59,860
+at method is supported in all the containers.
+
+78
+00:04:59,930 --> 00:05:07,340
+Most of the containers which have like the sequential interface, so we can say, OK, so this also
+
+79
+00:05:07,340 --> 00:05:08,390
+works this is also fine.
+
+80
+00:05:08,390 --> 00:05:13,940
+you can access all the element, either using at or using square brackets.
+
+81
+00:05:15,470 --> 00:05:23,750
+So let me show you an example of let's first print the capacity of deque so I can just say cout 
+
+82
+00:05:23,750 --> 00:05:24,890
+deque dot capacity
+
+83
+00:05:26,420 --> 00:05:26,690
+OK.
+
+84
+00:05:27,020 --> 00:05:29,380
+And let's also print the size of the deque.
+
+85
+00:05:53,080 --> 00:05:55,570
+So deque does not have the function capacity, OK?
+
+86
+00:05:55,780 --> 00:06:00,640
+It is only with the vector so will not print capacity we will only print the size.
+
+87
+00:06:01,120 --> 00:06:05,240
+So let's build the code and let's try to run it and...
+
+88
+00:06:06,700 --> 00:06:08,230
+OK, so the capacity is 10.
+
+89
+00:06:08,650 --> 00:06:14,120
+And if I do push back, if I say, OK, size is 10, then if I push something into deque, let's say
+
+90
+00:06:14,120 --> 00:06:19,840
+deque dot push back 123, that number would be there at the back.
+
+91
+00:06:21,040 --> 00:06:25,960
+So now you can see the number 123 is there inserted at the back of the deque, OK?
+
+92
+00:06:26,230 --> 00:06:30,770
+And if you do the push front, then this would be at the beginning of the deque.
+
+93
+00:06:31,930 --> 00:06:33,010
+So let me show it to you.
+
+94
+00:06:35,970 --> 00:06:40,380
+And you can tell at the beginning of the deque, so there are methods that allow you to insert something
+
+95
+00:06:40,380 --> 00:06:44,160
+in the middle of the deque, something remove from the middle of the deque
+
+96
+00:06:44,190 --> 00:06:50,520
+Those are also done a bit, but they take linear times and ideally for most of the use case, we would
+
+97
+00:06:50,520 --> 00:06:54,960
+be dealing with these methods insertion and deletion from both ends.
+
+98
+00:06:54,960 --> 00:06:55,200
+OK?
+
+99
+00:06:55,560 --> 00:06:58,440
+So I hope you got a quick idea about deque.
+
+100
+00:06:58,830 --> 00:07:01,590
+And that's all for this video and thanks a lot.
+

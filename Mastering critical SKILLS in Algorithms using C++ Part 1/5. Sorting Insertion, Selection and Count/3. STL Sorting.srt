@@ -1,0 +1,294 @@
+0
+1
+00:00:02,180 --> 00:00:06,300
+The last thing that I would like to discuss before ending is something about STL.
+1
+
+2
+00:00:06,600 --> 00:00:10,410
+So as we know that STL already has built-in sorting functions.
+2
+
+3
+00:00:10,890 --> 00:00:14,790
+If you have a victor, for example, you can say sort ( vec.begin(), vec.end() ).
+3
+
+4
+00:00:15,210 --> 00:00:18,120
+Now, what is the internally used algorithm?
+4
+
+5
+00:00:18,570 --> 00:00:19,590
+Here is the problem.
+5
+
+6
+00:00:20,100 --> 00:00:24,720
+We can see that every algorithm has some pros and cons features.
+6
+
+7
+00:00:25,200 --> 00:00:28,140
+So just depending on one algorithm isn't a good idea.
+7
+
+8
+00:00:28,860 --> 00:00:34,380
+So you will find, for example, STL using something called IntroSort, which is simply a hybrid
+8
+
+9
+00:00:34,380 --> 00:00:37,170
+approach of quick sort, heap sort, and insertion sort.
+9
+
+10
+00:00:37,950 --> 00:00:42,720
+So the idea is as following, if the arrays are very small, we use insertion sort.
+10
+
+11
+00:00:43,530 --> 00:00:46,530
+Otherwise, for big arrays, we run quick sort.
+11
+
+12
+00:00:47,160 --> 00:00:53,300
+Now, during the quick sort, we try to keep in mind how many operations so far are done.
+12
+
+13
+00:00:53,310 --> 00:00:56,680
+If it seems that quick sort is taking too much time,
+13
+
+14
+00:00:57,030 --> 00:00:59,130
+we stop it and we switch to heap sort.
+14
+
+15
+00:00:59,520 --> 00:01:05,310
+So this is how STL is trying to solve this problem. Python, on the other side, is using something called
+15
+
+16
+00:01:05,310 --> 00:01:13,380
+Timsort, which is a hybrid algorithm again mainly derived from merge sort and insertion sort.
+16
+
+17
+00:01:14,740 --> 00:01:20,310
+Suppose it is designed to be working well in real data. As you see, insertion sort is common
+17
+
+18
+00:01:20,310 --> 00:01:21,510
+between both of them.
+18
+
+19
+00:01:21,810 --> 00:01:22,410
+Why?
+19
+
+20
+00:01:22,650 --> 00:01:27,510
+Because insertion sort is very efficient on small arrays, and especially if the arrays are almost
+20
+
+21
+00:01:27,510 --> 00:01:27,930
+sorted.
+21
+
+22
+00:01:29,490 --> 00:01:35,430
+The second thing that I would like to show you is some people might use STL sorting in a wrong
+22
+
+23
+00:01:35,430 --> 00:01:35,820
+way.
+23
+
+24
+00:01:36,240 --> 00:01:41,610
+So observe the following code, this array has 10 to the power seven elements, all of them of value
+24
+
+25
+00:01:41,610 --> 00:01:42,090
+five.
+25
+
+26
+00:01:42,510 --> 00:01:46,500
+I would like to sort, C++ let me give a comparator if I would like to compare.
+26
+
+27
+00:01:46,500 --> 00:01:48,540
+So there are like two comparison functions.
+27
+
+28
+00:01:49,290 --> 00:01:54,780
+One of them is using a <= b, and one of them is using a < b.
+28
+
+29
+00:01:55,260 --> 00:01:58,890
+If you tried to run the code using this comparison, it will work well.
+29
+
+30
+00:01:59,640 --> 00:02:06,060
+But if you tried to run it using this comparison, it will take too much time, then just runtime error
+30
+
+31
+00:02:06,060 --> 00:02:06,690
+will terminate.
+31
+
+32
+00:02:07,110 --> 00:02:14,700
+This is due to the current internal implementation of C++ STL, which is based on what we call the
+32
+
+33
+00:02:14,700 --> 00:02:15,660
+logical ordering.
+33
+
+34
+00:02:16,170 --> 00:02:19,980
+So here is the point. If you will provide a comparison function,
+34
+
+35
+00:02:20,280 --> 00:02:26,660
+iI must behave logically the same as E1 < E2, not E1 <= E2.
+35
+
+36
+00:02:28,560 --> 00:02:29,940
+If this isn't satisfied,
+36
+
+37
+00:02:30,150 --> 00:02:32,550
+the internal implementations will go
+37
+
+38
+00:02:32,550 --> 00:02:34,260
+in infinite recursion and might runtime error.
+38
+
+39
+00:02:34,260 --> 00:02:39,870
+Observe that, in the future, the implementation might be changed, so this behavior might be changed,
+39
+
+40
+00:02:39,870 --> 00:02:41,540
+may be. OK.
+40
+
+41
+00:02:41,550 --> 00:02:43,230
+Here is, anyway, some thoughts about that.
+41
+
+42
+00:02:43,710 --> 00:02:50,610
+If the comparison between E1 and E2 is true, this means that E1 is smaller than E2, which means
+42
+
+43
+00:02:50,610 --> 00:02:54,240
+logically that E2 with E1 should be false.
+43
+
+44
+00:02:55,310 --> 00:03:02,300
+Now, if E1 is false when it comes to comparison with E2, there are actually two cases now,
+44
+
+45
+00:03:02,300 --> 00:03:04,310
+we start to compare E2 with E1.
+45
+
+46
+00:03:05,000 --> 00:03:10,680
+If E2 and E1 are true, then this means that E2 is less than E1.
+46
+
+47
+00:03:11,570 --> 00:03:17,030
+If it is false, then it means E1, E2 are false and E2 is E1 false, which means, is E1
+47
+
+48
+00:03:17,030 --> 00:03:18,170
+less than E2? False.
+48
+
+49
+00:03:18,350 --> 00:03:18,920
+Is E2 less
+49
+
+50
+00:03:18,920 --> 00:03:20,060
+than E1? False.
+50
+
+51
+00:03:20,210 --> 00:03:21,890
+So this means they are actually true.
+51
+
+52
+00:03:22,490 --> 00:03:25,820
+So this is how internally C++ know
+52
+
+53
+00:03:26,120 --> 00:03:27,680
+is it less than or equal.
+53
+
+54
+00:03:28,010 --> 00:03:31,640
+They infer the equality from these two ways comparison.
+54
+
+55
+00:03:32,120 --> 00:03:37,160
+Please don't miss up with the current STL implementation, always implement it to be less than not
+55
+
+56
+00:03:37,160 --> 00:03:38,450
+less than or equal.
+56
+
+57
+00:03:39,140 --> 00:03:45,440
+As you know in the C++ course, STL also allows us to compare objects like we can have built-in comparisons,
+57
+
+58
+00:03:45,680 --> 00:03:47,570
+but you can have something like the employee class
+58
+
+59
+00:03:47,570 --> 00:03:50,120
+and sort based on it. That's all.

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1672248071 source:e:\document\project\usaco\mastering 4 critical skills using c++ 17\21. headers and includes\learning\01 header and include\header.cpp
+
+1672248548 source:e:\document\project\usaco\mastering 4 critical skills using c++ 17\21. headers and includes\learning\01 header and include\main.cpp
+	<iostream>
+	<math.h>
+	"header.h"
+	"header - Copy.h"
+
+1672248721 e:\document\project\usaco\mastering 4 critical skills using c++ 17\21. headers and includes\learning\01 header and include\header.h
+
+1672248729 e:\document\project\usaco\mastering 4 critical skills using c++ 17\21. headers and includes\learning\01 header and include\header - copy.h
+

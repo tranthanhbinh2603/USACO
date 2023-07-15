@@ -1,0 +1,239 @@
+0
+1
+00:00:01,170 --> 00:00:03,840
+Let's learn a little more about the Files and Streams.
+1
+
+2
+00:00:03,870 --> 00:00:09,030
+There is a way, if you would like your object, to read and write in the same time.
+2
+
+3
+00:00:09,480 --> 00:00:13,770
+here there is something good.
+3
+
+4
+00:00:13,770 --> 00:00:16,260
+ios. you first
+4
+
+5
+00:00:16,260 --> 00:00:17,820
+Need to build some flag with it.
+5
+
+6
+00:00:17,850 --> 00:00:22,170
+OK, so this flag here, I would like you to just use it as it is for now.
+6
+
+7
+00:00:23,320 --> 00:00:27,050
+The default is in, out, app means append.
+7
+
+8
+00:00:27,360 --> 00:00:29,850
+So this means we are reading and writing to the file.
+8
+
+9
+00:00:30,090 --> 00:00:32,610
+But when it comes to writing, we append to the file.
+9
+
+10
+00:00:32,640 --> 00:00:33,350
+What does this mean?
+10
+
+11
+00:00:33,660 --> 00:00:37,440
+Let's say there is a file of hundred lines and you would like to write it.
+11
+
+12
+00:00:37,470 --> 00:00:38,460
+There is a question here.
+12
+
+13
+00:00:38,730 --> 00:00:44,550
+Do you like to add a line after the hundred lines or do you like to remove the current file and start
+13
+
+14
+00:00:44,610 --> 00:00:45,450
+from the beginning?
+14
+
+15
+00:00:45,480 --> 00:00:54,210
+OK, so that the default mode of the append(app) here, if you used it, is going to add an extra line to the
+15
+
+16
+00:00:54,210 --> 00:01:00,030
+end of the file, if you would like, on the other side to remove the old file and start from scratch
+16
+
+17
+00:01:00,030 --> 00:01:00,680
+on it.
+17
+
+18
+00:01:00,900 --> 00:01:02,670
+So you are overwriting it use here ios::trunc
+18
+
+19
+00:01:03,540 --> 00:01:09,150
+So these two lines here that you either decide to read or write, to write in these two modes and we are reading
+19
+
+20
+00:01:09,150 --> 00:01:09,890
+also in this way.
+20
+
+21
+00:01:10,410 --> 00:01:14,770
+So to define something that is read and write at the same time, use the fstream directly.
+21
+
+22
+00:01:14,790 --> 00:01:19,980
+So it isn't just ifstream, it is fstream and then you pass here this status.
+22
+
+23
+00:01:20,010 --> 00:01:22,380
+So we give it path and we also give it status.
+23
+
+24
+00:01:22,680 --> 00:01:25,660
+And then as usual, you check if it's open or not.
+24
+
+25
+00:01:25,680 --> 00:01:28,110
+And you also close it here, in the middle.
+25
+
+26
+00:01:28,290 --> 00:01:31,110
+You can use it to read and also to write.
+26
+
+27
+00:01:31,140 --> 00:01:31,470
+OK.
+27
+
+28
+00:01:31,870 --> 00:01:34,200
+Overall, I don't like it.
+28
+
+29
+00:01:34,200 --> 00:01:37,380
+Like I typically don't read and write in a similar way.
+29
+
+30
+00:01:37,630 --> 00:01:42,600
+I typically just read or write or maybe in two rounds, like a one round.
+30
+
+31
+00:01:42,600 --> 00:01:44,280
+I'm using it for a complete reading.
+31
+
+32
+00:01:44,460 --> 00:01:49,470
+And after that, I started to write like I typically don't mix reading and writing in the same
+32
+
+33
+00:01:49,470 --> 00:01:52,140
+way, like reading and writing then reading and writing
+33
+
+34
+00:01:52,330 --> 00:01:53,400
+This could be confusing.
+34
+
+35
+00:01:53,640 --> 00:02:00,150
+But anyway, if you just used fstream and provided a status for it, it's going to do fine if you are
+35
+
+36
+00:02:00,150 --> 00:02:01,500
+going to read or write or what.
+36
+
+37
+00:02:02,970 --> 00:02:03,450
+Let's see.
+37
+
+38
+00:02:03,450 --> 00:02:08,640
+Another example here I would like to show you that how could I read the whole input file?
+38
+
+39
+00:02:09,000 --> 00:02:11,430
+So I defined fstream and use the path.
+39
+
+40
+00:02:11,450 --> 00:02:12,530
+This is just the default.
+40
+
+41
+00:02:12,540 --> 00:02:13,800
+So it's going to read and write.
+41
+
+42
+00:02:14,160 --> 00:02:16,380
+And then I checked if it's open or not.
+42
+
+43
+00:02:16,710 --> 00:02:20,580
+And here I closed here I defined the while loop to get line.
+43
+
+44
+00:02:20,590 --> 00:02:27,240
+Remember, Getline was taking cin, and line now we are going to give it the file handler.
+44
+
+45
+00:02:27,570 --> 00:02:29,260
+So which is defined here.
+45
+
+46
+00:02:29,490 --> 00:02:36,120
+So while Getline file handler and line, it's going to read all of your file content, which is very useful
+46
+
+47
+00:02:36,300 --> 00:02:37,200
+during coding.
+47
+
+48
+00:02:37,680 --> 00:02:38,180
+that's it.

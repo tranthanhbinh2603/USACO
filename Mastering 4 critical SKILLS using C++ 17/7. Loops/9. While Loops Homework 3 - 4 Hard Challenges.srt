@@ -1,0 +1,229 @@
+0
+1
+00:00:01,230 --> 00:00:07,950
+The third homework set, the first problem is a bit an easy one, you would like to read an integer
+1
+
+2
+00:00:07,950 --> 00:00:15,270
+N followed by reading N strings, and you have to print only the strings that consist of the
+2
+
+3
+00:00:15,270 --> 00:00:16,270
+following conditions.
+3
+
+4
+00:00:16,560 --> 00:00:18,510
+First, they have to be only two letters.
+4
+
+5
+00:00:18,840 --> 00:00:26,850
+Second, this letter can be either N  or O, but you should ignore the lower case and upper
+5
+
+6
+00:00:26,850 --> 00:00:27,730
+case of numbers.
+6
+
+7
+00:00:27,960 --> 00:00:29,040
+You don't care about that.
+7
+
+8
+00:00:29,250 --> 00:00:34,110
+So it could be n small, N the capital, o small, O capital and you don't care about the order it could
+8
+
+9
+00:00:34,110 --> 00:00:35,040
+be N and O, O and N
+9
+
+10
+00:00:35,050 --> 00:00:38,720
+and so on, it is eventually have to be the word N O.
+10
+
+11
+00:00:39,360 --> 00:00:41,940
+And according to that, something like N O
+11
+
+12
+00:00:41,940 --> 00:00:43,700
+Is rejected ON is rejected.
+12
+
+13
+00:00:43,710 --> 00:00:44,070
+no
+13
+
+14
+00:00:44,070 --> 00:00:44,790
+Is rejected.
+14
+
+15
+00:00:45,540 --> 00:00:46,140
+Oh sorry.
+15
+
+16
+00:00:46,140 --> 00:00:49,170
+I reverse it, no on no are the right ones.
+16
+
+17
+00:00:49,320 --> 00:00:51,000
+Something like YEs is incorrect.
+17
+
+18
+00:00:51,120 --> 00:00:55,410
+Something like Nooo is incorrect because it consists of many, many letters.
+18
+
+19
+00:00:57,000 --> 00:01:01,980
+So overall just a word of N and O and both of them have to be there, for example, something like
+19
+
+20
+00:01:01,980 --> 00:01:04,950
+NN is invalid, OO is invalid and so on.
+20
+
+21
+00:01:06,840 --> 00:01:11,370
+Yeah, so this is a list here of things you OO is ignored, we don't print it.
+21
+
+22
+00:01:13,960 --> 00:01:20,340
+In the second problem, you are to reverse an integers N, read that integer n and reverse it, print it
+22
+
+23
+00:01:20,350 --> 00:01:24,700
+the reversed one, and the reversed one multiply by times three, for example, for input, one, two,
+23
+
+24
+00:01:24,700 --> 00:01:27,550
+three, the output is reverse,  three, two, one.
+24
+
+25
+00:01:27,550 --> 00:01:30,400
+And if you multiply this number by three, it will be this number.
+25
+
+26
+00:01:32,860 --> 00:01:38,320
+Here you will print the multiplication table read N and M for the multiplication table and then print it
+26
+
+27
+00:01:38,320 --> 00:01:42,970
+as following, for example, three and four, then we would like to try every number from one to three
+27
+
+28
+00:01:43,180 --> 00:01:46,930
+was every number from one to four and print it as I am printing it here.
+28
+
+29
+00:01:48,660 --> 00:01:54,000
+in special sum one, which might be a little harder than previous ones, you will read an integer T
+29
+
+30
+00:01:54,000 --> 00:02:00,690
+for the number of test cases for each test case, you will read N then N integers, ABC and you have
+30
+
+31
+00:02:00,690 --> 00:02:03,120
+to print the following summation for every test case.
+31
+
+32
+00:02:03,450 --> 00:02:07,710
+it's as follows,  let's say the numbers are ABCDE and so on.
+32
+
+33
+00:02:08,670 --> 00:02:18,810
+A, then B*B the submission of A plus B plus BB plus CCC plus DDDD plus EEEEE and so on.
+33
+
+34
+00:02:19,020 --> 00:02:26,040
+Observe in every step we are duplicating or repeating the number for K times here K is one,
+34
+
+35
+00:02:26,040 --> 00:02:29,520
+so we used A for once, B at the K for two.
+35
+
+36
+00:02:29,700 --> 00:02:30,780
+We repeating B twice.
+36
+
+37
+00:02:30,940 --> 00:02:33,510
+This is the third term we repeated C three times.
+37
+
+38
+00:02:33,840 --> 00:02:36,290
+This is a fourth term we repeated D four times.
+38
+
+39
+00:02:36,570 --> 00:02:39,540
+This is the fifth term, we repeated E five times and so on.
+39
+
+40
+00:02:40,050 --> 00:02:42,420
+As an example, here is the input, two testcases
+40
+
+41
+00:02:42,420 --> 00:02:44,490
+The first testcase is five seven two.
+41
+
+42
+00:02:44,820 --> 00:02:45,940
+So we will print  as follow.
+42
+
+43
+00:02:45,960 --> 00:02:49,920
+We need five and the seven twice and two three times.
+43
+
+44
+00:02:50,340 --> 00:02:51,330
+In this testcase,
+44
+
+45
+00:02:51,330 --> 00:02:55,650
+we need one, two, twice, three, three times, four, four times.
+45
+
+46
+00:02:55,650 --> 00:02:59,740
+And so and you need to develop this summation, that's all.

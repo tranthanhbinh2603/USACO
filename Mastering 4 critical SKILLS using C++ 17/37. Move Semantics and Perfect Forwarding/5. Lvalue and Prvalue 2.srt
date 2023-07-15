@@ -1,0 +1,383 @@
+1
+00:00:00,960 --> 00:00:04,650
+Let's continue about the difference between l value and be our values.
+
+2
+00:00:07,930 --> 00:00:10,710
+Here we are making we have three functions.
+
+3
+00:00:10,710 --> 00:00:12,860
+One of them is receiving entier.
+
+4
+00:00:12,870 --> 00:00:16,610
+The second one is integral reference, and the third is into difference.
+
+5
+00:00:16,830 --> 00:00:22,280
+We already took these three functions before and we already know about their usage.
+
+6
+00:00:22,620 --> 00:00:28,650
+If you have something like if one integer here, it can accept three things here, at least it can accept
+
+7
+00:00:28,770 --> 00:00:31,830
+four from us, just value ten, which we know now.
+
+8
+00:00:31,830 --> 00:00:36,600
+It's just our value and it can accept from us X and can accept from us what.
+
+9
+00:00:38,280 --> 00:00:44,220
+Now, if you would like to call, if free to function with variable, with value, ten, ten is temporary.
+
+10
+00:00:44,280 --> 00:00:47,710
+So this is like you saying integer reference A equals 10.
+
+11
+00:00:47,910 --> 00:00:49,040
+This will not work.
+
+12
+00:00:49,290 --> 00:00:49,840
+Why?
+
+13
+00:00:50,280 --> 00:00:57,930
+Because then here is a temporary value and we are expecting the value reference, specifically nonconscious
+
+14
+00:00:58,290 --> 00:00:59,040
+value reference.
+
+15
+00:00:59,250 --> 00:01:04,260
+So L is the reference value reference but then is a better value.
+
+16
+00:01:04,560 --> 00:01:10,590
+So this is, this will not work for F to X..
+
+17
+00:01:10,740 --> 00:01:15,260
+This is going to work because X is that value and we are passing it to a low value reference.
+
+18
+00:01:15,420 --> 00:01:23,200
+And as we said, we can end or connect or assign the value of a value to an L value difference.
+
+19
+00:01:23,620 --> 00:01:30,720
+However, you cannot call if we do with y y here is a at a cost to integer.
+
+20
+00:01:31,020 --> 00:01:33,540
+So it is like like a constant value.
+
+21
+00:01:33,780 --> 00:01:38,470
+You cannot bother to just value reference, which is expected to change the content.
+
+22
+00:01:38,580 --> 00:01:40,650
+We know that because Melua is kind of.
+
+23
+00:01:40,860 --> 00:01:50,630
+But this isn't in the third case you have, you can bet the integral reference a four even and our value.
+
+24
+00:01:50,640 --> 00:01:56,330
+And this is a bit confusing, but this is how the Central Committee eventually decided that we can bind
+
+25
+00:01:56,340 --> 00:02:01,440
+some we are value to a value difference.
+
+26
+00:02:01,770 --> 00:02:05,760
+We can also definition the X and we can also send Y, which is by definition.
+
+27
+00:02:07,230 --> 00:02:10,320
+So this one is allowing us to serve the three ones here.
+
+28
+00:02:10,710 --> 00:02:13,050
+But there is a cost here.
+
+29
+00:02:13,290 --> 00:02:18,630
+The variable E cannot be changed in the function because it's cost on the other side.
+
+30
+00:02:18,630 --> 00:02:24,840
+We can send the year then X and Y to the variable, to the function if one and it can be changed.
+
+31
+00:02:25,080 --> 00:02:29,090
+But the cost here, X and Y are sent by reference.
+
+32
+00:02:29,100 --> 00:02:30,360
+They are sent by Kobie.
+
+33
+00:02:30,390 --> 00:02:32,230
+So it's taking more memory copies.
+
+34
+00:02:32,310 --> 00:02:33,810
+We already know of all of that.
+
+35
+00:02:35,010 --> 00:02:35,730
+Let's go more.
+
+36
+00:02:36,060 --> 00:02:38,430
+It is a class, it has a variable.
+
+37
+00:02:38,430 --> 00:02:40,890
+Embley salary is definitely an L value.
+
+38
+00:02:41,400 --> 00:02:43,040
+Then we have two functions.
+
+39
+00:02:43,050 --> 00:02:45,630
+Get one and get to get one.
+
+40
+00:02:45,630 --> 00:02:49,590
+Is returning y value get two is returning by reference.
+
+41
+00:02:50,030 --> 00:02:52,560
+I would like you to know these two rules.
+
+42
+00:02:52,830 --> 00:02:55,920
+If you are returning by value, this is a b r value.
+
+43
+00:02:56,160 --> 00:02:59,790
+If you are returning Bio-Reference, this is an eleven year difference.
+
+44
+00:03:00,600 --> 00:03:02,220
+Here is some about the logic behind that.
+
+45
+00:03:02,670 --> 00:03:05,940
+When you return a variable salary itself is an L value.
+
+46
+00:03:06,330 --> 00:03:14,610
+But remember that when this function is returning here to either get get one, this salary will be copied
+
+47
+00:03:14,610 --> 00:03:16,370
+to a temporary variable here.
+
+48
+00:03:16,800 --> 00:03:21,840
+So eventually what we have here on the right side is a temporary copy of salary.
+
+49
+00:03:22,290 --> 00:03:28,230
+That's why we consider the return to BBR our value, because what you have here is another could be
+
+50
+00:03:28,230 --> 00:03:29,760
+different from what you have here.
+
+51
+00:03:29,970 --> 00:03:33,500
+That's why this is a b r value, because this is temporary.
+
+52
+00:03:33,690 --> 00:03:34,980
+It doesn't have a name.
+
+53
+00:03:36,540 --> 00:03:42,510
+If you try to do something like E to get one equal fifty, this will not combine.
+
+54
+00:03:43,080 --> 00:03:45,740
+We understand that more when we come to get to here.
+
+55
+00:03:47,360 --> 00:03:57,470
+If you try to call it get to and you put the value in to this, this is to get to is a return to Bio-Reference,
+
+56
+00:03:57,590 --> 00:03:58,790
+so it is only value.
+
+57
+00:04:00,220 --> 00:04:06,840
+Why, because the value returning here is the same in the memory address as the value returning here,
+
+58
+00:04:07,330 --> 00:04:11,770
+but as well as here were having no difference, we are making a copy of it.
+
+59
+00:04:11,920 --> 00:04:15,790
+But still, this is still an individual reference more efficiently.
+
+60
+00:04:15,970 --> 00:04:22,480
+If it is something like integer reference S3 equally to get to when you do that, either get to here
+
+61
+00:04:22,630 --> 00:04:27,640
+is just the same address as a seller here and we are assigning the address of S3.
+
+62
+00:04:27,880 --> 00:04:31,570
+So S3 and celery are the same in the memory.
+
+63
+00:04:31,570 --> 00:04:33,660
+S3 is an alias for the seller.
+
+64
+00:04:34,030 --> 00:04:35,980
+If you change it, it's a three to 70.
+
+65
+00:04:36,160 --> 00:04:38,900
+The value of salary will be changed to 70.
+
+66
+00:04:39,380 --> 00:04:41,350
+It is a more syntax that we really used.
+
+67
+00:04:41,860 --> 00:04:45,580
+I can say either get to equal 50.
+
+68
+00:04:46,030 --> 00:04:46,630
+Why?
+
+69
+00:04:46,900 --> 00:04:50,630
+Because either get data is equal to integrate different salary.
+
+70
+00:04:50,800 --> 00:04:55,670
+So this line is exactly like you wrote into a reference salary equal 50.
+
+71
+00:04:55,900 --> 00:04:57,450
+This one is left value.
+
+72
+00:04:57,460 --> 00:05:01,570
+And remember we said that the equal need on its side and the value.
+
+73
+00:05:01,900 --> 00:05:08,920
+So this one is going to work because the value going back to this line in line twenty, it would get
+
+74
+00:05:08,920 --> 00:05:10,350
+one is returning by value.
+
+75
+00:05:10,630 --> 00:05:15,050
+So what is on the left side now of the equation is a better value.
+
+76
+00:05:15,190 --> 00:05:19,510
+That's why this guy will complain that it was expecting an value here.
+
+77
+00:05:19,690 --> 00:05:20,680
+Not we are value.
+
+78
+00:05:23,480 --> 00:05:29,390
+Here is one more interesting thing in the injustice here, at least if you opened the function, Max,
+
+79
+00:05:29,510 --> 00:05:34,130
+of tier two and three, you would notice the return of the function is the difference.
+
+80
+00:05:34,280 --> 00:05:38,780
+It's trying to return either the value of two or the value of three, but using it as reference.
+
+81
+00:05:39,080 --> 00:05:47,570
+If you try to write here into your reference, Max, two and three, this one is going to is going to
+
+82
+00:05:47,570 --> 00:05:47,860
+work.
+
+83
+00:05:48,110 --> 00:05:50,850
+But notice, this is an L value return.
+
+84
+00:05:50,990 --> 00:05:53,660
+This is an L value return.
+
+85
+00:05:55,620 --> 00:06:03,100
+So Max here is returning actually the reference I saw some guys who are saying that Max three are are
+
+86
+00:06:03,200 --> 00:06:04,310
+r our value.
+
+87
+00:06:04,500 --> 00:06:08,310
+This is incorrect, at least in D.C. This is different from scorebook function.
+
+88
+00:06:08,310 --> 00:06:11,990
+For example, the school function is returning by value.
+
+89
+00:06:12,180 --> 00:06:14,040
+So it's a better value.
+
+90
+00:06:14,050 --> 00:06:16,320
+But Max year is returning by reference.
+
+91
+00:06:16,440 --> 00:06:17,640
+So it's really value difference.
+
+92
+00:06:18,780 --> 00:06:20,520
+It's also in a very similar way.
+
+93
+00:06:20,790 --> 00:06:27,410
+Things in C++ like Getline as it is tier one equals or two plus plus it.
+
+94
+00:06:27,630 --> 00:06:32,050
+All of this one's an operator overloading or returning Bio-Reference.
+
+95
+00:06:32,190 --> 00:06:34,740
+So all of these guys are l value.
+
+96
+00:06:36,830 --> 00:06:37,340
+That's all.

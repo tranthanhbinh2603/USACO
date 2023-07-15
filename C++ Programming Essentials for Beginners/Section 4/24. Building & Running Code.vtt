@@ -1,0 +1,430 @@
+WEBVTT
+
+00:01.590 --> 00:06.930
+Everyone in this lecture, we're going to write this code in our program and we are going to build it
+
+00:06.930 --> 00:07.770
+and run it.
+
+00:08.430 --> 00:10.860
+First of all, you need a few of your things.
+
+00:10.860 --> 00:14.430
+You need a text editor to write the code that you can download.
+
+00:14.520 --> 00:16.500
+So we would be using sublime text.
+
+00:16.770 --> 00:20.370
+It's very lightweight and very cool that I personally like a lot.
+
+00:20.910 --> 00:27.390
+You can go with any other options as well as per your wish on taking those you need to install a C++
+
+00:27.390 --> 00:27.960
+compiler.
+
+00:28.050 --> 00:33.780
+I will attach the links in the description, and when you're done with the two things what you need
+
+00:33.780 --> 00:39.930
+to do, you need to open up your extruder, which is which would look something like this.
+
+00:41.020 --> 00:49.720
+And you need to save your fight, look, so if I tell you I saved as file as maybe a loader CPB, OK,
+
+00:49.720 --> 00:52.950
+so or maybe hello world or TPP.
+
+00:53.590 --> 00:55.210
+This will create a new file.
+
+00:55.420 --> 00:58.210
+You can store it anywhere, any director you want.
+
+00:58.780 --> 01:05.110
+And we are going to type the same thing that we have seen in the boilerplate code, you will say, using
+
+01:05.110 --> 01:06.850
+namespace today.
+
+01:07.540 --> 01:12.450
+And after that, we are going to create the mean that is the entry point of the program.
+
+01:12.460 --> 01:15.970
+And we are also going to define the exit of the mean that is written zero.
+
+01:16.810 --> 01:21.670
+It signifies that the program has successfully terminated anything.
+
+01:21.670 --> 01:23.230
+Any good idea of right.
+
+01:23.740 --> 01:25.030
+That logic will go ahead.
+
+01:25.660 --> 01:35.440
+If you want to print something well in C++, we will use this syntax C out, followed by the value that
+
+01:35.440 --> 01:36.130
+you want to print.
+
+01:36.370 --> 01:38.800
+So maybe I want to print a very simple string.
+
+01:39.100 --> 01:39.370
+Hello.
+
+01:39.790 --> 01:44.460
+So string goes inside the barcodes, followed by end to end.
+
+01:44.470 --> 01:45.910
+It is like a new line.
+
+01:45.910 --> 01:47.590
+I want to shift to the new line.
+
+01:47.620 --> 01:49.270
+So for that, we use in here.
+
+01:50.350 --> 01:52.450
+And so these.
+
+01:54.610 --> 02:01.930
+These things are this is an operator, OK, is this is actually a left shift operator, but it it it
+
+02:01.930 --> 02:07.870
+has a special meaning for the compiler or get a compiler, understand these operators and these keywords
+
+02:08.350 --> 02:11.710
+as per the rules of the C++ programming language.
+
+02:11.740 --> 02:17.950
+So in the next set of videos, we are going to understand these rules, these new keyboards, what are
+
+02:17.950 --> 02:18.820
+water functions?
+
+02:18.820 --> 02:20.200
+What are variables?
+
+02:20.320 --> 02:22.990
+So we are going to look at everything in detail.
+
+02:23.110 --> 02:29.320
+But for now, we are just trying to show you how to write a very simple code on how you can run this
+
+02:29.650 --> 02:30.460
+on your machine.
+
+02:31.240 --> 02:35.290
+So now what happened is we have the source code.
+
+02:35.740 --> 02:38.470
+OK, we have the source code with us.
+
+02:38.710 --> 02:40.930
+So this file, this is known as source code.
+
+02:41.750 --> 02:46.180
+There is a piece of application that we have installed on this system.
+
+02:46.180 --> 02:48.610
+So that is known as a C++ compiler.
+
+02:51.760 --> 03:02.370
+We have a C++ compiler on the C++ compiler itself is a complex thing to understand what we are going
+
+03:02.370 --> 03:03.480
+to do in this lecture.
+
+03:03.480 --> 03:05.580
+We're going to see at high level what is going to happen.
+
+03:06.090 --> 03:14.940
+So it is going to accept a source file, which is a of TPP, and it is going to produce an executable
+
+03:14.940 --> 03:15.240
+file.
+
+03:15.690 --> 03:24.840
+May maybe something like Halo Dot, Eggsy if you are on a Windows machine or something like Halo out
+
+03:25.110 --> 03:25.830
+if you're on.
+
+03:26.770 --> 03:28.230
+A magic machine, something like this.
+
+03:28.980 --> 03:31.830
+What we're going to do, it will give us a file.
+
+03:32.580 --> 03:35.430
+These files can be executed.
+
+03:35.850 --> 03:37.300
+We need to run these files, OK?
+
+03:37.350 --> 03:39.630
+We need to run these files.
+
+03:40.050 --> 03:42.420
+The first step is compile the code.
+
+03:43.650 --> 03:52.800
+The compilation process will give us an executable as an end output, and we need to run that file and
+
+03:52.800 --> 03:57.810
+that will show us the output of the program, so it is a two step process.
+
+03:57.840 --> 04:07.080
+OK, so first step is building the code, which includes some violation and the second step is executing
+
+04:07.080 --> 04:07.470
+the code.
+
+04:07.800 --> 04:09.870
+That means we are going to run this code.
+
+04:10.260 --> 04:12.900
+So every program we are going to perform these two steps.
+
+04:13.380 --> 04:16.490
+I'm going to show you these steps through a command line.
+
+04:16.500 --> 04:22.770
+So what you need to do, you need to open up terminal and you need to go to the location where you are.
+
+04:22.800 --> 04:30.570
+So, for example, currently led to be at home to other quarters in the desktop world and inside CBB
+
+04:30.570 --> 04:31.050
+lecture.
+
+04:32.700 --> 04:37.350
+We come here and you do the command that we use to change that entry.
+
+04:38.070 --> 04:44.040
+And inside this directory, if I do less alert means tell me what all files do we have?
+
+04:44.310 --> 04:49.590
+OK, so it creates it has a file called Hello World Dog CBB.
+
+04:50.460 --> 04:50.760
+OK.
+
+04:51.090 --> 04:56.070
+So what I'm going to do, I'm going to build this code and show you the output.
+
+04:58.450 --> 05:02.530
+So let us see how to use the C++ compiler, OK?
+
+05:03.130 --> 05:06.550
+So there is a command that is known as D-plus Plus.
+
+05:06.950 --> 05:13.390
+So you hit the D-plus Plus is a command that invokes the Jianyu C++ compiler.
+
+05:14.590 --> 05:16.240
+Jianyu C++ compiler.
+
+05:16.540 --> 05:18.880
+This compiler gets invoked.
+
+05:20.040 --> 05:22.080
+And this needs to be installed on your machine.
+
+05:22.570 --> 05:28.470
+This this piece of software gets invoked when you write this command deeply if you want to see what
+
+05:28.470 --> 05:30.210
+version of Duplicitous, I'm using.
+
+05:31.260 --> 05:38.280
+You can see this is these are the details of the compiled ways and you get so you can see this version
+
+05:38.280 --> 05:39.810
+is twelve point zero and so on.
+
+05:40.210 --> 05:47.910
+And this is for this particular hardware that my machine has been being you using, OK?
+
+05:48.600 --> 05:54.090
+So you can install any version that maybe is the latest version of the previous version.
+
+05:54.240 --> 05:55.080
+Totally up to you.
+
+05:55.560 --> 06:03.630
+So what we are doing, we are going to use D-plus Plus to give our source file and create a executable
+
+06:03.630 --> 06:03.870
+file.
+
+06:03.960 --> 06:07.290
+So I'm going to say and C++, Hello world.
+
+06:08.540 --> 06:09.860
+DOD CPB.
+
+06:10.790 --> 06:16.320
+Now what happens this command executed successfully, and if I a list now?
+
+06:16.760 --> 06:18.590
+There is a file called 8Ot out.
+
+06:19.130 --> 06:24.110
+This is the default name of the file that has been created by our compiler.
+
+06:24.680 --> 06:28.760
+And if I want to run this file, I have to say dodged like it or not.
+
+06:29.390 --> 06:31.760
+This is how I compiled the file.
+
+06:32.600 --> 06:39.320
+So this step is, is the compilation think that this is, uh, compile?
+
+06:40.600 --> 06:49.090
+And this step is actually about executions, the law and order underscored again and underscored here,
+
+06:49.510 --> 06:52.570
+if I press and enter now, you can see the output.
+
+06:52.810 --> 06:53.390
+Hello, world.
+
+06:53.980 --> 07:01.330
+I suppose I want to change my code and instead of saying hello world, I want to say hello everyone.
+
+07:02.230 --> 07:07.510
+So what I will do, I will go back to my it and I will look.
+
+07:07.960 --> 07:08.710
+Hello, everyone.
+
+07:09.910 --> 07:17.590
+And again, back to the terminal, if I again run this good, I will not see any change because I have
+
+07:17.590 --> 07:26.590
+not completed the compilation converts your source code into machine good orders, resin in the executable
+
+07:26.590 --> 07:28.570
+file and that is run by the machine.
+
+07:28.630 --> 07:33.360
+So what we need to do if we want to reflect the new output, we have to build our code again.
+
+07:33.370 --> 07:40.740
+So we'll see D-plus Plus Hello World Dot A.P.B and laser dot like a dot.
+
+07:40.810 --> 07:44.970
+OK, so now you can see the output is a lovely one.
+
+07:45.310 --> 07:45.580
+OK.
+
+07:45.970 --> 07:49.600
+And this is going to run your code on.
+
+07:49.600 --> 07:53.490
+You see the output that has been updated as opposed.
+
+07:53.500 --> 08:01.060
+If you want to rename your output file, you don't want the output file to look like you wrote out you
+
+08:01.060 --> 08:01.930
+want something else.
+
+08:02.560 --> 08:09.760
+So in that case, this d-plus plus except certain flags, so you can still get the name of the output
+
+08:09.760 --> 08:10.130
+file.
+
+08:11.050 --> 08:12.180
+It should be something else.
+
+08:12.190 --> 08:16.060
+It should be hollowed out out instead of or maybe.
+
+08:16.480 --> 08:18.160
+Hello, everyone got out.
+
+08:20.140 --> 08:21.790
+And I'm going to compile the file.
+
+08:22.270 --> 08:23.850
+Hello, World Dot CPB.
+
+08:25.340 --> 08:31.640
+I'm going to compile the file Helloworld or TPP, not if I do it less.
+
+08:32.270 --> 08:33.230
+What are you going to hit?
+
+08:33.740 --> 08:35.780
+There is a file that has been created.
+
+08:36.470 --> 08:37.490
+Everyone thought out.
+
+08:38.120 --> 08:43.250
+So what we have said that the name of the executable file, it should not be rolled out.
+
+08:43.640 --> 08:44.390
+It should be.
+
+08:44.840 --> 08:45.710
+Hello, everyone.
+
+08:45.710 --> 08:48.140
+No doubt we have specified.
+
+08:50.600 --> 08:57.470
+A flag, and we are telling that again, the output should be this one, and it should not be the default
+
+08:57.470 --> 08:58.970
+one, which is not or.
+
+08:59.270 --> 09:02.720
+And here it is our source file.
+
+09:03.380 --> 09:08.870
+And with this flag, we have defined what should be the value of it.
+
+09:09.980 --> 09:10.730
+Output file.
+
+09:10.820 --> 09:15.930
+So in this case, if you want to run discord now, you will not be using large, large adulthood.
+
+09:15.980 --> 09:17.750
+You should be using torchlight.
+
+09:18.740 --> 09:19.610
+Hello, everyone.
+
+09:20.180 --> 09:20.840
+Dot Dot.
+
+09:21.490 --> 09:23.060
+OK, now you see the output.
+
+09:23.180 --> 09:23.810
+Hello, everyone.
+
+09:24.440 --> 09:30.350
+That is a slight introduction to how do you build and run a code using a C++ compiler?
+
+09:30.860 --> 09:36.590
+And I hope you clearly understood these steps, and the compilation itself is a complex thing.
+
+09:36.800 --> 09:42.110
+So we will spend one with you on diving deep into the details of the compilation process.
+
+09:42.470 --> 09:43.790
+That's all for this video.
+
+09:43.820 --> 09:44.330
+Thank you.

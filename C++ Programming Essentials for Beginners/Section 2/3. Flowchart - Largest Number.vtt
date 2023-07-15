@@ -1,0 +1,184 @@
+WEBVTT
+
+00:01.260 --> 00:06.090
+So in this lecture, we are going to discuss this problem, given three numbers, we have to find the
+
+00:06.090 --> 00:07.590
+largest of them, OK?
+
+00:08.100 --> 00:13.610
+For example, we have a number 10, we have a number 30 and we have a number 22.
+
+00:13.620 --> 00:17.730
+Obviously, we know the largest in this case is the middle man.
+
+00:18.270 --> 00:22.830
+This is the largest number because we have to print the largest of the three numbers.
+
+00:22.860 --> 00:27.570
+Another example would be, let's say we have 12 eight to 10.
+
+00:28.080 --> 00:30.770
+In this case, the largest is the number 12.
+
+00:31.650 --> 00:36.900
+So let's see how we can draw a flowchart to find the largest of these numbers.
+
+00:37.810 --> 00:41.640
+The first step, as we're discussing every problem, would be a start.
+
+00:42.270 --> 00:46.020
+The next step would be to read the values of these three numbers.
+
+00:46.020 --> 00:50.850
+OK, whatever it is, the input, we are going to read it, for example, into the input as.
+
+00:52.270 --> 01:00.520
+Then, well, I need this input would be fed to the system by using a read statement, OK, in the next
+
+01:00.520 --> 01:00.880
+step.
+
+01:01.090 --> 01:03.160
+That would be a comparison to what we can do.
+
+01:03.170 --> 01:11.230
+We can check if it is greater than equal to be and is greater than equal to see if this is.
+
+01:11.320 --> 01:16.000
+If this condition is true, that means we are checking is then greater than both.
+
+01:16.030 --> 01:16.510
+12.
+
+01:17.800 --> 01:21.610
+And it is also greater than equal to it.
+
+01:21.970 --> 01:23.980
+Obviously, this condition is not true.
+
+01:24.910 --> 01:30.280
+But if this is true to what we can do, we can simply print and exit.
+
+01:30.430 --> 01:32.290
+That means our work gets done.
+
+01:32.780 --> 01:39.610
+So we can say in this case, if it is like 12, then indeed we know that 12 is greater than or equal
+
+01:39.610 --> 01:43.150
+to 10 and 12 is also greater than or equal to eight.
+
+01:43.480 --> 01:43.770
+OK.
+
+01:44.680 --> 01:49.870
+So in this case, we will separate eight and end or exit whatever it is.
+
+01:50.410 --> 01:53.590
+But if it is not the case, what does it mean, OK?
+
+01:53.920 --> 02:00.640
+So this basically means, let's say the numbers are 10, 12 and eight, so is clearly not an option.
+
+02:00.940 --> 02:02.150
+It cannot be on it.
+
+02:02.710 --> 02:05.700
+So what we will do, we will take for be gone.
+
+02:05.850 --> 02:07.140
+We believe it answered.
+
+02:07.540 --> 02:14.650
+In order to have real as ever answered what we can do, we can check that if B is greater than or equal
+
+02:14.650 --> 02:18.590
+to A and B is greater than or equal to C, OK.
+
+02:19.330 --> 02:20.200
+This is the case.
+
+02:20.650 --> 02:23.700
+If we go into this direction of yours begins OK.
+
+02:24.310 --> 02:32.200
+B is the answer identifies if it is not the greatest B is not the greatest, then B must be the greatest.
+
+02:32.200 --> 02:32.440
+OK?
+
+02:32.830 --> 02:36.100
+So in this case, we will say print c and exit.
+
+02:36.100 --> 02:45.220
+OK, now you may ask why I'm using this greater than equal to sign why not only greater than is sufficient.
+
+02:45.220 --> 02:46.450
+OK, let's see.
+
+02:46.930 --> 02:48.240
+The numbers are equal.
+
+02:48.250 --> 02:50.470
+For example, let's say the numbers are.
+
+02:53.520 --> 02:54.060
+Twenty.
+
+02:56.440 --> 02:58.420
+Twenty twenty and.
+
+03:00.120 --> 03:01.890
+It's been OK.
+
+03:03.300 --> 03:10.080
+If this is the case, though, if you only use the statement greater than, OK, so for 2020 and then
+
+03:10.710 --> 03:17.700
+obviously this condition would be false when there is not greater than 20, this condition would also
+
+03:17.700 --> 03:18.300
+be false.
+
+03:18.810 --> 03:22.290
+B is not greater than what would happen in this case.
+
+03:22.770 --> 03:29.700
+We will end up in the last branch of the code and we will separate the two, which which will output
+
+03:29.700 --> 03:30.690
+bend in this case.
+
+03:30.960 --> 03:31.770
+So which is wrong?
+
+03:32.160 --> 03:38.580
+That is why in this flowchart, we are writing a modification that while making this check, we are
+
+03:38.580 --> 03:41.750
+checking whether the number is greater than or equal to.
+
+03:41.760 --> 03:44.640
+So this symbol is known as greater than or equal to.
+
+03:44.640 --> 03:48.390
+So if 20 is greater than equal to 20, the answer would be yes.
+
+03:48.750 --> 03:56.190
+So if the numbers are like 2020 and then so what you will do in the first check you will check is 20
+
+03:56.190 --> 04:01.440
+greater than equal to 20 yes, and 20 is greater than or equal to 10.
+
+04:01.590 --> 04:04.850
+Yes, we will print a and you will.
+
+04:04.860 --> 04:08.950
+And in this case, your output would be this number 20.
+
+04:09.540 --> 04:15.990
+I hope you have understood the flowchart to find out the largest of three numbers, and that's all for
+
+04:15.990 --> 04:16.560
+this we do.

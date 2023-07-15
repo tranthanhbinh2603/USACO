@@ -1,0 +1,416 @@
+﻿WEBVTT
+
+00:00:01.260 --> 00:00:09.870
+Trong C++ 17, Biểu thức nếp gấp xuất hiện để làm cho mẫu biến thiên dễ dàng hơn cho các toán tử nhị phân cụ thể
+
+00:00:10.110 --> 00:00:15.960
+Như bạn còn nhớ, Chúng ta đang thực
+hiện hàm tính tổng trong mẫu biến thiên,
+
+00:00:15.960 --> 00:00:19.350
+Hãy nhớ rằng lớp toán tử nhị phân là
+toán tử nhị phân nên cần hai toán hạng.
+
+00:00:19.590 --> 00:00:25.190
+Vì vậy, đối với 32 toán tử cụ thể, Biểu thức gấp giúp cuộc sống của chúng ta đơn giản hơn nhiều.
+
+00:00:25.860 --> 00:00:27.310
+Tương tự với mẫu matrixdic.
+
+00:00:27.540 --> 00:00:30.300
+Việc mã hóa biểu thức nếp gấp rất có hệ thống.
+
+00:00:30.960 --> 00:00:36.410
+Ngôn ngữ nhận ra các trường hợp khác
+nhau mà chúng tôi gọi là nếp gấp một
+
+00:00:36.570 --> 00:00:38.850
+ngôi và nếp gấp nhị phân và mỗi một
+trong số chúng giống như phải và trái.
+
+00:00:38.860 --> 00:00:41.310
+Chúng ta sẽ thấy rằng nó rất có hệ thống.
+
+00:00:41.640 --> 00:00:46.200
+Hãy nhớ nếu bạn đã viết 1, 2, 3 + 2 + 3: Trong C++, không sao
+
+00:00:46.440 --> 00:00:50.520
+nhưng nếu bạn có một
+cái gì đó như cộng 1, 2, 3
+
+00:00:50.520 --> 00:00:51.380
+hoặc 1, 2, 3 cộng ở đây,
+nó sẽ không biên dịch được
+
+00:00:51.420 --> 00:00:55.700
+và đây là lý do tại sao chúng ta có cách gấp bên trái và bên phải, như chúng ta sẽ thấy ngay bây giờ.
+
+00:00:56.550 --> 00:01:04.620
+Vì vậy, hãy đi thẳng đến cái mà chúng ta gọi là nếp gấp
+một ngôi bên phải.  Giờ đây, chức năng tính tổng một
+
+00:01:04.800 --> 00:01:13.080
+loạt các số trở nên đơn giản như cú pháp kỳ lạ mà bạn
+thấy này.  Đối số cộng với dấu chấm, dấu chấm, dấu chấm và
+
+00:01:13.080 --> 00:01:14.300
+đó là nó, Các hình elip.
+
+00:01:14.730 --> 00:01:17.410
+Chức năng cuối cùng đã hoàn thành, Mã đã hoàn thành.
+
+00:01:17.790 --> 00:01:22.790
+Vì vậy, bây giờ chúng tôi muốn xem loại phép thuật nào đang xảy ra ở đây và nếp gấp này là gì
+
+00:01:23.130 --> 00:01:23.820
+Từ có nghĩa là.
+
+00:01:25.160 --> 00:01:32.690
+Vì vậy, hãy nhớ, Đây là gói tham số mẫu và đây là
+đối số chức năng của nó và chúng ta có thể sử dụng
+
+00:01:32.690 --> 00:01:40.640
+kích thước của nó để lấy 4. Điều đang xảy ra trong
+biểu thức đầu tiên là chúng ta sẽ lại làm mẫu,
+
+00:01:40.880 --> 00:01:47.030
+Mẫu sẽ nhận chức năng mẫu của bạn và tạo ra câu trả lời của nó.
+
+00:01:47.360 --> 00:01:53.660
+Hàm này sẽ được mở rộng thành 1 cộng 2, cộng 3 cộng 4.
+
+00:01:53.660 --> 00:01:54.030
+...
+
+00:01:54.050 --> 00:01:55.450
+Nhưng làm thế nào để thực hiện việc mở rộng này?
+
+00:01:56.180 --> 00:01:59.660
+Hãy suy nghĩ như sau: điều này lập luận,
+
+00:02:00.050 --> 00:02:02.990
+Hãy nghĩ về nó như là phần tử đầu tiên của những con số mà bạn nhận được,
+
+00:02:02.990 --> 00:02:08.330
+Vì vậy, chúng tôi đã nhận được
+1, 2, 3, 4 từ đây, sau đó đối số bây
+
+00:02:08.330 --> 00:02:10.370
+giờ chỉ tương ứng với 1 và ba dấu
+chấm tương ứng với phần còn lại.
+
+00:02:10.760 --> 00:02:14.600
+Vì vậy, bây giờ ban đầu chúng ta sẽ có nó như một thế hệ thời gian biên dịch.
+
+00:02:14.630 --> 00:02:17.020
+Chúng ta có ở đây một dấu cộng, dấu chấm.
+
+00:02:17.630 --> 00:02:22.760
+Bây giờ hãy đi và lấy dấu chấm, dấu chấm, dấu chấm này và thay thế nó bằng biểu thức args cộng với dấu chấm, dấu chấm, dấu chấm.
+
+00:02:24.350 --> 00:02:31.300
+Vì vậy, khi bạn thay thế nó một lần nữa, The args sẽ là phần tử đầu tiên của tham số mới, là 2 cộng với dấu chấm, dấu chấm, dấu chấm.
+
+00:02:31.430 --> 00:02:35.090
+Lấy dấu chấm, dấu chấm và thay thế lại bằng biểu thức tương tự mà chúng ta có ở đây.
+
+00:02:35.090 --> 00:02:40.500
+Nó sẽ lại như vậy, args sẽ khớp với phần tử đầu tiên ở đây, 3 cộng với dấu chấm, dấu chấm, dấu chấm.
+
+00:02:40.810 --> 00:02:47.380
+Bây giờ, chúng tôi chỉ còn lại một phần tử, phần tử này sẽ được định cấu hình là 4.
+
+00:02:48.050 --> 00:02:53.630
+Vì vậy, cuối cùng biểu thức này, mà bạn phải viết các tham số và sau đó đối số cộng với một cái gì đó,
+
+00:02:53.630 --> 00:02:58.070
+Ngoài ra, ở đây chúng tôi muốn thực hiện chức năng gửi sau, Nó có thể là dấu hoa thị, Nó có thể là phép chia
+
+00:02:59.060 --> 00:03:05.380
+nhưng biểu thức của bạn phải cùng với các đối số và dấu chấm, dấu chấm, dấu chấm với một số toán tử ở giữa.
+
+00:03:05.960 --> 00:03:07.660
+Bạn không thể sử dụng arg trực tiếp.
+
+00:03:07.680 --> 00:03:10.720
+Bạn không thể nói ở đây: Này, cout args và thế là xong.
+
+00:03:11.120 --> 00:03:16.540
+Bạn phải sử dụng cả hai cùng nhau vì trình biên dịch nhìn thấy chúng và mở rộng chúng một cách chính xác
+
+00:03:16.580 --> 00:03:23.150
+Tôi đã làm với bạn.  Biểu thức này về mặt toán học cuối cùng sẽ là một tham số,
+
+00:03:23.330 --> 00:03:27.770
+Sau đó, 1 cộng với tham
+số khác, 2 cộng với tham
+
+00:03:27.770 --> 00:03:28.370
+số khác, 3 cộng, Sau
+đó là 4 và thế là xong.
+
+00:03:30.060 --> 00:03:38.070
+Bây giờ đối với trường hợp gửi
+một biến và không có biến nào, sẽ
+
+00:03:38.070 --> 00:03:39.750
+hơi khó để biết trình biên dịch
+tạo chính xác điều đó như thế nào.
+
+00:03:40.080 --> 00:03:46.350
+Nhưng tôi muốn bạn biết nếu bạn chỉ gửi một giá
+trị duy nhất cho trường hợp này, Trình biên dịch sẽ
+
+00:03:46.350 --> 00:03:53.400
+chỉ giải quyết giá trị này thành 1 và chỉ bỏ dấu
+chấm, dấu chấm, dấu chấm vì không còn tham số nào nữa.
+
+00:03:53.880 --> 00:04:00.210
+Tuy nhiên, nếu bạn đã gửi một giá trị trống ở đây, trình biên dịch sẽ không thể đoán giá trị đầu tiên
+
+00:04:00.450 --> 00:04:04.730
+và sau đó nó sẽ giống như một cái gì đó cộng với nó sẽ giống như một biểu hiện kỳ ​​lạ.
+
+00:04:04.890 --> 00:04:06.860
+Vì vậy, nó sẽ tạo ra lỗi biên dịch.
+
+00:04:06.870 --> 00:04:12.590
+Đạo đức của điều đó là nếu trong trường hợp này, Bạn đã gửi một tham số trống, Nó sẽ biên dịch lỗi.
+
+00:04:13.170 --> 00:04:16.140
+Nếu bạn chỉ gửi đến một giá trị, thì đó sẽ chỉ là giá trị args.
+
+00:04:16.440 --> 00:04:20.670
+Nếu bạn đã gửi nhiều hơn một giá trị, nó sẽ được sử dụng theo cách này.
+
+00:04:21.000 --> 00:04:25.980
+Và một lần nữa, nếu bạn muốn theo dõi quá trình mở
+rộng này sẽ diễn ra như thế nào?  gán giá trị này cho
+
+00:04:25.980 --> 00:04:31.650
+giá trị đầu tiên, Gán args cho giá trị đầu tiên và
+mở rộng đệ quy ba dấu chấm này với cùng một biểu thức
+
+00:04:31.650 --> 00:04:32.460
+lặp đi lặp lại.
+
+00:04:33.540 --> 00:04:37.170
+Bây giờ, Điều này đưa
+chúng ta đến cái mà chúng
+
+00:04:37.170 --> 00:04:38.070
+ta gọi thay vì quyền đơn
+nguyên, Nó được gọi là
+
+00:04:38.640 --> 00:04:44.160
+quyền nhị phân.  Toàn bộ sự khác biệt giữa quyền nhị
+phân (và quyền đơn nguyên), Chuyển sang bên phải của dấu
+
+00:04:44.160 --> 00:04:48.630
+chấm, dấu chấm, dấu chấm và đặt ngay tại đây cộng với
+một số giá trị gia tăng làm cho ngữ nghĩa của bạn đúng.
+
+00:04:49.090 --> 00:04:56.700
+Nếu tôi muốn thêm một
+loạt các số, tôi luôn có thể
+
+00:04:56.700 --> 00:04:57.430
+thêm cộng để toàn bộ nội
+dung gửi không thay đổi.
+
+00:04:58.290 --> 00:05:04.590
+Vì vậy, nếu chúng tôi đã thêm vào đây cộng 0, Điều duy nhất chúng tôi nhận được là nếu chúng tôi chuyển một danh sách trống,
+
+00:05:04.830 --> 00:05:07.350
+Nó sẽ giống như cộng 0 ở đây và
+
+00:05:07.350 --> 00:05:10.130
+Nó sẽ làm cho quá trình biên dịch trong thời gian tạo hoạt động.
+
+00:05:10.560 --> 00:05:14.580
+Nếu bạn bối rối về điều đó, Giống như cách thế hệ hậu trường thực sự hoạt động.
+
+00:05:14.790 --> 00:05:15.690
+Đây không phải là việc của chúng tôi
+vì chúng tôi không muốn tự làm phiền
+
+00:05:15.690 --> 00:05:23.790
+chính mình về cách thuật toán đằng
+sau hiện trường đang tạo ra biểu thức?
+
+00:05:24.060 --> 00:05:30.390
+Điều tôi muốn bạn biết là nếu bạn đang sử dụng
+một trường hợp trống, Bạn cần thêm một yếu tố
+
+00:05:30.390 --> 00:05:36.360
+bổ sung vào đây để việc gửi không kết thúc như
+1 cộng 2 cộng 3 cộng mà không có gì khác, Có thể
+
+00:05:36.360 --> 00:05:38.270
+kết thúc với like cộng với không có gì.
+
+00:05:38.730 --> 00:05:46.030
+Vì vậy, với một cộng 0 ở đây sẽ kết thúc bằng 0, Với một mục sẽ giống như một cộng với không.
+
+00:05:46.440 --> 00:05:48.210
+Đây là 1 cộng 0.
+
+00:05:48.390 --> 00:05:51.130
+Đây là bản cập nhật mới duy nhất sẽ xảy ra ở đây.
+
+00:05:51.420 --> 00:05:54.960
+Bây giờ, bạn có thể gọi hàm với danh sách trống và nó hoạt động.
+
+00:05:55.620 --> 00:06:02.580
+Điều tôi đang nói càng nhiều là sự khác biệt
+giữa nếp gấp bên phải đơn nguyên và nếp gấp
+
+00:06:02.590 --> 00:06:05.600
+bên phải nhị phân là nếp gấp bên phải nhị phân
+cho phép bạn có trường hợp danh sách trống.
+
+00:06:05.630 --> 00:06:12.630
+Đây là lý do tại sao chúng ta có nếp gấp nhị
+phân bên phải này và nó còn hơn thế nữa là do
+
+00:06:12.630 --> 00:06:19.650
+cách trình biên dịch tạo cú pháp và tạo mã phía
+sau hiện trường.  theo một cách rất giống nhau
+
+00:06:19.770 --> 00:06:21.510
+Có những gì chúng ta gọi là nếp gấp bên trái.
+
+00:06:21.690 --> 00:06:25.140
+Vì vậy, bên trái bây giờ có dấu chấm, dấu chấm, dấu chấm ở phía bên trái.
+
+00:06:25.470 --> 00:06:31.530
+Vì vậy, thế hệ đó sẽ được mở rộng từ phía bên trái
+và phía bên trái, Nếu bạn cố gắng thực hiện việc mở
+
+00:06:31.530 --> 00:06:36.960
+rộng từng bước như tôi đã làm, Bạn sẽ nhận thấy rằng
+1, 2, 3, 4 được mở rộng giống như một dấu ngoặc nhọn
+
+00:06:36.990 --> 00:06:41.430
+1 cộng 2 cộng một dấu ngoặc nhọn cộng 4 và theo một cách rất giống nhau,
+
+00:06:41.430 --> 00:06:47.880
+Đường gấp đôi bên trái sẽ có số 0
+từ bên phải, Dấu chấm, dấu chấm,
+
+00:06:47.880 --> 00:06:49.290
+dấu chấm ở đây và một lần nữa mở
+rộng từ phải sang trái theo cách này.
+
+00:06:51.060 --> 00:06:53.100
+Vì vậy, chúng tôi có ở đây bây giờ hai điều:
+
+00:06:53.100 --> 00:06:54.480
+Ở đây chúng ta
+có trái và phải và
+
+00:06:54.480 --> 00:06:55.860
+chúng ta có đơn
+nguyên và nhị phân.
+
+00:06:56.160 --> 00:07:00.330
+Lý do đằng sau đơn nguyên và nhị phân là tất cả về việc cho phép một danh sách trống.
+
+00:07:00.600 --> 00:07:04.640
+Nhưng trái và phải nói nhiều hơn về hướng bạn đang mở rộng danh sách.
+
+00:07:04.770 --> 00:07:11.540
+Vì vậy, C ++ 17 mang đến cho chúng ta nhiều sự lựa chọn hơn phù hợp với miền của chúng ta.
+
+00:07:11.730 --> 00:07:15.870
+Vì vậy, đây là bốn trường hợp mà chúng tôi đã đề cập đến nó.
+
+00:07:16.650 --> 00:07:22.320
+Đảm bảo rằng bạn hiểu việc mở rộng từng người trong số họ sẽ mở rộng danh sách của bạn như thế nào.
+
+00:07:22.320 --> 00:07:23.190
+Theo một cách rất giống nhau,
+
+00:07:23.310 --> 00:07:26.730
+Nếu bạn muốn hỗ trợ phép nhân, Bây giờ bạn sẽ thay thế
+
+00:07:27.150 --> 00:07:28.470
+cộng với phép nhân.
+
+00:07:28.800 --> 00:07:32.970
+Bây giờ, hãy suy nghĩ về phép nhân, Điều gì
+có thể là giá trị tốt ban đầu cho phép nhân
+
+00:07:32.970 --> 00:07:38.340
+để cho phép một danh sách gồm một phần tử?
+Bạn biết rằng bạn cần nhân 1 vì bất kỳ số nào
+
+00:07:38.670 --> 00:07:39.770
+lần một chỉ là nó là chính mình.
+
+00:07:39.780 --> 00:07:39.950
+...
+
+00:07:39.960 --> 00:07:41.460
+Vì vậy, đây là một giá trị tốt.
+
+00:07:41.730 --> 00:07:47.550
+Khi bạn thấy giá trị ban đầu mà
+bạn sẽ cung cấp cho trường hợp nhị
+
+00:07:47.550 --> 00:07:49.620
+phân phụ thuộc nhiều hơn vào bản
+chất của toán tử mà bạn sẽ sử dụng nó.
+
+00:07:50.070 --> 00:07:56.850
+Cũng tương tự như mẫu
+matrixdic, Chúng ta có thể bỏ gói
+
+00:07:56.850 --> 00:07:58.320
+tham số matrixdic ở đây và
+chỉ dùng auto cho đơn giản hơn.
+
+00:07:58.440 --> 00:07:58.860
+mã số.
+
+00:08:00.450 --> 00:08:03.210
+Trên tất cả những điều này là bốn trường hợp mà chúng ta có
+
+00:08:03.510 --> 00:08:07.100
+và tôi muốn bạn đọc phần mở rộng
+biểu thức này để biết liệu chúng ta có
+
+00:08:07.200 --> 00:08:12.300
+đang sử dụng biểu thức này hay
+không, Đây là cách nó sẽ được mở rộng và
+
+00:08:12.300 --> 00:08:14.670
+Sớm.  Op ở đây là toán tử.
+
+00:08:14.940 --> 00:08:21.120
+Vì vậy, hãy đọc nó và đảm bảo rằng
+bạn ít nhất hiểu các cách mở rộng mã
+
+00:08:21.120 --> 00:08:22.590
+của tôi hoặc ít nhất là hiểu những
+cách này hoặc kết hợp chúng với nhau.
+
+00:08:23.640 --> 00:08:28.640
+Đây là ba mươi hai toán tử cho phép
+
+00:08:28.910 --> 00:08:36.980
+Với biểu thức gấp và gấp nhị phân
+khi sử dụng thêm gấp ở đây, Bạn
+
+00:08:36.980 --> 00:08:41.090
+phải có nó trong cả hai toán tử,
+Bạn không thể ở đây dấu hoa thị
+
+00:08:41.090 --> 00:08:43.430
+và sau đó ở đây cộng.  Nó phải cùng loại.
+
+00:08:44.380 --> 00:08:49.720
+Đến lượt bạn, tôi muốn bạn thực hiện phép chia đó và kiểm tra xem đường gấp bên trái có
+
+00:08:50.170 --> 00:08:52.780
+giống như gấp phải hay không.  Đó là nó.

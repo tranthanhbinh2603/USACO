@@ -1,0 +1,204 @@
+0
+1
+00:00:00,900 --> 00:00:07,260
+Homework set number one, I would like you to write some set of classes, no details no functions 
+1
+
+2
+00:00:07,260 --> 00:00:10,340
+just represent this inheritance hierarchy.
+2
+
+3
+00:00:12,140 --> 00:00:18,950
+In a similar way, I would also like you to build  a set of classes that build this kind of inheritance hierarchy. 
+3
+
+4
+00:00:18,950 --> 00:00:27,320
+Design review, we have a class for wheels, class engine and class car is inheriting from
+4
+
+5
+00:00:27,320 --> 00:00:27,910
+both of them.
+5
+
+6
+00:00:28,460 --> 00:00:32,580
+This code is running well in bus system, everything is OK.
+6
+
+7
+00:00:32,810 --> 00:00:35,980
+Meanwhile there is something wrong about it when it comes to design.
+7
+
+8
+00:00:36,470 --> 00:00:39,980
+It's important to notice that your code can be working very well.
+8
+
+9
+00:00:40,010 --> 00:00:46,350
+Meanwhile, it is a big problem in design and this mean in the near future is going to be problematic.
+9
+
+10
+00:00:48,560 --> 00:00:52,640
+We have this design for mammals and we have here three members.
+10
+
+11
+00:00:52,910 --> 00:00:56,690
+One question is, what does this design imply about the mammals?
+11
+
+12
+00:00:57,320 --> 00:01:00,620
+Another question is, let's say the current system is really correct.
+12
+
+13
+00:01:00,920 --> 00:01:04,430
+After a year, we had a need to add a new mammal to the system.
+13
+
+14
+00:01:04,430 --> 00:01:05,770
+So it should inherit from here.
+14
+
+15
+00:01:06,140 --> 00:01:12,320
+But the problem is it turned out, something was wrong with this design and now adding the new class
+15
+
+16
+00:01:12,560 --> 00:01:13,750
+doesn't make sense enough.
+16
+
+17
+00:01:14,000 --> 00:01:16,430
+So think and find.
+17
+
+18
+00:01:16,550 --> 00:01:20,010
+What is this animal, if we add it to here, is going to fail.
+18
+
+19
+00:01:20,240 --> 00:01:26,300
+So think about it and then try to Google, in were another to identify what might be a wrong mammal here ?
+19
+
+20
+00:01:26,300 --> 00:01:26,540
+?
+20
+
+21
+00:01:30,680 --> 00:01:33,260
+Let's say that we have 4 classes.
+21
+
+22
+00:01:33,380 --> 00:01:35,330
+Each class has 20 functions.
+22
+
+23
+00:01:36,020 --> 00:01:42,410
+We would like now to add a new class that has a relationship of "has-a" with the 4 classes.
+23
+
+24
+00:01:42,770 --> 00:01:49,460
+But it is just to a good extent, not exactly has a relationship. So what is a problem that we will face?
+24
+
+25
+00:01:50,090 --> 00:01:50,840
+to motivate you
+25
+
+26
+00:01:50,840 --> 00:01:52,320
+more to answer this question,
+26
+
+27
+00:01:52,460 --> 00:01:53,260
+Here is a scenario.
+27
+
+28
+00:01:53,630 --> 00:01:58,640
+Let's say we have a class for a robot that just can drive, clean, and do funny moves.
+28
+
+29
+00:01:58,640 --> 00:02:01,280
+Just a house robot.
+29
+
+30
+00:02:01,970 --> 00:02:08,810
+Let's say we have another class for a real animal and this animal can go toilet or make sound and we have
+30
+
+31
+00:02:08,810 --> 00:02:09,930
+a real cat and real dog.
+31
+
+32
+00:02:10,550 --> 00:02:16,190
+Now, everything was going very well until a customer asked us to create a class for a robot dog.
+32
+
+33
+00:02:16,190 --> 00:02:20,600
+A robot dog is like the robot so it can drive, clean, and do funny things.
+33
+
+34
+00:02:20,600 --> 00:02:25,240
+But remember, it is an unreal dog so it can make sound, but it doesn't go to the toilet.
+34
+
+35
+00:02:25,610 --> 00:02:26,870
+So back to the problem here.
+35
+
+36
+00:02:26,990 --> 00:02:32,300
+What is a problem we will face if a "has-a" relationship, it just goes to some extent?
+36
+
+37
+00:02:33,620 --> 00:02:40,150
+Finally, we would like to implement here all in one machine for printing, scanning and so on.
+37
+
+38
+00:02:40,550 --> 00:02:44,390
+So let's say we would like to implement this system as it is.
+38
+
+39
+00:02:44,780 --> 00:02:50,810
+What is a problem here in terms of inheritance and in terms of a better design?
+39
+
+40
+00:02:51,080 --> 00:02:56,090
+What might be a better idea to make it more semantically valid and solve the problem here that we are
+40
+
+41
+00:02:56,090 --> 00:02:58,490
+going to identify? That's it.

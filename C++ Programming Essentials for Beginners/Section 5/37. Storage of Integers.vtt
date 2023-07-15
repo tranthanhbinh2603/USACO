@@ -1,0 +1,514 @@
+WEBVTT
+
+00:01.010 --> 00:07.340
+Everyone, so we have already seen how the binary number system works on in this video, we are going
+
+00:07.340 --> 00:15.050
+to talk about how the integers are stored inside the memory, OK, so basically of it integers that
+
+00:15.050 --> 00:15.380
+are.
+
+00:17.470 --> 00:23.130
+The first thing that we need to know is that given and indeed it how it is converted into the binary,
+
+00:23.140 --> 00:30.850
+or because we are going to discuss an algorithm that will help us to understand how to get the binary
+
+00:30.850 --> 00:32.300
+representation of any number.
+
+00:32.320 --> 00:39.190
+OK, so we have already seen how do we convert a number from a decimal representation from a binary
+
+00:39.190 --> 00:41.700
+representation into its decimal representation?
+
+00:41.710 --> 00:41.980
+OK.
+
+00:42.490 --> 00:47.050
+So for example, this is in the binary and you wanted to get the.
+
+00:48.290 --> 00:51.900
+Decimal equivalent of this number, so you generate powers of two.
+
+00:51.920 --> 00:58.850
+So you said this is 2.0 to cover one two squared, two cube to perform and to qualify, and then you
+
+00:58.850 --> 01:00.870
+multiply and add the terms.
+
+01:01.030 --> 01:09.860
+OK, one quick way of looking at it is that you can also directly say that I will just add this power,
+
+01:10.040 --> 01:15.770
+this power, this power and this power, because only these powers have corresponding words as one.
+
+01:15.890 --> 01:17.600
+This is to power five 32.
+
+01:17.960 --> 01:18.740
+This is eight.
+
+01:19.010 --> 01:22.800
+This is to power one that is two.
+
+01:22.820 --> 01:24.330
+And this is to facilitate this one.
+
+01:24.350 --> 01:25.820
+OK, so this number is 42.
+
+01:26.750 --> 01:29.680
+But now suppose you want to do the other way around.
+
+01:29.690 --> 01:37.160
+You want to get the binary of the number 42, so you want to convert a number from decimal number system
+
+01:37.580 --> 01:38.240
+to a binary.
+
+01:39.260 --> 01:44.960
+So first, we will look at an algorithm that will help us to generate a binary or a number on CNN.
+
+01:45.260 --> 01:46.760
+OK, so what we are going to?
+
+01:47.900 --> 01:53.720
+We are going to divide this number repeatedly with the number two, and we are going to find out the
+
+01:53.720 --> 01:54.170
+remainder.
+
+01:55.080 --> 01:58.140
+When you divide 43, which do what you get.
+
+01:58.160 --> 01:59.180
+You get 21.
+
+01:59.870 --> 02:03.380
+And what is the remainder to the remainder is one, right?
+
+02:03.440 --> 02:09.290
+So basically, I'm saying that went to 21 plus one is what 43 is right.
+
+02:10.070 --> 02:13.370
+This is the remainder and this is what is the quotient.
+
+02:13.760 --> 02:15.350
+I'm writing these two terms here, right?
+
+02:16.010 --> 02:18.830
+And we will do it until the number.
+
+02:19.190 --> 02:20.940
+And it doesn't become zero.
+
+02:20.960 --> 02:26.960
+OK, so now do unto our 10 as 20 and the remainder as one right?
+
+02:27.620 --> 02:30.950
+And we're going to divide 10s or two into five is 10.
+
+02:31.430 --> 02:34.100
+The remainder is zero to is for.
+
+02:35.290 --> 02:44.200
+And the remainder is one right into one is to the remainder of zero and two and to zero is zero.
+
+02:44.470 --> 02:49.240
+And the remainder is one because we will stop when this number and it becomes zero.
+
+02:49.910 --> 02:53.110
+Now what is the binary representation of this number?
+
+02:53.590 --> 02:56.800
+Basically, if you look carefully, if you go from bottom to top.
+
+02:57.770 --> 03:05.000
+And if you interpret these reminders right from bottom to top directions, that is one zero one zero
+
+03:05.030 --> 03:05.630
+one one.
+
+03:06.690 --> 03:15.930
+This these numbers represent the binary representation of the number 43, OK, so we have got this number,
+
+03:15.990 --> 03:17.590
+which is nothing but 43.
+
+03:17.640 --> 03:17.910
+OK.
+
+03:18.300 --> 03:22.110
+This is the pen and paper method of getting the binary off.
+
+03:23.490 --> 03:24.790
+Any possible integer?
+
+03:24.810 --> 03:32.020
+OK, so this is one way that you can do it, so it is kind of a division method, you can see.
+
+03:32.700 --> 03:37.560
+And we'll also talk about there any shortcut ways of doing it.
+
+03:37.950 --> 03:39.750
+They can beat you one shortcut as well.
+
+03:39.810 --> 03:46.410
+So maybe what you can do for smaller numbers, you can have powers of two lets.
+
+03:46.410 --> 03:53.810
+Let's do par zero to power one square or cube 2.4 2.5 lets it or what you want.
+
+03:53.880 --> 04:00.210
+You can write these powers as one, two, four, eight, 16 and right.
+
+04:00.660 --> 04:01.710
+So I fill these.
+
+04:01.710 --> 04:04.770
+These are better because we don't need to compute it.
+
+04:05.220 --> 04:08.970
+I suppose someone says, give me the number 43.
+
+04:09.090 --> 04:11.430
+OK, so how you're going to do it?
+
+04:12.030 --> 04:15.840
+So you need to make 43 by combining the powers of.
+
+04:16.140 --> 04:19.620
+So first of all, you will look at what is the largest power I can use.
+
+04:20.070 --> 04:22.170
+Obviously, we can use the 32.
+
+04:22.680 --> 04:28.500
+OK, then how much is left so you are tired or category two plus something makes the number 43?
+
+04:29.250 --> 04:31.890
+Of course you are left with the.
+
+04:33.210 --> 04:37.920
+The number 11, right, so you want to make you want to add 11.
+
+04:38.100 --> 04:41.130
+So how do you get 11 to what is the largest power of do?
+
+04:41.730 --> 04:42.840
+That is less than 11?
+
+04:42.930 --> 04:43.530
+That is it.
+
+04:43.830 --> 04:44.130
+OK.
+
+04:44.580 --> 04:46.560
+And then what is left?
+
+04:46.800 --> 04:50.520
+So you have added three is left to what is the largest power of two.
+
+04:50.550 --> 04:51.530
+That is less than three.
+
+04:51.540 --> 04:53.140
+So you take eight.
+
+04:53.520 --> 04:54.330
+How much is left?
+
+04:55.140 --> 04:57.930
+You have already reached to less than what one has left.
+
+04:57.930 --> 05:01.380
+So you make this bet as one, the rest, everything would be zero.
+
+05:01.890 --> 05:04.530
+This actually gives you the number 43.
+
+05:04.800 --> 05:05.100
+OK.
+
+05:05.370 --> 05:06.840
+Let us try out another example.
+
+05:06.840 --> 05:09.160
+For example, you want to generate the number 29.
+
+05:09.270 --> 05:09.570
+OK.
+
+05:10.260 --> 05:10.860
+What you will do.
+
+05:11.190 --> 05:12.330
+Which power you will choose.
+
+05:12.510 --> 05:13.280
+So you will choose.
+
+05:13.290 --> 05:13.920
+16.
+
+05:13.950 --> 05:14.340
+OK.
+
+05:14.670 --> 05:15.570
+You will choose eight.
+
+05:15.810 --> 05:18.240
+OK, if you have reached one before, you will choose four.
+
+05:18.630 --> 05:22.010
+OK, you have reached 28 and you will choose one.
+
+05:22.020 --> 05:23.220
+You have reached 29.
+
+05:23.790 --> 05:26.930
+This number represents 29.
+
+05:26.940 --> 05:33.420
+OK, so that is another way of looking at how do we get the binary off any given?
+
+05:33.600 --> 05:34.290
+I'm like, OK.
+
+05:34.920 --> 05:35.250
+And what?
+
+05:35.250 --> 05:39.120
+We will write the binaries of the numbers from one to 10.
+
+05:39.660 --> 05:44.370
+And we will try to observe one button that would be helpful for us.
+
+05:44.580 --> 05:44.910
+OK.
+
+05:46.120 --> 05:47.560
+Maybe up to 15, we can write.
+
+05:49.450 --> 05:54.760
+OK, so I want to write the binary often, so you can verify this is an adequate one.
+
+05:55.270 --> 05:55.700
+What is it?
+
+05:56.200 --> 05:57.220
+It was one zero.
+
+05:57.250 --> 05:58.990
+What is three one one?
+
+05:59.380 --> 06:01.750
+What is four one double zero?
+
+06:02.110 --> 06:03.880
+What is five one zero one?
+
+06:04.210 --> 06:05.950
+What is six one one zero?
+
+06:06.970 --> 06:08.740
+What is seven oil ones?
+
+06:09.250 --> 06:09.910
+What is it?
+
+06:10.150 --> 06:11.140
+One triple zero.
+
+06:11.680 --> 06:13.900
+What is nine one triple zero one?
+
+06:13.990 --> 06:15.610
+OK, you're adding one to it.
+
+06:16.060 --> 06:20.680
+What is then you're adding two two eight eight plus two, so you will add one zero one zero.
+
+06:20.710 --> 06:21.430
+What is 11?
+
+06:21.890 --> 06:24.790
+Riding one 210 hit what is 12?
+
+06:24.820 --> 06:34.060
+You're adding four to it as well was made by combining eight plus four, so it will be one zero three
+
+06:34.060 --> 06:35.050
+one one zero zero.
+
+06:35.080 --> 06:36.700
+OK, what is 13?
+
+06:36.820 --> 06:37.660
+Add one here.
+
+06:38.470 --> 06:39.310
+What is 14?
+
+06:39.760 --> 06:41.500
+So one one one zero?
+
+06:41.800 --> 06:42.610
+What is 15?
+
+06:42.830 --> 06:45.040
+All went right and what is 16?
+
+06:46.000 --> 06:46.960
+So what 16.
+
+06:47.350 --> 06:50.370
+You you need actually more than four, but you need five bits.
+
+06:50.950 --> 06:56.440
+It would be one, followed by four zero three eight one two four eight six.
+
+06:56.600 --> 06:56.920
+Yes.
+
+06:57.850 --> 06:58.270
+What?
+
+06:58.570 --> 07:01.030
+What is the pattern that you are looking at?
+
+07:01.630 --> 07:05.290
+Basically, as the number is increasing, right?
+
+07:06.590 --> 07:08.120
+As the number is increasing.
+
+07:10.260 --> 07:16.500
+The requirement of boots is also increasing the requirement of boats.
+
+07:18.180 --> 07:24.000
+Is also increasing, so if you need more more space, right, if you need to store a larger number,
+
+07:24.000 --> 07:29.430
+it will required more, but it's basically the large numbers required.
+
+07:29.700 --> 07:30.310
+Woodward's.
+
+07:30.750 --> 07:38.310
+OK, now it is to think in terms of your program, what is going to happen to suppose you created a
+
+07:38.310 --> 07:42.500
+bucket index and you stored the number in it?
+
+07:42.540 --> 07:42.870
+OK.
+
+07:43.710 --> 07:50.850
+And later on you thought, No, I want to make this say, seven hours, maybe seven to eight or seven.
+
+07:50.910 --> 07:56.850
+We know it only requires three bits, but 72 might require more number of books.
+
+07:56.880 --> 07:57.150
+OK.
+
+07:57.990 --> 07:59.280
+But on the hardware level?
+
+07:59.460 --> 07:59.760
+Right.
+
+08:00.330 --> 08:05.400
+And if we are storing some data, except maybe we are storing X there, we are storing some way.
+
+08:05.400 --> 08:07.260
+Right here we are storing Z.
+
+08:07.680 --> 08:13.980
+If you were storing a little tribute and when we updated Overvalued 72, maybe we acquired six bits.
+
+08:14.040 --> 08:14.490
+Let's see.
+
+08:15.510 --> 08:15.810
+OK.
+
+08:16.320 --> 08:17.820
+So we we need tribute.
+
+08:17.820 --> 08:19.580
+But maybe now we require six bits.
+
+08:20.590 --> 08:21.990
+So is it possible that?
+
+08:23.420 --> 08:25.070
+We dynamically expandable storage.
+
+08:26.260 --> 08:29.590
+The answer is, no, we cannot expand the storage because.
+
+08:30.640 --> 08:32.080
+The memory might be occupied, right?
+
+08:32.460 --> 08:33.430
+So we cannot do it.
+
+08:33.970 --> 08:35.770
+So how do we handle this situation?
+
+08:36.370 --> 08:45.220
+This is the reason that when the compiler allocates buckets for integers, these buckets have fixed
+
+08:45.220 --> 08:45.700
+sizes.
+
+08:45.710 --> 08:46.000
+OK?
+
+08:46.690 --> 08:48.100
+These buckets are fixed.
+
+08:48.100 --> 08:48.550
+Say this.
+
+08:48.910 --> 08:57.100
+So by default, the size of it in most systems, this is going to be four bytes or bytes means 32 bits.
+
+08:57.820 --> 09:02.980
+That means you are given a bucket that can hold up to 32 bits.
+
+09:03.400 --> 09:03.700
+OK.
+
+09:04.420 --> 09:05.410
+And if you're required.
+
+09:07.570 --> 09:13.810
+Something larger than this, and there is a concept of a data type modified which gives you a bigger
+
+09:13.810 --> 09:19.810
+bucket, which is of 64 bit, which is of 64 bit by default.
+
+09:20.230 --> 09:22.850
+Indeed, it would be stored as a 32 bit numbers.
+
+09:22.850 --> 09:27.070
+So even if you're storing two, it would be stored as zero zero zero one zero.
+
+09:27.070 --> 09:30.880
+So there would be a lot of zeros followed by one and you.
+
+09:31.270 --> 09:33.130
+This is how the number two is getting stored.
+
+09:35.290 --> 09:42.030
+So that is why understanding the binary was little important to tell you that the larger is the indeed
+
+09:42.070 --> 09:49.150
+it more say that it is going to take on the dog in more detail about this in the next lecture.

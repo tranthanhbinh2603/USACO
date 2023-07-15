@@ -1,0 +1,174 @@
+0
+1
+00:00:01,350 --> 00:00:07,110
+Let's solve the second homework set, we would like to find the maximum of 10 values, we started something
+1
+
+2
+00:00:07,110 --> 00:00:12,360
+that should tell you how to do that with only two variables. The idea is simple.
+2
+
+3
+00:00:13,110 --> 00:00:17,580
+We mainly need to keep minimizing over the same value.
+3
+
+4
+00:00:17,610 --> 00:00:19,460
+So let's start here.
+4
+
+5
+00:00:19,890 --> 00:00:22,200
+We have to read ten numbers.
+5
+
+6
+00:00:22,210 --> 00:00:28,290
+I started by reading in the result the first value and remember from the previous homework, the
+6
+
+7
+00:00:28,290 --> 00:00:30,340
+initialization of result was a bit tricky.
+7
+
+8
+00:00:30,540 --> 00:00:36,040
+So here to avoid the initialization at all, I starting by reading the first number in the results directly.
+8
+
+9
+00:00:36,600 --> 00:00:39,420
+Now we have other nine values to read.
+9
+
+10
+00:00:39,750 --> 00:00:43,680
+So what I'm doing here is just I keep minimize all of them, read the number.
+10
+
+11
+00:00:43,860 --> 00:00:49,680
+If result is less than it, maximise and so on and so on
+11
+
+12
+00:00:49,680 --> 00:00:50,550
+and so on and so on.
+12
+
+13
+00:00:52,530 --> 00:00:57,030
+By the way, you might write it like (num > result), this is OK.
+13
+
+14
+00:00:57,030 --> 00:01:02,280
+, but observer here, I like to write it like the result is less number because I just change here
+14
+
+15
+00:01:02,520 --> 00:01:03,500
+result equal number.
+15
+
+16
+00:01:03,500 --> 00:01:06,950
+So like a more, more synchronized code.
+16
+
+17
+00:01:07,850 --> 00:01:12,470
+Anyway, this is mainly the idea how to make two variable, take one of them and keep maximizing among
+17
+
+18
+00:01:12,510 --> 00:01:13,550
+all of the other variables.
+18
+
+19
+00:01:14,370 --> 00:01:20,940
+The other case is that you are given a variable number of variables, which
+19
+
+20
+00:01:20,940 --> 00:01:23,220
+is N here equal ten. Later,
+20
+
+21
+00:01:23,220 --> 00:01:26,760
+We'll learn about the loops and this should be easier problem.
+21
+
+22
+00:01:26,760 --> 00:01:30,120
+But to solve it here, we are going to make a simple trick.
+22
+
+23
+00:01:31,650 --> 00:01:34,020
+We are going to check from a step to another.
+23
+
+24
+00:01:34,200 --> 00:01:37,710
+We'll read account and initialize the result.
+24
+
+25
+00:01:37,980 --> 00:01:40,160
+Remove a count, let's say we read count with five.
+25
+
+26
+00:01:40,170 --> 00:01:41,340
+So we read the first number.
+26
+
+27
+00:01:41,340 --> 00:01:43,380
+Then now we have count equal one.
+27
+
+28
+00:01:43,380 --> 00:01:50,300
+We have four numbers, I am duplicating here nine if conditions because I know we have a maximum of ten,
+28
+
+29
+00:01:50,550 --> 00:01:51,360
+ten inputs.
+29
+
+30
+00:01:51,630 --> 00:01:58,380
+So with every one of them, I'm checking if there are more inputs, remove the input, read it, do the maximization
+30
+
+31
+00:01:58,380 --> 00:01:58,980
+and so on.
+31
+
+32
+00:01:59,790 --> 00:02:04,680
+The code definitely isn't well structured just for visualization purpose.
+32
+
+33
+00:02:04,680 --> 00:02:07,170
+(ctrl + shift + f) in eclipse will make
+33
+
+34
+00:02:07,170 --> 00:02:09,690
+All of them well organized.
+34
+
+35
+00:02:10,470 --> 00:02:11,010
+That's all.

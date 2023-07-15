@@ -1,0 +1,104 @@
+0
+1
+00:00:01,110 --> 00:00:07,080
+In this practice, we just would like to show how our library system can be rewritten in an easier
+1
+
+2
+00:00:07,080 --> 00:00:08,940
+way when it comes to the STL.
+2
+
+3
+00:00:09,510 --> 00:00:15,030
+So remember, the user class has previously an array of books,
+3
+
+4
+00:00:15,420 --> 00:00:20,880
+when we would like to return to the book ID, we need to verify where is the book ID and then we need
+4
+
+5
+00:00:20,910 --> 00:00:23,340
+to make a shifting in the array to remove something.
+5
+
+6
+00:00:23,730 --> 00:00:29,280
+If you would like to borrow, you have to iterate over all the array to make sure that it exists
+6
+
+7
+00:00:29,280 --> 00:00:29,700
+or not.
+7
+
+8
+00:00:30,570 --> 00:00:38,040
+Now, if you'd like to move using the set using the STL, you can use the set with the user.
+8
+
+9
+00:00:38,040 --> 00:00:41,280
+It would easily allow you to remove and sort the books.
+9
+
+10
+00:00:41,550 --> 00:00:42,900
+So that's it.
+10
+
+11
+00:00:43,080 --> 00:00:50,610
+If you would like to borrow a book you just inserted in the array and if you would like to return a
+11
+
+12
+00:00:50,610 --> 00:00:58,090
+copy, you find where is it in the array and then if it exists, you just remove it,
+12
+
+13
+00:00:58,110 --> 00:00:59,430
+you don't care now about shifting,
+13
+
+14
+00:00:59,430 --> 00:01:00,390
+It will be done for you.
+14
+
+15
+00:01:00,720 --> 00:01:05,940
+If you would like to know if the book is borrowed, you find it and double-check if the Iterator isn't
+15
+
+16
+00:01:06,060 --> 00:01:11,670
+null. If you'd like to print, you just iterate directly and print it. From the library system perspective,
+16
+
+17
+00:01:11,670 --> 00:01:16,390
+you can switch the books and users to be a couple of vectors, you can sort now using the beginning
+17
+
+18
+00:01:16,400 --> 00:01:22,170
+and dot end, and you can use the range-based for loops to iterate and print the users.
+18
+
+19
+00:01:22,980 --> 00:01:23,430
+That's it.
+19
+
+20
+00:01:23,580 --> 00:01:30,310
+As you see, there is some code reduction that happened, and the less code you do the fewer bugs
+20
+
+21
+00:01:30,330 --> 00:01:32,330
+you would introduce to your code. That's it.

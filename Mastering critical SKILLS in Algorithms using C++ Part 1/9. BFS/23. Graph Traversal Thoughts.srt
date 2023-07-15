@@ -1,0 +1,1183 @@
+1
+00:00:01,000 --> 00:00:08,860
+So we learned a lot of tricks, and it might be A. If you try it by yourself to always summarize things
+
+2
+00:00:08,860 --> 00:00:11,920
+like when you learn a lot of tricks from different angles.
+
+3
+00:00:12,220 --> 00:00:14,050
+Don't just let them float in your mind.
+
+4
+00:00:14,060 --> 00:00:15,250
+Try to make somebody.
+
+5
+00:00:15,580 --> 00:00:20,920
+So let me give you one good summary for the things that we're learning so that you can review it from
+
+6
+00:00:20,920 --> 00:00:21,640
+time to time.
+
+7
+00:00:23,530 --> 00:00:30,700
+Now, first of all, graph traversal is all about you have any nodes in some graph and you would like
+
+8
+00:00:30,700 --> 00:00:31,360
+to visit.
+
+9
+00:00:31,360 --> 00:00:34,090
+So the word traversal is mainly about visiting.
+
+10
+00:00:34,600 --> 00:00:39,910
+We learned the two main algorithms that we can use, the four that the depth first search and the bridge.
+
+11
+00:00:39,910 --> 00:00:46,090
+First, we can see that there are a lot of applications for both of them, like reachability, finding
+
+12
+00:00:46,090 --> 00:00:52,870
+connected components, detecting bicycles by birthright test and a lot of things in real life scenarios.
+
+13
+00:00:52,870 --> 00:00:58,420
+You can see that in different ways, like web crawling, for example, you have a beach and you have
+
+14
+00:00:58,420 --> 00:01:02,830
+another beach and you have another beach, and you would like to move from a beach to another based
+
+15
+00:01:02,830 --> 00:01:03,430
+on the links.
+
+16
+00:01:03,760 --> 00:01:08,210
+This is simply traversing for the links in garbage collection and social network.
+
+17
+00:01:08,230 --> 00:01:15,640
+I have my profile and your profile, and we have a beach and we have a boost and we are navigating between
+
+18
+00:01:15,640 --> 00:01:16,270
+all of them.
+
+19
+00:01:16,690 --> 00:01:23,530
+So this algorithms can be translated to real life applications that are based on connections.
+
+20
+00:01:25,610 --> 00:01:31,490
+When we think about the defense and defense we can think of from the flu perspective dips, the first
+
+21
+00:01:31,490 --> 00:01:35,270
+surge is representing the phenomena of going deeper and deeper.
+
+22
+00:01:35,540 --> 00:01:40,730
+The numbers here doesn't represent the new numbers, they represent the acceleration order.
+
+23
+00:01:41,090 --> 00:01:45,440
+So this one will be explored the first than this one than this one than this one.
+
+24
+00:01:46,010 --> 00:01:51,980
+Then the decision go back than this one because you can go back than this one and so on May 1st.
+
+25
+00:01:51,980 --> 00:01:54,290
+On the other side, follow level by level.
+
+26
+00:01:54,440 --> 00:01:58,940
+So we finish here, then here, then here, then here, then here.
+
+27
+00:01:59,870 --> 00:02:00,680
+And so on.
+
+28
+00:02:01,160 --> 00:02:06,650
+So this actually do like real life phenomena as we give examples before.
+
+29
+00:02:09,210 --> 00:02:15,720
+When you think about the properties, you will notice the following like defense, BFC can be used in
+
+30
+00:02:15,720 --> 00:02:21,090
+all of the reversal things like connected component and all of that, but there is one great advantage
+
+31
+00:02:21,090 --> 00:02:28,620
+for this device in an efficient way can be used to find the shortest path is in unweighted graphs.
+
+32
+00:02:28,920 --> 00:02:36,450
+So we learned that given the first is finding the nodes level by level, it means we can find the shortest
+
+33
+00:02:36,450 --> 00:02:36,720
+Abarth.
+
+34
+00:02:37,110 --> 00:02:38,790
+Can DFS find the shortest Abarth?
+
+35
+00:02:38,940 --> 00:02:39,420
+Yes.
+
+36
+00:02:39,840 --> 00:02:47,400
+But you will have to wait till you navigate the wall graph, which is less efficient than the office.
+
+37
+00:02:48,330 --> 00:02:49,530
+Now, don't get me wrong.
+
+38
+00:02:49,770 --> 00:02:53,820
+Don't think that this is is way better now than the office.
+
+39
+00:02:53,850 --> 00:02:55,140
+This isn't the case.
+
+40
+00:02:55,620 --> 00:03:03,450
+In fact, people discovered many Buddha abilities for DFS that billy a key role in many algorithms.
+
+41
+00:03:03,690 --> 00:03:05,430
+Let me give you some names for that.
+
+42
+00:03:05,850 --> 00:03:12,630
+No, the time is Tan Ming edgy classification, the biological sword, strongly connected components,
+
+43
+00:03:13,110 --> 00:03:17,610
+articulation edges, articulation nodes, Euler tools, and many.
+
+44
+00:03:17,610 --> 00:03:22,920
+Many of the algorithms observed that I probably will not cover most of these algorithms.
+
+45
+00:03:23,280 --> 00:03:30,540
+I plan to cover topological suit mainly, uh, not not all of this stuff, at least not in virtual and
+
+46
+00:03:30,540 --> 00:03:31,350
+not in M.2.
+
+47
+00:03:31,560 --> 00:03:33,960
+I'm not sure if there will be, but the theory of this course or not.
+
+48
+00:03:35,010 --> 00:03:38,160
+Now, should you go ahead and cover these algorithms?
+
+49
+00:03:38,310 --> 00:03:39,240
+The answer is no.
+
+50
+00:03:39,840 --> 00:03:44,880
+Is it added value to learning these algorithms out of graph theory topics are really fun and really
+
+51
+00:03:44,880 --> 00:03:45,840
+are very educated.
+
+52
+00:03:46,490 --> 00:03:51,990
+Um, in terms of real life implications, the strongly connected components may be the one that you
+
+53
+00:03:51,990 --> 00:03:53,060
+can see much more in.
+
+54
+00:03:53,070 --> 00:03:58,470
+Real life, oil output is very limited in real life applications.
+
+55
+00:03:59,220 --> 00:04:02,090
+Articulation edges is very nice, but there's also limitation.
+
+56
+00:04:02,370 --> 00:04:07,620
+So if you have to learn something among all of this maybe strongly connected component B be the one
+
+57
+00:04:07,620 --> 00:04:08,010
+to learn.
+
+58
+00:04:08,910 --> 00:04:14,010
+I'm saying that so that if you are following up on algorithm scores and you see this topic so you don't
+
+59
+00:04:14,010 --> 00:04:18,800
+get choked, this are the topics that I intentionally dropped, at least from part one.
+
+60
+00:04:18,840 --> 00:04:19,320
+But to.
+
+61
+00:04:20,600 --> 00:04:25,550
+And you can find a lot of details about that in the sellers book book.
+
+62
+00:04:26,270 --> 00:04:26,870
+Let's move.
+
+63
+00:04:27,380 --> 00:04:30,340
+So we learned that the office actually is way stronger than before.
+
+64
+00:04:31,520 --> 00:04:35,960
+The office is a few magical, recursive lines of goods.
+
+65
+00:04:36,530 --> 00:04:39,500
+We learned that we must use Vista Array.
+
+66
+00:04:39,920 --> 00:04:45,800
+The only exception is if you are using trees, observe that for dogs, you need visited arrays in a
+
+67
+00:04:45,800 --> 00:04:51,620
+tree in a graph like one, two, three and then one.
+
+68
+00:04:52,930 --> 00:04:53,470
+Or.
+
+69
+00:04:55,060 --> 00:05:00,970
+Three, you see, three is the vista twice if there is a huge tree here and you do not have visited
+
+70
+00:05:00,970 --> 00:05:03,190
+Ray, two would explore all of that.
+
+71
+00:05:03,430 --> 00:05:05,170
+Then Ford will explore all of that.
+
+72
+00:05:05,440 --> 00:05:07,040
+Well, it was visited the DAG.
+
+73
+00:05:07,180 --> 00:05:08,410
+You will not go here.
+
+74
+00:05:08,410 --> 00:05:16,600
+OK, so the only time and the only case where you do not need visited Ray is only the tree data structure.
+
+75
+00:05:17,020 --> 00:05:22,950
+By avoiding going back to your parent, remember that the defense is using a built in stack.
+
+76
+00:05:23,290 --> 00:05:27,760
+But remember, the built in the stack is usually small, so you have to be careful with their face when
+
+77
+00:05:27,760 --> 00:05:33,040
+it comes to denser graphs in it that you are in competitive programming and it seems that you have runtime
+
+78
+00:05:33,040 --> 00:05:33,400
+error.
+
+79
+00:05:33,670 --> 00:05:36,220
+Probably the device went to very deep.
+
+80
+00:05:36,760 --> 00:05:41,380
+The good news we still can write an iterative version of that defense.
+
+81
+00:05:41,380 --> 00:05:47,020
+Using our internet is that the code will not be intuitive enough, but in a way it's will be a face.
+
+82
+00:05:47,020 --> 00:05:51,930
+On the other side is a bit longer code that is iterative and using our belt.
+
+83
+00:05:52,670 --> 00:05:53,440
+To the structure.
+
+84
+00:05:55,520 --> 00:06:00,740
+We can use length to rate on a just say if it is visited or not, we can even use it to know the shortest
+
+85
+00:06:00,740 --> 00:06:01,600
+the birth of A..
+
+86
+00:06:02,030 --> 00:06:08,570
+We learned that both of the algorithms are using all those v for in the time and all the in the memory.
+
+87
+00:06:08,900 --> 00:06:10,970
+So I guess you are pretty good.
+
+88
+00:06:10,970 --> 00:06:12,320
+No implementation details.
+
+89
+00:06:13,070 --> 00:06:14,780
+Some thoughts on the nature of the algorithm.
+
+90
+00:06:15,050 --> 00:06:21,380
+The the device can be on a weighted or unweighted graph, but the context will decide what can we do
+
+91
+00:06:21,380 --> 00:06:21,920
+exactly?
+
+92
+00:06:22,640 --> 00:06:26,180
+The most popular usages would be reachability connected components.
+
+93
+00:06:26,180 --> 00:06:33,320
+Finding a in some cases now notes the following device is one to end the relationship you will see.
+
+94
+00:06:33,320 --> 00:06:37,220
+This 1mm notation, in course, is like a database course.
+
+95
+00:06:37,670 --> 00:06:39,710
+One time means one to mean the relationship.
+
+96
+00:06:40,010 --> 00:06:46,340
+So here in this context, we mean we have one node as a source, but we have multi destination nodes.
+
+97
+00:06:47,600 --> 00:06:52,940
+As you know, if I would like to add this to four reachability, I can run the FSA from one and then
+
+98
+00:06:52,940 --> 00:06:54,290
+explore all of the nodes.
+
+99
+00:06:54,470 --> 00:06:57,170
+So we say the difference is one in the relationship.
+
+100
+00:06:58,040 --> 00:07:02,870
+Now, what if I would like to know if all of the nodes in the graph can go to one or not, which is
+
+101
+00:07:02,870 --> 00:07:03,620
+always it now?
+
+102
+00:07:04,310 --> 00:07:08,390
+No, the problem is the office is one two m, not m one.
+
+103
+00:07:08,930 --> 00:07:14,660
+However, as we learned in one of the problems by just the reverse thinking, we can do the opposite.
+
+104
+00:07:14,960 --> 00:07:19,880
+So now if you try to reverse every edge in the graph, like, let's say here, I would like to know
+
+105
+00:07:20,150 --> 00:07:23,180
+if every node can go to zero or not.
+
+106
+00:07:23,450 --> 00:07:24,710
+So this is a graph.
+
+107
+00:07:25,790 --> 00:07:28,820
+I have to run the first from every node now, right?
+
+108
+00:07:30,550 --> 00:07:38,480
+So now the observation is, if you reverted this graph, so it's now zero, one, two and three reverse
+
+109
+00:07:38,500 --> 00:07:44,500
+at the edges and with only a single differs from zero, you got their nodes and you got the question.
+
+110
+00:07:45,010 --> 00:07:50,860
+So with a reversal track, we can also handle the multi source single distillation problem.
+
+111
+00:07:51,370 --> 00:07:58,600
+So insanity defense is one two m and to emit metal one, which is logically mean also to want one.
+
+112
+00:07:59,290 --> 00:08:05,170
+But it isn't M2M, which means you can start to use Multi Source two to target multi distribution.
+
+113
+00:08:06,630 --> 00:08:07,850
+Uh.
+
+114
+00:08:09,390 --> 00:08:11,110
+Looks like a big clean.
+
+115
+00:08:11,870 --> 00:08:13,770
+We me remember.
+
+116
+00:08:14,340 --> 00:08:17,000
+Uh, uh.
+
+117
+00:08:17,600 --> 00:08:18,860
+OK, let me tell you a trick.
+
+118
+00:08:18,870 --> 00:08:21,240
+How to make the first multi source multi destination.
+
+119
+00:08:22,010 --> 00:08:24,570
+Um, let's say you have.
+
+120
+00:08:26,020 --> 00:08:28,840
+Two three nodes here and two roads are here.
+
+121
+00:08:28,960 --> 00:08:29,350
+OK.
+
+122
+00:08:32,640 --> 00:08:33,780
+You would like to know.
+
+123
+00:08:34,230 --> 00:08:35,310
+You would like to know.
+
+124
+00:08:35,760 --> 00:08:38,520
+Zero one two three four.
+
+125
+00:08:38,940 --> 00:08:45,450
+You would start from not zero, one and two and you would like to get you would like to get all of the
+
+126
+00:08:45,450 --> 00:08:49,620
+nodes that are reachable by zero, one and two.
+
+127
+00:08:50,160 --> 00:08:58,650
+So you can run the first two from zero to market three and then from one, it doesn't go anywhere new
+
+128
+00:08:58,920 --> 00:08:59,910
+to mark four.
+
+129
+00:08:59,940 --> 00:09:06,210
+So in this way, we are treated on every node to run the FSA from it and the array.
+
+130
+00:09:06,210 --> 00:09:07,740
+Would we be efficient?
+
+131
+00:09:07,890 --> 00:09:10,830
+This is if we algorithm there is a nice track.
+
+132
+00:09:10,830 --> 00:09:15,240
+If you would like to run only a single device, create a new node extra node.
+
+133
+00:09:15,240 --> 00:09:21,000
+Let's call it node number five connected with the nodes that you would like to start to form them like
+
+134
+00:09:21,000 --> 00:09:21,780
+zero, one and two.
+
+135
+00:09:22,020 --> 00:09:26,460
+Now run the office only from five five will get all of these nodes and out of this nodes.
+
+136
+00:09:26,700 --> 00:09:27,750
+I hope you good the trick.
+
+137
+00:09:28,800 --> 00:09:35,970
+If you learned the maximum flow topic, you will, you will see this trick a lot in a way, in a formal
+
+138
+00:09:35,970 --> 00:09:36,290
+way.
+
+139
+00:09:36,300 --> 00:09:41,730
+We can say that mainly the difference is one to m and limit to one a relationship.
+
+140
+00:09:42,300 --> 00:09:43,650
+Um, reverse.
+
+141
+00:09:43,650 --> 00:09:48,630
+The thinking in general is very useful technique, although it doesn't appear that much.
+
+142
+00:09:49,170 --> 00:09:54,510
+Another case remember in the Atlantic Water War problem, we did the first from the bone that is like
+
+143
+00:09:54,510 --> 00:09:55,260
+in the problem.
+
+144
+00:09:55,590 --> 00:09:59,220
+It asked us if the nodes can reach the boundary or not.
+
+145
+00:09:59,430 --> 00:10:04,290
+Then we changed the problem and said, Does the boundaries, Richard, are nodes or not?
+
+146
+00:10:04,650 --> 00:10:07,530
+So this kind of changes sometimes make the problem much easier.
+
+147
+00:10:07,890 --> 00:10:09,420
+But there is a common mistake here.
+
+148
+00:10:09,660 --> 00:10:15,120
+You should observe if reversing the problem definition should have an effect on the problem, text or
+
+149
+00:10:15,120 --> 00:10:18,120
+not, like maybe it is, and b now is greater than B.
+
+150
+00:10:18,330 --> 00:10:19,620
+So be careful about that.
+
+151
+00:10:21,480 --> 00:10:22,860
+This variable isn't the problem.
+
+152
+00:10:23,900 --> 00:10:30,410
+Now moving to the beef, the beef, this is mainly for unweighted graph, but it can also work on weighted
+
+153
+00:10:30,410 --> 00:10:35,030
+graphs such that it is going to send to value like, let's say all of the graph has value seven.
+
+154
+00:10:35,840 --> 00:10:39,530
+So practically speaking, it doesn't matter the value.
+
+155
+00:10:40,630 --> 00:10:45,690
+Doesn't change anything, so it's either unwanted graph, which is the formal definition or weighted
+
+156
+00:10:45,690 --> 00:10:46,950
+with the coolest tend to value.
+
+157
+00:10:48,050 --> 00:10:53,390
+We learned how to code smartly the level by level, and this is a smart contract that you should always
+
+158
+00:10:53,390 --> 00:10:53,900
+remember.
+
+159
+00:10:55,810 --> 00:11:00,460
+And also, I told you that there are two ways to implement their beliefs.
+
+160
+00:11:00,670 --> 00:11:06,580
+Some people verify early the starting Newt and some people doesn't in our could you have to verify early
+
+161
+00:11:06,790 --> 00:11:09,790
+if you have any condition on the starting Newt?
+
+162
+00:11:10,000 --> 00:11:12,730
+You have to verify it first as we learn it in the problems.
+
+163
+00:11:13,600 --> 00:11:20,440
+One of the key application for the first really is the shortest the birth you will actually notice Bible
+
+164
+00:11:20,800 --> 00:11:23,170
+use, say, in competitive programming.
+
+165
+00:11:23,410 --> 00:11:28,420
+They use the first most of the time, but when it comes to shortest to bath and unwitting graphs, they
+
+166
+00:11:28,420 --> 00:11:31,720
+use the office and we met a very nice application for that.
+
+167
+00:11:31,930 --> 00:11:37,990
+The three diameter application we learned there are three variants in, there are.
+
+168
+00:11:40,220 --> 00:11:45,260
+Actually, for very sorry for variance for BFC, we can do the one to one.
+
+169
+00:11:45,740 --> 00:11:49,190
+We can do the one too many, which is natural and classical.
+
+170
+00:11:49,490 --> 00:11:55,100
+We learned that to do the emitter one, we would all of the image in the queue and run it.
+
+171
+00:11:55,370 --> 00:12:01,820
+And we learned also that we can even make M2M by creating all of this node in the queue and all of this
+
+172
+00:12:01,820 --> 00:12:02,660
+nodes in the queue.
+
+173
+00:12:02,930 --> 00:12:03,890
+Like, let's say, here.
+
+174
+00:12:08,780 --> 00:12:11,010
+Let's say that this are your initial ones.
+
+175
+00:12:11,030 --> 00:12:13,160
+This are your final ones.
+
+176
+00:12:13,310 --> 00:12:15,470
+You can watch all of this for news in the queue.
+
+177
+00:12:15,680 --> 00:12:19,730
+Then this one in level one, this one would be covered at level two.
+
+178
+00:12:19,730 --> 00:12:21,470
+This one would be covered.
+
+179
+00:12:21,740 --> 00:12:24,980
+So in two double steps, we reach it from here to here.
+
+180
+00:12:25,730 --> 00:12:31,850
+So this is merely the variance that we studied, observed that there is a variant that scored zero one
+
+181
+00:12:31,850 --> 00:12:32,600
+before this.
+
+182
+00:12:34,000 --> 00:12:39,310
+The zero won't be a first means that a graph has values which are either zero or one.
+
+183
+00:12:40,030 --> 00:12:44,620
+But this be this variant can be easily understood when you study that extra algorithm.
+
+184
+00:12:44,620 --> 00:12:45,790
+Before that, it's very hard.
+
+185
+00:12:45,790 --> 00:12:49,420
+You would you would be bothered with the correctness proof of it.
+
+186
+00:12:49,840 --> 00:12:53,860
+So this many are the different things about their beliefs.
+
+187
+00:12:57,560 --> 00:13:02,420
+The graph it's important to remember something about revisiting the news, I would like to make it more
+
+188
+00:13:02,420 --> 00:13:07,840
+explicit here if you are in undirected graphs, then you can revisit the nodes.
+
+189
+00:13:08,210 --> 00:13:10,190
+But there are actually two cases here.
+
+190
+00:13:11,390 --> 00:13:15,590
+The first the case, if you are at, say, zero one two three four.
+
+191
+00:13:15,920 --> 00:13:16,940
+No, this is a cycle.
+
+192
+00:13:16,940 --> 00:13:19,520
+So we are wasting back our initial load.
+
+193
+00:13:19,910 --> 00:13:24,890
+The second case, which I call a fixed cycle when you go from zero to one and try to use the same edge
+
+194
+00:13:24,890 --> 00:13:26,810
+to go to one to zero, this is a fake.
+
+195
+00:13:28,100 --> 00:13:32,990
+The second case in the erected graphs and directly graphs that there are no fixed hikers, if you missed
+
+196
+00:13:32,990 --> 00:13:34,550
+if you missed the note, then you have it.
+
+197
+00:13:34,880 --> 00:13:38,540
+If zero one have two edges in a way, then it's any way given.
+
+198
+00:13:38,540 --> 00:13:39,730
+So this is fake.
+
+199
+00:13:39,770 --> 00:13:43,910
+And in that as a given example, you can revisit the nude.
+
+200
+00:13:44,180 --> 00:13:48,230
+So although in there there are no cycles, but you still can revisit the nude.
+
+201
+00:13:48,380 --> 00:13:51,080
+So you must use a listed array for that.
+
+202
+00:13:51,440 --> 00:13:59,540
+The only case where you don't need their vested rape is their trees, but be careful them from their
+
+203
+00:13:59,540 --> 00:14:00,260
+fixed cycle.
+
+204
+00:14:01,100 --> 00:14:06,630
+We look at the graph can be in any domain like maybe a problem based on Emily's management would enter.
+
+205
+00:14:06,650 --> 00:14:10,730
+The graph can be owner to degrade within a different ways to get the neighbors.
+
+206
+00:14:10,730 --> 00:14:17,570
+You should be good in that most of the time we can see that graph values are mainly on edges, but also
+
+207
+00:14:17,570 --> 00:14:21,440
+we met cases where the nodes themselves have also values.
+
+208
+00:14:24,290 --> 00:14:32,210
+Now, the reductions we met several problems, remember you were lucky because you see a problem.
+
+209
+00:14:33,360 --> 00:14:35,280
+That doesn't seem a grave problem.
+
+210
+00:14:35,490 --> 00:14:37,260
+But I put it in grave problems.
+
+211
+00:14:37,380 --> 00:14:42,150
+So you have 50 percent the hint that this problem would be mad to a graph.
+
+212
+00:14:42,720 --> 00:14:48,450
+In reality, you will not even know that you will read a problem about race and think it's a race.
+
+213
+00:14:48,450 --> 00:14:51,450
+And there is nothing that say this is a graph problem.
+
+214
+00:14:51,600 --> 00:14:53,280
+So this would be really tricky for you.
+
+215
+00:14:53,790 --> 00:14:57,090
+So, but anyway, we are an educational quiz fees.
+
+216
+00:14:57,690 --> 00:15:04,620
+So the key to figure that this is a graph is to interpret what are the nodes and then what are the ages?
+
+217
+00:15:05,280 --> 00:15:06,090
+The good news.
+
+218
+00:15:06,360 --> 00:15:12,310
+Most of the time we can see many problems are based on numbers, and you can see that a number or an
+
+219
+00:15:12,630 --> 00:15:16,050
+index is actually the node we learned in the lecture.
+
+220
+00:15:16,050 --> 00:15:21,960
+The case in the fractions we learned about the consecutive sequences in the practice and so on.
+
+221
+00:15:23,190 --> 00:15:25,010
+We also learned about the strings.
+
+222
+00:15:25,020 --> 00:15:27,120
+We can see that a string can be A..
+
+223
+00:15:27,660 --> 00:15:29,720
+And we learned about this operation thing.
+
+224
+00:15:29,730 --> 00:15:34,830
+When you have an operation that you apply on a string and get you a new string, then it just string
+
+225
+00:15:34,830 --> 00:15:39,120
+is a node and the operation create an edge for us.
+
+226
+00:15:39,840 --> 00:15:46,710
+And now let's generalize that whenever you have a state could be a number a string, five strings,
+
+227
+00:15:46,890 --> 00:15:53,580
+a vector object and an operation that convert it to another thing like from a stranger to another string.
+
+228
+00:15:53,910 --> 00:15:57,150
+Then this is another, and this is an so we call this as a state.
+
+229
+00:15:57,780 --> 00:16:04,710
+So this is this is how you generalize your ideas when you see this kind of relationships, a mapping
+
+230
+00:16:04,710 --> 00:16:06,060
+from social destination.
+
+231
+00:16:07,180 --> 00:16:08,980
+And this is what I call a state graph.
+
+232
+00:16:09,290 --> 00:16:12,820
+The key the key is that graph here is like a state diagram in software engineering.
+
+233
+00:16:13,150 --> 00:16:16,930
+It's the graph where it's, you know, it is a state, a state can be anything.
+
+234
+00:16:17,200 --> 00:16:20,370
+Maybe the state is like seasoned food is a bulb ID.
+
+235
+00:16:20,980 --> 00:16:29,530
+And on and off for this, it may be the state is a three strings, an integer like a b, c, d, d,
+
+236
+00:16:29,770 --> 00:16:31,540
+x y and 17.
+
+237
+00:16:31,870 --> 00:16:40,960
+This is you to state, and there is another state that has x x x y y y a b and twin in one or two other
+
+238
+00:16:40,960 --> 00:16:41,350
+than one.
+
+239
+00:16:41,600 --> 00:16:42,460
+These another state.
+
+240
+00:16:42,640 --> 00:16:44,170
+There might be edges between them.
+
+241
+00:16:44,620 --> 00:16:48,640
+I'm trying to to push you to think in a state in a very generic way.
+
+242
+00:16:49,090 --> 00:16:51,430
+The vector of the values might be a state.
+
+243
+00:16:52,240 --> 00:16:59,620
+So now what you really have to be careful about it is your vista set will depend on the total number
+
+244
+00:16:59,620 --> 00:17:00,640
+of different states.
+
+245
+00:17:01,000 --> 00:17:06,070
+So the first thing when you decide to approach it as a state is the problem is to think about the total
+
+246
+00:17:06,070 --> 00:17:06,940
+number of states.
+
+247
+00:17:07,330 --> 00:17:13,480
+Imagine, for example, each state is a string consisting of exactly five letters lowercase letters.
+
+248
+00:17:13,990 --> 00:17:17,380
+Now, every every lowercase letter is 26 choices.
+
+249
+00:17:17,740 --> 00:17:19,990
+So we have 26 I 26 the blah blah blah.
+
+250
+00:17:19,990 --> 00:17:26,890
+Five times this is twenty six times about two the power five, which which is 11 million states.
+
+251
+00:17:27,760 --> 00:17:29,410
+The good news is we didn't.
+
+252
+00:17:29,440 --> 00:17:31,090
+We don't usually traverse all of them.
+
+253
+00:17:31,090 --> 00:17:33,340
+We usually traverse a small subset of them.
+
+254
+00:17:34,120 --> 00:17:35,980
+And this is take us to a new tab here.
+
+255
+00:17:36,340 --> 00:17:39,730
+Avoid converting a solid graph to an explicit graph.
+
+256
+00:17:39,970 --> 00:17:44,050
+Maybe you let religion that it state by state and give them number zero one two blah blah blah.
+
+257
+00:17:44,320 --> 00:17:45,340
+Up to 11 million.
+
+258
+00:17:45,340 --> 00:17:48,100
+You can do that in theory, but this is very bad.
+
+259
+00:17:48,130 --> 00:17:50,890
+This is very time consuming in general.
+
+260
+00:17:51,430 --> 00:17:55,870
+What you need is to figure out where are the nodes and how to generate the edges.
+
+261
+00:17:55,900 --> 00:18:01,240
+This is probably would be the case, and we learned about the an example of that like the shortest path,
+
+262
+00:18:01,240 --> 00:18:02,470
+problem and other a few ones.
+
+263
+00:18:04,050 --> 00:18:10,230
+Later, when we study the backtracking, a topic, you will notice that backtracking is all about statecraft.
+
+264
+00:18:13,520 --> 00:18:14,840
+The office or office?
+
+265
+00:18:15,140 --> 00:18:16,010
+Let's finish here.
+
+266
+00:18:16,670 --> 00:18:18,590
+This is sometimes is an area of debate.
+
+267
+00:18:19,930 --> 00:18:24,640
+You usually need to get some words about the graph, and in many cases you do know.
+
+268
+00:18:25,120 --> 00:18:30,850
+But in a way, the graph size, the density, all of that gives you signals about the graph size and
+
+269
+00:18:30,850 --> 00:18:32,320
+what can you do and what you cannot.
+
+270
+00:18:32,890 --> 00:18:39,280
+If you have a graph that is the really large, dense one boasts probably the DFS and DFS will have big
+
+271
+00:18:39,280 --> 00:18:45,220
+computational problems and b, if it's if the target is at a reasonable depth like you are here.
+
+272
+00:18:45,220 --> 00:18:50,040
+And you know that anyway, the the answer is within four steps only.
+
+273
+00:18:53,080 --> 00:18:54,130
+Then this is pretty good.
+
+274
+00:18:54,880 --> 00:19:01,240
+But if that if the dips isn't known, for example, or very far and the graph is we're white by wire,
+
+275
+00:19:01,240 --> 00:19:04,330
+they mean every note has too many choices.
+
+276
+00:19:04,720 --> 00:19:11,620
+This means that you will have too many nodes and you are actually exhausting.
+
+277
+00:19:11,620 --> 00:19:17,170
+The whole graph or a large subset of it probably will face some memory concerns.
+
+278
+00:19:17,980 --> 00:19:22,180
+Also, be careful the defense can exhaust your built in a stack.
+
+279
+00:19:22,660 --> 00:19:28,900
+I also give you some insights about the iterative defense, where you only use some depth to say defense
+
+280
+00:19:28,900 --> 00:19:36,070
+up to level five defense up to level nine, they face up to 15, and you try in a gradual way to see
+
+281
+00:19:36,250 --> 00:19:37,460
+if you found the answer or not.
+
+282
+00:19:37,480 --> 00:19:43,900
+You can think of it very similar to that to the first in a level by level of state defense might be
+
+283
+00:19:43,900 --> 00:19:47,350
+more suitable for a general graph search, but again, be careful.
+
+284
+00:19:48,040 --> 00:19:53,530
+Defense is more friendly to use in a distributed environment because if you have different machines
+
+285
+00:19:53,830 --> 00:19:57,940
+and you have a very large graph, you can tell this machine to start from not.
+
+286
+00:19:58,900 --> 00:20:01,270
+This machine to try starting from June 27.
+
+287
+00:20:01,510 --> 00:20:03,460
+But anyway, still not that easy to implement.
+
+288
+00:20:03,880 --> 00:20:09,730
+You shouldn't memorize that and trying to give you insights about the trade offs as a good software
+
+289
+00:20:09,730 --> 00:20:12,900
+engineer and far from algorithms you should learn to.
+
+290
+00:20:14,020 --> 00:20:18,530
+Have trade offs, and as you see, there is nothing that is a full winner in everything.
+
+291
+00:20:18,550 --> 00:20:19,840
+It doesn't go this way.
+
+292
+00:20:20,530 --> 00:20:27,220
+You will be back the engineer, and you have choice for this technology or this technology or this technology.
+
+293
+00:20:27,760 --> 00:20:34,630
+Should they use this database, a style like the rational relational databases or I should use no sequel.
+
+294
+00:20:34,960 --> 00:20:38,080
+Everything has pros and cons.
+
+295
+00:20:38,890 --> 00:20:39,480
+That's all.
+
+296
+00:20:39,490 --> 00:20:40,320
+I hope you enjoyed it.

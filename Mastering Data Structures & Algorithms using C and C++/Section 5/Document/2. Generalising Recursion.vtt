@@ -1,0 +1,94 @@
+WEBVTT
+
+00:00.630 --> 00:04.780
+Here I have a function recursive function that is calling itself.
+
+00:05.100 --> 00:10.170
+There are three statements, FUSA statement, there is something and then its calling itself and there
+
+00:10.170 --> 00:11.080
+is one more statement.
+
+00:11.400 --> 00:18.300
+So the question is when this statement will execute, this will execute at calling time and then this
+
+00:18.310 --> 00:19.560
+escapement will execute.
+
+00:19.620 --> 00:22.790
+It will execute at returning time.
+
+00:25.100 --> 00:31.270
+And if anything is there followed by this function, then that will also execute at returning time,
+
+00:31.280 --> 00:34.860
+only if any computations are there any more things are done.
+
+00:35.930 --> 00:36.740
+So that's it.
+
+00:36.800 --> 00:41.900
+So from this, like you can take it as a formula in the recursive function called before the function
+
+00:41.900 --> 00:42.140
+call.
+
+00:42.140 --> 00:44.840
+If anything is there, then that will be executed at calling time.
+
+00:45.350 --> 00:48.120
+After the function call it is executed at a turning point.
+
+00:48.140 --> 00:57.260
+So we can call this portion as ascending and this we can call it descending.
+
+00:58.490 --> 01:03.390
+So recursive functions have two phases that are ascending and descending.
+
+01:04.430 --> 01:09.890
+So the main important thing that we have learned now is that the recursion will have two phases.
+
+01:11.090 --> 01:18.020
+Let us compare recursion with loop loops are repeating statement, then what is recursion?
+
+01:18.320 --> 01:23.350
+Recursion is also repeating see a function gone, then I guess it is calling again.
+
+01:23.360 --> 01:24.020
+It is calling.
+
+01:24.050 --> 01:25.240
+So is it not repeating?
+
+01:25.250 --> 01:25.610
+Yes.
+
+01:25.860 --> 01:28.040
+Recursion is also just like repeating.
+
+01:28.370 --> 01:36.230
+But the difference is a loop will have only ascending phase, but the recursion will have ascending
+
+01:36.230 --> 01:38.010
+as well as descending phase.
+
+01:38.360 --> 01:47.880
+So that is the strength or power of recursion that you can utilize or exploit it for writing code easier.
+
+01:48.590 --> 01:50.890
+So these two phases are there.
+
+01:50.900 --> 01:53.680
+So the descending is there only in recursion.
+
+01:54.260 --> 01:56.420
+So that's all I end here in this video.
+
+01:56.570 --> 02:02.930
+Then the next video, I'll show you how stock is used in these two recursive functions and also I'll
+
+02:02.930 --> 02:04.280
+show you the time complexity.
+
+02:04.500 --> 02:07.490
+So we'll continue with the same functions in the next few days.

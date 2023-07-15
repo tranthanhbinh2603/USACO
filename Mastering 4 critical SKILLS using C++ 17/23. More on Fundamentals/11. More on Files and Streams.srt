@@ -1,0 +1,339 @@
+1
+00:00:01,170 --> 00:00:05,700
+In this video, we would like to highlight some more notes about the fires and extremes that either
+
+2
+00:00:05,910 --> 00:00:13,850
+to hear the first thing is about the music that you can open the file that we already see, the eye
+
+3
+00:00:13,890 --> 00:00:15,410
+in the mood to read it.
+
+4
+00:00:15,420 --> 00:00:19,170
+Only we saw also the outward which allow us to write only.
+
+5
+00:00:20,010 --> 00:00:21,510
+There are actually more modes.
+
+6
+00:00:21,510 --> 00:00:27,700
+For example, the four have been obtained the means to add in the end of the file, which is also ICE
+
+7
+00:00:27,720 --> 00:00:34,100
+eight, which means go to end of go to ending in the file opening.
+
+8
+00:00:34,230 --> 00:00:35,550
+So you just go to its end.
+
+9
+00:00:36,540 --> 00:00:38,310
+There is what is called binary file.
+
+10
+00:00:38,310 --> 00:00:40,890
+I will highlight it after a few seconds.
+
+11
+00:00:41,310 --> 00:00:46,000
+There is also the trunked here, which is going to remove the whole content of your file.
+
+12
+00:00:46,470 --> 00:00:52,080
+There's also the interesting thing here that you create and replace when we create it means that you
+
+13
+00:00:52,080 --> 00:00:57,090
+are going to feel if the file doesn't exist, then your place is going to fill in.
+
+14
+00:00:57,120 --> 00:00:58,380
+The file already exists.
+
+15
+00:00:58,740 --> 00:01:04,560
+So the moral of that is they are providing you with different statuses for different situations.
+
+16
+00:01:04,980 --> 00:01:11,070
+Generally, you typically don't need most of them and you typically need the in and out and you either
+
+17
+00:01:11,070 --> 00:01:13,050
+need either the trunk or a OBINZE.
+
+18
+00:01:13,530 --> 00:01:15,210
+It depends on your keys.
+
+19
+00:01:15,480 --> 00:01:18,720
+If you just need to enhance your file more and more, you typically would use.
+
+20
+00:01:18,720 --> 00:01:25,590
+The building is one of the functions in the streaming is what we call in the file.
+
+21
+00:01:25,930 --> 00:01:30,950
+If the you if it's telling you if if are you done with reading the file or not.
+
+22
+00:01:31,350 --> 00:01:38,450
+So as you can, as long as a file is in the file you can just keep reading it.
+
+23
+00:01:38,490 --> 00:01:42,320
+If it meant that you are reaching the end of file, you cannot read anymore.
+
+24
+00:01:44,310 --> 00:01:48,410
+The Getsy function here is a function to allow you to get a single character from the street.
+
+25
+00:01:50,790 --> 00:01:57,910
+We saw a lot of see in the field, which is a flag internally, if any error happened while the reading,
+
+26
+00:01:57,940 --> 00:02:03,600
+remember, let's say I'm reading an integer, but you give me a string, then the fail or the fail would
+
+27
+00:02:03,600 --> 00:02:04,630
+be will be true.
+
+28
+00:02:04,920 --> 00:02:07,530
+So you see here we have three kind of mistakes, actually.
+
+29
+00:02:07,530 --> 00:02:13,080
+Four that we have here, the end of file, which we just described, meaning are we done with reading
+
+30
+00:02:13,080 --> 00:02:13,400
+or not?
+
+31
+00:02:13,710 --> 00:02:22,560
+And we have the feel, which is indicating if we have a problem in reading something or not and we have
+
+32
+00:02:22,560 --> 00:02:24,200
+the bet, the bet is a bit trickier.
+
+33
+00:02:24,600 --> 00:02:28,050
+The bet is is much bigger and general error than the failure.
+
+34
+00:02:28,290 --> 00:02:33,170
+The math indicates that something heavy happened with the stream you cannot read anymore.
+
+35
+00:02:33,420 --> 00:02:39,210
+Let's say you were reading from a file and then maybe somewhere in the middle, the operating system
+
+36
+00:02:39,210 --> 00:02:40,640
+restricted access to the file.
+
+37
+00:02:40,670 --> 00:02:42,220
+So you cannot read or write anymore.
+
+38
+00:02:42,240 --> 00:02:43,720
+For example, you cannot write them.
+
+39
+00:02:44,130 --> 00:02:49,260
+You don't see it if you are asking for the bad bit is going to check two things.
+
+40
+00:02:49,440 --> 00:02:55,240
+If there is a failure, general failure or some issues about complete reading, write that you cannot
+
+41
+00:02:55,240 --> 00:02:55,850
+do it anymore.
+
+42
+00:02:56,860 --> 00:03:04,090
+There is also what we call a good bet, the good bit is checking if there is no error at all that is
+
+43
+00:03:04,090 --> 00:03:04,450
+mean.
+
+44
+00:03:04,480 --> 00:03:08,070
+There's no endophytes, there is no failure, there is no bad luck.
+
+45
+00:03:08,350 --> 00:03:13,220
+Sometimes guys think that the good bit is the opposite for the bad bit.
+
+46
+00:03:13,240 --> 00:03:14,980
+But this is a true rootsier.
+
+47
+00:03:15,190 --> 00:03:17,750
+The bad bit doesn't check the end of flight.
+
+48
+00:03:18,130 --> 00:03:22,510
+So if this was the opposite for that, we need to find this as true, true, true.
+
+49
+00:03:22,510 --> 00:03:23,340
+This isn't the case.
+
+50
+00:03:23,560 --> 00:03:25,600
+So the good bit is an update to the bedmate.
+
+51
+00:03:26,350 --> 00:03:31,090
+Practically speaking, you typically use the failure only as we see in our examples.
+
+52
+00:03:31,330 --> 00:03:33,790
+Sometimes you might need to check the end of flight.
+
+53
+00:03:34,900 --> 00:03:36,270
+Typically you need more than that.
+
+54
+00:03:36,280 --> 00:03:43,590
+But anyway, I just wanted you to be aware that there are different things to check in the status of
+
+55
+00:03:44,290 --> 00:03:45,250
+the binary file.
+
+56
+00:03:45,730 --> 00:03:51,990
+When you have something like the image, for example, Google doc or so the orange takes to find sticks
+
+57
+00:03:52,000 --> 00:03:57,880
+white are just normal files using the normal letters and characters by the files are written internally
+
+58
+00:03:57,880 --> 00:03:59,110
+based on zeros and ones.
+
+59
+00:04:00,280 --> 00:04:06,790
+If you try to edit to the text, you would not be able to [REMOVED] the specific program that can read
+
+60
+00:04:06,790 --> 00:04:14,020
+them according to the way they were written with the text file are normally natural text.
+
+61
+00:04:14,340 --> 00:04:18,760
+If some character in the text file is corrupted, you can still open the file and you can even find
+
+62
+00:04:18,760 --> 00:04:20,890
+it by your eyes, which is a mistake.
+
+63
+00:04:21,340 --> 00:04:26,840
+But however, they are typically bigger in size and their size depends on the platform.
+
+64
+00:04:27,160 --> 00:04:32,290
+So from a platform to another, the files content may have different sizes.
+
+65
+00:04:32,740 --> 00:04:38,280
+On the other side, the binary files allow us to write, text file and allow us to write.
+
+66
+00:04:38,320 --> 00:04:42,880
+Include something that's very binary, something that is and is invisible, for example.
+
+67
+00:04:44,670 --> 00:04:52,220
+Like it, like the normal characters, remember, there is more to this world, a capital to is it capital?
+
+68
+00:04:52,500 --> 00:04:54,510
+We have specific ranges.
+
+69
+00:04:54,660 --> 00:04:58,750
+Sometimes we might try write something even bigger than this rage.
+
+70
+00:04:59,490 --> 00:05:03,900
+Every time there is minor corruption in your file, you probably will lose your room.
+
+71
+00:05:03,910 --> 00:05:10,140
+While this is what is with the verified, if you tried to obtain an image and just remove a few a few
+
+72
+00:05:10,140 --> 00:05:14,280
+things from it, you typically will not be able to open the image again.
+
+73
+00:05:15,090 --> 00:05:18,990
+Typically the file sizes are smaller and it doesn't depend on the platform size.
+
+74
+00:05:18,990 --> 00:05:23,840
+In most of the cases, if you would like to open a file in a binder, I would use it as binary.
+
+75
+00:05:24,270 --> 00:05:29,460
+So this is what you add here, mainly into the elbow to indicate that you are going to open it in a
+
+76
+00:05:29,460 --> 00:05:30,150
+binary mode.
+
+77
+00:05:31,590 --> 00:05:38,530
+It typically, when it comes in infrastructure courses, you will have a chance and reasoning to write
+
+78
+00:05:38,550 --> 00:05:39,960
+and read in a binary format.
+
+79
+00:05:39,960 --> 00:05:41,190
+So you need to do that.
+
+80
+00:05:41,190 --> 00:05:46,200
+At the moment, there are also functions like a physical effort that we highlighted the last time.
+
+81
+00:05:46,500 --> 00:05:48,900
+They allow you to move in the file itself.
+
+82
+00:05:49,260 --> 00:05:54,600
+In the file structure, of course, it would be more like how people are implementing databases, which
+
+83
+00:05:54,600 --> 00:05:55,790
+is typically in binary.
+
+84
+00:05:55,800 --> 00:05:57,750
+So we're learning more about how to use it.
+
+85
+00:05:58,320 --> 00:05:58,860
+That's it.

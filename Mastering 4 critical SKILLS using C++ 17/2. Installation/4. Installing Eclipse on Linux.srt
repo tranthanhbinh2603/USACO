@@ -1,0 +1,159 @@
+0
+1
+00:00:00,810 --> 00:00:09,930
+In this video, we will learn how to install Eclipse on Linux. Installing Eclipse sometimes isn't
+1
+
+2
+00:00:09,930 --> 00:00:10,830
+an easy setup.
+2
+
+3
+00:00:11,280 --> 00:00:14,820
+Meanwhile, it is a very nice IDE to use.
+3
+
+4
+00:00:15,700 --> 00:00:20,840
+It is very impractical to support all the OS versions and their different setups.
+4
+
+5
+00:00:21,150 --> 00:00:22,700
+Check out the approach here, first.
+5
+
+6
+00:00:23,010 --> 00:00:28,590
+If it isn't your version or doesn't work with you, just google your version. Sadly, from OS to
+6
+
+7
+00:00:28,590 --> 00:00:29,040
+another,
+7
+
+8
+00:00:29,040 --> 00:00:32,280
+and even within the same OS setup, you may face different errors.
+8
+
+9
+00:00:32,490 --> 00:00:37,560
+The good news, typically googling for the problem will end up with a solution, especially on 
+9
+
+10
+00:00:37,560 --> 00:00:39,750
+a "StackOverFlow" website.
+10
+
+11
+00:00:40,530 --> 00:00:42,750
+Here are some versions that you might like
+11
+
+12
+00:00:42,750 --> 00:00:44,670
+try if the one here didn't work well.
+12
+
+13
+00:00:44,670 --> 00:00:51,390
+The first step is just to go to google and just write "Download Eclipse" like this way, you should
+13
+
+14
+00:00:51,390 --> 00:00:54,390
+find a page in google like this one typically.
+14
+
+15
+00:00:54,390 --> 00:01:01,140
+Notice the whole name "C++ CDT". On the right side of the page here,
+15
+
+16
+00:01:01,140 --> 00:01:06,090
+you should find a "Download" button, typically adjusted to your operating system.
+16
+
+17
+00:01:06,960 --> 00:01:11,610
+Once you did that, you should find something called Eclipse Installer in the file.
+17
+
+18
+00:01:11,940 --> 00:01:13,330
+Just double click on this file.
+18
+
+19
+00:01:13,500 --> 00:01:19,180
+Some of the older versions have the installer directly to run.
+19
+
+20
+00:01:19,200 --> 00:01:20,160
+So, there are two cases.
+20
+
+21
+00:01:20,180 --> 00:01:22,950
+Either you have to install it or it is the executable, ready to run.
+21
+
+22
+00:01:23,520 --> 00:01:29,070
+If you click, they just start to follow the normal path. It should find some internal files.
+22
+
+23
+00:01:29,340 --> 00:01:32,400
+Click install and select here C++.
+23
+
+24
+00:01:32,820 --> 00:01:37,980
+And if it asks for certificate, just mark all and just accept. Otherwise,
+24
+
+25
+00:01:38,220 --> 00:01:42,840
+that is it. It should open for you. For Fedora,
+25
+
+26
+00:01:42,870 --> 00:01:47,730
+also, I would like you first to try the installer in the previous system if it worked for you, great!
+26
+
+27
+00:01:47,730 --> 00:01:54,300
+If it didn't, then you might try the "sudo dnf install -y eclipse-cdt" command, then reboot and probably
+27
+
+28
+00:01:54,310 --> 00:01:58,270
+it is going to work. Again, for other operating systems,
+28
+
+29
+00:01:58,270 --> 00:01:59,430
+start with the installer.
+29
+
+30
+00:01:59,670 --> 00:02:03,660
+Otherwise, just try to google if there is someone who posted the command for that.
+30
+
+31
+00:02:04,770 --> 00:02:10,160
+If you would like to run, just write in the terminal "eclipse" or in your search box.
+31
+
+32
+00:02:10,170 --> 00:02:13,290
+It should look like this box. That is it. :)

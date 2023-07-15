@@ -1,0 +1,484 @@
+WEBVTT
+
+00:00.240 --> 00:07.200
+Let me tell you the basic concept for finding the time complexity, we assume that every statement in
+
+00:07.200 --> 00:12.080
+our program takes one unit of time for execution.
+
+00:13.390 --> 00:15.200
+Let me give you an idea behind that one.
+
+00:16.390 --> 00:21.910
+See, suppose there are some books kept here and you have to move the book and keep it on that shelf
+
+00:21.910 --> 00:24.910
+or in Iraq, how much time it takes.
+
+00:26.150 --> 00:31.880
+Maybe half a second quarter of a second for somebody who walks very slowly, Medick, once again for
+
+00:31.880 --> 00:34.520
+keeping one book there one by one, if you have to keep.
+
+00:35.180 --> 00:37.970
+So time varies from person to person.
+
+00:38.570 --> 00:41.630
+So we don't mention seconds or milliseconds.
+
+00:41.630 --> 00:49.750
+We say one unit of time, like if you take the example of currency, one dollar, one would be one born.
+
+00:50.540 --> 00:51.790
+So we say one.
+
+00:52.160 --> 00:54.900
+But what is the market value that would be different?
+
+00:55.610 --> 01:00.410
+So we say one bug or one unit of currency.
+
+01:00.950 --> 01:04.670
+So simply we assume that every statement makes one unit of time.
+
+01:05.300 --> 01:11.410
+If that statement is repeated multiple times, then you count the frequency how many times it is executed.
+
+01:11.690 --> 01:14.570
+So that is sufficient for analyzing our function.
+
+01:14.600 --> 01:20.660
+Now let us see what our function is doing is doing nothing just printing.
+
+01:21.080 --> 01:28.190
+So it is printing a value and how much time it takes for printing one unit of time.
+
+01:28.760 --> 01:29.810
+One unit of time.
+
+01:31.310 --> 01:33.170
+How many times print was written here?
+
+01:33.380 --> 01:34.170
+Only one time.
+
+01:34.940 --> 01:36.350
+So it is just one.
+
+01:36.860 --> 01:38.600
+But this is a recursive function.
+
+01:38.600 --> 01:43.430
+So it is calling itself again and again so total how many times it's printing.
+
+01:43.760 --> 01:51.710
+So let us look at and do the briefing three or recursion three here to spending one time to time three
+
+01:51.710 --> 01:53.780
+times so total.
+
+01:53.780 --> 01:54.620
+How many units.
+
+01:55.130 --> 01:56.570
+One one one.
+
+01:56.840 --> 02:06.730
+So I can see it takes three units of time for the value of an A3 value of N as a three for the first
+
+02:06.740 --> 02:07.760
+value of industry.
+
+02:09.270 --> 02:18.640
+If I make it as five then it will take five units of time then for and it will take and units of time.
+
+02:20.150 --> 02:22.400
+So it is just like coming back to the example.
+
+02:22.550 --> 02:28.580
+If you have to keep one book in Iraq, you are taking one unit of time, ten books, one unit of time
+
+02:28.970 --> 02:33.080
+and the books and unit of time, what is and whatever may be.
+
+02:33.470 --> 02:36.680
+So the time depends on a number of books.
+
+02:36.710 --> 02:40.630
+So here the time depends on the value that we are passing from here.
+
+02:41.090 --> 02:43.630
+It may be three, it may be five, or it can be anything.
+
+02:43.640 --> 02:51.560
+So we say the time is and units of time so the time can be represented as outdraw.
+
+02:51.590 --> 02:54.800
+And the answer that we got is then unit.
+
+02:54.830 --> 02:57.040
+So the degree of the polynomial is one.
+
+02:57.050 --> 02:58.730
+So we rated as outdraw.
+
+02:58.730 --> 03:01.280
+And so the time taken this order of.
+
+03:01.460 --> 03:06.160
+And there is one more method of finding the time complexity using recurrence relation.
+
+03:06.530 --> 03:12.770
+I will show you how to write recurrence relation and how to solve it to find the time complexity of
+
+03:13.130 --> 03:14.840
+recursive functions.
+
+03:15.650 --> 03:19.340
+Now let us find out the time complexity of this recursive function.
+
+03:19.340 --> 03:27.680
+Using the current solution, we assume that the time taken by this function as B of and for time, if
+
+03:27.680 --> 03:35.780
+the time taken that function fondren one is ten, then that total time should be some of all the times
+
+03:35.780 --> 03:37.600
+taken by the statements in sight.
+
+03:38.450 --> 03:40.010
+So let us look at the statement.
+
+03:40.400 --> 03:41.600
+See, there is a statement.
+
+03:42.020 --> 03:43.400
+This is a conditional statement.
+
+03:43.670 --> 03:46.220
+How much time it takes for execution.
+
+03:46.220 --> 03:48.770
+Just one unit of time one.
+
+03:49.160 --> 03:51.830
+Then there is a printed statement how much time it takes.
+
+03:52.010 --> 03:53.320
+This also takes one.
+
+03:53.960 --> 03:57.470
+Then there is one more function called how much time it takes one.
+
+03:58.370 --> 04:04.850
+As I said, every statement takes one unit of time for execution for this also have written one.
+
+04:05.720 --> 04:06.890
+No, it's wrong.
+
+04:07.310 --> 04:07.990
+It's wrong.
+
+04:08.510 --> 04:10.100
+See, that is a function call.
+
+04:10.760 --> 04:14.770
+So I should know total time taken by that function call.
+
+04:15.200 --> 04:19.700
+So it is not just a normal statement, it will call again itself.
+
+04:19.710 --> 04:22.070
+So there is something more behind that one.
+
+04:22.310 --> 04:25.340
+So I need to know how much time that function call is ticking.
+
+04:26.120 --> 04:33.050
+So let us see closely what I said that this function call total time ten then this is similar to that
+
+04:33.050 --> 04:36.050
+one and this is and the minus one.
+
+04:36.260 --> 04:41.090
+So yes, this will be taking the end minus one time.
+
+04:42.140 --> 04:42.770
+Yes.
+
+04:43.430 --> 04:45.320
+This is not a normal statement.
+
+04:45.620 --> 04:49.010
+There is a function called and it takes being minus one time.
+
+04:50.210 --> 04:55.450
+Then what is this total t I said the sum of all the times taken by the statement.
+
+04:55.460 --> 05:02.940
+So let's take the sum so that p and as equals to be in the minus one the bigger commemorating first
+
+05:03.200 --> 05:05.090
+plus two plus two.
+
+05:05.450 --> 05:10.790
+So the total times the energy goes to D and minus one, plus two.
+
+05:11.000 --> 05:20.930
+So the reconciliation as the and as equals two big and minus one plus two then.
+
+05:21.200 --> 05:23.820
+And is the greater than zero then.
+
+05:24.080 --> 05:25.370
+And there's a greater than.
+
+05:26.120 --> 05:32.360
+What happens when and is equal to zero one and is equal to zero, it will just check the condition,
+
+05:32.360 --> 05:34.610
+it will not enter inside and it will come out.
+
+05:34.910 --> 05:37.340
+So just checking the condition, one unit of time.
+
+05:37.640 --> 05:39.580
+So it takes one unit of time.
+
+05:41.430 --> 05:46.500
+So this is the reconciliation formed from that function.
+
+05:50.300 --> 05:57.290
+So the time complexity of recursive function can be represented in the form of reconciliation, not
+
+05:57.290 --> 06:04.370
+if we solve this using induction method, also called the successive substitution method, we can get
+
+06:04.370 --> 06:05.100
+the answer.
+
+06:06.020 --> 06:07.370
+So let us solve this one.
+
+06:08.030 --> 06:10.970
+Now, before solving this, I should tell you one thing.
+
+06:11.390 --> 06:16.690
+If you have any constant value here, then let us write it as one.
+
+06:16.700 --> 06:19.590
+So that means constant is false.
+
+06:19.940 --> 06:26.060
+So the reconciliation is city and as equals to be and the minus one plus one.
+
+06:26.840 --> 06:29.030
+This is the first equation we have.
+
+06:29.600 --> 06:35.420
+I can solve this if I can know what is it T and minus one scene here.
+
+06:35.420 --> 06:35.810
+Right.
+
+06:36.320 --> 06:46.340
+Since the end is equal to B and the minus one plus one, then what will be B and the minus one.
+
+06:46.730 --> 06:49.630
+So if this is and replace it then minus one.
+
+06:49.640 --> 06:51.740
+So this will repeat in the minus two.
+
+06:52.040 --> 06:52.840
+Plus one.
+
+06:53.090 --> 06:58.020
+So I can substitute this one T and minus two, plus one in place of being minus one.
+
+06:58.310 --> 07:00.570
+So this I can replace here.
+
+07:00.920 --> 07:09.470
+So the next question that I get is the end is equals two to be in the minus one for you D and minus
+
+07:09.470 --> 07:09.650
+two.
+
+07:09.650 --> 07:10.350
+Plus one.
+
+07:10.580 --> 07:13.040
+So the safety and the minus two.
+
+07:13.040 --> 07:13.790
+Plus one.
+
+07:14.090 --> 07:16.200
+And this plus one as it is.
+
+07:17.120 --> 07:22.590
+So this is substituted with this one and then this plus one as it is.
+
+07:22.880 --> 07:23.990
+So what is this one.
+
+07:23.990 --> 07:30.220
+Finally the end is equal to B and the minus two plus two.
+
+07:30.410 --> 07:32.390
+So that is called the first second increase.
+
+07:33.200 --> 07:35.160
+Then let us substitute in this place.
+
+07:35.170 --> 07:38.420
+So what this will be this will be B and minus three.
+
+07:38.420 --> 07:39.300
+Plus one.
+
+07:39.590 --> 07:48.100
+So if I substitute that then this will be tiendas equals to B and minus three, plus one and plus two.
+
+07:48.380 --> 07:53.030
+So this can be the nasty and as equals to B and minus three.
+
+07:53.030 --> 07:54.470
+Plus three.
+
+07:55.190 --> 07:56.450
+There's the total accretion.
+
+07:57.440 --> 08:01.120
+So I have substituted two times how long I should do this.
+
+08:01.520 --> 08:12.230
+Let us continue it four times so K times B and the minus K plus key because this was three.
+
+08:12.260 --> 08:14.780
+So there's also three for this four then this will be four.
+
+08:14.990 --> 08:17.030
+If this is K then this will also be K.
+
+08:17.210 --> 08:19.100
+So the fourth equation, Inglot.
+
+08:20.690 --> 08:27.560
+See, we have to solve this one, so substitute and then substitute and then substitute go on substituting
+
+08:27.860 --> 08:32.060
+until it reduces down to a smaller value.
+
+08:32.060 --> 08:35.250
+That is an equal level where we know the answer.
+
+08:35.260 --> 08:41.300
+That is one C when you don't know the answer for a bigger expression, you know the answer for a smaller
+
+08:41.300 --> 08:44.450
+expression, then break the bigger one into smaller one.
+
+08:45.400 --> 08:51.100
+And it so the same thing we have done, we don't know how much this is, but we know more than is equal
+
+08:51.100 --> 08:51.630
+to zero.
+
+08:51.650 --> 08:53.050
+And so this is directly one.
+
+08:53.060 --> 08:53.850
+So we know that.
+
+08:54.070 --> 08:58.950
+So we have tried to reduce this and reduce dissent by substituting and we got this one.
+
+08:59.890 --> 09:04.280
+Now we see that this and minus K actually has became zero.
+
+09:04.450 --> 09:05.880
+So on that side, I will try.
+
+09:05.920 --> 09:08.110
+Don't assume that.
+
+09:10.990 --> 09:17.600
+And minus K is equal to zero, so it means we have and minus one that we made it as a minus student
+
+09:17.600 --> 09:20.650
+and minus three and so on up to what it became zero.
+
+09:20.920 --> 09:22.990
+So we assume that this has become zero.
+
+09:23.230 --> 09:26.560
+So it means therefore end is equals to K.
+
+09:27.010 --> 09:37.000
+So in this equation, if I substitute that will be B and equals to the and the minus and plus.
+
+09:37.480 --> 09:45.050
+And so at the place of K I have written Edner so and minus and plus and so I got this one.
+
+09:45.070 --> 09:56.140
+So this is billion as equals to be zero plus and so t and is equal to one plus and so that's all I got
+
+09:56.140 --> 09:56.410
+done.
+
+09:56.410 --> 10:00.730
+So Deanne's equals one plus and this can be done.
+
+10:00.850 --> 10:07.040
+An order of N C earlier directly from the dressing room.
+
+10:07.090 --> 10:11.060
+Also I have shown you and plus one was the number of calls.
+
+10:11.070 --> 10:16.780
+So yes, I got the number of calls here and the time taken by this function depends on the number of
+
+10:16.780 --> 10:17.270
+calls.
+
+10:17.410 --> 10:25.810
+So yes, it is outdraw and so it will be for any time from the calls will be and plus one that is one
+
+10:25.810 --> 10:27.910
+more than the number of times of printing.
+
+10:28.780 --> 10:30.860
+Let us summarize the things that we have learned.
+
+10:31.090 --> 10:35.140
+See, I have shown you what does it mean by recursion that I have shown you how to write the recursion
+
+10:35.140 --> 10:36.730
+I have traced to that one.
+
+10:37.120 --> 10:39.460
+I have shown you two different types of recursion.
+
+10:40.000 --> 10:42.970
+Then I have shown you how a stack utilized.
+
+10:43.300 --> 10:47.590
+And then we saw how to find the time complexity from the three.
+
+10:47.620 --> 10:53.260
+Also, I have shown you and overriding recurrence relation also have shown you and the time complexity
+
+10:53.260 --> 10:54.180
+is mostly written.
+
+10:54.180 --> 10:58.540
+The order of our degree of that is order of n c.
+
+10:58.540 --> 11:03.420
+I'm not using the notations like big omegle data because we have not discussed about them.
+
+11:03.730 --> 11:07.600
+So I'll give you the about these notations at some other time.

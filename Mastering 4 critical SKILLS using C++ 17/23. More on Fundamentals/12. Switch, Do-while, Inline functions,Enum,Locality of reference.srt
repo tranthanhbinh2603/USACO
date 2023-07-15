@@ -1,0 +1,535 @@
+1
+00:00:00,990 --> 00:00:04,290
+I would like to highlight a bunch of different things in this video.
+
+2
+00:00:04,860 --> 00:00:10,950
+The first one is the switch statement, remember one would like to do and if statement let's I would
+
+3
+00:00:10,950 --> 00:00:12,090
+like to do this program.
+
+4
+00:00:12,450 --> 00:00:18,170
+If number is one, then just say what number one is the number one hundred or one thousand, just print
+
+5
+00:00:18,270 --> 00:00:19,370
+one hundred thousand.
+
+6
+00:00:19,710 --> 00:00:26,700
+If it's 200, print this guy l'esprit this guy this the standard Felsen ninety nine point nine percent.
+
+7
+00:00:26,700 --> 00:00:30,170
+You'll be using it this in C++, what we call a switch statement.
+
+8
+00:00:30,630 --> 00:00:37,650
+So you do a switch on the variable and then you start with case, case, case case which is going to
+
+9
+00:00:37,650 --> 00:00:43,740
+have a value here to to check if the number is value, one number is value and so on.
+
+10
+00:00:44,040 --> 00:00:49,710
+In every case, you can have a break here, which is once you achieved a condition, it just to break
+
+11
+00:00:49,710 --> 00:00:49,830
+it.
+
+12
+00:00:49,830 --> 00:00:52,850
+I would like to try to sense a comparison between both of them.
+
+13
+00:00:53,280 --> 00:00:58,680
+So it's going to say is, number one, if the answer is yes, is going to be print one and going to
+
+14
+00:00:58,680 --> 00:00:59,070
+break.
+
+15
+00:00:59,070 --> 00:01:00,680
+So we go to the switches statement.
+
+16
+00:01:01,290 --> 00:01:04,800
+If there are no quick isn't one jump two hundred.
+
+17
+00:01:04,800 --> 00:01:08,400
+If it's a hundred or one thousand, go here.
+
+18
+00:01:08,910 --> 00:01:11,370
+Is it one hundred and the break we go outside.
+
+19
+00:01:11,850 --> 00:01:16,110
+If it's two hundred you go brainteaser but there is no break so you go to the next one.
+
+20
+00:01:17,250 --> 00:01:18,150
+This is a default.
+
+21
+00:01:18,150 --> 00:01:20,040
+Something correspond to the variables here.
+
+22
+00:01:20,190 --> 00:01:21,570
+So you are going to beat the guy.
+
+23
+00:01:22,080 --> 00:01:28,470
+So you see it's going to move one by one like here if y if it's going to check if there is a break or
+
+24
+00:01:28,470 --> 00:01:33,210
+not, if there is a break, it's something that just go outside, something like the Elseworlds else.
+
+25
+00:01:33,510 --> 00:01:37,780
+If there is no break like this hundred year, it just keep going also to the next one.
+
+26
+00:01:37,830 --> 00:01:39,840
+So this is more of like other condition.
+
+27
+00:01:39,850 --> 00:01:45,390
+So here a hundred and one thousand is like more of the hundred one this condition.
+
+28
+00:01:45,630 --> 00:01:48,900
+So sometimes it's useful, but most of the time you don't really use it.
+
+29
+00:01:49,950 --> 00:01:56,070
+The other thing is what we call a do while remember in while loops we we use have like a while over
+
+30
+00:01:56,070 --> 00:02:01,800
+some condition, then somebody into while we have the reverse, we do the body first, then the condition,
+
+31
+00:02:02,010 --> 00:02:11,370
+the syntax is like you do the work to do and you open to the buttresses and you put the word condition
+
+32
+00:02:11,370 --> 00:02:11,630
+here.
+
+33
+00:02:12,060 --> 00:02:17,550
+So the difference between both of them is which one is starting with the body and which one is starting
+
+34
+00:02:17,550 --> 00:02:18,300
+with the condition.
+
+35
+00:02:18,930 --> 00:02:23,880
+The way they do while is very important or very useful if you have to do one.
+
+36
+00:02:23,880 --> 00:02:25,320
+But the execution at least.
+
+37
+00:02:25,680 --> 00:02:29,430
+So you are going to do this, but the execution, then you are doing the verification.
+
+38
+00:02:29,880 --> 00:02:33,180
+But in wire loops you have to verify the condition.
+
+39
+00:02:35,320 --> 00:02:40,370
+The declare and the define most of the time in the course we write a function directly like here what
+
+40
+00:02:40,370 --> 00:02:46,760
+we are doing here, but in C++ we can actually split, split the declaration from the definition.
+
+41
+00:02:47,030 --> 00:02:48,500
+The declaration is like the following.
+
+42
+00:02:48,500 --> 00:02:49,610
+You have a semicolon here.
+
+43
+00:02:49,700 --> 00:02:50,460
+There is nobody.
+
+44
+00:02:50,780 --> 00:02:53,480
+The declaration is more about what like you are saying.
+
+45
+00:02:53,480 --> 00:02:54,980
+We have a function named factory.
+
+46
+00:02:55,050 --> 00:02:58,340
+The ticket integrated returnability how that would be having.
+
+47
+00:02:58,370 --> 00:03:05,360
+No one knows the function, the definition you are going to now Ubuntu places and you put all of your
+
+48
+00:03:05,690 --> 00:03:06,390
+body logic.
+
+49
+00:03:06,650 --> 00:03:15,370
+This is very useful and sometimes especially like it is a case, let's say you have to function if one
+
+50
+00:03:15,370 --> 00:03:21,530
+or if two, if one is calling if two and if two also is correct, if one, how to put something cyclic
+
+51
+00:03:21,530 --> 00:03:21,950
+like that.
+
+52
+00:03:22,880 --> 00:03:23,670
+This is a problem.
+
+53
+00:03:23,680 --> 00:03:26,360
+Now, here is a way to handle that.
+
+54
+00:03:26,660 --> 00:03:31,370
+You can't first declare this to function if one and if two, then you function.
+
+55
+00:03:31,370 --> 00:03:36,830
+If one is calling if two and you'll function if two is calling your one.
+
+56
+00:03:37,070 --> 00:03:42,380
+Now this circular behavior is doable through this forward declaration.
+
+57
+00:03:44,890 --> 00:03:47,040
+Mind functions, airline functions.
+
+58
+00:03:48,550 --> 00:03:54,340
+So here is your normal function, if your function is really very small, you might want the word in,
+
+59
+00:03:54,610 --> 00:03:59,790
+though the line is giving a hint for the compiler that you might be able to optimize this good.
+
+60
+00:04:00,160 --> 00:04:05,320
+For example, you are quoting here the functions that one with Max between X and Y, it could happen
+
+61
+00:04:05,320 --> 00:04:11,080
+that the compiler would go and could be the content of the function as it is here and put it here.
+
+62
+00:04:11,350 --> 00:04:16,540
+And then in your actual code that has been compiled and run, there is no function named the max.
+
+63
+00:04:16,690 --> 00:04:22,150
+It has been removed and its content has been copied and pasted in different places with the max function.
+
+64
+00:04:22,450 --> 00:04:26,200
+Is calling your advice D then don't function in two cases.
+
+65
+00:04:26,770 --> 00:04:32,530
+Specifically if the function is very short like here and also we are going to call it very many times.
+
+66
+00:04:32,710 --> 00:04:38,350
+So it's much better to just align it in the code to make it like very fast in the code.
+
+67
+00:04:39,880 --> 00:04:46,210
+Also, truth telling you that in an industry we typically document our functions, a good function would
+
+68
+00:04:46,210 --> 00:04:49,760
+have a name that really express what it's going to do.
+
+69
+00:04:49,780 --> 00:04:54,130
+So if I'm saying salary data, this is a function that expected to read for us.
+
+70
+00:04:54,130 --> 00:05:00,820
+Some data is typically some documentation that start with a definition or like a statement or what is
+
+71
+00:05:00,820 --> 00:05:02,500
+this function going to do then?
+
+72
+00:05:02,500 --> 00:05:05,200
+For every input parameter we say, what is this parameter?
+
+73
+00:05:05,380 --> 00:05:08,020
+And for every other parameter we say, what is our parameter?
+
+74
+00:05:08,230 --> 00:05:08,890
+And so on.
+
+75
+00:05:09,490 --> 00:05:14,490
+The style of the function and the state of the naming is something that varies from a company to another.
+
+76
+00:05:14,950 --> 00:05:19,030
+But generally speaking, it's good to provide some documentation for your function.
+
+77
+00:05:19,330 --> 00:05:24,160
+And even better than that, your function, name and parameters are very expressible.
+
+78
+00:05:24,160 --> 00:05:29,050
+Like when you read them, you know, the intent of the programmer behind the function.
+
+79
+00:05:30,400 --> 00:05:37,270
+Also, we have something called if I define something like good in color, red, green, blue, the
+
+80
+00:05:37,270 --> 00:05:40,020
+red will can be used in the program here.
+
+81
+00:05:40,300 --> 00:05:44,530
+Its value would be zero and green would be one and blue would be two and so on.
+
+82
+00:05:44,830 --> 00:05:50,620
+You can say all colors are equal red and you can print it is going to print red with value zero.
+
+83
+00:05:50,920 --> 00:05:53,160
+You can say here are equal color of two.
+
+84
+00:05:53,380 --> 00:05:55,990
+This is going to be the value of one of the blue.
+
+85
+00:05:56,530 --> 00:05:59,950
+You can define it with different is starting to say.
+
+86
+00:05:59,950 --> 00:06:03,920
+If you say the equal one, every one consecutive will be committed by one.
+
+87
+00:06:04,150 --> 00:06:06,010
+So one, two, three, four.
+
+88
+00:06:06,730 --> 00:06:12,130
+If you define here February of two, then the next one will be the value of the previous plus one it
+
+89
+00:06:12,130 --> 00:06:12,700
+will be three.
+
+90
+00:06:12,700 --> 00:06:14,530
+But here you back again and define fourth.
+
+91
+00:06:15,010 --> 00:06:20,800
+So the more of that, it just helping if you would like to define maybe some consistency style, but
+
+92
+00:06:20,800 --> 00:06:21,700
+in an easier way.
+
+93
+00:06:21,820 --> 00:06:24,310
+So it might be one way to do that.
+
+94
+00:06:26,280 --> 00:06:31,470
+Locality of reference, this is something interesting and you study more in computer architecture courses,
+
+95
+00:06:31,500 --> 00:06:34,290
+I hope I like to highlight something about it here.
+
+96
+00:06:35,550 --> 00:06:39,930
+Let's say we have a huge to the matrix like that and we have to function.
+
+97
+00:06:39,930 --> 00:06:46,140
+One of them is attriting heavily on The Matrix, but RuBo and another one is creating biometrics.
+
+98
+00:06:46,440 --> 00:06:47,700
+But call them the Baycol.
+
+99
+00:06:48,000 --> 00:06:53,850
+The question for you, like how many operations that this guy and this guy is doing?
+
+100
+00:06:54,180 --> 00:06:55,230
+Exactly the same.
+
+101
+00:06:55,450 --> 00:06:57,780
+We are doing the same iteration, same hexing.
+
+102
+00:06:58,050 --> 00:07:00,690
+So Operation Wise, we are the same.
+
+103
+00:07:01,020 --> 00:07:07,680
+But speed wise, you will notice in most of the computers, the first one is much faster than the second
+
+104
+00:07:07,680 --> 00:07:07,980
+one.
+
+105
+00:07:08,520 --> 00:07:16,320
+The reason behind that is relevant to how we how we stood the to the arrays in memory and to the array
+
+106
+00:07:16,320 --> 00:07:17,550
+is a stored rubyfruit.
+
+107
+00:07:17,850 --> 00:07:21,590
+So if you have four rules in the array, the memory will have the first rule.
+
+108
+00:07:21,690 --> 00:07:22,440
+The second rule.
+
+109
+00:07:22,440 --> 00:07:23,040
+The third rule.
+
+110
+00:07:23,040 --> 00:07:25,230
+The fourth rule are all in the memory.
+
+111
+00:07:25,860 --> 00:07:30,570
+Now, when you try to exit the array, there is something called cash in your processor.
+
+112
+00:07:30,930 --> 00:07:34,680
+The cash is going to check if this number exists in the cash or not.
+
+113
+00:07:35,010 --> 00:07:38,670
+If it exists as part of a block, it's going to return it for you.
+
+114
+00:07:39,030 --> 00:07:46,050
+If it doesn't exist, it's going to probably remove some space from the cash and could be another block,
+
+115
+00:07:46,050 --> 00:07:47,760
+big block from you to the array.
+
+116
+00:07:48,510 --> 00:07:56,370
+Now, the good about having it written with array rule by rule is when you try to access the first element,
+
+117
+00:07:56,700 --> 00:07:59,810
+the first rule, or some of it is going to be copied to the cash.
+
+118
+00:08:00,270 --> 00:08:03,420
+When you try to access the second element, it's already in the cache.
+
+119
+00:08:03,450 --> 00:08:05,310
+Third element in the cache.
+
+120
+00:08:05,610 --> 00:08:10,170
+Let's say that the element number one hundred and one is in the cache we're going to bring to the next
+
+121
+00:08:10,170 --> 00:08:10,580
+block.
+
+122
+00:08:10,830 --> 00:08:13,430
+So 100 what exists, 100 to exist and so on.
+
+123
+00:08:14,310 --> 00:08:16,590
+Now, the problem with the order is as follows.
+
+124
+00:08:17,310 --> 00:08:21,030
+You access the first element in the array.
+
+125
+00:08:21,060 --> 00:08:25,010
+It doesn't exist in the cache is going to be the first through, for example, for you.
+
+126
+00:08:25,350 --> 00:08:28,710
+Now, we would like to access the second rule first, the value.
+
+127
+00:08:29,430 --> 00:08:34,860
+But this isn't in the cache is going again to drop the cash value and bring another rule for you.
+
+128
+00:08:35,160 --> 00:08:36,920
+And then you are moving to the third rule.
+
+129
+00:08:37,230 --> 00:08:43,540
+If you just hear it behind the scene, this good is causing a lot of get to the cache, remove fumigation,
+
+130
+00:08:43,730 --> 00:08:47,070
+get from the cash flow through the cache, which is going to be very slow.
+
+131
+00:08:47,670 --> 00:08:50,110
+If you didn't understand what I'm saying, this is totally OK.
+
+132
+00:08:50,170 --> 00:08:51,300
+Doesn't affect your coding.
+
+133
+00:08:51,340 --> 00:08:58,410
+I just wanted to tell you that Ruby rule iterating is too much faster than going the right column iterating,
+
+134
+00:08:59,130 --> 00:08:59,700
+that's all.

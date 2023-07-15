@@ -1,0 +1,528 @@
+1
+00:00:00,880 --> 00:00:04,570
+Cool guys so this was in the previous video we discussed about.
+
+2
+00:00:05,510 --> 00:00:07,010
+Binary Exponentiation normal
+
+3
+00:00:07,160 --> 00:00:13,490
+Now let's discuss about modular Exponentiation, so again it's the binary explanation only, but under mod
+
+4
+00:00:13,490 --> 00:00:14,060
+conditions
+
+5
+00:00:14,540 --> 00:00:15,540
+What is a mod guys?
+
+6
+00:00:15,890 --> 00:00:17,240
+What does mod means?
+
+7
+00:00:17,750 --> 00:00:18,920
+It's a reminder.
+
+8
+00:00:18,920 --> 00:00:23,270
+So if I say 10 mod 7, is 3
+
+9
+00:00:23,300 --> 00:00:25,160
+Generally, what happens is that.
+
+10
+00:00:29,560 --> 00:00:33,600
+The answers for some certain n for some certain problems are huge.
+
+11
+00:00:34,570 --> 00:00:37,270
+If those answers are very huge, then what does compiler do?
+
+12
+00:00:37,720 --> 00:00:43,930
+Of course, those huge answers cannot be calculated very easily because that will, of course, require
+
+13
+00:00:43,930 --> 00:00:48,340
+a lot of space and lot of time to be calculated, lots of cost operations.
+
+14
+00:00:48,930 --> 00:00:49,820
+Right
+
+15
+00:00:50,170 --> 00:00:51,640
+What is the problem?
+
+16
+00:00:52,270 --> 00:00:53,830
+So what does they do
+
+17
+00:00:53,830 --> 00:01:00,190
+They say, OK, give me the answer by taking modulo with some prime number why modulo's with prime
+
+18
+00:01:00,190 --> 00:01:06,460
+numbers because I leave it to you only find out why we use modulo's with prime numbers.
+
+19
+00:01:06,520 --> 00:01:13,080
+I go over to key cryptography section over the internet, just surf over it and check
+
+20
+00:01:13,090 --> 00:01:14,860
+Why do we always consider prime numbers?
+
+21
+00:01:14,860 --> 00:01:19,300
+Because there are lots of theorems which are only applicable to prime numbers right.
+
+22
+00:01:19,690 --> 00:01:19,990
+So.
+
+23
+00:01:21,220 --> 00:01:23,440
+Like, fermids little theorem and other stuff, cool
+
+24
+00:01:24,600 --> 00:01:31,020
+So what does he do is he says, OK, give me resultant mod prime by taking a prime generally guys
+
+25
+00:01:31,020 --> 00:01:33,270
+This primeis 10 to the power nine plus seven.
+
+26
+00:01:33,270 --> 00:01:34,890
+You might have seen it somewhere.
+
+27
+00:01:35,280 --> 00:01:37,080
+right other OK, he says.
+
+28
+00:01:37,080 --> 00:01:37,800
+Give me prime.
+
+29
+00:01:38,520 --> 00:01:41,640
+We all know about modular arithmetic operations.
+
+30
+00:01:42,000 --> 00:01:46,160
+how to perform addition, subtraction, multiplication and division using mod.
+
+31
+00:01:46,650 --> 00:01:49,860
+So that is already being discussed in the mathematics section.
+
+32
+00:01:51,160 --> 00:01:51,390
+So.
+
+33
+00:01:52,350 --> 00:01:55,380
+Here we will understand how to find out.
+
+34
+00:01:55,800 --> 00:01:56,460
+Binary.
+
+35
+00:01:56,580 --> 00:02:02,440
+How to do this  Binary Exponentiation and there modulus, and let's see if I want to find out 2 to
+
+36
+00:02:02,460 --> 00:02:03,030
+the power.
+
+37
+00:02:04,630 --> 00:02:11,940
+This is going to be huge lets say 2 to the power 100, so again, this this value is too huge, right?
+
+38
+00:02:11,950 --> 00:02:13,090
+Because 2 to the power.
+
+39
+00:02:15,070 --> 00:02:19,810
+64 is like around 10 to the power 18, which can be stored in C++ for long, long int.
+
+40
+00:02:20,950 --> 00:02:24,410
+But so this is around 10 to the power 19, right?
+
+41
+00:02:24,760 --> 00:02:25,030
+So.
+
+42
+00:02:25,940 --> 00:02:28,490
+But 2 to the power 100 will be a huge value, right?
+
+43
+00:02:29,000 --> 00:02:34,580
+We won't be able to store it, but still, if I want to calculate if I want to find out how it is, what
+
+44
+00:02:34,580 --> 00:02:41,540
+is 2 to the Power 100 and under some modulus statements, you gave me two of the power hundred,
+
+45
+00:02:41,750 --> 00:02:43,010
+with some modulus or less.
+
+46
+00:02:43,640 --> 00:02:44,780
+Let's take mod with some.
+
+47
+00:02:45,560 --> 00:02:46,760
+Let's call integer mod
+
+48
+00:02:47,360 --> 00:02:48,350
+So how will I do it?
+
+49
+00:02:48,860 --> 00:02:52,220
+Using binary exponentiation, very easy guys
+
+50
+00:02:53,210 --> 00:02:57,590
+So we all know that if I'm multiplying some a into b and I want to perform mod.
+
+51
+00:02:58,800 --> 00:03:03,630
+where a is less than modulus, and b is less than modulus.
+
+52
+00:03:03,930 --> 00:03:06,270
+Then this becomes a mod.
+
+53
+00:03:07,620 --> 00:03:13,680
+So this becomes a into B mod.
+
+54
+00:03:14,280 --> 00:03:14,540
+Right?
+
+55
+00:03:14,910 --> 00:03:23,560
+If I want to calculate this particular part, then it becomes like a mod into B mod mod right
+
+56
+00:03:23,610 --> 00:03:24,570
+and whole mod.
+
+57
+00:03:25,740 --> 00:03:30,750
+It's whenever i multiply to integers which are less than mod and I have to multiply and take mod, so I just
+
+58
+00:03:30,750 --> 00:03:32,270
+multiply them and take mod, right?
+
+59
+00:03:32,880 --> 00:03:37,480
+So similarly guys for addition also we do the same same stuff, right?
+
+60
+00:03:38,370 --> 00:03:39,600
+But that's not my point.
+
+61
+00:03:40,170 --> 00:03:44,100
+What I want to explain to you is that how is  binary, Exponentiation being done.
+
+62
+00:03:44,790 --> 00:03:48,660
+If I write, let's say I'm finding a into a into a.
+
+63
+00:03:51,220 --> 00:03:57,250
+One, two, three, four, five, six, seven, eight, nine and 11, 11 times the how does  binary exponentiation  work
+
+64
+00:03:57,260 --> 00:03:59,070
+work, it will take this one a.
+
+65
+00:04:00,050 --> 00:04:05,500
+right, Then it will take this two a together and then it will take this.
+
+66
+00:04:07,170 --> 00:04:12,150
+a is together that is 2 to the power of 8, 2 to the power to 2 with the power one 
+
+67
+00:04:12,150 --> 00:04:16,800
+will be equal to 2 to the power 11 right guys, so.
+
+68
+00:04:17,829 --> 00:04:19,060
+Let's get back to the code.
+
+69
+00:04:19,560 --> 00:04:24,880
+What happens here is I always multiply a into resultant and then I see is it goes to a is equals to a square.
+
+70
+00:04:25,450 --> 00:04:31,060
+What I want is I want all these values to be less than 10 to the power nine plus seven.
+
+71
+00:04:31,270 --> 00:04:34,120
+And I always want to give them less than 10 to the power 7
+
+72
+00:04:34,120 --> 00:04:35,110
+So how will I do that?
+
+73
+00:04:35,740 --> 00:04:40,300
+Very simple guys, because as you can see, there's only one multiplication operation happening here.
+
+74
+00:04:40,630 --> 00:04:45,700
+That means if lets say resultant is ten to the power 9
+
+75
+00:04:45,700 --> 00:04:49,870
+power nine both are nine lines, and if I multiply them, both of them will have 8 in length.
+
+76
+00:04:50,680 --> 00:04:54,910
+That particular length of 18 can be stored in long, long integer right.
+
+77
+00:04:55,030 --> 00:04:58,660
+Similarly, guys, this can also be stored in long, long integer.
+
+78
+00:04:58,900 --> 00:05:01,300
+They go after calculating both these values.
+
+79
+00:05:01,300 --> 00:05:07,480
+What I'll do is I simply take mod what I just reduce their values less than 10 to the power nine plus seven.
+
+80
+00:05:07,480 --> 00:05:08,950
+I just take a A mod
+
+81
+00:05:09,780 --> 00:05:12,270
+so firstly let me save this code 
+
+82
+00:05:13,580 --> 00:05:14,180
+binary_exponentiation.cpp
+
+83
+00:05:19,330 --> 00:05:22,720
+And now it's the new code.
+
+84
+00:05:23,260 --> 00:05:23,500
+Yeah.
+
+85
+00:05:23,960 --> 00:05:28,300
+So here what we'll do is we'll simply do a modular exponentiation.right?
+
+86
+00:05:28,480 --> 00:05:36,580
+Let's take a constant int mod I'm why I'm taking a constant int mod because generally constraint
+
+87
+00:05:36,580 --> 00:05:37,480
+is not necessary.
+
+88
+00:05:37,840 --> 00:05:40,600
+I mean, this is not necessarily we can take int mod.
+
+89
+00:05:42,110 --> 00:05:43,400
+Oh, yeah.
+
+90
+00:05:43,830 --> 00:05:49,430
+Oh, I'm just taking it as a global variable right because in power function, it will be used by calculating
+
+91
+00:05:49,430 --> 00:05:54,170
+factorial might be it will be used right instead of passing it over here.
+
+92
+00:05:54,470 --> 00:05:59,420
+Just take it as a global variable because what happens is if in a particular code.
+
+93
+00:06:00,400 --> 00:06:06,880
+In a particular problem, if you want a result, mod some prime number, that prime number will not only
+
+94
+00:06:06,880 --> 00:06:10,960
+be used in this power function, but everywhere in the code, wherever you are doing, in addition
+
+95
+00:06:10,960 --> 00:06:16,960
+or subtraction or multiplication or division, it's better to take mod rather than to pass it individually
+
+96
+00:06:16,960 --> 00:06:17,710
+to all the methods.
+
+97
+00:06:18,620 --> 00:06:22,000
+Cool, so I've taken resultant to be equal to one.
+
+98
+00:06:22,000 --> 00:06:25,720
+I don't have to take a mod because it is already less than 10 to the power nine plus seven.
+
+99
+00:06:26,920 --> 00:06:33,030
+The problem here is that OK, if I multiply, resultant into a, both of them are of the range
+
+100
+00:06:33,070 --> 00:06:33,790
+10 to power nine.
+
+101
+00:06:34,870 --> 00:06:38,740
+So this will go in into the range of it 10 to the power 18
+
+102
+00:06:38,740 --> 00:06:44,950
+so integer won't be able to store that right for that I have already told you of workaround.
+
+103
+00:06:44,950 --> 00:06:46,390
+That is, let's define.
+
+104
+00:06:47,690 --> 00:06:54,020
+Int long, long Cool, now guys we have long, long integers over here, we don't have
+
+105
+00:06:54,020 --> 00:06:55,670
+to worry about the other stuff.
+
+106
+00:06:56,420 --> 00:07:01,310
+So after multiplying both of these values, what we'll do is we'll simply take mod
+
+107
+00:07:01,340 --> 00:07:03,650
+Let's take mod side by side resulting.
+
+108
+00:07:05,520 --> 00:07:08,910
+Mod and again, for a also let's do the same.
+
+109
+00:07:10,780 --> 00:07:16,870
+And so by doing this, because this ensures that a remains less than 10 to the power 9 plus 7
+
+110
+00:07:17,230 --> 00:07:23,980
+and resultant also remains less than 10 to the power 10 plus 7, so that whenever I do this multiplication and
+
+111
+00:07:23,980 --> 00:07:30,680
+I take the square off a, both of them go at max 10 to the power 18 because this are less than 10 to the power 9
+
+112
+00:07:31,090 --> 00:07:36,550
+and that 10 to the power 18 number, can be stored in long long integer
+
+113
+00:07:36,550 --> 00:07:37,640
+long integer, right?
+
+114
+00:07:37,660 --> 00:07:40,660
+So that's why guys they take 10 to the power nine plus seven.
+
+115
+00:07:42,060 --> 00:07:49,810
+right, because if I multiply them, they'd multiply two numbers of this particular value.
+
+116
+00:07:50,040 --> 00:07:53,490
+And they are they are they get stored in the long long integer
+
+117
+00:07:53,700 --> 00:07:54,540
+That's what we want.
+
+118
+00:07:55,470 --> 00:07:58,200
+And whenever I'm multiplying them and again, like.
+
+119
+00:07:59,030 --> 00:08:04,940
+On this one, I'm taking mod and I don't want the value to exceed this particular value right because they
+
+120
+00:08:04,940 --> 00:08:12,590
+are using calculations again, so 2 to the power 20 will be very easy, the same value, but let's
+
+121
+00:08:12,590 --> 00:08:13,850
+say 2 to the power 200.
+
+122
+00:08:15,280 --> 00:08:19,480
+This will give me mod with this particular value.
+
+123
+00:08:20,410 --> 00:08:26,410
+So this is not 2 to the power 20 and it is 2 to power 200 mod 10 to the power nine plus seven, if i take
+
+124
+00:08:26,450 --> 00:08:34,750
+remainders and why are we taking remainders, to make our values in limit that our language our compiler can hold
+
+125
+00:08:34,750 --> 00:08:36,220
+can hold, cool.
+
+126
+00:08:37,710 --> 00:08:41,940
+So this was it about modular exponentiation, not much changes required only.
+
+127
+00:08:42,570 --> 00:08:47,810
+We just took mod side by side we don't have to take mod by b right
+
+128
+00:08:49,060 --> 00:08:54,220
+Because we are dividing it, we're not multiplying or adding it by something it has to be in binary,
+
+129
+00:08:54,220 --> 00:08:55,680
+don't ever take mod into this.
+
+130
+00:08:55,690 --> 00:08:59,690
+Otherwise the value of B will change and then there will be some of the binary right.
+
+131
+00:09:00,050 --> 00:09:01,070
+Oh, thank you, guys.
+
+132
+00:09:01,100 --> 00:09:01,870
+Seeyou, in the next part.
+

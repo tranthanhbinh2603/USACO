@@ -1,0 +1,274 @@
+0
+1
+00:00:01,170 --> 00:00:07,280
+Recursion is a hard topic, so let's do more and more practice, even we are still on a very simple level.
+1
+
+2
+00:00:07,860 --> 00:00:15,090
+In this practice, we would like to print the triangle, but this time, reversed. actually a more
+2
+
+3
+00:00:15,090 --> 00:00:16,710
+normal way,
+3
+
+4
+00:00:16,830 --> 00:00:22,780
+So a triangle of five levels is one stars, two stars, three stars, four stars, five stars.
+4
+
+5
+00:00:23,280 --> 00:00:26,250
+The problem here is in the recursion semantic.
+5
+
+6
+00:00:26,550 --> 00:00:35,540
+Like we know that a triangle of five levels is the same as printing five stars, followed by 
+6
+
+7
+00:00:35,550 --> 00:00:37,020
+a triangle of four levels.
+7
+
+8
+00:00:37,230 --> 00:00:44,130
+But this looks like this time as we are printing from bottom to up,
+8
+
+9
+00:00:44,490 --> 00:00:47,900
+which makes it not intuitive this time.
+9
+
+10
+00:00:48,090 --> 00:00:49,410
+So how can we do it?
+10
+
+11
+00:00:49,590 --> 00:00:51,430
+We do it with a very simple trick.
+11
+
+12
+00:00:52,200 --> 00:00:58,010
+The trick is to swap the printing call with the printing loop here, specifically,
+12
+
+13
+00:00:58,200 --> 00:01:00,000
+let's see the following.
+13
+
+14
+00:01:00,450 --> 00:01:02,190
+If, let's go back to the logic,
+14
+
+15
+00:01:02,460 --> 00:01:09,710
+If I would like to print a triangle of 5 stars, you should first print a triangle of four
+15
+
+16
+00:01:09,720 --> 00:01:12,570
+levels, then print five stars.
+16
+
+17
+00:01:12,870 --> 00:01:19,860
+Remember in the last time the logic was print five stars, then print triangle of four levels.
+17
+
+18
+00:01:20,100 --> 00:01:25,890
+This time we want to say print a triangle of four levels, then print five stars.
+18
+
+19
+00:01:26,040 --> 00:01:32,510
+So this is how we do the logic, you call print(5), which says initially print four.
+19
+
+20
+00:01:32,820 --> 00:01:39,870
+So the logic here is print(5) is asking print(4) to print four levels and after the four
+20
+
+21
+00:01:39,870 --> 00:01:44,420
+levels are done, you are going to print a fifth level. One more time,
+21
+
+22
+00:01:44,730 --> 00:01:51,960
+We as experienced programmers, we do not in reality keep tracing the recursion 'till the last moment.
+22
+
+23
+00:01:51,960 --> 00:01:52,740
+We don't do that.
+23
+
+24
+00:01:52,950 --> 00:01:55,950
+We think like think in recursion, one step only.
+24
+
+25
+00:01:56,250 --> 00:01:57,270
+So here is the logic.
+25
+
+26
+00:01:57,540 --> 00:02:00,930
+What is print_triangles supposed to do? print_triangle()
+26
+
+27
+00:02:00,930 --> 00:02:08,730
+is a function that takes levels and the prints a triangle incrementally, row by row, here,
+27
+
+28
+00:02:08,880 --> 00:02:11,260
+so if I asked here to five, it's going to print five.
+28
+
+29
+00:02:11,520 --> 00:02:14,790
+This is the logic of the recursive function, here,
+29
+
+30
+00:02:15,120 --> 00:02:16,800
+I see here a recursive call,
+30
+
+31
+00:02:16,800 --> 00:02:21,570
+I don't go in practice and trace it, I ask myself what this function should eventually do?
+31
+
+32
+00:02:21,960 --> 00:02:24,840
+print triangle of levels - 1, eventually, 
+32
+
+33
+00:02:24,930 --> 00:02:29,180
+should print, given that level as 5, should print a triangle of four levels.
+33
+
+34
+00:02:29,490 --> 00:02:35,490
+Now I ask myself if four levels are already printed, what I should do, I should do one loop to print
+34
+
+35
+00:02:35,490 --> 00:02:36,180
+five stars.
+35
+
+36
+00:02:36,450 --> 00:02:41,610
+Remember this method of tracing in practice so that you don't get lost like others
+36
+
+37
+00:02:41,610 --> 00:02:44,940
+in tracing recursion. In all cases,
+37
+
+38
+00:02:44,940 --> 00:02:50,190
+I still would like to show you how this function is going to work, like, as a compiler wise.
+38
+
+39
+00:02:50,490 --> 00:02:52,920
+So the compiler is going to call print(5),
+39
+
+40
+00:02:52,950 --> 00:02:56,500
+surprisingly, print...(5), just call print...(4),
+40
+
+41
+00:02:56,520 --> 00:02:57,510
+call print...(3)
+41
+
+42
+00:02:57,880 --> 00:03:02,730
+print...(3), call print...(2), print...(2) call print...(1), print...(1) call print...(0)
+42
+
+43
+00:03:03,000 --> 00:03:06,240
+So far, nothing is printed on the screen.
+43
+
+44
+00:03:06,840 --> 00:03:11,940
+once print...(0) is done we print one star, using print_triangle(1).
+44
+
+45
+00:03:12,630 --> 00:03:15,510
+Then we print two stars using print_triangle(2).
+45
+
+46
+00:03:15,960 --> 00:03:18,720
+Then we print three stars using print_triangle(3).
+46
+
+47
+00:03:19,230 --> 00:03:25,800
+Then we print four stars using print_triangle(4), then we print five starts using
+47
+
+48
+00:03:25,810 --> 00:03:26,460
+print_triangle(5).
+48
+
+49
+00:03:26,820 --> 00:03:35,070
+I would say this kind of tracing causes more confusing than actually your mind can
+49
+
+50
+00:03:35,070 --> 00:03:35,540
+afford.
+50
+
+51
+00:03:35,880 --> 00:03:39,990
+That's why in practice we don't do this kind of tracing.
+51
+
+52
+00:03:40,290 --> 00:03:46,800
+We trace only a recursive call once and we then ask ourselves what is the meaning and the final output
+52
+
+53
+00:03:46,800 --> 00:03:48,090
+of this recursive function.
+53
+
+54
+00:03:48,390 --> 00:03:54,810
+If we can build over it, we guarantee the correctness of this recursive function.
+54
+
+55
+00:03:55,500 --> 00:03:56,100
+That's it.

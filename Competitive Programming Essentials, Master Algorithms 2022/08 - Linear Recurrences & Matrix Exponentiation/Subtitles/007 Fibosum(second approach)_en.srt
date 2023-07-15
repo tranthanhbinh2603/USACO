@@ -1,0 +1,716 @@
+1
+00:00:00,690 --> 00:00:01,100
+I will.
+
+2
+00:00:01,260 --> 00:00:02,880
+So let's see this second approach.
+
+3
+00:00:03,180 --> 00:00:08,490
+The other alternative approach of explanation only if you are not able to figure out the.
+
+4
+00:00:09,830 --> 00:00:15,050
+This one, which is also a nice approach, it's just based on the property of people when I give numbers,
+
+5
+00:00:15,050 --> 00:00:19,930
+but just let it not be when I get on with some of this reading, we want to find some.
+
+6
+00:00:20,300 --> 00:00:23,030
+So let's see an example of how to do it.
+
+7
+00:00:24,200 --> 00:00:25,910
+Firstly, I always do.
+
+8
+00:00:26,120 --> 00:00:30,530
+I always started by writing some aromatic notes Alexa didn't have read.
+
+9
+00:00:31,610 --> 00:00:38,690
+Metric, and this is let's say it has some some deal and a.m. it has a Fibonacci number and because
+
+10
+00:00:38,690 --> 00:00:43,280
+some talent will look away from an IQ brain and it will also require if you're going to crewneck in
+
+11
+00:00:43,280 --> 00:00:45,650
+numbers and minus eight now.
+
+12
+00:00:46,670 --> 00:00:52,490
+What is the next metric that we can have if I multiply it by a metric into this metric, I should get
+
+13
+00:00:52,490 --> 00:00:54,020
+an F. And plus one metric.
+
+14
+00:00:54,320 --> 00:00:59,840
+So this replacing and by and plus one or more, should I get a cent plus one plus one?
+
+15
+00:01:00,850 --> 00:01:01,710
+F.n minus.
+
+16
+00:01:02,260 --> 00:01:03,370
+Right, right.
+
+17
+00:01:03,940 --> 00:01:05,290
+So this was.
+
+18
+00:01:07,650 --> 00:01:09,900
+But yeah, this should be if.
+
+19
+00:01:11,280 --> 00:01:12,590
+And not defend my innocent.
+
+20
+00:01:13,040 --> 00:01:19,680
+I'm replacing and by and press one right now again, Israel really major Demetri, which is very easy.
+
+21
+00:01:19,680 --> 00:01:28,290
+No, because after use these three things to make sense one what it is in Brisbane and it is as an plus
+
+22
+00:01:28,590 --> 00:01:34,830
+and +1 something and +1 200, which is Santaland to +7 +1.
+
+23
+00:01:35,410 --> 00:01:36,800
+So how will this will be?
+
+24
+00:01:36,930 --> 00:01:40,350
+It is very easy in Brisbane as it goes through F and +7 minus one.
+
+25
+00:01:41,160 --> 00:01:47,730
+So basically the sum of all three, right and the next I.M.F. and +1 247 +1.
+
+26
+00:01:48,120 --> 00:01:57,060
+It is f.n plus and minus 1.8, which is nothing but some of both the lower terms and the last one is
+
+27
+00:01:58,170 --> 00:01:58,670
+Effen.
+
+28
+00:01:58,680 --> 00:02:02,040
+I want to just find out if and which is does this cross diagonal?
+
+29
+00:02:03,270 --> 00:02:06,810
+So this is the thematics that's prepared for me for this particular f matrix.
+
+30
+00:02:06,810 --> 00:02:09,210
+And this is F and +1 metric in case.
+
+31
+00:02:09,720 --> 00:02:10,050
+So.
+
+32
+00:02:13,350 --> 00:02:17,550
+Let me just quickly share an example that it will work.
+
+33
+00:02:17,890 --> 00:02:23,780
+So the metrics in one one one zero one one zero one zero eight.
+
+34
+00:02:24,180 --> 00:02:24,720
+Let's see.
+
+35
+00:02:24,990 --> 00:02:29,280
+This metric is the basic let's make a base case we have and minus one here, right?
+
+36
+00:02:29,590 --> 00:02:30,600
+Let's make the best guess.
+
+37
+00:02:30,600 --> 00:02:32,700
+Let's replace and buy one.
+
+38
+00:02:33,210 --> 00:02:40,320
+Well, so this becomes F1, which is still one quantum is one, because if is one and if and minus one
+
+39
+00:02:40,320 --> 00:02:40,710
+is zero.
+
+40
+00:02:41,500 --> 00:02:47,300
+Well, guess what will be the multiplication of these two mattresses sort of be one plus one two.
+
+41
+00:02:47,820 --> 00:02:52,020
+And the next will be one here only, and the last one will be zero.
+
+42
+00:02:54,030 --> 00:02:58,120
+I hope, OK, the lawsuit will not be zero, it will be this one into this one.
+
+43
+00:02:58,470 --> 00:03:00,900
+It will be one eight.
+
+44
+00:03:01,620 --> 00:03:02,430
+This is the.
+
+45
+00:03:04,140 --> 00:03:10,770
+And plus one, which is after metrics and this content is to come to terms of it being accurate, which
+
+46
+00:03:10,770 --> 00:03:14,720
+is free when I get zero blasphemy in a given blasphemy anarchy to which is the OnePlus One.
+
+47
+00:03:15,210 --> 00:03:15,720
+It is true.
+
+48
+00:03:16,020 --> 00:03:16,860
+I hope you got this.
+
+49
+00:03:17,040 --> 00:03:20,070
+And again, if you multiply the time matrix with F.
+
+50
+00:03:20,490 --> 00:03:24,210
+Let's see if I multiply to Matrix with F2 or delete Alhadeff.
+
+51
+00:03:24,210 --> 00:03:24,500
+Three.
+
+52
+00:03:24,990 --> 00:03:25,740
+You can try this.
+
+53
+00:03:26,380 --> 00:03:28,410
+Well, let's call it out quickly.
+
+54
+00:03:28,620 --> 00:03:31,700
+And yeah, so this is just some previous code.
+
+55
+00:03:31,770 --> 00:03:33,430
+And let me just remove this.
+
+56
+00:03:34,380 --> 00:03:37,050
+I wouldn't change anything over here in the matrix structure.
+
+57
+00:03:37,440 --> 00:03:39,060
+And I just, yeah.
+
+58
+00:03:39,210 --> 00:03:45,150
+So this is the function for some will pass into it, and it will give me the sum of some of the anthem.
+
+59
+00:03:46,070 --> 00:03:46,550
+Always.
+
+60
+00:03:47,580 --> 00:03:48,460
+So, yeah.
+
+61
+00:03:52,010 --> 00:03:52,880
+Let me.
+
+62
+00:03:54,550 --> 00:03:54,730
+Hmm.
+
+63
+00:03:55,410 --> 00:03:55,650
+Yeah.
+
+64
+00:03:57,060 --> 00:04:06,750
+So let's see out ribosome, and we want to find out some detail and dump minus ribosome tail and minus
+
+65
+00:04:06,750 --> 00:04:07,710
+one dumb eight.
+
+66
+00:04:07,860 --> 00:04:10,500
+So here we can see that an is and can also be zero.
+
+67
+00:04:11,160 --> 00:04:14,540
+That means and minus one can also be negative, which is minus one.
+
+68
+00:04:14,820 --> 00:04:15,090
+Took.
+
+69
+00:04:15,420 --> 00:04:21,149
+Let's write some basic ISS, which is very simple if N is minus 100 and zero.
+
+70
+00:04:22,300 --> 00:04:22,540
+Right.
+
+71
+00:04:22,990 --> 00:04:23,980
+If and in zero.
+
+72
+00:04:24,400 --> 00:04:29,050
+What is the sub Murphy when I get the results of zero and if any is.
+
+73
+00:04:30,140 --> 00:04:30,530
+One.
+
+74
+00:04:30,920 --> 00:04:32,030
+And let's return one.
+
+75
+00:04:33,070 --> 00:04:35,980
+Well, it's written these three values now we know that.
+
+76
+00:04:37,160 --> 00:04:42,930
+Is greater than equal to age, so here, let me try that end is greater than equal to eight.
+
+77
+00:04:43,400 --> 00:04:46,550
+Now we have a resultant metric that we used to have.
+
+78
+00:04:46,880 --> 00:04:48,930
+This is the time metric that I have to make.
+
+79
+00:04:48,950 --> 00:04:51,310
+So the two metrics is one one one in the first two.
+
+80
+00:04:51,620 --> 00:04:52,310
+But do you not?
+
+81
+00:04:54,550 --> 00:05:00,670
+Zero zero is equal to do, you thought zero one is it goes to Detroit.
+
+82
+00:05:01,370 --> 00:05:03,730
+Zero two is it goes to one.
+
+83
+00:05:03,880 --> 00:05:05,830
+So fill the first room with one.
+
+84
+00:05:06,340 --> 00:05:08,770
+And also you can see that the size is three now.
+
+85
+00:05:08,980 --> 00:05:11,980
+That means all the mattresses here will be off regrows.
+
+86
+00:05:11,980 --> 00:05:13,030
+Three eight.
+
+87
+00:05:13,840 --> 00:05:14,250
+I hope.
+
+88
+00:05:14,770 --> 00:05:15,970
+Don't get confused, Rachel.
+
+89
+00:05:16,060 --> 00:05:18,490
+You're going to increase or decrease the sizes you want to.
+
+90
+00:05:19,740 --> 00:05:28,740
+And second row is zeroes on the second part, so let me quickly remove this 30 01 and 02 is one.
+
+91
+00:05:28,950 --> 00:05:32,160
+And the third one, we have it in just the middle part.
+
+92
+00:05:32,820 --> 00:05:35,970
+Let me remove this and let me also remove.
+
+93
+00:05:39,000 --> 00:05:39,360
+Right.
+
+94
+00:05:39,620 --> 00:05:44,160
+So as you can see, we have this zero zero advise, everyone will be.
+
+95
+00:05:45,030 --> 00:05:47,550
+We have these ones and everything else will be zero.
+
+96
+00:05:48,060 --> 00:05:50,890
+Now this is obaseki's eight.
+
+97
+00:05:50,910 --> 00:05:52,800
+So in the best case, I can.
+
+98
+00:05:53,310 --> 00:05:53,700
+Yeah.
+
+99
+00:05:53,730 --> 00:05:55,230
+So any greater than he going to do now?
+
+100
+00:05:55,950 --> 00:06:00,870
+Basically, if I let's see if I pass and go straight to here, what will happen?
+
+101
+00:06:02,690 --> 00:06:04,190
+It won't go here all.
+
+102
+00:06:06,900 --> 00:06:13,830
+This will fuel knowledge and is he going to do so, this value will go to so will it, meaning it will
+
+103
+00:06:13,830 --> 00:06:16,290
+try to find quiet of it?
+
+104
+00:06:16,560 --> 00:06:18,470
+Basically, it will find b squared.
+
+105
+00:06:19,440 --> 00:06:26,040
+Into whatever devices I'm multiplying rates, the base case here is nothing but this, which is one
+
+106
+00:06:26,040 --> 00:06:28,400
+one zero, which is F1 eight.
+
+107
+00:06:28,650 --> 00:06:33,750
+So I'm trying to multiply when would be square, but that should not happen because he's going into
+
+108
+00:06:33,750 --> 00:06:37,490
+everyone will give me f 2D and will not give f too late.
+
+109
+00:06:37,710 --> 00:06:44,170
+So if I'm passing and as to here, let me subtract and buy one and minus equals to win it.
+
+110
+00:06:44,700 --> 00:06:46,500
+Why am I subtracting and revenue?
+
+111
+00:06:46,830 --> 00:06:53,660
+Because if an is being possessed, I just want to find out the rest of it and minus four and not be
+
+112
+00:06:53,670 --> 00:06:54,000
+destroyed.
+
+113
+00:06:54,000 --> 00:07:00,780
+The power in those areas to the power and minus one into the base case is giving F2 and not F1.
+
+114
+00:07:01,410 --> 00:07:02,310
+I hope you got this.
+
+115
+00:07:03,170 --> 00:07:10,340
+Well, this is we are just subtracting one, because because let me also quickly write this because
+
+116
+00:07:10,820 --> 00:07:12,230
+it's quite urban history.
+
+117
+00:07:13,310 --> 00:07:18,730
+But F3 the which will give some till date similarly to you.
+
+118
+00:07:18,770 --> 00:07:21,400
+F1 is f word, right?
+
+119
+00:07:22,160 --> 00:07:24,680
+Basically, if necessary, then we are getting forward on.
+
+120
+00:07:24,680 --> 00:07:29,450
+So but we want parents, Rachel, I'm just subtracting and buy one so that we can get the third answer.
+
+121
+00:07:30,110 --> 00:07:30,920
+I hope that's fine.
+
+122
+00:07:31,430 --> 00:07:34,010
+Now, after this, we have found out that there is.
+
+123
+00:07:34,010 --> 00:07:35,270
+This matrix is.
+
+124
+00:07:36,540 --> 00:07:39,330
+We have hired the Treasury Department and minus one.
+
+125
+00:07:39,720 --> 00:07:43,380
+And after I found out the details of the boat and minus one, what I can do is.
+
+126
+00:07:45,090 --> 00:07:52,170
+I just have to multiply the first rule with the first column of the year because I just want S&M right
+
+127
+00:07:52,800 --> 00:07:53,040
+here.
+
+128
+00:07:53,460 --> 00:07:54,810
+I just want be as intimate.
+
+129
+00:07:55,080 --> 00:07:58,830
+I just multiply, defy stroke with the with this column, which is one one zero.
+
+130
+00:07:59,160 --> 00:08:00,630
+But indirectly, what will happen?
+
+131
+00:08:02,020 --> 00:08:04,250
+This will get multiplied by this.
+
+132
+00:08:04,270 --> 00:08:12,220
+This will get multiplied by this rate, and this will get multiplied by this to basically f and minus
+
+133
+00:08:12,220 --> 00:08:14,080
+one is zero because of the base case.
+
+134
+00:08:14,110 --> 00:08:15,250
+OK, let me let me read to you.
+
+135
+00:08:15,970 --> 00:08:20,830
+Basically, this deal is to the Bible, something let's let me call it get into the base case.
+
+136
+00:08:20,830 --> 00:08:22,510
+What was the base case one one zero?
+
+137
+00:08:22,910 --> 00:08:28,050
+We know the first rule will get multiplied by the system, so let me write first rule SABC eight.
+
+138
+00:08:28,240 --> 00:08:31,990
+So it will be in the OnePlus being the one OnePlus seen to zero.
+
+139
+00:08:32,289 --> 00:08:37,750
+We are not considering see what we'll do is we'll say in India and has been doing it, which is nothing
+
+140
+00:08:37,750 --> 00:08:43,299
+but result in dam zero zero e and is rendered M01, which is B.
+
+141
+00:08:43,600 --> 00:08:49,030
+I'm not taking the 3rd value because if I take this R value, I say this let's say zero one two, I
+
+142
+00:08:49,030 --> 00:08:51,880
+have to multiply it by zero rate a base in the base case.
+
+143
+00:08:51,880 --> 00:08:55,330
+We we saw that it's zero the f in metric.
+
+144
+00:08:56,590 --> 00:08:57,700
+We will not multiply this.
+
+145
+00:08:58,800 --> 00:09:02,510
+And finally, we'll take Maude and Randy values.
+
+146
+00:09:03,150 --> 00:09:04,080
+I hope this works.
+
+147
+00:09:04,110 --> 00:09:05,550
+Let me bill this quickly.
+
+148
+00:09:13,730 --> 00:09:15,130
+OK, it's who.
+
+149
+00:09:16,340 --> 00:09:17,270
+Zero zero rate.
+
+150
+00:09:18,340 --> 00:09:22,460
+So let me quickly go over this again, I don't think so, there should be an error.
+
+151
+00:09:23,580 --> 00:09:28,950
+This is the diametric the Dimitrescu's zero one one zero one two and.
+
+152
+00:09:30,510 --> 00:09:33,450
+And one or Kilkeel, guess what?
+
+153
+00:09:33,550 --> 00:09:36,570
+This is the first rate in the first rate should be one one.
+
+154
+00:09:36,750 --> 00:09:38,300
+And in the second, Richard, be two one.
+
+155
+00:09:38,610 --> 00:09:39,030
+My word?
+
+156
+00:09:40,740 --> 00:09:42,350
+Right now, we are seeing good numbers.
+
+157
+00:09:42,830 --> 00:09:43,670
+My word, sorry, guys.
+
+158
+00:09:43,940 --> 00:09:47,380
+Because in the first story, it should be one day I just copy paste it.
+
+159
+00:09:47,390 --> 00:09:49,820
+It always happens with me whenever I copy paste things.
+
+160
+00:09:51,010 --> 00:09:57,760
+So here what we have, we have 14 and yeah, so it will still not work away because I'm subjecting rate,
+
+161
+00:09:57,940 --> 00:09:59,590
+let's say the numbers are huge.
+
+162
+00:09:59,950 --> 00:10:05,760
+If I subtract them, they will not give me the right number because of the model's properties and reduce.
+
+163
+00:10:05,830 --> 00:10:06,670
+I'll add more.
+
+164
+00:10:07,870 --> 00:10:09,610
+And then I'll again ignored.
+
+165
+00:10:10,820 --> 00:10:14,420
+And then this should give me the overdoses as these movies.
+
+166
+00:10:14,550 --> 00:10:18,640
+Also, it was giving me the right answer, but I just remember this is the smallest puppy.
+
+167
+00:10:18,650 --> 00:10:20,210
+Don't ever forget this if you subtract.
+
+168
+00:10:20,930 --> 00:10:25,490
+So there was a time when I was giving some long talent and it took me two days to realize this because
+
+169
+00:10:25,730 --> 00:10:30,860
+at the time I was going to do programming, no one was going to tell the eldest part to me.
+
+170
+00:10:31,220 --> 00:10:34,340
+And it took two days to figure out that it might just be smart.
+
+171
+00:10:35,700 --> 00:10:37,520
+It might not be if I want to do more.
+
+172
+00:10:37,550 --> 00:10:38,420
+It should be A-minus.
+
+173
+00:10:38,420 --> 00:10:40,990
+B-plus more than Hallmark eight.
+
+174
+00:10:42,080 --> 00:10:46,970
+So, yeah, and we can simply submit this report as well on this budget and.
+
+175
+00:10:48,560 --> 00:10:49,130
+To the.
+
+176
+00:10:50,200 --> 00:10:52,180
+Yeah, let me submit it also.
+
+177
+00:10:53,410 --> 00:11:02,340
+Also, I would strongly suggest that you all try it once before and then somebody will do.
+
+178
+00:11:02,470 --> 00:11:03,190
+Thank you, everyone.
+
+179
+00:11:03,310 --> 00:11:03,940
+In the next part.
+

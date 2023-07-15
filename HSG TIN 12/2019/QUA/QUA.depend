@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1672455474 source:e:\document\project\usaco\hsg tin 12\2019\qua\main.cpp
+	<iostream>
+	<vector>
+	<cstdio>
+	<algorithm>
+

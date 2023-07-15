@@ -1,0 +1,400 @@
+1
+00:00:01,730 --> 00:00:05,760
+Hi Everyone, in this lecture we're going to discuss a problem unique number.
+
+2
+00:00:05,790 --> 00:00:09,950
+OK, so what this question is, your given the 2N+1 numbers?
+
+3
+00:00:09,950 --> 00:00:17,390
+That means you have odd number of numbers. Ok. where every number comes twice except one number
+
+4
+00:00:18,140 --> 00:00:19,830
+Find out that unique number.
+
+5
+00:00:19,830 --> 00:00:22,070
+Okay, so let me give or take an example.
+
+6
+00:00:22,460 --> 00:00:24,650
+let's say a we have N equal to seven.
+
+7
+00:00:24,770 --> 00:00:28,340
+That means we have odd number of numbers because it is 2N+1.
+
+8
+00:00:29,090 --> 00:00:38,600
+And let's say the numbers are one, two, five, five and maybe one.
+
+9
+00:00:39,050 --> 00:00:41,240
+And let's say two.
+
+10
+00:00:41,270 --> 00:00:43,940
+Ok. let's say this number is three.
+
+11
+00:00:45,560 --> 00:00:51,710
+So what we are doing is? let's we also have a number six and we also have a number three.
+
+12
+00:00:52,220 --> 00:00:57,290
+We have N equal to let say nine numbers and we want to find out the unique numbers.
+
+13
+00:00:57,290 --> 00:01:02,220
+So clearly you can see there is one number that is coming only once that is this number six.
+
+14
+00:01:02,240 --> 00:01:02,570
+OK.
+
+15
+00:01:03,930 --> 00:01:05,940
+That is this number six.
+
+16
+00:01:06,550 --> 00:01:08,980
+So now how do you then approach this problem?
+
+17
+00:01:09,000 --> 00:01:14,010
+So the approach one could be what a brute force approach.
+
+18
+00:01:14,730 --> 00:01:17,190
+You can go to every number and you can check.
+
+19
+00:01:17,250 --> 00:01:21,610
+You can scan the entire array whether this number is coming or not.
+
+20
+00:01:21,630 --> 00:01:26,330
+Ok. if this number is repeating in the array again then obviously three is not a number.
+
+21
+00:01:26,370 --> 00:01:29,280
+Then you go two, do the same process again
+
+22
+00:01:29,280 --> 00:01:30,630
+You will find another two here.
+
+23
+00:01:31,260 --> 00:01:33,810
+You go to five, you'll find another five here.
+
+24
+00:01:33,940 --> 00:01:39,810
+OK, you go to this five, you scan the entire array and check, whether there is another five coming up or not.
+
+25
+00:01:39,810 --> 00:01:41,110
+Okay, easily,
+
+26
+00:01:41,130 --> 00:01:46,980
+This approach is going to take order(n^2) time and we do not need any extra space.
+
+27
+00:01:47,100 --> 00:01:49,380
+So it is going to take O(1) space. OK?
+
+28
+00:01:50,190 --> 00:01:53,610
+So input array is going to take space but that is not extra space.
+
+29
+00:01:55,130 --> 00:02:02,510
+Let's talk about approach two. In approach to what we can do is? we can maintain kind of a frequency
+
+30
+00:02:02,510 --> 00:02:03,290
+table. OK?
+
+31
+00:02:04,160 --> 00:02:08,900
+We can maintain kind of a frequency table or a hash map or a hash map.
+
+32
+00:02:10,449 --> 00:02:12,310
+hash map is going to be  unordered map.
+
+33
+00:02:12,550 --> 00:02:17,650
+And we can just put everything inside a hash map so we can go to three, we can say, ok.
+
+34
+00:02:17,650 --> 00:02:18,700
+Three is coming.
+
+35
+00:02:18,820 --> 00:02:20,320
+What? three is coming
+
+36
+00:02:20,800 --> 00:02:22,660
+one time. we go two. two is coming
+
+37
+00:02:22,660 --> 00:02:24,340
+One time. we go to five.
+
+38
+00:02:24,370 --> 00:02:25,120
+Five is coming
+
+39
+00:02:25,120 --> 00:02:26,470
+One time. we go to five
+
+40
+00:02:26,480 --> 00:02:31,480
+It is coming again to increment the frequency of five. we go to one.
+
+41
+00:02:33,010 --> 00:02:36,820
+one is also coming, one should also be there, OK?
+
+42
+00:02:36,850 --> 00:02:44,020
+One should also be repeating. One is coming one time, two is coming two time, 6 is coming how
+
+43
+00:02:44,020 --> 00:02:46,110
+much time? six is coming one time only. ok.
+
+44
+00:02:47,050 --> 00:02:53,070
+So what we can do now is we go to three, three is coming two times and we go to one,
+
+45
+00:02:53,080 --> 00:02:54,340
+one is coming two times.
+
+46
+00:02:55,480 --> 00:02:58,990
+Now if you look at this. Ok. if you look at this.
+
+47
+00:03:00,060 --> 00:03:06,570
+Then clearly you can iterate over the frequency table and you can check which number has a frequency
+
+48
+00:03:06,570 --> 00:03:13,080
+of one. so this approach is going to take O(n) time to build the hash table and then to iterate
+
+49
+00:03:13,080 --> 00:03:13,530
+over it.
+
+50
+00:03:13,980 --> 00:03:16,140
+And it's going to take O(n) space.
+
+51
+00:03:17,250 --> 00:03:23,130
+This is another approach. can we think of something better than this approach?
+
+52
+00:03:23,730 --> 00:03:26,900
+Can we use somehow bit masking. OK?
+
+53
+00:03:27,570 --> 00:03:28,500
+The answer is yes.
+
+54
+00:03:28,920 --> 00:03:30,360
+The answer is yes.
+
+55
+00:03:30,390 --> 00:03:31,200
+Let's see how.
+
+56
+00:03:32,290 --> 00:03:38,700
+OK, so what are you going to do is you know, you can take help of XOR  operator, OK?
+
+57
+00:03:39,300 --> 00:03:42,670
+XOR of two numbers which are same is zero.
+
+58
+00:03:42,670 --> 00:03:46,930
+So if you do five XOR five, you can get an answer zero.
+
+59
+00:03:47,140 --> 00:03:54,310
+So if it's like one zero zero one one zero one, if you do XOR, XOR of the same bit is zero.
+
+60
+00:03:54,940 --> 00:03:56,170
+And then you will get to zero.
+
+61
+00:03:56,620 --> 00:04:01,420
+What about if I do a XOR of numbers like a^b^a ?
+
+62
+00:04:02,460 --> 00:04:03,660
+And what is going to happen?
+
+63
+00:04:04,110 --> 00:04:05,640
+The answer is going to be zero.
+
+64
+00:04:06,090 --> 00:04:11,370
+sorry..., the answer is going to be B because the bits of A will cancel out each other. Ok.
+
+65
+00:04:11,580 --> 00:04:12,720
+Let me give you an example.
+
+66
+00:04:12,720 --> 00:04:19,170
+If I do five XOR six XOR five, it would be nothing but five. if  you do a XOR with six.
+
+67
+00:04:20,560 --> 00:04:24,130
+It would be one one zero and there would be zero one zero.
+
+68
+00:04:24,550 --> 00:04:25,210
+If you do.
+
+69
+00:04:27,030 --> 00:04:27,300
+OK.
+
+70
+00:04:27,650 --> 00:04:28,680
+Sorry, 011.
+
+71
+00:04:28,710 --> 00:04:29,010
+OK.
+
+72
+00:04:30,020 --> 00:04:35,680
+If you do a XOR with five again that is one zero one. the XOR of same bit is going to be zero.
+
+73
+00:04:35,700 --> 00:04:36,840
+So it going to be one one zero?
+
+74
+00:04:37,110 --> 00:04:39,090
+So you can see this answer is nothing but six.
+
+75
+00:04:40,830 --> 00:04:47,130
+So what I can say is if I have numbers like five, six, one
+
+76
+00:04:49,570 --> 00:04:58,600
+Five, six and maybe three and two. Ok. if I have these numbers and I want to find out this unique
+
+77
+00:04:58,600 --> 00:05:05,320
+number. what I can do? I can simply find the cumulative XOR of all the numbers. Ok. so what
+
+78
+00:05:05,320 --> 00:05:10,270
+I need to do? I just need to find the XOR of all these numbers.
+
+79
+00:05:10,950 --> 00:05:14,350
+Once you do this what your left with.
+
+80
+00:05:15,010 --> 00:05:17,140
+The bits of three will cancel the three.
+
+81
+00:05:17,140 --> 00:05:21,970
+The bits of five will cancel this five, bits of six will cancel the six.
+
+82
+00:05:22,390 --> 00:05:25,230
+And finally, in your... in your XOR what
+
+83
+00:05:25,240 --> 00:05:27,390
+you will have XOR of this one.
+
+84
+00:05:27,400 --> 00:05:28,640
+So you will have one.
+
+85
+00:05:28,660 --> 00:05:28,960
+OK.
+
+86
+00:05:29,830 --> 00:05:30,460
+What you can do?
+
+87
+00:05:30,490 --> 00:05:37,510
+You can initialize the initials XOR as zero and four all the numbers in the range
+
+88
+00:05:37,660 --> 00:05:38,410
+Zero to
+
+89
+00:05:39,100 --> 00:05:40,870
+i less than n. i plus plus.
+
+90
+00:05:40,870 --> 00:05:42,280
+you can say, ok.
+
+91
+00:05:42,280 --> 00:05:48,730
+My XOR should be equal to my current XOR till now with the current number in the array.
+
+92
+00:05:49,780 --> 00:05:54,280
+Finally in this XOR you will have the number that is unique.
+
+93
+00:05:55,450 --> 00:05:57,370
+So I hope you understood this algorithm.
+
+94
+00:05:57,830 --> 00:06:04,290
+Now why this is better because we are not taking any extra space so we are doing in O(1) space.
+
+95
+00:06:05,330 --> 00:06:11,900
+And how much time we will need we will just need to iterate on the input array that is O(n) of time.
+
+96
+00:06:12,800 --> 00:06:14,220
+So no hash table is needed.
+
+97
+00:06:14,630 --> 00:06:16,760
+And it is running in linear time.
+
+98
+00:06:17,360 --> 00:06:21,950
+That's why this approach is better than the previous two approaches.
+
+99
+00:06:22,660 --> 00:06:24,500
+That's all for this lecture.
+
+100
+00:06:24,500 --> 00:06:26,240
+In the next video, you will write the code.
+

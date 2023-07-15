@@ -1,0 +1,777 @@
+WEBVTT
+
+0
+00:00.110 --> 00:07.980
+In this video, I'll be discussing about Abstract Data Type, that is, ADT, we'll learn What is ADT? and that,
+
+1
+00:08.010 --> 00:10.360
+I will explain it through an example,
+
+2
+00:10.360 --> 00:11.890
+that is, list example.
+
+3
+00:12.360 --> 00:15.620
+So, we will learn about list ADT.
+
+4
+00:15.660 --> 00:22.280
+So, first let us learn the term ADT. ADT means Abstract Data Type.
+
+5
+00:22.420 --> 00:28.320
+So, in this, you leave the term, Abstract. First we'll learn about Data Type.
+
+6
+00:28.320 --> 00:30.170
+What does it mean by Data Type?
+
+7
+00:30.480 --> 00:36.210
+So, a data type is defined as representation of data,
+
+8
+00:36.750 --> 00:40.590
+And second thing is operations on data.
+
+9
+00:41.130 --> 00:46.700
+So, a data type is a defined in 2 terms, first is, How the data is represented,
+
+10
+00:46.710 --> 00:48.150
+means, how you are storing the data.
+
+11
+00:48.840 --> 00:53.250
+And second thing is, what are the operations that you allow on the data.
+
+12
+00:54.210 --> 01:03.860
+So if we take an example of an integer data type in C, C++ languages, then if we assume that integer data
+
+13
+01:03.880 --> 01:08.020
+type it takes 2 bytes in C, C++.
+
+14
+01:08.070 --> 01:17.550
+If we assume that, then once I declare any variable of type integer, in C, C++ we get memory of 2 bytes,
+
+15
+01:19.570 --> 01:20.900
+that is 16 bits.
+
+16
+01:20.920 --> 01:28.990
+So these are 16 bits. So an integer type data is stored in 2 bytes together as a single value, as a
+
+17
+01:28.990 --> 01:30.370
+single data.
+
+18
+01:30.550 --> 01:39.010
+Now in this, 1 bit is reserved as sign bit, to allow both positive as well as negative numbers, and
+
+19
+01:39.010 --> 01:45.620
+the rest of the 15 bits are allowed for storing data, that is any number.
+
+20
+01:45.640 --> 01:52.420
+This is 1 bit. 1 bit for sign bit, the remaining bits are meant for storing a number.
+
+21
+01:52.480 --> 01:58.650
+This is how integer is represented inside the memory in 2 bytes.
+
+22
+01:58.720 --> 02:02.980
+So, this is the representation of integer data type.
+
+23
+02:03.430 --> 02:07.960
+So, as I said that, the representation of data and the operations of data.
+
+24
+02:07.960 --> 02:09.780
+Example of an integer
+
+25
+02:09.790 --> 02:11.970
+I have taken. So, integer,
+
+26
+02:12.040 --> 02:13.710
+This is how it is represented.
+
+27
+02:14.050 --> 02:15.900
+So this is the first thing we have covered.
+
+28
+02:16.030 --> 02:21.610
+And, what are the operations allowed on integer type data in C, C++ languages?
+
+29
+02:21.610 --> 02:23.130
+That is arithmetic
+
+30
+02:23.140 --> 02:24.960
+operations are allowed on them.
+
+31
+02:24.970 --> 02:31.540
+That is + , - , * , / and %
+
+32
+02:31.540 --> 02:37.120
+Apart from these, relational operations that is, <, >, and, increment, decrement
+
+33
+02:37.120 --> 02:38.340
+operators are allowed.
+
+34
+02:38.350 --> 02:42.530
+That is, ++ or -- , both pre-increment and post-increment.
+
+35
+02:42.700 --> 02:48.620
+So, these are some of the set of operations that are allowed on integer data.
+
+36
+02:49.660 --> 02:50.570
+So, that's all.
+
+37
+02:50.830 --> 02:53.050
+This is a data type.
+
+38
+02:53.320 --> 02:55.230
+So, if you talk about data type,
+
+39
+02:55.270 --> 03:02.020
+Any data type in a language, then that data type will have its representations and the set of operations
+
+40
+03:02.020 --> 03:02.930
+on the data.
+
+41
+03:02.950 --> 03:08.200
+So, when we are learning any programming language, when we learn any data type, we learn mostly about its
+
+42
+03:08.200 --> 03:13.680
+operations, and sometimes we go into detail and also understand its representation.
+
+43
+03:13.690 --> 03:19.470
+Now, let us see What is Abstract? Abstract means hiding internal details.
+
+44
+03:19.830 --> 03:28.060
+Now, if I take this example, integer data type and these operations, for performing these operations, do
+
+45
+03:28.060 --> 03:35.470
+we really need to know how they are performed in the binary form inside the main memory?
+
+46
+03:35.500 --> 03:36.540
+No.
+
+47
+03:36.940 --> 03:42.350
+We are concerned about declaring a variable and using it by performing these operations.
+
+48
+03:42.490 --> 03:46.810
+So, we need not know internal details, how these operations are performed.
+
+49
+03:47.220 --> 03:47.480
+Right?
+
+50
+03:47.530 --> 03:49.780
+Without knowing them, we can use them.
+
+51
+03:49.810 --> 03:56.250
+So, these things are hidden from us, so we can call them as Abstract. Without knowing internal details,
+
+52
+03:56.250 --> 04:00.470
+We can use it, So internal details are Abstract for us.
+
+53
+04:00.700 --> 04:07.810
+So, this is the example of a primitive data type I have taken, and explained you meaning of data type
+
+54
+04:07.840 --> 04:10.410
+and meaning of abstract data type.
+
+55
+04:10.440 --> 04:11.930
+This is not abstract data type,
+
+56
+04:11.950 --> 04:16.420
+This is primitive data type. Now, the term Abstract Data Type.
+
+57
+04:16.450 --> 04:17.530
+Why is it introduced?
+
+58
+04:17.530 --> 04:19.460
+What is the meaning of this one?
+
+59
+04:19.490 --> 04:24.140
+See, this is related to Object Oriented Programming languages.
+
+60
+04:24.310 --> 04:30.010
+When the Object Oriented Programming languages being started to use in Software Development, then using
+
+61
+04:30.010 --> 04:35.760
+the classes, we can define our own data types, that are Abstract.
+
+62
+04:35.890 --> 04:38.730
+That is, without knowing internal details, we can use them.
+
+63
+04:38.770 --> 04:41.950
+So, this term is related to Object Oriented Programming.
+
+64
+04:42.910 --> 04:47.460
+So, let us take an example of a list and define it as
+
+65
+04:47.620 --> 04:48.510
+Abstract Data Type.
+
+66
+04:48.610 --> 04:54.820
+Let us take the example of a list, that is list of elements or collection of elements.
+
+67
+04:54.820 --> 04:59.710
+So, if I say, List of elements, I'll take few numbers randomly.
+
+68
+04:59.710 --> 05:02.560
+So, here I have taken the list of elements.
+
+69
+05:02.560 --> 05:07.620
+Now, I can give the indices, either starting from 0 or 1, that depends on my requirement,
+
+70
+05:07.630 --> 05:09.320
+That depends on my definition.
+
+71
+05:09.460 --> 05:10.160
+So I'm starting
+
+72
+05:10.160 --> 05:11.500
+indices from 0 onward.
+
+73
+05:11.500 --> 05:14.290
+So, this is 0 1 2 and so on.
+
+74
+05:17.790 --> 05:21.660
+This is a list, that is collection of elements.
+
+75
+05:21.660 --> 05:22.720
+Now, this is a list,
+
+76
+05:22.740 --> 05:23.990
+This is on paper.
+
+77
+05:24.030 --> 05:28.110
+Now, I want this list to be used in my program.
+
+78
+05:28.110 --> 05:31.270
+Then, How can I represent a list?
+
+79
+05:31.320 --> 05:35.370
+So, What are the things that I have to store for representing the list?
+
+80
+05:35.370 --> 05:43.360
+So, the data that is required for storing this list is, first I need space for storing elements.
+
+81
+05:43.470 --> 05:48.020
+Then the second thing is, I need to have some capacity of a list.
+
+82
+05:48.090 --> 05:55.210
+Then, the third is, inside that capacity, how many elements already I have in the list, that is length of
+
+83
+05:55.250 --> 05:57.960
+the list, or size of a list.
+
+84
+05:57.990 --> 06:00.990
+So the third thing is size of a list.
+
+85
+06:01.890 --> 06:03.930
+So, for representing this list,
+
+86
+06:03.930 --> 06:12.380
+I need 3 things, space for storing the elements, and its capacity, that is maximum capacity, and its size,
+
+87
+06:12.390 --> 06:14.100
+that is, number of elements
+
+88
+06:14.100 --> 06:17.340
+it is having. So, for representation of this one,
+
+89
+06:17.370 --> 06:18.700
+I have two options.
+
+90
+06:18.720 --> 06:28.980
+One is, I can use array in a program, or I can use linked list. So, representation of a list can be done
+
+91
+06:29.010 --> 06:36.480
+using any of these methods. Then, let us look at operations on a list.
+
+92
+06:39.300 --> 06:43.650
+What are the operations that we perform on a list? For the operations,
+
+93
+06:43.650 --> 06:45.330
+I will write few operations here,
+
+94
+06:45.330 --> 06:49.140
+Then again, I will explain all of them.
+
+95
+06:49.140 --> 06:54.720
+So, the operations that I may be performing on a list is, in this set of elements, or the list of elements,
+
+96
+06:54.840 --> 06:56.550
+I can add more elements.
+
+97
+06:56.550 --> 07:05.040
+So, the operations that I can perform is, add an element that is, x or, I may want to remove some element
+
+98
+07:05.040 --> 07:05.690
+from this one.
+
+99
+07:05.730 --> 07:12.790
+So, remove an element or, I want to search for any particular element.
+
+100
+07:12.820 --> 07:15.640
+So, let us say it is search.
+
+101
+07:15.660 --> 07:20.610
+I want to search for any element key, like this, and so on.
+
+102
+07:20.900 --> 07:23.430
+I will be discussing all operations afterwards.
+
+103
+07:23.460 --> 07:24.780
+Now let me finish
+
+104
+07:24.780 --> 07:30.630
+Abstract Data Types here. See, this list is an Abstract Data Type.
+
+105
+07:30.870 --> 07:35.910
+It is having the representation of data, and the operations on the data.
+
+106
+07:36.420 --> 07:41.710
+So, when you have 2 things, data representations and operations on the data, together
+
+107
+07:41.710 --> 07:44.520
+it becomes a data type.
+
+108
+07:44.520 --> 07:45.750
+It becomes a data type.
+
+109
+07:46.680 --> 07:54.270
+Now, this I can put together, and I can define a class in C++, or in any other Object Oriented Programming
+
+110
+07:54.270 --> 07:55.050
+language.
+
+111
+07:55.080 --> 08:01.610
+Then, the question is, How you'll be storing this list of elements? Either Array, or, Linked List, whatever
+
+112
+08:01.620 --> 08:02.910
+is used,
+
+113
+08:02.910 --> 08:04.520
+This is going to work perfectly.
+
+114
+08:04.520 --> 08:07.050
+I'll be performing these set operations only.
+
+115
+08:07.240 --> 08:09.560
+Now, how the presentation is done?
+
+116
+08:09.570 --> 08:11.250
+I need not bother about it.
+
+117
+08:11.340 --> 08:12.520
+I need not bother.
+
+118
+08:12.830 --> 08:16.550
+When the class is written, I can just create the object of the class and I can use it.
+
+119
+08:16.890 --> 08:21.300
+So, how internally the things are working, I need not worry,
+
+120
+08:21.450 --> 08:23.010
+That's what, it's Abstract.
+
+121
+08:24.320 --> 08:30.680
+So, the concept of ADT, define the data, and operations on data together, and let it be
+
+122
+08:30.680 --> 08:36.150
+used as data type, by hiding all the internal details.
+
+123
+08:36.170 --> 08:40.270
+So, this concept of ADT is very common in C++.
+
+124
+08:40.310 --> 08:48.130
+So, I can say that, when you write any class in C++ which has the data presentation and operations together,
+
+125
+08:48.470 --> 08:50.970
+it defines an ADT.
+
+126
+08:51.380 --> 08:56.780
+So, in our subject data structure, we are going to learn about various data structures, like array, linked list,
+
+127
+08:56.770 --> 09:04.580
+stack, queues, graphs, or trees, Hash Table, all these things, we will try to represent them as
+
+128
+09:04.580 --> 09:05.600
+ADT
+
+129
+09:05.660 --> 09:13.190
+So, I'll be showing you the code for C language as well as I'll be showing you the code for C++. So, I'll
+
+130
+09:13.190 --> 09:20.570
+be showing you how ADT is implemented. We will be defining all these data structures as ADT
+
+131
+09:20.570 --> 09:23.170
+ADT through C++.
+
+132
+09:23.300 --> 09:28.130
+So, while learning other topics, I'll show you how it is working as ADT.
+
+133
+09:29.060 --> 09:32.270
+Now next, let us look at these operations on a list.
+
+134
+09:32.300 --> 09:35.150
+I'll just explain you few operations on a list.
+
+135
+09:35.150 --> 09:37.560
+What is the meaning of these operations.
+
+136
+09:37.620 --> 09:41.090
+Now, I'll explain you the operations on a list.
+
+137
+09:41.090 --> 09:43.850
+Let us look at the operations one by one.
+
+138
+09:43.850 --> 09:45.170
+See, first operation,
+
+139
+09:45.170 --> 09:49.310
+I will call it as add; add some element.
+
+140
+09:52.820 --> 09:53.900
+Adding an element,
+
+141
+09:53.930 --> 10:00.020
+This means that, I want to add something to the end of a list, like suppose, I want to add
+
+142
+10:00.200 --> 10:05.580
+15, so 15 should be added here, at the index 7.
+
+143
+10:05.840 --> 10:09.080
+So, add means, adding an element to the end of a list.
+
+144
+10:09.130 --> 10:10.810
+This is the meaning that we can take.
+
+145
+10:11.000 --> 10:17.840
+And even this add can also be called as, append, append an element,
+
+146
+10:17.880 --> 10:19.820
+.
+
+147
+10:19.880 --> 10:31.340
+So this also means that adding some element at the end of a list. Now, next operation, add an element
+
+148
+10:31.550 --> 10:34.030
+at a given index.
+
+149
+10:34.820 --> 10:43.090
+So, adding an element at a given index, for example, I want to add 20 at index 6.
+
+150
+10:43.160 --> 10:46.100
+So, here I want to insert 20.
+
+151
+10:46.360 --> 10:51.740
+So it means, already an element 12 is there, then I should shift the element and make a
+
+152
+10:51.740 --> 10:53.280
+free space for 20.
+
+153
+10:53.300 --> 11:02.060
+So, it means I should move 15 to the next place, on index 8, and I should bring 12 here, then I should
+
+154
+11:02.120 --> 11:03.410
+insert 20 here.
+
+155
+11:04.070 --> 11:08.390
+So, if you want to insert any element at a given index, then you have to shift the elements.
+
+156
+11:08.510 --> 11:14.270
+So, that's what, adding an element at a given index.
+
+157
+11:14.420 --> 11:21.090
+This can also be called as insert, insert at a given index,
+
+158
+11:21.090 --> 11:28.160
+this element. Adding at a given index, we can also call
+
+159
+11:28.160 --> 11:38.730
+it as insert. Then next, remove, Removing an element. So which element you want remove, you must give an index.
+
+160
+11:38.750 --> 11:42.450
+Suppose, I want to remove 20, the one I have inserted just now.
+
+161
+11:42.740 --> 11:46.310
+So it means, this 20 should be removed. When you remove 20,
+
+162
+11:46.310 --> 11:48.230
+that place will be vacant in the list.
+
+163
+11:48.260 --> 11:54.520
+So, we have to shift the rest of the elements. So, 12 should come here, and 15 should come here.
+
+164
+11:55.520 --> 11:59.470
+So I'll be having total 8 elements, index from 0 to 7.
+
+165
+12:00.140 --> 12:05.350
+So that's all, removing one element. So, rest of the elements are still the part of the list.
+
+166
+12:05.660 --> 12:16.640
+Removing from given index. Then, next operation is, set at Index, a new element.
+
+167
+12:16.760 --> 12:20.450
+This means, changing an element at a given index.
+
+168
+12:20.450 --> 12:30.350
+Suppose, I want to change an element at index 3 to 25. So, change this 4 to value 25.
+
+169
+12:30.520 --> 12:33.230
+So, set can also be called as replace,
+
+170
+12:33.260 --> 12:47.430
+that is, replacing an element, replace at a given index, a new element. Then, get.
+
+171
+12:47.430 --> 12:53.010
+This is, just I want to know the element at a given index, like I want to know, what is there at index 5,
+
+172
+12:53.010 --> 12:55.970
+index 5, the value is 10.
+
+173
+12:56.010 --> 13:07.960
+So, knowing an element from a given index. Then, search, for any given key. So, searching an element in a
+
+174
+13:07.960 --> 13:11.440
+list, like I want to search for an element, 9.
+
+175
+13:11.650 --> 13:16.240
+So, Yes. It is found here at index 2. The result of search is,
+
+176
+13:16.240 --> 13:19.260
+we get the index; We know the element 9,
+
+177
+13:19.270 --> 13:22.720
+We want to search for it. So, we should know where it is in the list,
+
+178
+13:22.840 --> 13:29.950
+So, it's at index 2. So, search - searching for an element to find its index if it is present in the
+
+179
+13:29.950 --> 13:31.120
+list.
+
+180
+13:31.120 --> 13:36.670
+This search is also called as contains.
+
+181
+13:36.670 --> 13:41.540
+So, we want to know whether this key element is there in the list or not.
+
+182
+13:41.590 --> 13:44.770
+The list contains that element or not. Next,
+
+183
+13:44.860 --> 13:47.140
+You may want to sort the list.
+
+184
+13:48.950 --> 13:54.940
+So, you want to arrange all these elements in some order, that is, you want to make it as a sorted list.
+
+185
+13:55.010 --> 13:56.970
+So, these are the few operations on a list
+
+186
+13:56.990 --> 14:02.090
+I have shown you. There are other operation that you can perform, that is, you can reverse the list,
+
+187
+14:02.210 --> 14:07.430
+And, when there are more than one lists, you can combine them, or you can merge them, or you can
+
+188
+14:07.430 --> 14:08.250
+split a list.
+
+189
+14:08.300 --> 14:11.650
+So, a lot of other operations you can perform on a list.
+
+190
+14:12.080 --> 14:18.170
+So, as a part of topic, that is ADT, I have taken an example of a list and I have shown you how it is
+
+191
+14:18.170 --> 14:20.400
+represented and what are the operations.
+
+192
+14:20.400 --> 14:27.510
+So, I have explained you what these operations mean. So, that's all about ADT.
+
+193
+14:27.590 --> 14:29.630
+So, let us move on to the next topic.

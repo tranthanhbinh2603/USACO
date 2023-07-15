@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1673689352 source:e:\document\project\usaco\mastering critical skills in algorithms using c++ part 1\8. graph depth first search\learning\02 dfs on matrix\main.cpp
+	<iostream>
+	<vector>
+

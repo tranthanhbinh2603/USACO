@@ -1,0 +1,369 @@
+0
+1
+00:00:01,100 --> 00:00:04,410
+In the last problem, to be able to solve it,
+1
+
+2
+00:00:04,430 --> 00:00:12,170
+we just need to do some analysis, and the analysis skill is an important skill that you need
+2
+
+3
+00:00:12,170 --> 00:00:14,870
+during algorithms.
+3
+
+4
+00:00:15,200 --> 00:00:18,140
+So sometimes the observations are very clear, and sometimes it isn't.
+4
+
+5
+00:00:18,680 --> 00:00:22,190
+So anyway, let's first start with the array values.
+5
+
+6
+00:00:22,430 --> 00:00:25,970
+What if all of the array values are greater than or equal to zero?
+6
+
+7
+00:00:26,480 --> 00:00:28,490
+Logically, their summation is maximum.
+7
+
+8
+00:00:29,120 --> 00:00:31,490
+So your k value might harm this summation.
+8
+
+9
+00:00:31,910 --> 00:00:33,360
+Let's start with k = 1.
+9
+
+10
+00:00:33,380 --> 00:00:37,220
+If I told you the values are maybe like 10, 20, and 30,
+10
+
+11
+00:00:38,900 --> 00:00:41,990
+and 40, they are all greater than or equal zero, k = 1.
+11
+
+12
+00:00:42,020 --> 00:00:43,220
+What can you do with that?
+12
+
+13
+00:00:44,330 --> 00:00:51,020
+As simple as the logical choice is, the greedy choice is just to take the minimum value and multiply
+13
+
+14
+00:00:51,020 --> 00:00:51,890
+it with negative one,
+14
+
+15
+00:00:52,640 --> 00:00:54,290
+and then sum all of them together.
+15
+
+16
+00:00:54,500 --> 00:00:54,990
+Why?
+16
+
+17
+00:00:55,010 --> 00:00:59,060
+Because this is the best you can do, just get the minimum and multiply it with negative one.
+17
+
+18
+00:00:59,780 --> 00:01:00,200
+OK.
+18
+
+19
+00:01:00,620 --> 00:01:01,580
+What if k
+19
+
+20
+00:01:02,620 --> 00:01:04,690
+is three?
+20
+
+21
+00:01:06,450 --> 00:01:14,370
+The observation here is if you multiply the number twice, then the value is just as it is. So if I
+21
+
+22
+00:01:14,370 --> 00:01:17,430
+multiply twenty by minus one and then minus one, it's just back to twenty.
+22
+
+23
+00:01:17,730 --> 00:01:22,050
+So k is three is as same as k is one. In another way,
+23
+
+24
+00:01:22,080 --> 00:01:23,550
+it's all about even and odd.
+24
+
+25
+00:01:24,790 --> 00:01:25,990
+Let's say k is two.
+25
+
+26
+00:01:27,710 --> 00:01:31,790
+If k is two, then if we applied it twice, its effect is done.
+26
+
+27
+00:01:32,090 --> 00:01:36,740
+So back again to our example, k is two just applied twice on ten, so it doesn't add value.
+27
+
+28
+00:01:37,160 --> 00:01:39,650
+So if k is even, we don't care.
+28
+
+29
+00:01:40,750 --> 00:01:45,670
+If k is odd, it just as same as applying it once, right?
+29
+
+30
+00:01:45,910 --> 00:01:51,880
+So if K is nine, this is as same as applying it once because anyway, eight of them will
+30
+
+31
+00:01:51,880 --> 00:01:52,750
+cancel each other.
+31
+
+32
+00:01:53,140 --> 00:01:56,110
+Remember, all of the values are greater than or equal to zero.
+32
+
+33
+00:01:56,410 --> 00:01:59,710
+And we just want to flip the smallest one of them.
+33
+
+34
+00:02:00,790 --> 00:02:01,660
+Now let's go back.
+34
+
+35
+00:02:02,110 --> 00:02:04,310
+I would like you to learn how I analyze things.
+35
+
+36
+00:02:04,340 --> 00:02:09,400
+OK, so you see, I'm thinking, Oh, maximum sum, positive values, negative values.
+36
+
+37
+00:02:09,820 --> 00:02:10,990
+Let's go to the other case.
+37
+
+38
+00:02:10,990 --> 00:02:14,080
+Let's say we have two negative values, for example.
+38
+
+39
+00:02:16,440 --> 00:02:17,220
+Or maybe three.
+39
+
+40
+00:02:18,650 --> 00:02:26,540
+Now, if I can multiply every one of these negative values with a negative one, then I'm maximizing
+40
+
+41
+00:02:26,540 --> 00:02:27,530
+my summation.
+41
+
+42
+00:02:28,070 --> 00:02:29,960
+So let's say you have k = 7.
+42
+
+43
+00:02:31,210 --> 00:02:32,800
+Then I would go multiply first
+43
+
+44
+00:02:33,010 --> 00:02:35,710
+this one with negative, and this one with negative, and this one with negative.
+44
+
+45
+00:02:36,010 --> 00:02:37,630
+Now we have k = 4,
+45
+
+46
+00:02:38,110 --> 00:02:39,010
+and an array that is
+46
+
+47
+00:02:39,010 --> 00:02:43,870
+all of it is positive, go back to our previous logic where k is even, cancel it.
+47
+
+48
+00:02:43,880 --> 00:02:46,990
+k is odd, just multiply it with the smallest one.
+48
+
+49
+00:02:47,500 --> 00:02:51,970
+So now we reduce the case of even and negative values to the case of
+49
+
+50
+00:02:53,590 --> 00:02:55,220
+all of it are positive values.
+50
+
+51
+00:02:55,850 --> 00:02:57,590
+I hope the idea overall is clear.
+51
+
+52
+00:02:58,190 --> 00:03:02,150
+So this is just the moral of the implementation.
+52
+
+53
+00:03:02,510 --> 00:03:04,850
+So first of all, we sort all of the values.
+53
+
+54
+00:03:06,270 --> 00:03:08,670
+And I'm going to iterate in the whole array.
+54
+
+55
+00:03:09,620 --> 00:03:12,290
+As long as we have a k value,
+55
+
+56
+00:03:13,270 --> 00:03:19,950
+and a number is negative, just multiply it with a negative one, and multiply the k, and keep summing
+56
+
+57
+00:03:19,960 --> 00:03:23,080
+the current numbers, and keep taking the minimum among all of them.
+57
+
+58
+00:03:24,320 --> 00:03:29,870
+Now, if k % 2 is one, it means we need to flip one number.
+58
+
+59
+00:03:30,680 --> 00:03:36,280
+So let's say the current numbers were like maybe 5, 10, and 15.
+59
+
+60
+00:03:36,290 --> 00:03:42,380
+I already add all of them together, and the minimum is five.
+60
+
+61
+00:03:43,100 --> 00:03:49,790
+So the current sum that I have is actually thirty, right?
+61
+
+62
+00:03:50,300 --> 00:03:51,560
+The current sum is thirty.
+62
+
+63
+00:03:52,340 --> 00:03:59,570
+But what I actually need is to add a negative five here. If you would like, with less code, to switch
+63
+
+64
+00:03:59,570 --> 00:04:04,100
+it, you can just make something like sum - 2 * min.
+64
+
+65
+00:04:04,100 --> 00:04:06,470
+Why? We know that this equation
+65
+
+66
+00:04:08,380 --> 00:04:15,610
+5 + 10 + 15 has an extra five and we actually need minus five, so as five need to be removed
+66
+
+67
+00:04:15,610 --> 00:04:20,680
+twice, if you added here -2 * 5, you will reduce the summation to this one.
+67
+
+68
+00:04:20,830 --> 00:04:22,870
+I hope this trick isn't an annoying one for you.
+68
+
+69
+00:04:23,170 --> 00:04:29,250
+If it's an annoying one for you, just find the minimum again, and cancel its summation, and add it.
+69
+
+70
+00:04:29,260 --> 00:04:31,240
+I'm just making it in one single step here.
+70
+
+71
+00:04:31,930 --> 00:04:33,010
+It's a math trick.
+71
+
+72
+00:04:33,400 --> 00:04:39,790
+If I know the summation and I know the minimum value, and I would like to multiply
+72
+
+73
+00:04:39,790 --> 00:04:46,220
+the minimum with negative, I just can cancel it by multiplying it twice.
+73
+
+74
+00:04:46,240 --> 00:04:46,780
+That's it.

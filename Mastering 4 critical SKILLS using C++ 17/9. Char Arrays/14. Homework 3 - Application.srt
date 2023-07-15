@@ -1,0 +1,149 @@
+0
+1
+00:00:01,140 --> 00:00:05,670
+In this homework, we will develop an application for an employee system,
+1
+
+2
+00:00:06,330 --> 00:00:12,060
+we have a factory of several employees that we would like to manage and we would like to have the following
+2
+
+3
+00:00:12,060 --> 00:00:15,180
+ability: to add a new employee, print all of them,
+3
+
+4
+00:00:15,180 --> 00:00:22,190
+delete someone by the age range, or update salary by given name, this program will keep running forever
+4
+
+5
+00:00:22,200 --> 00:00:26,700
+and then the user take a choice from one to four to do these choices.
+5
+
+6
+00:00:27,000 --> 00:00:30,630
+So let's let's get in more details for choice
+6
+
+7
+00:00:30,630 --> 00:00:35,220
+number one, we would like to allow the manager to enter information of an employee.
+7
+
+8
+00:00:35,430 --> 00:00:42,150
+The information is name, age, salary and gender letter, add the information to your
+8
+
+9
+00:00:42,150 --> 00:00:44,550
+database, which is your internal memory for now.
+9
+
+10
+00:00:45,060 --> 00:00:52,200
+printing all of them or, in the choice number three, you will take a start range and end range and remove
+10
+
+11
+00:00:52,200 --> 00:00:56,580
+all of the employees that has this, that the age is within the start and the end.
+11
+
+12
+00:00:57,180 --> 00:01:03,150
+in the fourth choice, the user enters a name, then salary, and then you update the salary of a person
+12
+
+13
+00:01:03,150 --> 00:01:04,040
+of his name.
+13
+
+14
+00:01:04,170 --> 00:01:06,170
+We are assuming here that names are symbols.
+14
+
+15
+00:01:06,480 --> 00:01:09,870
+Let's see some screenshots, here
+15
+
+16
+00:01:09,870 --> 00:01:11,520
+we have the menu of four choices.
+16
+
+17
+00:01:11,790 --> 00:01:19,110
+The user entered one that I enter the name Mustafa age 3 blah blah blah and gender M, for 
+17
+
+18
+00:01:19,110 --> 00:01:21,960
+simplicity I use the names without spaces.
+18
+
+19
+00:01:22,590 --> 00:01:27,540
+And then I added another name and then I asked for two, which is printing all of them please.
+19
+
+20
+00:01:27,540 --> 00:01:29,490
+So two employees would be printed.
+20
+
+21
+00:01:30,180 --> 00:01:34,200
+After that, we asked for four, which is updating salary by name.
+21
+
+22
+00:01:34,200 --> 00:01:38,370
+You would enter a name which again doesn't have spaces and a salary.
+22
+
+23
+00:01:38,850 --> 00:01:45,090
+If after that you try to print them, you will notice that the salary of Mustafa here changed 
+23
+
+24
+00:01:45,090 --> 00:01:52,490
+from thirty-three... from one, two, three, four, five to five hundred and five.
+24
+
+25
+00:01:53,400 --> 00:01:57,960
+Finally, we would like to do a deletion by age so we enter a start and end the age
+25
+
+26
+00:01:58,290 --> 00:02:00,930
+Then all of the employees in this range would be removed.
+26
+
+27
+00:02:01,290 --> 00:02:07,320
+Observe here, Mona here within the range so it would be deleted, but Mustafa will remain for
+27
+
+28
+00:02:07,320 --> 00:02:07,590
+us.
+28
+
+29
+00:02:08,640 --> 00:02:09,840
+That's all the program is.
+29
+
+30
+00:02:09,860 --> 00:02:15,660
+simple requirements do not complicate things for yourself and try to make it just that simple.

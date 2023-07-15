@@ -1,0 +1,604 @@
+0
+1
+00:00:01,260 --> 00:00:09,870
+In C++ 17, The fold expression cames to make the variadic template easier for specific binary operators
+1
+
+2
+00:00:10,110 --> 00:00:15,960
+As you remember, We were doing the sum function in the variadic template, Remember
+2
+
+3
+00:00:15,960 --> 00:00:19,350
+the binary operator class is a binary operator so needs two operands.
+3
+
+4
+00:00:19,590 --> 00:00:25,190
+So for a specific 32 operators, The fold expression comes to make our life much simpler.
+4
+
+5
+00:00:25,860 --> 00:00:27,310
+Similar to the variadic template.
+5
+
+6
+00:00:27,540 --> 00:00:30,300
+The coding of the fold expression is very systematic.
+6
+
+7
+00:00:30,960 --> 00:00:36,410
+The language recognizes for different cases what we call unary fold and binary fold
+7
+
+8
+00:00:36,570 --> 00:00:38,850
+and every one of them is like right and left.
+8
+
+9
+00:00:38,860 --> 00:00:41,310
+We will see that it's very systematic.
+9
+
+10
+00:00:41,640 --> 00:00:46,200
+Remember if you wrote 1, 2, 3 + 2 + 3: In C++, that's OK 
+10
+
+11
+00:00:46,440 --> 00:00:50,520
+but if you have something like plus 1, 2, 3 or 1, 2, 3 plus here, it's going to
+11
+
+12
+00:00:50,520 --> 00:00:51,380
+fail to compile
+12
+
+13
+00:00:51,420 --> 00:00:55,700
+and this is the reason why we have the left and right folding, as we will see right now.
+13
+
+14
+00:00:56,550 --> 00:01:04,620
+So let's go directly to what we call the right unary fold. The function
+14
+
+15
+00:01:04,800 --> 00:01:13,080
+now to sum a bunch of numbers becomes as simple as this weird syntax that you see. Args plus dot, dot, dot and
+15
+
+16
+00:01:13,080 --> 00:01:14,300
+that's it, The ellipses.
+16
+
+17
+00:01:14,730 --> 00:01:17,410
+The function eventually is done, The code is done.
+17
+
+18
+00:01:17,790 --> 00:01:22,790
+So now we would like to see really like what kind of magic is happening here and what what is this fold
+18
+
+19
+00:01:23,130 --> 00:01:23,820
+word means.
+19
+
+20
+00:01:25,160 --> 00:01:32,690
+So remember, This is a template parameter pack and this is its function argument and we can use the
+20
+
+21
+00:01:32,690 --> 00:01:40,640
+size of it to get 4. What's happening in the fold expression is we are going to again as a template,
+21
+
+22
+00:01:40,880 --> 00:01:47,030
+The template is going to take your template function and generate its answer.
+22
+
+23
+00:01:47,360 --> 00:01:53,660
+This function is going to be expanded as eventually 1 plus 2, plus 3 plus 4.
+23
+
+24
+00:01:53,660 --> 00:01:54,030
+...
+24
+
+25
+00:01:54,050 --> 00:01:55,450
+But how to do this expansion?
+25
+
+26
+00:01:56,180 --> 00:01:59,660
+Think as following: this args,
+26
+
+27
+00:02:00,050 --> 00:02:02,990
+Think of it as the first element of the numbers that you received,
+27
+
+28
+00:02:02,990 --> 00:02:08,330
+So we received 1, 2, 3, 4 from here then args now correspond only to 1 and the three
+28
+
+29
+00:02:08,330 --> 00:02:10,370
+dots correspond to the remaining.
+29
+
+30
+00:02:10,760 --> 00:02:14,600
+So now initially we will have that as a compile-time generation.
+30
+
+31
+00:02:14,630 --> 00:02:17,020
+We have here the one plus dot, dot dot.
+31
+
+32
+00:02:17,630 --> 00:02:22,760
+Now go and take this dot, dot, dot and replace it with again the expression args plus dot, dot, dot.
+32
+
+33
+00:02:24,350 --> 00:02:31,300
+So when you replace it again, The args will be the first element of the new parameter, which is 2 plus dot, dot, dot.
+33
+
+34
+00:02:31,430 --> 00:02:35,090
+Take the dot, the dot, and replace it again with the same expression that we have here.
+34
+
+35
+00:02:35,090 --> 00:02:40,500
+It will be again, args is going to match the first element here, 3 plus dot, dot, dot.
+35
+
+36
+00:02:40,810 --> 00:02:47,380
+Now, We have only one element remaining, Which will be configured out as 4.
+36
+
+37
+00:02:48,050 --> 00:02:53,630
+So eventually this expression, which you have to write parameters and then args plus something,
+37
+
+38
+00:02:53,630 --> 00:02:58,070
+Plus here as we would like to do a submission function later, It can be an asterisk, It can be division
+38
+
+39
+00:02:59,060 --> 00:03:05,380
+but your expression has to be together with the args and the dot, dot, dot with some operator in the middle.
+39
+
+40
+00:03:05,960 --> 00:03:07,660
+You cannot use args directly.
+40
+
+41
+00:03:07,680 --> 00:03:10,720
+You cannot say here: Hey, cout args and that's it.
+41
+
+42
+00:03:11,120 --> 00:03:16,540
+You have to use both of them together because the compiler see them and go to expand them as exactly
+42
+
+43
+00:03:16,580 --> 00:03:23,150
+I did with you. This expression mathematically would eventually be one parameter,
+43
+
+44
+00:03:23,330 --> 00:03:27,770
+Then 1 plus another parameter, 2 plus another parameter, 3 plus, Then 4
+44
+
+45
+00:03:27,770 --> 00:03:28,370
+and that's it.
+45
+
+46
+00:03:30,060 --> 00:03:38,070
+Now for the case of sending one variable and no variable, it's a bit tricky to know how the compiler
+46
+
+47
+00:03:38,070 --> 00:03:39,750
+is exactly generating that.
+47
+
+48
+00:03:40,080 --> 00:03:46,350
+But I would like you to know if you submitted only a single value for this case, The compiler
+48
+
+49
+00:03:46,350 --> 00:03:53,400
+is going to resolve this only to 1 and just to drop the dot, dot, dot because there are no more parameters.
+49
+
+50
+00:03:53,880 --> 00:04:00,210
+However, If you sent an empty value here, The compiler will not be able to guess the first value
+50
+
+51
+00:04:00,450 --> 00:04:04,730
+and then it would be like something plus like it would be like a weird expression.
+51
+
+52
+00:04:04,890 --> 00:04:06,860
+So it's going to generate the compilation error.
+52
+
+53
+00:04:06,870 --> 00:04:12,590
+The moral of that is if in this case, You sent an empty parameter, It will compile an error.
+53
+
+54
+00:04:13,170 --> 00:04:16,140
+If you sent to one value only, It would be only the args value.
+54
+
+55
+00:04:16,440 --> 00:04:20,670
+If you sent more than one value, It's going to be expended this way.
+55
+
+56
+00:04:21,000 --> 00:04:25,980
+And again, If you would like to trace how this expansion is going to happen? assign this value to
+56
+
+57
+00:04:25,980 --> 00:04:31,650
+the first value, Assign args to the first value and expand recursively these three dots with the same expression
+57
+
+58
+00:04:31,650 --> 00:04:32,460
+over and over again.
+58
+
+59
+00:04:33,540 --> 00:04:37,170
+Now, This takes us to what we call instead of unary
+59
+
+60
+00:04:37,170 --> 00:04:38,070
+right, Its called
+60
+
+61
+00:04:38,640 --> 00:04:44,160
+binary right. The whole difference between binary right ( and unary right ), Go to the right of the dot, dot, dot, and put now
+61
+
+62
+00:04:44,160 --> 00:04:48,630
+here plus some added value that makes your semantic correct.
+62
+
+63
+00:04:49,090 --> 00:04:56,700
+If I would like to add a bunch of numbers, I can always add plus so that the whole submission
+63
+
+64
+00:04:56,700 --> 00:04:57,430
+doesn't change.
+64
+
+65
+00:04:58,290 --> 00:05:04,590
+So if we added here the plus zero, The only thing that we got is if we are passing an empty list,
+65
+
+66
+00:05:04,830 --> 00:05:07,350
+It will be like plus zero here and
+66
+
+67
+00:05:07,350 --> 00:05:10,130
+It will make the compilation in generation time works.
+67
+
+68
+00:05:10,560 --> 00:05:14,580
+If you are confused about that, Like how really the generation behind the scene works.
+68
+
+69
+00:05:14,790 --> 00:05:15,690
+This isn't our business
+69
+
+70
+00:05:15,690 --> 00:05:23,790
+like we don't like to annoy ourselves exactly how the algorithm behind the scene is generating the expression?
+70
+
+71
+00:05:24,060 --> 00:05:30,390
+What I would like you to know is if you are using an empty case, You need to add an extra element
+71
+
+72
+00:05:30,390 --> 00:05:36,360
+here so that the submission doesn't end like 1 plus 2 plus 3 plus with nothing else, It might
+72
+
+73
+00:05:36,360 --> 00:05:38,270
+end up with like plus nothing.
+73
+
+74
+00:05:38,730 --> 00:05:46,030
+So with a plus zero here is going to end up with just zero, With one item is going to be like one plus zero.
+74
+
+75
+00:05:46,440 --> 00:05:48,210
+This is the 1 plus 0.
+75
+
+76
+00:05:48,390 --> 00:05:51,130
+This is the only new update that's going to happen here.
+76
+
+77
+00:05:51,420 --> 00:05:54,960
+Now, You can call the function with empty list and it works.
+77
+
+78
+00:05:55,620 --> 00:06:02,580
+The more of what I'm saying that the difference between the unary right fold and binary right fold is the binary
+78
+
+79
+00:06:02,590 --> 00:06:05,600
+right fold allows you to have a case of empty list.
+79
+
+80
+00:06:05,630 --> 00:06:12,630
+This is the reason why we have this binary right fold and it's more due to the the way that the compile
+80
+
+81
+00:06:12,630 --> 00:06:19,650
+is generating the syntax and generating the code behind the scene. In a very similar way
+81
+
+82
+00:06:19,770 --> 00:06:21,510
+There is what we call the left fold.
+82
+
+83
+00:06:21,690 --> 00:06:25,140
+So the left has now the dot, dot, dot on the left side.
+83
+
+84
+00:06:25,470 --> 00:06:31,530
+So that generation is going to be expanding from the left side and the left side, If you try to do the expansion
+84
+
+85
+00:06:31,530 --> 00:06:36,960
+step by step as I was doing, You will notice that the 1, 2, 3, 4 is expanded like a brace
+85
+
+86
+00:06:36,990 --> 00:06:41,430
+1 plus 2 plus a brace plus 4 and in a very similar way,
+86
+
+87
+00:06:41,430 --> 00:06:47,880
+The binary left fold is going to has the zero from the right, The dot, dot, dot here and again expanding
+87
+
+88
+00:06:47,880 --> 00:06:49,290
+from the right to the left this way.
+88
+
+89
+00:06:51,060 --> 00:06:53,100
+So we have here now two things:
+89
+
+90
+00:06:53,100 --> 00:06:54,480
+We have here left and right
+90
+
+91
+00:06:54,480 --> 00:06:55,860
+and we have unary and binary.
+91
+
+92
+00:06:56,160 --> 00:07:00,330
+The reason behind unary and binary is all about allowing an empty list, That's it.
+92
+
+93
+00:07:00,600 --> 00:07:04,640
+But left and right is more about the direction you are expanding the list.
+93
+
+94
+00:07:04,770 --> 00:07:11,540
+So the C++ 17 is giving us a more choices that fit with our domain.
+94
+
+95
+00:07:11,730 --> 00:07:15,870
+So these are the four cases that we were referring to it.
+95
+
+96
+00:07:16,650 --> 00:07:22,320
+Make sure that you understand how the expansion of every one of them is going to expand your list.
+96
+
+97
+00:07:22,320 --> 00:07:23,190
+In a very similar way,
+97
+
+98
+00:07:23,310 --> 00:07:26,730
+If you would like to support the multiplication, You now would replace the
+98
+
+99
+00:07:27,150 --> 00:07:28,470
+plus with multiplication.
+99
+
+100
+00:07:28,800 --> 00:07:32,970
+Now, Thinking about the multiplication, What could be initial good value for multiplication to
+100
+
+101
+00:07:32,970 --> 00:07:38,340
+allow a list of a single element?  You know that you need times 1 because any number of
+101
+
+102
+00:07:38,670 --> 00:07:39,770
+times one is just it's self.
+102
+
+103
+00:07:39,780 --> 00:07:39,950
+...
+103
+
+104
+00:07:39,960 --> 00:07:41,460
+So this is a good value.
+104
+
+105
+00:07:41,730 --> 00:07:47,550
+As you see the initial value that you are going to provide to the binary case depend on more the nature
+105
+
+106
+00:07:47,550 --> 00:07:49,620
+of the operator that you are going to use it.
+106
+
+107
+00:07:50,070 --> 00:07:56,850
+Also similar to the variadic template, We can remove the variadic parameter pack here and just use
+107
+
+108
+00:07:56,850 --> 00:07:58,320
+the auto for simpler.
+108
+
+109
+00:07:58,440 --> 00:07:58,860
+code.
+109
+
+110
+00:08:00,450 --> 00:08:03,210
+Over all these are the four cases that we have
+110
+
+111
+00:08:03,510 --> 00:08:07,100
+and I would like you to you read this expression
+111
+
+112
+00:08:07,200 --> 00:08:12,300
+expansions like to know if we are using this expression, This is how it's going to be expanded it and
+112
+
+113
+00:08:12,300 --> 00:08:14,670
+so on. Op here is the operator.
+113
+
+114
+00:08:14,940 --> 00:08:21,120
+So read it and make sure that you at least understand my my code expansion ways or at least understand
+114
+
+115
+00:08:21,120 --> 00:08:22,590
+this ones or matching them together.
+115
+
+116
+00:08:23,640 --> 00:08:28,640
+These are the thirty two operators that allowed
+116
+
+117
+00:08:28,910 --> 00:08:36,980
+With the fold expression and a binary fold when it comes to using the extra folding here, You
+117
+
+118
+00:08:36,980 --> 00:08:41,090
+have to have it in both operators, You cannot be here  asterisk
+118
+
+119
+00:08:41,090 --> 00:08:43,430
+and then here plus. It have to be the same type.
+119
+
+120
+00:08:44,380 --> 00:08:49,720
+As your turn, I would like you to do that division function and check out if the left fold is
+120
+
+121
+00:08:50,170 --> 00:08:52,780
+same as right fold or not. That's it.

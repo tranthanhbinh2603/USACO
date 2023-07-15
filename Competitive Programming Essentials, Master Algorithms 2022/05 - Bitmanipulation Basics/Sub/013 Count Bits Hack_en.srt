@@ -1,0 +1,224 @@
+1
+00:00:02,320 --> 00:00:06,610
+Hi everyone, in this lecture I'm going to discuss the hack to count the number of setbits.
+
+2
+00:00:06,760 --> 00:00:09,820
+So first, I will show you the code then I will tell you why this code works.
+
+3
+00:00:10,240 --> 00:00:15,010
+So what we are going to do? we want to count the number of setbits and I have the number n. what I will
+
+4
+00:00:15,010 --> 00:00:15,820
+do else? Ok.
+
+5
+00:00:15,910 --> 00:00:17,770
+The number of bits is let to answer
+
+6
+00:00:17,770 --> 00:00:18,460
+That is zero.
+
+7
+00:00:18,910 --> 00:00:25,450
+And while n is greater than zero, I am going to do one operation that is the main part of this
+
+8
+00:00:25,450 --> 00:00:25,870
+method.
+
+9
+00:00:26,020 --> 00:00:28,090
+I'm going to do n and n minus one.
+
+10
+00:00:28,420 --> 00:00:30,000
+And I'm going to do answer plus plus.
+
+11
+00:00:30,040 --> 00:00:30,370
+OK.
+
+12
+00:00:30,700 --> 00:00:35,380
+So what we're going to do ? we're going to count how many times this loop is going to run.
+
+13
+00:00:36,000 --> 00:00:44,710
+Basically, what this operation does, it actually removes the last setbits from the current number.
+
+14
+00:00:44,770 --> 00:00:45,100
+OK.
+
+15
+00:00:46,250 --> 00:00:48,260
+And we are going to return the answer.
+
+16
+00:00:48,790 --> 00:00:50,240
+So let me give you one example
+
+17
+00:00:50,480 --> 00:00:51,170
+let say n is nine ?
+
+18
+00:00:53,000 --> 00:00:55,670
+And 9 in binary is like one zero zero one.
+
+19
+00:00:56,060 --> 00:00:59,580
+What I'm doing, I'm updating n as nine and 8.
+
+20
+00:01:00,030 --> 00:01:01,640
+If you do and with 8.
+
+21
+00:01:01,710 --> 00:01:02,360
+So what is eight?
+
+22
+00:01:02,840 --> 00:01:04,099
+eight is one zero zero.
+
+23
+00:01:04,370 --> 00:01:04,700
+OK.
+
+24
+00:01:05,269 --> 00:01:12,620
+And what is going to happen is after doing this and, what you will get ? you will get this big will become
+
+25
+00:01:12,620 --> 00:01:12,960
+zero.
+
+26
+00:01:13,010 --> 00:01:16,520
+Basically, this will get removed and you will get one zero zero zero.
+
+27
+00:01:17,330 --> 00:01:19,130
+And again we are going to do the same work.
+
+28
+00:01:19,130 --> 00:01:25,850
+now the value of n is eight and we are going to do an and with seven and is seven is what ? this
+
+29
+00:01:25,850 --> 00:01:26,000
+is
+
+30
+00:01:26,000 --> 00:01:29,630
+What ? what is seven, if you do and here, you will get the number zero.
+
+31
+00:01:30,200 --> 00:01:33,320
+That means in just two iterations, we made this number zero.
+
+32
+00:01:33,320 --> 00:01:35,750
+And what happened is the first iteration.
+
+33
+00:01:35,750 --> 00:01:40,640
+This bit got removed, in the next iteration, this bit got removed because we are removing this bit
+
+34
+00:01:40,640 --> 00:01:40,850
+here.
+
+35
+00:01:41,150 --> 00:01:41,450
+OK.
+
+36
+00:01:41,810 --> 00:01:47,540
+So every time we are going to execute n equals to n and  n minus one, it is going to remove the last
+
+37
+00:01:47,540 --> 00:01:49,370
+setbits from the current number, OK?
+
+38
+00:01:49,760 --> 00:01:55,970
+So if a number has let say bits like this one one zero zero one zero one. in the first iteration, it
+
+39
+00:01:55,970 --> 00:01:59,720
+will get removed, in the next iteration it will get removed ,in the next iteration.
+
+40
+00:01:59,720 --> 00:02:04,400
+It will get removed, in the next iteration it will get removed and the number will become zero.
+
+41
+00:02:04,430 --> 00:02:04,760
+OK.
+
+42
+00:02:05,030 --> 00:02:10,520
+So if you will, with the first method, you would have been iterating one two three four five six times.
+
+43
+00:02:10,940 --> 00:02:16,310
+But if you go with this method, it will just take the number of iterations that is equal to the number
+
+44
+00:02:16,310 --> 00:02:17,470
+of setbits.
+
+45
+00:02:17,900 --> 00:02:25,280
+Now, I think with this example it is clear to you why this method is going to work and let us also
+
+46
+00:02:25,280 --> 00:02:26,570
+test of over functionality.
+
+47
+00:02:26,780 --> 00:02:32,390
+I can call both the functions I can call countbitshack and I give in n here.
+
+48
+00:02:34,340 --> 00:02:43,700
+And if I run the this code now, we can see if 15. 15 has 4 bits. in this case, the number of setbits and
+
+49
+00:02:43,700 --> 00:02:45,380
+the total bits is four.
+
+50
+00:02:45,410 --> 00:02:48,770
+So both the methods are going to take the same number of iterations.
+
+51
+00:02:49,460 --> 00:02:51,740
+But if I do it for, let's say 16.
+
+52
+00:02:53,450 --> 00:02:59,290
+Then the second method will just run for one time, because we are counting the number of iterations
+
+53
+00:02:59,300 --> 00:03:04,820
+and that is equal to answer. Ok. so that means in just one iteration it could tell that 16 has
+
+54
+00:03:04,820 --> 00:03:05,690
+only one setbits.
+
+55
+00:03:07,010 --> 00:03:14,030
+And maybe we will do it for nine. so nine has 2 setbits, both methods are working as expected,
+
+56
+00:03:14,030 --> 00:03:15,410
+so that's all for this lecture.
+

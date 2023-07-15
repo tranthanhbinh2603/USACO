@@ -1,0 +1,614 @@
+0
+1
+00:00:01,080 --> 00:00:09,540
+In this video, we will explain the hospital project, first of all, let's focus on the big picture of
+1
+
+2
+00:00:09,540 --> 00:00:10,260
+the project.
+2
+
+3
+00:00:12,790 --> 00:00:21,730
+Thinking here about..., like to understand the way I am codding it, first of all, my program here start
+3
+
+4
+00:00:21,730 --> 00:00:26,450
+with a hospital system function, which is just here, a function here.
+4
+
+5
+00:00:27,010 --> 00:00:29,230
+This function has a very basic entry.
+5
+
+6
+00:00:29,560 --> 00:00:33,580
+It has a while loop and it takes a choice from the user.
+6
+
+7
+00:00:33,910 --> 00:00:37,030
+And based on choice, it starts call a specific function.
+7
+
+8
+00:00:37,420 --> 00:00:43,450
+And I advise you, when you start your program, develop this function first where you are putting all
+8
+
+9
+00:00:43,450 --> 00:00:49,270
+of your choices, choice by choice, for the different functionalities, then you start one 
+9
+
+10
+00:00:49,270 --> 00:00:51,400
+by one to implement the function and test it.
+10
+
+11
+00:00:53,200 --> 00:00:55,510
+That is what we call front end; the word
+11
+
+12
+00:00:55,510 --> 00:01:06,100
+front end refers to what the user is facing when you are using mobile or we are using web interface.
+12
+
+13
+00:01:06,370 --> 00:01:08,740
+These are called interfaces or front ends.
+13
+
+14
+00:01:09,130 --> 00:01:11,410
+And this is the front end also for our application.
+14
+
+15
+00:01:11,410 --> 00:01:13,020
+But this is a console front end.
+15
+
+16
+00:01:13,330 --> 00:01:15,700
+So this is a bunch of functionalities here.
+16
+
+17
+00:01:16,090 --> 00:01:22,290
+Now, in terms of what kind of data structures we need in our code here, we definitely need some arrays.
+17
+
+18
+00:01:22,300 --> 00:01:27,250
+We need an array to maintain the name of the current employee, the current patient.
+18
+
+19
+00:01:27,550 --> 00:01:30,120
+And we have also different specialization.
+19
+
+20
+00:01:30,130 --> 00:01:35,800
+So we need also to count over that. We have 20 specializations and we have five max_queue.
+20
+
+21
+00:01:36,310 --> 00:01:40,100
+So one makes sense
+21
+
+22
+00:01:40,100 --> 00:01:42,690
+the choice is to have something that is to restructure.
+22
+
+23
+00:01:43,180 --> 00:01:44,860
+So we have 20 specializations.
+23
+
+24
+00:01:45,130 --> 00:01:50,020
+And for every specialization we have here a max_queue of the needed items.
+24
+
+25
+00:01:53,170 --> 00:01:55,630
+I doubt that we really need this plus one anyway.
+25
+
+26
+00:01:56,050 --> 00:02:00,690
+And so this is a 2D structure to represent the names and the corresponding one for the status.
+26
+
+27
+00:02:00,700 --> 00:02:08,230
+And this is a current queue length for the current items here, because like we need to know
+27
+
+28
+00:02:08,230 --> 00:02:13,720
+that we have four items in the specialization 10, five items in specialization seven and so on.
+28
+
+29
+00:02:14,920 --> 00:02:20,380
+The more we go during the course, we will learn things that will make our life in development much
+29
+
+30
+00:02:20,380 --> 00:02:20,980
+better than that.
+30
+
+31
+00:02:20,980 --> 00:02:23,500
+We'll learn about struct which will regroup
+31
+
+32
+00:02:23,500 --> 00:02:24,550
+all of that in a nice way.
+32
+
+33
+00:02:24,550 --> 00:02:27,130
+We learn about STL, which will make this code more dynamic.
+33
+
+34
+00:02:27,130 --> 00:02:30,190
+We'll learn about OOP, which can have a different perspective.
+34
+
+35
+00:02:30,190 --> 00:02:33,410
+So more is coming when it comes to structuring your code.
+35
+
+36
+00:02:33,790 --> 00:02:35,770
+So this is a data structure of the project.
+36
+
+37
+00:02:35,770 --> 00:02:40,720
+Before proceeding in the code, I would like you to make sure that you understand the purpose of these
+37
+
+38
+00:02:40,720 --> 00:02:41,420
+three items.
+38
+
+39
+00:02:41,890 --> 00:02:45,100
+Now, let's think about the first functionality here.
+39
+
+40
+00:02:45,250 --> 00:02:50,560
+The add_patient, the add_patient will like only to add an element to our array.
+40
+
+41
+00:02:51,130 --> 00:02:54,250
+But as we know, we have some requirements anyway.
+41
+
+42
+00:02:54,250 --> 00:03:00,280
+We started in the function with reading the input from the user and we should be careful to not add
+42
+
+43
+00:03:00,280 --> 00:03:03,360
+an element to the array if we have enough patients.
+43
+
+44
+00:03:03,730 --> 00:03:07,960
+So the first thing here is I get the queue length of the current specialization.
+44
+
+45
+00:03:07,960 --> 00:03:09,580
+Let's say the specialization is seven.
+45
+
+46
+00:03:09,910 --> 00:03:12,630
+So what is the current queue of the specialization?
+46
+
+47
+00:03:12,640 --> 00:03:13,830
+Let's say five elements.
+47
+
+48
+00:03:14,200 --> 00:03:21,250
+So I'm confirming here that if the position is greater than our limit, we return false and
+48
+
+49
+00:03:21,250 --> 00:03:22,450
+we give an error message.
+49
+
+50
+00:03:22,840 --> 00:03:25,220
+Otherwise, we have some spaces for the people.
+50
+
+51
+00:03:25,720 --> 00:03:26,950
+Now we have two cases.
+51
+
+52
+00:03:27,250 --> 00:03:34,240
+The easy case is to add just the element in the end of the current queue if the status is zero, which
+52
+
+53
+00:03:34,240 --> 00:03:35,040
+is a regular case.
+53
+
+54
+00:03:35,260 --> 00:03:36,670
+So this is very straightforward.
+54
+
+55
+00:03:36,670 --> 00:03:41,310
+We are going to add the position here for this guy.
+55
+
+56
+00:03:41,620 --> 00:03:46,560
+We are going to add it for the status and it's very important to increment to the current queue length.
+56
+
+57
+00:03:46,780 --> 00:03:50,590
+So we go to the target specialization and increment its size.
+57
+
+58
+00:03:51,490 --> 00:03:58,480
+The tricky case is when you have to add the element in the beginning of the array here.
+58
+
+59
+00:03:59,280 --> 00:04:01,860
+But the problem is we already have people in the array.
+59
+
+60
+00:04:02,380 --> 00:04:07,570
+So the idea that I come with is to make a shift for the current content
+60
+
+61
+00:04:07,570 --> 00:04:08,770
+one step to the right.
+61
+
+62
+00:04:09,100 --> 00:04:14,440
+For example, if we have three elements in position zero one two, I would like to shift them to the
+62
+
+63
+00:04:14,440 --> 00:04:14,890
+position
+63
+
+64
+00:04:14,890 --> 00:04:15,570
+one, two, three.
+64
+
+65
+00:04:15,910 --> 00:04:19,930
+After that, I'm going to put in the first element, the element here.
+65
+
+66
+00:04:20,470 --> 00:04:22,360
+The shift is a straightforward function.
+66
+
+67
+00:04:22,660 --> 00:04:26,470
+You would like to iterate on the array, but in a very careful way.
+67
+
+68
+00:04:26,840 --> 00:04:32,140
+And start to shift. To do the shifting properly, you need to start from the end so that you don't
+68
+
+69
+00:04:32,140 --> 00:04:33,000
+override the data wrongly.
+69
+
+70
+00:04:33,790 --> 00:04:44,730
+So I start at 'i' of length minus one, and in every step, 'i' of len-1 is my last item.
+70
+
+71
+00:04:45,100 --> 00:04:52,480
+So in every step I take the current item and put it in the next item, take the current item and put
+71
+
+72
+00:04:52,480 --> 00:04:53,650
+it in next item and so on.
+72
+
+73
+00:04:53,890 --> 00:05:00,970
+Going back from back to front, I would like you if you are confused why that we have to start from
+73
+
+74
+00:05:00,970 --> 00:05:01,360
+the end,
+74
+
+75
+00:05:01,720 --> 00:05:02,430
+try 
+75
+
+76
+00:05:02,710 --> 00:05:07,870
+three numbers or like zero one, two, four, let's say five, seven, eight, and try to do the
+76
+
+77
+00:05:07,870 --> 00:05:11,710
+right shift in a different way to observe that we are overriding the data in a wrong way.
+77
+
+78
+00:05:13,450 --> 00:05:19,700
+I'm also here incrementing the array with one item, because now the length is like it is a bit bigger.
+78
+
+79
+00:05:20,380 --> 00:05:25,840
+Once we did this shifting, we are ready to remove the item from the queue.
+79
+
+80
+00:05:26,560 --> 00:05:28,270
+So this is the add_patient function.
+80
+
+81
+00:05:28,300 --> 00:05:31,680
+Please make sure to understand it very well before proceeding more.
+81
+
+82
+00:05:32,560 --> 00:05:36,400
+In the second case, we had the print function, which is very straightforward.
+82
+
+83
+00:05:36,850 --> 00:05:42,280
+You will iterate over the current specialization one by one and call the print patient function,
+83
+
+84
+00:05:42,670 --> 00:05:49,080
+which just access the queue and just get the information.
+84
+
+85
+00:05:49,090 --> 00:05:56,980
+Sorry, this one is iterating to print specialization by specialization and this one is printing a specific
+85
+
+86
+00:05:56,980 --> 00:05:57,790
+specialization.
+86
+
+87
+00:05:58,090 --> 00:06:00,700
+So this one is going to get a special specialization.
+87
+
+88
+00:06:00,820 --> 00:06:06,550
+If there are no items, just return. Otherwise, iterate on them one by one and start to print the
+88
+
+89
+00:06:06,550 --> 00:06:08,080
+content of the array.
+89
+
+90
+00:06:09,600 --> 00:06:16,680
+The next function is the get next patient here, which would like to get the top element, first of all,
+90
+
+91
+00:06:16,680 --> 00:06:18,870
+we need to make sure there are some elements in the queue.
+91
+
+92
+00:06:19,080 --> 00:06:20,850
+If there are no elements, you just go back.
+92
+
+93
+00:06:21,360 --> 00:06:24,090
+Otherwise, the first person would go to the queue.
+93
+
+94
+00:06:24,510 --> 00:06:29,280
+Now, one issue here, we would like to remove the first element in the array, but we don't have the
+94
+
+95
+00:06:29,280 --> 00:06:31,660
+remove operation.
+95
+
+96
+00:06:31,890 --> 00:06:38,220
+So one way here is to just make a left shift for this array from left to right; the opposite direction
+96
+
+97
+00:06:38,230 --> 00:06:38,820
+of what we did.
+97
+
+98
+00:06:38,840 --> 00:06:42,390
+So let's go to this function starting from one.
+98
+
+99
+00:06:42,660 --> 00:06:47,970
+I'm going to take the current element and move it one step back, current element moving step back.
+99
+
+100
+00:06:48,300 --> 00:06:54,420
+Again, if you are confused about that, try to take three numbers in an array and do a simulation.
+100
+
+101
+00:06:54,660 --> 00:06:57,950
+The shift left and shift right idea are very common in programming.
+101
+
+102
+00:06:57,960 --> 00:07:02,130
+So you have to be very comfortable with these two functions. Once you are done here,
+102
+
+103
+00:07:02,220 --> 00:07:08,570
+again, going to decrease by one element the length of the queue.
+103
+
+104
+00:07:10,700 --> 00:07:11,570
+Yeah, that's all.
+104
+
+105
+00:07:11,580 --> 00:07:19,980
+These are the three functionalities I would like you to be like more patient when we are trying to learn
+105
+
+106
+00:07:19,980 --> 00:07:21,320
+and develop our own projects.
+106
+
+107
+00:07:21,600 --> 00:07:24,790
+I know that some of the projects might be hard.
+107
+
+108
+00:07:24,840 --> 00:07:26,550
+This is like it depends.
+108
+
+109
+00:07:26,550 --> 00:07:27,970
+Sometimes guys find it easy.
+109
+
+110
+00:07:27,970 --> 00:07:30,390
+Others find it hard, take it easy.
+110
+
+111
+00:07:31,610 --> 00:07:36,290
+If you develop your own code in a different way, this is totally OK, but please also read my code to
+111
+
+112
+00:07:36,290 --> 00:07:36,940
+learn from it.
+112
+
+113
+00:07:37,310 --> 00:07:39,830
+If you could not develop mine, please listen to me.
+113
+
+114
+00:07:39,830 --> 00:07:42,060
+Read the code line by line, try to understand.
+114
+
+115
+00:07:42,620 --> 00:07:49,670
+And after that, remove the whole code, and start it from scratch, to not just proceed to the next project
+115
+
+116
+00:07:49,670 --> 00:07:51,140
+or the next video.
+116
+
+117
+00:07:53,260 --> 00:07:57,530
+The more you go during this project, I'm going to challenge you a lot.
+117
+
+118
+00:07:57,770 --> 00:08:00,370
+And this is actually the whole purpose of this course.
+118
+
+119
+00:08:00,390 --> 00:08:05,800
+I'm not going to like, give you easy exercises and then you are happy; you will be challenged.
+119
+
+120
+00:08:06,140 --> 00:08:09,170
+So you have to make sure that step by step you can do the project.
+120
+
+121
+00:08:09,650 --> 00:08:14,390
+Generally speaking, if you cannot do a project, you will not be able to do the next project.
+121
+
+122
+00:08:14,420 --> 00:08:17,660
+The next project will typically be harder and would be much more codes.
+122
+
+123
+00:08:19,280 --> 00:08:19,880
+That's all.

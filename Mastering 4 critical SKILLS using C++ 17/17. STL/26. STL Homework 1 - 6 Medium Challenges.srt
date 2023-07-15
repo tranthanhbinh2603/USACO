@@ -1,0 +1,154 @@
+0
+1
+00:00:01,140 --> 00:00:09,030
+For the first set of homework in STL. First, you are to reverse a queue using a stack so you will implement
+1
+
+2
+00:00:09,030 --> 00:00:12,060
+function reversing a queue and it will take a queue by reference,
+2
+
+3
+00:00:12,060 --> 00:00:19,530
+and you are to use inside it a stack to swap the content of a queue. For the second homework,
+3
+
+4
+00:00:19,530 --> 00:00:23,850
+You are to implement something called our stack, which is a stack of integers.
+4
+
+5
+00:00:24,210 --> 00:00:28,840
+The functionalities of push, empty and top would be acting exactly like a stack.
+5
+
+6
+00:00:29,340 --> 00:00:35,340
+So the interesting thing here is we would like to implement the stack using an internal data structure
+6
+
+7
+00:00:35,340 --> 00:00:42,060
+of the queue. So you have the pop, top, and empty implemented but you would like to implement the push
+7
+
+8
+00:00:42,060 --> 00:00:45,150
+function such that it acts really like a stack.
+8
+
+9
+00:00:45,450 --> 00:00:49,170
+So you are going to use this queue to implement a stack.
+9
+
+10
+00:00:51,020 --> 00:00:58,280
+Reverse a number like 1, 2, 3 to the integer 4, 3, 2, 1 using stack, use this functionality.
+10
+
+11
+00:00:59,330 --> 00:01:06,440
+Word prefix, you will be given N unique strings and then Q queries, each query has some
+11
+
+12
+00:01:06,440 --> 00:01:13,770
+prefix and you are to find all the words that start with this prefix, print them using their input
+12
+
+13
+00:01:13,970 --> 00:01:19,070
+order, for example, these are the N strings and these are 4 queries.
+13
+
+14
+00:01:19,340 --> 00:01:26,060
+If I give you a letter M, there are three strings that start with M. You are to print them in the
+14
+
+15
+00:01:26,060 --> 00:01:29,730
+same order as the input order so you don't print Marwa 
+15
+
+16
+00:01:29,780 --> 00:01:31,520
+first, you print Mostafa first.
+16
+
+17
+00:01:32,030 --> 00:01:36,380
+If I give you 'mo' then Mostafa and Morad are the answers, 'mos' then only
+17
+
+18
+00:01:36,440 --> 00:01:38,800
+Mostafa is the answer. Remember, they are unique strings.
+18
+
+19
+00:01:40,400 --> 00:01:44,990
+A similar program is reading N strings, but they aren't unique.
+19
+
+20
+00:01:45,380 --> 00:01:49,580
+You are to print them without duplicating and print them ordered.
+20
+
+21
+00:01:50,030 --> 00:01:56,870
+For example, if I give you here query m, then the answer is Marwa first then Morad then Mostafa.
+21
+
+22
+00:01:57,170 --> 00:02:01,130
+So you notice 'ma' here is first in the dictionary before the these guys.
+22
+
+23
+00:02:01,490 --> 00:02:04,630
+Mostafa here is duplicated, but here will print it once only.
+23
+
+24
+00:02:06,440 --> 00:02:12,380
+In this program, you are going to read the string s and you're going to apply some removal operations.
+24
+
+25
+00:02:12,710 --> 00:02:19,880
+Specifically, every time you find two characters equal and adjacent, you remove them.
+25
+
+26
+00:02:20,090 --> 00:02:26,030
+Adjacent means they are like one position and the one after me, for example, if I found B and B,
+26
+
+27
+00:02:26,210 --> 00:02:28,540
+I remove them directly, after that
+27
+
+28
+00:02:28,550 --> 00:02:30,510
+the string is A, A, C, A.
+28
+
+29
+00:02:30,930 --> 00:02:33,680
+Now, A, A are adjacent,
+29
+
+30
+00:02:33,800 --> 00:02:34,740
+you remove them.
+30
+
+31
+00:02:34,760 --> 00:02:38,760
+Now, you have 'ca', nothing else to remove. That's it.

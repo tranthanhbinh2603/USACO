@@ -1,0 +1,1044 @@
+0
+1
+00:00:01,020 --> 00:00:07,740
+In this video, we'll learn how to use the code blocks IDE for debugging. Let's first learn about
+1
+
+2
+00:00:07,740 --> 00:00:11,430
+the places where you can configure something about the debugger.
+2
+
+3
+00:00:11,970 --> 00:00:14,190
+The first is from the settings menu,
+3
+
+4
+00:00:14,490 --> 00:00:23,710
+click compiler. Remember here we are in the toolchain executable where we have our some modifications,
+4
+
+5
+00:00:23,710 --> 00:00:25,260
+say, for C++ 17.
+5
+
+6
+00:00:26,970 --> 00:00:31,560
+Now, you see here there is a default debugger configuration.
+6
+
+7
+00:00:31,560 --> 00:00:32,960
+You typically don't need to do that.
+7
+
+8
+00:00:32,970 --> 00:00:36,090
+So this is one place where there is something relevant to the debugger.
+8
+
+9
+00:00:36,910 --> 00:00:41,610
+Another thing is here, also in the setting debugger, this is what you just say,
+9
+
+10
+00:00:41,620 --> 00:00:45,620
+This is the default profile of the current debugger.
+10
+
+11
+00:00:46,630 --> 00:00:51,310
+Let's say that you installed a different JDB or some other debugger, something recent.
+11
+
+12
+00:00:51,340 --> 00:00:56,320
+This is the path that you need to change to see the new debugger.
+12
+
+13
+00:00:56,620 --> 00:01:01,370
+Again, this is a menu that you don't need to play with it, just some default options that are good.
+13
+
+14
+00:01:02,320 --> 00:01:11,170
+So these are the overall global settings. Now for the project itself, if you came here and get the
+14
+
+15
+00:01:11,170 --> 00:01:13,090
+settings of the project itself.
+15
+
+16
+00:01:15,930 --> 00:01:23,220
+From the build options now, this is now what is really more important. The first thing to keep in
+16
+
+17
+00:01:23,220 --> 00:01:26,790
+mind here and to notice is this word debugger and this word release.
+17
+
+18
+00:01:27,310 --> 00:01:34,530
+Remember, when we were trying to create a new project from here, we used to select something, let's
+18
+
+19
+00:01:34,530 --> 00:01:39,710
+say console, go, C++, next, blah, blah, blah,
+19
+
+20
+00:01:39,930 --> 00:01:40,360
+next.
+20
+
+21
+00:01:40,650 --> 00:01:46,640
+Yeah, here I used to tell you that to create in the debug and create in the release and file in the
+21
+
+22
+00:01:46,650 --> 00:01:47,490
+debug and the release.
+22
+
+23
+00:01:47,820 --> 00:01:53,070
+What are these two terms now? now you should be familiar with that. The debug is where the debug symbols
+23
+
+24
+00:01:53,070 --> 00:01:53,730
+are added.
+24
+
+25
+00:01:53,970 --> 00:01:58,230
+The release is one without debug symbols and more ready for configuration.
+25
+
+26
+00:01:58,660 --> 00:02:04,810
+So now, when you come to the project here from the build options, you can see that we have two profiles,
+26
+
+27
+00:02:05,250 --> 00:02:08,760
+and these profiles every one of them will have different settings,
+27
+
+28
+00:02:09,210 --> 00:02:14,520
+and one of the issues sometimes that we work a lot in the debug, we put all of our settings, but
+28
+
+29
+00:02:14,520 --> 00:02:18,690
+when we start to run the release, we find things don't go well.
+29
+
+30
+00:02:19,110 --> 00:02:25,980
+You need to make sure that your configuration is in both of them or in the profile that you would like
+30
+
+31
+00:02:25,980 --> 00:02:27,040
+to use. All the time,
+31
+
+32
+00:02:27,050 --> 00:02:29,550
+we were using the debug profile.,
+32
+
+33
+00:02:29,970 --> 00:02:32,810
+and also, you can find it from here, debug and release.
+33
+
+34
+00:02:33,120 --> 00:02:40,830
+Now, I would like you to remember that if you tried to debug in the release mode, it would not work.
+34
+
+35
+00:02:40,860 --> 00:02:46,800
+OK, so now we are in the debug mode, we are going to debug.
+35
+
+36
+00:02:47,040 --> 00:02:55,170
+The last two things here to notice is this debug's menu which has several debug's options, and they are corresponding
+36
+
+37
+00:02:55,530 --> 00:02:56,730
+to this case
+37
+
+38
+00:02:56,730 --> 00:03:01,470
+here, you see this button, it says debug continue, this one run to cursor,
+38
+
+39
+00:03:01,800 --> 00:03:07,200
+then next line, we care about that, step into, we care about that, and step out,
+39
+
+40
+00:03:07,200 --> 00:03:07,950
+we care about that,
+40
+
+41
+00:03:07,950 --> 00:03:09,830
+and there is also some button here.
+41
+
+42
+00:03:11,310 --> 00:03:12,420
+Let's start debugging.
+42
+
+43
+00:03:12,420 --> 00:03:13,350
+We have a code here.
+43
+
+44
+00:03:13,590 --> 00:03:18,900
+It has a sum_square function which takes an array, and some length, iterate on the array,
+44
+
+45
+00:03:18,900 --> 00:03:20,660
+sum every element, return the sum.
+45
+
+46
+00:03:21,090 --> 00:03:26,790
+We have also a recursive function for the factorial. our code here starts defining sum array,
+46
+
+47
+00:03:26,790 --> 00:03:34,380
+calling sum_function over it, then calling array1 and this vector here, the vector we will learnt
+47
+
+48
+00:03:34,380 --> 00:03:36,940
+about it in the STL and printing some side.
+48
+
+49
+00:03:37,110 --> 00:03:38,420
+So just some basic code.
+49
+
+50
+00:03:39,920 --> 00:03:42,810
+How to debug? you started debugging by clicking this button.
+50
+
+51
+00:03:43,290 --> 00:03:44,000
+Let's click it.
+51
+
+52
+00:03:45,400 --> 00:03:47,710
+OK, something appeared and then disappeared.
+52
+
+53
+00:03:48,310 --> 00:03:53,890
+There is nothing more than that. If this happened, this means that there were no breakpoints
+53
+
+54
+00:03:53,890 --> 00:03:55,900
+in your code, you need to put here
+54
+
+55
+00:03:55,900 --> 00:04:01,710
+Something called break point. A breakpoint, as the name says, is something where the code stops.
+55
+
+56
+00:04:02,050 --> 00:04:04,180
+So I am putting here a break point.
+56
+
+57
+00:04:04,360 --> 00:04:06,130
+Let's click the button again here.
+57
+
+58
+00:04:07,310 --> 00:04:16,980
+You see now the code showing this triangle thing here, it means that the code is active at this point.
+58
+
+59
+00:04:17,000 --> 00:04:18,540
+I would like you to do three things.
+59
+
+60
+00:04:18,560 --> 00:04:20,330
+The first is to get this console.
+60
+
+61
+00:04:20,810 --> 00:04:23,080
+This console will be updated line by line.
+61
+
+62
+00:04:23,480 --> 00:04:27,370
+So let's make it here always on to,p so we can see it.
+62
+
+63
+00:04:27,860 --> 00:04:30,400
+I would like you to add other two important things here.
+63
+
+64
+00:04:30,800 --> 00:04:35,930
+First, come to this menu, the debugging windows, and select watches.
+64
+
+65
+00:04:38,830 --> 00:04:47,170
+The second menu comes from here and say..., or it is here,  call stack.
+65
+
+66
+00:04:47,410 --> 00:04:47,740
+Yeah.
+66
+
+67
+00:04:47,830 --> 00:04:49,990
+So these two menus we need them.
+67
+
+68
+00:04:50,000 --> 00:04:52,120
+They are very, very useful menus.
+68
+
+69
+00:04:52,920 --> 00:04:58,750
+I would like you to start to see what are going to do.
+69
+
+70
+00:04:59,170 --> 00:05:03,920
+When we say debugger, we mean we can trace the code line by line.
+70
+
+71
+00:05:04,270 --> 00:05:06,790
+Now, see the active line here, line 26.
+71
+
+72
+00:05:07,000 --> 00:05:13,260
+If we go to the menu options here, we find something called  next line, OK.
+72
+
+73
+00:05:13,930 --> 00:05:16,960
+The next line can allow us to move to the next line.
+73
+
+74
+00:05:16,960 --> 00:05:18,190
+So we click here.
+74
+
+75
+00:05:18,190 --> 00:05:19,730
+You see the active line now here.
+75
+
+76
+00:05:20,380 --> 00:05:25,810
+Now the first thing to observe here is in the watches.
+76
+
+77
+00:05:26,200 --> 00:05:30,280
+The watches here have variables that are available at the moment.
+77
+
+78
+00:05:30,670 --> 00:05:37,190
+So, for example, it's telling you that there is an array of three elements of values 2, 3, 4.
+78
+
+79
+00:05:37,660 --> 00:05:40,750
+There are other variables also that don't have values at the moment.
+79
+
+80
+00:05:42,140 --> 00:05:48,530
+There is also another option called step_into. Step_into is good if you would like to jump inside
+80
+
+81
+00:05:48,530 --> 00:05:48,940
+function's details.
+81
+
+82
+00:05:49,520 --> 00:05:52,580
+So you see line 28 is stopping at this function call.
+82
+
+83
+00:05:52,670 --> 00:05:53,600
+You have two choices
+83
+
+84
+00:05:53,600 --> 00:05:55,610
+now. You either step next 
+84
+
+85
+00:05:55,610 --> 00:06:01,850
+so you go directly to line 30 and see the result of this line, or you jump inside the function itself.
+85
+
+86
+00:06:01,850 --> 00:06:02,270
+let's for now,
+86
+
+87
+00:06:02,270 --> 00:06:04,730
+focus on the step next line, that's all.
+87
+
+88
+00:06:05,240 --> 00:06:09,230
+So we click here next line, which is, by the way, from the debug menu,
+88
+
+89
+00:06:09,230 --> 00:06:11,980
+next line is button F7.
+89
+
+90
+00:06:13,490 --> 00:06:17,210
+Now, look at the variable result,
+90
+
+91
+00:06:17,510 --> 00:06:18,830
+the variable result here,
+91
+
+92
+00:06:18,830 --> 00:06:21,320
+the value now changed to 29.
+92
+
+93
+00:06:23,110 --> 00:06:27,250
+If you tried to double click, you cannot change it, but in something like eclipse or visual studio,
+93
+
+94
+00:06:27,250 --> 00:06:31,120
+you can even change the value on the fly during the run.
+94
+
+95
+00:06:31,270 --> 00:06:37,570
+But anyway, the debugger now is at line 30, and we have these variables.
+95
+
+96
+00:06:37,600 --> 00:06:38,860
+Now, look to the array here.
+96
+
+97
+00:06:38,860 --> 00:06:40,200
+values is 2, 3, 4.
+97
+
+98
+00:06:40,390 --> 00:06:44,250
+It seemed line 30 is changing the value of the array of one, to 100.
+98
+
+99
+00:06:44,530 --> 00:06:46,450
+So let's let's go next line.
+99
+
+100
+00:06:47,640 --> 00:06:49,360
+Here you see what happened.
+100
+
+101
+00:06:49,740 --> 00:06:56,670
+So as you see that debugger gives you the ability to see things like step by step, this lets you catch
+101
+
+102
+00:06:56,670 --> 00:06:58,170
+the errors in a very easy way.
+102
+
+103
+00:06:59,070 --> 00:07:02,220
+Now, we are going to declare and define a vector.
+103
+
+104
+00:07:02,670 --> 00:07:06,450
+So let's see here, you see now the vector 2, 3, 4.
+104
+
+105
+00:07:06,900 --> 00:07:12,780
+You also have a function that is pushing back. For educational purposes, let's now try to jump inside the
+105
+
+106
+00:07:12,780 --> 00:07:13,280
+function.
+106
+
+107
+00:07:13,590 --> 00:07:15,970
+So we will go to step_into and jump inside it.
+107
+
+108
+00:07:15,970 --> 00:07:17,660
+You notice what happened?
+108
+
+109
+00:07:17,910 --> 00:07:23,390
+We jumped into the implementation of the C++ itself, which typically is out of interest.
+109
+
+110
+00:07:23,640 --> 00:07:27,170
+So now we don't want to jump here more in the file.
+110
+
+111
+00:07:27,540 --> 00:07:29,490
+So let's get back from this function.
+111
+
+112
+00:07:29,550 --> 00:07:30,900
+Now, here is the step out.
+112
+
+113
+00:07:31,260 --> 00:07:31,860
+...
+113
+
+114
+00:07:31,860 --> 00:07:34,120
+Step out means go back one step.
+114
+
+115
+00:07:34,470 --> 00:07:36,160
+So we go back to our file.
+115
+
+116
+00:07:36,990 --> 00:07:41,790
+Now, you notice the vector pushed in it a new value of 7.
+116
+
+117
+00:07:42,570 --> 00:07:44,000
+Another thing here is 
+117
+
+118
+00:07:44,010 --> 00:07:46,320
+the cout line. Once we proceed it.
+118
+
+119
+00:07:48,430 --> 00:07:54,730
+OK, so we notice here something when you proceed it, it didn't print the factorial five, which
+119
+
+120
+00:07:54,730 --> 00:07:59,410
+is 120, why? Let's stop the processing.
+120
+
+121
+00:08:01,240 --> 00:08:08,350
+Yes, if asking you to see the configuration. In the moral fundamentals unit, you will
+121
+
+122
+00:08:08,350 --> 00:08:15,100
+know that sometimes cout doesn't see the output of something so we can right here flush,
+122
+
+123
+00:08:15,520 --> 00:08:17,810
+which will force the output of our processing.
+123
+
+124
+00:08:18,280 --> 00:08:23,980
+The second thing that I would like to make use here is I'm going to put here another breakpoint and
+124
+
+125
+00:08:23,980 --> 00:08:25,030
+show you something else.
+125
+
+126
+00:08:25,960 --> 00:08:27,160
+Now, let's debug again.
+126
+
+127
+00:08:29,520 --> 00:08:36,150
+The code stopped here. If you clicked on continue here, debug continues, it will jump directly to this
+127
+
+128
+00:08:36,150 --> 00:08:36,630
+point.
+128
+
+129
+00:08:37,560 --> 00:08:39,300
+OK, let's get the output here.
+129
+
+130
+00:08:39,660 --> 00:08:42,810
+Yeah, you see now the console screen has 120.
+130
+
+131
+00:08:42,810 --> 00:08:43,720
+It's now printed.
+131
+
+132
+00:08:43,920 --> 00:08:48,660
+So if you see cout not printed here or in a file, then flush it directly.
+132
+
+133
+00:08:49,350 --> 00:08:54,870
+The second thing is you can put more breakpoints, and the code will jump directly to it.
+133
+
+134
+00:08:54,870 --> 00:08:56,490
+So you don't need to trace line by line.
+134
+
+135
+00:08:56,490 --> 00:08:59,130
+You can jump to another breakpoint.
+135
+
+136
+00:08:59,520 --> 00:09:00,830
+Now, let's stop that again.
+136
+
+137
+00:09:03,760 --> 00:09:09,940
+Let's play one more time, but before playing, I would like to show you what would happen if we tried
+137
+
+138
+00:09:09,940 --> 00:09:11,490
+to switch to the release mode.
+138
+
+139
+00:09:11,560 --> 00:09:17,890
+So I will come here and say release, and then I will try to rebuild the project.
+139
+
+140
+00:09:19,640 --> 00:09:20,690
+Let's run it.
+140
+
+141
+00:09:21,200 --> 00:09:26,120
+OK, good, so now let's try to debug that. If you tried to debug that what will happen?
+141
+
+142
+00:09:28,830 --> 00:09:34,600
+It says here, no debug symbols are found. So when you see this message, you know that you are in
+142
+
+143
+00:09:34,600 --> 00:09:35,220
+the release mode.
+143
+
+144
+00:09:35,220 --> 00:09:40,410
+So please go back to the debug mode, rebuild, and make sure that you are in the debug mode.
+144
+
+145
+00:09:42,250 --> 00:09:42,670
+Good.
+145
+
+146
+00:09:43,060 --> 00:09:44,020
+Let's go back here.
+146
+
+147
+00:09:45,970 --> 00:09:46,870
+Let's debug again.
+147
+
+148
+00:09:48,160 --> 00:09:53,320
+Again, disappeared, but there are no error messages here exit normally, so please remember that
+148
+
+149
+00:09:53,320 --> 00:09:54,750
+you need to put a breakpoint here.
+149
+
+150
+00:09:55,150 --> 00:09:57,130
+Let's put breakpoint
+150
+
+151
+00:09:58,600 --> 00:10:01,230
+at this line here, and let's start it again.
+151
+
+152
+00:10:02,810 --> 00:10:09,560
+Now, we are at line 28 but instead of the next line, I would like to try to jump inside the function
+152
+
+153
+00:10:09,560 --> 00:10:09,920
+itself.
+153
+
+154
+00:10:09,930 --> 00:10:14,080
+So where is the step into? step into. Now, the step into jumped
+154
+
+155
+00:10:14,170 --> 00:10:16,910
+you the line at line 16, the triangle.
+155
+
+156
+00:10:17,060 --> 00:10:19,960
+It means we are inside this function.
+156
+
+157
+00:10:20,330 --> 00:10:27,940
+Now, observe here the call stack. Remember, we explain what is a call stack is in the pointers.
+157
+
+158
+00:10:28,460 --> 00:10:33,590
+So we see here we have the main function that called sum square function.
+158
+
+159
+00:10:33,600 --> 00:10:35,660
+So our call stack currently has 2 function.
+159
+
+160
+00:10:35,660 --> 00:10:37,400
+You can even double click the main,
+160
+
+161
+00:10:38,280 --> 00:10:43,300
+and you notice it is giving you the values in the main or go back to the sumsquare function as
+161
+
+162
+00:10:43,300 --> 00:10:45,210
+the values of the sum square function.
+162
+
+163
+00:10:45,390 --> 00:10:50,430
+So, again, we can trace it line by line here.
+163
+
+164
+00:10:50,730 --> 00:10:53,970
+So sum is zero. Now, array of i. Let's say,
+164
+
+165
+00:10:53,970 --> 00:10:55,860
+I would like to know what is in the value of array of i.
+165
+
+166
+00:10:56,610 --> 00:11:03,270
+You can definitely see it from here, but I would like to do something here.
+166
+
+167
+00:11:04,450 --> 00:11:10,590
+Come and double click right array of i, and enter. You see it now giving you two.
+167
+
+168
+00:11:11,230 --> 00:11:12,660
+This is what we call expressions.
+168
+
+169
+00:11:12,670 --> 00:11:20,200
+You can add expressions, you can say here print for me, sum plus 6, for example, it's up to
+169
+
+170
+00:11:20,200 --> 00:11:20,380
+you.
+170
+
+171
+00:11:20,380 --> 00:11:22,390
+You can add more expressions to watches here.
+171
+
+172
+00:11:24,970 --> 00:11:25,600
+Sometimes
+172
+
+173
+00:11:25,600 --> 00:11:28,960
+as you see, the array here, for example, isn't accessible in an easy way.
+173
+
+174
+00:11:29,380 --> 00:11:36,130
+Debugger sometimes have limitations, but you can add more variables, you can add the i, n and so on
+174
+
+175
+00:11:36,130 --> 00:11:37,540
+In eclipse,
+175
+
+176
+00:11:37,570 --> 00:11:42,190
+when you stop over a variable, you can see its values which is more powerful.
+176
+
+177
+00:11:42,640 --> 00:11:46,180
+Now, the moral of that is let's try to do some tracing.
+177
+
+178
+00:11:46,420 --> 00:11:54,430
+Next line, next line, you see the sum variable is changing and also our sum plus 6 is changing.
+178
+
+179
+00:11:54,640 --> 00:11:57,420
+Now, let's say you're done with the function, and you don't need to trace anymore.
+179
+
+180
+00:11:57,430 --> 00:12:01,440
+You can just come here and step out of the function, and just go outside of it.
+180
+
+181
+00:12:01,510 --> 00:12:06,790
+Now, we jumped completely outside of the function in an easy way.
+181
+
+182
+00:12:10,380 --> 00:12:16,470
+What else? So we know about the different options, about the variables, and the watches.
+182
+
+183
+00:12:17,730 --> 00:12:25,810
+..., Let's finish the processing here.
+183
+
+184
+00:12:26,040 --> 00:12:27,400
+I'm going to do something here.
+184
+
+185
+00:12:27,420 --> 00:12:33,120
+Let's say that I'm going to put here minus one zero zero zero zero zero zero zero,
+185
+
+186
+00:12:34,960 --> 00:12:38,040
+and I'm going to run this program now.
+186
+
+187
+00:12:41,800 --> 00:12:47,950
+You see what happened, the debugger jumped directly to line 19 to tell you that something wrong happened
+187
+
+188
+00:12:47,950 --> 00:12:53,040
+here. In a single second, you managed to know where is the problem in your code.
+188
+
+189
+00:12:53,710 --> 00:12:55,110
+This doesn't happen all the time.
+189
+
+190
+00:12:55,120 --> 00:12:55,870
+Sometimes yes.
+190
+
+191
+00:12:55,870 --> 00:12:56,590
+Sometimes no.
+191
+
+192
+00:12:56,800 --> 00:13:02,230
+But the moral of that, the debugger sometimes, can catch for you the error in a very short time.
+192
+
+193
+00:13:02,560 --> 00:13:05,500
+So you can find it in a very simple way.
+193
+
+194
+00:13:06,760 --> 00:13:14,110
+Again, you can put a breakpoint here and just click jump and the whole code will jump to this point.
+194
+
+195
+00:13:14,110 --> 00:13:15,070
+Very normally here.
+195
+
+196
+00:13:15,080 --> 00:13:16,230
+So what is the value of sum?
+196
+
+197
+00:13:16,540 --> 00:13:18,190
+The value of some currently is zero.
+197
+
+198
+00:13:18,670 --> 00:13:23,260
+But there is a very interesting and powerful feature which we call conditional breakpoint.
+198
+
+199
+00:13:23,650 --> 00:13:24,970
+Come here to this point.
+199
+
+200
+00:13:24,970 --> 00:13:28,900
+Right click, edit break point and come to break
+200
+
+201
+00:13:28,900 --> 00:13:30,780
+when expression is true.
+201
+
+202
+00:13:31,030 --> 00:13:32,290
+Let's put her sum
+202
+
+203
+00:13:34,770 --> 00:13:41,010
+equal-equal 4. This is a conditional breakpoint. this breakpoint will be activated only when the sum
+203
+
+204
+00:13:41,010 --> 00:13:41,390
+is 4.
+204
+
+205
+00:13:41,560 --> 00:13:42,480
+Now let's run here.
+205
+
+206
+00:13:45,230 --> 00:13:50,720
+You see, what's the value of the sum. So even sometimes if you knew that you would like to go to a very,
+206
+
+207
+00:13:50,720 --> 00:13:58,430
+very specific point, you can put the value of the breakpoint, and just run and go for it.
+207
+
+208
+00:13:58,820 --> 00:14:01,820
+So this is how we can use the debugger to debug step by step.
+208
+
+209
+00:14:02,000 --> 00:14:09,070
+In the next video will learn how to debug recursive functions like factorial. That's it.

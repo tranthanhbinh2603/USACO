@@ -1,0 +1,444 @@
+0
+1
+00:00:01,350 --> 00:00:05,580
+Let's know more about the vector, but this time we would like to discuss the 2D vector and the
+1
+
+2
+00:00:05,580 --> 00:00:06,350
+3D vector.
+2
+
+3
+00:00:06,750 --> 00:00:10,380
+So, the first interesting thing is: Let's make a vector of string,
+3
+
+4
+00:00:10,470 --> 00:00:11,760
+this is very intuitive for you.
+4
+
+5
+00:00:11,760 --> 00:00:15,490
+You make a vector of string, which mostafa, ali, me, that's so far so good,
+5
+
+6
+00:00:16,050 --> 00:00:20,590
+but remember that each string is actually a 1D array,
+6
+
+7
+00:00:20,940 --> 00:00:25,050
+so actually we are creating a vector of something that is actually by itself is a 1D array.
+7
+
+8
+00:00:25,320 --> 00:00:27,280
+So, it looks like a vector of vector,
+8
+
+9
+00:00:27,600 --> 00:00:29,310
+so it's actually 2D vector.
+9
+
+10
+00:00:29,520 --> 00:00:35,520
+OK?. So, if you thought about that, as a 2D vector, we actually have a 2D vector of three rows,
+10
+
+11
+00:00:35,700 --> 00:00:41,610
+but every row has a dynamic number of columns, and this is one of the great things about vectors you can
+11
+
+12
+00:00:41,610 --> 00:00:44,660
+now have like this dynamic features even row by row.
+12
+
+13
+00:00:45,000 --> 00:00:47,950
+So, if you try to print matrix of that size, it will get 3.
+13
+
+14
+00:00:48,180 --> 00:00:53,690
+So, here matrix-dot-size is about the big picture about the number of commas here.
+14
+
+15
+00:00:53,970 --> 00:00:55,890
+So, the matrix-dot-size is just 3.
+15
+
+16
+00:00:55,950 --> 00:01:02,200
+This is like the number of rows. If you tried to iterate row by row and say matrix-of-i, dot size,
+16
+
+17
+00:01:02,240 --> 00:01:08,250
+so matrix-of-i is the ith row, so the ith row size here, 7, 3, 2, which is the number of columns
+17
+
+18
+00:01:08,250 --> 00:01:08,470
+here.
+18
+
+19
+00:01:08,760 --> 00:01:10,710
+So make sure that is intuitive for you.
+19
+
+20
+00:01:11,070 --> 00:01:13,070
+Now, let's go little more complex.
+20
+
+21
+00:01:13,110 --> 00:01:15,180
+This is defined as a 2D vector of integer by us.
+21
+
+22
+00:01:16,350 --> 00:01:20,880
+So, here vector of integer, row, 5, coma, 1.
+22
+
+23
+00:01:21,150 --> 00:01:23,880
+This means that we have 5 values, each is one.
+23
+
+24
+00:01:24,570 --> 00:01:26,040
+Now, look to this syntax,
+24
+
+25
+00:01:26,070 --> 00:01:29,660
+We are defining a vector of vector of integer,
+25
+
+26
+00:01:29,670 --> 00:01:30,420
+What does this mean?
+26
+
+27
+00:01:31,270 --> 00:01:38,750
+The first vector means we have like a row of numbers and a row of elements,
+27
+
+28
+00:01:39,000 --> 00:01:40,890
+What is the value of each element?
+28
+
+29
+00:01:40,920 --> 00:01:43,160
+It is another vector of integer.
+29
+
+30
+00:01:43,470 --> 00:01:49,920
+OK?. So, we see here vector of vector of integer, v2d, three is the number of rows,
+30
+
+31
+00:01:50,070 --> 00:01:51,870
+and this is the value of every row,
+31
+
+32
+00:01:52,290 --> 00:01:55,580
+but the value of a row itself is another row of five numbers,
+32
+
+33
+00:01:55,830 --> 00:01:58,660
+so it's actually like a matrix 3 times 5.
+33
+
+34
+00:01:59,070 --> 00:02:01,680
+So, if you tried to print this matrix, it would be like 3
+34
+
+35
+00:02:01,680 --> 00:02:04,230
+ones, 5 ones, 3 times 5 ones.
+35
+
+36
+00:02:04,900 --> 00:02:11,330
+Let's check out the printing function. We have here a vector of vector of integer,  v2d to
+36
+
+37
+00:02:11,350 --> 00:02:16,080
+print. If we did for, auto, row, v2d, then we are iterating on it  now
+37
+
+38
+00:02:16,080 --> 00:02:17,160
+row by row, Right?
+38
+
+39
+00:02:17,610 --> 00:02:20,550
+So, every row is actually vector of integer by itself.
+39
+
+40
+00:02:21,150 --> 00:02:23,410
+Now, let's take the row and iterate over it.
+40
+
+41
+00:02:23,430 --> 00:02:24,210
+We know 
+41
+
+42
+00:02:24,210 --> 00:02:26,220
+It's actually the row is vector of integer.
+42
+
+43
+00:02:26,220 --> 00:02:29,760
+So when we iterate over it, It is a vector of just numbers,
+43
+
+44
+00:02:29,910 --> 00:02:30,900
+so just integers.
+44
+
+45
+00:02:31,170 --> 00:02:33,100
+So, if you did that, you're going to printed it
+45
+
+46
+00:02:33,330 --> 00:02:37,730
+row by row. It is very important to feel comfortable with these 2 styles.
+46
+
+47
+00:02:38,100 --> 00:02:40,790
+So, the way to think about it, I'm having a vector,
+47
+
+48
+00:02:40,800 --> 00:02:45,780
+so this vector of some items and each item is a vector of integer and so on.
+48
+
+49
+00:02:46,530 --> 00:02:49,040
+Now, let's do some changes, some lines with that.
+49
+
+50
+00:02:49,380 --> 00:02:54,060
+First of all, the number of rows and columns, the number of rows of the matrix
+50
+
+51
+00:02:54,070 --> 00:02:59,110
+can be found from the main vector, vector-dot-size so now we have the number of rows.
+51
+
+52
+00:02:59,640 --> 00:03:06,500
+The second way to get the columns is here, get inside the first row and execute dot-size,
+52
+
+53
+00:03:06,540 --> 00:03:07,520
+so you get the columns.
+53
+
+54
+00:03:07,560 --> 00:03:10,740
+Be careful, make sure that there is at least an element here.
+54
+
+55
+00:03:11,370 --> 00:03:13,470
+If this is empty, this would crash.
+55
+
+56
+00:03:14,420 --> 00:03:18,920
+Now, we know the number of rows and the number of columns, what if we would like to manipulate the array?
+56
+
+57
+00:03:19,070 --> 00:03:24,590
+so we can put the first row here, the first element in it with 9. We can go to the second row
+57
+
+58
+00:03:24,860 --> 00:03:26,660
+and push 2 values, 5 and 6.
+58
+
+59
+00:03:26,930 --> 00:03:31,310
+We can go to the third row and erase the beginning of it.
+59
+
+60
+00:03:31,360 --> 00:03:35,130
+OK?. Notice here, v2d is a vector,
+60
+
+61
+00:03:35,160 --> 00:03:35,800
+and this is a row,
+61
+
+62
+00:03:36,170 --> 00:03:38,180
+so when I would like to erase something, put
+62
+
+63
+00:03:38,180 --> 00:03:38,980
+this (v2d)  as a row.
+63
+
+64
+00:03:39,320 --> 00:03:41,780
+So when you try to print this, you see here, it is 9.
+64
+
+65
+00:03:41,960 --> 00:03:43,000
+here it is 5 and 6.
+65
+
+66
+00:03:43,010 --> 00:03:45,060
+This one lost 1 here.
+66
+
+67
+00:03:45,440 --> 00:03:49,490
+So now you see we have a 2D dynamic vector, which is very interesting.
+67
+
+68
+00:03:50,210 --> 00:03:51,770
+Let's complicate things further.
+68
+
+69
+00:03:51,770 --> 00:03:53,330
+Let's create  a 3D vector.
+69
+
+70
+00:03:53,380 --> 00:03:54,620
+OK?. So now
+70
+
+71
+00:03:57,560 --> 00:03:58,490
+here is the logic.
+71
+
+72
+00:03:58,760 --> 00:04:03,020
+A 3D vector is vector of vector of vector of integer.
+72
+
+73
+00:04:03,020 --> 00:04:04,580
+So here is how we think it in logic.
+73
+
+74
+00:04:04,760 --> 00:04:09,090
+I need a 4D vector then vector of vector of vector of integer.
+74
+
+75
+00:04:09,380 --> 00:04:12,070
+So this is how we define it in a very systematic way,
+75
+
+76
+00:04:12,470 --> 00:04:17,600
+and then the initialization might be a bit tricky. It is like you define first the number of rows.
+76
+
+77
+00:04:18,020 --> 00:04:20,710
+( Let's call here the number of depth, rows, columns)
+77
+
+78
+00:04:20,960 --> 00:04:26,840
+So you define here the depth of the 3D vector, then this is 5, and then every one of them
+78
+
+79
+00:04:26,840 --> 00:04:28,430
+is 2D vector.
+79
+
+80
+00:04:28,430 --> 00:04:35,140
+So, you initialize it like a 2D vector of vector of vector of integer of 6, and the row value is a vector
+80
+
+81
+00:04:35,150 --> 00:04:36,190
+integer and seven.
+81
+
+82
+00:04:36,620 --> 00:04:40,990
+So this is a 5 times, 6 times, 7 matrix.
+82
+
+83
+00:04:41,000 --> 00:04:42,310
+This is how you get the values.
+83
+
+84
+00:04:42,500 --> 00:04:46,620
+If I would like to print it, you can iterate it on depth by depth like depth
+84
+
+85
+00:04:46,640 --> 00:04:47,350
+step by step.
+85
+
+86
+00:04:47,630 --> 00:04:52,460
+So, you iterate on v3d dot size, v3d of i is actually a 2D vector
+86
+
+87
+00:04:52,460 --> 00:04:54,280
+now, you can call it to make a print.
+87
+
+88
+00:04:54,560 --> 00:04:59,170
+So the syntax isn't easy, but you need to read it several times and think about it.
+88
+
+89
+00:04:59,840 --> 00:05:00,380
+That's it.

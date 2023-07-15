@@ -1,0 +1,160 @@
+1
+00:00:01,650 --> 00:00:06,870
+Hi Everyone, the next thing that we're going to look at is how do we set ith bit. Ok. we need to write a
+
+2
+00:00:06,870 --> 00:00:07,410
+function.
+
+3
+00:00:07,830 --> 00:00:13,770
+void set i th bit and we get the number and we get the position.
+
+4
+00:00:14,340 --> 00:00:18,660
+So one thing you can do is you can take this number by reference and you can change the value
+
+5
+00:00:18,660 --> 00:00:22,240
+here or you can return the new number. OK?
+
+6
+00:00:22,260 --> 00:00:25,680
+So maybe another way to make this function is like this.
+
+7
+00:00:25,710 --> 00:00:26,040
+OK.
+
+8
+00:00:26,460 --> 00:00:29,310
+And here you have to return the new value.
+
+9
+00:00:29,790 --> 00:00:37,050
+So maybe I want to go with the first one because we we want to change the value of n in the function
+
+10
+00:00:37,050 --> 00:00:37,470
+itself.
+
+11
+00:00:38,040 --> 00:00:40,440
+So let's see how we can do it.
+
+12
+00:00:40,620 --> 00:00:46,410
+So it's actually very easy, very similar to what we have seen in the get, let's say the number is five.
+
+13
+00:00:47,370 --> 00:00:49,620
+And I want to say the first bit.
+
+14
+00:00:49,920 --> 00:00:50,250
+OK.
+
+15
+00:00:52,020 --> 00:00:53,700
+I want to set the first bit.
+
+16
+00:00:55,390 --> 00:00:57,010
+that is this one.
+
+17
+00:00:57,880 --> 00:01:04,540
+OK, so what I need, I need to do OR operation, a bitwise OR with the number which looks like this.
+
+18
+00:01:04,569 --> 00:01:08,500
+zero one zero. which has set bit at the i th index.
+
+19
+00:01:08,920 --> 00:01:09,250
+OK.
+
+20
+00:01:11,060 --> 00:01:16,820
+And i th bit should be set. so what we need to do? we need to create a mask that is again, this
+
+21
+00:01:16,820 --> 00:01:18,800
+number is going to be one left shift i.
+
+22
+00:01:18,800 --> 00:01:20,360
+I will get this number.
+
+23
+00:01:20,720 --> 00:01:23,250
+And we will do a Bitwise OR with the value of n.
+
+24
+00:01:23,270 --> 00:01:30,830
+And so let's see, so we can say int mask equals one left shift i.
+
+25
+00:01:31,670 --> 00:01:33,170
+And what we can say? we can say,
+
+26
+00:01:33,530 --> 00:01:36,830
+Let's update the value of N as N OR mask.
+
+27
+00:01:37,520 --> 00:01:38,690
+And we are done.
+
+28
+00:01:39,320 --> 00:01:49,790
+Now, if the number is five if I say, OK. get ith bit. OK. I can say void, I can say set
+
+29
+00:01:50,120 --> 00:01:50,810
+ith bit.
+
+30
+00:01:51,050 --> 00:01:55,040
+Instead of calling this I can call set ith bit.
+
+31
+00:01:55,520 --> 00:02:00,110
+I give the value of n and i and maybe I print the new value of n.
+
+32
+00:02:00,110 --> 00:02:03,470
+And so let's try to run this.
+
+33
+00:02:05,440 --> 00:02:12,310
+I say. OK, I us set the first bit so you can see after setting the first bit the result is seven.
+
+34
+00:02:12,940 --> 00:02:19,000
+which is fine. if I set the zero th bit then the result will not change because that bit is already
+
+35
+00:02:19,000 --> 00:02:19,720
+set in five.
+
+36
+00:02:20,470 --> 00:02:21,290
+So that's all.
+
+37
+00:02:21,400 --> 00:02:23,260
+That's how it is going to work.
+
+38
+00:02:23,260 --> 00:02:27,280
+So we are getting this number one one one by setting the i th bit as one.
+
+39
+00:02:28,150 --> 00:02:28,690
+That's it.
+
+40
+00:02:28,810 --> 00:02:29,980
+See you in the next lecture.
+

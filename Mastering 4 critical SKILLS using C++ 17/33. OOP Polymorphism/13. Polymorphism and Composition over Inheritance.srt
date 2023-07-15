@@ -1,0 +1,274 @@
+0
+1
+00:00:01,290 --> 00:00:08,310
+So going back to the composition and inheritance issue. Once mentioned the inheritance
+1
+
+2
+00:00:08,310 --> 00:00:15,240
+and how many troubles could start to happen, especially with the multiple-inheritance. Composition
+2
+
+3
+00:00:15,240 --> 00:00:18,420
+as I said before, is a way to go in the industry.
+3
+
+4
+00:00:18,720 --> 00:00:22,090
+If something is doable with composition, then just go ahead.
+4
+
+5
+00:00:22,350 --> 00:00:26,640
+Now, we know about polymorphism, interfaces, and abstract classes.
+5
+
+6
+00:00:27,000 --> 00:00:33,600
+So the proper way to do the composition in the market is more of the composition with interfaces.
+6
+
+7
+00:00:33,930 --> 00:00:37,950
+So it doesn't depend on a composition of a specific object
+7
+
+8
+00:00:37,950 --> 00:00:42,120
+like you have a car, you don't say just car has a class of engine.
+8
+
+9
+00:00:42,700 --> 00:00:49,560
+You say a class has as an object of type interface of like let's name it IEngine, and there will
+9
+
+10
+00:00:49,560 --> 00:00:52,050
+be some different implementation for this engine.
+10
+
+11
+00:00:52,320 --> 00:00:58,710
+So we typically utilize the composition with the interfaces to resolve the dependencies and to avoid
+11
+
+12
+00:00:58,710 --> 00:00:59,960
+inheritance as possible,
+12
+
+13
+00:01:00,630 --> 00:01:05,820
+but when you tried to switch a lot of things that are more involved with composition to inheritance,
+13
+
+14
+00:01:06,060 --> 00:01:08,820
+it might not be like very intuitive.
+14
+
+15
+00:01:09,330 --> 00:01:15,270
+The good news is the more you learned design patterns, the more you will notice how things might
+15
+
+16
+00:01:15,270 --> 00:01:21,890
+be switched from some inheritance hierarchy to some composition style.
+16
+
+17
+00:01:22,170 --> 00:01:29,280
+For example, the decorator pattern can help us to avoid the explosion that we saw before in the class hierarchy.
+17
+
+18
+00:01:29,290 --> 00:01:29,780
+...
+18
+
+19
+00:01:30,480 --> 00:01:33,200
+So still there is something about it,
+19
+
+20
+00:01:33,280 --> 00:01:39,060
+the negative side. We typically have to write more code for two things: we have to do more code to 
+20
+
+21
+00:01:39,060 --> 00:01:42,900
+handle the composition itself as a logic, maybe more wraps, and delegates.
+21
+
+22
+00:01:43,290 --> 00:01:49,410
+In addition, we have to write more code to create instances of our intermediate classes,
+22
+
+23
+00:01:49,650 --> 00:01:53,820
+and this is where something named factory pattern very simple and intuitive comes to the scene.
+23
+
+24
+00:01:54,300 --> 00:01:55,770
+So that's all,
+24
+
+25
+00:01:55,770 --> 00:01:59,910
+just keep in mind, try to make things with more composition as you could,
+25
+
+26
+00:02:00,180 --> 00:02:04,500
+and this would typically involve some interfaces and polymorphism. Polymorphism itself
+26
+
+27
+00:02:04,500 --> 00:02:10,830
+needs some inheritance, but when we tried to build  proper polymorphism specifically with interfaces,
+27
+
+28
+00:02:11,160 --> 00:02:17,130
+we don't intend to make very deep hierarchical inheritance or multiple-inheritance, it is more of something
+28
+
+29
+00:02:17,130 --> 00:02:20,340
+that allow the polymorphic performance and behavior.
+29
+
+30
+00:02:21,910 --> 00:02:29,830
+Finally, I would like to share with you something like the design intentions when I design class and mark
+30
+
+31
+00:02:30,220 --> 00:02:31,940
+a function as a non-virtual function.
+31
+
+32
+00:02:32,320 --> 00:02:37,060
+I'm sending a message to others that this is almost a mandatory implementation,
+32
+
+33
+00:02:37,210 --> 00:02:40,930
+do not overwrite, OK, but I still can override and call it.
+33
+
+34
+00:02:41,170 --> 00:02:44,620
+This is true, but it will fail in polymorphic behavior.
+34
+
+35
+00:02:44,620 --> 00:02:48,440
+So if you do that in polymorphism, you are going probably to lose it.
+35
+
+36
+00:02:48,580 --> 00:02:51,190
+The worst is you will not notice that you are losing it,
+36
+
+37
+00:02:51,310 --> 00:02:55,350
+so it would be more of like a bug in your code and you don't notice that.
+37
+
+38
+00:02:55,720 --> 00:03:02,230
+So if someone is providing a non-virtual function, do not implement it, just use the given implementation,
+38
+
+39
+00:03:02,920 --> 00:03:06,830
+Otherwise, make sure this will be called in polymorphism  set approach,
+39
+
+40
+00:03:06,840 --> 00:03:10,380
+typically, It will be hard. As a better tip
+40
+
+41
+00:03:10,390 --> 00:03:16,300
+also, mark this function with final, if you would like. If you are the creator of that, mark it
+41
+
+42
+00:03:16,300 --> 00:03:21,790
+with final to prevent such mistake for others like you are telling them, hey, do not override
+42
+
+43
+00:03:21,790 --> 00:03:27,790
+this one. On the other side, when you provide the virtual function, you are sending
+43
+
+44
+00:03:27,790 --> 00:03:31,990
+a message like this is currently a default implementation,
+44
+
+45
+00:03:32,290 --> 00:03:38,740
+but you as a child class you are welcome to write your own implementation. For
+45
+
+46
+00:03:38,740 --> 00:03:39,790
+a good coding
+46
+
+47
+00:03:39,790 --> 00:03:44,170
+also, you are suggested to write virtual and overwrite keywords in this function.
+47
+
+48
+00:03:44,860 --> 00:03:50,530
+If you provided a pure virtual function, you are sending a message also like, hey, I don't know how to
+48
+
+49
+00:03:50,530 --> 00:03:52,350
+implement the implementation of this function,
+49
+
+50
+00:03:52,540 --> 00:03:54,550
+for example, the area in shape class.
+50
+
+51
+00:03:54,940 --> 00:04:01,180
+Sometimes you are just acting more like an interface function as we said before in interfaces
+51
+
+52
+00:04:01,180 --> 00:04:04,270
+like properties, for example, or even any interface.
+52
+
+53
+00:04:04,270 --> 00:04:06,970
+You just telling like you know what you have to think
+53
+
+54
+00:04:06,970 --> 00:04:08,300
+and implement this by yourself.
+54
+
+55
+00:04:09,240 --> 00:04:09,750
+That's it.

@@ -1,0 +1,99 @@
+0
+1
+00:00:01,080 --> 00:00:07,680
+homework set number two, on the first problem, you will be doing a tracing mean to follow
+1
+
+2
+00:00:07,680 --> 00:00:13,740
+step by step by yourself and guess the output as if you are the compiler, we did that before.
+2
+
+3
+00:00:14,190 --> 00:00:16,500
+You will take this number one, number two, number three.
+3
+
+4
+00:00:16,770 --> 00:00:19,870
+And then observe there is like a kind of pattern here.
+4
+
+5
+00:00:20,550 --> 00:00:26,820
+So anyway, try to guess the output here, which is like mainly couting the number of three here.
+5
+
+6
+00:00:27,330 --> 00:00:31,160
+And after that, educate yourself about what is fibonacci number.
+6
+
+7
+00:00:31,320 --> 00:00:32,040
+Here is a link.
+7
+
+8
+00:00:33,180 --> 00:00:39,810
+And the second program, we will do a swapping operation, swapping is a very common term 
+8
+
+9
+00:00:40,080 --> 00:00:40,800
+in programming
+9
+
+10
+00:00:41,070 --> 00:00:43,740
+It means to exchange the value of two things.
+10
+
+11
+00:00:44,130 --> 00:00:48,240
+For example, let's say you read 2 integers here, num one and num two.
+11
+
+12
+00:00:48,840 --> 00:00:52,550
+And then let's say the input is seven and 231.
+12
+
+13
+00:00:52,860 --> 00:00:57,510
+We can do a swap operation which will exchange the content of these two variables,
+13
+
+14
+00:00:57,510 --> 00:00:58,500
+Number one, number two.
+14
+
+15
+00:00:58,740 --> 00:00:59,910
+And then we print them.
+15
+
+16
+00:00:59,910 --> 00:01:01,650
+They are two hundred thirty one and seven.
+16
+
+17
+00:01:01,650 --> 00:01:03,650
+So they are now swapped or exchanged.
+17
+
+18
+00:01:04,350 --> 00:01:07,950
+You are right, three lines of code here that will take number one.
+18
+
+19
+00:01:07,950 --> 00:01:12,300
+And number two, do the Internet exchange so that the output is like that.
+19
+
+20
+00:01:13,410 --> 00:01:13,740
+That' all.

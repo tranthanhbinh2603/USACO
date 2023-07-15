@@ -1,0 +1,267 @@
+1
+00:00:00,780 --> 00:00:01,960
+Let's continue the summary.
+
+2
+00:00:03,600 --> 00:00:08,640
+These are the ships of inheritance, but here we would like to to focus on the problems of the inheritance.
+
+3
+00:00:09,140 --> 00:00:16,190
+One in one of the assignments we highlighted that sometimes we design our our inheritance hierarchy
+
+4
+00:00:16,210 --> 00:00:20,760
+looks while everything looks so good in the future in the class like we have here, a few classes that
+
+5
+00:00:20,760 --> 00:00:25,470
+armaments, all of them give us a Malcolm X and gives a live birth.
+
+6
+00:00:25,470 --> 00:00:26,910
+And so everything is OK.
+
+7
+00:00:27,690 --> 00:00:31,470
+And in the future, someone needed to add a new type of mammas.
+
+8
+00:00:31,770 --> 00:00:35,960
+But surprisingly, this one doesn't have this function as an applicable for it.
+
+9
+00:00:36,480 --> 00:00:41,430
+So if we just try to extend it from this hierarchy, it is going to support a function that shouldn't
+
+10
+00:00:41,430 --> 00:00:43,440
+exist, which is problematic.
+
+11
+00:00:43,680 --> 00:00:49,320
+So we have to be careful and we have to think in future if our to class is really aberrant for every
+
+12
+00:00:49,320 --> 00:00:50,670
+potential subclass or not.
+
+13
+00:00:52,100 --> 00:00:55,150
+We also know that sometimes everything looks OK.
+
+14
+00:00:55,170 --> 00:00:59,550
+However, it is buggie in another, like the rectangle class and square class.
+
+15
+00:00:59,960 --> 00:01:04,200
+This class is going to tell itself like I am.
+
+16
+00:01:04,200 --> 00:01:10,260
+A rectangle with two sides are equal so I can initiate a rectangle with width on right with same value.
+
+17
+00:01:10,530 --> 00:01:12,690
+And then everything would definitely be perfect.
+
+18
+00:01:12,700 --> 00:01:13,200
+Yes.
+
+19
+00:01:13,710 --> 00:01:19,790
+Then someone is creating a function that rectangle pointer as an object and he manipulate the with an
+
+20
+00:01:20,220 --> 00:01:26,730
+internal as you wish we would have what we call with a square pointer class object and the square pointer
+
+21
+00:01:26,730 --> 00:01:30,450
+class would be changed internally to be within equal height.
+
+22
+00:01:30,810 --> 00:01:37,200
+Now we broke the integrity of our square class, which is making this as a rule, inheritance relationship.
+
+23
+00:01:38,100 --> 00:01:44,280
+We also from the robot dog problem, we saw how how sometimes we end up with classes that involve a
+
+24
+00:01:44,280 --> 00:01:50,490
+lot of features, a lot of variables, a lot of functionality that that that aren't relevant to the
+
+25
+00:01:50,490 --> 00:01:51,540
+class like here.
+
+26
+00:01:51,540 --> 00:01:58,080
+When we made the robot, the robot, the robot dog, for example, the dog wasn't actually so it doesn't
+
+27
+00:01:58,080 --> 00:01:58,680
+go to tail.
+
+28
+00:01:58,830 --> 00:02:00,750
+So this wasn't a realistic one.
+
+29
+00:02:01,560 --> 00:02:06,810
+When it happens that you are doing a lot of inheritance, a lot of multiple inheritance, you might
+
+30
+00:02:06,810 --> 00:02:09,630
+end up with functionalities that doesn't belong to you.
+
+31
+00:02:10,770 --> 00:02:16,590
+We also have the the dam, and the problem is very problematic in terms of implementation, in terms
+
+32
+00:02:16,590 --> 00:02:19,640
+of accessing variables that doesn't belong to us.
+
+33
+00:02:19,860 --> 00:02:24,380
+So variables that are visible from different locations, they are all creating problems.
+
+34
+00:02:25,020 --> 00:02:30,660
+And we also saw how the how the inheritance laws might explode over time.
+
+35
+00:02:30,870 --> 00:02:36,030
+You start with initial Sunbus class and you would like to keep extending them with different features.
+
+36
+00:02:36,240 --> 00:02:39,800
+But every extension is like duplicating all the work that we have.
+
+37
+00:02:40,080 --> 00:02:41,300
+So the classes eventually.
+
+38
+00:02:43,050 --> 00:02:46,740
+And also we see how the inheritance in general is inflexible.
+
+39
+00:02:46,950 --> 00:02:52,050
+Inheritance is a design time, a choice you are cutting against some specific class.
+
+40
+00:02:52,050 --> 00:02:55,130
+You know, it's a productive members, it's public interface.
+
+41
+00:02:55,350 --> 00:02:57,150
+So you are coupled with this class.
+
+42
+00:02:57,660 --> 00:03:00,630
+What if we need more dynamic behavior during the runtime?
+
+43
+00:03:01,020 --> 00:03:06,990
+This is where we have to run away from the general multiple inheritance idea to something more of composition
+
+44
+00:03:06,990 --> 00:03:14,640
+and dependence on interfaces with polymorphism to have less cabling and less carbon system inheritance.
+
+45
+00:03:14,640 --> 00:03:20,430
+In practice, there are typically three types of programmers this who hated so much, this who avoid
+
+46
+00:03:20,430 --> 00:03:21,630
+it as much as possible.
+
+47
+00:03:21,630 --> 00:03:25,590
+But they have if they are using it, they have strong justification for that.
+
+48
+00:03:25,860 --> 00:03:27,570
+And this will go to study the basics.
+
+49
+00:03:28,200 --> 00:03:33,960
+I mean, here that this who didn't give time to be very good in the basics like programming and object
+
+50
+00:03:33,960 --> 00:03:34,350
+oriented.
+
+51
+00:03:34,590 --> 00:03:36,510
+They are aware of the problems.
+
+52
+00:03:36,540 --> 00:03:41,370
+They just learn some stuff and would like to jump on learning, say, Android or OS or Web development
+
+53
+00:03:41,670 --> 00:03:45,360
+without really understanding a lot of code issues in the basics.
+
+54
+00:03:45,900 --> 00:03:46,830
+Here are some tips.
+
+55
+00:03:47,060 --> 00:03:48,870
+Berfield Composition over inheritance.
+
+56
+00:03:48,900 --> 00:03:50,460
+We will come back to this point later.
+
+57
+00:03:50,790 --> 00:03:53,670
+Be aware of inheritance problem that we just described today.
+
+58
+00:03:54,150 --> 00:03:58,440
+Remember, the Berretta class should be super class for all elements of class.
+
+59
+00:03:58,450 --> 00:04:00,060
+Try to think it over in the future.
+
+60
+00:04:00,720 --> 00:04:04,560
+Do not just do inheritance to reduce some available code.
+
+61
+00:04:04,560 --> 00:04:05,340
+Don't do that.
+
+62
+00:04:05,340 --> 00:04:10,380
+There have to be strong justification for using inheritance before extending a class.
+
+63
+00:04:10,590 --> 00:04:11,940
+Doublecheck is this class.
+
+64
+00:04:11,940 --> 00:04:14,280
+Looks like it was designed to be extensible.
+
+65
+00:04:14,430 --> 00:04:16,340
+It was designed to be inherited or not.
+
+66
+00:04:16,350 --> 00:04:17,760
+If not, do not go with that.
+
+67
+00:04:18,510 --> 00:04:19,050
+That said.

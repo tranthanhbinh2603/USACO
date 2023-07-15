@@ -1,0 +1,346 @@
+WEBVTT
+
+00:01.860 --> 00:06.570
+Everyone's in this lecture, we're going to talk about one important concept, which is known as data
+
+00:06.570 --> 00:09.110
+type modifiers in C++.
+
+00:09.360 --> 00:15.900
+We have something which is known as auditor type modify, and it allows us to expand or decrease the
+
+00:15.900 --> 00:21.870
+capacity of the boxes or the buckets that we have been allocating for integers, OK, or for other data
+
+00:21.870 --> 00:22.530
+types as well.
+
+00:22.990 --> 00:26.990
+So some of the data does work.
+
+00:27.030 --> 00:34.800
+So let me just tell you what example is the boys wanted to create an integer and by default it gives
+
+00:34.800 --> 00:36.990
+me 32 bits.
+
+00:37.170 --> 00:37.440
+OK?
+
+00:37.890 --> 00:39.270
+It gives me a 32 bit bucket.
+
+00:39.750 --> 00:47.070
+I suppose I wanted to create a larger integer, so we know that it will not draw a number which contains
+
+00:47.070 --> 00:47.740
+more than that.
+
+00:47.870 --> 00:56.730
+But there is another option to either modify it in front of it that we call as long long.
+
+00:57.870 --> 01:02.850
+It gives you the biggest budget, which which will contain 64 bit sugar.
+
+01:03.660 --> 01:08.860
+That means you can store a number up to 64 bit inside the bucket called long, long.
+
+01:08.910 --> 01:13.020
+So this long long is a data type modified OK.
+
+01:14.130 --> 01:15.660
+Or you can alter this shortened.
+
+01:17.060 --> 01:24.980
+Maybe you you're working on a concept where you're storing some data that only requires age of the person
+
+01:24.980 --> 01:25.580
+to be stored.
+
+01:26.330 --> 01:32.300
+You know that to age must be in the range, let's say, zero to 120 years, OK?
+
+01:33.620 --> 01:39.170
+Now what this will do, it will give you a smaller size bucket, OK, so what is the exact size we can
+
+01:39.170 --> 01:40.580
+check on our machine?
+
+01:41.120 --> 01:46.310
+So the way we can check it, we are going to go to our order.
+
+01:47.420 --> 01:51.050
+And we are going to say, OK, let me create a shortened.
+
+01:53.810 --> 01:55.460
+Maybe shot in.
+
+01:56.680 --> 01:57.160
+Age.
+
+01:58.910 --> 02:02.980
+And I can say, OK, give me the size of each.
+
+02:03.410 --> 02:07.580
+How much memory you're going to allocate for this shortened.
+
+02:07.820 --> 02:12.860
+So let us verify by running this code on terminal and.
+
+02:14.580 --> 02:17.730
+We have built a gold as well, so dodge slash.
+
+02:18.860 --> 02:19.940
+Size of demo.
+
+02:21.020 --> 02:25.820
+So short, you're going to hear this taking two bites, that means it is allocating.
+
+02:28.750 --> 02:32.920
+How much it is allocating estimates for this number?
+
+02:33.280 --> 02:36.310
+Similarly, you can verify for long, long as well, right?
+
+02:37.400 --> 02:41.240
+You can verify for long, long as well.
+
+02:41.570 --> 02:44.780
+It may be long and so and long, long and let's.
+
+02:46.630 --> 02:48.400
+What happened in this case?
+
+02:52.230 --> 02:59.250
+Maybe I can give how much memory you allocate if I create a long and digit or if I create a long, long
+
+02:59.250 --> 02:59.820
+integer.
+
+03:00.090 --> 03:03.240
+OK, so let's run this code.
+
+03:04.830 --> 03:11.590
+So bored and gaze of longing on long, long, it is giving me aid bytes of memory.
+
+03:11.610 --> 03:18.720
+That means it is giving me 64 bit basically in this system, the longest seem as long long will.
+
+03:19.440 --> 03:23.250
+And these things are basically your system dependent.
+
+03:23.250 --> 03:25.590
+So that's why we are checking how much it is.
+
+03:25.920 --> 03:34.500
+But the idea is that long would give you a memory that is greater than equal to the memory of the individual,
+
+03:34.500 --> 03:34.740
+OK?
+
+03:35.280 --> 03:40.820
+On short will give you a memory that is less than equal to the memory of integer bucket.
+
+03:42.390 --> 03:49.470
+And by having a larger bucket, you can also increase the range of the largest number that can be stored
+
+03:49.470 --> 03:50.520
+in that particular bucket.
+
+03:51.090 --> 03:56.040
+So very soon we will talk about what is the largest and what is the smallest number that can be stored.
+
+03:56.700 --> 03:59.640
+But before that, there are two more things that we would like to cover.
+
+04:00.300 --> 04:04.980
+There is also a concept of a signed integer under unsigned integer.
+
+04:04.980 --> 04:05.240
+OK?
+
+04:05.760 --> 04:12.480
+What is the meaning of signed on unsigned to by default, all integers are trying to get if you write,
+
+04:12.480 --> 04:14.490
+OK, I am talking about assigning digits.
+
+04:14.520 --> 04:21.630
+That means that integer is capable of storing both the positive numbers and the negative numbers.
+
+04:21.660 --> 04:24.960
+If you say X is plus five, it is going to store it.
+
+04:25.320 --> 04:29.250
+If you don't know, my X is minus five, it is also going to store it because.
+
+04:30.280 --> 04:36.460
+All integers, by default, they're capable of storing both the designed positive numbers and the negative
+
+04:36.460 --> 04:37.060
+numbers, OK?
+
+04:37.570 --> 04:39.760
+Now how does it differ?
+
+04:39.840 --> 04:40.900
+OK, how does it differ?
+
+04:40.960 --> 04:47.170
+The one one difference between the positive numbers and the negative numbers is that if you have a 32
+
+04:47.170 --> 04:54.340
+bit bucket, OK, then the 31 bits they are used to store the magnitude of the number, let's say the
+
+04:54.340 --> 04:55.210
+number is five.
+
+04:55.750 --> 05:02.080
+OK, then the remaining bits that the first bit, which is also known as the most significant bit.
+
+05:03.150 --> 05:10.260
+This is actually used as the sign read, OK, this is actually used as designed by the convention.
+
+05:10.590 --> 05:14.460
+If the sign was zero, it denote a positive number.
+
+05:15.030 --> 05:17.790
+But if this sign is one, it denotes a negative.
+
+05:18.090 --> 05:22.410
+OK, if the sign is one, it is going to denote the negative number.
+
+05:23.130 --> 05:25.940
+So that is the idea of a signed integer.
+
+05:26.430 --> 05:30.840
+But if I talk about an unsigned integer, OK, so what happens in an integer?
+
+05:31.320 --> 05:35.010
+All 32 bits are used to store the magnitude of the number.
+
+05:35.040 --> 05:38.280
+It only stores the numbers, which are greater than equal to zero.
+
+05:39.190 --> 05:41.640
+What example if you want to store a roll number of a person?
+
+05:41.940 --> 05:48.630
+OK, you might use an unsigned integer, do you using A. There is also fine, but rule numbers cannot
+
+05:48.630 --> 05:49.150
+be negatives.
+
+05:49.170 --> 05:51.480
+Are I just created an unsigned integer bucket?
+
+05:51.650 --> 05:51.930
+OK.
+
+05:53.010 --> 05:58.260
+But for most use cases writing the regular rate, it is going to work fine.
+
+05:58.800 --> 06:04.050
+And it is only very corner cases where you might require to work with an unsigned integer.
+
+06:04.050 --> 06:04.290
+OK?
+
+06:04.800 --> 06:11.700
+But for all your programming, you can work with the regular integers as to let me just tell you the
+
+06:11.700 --> 06:17.430
+difference between the signed integer and unsigned integer so you can have signed end.
+
+06:18.740 --> 06:20.390
+Or in what are seen.
+
+06:21.660 --> 06:21.930
+OK.
+
+06:22.470 --> 06:30.000
+And if you want to go get no, I don't want the first bit to denote the magnitude of the number or not,
+
+06:30.000 --> 06:36.570
+the sign of the number, then all 32 little bits will be used to denote the magnitude of the number,
+
+06:36.570 --> 06:36.810
+OK?
+
+06:37.200 --> 06:43.830
+That means if you have one hit or something, something something like this, then this number is going
+
+06:43.830 --> 06:43.980
+to.
+
+06:44.400 --> 06:51.630
+This one is going to contribute to raise to the bar 31 in the answer, OK, but hit the first bit as
+
+06:51.630 --> 06:52.730
+a result for the sign.
+
+06:53.160 --> 06:59.330
+If it is one, then you have some numbers, then this does not contribute to raise to the bar 31 dedans
+
+06:59.340 --> 07:01.090
+that it contributes a negative sign.
+
+07:01.110 --> 07:03.240
+It means it is a negative number.
+
+07:03.540 --> 07:09.480
+OK, and if the first bit of zero, then it means it is a positive number.
+
+07:09.480 --> 07:13.770
+OK, so this number has the first zero.
+
+07:13.800 --> 07:17.910
+It means that as a positive numbers, it represents less fate.
+
+07:18.780 --> 07:20.190
+And what does it represent?
+
+07:20.430 --> 07:25.950
+We will discuss very, very shortly, but we will also talk about the storage of negative numbers,
+
+07:25.950 --> 07:27.710
+how the negative numbers are stored.
+
+07:27.810 --> 07:29.520
+It is unsigned integer, OK.
+
+07:30.300 --> 07:37.590
+You can also add two more modifiers you can unsigned, long, OK, unsigned long.
+
+07:37.590 --> 07:43.470
+And what it means Create a bucket of size 64 bits.
+
+07:44.850 --> 07:49.080
+And in this book, the first bit does not represent the sign.
+
+07:49.110 --> 07:53.500
+It also represents a power of two that isn't meaning of one's own logic.
+
+07:53.820 --> 07:57.480
+That means you can store a bigger number inside this bunker.
+
+07:57.550 --> 07:57.810
+OK.
+
+07:58.440 --> 08:03.990
+And we'll discuss what is the range of these numbers, how big the number can be.
+
+08:04.790 --> 08:12.660
+And yeah, very soon in the next lecture that was all about this video you can also use.
+
+08:14.870 --> 08:18.580
+Along with other data types like Double, you can say I want along.
+
+08:19.040 --> 08:22.700
+OK, so I'll show you the examples in the coming lectures.
+
+08:22.850 --> 08:24.050
+That's all for this video.
+
+08:24.060 --> 08:24.590
+Thank you.

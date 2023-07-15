@@ -1,0 +1,559 @@
+1
+00:00:01,060 --> 00:00:08,440
+Let's solve another problem where the idea of a state graph will come back again to the scene, when
+
+2
+00:00:08,440 --> 00:00:09,970
+you think about this problem.
+
+3
+00:00:10,240 --> 00:00:16,720
+You will notice that we have two jars like maybe one of them has capacity.
+
+4
+00:00:16,720 --> 00:00:17,200
+Six.
+
+5
+00:00:17,500 --> 00:00:19,150
+And another one has capacity.
+
+6
+00:00:19,150 --> 00:00:19,660
+Five.
+
+7
+00:00:20,530 --> 00:00:24,250
+When we do an operation, we get a New Jersey.
+
+8
+00:00:24,280 --> 00:00:26,500
+Maybe we get zero and five.
+
+9
+00:00:27,220 --> 00:00:32,860
+Maybe in another operation, we get like five and maybe zero, maybe another operation.
+
+10
+00:00:32,860 --> 00:00:35,320
+We get like a five and there maybe three.
+
+11
+00:00:36,420 --> 00:00:43,500
+And if you started to think in each two years together as a single note, then.
+
+12
+00:00:44,800 --> 00:00:52,240
+A state graph can be represented where we have a node that has no like, let's see here, five and zero,
+
+13
+00:00:53,560 --> 00:00:57,040
+that is going to five and three in a directed graph.
+
+14
+00:00:57,760 --> 00:01:04,480
+So once you think in this problem as a states, the state is to number the operation is converting a
+
+15
+00:01:04,480 --> 00:01:12,100
+state to another state, then you simply has a graph and the task is asking you if we can start from
+
+16
+00:01:12,100 --> 00:01:18,760
+a steady state like zero and zero and reach out to some state where there is a mission of the two values
+
+17
+00:01:18,760 --> 00:01:20,380
+equal it, for example.
+
+18
+00:01:20,920 --> 00:01:27,400
+Now this is a standard beliefs, but all what you need to do is to run it on their own the graph.
+
+19
+00:01:29,110 --> 00:01:31,150
+A few things to take into into consideration.
+
+20
+00:01:31,720 --> 00:01:38,170
+The first thing is most of the goods will fail in the face and that it could blind judge.
+
+21
+00:01:38,950 --> 00:01:44,230
+This is mainly due to like minor like tight, tight time limits.
+
+22
+00:01:44,620 --> 00:01:45,670
+I don't care about that.
+
+23
+00:01:45,670 --> 00:01:46,510
+I'm teaching you before.
+
+24
+00:01:46,610 --> 00:01:47,950
+So this is what matters here.
+
+25
+00:01:49,240 --> 00:01:54,700
+The second thing is there is own math for this problem, it's mainly based on Cobram and you said you're
+
+26
+00:01:54,700 --> 00:01:58,930
+going to check out this year notes if you would like, feel free to ignore it, it doesn't matter.
+
+27
+00:01:59,750 --> 00:02:03,640
+Uh, we can even do further improvements like this could.
+
+28
+00:02:03,850 --> 00:02:05,080
+I don't completely get it.
+
+29
+00:02:05,080 --> 00:02:16,240
+But anyway, uh, now we mentioned before that, um, the states and counting the states, uh, is important,
+
+30
+00:02:16,240 --> 00:02:16,630
+right?
+
+31
+00:02:17,080 --> 00:02:20,080
+I don't know how many number of states have this problem.
+
+32
+00:02:20,560 --> 00:02:24,530
+And as you see there, the states are very regular in representation.
+
+33
+00:02:24,970 --> 00:02:30,120
+Practically speaking, we can have up to 10 to about six times to a number of states.
+
+34
+00:02:30,130 --> 00:02:31,720
+Looks like huge numbers, right?
+
+35
+00:02:32,110 --> 00:02:35,110
+But practically speaking, it must be much less than that.
+
+36
+00:02:35,560 --> 00:02:43,060
+Also, the mass of the city and cobra homes might get involved in the problem to decide, uh, like
+
+37
+00:02:43,060 --> 00:02:45,820
+what are the really practical number of cities that could have been?
+
+38
+00:02:46,120 --> 00:02:51,370
+So generally speaking, completing the total number of states of this problem is completely out of our
+
+39
+00:02:51,370 --> 00:02:51,670
+scope.
+
+40
+00:02:51,670 --> 00:02:53,110
+Feel free to just ignore it.
+
+41
+00:02:53,430 --> 00:03:00,430
+All what we need is, uh, I'm assuring you that beavers can do it like it isn't like 10 to about 12
+
+42
+00:03:01,150 --> 00:03:02,410
+states this year.
+
+43
+00:03:02,950 --> 00:03:03,580
+Now let's see that.
+
+44
+00:03:03,610 --> 00:03:04,930
+See the implementation.
+
+45
+00:03:08,450 --> 00:03:09,030
+OK.
+
+46
+00:03:09,620 --> 00:03:13,340
+The first thing is, let's let's go here.
+
+47
+00:03:13,920 --> 00:03:15,500
+I'm handling two best cases.
+
+48
+00:03:15,500 --> 00:03:19,580
+If they're already the two covers, these are equal to the target were returning one.
+
+49
+00:03:20,090 --> 00:03:25,040
+If the two corpses are in a way less than the target, like, let's say, the cops, the five and seven,
+
+50
+00:03:25,310 --> 00:03:30,140
+the target is to we would never reach a twin anyway, so cancel it now.
+
+51
+00:03:30,170 --> 00:03:34,160
+After that, we can have a cue that you need the state state graph.
+
+52
+00:03:34,170 --> 00:03:40,370
+So what we have here, victor of India, maybe another one would create the structure and say Your legs
+
+53
+00:03:40,370 --> 00:03:42,200
+are one size, you are to size up to you.
+
+54
+00:03:42,890 --> 00:03:49,130
+I'm using some hatchet and I will discuss that right now and we have bullion found here now.
+
+55
+00:03:51,320 --> 00:03:56,570
+We have an initial state and we need to generate like we need to sit here.
+
+56
+00:03:56,570 --> 00:03:57,770
+So I'm writing here.
+
+57
+00:03:58,070 --> 00:03:58,880
+Process function.
+
+58
+00:03:59,060 --> 00:04:05,090
+You probably notice that when I have a lot of copy best I could I try to develop a function to do all
+
+59
+00:04:05,090 --> 00:04:05,660
+of this stuff.
+
+60
+00:04:06,320 --> 00:04:06,710
+OK.
+
+61
+00:04:06,740 --> 00:04:07,640
+It is the business.
+
+62
+00:04:07,880 --> 00:04:10,320
+As long as we couldn't find it, keep going.
+
+63
+00:04:10,340 --> 00:04:12,140
+Don't just explore the world graph.
+
+64
+00:04:12,800 --> 00:04:16,930
+And then we get from the graph, from the Q, the two numbers.
+
+65
+00:04:17,630 --> 00:04:22,400
+When you think about it, you have mainly six different cases as the problem is.
+
+66
+00:04:23,150 --> 00:04:29,220
+So I can, for example, MBT the first one, then it would be zero here for MBT, the second one.
+
+67
+00:04:29,240 --> 00:04:32,450
+It would be zero here or failed the first one.
+
+68
+00:04:32,510 --> 00:04:34,100
+It would be chemistry or field.
+
+69
+00:04:34,100 --> 00:04:37,020
+The second one, it would be chemistry to the third.
+
+70
+00:04:37,030 --> 00:04:43,760
+The case, which is a little bit maybe like a bit tricky, is the one about, uh, booting from one
+
+71
+00:04:43,760 --> 00:04:44,190
+to another.
+
+72
+00:04:44,210 --> 00:04:45,800
+You just have to be careful here.
+
+73
+00:04:46,160 --> 00:04:52,700
+Like, for example, if the if this one has these five units, this one has three units and this one
+
+74
+00:04:52,700 --> 00:04:54,350
+is empty, like the chemistry.
+
+75
+00:04:54,560 --> 00:04:58,240
+So when this one bush here, this one would remain three, but this one would be two.
+
+76
+00:04:58,710 --> 00:05:04,070
+So you need to know the minimums between the source and destination and the possible mass.
+
+77
+00:05:04,070 --> 00:05:07,700
+You can figure out what's happening here now.
+
+78
+00:05:08,060 --> 00:05:13,370
+The processing their processing is following the process function.
+
+79
+00:05:13,670 --> 00:05:20,360
+Take the current gen one and two and the target if it happened that Jaguar and to equal the target found,
+
+80
+00:05:20,370 --> 00:05:22,100
+is true and return.
+
+81
+00:05:23,210 --> 00:05:29,090
+I am trying to make an optimization like when you think about it, a state like five and seven is as
+
+82
+00:05:29,090 --> 00:05:30,560
+simple as seven and five.
+
+83
+00:05:31,130 --> 00:05:35,230
+And as you know, that are a huge number of states who would like to make things easy.
+
+84
+00:05:35,570 --> 00:05:39,140
+Optimizations are tricks are very common in competitive programming.
+
+85
+00:05:39,500 --> 00:05:41,410
+So I'm just saying, Hey, let's a standardized.
+
+86
+00:05:41,810 --> 00:05:44,970
+There is no need to mark a five and seven and seven and five.
+
+87
+00:05:45,110 --> 00:05:46,670
+Any of them is the same anyway.
+
+88
+00:05:46,970 --> 00:05:49,340
+This is kind of an initialization operation.
+
+89
+00:05:50,690 --> 00:05:59,720
+Now, the last thing is if the state is invested before we added to the queue, now let's think about
+
+90
+00:05:59,720 --> 00:06:00,710
+the visiting.
+
+91
+00:06:00,890 --> 00:06:03,470
+Now I would like to mark something as Vista, OK?
+
+92
+00:06:03,620 --> 00:06:06,230
+So there are a bunch of ways to do that.
+
+93
+00:06:06,800 --> 00:06:15,560
+The first one is I can use a hash set and order the set own bit of integrated integer or a hash set
+
+94
+00:06:15,560 --> 00:06:16,940
+or a vector of integer.
+
+95
+00:06:17,390 --> 00:06:18,710
+What is the problem here?
+
+96
+00:06:19,190 --> 00:06:20,390
+The problem is.
+
+97
+00:06:21,420 --> 00:06:25,740
+Bear or Victor are undefined for the hatch set for the northern set.
+
+98
+00:06:25,980 --> 00:06:28,390
+You have to define their hazard function herself.
+
+99
+00:06:28,410 --> 00:06:30,300
+I'll show you a code snippet for that.
+
+100
+00:06:30,960 --> 00:06:33,750
+But the good news here is this is a very nice trick.
+
+101
+00:06:34,200 --> 00:06:37,440
+Four bit of integers you can create the hash set for them.
+
+102
+00:06:37,440 --> 00:06:44,220
+In this way you create a map of integer and this integer is looking to end and order the set.
+
+103
+00:06:45,090 --> 00:06:47,190
+Now there is two good news about that.
+
+104
+00:06:48,620 --> 00:06:55,520
+The first the good news, it is more efficient because one of the values is the same and the keys here
+
+105
+00:06:55,520 --> 00:06:59,690
+are used, the ones so memory wise and in certain ways, it is a bit more efficient.
+
+106
+00:07:00,230 --> 00:07:07,610
+The second good news you didn't have to write your own like victor, a hatchet, for example.
+
+107
+00:07:08,180 --> 00:07:10,250
+So this is in a way, one nice way.
+
+108
+00:07:10,490 --> 00:07:16,250
+So the take home message here, if you would like to mark visited bit of numbers, you can always use
+
+109
+00:07:16,250 --> 00:07:18,260
+a map of an ordered set.
+
+110
+00:07:19,100 --> 00:07:20,120
+This is mainly there.
+
+111
+00:07:20,810 --> 00:07:22,070
+The key one here.
+
+112
+00:07:24,780 --> 00:07:29,010
+I think I wrote your song, could I will show you other two nice ways to do that.
+
+113
+00:07:29,530 --> 00:07:34,650
+The the second way here, which is a standard one, you create the hatchet, which is actually just
+
+114
+00:07:34,650 --> 00:07:36,180
+an ordered set or victor.
+
+115
+00:07:36,510 --> 00:07:43,500
+And then you have some hash function that take a vector and the complete hash function for it and just
+
+116
+00:07:43,500 --> 00:07:43,950
+return it.
+
+117
+00:07:43,980 --> 00:07:46,470
+I teach it that already, and we did a structure course.
+
+118
+00:07:47,460 --> 00:07:49,100
+There is one final ad hoc trek.
+
+119
+00:07:49,110 --> 00:07:52,560
+Also you can see in competitive programming, which is just following.
+
+120
+00:07:53,970 --> 00:07:55,030
+The idea is following.
+
+121
+00:07:55,320 --> 00:07:59,570
+Let's say that they remember Jack one and Jack too, is like one million to one million.
+
+122
+00:07:59,630 --> 00:08:01,470
+It's actually like a two year rewrite.
+
+123
+00:08:03,760 --> 00:08:09,670
+Like, you have a set of five and seven and so on, so you can simply convert any bit of number to a
+
+124
+00:08:09,670 --> 00:08:11,170
+single integer like.
+
+125
+00:08:12,020 --> 00:08:16,670
+If you are a huge jaguar in Jakarta and you know that that they mention here is up to a million, if
+
+126
+00:08:16,670 --> 00:08:21,170
+you multiply Jaguar and one million and Jakarta, you convert it to a single integer.
+
+127
+00:08:21,680 --> 00:08:26,150
+Now all what you need is an order to sit on a single number, but this time you are using longer look.
+
+128
+00:08:26,630 --> 00:08:34,250
+This is a very nice approach because if you have like, let's say, four variables I, G, K and L know
+
+129
+00:08:34,250 --> 00:08:38,900
+you cannot use MATLAB above unless it's very inconvenient way.
+
+130
+00:08:39,230 --> 00:08:42,860
+But you can convert aged care to a single integer.
+
+131
+00:08:43,040 --> 00:08:46,400
+So this is anyway good, but we don't go this way in the industry.
+
+132
+00:08:46,400 --> 00:08:46,970
+Be careful.
+
+133
+00:08:47,390 --> 00:08:52,370
+This is good for competitive programming, and in this theory, this lack clarity in industry.
+
+134
+00:08:52,490 --> 00:08:54,320
+You have to justify what you are doing here.
+
+135
+00:08:54,680 --> 00:08:57,230
+And we believe fair code that are very clear.
+
+136
+00:08:57,620 --> 00:09:06,200
+So anyway, these are the three different ways that you can use to, um, create a clearly this an order.
+
+137
+00:09:06,200 --> 00:09:09,140
+The set here was adjusted, by the way, give me time limit.
+
+138
+00:09:09,350 --> 00:09:10,430
+I forgot of this one.
+
+139
+00:09:10,430 --> 00:09:12,200
+Bastareaud give also me time limit.
+
+140
+00:09:12,740 --> 00:09:15,860
+Anyway, that I have time limit in this problem is very tight.

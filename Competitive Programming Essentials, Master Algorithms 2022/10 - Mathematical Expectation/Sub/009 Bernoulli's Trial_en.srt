@@ -1,0 +1,144 @@
+1
+00:00:01,609 --> 00:00:05,010
+Hi Everyone, so let's discuss this question of interviewing candidates.
+
+2
+00:00:05,030 --> 00:00:08,170
+So it says candidates are appearing for interview one after another.
+
+3
+00:00:08,630 --> 00:00:12,350
+The probability of each candidate getting selected is zero point one six.
+
+4
+00:00:12,830 --> 00:00:18,890
+What is the expected number of candidates you would need to interview to make sure you at least select
+
+5
+00:00:18,890 --> 00:00:19,430
+somebody?
+
+6
+00:00:19,430 --> 00:00:25,790
+So that basically means what is the probability of getting a success in an interview, in how many trials
+
+7
+00:00:26,750 --> 00:00:28,550
+a candidate would become successful?
+
+8
+00:00:28,560 --> 00:00:31,100
+That's another way of framing this problem statement.
+
+9
+00:00:31,550 --> 00:00:37,510
+If you use the concept of a Bernoulli's style. is this evnet a Bernoulli's trial ?the answer is yes. so
+
+10
+00:00:37,520 --> 00:00:42,200
+either person can pass in the interview or it can fail in the interview.
+
+11
+00:00:42,230 --> 00:00:44,330
+OK. so there are only two outcomes.
+
+12
+00:00:44,810 --> 00:00:48,980
+The probability of getting a success is 0.16.
+
+13
+00:00:49,430 --> 00:00:51,380
+So how many trials you would need?
+
+14
+00:00:51,410 --> 00:00:53,340
+That is nothing but one by three.
+
+15
+00:00:53,930 --> 00:00:55,910
+And this is equal to 6.25.
+
+16
+00:00:55,910 --> 00:00:56,210
+.
+
+17
+00:00:56,570 --> 00:01:01,580
+So you can in seven interviews. OK, you can down rounded up to seven.
+
+18
+00:01:02,000 --> 00:01:03,410
+You can say in seven interviews.
+
+19
+00:01:03,890 --> 00:01:04,300
+You can say
+
+20
+00:01:04,310 --> 00:01:07,880
+You will select someone. you cannot take 6.25 interviews.
+
+21
+00:01:07,880 --> 00:01:09,440
+You have to take seven interviews only.
+
+22
+00:01:09,440 --> 00:01:13,040
+OK, doing interviews  interviews, you're going to select someone, OK?
+
+23
+00:01:13,460 --> 00:01:17,390
+And if you want to solve this using the equation method, you can still do it.
+
+24
+00:01:17,780 --> 00:01:20,900
+So you can say X equals 0.16.
+
+25
+00:01:22,080 --> 00:01:28,950
+If the person gets successful in the first interview then or if the person fails in the first interview,
+
+26
+00:01:28,950 --> 00:01:34,440
+then you would require X+1 more interviews ok so probability of getting a failure.
+
+27
+00:01:34,500 --> 00:01:40,410
+That would be o1-0.6. 0.6 into x+1.
+
+28
+00:01:40,530 --> 00:01:40,830
+OK.
+
+29
+00:01:41,460 --> 00:01:48,060
+You can simply solve this equation and again what you will get?  you will get X equals one up one
+
+30
+00:01:48,450 --> 00:01:49,320
+point one six.
+
+31
+00:01:49,740 --> 00:01:51,620
+This is again 6.25.
+
+32
+00:01:51,630 --> 00:01:51,890
+OK?
+
+33
+00:01:52,340 --> 00:01:55,860
+This is method one, which is using  Bernoulli's trial.
+
+34
+00:01:55,890 --> 00:02:00,390
+And this is the standard equation approach that we have already seen.
+
+35
+00:02:00,870 --> 00:02:02,590
+So that's all for this video.
+
+36
+00:02:02,610 --> 00:02:03,240
+Thanks a lot.
+

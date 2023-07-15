@@ -1,0 +1,207 @@
+1
+00:00:01,140 --> 00:00:02,790
+Let's proceed solving the problem.
+
+2
+00:00:03,450 --> 00:00:07,020
+First of all, I have here a similar external utility.
+
+3
+00:00:07,440 --> 00:00:13,530
+They try to take some position, RNC Animatrix and just tell me if this is a position within the utility
+
+4
+00:00:13,530 --> 00:00:15,960
+within the metrics are not so we have here to the metrics.
+
+5
+00:00:16,440 --> 00:00:19,230
+And I would like to know if this is a valid position or not.
+
+6
+00:00:19,230 --> 00:00:22,500
+So something that's here, something that's here, they are invited one.
+
+7
+00:00:22,710 --> 00:00:24,710
+So I verify the rules are valid.
+
+8
+00:00:24,720 --> 00:00:25,890
+The columns are valid.
+
+9
+00:00:25,890 --> 00:00:27,420
+If none is valid, return defaults.
+
+10
+00:00:27,420 --> 00:00:31,980
+Otherwise, returning to this is a requested function that we have to do it.
+
+11
+00:00:32,430 --> 00:00:34,890
+I started by creating a visited matrix.
+
+12
+00:00:35,230 --> 00:00:40,350
+Now remember, in the normal defense, we would like to make sure the node is visited or not.
+
+13
+00:00:40,710 --> 00:00:43,860
+So when we have any nodes, we created vector of any nodes.
+
+14
+00:00:44,250 --> 00:00:45,780
+Now we have a matrix of 2D.
+
+15
+00:00:46,080 --> 00:00:52,920
+So I created a 2D matrix of rows and columns that represent that the given Imbert and Sebastian one.
+
+16
+00:00:53,220 --> 00:00:56,220
+So the first the change here we use the Boolean matrix.
+
+17
+00:00:56,220 --> 00:01:02,640
+But to do this time, we started by calling the defense function, giving it the source and destination
+
+18
+00:01:03,000 --> 00:01:05,220
+and giving it the all the color.
+
+19
+00:01:05,460 --> 00:01:07,200
+And here is the new color to market.
+
+20
+00:01:07,800 --> 00:01:08,550
+Now let's see.
+
+21
+00:01:08,550 --> 00:01:09,900
+How can we do the defense?
+
+22
+00:01:10,850 --> 00:01:19,310
+We started as following, we've we've verified if The Matrix, OK, we started with sub RNC would like
+
+23
+00:01:19,310 --> 00:01:26,250
+to know out of this RNC invalid if yes, return is a cell visited before during the defense, if yes,
+
+24
+00:01:26,260 --> 00:01:32,090
+certain if the all the color we have doesn't match the current fiscal position.
+
+25
+00:01:32,420 --> 00:01:33,860
+Also, skip it.
+
+26
+00:01:34,190 --> 00:01:37,820
+So these are the different cases where we skip the values.
+
+27
+00:01:38,540 --> 00:01:42,860
+Otherwise RNC now would represent my Newt indices.
+
+28
+00:01:43,280 --> 00:01:49,460
+So a more currency was through here and I replaced the old the color with the new colors.
+
+29
+00:01:50,840 --> 00:01:56,540
+I hope you can see that the like the the correspondence between the Normandy office now we have four
+
+30
+00:01:56,540 --> 00:02:03,860
+neighbors, one of them at plus one and zero minus one and zero zero a minus one zero and the plus one.
+
+31
+00:02:05,090 --> 00:02:08,090
+And again, ambassador, all the color that we have in the new column have.
+
+32
+00:02:08,930 --> 00:02:15,620
+I hope you can see that we are dealing with each other in the sea as our roots.
+
+33
+00:02:16,070 --> 00:02:20,900
+When I tell you what are the ages of us we have went into from here, when, from here, when, from
+
+34
+00:02:20,900 --> 00:02:25,730
+here and from here, so we can build the four edges, see it in a different way, in a very similar
+
+35
+00:02:25,730 --> 00:02:26,030
+way.
+
+36
+00:02:26,810 --> 00:02:32,510
+And as this recursive function is making for calls, we are validating here the are within the boundary.
+
+37
+00:02:32,630 --> 00:02:35,090
+We are validating that we never visited this before.
+
+38
+00:02:35,270 --> 00:02:37,220
+We are validating that we have the same color.
+
+39
+00:02:37,490 --> 00:02:39,530
+If any of that is wrong, we return.
+
+40
+00:02:39,830 --> 00:02:44,090
+Otherwise market the cell node, iterate on the four edges.
+
+41
+00:02:44,390 --> 00:02:46,820
+I hope you can see the correctness of the good.
+
+42
+00:02:47,450 --> 00:02:49,220
+Now let's make things more elegant.
+
+43
+00:02:49,970 --> 00:02:53,060
+Don't proceed in the video if you don't 100 percent to get this good.
+
+44
+00:02:54,320 --> 00:02:58,460
+Now what if you have it Niebuhr's, you will write it lines of code.
+
+45
+00:02:59,090 --> 00:03:00,950
+What if you have 24 Niebuhr's?
+
+46
+00:03:01,130 --> 00:03:03,860
+You write 24 lines of code.
+
+47
+00:03:04,280 --> 00:03:07,910
+This is very, uh, stupid a slide.
+
+48
+00:03:08,270 --> 00:03:10,730
+We need a way to make it more elegant.
+
+49
+00:03:10,970 --> 00:03:12,410
+So how can we make that?
+
+50
+00:03:12,770 --> 00:03:13,670
+That's the question.
+
+51
+00:03:14,120 --> 00:03:16,730
+Think for 30 minutes about this.
+
+52
+00:03:17,390 --> 00:03:18,110
+This question?

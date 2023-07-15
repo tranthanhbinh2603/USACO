@@ -1,0 +1,224 @@
+0
+1
+00:00:01,410 --> 00:00:07,440
+This is another solution to the previous problem that is exactly the same logic, but it's just making
+1
+
+2
+00:00:07,440 --> 00:00:13,320
+one more advantage here, you know, that the array is sorted so we can keep only the last value on the
+2
+
+3
+00:00:13,320 --> 00:00:17,220
+current value to make a judgment if we need to print or not.
+3
+
+4
+00:00:17,610 --> 00:00:22,560
+So instead of saving the values and then iterating to check if the value is equal to the previous one,
+4
+
+5
+00:00:22,830 --> 00:00:24,690
+all what we need is just to the previous one.
+5
+
+6
+00:00:24,990 --> 00:00:27,380
+For that purpose, we don't need even to create an array.
+6
+
+7
+00:00:27,540 --> 00:00:30,230
+So this array here, as you see, is now useless.
+7
+
+8
+00:00:30,240 --> 00:00:33,900
+No need for such an array as an input here.
+8
+
+9
+00:00:35,520 --> 00:00:36,420
+Let's move.
+9
+
+10
+00:00:36,630 --> 00:00:38,590
+The next problem is palindrome problem.
+10
+
+11
+00:00:38,610 --> 00:00:41,400
+The palindrome is a very common problem in computer science.
+11
+
+12
+00:00:43,560 --> 00:00:47,970
+To think about the palindrome problem, all what you need is to compare
+12
+
+13
+00:00:48,210 --> 00:00:51,450
+If its reading from left to right is as same as right to left.
+13
+
+14
+00:00:51,810 --> 00:00:53,310
+But there is an observation here.
+14
+
+15
+00:00:53,650 --> 00:00:56,310
+Do we need to make a complete iteration from left to right?
+15
+
+16
+00:00:56,640 --> 00:00:57,480
+The answer is no.
+16
+
+17
+00:00:57,490 --> 00:01:03,810
+It is enough to walk only to half the array, so only half of the content and make sure that the first
+17
+
+18
+00:01:03,810 --> 00:01:06,360
+half is the same as the second half.
+18
+
+19
+00:01:06,630 --> 00:01:10,020
+This is all what we actually need to make sure that the array is palindrome.
+19
+
+20
+00:01:10,020 --> 00:01:14,130
+If it happened at any moment that they aren't equal, then we just say no.
+20
+
+21
+00:01:14,130 --> 00:01:15,510
+Otherwise, we say yes.
+21
+
+22
+00:01:16,770 --> 00:01:19,540
+So this is all what you need to check if a number is a palindrome or not.
+22
+
+23
+00:01:21,150 --> 00:01:26,360
+The last one is the smallest pair problem.
+23
+
+24
+00:01:27,240 --> 00:01:33,270
+This is just a direct brute force approach, in which the word the brute force is coming from algorithms
+24
+
+25
+00:01:33,270 --> 00:01:35,500
+field and it means we are trying everything.
+25
+
+26
+00:01:35,850 --> 00:01:40,890
+So instead of trying to be smart about the solution, we can just make nested of loops here, one for
+26
+
+27
+00:01:40,890 --> 00:01:43,140
+loop on the i, one for over the j.
+27
+
+28
+00:01:43,140 --> 00:01:48,420
+But be careful, start from i + 1, you don't need here to duplicate the operation, like, you need
+28
+
+29
+00:01:48,420 --> 00:01:51,360
+to try every i and every j, right?
+29
+
+30
+00:01:51,360 --> 00:01:51,850
+Makes sense.
+30
+
+31
+00:01:51,900 --> 00:01:53,370
+This is a very important optimization.
+31
+
+32
+00:01:53,370 --> 00:01:55,980
+Make sure that you understand it. In every step,
+32
+
+33
+00:01:55,980 --> 00:02:03,810
+We try to take the tmp, the value that was requested from us and keep minimizing among all of them.
+33
+
+34
+00:02:04,740 --> 00:02:08,320
+Now observe that one of the guys try to do the following.
+34
+
+35
+00:02:08,320 --> 00:02:13,230
+He tried to find the first minimum and the second minimum and then compute the equation and
+35
+
+36
+00:02:13,230 --> 00:02:13,680
+that's it.
+36
+
+37
+00:02:14,040 --> 00:02:20,430
+But if you tried the following test case, you will notice that his idea failed the first and second
+37
+
+38
+00:02:20,430 --> 00:02:22,130
+minimum are the first and last element.
+38
+
+39
+00:02:22,410 --> 00:02:25,980
+But these two elements, for example, are a much better solutions.
+39
+
+40
+00:02:27,690 --> 00:02:31,560
+The motivation behind his solution the he was trying to make it without nested loops.
+40
+
+41
+00:02:31,980 --> 00:02:34,320
+But be careful when you propose a solution.
+41
+
+42
+00:02:34,530 --> 00:02:38,040
+Try to consider like some evidence
+42
+
+43
+00:02:38,040 --> 00:02:38,380
+Why?
+43
+
+44
+00:02:38,390 --> 00:02:39,750
+Why do you think it is the correct one?
+44
+
+45
+00:02:40,440 --> 00:02:40,970
+That's all.
